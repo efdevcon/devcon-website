@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: efdevcon/devcon-website
+  branch: main
+
+publish_mode: editorial_workflow
+media_folder: static/assets/images/uploads
+public_folder: /assets/images/uploads
+
+i18n:
+  structure: multiple_files
+  locales: [en, es]
+  default_locale: en
+
+collections:
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: src/content/pages
+    create: true
+    i18n: true
+    nested:
+      depth: 3 
+    fields:
+      - name: title
+        label: Title
+        widget: string
+        i18n: true
+      - name: description
+        label: Description
+        widget: text
+        i18n: true
+        required: false
+      - name: body
+        label: Body
+        widget: markdown
+        i18n: true
+      - name: keywords
+        label: Keywords
+        widget: list
+        i18n: true
+        required: false
+      - name: visible
+        label: 'Show in Menu'
+        widget: boolean
+        default: false
+        i18n: duplicate
+        required: false
+    meta: { path: { name: path, label: Path, widget: string, i18n: false, index_file: index, hint: 'Path can be a sub-folder (e.g. tickets/builder)' } }
