@@ -8,10 +8,14 @@
       "noEmit": true,
       "skipLibCheck": true,
       "esModuleInterop": true,
-      "baseUrl": "./"
+      "baseUrl": "./",
+      "types": []
     },
     "include": [
       "src"
+    ],
+    "exclude": [
+      "node_modules",
     ]
   }
   
