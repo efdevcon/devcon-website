@@ -1,0 +1,18 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+html { 
+    margin: 0 auto;
+}
+
+body {
+	position: relative;
+    margin: 0 auto;
+    text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 { 
+    color: #483EFF;
+}
+
