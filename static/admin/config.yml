@@ -22,28 +22,41 @@ collections:
     nested:
       depth: 3 
     fields:
-      - name: title
-        label: Title
-        widget: string
-        i18n: true
-      - name: description
-        label: Description
-        widget: text
-        i18n: true
-        required: false
-      - name: body
-        label: Body
-        widget: markdown
-        i18n: true
-      - name: keywords
-        label: Keywords
-        widget: list
-        i18n: true
-        required: false
-      - name: visible
-        label: 'Show in Menu'
-        widget: boolean
-        default: false
-        i18n: duplicate
-        required: false
+      - { name: title, label: Title, widget: string, i18n: true }
+      - { name: description, label: Description, widget: text, i18n: true, required: false }
+      - { name: keywords, label: Keywords, widget: list, i18n: true, required: false }
+      - { name: canonical, label: 'Canonical URL', widget: markdown, i18n: duplicate, required: false }
+      - { name: body, label: Body, widget: markdown, i18n: true }
+      - { name: tags, label: Tags, widget: relation, i18n: duplicate, required: false, collection: tags, value_field: title, search_fields: title, multiple: true }
+      - { name: template, label: Template, widget: select, options: ["content", "overview"] }
+      - { name: order, label: Order, widget: number, i18n: duplicate, required: false, value_type: int, min: 1, max: 1000, step: 1 }
+      - { name: showInMenu, label: 'Show page in Menu', widget: boolean, i18n: duplicate, default: true }
+      - { name: autoTranslated, label: 'Automatically translated', widget: boolean, i18n: duplicate, default: true }
     meta: { path: { name: path, label: Path, widget: string, i18n: false, index_file: index, hint: 'Path can be a sub-folder (e.g. tickets/builder)' } }
+
+  - name: faq
+    label: FAQ
+    label_singular: FAQ
+    folder: src/content/faq
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string, i18n: true }
+      - { name: body, label: Body, widget: markdown, i18n: true }
+      - { name: category, label: Category, widget: relation, i18n: duplicate, collection: categories, value_field: title, search_fields: title, multiple: true }
+      - { name: order, label: Order, widget: number, i18n: duplicate, required: false, value_type: int, min: 1, max: 1000, step: 1 }
+
+  - name: categories
+    label: Categories
+    label_singular: Category
+    folder: src/content/categories
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string, i18n: true }
+
+  - name: tags
+    label: Tags
+    label_singular: Tag
+    folder: src/content/tags
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
