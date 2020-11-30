@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: efdevcon/devcon-website
-  branch: main
+  branch: develop
 
 publish_mode: editorial_workflow
 media_folder: static/assets/images/uploads
