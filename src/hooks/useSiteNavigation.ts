@@ -1,25 +1,36 @@
 import { useStaticQuery, graphql } from "gatsby"
-import { SiteMetadata } from "src/types/siteMetadata"
+import { PageContentType } from "src/types/baseContentType"
 
-export const useSiteNavigation = (lang: "en" | "es" = "en"): SiteMetadata => {
-  const { site } = useStaticQuery(
-    graphql`
-      query SiteNavigation {
-        allMarkdownRemark {
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                showInMenu
-                order
-              }
-            }
+export const useSiteNavigation = (
+  lang: "en" | "es" = "en"
+): Array<PageContentType> => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        sort: { order: ASC, fields: [frontmatter___order] }
+        filter: {
+          fileAbsolutePath: { regex: "/pages/" }
+          frontmatter: { showInMenu: { eq: true } }
+        }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+            showInMenu
+            order
           }
         }
       }
-    `
-  )
+    }
+  `)
 
-  return site.siteMetadata
+  return data.allMarkdownRemark.nodes.map((i: any) => {
+    return {
+      id: i.id,
+      title: i.frontmatter.title,
+      showInMenu: i.frontmatter.showInMenu,
+      order: i.frontmatter.order,
+    }
+  })
 }

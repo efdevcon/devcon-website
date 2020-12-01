@@ -1,33 +1,14 @@
-import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import { useSiteNavigation } from "src/hooks/useSiteNavigation"
+import { PageContentType } from "src/types/baseContentType"
 
 export function Navigation() {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___order] }
-        filter: {
-          fileAbsolutePath: { regex: "/pages/" }
-          frontmatter: { showInMenu: { eq: true } }
-        }
-      ) {
-        nodes {
-          id
-          frontmatter {
-            title
-            showInMenu
-            order
-          }
-        }
-      }
-    }
-  `)
-  const pages = data.allMarkdownRemark.nodes
+  const pages = useSiteNavigation()
 
   return (
     <ul>
-      {pages.map((i: any) => (
-        <li key={i.id}>{i.frontmatter.title}</li>
+      {pages.map((i: PageContentType) => (
+        <li key={i.id}>{i.title}</li>
       ))}
     </ul>
   )
