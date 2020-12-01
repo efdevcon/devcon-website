@@ -8,7 +8,7 @@ media_folder: static/assets/images/uploads
 public_folder: /assets/images/uploads
 
 i18n:
-  structure: multiple_files
+  structure: multiple_folders
   locales: [en, es]
   default_locale: en
 

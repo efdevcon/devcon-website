@@ -1,19 +1,28 @@
+import { graphql } from "gatsby";
 import React from "react"
 
-export function ContentTemplate({ data }: any) {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+export default function ContentTemplate({ data }: any) {
+  const page = data.markdownRemark
 
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
+    <div>
+      <h1>{page.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </div>
   )
 }
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        template
+        keywords
+        description
+        autoTranslated
+      }
+    }
+  }
+`
