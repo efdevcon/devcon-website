@@ -14,6 +14,13 @@ module.exports = {
         path: `${__dirname}/src/content/pages`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'dips',
+        path: `${__dirname}/src/content/dips`,
+      },
+    },
     'gatsby-transformer-remark',
   ],
 }
