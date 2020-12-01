@@ -28,7 +28,7 @@ collections:
       - { name: canonical, label: 'Canonical URL', widget: string, i18n: true, required: false }
       - { name: body, label: Body, widget: markdown, i18n: true }
       - { name: tags, label: Tags, widget: relation, i18n: duplicate, required: false, collection: tags, value_field: title, search_fields: ['title'], multiple: true }
-      - { name: template, label: Template, widget: select, i18n: duplicate, options: ["content", "overview"] }
+      - { name: template, label: Template, widget: select, i18n: duplicate, options: ['none', 'content', 'overview'] }
       - { name: order, label: Order, widget: number, i18n: duplicate, required: false, value_type: int, min: 1, max: 1000, step: 1 }
       - { name: showInMenu, label: 'Show page in Menu', widget: boolean, i18n: duplicate, default: true }
       - { name: autoTranslated, label: 'Automatically translated', widget: boolean, i18n: duplicate, default: true }

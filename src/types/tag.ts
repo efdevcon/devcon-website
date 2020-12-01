@@ -1,3 +1,3 @@
 export interface Tag {
-    title: string;
+  title: string
 }

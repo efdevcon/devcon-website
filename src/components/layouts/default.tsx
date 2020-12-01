@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
 import { Header } from "src/components/header"
+import { Navigation } from "../navigation"
 import "src/assets/main.css"
 
 type LayoutProps = {
@@ -10,6 +11,7 @@ export default function DefaultLayout({ children }: LayoutProps) {
   return (
     <div>
       <Header />
+      <Navigation />
 
       <div className="container">{children}</div>
     </div>
