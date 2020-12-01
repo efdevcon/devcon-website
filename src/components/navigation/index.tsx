@@ -22,11 +22,13 @@ export function Navigation() {
       }
     }
   `)
-  const pages = data.allMarkdownRemark.nodes;
+  const pages = data.allMarkdownRemark.nodes
 
   return (
     <ul>
-      {pages.map((i: any) => <li key={i.id}>{i.frontmatter.title}</li>)}
+      {pages.map((i: any) => (
+        <li key={i.id}>{i.frontmatter.title}</li>
+      ))}
     </ul>
   )
 }
