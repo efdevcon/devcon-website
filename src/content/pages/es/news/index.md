@@ -1,8 +1,8 @@
 ---
-title: main ES
+title: News ES
 template: content
 showInMenu: true
 autoTranslated: true
 ---
 
-main ES
+News ES

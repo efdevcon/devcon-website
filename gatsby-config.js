@@ -1,8 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `Devcon 6`,
-    description: `The annual conference for all Ethereum developers, researchers, thinkers, and makers.`,
-  },
   plugins: [
     'gatsby-plugin-root-import',
     'gatsby-plugin-typescript',
@@ -22,5 +18,14 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/content/i18n`,
+        languages: [`en`, `es`],
+        defaultLanguage: `en`,
+        redirect: true,
+      },
+    },
   ],
 }

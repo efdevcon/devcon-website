@@ -1,8 +1,8 @@
 ---
-title: main ES
+title: Tickets EN
 template: content
 showInMenu: true
 autoTranslated: true
 ---
 
-main ES
+Tickets EN

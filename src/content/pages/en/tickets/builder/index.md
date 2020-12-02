@@ -1,8 +1,8 @@
 ---
-title: main ES
+title: Builder Tickets EN
 template: content
 showInMenu: true
 autoTranslated: true
 ---
 
-main ES
+Builder Tickets EN

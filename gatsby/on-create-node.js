@@ -6,11 +6,10 @@ module.exports = ({ node, getNode, actions }) => {
     if (node.internal.type === `MarkdownRemark`) {
         const collection = getNode(node.parent).sourceInstanceName;
         const slug = createFilePath({ node, getNode, basePath: `pages` });
-        // console.log('Creating slug for', collection, slug)
 
         if (collection === 'pages') { 
             const paths = slug.split('/').filter(String);
-            const lang = paths[paths.length - 1];
+            const lang = paths[0];
 
             createNodeField({
                 node,

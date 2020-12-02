@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
 import { PageContentType } from "src/types/baseContentType"
 
-export const useSiteNavigation = (
+export const useSpanishNavigation = (
   lang: "en" | "es" = "en"
 ): Array<PageContentType> => {
   const data = useStaticQuery(graphql`
@@ -11,7 +11,7 @@ export const useSiteNavigation = (
         filter: {
           fileAbsolutePath: { regex: "/pages/" }
           frontmatter: { showInMenu: { eq: true } }
-          fields: { lang: { eq: "en" } }
+          fields: { lang: { eq: "es" } }
         }
       ) {
         nodes {

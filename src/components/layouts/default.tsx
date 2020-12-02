@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { Header } from "src/components/header"
-import { Navigation } from "../navigation"
+import { Navigation } from "src/components/navigation"
 import "src/assets/main.css"
 
 type LayoutProps = {
