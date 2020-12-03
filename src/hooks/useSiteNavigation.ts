@@ -1,9 +1,7 @@
-import { useStaticQuery, graphql } from "gatsby"
-import { PageContentType } from "src/types/baseContentType"
+import { useStaticQuery, graphql } from 'gatsby'
+import { PageContentType } from 'src/types/baseContentType'
 
-export const useSiteNavigation = (
-  lang: "en" | "es" = "en"
-): Array<PageContentType> => {
+export const useSiteNavigation = (): Array<PageContentType> => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(

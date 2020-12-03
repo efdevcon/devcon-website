@@ -3,6 +3,7 @@ module.exports = {
     'gatsby-plugin-root-import',
     'gatsby-plugin-typescript',
     'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
