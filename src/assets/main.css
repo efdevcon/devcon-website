@@ -16,3 +16,14 @@ h1 {
     color: #483EFF;
 }
 
+header { 
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+ul { 
+    list-style-type: none;
+}

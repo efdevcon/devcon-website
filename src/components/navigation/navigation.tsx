@@ -9,21 +9,11 @@ export function Navigation() {
   const intl = useIntl()
   const spanish = useSpanishNavigation()
   const english = useSiteNavigation()
+  const pages = intl.locale === 'es' ? spanish : english;
 
-  if (intl.locale === "es") {
-    return (
-      <ul>
-        {spanish.map((i: PageContentType) => (
-          <li key={i.id}>
-            <Link to={i.path}>{i.title}</Link>
-          </li>
-        ))}
-      </ul>
-    )
-  }
   return (
-    <ul>
-      {english.map((i: PageContentType) => (
+    <ul className="navigation">
+      {pages.map((i: PageContentType) => (
         <li key={i.id}>
           <Link to={i.path}>{i.title}</Link>
         </li>
