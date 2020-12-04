@@ -5,7 +5,6 @@ import { SEO } from 'src/components/SEO/SEO'
 
 export default function ContentTemplate({ data }: any) {
   const page = data.markdownRemark
-  console.log('PAGE', page)
 
   return (
     <DefaultLayout>

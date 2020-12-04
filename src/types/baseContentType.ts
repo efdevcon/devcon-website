@@ -7,11 +7,12 @@ export enum PageTemplateType {
 }
 
 export interface PageContentType extends SEOContentType {
-  body: string
+  body?: string
   tags?: Array<Tag>
   template: PageTemplateType
   order?: number
   showInMenu: boolean
-  autoTranslated: boolean
+  autoTranslated?: boolean
   path: string
+  children: Array<PageContentType>
 }

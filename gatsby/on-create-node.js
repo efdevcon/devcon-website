@@ -10,11 +10,26 @@ module.exports = ({ node, getNode, actions }) => {
         if (collection === 'pages') { 
             const paths = slug.split('/').filter(String);
             const lang = paths[0];
+            const level = paths.length - 2;
+            paths.pop();
+            const parent = '/' + paths.join('/') + '/';
 
             createNodeField({
                 node,
                 name: 'lang',
                 value: lang,
+            });
+
+            createNodeField({
+                node,
+                name: 'level',
+                value: level,
+            });
+
+            createNodeField({
+                node,
+                name: 'parent',
+                value: parent,
             });
         }
 
