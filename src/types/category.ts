@@ -1,4 +1,4 @@
 export interface Category {
-    title: string;
-    lang: string
+  title: string
+  lang: string
 }
