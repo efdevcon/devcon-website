@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Travel
 template: content
 order: 3
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Lorem ipsum dolor sit amet..

@@ -1,10 +1,9 @@
 ---
-title: Contacto
-description: Contacto description ES
+title: Location
 template: content
 order: 7
 showInMenu: true
 autoTranslated: true
 ---
 
-Contacto ES
+Location EN

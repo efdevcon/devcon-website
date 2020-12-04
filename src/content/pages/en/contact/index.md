@@ -2,7 +2,7 @@
 title: Contact
 description: Contact description
 template: content
-order: 7
+order: 8
 showInMenu: true
 autoTranslated: true
 ---

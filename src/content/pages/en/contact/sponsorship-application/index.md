@@ -1,9 +1,9 @@
 ---
-title: Builder Tickets EN
+title: Sponsorship application
 template: content
 order: 2
 showInMenu: true
 autoTranslated: true
 ---
 
-Builder Tickets EN
+Lorem ipsum dolor sit amet..

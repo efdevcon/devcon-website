@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: DIPs ES
 template: content
-order: 3
+order: 2
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+DIPs ES

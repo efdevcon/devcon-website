@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Why Attend
 template: content
-order: 3
+order: 1
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Why Attend

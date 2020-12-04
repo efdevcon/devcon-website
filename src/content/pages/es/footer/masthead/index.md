@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Masthead
 template: content
-order: 3
+order: 6
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Lorem ipsum dolor sit amet..

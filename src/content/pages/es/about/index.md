@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Acerca de Devcon
 template: content
-order: 3
+order: 6
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Acerca de Devcon ES

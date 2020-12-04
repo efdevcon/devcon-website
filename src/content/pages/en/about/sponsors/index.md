@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Sponsors
 template: content
-order: 3
+order: 4
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Sponsors

@@ -1,9 +1,9 @@
 ---
-title: Builder Tickets EN
+title: Speaker selection process
 template: content
 order: 2
 showInMenu: true
 autoTranslated: true
 ---
 
-Builder Tickets EN
+Speaker selection process

@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Scholar Tickets ES
 template: content
-order: 3
+order: 1
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Erudita

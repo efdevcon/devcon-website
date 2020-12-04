@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Cookie policy
 template: content
-order: 3
+order: 4
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Lorem ipsum dolor sit amet..

@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Tickets FAQ ES
 template: content
-order: 3
+order: 5
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Tickets FAQ ES

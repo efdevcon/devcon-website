@@ -1,9 +1,9 @@
 ---
-title: Tickets ES
+title: Terms of use
 template: content
-order: 3
+order: 5
 showInMenu: true
 autoTranslated: true
 ---
 
-Entradas
+Lorem ipsum dolor sit amet..
