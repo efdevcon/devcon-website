@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Masthead
 template: content
-parent: get-involved
-order: 1
+parent: footer
+order: 6
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Masthead

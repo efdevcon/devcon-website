@@ -1,10 +1,10 @@
 ---
-title: DIPs
+title: Sponsorship application
 template: content
-parent: get-involved
+parent: contact
 order: 2
 showInMenu: true
 autoTranslated: true
 ---
 
-DIPs EN
+Sponsorship application

@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Code of conduct
 template: content
-parent: get-involved
-order: 1
+parent: footer
+order: 2
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Code of conduct

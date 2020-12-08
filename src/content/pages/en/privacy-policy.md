@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Privacy policy
 template: content
-parent: get-involved
-order: 1
+parent: footer
+order: 3
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Privacy policy

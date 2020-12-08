@@ -5,4 +5,5 @@ order: 1
 showInMenu: true
 autoTranslated: true
 ---
+
 News EN

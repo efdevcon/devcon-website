@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Ticket FAQ
 template: content
-parent: get-involved
-order: 1
+parent: tickets
+order: 5
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Ticket FAQ

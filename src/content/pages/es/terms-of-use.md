@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Terms of use
 template: content
-parent: get-involved
-order: 1
+parent: footer
+order: 5
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Terms of use

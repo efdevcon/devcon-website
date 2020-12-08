@@ -1,10 +1,10 @@
 ---
-title: Sponsors
+title: FAQ
 template: content
-parent: about
-order: 4
+parent: footer
+order: 1
 showInMenu: true
 autoTranslated: true
 ---
 
-Sponsors ES
+FAQ

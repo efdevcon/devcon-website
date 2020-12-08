@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Cookie policy
 template: content
-parent: get-involved
-order: 1
+parent: footer
+order: 4
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Cookie policy

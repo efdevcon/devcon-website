@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Venue
 template: content
-parent: get-involved
+parent: location
 order: 1
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Venue

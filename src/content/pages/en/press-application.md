@@ -1,10 +1,10 @@
 ---
-title: DIP process
+title: Press application
 template: content
-parent: get-involved
+parent: contact
 order: 1
 showInMenu: true
 autoTranslated: true
 ---
 
-DIP process
+Press application
