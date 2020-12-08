@@ -10,7 +10,8 @@ export default function Index() {
     <DefaultLayout>
       <SEO />
 
-      <p>{intl.formatMessage({ id: 'hello' })}</p>
+      <h2>{intl.formatMessage({ id: 'hello' })}</h2>
+      <div>{intl.formatMessage({ id: 'description' })}</div>
     </DefaultLayout>
   )
 }
