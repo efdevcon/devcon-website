@@ -8,6 +8,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
+    "local-cms": "npx netlify-cms-proxy-server",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,md}\"",
     "lint": "eslint --fix 'src/**/*.{ts,tsx}'",
     "serve": "gatsby serve",

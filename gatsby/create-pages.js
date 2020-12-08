@@ -23,7 +23,7 @@ module.exports = async function({ actions, graphql }) {
     result.data.allMarkdownRemark.nodes.forEach(node => {
         if (node.frontmatter.template === 'none') return;
 
-        console.log("Creating page", node.fields.slug, 'with template:', node.frontmatter.template);    
+        // console.log("Creating page", node.fields.slug, 'with template:', node.frontmatter.template);    
         createPage({
           path: node.fields.slug,
           component: path.resolve(`./src/templates/${node.frontmatter.template}.tsx`),

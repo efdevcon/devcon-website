@@ -12,7 +12,6 @@ export function Header() {
         <h1>
           <Link to={`/${intl.locale}`}>{intl.formatMessage({ id: 'title' })}</Link>
         </h1>
-        <small>{intl.formatMessage({ id: 'description' })}</small>
       </div>
 
       <LanguageToggle />
