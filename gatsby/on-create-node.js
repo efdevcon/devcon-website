@@ -4,15 +4,17 @@ module.exports = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
 
     if (node.internal.type === `MarkdownRemark`) {
+        const frontmatter = node.frontmatter;
         const collection = getNode(node.parent).sourceInstanceName;
         const slug = createFilePath({ node, getNode, basePath: `pages` });
 
         if (collection === 'pages') { 
             const paths = slug.split('/').filter(String);
             const lang = paths[0];
-            const level = paths.length - 2;
-            paths.pop();
-            const parent = '/' + paths.join('/') + '/';
+            const level = frontmatter.parent ? 1 : 0;
+            const parent = frontmatter.parent ? '/' + lang + '/' + frontmatter.parent + '/' : '';
+            
+            // console.log("Create node", collection, slug, lang, level, parent)
 
             createNodeField({
                 node,
