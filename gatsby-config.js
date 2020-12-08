@@ -18,6 +18,7 @@ module.exports = {
         path: `${__dirname}/src/content/dips`,
       },
     },
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-intl`,
       options: {
