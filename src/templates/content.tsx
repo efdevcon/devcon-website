@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import DefaultLayout from 'src/components/layouts/default'
-import { SEO } from 'src/components/SEO/SEO'
+import { SEO } from 'src/components/common/seo'
+import Default from 'src/components/layouts/default'
 
 export default function ContentTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <DefaultLayout>
+    <Default>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <h2>{page.frontmatter.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
-    </DefaultLayout>
+    </Default>
   )
 }
 

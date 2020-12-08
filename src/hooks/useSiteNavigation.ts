@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import { PageContentType } from 'src/types/baseContentType'
+import { PageContentType } from 'src/types/PageContentType'
 
 export const useSiteNavigation = (lang: 'en' | 'es' = 'en'): Array<PageContentType> => {
   const data = useStaticQuery(graphql`

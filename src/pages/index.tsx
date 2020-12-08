@@ -1,17 +1,17 @@
 import React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
-import DefaultLayout from 'src/components/layouts/default'
-import { SEO } from 'src/components/SEO/SEO'
+import { SEO } from 'src/components/common/seo'
+import Default from 'src/components/layouts/default'
 
 export default function Index() {
   const intl = useIntl()
 
   return (
-    <DefaultLayout>
+    <Default>
       <SEO />
 
       <h2>{intl.formatMessage({ id: 'hello' })}</h2>
       <div>{intl.formatMessage({ id: 'description' })}</div>
-    </DefaultLayout>
+    </Default>
   )
 }

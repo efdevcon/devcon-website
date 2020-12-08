@@ -1,18 +1,20 @@
-import { SEOContentType } from './seoContentType'
 import { Tag } from './tag'
 
 export enum PageTemplateType {
+  'none',
   'content',
-  'overview',
 }
 
-export interface PageContentType extends SEOContentType {
+export interface PageContentType {
+  title: string
+  description?: string
   body?: string
   tags?: Array<Tag>
   template: PageTemplateType
+  parent: PageContentType
   order?: number
   showInMenu: boolean
   autoTranslated?: boolean
-  path: string
+  lang: string
   children: Array<PageContentType>
 }

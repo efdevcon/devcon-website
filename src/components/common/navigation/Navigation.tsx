@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
-import { PageContentType } from 'src/types/baseContentType'
+import { PageContentType } from 'src/types/PageContentType'
 import { useSiteNavigation } from 'src/hooks/useSiteNavigation'
 
 export function Navigation() {

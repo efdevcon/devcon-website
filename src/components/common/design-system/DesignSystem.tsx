@@ -1,10 +1,8 @@
-import React from "react"
+import React from 'react'
 // @ts-ignore // https://spin.atomicobject.com/2020/06/22/css-module-typescript/
-import css from "./design-system.module.scss"
+import css from './DesignSystem.module.scss'
 
-type Props = {}
-
-export default (props: Props) => {
+export function DesignSystem() {
   return (
     <div>
       <br />
@@ -24,7 +22,7 @@ export default (props: Props) => {
       </p>
 
       <div className="w-full flex justify-center items-center">
-        <button className={css["module-test"]}>Main Button</button>
+        <button className={css['module-test']}>Main Button</button>
         <button className="button-secondary">Main Button</button>
         <button>Main Button</button>
       </div>
