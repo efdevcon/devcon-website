@@ -1,0 +1,69 @@
+button,
+.button-primary {
+  cursor: pointer;
+  background-color: $color-primary;
+  color: $color-secondary-dark;
+  padding: $size-4 $size-3;
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+
+  &:active {
+    background-color: $color-primary-dark;
+  }
+
+  &:disabled {
+    background-color: $color-primary-opaque;
+  }
+}
+
+.button-secondary {
+  cursor: pointer;
+  background-color: $color-secondary;
+  color: $color-secondary-dark;
+  padding: $size-4 $size-3;
+
+  &:hover {
+    background-color: $color-secondary-light;
+  }
+
+  &:active {
+    background-color: $color-secondary-dark;
+  }
+
+  &:disabled {
+    background-color: $color-secondary-opaque;
+  }
+}
+
+.button-tertiary {
+  cursor: pointer;
+  background-color: $color-tertiary;
+  color: $color-secondary-dark;
+  padding: $size-4 $size-3;
+
+  &:hover {
+    background-color: $color-tertiary-light;
+  }
+
+  &:active {
+    background-color: $color-tertiary-dark;
+  }
+
+  &:disabled {
+    background-color: $color-tertiary-opaque;
+  }
+}
+
+/*
+  &.button-sm {
+    padding: $sm * 0.75 $sm;
+    font-size: $sm;
+  }
+
+  &.button-lg {
+    padding: $lg * 0.75 $lg;
+    font-size: $lg;
+  }
+*/

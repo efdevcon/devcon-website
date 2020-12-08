@@ -1,0 +1,50 @@
+@import "src/css/common/grids.mixins";
+
+.container {
+  @include grid-12;
+  padding: 2rem;
+
+  .col-1 {
+    display: flex;
+    overflow: hidden;
+    grid-column: span 3;
+    // grid-column: 1 / 4;
+
+    @media (max-width: $screen-sm) {
+      grid-column: span 13;
+      justify-content: center;
+    }
+
+    .logo {
+      height: 120px;
+      width: 120px;
+      border-radius: 1000px;
+      background: $color-secondary-dark;
+    }
+  }
+
+  .col-2 {
+    grid-column: span 7;
+    // grid-column: 4 / 11;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    @media (max-width: $screen-sm) {
+      grid-column: span 13;
+      flex-direction: column;
+    }
+
+    .list {
+      > p {
+        // Mixin candidate!
+        font-size: $size-7;
+        margin: $size-4;
+      }
+    }
+  }
+
+  .col-3 {
+    grid-column: 1 / 13;
+  }
+}

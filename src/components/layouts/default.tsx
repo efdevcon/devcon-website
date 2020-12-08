@@ -1,7 +1,12 @@
 import React, { ReactNode } from "react"
 import { Header } from "src/components/header"
+import { Footer } from "src/components/footer"
 import { Navigation } from "../navigation"
-import "src/assets/main.css"
+// import DesignSystemTest from "../design-system"
+// @ts-ignore
+import css from "./default.module.scss"
+
+console.log(css, "css")
 
 type LayoutProps = {
   children: ReactNode
@@ -9,11 +14,15 @@ type LayoutProps = {
 
 export default function DefaultLayout({ children }: LayoutProps) {
   return (
-    <div>
-      <Header />
-      <Navigation />
+    <div className="layout">
+      <div className="content">
+        <Header />
+        <Navigation />
+        {children}
+      </div>
 
-      <div className="container">{children}</div>
+      {/* <DesignSystemTest /> */}
+      <Footer />
     </div>
   )
 }

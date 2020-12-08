@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@import "./components/button.scss";
+@import "./vendors.scss";
+
+@layer base {
+  html {
+    margin: 0 auto;
+    font-family: theme("fontFamily.primary");
+    color: theme("colors.primary.DEFAULT");
+
+    font-size: 16px;
+
+    @media (max-width: theme("screens.md")) {
+      font-size: 14px;
+    }
+
+    @media (max-width: theme("screens.sm")) {
+      font-size: 12px;
+    }
+  }
+
+  h1 {
+    font-size: theme("spacing.7");
+    line-height: theme("spacing.9");
+  }
+
+  h2 {
+    font-size: theme("spacing.6");
+    line-height: theme("spacing.8");
+  }
+
+  h3 {
+    font-size: theme("spacing.5");
+    line-height: theme("spacing.7");
+  }
+
+  h4 {
+    font-size: theme("spacing.4");
+    line-height: theme("spacing.6");
+  }
+
+  p {
+    font-size: theme("spacing.4");
+    line-height: theme("spacing.6");
+  }
+
+  button {
+    @apply button-primary;
+  }
+}

@@ -1,0 +1,33 @@
+@import "variables";
+@import "reset";
+@import "common/typography";
+@import "common/buttons";
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  margin: 0 auto;
+  font-family: $font-primary;
+  color: $color-primary;
+
+  font-size: 16px;
+
+  @media (max-width: $screen-lg) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $screen-sm) {
+    font-size: 12px;
+  }
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
