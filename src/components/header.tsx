@@ -1,13 +1,21 @@
-import React from "react"
-import { useSiteMetadata } from "src/hooks/useSiteMetadata"
+import React from 'react'
+import { useIntl } from 'gatsby-plugin-intl'
+import { Link } from 'gatsby'
+import { LanguageToggle } from './languageToggle'
 
 export function Header() {
-  const { title, description } = useSiteMetadata()
+  const intl = useIntl()
 
   return (
     <header>
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <div>
+        <h1>
+          <Link to={`/${intl.locale}`}>{intl.formatMessage({ id: 'title' })}</Link>
+        </h1>
+        <small>{intl.formatMessage({ id: 'description' })}</small>
+      </div>
+
+      <LanguageToggle />
     </header>
   )
 }

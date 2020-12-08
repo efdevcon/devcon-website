@@ -7,10 +7,11 @@ Tags: Event Operations, Event Production, Software
 Authors: weiwu.zhang@alphawallet.com, sunil.tom.jose@alphawallet.com, victor.zhang@alphawallet.com
 Resources Required: software development, operations Support and tech support
 Discussions-to: https://forum.devcon.org/t/attestation-based-ticketing-system-that-is-managed-by-ethereum-smart-contracts-and-integrated-with-pretix-re-rfp-1-onchain-ticketing/54
-Created: 2020-08-13  
+Created: 2020-08-13
 ---
 
 ## Summary of Proposal
+
 Implement an attestation based ticketing system on Ethereum for Devcon. This system will be integrated to Pretix, the existing Devcon ticketing system
 
 ## Abstract
@@ -37,15 +38,15 @@ Tickets are one of the best use cases to demonstrate how blockchain and crypto t
 - Eliminates ticket fraud
 - Offer limitless integration with host of services
 
-Also the solution can convert non-crypto users to Ethereum users, as attendees can use the issued ticket (attestation #1) as an Ethereum token, once he set up a wallet and goes through email verification (attestation #2). If we can maintain and open up the system to other event organisers, it will bring us millions of new Ethereum users. Currently, there are 940 million unique digital ticket holders globally. If we can convert 5%, it is 47 million which is half of the total Ethereum unique addresses we have got for the past 5 years. 
-      
+Also the solution can convert non-crypto users to Ethereum users, as attendees can use the issued ticket (attestation #1) as an Ethereum token, once he set up a wallet and goes through email verification (attestation #2). If we can maintain and open up the system to other event organisers, it will bring us millions of new Ethereum users. Currently, there are 940 million unique digital ticket holders globally. If we can convert 5%, it is 47 million which is half of the total Ethereum unique addresses we have got for the past 5 years.
+
 ## Implementation
 
 The core modules of the smart contract based ticketing system is already implemented by the same team for prior projects such as [FIFA 2018](https://alphawallet.com/for-business/case-study-tickets/) and UEFA 2020. The bulk of the implementation efforts for Devcon 6 would be around integrating the existing solution with Pretix. Ideally this should be done in collaboration with Pretix team.
 
 On top of that, an email attestation service for uses needs to be built. We (AlphaWallet) can create one such service for attendees to claim attestation #2 (explained below) at http://attestation.id, ideally to create a decentralised ecosystem of attestors for the benefit of enriching smart contract functions and reducing on-chain transactions. These attestations can be reused.
 
-### Attestations ###
+### Attestations
 
 Attestation based ticketing ensures privacy, flexibility and cost efficiency for the blockchain implementation of ticketing. It involves two attestations:
 
@@ -56,14 +57,15 @@ Attestation #2
 : [for crypto users] Attestation linking Ethereum address with email address (acquired by the user through a DApp browser).
 
 ![Attestations involved](images/DIP-Ticket_Attestations.svg)
- 
+
 Attestation #1 is the "traditional ticket". It is issued by email after the payment is confirmed on the ticket purchasing website as QR code and [magic link](http://docs.tokenscript.org/MagicLinks.html). User is not required to have an Ethereum address at this stage!
 
 If the user later installed a wallet and get his Ethereum address, Attestation #2 can be issued by http://attestation.id The process of acquiring attestation #2 would be a simple guided process for the users. It will be through visiting a website, where the user verifies their email to receive an attestation that will be saved in the Dapp browser as a cookie or in the user's wallet if the wallet can recognise attestations.
- 
+
 When the user wishes to interact with a smart contract function, such as voting, the user will call the smart contract with the attestation #1 and #2. Together they prove that the transaction sender's Ethereum address is that of the valid attendee. Such an implementation would preserve the privacy of the user, as these attestations do not reveal the actual email address. Please check out the [safe protocol](https://github.com/AlphaWallet/blockchain-attestation/blob/master/use-cases/send-ether-by-identifier-attestation.md) for more details.
 
 **Integration with Pretix**
+
 - A brief idea about integration with pretix, details are to be confirmed
 
 ![Attestations involved](images/Pretix-integration.svg)
@@ -82,28 +84,30 @@ Our first ticket implementation was on 2018, as an experiment with FIFA official
 
 The next full fledged implementation was in 2019, with Shankai Sports for tokenising EURO Championship 2020 VIP event tickets, with integrated hospitality passes([App](https://apps.apple.com/us/app/shankai/id1492559481). The tickets were tokenised and the apps were ready to go, but the event got cancelled 😭😭😭)
 
-In 2019, we also worked towards implementing EDCON 2020 event tickets on blockchain. Again, the app and tickets were ready, but thanks to the pandemic, the event got cancelled 😭😭😭)   
+In 2019, we also worked towards implementing EDCON 2020 event tickets on blockchain. Again, the app and tickets were ready, but thanks to the pandemic, the event got cancelled 😭😭😭)
 
 ## Operational Requirements & Ownership
+
 **Actions required to implement the proposal at Devcon**
 
 1. What actions are required to implement the proposal at Devcon?
 
-The key effort would be around developing the solution further to integrate it with the Pretix solution. 
+The key effort would be around developing the solution further to integrate it with the Pretix solution.
 
 Development:
+
 - Improving our existing attestation and smart contract based ticketing system
 - Integrating with Pretix
 - Optimizing features for Devcon
 - Ticket smart contract development and deployment
 - Devcon Dapp website development
 - Initial testing and feedback (before event)
-    
+
 Operations for the event should be more or less the same as the previous Devcon. Tech support for people who are trying out the new experiences would be something that is new and needs to be planned for
 
 2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)
 
-AlphaWallet and the Devcon team will be responsible for the implementation. The project governance would be done through weekly or fortnightly meetings managed in an Agile fashion. 
+AlphaWallet and the Devcon team will be responsible for the implementation. The project governance would be done through weekly or fortnightly meetings managed in an Agile fashion.
 
 3. What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))
 
@@ -114,14 +118,16 @@ The [CO2ken project](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27)
 ## Links & Additional Information
 
 **Possible Questions**
+
 1. Can the Tickets work without internet?
-A. Yes, the ticket can be used to check-in with out internet. This was one of the key requirements for the implementations for FIFA and UEFA. However, internet will be needed to access the advanced DAPP features offered by the ticket such as voting.
+   A. Yes, the ticket can be used to check-in with out internet. This was one of the key requirements for the implementations for FIFA and UEFA. However, internet will be needed to access the advanced DAPP features offered by the ticket such as voting.
 
 2. tbc
 
 **Links**
-* [Link to Devon Forum — Attestation based Ticketing solution DIP](https://forum.devcon.org/t/attestation-based-ticketing-system-that-is-managed-by-ethereum-smart-contracts-and-integrated-with-pretix-re-rfp-1-onchain-ticketing/54)
-* [AlphaWallet website](https://alphawallet.com/)
-* [FIFA Tickets case study](https://alphawallet.com/for-business/case-study-tickets/)
-* [Pretix Solution GitHub](https://github.com/pretix/pretix)
-* [AlphaWallet GitHub](https://github.com/AlphaWallet)
+
+- [Link to Devon Forum — Attestation based Ticketing solution DIP](https://forum.devcon.org/t/attestation-based-ticketing-system-that-is-managed-by-ethereum-smart-contracts-and-integrated-with-pretix-re-rfp-1-onchain-ticketing/54)
+- [AlphaWallet website](https://alphawallet.com/)
+- [FIFA Tickets case study](https://alphawallet.com/for-business/case-study-tickets/)
+- [Pretix Solution GitHub](https://github.com/pretix/pretix)
+- [AlphaWallet GitHub](https://github.com/AlphaWallet)

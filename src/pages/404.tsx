@@ -1,5 +1,13 @@
-import React from "react"
+import { useIntl } from 'gatsby-plugin-intl'
+import React from 'react'
 
 export default function Index() {
-  return <h1>Page not found</h1>
+  const intl = useIntl()
+
+  return (
+    <div>
+      <h1>{intl.formatMessage({ id: 'notfound.header' })}</h1>
+      <p>{intl.formatMessage({ id: 'notfound.description' })}</p>
+    </div>
+  )
 }
