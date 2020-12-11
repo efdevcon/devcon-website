@@ -39,6 +39,6 @@ function mapToDIP(source: any): DIP {
     discussion: source.frontmatter.Discussion,
     created: new Date(source.frontmatter.Created),
     body: source.html,
-    slug: source.fields.slug
+    slug: source.fields.slug,
   }
 }

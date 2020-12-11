@@ -10,7 +10,9 @@ export default function DIPTemplate({ data }: any) {
     <Default>
       <SEO title={page.frontmatter.Title} />
 
-      <h2>{page.frontmatter.Title} <small>#{page.frontmatter.DIP}</small></h2>
+      <h2>
+        {page.frontmatter.Title} <small>#{page.frontmatter.DIP}</small>
+      </h2>
       <ul>
         <li>Status: {page.frontmatter.Status}</li>
         <li>Themes: {page.frontmatter.Themes}</li>

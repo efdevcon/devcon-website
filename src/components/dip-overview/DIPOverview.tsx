@@ -12,7 +12,9 @@ export function DIPOverview() {
       <ul>
         {dips.map(i => (
           <li key={i.number}>
-            <Link to={`${i.slug}`}>#{i.number} - {i.title}</Link>
+            <Link to={`${i.slug}`}>
+              #{i.number} - {i.title}
+            </Link>
           </li>
         ))}
       </ul>
