@@ -1,9 +1,36 @@
+const supportedLanguages = ['en', 'es']
+const defaultLanguage = 'en'
+const siteName = 'devcon.org'
+const siteUrl = 'https://devcon.org'
+const matomoSiteId = '8'
+const matomoUrl = 'https://matomo.ethereum.org'
+
 module.exports = {
   plugins: [
     'gatsby-plugin-root-import',
     'gatsby-plugin-typescript',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: siteName,
+        short_name: siteName,
+        start_url: '/en/',
+        background_color: '#fff',
+        theme_color: '#663399',
+        display: `standalone`,
+        icon: `src/assets/images/devcon-icon.png`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: matomoSiteId,
+        matomoUrl: matomoUrl,
+        siteUrl,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -30,8 +57,8 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/content/i18n`,
-        languages: [`en`, `es`],
-        defaultLanguage: `en`,
+        languages: supportedLanguages,
+        defaultLanguage: defaultLanguage,
         redirect: true,
       },
     },
