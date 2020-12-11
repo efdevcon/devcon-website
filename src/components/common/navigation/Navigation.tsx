@@ -11,14 +11,14 @@ export function Navigation() {
 
   return (
     <ul className="navigation">
-      {pages.map((i: any) => (
-        <li key={i.path}>
-          <Link to={i.path}>{i.title}</Link>
+      {pages.map((i: PageContentType) => (
+        <li key={i.slug}>
+          <Link to={i.slug}>{i.title}</Link>
 
           <ul>
             {i.children.map((c: PageContentType) => (
-              <li key={c.path}>
-                <Link to={c.path}>{c.title}</Link>
+              <li key={c.slug}>
+                <Link to={c.slug}>{c.title}</Link>
               </li>
             ))}
           </ul>

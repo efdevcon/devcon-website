@@ -18,6 +18,13 @@ module.exports = {
         path: `${__dirname}/src/content/dips`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blogs',
+        path: `${__dirname}/src/content/blogs`,
+      },
+    },
     'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-intl`,

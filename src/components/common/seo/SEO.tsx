@@ -8,6 +8,7 @@ interface SEOProps {
   title?: string
   description?: string
   lang?: string
+  canonicalUrl?: string
 }
 
 export function SEO(props: SEOProps) {
@@ -20,6 +21,7 @@ export function SEO(props: SEOProps) {
   const title = props.title || intl.formatMessage({ id: 'title' })
   const description = props.description || intl.formatMessage({ id: 'description' })
   const lang = props.lang || intl.locale || intl.defaultLocale
+  const canonical = props.canonicalUrl || ''
 
   const image = '/assets/images//seo.jpg'
   const siteUrl = location.origin
@@ -35,6 +37,7 @@ export function SEO(props: SEOProps) {
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
         {image && <meta property="og:image" content={image} />}
+        {canonical && <link rel="canonical" href={canonical} />}
       </Helmet>
 
       <Twitter title={title} description={description} image={image} />

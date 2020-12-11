@@ -3,6 +3,9 @@ const path = require(`path`)
 module.exports = async function({ actions, graphql }) {
     const { createPage } = actions;
 
+    const languages = ['en', 'es'];
+    const defaultLang = 'en';
+
     // Create Pages
     const pageResult = await graphql(`
         query {
@@ -29,14 +32,14 @@ module.exports = async function({ actions, graphql }) {
             path: node.fields.slug,
             component: path.resolve(`./src/templates/${node.frontmatter.template}.tsx`),
             context: {
-            slug: node.fields.slug,
-            lang: node.fields.lang,
-            intl: {
-                language: node.fields.lang,
-                languages: ['en', 'es'],
-                messages: require(`../src/content/i18n/${node.fields.lang}.json`),
-                routed: true,
-                redirect: false,
+                slug: node.fields.slug,
+                lang: node.fields.lang,
+                intl: {
+                    language: node.fields.lang,
+                    languages: languages,
+                    messages: require(`../src/content/i18n/${node.fields.lang}.json`),
+                    routed: true,
+                    redirect: false,
                 },
             },
         })
@@ -67,19 +70,62 @@ module.exports = async function({ actions, graphql }) {
 
     dipResult.data.dips.nodes.forEach(node => {
 
-        // console.log("Creating DIP", node.fields.slug, 'with template:', 'dip');    
+        const slug = node.fields.slug;
+        const template = 'dip';
+        console.log("Creating DIP", slug, 'with template:', template, 'lang', defaultLang);
+
         createPage({
-            path: node.fields.slug,
-            component: path.resolve(`./src/templates/dip.tsx`),
+            path: slug,
+            component: path.resolve(`./src/templates/${template}.tsx`),
             context: {
-            slug: node.fields.slug,
-            lang: 'en',
-            intl: {
-                language: 'en',
-                languages: ['en', 'es'],
-                messages: require(`../src/content/i18n/en.json`),
-                routed: true,
-                redirect: false,
+            slug: slug,
+            lang: defaultLang,
+                intl: {
+                    language: defaultLang,
+                    languages: languages,
+                    messages: require(`../src/content/i18n/${defaultLang}.json`),
+                    routed: true,
+                    redirect: false,
+                },
+            },
+        })
+    })
+
+    // Create Blogs
+    const blogResult = await graphql(`
+        query {
+            blogs: allMarkdownRemark(filter: {fields: {collection: {eq: "blogs"}}}, sort: {fields: frontmatter___DIP}) {
+                nodes {
+                    frontmatter {
+                        title
+                    }
+                    fields {
+                        slug
+                    }
+                }
+            }
+        }
+    `);
+
+    blogResult.data.blogs.nodes.forEach(node => {
+
+        const slug = node.fields.slug;
+        const template = 'blog';
+        const defaultLang = 'en';
+        console.log("Creating blog post", slug, 'with template:', template, 'lang', defaultLang);
+
+        createPage({
+            path: slug,
+            component: path.resolve(`./src/templates/${template}.tsx`),
+            context: {
+            slug: slug,
+            lang: defaultLang,
+                intl: {
+                    language: defaultLang,
+                    languages: languages,
+                    messages: require(`../src/content/i18n/${defaultLang}.json`),
+                    routed: true,
+                    redirect: false,
                 },
             },
         })
