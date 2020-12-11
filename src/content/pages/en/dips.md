@@ -1,6 +1,6 @@
 ---
 title: DIPs
-template: content
+template: dips
 parent: get-involved
 order: 2
 showInMenu: true
