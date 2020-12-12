@@ -1,0 +1,55 @@
+@import './typography.mixins';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+// Defaults
+h1 {
+  @include font-tertiary;
+  font-size: $size-16 + $size-8;
+  line-height: 125%;
+}
+
+h2 {
+  @include font-tertiary;
+  font-size: $size-16;
+  line-height: 150%;
+}
+
+h3 {
+  @include font-tertiary;
+  font-size: $size-12;
+  line-height: 125%;
+}
+
+h4 {
+  @include font-tertiary;
+  @include font-md;
+}
+
+// p {
+//   @include font-md;
+// }
+
+// Utilities
+// .font-primary {
+//   @include font-primary;
+// }
+// .font-secondary {
+//   @include font-secondary;
+// }
+// .font-tertiary {
+//   @include font-tertiary;
+// }
+
+.font-md {
+  @include font-md;
+}
+
+.font-sm {
+  @include font-sm;
+}
+
+.bold {
+  @include bold;
+}

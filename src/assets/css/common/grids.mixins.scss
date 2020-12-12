@@ -1,8 +1,8 @@
-@import "src/css/variables";
+@import 'src/assets/css/variables';
 
 @mixin grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: $size-8;
+  column-gap: $size-16;
   // margin: $size-16; <--- probably too opinionated, just pad the grid instead in the context where it gets used
 }

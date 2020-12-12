@@ -36,5 +36,19 @@ module.exports = {
         },
       },
     },
+    // Used to load svg files as React components, specifically useful for icons (without this plugin they get loaded as dataurls, meaning we lose the properties of inline svg)
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /icons/,
+          options: {
+            props: {
+              className: 'icon', // Need a class to target for default icon styling
+            },
+          },
+        },
+      },
+    },
   ],
 }

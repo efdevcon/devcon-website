@@ -15,9 +15,9 @@ $color-tertiary-dark: #30354b;
 $color-tertiary-opaque: #1b1d24;
 
 // Fonts
-$font-primary: "Montserrat", sans-serif;
-$font-secondary: "Roboto", serif;
-$font-tertiary: "Verdana", sans-serif;
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Roboto', serif;
+$font-tertiary: 'Space Mono', monospace;
 
 // Sizes
 // $size-1: 0.25rem; // 4px (assuming root font-size 16px)
@@ -30,6 +30,7 @@ $font-tertiary: "Verdana", sans-serif;
 // $size-8: $size-1 * 8; // 2rem 32px
 // $size-16: $size-1 * 16; // 4rem 64px
 
+// Add more as needed
 $size-1: 0.125rem; // 2px (assuming root font-size 16px)
 $size-2: $size-1 * 2;
 $size-3: $size-1 * 3;
@@ -46,6 +47,7 @@ $size-13: $size-1 * 13;
 $size-14: $size-1 * 14;
 $size-15: $size-1 * 15;
 $size-16: $size-1 * 16; // 2rem 32px
+$size-20: $size-1 * 20; // 2rem 40px;
 $size-32: $size-1 * 32; // 4rem 64px;
 
 // Gaps

@@ -1,7 +1,8 @@
-@import "variables";
-@import "reset";
-@import "common/typography";
-@import "common/buttons";
+@import 'variables';
+@import 'reset';
+@import 'common/typography';
+@import 'common/buttons';
+@import 'common/icons';
 
 html,
 body {
@@ -13,21 +14,20 @@ html {
   font-family: $font-primary;
   color: $color-primary;
 
-  font-size: 16px;
+  @include font-md;
 
   @media (max-width: $screen-lg) {
-    font-size: 14px;
+    @include font-sm;
   }
 
   @media (max-width: $screen-sm) {
-    font-size: 12px;
+    @include font-xs;
   }
 }
 
 body {
   position: relative;
   margin: 0 auto;
-  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
