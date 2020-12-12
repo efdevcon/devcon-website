@@ -134,7 +134,6 @@
   > p,
   li {
     @include font-sm;
-    @include bold;
     margin-bottom: $size-9;
 
     &:last-child {
