@@ -67,7 +67,7 @@ function mapNodeToPage(source: any, nodes?: any): PageContentType {
     template: source.frontmatter.template,
     showInMenu: source.frontmatter.showInMenu,
     order: source.frontmatter.order,
-    path: source.fields.slug,
+    slug: source.fields.slug,
     lang: source.fields.lang,
     children: nodes.filter((i: any) => i.fields.parent === source.fields.slug).map((i: any) => mapNodeToPage(i, nodes)),
   }

@@ -11,8 +11,9 @@ export interface PageContentType {
   body?: string
   tags?: Array<Tag>
   template: PageTemplateType
-  parent: PageContentType
+  parent?: PageContentType
   order?: number
+  slug: string
   showInMenu: boolean
   autoTranslated?: boolean
   lang: string

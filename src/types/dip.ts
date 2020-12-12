@@ -32,11 +32,12 @@ export interface DIP {
   number: number
   title: string
   status: Status
-  theme: Theme
+  themes: Array<Theme>
   tags: Array<Tag>
   authors: Array<string>
   resources: string
   discussion: string
   created: Date
   body: string
+  slug: string
 }

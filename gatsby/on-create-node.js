@@ -8,6 +8,12 @@ module.exports = ({ node, getNode, actions }) => {
         const collection = getNode(node.parent).sourceInstanceName;
         const slug = createFilePath({ node, getNode, basePath: `pages` });
 
+        createNodeField({
+            node,
+            name: 'collection',
+            value: collection,
+        });
+
         if (collection === 'pages') { 
             const paths = slug.split('/').filter(String);
             const lang = paths[0];
@@ -33,18 +39,28 @@ module.exports = ({ node, getNode, actions }) => {
                 name: 'parent',
                 value: parent,
             });
+
+            createNodeField({
+                node,
+                name: 'slug',
+                value: slug,
+            });
         }
 
-        createNodeField({
-            node,
-            name: 'collection',
-            value: collection,
-        });
+        if (collection === 'dips') { 
+            createNodeField({
+                node,
+                name: 'slug',
+                value: '/dips' + slug,
+            });
+        }
 
-        createNodeField({
-            node,
-            name: 'slug',
-            value: slug,
-        });
+        if (collection === 'blogs') { 
+            createNodeField({
+                node,
+                name: 'slug',
+                value: '/blog' + slug,
+            });
+        }
     }
 };
