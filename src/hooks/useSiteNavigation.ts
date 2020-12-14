@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import { PageContentType } from 'src/types/PageContentType'
+import { Page } from 'src/types/Page'
 
-export const useSiteNavigation = (lang: 'en' | 'es' = 'en'): Array<PageContentType> => {
+export const useSiteNavigation = (lang: 'en' | 'es' = 'en'): Array<Page> => {
   const data = useStaticQuery(graphql`
     query {
       english: allMarkdownRemark(
@@ -61,7 +61,7 @@ export const useSiteNavigation = (lang: 'en' | 'es' = 'en'): Array<PageContentTy
   return nodes.filter((i: any) => i.fields.level === 0).map((i: any) => mapNodeToPage(i, nodes))
 }
 
-function mapNodeToPage(source: any, nodes?: any): PageContentType {
+function mapNodeToPage(source: any, nodes?: any): Page {
   return {
     title: source.frontmatter.title,
     template: source.frontmatter.template,

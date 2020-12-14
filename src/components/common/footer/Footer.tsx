@@ -31,7 +31,7 @@ export const Footer = (props: Props) => {
     <div className={`footer ${css['container']}`}>
       <div className={css['top-section']}>
         <div className={css['col-1']}>
-          <img src={logo} />
+          <img src={logo} alt="Devcon" />
         </div>
         <div className={css['col-2']}>
           <h2>Program</h2>
@@ -99,7 +99,7 @@ export const Footer = (props: Props) => {
             <p>Ethereum Foundation</p>
           </div>
 
-          <img src={smallLogo} />
+          <img src={smallLogo} alt="Devcon" />
         </div>
       </div>
     </div>
