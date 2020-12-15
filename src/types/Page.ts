@@ -16,7 +16,7 @@ export interface Page {
   order?: number
   slug: string
   showInMenu: boolean
-  autoTranslated?: boolean
+  translationVerified?: boolean
   lang: string
   children: Array<Page>
 }
