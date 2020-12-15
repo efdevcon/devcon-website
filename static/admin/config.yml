@@ -5,7 +5,7 @@ backend:
   accept_roles:
     - admin
     - editor
-    
+
 slug:
   encoding: 'ascii'
   clean_accents: true
@@ -38,7 +38,7 @@ collections:
       - { name: 'parent', label: 'Parent', widget: 'relation', i18n: duplicate, required: false, collection: pages, value_field: '{{slug}}', search_fields: ['{{slug}}'] }
       - { name: 'order', label: 'Order', widget: 'number', i18n: 'duplicate', required: false, value_type: 'int', min: 1, max: 1000, step: 1 }
       - { name: 'showInMenu', label: 'Show page in Menu', widget: 'boolean', i18n: 'duplicate', default: true }
-      - { name: 'autoTranslated', label: 'Automatically translated', widget: 'boolean', i18n: 'duplicate', default: true }
+      - { name: 'translationVerified', label: 'If this translation has been (manually) verified', widget: 'boolean', i18n: 'duplicate', default: false }
 
   - name: faq
     label: FAQ
