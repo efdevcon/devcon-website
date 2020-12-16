@@ -24,7 +24,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-matomo",
+      resolve: 'gatsby-plugin-matomo',
       options: {
         siteId: matomoSiteId,
         matomoUrl: matomoUrl,
@@ -50,6 +50,13 @@ module.exports = {
       options: {
         name: 'blogs',
         path: `${__dirname}/src/content/blogs`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'footer',
+        path: `${__dirname}/src/content/footer`,
       },
     },
     'gatsby-transformer-remark',

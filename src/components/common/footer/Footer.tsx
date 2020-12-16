@@ -12,20 +12,33 @@ import smallLogo from 'src/assets/images/footer-logo.svg'
 type Props = {}
 
 export const Footer = (props: Props) => {
-  const data = useStaticQuery(graphql`
+  const footerData = useStaticQuery(graphql`
     query FooterQuery {
-      allMarkdownRemark(filter: { frontmatter: { parent: { eq: "footer" } } }) {
+      allMarkdownRemark(filter: { fields: { collection: { eq: "footer" } } }) {
         nodes {
           id
           frontmatter {
-            parent
+            title
+            pages {
+              page
+            }
+            bottom_pages {
+              page
+            }
+            highlighted_pages {
+              page
+            }
           }
         }
       }
     }
   `)
 
-  console.log(data, 'footer query test')
+  // const pagesData = useStaticQuery(graphql``)
+
+  // ... second query for the pages?
+
+  // console.log(data, 'footer query atesst')
 
   return (
     <div className={`footer ${css['container']}`}>
@@ -81,7 +94,10 @@ export const Footer = (props: Props) => {
 
         <div className={css['col-6']}>
           <div className={css['scroll-up']}>
-            <IconArrowUpward />
+            <IconArrowUpward
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              style={{ cursor: 'pointer' }}
+            />
           </div>
         </div>
       </div>

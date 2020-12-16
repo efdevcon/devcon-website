@@ -9,6 +9,7 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "local-cms": "npx netlify-cms-proxy-server",
+    "debug": "node node_modules/.bin/gatsby develop --inspect",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,md}\"",
     "lint": "eslint --fix 'src/**/*.{ts,tsx}'",
     "serve": "gatsby serve",

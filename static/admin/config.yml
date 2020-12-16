@@ -5,7 +5,7 @@ backend:
   accept_roles:
     - admin
     - editor
-    
+
 slug:
   encoding: 'ascii'
   clean_accents: true
@@ -26,19 +26,61 @@ collections:
     label: 'Pages'
     label_singular: 'Page'
     folder: 'src/content/pages'
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     create: true
     i18n: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', i18n: true }
       - { name: 'description', label: 'Description', widget: 'text', i18n: true, required: false }
       - { name: 'body', label: 'Body', widget: 'markdown', i18n: true }
-      - { name: 'tags', label: 'Tags', widget: 'relation', i18n: 'duplicate', required: false, collection: 'tags', value_field: 'title', search_fields: ['title'], multiple: true }
-      - { name: 'template', label: 'Template', widget: 'select', i18n: 'duplicate', options: ['none', 'content', 'dips'], default: 'content' }
-      - { name: 'parent', label: 'Parent', widget: 'relation', i18n: duplicate, required: false, collection: pages, value_field: '{{slug}}', search_fields: ['{{slug}}'] }
-      - { name: 'order', label: 'Order', widget: 'number', i18n: 'duplicate', required: false, value_type: 'int', min: 1, max: 1000, step: 1 }
+      - {
+          name: 'tags',
+          label: 'Tags',
+          widget: 'relation',
+          i18n: 'duplicate',
+          required: false,
+          collection: 'tags',
+          value_field: 'title',
+          search_fields: ['title'],
+          multiple: true,
+        }
+      - {
+          name: 'template',
+          label: 'Template',
+          widget: 'select',
+          i18n: 'duplicate',
+          options: ['none', 'content', 'dips'],
+          default: 'content',
+        }
+      - {
+          name: 'parent',
+          label: 'Parent',
+          widget: 'relation',
+          i18n: duplicate,
+          required: false,
+          collection: pages,
+          value_field: '{{slug}}',
+          search_fields: ['{{slug}}'],
+        }
+      - {
+          name: 'order',
+          label: 'Order',
+          widget: 'number',
+          i18n: 'duplicate',
+          required: false,
+          value_type: 'int',
+          min: 1,
+          max: 1000,
+          step: 1,
+        }
       - { name: 'showInMenu', label: 'Show page in Menu', widget: 'boolean', i18n: 'duplicate', default: true }
-      - { name: 'autoTranslated', label: 'Automatically translated', widget: 'boolean', i18n: 'duplicate', default: true }
+      - {
+          name: 'autoTranslated',
+          label: 'Automatically translated',
+          widget: 'boolean',
+          i18n: 'duplicate',
+          default: true,
+        }
 
   - name: faq
     label: FAQ
@@ -49,8 +91,27 @@ collections:
     fields:
       - { name: title, label: Title, widget: string, i18n: true }
       - { name: body, label: Body, widget: markdown, i18n: true }
-      - { name: category, label: Category, widget: relation, i18n: duplicate, collection: categories, value_field: title, search_fields: ['title'], multiple: true }
-      - { name: order, label: Order, widget: number, i18n: duplicate, required: false, value_type: int, min: 1, max: 1000, step: 1 }
+      - {
+          name: category,
+          label: Category,
+          widget: relation,
+          i18n: duplicate,
+          collection: categories,
+          value_field: title,
+          search_fields: ['title'],
+          multiple: true,
+        }
+      - {
+          name: order,
+          label: Order,
+          widget: number,
+          i18n: duplicate,
+          required: false,
+          value_type: int,
+          min: 1,
+          max: 1000,
+          step: 1,
+        }
 
   - name: categories
     label: Categories
@@ -69,3 +130,42 @@ collections:
     i18n: true
     fields:
       - { name: title, label: Title, widget: string, i18n: true }
+
+  - name: footer
+    label: Footer
+    folder: src/content/footer
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - label: Highlighted pages
+        name: highlighted_pages
+        widget: list
+        fields:
+          - { name: page, label: Page, search_fields: ['slug'], value_field: slug, widget: relation, collection: pages }
+          - { name: order, label: Order, widget: number, required: false, value_type: int, min: 1, max: 1000, step: 1 }
+      - label: Pages
+        name: pages
+        widget: list
+        fields:
+          - {
+              name: page,
+              label: Page,
+              search_fields: ['title', 'parent'],
+              value_field: title,
+              widget: relation,
+              collection: pages,
+            }
+          - { name: order, label: Order, widget: number, required: false, value_type: int, min: 1, max: 1000, step: 1 }
+      - label: Bottom pages # name: tbd
+        name: bottom_pages
+        widget: list
+        fields:
+          - {
+              name: page,
+              label: Page,
+              search_fields: ['title', 'parent'],
+              value_field: title,
+              widget: relation,
+              collection: pages,
+            }
+          - { name: order, label: Order, widget: number, required: false, value_type: int, min: 1, max: 1000, step: 1 }
