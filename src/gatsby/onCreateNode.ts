@@ -1,12 +1,18 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
+import { GatsbyNode } from 'gatsby';
+import { createFilePath } from 'gatsby-source-filesystem';
 
-module.exports = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+interface NodeFrontmatter { 
+    title: string
+    parent: string
+}
+
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const frontmatter = node.frontmatter
-    const collection = getNode(node.parent).sourceInstanceName
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const frontmatter = node.frontmatter as NodeFrontmatter;
+    const collection = getNode(node.parent || '').sourceInstanceName;
+    const slug = createFilePath({ node, getNode, basePath: `pages` });
 
     createNodeField({
       node,
@@ -89,4 +95,4 @@ module.exports = ({ node, getNode, actions }) => {
       })
     }
   }
-}
+};

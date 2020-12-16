@@ -3,19 +3,20 @@ import { Tag } from './tag'
 export enum PageTemplateType {
   'none',
   'content',
+  'dips',
 }
 
-export interface PageContentType {
+export interface Page {
   title: string
   description?: string
   body?: string
   tags?: Array<Tag>
   template: PageTemplateType
-  parent?: PageContentType
+  parent?: Page
   order?: number
   slug: string
   showInMenu: boolean
-  autoTranslated?: boolean
+  translationVerified?: boolean
   lang: string
-  children: Array<PageContentType>
+  children: Array<Page>
 }

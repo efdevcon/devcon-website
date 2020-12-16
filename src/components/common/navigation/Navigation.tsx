@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
-import { PageContentType } from 'src/types/PageContentType'
+import { Page } from 'src/types/Page'
 import { useSiteNavigation } from 'src/hooks/useSiteNavigation'
 
 export function Navigation() {
@@ -11,12 +11,12 @@ export function Navigation() {
 
   return (
     <ul className="navigation">
-      {pages.map((i: PageContentType) => (
+      {pages.map((i: Page) => (
         <li key={i.slug}>
           <Link to={i.slug}>{i.title}</Link>
 
           <ul>
-            {i.children.map((c: PageContentType) => (
+            {i.children.map((c: Page) => (
               <li key={c.slug}>
                 <Link to={c.slug}>{c.title}</Link>
               </li>

@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: efdevcon/devcon-website
-  branch: main
+  branch: feature-portal
   accept_roles:
     - admin
     - editor
@@ -75,11 +75,11 @@ collections:
         }
       - { name: 'showInMenu', label: 'Show page in Menu', widget: 'boolean', i18n: 'duplicate', default: true }
       - {
-          name: 'autoTranslated',
-          label: 'Automatically translated',
+          name: 'translationVerified',
+          label: 'If this translation has been (manually) verified',
           widget: 'boolean',
           i18n: 'duplicate',
-          default: true,
+          default: false,
         }
 
   - name: faq

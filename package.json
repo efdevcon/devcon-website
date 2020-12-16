@@ -17,7 +17,6 @@
     "test": "jest --watch"
   },
   "dependencies": {
-    "@types/react-helmet": "^6.1.0",
     "gatsby": "^2.25.3",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^2.8.0",
@@ -38,12 +37,15 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.12.1",
     "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.13",
     "@types/react": "^16.9.56",
     "@types/react-dom": "^16.9.9",
+    "@types/react-helmet": "^6.1.0",
     "@types/react-test-renderer": "^16.9.3",
     "babel-jest": "^26.6.3",
     "babel-preset-gatsby": "^0.6.0",
     "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-ts-config": "^1.1.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.1.2",

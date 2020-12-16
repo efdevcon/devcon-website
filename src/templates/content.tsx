@@ -27,7 +27,6 @@ export const query = graphql`
         title
         template
         description
-        autoTranslated
       }
     }
   }
