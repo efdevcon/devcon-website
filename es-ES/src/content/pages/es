@@ -1,8 +1,9 @@
 ---
-title: Tickets EN
+title: Ticket FAQ
 template: content
-order: 3
+parent: tickets
+order: 5
 showInMenu: true
 ---
 
-Tickets EN
+Ticket FAQ
