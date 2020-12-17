@@ -1,8 +1,8 @@
 ---
-title: Get Involved
-template: content
+title: Participar
+template: contenido
 order: 5
-showInMenu: true
+showInMenu: verdad
 ---
 
-Get Involved ES
+Participar
