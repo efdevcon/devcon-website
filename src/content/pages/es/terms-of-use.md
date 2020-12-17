@@ -1,9 +1,9 @@
 ---
-title: Terms of use
-template: content
-parent: footer
+title: Términos de uso
+template: contenido
+parent: pie de página
 order: 5
-showInMenu: true
+showInMenu: verdad
 ---
 
-Terms of use
+Términos de uso
