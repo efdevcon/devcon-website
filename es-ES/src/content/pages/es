@@ -1,8 +1,9 @@
 ---
-title: News EN
+title: Code of conduct
 template: content
-order: 1
+parent: footer
+order: 2
 showInMenu: true
 ---
 
-News EN
+Code of conduct
