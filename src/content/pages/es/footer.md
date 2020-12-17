@@ -1,8 +1,8 @@
 ---
-title: Footer
-template: none
+title: Pie
+template: ninguno
 order: 9
-showInMenu: false
+showInMenu: falso
 ---
 
-Footer
+Pie
