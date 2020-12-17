@@ -1,9 +1,9 @@
 ---
-title: Cookie policy
+title: Contact
+description: Contact description
 template: content
-parent: footer
-order: 4
+order: 8
 showInMenu: true
 ---
 
-Cookie policy
+Contact
