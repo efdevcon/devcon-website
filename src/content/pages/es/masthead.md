@@ -1,9 +1,9 @@
 ---
-title: Masthead
-template: content
-parent: footer
+title: Cabezal
+template: contenido
+parent: pie de página
 order: 6
-showInMenu: true
+showInMenu: verdad
 ---
 
-Masthead
+Cabezal
