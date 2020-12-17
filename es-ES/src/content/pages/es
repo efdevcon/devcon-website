@@ -1,9 +1,9 @@
 ---
-title: FAQ
-template: content
-parent: footer
-order: 1
+title: DIPs
+template: dips
+parent: get-involved
+order: 2
 showInMenu: true
 ---
 
-FAQ
+DIPs EN
