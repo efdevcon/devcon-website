@@ -1,9 +1,9 @@
 ---
-title: Cookie policy
-template: content
-parent: footer
+title: Política de cookies
+template: contenido
+parent: pie de página
 order: 4
-showInMenu: true
+showInMenu: verdad
 ---
 
-Cookie policy
+Política de cookies
