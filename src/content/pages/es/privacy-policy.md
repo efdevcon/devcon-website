@@ -1,9 +1,9 @@
 ---
-title: Privacy policy
-template: content
-parent: footer
+title: Política de privacidad
+template: contenido
+parent: pie de página
 order: 3
-showInMenu: true
+showInMenu: verdad
 ---
 
-Privacy policy
+Política de privacidad
