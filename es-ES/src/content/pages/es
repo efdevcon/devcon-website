@@ -1,9 +1,9 @@
 ---
-title: Eventos pasados
+title: Cabezal
 template: contenido
-parent: sobre
-order: 3
+parent: pie de página
+order: 6
 showInMenu: verdad
 ---
 
-Eventos pasados
+Cabezal
