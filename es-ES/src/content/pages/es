@@ -1,8 +1,9 @@
 ---
-title: Acerca de Devcon
+title: Contacto
+description: Descripción del contacto
 template: contenido
-order: 6
+order: 8
 showInMenu: verdad
 ---
 
-About Devcon ES
+Contacto
