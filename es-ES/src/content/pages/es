@@ -1,8 +1,9 @@
 ---
-title: Noticias ES
+title: Política de privacidad
 template: contenido
-order: 1
+parent: pie de página
+order: 3
 showInMenu: verdad
 ---
 
-Noticias ES
+Política de privacidad
