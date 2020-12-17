@@ -1,8 +1,8 @@
 ---
-title: Get Involved
-template: content
-order: 5
-showInMenu: true
+title: Footer
+template: none
+order: 9
+showInMenu: false
 ---
 
-Get Involved
+Footer
