@@ -1,9 +1,9 @@
 ---
 title: Contacto
-description: Contacto description ES
-template: content
+description: Descripción del contacto
+template: contenido
 order: 8
-showInMenu: true
+showInMenu: verdad
 ---
 
-Contacto ES
+Contacto
