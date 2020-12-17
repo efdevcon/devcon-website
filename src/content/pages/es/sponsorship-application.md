@@ -1,9 +1,9 @@
 ---
-title: Sponsorship application
-template: content
-parent: contact
+title: Aplicación de patrocinio
+template: contenido
+parent: contacto
 order: 2
-showInMenu: true
+showInMenu: verdad
 ---
 
-Sponsorship application
+Aplicación de patrocinio
