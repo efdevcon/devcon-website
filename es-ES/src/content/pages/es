@@ -1,8 +1,9 @@
 ---
-title: Tickets ES
+title: Preguntas frecuentes
 template: contenido
-order: 3
+parent: tickets
+order: 5
 showInMenu: verdad
 ---
 
-Tickets ES
+Preguntas frecuentes
