@@ -1,8 +1,9 @@
 ---
-title: About Devcon
+title: Past events
 template: content
-order: 6
+parent: about
+order: 3
 showInMenu: true
 ---
 
-About Devcon EN
+Past events
