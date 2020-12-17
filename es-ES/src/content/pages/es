@@ -1,9 +1,9 @@
 ---
-title: Proceso DIP
-template: contenido
+title: DI
+template: dips
 parent: involucrarse
-order: 1
+order: 2
 showInMenu: verdad
 ---
 
-Proceso DIP
+DIPs EN
