@@ -1,9 +1,8 @@
 ---
-title: Cabezal
+title: Ubicación
 template: contenido
-parent: pie de página
-order: 6
+order: 7
 showInMenu: verdad
 ---
 
-Cabezal
+Ubicación EN
