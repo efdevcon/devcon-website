@@ -1,9 +1,9 @@
 ---
-title: DIP process
-template: content
-parent: get-involved
+title: Proceso DIP
+template: contenido
+parent: involucrarse
 order: 1
-showInMenu: true
+showInMenu: verdad
 ---
 
-DIP process
+Proceso DIP
