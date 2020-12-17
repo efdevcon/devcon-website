@@ -1,8 +1,9 @@
 ---
-title: Footer
-template: none
-order: 9
-showInMenu: false
+title: FAQ
+template: content
+parent: footer
+order: 1
+showInMenu: true
 ---
 
-Footer
+FAQ
