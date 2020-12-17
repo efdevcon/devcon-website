@@ -1,9 +1,9 @@
 {
-  "title": "Devcon",
+  "title": "Discón",
   "description": "La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.",
   "hello": "Hola Devcon",
   "notfound": {
-    "header": "NO ENCONTRADO",
+    "header": "NO FUNCIONADO",
     "description": "La página solicitada no pudo ser encontrada."
   }
 }
