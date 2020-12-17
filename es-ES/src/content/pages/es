@@ -1,9 +1,8 @@
 ---
-title: Masthead
+title: Location
 template: content
-parent: footer
-order: 6
+order: 7
 showInMenu: true
 ---
 
-Masthead
+Location EN
