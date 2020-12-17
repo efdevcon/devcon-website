@@ -1,8 +1,8 @@
 ---
 title: Ubicación
-template: content
+template: contenido
 order: 7
-showInMenu: true
+showInMenu: verdad
 ---
 
-Ubicación ES
+Ubicación EN
