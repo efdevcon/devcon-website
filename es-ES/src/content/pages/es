@@ -1,9 +1,9 @@
 ---
-title: Contacto
-description: Descripción del contacto
+title: Política de cookies
 template: contenido
-order: 8
+parent: pie de página
+order: 4
 showInMenu: verdad
 ---
 
-Contacto
+Política de cookies
