@@ -1,8 +1,8 @@
 ---
-title: News ES
-template: content
+title: Noticias ES
+template: contenido
 order: 1
-showInMenu: true
+showInMenu: verdad
 ---
 
-News ES
+Noticias ES
