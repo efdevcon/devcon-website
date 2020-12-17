@@ -1,8 +1,8 @@
 ---
 title: Acerca de Devcon
-template: content
+template: contenido
 order: 6
-showInMenu: true
+showInMenu: verdad
 ---
 
-Acerca de Devcon ES
+About Devcon ES
