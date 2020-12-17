@@ -1,9 +1,9 @@
 ---
-title: Press application
-template: content
-parent: contact
+title: Presione la aplicación
+template: contenido
+parent: contacto
 order: 1
-showInMenu: true
+showInMenu: verdad
 ---
 
-Press application
+Presione la aplicación
