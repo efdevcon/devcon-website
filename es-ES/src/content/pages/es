@@ -1,9 +1,9 @@
 ---
-title: Privacy policy
+title: Press application
 template: content
-parent: footer
-order: 3
+parent: contact
+order: 1
 showInMenu: true
 ---
 
-Privacy policy
+Press application
