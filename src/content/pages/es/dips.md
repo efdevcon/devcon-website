@@ -1,9 +1,9 @@
 ---
-title: DIPs
+title: DI
 template: dips
-parent: get-involved
+parent: involucrarse
 order: 2
-showInMenu: true
+showInMenu: verdad
 ---
 
-DIPs ES
+DIPs EN
