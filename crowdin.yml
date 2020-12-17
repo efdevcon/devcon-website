@@ -1,0 +1,5 @@
+files:
+  - source: src/content/pages/en
+    translation: src/content/pages/%two_letters_code%
+  - source: src/content/i18n/en.json
+    translation: src/content/i18n/%two_letters_code%.json
