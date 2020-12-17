@@ -1,9 +1,9 @@
 ---
-title: Past events
-template: content
-parent: about
+title: Eventos pasados
+template: contenido
+parent: sobre
 order: 3
-showInMenu: true
+showInMenu: verdad
 ---
 
-Past events ES
+Eventos pasados
