@@ -1,9 +1,9 @@
 ---
-title: Venue
-template: content
-parent: location
+title: Lugar
+template: contenido
+parent: ubicación
 order: 1
-showInMenu: true
+showInMenu: verdad
 ---
 
-Venue
+Lugar
