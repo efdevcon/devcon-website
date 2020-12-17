@@ -1,9 +1,8 @@
 ---
-title: Venue
+title: Tickets EN
 template: content
-parent: location
-order: 1
+order: 3
 showInMenu: true
 ---
 
-Venue
+Tickets EN
