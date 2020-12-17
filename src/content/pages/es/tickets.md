@@ -1,8 +1,8 @@
 ---
-title: Entradas
-template: content
+title: Tickets ES
+template: contenido
 order: 3
-showInMenu: true
+showInMenu: verdad
 ---
 
-Entradas
+Tickets ES
