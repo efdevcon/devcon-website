@@ -1,9 +1,9 @@
 ---
 title: FAQ
-template: content
-parent: footer
+template: contenido
+parent: pie de página
 order: 1
-showInMenu: true
+showInMenu: verdad
 ---
 
 FAQ
