@@ -1,6 +1,4 @@
-import EN from 'src/content/i18n/en.json';
-import ES from 'src/content/i18n/es.json';
-
+const title = 'Devcon'
 const siteUrl = 'https://devcon.org'
 const defaultLanguage = 'en'
 const secondaryLanguage = 'es'
@@ -26,9 +24,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: EN.title,
-        short_name: EN.title,
-        description: EN.description,
+        name: title,
+        short_name: title,
+        description: 'The annual conference for all Ethereum developers, researchers, thinkers, and makers.',
         lang: defaultLanguage,
         start_url: `/${defaultLanguage}/`,
         background_color: '#fff',
@@ -39,9 +37,9 @@ module.exports = {
           {
             start_url: `/${secondaryLanguage}/`,
             lang: secondaryLanguage,
-            name: ES.title,
-            short_name: ES.title,
-            description: ES.description,
+            name: title,
+            short_name: title,
+            description: 'La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.',
           },
         ],
       },
