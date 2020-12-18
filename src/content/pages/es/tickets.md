@@ -1,5 +1,5 @@
 ---
-title: Tickets ES
+title: Tickets
 template: contenido
 order: 3
 showInMenu: verdad
