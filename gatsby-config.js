@@ -68,7 +68,7 @@ module.exports = {
         short_name: title,
         description: 'The annual conference for all Ethereum developers, researchers, thinkers, and makers.',
         lang: defaultLanguage,
-        start_url: `/${defaultLanguage}/`,
+        start_url: '/',
         background_color: '#fff',
         theme_color: '#663399',
         display: `standalone`,
