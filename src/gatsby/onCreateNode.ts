@@ -1,4 +1,4 @@
-import { GatsbyNode } from 'gatsby';
+import { GatsbyNode, NodePluginArgs, Node } from 'gatsby';
 import { createFilePath } from 'gatsby-source-filesystem';
 
 interface NodeFrontmatter { 
@@ -6,7 +6,29 @@ interface NodeFrontmatter {
     parent: string
 }
 
-export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, getNode, actions }) => {
+// const getFooterNode = (() => {
+//   let footerNode: Node | undefined | any;
+
+//   return (getNodesByType: NodePluginArgs["getNodesByType"], getNode: NodePluginArgs["getNode"]) => {
+//     if (footerNode) return footerNode;
+
+//     const allMarkdownNodes = getNodesByType('MarkdownRemark');
+
+//     console.log(allMarkdownNodes.length, 'all markdown nodes');
+
+//     footerNode = allMarkdownNodes.find(node => {
+//       // console.log(node, 'node');
+//       const collection = getNode(node.parent || '').sourceInstanceName;
+
+//       if (collection === 'footer') {
+//         console.log(collection, 'collection MATCH');
+//         return node;
+//       }
+//     });
+//   };
+// })();
+
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, getNode, getNodesByType, actions }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
@@ -26,7 +48,7 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, getNode, action
       const level = frontmatter.parent ? 1 : 0
       const parent = frontmatter.parent ? '/' + lang + '/' + frontmatter.parent + '/' : ''
 
-      console.log('Create node', collection, slug, lang, level, parent)
+      // console.log('Create node', collection, slug, lang, level, parent)
 
       createNodeField({
         node,
@@ -51,6 +73,8 @@ export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, getNode, action
         name: 'slug',
         value: slug,
       })
+
+      // const footerNode = getFooterNode(getNodesByType, getNode);
     }
 
     // if (collection === 'footer') {

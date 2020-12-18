@@ -15,7 +15,7 @@ module.exports = {
       resolve: 'gatsby-plugin-ts-config',
       options: {
         configDir: './src/gatsby',
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

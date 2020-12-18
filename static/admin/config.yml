@@ -133,39 +133,88 @@ collections:
 
   - name: footer
     label: Footer
-    folder: src/content/footer
-    create: true
-    fields:
-      - { name: title, label: Title, widget: string }
-      - label: Highlighted pages
-        name: highlighted_pages
-        widget: list
+    files:
+      - label: 'Footer settings'
+        name: 'footer settings'
+        file: src/content/footer/settings.md
         fields:
-          - { name: page, label: Page, search_fields: ['slug'], value_field: slug, widget: relation, collection: pages }
-          - { name: order, label: Order, widget: number, required: false, value_type: int, min: 1, max: 1000, step: 1 }
-      - label: Pages
-        name: pages
-        widget: list
-        fields:
-          - {
-              name: page,
-              label: Page,
-              search_fields: ['title', 'parent'],
-              value_field: title,
-              widget: relation,
-              collection: pages,
-            }
-          - { name: order, label: Order, widget: number, required: false, value_type: int, min: 1, max: 1000, step: 1 }
-      - label: Bottom pages # name: tbd
-        name: bottom_pages
-        widget: list
-        fields:
-          - {
-              name: page,
-              label: Page,
-              search_fields: ['title', 'parent'],
-              value_field: title,
-              widget: relation,
-              collection: pages,
-            }
-          - { name: order, label: Order, widget: number, required: false, value_type: int, min: 1, max: 1000, step: 1 }
+          - label: Highlighted links
+            name: highlightedLinks
+            widget: list
+            types:
+              - label: Page
+                name: page
+                fields:
+                  - {
+                      name: title,
+                      label: Page,
+                      search_fields: ['title'],
+                      value_field: 'title',
+                      widget: relation,
+                      collection: pages,
+                    }
+              - label: URL
+                name: url
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: URL, widget: string }
+          - label: Left links
+            name: leftLinks
+            widget: list
+            types:
+              - label: Page
+                name: page
+                fields:
+                  - {
+                      name: title,
+                      label: Page,
+                      search_fields: ['title'],
+                      value_field: 'title',
+                      widget: relation,
+                      collection: pages,
+                    }
+              - label: URL
+                name: url
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: URL, widget: string }
+          - label: Right links
+            name: rightLinks
+            widget: list
+            types:
+              - label: Page
+                name: page
+                fields:
+                  - {
+                      name: title,
+                      label: Page,
+                      search_fields: ['title'],
+                      value_field: 'title',
+                      widget: relation,
+                      collection: pages,
+                    }
+              - label: URL
+                name: url
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: URL, widget: string }
+          - label: Bottom links
+            name: bottomLinks
+            widget: list
+            types:
+              - label: Page
+                name: page
+                fields:
+                  - {
+                      name: title,
+                      label: Page,
+                      search_fields: ['title'],
+                      value_field: 'title',
+                      widget: relation,
+                      collection: pages,
+                    }
+              - label: URL
+                name: url
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: url, label: URL, widget: string }

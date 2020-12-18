@@ -29,6 +29,10 @@
     grid-column: 12 / 13;
   }
 
+  @media (max-width: $screen-md) {
+    // TBD - waiting on design
+  }
+
   @media (max-width: $screen-sm) {
     // TBD - waiting on design
   }

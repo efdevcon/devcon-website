@@ -1,6 +1,5 @@
 import React from 'react'
 import css from './footer.module.scss'
-import { graphql, useStaticQuery } from 'gatsby'
 import IconArrowUpward from 'src/assets/icons/arrow_upward.svg'
 import IconGithub from 'src/assets/icons/github.svg'
 import IconShare from 'src/assets/icons/share.svg'
@@ -8,37 +7,31 @@ import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconYoutube from 'src/assets/icons/youtube.svg'
 import logo from 'src/assets/images/test-asset.svg'
 import smallLogo from 'src/assets/images/footer-logo.svg'
+import { useIntl } from 'gatsby-plugin-intl'
+import { Link } from 'gatsby'
+import { Link as LinkType } from 'src/types/Link'
+import useFooterData from './useFooterData'
 
 type Props = {}
 
+const resolveUrl = (link: any, lang: String) => {
+  if (link.type === 'page') {
+    return link.url.replace(':lang', lang)
+  }
+
+  return link.url
+}
+
 export const Footer = (props: Props) => {
-  const footerData = useStaticQuery(graphql`
-    query FooterQuery {
-      allMarkdownRemark(filter: { fields: { collection: { eq: "footer" } } }) {
-        nodes {
-          id
-          frontmatter {
-            title
-            pages {
-              page
-            }
-            bottom_pages {
-              page
-            }
-            highlighted_pages {
-              page
-            }
-          }
-        }
-      }
-    }
-  `)
+  const data = useFooterData()
 
-  // const pagesData = useStaticQuery(graphql``)
+  console.log(data, 'data')
 
-  // ... second query for the pages?
+  const { leftLinks, rightLinks, bottomLinks, highlightedLinks } = data.allMarkdownRemark.nodes[0].frontmatter
 
-  // console.log(data, 'footer query atesst')
+  // Should probably make a hook to fetch current language (used in multiple separate places)
+  const intl = useIntl()
+  const lang = intl.locale === 'es' ? 'es' : 'en'
 
   return (
     <div className={`footer ${css['container']}`}>
@@ -47,10 +40,15 @@ export const Footer = (props: Props) => {
           <img src={logo} alt="Devcon" />
         </div>
         <div className={css['col-2']}>
-          <h2>Program</h2>
-          <h2>Tickets</h2>
-          <h2>Bogota</h2>
-          <h2>Archive</h2>
+          {highlightedLinks.map((link: LinkType, index: number) => {
+            return (
+              <h2 key={index}>
+                <Link className="plain" to={resolveUrl(link, lang)}>
+                  {link.title}
+                </Link>
+              </h2>
+            )
+          })}
 
           <div className={css['social-media']}>
             <IconTwitter />
@@ -62,28 +60,32 @@ export const Footer = (props: Props) => {
 
         <div className={css['col-3']}>
           <ul className={css['list']}>
-            <li className="bold">About</li>
-            <li className="bold">Program</li>
-            <li className="bold">Speakers</li>
-            <li className="bold">UX Awards</li>
-            <li className="bold">Venue</li>
-            <li className="bold">Bogota</li>
-            <li className="bold">Tickets</li>
-            <li className="bold">COVID-19</li>
+            {leftLinks.map((link: LinkType, index: number) => {
+              return (
+                <li className="bold" key={index}>
+                  <Link className="plain" to={resolveUrl(link, lang)}>
+                    {link.title}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <div className={css['col-4']}>
           <ul className={css['list']}>
-            <li className="bold">News</li>
-            <li className="bold">Community</li>
-            <li className="bold">Sponsors</li>
-            <li className="bold">DIP Process</li>
-            <li className="bold">Forum</li>
-            <li className="bold">Blog</li>
+            {rightLinks.map((link: LinkType, index: number) => {
+              return (
+                <li className="bold" key={index}>
+                  <Link className="plain" to={resolveUrl(link, lang)}>
+                    {link.title}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <div className={css['col-5']}>
-          <div className={css['list']}>
+          <div className={css['contact']}>
             <p className="bold">Get in touch</p>
             <p>devcon@ethereum.org</p>
 
@@ -107,15 +109,20 @@ export const Footer = (props: Props) => {
 
         <div className={css['col-2']}>
           <div className={css['left']}>
-            <p>FAQ</p>
-            <p>Code of conduct</p>
-            <p>Privacy Policy</p>
-            <p>Cookie Policy</p>
-            <p>Terms of Use</p>
-            <p>Ethereum Foundation</p>
+            {bottomLinks.map((link: LinkType, index: number) => {
+              return (
+                <p className="bold" key={index}>
+                  <Link className="plain" to={resolveUrl(link, lang)}>
+                    {link.title}
+                  </Link>
+                </p>
+              )
+            })}
           </div>
 
-          <img src={smallLogo} alt="Devcon" />
+          <Link to="https://ethereum.foundation">
+            <img src={smallLogo} alt="Devcon" />
+          </Link>
         </div>
       </div>
     </div>
