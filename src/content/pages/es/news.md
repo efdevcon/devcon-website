@@ -1,5 +1,5 @@
 ---
-title: News ES
+title: Noticias
 template: content
 order: 1
 showInMenu: true

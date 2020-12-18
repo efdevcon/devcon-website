@@ -1,9 +1,13 @@
-const supportedLanguages = ['en', 'es']
-const defaultLanguage = 'en'
-const siteName = 'devcon.org'
+const title = 'Devcon'
 const siteUrl = 'https://devcon.org'
+const defaultLanguage = 'en'
+const secondaryLanguage = 'es'
+const supportedLanguages = [defaultLanguage, secondaryLanguage]
+
 const matomoSiteId = '8'
 const matomoUrl = 'https://matomo.ethereum.org'
+
+const offlinePages = ['/en/', '/es/', '/en/contact/', '/es/contact/']
 
 module.exports = {
   plugins: [
@@ -20,13 +24,31 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: siteName,
-        short_name: siteName,
-        start_url: '/en/',
+        name: title,
+        short_name: title,
+        description: 'The annual conference for all Ethereum developers, researchers, thinkers, and makers.',
+        lang: defaultLanguage,
+        start_url: `/${defaultLanguage}/`,
         background_color: '#fff',
         theme_color: '#663399',
         display: `standalone`,
         icon: `src/assets/images/devcon-icon.png`,
+        localize: [
+          {
+            start_url: `/${secondaryLanguage}/`,
+            lang: secondaryLanguage,
+            name: title,
+            short_name: title,
+            description: 'La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.',
+          },
+        ],
+      },
+    },
+    //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: offlinePages,
       },
     },
     {

@@ -9,7 +9,8 @@
       "skipLibCheck": true,
       "esModuleInterop": true,
       "baseUrl": "./",
-      "types": []
+      "types": ["node"],
+      "lib": ["dom", "es2015"],
     },
     "include": [
       "src"
