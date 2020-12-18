@@ -1,5 +1,5 @@
 ---
-title: Noticias ES
+title: News
 template: contenido
 order: 1
 showInMenu: verdad
