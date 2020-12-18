@@ -1,9 +1,15 @@
-const supportedLanguages = ['en', 'es']
-const defaultLanguage = 'en'
-const siteName = 'devcon.org'
+import EN from 'src/content/i18n/en.json';
+import ES from 'src/content/i18n/es.json';
+
 const siteUrl = 'https://devcon.org'
+const defaultLanguage = 'en'
+const secondaryLanguage = 'es'
+const supportedLanguages = [defaultLanguage, secondaryLanguage]
+
 const matomoSiteId = '8'
 const matomoUrl = 'https://matomo.ethereum.org'
+
+const offlinePages = ['/en/', '/es/', '/en/contact/', '/es/contact/']
 
 module.exports = {
   plugins: [
@@ -20,13 +26,31 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: siteName,
-        short_name: siteName,
-        start_url: '/en/',
+        name: EN.title,
+        short_name: EN.title,
+        description: EN.description,
+        lang: defaultLanguage,
+        start_url: `/${defaultLanguage}/`,
         background_color: '#fff',
         theme_color: '#663399',
         display: `standalone`,
         icon: `src/assets/images/devcon-icon.png`,
+        localize: [
+          {
+            start_url: `/${secondaryLanguage}/`,
+            lang: secondaryLanguage,
+            name: ES.title,
+            short_name: ES.title,
+            description: ES.description,
+          },
+        ],
+      },
+    },
+    //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: offlinePages,
       },
     },
     {
