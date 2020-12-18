@@ -14,7 +14,7 @@ export function Navigation() {
     <ul className={css['navigation']}>
       {pages.map((i: Page) => (
         <li key={i.slug}>
-          <Link to={i.slug} className="nav-link">{i.title}</Link>
+          <Link to={i.slug}>{i.title}</Link>
 
           <ul>
             {i.children.map((c: Page) => (

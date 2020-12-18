@@ -34,7 +34,5 @@ body {
 
 a { 
   color: $color-primary;
-}
-a:hover { 
-  color: $color-secondary;
+  text-decoration: none;
 }

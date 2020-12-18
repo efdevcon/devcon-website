@@ -11,7 +11,7 @@ export default function Index() {
     <Default>
       <SEO />
 
-      <h2>{intl.formatMessage({ id: 'hello' })}</h2>
+      <h2>{intl.formatMessage({ id: 'journey' })}</h2>
       <div>{intl.formatMessage({ id: 'description' })}</div>
 
       <BlogOverview />

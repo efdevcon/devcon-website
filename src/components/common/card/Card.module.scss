@@ -1,0 +1,38 @@
+@import 'src/assets/css/common/grids.mixins';
+@import 'src/assets/css/common/typography.mixins';
+
+.card { 
+  overflow: hidden;
+  width: 526px;
+  margin: $size-8;
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img { 
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+.card-body { 
+  padding: $size-8;
+}
+
+.card-title { 
+  color: $color-primary;
+  margin-bottom: $size-8;
+}
+
+.card-text { 
+  color: $color-primary;
+}
+
+.card-meta { 
+  display: flex;
+}
+
+.card-meta small { 
+  margin-right: $size-8;
+}

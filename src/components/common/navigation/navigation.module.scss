@@ -12,3 +12,7 @@
   list-style-position: inside; 
   margin-left: 15px; 
 }
+
+.navigation a:hover {
+  color: $color-secondary;
+}
