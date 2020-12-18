@@ -1,0 +1,16 @@
+@import 'src/assets/css/common/grids.mixins';
+@import 'src/assets/css/common/typography.mixins';
+
+header {
+  display: flex; 
+  justify-content: space-between;
+}
+
+header h1 a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  color: $color-primary;
+}

@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Page } from 'src/types/Page'
 import { useSiteNavigation } from 'src/hooks/useSiteNavigation'
+import css from './navigation.module.scss'
 
 export function Navigation() {
   const intl = useIntl()
@@ -10,10 +11,10 @@ export function Navigation() {
   const pages = useSiteNavigation(lang)
 
   return (
-    <ul className="navigation">
+    <ul className={css['navigation']}>
       {pages.map((i: Page) => (
         <li key={i.slug}>
-          <Link to={i.slug}>{i.title}</Link>
+          <Link to={i.slug} className="nav-link">{i.title}</Link>
 
           <ul>
             {i.children.map((c: Page) => (

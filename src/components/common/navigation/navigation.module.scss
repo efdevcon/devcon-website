@@ -1,0 +1,14 @@
+@import 'src/assets/css/common/grids.mixins';
+@import 'src/assets/css/common/typography.mixins';
+
+.navigation { 
+  margin-left: 15px;
+  list-style-type: disc; 
+  list-style-position: inside; 
+}
+
+.navigation ul { 
+  list-style-type: circle; 
+  list-style-position: inside; 
+  margin-left: 15px; 
+}

@@ -31,3 +31,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a { 
+  color: $color-primary;
+}
+a:hover { 
+  color: $color-secondary;
+}
