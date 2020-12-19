@@ -1,21 +1,28 @@
-import { Link } from 'gatsby'
 import React from 'react'
 import { useBlogs } from 'src/hooks/useBlogs'
+import moment from 'moment'
+import css from './BlogOverview.module.scss'
+import { Card } from '../common/card'
+import { BlogPost } from 'src/types/BlogPost'
 
 export function BlogOverview() {
   const blogs = useBlogs()
 
   return (
     <div>
-      <h3>Blog Overview</h3>
+      <h3>BLOG</h3>
 
-      <ul>
-        {blogs.map(i => (
-          <li key={i.date.toISOString()}>
-            <Link to={`${i.slug}`}>{i.title}</Link>
-          </li>
+      <div className={css['card-columns']}>
+        {blogs.map((blog: BlogPost) => (
+          <Card
+            key={blog.slug}
+            title={blog.title}
+            imageUrl={blog.imageUrl}
+            linkUrl={blog.slug}
+            metadata={[moment(blog.date).format('ll'), blog.author]}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

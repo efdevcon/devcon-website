@@ -17,13 +17,13 @@
 //       }).then((page: any) => {
 //         return {
 //           title: page.frontmatter.title,
-//           slug: page.fields.slug, 
+//           slug: page.fields.slug,
 //           order: source.page.order
 //         }
 //       })
 //     },
 //   };
-  
+
 //   const resolvers = {
 //     Frontmatter: {
 //       pages: pageResolver,
@@ -31,6 +31,6 @@
 //       highlightedPages: pageResolver
 //     }
 //   };
-  
+
 //   createResolvers(resolvers as any);
 // };

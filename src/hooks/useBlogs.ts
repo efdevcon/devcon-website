@@ -13,6 +13,8 @@ export const useBlogs = (): Array<BlogPost> => {
             title
             date
             author
+            permaLink
+            imageUrl
           }
           fields {
             slug
@@ -33,5 +35,7 @@ function mapToBlog(source: any): BlogPost {
     author: source.frontmatter.author,
     body: source.html,
     slug: source.fields.slug,
+    permaLink: source.frontmatter.permaLink,
+    imageUrl: source.frontmatter.imageUrl,
   }
 }

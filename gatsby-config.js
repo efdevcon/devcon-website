@@ -1,5 +1,13 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://devcon.org',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 const title = 'Devcon'
-const siteUrl = 'https://devcon.org'
 const defaultLanguage = 'en'
 const secondaryLanguage = 'es'
 const supportedLanguages = [defaultLanguage, secondaryLanguage]
@@ -7,14 +15,46 @@ const supportedLanguages = [defaultLanguage, secondaryLanguage]
 const matomoSiteId = '8'
 const matomoUrl = 'https://matomo.ethereum.org'
 
-const offlinePages = ['/en/', '/es/', '/en/contact/', '/es/contact/']
+const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: siteUrl,
+  },
   plugins: [
     'gatsby-plugin-root-import',
     'gatsby-plugin-typescript',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/admin']
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            host: siteUrl,
+            sitemap: siteUrl + '/sitemap.xml',
+            policy: [{ userAgent: '*' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
     {
       resolve: 'gatsby-plugin-ts-config',
       options: {
@@ -28,7 +68,7 @@ module.exports = {
         short_name: title,
         description: 'The annual conference for all Ethereum developers, researchers, thinkers, and makers.',
         lang: defaultLanguage,
-        start_url: `/${defaultLanguage}/`,
+        start_url: '/',
         background_color: '#fff',
         theme_color: '#663399',
         display: `standalone`,

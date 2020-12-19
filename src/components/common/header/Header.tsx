@@ -1,7 +1,8 @@
 import React from 'react'
-import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
+import { useIntl } from 'gatsby-plugin-intl'
 import { LanguageToggle } from 'src/components/common/language-toggle'
+import './header.module.scss'
 
 export function Header() {
   const intl = useIntl()

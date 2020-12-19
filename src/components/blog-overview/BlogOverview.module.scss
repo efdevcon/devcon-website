@@ -1,0 +1,27 @@
+@import 'src/assets/css/common/grids.mixins';
+@import 'src/assets/css/common/typography.mixins';
+
+.card-columns { 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card { 
+  overflow: hidden;
+  width: 526px;
+  padding: 10px;
+}
+
+.card-img { 
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+.card-title { 
+  color: $color-primary;
+}
+
+.card-text { 
+  color: $color-primary;
+}

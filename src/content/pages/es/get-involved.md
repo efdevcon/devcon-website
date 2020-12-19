@@ -1,8 +1,8 @@
 ---
-title: Get Involved
+title: Involucrarse
 template: content
 order: 5
 showInMenu: true
 ---
 
-Get Involved ES
+Involucrarse
