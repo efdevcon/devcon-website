@@ -37,8 +37,11 @@ export const Footer = (props: Props) => {
     <div className={`footer ${css['container']}`}>
       <div className={css['top-section']}>
         <div className={css['col-1']}>
-          <img src={logo} alt="Devcon" />
+          <Link to={`/${lang}/`}>
+            <img src={logo} alt="Devcon" />
+          </Link>
         </div>
+
         <div className={css['col-2']}>
           {highlightedLinks.map((link: LinkType, index: number) => {
             return (
@@ -62,7 +65,7 @@ export const Footer = (props: Props) => {
           <ul className={css['list']}>
             {leftLinks.map((link: LinkType, index: number) => {
               return (
-                <li className="bold" key={index}>
+                <li className="semi-bold" key={index}>
                   <Link className="plain" to={resolveUrl(link, lang)}>
                     {link.title}
                   </Link>
@@ -71,11 +74,12 @@ export const Footer = (props: Props) => {
             })}
           </ul>
         </div>
+
         <div className={css['col-4']}>
           <ul className={css['list']}>
             {rightLinks.map((link: LinkType, index: number) => {
               return (
-                <li className="bold" key={index}>
+                <li className="semi-bold" key={index}>
                   <Link className="plain" to={resolveUrl(link, lang)}>
                     {link.title}
                   </Link>
@@ -84,13 +88,14 @@ export const Footer = (props: Props) => {
             })}
           </ul>
         </div>
+
         <div className={css['col-5']}>
           <div className={css['contact']}>
-            <p className="bold">Get in touch</p>
-            <p>devcon@ethereum.org</p>
+            <p className="semi-bold">Get in touch</p>
+            <p className={css['email']}>devcon@ethereum.org</p>
 
-            <p className="bold">Partner with us</p>
-            <p>sponsorships@ethereum.org</p>
+            <p className="semi-bold">Partner with us</p>
+            <p className={css['email']}>sponsorships@ethereum.org</p>
           </div>
         </div>
 
@@ -108,19 +113,19 @@ export const Footer = (props: Props) => {
         <div className={css['col-1']}>© 2021 — Ethereum Foundation. All Rights Reserved.</div>
 
         <div className={css['col-2']}>
-          <div className={css['left']}>
-            {bottomLinks.map((link: LinkType, index: number) => {
-              return (
-                <p className="bold" key={index}>
-                  <Link className="plain" to={resolveUrl(link, lang)}>
-                    {link.title}
-                  </Link>
-                </p>
-              )
-            })}
-          </div>
+          {bottomLinks.map((link: LinkType, index: number) => {
+            return (
+              <p className="semi-bold" key={index}>
+                <Link className="plain" to={resolveUrl(link, lang)}>
+                  {link.title}
+                </Link>
+              </p>
+            )
+          })}
+        </div>
 
-          <Link to="https://ethereum.foundation">
+        <div className={css['col-3']}>
+          <Link className={css['small-logo']} to="https://ethereum.foundation">
             <img src={smallLogo} alt="Devcon" />
           </Link>
         </div>

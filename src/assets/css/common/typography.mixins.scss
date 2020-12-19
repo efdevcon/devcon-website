@@ -31,7 +31,11 @@
 
 // Misc
 @mixin bold {
-  font-weight: bold;
+  font-weight: 700;
+}
+
+@mixin semi-bold {
+  font-weight: 600;
 }
 
 // @mixin font-xs {

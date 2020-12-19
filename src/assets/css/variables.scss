@@ -30,8 +30,8 @@ $font-tertiary: 'Space Mono', monospace;
 // $size-8: $size-1 * 8; // 2rem 32px
 // $size-16: $size-1 * 16; // 4rem 64px
 
-// Add more as needed
-$size-1: 0.125rem; // 2px (assuming root font-size 16px)
+// Sizes relative to root font-size
+$size-1: 0.125rem; // 2px (assuming font-size in context is 16px)
 $size-2: $size-1 * 2;
 $size-3: $size-1 * 3;
 $size-4: $size-1 * 4; // 0.5rem 8px
@@ -50,12 +50,47 @@ $size-16: $size-1 * 16; // 2rem 32px
 $size-20: $size-1 * 20; // 2rem 40px;
 $size-32: $size-1 * 32; // 4rem 64px;
 
-// Gaps
-$gap-4: $size-1 * 4;
-$gap-8: $size-1 * 8;
-$gap-16: $size-1 * 16;
+$size-1-px: 2px;
+$size-2-px: $size-1 * 2;
+$size-3-px: $size-1 * 3;
+$size-4-px: $size-1 * 4; // 8px
+$size-5-px: $size-1 * 5;
+$size-6-px: $size-1 * 6;
+$size-7-px: $size-1 * 7;
+$size-8-px: $size-1 * 8; // 16px
+$size-9-px: $size-1 * 9;
+$size-10-px: $size-1 * 10;
+$size-11-px: $size-1 * 11;
+$size-12-px: $size-1 * 12;
+$size-13-px: $size-1 * 13;
+$size-14-px: $size-1 * 14;
+$size-15-px: $size-1 * 15;
+$size-16-px: $size-1 * 16; // 32px
+$size-20-px: $size-1 * 20; // 40px;
+$size-32-px: $size-1 * 32; // 64px;
+
+// Sizes relative to font-size in context
+// $size-1-rem: 0.125rem; // 2px (assuming root font-size 16px)
+// $size-2-rem: $size-1 * 2;
+// $size-3-rem: $size-1 * 3;
+// $size-4-rem: $size-1 * 4; // 0.5em 8px
+// $size-5-rem: $size-1 * 5;
+// $size-6-rem: $size-1 * 6;
+// $size-7-rem: $size-1 * 7;
+// $size-8-rem: $size-1 * 8; // 1em 16px
+// $size-9-rem: $size-1 * 9;
+// $size-10-rem: $size-1 * 10;
+// $size-11-rem: $size-1 * 11;
+// $size-12-rem: $size-1 * 12;
+// $size-13-rem: $size-1 * 13;
+// $size-14-rem: $size-1 * 14;
+// $size-15-rem: $size-1 * 15;
+// $size-16-rem: $size-1 * 16; // 2em 32px
+// $size-20-rem: $size-1 * 20; // 2em 40px;
+// $size-32-rem: $size-1 * 32; // 4em 64px;
 
 // Screens
+$screen-tiny: 410px;
 $screen-sm: 640px;
 $screen-md: 768px;
 $screen-lg: 1024px;

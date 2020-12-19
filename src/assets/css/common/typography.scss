@@ -1,5 +1,6 @@
 @import './typography.mixins';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
@@ -37,6 +38,10 @@ h4 {
 
 .bold {
   @include bold;
+}
+
+.semi-bold {
+  @include semi-bold;
 }
 
 // For cases where we don't want default link styling

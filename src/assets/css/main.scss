@@ -20,7 +20,7 @@ html {
     @include font-sm;
   }
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-md) {
     @include font-xs;
   }
 }
