@@ -85,7 +85,12 @@ module.exports = {
       },
     },
     //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-offline',	
+      options: {	
+        precachePages: offlinePages,	
+      },	
+    },
     {
       resolve: 'gatsby-plugin-matomo',
       options: {
