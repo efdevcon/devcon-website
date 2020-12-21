@@ -5,4 +5,4 @@ order: 1
 showInMenu: verdad
 ---
 
-Noticias ES
+Latest news & updates
