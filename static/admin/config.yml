@@ -79,6 +79,7 @@ collections:
           label: 'If this translation has been (manually) verified',
           widget: 'boolean',
           i18n: 'duplicate',
+          required: false,
           default: false,
         }
 
