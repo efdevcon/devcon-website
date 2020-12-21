@@ -10,7 +10,7 @@ export function LanguageToggle() {
 
   return (
     <div>
-      <Link to={`/en/${redirectPath}`}>EN</Link> | <Link to={`/es/${redirectPath}`}>ES</Link>
+      <Link to={`/en/${redirectPath}/`}>EN</Link> | <Link to={`/es/${redirectPath}/`}>ES</Link>
     </div>
   )
 }

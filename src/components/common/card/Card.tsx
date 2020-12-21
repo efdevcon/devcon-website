@@ -20,10 +20,8 @@ export function Card(props: CardProps) {
         <h4 className={css['card-title']}>{props.title}</h4>
         {props.description && <p className={css['card-text']}>{GetExcerpt(props.description)}</p>}
         <div className={css['card-meta']}>
-        {props.metadata && props.metadata.map(text => (
-            <small>{text}</small>
-        ))}
-        {props.linkUrl && <IconArrowRight />}
+          {props.metadata && props.metadata.map((text, index) => <small key={props.title + '_' + index}>{text}</small>)}
+          {props.linkUrl && <IconArrowRight />}
         </div>
       </div>
     </>

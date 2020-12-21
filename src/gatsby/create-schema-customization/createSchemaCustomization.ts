@@ -1,4 +1,4 @@
-import { CreateSchemaCustomizationArgs, GatsbyGraphQLObjectType } from 'gatsby'
+import { CreateSchemaCustomizationArgs } from 'gatsby'
 import { links as linksResolver } from './resolvers/links'
 
 const baseTypes = `

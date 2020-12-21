@@ -11,21 +11,12 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import { Link as LinkType } from 'src/types/Link'
 import useFooterData from './useFooterData'
+import { LinkComponent } from './Link'
 
 type Props = {}
 
-const resolveUrl = (link: any, lang: String) => {
-  if (link.type === 'page') {
-    return link.url.replace(':lang', lang)
-  }
-
-  return link.url
-}
-
 export const Footer = (props: Props) => {
   const data = useFooterData()
-
-  console.log(data, 'data')
 
   const { leftLinks, rightLinks, bottomLinks, highlightedLinks } = data.allMarkdownRemark.nodes[0].frontmatter
 
@@ -46,9 +37,7 @@ export const Footer = (props: Props) => {
           {highlightedLinks.map((link: LinkType, index: number) => {
             return (
               <h2 key={index}>
-                <Link className="plain" to={resolveUrl(link, lang)}>
-                  {link.title}
-                </Link>
+                <LinkComponent link={link} lang={lang} className="plain" />
               </h2>
             )
           })}
@@ -66,9 +55,7 @@ export const Footer = (props: Props) => {
             {leftLinks.map((link: LinkType, index: number) => {
               return (
                 <li className="semi-bold" key={index}>
-                  <Link className="plain" to={resolveUrl(link, lang)}>
-                    {link.title}
-                  </Link>
+                  <LinkComponent link={link} lang={lang} className="plain" />
                 </li>
               )
             })}
@@ -80,9 +67,7 @@ export const Footer = (props: Props) => {
             {rightLinks.map((link: LinkType, index: number) => {
               return (
                 <li className="semi-bold" key={index}>
-                  <Link className="plain" to={resolveUrl(link, lang)}>
-                    {link.title}
-                  </Link>
+                  <LinkComponent link={link} lang={lang} className="plain" />
                 </li>
               )
             })}
@@ -116,18 +101,16 @@ export const Footer = (props: Props) => {
           {bottomLinks.map((link: LinkType, index: number) => {
             return (
               <p className="semi-bold" key={index}>
-                <Link className="plain" to={resolveUrl(link, lang)}>
-                  {link.title}
-                </Link>
+                <LinkComponent link={link} lang={lang} className="plain" />
               </p>
             )
           })}
         </div>
 
         <div className={css['col-3']}>
-          <Link className={css['small-logo']} to="https://ethereum.foundation">
+          <a className={css['small-logo']} href="https://ethereum.foundation">
             <img src={smallLogo} alt="Devcon" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
