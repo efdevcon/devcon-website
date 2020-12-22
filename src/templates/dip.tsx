@@ -7,7 +7,7 @@ export default function DIPTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <Default>
+    <Default footerData={data.footer}>
       <SEO title={page.frontmatter.Title} />
 
       <h2>
@@ -27,7 +27,7 @@ export default function DIPTemplate({ data }: any) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $language: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -41,5 +41,6 @@ export const query = graphql`
         Tags
       }
     }
+    ...FooterData
   }
 `

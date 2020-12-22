@@ -7,7 +7,7 @@ export default function ContentTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <Default>
+    <Default footerData={data.footer}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <h2>{page.frontmatter.title}</h2>
@@ -17,7 +17,7 @@ export default function ContentTemplate({ data }: any) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $language: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
@@ -29,5 +29,6 @@ export const query = graphql`
         description
       }
     }
+    ...FooterData
   }
 `

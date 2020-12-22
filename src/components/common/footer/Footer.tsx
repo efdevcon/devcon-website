@@ -10,24 +10,15 @@ import smallLogo from 'src/assets/images/footer-logo.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'gatsby'
 import { Link as LinkType } from 'src/types/Link'
-import useFooterData from './useFooterData'
 
-type Props = {}
-
-const resolveUrl = (link: any, lang: String) => {
-  if (link.type === 'page') {
-    return link.url.replace(':lang', lang)
-  }
-
-  return link.url
+type Props = {
+  data: any
 }
 
 export const Footer = (props: Props) => {
-  const data = useFooterData()
+  if (!props.data) return null
 
-  console.log(data, 'data')
-
-  const { leftLinks, rightLinks, bottomLinks, highlightedLinks } = data.allMarkdownRemark.nodes[0].frontmatter
+  const { leftLinks, rightLinks, bottomLinks, highlightedLinks } = props.data.nodes[0].frontmatter
 
   // Should probably make a hook to fetch current language (used in multiple separate places)
   const intl = useIntl()
@@ -46,7 +37,7 @@ export const Footer = (props: Props) => {
           {highlightedLinks.map((link: LinkType, index: number) => {
             return (
               <h2 key={index}>
-                <Link className="plain" to={resolveUrl(link, lang)}>
+                <Link className="plain" to={link.url}>
                   {link.title}
                 </Link>
               </h2>
@@ -66,7 +57,7 @@ export const Footer = (props: Props) => {
             {leftLinks.map((link: LinkType, index: number) => {
               return (
                 <li className="semi-bold" key={index}>
-                  <Link className="plain" to={resolveUrl(link, lang)}>
+                  <Link className="plain" to={link.url}>
                     {link.title}
                   </Link>
                 </li>
@@ -80,7 +71,7 @@ export const Footer = (props: Props) => {
             {rightLinks.map((link: LinkType, index: number) => {
               return (
                 <li className="semi-bold" key={index}>
-                  <Link className="plain" to={resolveUrl(link, lang)}>
+                  <Link className="plain" to={link.url}>
                     {link.title}
                   </Link>
                 </li>
@@ -116,7 +107,7 @@ export const Footer = (props: Props) => {
           {bottomLinks.map((link: LinkType, index: number) => {
             return (
               <p className="semi-bold" key={index}>
-                <Link className="plain" to={resolveUrl(link, lang)}>
+                <Link className="plain" to={link.url}>
                   {link.title}
                 </Link>
               </p>

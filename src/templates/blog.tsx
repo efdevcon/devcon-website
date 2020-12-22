@@ -7,7 +7,7 @@ export default function BlogTemplate({ data }: any) {
   const blog = data.markdownRemark
 
   return (
-    <Default>
+    <Default footerData={data.footer}>
       <SEO title={blog.frontmatter.Title} canonicalUrl={blog.frontmatter.permaLink} />
 
       <h2>{blog.frontmatter.title}</h2>
@@ -18,7 +18,7 @@ export default function BlogTemplate({ data }: any) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $language: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -32,5 +32,6 @@ export const query = graphql`
       }
       html
     }
+    ...FooterData
   }
 `

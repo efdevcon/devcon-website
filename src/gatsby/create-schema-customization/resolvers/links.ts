@@ -1,18 +1,32 @@
 import { Link } from 'src/types/Link'
 
+type UnresolvedLink = {
+  slug: string,
+  type: string,
+  title: string,
+  url: string
+}
+
 type PageNode = {
   frontmatter: {
-    title: String
+    title: string
   }
   fields: {
-    slug: String
+    slug: string
   }
 }
 
-const linkResolver = (linkData: Link, context: any): Promise<null | Link> => {
+const linkResolver = (linkData: UnresolvedLink, language: string, context: any): Promise<null | Link> => {
   switch (linkData && linkData.type) {
     case 'url': {
-      return Promise.resolve(linkData)
+      const formatted: Link = {
+        // External url title may need translation - holding off on that until we have an actual use case
+        title: linkData.title, 
+        url: linkData.url,
+        type: linkData.type
+      }
+
+      return Promise.resolve(formatted) 
     }
 
     case 'page': {
@@ -24,12 +38,10 @@ const linkResolver = (linkData: Link, context: any): Promise<null | Link> => {
                 collection: {
                   eq: 'pages',
                 },
-              },
-              frontmatter: {
-                title: {
-                  eq: linkData.title,
-                },
-              },
+                slug: {
+                  eq: `/${language}/${linkData.slug}/`
+                }
+              }
             },
           },
           firstOnly: true,
@@ -38,16 +50,10 @@ const linkResolver = (linkData: Link, context: any): Promise<null | Link> => {
         .then((page: PageNode) => {
           if (!page) return null
 
-          const slugMatch = page.fields.slug.match(/\/[^\/]*(.*)/)
-
-          if (!slugMatch) return null
-
-          const url = '/:lang' + slugMatch[1] // e.g. /en/about => /:lang/about
-
           return {
             type: linkData.type,
             title: page.frontmatter.title,
-            url,
+            url: page.fields.slug,
           }
         })
     }
@@ -58,28 +64,35 @@ const linkResolver = (linkData: Link, context: any): Promise<null | Link> => {
 
 export const links = {
   type: '[Link]',
-  resolve: (source: any, args: any, context: any, info: any) => {
+  resolve: (source: any, { language }: any, context: any, info: any) => {
     const links = source[info.fieldName]
 
     if (!links) return []
 
-    const promises = links.map((linkData: any) => {
-      return linkResolver(linkData, context)
+    const promises = links.map((linkData: UnresolvedLink) => {
+      return linkResolver(linkData, language, context)
     })
 
-    // console.time('resolve link query')
-
     return Promise.all(promises).then(links => {
-      // console.timeEnd('resolve link query');
       return links.filter(link => !!link)
     })
   },
+  args: {
+    language: {
+      type: "String!"
+    },
+  }
 }
 
 // Singular link resolver
 export const link = {
   type: 'Link',
-  resolve: (source: any, args: any, context: any, info: any) => {
-    return linkResolver(source, context)
+  resolve: (source: any, { language }: any, context: any, info: any) => {
+    return linkResolver(source, language, context)
   },
+  args: {
+    language: {
+      type: "String!"
+    },
+  }
 }

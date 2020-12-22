@@ -99,6 +99,7 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
     context: {
       slug: slug,
       lang: lang,
+      language: lang, // Merge with lang (language is better because gatsby-intl-plugin writes to the language key)
       intl: {
         language: lang,
         languages: languages,

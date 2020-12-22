@@ -1,57 +1,52 @@
 ---
 highlightedLinks:
   - type: page
-    title: Contact
-  - type: url
-    title: External
-    url: https://ethereum.foundation
+    slug: about
   - type: page
-    title: Tickets EN
+    slug: contact
   - type: page
-    title: Contact
+    slug: past-events
   - type: page
-    title: DIP process
+    slug: faq
 leftLinks:
   - type: page
-    title: About Devcon
+    slug: contact
   - type: page
-    title: Cookie policy
+    slug: contact
   - type: page
-    title: Contact
+    slug: about
   - type: page
-    title: About Devcon
+    slug: dips
   - type: page
-    title: Code of conduct
+    slug: get-involved
   - type: page
-    title: FAQ
+    slug: privacy-policy
   - type: page
-    title: Terms of use
+    slug: press-application
   - type: page
-    title: Location
+    slug: masthead
 rightLinks:
   - type: page
-    title: FAQ
+    slug: dip-process
   - type: page
-    title: Contact
+    slug: contact
   - type: page
-    title: Location
+    slug: about
   - type: page
-    title: Cookie policy
+    slug: contact
   - type: page
-    title: DIPs
+    slug: cookie-policy
   - type: page
-    title: News
+    slug: news
   - type: page
-    title: Contact
+    slug: sponsorship-application
 bottomLinks:
   - type: page
-    title: FAQ
+    slug: faq
   - type: page
-    title: Contact
+    slug: code-of-conduct
   - type: page
-    title: News
+    slug: news
   - type: page
-    title: Terms of use
-  - type: page
-    title: Past events
+    slug: past-events
 ---

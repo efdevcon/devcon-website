@@ -146,10 +146,10 @@ collections:
                 name: page
                 fields:
                   - {
-                      name: title,
+                      name: slug,
                       label: Page,
-                      search_fields: ['title'],
-                      value_field: 'title',
+                      value_field: '{{slug}}',
+                      search_fields: ['{{slug}}'],
                       widget: relation,
                       collection: pages,
                     }
@@ -166,10 +166,10 @@ collections:
                 name: page
                 fields:
                   - {
-                      name: title,
+                      name: slug,
                       label: Page,
-                      search_fields: ['title'],
-                      value_field: 'title',
+                      value_field: '{{slug}}',
+                      search_fields: ['{{slug}}'],
                       widget: relation,
                       collection: pages,
                     }
@@ -186,10 +186,10 @@ collections:
                 name: page
                 fields:
                   - {
-                      name: title,
+                      name: slug,
                       label: Page,
-                      search_fields: ['title'],
-                      value_field: 'title',
+                      value_field: '{{slug}}',
+                      search_fields: ['{{slug}}'],
                       widget: relation,
                       collection: pages,
                     }
@@ -206,10 +206,10 @@ collections:
                 name: page
                 fields:
                   - {
-                      name: title,
+                      name: slug,
                       label: Page,
-                      search_fields: ['title'],
-                      value_field: 'title',
+                      value_field: '{{slug}}',
+                      search_fields: ['{{slug}}'],
                       widget: relation,
                       collection: pages,
                     }

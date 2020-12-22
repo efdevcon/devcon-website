@@ -6,9 +6,10 @@ import './Default.module.scss'
 
 type LayoutProps = {
   children: ReactNode
+  footerData: any
 }
 
-export default function Default({ children }: LayoutProps) {
+export default function Default({ children, footerData }: LayoutProps) {
   return (
     <div className="layout">
       <div className="content">
@@ -17,7 +18,7 @@ export default function Default({ children }: LayoutProps) {
         {children}
       </div>
 
-      <Footer />
+      <Footer data={footerData} />
     </div>
   )
 }
