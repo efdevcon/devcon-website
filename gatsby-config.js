@@ -15,7 +15,7 @@ const supportedLanguages = [defaultLanguage, secondaryLanguage]
 const matomoSiteId = '8'
 const matomoUrl = 'https://matomo.ethereum.org'
 
-const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
+const offlinePages = ['/en/', '/es/', '/en/contact/', '/es/contact/']
 
 module.exports = {
   siteMetadata: {
@@ -71,7 +71,7 @@ module.exports = {
         start_url: '/',
         background_color: '#fff',
         theme_color: '#663399',
-        display: `standalone`,
+        display: 'minimal-ui',
         icon: `src/assets/images/devcon-icon.png`,
         localize: [
           {
@@ -86,10 +86,10 @@ module.exports = {
     },
     //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
     {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: offlinePages,
-      },
+      resolve: 'gatsby-plugin-offline',	
+      options: {	
+        precachePages: offlinePages,	
+      },	
     },
     {
       resolve: 'gatsby-plugin-matomo',

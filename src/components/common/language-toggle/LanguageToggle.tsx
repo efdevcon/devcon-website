@@ -6,7 +6,8 @@ export function LanguageToggle() {
   const location = useLocation()
   const paths = location.pathname.split('/').filter(String)
   paths.shift()
-  const redirectPath = paths.join('/')
+  const path = paths.join('/');
+  const redirectPath = path ? path + '/' : '';
 
   return (
     <div>
