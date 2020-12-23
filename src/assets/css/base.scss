@@ -1,0 +1,35 @@
+@use 'src/assets/css/variables' as *;
+@use 'partials/fonts';
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  margin: 0 auto;
+  font-family: $font-primary;
+  color: $color-primary;
+
+  @include fonts.font-md;
+
+  @media (max-width: $screen-lg) {
+    @include fonts.font-sm;
+  }
+
+  @media (max-width: $screen-md) {
+    @include fonts.font-xs;
+  }
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+}

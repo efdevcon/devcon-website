@@ -1,7 +1,7 @@
-@import 'src/assets/css/common/grids.mixins';
-@import 'src/assets/css/common/typography.mixins';
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
 
-.card { 
+.card {
   overflow: hidden;
   width: 526px;
   margin: $size-8;
@@ -10,29 +10,30 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card-img { 
+.card-img {
   max-width: 100%;
   max-height: 100%;
   vertical-align: middle;
 }
 
-.card-body { 
+.card-body {
   padding: $size-8;
 }
 
-.card-title { 
+.card-title {
   color: $color-primary;
   margin-bottom: $size-8;
 }
 
-.card-text { 
+.card-text {
   color: $color-primary;
+  @include fonts.bold;
 }
 
-.card-meta { 
+.card-meta {
   display: flex;
 }
 
-.card-meta small { 
+.card-meta small {
   margin-right: $size-8;
 }

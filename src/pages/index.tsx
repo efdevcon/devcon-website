@@ -4,7 +4,7 @@ import Default from 'src/components/layouts/default'
 import { SEO } from 'src/components/common/seo'
 import { BlogOverview } from 'src/components/blog-overview'
 import { graphql } from 'gatsby'
-// import { News } from 'src/components/news'
+import { News } from 'src/components/news'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
@@ -16,7 +16,7 @@ export default function Index({ data }: any) {
       <h2>{intl.formatMessage({ id: 'journey' })}</h2>
       <div>{intl.formatMessage({ id: 'description' })}</div>
 
-      {/* <News /> */}
+      <News />
       <BlogOverview />
     </Default>
   )

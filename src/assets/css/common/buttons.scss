@@ -1,3 +1,5 @@
+@use 'src/assets/css/variables' as *;
+
 button,
 .button-primary {
   cursor: pointer;
@@ -55,15 +57,3 @@ button,
     background-color: $color-tertiary-opaque;
   }
 }
-
-/*
-  &.button-sm {
-    padding: $sm * 0.75 $sm;
-    font-size: $sm;
-  }
-
-  &.button-lg {
-    padding: $lg * 0.75 $lg;
-    font-size: $lg;
-  }
-*/

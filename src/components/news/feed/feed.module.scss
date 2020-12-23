@@ -1,0 +1,76 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+.feed {
+  padding: 32px;
+  padding-bottom: 20px;
+  background: white;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+
+  .header {
+    @include fonts.font-sm;
+    text-transform: uppercase;
+  }
+
+  .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+
+    .list-number {
+      @include fonts.font-xl;
+      font-family: $font-tertiary;
+      color: rgba(0, 0, 0, 0.25);
+      margin-right: 25px;
+      margin-left: 8px;
+    }
+
+    .date-handle {
+      margin-right: 75px;
+
+      .date {
+        @include fonts.font-xs;
+        font-family: $font-secondary;
+      }
+
+      .handle {
+        @include fonts.font-xxs;
+        font-family: $font-secondary;
+        line-height: 100%;
+        opacity: 0.5;
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-grow: 1;
+
+      .title {
+        font-family: $font-primary;
+        @include fonts.font-md;
+        @include fonts.bold;
+      }
+    }
+
+    .icon {
+      opacity: 0.25;
+    }
+  }
+
+  .load-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-left: 8px;
+    opacity: 0.25;
+
+    > p {
+      font-family: $font-secondary;
+      @include fonts.font-lg;
+      @include fonts.bold;
+    }
+  }
+}

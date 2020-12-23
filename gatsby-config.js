@@ -2,10 +2,10 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://devcon.org',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env;
-const isNetlifyProduction = NETLIFY_ENV === 'production';
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 const title = 'Devcon'
 const defaultLanguage = 'en'
@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ['/admin']
-      }
+        exclude: ['/admin'],
+      },
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -40,20 +40,20 @@ module.exports = {
           production: {
             host: siteUrl,
             sitemap: siteUrl + '/sitemap.xml',
-            policy: [{ userAgent: '*' }]
+            policy: [{ userAgent: '*' }],
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
+            host: null,
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
-          }
-        }
-      }
+            host: null,
+          },
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-ts-config',
@@ -79,17 +79,18 @@ module.exports = {
             lang: secondaryLanguage,
             name: title,
             short_name: title,
-            description: 'La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.',
+            description:
+              'La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.',
           },
         ],
       },
     },
     //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
     {
-      resolve: 'gatsby-plugin-offline',	
-      options: {	
-        precachePages: offlinePages,	
-      },	
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: offlinePages,
+      },
     },
     {
       resolve: 'gatsby-plugin-matomo',
@@ -140,6 +141,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
+        implementation: require('sass'),
         cssLoaderOptions: {
           camelCase: false,
         },

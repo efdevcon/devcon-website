@@ -1,0 +1,11 @@
+@use 'src/assets/css/variables' as *;
+
+@mixin section {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin content {
+  max-width: $content-width;
+  flex-grow: 1;
+}

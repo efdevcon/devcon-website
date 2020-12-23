@@ -1,38 +1,7 @@
-@import 'variables';
-@import 'reset';
-@import 'common/typography';
-@import 'common/buttons';
-@import 'common/icons';
-
-html,
-body {
-  height: 100%;
-}
-
-html {
-  margin: 0 auto;
-  font-family: $font-primary;
-  color: $color-primary;
-
-  @include font-md;
-
-  @media (max-width: $screen-lg) {
-    @include font-sm;
-  }
-
-  @media (max-width: $screen-md) {
-    @include font-xs;
-  }
-}
-
-body {
-  position: relative;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a { 
-  color: $color-primary;
-  text-decoration: none;
-}
+@use 'reset';
+@use 'base.scss';
+@use 'common/fonts';
+@use 'common/buttons';
+@use 'common/icons';
+@use 'common/layout';
+@use 'common/grids';

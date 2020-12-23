@@ -1,9 +1,11 @@
-@import 'src/assets/css/common/grids.mixins';
-@import 'src/assets/css/common/typography.mixins';
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/grids';
+@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/layout';
 
 // Split out the positioning to make it easier to reason about
 @mixin top-grid {
-  @include grid-12;
+  @include grids.grid-12;
 
   .col-1 {
     grid-column: 1 / 3;
@@ -30,7 +32,7 @@
   }
 
   @media (max-width: $screen-md) {
-    @include grid-6;
+    @include grids.grid-6;
     row-gap: 40px;
 
     .col-1 {
@@ -63,7 +65,7 @@
 }
 
 @mixin bottom-grid {
-  @include grid-12;
+  @include grids.grid-12;
 
   .col-1 {
     grid-column: 1 / 6;
@@ -78,7 +80,7 @@
   }
 
   @media (max-width: $screen-md) {
-    @include grid-6;
+    @include grids.grid-6;
     grid-auto-flow: column;
 
     .col-1 {
@@ -118,19 +120,20 @@
 }
 
 .container {
+  border-top: 1px solid #e0e0e0;
+
   .top-section {
     @include top-grid;
     position: relative;
-    border-top: 1px solid #e0e0e0;
 
-    padding: $size-32-px;
-    padding-top: $size-16-px;
-    padding-bottom: $size-16-px;
+    padding: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     @media (max-width: $screen-md) {
-      padding: $size-8-px;
-      padding-top: $size-8-px;
-      padding-bottom: $size-8-px;
+      padding: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
       background-position: center left;
     }
 
@@ -162,10 +165,10 @@
       flex-direction: column;
 
       > h2 {
-        @include bold;
+        @include fonts.bold;
 
         &:last-of-type {
-          margin-bottom: $size-16-px;
+          margin-bottom: 32px;
         }
       }
 
@@ -188,7 +191,7 @@
       }
 
       .contact {
-        @include font-sm;
+        @include fonts.font-sm;
 
         .email {
           margin-bottom: $size-16;
@@ -214,64 +217,69 @@
   }
 
   .bottom-section {
-    @include bottom-grid;
+    @include layout.section;
     border-top: 1px solid rgba(34, 68, 144, 0.25);
-    padding: $size-32-px;
-    padding-top: $size-10-px;
-    padding-bottom: $size-10-px;
 
-    @media (max-width: $screen-md) {
-      padding: $size-8-px;
-      padding-top: $size-8-px;
-      padding-bottom: $size-8-px;
-      background-position: center left;
-    }
-
-    > .col-1 {
-      @include font-xs;
-      display: flex;
-      align-items: center;
-
-      @media (max-width: $screen-tiny) {
-        justify-content: center;
-      }
-    }
-
-    > .col-2 {
-      @include font-xs;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    .content {
+      @include layout.content;
+      @include bottom-grid;
+      padding: 64px;
+      padding-top: 20px;
+      padding-bottom: 20px;
 
       @media (max-width: $screen-md) {
-        margin-bottom: $size-4-px;
+        padding: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-position: center left;
       }
 
-      @media (max-width: $screen-tiny) {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
+      > .col-1 {
+        @include fonts.font-xs;
+        display: flex;
+        align-items: center;
 
-      > p {
-        margin-right: $size-14;
-
-        &:last-child {
-          margin-right: 0;
+        @media (max-width: $screen-tiny) {
+          justify-content: center;
         }
       }
-    }
 
-    > .col-3 {
-      display: flex;
-      justify-content: flex-end;
+      > .col-2 {
+        @include fonts.font-xs;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-      @media (max-width: $screen-tiny) {
-        margin-bottom: $size-4-px;
-        justify-content: center;
+        @media (max-width: $screen-md) {
+          margin-bottom: 8px;
+        }
+
+        @media (max-width: $screen-tiny) {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        > p {
+          margin-right: $size-14;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
       }
 
-      img {
-        max-width: 75px;
+      > .col-3 {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: $screen-tiny) {
+          margin-bottom: 8px;
+          justify-content: center;
+        }
+
+        img {
+          max-width: 75px;
+        }
       }
     }
   }
@@ -282,8 +290,8 @@
 
   > p,
   li {
-    @include font-sm;
-    margin-bottom: $size-7-px;
+    @include fonts.font-sm;
+    margin-bottom: 14px;
 
     &:last-child {
       margin-bottom: 0;

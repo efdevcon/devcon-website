@@ -1,6 +1,11 @@
-@import 'src/assets/css/variables';
+@use 'src/assets/css/variables' as *;
 
 // Add more sizes as needed. Make sure to reference any newly added mixins from typegraphy.scss so we have one source of truth for text sizes.
+@mixin font-xxs {
+  font-size: $size-5;
+  line-height: 150%;
+}
+
 @mixin font-xs {
   font-size: $size-6;
   line-height: 150%;
@@ -14,6 +19,16 @@
 @mixin font-md {
   font-size: $size-8;
   line-height: 150%;
+}
+
+@mixin font-lg {
+  font-size: $size-9;
+  line-height: 125%;
+}
+
+@mixin font-xl {
+  font-size: $size-12;
+  line-height: 125%;
 }
 
 // Font-family
@@ -37,29 +52,3 @@
 @mixin semi-bold {
   font-weight: 600;
 }
-
-// @mixin font-xs {
-//   font-size: $size-2;
-//   line-height: 125%;
-// }
-// @mixin font-sm {
-//   font-size: $size-3;
-//   line-height: 125%;
-// }
-// @mixin font-md {
-//   font-size: $size-4;
-//   line-height: 125%;
-// }
-// @mixin font-lg {
-//   font-size: $size-6;
-//   line-height: 125%;
-// }
-// @mixin font-xl {
-//   font-size: $size-8;
-//   line-height: 125%;
-// }
-
-// @mixin font-xxl {
-//   font-size: $size-8 + $size-4;
-//   line-height: 125%;
-// }

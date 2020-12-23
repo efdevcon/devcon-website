@@ -1,8 +1,7 @@
-@import 'src/assets/css/common/grids.mixins';
-@import 'src/assets/css/common/typography.mixins';
+@use 'src/assets/css/variables' as *;
 
 header {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
 

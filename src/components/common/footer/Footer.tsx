@@ -17,10 +17,6 @@ type Props = {
 }
 
 export const Footer = (props: Props) => {
-  if (!props.data) return null
-
-  console.log(props.data, 'data')
-
   const { leftLinks, rightLinks, bottomLinks, highlightedLinks } = props.data.nodes[0].frontmatter
 
   // Should probably make a hook to fetch current language (used in multiple separate places)
@@ -52,6 +48,10 @@ export const Footer = (props: Props) => {
             <IconShare />
           </div>
         </div>
+
+        {/* <div className="test" style={{ width: '50px', height: '50px' }}>
+          ha
+        </div> */}
 
         <div className={css['col-3']}>
           <ul className={css['list']}>
@@ -98,22 +98,24 @@ export const Footer = (props: Props) => {
       </div>
 
       <div className={css['bottom-section']}>
-        <div className={css['col-1']}>© 2021 — Ethereum Foundation. All Rights Reserved.</div>
+        <div className={css['content']}>
+          <div className={css['col-1']}>© 2021 — Ethereum Foundation. All Rights Reserved.</div>
 
-        <div className={css['col-2']}>
-          {bottomLinks.map((link: LinkType, index: number) => {
-            return (
-              <p className="semi-bold" key={index}>
-                <LinkComponent link={link} lang={lang} className="plain" />
-              </p>
-            )
-          })}
-        </div>
+          <div className={css['col-2']}>
+            {bottomLinks.map((link: LinkType, index: number) => {
+              return (
+                <p className="semi-bold" key={index}>
+                  <LinkComponent link={link} lang={lang} className="plain" />
+                </p>
+              )
+            })}
+          </div>
 
-        <div className={css['col-3']}>
-          <a className={css['small-logo']} href="https://ethereum.foundation">
-            <img src={smallLogo} alt="Devcon" />
-          </a>
+          <div className={css['col-3']}>
+            <a className={css['small-logo']} href="https://ethereum.foundation">
+              <img src={smallLogo} alt="Devcon" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
