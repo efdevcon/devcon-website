@@ -24,75 +24,73 @@ export const Footer = (props: Props) => {
   const lang = intl.locale === 'es' ? 'es' : 'en'
 
   return (
-    <div className={`footer ${css['container']}`}>
+    <footer className={`footer ${css['container']}`}>
       <div className={css['top-section']}>
-        <div className={css['col-1']}>
-          <Link to={`/${lang}/`}>
-            <img src={logo} alt="Devcon" />
-          </Link>
-        </div>
-
-        <div className={css['col-2']}>
-          {highlightedLinks.map((link: LinkType, index: number) => {
-            return (
-              <h2 key={index}>
-                <LinkComponent link={link} lang={lang} className="plain" />
-              </h2>
-            )
-          })}
-
-          <div className={css['social-media']}>
-            <IconTwitter />
-            <IconGithub />
-            <IconYoutube />
-            <IconShare />
+        <div className={css['content']}>
+          <div className={css['col-1']}>
+            <Link to={`/${lang}/`}>
+              <img src={logo} alt="Devcon" />
+            </Link>
           </div>
-        </div>
 
-        {/* <div className="test" style={{ width: '50px', height: '50px' }}>
-          ha
-        </div> */}
-
-        <div className={css['col-3']}>
-          <ul className={css['list']}>
-            {leftLinks.map((link: LinkType, index: number) => {
+          <div className={css['col-2']}>
+            {highlightedLinks.map((link: LinkType, index: number) => {
               return (
-                <li className="semi-bold" key={index}>
+                <h2 key={index}>
                   <LinkComponent link={link} lang={lang} className="plain" />
-                </li>
+                </h2>
               )
             })}
-          </ul>
-        </div>
 
-        <div className={css['col-4']}>
-          <ul className={css['list']}>
-            {rightLinks.map((link: LinkType, index: number) => {
-              return (
-                <li className="semi-bold" key={index}>
-                  <LinkComponent link={link} lang={lang} className="plain" />
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-
-        <div className={css['col-5']}>
-          <div className={css['contact']}>
-            <p className="semi-bold">Get in touch</p>
-            <p className={css['email']}>devcon@ethereum.org</p>
-
-            <p className="semi-bold">Partner with us</p>
-            <p className={css['email']}>sponsorships@ethereum.org</p>
+            <div className={css['social-media']}>
+              <IconTwitter />
+              <IconGithub />
+              <IconYoutube />
+              <IconShare />
+            </div>
           </div>
-        </div>
 
-        <div className={css['col-6']}>
-          <div className={css['scroll-up']}>
-            <IconArrowUpward
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              style={{ cursor: 'pointer' }}
-            />
+          <div className={css['col-3']}>
+            <ul className={css['list']}>
+              {leftLinks.map((link: LinkType, index: number) => {
+                return (
+                  <li className="semi-bold" key={index}>
+                    <LinkComponent link={link} lang={lang} className="plain" />
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+
+          <div className={css['col-4']}>
+            <ul className={css['list']}>
+              {rightLinks.map((link: LinkType, index: number) => {
+                return (
+                  <li className="semi-bold" key={index}>
+                    <LinkComponent link={link} lang={lang} className="plain" />
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+
+          <div className={css['col-5']}>
+            <div className={css['contact']}>
+              <p className="semi-bold">Get in touch</p>
+              <p className={css['email']}>devcon@ethereum.org</p>
+
+              <p className="semi-bold">Partner with us</p>
+              <p className={css['email']}>sponsorships@ethereum.org</p>
+            </div>
+          </div>
+
+          <div className={css['col-6']}>
+            <div className={css['scroll-up']}>
+              <IconArrowUpward
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                style={{ cursor: 'pointer' }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -118,6 +116,6 @@ export const Footer = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }

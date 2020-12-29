@@ -11,7 +11,7 @@ slug:
   clean_accents: true
   sanitize_replacement: '-'
 
-# local_backend: true
+local_backend: true
 publish_mode: editorial_workflow
 media_folder: static/assets/uploads/images
 public_folder: /assets/uploads/images
@@ -82,6 +82,44 @@ collections:
           required: false,
           default: false,
         }
+  - name: 'news'
+    label: 'News'
+    label_singular: 'News item'
+    folder: 'src/content/news'
+    create: true
+    i18n: true
+    fields:
+      - { name: 'url', label: 'URL', widget: 'string' }
+      - { name: 'type', label: 'Type', widget: 'select', options: ['twitter', 'other'] }
+      - { name: 'title', label: 'Title', widget: 'string', i18n: true }
+      - { name: 'description', label: 'Description', widget: 'text', i18n: true, required: false }
+      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true }
+      # - label: URL
+      #   name: url
+      #   fields:
+      #     - { name: title, label: Title, widget: string }
+      #     - { name: url, label: URL, widget: string }
+      # - label: 'Link'
+      #   name: 'link'
+      #   widget: list
+      #   i18n: true
+      #   types:
+      #     - label: Page
+      #       name: page
+      #       fields:
+      #         - {
+      #             name: slug,
+      #             label: Page,
+      #             value_field: '{{slug}}',
+      #             search_fields: ['{{slug}}'],
+      #             widget: relation,
+      #             collection: pages,
+      #           }
+      #     - label: URL
+      #       name: url
+      #       fields:
+      #         - { name: title, label: Title, widget: string }
+      #         - { name: url, label: URL, widget: string }
 
   - name: faq
     label: FAQ

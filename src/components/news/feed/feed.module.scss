@@ -4,8 +4,12 @@
 .feed {
   padding: 32px;
   padding-bottom: 20px;
-  background: white;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $screen-lg) {
+    box-shadow: none;
+    background: none;
+  }
 
   .header {
     @include fonts.font-sm;

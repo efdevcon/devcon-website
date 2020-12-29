@@ -3,8 +3,8 @@
 
 .card {
   overflow: hidden;
-  width: 526px;
-  margin: $size-8;
+  max-width: 526px;
+  // margin: $size-8;
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -36,4 +36,55 @@
 
 .card-meta small {
   margin-right: $size-8;
+}
+
+.card-variation-simple {
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  background: white;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    margin-top: 30px;
+    font-family: $font-primary;
+    @include fonts.font-xl;
+    @include fonts.bold;
+  }
+
+  .date {
+    @include fonts.font-xs;
+  }
+
+  .summary {
+    // @include fonts.multilineEllipsis(1.2em, 7, white);
+    margin-top: 18px;
+    padding-right: 40px;
+    // flex-grow: 1;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+  }
+
+  .bottom-section {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    .twitter {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .learn-more {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      padding-top: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

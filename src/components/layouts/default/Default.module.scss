@@ -1,14 +1,24 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/layout';
+
 :global {
   .layout {
     min-height: 100vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
 
+    > .header {
+      width: 100%;
+    }
+
     > .content {
+      max-width: $content-width;
       flex: 1 0 auto;
     }
 
     > .footer {
+      width: 100%;
       flex-shrink: 0;
     }
   }

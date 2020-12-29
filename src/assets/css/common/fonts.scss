@@ -35,6 +35,10 @@ h4 {
   @include fonts.font-sm;
 }
 
+.font-xs {
+  @include fonts.font-xs;
+}
+
 .bold {
   @include fonts.bold;
 }

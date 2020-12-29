@@ -12,8 +12,9 @@ type LayoutProps = {
 export default function Default({ children, footerData }: LayoutProps) {
   return (
     <div className="layout">
+      <Header />
+
       <div className="content">
-        <Header />
         <Navigation />
         {children}
       </div>
