@@ -101,6 +101,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://ethereum.us7.list-manage.com/subscribe/post?u=bfdb1ffb0f71e3a27b9d96aed&amp;id=013a6fa362',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',

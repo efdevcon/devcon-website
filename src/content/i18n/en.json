@@ -5,5 +5,12 @@
   "notfound": {
     "header": "NOT FOUND",
     "description": "The requested page could not be found."
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "subscribe": "Subscribe",
+    "subscribed": "Thank you for subscribing!",
+    "alreadySubscribed": "The email you entered is already subscribed.",
+    "notValid": "The email you entered is not valid."
   }
 }

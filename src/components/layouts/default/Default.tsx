@@ -3,6 +3,7 @@ import { Header } from 'src/components/common/header'
 import { Footer } from 'src/components/common/footer'
 import { Navigation } from 'src/components/common/navigation'
 import './Default.module.scss'
+import { Newsletter } from 'src/components/newsletter'
 
 type LayoutProps = {
   children: ReactNode
@@ -16,6 +17,7 @@ export default function Default({ children, footerData }: LayoutProps) {
         <Header />
         <Navigation />
         {children}
+        <Newsletter />
       </div>
 
       <Footer data={footerData} />
