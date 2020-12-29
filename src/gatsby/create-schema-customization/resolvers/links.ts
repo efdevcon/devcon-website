@@ -1,9 +1,9 @@
 import { Link } from 'src/types/Link'
 
 type UnresolvedLink = {
-  slug: string,
-  type: string,
-  title: string,
+  slug: string
+  type: string
+  title: string
   url: string
 }
 
@@ -21,12 +21,12 @@ const linkResolver = (linkData: UnresolvedLink, language: string, context: any):
     case 'url': {
       const formatted: Link = {
         // External url title may need translation - holding off on that until we have an actual use case
-        title: linkData.title, 
+        title: linkData.title,
         url: linkData.url,
-        type: linkData.type
+        type: linkData.type,
       }
 
-      return Promise.resolve(formatted) 
+      return Promise.resolve(formatted)
     }
 
     case 'page': {
@@ -39,9 +39,9 @@ const linkResolver = (linkData: UnresolvedLink, language: string, context: any):
                   eq: 'pages',
                 },
                 slug: {
-                  eq: `/${language}/${linkData.slug}/`
-                }
-              }
+                  eq: `/${language}/${linkData.slug}/`,
+                },
+              },
             },
           },
           firstOnly: true,
@@ -79,9 +79,9 @@ export const links = {
   },
   args: {
     language: {
-      type: "String!"
+      type: 'String!',
     },
-  }
+  },
 }
 
 // Singular link resolver
@@ -92,7 +92,7 @@ export const link = {
   },
   args: {
     language: {
-      type: "String!"
+      type: 'String!',
     },
-  }
+  },
 }

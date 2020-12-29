@@ -3,7 +3,6 @@ import css from './feed.module.scss'
 import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconArrowDownward from 'src/assets/icons/arrow_downward.svg'
 
-const test = [1, 2, 3, 4, 5]
 const itemsPerPage = 5
 
 type Props = {
@@ -12,7 +11,7 @@ type Props = {
 }
 
 export const Feed = ({ title, items }: Props) => {
-  const [page, setPage] = React.useState(0)
+  const [page] = React.useState(0)
   const offset = page * itemsPerPage
   const itemsInView = items.slice(offset, offset + itemsPerPage)
 
