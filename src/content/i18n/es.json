@@ -10,7 +10,7 @@
     "title": "Newsletter",
     "subscribe": "Subscribe",
     "subscribed": "Thank you for subscribing!",
-    "alreadySubscribed": "The email you entered is already subscribed.",
+    "alreadySubscribed": "El e-mail que ha introducido ya está en uso.",
     "notValid": "The email you entered is not valid."
   }
 }
