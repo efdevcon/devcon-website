@@ -116,6 +116,20 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'categories',
+        path: `${__dirname}/src/content/categories`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'faq',
+        path: `${__dirname}/src/content/faq`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'dips',
         path: `${__dirname}/src/content/dips`,
       },

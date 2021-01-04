@@ -49,7 +49,7 @@ collections:
           label: 'Template',
           widget: 'select',
           i18n: 'duplicate',
-          options: ['none', 'content', 'dips'],
+          options: ['none', 'content', 'dips', 'faq'],
           default: 'content',
         }
       - {
