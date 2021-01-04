@@ -11,13 +11,13 @@ export const Menu = () => {
     <div className={css['menu']}>
       <div className={css['left']}>
         <Link external to="https://archive.devcon.org/" className={css['highlighted-link']}>
-          {intl.formatMessage({ id: 'Archive' })}
+          {intl.formatMessage({ id: 'archive' })}
         </Link>
         <Link external to="https://forum.devcon.org/" className={css['highlighted-link']}>
-          {intl.formatMessage({ id: 'Forum' })}
+          {intl.formatMessage({ id: 'forum' })}
         </Link>
         <Link external to="https://blog.ethereum.org/category/devcon/" className={css['highlighted-link']}>
-          {intl.formatMessage({ id: 'Blog' })}
+          {intl.formatMessage({ id: 'blog' })}
         </Link>
       </div>
 
