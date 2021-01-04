@@ -1,5 +1,5 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'src/components/common/link'
 import { useDIPs } from 'src/hooks/useDIPs'
 
 export function DIPOverview() {

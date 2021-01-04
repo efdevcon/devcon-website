@@ -8,9 +8,8 @@ import IconYoutube from 'src/assets/icons/youtube.svg'
 import logo from 'src/assets/images/test-asset.svg'
 import smallLogo from 'src/assets/images/footer-logo.svg'
 import { useIntl } from 'gatsby-plugin-intl'
-import { Link } from 'gatsby'
+import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
-import { LinkComponent } from './Link'
 
 type Props = {
   data: any
@@ -37,16 +36,18 @@ export const Footer = (props: Props) => {
             {highlightedLinks.map((link: LinkType, index: number) => {
               return (
                 <h2 key={index}>
-                  <LinkComponent link={link} lang={lang} className="plain" />
+                  <Link to={link.url} className="plain">
+                    {link.title}
+                  </Link>
                 </h2>
               )
             })}
 
             <div className={css['social-media']}>
-              <IconTwitter />
-              <IconGithub />
-              <IconYoutube />
-              <IconShare />
+              <IconTwitter style={{ cursor: 'pointer' }} />
+              <IconGithub style={{ cursor: 'pointer' }} />
+              <IconYoutube style={{ cursor: 'pointer' }} />
+              <IconShare style={{ cursor: 'pointer' }} />
             </div>
           </div>
 
@@ -55,7 +56,9 @@ export const Footer = (props: Props) => {
               {leftLinks.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
-                    <LinkComponent link={link} lang={lang} className="plain" />
+                    <Link to={link.url} className="plain">
+                      {link.title}
+                    </Link>
                   </li>
                 )
               })}
@@ -67,7 +70,9 @@ export const Footer = (props: Props) => {
               {rightLinks.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
-                    <LinkComponent link={link} lang={lang} className="plain" />
+                    <Link to={link.url} className="plain">
+                      {link.title}
+                    </Link>
                   </li>
                 )
               })}
@@ -103,16 +108,18 @@ export const Footer = (props: Props) => {
             {bottomLinks.map((link: LinkType, index: number) => {
               return (
                 <p className="semi-bold" key={index}>
-                  <LinkComponent link={link} lang={lang} className="plain" />
+                  <Link to={link.url} external={link.type === 'url'} className="plain">
+                    {link.title}
+                  </Link>
                 </p>
               )
             })}
           </div>
 
           <div className={css['col-3']}>
-            <a className={css['small-logo']} href="https://ethereum.foundation">
+            <Link external className={css['small-logo']} to="https://ethereum.foundation">
               <img src={smallLogo} alt="Devcon" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

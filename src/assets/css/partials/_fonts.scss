@@ -31,6 +31,11 @@
   line-height: 125%;
 }
 
+@mixin font-xxl {
+  font-size: $size-16;
+  line-height: 125%;
+}
+
 // Font-family
 @mixin font-primary {
   font-family: $font-primary;
@@ -47,6 +52,10 @@
 // Misc
 @mixin bold {
   font-weight: 700;
+}
+
+@mixin very-bold {
+  font-weight: 800;
 }
 
 @mixin semi-bold {

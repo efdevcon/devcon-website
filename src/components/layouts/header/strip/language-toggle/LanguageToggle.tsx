@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { useLocation } from '@reach/router'
-import IconGlobe from 'src/assets/icons/icon_globe.svg'
+import IconGlobe from 'src/assets/icons/globe.svg'
 import css from './language-toggle.module.scss'
 
 export function LanguageToggle() {
@@ -13,9 +13,9 @@ export function LanguageToggle() {
 
   return (
     <div className={css['language-toggle']}>
-      <IconGlobe />
+      <IconGlobe style={{ fontSize: '16px' }} />
       <Link to={`/en/${redirectPath}`}>EN</Link>
-      <span> / </span>
+      <span className={css['split']}>/</span>
       <Link to={`/es/${redirectPath}`}>ES</Link>
     </div>
   )

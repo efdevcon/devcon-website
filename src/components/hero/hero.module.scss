@@ -1,0 +1,49 @@
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.hero {
+  overflow: hidden;
+  flex-grow: 1;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  // top: 0;
+  // z-index: -1;
+  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+
+  > * {
+    position: absolute;
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    height: 494px;
+    width: 494px;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    margin-left: -(494px / 2);
+    margin-top: -(494px / 2);
+  }
+
+  .clouds {
+    bottom: 0px;
+  }
+
+  .rays {
+    height: 100%;
+    width: 100%;
+    transform: scale(2);
+  }
+}

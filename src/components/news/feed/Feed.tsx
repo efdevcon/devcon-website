@@ -3,7 +3,6 @@ import css from './feed.module.scss'
 import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconArrowDownward from 'src/assets/icons/arrow_downward.svg'
 
-const test = [1, 2, 3, 4, 5]
 const itemsPerPage = 5
 
 type Props = {

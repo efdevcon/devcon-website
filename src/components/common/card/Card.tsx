@@ -1,9 +1,8 @@
-import { Link } from 'gatsby'
-import React, { FunctionComponent } from 'react'
+import React from 'react'
+import { Link } from 'src/components/common/link'
 import { GetExcerpt } from 'src/utils/formatting'
-import css from './Card.module.scss'
+import css from './card.module.scss'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
-import Twitter from 'src/assets/icons/twitter.svg'
 
 interface CardProps {
   title: string
@@ -23,7 +22,7 @@ export const Card = (props: CardProps) => {
         {props.description && <p className={css['card-text']}>{GetExcerpt(props.description)}</p>}
         <div className={css['card-meta']}>
           {props.metadata && props.metadata.map((text, index) => <small key={props.title + '_' + index}>{text}</small>)}
-          {props.linkUrl && <IconArrowRight />}
+          {props.linkUrl && <IconArrowRight style={{ cursor: 'pointer' }} />}
         </div>
       </div>
     </>
