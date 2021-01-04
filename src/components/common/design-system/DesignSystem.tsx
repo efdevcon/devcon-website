@@ -1,6 +1,6 @@
 import React from 'react'
 // @ts-ignore // https://spin.atomicobject.com/2020/06/22/css-module-typescript/
-import css from './DesignSystem.module.scss'
+import css from './design-system.module.scss'
 
 export function DesignSystem() {
   return (

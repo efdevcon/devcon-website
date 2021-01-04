@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'src/components/common/card'
 import { Feed } from './feed'
+import css from './news.module.scss'
 
 // interface CardProps {
 //   title: string
