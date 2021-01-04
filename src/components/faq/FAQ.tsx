@@ -15,15 +15,15 @@ export function FAQ(props: FaqProps) {
         {props.categories.map(i => {
           return <li key={i.title}>{i.title}</li>
         })}
-        {/* <li>Category 1
-          <ul>
-            <li>Question 1: Answer</li>
-            <li>Question 2: Answer</li>
-            <li>Question 3: Answer</li>
-          </ul>
-        </li>
-        <li>Category 2</li>
-        <li>Category 3</li> */}
+      </ul>
+      <h4>FAQs</h4>
+      <ul>
+        {props.faqs.map(i => {
+          return <li key={i.title}>
+            <strong>{i.title}</strong>
+            <p dangerouslySetInnerHTML={{ __html: i.body }} />
+          </li>
+        })}
       </ul>
     </div>
   )
