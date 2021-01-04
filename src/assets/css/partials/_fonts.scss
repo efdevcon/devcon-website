@@ -31,6 +31,11 @@
   line-height: 125%;
 }
 
+@mixin font-xxl {
+  font-size: $size-16;
+  line-height: 125%;
+}
+
 // Font-family
 @mixin font-primary {
   font-family: $font-primary;
@@ -49,6 +54,36 @@
   font-weight: 700;
 }
 
+@mixin very-bold {
+  font-weight: 800;
+}
+
 @mixin semi-bold {
   font-weight: 600;
+}
+
+// https://hackingui.com/a-pure-css-solution-for-multiline-text-truncation/
+@mixin multilineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
 }

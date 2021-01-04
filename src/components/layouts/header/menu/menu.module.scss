@@ -1,0 +1,30 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  .highlighted-link {
+    margin-right: 32px;
+    font-family: $font-primary;
+    @include fonts.bold;
+  }
+
+  .left {
+    display: none;
+
+    @media (min-width: $screen-lg - 1) {
+      display: flex;
+    }
+  }
+
+  .right {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

@@ -1,6 +1,6 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
@@ -35,16 +35,14 @@ h4 {
   @include fonts.font-sm;
 }
 
+.font-xs {
+  @include fonts.font-xs;
+}
+
 .bold {
   @include fonts.bold;
 }
 
 .semi-bold {
   @include fonts.semi-bold;
-}
-
-// For cases where we don't want default link styling
-a.plain {
-  color: inherit;
-  text-decoration: none;
 }

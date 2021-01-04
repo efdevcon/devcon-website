@@ -1,20 +1,21 @@
 import React from 'react'
-import { useIntl } from 'gatsby-plugin-intl'
+// import { useIntl } from 'gatsby-plugin-intl'
 import Default from 'src/components/layouts/default'
 import { SEO } from 'src/components/common/seo'
 import { BlogOverview } from 'src/components/blog-overview'
 import { graphql } from 'gatsby'
 import { News } from 'src/components/news'
+import { Hero } from 'src/components/hero'
 
 export default function Index({ data }: any) {
-  const intl = useIntl()
+  // const intl = useIntl()
 
   return (
-    <Default footerData={data.footer}>
+    <Default HeroComponent={Hero} footerData={data.footer}>
       <SEO />
-
+      {/* 
       <h2>{intl.formatMessage({ id: 'journey' })}</h2>
-      <div>{intl.formatMessage({ id: 'description' })}</div>
+      <div>{intl.formatMessage({ id: 'description' })}</div> */}
 
       <News />
       <BlogOverview />

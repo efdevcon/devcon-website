@@ -1,0 +1,68 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/layout';
+
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  --section-background-color: white;
+  --section-border: 1px solid rgba(0, 0, 0, 0.1);
+  --section-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+  color: var(--text-color);
+
+  &.hero {
+    // Layout expands header to 100vh to make room for the hero section (which is absolutely positioned at the top of the page) - only happens on the hero page
+    position: fixed;
+    z-index: 1;
+    // height: 100vh;
+    --text-color: white;
+    --section-background-color: none;
+    --section-border: none;
+    --section-shadow: none;
+    --header-height: 100vh;
+  }
+
+  &.scrolled {
+    --text-color: inherit;
+
+    --section-background-color: white;
+    --section-border: 1px solid rgba(0, 0, 0, 0.1);
+    --section-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+
+    // .header-wrapper-inner {
+    //   position: fixed;
+    //   top: 0px;
+    //   z-index: 1;
+    //   width: 100%;
+
+    // }
+  }
+
+  .header-wrapper-inner {
+    @include layout.section;
+    box-shadow: var(--section-shadow);
+    background: var(--section-background-color);
+
+    .header {
+      @include layout.content;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .menu-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        > h1 {
+          @include fonts.very-bold;
+          @include fonts.font-xxl;
+          padding-right: 42px;
+          font-family: $font-primary;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

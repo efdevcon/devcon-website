@@ -1,0 +1,13 @@
+@use 'src/assets/css/partials/fonts';
+
+.strip {
+  display: var(--display-strip, flex);
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 24px;
+  padding: 4px;
+  // border-bottom: var(--section-border); // Need to refactor a little to get this to work properly - holding off until this is confirmed as part of the final design
+
+  @include fonts.font-xs;
+}
