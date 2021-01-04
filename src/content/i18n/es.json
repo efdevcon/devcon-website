@@ -1,7 +1,9 @@
 {
   "title": "Discón",
   "description": "La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.",
-  "journey": "Journey to Devcon",
+  "archive": "Archive",
+  "forum": "Forum",
+  "blog": "Blog",
   "notfound": {
     "header": "NO FUNCIONADO",
     "description": "La página solicitada no pudo ser encontrada."
