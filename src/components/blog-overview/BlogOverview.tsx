@@ -1,7 +1,7 @@
 import React from 'react'
 import { useBlogs } from 'src/hooks/useBlogs'
 import moment from 'moment'
-import css from './BlogOverview.module.scss'
+import css from './blog-overview.module.scss'
 import { Card } from '../common/card'
 import { BlogPost } from 'src/types/BlogPost'
 

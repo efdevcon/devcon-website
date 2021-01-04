@@ -11,7 +11,7 @@ type Props = {
 }
 
 export const Feed = ({ title, items }: Props) => {
-  const [page, setPage] = React.useState(0)
+  const [page] = React.useState(0)
   const offset = page * itemsPerPage
   const itemsInView = items.slice(offset, offset + itemsPerPage)
 
