@@ -1,8 +1,8 @@
 import { useLayoutEffect, useState } from 'react'
 
 export default () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  
+  const [isScrolled, setIsScrolled] = useState(false)
+
   useLayoutEffect(() => {
     let options = {
       threshold: 1.0,
@@ -12,20 +12,20 @@ export default () => {
       const { intersectionRatio } = entries[0]
 
       if (intersectionRatio < 1) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
     }
 
     const observer = new IntersectionObserver(callback, options)
 
-    observer.observe(document.body);
+    observer.observe(document.body)
 
     return () => {
       observer.unobserve(document.body)
     }
   }, [])
 
-  return isScrolled;
-};
+  return isScrolled
+}

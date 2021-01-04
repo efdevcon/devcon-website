@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Default from 'src/components/layouts/default'
 import { SEO } from 'src/components/common/seo'
+import Content from 'src/components/layouts/content'
 
 export default function DIPTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <Default footerData={data.footer}>
+    <Content footerData={data.footer}>
       <SEO title={page.frontmatter.Title} />
 
       <h2>
@@ -22,7 +22,7 @@ export default function DIPTemplate({ data }: any) {
         <li>Dicussion: {page.frontmatter.Discussion}</li>
       </ul>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
-    </Default>
+    </Content>
   )
 }
 
