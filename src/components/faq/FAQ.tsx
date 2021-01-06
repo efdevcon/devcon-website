@@ -19,10 +19,12 @@ export function FAQ(props: FaqProps) {
       <h4>FAQs</h4>
       <ul>
         {props.faqs.map(i => {
-          return <li key={i.title}>
-            <strong>{i.title}</strong>
-            <p dangerouslySetInnerHTML={{ __html: i.body }} />
-          </li>
+          return (
+            <li key={i.title}>
+              <strong>{i.title}</strong>
+              <p dangerouslySetInnerHTML={{ __html: i.body }} />
+            </li>
+          )
         })}
       </ul>
     </div>
