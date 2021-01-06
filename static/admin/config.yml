@@ -136,9 +136,9 @@ collections:
           widget: relation,
           i18n: duplicate,
           collection: categories,
-          value_field: title,
+          value_field: '{{slug}}',
           search_fields: ['title'],
-          multiple: true,
+          multiple: false,
         }
       - {
           name: order,

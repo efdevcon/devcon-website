@@ -2,13 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { SEO } from 'src/components/common/seo'
 import { FAQ } from 'src/components/faq'
-import { ToCategories, ToFAQs } from 'src/components/faq/queryMapper'
+import { ToFaqData } from 'src/components/faq/queryMapper'
 import Content from 'src/components/layouts/content'
 
 export default function FaqTemplate({ data }: any) {
   const page = data.markdownRemark
-  const categories = ToCategories(data)
-  const faq = ToFAQs(data)
+  const faq = ToFaqData(data)
 
   return (
     <Content footerData={data.footer}>
@@ -17,7 +16,7 @@ export default function FaqTemplate({ data }: any) {
       <h2>{page.frontmatter.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
 
-      <FAQ categories={categories} faqs={faq} />
+      <FAQ data={faq} />
     </Content>
   )
 }

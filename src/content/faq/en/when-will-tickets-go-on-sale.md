@@ -1,7 +1,6 @@
 ---
 title: When will tickets go on sale?
-category:
-  - Ticketing
+category: ticketing
 order: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: Dónde se lleva a cabo Devcon?
-category:
-  - Location
+category: location
+order: 1
 ---

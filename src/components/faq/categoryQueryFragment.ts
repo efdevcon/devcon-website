@@ -8,8 +8,7 @@ export const query = graphql`
           title
         }
         fields {
-          collection
-          lang
+          id
         }
       }
     }
