@@ -2,7 +2,6 @@ import React, { FunctionComponent, ReactNode } from 'react'
 import { Header } from 'src/components/layouts/header'
 import { Footer } from 'src/components/layouts/footer'
 import './default.module.scss'
-import { Newsletter } from 'src/components/newsletter'
 
 type LayoutProps = {
   children: ReactNode
@@ -21,10 +20,7 @@ export default function Default({ children, footerData, HeroComponent }: LayoutP
       */}
       {HeroComponent && <HeroComponent />}
 
-      <div className="content">
-        {children}
-        <Newsletter />
-      </div>
+      <div className="content">{children}</div>
 
       <Footer data={footerData} />
     </div>

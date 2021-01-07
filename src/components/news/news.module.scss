@@ -1,43 +1,49 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/grids';
+@use 'src/assets/css/partials/fonts';
 
 .news-container {
   display: flex;
+  flex-direction: column;
 
-  @media (max-width: $screen-lg) {
-    flex-wrap: wrap;
-  }
-
-  .cards {
+  .body {
     display: flex;
-    margin-right: 32px;
-    flex-basis: 50%;
 
     @media (max-width: $screen-lg) {
-      flex-basis: 100%;
-      margin-right: 0px;
-      margin-bottom: 37px;
+      flex-wrap: wrap;
     }
 
-    > * {
-      flex-basis: 0;
-      flex-grow: 1;
+    .cards {
+      display: flex;
+      margin-right: 32px;
+      flex-basis: 50%;
 
-      &:first-child {
-        margin-right: 32px;
+      @media (max-width: $screen-lg) {
+        flex-basis: 100%;
+        margin-right: 0px;
+        margin-bottom: 18px;
+      }
 
-        @media (max-width: $screen-lg) {
-          margin-right: 43px;
+      > * {
+        flex-basis: 0;
+        flex-grow: 1;
+
+        &:first-child {
+          margin-right: 32px;
+
+          @media (max-width: $screen-lg) {
+            margin-right: 18px;
+          }
         }
       }
     }
-  }
 
-  .feed {
-    flex-basis: 50%;
+    .feed {
+      flex-basis: 50%;
 
-    @media (max-width: $screen-lg) {
-      flex-basis: 100%;
+      @media (max-width: $screen-lg) {
+        flex-basis: 100%;
+      }
     }
   }
 }

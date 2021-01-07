@@ -40,6 +40,13 @@ $size-16: $size-1 * 16; // 2rem 32px
 $size-20: $size-1 * 20; // 2rem 40px;
 $size-32: $size-1 * 32; // 4rem 64px;
 
+// Could start using gap mixins and then autoscale them with css variables, or other gap improvements... revisit at some point if patterns in the design become clear
+// $gap-1: 4px;
+// $gap-2: $gap-1 * 2; // 8px
+// $gap-4: $gap-1 * 4; // 16px
+// $gap-8: $gap-1 * 8; // 32px
+// $gap-16: $gap-1 * 16; // 64px
+
 // Content boundary (borders, background images, etc. can extend this, but the "inner" content of sections should be bounded by this value)
 $content-width: 1680px;
 

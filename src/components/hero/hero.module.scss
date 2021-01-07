@@ -1,3 +1,7 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/grids';
+@use 'src/assets/css/partials/fonts';
+
 @keyframes gradient {
   0% {
     background-position: 0%;
@@ -7,43 +11,153 @@
   }
 }
 
+$logo-offset: 40%;
+
 .hero {
   overflow: hidden;
   flex-grow: 1;
   position: relative;
   height: 100vh;
   width: 100%;
-  // top: 0;
-  // z-index: -1;
   background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
   background-size: 600% 100%;
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
 
-  > * {
+  .mountains {
     position: absolute;
     width: 100%;
+    bottom: 0%;
   }
 
-  .logo {
-    display: flex;
-    height: 494px;
-    width: 494px;
-    justify-content: center;
-    align-items: center;
-    left: 50%;
-    top: 50%;
-    margin-left: -(494px / 2);
-    margin-top: -(494px / 2);
-  }
-
-  .clouds {
+  .cloud-container {
+    position: absolute;
+    width: 100%;
     bottom: 0px;
+
+    .clouds {
+      margin-bottom: -9%;
+      margin-left: -7.5%;
+      width: 115%;
+    }
   }
 
   .rays {
+    position: absolute;
+    width: 100%;
     height: 100%;
     width: 100%;
+    top: -($logo-offset / 4);
     transform: scale(2);
+  }
+
+  .grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    --text-color: white;
+
+    @include grids.grid-12;
+    // column-gap: 0px;
+
+    .left-rotated,
+    .right-rotated {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      grid-row: 1;
+
+      p {
+        @include fonts.font-xs;
+        @include fonts.bold;
+        white-space: nowrap;
+      }
+    }
+
+    .left-rotated {
+      grid-column: 1 / 2;
+
+      p {
+        writing-mode: vertical-lr;
+        margin-left: 20px;
+        transform: rotate(180deg);
+      }
+    }
+
+    .right-rotated {
+      grid-column: 12 / 13;
+      justify-content: flex-end;
+
+      p {
+        writing-mode: vertical-rl;
+        margin-right: 20px;
+      }
+    }
+
+    .logo {
+      display: flex;
+      position: relative;
+      margin-top: -50%;
+      top: $logo-offset;
+      min-width: 0;
+      grid-column-start: 5;
+      grid-column-end: 9;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .info {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-left: 32px;
+      height: 55%;
+      grid-column: 9 / 12;
+      grid-row: 1;
+
+      justify-content: space-between;
+
+      .date {
+        p {
+          line-height: 100%;
+        }
+      }
+
+      .calendar {
+        position: relative;
+        // margin-right: 64px;
+        // margin-left: 32px;
+
+        > p {
+          font-family: $font-tertiary;
+        }
+
+        div {
+          @include fonts.font-xl;
+          @include fonts.bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          cursor: pointer;
+          max-width: 80%;
+          margin-top: 16px;
+          display: flex;
+          justify-content: space-between;
+          padding-left: 28px;
+          padding-right: 28px;
+          padding-top: 14px;
+          padding-bottom: 14px;
+          border: 2px solid white;
+
+          .icon {
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
   }
 }

@@ -5,24 +5,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 // Defaults
-h1 {
+h1,
+.h1 {
   @include fonts.font-tertiary;
   font-size: $size-16 + $size-8;
   line-height: 125%;
 }
 
-h2 {
+h2,
+.h2 {
   @include fonts.font-tertiary;
   font-size: $size-16;
   line-height: 150%;
 }
 
-h3 {
+h3,
+.h3 {
   @include fonts.font-tertiary;
   @include fonts.font-xl;
 }
 
-h4 {
+h4,
+.h4 {
   @include fonts.font-tertiary;
   @include fonts.font-md;
 }

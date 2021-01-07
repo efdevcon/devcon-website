@@ -7,7 +7,7 @@ type Props = {
 export default React.memo((props: Props) => {
   return (
     <svg {...props} viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" id="logo">
-      <rect width="500" height="500" fill="url(#paint0_radial)" />
+      <rect width="500" height="500" fill="url(#logo_paint0_radial)" />
       <path
         d="M164.416 416.591C164.416 412.47 167.561 409.464 171.802 409.464C173.951 409.464 175.822 410.201 177.097 411.635L175.802 412.888C174.727 411.754 173.414 411.236 171.881 411.236C168.736 411.236 166.407 413.506 166.407 416.591C166.407 419.676 168.736 421.946 171.881 421.946C173.414 421.946 174.728 421.409 175.802 420.274L177.097 421.529C175.822 422.962 173.951 423.718 171.782 423.718C167.561 423.717 164.416 420.711 164.416 416.591Z"
         fill="white"
@@ -153,7 +153,7 @@ export default React.memo((props: Props) => {
       />
       <defs>
         <radialGradient
-          id="paint0_radial"
+          id="logo_paint0_radial"
           cx="0"
           cy="0"
           r="1"

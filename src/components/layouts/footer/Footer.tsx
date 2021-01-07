@@ -10,6 +10,7 @@ import smallLogo from 'src/assets/images/footer-logo.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
+import { Newsletter } from 'src/components/newsletter'
 
 type Props = {
   data: any
@@ -86,6 +87,9 @@ export const Footer = (props: Props) => {
 
               <p className="semi-bold">Partner with us</p>
               <p className={css['email']}>sponsorships@ethereum.org</p>
+
+              <p className="semi-bold">Subscribe to our newsletter</p>
+              <Newsletter />
             </div>
           </div>
 

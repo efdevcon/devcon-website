@@ -37,7 +37,7 @@ export const Newsletter = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h4>{intl.formatMessage({ id: 'newsletter.title' })}</h4>
+      {/* <h4>{intl.formatMessage({ id: 'newsletter.title' })}</h4> */}
       {result && (
         <div>
           <span>

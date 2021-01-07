@@ -9,8 +9,8 @@ export function BlogOverview() {
   const blogs = useBlogs()
 
   return (
-    <div>
-      <h3>BLOG</h3>
+    <div className={css['blog-container']}>
+      <h2 className="section-header">Blog</h2>
 
       <div className={css['card-columns']}>
         {blogs.map((blog: BlogPost) => (

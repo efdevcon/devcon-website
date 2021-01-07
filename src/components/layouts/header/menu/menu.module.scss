@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   flex-grow: 1;
+  min-width: 0;
 
   .highlighted-link {
     margin-right: 32px;
@@ -22,6 +23,7 @@
 
   .right {
     flex-grow: 1;
+    min-width: 0;
     display: flex;
     align-items: center;
     flex-direction: row;
