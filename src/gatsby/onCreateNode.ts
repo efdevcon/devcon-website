@@ -8,6 +8,7 @@ interface NodeFrontmatter {
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
+  // console.log('onCreateNode')
 
   if (node.internal.type === `MarkdownRemark`) {
     const frontmatter = node.frontmatter as NodeFrontmatter
@@ -56,22 +57,36 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
     if (collection === 'faq') {
       const paths = slug.split('/').filter(String)
       const lang = paths[0]
+      const id = paths[1]
 
       createNodeField({
         node,
         name: 'lang',
         value: lang,
       })
+
+      createNodeField({
+        node,
+        name: 'id',
+        value: id,
+      })
     }
 
     if (collection === 'categories') {
       const paths = slug.split('/').filter(String)
       const lang = paths[0]
+      const id = paths[1]
 
       createNodeField({
         node,
         name: 'lang',
         value: lang,
+      })
+
+      createNodeField({
+        node,
+        name: 'id',
+        value: id,
       })
     }
 

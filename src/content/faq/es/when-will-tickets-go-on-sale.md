@@ -1,7 +1,6 @@
 ---
 title: Cuándo saldrán a la venta las entradas?
-category:
-  - Ticketing
+category: ticketing
 order: 1
 ---
 

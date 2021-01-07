@@ -1,29 +1,34 @@
 import React from 'react'
 import { Category } from 'src/types/Category'
-import { FAQ as Faq } from 'src/types/FAQ'
+import { FAQ as FaqType } from 'src/types/FAQ'
 
 interface FaqProps {
-  categories: Array<Category>
-  faqs: Array<Faq>
+  data: Array<Category>
 }
 
 export function FAQ(props: FaqProps) {
   return (
     <div>
-      <h4>Categories</h4>
       <ul>
-        {props.categories.map(i => {
-          return <li key={i.title}>{i.title}</li>
+        {props.data.map((category: Category) => {
+          return (
+            <li key={category.id}>
+              {category.title}
+              {category.questions.length > 0 && (
+                <ul id={category.id}>
+                  {category.questions.map((q: FaqType) => {
+                    return (
+                      <li key={q.id}>
+                        <strong>{q.title}</strong>
+                        <p dangerouslySetInnerHTML={{ __html: q.body }} />
+                      </li>
+                    )
+                  })}
+                </ul>
+              )}
+            </li>
+          )
         })}
-        {/* <li>Category 1
-          <ul>
-            <li>Question 1: Answer</li>
-            <li>Question 2: Answer</li>
-            <li>Question 3: Answer</li>
-          </ul>
-        </li>
-        <li>Category 2</li>
-        <li>Category 3</li> */}
       </ul>
     </div>
   )

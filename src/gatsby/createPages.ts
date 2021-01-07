@@ -5,7 +5,7 @@ const languages = ['en', 'es']
 const defaultLang = 'en'
 
 export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesArgs) => {
-  console.log('createPages - Languages', languages, 'default', defaultLang)
+  console.log('createPages', languages, 'default', defaultLang)
 
   await createContentPages(args)
   await createDipPages(args)

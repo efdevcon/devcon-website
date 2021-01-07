@@ -1,5 +1,5 @@
 ---
 title: Por qué Bogotá?
-category:
-  - Location
+category: location
+order: 2
 ---

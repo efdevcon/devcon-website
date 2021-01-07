@@ -1,9 +1,9 @@
 import { Category } from './category'
 
 export interface FAQ {
+  id: string
   title: string
   body: string
-  category: Array<Category>
+  category?: Category
   order?: number
-  lang: string
 }

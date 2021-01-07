@@ -1,7 +1,9 @@
 {
   "title": "Devcon",
   "description": "La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.",
-  "journey": "Viaje a Devcon",
+  "archive": "Archivo",
+  "forum": "Foro",
+  "blog": "Blog",
   "notfound": {
     "header": "NO ENCONTRADO",
     "description": "La página solicitada no pudo ser encontrada."

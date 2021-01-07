@@ -13,10 +13,6 @@ export default function Index({ data }: any) {
   return (
     <Default HeroComponent={Hero} footerData={data.footer}>
       <SEO />
-      {/* 
-      <h2>{intl.formatMessage({ id: 'journey' })}</h2>
-      <div>{intl.formatMessage({ id: 'description' })}</div> */}
-
       <News />
       <BlogOverview />
     </Default>

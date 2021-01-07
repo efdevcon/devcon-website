@@ -1,21 +1,21 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Default from 'src/components/layouts/default'
 import { SEO } from 'src/components/common/seo'
 import { DIPOverview } from 'src/components/dip-overview'
+import Content from 'src/components/layouts/content'
 
 export default function ContentTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <Default footerData={data.footer}>
+    <Content footerData={data.footer}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <h2>{page.frontmatter.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
 
       <DIPOverview />
-    </Default>
+    </Content>
   )
 }
 
