@@ -1,6 +1,6 @@
 ---
-title: Footer
+title: Pie
 template: none
 ---
 
-Footer
+Pie
