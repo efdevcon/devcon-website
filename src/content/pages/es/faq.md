@@ -1,5 +1,5 @@
 ---
-title: Preguntas más frecuentes
+title: FAQ
 template: faq
 parent: footer
 order: 1
