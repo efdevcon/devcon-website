@@ -1,5 +1,5 @@
 ---
-title: Lugar de eventos
+title: Venue
 template: content
 parent: location
 order: 1
