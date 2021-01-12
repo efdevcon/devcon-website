@@ -1,6 +1,6 @@
 ---
-title: Privacy policy
+title: Política de privacidad
 template: content
 ---
 
-Privacy policy
+Política de privacidad

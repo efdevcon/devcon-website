@@ -1,6 +1,6 @@
 ---
-title: Sponsorship application
+title: Aplicación de patrocinio
 template: content
 ---
 
-Sponsorship application
+Aplicación de patrocinio
