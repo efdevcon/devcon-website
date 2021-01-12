@@ -6,4 +6,4 @@ order: 3
 showInMenu: true
 ---
 
-Past events ES
+Past events
