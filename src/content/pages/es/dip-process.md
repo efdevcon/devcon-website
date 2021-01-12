@@ -1,6 +1,6 @@
 ---
-title: DIP process
+title: Proceso DIP
 template: content
 ---
 
-DIP process
+Proceso DIP
