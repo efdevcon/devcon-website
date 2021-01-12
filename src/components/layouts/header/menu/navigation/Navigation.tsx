@@ -1,20 +1,13 @@
 import React from 'react'
-import { useSiteNavigation } from 'src/hooks/useSiteNavigation'
 import IconMenu from 'src/assets/icons/menu.svg'
 import IconArrowDown from 'src/assets/icons/arrow_drop_down.svg'
-import { useIntl } from 'gatsby-plugin-intl'
-import { Page } from 'src/types/Page'
 import { Link } from 'src/components/common/link'
 import css from './navigation.module.scss'
 import { useSiteNavigationContext } from 'src/context/site-navigation-context'
 import { Link as LinkType } from 'src/types/Link'
 
 export const Navigation = () => {
-  const intl = useIntl()
-  const lang = intl.locale === 'es' ? 'es' : 'en'
-  const pages = useSiteNavigation(lang)
   const context = useSiteNavigationContext()
-  const siteNav = context.data.site
 
   return (
     <>
