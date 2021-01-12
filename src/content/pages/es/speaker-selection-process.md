@@ -1,6 +1,6 @@
 ---
-title: Speaker selection process
+title: Proceso de selección del altavoz
 template: content
 ---
 
-Speaker selection process ES
+Proceso de selección del altavoz
