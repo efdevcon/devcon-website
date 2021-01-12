@@ -1,7 +1,7 @@
 ---
 title: Contacto
-description: Contacto description
+description: Contact description
 template: content
 ---
 
-Contacto body
+Cuerpo de contacto
