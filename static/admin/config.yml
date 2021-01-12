@@ -82,6 +82,7 @@ collections:
           required: false,
           default: false,
         }
+
   - name: 'news'
     label: 'News'
     label_singular: 'News item'
@@ -94,32 +95,6 @@ collections:
       - { name: 'title', label: 'Title', widget: 'string', i18n: true }
       - { name: 'description', label: 'Description', widget: 'text', i18n: true, required: false }
       - { name: 'date', label: 'Date', widget: datetime, picker_utc: true }
-      # - label: URL
-      #   name: url
-      #   fields:
-      #     - { name: title, label: Title, widget: string }
-      #     - { name: url, label: URL, widget: string }
-      # - label: 'Link'
-      #   name: 'link'
-      #   widget: list
-      #   i18n: true
-      #   types:
-      #     - label: Page
-      #       name: page
-      #       fields:
-      #         - {
-      #             name: slug,
-      #             label: Page,
-      #             value_field: '{{slug}}',
-      #             search_fields: ['{{slug}}'],
-      #             widget: relation,
-      #             collection: pages,
-      #           }
-      #     - label: URL
-      #       name: url
-      #       fields:
-      #         - { name: title, label: Title, widget: string }
-      #         - { name: url, label: URL, widget: string }
 
   - name: faq
     label: FAQ
@@ -191,177 +166,99 @@ collections:
 
   - name: navigation
     label: Navigation
-    files:
-      - label: 'Top navigation'
-        name: 'Top'
-        file: src/content/navigation/top.md
-        fields:
-          - label: Items
-            name: items
-            widget: list
-            types:
-              - label: Page
-                name: page
-                fields:
-                  - {
-                      name: slug,
-                      label: Page,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: pages,
-                    }
-              - label: Link
-                name: link
-                fields:
-                  - {
-                      name: slug,
-                      label: Link,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: links,
-                    }
-              - label: Header
-                name: header
-                fields:
-                  - {
-                      name: slug,
-                      label: Header,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: headers,
-                    }
-              - label: Items
-                name: items
-                fields:
-                  - label: Items
-                    name: items
-                    widget: list
-                    types:
-                      - label: Page
-                        name: page
-                        fields:
-                          - {
-                              name: slug,
-                              label: Page,
-                              value_field: '{{slug}}',
-                              search_fields: ['{{slug}}'],
-                              widget: relation,
-                              collection: pages,
-                            }
-                      - label: Link
-                        name: link
-                        fields:
-                          - {
-                              name: slug,
-                              label: Link,
-                              value_field: '{{slug}}',
-                              search_fields: ['{{slug}}'],
-                              widget: relation,
-                              collection: links,
-                            }
-                      - label: Header
-                        name: header
-                        fields:
-                          - {
-                              name: slug,
-                              label: Header,
-                              value_field: '{{slug}}',
-                              search_fields: ['{{slug}}'],
-                              widget: relation,
-                              collection: headers,
-                            }
-      - label: 'Site navigation'
-        name: 'site'
-        file: src/content/navigation/site.md
-        fields:
-          - label: Items
-            name: items
-            widget: list
-            types:
-              - label: Page
-                name: page
-                fields:
-                  - {
-                      name: slug,
-                      label: Page,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: pages,
-                    }
-              - label: Link
-                name: link
-                fields:
-                  - {
-                      name: slug,
-                      label: Link,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: links,
-                    }
-              - label: Header
-                name: header
-                fields:
-                  - {
-                      name: slug,
-                      label: Header,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: headers,
-                    }
-              - label: Items
-                name: items
-                fields:
-                  - {
-                      name: slug,
-                      label: Header,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: headers,
-                    }
-                  - label: Items
-                    name: items
-                    widget: list
-                    types:
-                      - label: Page
-                        name: page
-                        fields:
-                          - {
-                              name: slug,
-                              label: Page,
-                              value_field: '{{slug}}',
-                              search_fields: ['{{slug}}'],
-                              widget: relation,
-                              collection: pages,
-                            }
-                      - label: Link
-                        name: link
-                        fields:
-                          - {
-                              name: slug,
-                              label: Link,
-                              value_field: '{{slug}}',
-                              search_fields: ['{{slug}}'],
-                              widget: relation,
-                              collection: links,
-                            }
-                      - label: Header
-                        name: header
-                        fields:
-                          - {
-                              name: slug,
-                              label: Header,
-                              value_field: '{{slug}}',
-                              search_fields: ['{{slug}}'],
-                              widget: relation,
-                              collection: headers,
-                            }
+    label_singular: Navigation
+    folder: src/content/navigation
+    create: true
+    i18n: false
+    fields:
+      - { name: title, label: Title, widget: string }
+      - label: Links
+        name: links
+        widget: list
+        collapsed: false
+        types:
+          - label: Page
+            name: page
+            fields:
+              - {
+                  name: slug,
+                  label: Page,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: pages,
+                }
+          - label: Link
+            name: link
+            fields:
+              - {
+                  name: slug,
+                  label: Link,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: links,
+                }
+          - label: Header
+            name: header
+            fields:
+              - {
+                  name: slug,
+                  label: Header,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: headers,
+                }
+          - label: Links
+            name: links
+            fields:
+              - {
+                  name: slug,
+                  label: Header,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: headers,
+                }
+              - label: Links
+                name: links
+                widget: list
+                types:
+                  - label: Page
+                    name: page
+                    fields:
+                      - {
+                          name: slug,
+                          label: Page,
+                          value_field: '{{slug}}',
+                          search_fields: ['{{slug}}'],
+                          widget: relation,
+                          collection: pages,
+                        }
+                  - label: Link
+                    name: link
+                    fields:
+                      - {
+                          name: slug,
+                          label: Link,
+                          value_field: '{{slug}}',
+                          search_fields: ['{{slug}}'],
+                          widget: relation,
+                          collection: links,
+                        }
+                  - label: Header
+                    name: header
+                    fields:
+                      - {
+                          name: slug,
+                          label: Header,
+                          value_field: '{{slug}}',
+                          search_fields: ['{{slug}}'],
+                          widget: relation,
+                          collection: headers,
+                        }
+
   - name: footer
     label: Footer
     files:

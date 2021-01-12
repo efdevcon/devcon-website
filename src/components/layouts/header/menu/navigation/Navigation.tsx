@@ -6,39 +6,59 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Page } from 'src/types/Page'
 import { Link } from 'src/components/common/link'
 import css from './navigation.module.scss'
+import { useSiteNavigationContext } from 'src/context/site-navigation-context'
+import { Link as LinkType } from 'src/types/Link'
 
 export const Navigation = () => {
   const intl = useIntl()
   const lang = intl.locale === 'es' ? 'es' : 'en'
   const pages = useSiteNavigation(lang)
+  const context = useSiteNavigationContext()
+  const siteNav = context.data.site
 
   return (
     <>
       <ul className={css['navigation']}>
-        {pages.map((i: Page) => {
-          const hasChildren = i.children && i.children.length > 0
+        {context.data.site.map((i: LinkType) => {
+          const hasChildren = i.links && i.links.length > 0
 
           const link = (
-            <Link className={`${css['foldout-link']} plain`} to={i.slug}>
+            <Link className={`${css['foldout-link']} plain`} to={i.url}>
               {i.title}
             </Link>
           )
 
           return (
-            <li className="plain" key={i.slug}>
+            <li className="plain" key={`site-nav-${i.type}-${i.url ?? i.title}`}>
               {hasChildren ? (
                 <>
                   {i.title}
                   <IconArrowDown style={{ width: '10px', height: '5px', margin: '8px' }} />
                   <div className={css['foldout']}>
-                    {link}
-                    {i.children.map((c: Page) => (
-                      <ul key={c.slug}>
-                        <li className={`${css['foldout-link']} plain`} key={c.slug}>
-                          <Link to={c.slug}>{c.title}</Link>
-                        </li>
+                    {i.links && i.links.length > 0 && (
+                      <ul>
+                        {i.links?.map((c: LinkType) => {
+                          if (c.type === 'header') {
+                            return (
+                              <li>
+                                <span className={css['foldout-header']}>{c.title}</span>
+                              </li>
+                            )
+                          }
+                          if (c.type === 'links') {
+                            // nothing?
+                          }
+
+                          return (
+                            <li>
+                              <Link className={`${css['foldout-link']} plain`} to={c.url}>
+                                {c.title}
+                              </Link>
+                            </li>
+                          )
+                        })}
                       </ul>
-                    ))}
+                    )}
                   </div>
                 </>
               ) : (

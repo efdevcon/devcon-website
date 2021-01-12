@@ -10,7 +10,7 @@ export default function FaqTemplate({ data }: any) {
   const faq = ToFaqData(data)
 
   return (
-    <Content footerData={data.footer}>
+    <Content navigationData={data.navigationData}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <h2>{page.frontmatter.title}</h2>
@@ -34,7 +34,7 @@ export const query = graphql`
         description
       }
     }
-    ...FooterData
+    ...NavigationData
     ...Categories
     ...FAQs
   }

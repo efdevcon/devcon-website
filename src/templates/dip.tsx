@@ -7,7 +7,7 @@ export default function DIPTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content footerData={data.footer}>
+    <Content navigationData={data.navigationData}>
       <SEO title={page.frontmatter.Title} />
 
       <h2>
@@ -41,6 +41,6 @@ export const query = graphql`
         Tags
       }
     }
-    ...FooterData
+    ...NavigationData
   }
 `

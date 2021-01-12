@@ -5,28 +5,112 @@ type UnresolvedLink = {
   type: string
   title: string
   url: string
+  links?: UnresolvedLink[]
 }
 
-type PageNode = {
-  frontmatter: {
-    title: string
-  }
-  fields: {
-    slug: string
-  }
-}
+const linkResolver = async (linkData: UnresolvedLink, language: string, context: any): Promise<null | Link> => {
+  // console.log("LinkResolver", linkData.type, linkData.slug);
 
-const linkResolver = (linkData: UnresolvedLink, language: string, context: any): Promise<null | Link> => {
   switch (linkData && linkData.type) {
-    case 'url': {
-      const formatted: Link = {
-        // External url title may need translation - holding off on that until we have an actual use case
-        title: linkData.title,
-        url: linkData.url,
-        type: linkData.type,
-      }
+    case 'links': {
+      return context.nodeModel
+        .runQuery({
+          query: {
+            filter: {
+              fields: {
+                collection: {
+                  eq: 'headers',
+                },
+                slug: {
+                  eq: `/${language}/${linkData.slug}/`,
+                },
+              },
+            },
+          },
+          firstOnly: true,
+          type: 'MarkdownRemark',
+        })
+        .then(async (page: any) => {
+          if (!page) return Promise.resolve(null)
+          if (!linkData.links || linkData.links.length === 0) return Promise.resolve(null)
 
-      return Promise.resolve(formatted)
+          const promises = linkData.links.map((i: UnresolvedLink) => {
+            return linkResolver(i, language, context)
+          })
+
+          const links = await Promise.all(promises).then(links => {
+            return links.filter((item): item is Link => item !== null)
+          })
+
+          const link: Link = {
+            type: linkData.type,
+            title: page.frontmatter.title,
+            url: '',
+            links: links,
+          }
+
+          return Promise.resolve(link)
+        })
+    }
+
+    case 'header': {
+      return context.nodeModel
+        .runQuery({
+          query: {
+            filter: {
+              fields: {
+                collection: {
+                  eq: 'headers',
+                },
+                slug: {
+                  eq: `/${language}/${linkData.slug}/`,
+                },
+              },
+            },
+          },
+          firstOnly: true,
+          type: 'MarkdownRemark',
+        })
+        .then((page: any) => {
+          if (!page) return null
+
+          return {
+            type: linkData.type,
+            title: page.frontmatter.title,
+            url: '#',
+            links: [],
+          }
+        })
+    }
+
+    case 'link': {
+      return context.nodeModel
+        .runQuery({
+          query: {
+            filter: {
+              fields: {
+                collection: {
+                  eq: 'links',
+                },
+                slug: {
+                  eq: `/${language}/${linkData.slug}/`,
+                },
+              },
+            },
+          },
+          firstOnly: true,
+          type: 'MarkdownRemark',
+        })
+        .then((page: any) => {
+          if (!page) return null
+
+          return {
+            type: linkData.type,
+            title: page.frontmatter.title,
+            url: page.frontmatter.url,
+            links: [],
+          }
+        })
     }
 
     case 'page': {
@@ -47,13 +131,14 @@ const linkResolver = (linkData: UnresolvedLink, language: string, context: any):
           firstOnly: true,
           type: 'MarkdownRemark',
         })
-        .then((page: PageNode) => {
+        .then((page: any) => {
           if (!page) return null
 
           return {
             type: linkData.type,
             title: page.frontmatter.title,
             url: page.fields.slug,
+            links: [],
           }
         })
     }

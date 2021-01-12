@@ -144,8 +144,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'footer',
-        path: `${__dirname}/src/content/footer`,
+        name: 'navigation',
+        path: `${__dirname}/src/content/navigation`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'links',
+        path: `${__dirname}/src/content/links`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'headers',
+        path: `${__dirname}/src/content/headers`,
       },
     },
     'gatsby-transformer-remark',

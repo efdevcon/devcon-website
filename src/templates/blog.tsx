@@ -7,7 +7,7 @@ export default function BlogTemplate({ data }: any) {
   const blog = data.markdownRemark
 
   return (
-    <Content footerData={data.footer}>
+    <Content navigationData={data.navigationData}>
       <SEO title={blog.frontmatter.Title} canonicalUrl={blog.frontmatter.permaLink} />
 
       <h2>{blog.frontmatter.title}</h2>
@@ -32,6 +32,6 @@ export const query = graphql`
       }
       html
     }
-    ...FooterData
+    ...NavigationData
   }
 `

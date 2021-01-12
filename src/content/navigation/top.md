@@ -1,5 +1,6 @@
 ---
-items:
+title: top
+links:
   - type: link
     slug: archive
   - type: link
