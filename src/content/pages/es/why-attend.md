@@ -6,4 +6,4 @@ order: 1
 showInMenu: true
 ---
 
-Why Attend ES
+Why Attend
