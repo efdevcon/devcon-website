@@ -109,7 +109,7 @@ export function BlogOverview() {
     return () => {
       observer.unobserve(lastItem)
     }
-  }, [blogs])
+  }, [allItemsVisible, blogs])
 
   return (
     <div className={css['blog-container']}>

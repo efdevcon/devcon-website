@@ -63,7 +63,7 @@ export const Hero = () => {
       </div>
 
       <div className={css['grid']}>
-        <img className={css['logo']} src={logo} /> {/*<Logo className={css['logo']} />*/}
+        <img alt="devcon bogota logo" className={css['logo']} src={logo} /> {/*<Logo className={css['logo']} />*/}
         <div className={css['info']}>
           <div className={css['date']}>
             <p className="h2">

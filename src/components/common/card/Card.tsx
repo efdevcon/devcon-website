@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react'
+import React from 'react'
 import { Link } from 'src/components/common/link'
 import { GetExcerpt } from 'src/utils/formatting'
 import css from './card.module.scss'
