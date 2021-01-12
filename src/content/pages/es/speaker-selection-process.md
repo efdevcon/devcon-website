@@ -6,4 +6,4 @@ order: 2
 showInMenu: true
 ---
 
-Speaker selection process ES
+Speaker selection process
