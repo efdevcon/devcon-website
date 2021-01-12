@@ -1,5 +1,5 @@
 ---
-title: DIPs
+title: DI
 template: dips
 ---
 
