@@ -4,4 +4,4 @@ description: Contact description
 template: content
 ---
 
-Contact body
+Cuerpo de contacto
