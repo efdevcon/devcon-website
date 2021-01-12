@@ -1,6 +1,7 @@
 import React from 'react'
 import css from './hero.module.scss'
-import Logo from './svgs/Logo'
+// import Logo from './svgs/Logo'
+import logo from 'src/assets/images/devcon-logo.svg'
 import Clouds from './svgs/Clouds'
 import Rays from './svgs/Rays'
 import Mountains from './svgs/Mountains'
@@ -8,7 +9,7 @@ import IconEventNote from 'src/assets/icons/event_note.svg'
 
 const parallax = (intersectionRatio: any) => {
   return {
-    transform: `translateY(${(100 - intersectionRatio) / 4}%)`,
+    transform: `translateY(${(100 - intersectionRatio) / 5}%)`,
   }
 }
 
@@ -41,41 +42,44 @@ export const Hero = () => {
   }, [])
 
   return (
-    <div ref={heroEl} className={css['hero']}>
+    <div ref={heroEl} className={`${css['hero']} full-width`}>
       <Rays className={css['rays']} />
       {/* <div style={parallax(intersectionRatio)} className={css['bottom-section']}> */}
-      <Mountains style={parallax(intersectionRatio)} className={css['mountains']} />
+
+      <div className={css['mountain-container']}>
+        <Mountains style={parallax(intersectionRatio)} className={css['mountains']} />
+      </div>
 
       <div className={css['cloud-container']}>
         <Clouds style={parallax(intersectionRatio)} className={css['clouds']} />
       </div>
       {/* </div> */}
-      <div className={css['grid']}>
-        <Logo className={css['logo']} />
 
+      <div className={css['left-rotated']}>
+        <p>ETHEREUM DEVELOPER CONFERENCE</p>
+      </div>
+      <div className={css['right-rotated']}>
+        <p>JOURNEY TO BOGOTA 2021+</p>
+      </div>
+
+      <div className={css['grid']}>
+        <img className={css['logo']} src={logo} /> {/*<Logo className={css['logo']} />*/}
         <div className={css['info']}>
           <div className={css['date']}>
             <p className="h2">
               Aug 2021
               <br />
-              10 - 13
+              10 → 13
             </p>
           </div>
 
           <div className={css['calendar']}>
             <p>The annual conference for all Ethereum developers, researchers, thinkers, and makers.</p>
-            <div>
+            <button>
               <IconEventNote className={`icon ${css['icon']}`} />
               <p>Add To Calendar</p>
-            </div>
+            </button>
           </div>
-        </div>
-
-        <div className={css['left-rotated']}>
-          <p>ETHEREUM DEVELOPER CONFERENCE</p>
-        </div>
-        <div className={css['right-rotated']}>
-          <p>JOURNEY TO BOGOTA 2021+</p>
         </div>
       </div>
     </div>

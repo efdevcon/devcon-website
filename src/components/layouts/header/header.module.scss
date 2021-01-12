@@ -43,17 +43,19 @@
   width: 100%;
   z-index: 1;
   --text-color: white;
+  --logo-color: var(--text-color);
   --header-background-color: none;
   --header-shadow: none;
 
   &.scrolled {
     --text-color: black;
+    --logo-color: #2f354b;
     --header-background-color: white;
     --header-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
-    --strip-height: 0px;
-    --strip-opacity: 0;
-    --strip-padding: 0px;
-    // --display-strip: none;
+    // --strip-height: 0px;
+    // --strip-opacity: 0;
+    // --strip-padding: 0px;
+    --display-strip: none;
   }
 }
 
@@ -65,6 +67,7 @@
   background: var(--header-background-color, white);
   color: var(--text-color, black);
   position: sticky;
+  z-index: 1;
   top: 0px;
 
   &.hero {
@@ -78,12 +81,24 @@
     align-items: center;
     width: 100%;
 
-    > h1 {
-      @include fonts.very-bold;
-      @include fonts.font-xxl;
-      padding-right: 42px;
-      font-family: $font-primary;
-      text-transform: uppercase;
+    > a {
+      display: flex;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      align-items: center;
+      > svg {
+        height: 38px;
+        fill: var(--logo-color, #2f354b);
+        padding-right: 42px;
+      }
     }
+
+    // > h1 {
+    //   @include fonts.very-bold;
+    //   @include fonts.font-xxl;
+    //   padding-right: 42px;
+    //   font-family: $font-primary;
+    //   text-transform: uppercase;
+    // }
   }
 }

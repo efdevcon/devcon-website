@@ -5,9 +5,11 @@ import { Menu } from './menu'
 import { Strip } from './strip'
 import css from './header.module.scss'
 import useIsScrolled from 'src/hooks/useIsScrolled'
+import HeaderLogo from './HeaderLogo'
 
 type HeaderProps = {
   withHero?: boolean
+  className?: string
 }
 
 export function Header({ withHero }: HeaderProps) {
@@ -19,9 +21,15 @@ export function Header({ withHero }: HeaderProps) {
       <Strip />
       <header className={css['header']}>
         <div className={css['menu-container']}>
-          <h1>
+          <Link to={`/${intl.locale}/`}>
+            <HeaderLogo />
+          </Link>
+          {/* <Link to={`/${intl.locale}/`}>
+            <img height="100%" src={headerLogo} />
+          </Link> */}
+          {/* <h1>
             <Link to={`/${intl.locale}/`}>{intl.formatMessage({ id: 'title' })}</Link>
-          </h1>
+          </h1> */}
 
           <Menu />
         </div>

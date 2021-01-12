@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { RefObject } from 'react'
 import { Link } from 'src/components/common/link'
 import { GetExcerpt } from 'src/utils/formatting'
 import css from './card.module.scss'
@@ -13,8 +13,7 @@ interface CardProps {
   metadata?: string[]
 }
 
-// API of this component is still a bit up in the air
-export const Card = (props: CardProps) => {
+export const Card = React.forwardRef((props: CardProps, ref: any) => {
   let className = css['card']
 
   if (props.imageUrl) className = `${className} ${css['img']}`
@@ -22,7 +21,7 @@ export const Card = (props: CardProps) => {
   const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title
 
   return (
-    <div className={className}>
+    <div className={className} ref={ref}>
       {props.imageUrl && (
         <div className={css['img-wrapper']}>
           <img src={props.imageUrl} className={css['img']} alt={props.title} />{' '}
@@ -56,4 +55,4 @@ export const Card = (props: CardProps) => {
       </div>
     </div>
   )
-}
+})

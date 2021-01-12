@@ -1,27 +1,85 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/grids';
+@use 'src/assets/css/partials/layout';
 
 .blog-container {
   margin-top: 32px;
-  .card-columns {
-    @include grids.grid-6;
-    grid-gap: 32px;
+  position: relative;
 
-    @media (max-width: $screen-lg) {
-      grid-gap: 16px;
-    }
+  .top-section {
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    > div {
-      // width: 526px;
-      grid-column: span 2;
+    .arrow-button {
+      --text-color: white;
+      background: black;
+      padding: 8px;
 
-      @media (max-width: $screen-lg) {
-        grid-column: span 3;
+      &:disabled {
+        background: grey;
+      }
+
+      &:last-child {
+        margin-left: 28px;
       }
 
       @media (max-width: $screen-md) {
-        grid-column: span 6;
+        display: none;
       }
     }
   }
+
+  .scroll-container {
+    overflow-x: hidden;
+
+    @media (max-width: $screen-md) {
+      overflow-x: auto;
+    }
+
+    .scroller {
+      transition: all 0.5s;
+      // white-space: nowrap;
+      margin-top: 0;
+      padding-bottom: $gap-4;
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: $gap-4;
+      grid-template-columns: repeat(var(--n), 33.333%);
+
+      @media (max-width: $screen-md) {
+        transform: translateX(0) !important;
+        grid-gap: $gap-2;
+        grid-template-columns: repeat(var(--n), 90%);
+      }
+
+      // https://uxdesign.cc/creating-horizontal-scrolling-containers-the-right-way-css-grid-c256f64fc585
+      > * {
+        width: 100%;
+      }
+    }
+  }
+
+  // .card-columns {
+  //   @include grids.grid-6;
+  //   grid-gap: 32px;
+
+  //   @media (max-width: $screen-lg) {
+  //     grid-gap: 16px;
+  //   }
+
+  //   > div {
+  //     // width: 526px;
+  //     grid-column: span 2;
+
+  //     @media (max-width: $screen-lg) {
+  //       grid-column: span 3;
+  //     }
+
+  //     @media (max-width: $screen-md) {
+  //       grid-column: span 6;
+  //     }
+  //   }
+  // }
 }

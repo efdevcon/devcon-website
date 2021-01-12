@@ -14,6 +14,7 @@ import { Newsletter } from 'src/components/newsletter'
 
 type Props = {
   data: any
+  className?: string
 }
 
 export const Footer = (props: Props) => {
@@ -23,8 +24,16 @@ export const Footer = (props: Props) => {
   const intl = useIntl()
   const lang = intl.locale === 'es' ? 'es' : 'en'
 
+  const newsletter = (
+    <>
+      <p className="semi-bold">Subscribe to our newsletter</p>
+      <p>Stay up to date on the latest devcon news and updates.</p>
+      <Newsletter />
+    </>
+  )
+
   return (
-    <footer className={`footer ${css['container']}`}>
+    <footer className={`${props.className} ${css['container']}`}>
       <div className={css['top-section']}>
         <div className={css['content']}>
           <div className={css['col-1']}>
@@ -83,13 +92,13 @@ export const Footer = (props: Props) => {
           <div className={css['col-5']}>
             <div className={css['contact']}>
               <p className="semi-bold">Get in touch</p>
-              <p className={css['email']}>devcon@ethereum.org</p>
+              <p className={css['email-1']}>devcon@ethereum.org</p>
 
               <p className="semi-bold">Partner with us</p>
-              <p className={css['email']}>sponsorships@ethereum.org</p>
+              <p className={css['email-2']}>sponsorships@ethereum.org</p>
 
-              <p className="semi-bold">Subscribe to our newsletter</p>
-              <Newsletter />
+              {/* Visible on some breakpoints, but not all - moves to col-7 on mobile */}
+              <div className={css['newsletter']}>{newsletter}</div>
             </div>
           </div>
 
@@ -101,6 +110,9 @@ export const Footer = (props: Props) => {
               />
             </div>
           </div>
+
+          {/* Only visible on mobile */}
+          <div className={css['col-7']}>{newsletter}</div>
         </div>
       </div>
 

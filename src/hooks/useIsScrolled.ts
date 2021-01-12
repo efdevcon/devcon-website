@@ -5,7 +5,7 @@ export default () => {
 
   useLayoutEffect(() => {
     let options = {
-      threshold: 1.0,
+      threshold: 1,
     }
 
     const callback = (entries: any) => {

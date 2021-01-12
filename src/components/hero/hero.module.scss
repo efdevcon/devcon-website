@@ -1,6 +1,8 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/grids';
 @use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/gaps';
 
 @keyframes gradient {
   0% {
@@ -11,7 +13,7 @@
   }
 }
 
-$logo-offset: 40%;
+$logo-offset: 50px;
 
 .hero {
   overflow: hidden;
@@ -24,10 +26,27 @@ $logo-offset: 40%;
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
 
-  .mountains {
+  // Using 100vh on mobile devices often doesn't account for the navigation bar at the bottom, so this is a decent compromise - if it's important to fill the entire
+  // screen we can fall back to a JS solution - pending feedback
+  @media (max-width: $screen-lg) {
+    height: 80vh;
+  }
+
+  .mountain-container {
     position: absolute;
     width: 100%;
     bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .mountains {
+      width: 35%;
+
+      @media (max-width: $screen-lg) {
+        width: 50%;
+      }
+    }
   }
 
   .cloud-container {
@@ -47,8 +66,52 @@ $logo-offset: 40%;
     width: 100%;
     height: 100%;
     width: 100%;
-    top: -($logo-offset / 4);
+    top: -$logo-offset;
     transform: scale(2);
+
+    @media (max-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  .left-rotated,
+  .right-rotated {
+    color: white;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    @media (max-width: $screen-lg) {
+      display: none;
+    }
+
+    p {
+      @include fonts.font-xs;
+      @include fonts.bold;
+      white-space: nowrap;
+    }
+  }
+
+  .left-rotated {
+    left: 0;
+
+    p {
+      writing-mode: vertical-lr;
+      margin-left: 20px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .right-rotated {
+    right: 0;
+    justify-content: flex-end;
+
+    p {
+      writing-mode: vertical-rl;
+      margin-right: 20px;
+    }
   }
 
   .grid {
@@ -60,66 +123,41 @@ $logo-offset: 40%;
     color: white;
     --text-color: white;
 
+    @include gaps.lg(true);
     @include grids.grid-12;
-    // column-gap: 0px;
-
-    .left-rotated,
-    .right-rotated {
-      display: flex;
-      height: 100%;
-      align-items: center;
-      grid-row: 1;
-
-      p {
-        @include fonts.font-xs;
-        @include fonts.bold;
-        white-space: nowrap;
-      }
-    }
-
-    .left-rotated {
-      grid-column: 1 / 2;
-
-      p {
-        writing-mode: vertical-lr;
-        margin-left: 20px;
-        transform: rotate(180deg);
-      }
-    }
-
-    .right-rotated {
-      grid-column: 12 / 13;
-      justify-content: flex-end;
-
-      p {
-        writing-mode: vertical-rl;
-        margin-right: 20px;
-      }
-    }
 
     .logo {
       display: flex;
       position: relative;
-      margin-top: -50%;
-      top: $logo-offset;
-      min-width: 0;
+      width: 100%;
+      height: 100%;
       grid-column-start: 5;
       grid-column-end: 9;
       justify-content: center;
       align-items: center;
+      top: -$logo-offset;
+
+      @media (max-width: $screen-lg) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+      }
     }
 
     .info {
       overflow: hidden;
       display: flex;
+      justify-content: space-between;
       flex-direction: column;
       margin: auto;
       margin-left: 32px;
-      height: 55%;
-      grid-column: 9 / 12;
+      height: 50%;
+      grid-column: 9 / 13;
       grid-row: 1;
 
-      justify-content: space-between;
+      @media (max-width: $screen-lg) {
+        grid-column: 7 / 13;
+        height: auto;
+      }
 
       .date {
         p {
@@ -129,24 +167,25 @@ $logo-offset: 40%;
 
       .calendar {
         position: relative;
-        // margin-right: 64px;
-        // margin-left: 32px;
 
         > p {
           font-family: $font-tertiary;
+
+          @media (max-width: $screen-lg) {
+            display: none;
+          }
         }
 
-        div {
+        button {
           @include fonts.font-xl;
           @include fonts.bold;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           cursor: pointer;
-          max-width: 80%;
           margin-top: 16px;
           display: flex;
-          justify-content: space-between;
+          color: white;
           padding-left: 28px;
           padding-right: 28px;
           padding-top: 14px;
@@ -154,6 +193,7 @@ $logo-offset: 40%;
           border: 2px solid white;
 
           .icon {
+            margin-right: $gap-2;
             flex-shrink: 0;
           }
         }

@@ -11,8 +11,8 @@ type LayoutProps = {
 
 export default function Default({ children, footerData, HeroComponent }: LayoutProps) {
   return (
-    <div className="layout">
-      <Header withHero={!!HeroComponent} />
+    <div className="layout-default">
+      <Header className="header" withHero={!!HeroComponent} />
 
       {/* 
         The hero component is pretty big, so passing it in as a prop rather than explicitly in this component means we only have to load it on the index page 
@@ -22,7 +22,7 @@ export default function Default({ children, footerData, HeroComponent }: LayoutP
 
       <div className="content">{children}</div>
 
-      <Footer data={footerData} />
+      <Footer className="footer" data={footerData} />
     </div>
   )
 }

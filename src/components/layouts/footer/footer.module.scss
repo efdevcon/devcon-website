@@ -24,11 +24,17 @@
   }
 
   .col-5 {
-    grid-column: 10 / 12;
+    grid-column: 10 / 13;
+    grid-row: 1;
   }
 
   .col-6 {
     grid-column: 12 / 13;
+    grid-row: 1;
+  }
+
+  .col-7 {
+    display: none;
   }
 
   @media (max-width: $screen-md) {
@@ -55,11 +61,21 @@
     .col-5 {
       grid-column: 1 / 4;
       grid-row-start: 1;
+
+      .newsletter {
+        display: none;
+      }
     }
 
     .col-6 {
       grid-column: 1 / 1;
       grid-row: 1 / 1;
+    }
+
+    .col-7 {
+      display: block;
+      grid-column: 1 / 7;
+      grid-row: 2;
     }
   }
 }
@@ -138,11 +154,17 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center 10%;
+
+      @media (max-width: $screen-md) {
+        background-size: 250%;
+        background-position: 20% center;
+      }
     }
 
     .content {
       @include layout.content;
       @include top-grid;
+      flex-grow: 1;
       position: relative;
 
       padding: 64px;
@@ -189,18 +211,20 @@
       }
 
       .col-5 {
+        @include fonts.font-sm;
         @media (max-width: $screen-md) {
           display: flex;
           align-items: flex-end;
         }
 
         .contact {
-          @include fonts.font-sm;
-
-          .email {
+          .email-1,
+          .email-2 {
             margin-bottom: $size-16;
+          }
 
-            &:last-child {
+          .email-2 {
+            @media (max-width: $screen-md) {
               margin-bottom: 0px;
             }
           }
@@ -218,6 +242,33 @@
           }
         }
       }
+
+      .col-7 {
+        // position: relative;
+
+        // Not sure if these borders add much; leaving it commented out in case we want to use them later
+
+        // &:before {
+        //   content: '';
+        //   position: absolute;
+        //   top: 0px;
+        //   left: 0px;
+        //   width: calc(100vw + 128px);
+        //   margin-left: -64px;
+        //   height: 1px;
+        //   background: rgba(0, 0, 0, 0.1);
+        // }
+        // &:after {
+        //   content: '';
+        //   position: absolute;
+        //   bottom: 0px;
+        //   left: 0px;
+        //   width: calc(100vw + 128px);
+        //   margin-left: -64px;
+        //   height: 1px;
+        //   background: rgba(0, 0, 0, 0.1);
+        // }
+      }
     }
   }
 
@@ -228,6 +279,7 @@
     .content {
       @include layout.content;
       @include bottom-grid;
+      flex-grow: 1;
       padding: 64px;
       padding-top: 20px;
       padding-bottom: 20px;

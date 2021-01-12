@@ -7,7 +7,7 @@ type Props = {
 
 export default React.memo((props: Props) => {
   return (
-    <svg {...props} id="mountains" height="250" viewBox="0 0 542 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} id="mountains" viewBox="0 0 542 181" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 181H66.5003V66L0 181Z" fill="url(#mountains_paint0_linear)" />
       <path d="M66.5 181H133L66.5 66V181Z" fill="url(#mountains_paint1_linear)" />
       <path d="M66.5 104.333L110.833 181H121.916L66.5 85.1665V104.333Z" fill="#BB7253" />

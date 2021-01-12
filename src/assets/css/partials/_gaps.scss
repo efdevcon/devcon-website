@@ -1,0 +1,38 @@
+@use 'src/assets/css/variables' as *;
+
+// Here are some common gap constellations with responsiveness built in
+@mixin lg($sidesOnly: false) {
+  @if ($sidesOnly == true) {
+    padding-left: $gap-16;
+    padding-right: $gap-16;
+
+    @media (max-width: $screen-md) {
+      padding-left: $gap-4;
+      padding-right: $gap-4;
+    }
+  } @else {
+    padding: $gap-16;
+
+    @media (max-width: $screen-md) {
+      padding: $gap-4;
+    }
+  }
+}
+
+@mixin sm($sidesOnly: false) {
+  @if ($sidesOnly == true) {
+    padding-left: $gap-8;
+    padding-right: $gap-8;
+
+    @media (max-width: $screen-md) {
+      padding-left: $gap-2;
+      padding-right: $gap-2;
+    }
+  } @else {
+    padding: $gap-8;
+
+    @media (max-width: $screen-md) {
+      padding: $gap-2;
+    }
+  }
+}

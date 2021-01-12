@@ -31,7 +31,7 @@ export const Feed = ({ title, items }: Props) => {
           return (
             <div className={css['item']} key={index}>
               <div className={css['list-number']}>{number}</div>
-              <div className={css['body']}>
+              <div className={css['item-body']}>
                 <div className={css['date-handle']}>
                   <p className={css['date']}>JAN 21, 2021</p>
                   <p className={css['handle']}>@EFDEVCON</p>

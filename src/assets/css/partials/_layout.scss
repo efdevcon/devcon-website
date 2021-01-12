@@ -1,20 +1,15 @@
 @use 'src/assets/css/variables' as *;
-
-$side-gap: 64px;
-$max-content-width: $content-width + ($side-gap * 2);
+@use './gaps';
 
 @mixin section {
   display: flex;
   justify-content: center;
 }
 
+$side-gap: $gap-16;
+$max-content-width: $content-width + ($side-gap * 2);
+
 @mixin content {
   max-width: $max-content-width;
-  padding-left: 64px;
-  padding-right: 64px;
-
-  @media (max-width: $screen-md) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+  @include gaps.lg(true);
 }
