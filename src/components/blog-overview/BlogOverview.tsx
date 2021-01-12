@@ -8,16 +8,6 @@ import ArrowLeft from 'src/assets/icons/arrow_left.svg'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 
 /*
-  1) Scrolling
-  2) Which one is active (calculate at "prev/next" click)
-  3) Moving (translateX)
-
-  <div container>
-    <div scroller> // translateX here
-      <item1>
-      <item2>
-      <item3>
-  
       TO-DO: 
         Port scrolling functionality to a separate "HorizontalScroller" component
 */
@@ -25,8 +15,9 @@ import ArrowRight from 'src/assets/icons/arrow_right.svg'
 export function BlogOverview() {
   const blogs = useBlogs()
   const refs = useRef<Array<HTMLElement>>([])
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>()
   const [pixelsMoved, setPixelsMoved] = useState(0)
+  // const [isLastItem, setIsLastItem] = useState(false)
   const [allItemsVisible, setAllItemsVisible] = useState(false)
 
   const moveForward = (e: React.SyntheticEvent) => {
@@ -40,7 +31,18 @@ export function BlogOverview() {
       const horizontalOffset = element.offsetLeft
 
       if (horizontalOffset > pixelsMoved) {
+        // const horizontalBound = containerRef.current.scrollWidth + containerRef.current.clientWidth
+        // const nextPixelsMoved = Math.min(horizontalOffset, horizontalBound)
+
         setPixelsMoved(horizontalOffset)
+
+        // const isLastItem = i === elements.length - 1
+
+        // if (isLastItem) {
+        //   setIsLastItem(true)
+        // } else {
+        //   setIsLastItem(false)
+        // }
 
         break
       }
@@ -73,6 +75,7 @@ export function BlogOverview() {
     // Could debounce here, but keeping it simple in first iteration
     const resizeListener = () => {
       setPixelsMoved(0)
+      // setIsLastItem(false)
       if (containerRef.current) containerRef.current.scrollTo(0, 0)
     }
 
