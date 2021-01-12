@@ -11,17 +11,12 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
 import { Newsletter } from 'src/components/newsletter'
+import { useSiteNavigationContext } from 'src/context/site-navigation-context'
 
-type Props = {
-  data: any
-}
-
-export const Footer = (props: Props) => {
-  const { leftLinks, rightLinks, bottomLinks, highlightedLinks } = props.data.nodes[0].frontmatter
-
-  // Should probably make a hook to fetch current language (used in multiple separate places)
-  const intl = useIntl()
-  const lang = intl.locale === 'es' ? 'es' : 'en'
+export const Footer = () => {
+  const context = useSiteNavigationContext()
+  const footerData = context.data.footer
+  const lang = useIntl().locale
 
   return (
     <footer className={`footer ${css['container']}`}>
@@ -34,7 +29,7 @@ export const Footer = (props: Props) => {
           </div>
 
           <div className={css['col-2']}>
-            {highlightedLinks.map((link: LinkType, index: number) => {
+            {footerData.highlights.map((link: LinkType, index: number) => {
               return (
                 <h2 key={index}>
                   <Link to={link.url} className="plain">
@@ -54,7 +49,7 @@ export const Footer = (props: Props) => {
 
           <div className={css['col-3']}>
             <ul className={css['list']}>
-              {leftLinks.map((link: LinkType, index: number) => {
+              {footerData.left.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
                     <Link to={link.url} className="plain">
@@ -68,7 +63,7 @@ export const Footer = (props: Props) => {
 
           <div className={css['col-4']}>
             <ul className={css['list']}>
-              {rightLinks.map((link: LinkType, index: number) => {
+              {footerData.right.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
                     <Link to={link.url} className="plain">
@@ -109,7 +104,7 @@ export const Footer = (props: Props) => {
           <div className={css['col-1']}>© 2021 — Ethereum Foundation. All Rights Reserved.</div>
 
           <div className={css['col-2']}>
-            {bottomLinks.map((link: LinkType, index: number) => {
+            {footerData.bottom.map((link: LinkType, index: number) => {
               return (
                 <p className="semi-bold" key={index}>
                   <Link to={link.url} external={link.type === 'url'} className="plain">

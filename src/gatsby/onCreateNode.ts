@@ -46,12 +46,6 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
         name: 'parent',
         value: parent,
       })
-
-      createNodeField({
-        node,
-        name: 'slug',
-        value: slug,
-      })
     }
 
     if (collection === 'faq') {
@@ -96,13 +90,17 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
         name: 'slug',
         value: '/dips' + slug,
       })
-    }
-
-    if (collection === 'blogs') {
+    } else if (collection === 'blogs') {
       createNodeField({
         node,
         name: 'slug',
         value: '/blog' + slug,
+      })
+    } else {
+      createNodeField({
+        node,
+        name: 'slug',
+        value: slug,
       })
     }
   }

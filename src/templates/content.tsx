@@ -7,7 +7,7 @@ export default function ContentTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content footerData={data.footer}>
+    <Content navigationData={data.navigationData}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <h2>{page.frontmatter.title}</h2>
@@ -29,6 +29,6 @@ export const query = graphql`
         description
       }
     }
-    ...FooterData
+    ...NavigationData
   }
 `
