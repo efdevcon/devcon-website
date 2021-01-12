@@ -1,6 +1,6 @@
 ---
-title: Venue
+title: Lugar
 template: content
 ---
 
-Venue
+Lugar
