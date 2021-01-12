@@ -1,6 +1,6 @@
 ---
-title: Masthead
+title: Cabezal
 template: content
 ---
 
-Masthead
+Cabezal
