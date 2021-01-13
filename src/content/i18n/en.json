@@ -1,12 +1,18 @@
 {
-  "title": "Devcon",
+  "subtitle": "Ethereum developer conference",
   "description": "The annual conference for all Ethereum developers, researchers, thinkers, and makers.",
+  "journey": "Journey to Bogota 2021+",
+  "getintouch": "Get in touch",
+  "partnerwithus": "Partner with us",
+  "readmore": "Read more",
+  "addtocalendar": "Add to calendar",
   "notfound": {
     "header": "NOT FOUND",
     "description": "The requested page could not be found."
   },
   "newsletter": {
-    "title": "Newsletter",
+    "title": "Subscribe to our newsletter",
+    "subtitle": "Stay up to date on the latest devcon news and updates.",
     "subscribe": "Subscribe",
     "subscribed": "Thank you for subscribing!",
     "alreadySubscribed": "The email you entered is already subscribed.",

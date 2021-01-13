@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { useLocation } from '@reach/router'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Twitter } from './Twitter'
+import { TITLE } from 'src/utils/constants'
 
 interface SEOProps {
   title?: string
@@ -15,10 +16,8 @@ export function SEO(props: SEOProps) {
   const intl = useIntl()
   const location = useLocation()
 
-  const titleTemplate = props.title
-    ? `%s · ${intl.formatMessage({ id: 'title' })}`
-    : intl.formatMessage({ id: 'title' })
-  const title = props.title || intl.formatMessage({ id: 'title' })
+  const titleTemplate = props.title ? `%s · ${TITLE}` : TITLE
+  const title = props.title || TITLE
   const description = props.description || intl.formatMessage({ id: 'description' })
   const lang = props.lang || intl.locale || intl.defaultLocale
   const canonical = props.canonicalUrl || ''
