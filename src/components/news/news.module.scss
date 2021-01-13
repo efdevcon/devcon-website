@@ -1,10 +1,12 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/grids';
 @use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/layout';
 
 .news-container {
   display: flex;
   flex-direction: column;
+  @include layout.content;
 
   .body {
     display: flex;
@@ -40,7 +42,8 @@
     }
 
     .feed {
-      flex-basis: 40%;
+      flex-grow: 1;
+      // flex-basis: 40%;
 
       @media (max-width: $screen-lg) {
         flex-basis: 100%;

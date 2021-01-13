@@ -15,10 +15,12 @@
 
   .img-wrapper {
     position: relative;
+    flex-grow: 1;
 
     .img {
       width: 100%;
-      vertical-align: middle;
+      height: 100%;
+      object-fit: cover;
     }
 
     &:after {
@@ -35,6 +37,7 @@
   &.img {
     .body {
       padding-top: 0px;
+      flex-grow: 0;
     }
   }
 

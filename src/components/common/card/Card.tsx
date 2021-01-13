@@ -11,11 +11,13 @@ interface CardProps {
   linkUrl?: string
   date?: Date
   metadata?: string[]
+  className?: string
 }
 
 export const Card = React.forwardRef((props: CardProps, ref: any) => {
   let className = css['card']
 
+  if (props.className) className = `${props.className} ${className}`
   if (props.imageUrl) className = `${className} ${css['img']}`
 
   const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title

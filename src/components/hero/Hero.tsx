@@ -42,9 +42,8 @@ export const Hero = () => {
   }, [])
 
   return (
-    <div ref={heroEl} className={`${css['hero']} full-width`}>
+    <div ref={heroEl} className={`${css['hero']}`}>
       <Rays className={css['rays']} />
-      {/* <div style={parallax(intersectionRatio)} className={css['bottom-section']}> */}
 
       <div className={css['mountain-container']}>
         <Mountains style={parallax(intersectionRatio)} className={css['mountains']} />
@@ -53,7 +52,6 @@ export const Hero = () => {
       <div className={css['cloud-container']}>
         <Clouds style={parallax(intersectionRatio)} className={css['clouds']} />
       </div>
-      {/* </div> */}
 
       <div className={css['left-rotated']}>
         <p>ETHEREUM DEVELOPER CONFERENCE</p>

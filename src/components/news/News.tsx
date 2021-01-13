@@ -54,16 +54,18 @@ const data = [
 
 export const News = () => {
   return (
-    <div className={css['news-container']}>
-      <h2 className="section-header">News</h2>
-      <div className={css['body']}>
-        <div className={css['cards']}>
-          {data.slice(0, 2).map((item: any, index) => {
-            return <Card key={index} {...item} />
-          })}
-        </div>
-        <div className={css['feed']}>
-          <Feed title="News feed" items={data} />
+    <div className="section">
+      <div className={css['news-container']}>
+        <h2 className="section-header">News</h2>
+        <div className={css['body']}>
+          <div className={css['cards']}>
+            {data.slice(0, 2).map((item: any, index) => {
+              return <Card key={index} {...item} />
+            })}
+          </div>
+          <div className={css['feed']}>
+            <Feed title="News feed" items={data} />
+          </div>
         </div>
       </div>
     </div>

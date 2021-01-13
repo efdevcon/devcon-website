@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Slider from 'react-slick'
 import { useBlogs } from 'src/hooks/useBlogs'
 import moment from 'moment'
 import css from './blog-overview.module.scss'
@@ -7,139 +8,82 @@ import { BlogPost } from 'src/types/BlogPost'
 import ArrowLeft from 'src/assets/icons/arrow_left.svg'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 
-/*
-      TO-DO: 
-        Port scrolling functionality to a separate "HorizontalScroller" component
-*/
-
 export function BlogOverview() {
   const blogs = useBlogs()
-  const refs = useRef<Array<HTMLElement>>([])
-  const containerRef = useRef<HTMLDivElement>()
-  const [pixelsMoved, setPixelsMoved] = useState(0)
-  // const [isLastItem, setIsLastItem] = useState(false)
-  const [allItemsVisible, setAllItemsVisible] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const sliderRef = useRef<Slider>()
 
-  const moveForward = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-
-    const elements = refs.current
-
-    // Looping until we find the first element with a horizontal offset higher than the currently moved pixels (which would be the next item)
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i]
-      const horizontalOffset = element.offsetLeft
-
-      if (horizontalOffset > pixelsMoved) {
-        // const horizontalBound = containerRef.current.scrollWidth + containerRef.current.clientWidth
-        // const nextPixelsMoved = Math.min(horizontalOffset, horizontalBound)
-
-        setPixelsMoved(horizontalOffset)
-
-        // const isLastItem = i === elements.length - 1
-
-        // if (isLastItem) {
-        //   setIsLastItem(true)
-        // } else {
-        //   setIsLastItem(false)
-        // }
-
-        break
-      }
-    }
+  const settings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3.1,
+    slidesToScroll: 3,
+    mobileFirst: true,
+    beforeChange: (_: any, next: number) => {
+      setCurrentIndex(Math.round(next))
+    },
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2.1,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 410,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
-
-  const moveBackward = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-
-    const elements = refs.current
-
-    // Looping backwards looking for the first element with a horizontal offset less than the currently moved pixels (which would be the previous item)
-    for (let i = elements.length - 1; i >= 0; i--) {
-      const element = elements[i]
-      const horizontalOffset = element.offsetLeft
-
-      if (horizontalOffset < pixelsMoved) {
-        setPixelsMoved(horizontalOffset)
-
-        break
-      }
-    }
-  }
-
-  /* 
-    To save some time and deal with edge cases, we reset the scroll distance to 0 whenever the browser resizes 
-    (doesn't do anything on mobile because we use native scroll there)
-  */
-  React.useEffect(() => {
-    // Could debounce here, but keeping it simple in first iteration
-    const resizeListener = () => {
-      setPixelsMoved(0)
-      // setIsLastItem(false)
-      if (containerRef.current) containerRef.current.scrollTo(0, 0)
-    }
-
-    window.addEventListener('resize', resizeListener)
-
-    return () => window.removeEventListener('resize', resizeListener)
-  }, [])
-
-  // We observe whenever the last item becomes fully visible, and then disable the next button
-  React.useLayoutEffect(() => {
-    const lastItem = refs.current[blogs.length - 1]
-
-    let options = {
-      threshold: 1.0,
-    }
-
-    const callback = (entries: any) => {
-      const { intersectionRatio } = entries[0]
-
-      if (intersectionRatio === 1) {
-        setAllItemsVisible(true)
-      } else if (allItemsVisible) {
-        setAllItemsVisible(false)
-      }
-    }
-
-    const observer = new IntersectionObserver(callback, options)
-
-    observer.observe(lastItem)
-
-    return () => {
-      observer.unobserve(lastItem)
-    }
-  }, [allItemsVisible, blogs])
 
   return (
     <div className={css['blog-container']}>
       <div className={css['top-section']}>
-        <h2 className="section-header">Blog</h2>
+        <h3 className="subsection-header">Blog</h3>
 
         <div className={css['arrows']}>
-          <button className={css['arrow-button']} disabled={pixelsMoved === 0} onClick={moveBackward}>
+          <button
+            className={css['arrow-button']}
+            disabled={currentIndex === 0}
+            onClick={() => sliderRef.current?.slickPrev()}
+          >
             <ArrowLeft />
           </button>
 
-          <button className={css['arrow-button']} disabled={allItemsVisible} onClick={moveForward}>
+          <button
+            className={css['arrow-button']}
+            disabled={currentIndex >= blogs.length - 3}
+            onClick={() => sliderRef.current?.slickNext()}
+          >
             <ArrowRight />
           </button>
         </div>
       </div>
 
-      <div ref={containerRef} className={css['scroll-container']}>
-        <div className={css['scroller']} style={{ transform: `translateX(-${pixelsMoved}px)`, '--n': blogs.length }}>
-          {blogs.map((blog: BlogPost, i) => (
-            <Card
-              ref={(ref: HTMLElement) => (refs.current[i] = ref)}
-              key={blog.slug}
-              title={blog.title}
-              imageUrl={blog.imageUrl}
-              linkUrl={blog.slug}
-              metadata={[moment(blog.date).format('ll'), blog.author]}
-            />
-          ))}
-        </div>
+      <div className={css['cards']}>
+        <Slider ref={sliderRef} {...settings}>
+          {blogs.map((blog: BlogPost, i) => {
+            let className = css['card']
+
+            if (i === 0) className += ` ${css['first']}`
+            if (i === blogs.length - 1) className += ` ${css['last']}`
+
+            return (
+              <Card
+                className={className}
+                key={blog.slug}
+                title={blog.title}
+                imageUrl={blog.imageUrl}
+                linkUrl={blog.slug}
+                metadata={[moment(blog.date).format('ll'), blog.author]}
+              />
+            )
+          })}
+        </Slider>
       </div>
     </div>
   )

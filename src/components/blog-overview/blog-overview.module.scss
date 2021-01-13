@@ -1,13 +1,17 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/grids';
 @use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/gaps';
 
 .blog-container {
-  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: $gap-4;
   position: relative;
 
   .top-section {
-    padding-left: 0px;
+    @include layout.content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,64 +26,46 @@
       }
 
       &:last-child {
-        margin-left: 28px;
+        margin-left: 20px;
       }
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $screen-lg) {
         display: none;
       }
     }
   }
 
-  .scroll-container {
-    overflow-x: hidden;
-
-    @media (max-width: $screen-md) {
-      overflow-x: auto;
-    }
-
-    .scroller {
-      transition: all 0.5s;
-      // white-space: nowrap;
-      margin-top: 0;
-      padding-bottom: $gap-4;
-      display: grid;
-      grid-auto-flow: column;
-      grid-gap: $gap-4;
-      grid-template-columns: repeat(var(--n), 33.333%);
-
-      @media (max-width: $screen-md) {
-        transform: translateX(0) !important;
-        grid-gap: $gap-2;
-        grid-template-columns: repeat(var(--n), 90%);
-      }
-
-      // https://uxdesign.cc/creating-horizontal-scrolling-containers-the-right-way-css-grid-c256f64fc585
-      > * {
-        width: 100%;
-      }
-    }
+  .cards {
+    // @include layout.content;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 100%;
   }
 
-  // .card-columns {
-  //   @include grids.grid-6;
-  //   grid-gap: 32px;
+  .card {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    height: 500px;
+    margin-right: $gap-4;
+    margin-bottom: $gap-4;
 
-  //   @media (max-width: $screen-lg) {
-  //     grid-gap: 16px;
-  //   }
+    @media (max-width: $screen-lg) {
+      height: 400px;
+    }
 
-  //   > div {
-  //     // width: 526px;
-  //     grid-column: span 2;
+    @media (max-width: $screen-md) {
+      height: 300px;
+    }
 
-  //     @media (max-width: $screen-lg) {
-  //       grid-column: span 3;
-  //     }
+    &.first {
+      margin-left: $gap-4;
+    }
 
-  //     @media (max-width: $screen-md) {
-  //       grid-column: span 6;
-  //     }
-  //   }
-  // }
+    &.last {
+      margin-right: $gap-4;
+    }
+  }
 }

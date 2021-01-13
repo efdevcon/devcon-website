@@ -2,10 +2,13 @@
 @use 'src/assets/css/partials/fonts';
 
 .feed {
+  height: 100%;
   padding: 32px;
   padding-bottom: 20px;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
   background: white;
+  display: flex;
+  flex-direction: column;
   color: $color-primary;
 
   @media (max-width: $screen-md) {
@@ -20,12 +23,20 @@
   }
 
   .body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
     .item {
+      flex-grow: 1;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+
+      @media (max-width: $screen-lg) {
+        height: 64px;
+      }
 
       @media (max-width: $screen-md) {
         margin-top: $gap-2;
