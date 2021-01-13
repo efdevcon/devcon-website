@@ -1,18 +1,18 @@
 {
-  "subtitle": "Ethereum developer conference",
+  "subtitle": "Conferencia de desarrolladores de Ethereum",
   "description": "La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.",
-  "journey": "Journey to Bogotá 2021+",
-  "getintouch": "Get in touch",
-  "partnerwithus": "Partner with us",
-  "readmore": "Read more",
-  "addtocalendar": "Add to calendar",
+  "journey": "Diario a Bogota 2021+",
+  "getintouch": "Ponte en contacto",
+  "partnerwithus": "Asociarse con nosotros",
+  "readmore": "Leer más",
+  "addtocalendar": "Añadir al calendario",
   "notfound": {
     "header": "NO ENCONTRADO",
     "description": "La página solicitada no pudo ser encontrada."
   },
   "newsletter": {
-    "title": "Subscribe to our boletin",
-    "subtitle": "Stay up to date on the latest devcon news and updates.",
+    "title": "Suscríbete a nuestro boletín",
+    "subtitle": "Mantente al día de las últimas noticias y actualizaciones de devcon.",
     "subscribe": "Suscribirse",
     "subscribed": "¡Gracias por suscribirse!",
     "alreadySubscribed": "El correo electrónico introducido ya está suscrito.",
