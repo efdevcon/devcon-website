@@ -1,9 +1,6 @@
 ---
-title: Press application
+title: Presione la aplicación
 template: content
-parent: contact
-order: 1
-showInMenu: true
 ---
 
-Press application
+Presione la aplicación

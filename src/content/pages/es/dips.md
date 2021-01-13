@@ -1,9 +1,6 @@
 ---
-title: DIPs
+title: DI
 template: dips
-parent: get-involved
-order: 2
-showInMenu: true
 ---
 
 DIPs ES

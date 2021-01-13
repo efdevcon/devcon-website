@@ -1,9 +1,6 @@
 ---
-title: Why Attend
+title: Por qué asistir
 template: content
-parent: about
-order: 1
-showInMenu: true
 ---
 
-Why Attend ES
+Por qué asistir

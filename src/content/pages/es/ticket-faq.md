@@ -1,9 +1,6 @@
 ---
-title: Ticket FAQ
+title: Preguntas frecuentes
 template: content
-parent: tickets
-order: 5
-showInMenu: true
 ---
 
-Ticket FAQ
+Preguntas frecuentes

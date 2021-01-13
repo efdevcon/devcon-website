@@ -1,9 +1,6 @@
 ---
-title: Speaker selection process
+title: Proceso de selección del altavoz
 template: content
-parent: about
-order: 2
-showInMenu: true
 ---
 
-Speaker selection process ES
+Proceso de selección del altavoz
