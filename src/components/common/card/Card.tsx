@@ -48,7 +48,9 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
           {props.linkUrl && (
             <div className={css['read-more']}>
               <p>
-                <Link to={props.linkUrl} className={css['uppercase']}>{intl.formatMessage({ id: 'readmore' })}</Link>
+                <Link to={props.linkUrl} className={css['uppercase']}>
+                  {intl.formatMessage({ id: 'readmore' })}
+                </Link>
               </p>
               <Link to={props.linkUrl}>
                 <IconArrowRight />
