@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react'
-import { ToNavigationData } from 'src/context/queryMapper'
+import { ToNavigationData } from 'src/context/query-mapper'
 import { SiteNavigationContext, DefaultSiteNavigationContext, ISiteNavigationContext } from './site-navigation-context'
 
 interface SiteNavigationContextProviderProps {

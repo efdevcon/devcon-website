@@ -1,5 +1,6 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/main';
 
 .card {
   // overflow: hidden;
@@ -13,12 +14,25 @@
   display: flex;
   flex-direction: column;
 
+  &:hover {
+    .img-wrapper {
+      .img {
+        transform: scale(1.15);
+      }
+    }
+  }
+
   .img-wrapper {
+    overflow: hidden;
     position: relative;
+    flex-grow: 1;
 
     .img {
+      transition: transform 0.5s;
       width: 100%;
-      vertical-align: middle;
+      height: 100%;
+      transform: scale(1);
+      object-fit: cover;
     }
 
     &:after {
@@ -35,6 +49,7 @@
   &.img {
     .body {
       padding-top: 0px;
+      flex-grow: 0;
     }
   }
 

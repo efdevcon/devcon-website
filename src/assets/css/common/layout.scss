@@ -8,12 +8,3 @@
     @include layout.content;
   }
 }
-
-.section-header {
-  font-weight: 400;
-  margin-bottom: 32px;
-
-  @media (max-width: $screen-lg) {
-    margin-bottom: 16px;
-  }
-}

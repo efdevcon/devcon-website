@@ -1,0 +1,16 @@
+.slick-track {
+  display: flex !important;
+}
+
+.slick-list {
+  overflow: unset !important;
+}
+
+.slick-slide {
+  height: auto !important;
+  position: relative;
+
+  > div {
+    height: 100%;
+  }
+}

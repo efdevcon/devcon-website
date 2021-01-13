@@ -3,6 +3,7 @@
 @use 'src/assets/css/partials/fonts';
 @use 'src/assets/css/partials/layout';
 @use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/main';
 
 @keyframes gradient {
   0% {
@@ -69,9 +70,9 @@ $logo-offset: 50px;
     top: -$logo-offset;
     transform: scale(2);
 
-    @media (max-width: $screen-lg) {
-      display: none;
-    }
+    // @media (max-width: $screen-lg) {
+    //   display: none;
+    // }
   }
 
   .left-rotated,
@@ -133,17 +134,19 @@ $logo-offset: 50px;
       height: 100%;
       grid-column-start: 5;
       grid-column-end: 9;
+      grid-row: 1;
       justify-content: center;
       align-items: center;
       top: -$logo-offset;
 
       @media (max-width: $screen-lg) {
-        grid-column-start: 1;
-        grid-column-end: 7;
+        grid-column-start: 3;
+        grid-column-end: 11;
       }
     }
 
     .info {
+      position: relative;
       overflow: hidden;
       display: flex;
       justify-content: space-between;
@@ -155,11 +158,14 @@ $logo-offset: 50px;
       grid-row: 1;
 
       @media (max-width: $screen-lg) {
-        grid-column: 7 / 13;
+        grid-column: 1 / 13;
+        grid-row: 1;
         height: auto;
       }
 
       .date {
+        width: 100%;
+
         p {
           line-height: 100%;
         }

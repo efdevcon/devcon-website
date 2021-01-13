@@ -24,13 +24,6 @@ export function Header({ withHero }: HeaderProps) {
           <Link to={`/${intl.locale}/`}>
             <HeaderLogo />
           </Link>
-          {/* <Link to={`/${intl.locale}/`}>
-            <img height="100%" src={headerLogo} />
-          </Link> */}
-          {/* <h1>
-            <Link to={`/${intl.locale}/`}>{intl.formatMessage({ id: 'title' })}</Link>
-          </h1> */}
-
           <Menu />
         </div>
       </header>

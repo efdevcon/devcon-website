@@ -12,16 +12,18 @@ import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
 import { Newsletter } from 'src/components/newsletter'
 import { useSiteNavigationContext } from 'src/context/site-navigation-context'
+import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
 export const Footer = () => {
   const context = useSiteNavigationContext()
   const footerData = context.data.footer
-  const lang = useIntl().locale
+  const intl = useIntl()
+  const lang = intl.locale
 
   const newsletter = (
     <>
-      <p className="semi-bold">Subscribe to our newsletter</p>
-      <p>Stay up to date on the latest devcon news and updates.</p>
+      <p className="semi-bold">{intl.formatMessage({ id: 'newsletter.title' })}</p>
+      <p>{intl.formatMessage({ id: 'newsletter.subtitle' })}</p>
       <Newsletter />
     </>
   )
@@ -32,7 +34,7 @@ export const Footer = () => {
         <div className={css['content']}>
           <div className={css['col-1']}>
             <Link to={`/${lang}/`}>
-              <img src={logo} alt="Devcon" />
+              <img src={logo} alt={TITLE} />
             </Link>
           </div>
 
@@ -85,11 +87,11 @@ export const Footer = () => {
 
           <div className={css['col-5']}>
             <div className={css['contact']}>
-              <p className="semi-bold">Get in touch</p>
-              <p className={css['email-1']}>devcon@ethereum.org</p>
+              <p className="semi-bold">{intl.formatMessage({ id: 'getintouch' })}</p>
+              <p className={css['email-1']}>{EMAIL_DEVCON}</p>
 
-              <p className="semi-bold">Partner with us</p>
-              <p className={css['email-2']}>sponsorships@ethereum.org</p>
+              <p className="semi-bold">{intl.formatMessage({ id: 'partnerwithus' })}</p>
+              <p className={css['email-2']}>{EMAIL_SPONSORSHIP}</p>
 
               {/* Visible on some breakpoints, but not all - moves to col-7 on mobile */}
               <div className={css['newsletter']}>{newsletter}</div>
@@ -112,7 +114,7 @@ export const Footer = () => {
 
       <div className={css['bottom-section']}>
         <div className={css['content']}>
-          <div className={css['col-1']}>© 2021 — Ethereum Foundation. All Rights Reserved.</div>
+          <div className={css['col-1']}>{COPYRIGHT_NOTICE}</div>
 
           <div className={css['col-2']}>
             {footerData.bottom.map((link: LinkType, index: number) => {
@@ -127,8 +129,8 @@ export const Footer = () => {
           </div>
 
           <div className={css['col-3']}>
-            <Link external className={css['small-logo']} to="https://ethereum.foundation">
-              <img src={smallLogo} alt="Devcon" />
+            <Link external className={css['small-logo']} to={LINK_ETHEREUM_FOUNDATION}>
+              <img src={smallLogo} alt={TITLE} />
             </Link>
           </div>
         </div>

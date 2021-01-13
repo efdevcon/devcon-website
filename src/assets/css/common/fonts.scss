@@ -50,3 +50,39 @@ h4,
 .semi-bold {
   @include fonts.semi-bold;
 }
+
+.section-header {
+  font-weight: 400;
+  margin-bottom: $gap-8;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
+  }
+}
+
+.subsection-header {
+  @include fonts.bold;
+  @include fonts.font-tertiary;
+  text-transform: uppercase;
+  margin-bottom: $gap-6;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
+  }
+}
+
+.uppercase { 
+  text-transform: uppercase;
+}
+
+.lowercase { 
+  text-transform: lowercase;
+}
+
+.line-through { 
+  text-decoration: line-through;
+}
+
+.underline { 
+  text-decoration: underline;
+}

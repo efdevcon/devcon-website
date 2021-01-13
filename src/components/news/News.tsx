@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from 'react-slick'
 import { Card } from 'src/components/common/card'
 import { Feed } from './feed'
 import css from './news.module.scss'
@@ -53,17 +54,34 @@ const data = [
 ]
 
 export const News = () => {
+  const settings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1.1,
+    slidesToScroll: 1,
+  }
+
   return (
-    <div className={css['news-container']}>
-      <h2 className="section-header">News</h2>
-      <div className={css['body']}>
-        <div className={css['cards']}>
-          {data.slice(0, 2).map((item: any, index) => {
-            return <Card key={index} {...item} />
-          })}
+    <div className="section">
+      <div className={css['news-container']}>
+        <h2 className="section-header">News</h2>
+        {/* Only visible on mobile */}
+        <div className={css['slider']}>
+          <Slider {...settings}>
+            {data.slice(0, 2).map((item: any, index) => {
+              return <Card className={`${css['card']} ${css['slider']}`} key={index} {...item} />
+            })}
+          </Slider>
         </div>
-        <div className={css['feed']}>
-          <Feed title="News feed" items={data} />
+        <div className={css['body']}>
+          <div className={css['cards']}>
+            {data.slice(0, 2).map((item: any, index) => {
+              return <Card className={css['card']} key={index} {...item} />
+            })}
+          </div>
+          <div className={css['feed']}>
+            <Feed title="News feed" items={data} />
+          </div>
         </div>
       </div>
     </div>

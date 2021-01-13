@@ -41,7 +41,7 @@
   font-family: $font-primary;
 }
 
-@mixin font-seconary {
+@mixin font-secondary {
   font-family: $font-secondary;
 }
 
@@ -50,18 +50,15 @@
 }
 
 // Misc
-@mixin bold {
-  font-weight: 700;
+@mixin normal {
+  font-weight: 400;
 }
-
-@mixin very-bold {
-  font-weight: 800;
-}
-
 @mixin semi-bold {
   font-weight: 600;
 }
-
-@mixin normal {
-  font-weight: 400;
+@mixin bold {
+  font-weight: 700;
+}
+@mixin very-bold {
+  font-weight: 800;
 }
