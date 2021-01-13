@@ -17,6 +17,7 @@ export function BlogOverview() {
     infinite: false,
     speed: 500,
     slidesToShow: 3.1,
+    arrows: false,
     slidesToScroll: 3,
     mobileFirst: true,
     beforeChange: (_: any, next: number) => {
@@ -69,7 +70,6 @@ export function BlogOverview() {
           {blogs.map((blog: BlogPost, i) => {
             let className = css['card']
 
-            if (i === 0) className += ` ${css['first']}`
             if (i === blogs.length - 1) className += ` ${css['last']}`
 
             return (

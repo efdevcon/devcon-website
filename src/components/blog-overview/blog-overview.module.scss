@@ -36,11 +36,11 @@
   }
 
   .cards {
-    // @include layout.content;
+    @include layout.content;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    max-width: 100%;
+    // overflow: hidden;
+    // max-width: 100%;
   }
 
   .card {
@@ -60,12 +60,8 @@
       height: 300px;
     }
 
-    &.first {
-      margin-left: $gap-4;
-    }
-
     &.last {
-      margin-right: $gap-4;
+      margin-right: 0px;
     }
   }
 }

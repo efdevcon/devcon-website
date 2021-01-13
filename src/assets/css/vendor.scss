@@ -1,12 +1,16 @@
-// .slick-track {
-//   display: flex !important;
-// }
+.slick-track {
+  display: flex !important;
+}
 
-// .slick-slide {
-//   height: auto !important;
-//   position: relative;
+.slick-list {
+  overflow: unset !important;
+}
 
-//   > div {
-//     height: 100%;
-//   }
-// }
+.slick-slide {
+  height: auto !important;
+  position: relative;
+
+  > div {
+    height: 100%;
+  }
+}
