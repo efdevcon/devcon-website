@@ -1,12 +1,18 @@
 {
-  "title": "Discón",
+  "subtitle": "Ethereum developer conference",
   "description": "La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.",
+  "journey": "Journey to Bogota 2021+",
+  "getintouch": "Get in touch",
+  "partnerwithus": "Partner with us",
+  "readmore": "Read more",
+  "addtocalendar": "Add to calendar",
   "notfound": {
     "header": "NO ENCONTRADO",
     "description": "La página solicitada no pudo ser encontrada."
   },
   "newsletter": {
-    "title": "Boletín",
+    "title": "Subscribe to our newsletter",
+    "subtitle": "Stay up to date on the latest devcon news and updates.",
     "subscribe": "Suscribirse",
     "subscribed": "¡Gracias por suscribirse!",
     "alreadySubscribed": "El correo electrónico introducido ya está suscrito.",
