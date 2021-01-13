@@ -28,10 +28,10 @@ export const Feed = ({ title, items }: Props) => {
         <div className={css['list-number']}>{number}</div>
         <div className={css['item-body']}>
           <div className={css['date-handle']}>
-            <p className={css['date']}>JAN 21, 2021</p>
-            <p className={css['handle']}>@EFDEVCON</p>
+            <p className={css['date']}>{item.metadata[0]}</p>
+            <p className={css['handle']}>{item.metadata.slice(1).join(',')}</p>
           </div>
-          <h4 className={css['title']}>Ticket Raffle is Live!</h4>
+          <h4 className={css['title']}>{item.title}</h4>
         </div>
         <IconTwitter className={`${css['icon']} icon`} />
       </div>

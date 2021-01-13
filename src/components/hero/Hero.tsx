@@ -11,7 +11,8 @@ import { TITLE } from 'src/utils/constants'
 
 const parallax = (intersectionRatio: any) => {
   return {
-    transform: `translateY(${(100 - intersectionRatio) / 5}%)`,
+    '--translateY': `${(100 - intersectionRatio) / 5}%`,
+    // transform: `translateY(${(100 - intersectionRatio) / 5}%)`,
   }
 }
 

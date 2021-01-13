@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react'
-import { ToNavigationData } from 'src/context/query-mapper'
+import { ToNavigationData /*ToNewsData*/ } from 'src/context/query-mapper'
 import { SiteNavigationContext, DefaultSiteNavigationContext, ISiteNavigationContext } from './site-navigation-context'
 
 interface SiteNavigationContextProviderProps {
@@ -12,6 +12,7 @@ export const SiteNavigationContextProvider = ({ children, data }: SiteNavigation
 
   useEffect(() => {
     const navigationData = ToNavigationData(data.nodes)
+    // const newsData = ToNewsData(data.nodes)
 
     setContext({ data: navigationData })
   }, [data])

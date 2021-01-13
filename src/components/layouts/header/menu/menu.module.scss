@@ -16,7 +16,7 @@
   .left {
     display: none;
 
-    @media (min-width: $screen-lg - 1) {
+    @media (min-width: $screen-lg + 1) {
       display: flex;
     }
   }

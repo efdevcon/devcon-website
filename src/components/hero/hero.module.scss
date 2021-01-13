@@ -30,6 +30,10 @@ $logo-offset: 50px;
   // Using 100vh on mobile devices often doesn't account for the navigation bar at the bottom, so this is a decent compromise - if it's important to fill the entire
   // screen we can fall back to a JS solution - pending feedback
   @media (max-width: $screen-lg) {
+    height: 90vh;
+  }
+
+  @media (max-width: $screen-md) {
     height: 80vh;
   }
 
@@ -42,10 +46,23 @@ $logo-offset: 50px;
     align-items: flex-end;
 
     .mountains {
+      transform: translateY(var(--translateY));
       width: 35%;
 
       @media (max-width: $screen-lg) {
-        width: 50%;
+        width: 45%;
+      }
+
+      @media (max-width: $screen-md) {
+        width: 65%;
+      }
+
+      @media (max-width: $screen-sm) {
+        width: 80%;
+      }
+
+      @media (max-width: $screen-tiny) {
+        width: 100%;
       }
     }
   }
@@ -59,6 +76,21 @@ $logo-offset: 50px;
       margin-bottom: -9%;
       margin-left: -7.5%;
       width: 115%;
+      transform: translateY(var(--translateY));
+
+      @media (max-width: $screen-md) {
+        transform: scale(1.5) translateY(var(--translateY));
+        margin-bottom: -3%;
+        margin-left: 0%;
+        width: 100%;
+      }
+
+      @media (max-width: $screen-sm) {
+        transform: scale(2.5) translateY(var(--translateY));
+        margin-bottom: -3%;
+        margin-left: 0%;
+        width: 100%;
+      }
     }
   }
 

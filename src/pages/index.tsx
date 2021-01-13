@@ -9,14 +9,15 @@ export default function Index({ data }: any) {
   return (
     <Default navigationData={data.navigationData}>
       <SEO />
-      <News />
+      <News data={data.newsData} />
       <BlogOverview />
     </Default>
   )
 }
 
 export const query = graphql`
-  query($language: String!) {
+  query($language: String!, $withNews: Boolean!) {
     ...NavigationData
+    ...NewsData @include(if: $withNews)
   }
 `

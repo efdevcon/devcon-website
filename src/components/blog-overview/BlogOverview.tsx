@@ -19,6 +19,7 @@ export function BlogOverview() {
     slidesToShow: 3.1,
     arrows: false,
     slidesToScroll: 3,
+    touchThreshold: 100,
     mobileFirst: true,
     beforeChange: (_: any, next: number) => {
       setCurrentIndex(Math.round(next))

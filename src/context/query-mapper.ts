@@ -1,4 +1,5 @@
 import { Link } from 'src/types/Link'
+// import { NewsItem } from 'src/types/NewsItem'
 import { NavigationData } from 'src/types/NavigationData'
 import { FooterData } from 'src/types/FooterData'
 
@@ -7,6 +8,7 @@ export function ToNavigationData(nodes: any): NavigationData {
     top: ToLinks(nodes, 'top'),
     site: ToLinks(nodes, 'site'),
     footer: ToFooterData(nodes),
+    // news: ToNewsData(nodes, '') // Technically not navigation data but we should probably unify all page context data in one provider (TO-DO: discuss with Wesley)
   }
 }
 
@@ -35,3 +37,9 @@ export function ToLink(node: any): Link {
     links: node.links?.map((i: any) => ToLink(i)),
   } as Link
 }
+
+// export function ToNewsData(nodes: any): Array<NewsItem> {
+//   console.log(nodes, 'uh nodes');
+
+//   return [];
+// }

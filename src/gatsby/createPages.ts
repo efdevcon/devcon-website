@@ -98,6 +98,7 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
     component: path.resolve(`./src/templates/${template}.tsx`),
     context: {
       slug: slug,
+      withNews: true,
       lang: lang,
       language: lang, // Merge with lang (language is better because gatsby-intl-plugin writes to the language key)
       intl: {

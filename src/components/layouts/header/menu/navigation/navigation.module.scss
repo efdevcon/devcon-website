@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   font-family: $font-secondary;
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-lg + 1) {
     display: flex;
   }
 
@@ -81,7 +81,6 @@
     text-decoration: underline;
   }
 }
-
 
 .foldout-header {
   @include fonts.font-xxs;

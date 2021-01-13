@@ -24,7 +24,7 @@
     cursor: -webkit-grab;
     display: none;
 
-    @media (min-width: $screen-tiny) {
+    @media (min-width: $screen-tiny + 1) {
       display: none;
     }
   }

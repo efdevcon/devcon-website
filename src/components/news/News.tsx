@@ -5,55 +5,47 @@ import { Feed } from './feed'
 import css from './news.module.scss'
 import moment from 'moment'
 import Twitter from 'src/assets/icons/twitter.svg'
+import { NewsItem } from 'src/types/NewsItem'
+// import { useSiteNavigationContext } from 'src/context/site-navigation-context'
 
-// interface CardProps {
-//   title: string
-//   description?: string
-//   imageUrl?: string
-//   linkUrl?: string
-//   metadata?: string[]
-// }
+type NewsProps = {
+  data?: any
+  className?: string
+}
 
-const data = [
-  {
-    title: 'Ticket Raffle is Live!',
-    description: 'Some description!',
-    linkUrl: '/en/',
-    type: 'twitter',
-    metadata: [moment(new Date()).format('ll'), '@EFDEVCON', <Twitter />],
-  },
-  {
-    title: 'Ticket Raffle is Live!',
-    description: 'hey',
-    // "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    linkUrl: '/en/',
-    type: 'twitter',
-    metadata: [moment(new Date()).format('ll'), '@EFDEVCON', <Twitter />],
-  },
-  {
-    title: 'Ticket Raffle is Live!',
-    description: 'Some description!',
-    linkUrl: '/en/',
-    type: 'twitter',
-    metadata: [moment(new Date()).format('ll'), '@EFDEVCON', <Twitter />],
-  },
-  {
-    title: 'Ticket Raffle is Live!',
-    description: 'Some description!',
-    linkUrl: '/en/',
-    type: 'twitter',
-    metadata: [moment(new Date()).format('ll'), '@EFDEVCON', <Twitter />],
-  },
-  {
-    title: 'Ticket Raffle is Live!',
-    description: 'Some description!',
-    linkUrl: '/en/',
-    type: 'twitter',
-    metadata: [moment(new Date()).format('ll'), '@EFDEVCON', <Twitter />],
-  },
-]
+// Add better typescript here
+// + move to page context provider and do formatting there; discuss with Wesley how to handle non-navigation context data
+const formatNewsData = (data: any): Array<any> => {
+  return data.map((node: any) => {
+    const { date, description, metadata, title, url } = node.frontmatter as NewsItem
 
-export const News = () => {
+    const formattedDate = moment(date).format('ll')
+    const formattedMetaData = [formattedDate, metadata]
+
+    if (url.includes('twitter')) formattedMetaData.push(<Twitter />)
+
+    return {
+      title,
+      description,
+      linkUrl: url,
+      date,
+      metadata: formattedMetaData,
+    }
+  })
+}
+
+const sortNews = (data: any): Array<any> => {
+  return data.slice().sort((a: any, b: any) => {
+    const d1 = new Date(a.frontmatter?.date)
+    const d2 = new Date(b.frontmatter?.date)
+
+    return d1 < d2 ? 1 : -1
+  })
+}
+
+export const News = ({ data: rawData }: NewsProps) => {
+  const data = formatNewsData(sortNews(rawData.nodes))
+
   const settings = {
     infinite: false,
     speed: 500,

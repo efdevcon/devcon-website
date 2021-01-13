@@ -7,6 +7,8 @@ body {
 }
 
 html {
+  position: relative;
+  overflow-x: hidden;
   margin: 0 auto;
   font-family: $font-primary;
   color: $color-primary;
@@ -23,8 +25,7 @@ html {
 }
 
 body {
-  position: relative;
-  overflow-x: hidden;
+  // position: relative;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -15,11 +15,10 @@
 
     > .content {
       position: relative;
-      // max-width: 100%;
       padding-top: 32px;
       padding-bottom: 32px;
       width: 100%;
-      // flex: 1 0 auto;
+      overflow-x: hidden;
     }
 
     > .footer {

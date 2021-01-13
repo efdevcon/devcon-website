@@ -162,6 +162,13 @@ module.exports = {
         path: `${__dirname}/src/content/headers`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'news',
+        path: `${__dirname}/src/content/news`,
+      },
+    },
     'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-intl`,
