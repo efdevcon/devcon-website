@@ -70,3 +70,19 @@ h4,
     margin-bottom: $gap-4;
   }
 }
+
+.uppercase { 
+  text-transform: uppercase;
+}
+
+.lowercase { 
+  text-transform: lowercase;
+}
+
+.line-through { 
+  text-decoration: line-through;
+}
+
+.underline { 
+  text-decoration: underline;
+}

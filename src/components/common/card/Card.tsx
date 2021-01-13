@@ -3,6 +3,7 @@ import { Link } from 'src/components/common/link'
 import { GetExcerpt } from 'src/utils/formatting'
 import css from './card.module.scss'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
+import { useIntl } from 'gatsby-plugin-intl'
 
 interface CardProps {
   title: string
@@ -15,6 +16,7 @@ interface CardProps {
 }
 
 export const Card = React.forwardRef((props: CardProps, ref: any) => {
+  const intl = useIntl()
   let className = css['card']
 
   if (props.className) className = `${props.className} ${className}`
@@ -46,7 +48,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
           {props.linkUrl && (
             <div className={css['read-more']}>
               <p>
-                <Link to={props.linkUrl}>READ MORE</Link>
+                <Link to={props.linkUrl} className={css['uppercase']}>{intl.formatMessage({ id: 'readmore' })}</Link>
               </p>
               <Link to={props.linkUrl}>
                 <IconArrowRight />
