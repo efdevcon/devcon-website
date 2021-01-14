@@ -19,10 +19,10 @@
     "notValid": "El correo electrónico introducido no es válido."
   },
   "state": {
-    "success": "Success",
+    "success": "Éxito",
     "error": "Error",
-    "warning": "Warning",
+    "warning": "Advertencia",
     "info": "Info",
-    "alert": "Alert"
+    "alert": "Alerta"
   }
 }
