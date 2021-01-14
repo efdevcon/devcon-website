@@ -14,7 +14,7 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = ({ page, actions }) => {
         withNews: true
       }
     });
-  } else
+  } else {
     deletePage(page);
 
     createPage({
