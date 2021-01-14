@@ -1,5 +1,5 @@
 ---
-title: Cuándo saldrán a la venta las entradas?
+title: When will tickets go on sale?
 category: ticketing
 order: 1
 ---
