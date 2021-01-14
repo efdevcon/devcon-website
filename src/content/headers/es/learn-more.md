@@ -1,4 +1,4 @@
 ---
-title: Learn more
+title: Aprende más
 ---
 
