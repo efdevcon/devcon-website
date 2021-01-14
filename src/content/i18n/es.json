@@ -17,5 +17,12 @@
     "subscribed": "¡Gracias por suscribirse!",
     "alreadySubscribed": "El correo electrónico introducido ya está suscrito.",
     "notValid": "El correo electrónico introducido no es válido."
+  },
+  "state": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "alert": "Alert"
   }
 }

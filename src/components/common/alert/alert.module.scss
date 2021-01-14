@@ -1,0 +1,86 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/main';
+
+.alert {
+  color: $color-primary;
+  padding: $size-8;
+  display: flex;
+}
+
+.message {
+  margin: 0 0 0 $size-8;
+  width: 100%;
+}
+
+.right { 
+  float: right;
+}
+
+.dismiss {
+  cursor: pointer;
+}
+
+.title { 
+  @include fonts.font-lg;
+}
+
+.success {
+  @extend .alert;
+  background-color: $color-success-light;
+
+  svg {
+    fill: $color-success;
+  }
+  .title { 
+    color: $color-success;
+  }
+}
+
+.error {
+  @extend .alert;
+  background-color: $color-error-light;
+
+  svg {
+    fill: $color-error;
+  }
+  .title { 
+    color: $color-error;
+  }
+}
+
+.warning {
+  @extend .alert;
+  background-color: $color-warning-light;
+
+  svg {
+    fill: $color-warning;
+  }
+  .title { 
+    color: $color-warning;
+  }
+}
+
+.info {
+  @extend .alert;
+  background-color: $color-info-light;
+  
+  svg {
+    fill: $color-info;
+  }
+  .title { 
+    color: $color-info;
+  }
+}
+
+.light {
+  @extend .alert;
+  background-color: $color-light-light;
+
+  svg {
+    fill: $color-light;
+  }
+  .title { 
+    color: $color-light;
+  }
+}

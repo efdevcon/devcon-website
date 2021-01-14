@@ -58,10 +58,10 @@ export const Hero = () => {
       </div>
 
       <div className={css['left-rotated']}>
-        <p className={css['uppercase']}>{intl.formatMessage({ id: 'subtitle' })}</p>
+        <p className={css['text-uppercase']}>{intl.formatMessage({ id: 'subtitle' })}</p>
       </div>
       <div className={css['right-rotated']}>
-        <p className={css['uppercase']}>{intl.formatMessage({ id: 'journey' })}</p>
+        <p className={css['text-uppercase']}>{intl.formatMessage({ id: 'journey' })}</p>
       </div>
 
       <div className={css['grid']}>
