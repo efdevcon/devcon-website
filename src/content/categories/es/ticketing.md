@@ -1,4 +1,4 @@
 ---
-title: Ticketing
+title: Tickets
 ---
 
