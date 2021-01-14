@@ -1,3 +1,4 @@
 ---
-title: Venta de entradas
+title: Ticketing
 ---
+
