@@ -3,8 +3,8 @@ import { GatsbyNode } from 'gatsby'
 export const onCreatePage: GatsbyNode['onCreatePage'] = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
-  // Could use a smarter regex when we have more languages
-  if (['/en/', '/es/'].includes(page.path)) {
+  // Detects the index page, not sure where news lives yet 
+  if (['/', '/en/', '/es/'].includes(page.path)) {
     deletePage(page);
 
     createPage({
@@ -14,7 +14,7 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = ({ page, actions }) => {
         withNews: true
       }
     });
-  } /*else { <--- not really sure where news lives, so just adding it to the index page for now
+  } else
     deletePage(page);
 
     createPage({
@@ -24,5 +24,5 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = ({ page, actions }) => {
         withNews: false
       }
     });
-  }*/
+  }
 }

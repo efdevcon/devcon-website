@@ -2,6 +2,7 @@ import React from 'react'
 import css from './feed.module.scss'
 import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconArrowDownward from 'src/assets/icons/arrow_downward.svg'
+import { Link } from 'src/components/common/link'
 
 const itemsPerPage = 5
 
@@ -31,7 +32,11 @@ export const Feed = ({ title, items }: Props) => {
             <p className={css['date']}>{item.metadata[0]}</p>
             <p className={css['handle']}>{item.metadata.slice(1).join(',')}</p>
           </div>
-          <h4 className={css['title']}>{item.title}</h4>
+          <h4 className={css['title']}>
+            <Link to={item.linkUrl} external>
+              {item.title}
+            </Link>
+          </h4>
         </div>
         <IconTwitter className={`${css['icon']} icon`} />
       </div>
