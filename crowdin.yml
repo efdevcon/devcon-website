@@ -1,6 +1,16 @@
 preserve_hierarchy: true
 files:
-  - source: /src/content/*/en/*.md
-    translation: /src/content/*/%two_letters_code%/%original_file_name%
+  - source: /src/content/categories/en/*.md
+    translation: /src/content/categories/%two_letters_code%/%original_file_name%
   - source: /src/content/i18n/en.json
     translation: /src/content/i18n/%two_letters_code%.json
+  - source: /src/content/faq/en/*.md
+    translation: /src/content/faq/%two_letters_code%/%original_file_name%
+  - source: /src/content/headers/en/*.md
+    translation: /src/content/headers/%two_letters_code%/%original_file_name%
+  - source: /src/content/links/en/*.md
+    translation: /src/content/links/%two_letters_code%/%original_file_name%
+  - source: /src/content/news/en/*.md
+    translation: /src/content/news/%two_letters_code%/%original_file_name%
+  - source: /src/content/pages/en/*.md
+    translation: /src/content/pages/%two_letters_code%/%original_file_name%
