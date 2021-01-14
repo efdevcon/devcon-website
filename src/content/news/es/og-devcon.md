@@ -1,7 +1,8 @@
 ---
 url: https://devcon.org/
-title: Spanish Devcon
-description: I like to describe my news in spanish
+title: OG Devcon
+description: I like to describe my news
 date: 2021-01-12T22:31:49.152Z
 metadata: DEVCON
 ---
+
