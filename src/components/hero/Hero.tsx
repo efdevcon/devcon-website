@@ -46,13 +46,11 @@ export const Hero = () => {
     }
   }, [])
 
-  console.log('rendering svgs')
-
   return (
     <div ref={heroEl} className={`${css['hero']}`}>
       {/* Grants some text visibility */}
       {/* <div className={css['shading']} /> */}
-      <img className={css['shading']} src={shading} />
+      <img alt="" className={css['shading']} src={shading} />
 
       <Rays className={css['rays']} />
 

@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Slider from 'react-slick'
 import { Card } from 'src/components/common/card'
 import { Feed } from './feed'
 import css from './news.module.scss'
 import moment from 'moment'
-import Twitter from 'src/assets/icons/twitter.svg'
+// import Twitter from 'src/assets/icons/twitter.svg'
 import { NewsItem } from 'src/types/NewsItem'
 // import { useSiteNavigationContext } from 'src/context/site-navigation-context'
 
@@ -22,7 +22,8 @@ const formatNewsData = (data: any): Array<any> => {
     const formattedDate = moment(date).format('ll')
     const formattedMetaData = [formattedDate, metadata]
 
-    if (url.includes('twitter')) formattedMetaData.push(<Twitter />)
+    // Need a stronger regex here probably
+    // if (url.includes('twitter')) formattedMetaData.push(<Twitter />)
 
     return {
       title,

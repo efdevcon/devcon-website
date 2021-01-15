@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './feed.module.scss'
 // import IconTwitter from 'src/assets/icons/twitter.svg'
-import IconArrowDownward from 'src/assets/icons/arrow_downward.svg'
+// import IconArrowDownward from 'src/assets/icons/arrow_downward.svg'
 import { Link } from 'src/components/common/link'
 
 // const itemsPerPage = 5
