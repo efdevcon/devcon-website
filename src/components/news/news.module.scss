@@ -50,8 +50,9 @@
         display: none;
       }
 
-      @media (max-width: $screen-xl) {
+      @media (max-width: $screen-xxl) {
         margin-right: $gap-4;
+        flex-basis: 40%;
       }
 
       // @media (max-width: $screen-tiny) {
@@ -71,7 +72,7 @@
         &:first-child {
           margin-right: $gap-8;
 
-          @media (max-width: $screen-xl) {
+          @media (max-width: $screen-xxl) {
             margin-right: 0px;
           }
         }
@@ -87,7 +88,7 @@
 
     .feed {
       flex-grow: 1;
-      // flex-basis: 40%;
+      flex-basis: 40%;
 
       @media (max-width: $screen-lg) {
         display: none;
