@@ -12,7 +12,7 @@ interface AlertProps {
   title?: string
   message?: string
   dismissable?: boolean
-  dismissed?: () => void,
+  dismissed?: () => void
 }
 
 export function Alert(props: AlertProps) {
@@ -47,11 +47,11 @@ export function Alert(props: AlertProps) {
     }
   }
 
-  function dismiss() { 
-    setVisible(false);
+  function dismiss() {
+    setVisible(false)
 
     if (props.dismissed) {
-      props.dismissed();
+      props.dismissed()
     }
   }
 

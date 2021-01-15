@@ -37,8 +37,8 @@ export const Newsletter = () => {
     setResult(result)
   }
 
-  function onDismiss() { 
-    setResult(undefined);
+  function onDismiss() {
+    setResult(undefined)
   }
 
   return (
@@ -52,19 +52,19 @@ export const Newsletter = () => {
             </div>
           ) : (
             <>
-            <p>{intl.formatMessage({ id: 'newsletter.subtitle' })}</p>
-            <div className={css['container']}>
-              <input
-                className={css['input']}
-                type="email"
-                id="email"
-                placeholder={intl.formatMessage({ id: 'newsletter.enter' })}
-                {...emailField}
-              />
-              <button className={css['button']} type="submit">
-                {intl.formatMessage({ id: 'newsletter.subscribe' })}
-              </button>
-            </div>
+              <p>{intl.formatMessage({ id: 'newsletter.subtitle' })}</p>
+              <div className={css['container']}>
+                <input
+                  className={css['input']}
+                  type="email"
+                  id="email"
+                  placeholder={intl.formatMessage({ id: 'newsletter.enter' })}
+                  {...emailField}
+                />
+                <button className={css['button']} type="submit">
+                  {intl.formatMessage({ id: 'newsletter.subscribe' })}
+                </button>
+              </div>
             </>
           )}
         </div>
