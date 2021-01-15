@@ -72,12 +72,17 @@
     .title {
       font-family: $font-primary;
       letter-spacing: -0.4px;
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
       @include fonts.font-xl;
       @include fonts.bold;
     }
 
     .text {
       margin-top: $gap-4;
+      overflow: hidden;
+      // white-space: nowrap;
       color: rgba(97, 97, 97, 1);
     }
 

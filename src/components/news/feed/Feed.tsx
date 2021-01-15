@@ -1,10 +1,10 @@
 import React from 'react'
 import css from './feed.module.scss'
-import IconTwitter from 'src/assets/icons/twitter.svg'
+// import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconArrowDownward from 'src/assets/icons/arrow_downward.svg'
 import { Link } from 'src/components/common/link'
 
-const itemsPerPage = 5
+// const itemsPerPage = 5
 
 type Props = {
   title: string
@@ -12,11 +12,11 @@ type Props = {
 }
 
 export const Feed = ({ title, items }: Props) => {
-  const [page] = React.useState(0)
-  const offset = page * itemsPerPage
-  const itemsInView = items.slice(offset, offset + itemsPerPage)
+  // const [page] = React.useState(0)
+  // const offset = page * itemsPerPage
+  // const itemsInView = items.slice(offset, offset + itemsPerPage)
 
-  const formattedItems = itemsInView.map((item, index) => {
+  const formattedItems = items.map((item, index) => {
     let number: string = (index + 1).toString()
 
     // Left pad with 0
@@ -25,21 +25,19 @@ export const Feed = ({ title, items }: Props) => {
     }
 
     return (
-      <div className={css['item']} key={index}>
+      <Link to={item.linkUrl} key={item.linkUrl} external>
+        {/* <div className={css['item']} key={index}> */}
         <div className={css['list-number']}>{number}</div>
         <div className={css['item-body']}>
           <div className={css['date-handle']}>
             <p className={css['date']}>{item.metadata[0]}</p>
             <p className={css['handle']}>{item.metadata.slice(1).join(',')}</p>
           </div>
-          <h4 className={css['title']}>
-            <Link to={item.linkUrl} external>
-              {item.title}
-            </Link>
-          </h4>
+          <h4 className={css['title']}>{item.title}</h4>
         </div>
-        <IconTwitter className={`${css['icon']} icon`} />
-      </div>
+        {/* <IconTwitter className={`${css['icon']} icon`} /> */}
+        {/* </div> */}
+      </Link>
     )
   })
 
@@ -49,10 +47,11 @@ export const Feed = ({ title, items }: Props) => {
 
       <div className={css['body']}>{formattedItems}</div>
 
-      <div className={css['load-more']}>
+      {/* Pagination */}
+      {/* <div className={css['load-more']}>
         <p>Load More</p>
         <IconArrowDownward />
-      </div>
+      </div> */}
     </div>
   )
 }

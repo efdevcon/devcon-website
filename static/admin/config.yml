@@ -68,8 +68,8 @@ collections:
     create: true
     i18n: true
     fields:
-      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate' }
-      - { name: 'title', label: 'Title', widget: 'string', i18n: true }
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: true }
+      - { name: 'title', label: 'Title', widget: 'string', i18n: true, required: true }
       - {
           name: 'description',
           pattern: ['^.{0,280}$', 'Must have less than 280 characters'],
@@ -78,8 +78,8 @@ collections:
           i18n: true,
           required: false,
         }
-      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate' }
-      - { name: 'metadata', label: 'Metadata', widget: text, i18n: 'duplicate' }
+      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
+      - { name: 'metadata', label: 'Metadata', widget: text, i18n: 'duplicate', required: false }
 
   - name: faq
     label: FAQ

@@ -17,6 +17,8 @@
 $logo-offset: 50px;
 
 .hero {
+  color: white;
+  --text-color: white;
   overflow: hidden;
   flex-grow: 1;
   position: relative;
@@ -37,6 +39,14 @@ $logo-offset: 50px;
     height: 80vh;
   }
 
+  .shading {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 21%;
+    width: 100%;
+  }
+
   .mountain-container {
     position: absolute;
     width: 100%;
@@ -47,22 +57,30 @@ $logo-offset: 50px;
 
     .mountains {
       transform: translateY(var(--translateY));
-      width: 35%;
+      width: 42%;
 
-      @media (max-width: $screen-lg) {
-        width: 45%;
+      @media (max-width: $screen-xl) {
+        width: 60%;
       }
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $screen-lg) {
         width: 65%;
       }
 
+      @media (max-width: $screen-md) {
+        width: 75%;
+      }
+
       @media (max-width: $screen-sm) {
-        width: 80%;
+        width: 100%;
       }
 
       @media (max-width: $screen-tiny) {
         width: 100%;
+      }
+
+      @media (orientation: landscape) {
+        width: 40%;
       }
     }
   }
@@ -91,6 +109,13 @@ $logo-offset: 50px;
         margin-left: 0%;
         width: 100%;
       }
+
+      @media (orientation: landscape) {
+        transform: scale(1.1) translateY(var(--translateY));
+        width: 100%;
+        margin-left: 0%;
+        margin-bottom: -10%;
+      }
     }
   }
 
@@ -102,9 +127,13 @@ $logo-offset: 50px;
     top: -$logo-offset;
     transform: scale(2);
 
-    // @media (max-width: $screen-lg) {
-    //   display: none;
-    // }
+    @media (max-width: $screen-tiny) {
+      top: -($logo-offset / 2);
+    }
+
+    @media (max-width: $screen-lg) and (orientation: landscape) {
+      top: -($logo-offset / 2);
+    }
   }
 
   .left-rotated,
@@ -147,7 +176,7 @@ $logo-offset: 50px;
     }
   }
 
-  .grid {
+  .logo-container {
     position: absolute;
     left: 0;
     top: 0;
@@ -155,86 +184,137 @@ $logo-offset: 50px;
     height: 100%;
     color: white;
     --text-color: white;
-
-    @include gaps.lg(true);
-    @include grids.grid-12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     .logo {
       display: flex;
       position: relative;
-      width: 100%;
-      height: 100%;
-      grid-column-start: 5;
-      grid-column-end: 9;
-      grid-row: 1;
+      width: 25%;
+      height: auto;
       justify-content: center;
       align-items: center;
       top: -$logo-offset;
 
+      @media (max-width: $screen-xl) {
+        width: 35%;
+      }
+
       @media (max-width: $screen-lg) {
-        grid-column-start: 3;
-        grid-column-end: 11;
+        width: 50%;
+      }
+
+      @media (max-width: $screen-md) {
+        width: 60%;
+      }
+
+      @media (max-width: $screen-sm) {
+        width: 60%;
+      }
+
+      @media (max-width: $screen-tiny) {
+        top: -($logo-offset / 2);
+      }
+
+      @media (max-width: $screen-lg) and (orientation: landscape) {
+        width: 20%;
+        top: -($logo-offset / 2);
+      }
+    }
+  }
+
+  .date {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+
+    p {
+      line-height: 100%;
+    }
+
+    @media (max-width: $screen-lg) {
+      @include gaps.lg(true);
+      display: flex;
+      left: unset;
+      width: 100%;
+      top: 15%;
+      justify-content: flex-end;
+    }
+
+    @media (orientation: landscape) {
+      top: 25%;
+    }
+  }
+
+  .calendar {
+    position: absolute;
+    left: 70%;
+    bottom: 20%;
+    width: 25%;
+
+    @media (max-width: $screen-lg) {
+      @include gaps.lg(true);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      left: unset;
+      width: 100%;
+    }
+
+    @media (max-width: $screen-lg) {
+      bottom: 15%;
+    }
+
+    > p {
+      font-family: $font-tertiary;
+
+      @media (max-width: $screen-lg) {
+        display: none;
       }
     }
 
-    .info {
-      position: relative;
+    button {
+      @include fonts.font-xl;
+      @include fonts.bold;
+      cursor: pointer;
+      width: 100%;
       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background: none;
+      margin-top: $gap-4;
       display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      margin: auto;
-      margin-left: 32px;
-      height: 50%;
-      grid-column: 9 / 13;
-      grid-row: 1;
+      align-items: center;
+      color: white;
+      padding-left: $gap-7;
+      padding-right: $gap-7;
+      padding-top: $gap-3;
+      padding-bottom: $gap-3;
+      border: 2px solid white;
 
       @media (max-width: $screen-lg) {
-        grid-column: 1 / 13;
-        grid-row: 1;
-        height: auto;
+        @include fonts.font-xxl;
+        width: 70%;
+        max-width: 300px;
       }
 
-      .date {
+      @media (max-width: $screen-sm) {
         width: 100%;
-
-        p {
-          line-height: 100%;
-        }
       }
 
-      .calendar {
-        position: relative;
+      @media (max-width: $screen-lg) and (orientation: landscape) {
+        font-size: 16px;
+      }
 
-        > p {
-          font-family: $font-tertiary;
+      > p {
+        flex-grow: 1;
+      }
 
-          @media (max-width: $screen-lg) {
-            display: none;
-          }
-        }
-
-        button {
-          @include fonts.font-xl;
-          @include fonts.bold;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          cursor: pointer;
-          margin-top: 16px;
-          display: flex;
-          color: white;
-          padding-left: 28px;
-          padding-right: 28px;
-          padding-top: 14px;
-          padding-bottom: 14px;
-          border: 2px solid white;
-
-          .icon {
-            margin-right: $gap-2;
-            flex-shrink: 0;
-          }
-        }
+      .icon {
+        margin-right: $gap-2;
+        flex-shrink: 0;
       }
     }
   }

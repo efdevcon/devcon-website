@@ -2,6 +2,7 @@ import React from 'react'
 import css from './hero.module.scss'
 // import Logo from './svgs/Logo'
 import logo from 'src/assets/images/devcon-logo.svg'
+import shading from 'src/assets/images/shading.png'
 import Clouds from './svgs/Clouds'
 import Rays from './svgs/Rays'
 import Mountains from './svgs/Mountains'
@@ -45,8 +46,14 @@ export const Hero = () => {
     }
   }, [])
 
+  console.log('rendering svgs')
+
   return (
     <div ref={heroEl} className={`${css['hero']}`}>
+      {/* Grants some text visibility */}
+      {/* <div className={css['shading']} /> */}
+      <img className={css['shading']} src={shading} />
+
       <Rays className={css['rays']} />
 
       <div className={css['mountain-container']}>
@@ -64,26 +71,27 @@ export const Hero = () => {
         <p className={css['uppercase']}>{intl.formatMessage({ id: 'journey' })}</p>
       </div>
 
-      <div className={css['grid']}>
+      <div className={css['logo-container']}>
         <img alt={TITLE} className={css['logo']} src={logo} /> {/*<Logo className={css['logo']} />*/}
-        <div className={css['info']}>
-          <div className={css['date']}>
-            <p className="h2">
-              Aug 2021
-              <br />
-              10 → 13
-            </p>
-          </div>
-
-          <div className={css['calendar']}>
-            <p>{intl.formatMessage({ id: 'description' })}</p>
-            <button>
-              <IconEventNote className={`icon ${css['icon']}`} />
-              <p>{intl.formatMessage({ id: 'addtocalendar' })}</p>
-            </button>
-          </div>
-        </div>
       </div>
+
+      {/* <div className={css['info']}> */}
+      <div className={css['date']}>
+        <p className="h2">
+          Aug 2021
+          <br />
+          10 → 13
+        </p>
+      </div>
+
+      <div className={css['calendar']}>
+        <p>{intl.formatMessage({ id: 'description' })}</p>
+        <button>
+          <IconEventNote className={`icon ${css['icon']}`} />
+          <p>{intl.formatMessage({ id: 'addtocalendar' })}</p>
+        </button>
+      </div>
+      {/* </div> */}
     </div>
   )
 }

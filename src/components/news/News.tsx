@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Slider from 'react-slick'
 import { Card } from 'src/components/common/card'
 import { Feed } from './feed'
@@ -48,9 +48,21 @@ export const News = ({ data: rawData }: NewsProps) => {
 
   const settings = {
     infinite: false,
+    arrows: false,
     speed: 500,
-    slidesToShow: 1.1,
-    slidesToScroll: 1,
+    slidesToShow: 2.1,
+    slidesToScroll: 2,
+    touchThreshold: 100,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 410,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   return (
@@ -60,7 +72,7 @@ export const News = ({ data: rawData }: NewsProps) => {
         {/* Only visible on mobile */}
         <div className={css['slider']}>
           <Slider {...settings}>
-            {data.slice(0, 2).map((item: any, index) => {
+            {data.map((item: any, index) => {
               return <Card className={`${css['card']} ${css['slider']}`} key={index} {...item} />
             })}
           </Slider>

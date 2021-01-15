@@ -22,34 +22,46 @@
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
-    display: none;
+    // https://github.com/kenwheeler/slick/issues/187 <-- can't use display: none; for the slider because react-slick needs to measure elements
+    display: block;
+    height: 0;
+    overflow: hidden;
 
-    @media (min-width: $screen-tiny + 1) {
-      display: none;
+    @media (max-width: $screen-lg) {
+      display: flex;
+      height: 300px;
+      overflow: unset;
     }
   }
 
   .body {
     display: flex;
 
-    @media (max-width: $screen-lg) {
-      flex-wrap: wrap;
-    }
+    // @media (max-width: $screen-lg) {
+    //   flex-wrap: wrap;
+    // }
 
     .cards {
       display: flex;
-      margin-right: 32px;
+      margin-right: $gap-8;
       flex-basis: 60%;
 
-      @media (max-width: $screen-tiny) {
+      @media (max-width: $screen-lg) {
         display: none;
       }
 
-      @media (max-width: $screen-lg) {
-        flex-basis: 100%;
-        margin-right: 0px;
-        margin-bottom: 18px;
+      @media (max-width: $screen-xl) {
+        margin-right: $gap-4;
       }
+
+      // @media (max-width: $screen-tiny) {
+      //   display: none;
+      // }
+      // @media (max-width: $screen-lg) {
+      //   flex-basis: 100%;
+      //   margin-right: 0px;
+      //   margin-bottom: 18px;
+      // }
 
       > * {
         height: 410px;
@@ -57,10 +69,17 @@
         flex-grow: 1;
 
         &:first-child {
-          margin-right: 32px;
+          margin-right: $gap-8;
 
-          @media (max-width: $screen-lg) {
-            margin-right: 18px;
+          @media (max-width: $screen-xl) {
+            margin-right: 0px;
+          }
+        }
+
+        @media (max-width: $screen-xxl) {
+          min-height: 300px;
+          &:last-child {
+            display: none;
           }
         }
       }
@@ -71,8 +90,12 @@
       // flex-basis: 40%;
 
       @media (max-width: $screen-lg) {
-        flex-basis: 100%;
+        display: none;
       }
+
+      // @media (max-width: $screen-lg) {
+      //   flex-basis: 100%;
+      // }
     }
   }
 }
