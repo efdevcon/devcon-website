@@ -71,18 +71,46 @@ h4,
   }
 }
 
-.uppercase { 
+.text-primary { 
+  color: $color-primary;
+}
+
+.text-secondary { 
+  color: $color-secondary;
+}
+
+.text-tertiary { 
+  color: $color-tertiary;
+}
+
+.text-bold { 
+  @include fonts.bold;
+}
+
+.text-italic { 
+  font-style: italic !important;
+}
+
+.text-small { 
+  @include fonts.font-sm;
+}
+
+.text-uppercase { 
   text-transform: uppercase;
 }
 
-.lowercase { 
+.text-lowercase { 
   text-transform: lowercase;
 }
 
-.line-through { 
+.text-line-through { 
   text-decoration: line-through;
 }
 
-.underline { 
+.text-underline { 
   text-decoration: underline;
+}
+
+.no-underline { 
+  text-decoration: none;
 }

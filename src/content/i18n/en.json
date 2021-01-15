@@ -17,5 +17,12 @@
     "subscribed": "Thank you for subscribing!",
     "alreadySubscribed": "The email you entered is already subscribed.",
     "notValid": "The email you entered is not valid."
+  },
+  "state": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "alert": "Alert"
   }
 }
