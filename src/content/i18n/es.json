@@ -13,6 +13,7 @@
   "newsletter": {
     "title": "Suscríbete a nuestro boletín",
     "subtitle": "Mantente al día de las últimas noticias y actualizaciones de devcon.",
+    "enter": "Enter email address",
     "subscribe": "Suscribirse",
     "subscribed": "¡Gracias por suscribirse!",
     "alreadySubscribed": "El correo electrónico introducido ya está suscrito.",
