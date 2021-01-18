@@ -1,5 +1,6 @@
 import React from 'react'
 import { Alert } from '../alert'
+import { Collapse } from '../collapse'
 import './design-system.module.scss'
 
 export function DesignSystem() {
@@ -62,6 +63,18 @@ export function DesignSystem() {
         <Alert type="error" title="Without message" />
         <Alert type="warning" message='You can dismiss this alert by clicking "X"' dismissable={true} />
         <Alert type="info" dismissable={true} />
+      </div>
+
+      <div>
+        <h1>Collapse</h1>
+        <hr />
+
+        <Collapse title="Expanded Panel" expanded={true} body="This panel is expanded." />
+        <Collapse title="Collapsed Panel" expanded={false} body="This panel is collapsed." />
+        <Collapse
+          title="Collapsed Panel by default"
+          body="This panel is collapsed by default. Without providing a property."
+        />
       </div>
 
       <div>

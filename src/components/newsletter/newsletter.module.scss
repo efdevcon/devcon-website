@@ -3,8 +3,6 @@
 @use 'src/assets/css/partials/gaps';
 @use 'src/assets/css/main';
 
-// tussen 768 $screen-md en 1280px $screen-xl
-
 .container { 
     padding: $size-8 0;
     display: flex;
@@ -63,12 +61,3 @@
         margin-top: $gap-2;
     }
 }
-
-// .title { 
-//   @include fonts.font-lg;
-// }
-
-// .success {
-//   @extend .alert;
-//   background-color: $color-success-light;
-// }
