@@ -6,4 +6,4 @@ order: 1
 
 Estamos encantados de anunciar que Devcon 6 se celebrará en Bogota, capital de Colombia y ciudad más grande.
 
-**Nuestro lugar es el \[Centro de Convenciones Agora Bogota] ([https://goo. l/maps/Ee3dz2XbQfbNKeR36](https://goo.gl/maps/Ee3dz2XbQfbNKeR36)); un lugar recientemente construido y de vanguardia que esperamos que sea el lugar más adecuado para albergar a Devcon.**
+Our venue is the [Agora Bogota Convention Center](https://goo.gl/maps/Ee3dz2XbQfbNKeR36); a newly constructed and state of the art venue that we hope will be, by far, the most suitable venue to ever host Devcon.
