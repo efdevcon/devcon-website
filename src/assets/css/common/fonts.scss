@@ -31,6 +31,14 @@ h4,
   @include fonts.font-md;
 }
 
+.font-xxl { 
+  font-size: $size-16 + $size-8;
+}
+
+.font-xl { 
+  @include fonts.font-xl;
+}
+
 .font-md {
   @include fonts.font-md;
 }

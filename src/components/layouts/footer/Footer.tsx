@@ -20,14 +20,6 @@ export const Footer = () => {
   const intl = useIntl()
   const lang = intl.locale
 
-  const newsletter = (
-    <>
-      <p className="semi-bold">{intl.formatMessage({ id: 'newsletter.title' })}</p>
-      <p>{intl.formatMessage({ id: 'newsletter.subtitle' })}</p>
-      <Newsletter />
-    </>
-  )
-
   return (
     <footer className={`footer ${css['container']}`}>
       <div className={css['top-section']}>
@@ -94,7 +86,9 @@ export const Footer = () => {
               <p className={css['email-2']}>{EMAIL_SPONSORSHIP}</p>
 
               {/* Visible on some breakpoints, but not all - moves to col-7 on mobile */}
-              <div className={css['newsletter']}>{newsletter}</div>
+              <div className={css['newsletter']}>
+                <Newsletter />
+              </div>
             </div>
           </div>
 
@@ -108,7 +102,9 @@ export const Footer = () => {
           </div>
 
           {/* Only visible on mobile */}
-          <div className={css['col-7']}>{newsletter}</div>
+          <div className={css['col-7']}>
+            <Newsletter />
+          </div>
         </div>
       </div>
 

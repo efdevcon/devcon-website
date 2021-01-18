@@ -12,13 +12,14 @@ interface AlertProps {
   title?: string
   message?: string
   dismissable?: boolean
+  dismissed?: () => void
 }
 
 export function Alert(props: AlertProps) {
   const intl = useIntl()
   const [visible, setVisible] = useState(true)
 
-  const RenderTitle = () => {
+  const renderTitle = () => {
     if (props.title) return props.title
 
     switch (props.type) {
@@ -35,7 +36,7 @@ export function Alert(props: AlertProps) {
     }
   }
 
-  const RenderIcon = () => {
+  const renderIcon = () => {
     switch (props.type) {
       case 'success':
         return <IconCircleCheck />
@@ -46,20 +47,28 @@ export function Alert(props: AlertProps) {
     }
   }
 
+  function dismiss() {
+    setVisible(false)
+
+    if (props.dismissed) {
+      props.dismissed()
+    }
+  }
+
   if (!visible) return <></>
 
   return (
     <div className={css[props.type]}>
-      <div>{RenderIcon()}</div>
+      <div>{renderIcon()}</div>
       <div className={css.message}>
         {props.dismissable && (
           <div className={css.right}>
-            <span role="button" className={css.dismiss} onClick={() => setVisible(false)}>
+            <span role="button" className={css.dismiss} onClick={dismiss}>
               <IconCross />
             </span>
           </div>
         )}
-        <p className={css.title}>{RenderTitle()}</p>
+        <p className={css.title}>{renderTitle()}</p>
         {props.message && <p>{props.message}</p>}
       </div>
     </div>

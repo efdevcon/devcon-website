@@ -13,6 +13,7 @@
   "newsletter": {
     "title": "Subscribe to our newsletter",
     "subtitle": "Stay up to date on the latest devcon news and updates.",
+    "enter": "Enter email address",
     "subscribe": "Subscribe",
     "subscribed": "Thank you for subscribing!",
     "alreadySubscribed": "The email you entered is already subscribed.",
