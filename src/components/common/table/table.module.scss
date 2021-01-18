@@ -1,0 +1,37 @@
+.distribute-items {
+  display: flex;
+  // grid-template-columns: 1fr;
+  // background: yellow;
+
+  > * {
+    border: 1px solid black;
+    flex-shrink: 0;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  // display: flex;
+  // justify-content: space-evenly;
+  // background: yellow;
+
+  // > * {
+  //   border: 1px solid black;
+  //   flex-shrink: 0;
+  //   flex-grow: 1;
+  // }
+}
+
+.container {
+  .header {
+    @extend .distribute-items;
+  }
+
+  .row {
+    @extend .distribute-items;
+
+    background: white;
+
+    &:nth-child(even) {
+      background: grey;
+    }
+  }
+}

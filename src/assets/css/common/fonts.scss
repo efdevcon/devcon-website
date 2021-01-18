@@ -43,6 +43,18 @@ h4,
   @include fonts.font-xs;
 }
 
+.font-primary {
+  @include fonts.font-primary;
+}
+
+.font-secondary {
+  @include fonts.font-secondary;
+}
+
+.font-tertiary {
+  @include fonts.font-tertiary;
+}
+
 .bold {
   @include fonts.bold;
 }
@@ -71,46 +83,46 @@ h4,
   }
 }
 
-.text-primary { 
+.text-primary {
   color: $color-primary;
 }
 
-.text-secondary { 
+.text-secondary {
   color: $color-secondary;
 }
 
-.text-tertiary { 
+.text-tertiary {
   color: $color-tertiary;
 }
 
-.text-bold { 
+.text-bold {
   @include fonts.bold;
 }
 
-.text-italic { 
+.text-italic {
   font-style: italic !important;
 }
 
-.text-small { 
+.text-small {
   @include fonts.font-sm;
 }
 
-.text-uppercase { 
+.text-uppercase {
   text-transform: uppercase;
 }
 
-.text-lowercase { 
+.text-lowercase {
   text-transform: lowercase;
 }
 
-.text-line-through { 
+.text-line-through {
   text-decoration: line-through;
 }
 
-.text-underline { 
+.text-underline {
   text-decoration: underline;
 }
 
-.no-underline { 
+.no-underline {
   text-decoration: none;
 }

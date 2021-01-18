@@ -1,0 +1,46 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/layout';
+
+.hero {
+  position: relative;
+  width: 100%;
+  padding-top: $gap-4;
+
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        73.15% 179.46% at 90.19% 25.94%,
+        #00b3a4 0%,
+        rgba(0, 255, 117, 0.4) 58.33%,
+        rgba(203, 227, 214, 0) 100%
+      ),
+      #ffffff;
+
+    > img {
+      position: absolute;
+      right: 0px;
+      bottom: -50px;
+    }
+  }
+}
+
+.info {
+  @include layout.content;
+  width: 100%;
+
+  > h1 {
+    padding-top: $gap-16;
+    padding-bottom: $gap-16;
+    font-size: 9rem;
+  }
+
+  .anchors {
+    width: 100%;
+    display: flex;
+  }
+}

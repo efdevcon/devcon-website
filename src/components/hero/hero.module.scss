@@ -5,6 +5,24 @@
 @use 'src/assets/css/partials/gaps';
 @use 'src/assets/css/main';
 
+@keyframes sway {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(-50px);
+  }
+
+  75% {
+    transform: translateX(50px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 @keyframes gradient {
   0% {
     background-position: 0%;
@@ -91,10 +109,11 @@ $logo-offset: 50px;
     bottom: 0px;
 
     .clouds {
-      margin-bottom: -9%;
+      margin-bottom: -7%;
       margin-left: -7.5%;
       width: 115%;
       transform: translateY(var(--translateY));
+      // animation: sway linear 13s infinite;
 
       @media (max-width: $screen-md) {
         transform: scale(1.5) translateY(var(--translateY));

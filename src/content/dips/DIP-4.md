@@ -1,4 +1,5 @@
 ---
+Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-4.md
 DIP: 4
 Title: Treasure Hunt Game
 Status: Accepted
@@ -9,9 +10,11 @@ Resources Required: Communication support, Access to the venue before the event 
 Discussion: https://forum.devcon.org/t/dip-a-treasure-hunt-game-for-devcon/45
 ---
 
+
 # Summary of Proposal
 
 Develop a game for Devcon to push people to explore the event, engage with other people, and learn how to develop a great UX for a fully decentralized app.
+
 
 # Abstract
 
@@ -47,11 +50,11 @@ Treasure hunt games are customized and tailored around a conference or event. A 
 - **Discover.** The game requires to go around and explore different areas of the event and discover what's around them.
 - **Socialize.** It makes people socialize outside the context of doing business and have fun together. Individuals or groups of players can team up and play the game together.
 - **Think.** The game is built around a story. Our previous game featured a story that develops in a future where transplanetary corporations commodified democracy, manipulated governments, and destroyed the environment, to warn people about the dystopian future they face if they don't fight.
-- **Learn.** The dApp to interact with the game, the smart contracts, and the tools to compile and deploy the story are free and open source software. To fight centralization, we must stop building centralized systems. That's why the whole game is developed using only Ethereum and IPFs, and no centralized APIs. The game itself is a showcase of what can be built **today** using decentralized protocols.
+- **Learn.** The dApp to interact with the game, the smart contracts, and the tools to compile and deploy the story are free and open source software. To fight centralization, we must stop building centralized systems. That's why the whole game is developed using only Ethereum and IPFS, and no centralized APIs. The game itself is a showcase of what can be built **today** using decentralized protocols.
 
 ## Previous Experience
 
-We set up [Planetscape][planetscape], a dystopian escape game for [36C3][36c3] based on the dreadful effects of climate change (ccc did **not** sponsor the game).
+We set up [Planetscape][planetscape], a dystopian escape game for [36C3][36c3] based on the dreadful effects of climate change (CCC did **not** sponsor the game).
 
 Planetscape is organized in 20 chapters, and requires players to solve quests in real life, explore the congress to find hints and interact with people. Planetscape had **20 levels**, **254 players**, [**1300** transactions][ps:transactions] to the smart contract, and **7 teams** finished the game and claimed their prize.
 
@@ -100,7 +103,7 @@ to create decentralized treasure hunts. Given a story, THC generates all the com
 .                                         +---------------------+
 ```
 
-THC creates a _user-friendly application that relies on decentralized technology only_. We want to live the decentralized dream with no compromises, developing a powerful dApp that would use Ethereum under the hood without exposing any details about blockchain and IPFS to the player.
+THC creates a *user-friendly application that relies on decentralized technology only*. We want to live the decentralized dream with no compromises, developing a powerful dApp that would use Ethereum under the hood without exposing any details about blockchain and IPFS to the player.
 
 The game has **instant onboarding** by allowing people to play the game just by visiting a website. By now, this happens by using a "burner-wallet"-like approach (the player's wallet is created on the fly when opening the dApp for the first time). In order to make transactions players needed Ether. While the current approach is to simply [transfer][gasstation] a small amount of (test) Ether to new players, we want to improve this by using [OpenGSN][opengsn].
 
@@ -153,19 +156,17 @@ In order to develop a similar game for Devcon, information about the conference 
 
 # Operational Requirements & Ownership
 
-1. _What actions are required to implement the proposal at Devcon?_
+1. *What actions are required to implement the proposal at Devcon?*
+    - The game must be deployed few days before the conference. Physical and digital puzzles must be ready on the first day of the event.
+    - Serving the game under `devcon.org` subdomain would make the game more trustworthy.
+    - Add the link to the game to the paper guide (if any) provided at Devcon.
+    - If Devcon's designers have bandwitdh, create few official NFTs "signed by Devcon" to distribute to for the winners.
 
-   - The game must be deployed few days before the conference. Physical and digital puzzles must be ready on the first day of the event.
-   - Serving the game under `devcon.org` subdomain would make the game more trustworthy.
-   - Add the link to the game to the paper guide (if any) provided at Devcon.
-   - If Devcon's designers have bandwitdh, create few official NFTs "signed by Devcon" to distribute to for the winners.
+2. *Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)*
+    - Social Dist0rtion Protocol will be responsible for the successful implementation of this proposal.
 
-2. _Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)_
-
-   - Social Dist0rtion Protocol will be responsible for the successful implementation of this proposal.
-
-3. _What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))_
-   - One of the goals of the game is to discover Devcon and its projects. Knowing in advance the list of projects would allow us to create levels around them.
+3. *What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))*
+    - One of the goals of the game is to discover Devcon and its projects. Knowing in advance the list of projects would allow us to create levels around them.
 
 # Links & Additional Information
 
@@ -175,6 +176,7 @@ Additional information can be found here:
 - :writing_hand: [Our extensive blog post](https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/) about the game.
 - :speaking_head: [Lightning Talk](https://www.youtube.com/watch?v=7RJn2gowj2I) at IPFS Pinning Summit
 
+
 [planetscape]: https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/
 [36c3]: https://events.ccc.de/congress/2019/wiki/index.php/Main_Page
 [ps:transactions]: https://rinkeby.etherscan.io/address/0x4d9529698d112939ad540bc33caf11809fd1d684
@@ -183,4 +185,4 @@ Additional information can be found here:
 [zk:creation]: https://github.com/social-dist0rtion-protocol/thc/blob/v0.0.1/app/src/Chapter.svelte#L21
 [zk:verification]: https://github.com/social-dist0rtion-protocol/thc/blob/v0.0.1/eth/contracts/TreasureHuntCreator.sol#L66
 [gasstation]: https://rinkeby.etherscan.io/address/0x197970e48082cd46f277abdb8afe492bccd78300
-[opengsn]: https://www.opengsn.org/
+[opengsn]: https://opengsn.org

@@ -1,4 +1,5 @@
 ---
+Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-2.md
 DIP: 2
 Title: Audius music in common areas and between talks at Devcon
 Status: Withdrawn
@@ -44,7 +45,7 @@ neat opportunity to dogfood a decentralized Ethereum-powered service.
 ## Motivation & Rationale
 
 Typically, conferences play music at various times including: between talks, in
-common areas (eg. by the food / drinks / sitting areas), and at the evening
+common areas (e.g. by the food / drinks / sitting areas), and at the evening
 happy hours and other social events.
 
 However, using music in this way poses a few problems: 1) most music cannot be

@@ -1,11 +1,9 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import css from './hero.module.scss'
-// import Logo from './svgs/Logo'
 import logo from 'src/assets/images/devcon-logo.svg'
-import shading from 'src/assets/images/shading.png'
-import Clouds from './svgs/Clouds'
 import Rays from './svgs/Rays'
-import Mountains from './svgs/Mountains'
 import IconEventNote from 'src/assets/icons/event_note.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { TITLE } from 'src/utils/constants'
@@ -13,7 +11,6 @@ import { TITLE } from 'src/utils/constants'
 const parallax = (intersectionRatio: any) => {
   return {
     '--translateY': `${(100 - intersectionRatio) / 5}%`,
-    // transform: `translateY(${(100 - intersectionRatio) / 5}%)`,
   }
 }
 
@@ -46,20 +43,49 @@ export const Hero = () => {
     }
   }, [])
 
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { relativePath: { in: ["clouds.png", "mountains.png", "shading.png"] } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 80) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div ref={heroEl} className={`${css['hero']}`}>
       {/* Grants some text visibility */}
       {/* <div className={css['shading']} /> */}
-      <img alt="" className={css['shading']} src={shading} />
+      {/* <img alt="" className={css['shading']} src={shading} /> */}
+      <Img alt="" className={css['shading']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
 
       <Rays className={css['rays']} />
 
       <div className={css['mountain-container']}>
-        <Mountains style={parallax(intersectionRatio)} className={css['mountains']} />
+        <Img
+          alt=""
+          style={parallax(intersectionRatio)}
+          className={css['mountains']}
+          fluid={data.allFile.nodes[1].childImageSharp.fluid}
+        />
+        {/* <img alt="" style={parallax(intersectionRatio)} className={css['mountains']} src={mountains} /> */}
+        {/* <Mountains style={parallax(intersectionRatio)} className={css['mountains']} /> */}
       </div>
 
       <div className={css['cloud-container']}>
-        <Clouds style={parallax(intersectionRatio)} className={css['clouds']} />
+        <Img
+          alt=""
+          style={parallax(intersectionRatio)}
+          className={css['clouds']}
+          fluid={data.allFile.nodes[2].childImageSharp.fluid}
+        />
+        {/* <img alt="" style={parallax(intersectionRatio)} className={css['clouds']} src={clouds} /> */}
+        {/* <Clouds style={parallax(intersectionRatio)} className={css['clouds']} /> */}
       </div>
 
       <div className={css['left-rotated']}>
@@ -70,10 +96,9 @@ export const Hero = () => {
       </div>
 
       <div className={css['logo-container']}>
-        <img alt={TITLE} className={css['logo']} src={logo} /> {/*<Logo className={css['logo']} />*/}
+        <img alt={TITLE} className={css['logo']} src={logo} />
       </div>
 
-      {/* <div className={css['info']}> */}
       <div className={css['date']}>
         <p className="h2">
           Aug 2021
@@ -89,7 +114,6 @@ export const Hero = () => {
           <p>{intl.formatMessage({ id: 'addtocalendar' })}</p>
         </button>
       </div>
-      {/* </div> */}
     </div>
   )
 }

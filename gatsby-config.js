@@ -26,6 +26,8 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
@@ -104,6 +106,13 @@ module.exports = {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: 'https://ethereum.us7.list-manage.com/subscribe/post?u=bfdb1ffb0f71e3a27b9d96aed&amp;id=013a6fa362',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
