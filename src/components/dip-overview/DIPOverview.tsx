@@ -3,28 +3,6 @@ import { Label } from 'src/components/common/label'
 import { useDIPs } from 'src/hooks/useDIPs'
 import { Table, SortVariation } from 'src/components/common/table'
 import css from './dip-overview.module.scss'
-import { table } from 'console'
-
-const items = [
-  {
-    name: 'Testaaaaaaaaaa aaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa a',
-    summary: 'Test',
-    status: 'TEst',
-    themes: 'Test',
-    tags: ['a', 'c', 'b'],
-    authors: ['b', 'a', 'C'],
-    links: [],
-  },
-  {
-    name: 'Testa',
-    summary: 'Test',
-    status: 'TEst',
-    themes: 'Test',
-    tags: ['a', 'c', 'b'],
-    authors: ['b', 'a', 'C'],
-    links: [],
-  },
-]
 
 const tableColumns = [
   {
@@ -79,14 +57,6 @@ const tableColumns = [
     key: 'links',
   },
 ]
-
-const formatDIPs = dips => {
-  return dips.map(dip => {
-    return {
-      ...dip,
-    }
-  })
-}
 
 export function DIPOverview() {
   const dips = useDIPs()

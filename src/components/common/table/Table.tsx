@@ -62,7 +62,7 @@ const TableRows = (props: RowProps) => {
     <>
       {props.items.map(item => {
         return (
-          <div className={css['row']}>
+          <div key={item.key} className={css['row']}>
             {props.columns.map(column => {
               const value = item[column.key]
 
