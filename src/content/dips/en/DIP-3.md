@@ -40,7 +40,7 @@ What's great is that we don't need to build anything from scratch, we'll just mo
 ### 1. What actions are required to implement the proposal at Devcon?
 
 - we need to get a list of hotels Devcon team planned to target for room blocks
-- Contingent on the Devcon team's approval (which will be based in part on *seeing* a [stellar UX and thorough customer service plan](https://github.com/efdevcon/DIPs/pull/33) in action), we would like to integrate our interface into the Devcon website
+- Contingent on the Devcon team's approval (which will be based in part on _seeing_ a [stellar UX and thorough customer service plan](https://github.com/efdevcon/DIPs/pull/33) in action), we would like to integrate our interface into the Devcon website
 
 ### 2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)
 

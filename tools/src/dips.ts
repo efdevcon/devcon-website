@@ -41,17 +41,11 @@ async function GetDIPs() {
                         })
                     })
                 }
-
-                // console.log(file, 'file?')
                 
                 const buffer = Buffer.from(file.data.content, 'base64');
                 const decoded = buffer.toString('utf-8').replace('---', `---\nGithub URL: ${file.data._links.html}`);
-
-                // decoded.replace('---', `---\nGithub Url: ${file.data._links.html}`);
-
-                // console.log(decoded, 'decoded')
                 
-                fs.writeFile(outDir + i.name, decoded, function (err: any) {
+                fs.writeFile(outDir + 'en/' + i.name, decoded, function (err: any) {
                     if (err) return console.log(err);
                 });
 
