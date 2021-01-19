@@ -41,17 +41,21 @@ async function GetDIPs() {
                         })
                     })
                 }
-
-                // console.log(file, 'file?')
                 
                 const buffer = Buffer.from(file.data.content, 'base64');
-                const decoded = buffer.toString('utf-8').replace('---', `---\nGithub URL: ${file.data._links.html}`);
+                const decoded = buffer.toString('utf-8');
 
-                // decoded.replace('---', `---\nGithub Url: ${file.data._links.html}`);
+                let formattedMarkdown = decoded;
 
-                // console.log(decoded, 'decoded')
+                formattedMarkdown = formattedMarkdown.replace('---', `---\nGithub URL: ${file.data._links.html}`);
+
+                // Finds the first section of the markdown body and extracts the text from it
+                // Look for first occurence of ## (markdown header), keep going until a newline is found, collect all text until the next header, then trim
+                const matchSummary = formattedMarkdown.match(/##[^\n]*([^##]*)/);
+
+                if (matchSummary && matchSummary[1]) formattedMarkdown = formattedMarkdown.replace('---', `---\nSummary: "${matchSummary[1].trim()}"`)
                 
-                fs.writeFile(outDir + i.name, decoded, function (err: any) {
+                fs.writeFile(outDir + i.name, formattedMarkdown, function (err: any) {
                     if (err) return console.log(err);
                 });
 
