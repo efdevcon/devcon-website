@@ -1,6 +1,6 @@
 ---
 title: Contacto
-description: Contact description
+description: Descripción del contacto
 template: content
 ---
 
