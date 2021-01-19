@@ -6,24 +6,18 @@
   "partnerwithus": "Partner with us",
   "readmore": "Read more",
   "addtocalendar": "Add to calendar",
-  "notfound": {
-    "header": "NOT FOUND",
-    "description": "The requested page could not be found."
-  },
-  "newsletter": {
-    "title": "Subscribe to our newsletter",
-    "subtitle": "Stay up to date on the latest devcon news and updates.",
-    "enter": "Enter email address",
-    "subscribe": "Subscribe",
-    "subscribed": "Thank you for subscribing!",
-    "alreadySubscribed": "The email you entered is already subscribed.",
-    "notValid": "The email you entered is not valid."
-  },
-  "state": {
-    "success": "Success",
-    "error": "Error",
-    "warning": "Warning",
-    "info": "Info",
-    "alert": "Alert"
-  }
+  "notfound_title": "NOT FOUND",
+  "notfound_description": "The requested page could not be found.",
+  "newsletter_title": "Subscribe to our newsletter",
+  "newsletter_subtitle": "Stay up to date on the latest devcon news and updates.",
+  "newsletter_enter": "Enter email address",
+  "newsletter_subscribe": "Subscribe",
+  "newsletter_subscribed": "Thank you for subscribing!",
+  "newsletter_alreadySubscribed": "The email you entered is already subscribed.",
+  "newsletter_notValid": "The email you entered is not valid.",
+  "state_success": "Success",
+  "state_error": "Error",
+  "state_warning": "Warning",
+  "state_info": "Info",
+  "state_alert": "Alert"
 }

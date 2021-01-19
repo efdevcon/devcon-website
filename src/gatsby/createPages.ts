@@ -8,8 +8,8 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
   console.log('createPages', languages, 'default', defaultLang)
 
   await createContentPages(args)
-  await createDipPages(args)
   await createBlogPages(args)
+  // await createDipPages(args) // DIP data will remain within their components. No need for individual pages 
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -47,6 +47,7 @@ async function createDipPages({ actions, graphql, reporter }: CreatePagesArgs) {
         nodes {
           fields {
             slug
+            lang
           }
         }
       }
@@ -58,7 +59,8 @@ async function createDipPages({ actions, graphql, reporter }: CreatePagesArgs) {
     return
   }
 
-  result.data.dips.nodes.forEach((node: any) => createDynamicPage(actions, node.fields.slug, 'dip', defaultLang))
+  result.data.dips.nodes.forEach((node: any) => 
+    createDynamicPage(actions, node.fields.slug, 'dip', node.fields.lang))
 }
 
 async function createBlogPages({ actions, graphql, reporter }: CreatePagesArgs) {

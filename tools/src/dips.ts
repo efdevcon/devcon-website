@@ -55,7 +55,7 @@ async function GetDIPs() {
 
                 if (matchSummary && matchSummary[1]) formattedMarkdown = formattedMarkdown.replace('---', `---\nSummary: "${matchSummary[1].trim()}"`)
                 
-                fs.writeFile(outDir + i.name, formattedMarkdown, function (err: any) {
+                fs.writeFile(outDir + 'en/' + i.name, formattedMarkdown, function (err: any) {
                     if (err) return console.log(err);
                 });
 

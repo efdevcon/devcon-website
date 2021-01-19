@@ -24,15 +24,15 @@ export function Alert(props: AlertProps) {
 
     switch (props.type) {
       case 'success':
-        return intl.formatMessage({ id: 'success' })
+        return intl.formatMessage({ id: 'state_success' })
       case 'error':
-        return intl.formatMessage({ id: 'error' })
+        return intl.formatMessage({ id: 'state_error' })
       case 'warning':
-        return intl.formatMessage({ id: 'warning' })
+        return intl.formatMessage({ id: 'state_warning' })
       case 'info':
-        return intl.formatMessage({ id: 'info' })
+        return intl.formatMessage({ id: 'state_info' })
       default:
-        return intl.formatMessage({ id: 'alert' })
+        return intl.formatMessage({ id: 'state_alert' })
     }
   }
 

@@ -6,8 +6,8 @@ export default function Index() {
 
   return (
     <div>
-      <h1>{intl.formatMessage({ id: 'notfound.header' })}</h1>
-      <p>{intl.formatMessage({ id: 'notfound.description' })}</p>
+      <h1>{intl.formatMessage({ id: 'notfound_title' })}</h1>
+      <p>{intl.formatMessage({ id: 'notfound_description' })}</p>
     </div>
   )
 }
