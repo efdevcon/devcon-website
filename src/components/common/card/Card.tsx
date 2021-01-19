@@ -28,7 +28,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
     <div className={className} ref={ref}>
       {props.imageUrl && (
         <div className={css['img-wrapper']}>
-          <img src={props.imageUrl} className={css['img']} alt={props.title} />{' '}
+          <img src={props.imageUrl} className={css['img']} alt={props.title} />
         </div>
       )}
 

@@ -32,6 +32,7 @@ export interface DIP {
   number: number
   title: string
   status: Status
+  github: string
   themes: Array<Theme>
   tags: Array<Tag>
   authors: Array<string>

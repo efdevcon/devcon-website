@@ -1,28 +1,40 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
 .distribute-items {
   display: flex;
-  // grid-template-columns: 1fr;
-  // background: yellow;
 
   > * {
-    border: 1px solid black;
-    flex-shrink: 0;
+    overflow: hidden;
+    padding-left: $gap-2;
+    padding-right: $gap-2;
     flex-basis: 0;
     flex-grow: 1;
   }
-  // display: flex;
-  // justify-content: space-evenly;
-  // background: yellow;
+}
 
-  // > * {
-  //   border: 1px solid black;
-  //   flex-shrink: 0;
-  //   flex-grow: 1;
-  // }
+.column-header {
+  padding-top: $gap-5;
+  padding-bottom: $gap-5;
 }
 
 .container {
+  @include fonts.font-secondary;
+  position: relative;
+
   .header {
+    position: sticky;
+    top: 60px;
+    z-index: 1;
+    background: $color-primary; //rgba(255, 255, 255, 1);
+    color: white;
+    align-self: flex-start;
     @extend .distribute-items;
+
+    .column-header {
+      @include fonts.font-xs;
+      @include fonts.bold;
+    }
   }
 
   .row {
@@ -31,7 +43,7 @@
     background: white;
 
     &:nth-child(even) {
-      background: grey;
+      background: #f8f8f8;
     }
   }
 }

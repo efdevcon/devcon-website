@@ -14,6 +14,8 @@ export const useDIPs = (): Array<DIP> => {
             Discussion
             Authors
             Resources_Required
+            Github_URL
+            Summary
             Tags
           }
           fields {
@@ -29,6 +31,8 @@ export const useDIPs = (): Array<DIP> => {
 
 function mapToDIP(source: any): DIP {
   return {
+    github: source.frontmatter.Github_URL,
+    summary: source.frontmatter.Summary,
     number: source.frontmatter.DIP,
     title: source.frontmatter.Title,
     status: source.frontmatter.Status,
@@ -38,7 +42,7 @@ function mapToDIP(source: any): DIP {
     resources: source.frontmatter.Resources,
     discussion: source.frontmatter.Discussion,
     created: new Date(source.frontmatter.Created),
-    body: source.html,
+    // body: source.html,
     slug: source.fields.slug,
   }
 }

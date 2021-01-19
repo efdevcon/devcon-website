@@ -1,0 +1,25 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+.index-column {
+  flex-grow: 0 !important;
+  flex-basis: 40px !important;
+}
+
+.summary-column {
+  flex-grow: 2.5 !important;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.label-content {
+  display: flex;
+  align-items: center;
+
+  > span {
+    margin-right: $gap-1;
+    font-size: 1.2rem;
+  }
+}

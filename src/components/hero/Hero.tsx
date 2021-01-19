@@ -7,6 +7,7 @@ import Rays from './svgs/Rays'
 import IconEventNote from 'src/assets/icons/event_note.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { TITLE } from 'src/utils/constants'
+import { Link } from 'src/components/common/link'
 
 const parallax = (intersectionRatio: any) => {
   return {
@@ -107,15 +108,16 @@ export const Hero = () => {
         </p>
       </div>
 
-      <div className={css['calendar']}>
+      <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>
         <p>{intl.formatMessage({ id: 'description' })}</p>
         <button>
           <IconEventNote className={`icon ${css['icon']}`} />
           <p>{intl.formatMessage({ id: 'addtocalendar' })}</p>
         </button>
-      </div>
+      </Link>
     </div>
   )
 }
+//href="devcon.ics"
 
 // Animation resource: https://whoisryosuke.com/blog/2020/handling-scroll-based-animations-in-react/

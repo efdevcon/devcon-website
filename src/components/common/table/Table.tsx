@@ -13,6 +13,8 @@ type RowProps = {
 type TableColumn = {
   title: string
   key: string
+  className?: string
+  render?: Function
   sort?: SortVariation | Function
 }
 type TableProps = {
@@ -38,9 +40,16 @@ const TableHeader = (props: HeaderProps) => {
       </div> */}
 
       {props.columns.map(column => {
+        let className = css['column-header']
+
+        if (column.className) className = `${column.className} ${className}`
+
         return (
-          <div key={column.title} className={css['column-header']}>
-            {column.title}
+          <div key={column.title} className={className}>
+            <p>
+              {column.title.toUpperCase()}
+              {column.sort && ':SORT'}
+            </p>
           </div>
         )
       })}
@@ -57,7 +66,15 @@ const TableRows = (props: RowProps) => {
             {props.columns.map(column => {
               const value = item[column.key]
 
-              return <p>{value}</p>
+              let className = css['column-header']
+
+              if (column.className) className = `${column.className} ${className}`
+
+              return (
+                <div key={column.title} className={className}>
+                  {column.render ? column.render(item, column) : <p>{value}</p>}
+                </div>
+              )
             })}
           </div>
         )

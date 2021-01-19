@@ -1,0 +1,16 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+.label {
+  @include fonts.font-secondary;
+  @include fonts.font-xxs;
+  display: inline-block;
+  padding: $gap-1;
+  color: black;
+  background: grey;
+
+  &.success {
+    color: $color-success;
+    background: $color-success-light;
+  }
+}

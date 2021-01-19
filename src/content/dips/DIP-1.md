@@ -1,4 +1,5 @@
 ---
+Summary: "Give Devcon participants a taste of a regenerative economy, by allowing them to offset the carbon emissions associated with the event, as part of the ticketing process."
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md
 DIP: 1
 Title: Make Devcon carbon neutral

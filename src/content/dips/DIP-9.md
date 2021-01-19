@@ -1,4 +1,5 @@
 ---
+Summary: "Devcon 6 is in 2021, a small virtual version on 2020 can help to test streaming, consensus rules on talks, and anything that could help to improve the experience for next year's physical event."
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-9.md
 DIP: 9
 Title: Devcon 5.1
