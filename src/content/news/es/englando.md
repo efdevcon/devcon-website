@@ -1,6 +1,6 @@
 ---
 url: https://stackoverflow.com/questions/52576376/how-to-zoom-in-on-a-complex-svg-structure
-title: Zoom on SVGs Zoom on SVGs Zoom on SVGs
+title: Zoomies en los SVG
 description: Lorem Ipsum es simplemente un texto ficticio de la impresión y tipografía
   industry. Lorem Ipsum has been the industry's standard dummy text ever since
   the 1500s, when an unknown printer took a galley of type and scrambled it to
