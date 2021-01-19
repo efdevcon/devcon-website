@@ -17,13 +17,13 @@ export const Newsletter = () => {
 
   const translateMessage = (message: string) => {
     if (message.includes('Thank you for subscribing')) {
-      return intl.formatMessage({ id: 'newsletter.subscribed' })
+      return intl.formatMessage({ id: 'newsletter_subscribed' })
     }
     if (message.includes('The email you entered is not valid')) {
-      return intl.formatMessage({ id: 'newsletter.notValid' })
+      return intl.formatMessage({ id: 'newsletter_notValid' })
     }
     if (message.includes('is already subscribed')) {
-      return intl.formatMessage({ id: 'newsletter.alreadySubscribed' })
+      return intl.formatMessage({ id: 'newsletter_alreadySubscribed' })
     }
 
     return ''
@@ -44,7 +44,7 @@ export const Newsletter = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <p className="semi-bold">{intl.formatMessage({ id: 'newsletter.title' })}</p>
+        <p className="semi-bold">{intl.formatMessage({ id: 'newsletter_title' })}</p>
         <div>
           {result ? (
             <div className={css['alert-container']}>
@@ -52,17 +52,17 @@ export const Newsletter = () => {
             </div>
           ) : (
             <>
-              <p>{intl.formatMessage({ id: 'newsletter.subtitle' })}</p>
+              <p>{intl.formatMessage({ id: 'newsletter_subtitle' })}</p>
               <div className={css['container']}>
                 <input
                   className={css['input']}
                   type="email"
                   id="email"
-                  placeholder={intl.formatMessage({ id: 'newsletter.enter' })}
+                  placeholder={intl.formatMessage({ id: 'newsletter_enter' })}
                   {...emailField}
                 />
                 <button className={css['button']} type="submit">
-                  {intl.formatMessage({ id: 'newsletter.subscribe' })}
+                  {intl.formatMessage({ id: 'newsletter_subscribe' })}
                 </button>
               </div>
             </>
