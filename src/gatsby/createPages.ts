@@ -9,7 +9,7 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
 
   await createContentPages(args)
   await createBlogPages(args)
-  // await createDipPages(args) // DIP data will remain within their components. No need for individual pages 
+  await createDipPages(args)
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
