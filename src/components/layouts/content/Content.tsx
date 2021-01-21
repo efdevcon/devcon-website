@@ -3,17 +3,13 @@ import { Header } from 'src/components/layouts/header'
 import { Footer } from 'src/components/layouts/footer'
 import { SiteNavigationContextProvider } from 'src/context/site-navigation-context-provider'
 import './content.module.scss'
-import { useIntl } from 'gatsby-plugin-intl'
 
 type LayoutProps = {
   children: ReactNode
   navigationData: any
 }
 
-export default function Content({ children, navigationData }: LayoutProps) {
-  const intl = useIntl();
-  console.log("INTL", intl);
-  
+export default function Content({ children, navigationData }: LayoutProps) {  
   return (
     <div className="layout">
       <SiteNavigationContextProvider data={navigationData}>
