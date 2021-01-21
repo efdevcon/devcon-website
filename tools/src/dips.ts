@@ -50,10 +50,10 @@ async function GetDIPs() {
                 formattedMarkdown = formattedMarkdown.replace('---', `---\nGithub URL: ${file.data._links.html}`);
 
                 // Finds the first section of the markdown body and extracts the text from it
-                // Look for first occurence of ## (markdown header), keep going until a newline is found, collect all text until the next header, then trim
+                // Look for first occurence of ## (markdown header), keep going until a newline is found, collect all text until the next header, then sanitize and trim
                 const matchSummary = formattedMarkdown.match(/##[^\n]*([^##]*)/);
 
-                if (matchSummary && matchSummary[1]) formattedMarkdown = formattedMarkdown.replace('---', `---\nSummary: "${matchSummary[1].trim()}"`)
+                if (matchSummary && matchSummary[1]) formattedMarkdown = formattedMarkdown.replace('---', `---\nSummary: '${matchSummary[1].replace(/'/g, '"').trim()}'`)
                 
                 fs.writeFile(outDir + 'en/' + i.name, formattedMarkdown, function (err: any) {
                     if (err) return console.log(err);

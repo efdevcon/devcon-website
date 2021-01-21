@@ -1,5 +1,5 @@
 ---
-Summary: "Vocdoni and POAP joint proposal to provide a universally verifiable, affordable and offchain voting system for DevCon ticket-holders. Supports quadratic voting and other governance systems."
+Summary: 'Vocdoni and POAP joint proposal to provide a universally verifiable, affordable and offchain voting system for DevCon ticket-holders. Supports quadratic voting and other governance systems.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-16.md
 DIP: 16
 Title: Universally verifiable off-chain polls for Devcon 6

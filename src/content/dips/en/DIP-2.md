@@ -1,6 +1,6 @@
 ---
-Summary: "Audius has lots of freely-licensed music. Audius is also built on Ethereum. Audius could
-be used at Devcon to play music during downtime."
+Summary: 'Audius has lots of freely-licensed music. Audius is also built on Ethereum. Audius could
+be used at Devcon to play music during downtime.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-2.md
 DIP: 2
 Title: Audius music in common areas and between talks at Devcon
