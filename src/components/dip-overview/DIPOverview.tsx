@@ -1,5 +1,6 @@
 import React from 'react'
 import { Label } from 'src/components/common/label'
+import { Contribute } from './contribute'
 import { useDIPs } from 'src/hooks/useDIPs'
 import { Table, SortVariation } from 'src/components/common/table'
 import css from './dip-overview.module.scss'
@@ -61,14 +62,17 @@ const tableColumns = [
 export function DIPOverview() {
   const dips = useDIPs()
 
-  console.log(dips, 'dipsserr')
-
   return (
     <div className="section">
       <div className="content">
+        <Contribute />
         <Table items={dips} columns={tableColumns} />
+      </div>
+    </div>
+  )
+}
 
-        {/* <ul>
+/* <ul>
         {dips.map(i => (
           <li key={i.number}>
             <Link to={`${i.slug}`}>
@@ -76,8 +80,4 @@ export function DIPOverview() {
             </Link>
           </li>
         ))}
-      </ul> */}
-      </div>
-    </div>
-  )
-}
+      </ul> */

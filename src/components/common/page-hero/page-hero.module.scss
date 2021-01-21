@@ -1,10 +1,13 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/fonts';
 
 .hero {
   position: relative;
   width: 100%;
   padding-top: $gap-4;
+  border-bottom: 1px solid black;
+  margin-bottom: $gap-10;
 
   .backdrop {
     position: absolute;
@@ -25,6 +28,12 @@
       position: absolute;
       right: 0px;
       bottom: -50px;
+
+      @media (max-width: $screen-lg) {
+        max-width: 50%;
+        height: 100%;
+        bottom: 0px;
+      }
     }
   }
 }
@@ -33,14 +42,42 @@
   @include layout.content;
   width: 100%;
 
-  > h1 {
+  .title-block {
     padding-top: $gap-16;
     padding-bottom: $gap-16;
-    font-size: 9rem;
+
+    > h1 {
+      font-size: 9rem;
+    }
+
+    .buttons {
+      margin-top: $gap-5;
+
+      > button {
+        margin-right: $gap-3;
+
+        > svg {
+          @include fonts.font-xs;
+        }
+
+        > span {
+          margin-left: $gap-2;
+        }
+      }
+    }
   }
 
   .anchors {
     width: 100%;
     display: flex;
+    margin-bottom: $gap-5;
+
+    > * {
+      margin-left: $gap-6;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
   }
 }

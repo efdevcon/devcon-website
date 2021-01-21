@@ -1,4 +1,5 @@
 ---
+Summary: "Status as the communication layer for Devcon (on the ground and for satellite events). Utilizing Status as the layer into which many different projects showcased at Devcon plug in for maximum usability."
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-10.md
 DIP: 10
 Title: Status as Devcon Communication Layer
@@ -55,7 +56,6 @@ QR codes on rooms to join live chats about what’s happening in a specific room
 Since keycard comes with some preloaded assets e.g a POAP token, 10 SNTs, x DAIs to buy food etc. we can easily merge experiential with communication in a smooth bundle and plug in any other partner projects’ tokens.
 
 ## Operational Requirements & Ownership
-
 Please answer questions below:
 
 Devcon team needs to be involved in the following manner:

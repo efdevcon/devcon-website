@@ -1,0 +1,52 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/fonts';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: $gap-10;
+
+  .dip-description {
+    flex-basis: 50%;
+    flex-shrink: 0;
+  }
+
+  .authors {
+    position: relative;
+    flex-basis: 50%;
+
+    &:after {
+      content: '';
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(0, 0, 0, 0) 20%,
+        rgba(0, 0, 0, 0) 80%,
+        rgba(255, 255, 255, 0.8)
+      );
+    }
+
+    .row {
+      overflow: hidden;
+      white-space: nowrap;
+      &:nth-child(even) {
+        margin-left: 80px;
+      }
+
+      .circular-img {
+        border-radius: 80px;
+        margin-left: $gap-10;
+        margin-right: $gap-10;
+        width: 80px;
+        height: 80px;
+        background: #6edbb6;
+      }
+    }
+  }
+}

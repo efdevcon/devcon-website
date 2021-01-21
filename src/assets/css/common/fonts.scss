@@ -31,11 +31,16 @@ h4,
   @include fonts.font-md;
 }
 
-.font-xxl { 
+p {
+  @include fonts.font-secondary;
+}
+
+// Could just shorten these to "xxl, xl" etc rather than "font-xxl font-xl"
+.font-xxl {
   font-size: $size-16 + $size-8;
 }
 
-.font-xl { 
+.font-xl {
   @include fonts.font-xl;
 }
 

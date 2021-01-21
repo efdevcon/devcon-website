@@ -1,59 +1,130 @@
 @use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
 
-button,
-.button-primary {
-  cursor: pointer;
-  background-color: $color-primary;
-  color: $color-secondary-dark;
-  padding: $size-4 $size-3;
+@mixin padding($name, $padding, $padding-sm, $padding-md) {
+  &.#{$name} {
+    padding: $padding;
 
-  &:hover {
-    background-color: $color-primary-light;
-  }
+    @media (max-width: $screen-sm) {
+      padding: $padding-sm;
+    }
 
-  &:active {
-    background-color: $color-primary-dark;
-  }
-
-  &:disabled {
-    background-color: $color-primary-opaque;
+    @media (max-width: $screen-md) {
+      padding: $padding-md;
+    }
   }
 }
 
-.button-secondary {
+button {
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
-  background-color: $color-secondary;
-  color: $color-secondary-dark;
-  padding: $size-4 $size-3;
+  font-family: $font-secondary;
+  @include fonts.font-md;
+  padding: $gap-2 $gap-3;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  background: none;
 
+  &:focus,
+  &:active,
   &:hover {
-    background-color: $color-secondary-light;
+    outline: none;
   }
 
-  &:active {
-    background-color: $color-secondary-dark;
+  .sm {
+    @include fonts.font-sm;
+    padding: $gap-1 $gap-2;
+
+    @media (max-width: $screen-md) {
+      @include fonts.font-xs;
+    }
   }
 
-  &:disabled {
-    background-color: $color-secondary-opaque;
+  .lg {
+    @include fonts.font-lg;
+    padding: $gap-4 $gap-5;
+
+    @media (max-width: $screen-md) {
+      @include fonts.font-md;
+    }
   }
 }
 
-.button-tertiary {
-  cursor: pointer;
-  background-color: $color-tertiary;
-  color: $color-secondary-dark;
-  padding: $size-4 $size-3;
+// <button class="lg transparent">
 
-  &:hover {
-    background-color: $color-tertiary-light;
-  }
+// button,
+// .button-primary {
+//   background-color: $color-primary;
+//   color: $color-secondary-dark;
+//   padding: $size-4 $size-3;
 
-  &:active {
-    background-color: $color-tertiary-dark;
-  }
+//   &:hover {
+//     background-color: $color-primary-light;
+//   }
 
-  &:disabled {
-    background-color: $color-tertiary-opaque;
-  }
-}
+//   &:active {
+//     background-color: $color-primary-dark;
+//   }
+
+//   &:disabled {
+//     background-color: $color-primary-opaque;
+//   }
+// }
+
+// .button-secondary {
+//   cursor: pointer;
+//   background-color: $color-secondary;
+//   color: $color-secondary-dark;
+//   padding: $size-4 $size-3;
+
+//   &:hover {
+//     background-color: $color-secondary-light;
+//   }
+
+//   &:active {
+//     background-color: $color-secondary-dark;
+//   }
+
+//   &:disabled {
+//     background-color: $color-secondary-opaque;
+//   }
+// }
+
+// .button-tertiary {
+//   cursor: pointer;
+//   background-color: $color-tertiary;
+//   color: $color-secondary-dark;
+//   padding: $size-4 $size-3;
+
+//   &:hover {
+//     background-color: $color-tertiary-light;
+//   }
+
+//   &:active {
+//     background-color: $color-tertiary-dark;
+//   }
+
+//   &:disabled {
+//     background-color: $color-tertiary-opaque;
+//   }
+// }
+
+// Size (sm, md, lg)
+// Color (any color reference, seethrough)
+// Responsiveness
+
+// &:focus,
+// &:active,
+// &:hover {
+//     outline: none;
+//     background: #fff;
+//     border: 2px solid $color-primary;
+//     color: $color-primary;
+// }
+
+// @media (min-width: $screen-md) and (max-width: $screen-xl) {
+//     padding: $gap-1 $gap-2;
+//     width: 100%;
+//     margin-top: $gap-2;
+// }

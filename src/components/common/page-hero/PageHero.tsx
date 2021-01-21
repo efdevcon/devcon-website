@@ -1,34 +1,49 @@
 import React from 'react'
 import css from './page-hero.module.scss'
-import dipLogo from 'src/assets/images/dip-logo.svg'
+import Pencil from 'src/assets/icons/pencil.svg'
+import BulletList from 'src/assets/icons/bullet_list.svg'
 
 // Props not fleshed out yet, just creating an overview of potential props
 type PageHeroProps = {
+  title: string
   logo?: any
   links?: any
   background?: any
 }
 
-export const PageHero = () => {
+export const PageHero = (props: PageHeroProps) => {
   return (
     <div className={css['hero']}>
-      <div className={css['backdrop']}>
-        <img alt="" src={dipLogo} />
+      <div className={css['backdrop']} style={{ background: props.background }}>
+        <img alt="" src={props.logo} />
       </div>
       <div className="section">
         <div className={css['info']}>
-          <p className="font-xs">BOGOTA / CITY GUIDE</p>
+          <p className="font-xs">
+            GET INVOLVED / <b>DIPS</b>
+          </p>
+          {/* */}
+          <div className={css['title-block']}>
+            <h1>{props.title}</h1>
 
-          <h1>City Guide</h1>
-
+            <div className={css['buttons']}>
+              <button className="lg">
+                <BulletList />
+                <span>Review DIPs</span>
+              </button>
+              <button className="lg">
+                <Pencil />
+                <span>Create Proposal</span>
+              </button>
+            </div>
+          </div>
           <div className={css['anchors']}>
-            <p className="font-sm bold">LOCATION</p>
-            <p className="font-sm bold">ABOUT BOGOTA</p>
-            <p className="font-sm bold">WHY BOGOTA?</p>
-            <p className="font-sm bold">THINGS TO KNOW</p>
-            <p className="font-sm bold">THINGS TO DO</p>
-            <p className="font-sm bold">GETTING AROUND</p>
-            <p className="font-sm bold">FREQUENTLY ASKED QUESTIONS</p>
+            <p className="font-xs bold font-secondary">FORUM</p>
+            <p className="font-xs bold font-secondary">GITHUB</p>
+            <p className="font-xs bold font-secondary">
+              <a href="#contribute">CONTRIBUTE</a>
+            </p>
+            <p className="font-xs bold font-secondary">DIPS</p>
           </div>
         </div>
       </div>
