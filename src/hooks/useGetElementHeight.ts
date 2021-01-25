@@ -2,9 +2,9 @@ import { useState, useLayoutEffect } from 'react';
 // import throttle from 'src/utils/throttle';
 
 const getElementHeight = (elementID: string) => {
-  const element = document.getElementById(elementID);
+  const element = document && document.getElementById(elementID);
 
-  return element?.clientHeight;
+  return element?.clientHeight || 0;
 }
 
 // Returns the height of an element by ID
