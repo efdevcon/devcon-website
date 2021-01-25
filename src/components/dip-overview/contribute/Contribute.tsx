@@ -1,12 +1,14 @@
 import React from 'react'
 import dipLogo from 'src/assets/images/devcon-logo.svg'
+import Github from 'src/assets/icons/github.svg'
 import css from './contribute.module.scss'
+import { Link } from 'src/components/common/link'
 
 type ContributeProps = {}
 
 export const Contribute = (props: ContributeProps) => {
   return (
-    <div id="contribute" className={css['container']}>
+    <section id="contribute" className={css['container']}>
       <div className={css['dip-description']}>
         <h3 className="subsection-header">CONTRIBUTE</h3>
         <p>
@@ -21,38 +23,58 @@ export const Contribute = (props: ContributeProps) => {
           Requests For Proposals (RFPs), which are specific ideas we'd love to see take place for the next Devcon
           edition. They are available on our forum.
         </p>
-      </div>
-      <div className={css['authors']}>
-        <div className={css['row']}>
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-        </div>
-        <div className={css['row']}>
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-        </div>
-        <div className={css['row']}>
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-        </div>
-        <div className={css['row']}>
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
-          <img className={css['circular-img']} alt="" src={dipLogo} />
+
+        <div className={css['links']}>
+          <Link to="https://forum.devcon.org" indicateExternal className="font-lg bold font-secondary">
+            VISIT FORUM
+          </Link>
+          <Link to="https://forum.devcon.org" indicateExternal className="font-lg bold font-secondary">
+            CREATE PROPOSAL
+          </Link>
         </div>
       </div>
-    </div>
+      <div className={css['contributors']}>
+        <div className="thumbnails">
+          <img className={css['circular-img']} alt="" src={dipLogo} />
+          <img className={css['circular-img']} alt="" src={dipLogo} />
+          <img className={css['circular-img']} alt="" src={dipLogo} />
+          <img className={css['circular-img']} alt="" src={dipLogo} />
+          <img className={css['circular-img']} alt="" src={dipLogo} />
+          <img className={css['circular-img']} alt="" src={dipLogo} />
+          {/* <div className={css['row']}>
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+          </div>
+          <div className={css['row']}>
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+          </div>
+          <div className={css['row']}>
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+          </div>
+          <div className={css['row']}>
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+            <img className={css['circular-img']} alt="" src={dipLogo} />
+  </div>*/}
+        </div>
+        <div className={css['info']}>
+          <p>* DIP Github Contributors</p> <Github />
+        </div>
+      </div>
+    </section>
   )
 }

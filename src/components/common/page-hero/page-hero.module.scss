@@ -3,7 +3,11 @@
 @use 'src/assets/css/partials/fonts';
 
 .hero {
-  position: relative;
+  position: sticky;
+  // "Pulls up" the entire section except for the page menu, effectively making it look like just the page menu is sticky
+  top: var(--negative-offset, -1000px);
+  z-index: 1;
+  overflow: hidden;
   width: 100%;
   padding-top: $gap-4;
   border-bottom: 1px solid black;
@@ -44,7 +48,7 @@
 
   .title-block {
     padding-top: $gap-16;
-    padding-bottom: $gap-16;
+    padding-bottom: $gap-12;
 
     > h1 {
       font-size: 9rem;
@@ -53,7 +57,7 @@
     .buttons {
       margin-top: $gap-5;
 
-      > button {
+      > a {
         margin-right: $gap-3;
 
         > svg {
@@ -67,10 +71,14 @@
     }
   }
 
-  .anchors {
+  .page-navigation {
+    position: sticky;
+    top: var(--header-height);
     width: 100%;
     display: flex;
-    margin-bottom: $gap-5;
+    padding-top: $gap-4;
+    padding-bottom: $gap-4;
+    // margin-bottom: $gap-5;
 
     > * {
       margin-left: $gap-6;

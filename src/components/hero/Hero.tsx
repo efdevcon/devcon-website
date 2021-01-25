@@ -118,6 +118,3 @@ export const Hero = () => {
     </div>
   )
 }
-//href="devcon.ics"
-
-// Animation resource: https://whoisryosuke.com/blog/2020/handling-scroll-based-animations-in-react/

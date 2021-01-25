@@ -3,8 +3,6 @@ import { graphql } from 'gatsby'
 import { SEO } from 'src/components/common/seo'
 import { DIPOverview } from 'src/components/dip-overview'
 import Content from 'src/components/layouts/content'
-import { PageHero } from 'src/components/common/page-hero'
-import dipLogo from 'src/assets/images/dip-logo.svg'
 
 export default function ContentTemplate({ data }: any) {
   const page = data.markdownRemark
@@ -12,8 +10,6 @@ export default function ContentTemplate({ data }: any) {
   return (
     <Content navigationData={data.navigationData}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
-
-      <PageHero title="DIPs" logo={dipLogo} />
 
       <DIPOverview />
     </Content>

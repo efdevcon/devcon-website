@@ -1,74 +1,56 @@
 import React from 'react'
-import { Label } from 'src/components/common/label'
 import { Contribute } from './contribute'
-import { useDIPs } from 'src/hooks/useDIPs'
-import { Table, SortVariation } from 'src/components/common/table'
-import css from './dip-overview.module.scss'
-
-const tableColumns = [
-  {
-    title: '#',
-    key: 'number',
-    className: css['index-column'],
-  },
-  {
-    title: 'name',
-    key: 'title',
-    // className: css['name-column'],
-    sort: SortVariation.basic,
-  },
-  {
-    title: 'summary',
-    className: css['summary-column'],
-    key: 'summary',
-  },
-  {
-    title: 'status',
-    key: 'status',
-    sort: SortVariation.basic,
-    render: () => {
-      return (
-        <Label type="success">
-          <div className={css['label-content']}>
-            <span>&#8226;</span>
-            <p>ACCEPTED</p>
-          </div>
-        </Label>
-      )
-    },
-  },
-  {
-    title: 'themes',
-    key: 'themes',
-    sort: SortVariation.basic,
-  },
-  {
-    title: 'tags',
-    key: 'tags',
-    sort: (item1, item2) => {
-      return -1
-    },
-  },
-  {
-    title: 'authors',
-    key: 'authors',
-  },
-  {
-    title: 'links',
-    key: 'links',
-  },
-]
+import { PageHero } from 'src/components/common/page-hero'
+import dipLogo from 'src/assets/images/dip-logo.svg'
+// import css from './dip-overview.module.scss'
+import Pencil from 'src/assets/icons/pencil.svg'
+import BulletList from 'src/assets/icons/bullet_list.svg'
+import { Proposals } from './proposals'
 
 export function DIPOverview() {
-  const dips = useDIPs()
-
   return (
-    <div className="section">
-      <div className="content">
-        <Contribute />
-        <Table items={dips} columns={tableColumns} />
+    <>
+      <PageHero
+        title="DIPs"
+        logo={dipLogo}
+        cta={[
+          {
+            title: 'Review DIPs',
+            to: 'https://forum.devcon.org',
+            icon: <BulletList />,
+          },
+          {
+            title: 'Create Proposal',
+            to: 'https://forum.devcon.org',
+            icon: <Pencil />,
+          },
+        ]}
+        navigation={[
+          {
+            title: 'FORUM',
+            to: 'https://forum.devcon.org',
+          },
+          {
+            title: 'GITHUB',
+            to: 'https://github.com/efdevcon/DIPs',
+          },
+          {
+            title: 'CONTRIBUTE',
+            to: '#contribute',
+          },
+          {
+            title: 'DIPS',
+            to: '#proposals',
+          },
+        ]}
+      />
+      <div className="section">
+        <div className="content">
+          <Contribute />
+          <Proposals />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

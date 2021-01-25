@@ -19,7 +19,7 @@ export function Header({ withHero }: HeaderProps) {
   const body = (
     <>
       <Strip />
-      <header className={css['header']}>
+      <header id="header" className={css['header']}>
         <div className={css['menu-container']}>
           <Link to={`/${intl.locale}/`}>
             <HeaderLogo />

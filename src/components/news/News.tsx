@@ -44,27 +44,27 @@ const sortNews = (data: any): Array<any> => {
   })
 }
 
+const settings = {
+  infinite: false,
+  arrows: false,
+  speed: 500,
+  slidesToShow: 2.1,
+  slidesToScroll: 2,
+  touchThreshold: 100,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 410,
+      settings: {
+        slidesToShow: 1.1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+}
+
 export const News = ({ data: rawData }: NewsProps) => {
   const data = formatNewsData(sortNews(rawData.nodes))
-
-  const settings = {
-    infinite: false,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 2.1,
-    slidesToScroll: 2,
-    touchThreshold: 100,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 410,
-        settings: {
-          slidesToShow: 1.1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  }
 
   return (
     <div className="section">

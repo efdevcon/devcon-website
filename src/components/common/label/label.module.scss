@@ -5,9 +5,16 @@
   @include fonts.font-secondary;
   @include fonts.font-xxs;
   display: inline-block;
-  padding: $gap-1;
+  padding: $gap-2;
+  padding-top: $gap-1;
+  padding-bottom: $gap-1;
   color: black;
-  background: grey;
+  background: rgba(0, 0, 0, 0.1);
+
+  &.error {
+    color: rgba(174, 10, 10, 1);
+    background: rgba(254, 239, 239, 1);
+  }
 
   &.success {
     color: $color-success;

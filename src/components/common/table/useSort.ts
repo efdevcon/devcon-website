@@ -1,16 +1,12 @@
 import React from 'react';
 
 export enum SortVariation {
-  number,
-  date,
-  basic
+  number = 'number',
+  date = 'date',
+  basic = 'basic'
 }
 
-type Sort = {
-  column: string
-  
-}
-
+// Generic sorting methods
 export const presetSortingMethods = {
   number: (columnKey: string) => (a: any, b: any) => a[columnKey] - b[columnKey],
   date: (columnKey: string) => (a: any, b: any) => {
@@ -23,43 +19,60 @@ export const presetSortingMethods = {
     a[columnKey] === b[columnKey] ? 0 : a[columnKey] > b[columnKey] ? 1 : -1,
 }
 
-const useSort = (items: any) => {
-  const [sort, setSort] = React.useState()
+const useSort = (items: any, columns: any) => {
+  const [columnIndex, setColumnIndex] = React.useState<number>(0);
+  const [sortDirection, setSortDirection] = React.useState<string>('asc');
 
-  const expandedSetSort = (column: string) => {
-    const alreadySortedByColumn = sort?.column === column;
+  const setSort = (nextColumnIndex: number) => {
+    const alreadySortedByColumn = columnIndex === nextColumnIndex;
 
     if (alreadySortedByColumn) {
-      setSort({
-        ...sort,
-        direction: sort.direction === 'asc' ? 'desc' : 'asc'
-      })
+      if (sortDirection === 'asc') {
+        setSortDirection('desc');
+      } else if (sortDirection === 'desc') {
+        setColumnIndex(0)
+        setSortDirection('asc')
+      }
     } else {
-
+      setColumnIndex(nextColumnIndex);
+      setSortDirection('asc');
     }
   }
 
   const sortedItems = React.useMemo(() => {
-    if (sort) {
-      // Custom sorting function
-      if (typeof sort === 'function') {
-        return items.sort(sort.method);
+    const sort = () => {
+      const shouldSort = typeof columnIndex === 'number';
+
+      if (shouldSort) {
+        const column = columns[columnIndex];
+  
+        if (typeof column.sort === 'function') {
+          return items.sort(column.sort);
+        } else {
+          // If sort wasn't custom, it should reference a preset sorting method:
+          const createSortingMethod = presetSortingMethods[column.sort] || presetSortingMethods.basic;
+          // Have to instantiate the sorting method with the column key so it knows what to sort by
+          const sortingMethod = createSortingMethod(column.key);
+    
+          return items.sort(sortingMethod)
+        }
       }
-
-      // If sort wasn't a function, it should reference a preset sorting method:
-      const createSortingMethod = presetSortingMethods[sort.method] || presetSortingMethods.basic;
-      // Have to instantiate the sorting method with the column key so it knows what to sort by
-      const sortingMethod = createSortingMethod(sort.column);
-
-      return items.sort(sortingMethod)
+  
+      return items;
     }
 
-    return items
-  }, [items, sort])
+    const sortedItems = sort();
+
+    if (sortDirection === 'desc') return sortedItems.reverse();
+
+    return sortedItems;
+  }, [sortDirection, columnIndex, items, columns])
 
   return [
     sortedItems,
-    expandedSetSort
+    columnIndex,
+    setSort,
+    sortDirection
   ];
 }
 

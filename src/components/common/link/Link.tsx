@@ -19,7 +19,7 @@ export const Link = ({ children, indicateExternal, external, to, ...rest }: Link
   // GatsbyLink is only used for internal links, as per the gatsby documentation
   if (isExternal) {
     return (
-      <a href={to} {...rest}>
+      <a href={to} {...rest} target="_blank" rel="noopener noreferrer">
         {children} {indicateExternal && <NorthEast style={{ fontSize: '0.5rem' }} />}
       </a>
     )

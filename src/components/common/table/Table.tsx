@@ -1,10 +1,14 @@
 import React from 'react'
 import useSort, { SortVariation } from './useSort'
 import css from './table.module.scss'
+import ArrowAsc from 'src/assets/icons/arrow_asc.svg'
+import ArrowDesc from 'src/assets/icons/arrow_desc.svg'
 
 type HeaderProps = {
   columns: TableColumn[]
-  setSort: Function
+  setSortedBy: Function
+  sortedBy: number
+  sortDirection: string
 }
 type RowProps = {
   columns: TableColumn[]
@@ -26,30 +30,30 @@ type TableProps = {
 const TableHeader = (props: HeaderProps) => {
   return (
     <div className={css['header']}>
-      {/* <div
-        key="index"
-        className={css['column-header']}
-        onClick={() =>
-          props.setSort({
-            column: 'index',
-            sort: presetSortingMethods.number,
-          })
-        }
-      >
-        #
-      </div> */}
-
-      {props.columns.map(column => {
+      {props.columns.map((column, index) => {
         let className = css['column-header']
 
         if (column.className) className = `${column.className} ${className}`
+        if (column.sort) className += ` ${css['sort']}`
+
+        const sortIsActive = props.sortedBy === index
+
+        if (sortIsActive) {
+          className += ` ${css[props.sortDirection]}`
+        }
+
+        const shouldRenderAsc = !sortIsActive || props.sortDirection === 'asc'
+        const shouldRenderDesc = !sortIsActive || props.sortDirection === 'desc'
 
         return (
-          <div key={column.title} className={className}>
-            <p>
-              {column.title.toUpperCase()}
-              {column.sort && ':SORT'}
-            </p>
+          <div key={column.title} className={className} onClick={() => column.sort && props.setSortedBy(index)}>
+            <p>{column.title.toUpperCase()}</p>
+            {column.sort && (
+              <div className={css['sort']}>
+                {shouldRenderAsc && <ArrowAsc />}
+                {shouldRenderDesc && <ArrowDesc />}
+              </div>
+            )}
           </div>
         )
       })}
@@ -84,11 +88,16 @@ const TableRows = (props: RowProps) => {
 }
 
 export const Table = (props: TableProps) => {
-  const [sortedItems, setSort] = useSort(props.items)
+  const [sortedItems, sortedBy, setSortedBy, sortDirection] = useSort(props.items, props.columns)
 
   return (
     <div className={css['container']}>
-      <TableHeader columns={props.columns} setSort={setSort} />
+      <TableHeader
+        columns={props.columns}
+        setSortedBy={setSortedBy}
+        sortedBy={sortedBy}
+        sortDirection={sortDirection}
+      />
       <TableRows columns={props.columns} items={sortedItems} />
     </div>
   )
