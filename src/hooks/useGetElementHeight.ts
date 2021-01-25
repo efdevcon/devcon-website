@@ -2,7 +2,7 @@ import { useState, useLayoutEffect } from 'react';
 // import throttle from 'src/utils/throttle';
 
 const getElementHeight = (elementID: string) => {
-  const element = document && document.getElementById(elementID);
+  const element = document.getElementById(elementID);
 
   return element?.clientHeight || 0;
 }
@@ -10,7 +10,7 @@ const getElementHeight = (elementID: string) => {
 // Returns the height of an element by ID
 // Assumes the target element is rendered
 export default (elementID: string) => {
-  const [elementHeight, setElementHeight] = useState(getElementHeight(elementID));
+  const [elementHeight, setElementHeight] = useState(0);
 
   useLayoutEffect(() => {
     const determineHeight = () => {
