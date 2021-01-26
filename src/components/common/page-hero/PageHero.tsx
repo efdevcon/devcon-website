@@ -2,8 +2,9 @@ import React from 'react'
 import css from './page-hero.module.scss'
 import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
-import { useSiteNavigationContext } from 'src/context/site-navigation-context'
+import { usePageContext } from 'src/context/page-context'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
+import { useStaticQuery, graphql } from 'gatsby'
 
 type NavigationLink = {
   to: string
@@ -24,8 +25,8 @@ type PageHeroProps = {
   navigation: Array<NavigationLink>
 }
 
-const resolvePageCategory = (link: LinkType, parent?: string): undefined | JSX.Element => {
-  const match = link.url.includes(window.location.pathname)
+const resolvePageCategory = (pathname: string, link: LinkType, parent?: string): undefined | JSX.Element => {
+  const match = link.url.includes(pathname)
 
   if (match) {
     if (parent)
@@ -40,7 +41,7 @@ const resolvePageCategory = (link: LinkType, parent?: string): undefined | JSX.E
 
   if (link.links) {
     for (let i = 0; i < link.links.length; i++) {
-      const match = resolvePageCategory(link.links[i], link.title)
+      const match = resolvePageCategory(pathname, link.links[i], link.title)
 
       if (match) return match
     }
@@ -48,14 +49,14 @@ const resolvePageCategory = (link: LinkType, parent?: string): undefined | JSX.E
 }
 
 export const PageHero = (props: PageHeroProps) => {
-  const { data } = useSiteNavigationContext()
+  const pageContext = usePageContext()
   const headerHeight = useGetElementHeight('header')
   const pageHeaderHeight = useGetElementHeight('page-navigation')
   const pageHeroHeight = useGetElementHeight('page-hero')
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
 
-  const pageCategory = data.site.reduce((acc: null | JSX.Element, link) => {
-    const category = resolvePageCategory(link)
+  const pageCategory = pageContext?.navigation.site.reduce((acc: null | JSX.Element, link) => {
+    const category = resolvePageCategory(pageContext.location.pathname, link)
 
     if (category) acc = category
 

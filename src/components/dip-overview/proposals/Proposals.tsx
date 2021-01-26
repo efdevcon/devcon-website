@@ -72,7 +72,6 @@ const tableColumns = [
       return -1
     },
     render: item => {
-      console.log(item, 'item lul')
       return item.tags
         ? item.tags.map(tag => (
             <Label type="neutral" className={css['tag']}>

@@ -11,12 +11,12 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
 import { Newsletter } from 'src/components/newsletter'
-import { useSiteNavigationContext } from 'src/context/site-navigation-context'
+import { usePageContext } from 'src/context/page-context'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
 export const Footer = () => {
-  const context = useSiteNavigationContext()
-  const footerData = context.data.footer
+  const context = usePageContext()
+  const footerData = context?.navigation.footer
   const intl = useIntl()
   const lang = intl.locale
 
@@ -31,7 +31,7 @@ export const Footer = () => {
           </div>
 
           <div className={css['col-2']}>
-            {footerData.highlights.map((link: LinkType, index: number) => {
+            {footerData?.highlights.map((link: LinkType, index: number) => {
               return (
                 <h2 key={index}>
                   <Link to={link.url} className="plain">
@@ -51,7 +51,7 @@ export const Footer = () => {
 
           <div className={css['col-3']}>
             <ul className={css['list']}>
-              {footerData.left.map((link: LinkType, index: number) => {
+              {footerData?.left.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
                     <Link to={link.url} className="plain">
@@ -65,7 +65,7 @@ export const Footer = () => {
 
           <div className={css['col-4']}>
             <ul className={css['list']}>
-              {footerData.right.map((link: LinkType, index: number) => {
+              {footerData?.right.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
                     <Link to={link.url} className="plain">
@@ -113,7 +113,7 @@ export const Footer = () => {
           <div className={css['col-1']}>{COPYRIGHT_NOTICE}</div>
 
           <div className={css['col-2']}>
-            {footerData.bottom.map((link: LinkType, index: number) => {
+            {footerData?.bottom.map((link: LinkType, index: number) => {
               return (
                 <p className="semi-bold" key={index}>
                   <Link to={link.url} external={link.type === 'url'} className="plain">

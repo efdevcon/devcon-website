@@ -3,16 +3,16 @@ import IconMenu from 'src/assets/icons/menu.svg'
 import IconArrowDown from 'src/assets/icons/arrow_drop_down.svg'
 import { Link } from 'src/components/common/link'
 import css from './navigation.module.scss'
-import { useSiteNavigationContext } from 'src/context/site-navigation-context'
+import { usePageContext } from 'src/context/page-context'
 import { Link as LinkType } from 'src/types/Link'
 
 export const Navigation = () => {
-  const context = useSiteNavigationContext()
+  const { navigation } = usePageContext()
 
   return (
     <>
       <ul className={css['navigation']}>
-        {context.data.site.map((i: LinkType) => {
+        {navigation.site.map((i: LinkType) => {
           const hasChildren = i.links && i.links.length > 0
 
           const link = (
