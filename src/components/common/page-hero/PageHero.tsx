@@ -20,7 +20,7 @@ type PageHeroProps = {
   title: string
   logo?: any
   cta?: Array<CTALink>
-  background?: any
+  type: 'dip' | 'faq',
   navigation: Array<NavigationLink>
 }
 
@@ -64,7 +64,7 @@ export const PageHero = (props: PageHeroProps) => {
 
   return (
     <div id="page-hero" className={css['hero']} style={{ '--negative-offset': negativeOffset }}>
-      <div className={css['backdrop']} style={{ background: props.background }}>
+      <div className={css[props.type]}>
         <img alt="" src={props.logo} />
       </div>
       <div className="section">
@@ -92,7 +92,7 @@ export const PageHero = (props: PageHeroProps) => {
             <div id="page-navigation" className={css['page-navigation']}>
               {props.navigation.map(link => {
                 return (
-                  <Link to={link.to} indicateExternal className="font-xs bold font-secondary">
+                  <Link to={link.to} indicateExternal className="font-xs bold font-secondary text-uppercase">
                     {link.title}
                   </Link>
                 )

@@ -13,6 +13,7 @@ export function DIPOverview() {
       <PageHero
         title="DIPs"
         logo={dipLogo}
+        type='dip'
         cta={[
           {
             title: 'Review DIPs',
