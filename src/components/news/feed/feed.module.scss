@@ -27,6 +27,7 @@
     flex-direction: column;
     flex-grow: 1;
     max-height: 64px * 5;
+    padding-right: $gap-5;
     overflow-y: auto;
 
     &::-webkit-scrollbar {

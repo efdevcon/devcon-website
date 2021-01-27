@@ -146,6 +146,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'dip-contributors',
+        path: `${__dirname}/src/content/dips/contributors.json`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'blogs',
         path: `${__dirname}/src/content/blogs`,
       },
@@ -179,6 +186,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    'gatsby-transformer-json',
     {
       resolve: `gatsby-plugin-intl`,
       options: {

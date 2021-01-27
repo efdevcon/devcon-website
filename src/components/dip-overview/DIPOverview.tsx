@@ -6,8 +6,11 @@ import dipLogo from 'src/assets/images/dip-logo.svg'
 import Pencil from 'src/assets/icons/pencil.svg'
 import BulletList from 'src/assets/icons/bullet_list.svg'
 import { Proposals } from './proposals'
+import { useDIPs } from 'src/hooks/useDIPs'
 
 export function DIPOverview() {
+  const { dips, contributors } = useDIPs()
+
   return (
     <>
       <PageHero
@@ -46,20 +49,10 @@ export function DIPOverview() {
       />
       <div className="section">
         <div className="content">
-          <Contribute />
-          <Proposals />
+          <Contribute contributors={contributors} />
+          <Proposals dips={dips} />
         </div>
       </div>
     </>
   )
 }
-
-/* <ul>
-        {dips.map(i => (
-          <li key={i.number}>
-            <Link to={`${i.slug}`}>
-              #{i.number} - {i.title}
-            </Link>
-          </li>
-        ))}
-      </ul> */

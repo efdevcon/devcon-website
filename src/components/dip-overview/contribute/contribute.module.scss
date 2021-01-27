@@ -2,90 +2,194 @@
 @use 'src/assets/css/partials/layout';
 @use 'src/assets/css/partials/fonts';
 
-.container {
+@keyframes auto-scroll {
+  100% {
+    transform: translateX(var(--track-width));
+  }
+}
+
+@keyframes auto-scroll-indent {
+  100% {
+    transform: translateX(calc(var(--track-width) + var(--odd-offset)));
+  }
+}
+
+@keyframes auto-scroll-reverse {
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.section {
   display: flex;
-  flex-direction: row;
-  margin-bottom: $gap-10;
+  flex-direction: column;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px; // safari
 
-  .dip-description {
-    flex-basis: 50%;
-    flex-shrink: 0;
+  .container {
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    margin-bottom: $gap-10;
 
-    .links {
-      margin-top: $gap-6;
-      > * {
-        margin-right: $gap-12;
+    @media (max-width: $screen-lg) {
+      flex-direction: column;
+    }
 
-        &:last-child {
-          margin-right: 0px;
+    .header-container {
+      flex-basis: 100%;
+    }
+
+    .left-section {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .dip-description {
+        flex-shrink: 0;
+
+        @media (max-width: $screen-lg) {
+          flex-basis: 100%;
+        }
+      }
+
+      .links {
+        margin-top: $gap-6;
+        > * {
+          margin-right: $gap-12;
+
+          &:last-child {
+            margin-right: 0px;
+          }
         }
       }
     }
-  }
 
-  .contributors {
-    position: relative;
-    flex-basis: 50%;
-
-    .thumbnails {
-      .circular-img {
-        border-radius: 80px;
-        margin-left: $gap-10;
-        margin-right: $gap-10;
-        width: 80px;
-        height: 80px;
-        background: #6edbb6;
-      }
-    }
-
-    // .thumbnails {
-    //   &:after {
-    //     content: '';
-    //     left: 0;
-    //     top: 0;
-    //     right: 0;
-    //     height: 100%;
-    //     position: absolute;
-    //     background: linear-gradient(
-    //       90deg,
-    //       rgba(255, 255, 255, 0.8) 0%,
-    //       rgba(0, 0, 0, 0) 20%,
-    //       rgba(0, 0, 0, 0) 80%,
-    //       rgba(255, 255, 255, 0.8)
-    //     );
-    //   }
-
-    //   .row {
-    //     overflow: hidden;
-    //     white-space: nowrap;
-    //     &:nth-child(even) {
-    //       margin-left: 80px;
-    //     }
-
-    //     .circular-img {
-    //       border-radius: 80px;
-    //       margin-left: $gap-10;
-    //       margin-right: $gap-10;
-    //       width: 80px;
-    //       height: 80px;
-    //       background: #6edbb6;
-    //     }
-    //   }
-    // }
-
-    .info {
+    .contributors {
+      position: relative;
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: 50%;
 
-      p {
-        margin-right: $gap-4;
+      @media (max-width: $screen-lg) {
+        margin-top: $gap-10;
+        flex-basis: 100%;
       }
 
-      svg {
-        font-size: $size-14;
+      .scroll-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        &:after {
+          content: '';
+          pointer-events: none;
+          left: 0;
+          top: 0;
+          right: 0;
+          height: 100%;
+          position: absolute;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.1) 15%,
+            rgba(255, 255, 255, 0.1) 85%,
+            rgba(255, 255, 255, 1)
+          );
+        }
+
+        &.hovered {
+          .track {
+            -webkit-animation-play-state: paused !important;
+            -moz-animation-play-state: paused !important;
+            -o-animation-play-state: paused !important;
+            animation-play-state: paused !important;
+          }
+        }
+
+        .track {
+          --thumbnails-per-view: 6;
+          --thumbnail-spacing: 20px;
+          --track-width: calc(-100% + var(--container-size));
+          // yikes
+          --odd-offset: calc(
+            (
+              ((var(--container-size) / var(--thumbnails-per-view) - (var(--thumbnail-spacing) * 2)) / 2) +
+                var(--thumbnail-spacing)
+            )
+          );
+          animation: auto-scroll linear 50s infinite;
+          transform: translateX(0%);
+          display: inline-block;
+          white-space: nowrap;
+
+          &.odd {
+            transform: translateX(var(--odd-offset));
+            animation: auto-scroll-indent linear 50s infinite;
+          }
+
+          // &.reverse {
+          //   animation: auto-scroll-reverse linear 120s infinite;
+          //   transform: translateX(var(--track-width));
+          // }
+
+          @media (max-width: $screen-md) {
+            --thumbnails-per-view: 5;
+            // --thumbnail-spacing: 40px;
+          }
+
+          @media (max-width: $screen-sm) {
+            --thumbnails-per-view: 4;
+          }
+
+          @media (max-width: $screen-tiny) {
+            --thumbnails-per-view: 3;
+          }
+
+          .thumbnail {
+            cursor: pointer;
+            display: inline-block;
+            width: calc(var(--container-size) / var(--thumbnails-per-view) - (var(--thumbnail-spacing) * 2));
+            margin-left: var(--thumbnail-spacing);
+            margin-right: var(--thumbnail-spacing);
+            margin-bottom: var(--thumbnail-spacing);
+            border-radius: 100px;
+
+            @media (max-width: $screen-md) {
+              &:nth-last-child(-n + 1) {
+                display: none;
+              }
+            }
+
+            @media (max-width: $screen-sm) {
+              &:nth-last-child(-n + 2) {
+                display: none;
+              }
+            }
+
+            @media (max-width: $screen-tiny) {
+              &:nth-last-child(-n + 3) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+          margin-right: $gap-4;
+        }
+
+        svg {
+          font-size: $size-14;
+        }
       }
     }
   }

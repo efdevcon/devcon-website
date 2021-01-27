@@ -46,7 +46,16 @@ const TableHeader = (props: HeaderProps) => {
         const shouldRenderDesc = !sortIsActive || props.sortDirection === 'desc'
 
         return (
-          <div key={column.title} className={className} onClick={() => column.sort && props.setSortedBy(index)}>
+          <div
+            key={column.key}
+            className={className}
+            style={{
+              userSelect: 'none', // Prevents accidental text selection when double-clicking
+            }}
+            onClick={e => {
+              if (column.sort) props.setSortedBy(index)
+            }}
+          >
             <p>{column.title.toUpperCase()}</p>
             {column.sort && (
               <div className={css['sort']}>

@@ -21,14 +21,15 @@
 
 .container {
   @include fonts.font-secondary;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
   position: relative;
 
   .header {
     // position: sticky;
     // top: 60px;
-    background: $color-primary; //rgba(255, 255, 255, 1);
-    color: white;
-    --text-color: white;
+    // background: $color-primary; //rgba(255, 255, 255, 1);
+    // color: white;
+    // --text-color: white;
     align-self: flex-start;
     @extend .distribute-items;
 
@@ -42,25 +43,25 @@
         cursor: pointer;
       }
 
-      &.asc {
-        > .sort {
-          > * {
-            &:first-child {
-              --text-color: #00ff3c;
-            }
-          }
-        }
-      }
+      // &.asc {
+      //   > .sort {
+      //     > * {
+      //       &:first-child {
+      //         --text-color: #ff0000;
+      //       }
+      //     }
+      //   }
+      // }
 
-      &.desc {
-        > .sort {
-          > * {
-            &:last-child {
-              --text-color: #00ff3c;
-            }
-          }
-        }
-      }
+      // &.desc {
+      //   > .sort {
+      //     > * {
+      //       &:last-child {
+      //         --text-color: #ff0000;
+      //       }
+      //     }
+      //   }
+      // }
 
       .sort {
         margin-left: $gap-3;

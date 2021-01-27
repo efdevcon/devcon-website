@@ -8,6 +8,35 @@
   margin-bottom: $gap-10;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px;
+
+  .top-container {
+    padding-top: $gap-10;
+    padding-bottom: $gap-10;
+    border-top: 1px solid #30354b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin-bottom: 0px;
+    }
+
+    .filters {
+      display: flex;
+
+      > * {
+        cursor: pointer;
+        padding: $gap-2;
+        margin-left: $gap-8;
+      }
+
+      .active-filter {
+        @include fonts.bold;
+        border-bottom: 2px solid black;
+      }
+    }
+  }
 }
 
 .index-column {
@@ -27,7 +56,7 @@
   flex-grow: 2 !important;
 
   @media (max-width: 1000px) {
-    display: none;
+    display: none !important;
   }
 }
 

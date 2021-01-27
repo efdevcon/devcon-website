@@ -31,7 +31,8 @@ export enum Tag {
 export interface DIP {
   number: number
   title: string
-  status: Status
+  summary: string
+  status: string // Hard to enumerate all statuses because of different casing
   github: string
   themes: Array<Theme>
   tags: Array<Tag>
@@ -39,6 +40,11 @@ export interface DIP {
   resources: string
   discussion: string
   created: Date
-  body: string
+  body?: string
   slug: string
+}
+
+export interface Contributor {
+  name: string
+  avatarUrl: string
 }

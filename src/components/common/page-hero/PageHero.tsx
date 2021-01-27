@@ -4,7 +4,6 @@ import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
 import { usePageContext } from 'src/context/page-context'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
-import { useStaticQuery, graphql } from 'gatsby'
 
 type NavigationLink = {
   to: string
@@ -79,7 +78,7 @@ export const PageHero = (props: PageHeroProps) => {
               <div className={css['buttons']}>
                 {props.cta.map((link: CTALink) => {
                   return (
-                    <Link className="button lg" to={link.to}>
+                    <Link key={link.to + link.title} className="button lg" to={link.to}>
                       {link.icon}
                       <span>{link.title}</span>
                     </Link>
@@ -93,7 +92,12 @@ export const PageHero = (props: PageHeroProps) => {
             <div id="page-navigation" className={css['page-navigation']}>
               {props.navigation.map(link => {
                 return (
-                  <Link to={link.to} indicateExternal className="font-xs bold font-secondary">
+                  <Link
+                    key={link.to + link.title}
+                    to={link.to}
+                    indicateExternal
+                    className="font-xs bold font-secondary"
+                  >
                     {link.title}
                   </Link>
                 )

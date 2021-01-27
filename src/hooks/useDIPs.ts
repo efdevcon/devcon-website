@@ -1,9 +1,20 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import { DIP } from 'src/types/dip'
+import { DIP, Contributor } from 'src/types/dip'
 
-export const useDIPs = (): Array<DIP> => {
+type DIPData = {
+  dips: Array<DIP>
+  contributors: Array<Contributor>
+}
+
+export const useDIPs = (): DIPData => {
   const data = useStaticQuery(graphql`
     query {
+      contributors: allContributorsJson {
+        nodes {
+          name
+          avatarUrl
+        }
+      }
       dips: allMarkdownRemark(filter: { fields: { collection: { eq: "dips" } } }, sort: { fields: frontmatter___DIP }) {
         nodes {
           frontmatter {
@@ -26,7 +37,10 @@ export const useDIPs = (): Array<DIP> => {
     }
   `)
 
-  return data.dips.nodes.map((i: any) => mapToDIP(i))
+  return {
+    dips: data.dips.nodes.map((i: any) => mapToDIP(i)),
+    contributors: data.contributors.nodes.map((i: any) => i)
+  }
 }
 
 function mapToDIP(source: any): DIP {

@@ -47,14 +47,14 @@ const useSort = (items: any, columns: any) => {
         const column = columns[columnIndex];
   
         if (typeof column.sort === 'function') {
-          return items.sort(column.sort);
+          return items.slice().sort(column.sort);
         } else {
           // If sort wasn't custom, it should reference a preset sorting method:
           const createSortingMethod = presetSortingMethods[column.sort] || presetSortingMethods.basic;
           // Have to instantiate the sorting method with the column key so it knows what to sort by
           const sortingMethod = createSortingMethod(column.key);
     
-          return items.sort(sortingMethod)
+          return items.slice().sort(sortingMethod)
         }
       }
   
