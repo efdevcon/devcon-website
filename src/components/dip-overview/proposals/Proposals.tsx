@@ -5,7 +5,6 @@ import { Link } from 'src/components/common/link'
 import leftPad from 'src/utils/left-pad'
 import { Table, SortVariation } from 'src/components/common/table'
 import { DIP } from 'src/types/dip'
-import { normalizeUnits } from 'moment'
 
 const tableColumns = [
   {
