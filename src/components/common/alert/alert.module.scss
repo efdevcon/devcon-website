@@ -1,6 +1,5 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/main';
 
 .alert {
   color: $color-primary;
@@ -13,7 +12,7 @@
   width: 100%;
 }
 
-.right { 
+.right {
   float: right;
 }
 
@@ -21,7 +20,7 @@
   cursor: pointer;
 }
 
-.title { 
+.title {
   @include fonts.font-lg;
 }
 
@@ -32,7 +31,7 @@
   svg {
     fill: $color-success;
   }
-  .title { 
+  .title {
     color: $color-success;
   }
 }
@@ -44,7 +43,7 @@
   svg {
     fill: $color-error;
   }
-  .title { 
+  .title {
     color: $color-error;
   }
 }
@@ -56,7 +55,7 @@
   svg {
     fill: $color-warning;
   }
-  .title { 
+  .title {
     color: $color-warning;
   }
 }
@@ -64,11 +63,11 @@
 .info {
   @extend .alert;
   background-color: $color-info-light;
-  
+
   svg {
     fill: $color-info;
   }
-  .title { 
+  .title {
     color: $color-info;
   }
 }
@@ -80,7 +79,7 @@
   svg {
     fill: $color-light;
   }
-  .title { 
+  .title {
     color: $color-light;
   }
 }

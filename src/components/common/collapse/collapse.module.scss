@@ -1,14 +1,13 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/main';
 
-.container { 
-  svg { 
-      fill: $color-primary;
+.container {
+  svg {
+    fill: $color-primary;
   }
 }
 
-.header { 
+.header {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -16,23 +15,23 @@
   padding: $gap-4 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-  span { 
-      @include fonts.font-xxl;
+  span {
+    @include fonts.font-xxl;
   }
 
   &:hover,
   &:focus,
   &:active {
-    background: #F8F8F8;
+    background: #f8f8f8;
   }
 }
 
 .active {
   @extend .header;
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
-.body { 
+.body {
   padding: $gap-8 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }

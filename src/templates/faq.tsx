@@ -9,27 +9,31 @@ import Content from 'src/components/layouts/content'
 
 import IconFAQ from 'src/assets/images/logo-faq.svg'
 
-export default function FaqTemplate({ data }: any) {
+export default function FaqTemplate({ data, location }: any) {
   const page = data.markdownRemark
   const faq = ToFaqData(data)
 
   return (
-    <Content navigationData={data.navigationData}>
+    <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
-      <PageHero title={page.frontmatter.title} type='faq' logo={IconFAQ}
-        navigation={faq.map((category: Category) => { 
-          return {title: category.title, to: `#${category.id}`}
-        })} />
-        
-        <div className="section">
-          <div className="content">
-            <h3 className="subsection-header">{page.frontmatter.title}</h3>
-            <p dangerouslySetInnerHTML={{ __html: page.html }} />
+      <PageHero
+        title={page.frontmatter.title}
+        type="faq"
+        logo={IconFAQ}
+        navigation={faq.map((category: Category) => {
+          return { title: category.title, to: `#${category.id}` }
+        })}
+      />
 
-            <FAQ data={faq} />
-          </div>
+      <div className="section">
+        <div className="content">
+          <h3 className="subsection-header">{page.frontmatter.title}</h3>
+          <p dangerouslySetInnerHTML={{ __html: page.html }} />
+
+          <FAQ data={faq} />
         </div>
+      </div>
     </Content>
   )
 }
