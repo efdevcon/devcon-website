@@ -12,33 +12,6 @@
   }
 }
 
-.filter-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.search-bar {
-  padding: $gap-8 0;
-
-  input {
-    width: 400px;
-    font-size: $size-12;
-    color: $color-primary;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: $gap-1 $gap-2;
-  }
-
-  .subtitle {
-    @include fonts.font-xs;
-    @include fonts.bold;
-    text-transform: uppercase;
-    color: #88c43f;
-    display: block;
-    margin: $gap-4 0;
-  }
-}
-
 .category {
   display: flex;
   justify-content: space-between;
