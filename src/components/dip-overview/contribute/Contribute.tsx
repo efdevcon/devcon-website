@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import Github from 'src/assets/icons/github.svg'
 import css from './contribute.module.scss'
 import { Link } from 'src/components/common/link'
@@ -18,8 +18,10 @@ const chunkArray = (array: Array<any>, nChunks: number): Array<Array<any>> => {
   return results
 }
 
+/*
+  TO FIX: on safari the animated tracks "flash" when they reset their animation (happens every 50 seconds so not that significant)
+*/
 const AutoScroller = (props: ContributeProps) => {
-  const [hovered, setHovered] = React.useState(false)
   const [containerSize, setContainerSize] = React.useState(0)
   const containerRef = React.useRef<HTMLDivElement>()
 
@@ -44,25 +46,23 @@ const AutoScroller = (props: ContributeProps) => {
 
   let containerClass = css['scroll-container']
 
-  if (hovered) containerClass += ` ${css['hovered']}`
-
   const chunkedContributors = chunkArray(props.contributors, nRows)
 
   return (
     <div
+      key={containerSize === 0 ? 'loading' : containerSize} // Remounting the element when containerSize changes solves a lot of safari edge cases by resetting the CSS animations
       ref={containerRef}
       className={containerClass}
       style={{
         '--container-size': `${containerSize}px`,
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       {chunkedContributors.map((contributors, index) => {
         const isOdd = index % 2 !== 0
 
         let className = css['track']
 
+        if (containerSize) className += ` ${css['animate']}` // Have to wait with animating until containerSize is determined - bugs out in Safari otherwise
         if (isOdd) className += ` ${css['odd']} ${css['reverse']}`
 
         return (

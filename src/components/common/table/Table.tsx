@@ -31,7 +31,7 @@ const TableHeader = (props: HeaderProps) => {
   return (
     <div className={css['header']}>
       {props.columns.map((column, index) => {
-        let className = css['column-header']
+        let className = `${css['cell']} ${css['column-header']}`
 
         if (column.className) className = `${column.className} ${className}`
         if (column.sort) className += ` ${css['sort']}`
@@ -79,7 +79,7 @@ const TableRows = (props: RowProps) => {
             {props.columns.map(column => {
               const value = item[column.key]
 
-              let className = css['column-header']
+              let className = css['cell']
 
               if (column.className) className = `${column.className} ${className}`
 

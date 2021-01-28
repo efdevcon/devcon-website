@@ -5,6 +5,9 @@ import { Link } from 'src/components/common/link'
 import leftPad from 'src/utils/left-pad'
 import { Table, SortVariation } from 'src/components/common/table'
 import { DIP } from 'src/types/dip'
+import GithubIcon from 'src/assets/icons/github.svg'
+import ShareIcon from 'src/assets/icons/share.svg'
+import TooltipIcon from 'src/assets/icons/tooltip.svg'
 
 const tableColumns = [
   {
@@ -13,7 +16,11 @@ const tableColumns = [
     className: css['index-column'],
     sort: SortVariation.basic,
     render: item => {
-      return <p className={`${css['index']} h3`}>{leftPad(item.number)}</p>
+      return (
+        <p className={`${css['index']} h3`}>
+          <Link to={item.slug}>{leftPad(item.number)}</Link>
+        </p>
+      )
     },
   },
   {
@@ -21,6 +28,9 @@ const tableColumns = [
     key: 'title',
     className: css['name-column'],
     sort: SortVariation.basic,
+    render: item => {
+      return <Link to={item.slug}>{item.title}</Link>
+    },
   },
   {
     title: 'summary',
@@ -30,6 +40,7 @@ const tableColumns = [
   {
     title: 'status',
     key: 'status',
+    className: css['status-column'],
     sort: SortVariation.basic,
     render: item => {
       let labelType
@@ -60,6 +71,7 @@ const tableColumns = [
   {
     title: 'themes',
     key: 'themes',
+    className: css['themes-column'],
     sort: SortVariation.basic,
     render: item => {
       return item.themes ? item.themes.join(', ') : null
@@ -86,11 +98,22 @@ const tableColumns = [
   },
   {
     title: 'authors',
+    className: css['authors-column'],
     key: 'authors',
   },
   {
     title: 'links',
     key: 'links',
+    className: css['links-column'],
+    render: item => {
+      return (
+        <div className={css['links']}>
+          <TooltipIcon />
+          <GithubIcon />
+          <ShareIcon />
+        </div>
+      )
+    },
   },
 ]
 
@@ -136,6 +159,9 @@ const resolveStatuses = (dips: Array<DIP>) => {
 export const Proposals = (props: ProposalsProps) => {
   const [statusFilter, setStatusFilter] = React.useState<string | null>(null)
   const noFilter = !statusFilter
+
+  // // Pushing an extra column into the table to make room for a link back to the page
+  // const modifiedDips
 
   const filteredDips = React.useMemo(() => {
     return noFilter ? props.dips : props.dips.filter(dip => dip.status.toLowerCase() === statusFilter)

@@ -100,7 +100,7 @@
           );
         }
 
-        &.hovered {
+        &:hover {
           .track {
             -webkit-animation-play-state: paused !important;
             -moz-animation-play-state: paused !important;
@@ -109,10 +109,22 @@
           }
         }
 
+        // &.hovered {
+        //   @media (min-width: $screen-lg + 1) {
+        //     .track {
+        //       -webkit-animation-play-state: paused !important;
+        //       -moz-animation-play-state: paused !important;
+        //       -o-animation-play-state: paused !important;
+        //       animation-play-state: paused !important;
+        //     }
+        //   }
+        // }
+
         .track {
           --thumbnails-per-view: 6;
           --thumbnail-spacing: 20px;
           --track-width: calc(-100% + var(--container-size));
+          transform: translateX(0%);
           // yikes
           --odd-offset: calc(
             (
@@ -120,15 +132,22 @@
                 var(--thumbnail-spacing)
             )
           );
-          animation: auto-scroll linear 50s infinite;
-          transform: translateX(0%);
-          display: inline-block;
-          white-space: nowrap;
 
           &.odd {
             transform: translateX(var(--odd-offset));
-            animation: auto-scroll-indent linear 50s infinite;
           }
+
+          // TO FIX: When animation resets there's a quick flicker on safari
+          &.animate {
+            animation: auto-scroll linear 50s infinite;
+
+            &.odd {
+              animation: auto-scroll-indent linear 50s infinite;
+            }
+          }
+
+          display: inline-block;
+          white-space: nowrap;
 
           // &.reverse {
           //   animation: auto-scroll-reverse linear 120s infinite;

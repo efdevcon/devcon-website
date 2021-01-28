@@ -25,9 +25,9 @@ type PageHeroProps = {
 }
 
 const resolvePageCategory = (pathname: string, link: LinkType, parent?: string): undefined | JSX.Element => {
-  const match = link.url.includes(pathname)
+  const urlMatch = link.url.includes(pathname)
 
-  if (match) {
+  if (urlMatch) {
     if (parent)
       return (
         <>
