@@ -12,7 +12,8 @@ export const Navigation = () => {
   return (
     <>
       <ul className={css['navigation']}>
-        {navigation.site.map((i: LinkType) => {
+        {navigation.site.map((i: LinkType, index: number) => {
+          const primaryKey = `site-nav-1_${index}`;
           const hasChildren = i.links && i.links.length > 0
 
           const link = (
@@ -22,7 +23,7 @@ export const Navigation = () => {
           )
 
           return (
-            <li className="plain" key={`site-nav-${i.type}-${i.url ?? i.title}`}>
+            <li className="plain" key={primaryKey}>
               {hasChildren ? (
                 <>
                   {i.title}
@@ -30,10 +31,12 @@ export const Navigation = () => {
                   <div className={css['foldout']}>
                     {i.links && i.links.length > 0 && (
                       <ul>
-                        {i.links?.map((c: LinkType) => {
+                        {i.links?.map((c: LinkType, subIndex: number) => {
+                          const subKey = `site-nav-2_${subIndex}`;
+
                           if (c.type === 'header') {
                             return (
-                              <li>
+                              <li key={subKey}>
                                 <span className={css['foldout-header']}>{c.title}</span>
                               </li>
                             )
@@ -43,7 +46,7 @@ export const Navigation = () => {
                           }
 
                           return (
-                            <li>
+                            <li key={subKey}>
                               <Link className={`${css['foldout-link']} plain`} to={c.url}>
                                 {c.title}
                               </Link>
