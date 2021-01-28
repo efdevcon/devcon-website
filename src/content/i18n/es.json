@@ -19,5 +19,6 @@
   "state_error": "Error",
   "state_warning": "Warning",
   "state_info": "Info",
-  "state_alert": "Alert"
+  "state_alert": "Alert",
+  "faq_filter": "Filter FAQs using relevant key terms."
 }
