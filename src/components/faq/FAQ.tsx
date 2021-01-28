@@ -35,16 +35,16 @@ export function FAQ(props: FaqProps) {
     <div>
       {props.data.map((category: Category) => {
           return (
-            <>
+            <div key={category.id}>
               <div id={category.id} className={css['category']}>
                 <h3 key={category.id}>{renderTitle(category.title)}</h3>
                 <span role='button' className={css['collapse']} onClick={() => toggleExpand(category.title)}><IconMinus /></span>
               </div>
 
               {category.questions.length > 0 && filter(category.questions).map((question: FaqType) => {
-                return <Collapse title={question.title} body={question.body} expanded={true} />
+                return <Collapse key={question.id} title={question.title} body={question.body} expanded={true} />
               })}
-            </>
+            </div>
           )
       })}
     </div>
