@@ -4,7 +4,7 @@ Summary: 'As a continuation of a tradition started in Prague, let"s have an esca
 This time, however, the mechanics and story of the room should be fundamentally crypto.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-11.md
 DIP: 11
-Title: A Crypto-Onboarding Escape Room
+Title: Una sala de huida de Cripto-Onboarding
 Status: Accepted
 Themes: Freeform
 Tags: Event Production, Other
@@ -13,54 +13,54 @@ Discussion: https://forum.devcon.org/t/dip-11-a-crypto-onboarding-escape-room/12
 Created: 2020-09-22
 ---
 
-## Summary of Proposal
-As a continuation of a tradition started in Prague, let's have an escape room experience at Devcon6!
+## Resumen de la propuesta
+Como continuación de una tradición iniciada en Praga, ¡vamos a tener una experiencia en la sala de escape en Devcon6!
 
-This time, however, the mechanics and story of the room should be fundamentally crypto.
+Esta vez, sin embargo, la mecánica y la historia de la sala deberían ser fundamentalmente criptografía.
 
-## Abstract
-Daedalus Industries proposes a sequel to "The Spy Who Staked Me" Crypto-Escape Room experience.
+## Resumen
+Daedalus Industries propone una secuela de "The Spy Who Staked Me" Crypto-Escape Room experience.
 
-The general mechanics, outline, and several pieces of equipment are adaptable from the previous production, but there are some open questions concerning space, funding, and local execution that need to be addressed.
+Las mecánicas generales, el contorno, y varias piezas de equipo son adaptables a la producción anterior. pero hay algunas preguntas abiertas acerca del espacio, la financiación y la ejecución local que necesitan ser abordadas.
 
-## Motivation & Rationale
-Escape rooms are a wonderful experience to have at an event like Devcon; and offer an alternative environment to have fun and take a break from the conference proper.
+## Motivación & Racionalidad
+Las salas de escape son una experiencia maravillosa para celebrar un evento como Devcon; y ofrecer un ambiente alternativo para divertirse y tomarse un descanso de la conferencia propiamente dicha.
 
-An escape room is also an educational opportunity for crypto onboarding. Cryptography and cryptocurrency are the perfect foundation for both imaginative storytelling and ingenious puzzle-making. Fundamentals of operational security, "hacking", and digital forensics can be introduced in a safe and fun environment.
+Una sala de escape es también una oportunidad educativa para la incorporación de criptomonedas. La criptografía y la criptomoneda son la base perfecta tanto para la narración imaginativa como para la creación de puzzles ingenios. En un entorno seguro y divertido, se pueden introducir los "hacking" y los forenses digitales.
 
-This was my intention [in creating "The Spy who Staked Me" for ETHBerlin](https://medium.com/ethberlin/crypto-educational-escape-rooms-lessons-from-berlin-85f6765535c3): to have an escape room where crypto is front-and-center. Throughout the experience, players solve puzzles in order to break into the wallets of Alice, Bob, Charlie, and others, in order to save the world from the threat of EVE. In doing so, they learn basic principles of seed phrases, choosing strong passwords, encryption and other fun cryptography techniques for hiding (and discovering) hidden secrets.
+Esta fue mi intención [al crear "The Spy who Staked Me" para ETHBerlin](https://medium.com/ethberlin/crypto-educational-escape-rooms-lessons-from-berlin-85f6765535c3): tener una sala de escape donde el cripto esté en frente y centro. A lo largo de la experiencia, los jugadores resuelven rompecabezas para entrar en las carteras de Alicia, Bob, Charlie y otros, para salvar al mundo de la amenaza de EVE. Al hacerlo, aprenden principios básicos de frases de semillas, eligiendo contraseñas fuertes, cifrado y otras técnicas de criptografía divertidas para ocultar (y descubrir) secretos ocultos.
 
-At an event like Devcon where the 'cool' crypto people like to show off their brainpower, there is an additional opportunity to let people do some (fair and open) wagers-- dogfooded on Ethereum, of course. The exact mechanism needs to be polished, but the general idea is that teams must put up a minimum stake (first and foremost as a collateral for valuable items in the room) which they make back by solving the increasingly difficult puzzles within. Optionally, players could add an additional 'boasting' bet for their score within the room. If they solve all the puzzles, perhaps they might get back more than they put in, or cause an additional amount to be donated to some appropriate charitable cause.
+En un evento como Devcon en el que a la gente 'guía' le gusta mostrar su poder de cerveza, hay una oportunidad adicional de permitir que la gente haga algunas apuestas (justas y abiertas) – perdiéndose en Ethereum, por supuesto. Hay que pulir el mecanismo exacto, pero la idea general es que los equipos deben poner una apuesta mínima (sobre todo como garantía para objetos valiosos en la sala) que recuperan resolviendo los rompecabezas cada vez más difíciles en el interior. Opcionalmente, los jugadores podrían añadir una apuesta adicional para su puntuación dentro de la sala. Si resuelven todos los rompecabezas, tal vez recuperen más de lo que ingresan. o hacer que una cantidad adicional sea donada a alguna causa benéfica apropiada.
 
-## Implementation
-As stated earlier, I was the lead producer of the escape room at ETHBerlinZwei. After having successfully run that event experience, only now do I feel confident enough to propose a Devcon escape room.
+## Implementación
+Como se ha dicho anteriormente, fui el productor principal de la sala de escape de ETHBerlinZwei. Después de haber ejecutado con éxito esa experiencia del evento, sólo ahora me siento lo suficientemente confiado como para proponer una sala de escape de Devcon.
 
-Although most of the DIPs contained here are meant to be in some sense publicly discussed and guided, in this case I believe the experience is best handled by the few people I know to be reliable and capable, i.e. the Daedalus.Industries team from last year at ETHBerlin. Creative and technical projects like this don't lend themselves very well to the wisdom of the crowd, and I would like to maintain a countenance of mystery throughout the development process. I know it's a lot to ask, but I'm requesting complete centralized creative control over the project.
+Aunque la mayoría de los DI que se contienen aquí están destinados a ser en cierto sentido públicamente discutidos y guiados, en este caso creo que la experiencia es mejor manejada por las pocas personas que sé que son confiables y capaces, i. El equipo de Daedalus.Industries del año pasado en ETHBerlin. Proyectos creativos y técnicos como este no se prestan muy bien a la sabiduría de la corona, y me gustaría mantener un apoyo al misterio a lo largo del proceso de desarrollo. Sé que es mucho que pedir, pero estoy solicitando un control creativo completo centralizado sobre el proyecto.
 
-## Operational Requirements & Ownership
-There are essentially 3 components to a well-executed escape room:
+## Requisitos operacionales & Propiedad
+Hay esencialmente 3 componentes en una sala de escape bien ejecutada:
 
-* Narrative & Aesthetic. The overall narrative needs to be compelling and make sense in the context of both Ethereum AND Colombia. The props and components of the room must be chosen to fit the narrative. This entails several months worth of research, writing time, prop acquisition, and in this case likely a bit of local translation.
+* Narrativa & Estética. La narrativa general tiene que ser convincente y tener sentido en el contexto tanto de Ethereum como de Colombia. Los accesorios y componentes de la habitación deben ser elegidos para adaptarse a la narrativa. Esto implica varios meses de investigación, tiempo de escritura, adquisición de aptitudes, y en este caso probablemente un poco de traducción local.
 
-* Hardware. Several custom-built components need to be either shipped from Berlin (some pieces are quite heavy) or assembled in Bogotá before the event.
+* Hardware. Varios componentes hechos a medida tienen que ser enviados desde Berlín (algunas piezas son bastante pesadas) o ensamblados en Bogota antes del evento.
 
-* Software. [The burner wallet](https://medium.com/@dmihal/bringing-the-burner-wallet-to-ethberlins-escape-room-5d2d01992962) needs to be adapted to both the new story and a well-conceived mechanism of staking.
+* Software. [La cartera de arquero](https://medium.com/@dmihal/bringing-the-burner-wallet-to-ethberlins-escape-room-5d2d01992962) necesita adaptarse tanto a la nueva historia como a un mecanismo bien concebido de apuesta.
 
-There exists a lead-person for each of these elements on the Daedalus team, and I've confirmed with each of them they are willing and able to work on them this year in preparation for Devcon6.
+Existe un líder para cada uno de estos elementos en el equipo de Daedalus y he confirmado con cada uno de ellos que están dispuestos y capaces de trabajar en ellos este año en preparación para Devcon6.
 
-What I do not have sorted yet concern locale and execution:
+Lo que no he ordenado aún se refiere a la localización y la ejecución:
 
-* Space. I have no idea what the space or layout entails. This is potentially important for the story, as well as the set design.
+* Espacio. No tengo ni idea de lo que implica el espacio o el diseño. Esto es potencialmente importante para la historia, así como para el diseño del conjunto.
 
-* Marketing. Limited event 'experiences' are hard enough to promote, but this is compounded by the secretive nature of an escape room. This is one area where help from the Devcon team could really make all the difference.
+* Marketing. Las "experiencias" de eventos limitados son lo suficientemente difíciles para promover, pero esto se ve agravado por la naturaleza secreta de una sala de escape. Esta es una área en la que la ayuda del equipo de Devcon realmente podría marcar la diferencia.
 
-* Funding. Between working hours, travel expenses, and custom equipment/furniture builds, this is not a *cheap* proposal by any stretch of the imagination. I believe there is some opportunity for external funding from the ecosystem, such as sponsorship from hardware wallet companies or (tasteful and unimposing) in-room promotions. I can provide an itemized budget from the previous production by request, but would rather not post it here.
+* Financiación. Entre el horario de trabajo, gastos de viaje, y construcciones personalizadas de equipamiento/muebles, esta no es una propuesta *barata* de cualquier estiramiento de la imaginación. Creo que existe alguna oportunidad de financiación externa por parte del ecosistema, como el patrocinio de empresas de ferreterías o promociones (sabrosas e impuestas) en la sala. Puedo presentar a petición un presupuesto específico de la producción anterior, pero prefiero no incluirlo aquí.
 
-* Translation. Although it would be a tremendous amount of work, producing the story and materials to be Spanish-compatible would be worth it, IMO. The whole point of the room is for crypto-onboarding, and a Spanish-language option would encourage much more local participation.
+* Traducción. Aunque sería una cantidad tremenda de trabajo, vale la pena producir la historia y materiales compatibles con el español, la OMI. El sentido de la sala es para el cifrado y una opción en español favorecería mucha más participación local.
 
 
-## Links and Additional Information
+## Enlaces e información adicional
 
 https://medium.com/ethberlin/crypto-educational-escape-rooms-lessons-from-berlin-85f6765535c3
 
-https://medium.com/@dmihal/bringing-the-burner-wallet-to-ethberlins-escape-room-5d2d01992962
+https://medium.com/@dmihal/bring-the-burner-wallet-to-ethberlins-escape-room-5d2d01992962
