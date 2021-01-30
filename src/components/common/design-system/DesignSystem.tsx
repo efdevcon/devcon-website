@@ -1,9 +1,17 @@
 import React from 'react'
+import { Accordion } from '../accordion'
 import { Alert } from '../alert'
-import { Collapse } from '../collapse'
 import './design-system.module.scss'
 
 export function DesignSystem() {
+  const items = [
+    { id: "1", title: "Accordion item #1", body: "This is the extended body of accordion item #1" },
+    { id: "2", title: "Accordion item #2", body: "This is the extended body of accordion item #2" },
+    { id: "3", title: "Accordion item #3", body: "This is the extended body of accordion item #3" },
+    { id: "4", title: "Accordion item #4", body: "This is the extended body of accordion item #4" },
+    { id: "5", title: "Accordion item #5", body: "This is the extended body of accordion item #5" },
+  ]
+
   return (
     <div>
       <p>Various components for testing the design system</p>
@@ -66,15 +74,11 @@ export function DesignSystem() {
       </div>
 
       <div>
-        <h1>Collapse</h1>
+        <h1>Accordion</h1>
         <hr />
 
-        <Collapse title="Expanded Panel" expanded={true} body="This panel is expanded." />
-        <Collapse title="Collapsed Panel" expanded={false} body="This panel is collapsed." />
-        <Collapse
-          title="Collapsed Panel by default"
-          body="This panel is collapsed by default. Without providing a property."
-        />
+        <Accordion title="Expanded Accordion" open={true} items={items} />
+        <Accordion title="Collapsed Accordion" open={false} items={items} />
       </div>
 
       <div>

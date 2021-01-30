@@ -3,6 +3,8 @@
 @use 'src/assets/css/partials/fonts';
 
 .container {
+  margin-bottom: $gap-10;
+
   a {
     color: #88c43f;
   }
@@ -12,17 +14,3 @@
   }
 }
 
-.category {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: $gap-4 0;
-
-  h3 {
-    text-transform: uppercase;
-  }
-}
-
-.collapse {
-  cursor: pointer;
-}
