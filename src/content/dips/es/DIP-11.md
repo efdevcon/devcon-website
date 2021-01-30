@@ -1,6 +1,17 @@
-- - -
+---
+Summary: 'As a continuation of a tradition started in Prague, let"s have an escape room experience at Devcon6!
+
+This time, however, the mechanics and story of the room should be fundamentally crypto.'
+Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-11.md
+DIP: 11
 Title: A Crypto-Onboarding Escape Room
-- - -
+Status: Accepted
+Themes: Freeform
+Tags: Event Production, Other
+Authors: Griffin Ichiba Hotchkiss @gichiba
+Discussion: https://forum.devcon.org/t/dip-11-a-crypto-onboarding-escape-room/128
+Created: 2020-09-22
+---
 
 ## Summary of Proposal
 As a continuation of a tradition started in Prague, let's have an escape room experience at Devcon6!
