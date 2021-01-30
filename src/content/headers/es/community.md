@@ -1,4 +1,4 @@
 ---
-title: Comunidad
+title: Community
 ---
 
