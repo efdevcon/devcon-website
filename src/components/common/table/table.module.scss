@@ -1,22 +1,19 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/gaps';
 
 .distribute-items {
   display: flex;
 
   > * {
     overflow: hidden;
-    padding-left: $gap-4;
-    padding-right: $gap-4;
     flex-basis: 0;
     flex-grow: 1;
   }
 }
 
-.column-header {
-  padding: $gap-4;
-  // padding-top: $gap-4;
-  // padding-bottom: $gap-4;
+.cell {
+  @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
 }
 
 .container {
@@ -25,11 +22,6 @@
   position: relative;
 
   .header {
-    // position: sticky;
-    // top: 60px;
-    // background: $color-primary; //rgba(255, 255, 255, 1);
-    // color: white;
-    // --text-color: white;
     align-self: flex-start;
     @extend .distribute-items;
 
@@ -43,26 +35,6 @@
         cursor: pointer;
       }
 
-      // &.asc {
-      //   > .sort {
-      //     > * {
-      //       &:first-child {
-      //         --text-color: #ff0000;
-      //       }
-      //     }
-      //   }
-      // }
-
-      // &.desc {
-      //   > .sort {
-      //     > * {
-      //       &:last-child {
-      //         --text-color: #ff0000;
-      //       }
-      //     }
-      //   }
-      // }
-
       .sort {
         margin-left: $gap-3;
         font-size: $size-4;
@@ -75,10 +47,22 @@
   .row {
     @extend .distribute-items;
 
-    background: white;
+    $bg-color: white;
+
+    background: $bg-color;
+
+    &:hover {
+      outline: 1px solid rgba(121, 128, 135, 1);
+      background: darken($bg-color, 5%);
+    }
 
     &:nth-child(even) {
-      background: #f8f8f8;
+      $even-bg-color: #f8f8f8;
+      background: $even-bg-color;
+
+      &:hover {
+        background: darken($even-bg-color, 5%);
+      }
     }
   }
 }
