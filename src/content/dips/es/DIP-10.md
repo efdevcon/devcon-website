@@ -2,7 +2,7 @@
 Summary: 'Status as the communication layer for Devcon (on the ground and for satellite events). Utilizing Status as the layer into which many different projects showcased at Devcon plug in for maximum usability.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-10.md
 DIP: 10
-Title: Status as Devcon Communication Layer
+Title: Estado como capa de comunicación de Devcon
 Status: DRAFT
 Themes: Social
 Tags: Communication, Event Production, Sponsorship
@@ -12,53 +12,53 @@ Discussion: https://forum.devcon.org/t/dip-10-status-as-communication-layer-for-
 Created: 2020-08-21
 ---
 
-## Summary of Proposal
+## Resumen de la propuesta
 
-Status as the communication layer for Devcon (on the ground and for satellite events). Utilizing Status as the layer into which many different projects showcased at Devcon plug in for maximum usability.
+Estado como la capa de comunicación para Devcon (en el suelo y para eventos de satélite). Utilizando el estado como la capa en la que se mostraron muchos proyectos diferentes en el enchufe de Devcon para la máxima usabilidad.
 
-## Abstract
+## Resumen
 
-As we know, whenever we have an event in the Ethereum calendar, several different groups and conversations start taking shape in Telegram, WhatsApp etc. All less than decentralized.
+Como sabemos, cada vez que tenemos un evento en el calendario de Ethereum, varios grupos y conversaciones diferentes comienzan a tomar forma en Telegram, WhatsApp, etc. Todo menos que descentralizado.
 
-We also know there are many different projects that would be great to showcase but because the schedule is SO full and there are so many wonderful conversations happening, the ability to interact with most of them is stifled for attendees.
+También sabemos que hay muchos proyectos diferentes que serían estupendos para mostrar, pero debido a que el programa está lleno de SO y hay tantas conversaciones maravillosas que están sucediendo, la capacidad de interactuar con la mayoría de ellos es sofocada para los asistentes.
 
-The proposal is to use the Status chat, wallet and dapp browser capabilities to enable a smoother experience for attendees. Creating various Devcon chat channels would facilitate communications like:
+La propuesta es utilizar las funciones de chat, monedero y navegador dapp para habilitar una experiencia más suave para los asistentes. Crear varios canales de chat de Devcon facilitaría las comunicaciones como:
 
-Local knowledge/tips Spanish phrases Good restaurants Side events Satellite events (think people sharing images from their streaming events which we can then use for social/initiative assessment) Devcon Scholars But also enable attendees to create private chats with up to 10 friends.
+Conocimiento/consejos locales frases españolas Buen restaurantes Además de eventos eventos satelitales (piense que la gente comparte imágenes de sus eventos de streaming que luego podemos utilizar para la evaluación social/iniciativa) Becarios de desarrollo Pero también permite a los asistentes crear chats privados con hasta 10 amigos.
 
-Using the Status wallet would enable the sending and receiving of tokens (NFTs as well as ERC20s), use of Keycard, any payment needs as well as any IRL experiences created by any dapps that would require a browser.
+El uso de la cartera Status permitiría el envío y la recepción de tokens (NFTs así como ERC20s), el uso de la tarjeta clave, cualquier pago necesita así como cualquier experiencia de IRL creada por cualquier dapps que requieran un navegador.
 
-## Motivation & Rationale
+## Motivación & Racionalidad
 
-As an attendee, I very rarely use the official app and rely on my conversations (either IRL or via Telegram) to inform my decisions re where to go next, what events are happening, dinners etc.
+Como asistente, Muy raras veces uso la aplicación oficial y confío en mis conversaciones (ya sea IRL o via Telegram) para informar a mis decisiones de dónde ir a continuación, qué eventos están sucediendo, cenas, etc.
 
-It would be helpful however to be able to dip into bigger and somewhat orderly conversations as well as a curated list of the experiences I can tap into. Notifications on my phone alerting me of things happening (from talks coming up to people planning dinners) would make my life SO much easier and my experience much richer.
+Sería útil, sin embargo, poder sumergirse en conversaciones más grandes y algo ordenadas, así como una lista curada de las experiencias que puedo aprovechar. Las notificaciones en mi teléfono avisándome de las cosas que están sucediendo (desde las conversaciones hasta la gente que planea cenas) harían mi vida SO mucho más fácil y mi experiencia mucho más rica.
 
-Add in the security, wallet, dapp browsing facility and Keycard integration would make this a superior ALL IN ONE option vs various disjointed, non crypto products used for communication throughout the event.
+Añadir a la seguridad, cartera, facilidad de navegación dapp e integración de tarjetas de claves haría que esto fuera superior TODO EN UNA opción vs varios descontentos, productos no criptográficos utilizados para la comunicación a lo largo del evento.
 
-## Implementation
+## Implementación
 
-Status has recently activated a whole host of features such as notifications and picture messages which bring the experience much closer to a mainstream platform. Both for communication but also for the frictionless access to functionality like payments.
+Estado ha activado recientemente un gran número de funcionalidades como notificaciones y mensajes de imagen que acercan la experiencia a una plataforma de ream. Tanto para la comunicación como para el acceso sin fisuras a la funcionalidad como para los pagos.
 
-By Devcon 6, the Desktop client will also be live and will therefore link both laptop and mobile use. This could prove essential for real time communication by the Devcon team (think talk announcements) as well as sponsors for deeper engagement throughout.
+Por Devcon 6, el cliente de escritorio también estará en vivo y por lo tanto enlazará tanto el uso de portátiles como el móvil. Esto podría resultar esencial para la comunicación en tiempo real por parte del equipo de Devcon (pensar en anuncios de charla) así como para los patrocinadores para un compromiso más profundo a lo largo de todo el proceso.
 
-We can also use incentives to get attendees to perform more actions within the app and around Devcon focal points:
+También podemos utilizar incentivos para conseguir que los asistentes realicen más acciones dentro de la aplicación y alrededor de los puntos focales de Devcon:
 
-getting an ens name so they become easier to identify by their peers on the ground QR codes on rooms to join live chats about what’s happening in a specific room/stage (or ask questions of the speakers) Since keycard comes with some preloaded assets e.g a POAP token, 10 SNTs, x DAIs to buy food etc. we can easily merge experiential with communication in a smooth bundle and plug in any other partner projects’ tokens.
+obtener un nombre ens para que sean más fáciles de identificar por sus pares en el suelo códigos QR en las salas para unirse a chats en vivo sobre lo que está sucediendo en una sala/etapa específica (o hacer preguntas a los alta) Dado que la tarjeta viene con algunos activos precargados. un token POAP, 10 SNTs, x DAI para comprar alimentos, etc. podemos fusionar fácilmente la experiencia con la comunicación en un paquete liso y enchufar en los tokens de cualquier otro proyecto de socio.
 
-## Operational Requirements & Ownership
-Please answer questions below:
+## Requisitos operacionales & Propiedad
+Por favor, responda a las siguientes preguntas:
 
-Devcon team needs to be involved in the following manner:
+El equipo de Devcon necesita estar involucrado de la siguiente manera:
 
-communication support prior to the conference: connect Status team with participating projects so that the best collaboration dynamic can be identified.
+soporte de comunicación antes de la conferencia: conectar al equipo de estado con proyectos participantes para que se identifique la mejor dinámica de colaboración.
 
-if Status is used for communication, setup core channels for attendees and communicate via these channels
+si Estado se utiliza para la comunicación, configurar los canales principales para los asistentes y comunicarse a través de estos canales
 
-Status will be responsible for ensuring chat, wallet, browser and Keycard (outlined in DIP5) are fully functional.
+El estado será responsable de asegurar que el chat, la cartera, el navegador y la tarjeta de claves (descritos en DIP5) sean totalmente funcionales.
 
-Status will provide onboarding and technical support though.
+Sin embargo, el estatus proporcionará la incorporación y el apoyo técnico.
 
-The proposal can easily be integrated with POAP, Keycard, Satellite events DIP etc.
+La propuesta se puede integrar fácilmente con POAP, tarjeta clave, eventos Satellite DIP, etc.
 
 :rocket:
