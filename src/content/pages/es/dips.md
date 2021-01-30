@@ -1,6 +1,6 @@
 ---
-title: DI
+title: DIPs
 template: dips
 ---
 
-DIPs ES
+DIPs EN
