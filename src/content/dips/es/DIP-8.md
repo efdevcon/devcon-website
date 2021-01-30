@@ -2,7 +2,7 @@
 Summary: 'The main objective of this DIP is to replicate the experience of using POAP in Devcon 5 (Osaka). This being establishing the process for which every attendee gets one (and only one) POAP redemption code when they show up at the registration desk.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-8.md
 DIP: 8
-Title: Proof of Attendance Protocol - basics
+Title: Prueba del Protocolo de Asistencia - Básicos
 Status: Accepted
 Themes: Social
 Tags: Event Production
@@ -12,29 +12,29 @@ Discussion: https://forum.devcon.org/t/issuance-of-proof-of-attendance-nfts-with
 Created: 2020-08-17
 ---
 
-## Summary of Proposal
+## Resumen de la propuesta
 
-The main objective of this DIP is to replicate the experience of using POAP in Devcon 5 (Osaka). This being establishing the process for which every attendee gets one (and only one) POAP redemption code when they show up at the registration desk.
+El objetivo principal de este DIP es replicar la experiencia de usar POAP en Devcon 5 (Osaka). Estando estableciendo el proceso para el cual cada asistente recibe uno (y sólo) código de canje POAP cuando aparecen en el mostrador de registro.
 
-## Abstract
+## Resumen
 
-In devcon 5 the results were good, with 600 NFT redeemed and excellent feedback from the attendance. The process was established on the fly on the day of opening and it ended up being very clunky. The volunteers were supposed to give each attendee a deck of items that contained a decorative POAP sticky patch made of fabric with a QR code in the back and a colorful flyer with general information and instructions (among other stuff like a wrist band, food vouchers, a leaflet with the agenda). Weak and improvised coordination, problems with the wifi service and the language barrier made the registration process messy. For different reasons lots of attendees left the registration area without their POAP code or without the instructions. Although POAP had setup a help desk next to the main entrance, sometimes attendees with question weren't instructed to get there just because the volunteer was too rushed by the next person in line. For devcon six we have the opportunity to develop a more polished process with clearer instructions and tasks. It remains to be analyzed in which format the attendees do get their QR redemption code being the suggested options:
+En devcon 5 los resultados fueron buenos, con 600 NFT canjeados y excelente retroalimentación de la asistencia. El proceso se estableció sobre la marcha el día de la apertura y terminó siendo muy torpe. Los voluntarios debían dar a cada asistente un mazo de artículos que contenían un parche decorativo POAP hecho de tela con un código QR en la espalda y un colorido volante con información general e instrucciones (entre otras cosas como una banda de muñeca, vales de alimentación, un folleto con la agosto). Una coordinación débil e inadecuada, los problemas con el servicio wifi y la barrera lingüística dificultaron el proceso de registro. Por diferentes motivos, muchos asistentes dejaron el área de registro sin su código POAP o sin las instrucciones. Aunque POAP tenía configurado un servicio de asistencia junto a la entrada principal, a veces los asistentes con pregunta no fueron instruidos para llegar allí sólo porque el voluntario fue demasiado estrujado por la siguiente persona en la línea. Para el desarrollo seis tenemos la oportunidad de desarrollar un proceso más pulido con instrucciones y tareas más claras. Queda por analizar en qué formato los asistentes obtienen su código de canje QR siendo las opciones sugeridas:
 
-* The QR code comes in a piece of paper, standalone or included within other materials
-* The QR code comes on the back of the fabric sticky patch (this is a proven model that people loved)
-* The QR codes comes in an enamel pin (this was tested during ETHDenver and EthCC with great reception)
-* Others.
+* El código QR viene en un pedazo de papel, independiente o incluido en otros materiales
+* El código QR viene en la parte posterior del parche de tela (este es un modelo probado que la gente ama)
+* Los códigos QR vienen en un pin de esmalte (esto fue probado durante ETHDenver y EthCC con gran recepción)
+* Otros.
 
-## Motivation & Rationale
+## Motivación & Racionalidad
 
-When POAP was launched in Feb-2019 the purposes of it were to showcase true ownership of bearer assets, the potential of composability and the potential of Ethereum in general; as POAPs can create different highly sophisticated solutions like groundworks for sybil resistant identity solutions. All these purposes were achieved and the community got highly engaged. As of August 2020 POAP is a highly recognized protocol that has been used by thousands of people after being present in almost all large Ethereum events and a long tail of smaller community activities.
+Cuando se lanzó el POAP en febrero de 2019 los propósitos del mismo eran mostrar la verdadera propiedad de los activos portadores, el potencial de composición y el potencial de Ethereum en general; ya que los POAPs pueden crear diferentes soluciones altamente sofisticadas como las bases para soluciones de identidad resistentes al síbil. Todos estos propósitos se lograron y la comunidad se involucró mucho. A partir de agosto de 2020 POAP es un protocolo altamente reconocido que ha sido utilizado por miles de personas después de estar presente en casi todos los grandes eventos de Ethereum y una larga lista de actividades comunitarias más pequeñas.
 
-## Implementation
+## Implementación
 
-It's important to dedicate resources for creating a highly quality implementation. People that don't have advanced experience on using dapps need hand holding and explanations. Ideally a Devcon team member would be the liason with the POAP team to make sure the whole process is designed and executed switfly. Feedback or data from attendees post event is useful but not necessary.
+Es importante dedicar recursos para crear una implementación de alta calidad. Las personas que no tienen experiencia avanzada en el uso de dapps necesitan tener manos y explicaciones. Idealmente un miembro del equipo de Devcon sería el enlace con el equipo de POAP para asegurarse de que todo el proceso está diseñado y ejecutado cambie. Los comentarios o datos de los asistentes al evento post son útiles, pero no necesarios.
 
-## Operational Requirements & Ownership
+## Requisitos operacionales & Propiedad
 
-1. What actions are required to implement the proposal at Devcon? The implementation spans across several areas both physical and virtual. It's important to come up with a plan and diligently follow it.
-2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0) The POAP team and ad-hoc joined volunteers should be available for this.
-3. What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :)) POAP has a track record of several successful integrations with other products, we remain open mind to collaborate with anyone with good intentions.
+1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? La implementación abarca varias áreas tanto físicas como virtuales. Es importante elaborar un plan y seguirlo de forma consolidada.
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de POAP y los voluntarios ad-hoc deben estar disponibles para esto.
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonificación para la colaboración entre equipos :)) POAP tiene un historial de varias integraciones exitosas con otros productos. permanecemos abiertos a colaborar con cualquier persona con buenas intenciones.
