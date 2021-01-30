@@ -2,7 +2,7 @@
 Summary: 'Winding Tree offers Devcon attendees to book their flights and hotels directly from suppliers with discount. Winding Tree is 100% open-source and we aim to be as decentralized as it is possible.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-3.md
 DIP: 3
-Title: Flight and hotel bookings sourced from decentralized open-source travel marketplace
+Title: Las reservas de vuelo y hoteles proceden del mercado descentralizado de viajes de código abierto
 Status: Accepted
 Themes: Ticketing, Purchases & ID
 Tags: Attendee Experience
@@ -14,44 +14,44 @@ Created: 2020-07-29
 
 ## Summary
 
-Winding Tree offers Devcon attendees to book their flights and hotels directly from suppliers with discount. Winding Tree is 100% open-source and we aim to be as decentralized as it is possible.
+Winding Tree ofrece a Devcon asistentes para reservar sus vuelos y hoteles directamente de proveedores con descuento. Winding Tree es 100% de código abierto y nuestro objetivo es ser tan descentralizado como sea posible.
 
-## Abstract
+## Resumen
 
-Winding Tree is Ethereum-based decentralized B2B travel marketplace. We've also built a set of open source tools, including a [travel agency](https://glider.travel), which we could integrate directly into Devcon website. We'll also take on the responsibility of finding discounted hotel rates in Bogota, and also discounted flight tickets.
+Winding Tree es el mercado descentralizado de viajes B2B basado en Ethereum. También hemos construido un conjunto de herramientas de código abierto, incluyendo una [agencia de viajes](https://glider.travel), que podríamos integrar directamente en el sitio web de Devcon. También asumiremos la responsabilidad de encontrar tarifas de hotel con descuento en Bogota, así como billetes de vuelo con descuento.
 
-## Motivation & Rationale
+## Motivación & Racionalidad
 
-It would be great if Devcon attendees were able to book their flight and hotel immediately after purchasing their Devcon ticket, and 10-20% cheaper than on any other travel booking website!
+Sería genial que los asistentes de Devcon pudieran reservar su vuelo y hotel inmediatamente después de comprar su billete de Devcon, y 10-20% más barato que en cualquier otro sitio web de reservas de viajes!
 
-Hopefully no one would even notice that travel booking was facilitated by our smart contracts, that would be the greatest compliment. At the same time, curious minds will be able to learn about our identity solution for organizations.
+Esperemos que nadie se dé cuenta de que la reserva de viajes se ha visto facilitada por nuestros contratos inteligentes, lo que sería el mayor cumplimiento. Al mismo tiempo, las mentes curiosas podrán aprender sobre nuestra solución de identidad para las organizaciones.
 
-## Implementation
+## Implementación
 
-We haven't done anything like that at other events, but our open source travel agency is live: https://glider.travel.
+No hemos hecho nada así en otros eventos, pero nuestra agencia de viajes de código abierto está en vivo: https://glider.travel.
 
-For this to work we'll have to spin up a separate Glider Aggregator module, which will be combining data streams from different hotels and airlines. It will expose a REST API that the Devcon website will be able to talk to.
+Para que esto funcione, tendremos que girar un módulo independiente de Glider Aggregator, que combinará flujos de datos de diferentes hoteles y compañías aéreas. Expondrá una API REST con la que el sitio web de Devcon podrá hablar.
 
-Post-event, it would be amazing to learn about attendees' travel booking experience, if possible, but it is optional.
+Después del evento, sería increíble conocer la experiencia de reserva de los asistentes, si es posible, pero es opcional.
 
-What's great is that we don't need to build anything from scratch, we'll just modify our existing Glider components.
+Lo que es bueno es que no necesitamos construir nada a partir de cero, sólo modificaremos nuestros componentes existentes de Glider.
 
-## Operational Requirements & Ownership
+## Requisitos operacionales & Propiedad
 
-### 1. What actions are required to implement the proposal at Devcon?
+### 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
 
-- we need to get a list of hotels Devcon team planned to target for room blocks
-- Contingent on the Devcon team's approval (which will be based in part on *seeing* a [stellar UX and thorough customer service plan](https://github.com/efdevcon/DIPs/pull/33) in action), we would like to integrate our interface into the Devcon website
+- necesitamos obtener una lista de hoteles equipo de Devcon planeado para el objetivo de bloques de habitación
+- Contingente con la aprobación del equipo de Devcon (que se basará en parte en *ver* un [estelar UX y un minucioso plan de servicio al cliente](https://github.com/efdevcon/DIPs/pull/33) en acción), queremos integrar nuestra interfaz en el sitio web de Devcon
 
-### 2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)
+### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
 
 Maksim Izmaylov <max@windingtree.com>
 
-### 3. What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))
+### 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
 
-We're already working with solutions like Kleros and zkSync. There is an opportunity to integrate with CO2ken and feed our flight and accommodation data into their system to allow attendees to offset their carbon footprint.
+Ya estamos trabajando con soluciones como Kleros y zkSync. Existe la oportunidad de integrarse con CO2ken y alimentar nuestros datos de vuelo y alojamiento en su sistema para permitir a los asistentes compensar su huella de carbono.
 
-## Links & Additional Information
+## Enlaces & Información adicional
 
 - https://windingtree.com
 - https://orgid.tech
