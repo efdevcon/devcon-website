@@ -1,6 +1,16 @@
-- - -
+---
+Summary: 'The on-chain ticketing solution that GET Protocol offers could be the perfect fit for Devcon 6. It already meets a lot of the requirements and the team is likely able to facilitate specific innovative demands.'
+Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-13.md
+DIP: 13
 Title: On-chain & trouble-free ticketing for Devcon 6 with GET Protocol
-- - -
+Status: Rejected
+Themes: Ticketing
+Tags: Event operations
+Authors: olivier@get-protocol.io
+Resources Required: Operations support
+Discussion: https://forum.devcon.org/t/on-chain-trouble-free-ticketing-with-get-protocol/169
+Created: 2020-6-11
+---
 
 ## Summary of Proposal
 The on-chain ticketing solution that GET Protocol offers could be the perfect fit for Devcon 6. It already meets a lot of the requirements and the team is likely able to facilitate specific innovative demands.
