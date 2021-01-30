@@ -1,4 +1,4 @@
 ---
-title: Acerca de
+title: About
 ---
 
