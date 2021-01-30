@@ -1,6 +1,6 @@
 ---
-title: Código de conducta
+title: Code of conduct
 template: content
 ---
 
-Código de conducta
+Code of conduct
