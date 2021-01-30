@@ -1,7 +1,7 @@
 ---
-title: '¿Cuándo se venderán los tickets?'
+title: When will tickets go on sale?
 category: ticketing
 order: 1
 ---
 
-Todas las actualizaciones relativas a la venta de tickets serán difundidas a través de nuestro [Devcon Blog](https://blog.ethereum.org/category/devcon/), [@EFDevcon Twitter](https://twitter.com/EFDevcon)y [Devcon.org](https://devcon.org)!
+All updates regarding ticket sales will be broadcasted via our [Devcon Blog](https://blog.ethereum.org/category/devcon/), [@EFDevcon Twitter](https://twitter.com/EFDevcon), and [Devcon.org](https://devcon.org)!
