@@ -1,5 +1,5 @@
 ---
-title: ¿Cuándo se venderán los tickets?
+title: '¿Cuándo se venderán los tickets?'
 category: ticketing
 order: 1
 ---

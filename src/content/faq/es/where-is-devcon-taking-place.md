@@ -1,5 +1,5 @@
 ---
-title: ¿Dónde se está llevando a cabo Devcon?
+title: '¿Dónde se está llevando a cabo Devcon?'
 category: location
 order: 1
 ---
