@@ -1,5 +1,5 @@
 ---
-title: Archivar
+title: Archive
 url: https://archive.devcon.org/
 ---
 
