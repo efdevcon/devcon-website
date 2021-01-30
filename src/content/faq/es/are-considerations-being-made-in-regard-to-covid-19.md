@@ -1,6 +1,6 @@
 ---
-title: '¿Se están haciendo consideraciones con respecto a COVID-19?'
+title: Are considerations being made in regard to COVID-19?
 category: general
 ---
 
-Aunque nos complace ver mejorar la situación general, estamos supervisando activamente la situación y adoptando medidas in situ para garantizar la seguridad durante todo el evento. Para estar atentos a la situación y a su impacto en todos, ofrecemos una política de reembolso especial para Devcon 6: en cualquier momento, por cualquier razón, si desea solicitar un reembolso completo (menos impuestos y tasas), respetaremos la solicitud.
+Though we are happy to see the overall situation improving, we are actively monitoring it and taking on-site measures to ensure safety throughout the event. To be accomodating of the situation and its impact on everyone, we are offering a special refund policy for Devcon 6: at any time, for any reason, if you would like to request a full refund (minus applicable taxes and fees), we will respect the request.
