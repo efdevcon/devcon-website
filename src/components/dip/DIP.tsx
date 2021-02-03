@@ -77,8 +77,6 @@ export function DIP(props: { dip: DIPType }) {
     return mapToDIP(props.dip)
   }, [props.dip])
 
-  console.log(formattedDIP, 'formatted dip')
-
   return (
     <div className={css['dip-container']}>
       <PageHero
