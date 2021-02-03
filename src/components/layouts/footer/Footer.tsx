@@ -2,7 +2,6 @@ import React from 'react'
 import css from './footer.module.scss'
 import IconArrowUpward from 'src/assets/icons/arrow_upward.svg'
 import IconGithub from 'src/assets/icons/github.svg'
-import IconShare from 'src/assets/icons/share.svg'
 import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconYoutube from 'src/assets/icons/youtube.svg'
 import logo from 'src/assets/images/test-asset.svg'
@@ -12,6 +11,7 @@ import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
 import { Newsletter } from 'src/components/newsletter'
 import { usePageContext } from 'src/context/page-context'
+import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
 export const Footer = () => {
@@ -42,10 +42,16 @@ export const Footer = () => {
             })}
 
             <div className={css['social-media']}>
-              <IconTwitter style={{ cursor: 'pointer' }} />
-              <IconGithub style={{ cursor: 'pointer' }} />
-              <IconYoutube style={{ cursor: 'pointer' }} />
-              <IconShare style={{ cursor: 'pointer' }} />
+              <Link to="https://twitter.com/efdevcon">
+                <IconTwitter style={{ cursor: 'pointer' }} />
+              </Link>
+              <Link to="https://github.com/efdevcon/DIPs">
+                <IconGithub style={{ cursor: 'pointer' }} />
+              </Link>
+              <Link to="https://www.youtube.com/c/EthereumFoundation/search?query=devcon">
+                <IconYoutube style={{ cursor: 'pointer' }} />
+              </Link>
+              <Share url="https://devcon.org" />
             </div>
           </div>
 

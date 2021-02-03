@@ -1,11 +1,6 @@
 @use 'src/assets/css/variables' as *;
 @use 'partials/fonts';
 
-html,
-body {
-  height: 100%;
-}
-
 html {
   position: relative;
   overflow-x: hidden;
@@ -25,7 +20,7 @@ html {
 }
 
 body {
-  // position: relative;
+  position: relative;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

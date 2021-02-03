@@ -11,7 +11,8 @@ GetDIPs();
 
 interface Contributor { 
     name: string,
-    avatarUrl: string
+    avatarUrl: string,
+    url: string
 }
 
 async function GetDIPs() {
@@ -34,9 +35,11 @@ async function GetDIPs() {
                 if (Array.isArray(commits.data)) { 
                     const arr = Array.from(commits.data);
 
+
                     arr.forEach(c => {
                         allContributors.push({
                             name: c.author ? c.author.login :c.commit.author.name,
+                            url: c.author && c.author.url,
                             avatarUrl: c.author ? c.author.avatar_url : 'https://camo.githubusercontent.com/6e2f6de0032f63dd90d46812bcc47c1519ee78c4e095733ec35a964901b1274d/68747470733a2f2f302e67726176617461722e636f6d2f6176617461722f35316334663761346261326430393962326261396630343830333264643734613f643d68747470732533412532462532466769746875622e6769746875626173736574732e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d6726733d3634'
                         })
                     })

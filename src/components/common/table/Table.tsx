@@ -18,7 +18,7 @@ type TableColumn = {
   title: string
   key: string
   className?: string
-  render?: Function
+  render?(args: any): Element
   sort?: SortVariation | Function
 }
 type TableProps = {
@@ -84,7 +84,7 @@ const TableRows = (props: RowProps) => {
               if (column.className) className = `${column.className} ${className}`
 
               return (
-                <div key={column.title} className={className}>
+                <div key={column.key} className={className}>
                   {column.render ? column.render(item, column) : <p>{value}</p>}
                 </div>
               )
@@ -111,3 +111,5 @@ export const Table = (props: TableProps) => {
     </div>
   )
 }
+
+export { TableColumn }

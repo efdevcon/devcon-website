@@ -1,16 +1,9 @@
 import React, { ReactNode } from 'react'
 import css from './label.module.scss'
 
-enum LabelTypes {
-  warning = 'warning',
-  success = 'success',
-  error = 'error',
-  neutral = 'neutral',
-}
-
 type LabelProps = {
-  type?: LabelTypes
-  className: string
+  type?: string
+  className?: string
   children?: ReactNode
   style?: {
     [key: string]: string

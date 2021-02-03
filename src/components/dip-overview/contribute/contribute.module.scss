@@ -100,27 +100,16 @@
           );
         }
 
-        &:hover {
-          .track {
-            -webkit-animation-play-state: paused !important;
-            -moz-animation-play-state: paused !important;
-            -o-animation-play-state: paused !important;
-            animation-play-state: paused !important;
-          }
-        }
-
-        // &.hovered {
-        //   @media (min-width: $screen-lg + 1) {
-        //     .track {
-        //       -webkit-animation-play-state: paused !important;
-        //       -moz-animation-play-state: paused !important;
-        //       -o-animation-play-state: paused !important;
-        //       animation-play-state: paused !important;
-        //     }
-        //   }
-        // }
-
         .track {
+          @media (hover: hover) {
+            &:hover {
+              -webkit-animation-play-state: paused !important;
+              -moz-animation-play-state: paused !important;
+              -o-animation-play-state: paused !important;
+              animation-play-state: paused !important;
+            }
+          }
+
           --thumbnails-per-view: 6;
           --thumbnail-spacing: 20px;
           --track-width: calc(-100% + var(--container-size));
@@ -168,8 +157,10 @@
           }
 
           .thumbnail {
-            cursor: pointer;
             display: inline-block;
+
+            // img {
+            cursor: pointer;
             width: calc(var(--container-size) / var(--thumbnails-per-view) - (var(--thumbnail-spacing) * 2));
             margin-left: var(--thumbnail-spacing);
             margin-right: var(--thumbnail-spacing);
@@ -193,6 +184,7 @@
                 display: none;
               }
             }
+            // }
           }
         }
       }

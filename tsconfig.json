@@ -13,10 +13,8 @@
       "lib": ["dom", "es2015"],
     },
     "include": [
-      "src"
-    ],
-    "exclude": [
-      "node_modules",
+      "src",
+      "node_modules/@types"
     ]
   }
   

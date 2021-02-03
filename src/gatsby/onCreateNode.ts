@@ -112,6 +112,16 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
         name: 'slug',
         value: '/blog' + slug,
       })
+    } else if (collection === 'dips') {
+      const paths = slug.split('/').filter(String)
+      const lang = paths[0]
+      const formattedSlug = `/${lang}/dips/${slug.split('/')[2].toLowerCase()}/`; // /en/dips/dip-0/
+
+      createNodeField({
+        node,
+        name: 'slug',
+        value: formattedSlug
+      })
     } else {
       createNodeField({
         node,

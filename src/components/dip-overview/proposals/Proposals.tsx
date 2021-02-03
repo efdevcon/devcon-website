@@ -3,13 +3,32 @@ import css from './proposals.module.scss'
 import { Label } from 'src/components/common/label'
 import { Link } from 'src/components/common/link'
 import leftPad from 'src/utils/left-pad'
-import { Table, SortVariation } from 'src/components/common/table'
+import { Table, SortVariation, TableColumn } from 'src/components/common/table'
 import { DIP } from 'src/types/dip'
 import GithubIcon from 'src/assets/icons/github.svg'
-import ShareIcon from 'src/assets/icons/share.svg'
 import TooltipIcon from 'src/assets/icons/tooltip.svg'
+import ArrowRight from 'src/assets/icons/arrow_right.svg'
+import { Share } from 'src/components/common/share'
 
-const tableColumns = [
+export const Links = ({ dip }: { dip: DIP }) => {
+  return (
+    <div className={css['links']}>
+      {dip.discussion && (
+        <Link to={dip.discussion}>
+          <TooltipIcon />
+        </Link>
+      )}
+      {dip.github && (
+        <Link to={dip.github}>
+          <GithubIcon />
+        </Link>
+      )}
+      <Share url={`https://devcon.org${dip.slug}`} />
+    </div>
+  )
+}
+
+const tableColumns: Array<TableColumn> = [
   {
     title: '#',
     key: 'number',
@@ -100,18 +119,45 @@ const tableColumns = [
     title: 'authors',
     className: css['authors-column'],
     key: 'authors',
+    // Authors have no standard format so this is a tricky one
+    // render: item => {
+    //   console.log(item.authors, 'authors')
+
+    //   if (!item.authors) return null
+
+    //   return (
+    //     <li>
+    //       {item.authors.map(
+    //         author =>
+    //           console.log(author, 'author') || (
+    //             <li key={author} className="font-xs bold text-uppercase">
+    //               {author}
+    //             </li>
+    //           )
+    //       )}
+    //     </li>
+    //   )
+
+    //   return item.authors ? item.authors.map(author => <p className="font-xs bold text-uppercase">{author}</p>) : null
+    // },
   },
   {
     title: 'links',
     key: 'links',
     className: css['links-column'],
     render: item => {
+      return <Links dip={item} />
+    },
+  },
+  {
+    title: 'expand',
+    key: 'link',
+    className: css['expand-column'],
+    render: item => {
       return (
-        <div className={css['links']}>
-          <TooltipIcon />
-          <GithubIcon />
-          <ShareIcon />
-        </div>
+        <Link to={item.slug}>
+          <ArrowRight />
+        </Link>
       )
     },
   },
@@ -161,11 +207,18 @@ export const Proposals = (props: ProposalsProps) => {
   const noFilter = !statusFilter
 
   // // Pushing an extra column into the table to make room for a link back to the page
-  // const modifiedDips
+  const dipsWithLink = React.useMemo(() => {
+    return props.dips.map(dip => {
+      return {
+        ...dip,
+        link: dip.github,
+      }
+    })
+  }, [props.dips])
 
   const filteredDips = React.useMemo(() => {
-    return noFilter ? props.dips : props.dips.filter(dip => dip.status.toLowerCase() === statusFilter)
-  }, [noFilter, props.dips, statusFilter])
+    return noFilter ? dipsWithLink : dipsWithLink.filter(dip => dip.status.toLowerCase() === statusFilter)
+  }, [noFilter, dipsWithLink, statusFilter])
 
   return (
     <section id="proposals" className={css['container']}>

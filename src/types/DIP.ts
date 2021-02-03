@@ -42,9 +42,12 @@ export interface DIP {
   created: Date
   body?: string
   slug: string
+  next_dip: string
+  prev_dip: string
 }
 
 export interface Contributor {
   name: string
+  url: string
   avatarUrl: string
 }

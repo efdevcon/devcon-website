@@ -77,23 +77,11 @@ p {
 }
 
 .section-header {
-  font-weight: 400;
-  margin-bottom: $gap-8;
-
-  @media (max-width: $screen-lg) {
-    margin-bottom: $gap-4;
-  }
+  @include fonts.section-header;
 }
 
 .subsection-header {
-  @include fonts.bold;
-  @include fonts.font-tertiary;
-  text-transform: uppercase;
-  margin-bottom: $gap-6;
-
-  @media (max-width: $screen-lg) {
-    margin-bottom: $gap-4;
-  }
+  @include fonts.subsection-header;
 }
 
 .text-primary {

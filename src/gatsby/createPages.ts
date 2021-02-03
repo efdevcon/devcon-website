@@ -59,8 +59,9 @@ async function createDipPages({ actions, graphql, reporter }: CreatePagesArgs) {
     return
   }
 
-  result.data.dips.nodes.forEach((node: any) => 
-    createDynamicPage(actions, node.fields.slug, 'dip', node.fields.lang))
+  result.data.dips.nodes.forEach((node: any) => {
+    createDynamicPage(actions, node.fields.slug, 'dip', node.fields.lang)
+  });
 }
 
 async function createBlogPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -95,12 +96,12 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
 
   // console.log("Creating page", slug, 'with template:', template, lang);
   const { createPage } = actions
+
   createPage({
     path: slug,
     component: path.resolve(`./src/templates/${template}.tsx`),
     context: {
       slug: slug,
-      withNews: true,
       lang: lang,
       language: lang, // Merge with lang (language is better because gatsby-intl-plugin writes to the language key)
       intl: {

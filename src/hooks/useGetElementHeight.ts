@@ -4,6 +4,12 @@ import { useState, useLayoutEffect } from 'react';
 const getElementHeight = (elementID: string) => {
   const element = document.getElementById(elementID);
 
+  // NEED TO FIX: some pages load before the CSS arrives, while others don't - this causes miscalculations in components that rely on this utility but resize once loaded
+  // console.log(element, 'element')
+  // console.log(element?.clientHeight, 'client height')
+  
+  // debugger;
+
   return element?.clientHeight || 0;
 }
 
@@ -15,6 +21,8 @@ export default (elementID: string) => {
   useLayoutEffect(() => {
     const determineHeight = () => {
       const nextElementHeight = getElementHeight(elementID);
+
+      // console.log(nextElementHeight, elementID)
 
       if (nextElementHeight) setElementHeight(nextElementHeight);
     };

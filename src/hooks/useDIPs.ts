@@ -43,7 +43,7 @@ export const useDIPs = (): DIPData => {
   }
 }
 
-function mapToDIP(source: any): DIP {
+export function mapToDIP(source: any): DIP {
   return {
     github: source.frontmatter.Github_URL,
     summary: source.frontmatter.Summary,
@@ -56,7 +56,9 @@ function mapToDIP(source: any): DIP {
     resources: source.frontmatter.Resources,
     discussion: source.frontmatter.Discussion,
     created: new Date(source.frontmatter.Created),
+    next_dip: source.frontmatter.next_dip,
+    prev_dip: source.frontmatter.prev_dip,
     // body: source.html,
-    slug: source.fields.slug,
+    slug: source.fields?.slug,
   }
 }

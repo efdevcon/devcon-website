@@ -4,27 +4,40 @@ export default () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useLayoutEffect(() => {
-    let options = {
-      threshold: 1,
+    
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 0; // Reading scrollY causes repaint; keep an eye out for perf issues
+      
+      setIsScrolled(scrolled);
     }
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => window.removeEventListener('scroll', handleScroll);
 
-    const callback = (entries: any) => {
-      const { intersectionRatio } = entries[0]
+    // let options = {
+    //   threshold: [0, 1],
+    // }
 
-      if (intersectionRatio < 1) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
+    // const callback = (entries: any) => {
+    //   const { intersectionRatio } = entries[0]
 
-    const observer = new IntersectionObserver(callback, options)
+    //   console.log(intersectionRatio, 'ratio')
 
-    observer.observe(document.body)
+    //   if (intersectionRatio < 1) {
+    //     setIsScrolled(true)
+    //   } else {
+    //     setIsScrolled(false)
+    //   }
+    // }
 
-    return () => {
-      observer.unobserve(document.body)
-    }
+    // const observer = new IntersectionObserver(callback, options)
+
+    // observer.observe(document.body)
+
+    // return () => {
+    //   observer.unobserve(document.body)
+    // }
   }, [])
 
   return isScrolled

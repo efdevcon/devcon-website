@@ -62,6 +62,9 @@
 .index-column {
   flex-grow: 0 !important;
   flex-basis: 50px !important;
+  > * {
+    word-break: normal !important;
+  }
 
   @media (max-width: $screen-sm) {
     flex-basis: 40px !important;
@@ -88,11 +91,37 @@
   }
 }
 
+.status-column {
+  flex-grow: 0 !important;
+  flex-basis: 110px !important;
+
+  @media (max-width: $screen-sm) {
+    flex-basis: 70px !important;
+  }
+}
+
+.links-column {
+  @media (max-width: $screen-lg) {
+    display: none !important;
+  }
+}
+
 .summary-column {
   flex-grow: 2 !important;
 
   @media (max-width: $screen-lg) {
     display: none !important;
+  }
+}
+
+.expand-column {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0 !important;
+  flex-basis: 80px !important;
+
+  @media (max-width: $screen-sm) {
+    flex-basis: 70px !important;
   }
 }
 
@@ -130,6 +159,10 @@
   > * {
     cursor: pointer;
     @include gaps.responsive-gap($attribute: margin, $right: $gap-4, $min-gap: $gap-2);
+
+    &:last-child {
+      margin-right: 0px;
+    }
 
     @media (max-width: $screen-lg) {
       font-size: 2rem;

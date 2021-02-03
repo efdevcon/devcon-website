@@ -62,3 +62,23 @@
 @mixin very-bold {
   font-weight: 800;
 }
+
+@mixin section-header {
+  font-weight: 400;
+  margin-bottom: $gap-8;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
+  }
+}
+
+@mixin subsection-header {
+  @include bold;
+  @include font-tertiary;
+  text-transform: uppercase;
+  margin-bottom: $gap-6;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
+  }
+}

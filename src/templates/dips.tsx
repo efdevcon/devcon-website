@@ -11,7 +11,7 @@ export default function ContentTemplate({ data, location }: any) {
     <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
-      <DIPOverview />
+      <DIPOverview DIPBody={data.markdownRemark.html} />
     </Content>
   )
 }

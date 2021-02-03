@@ -14,6 +14,9 @@
 
 .cell {
   @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
+  > * {
+    word-break: break-word;
+  }
 }
 
 .container {

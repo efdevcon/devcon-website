@@ -1,11 +1,17 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import Github from 'src/assets/icons/github.svg'
 import css from './contribute.module.scss'
 import { Link } from 'src/components/common/link'
 import { Contributor } from 'src/types/dip'
+import { Tooltip } from 'src/components/common/tooltip'
 
 type ContributeProps = {
   contributors: Array<Contributor>
+  DIPBody: any
+}
+
+type ThumbnailProps = {
+  contributor: Contributor
 }
 
 const chunkArray = (array: Array<any>, nChunks: number): Array<Array<any>> => {
@@ -18,10 +24,23 @@ const chunkArray = (array: Array<any>, nChunks: number): Array<Array<any>> => {
   return results
 }
 
+const Thumbnail = ({ contributor }: ThumbnailProps) => {
+  return (
+    <Tooltip sticky content={contributor.name}>
+      <img
+        key={contributor.name}
+        className={css['thumbnail']}
+        alt={`Contributor: ${contributor.name}`}
+        src={contributor.avatarUrl}
+      />
+    </Tooltip>
+  )
+}
+
 /*
   TO FIX: on safari the animated tracks "flash" when they reset their animation (happens every 50 seconds so not that significant)
 */
-const AutoScroller = (props: ContributeProps) => {
+const AutoScroller = (props: { contributors: Array<Contributor> }) => {
   const [containerSize, setContainerSize] = React.useState(0)
   const containerRef = React.useRef<HTMLDivElement>()
 
@@ -68,26 +87,11 @@ const AutoScroller = (props: ContributeProps) => {
         return (
           <div key={index} className={className}>
             {contributors.map(contributor => {
-              return (
-                <img
-                  key={contributor.name}
-                  className={css['thumbnail']}
-                  alt={`Contributor: ${contributor.name}`}
-                  src={contributor.avatarUrl}
-                />
-              )
+              return <Thumbnail key={contributor.name} contributor={contributor} />
             })}
-
             {/* Have to repeat some thumbnails to give the illusion of infinite loop */}
             {contributors.slice(0, maxThumbnailsInView).map(contributor => {
-              return (
-                <img
-                  key={contributor.name}
-                  className={css['thumbnail']}
-                  alt={`Contributor: ${contributor.name}`}
-                  src={contributor.avatarUrl}
-                />
-              )
+              return <Thumbnail key={contributor.name} contributor={contributor} />
             })}
           </div>
         )
@@ -100,26 +104,10 @@ export const Contribute = (props: ContributeProps) => {
   return (
     <section id="contribute" className={css['section']}>
       <h3 className="subsection-header">CONTRIBUTE</h3>
+
       <div className={css['container']}>
         <div className={css['left-section']}>
-          <div className={css['dip-description']}>
-            {/* This text block should come from the CMS, but it currently can't handle font-sizes, so have to find a solution (or compromise) */}
-            <p>
-              <b>Devcon Improvement Proposals (DIPs)</b> provide a mechanism for collecting collaborative community
-              input on what should be included at the upcoming Devcon. While we are excited to have a more formal
-              process to hear ideas from the community (roughly inspired by the more decentralized PEP, BIP and EIP
-              processes), this is an experiment, and it should be understood that approval of proposals ultimately lies
-              solely with the Devcon team. DIPs focus on collaboration in the ecosystem between different projects. The
-              Devcon team also publishes
-            </p>
-
-            <br />
-
-            <p className="font-xs">
-              The Devcon team also publishes <b>Requests For Proposals (RFPs)</b>, which are specific ideas we'd love to
-              see take place for the next Devcon edition. They are available on our forum.
-            </p>
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: props.DIPBody }} className={`${css['dip-description']} markdown`} />
           <div className={css['links']}>
             <Link to="https://forum.devcon.org" indicateExternal className="font-lg bold font-secondary">
               VISIT FORUM
