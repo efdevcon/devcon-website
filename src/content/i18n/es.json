@@ -10,7 +10,7 @@
   "notfound_description": "La página solicitada no pudo ser encontrada.",
   "newsletter_title": "Suscríbete a nuestro boletín",
   "newsletter_subtitle": "Mantente al día de las últimas noticias y actualizaciones de devcon.",
-  "newsletter_enter": "Enter email address",
+  "newsletter_enter": "Introduzca dirección de email",
   "newsletter_subscribe": "Suscribirse",
   "newsletter_subscribed": "¡Gracias por suscribirse!",
   "newsletter_alreadySubscribed": "El correo electrónico introducido ya está suscrito.",
@@ -20,5 +20,5 @@
   "state_warning": "Advertencia",
   "state_info": "Info",
   "state_alert": "Alerta",
-  "faq_filter": "Filter FAQs using relevant key terms."
+  "faq_filter": "Filtrar FAQs usando términos de clave relevantes."
 }

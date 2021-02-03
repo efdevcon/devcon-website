@@ -35,3 +35,18 @@
   padding: $gap-8 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $gap-4 0;
+
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.collapse {
+  cursor: pointer;
+}

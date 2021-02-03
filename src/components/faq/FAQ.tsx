@@ -1,10 +1,8 @@
 import React from 'react'
-import { Collapse } from '../common/collapse'
 import { Category } from 'src/types/Category'
 import { FAQ as FaqType } from 'src/types/FAQ'
+import { Accordion, AccordionItem } from '../common/accordion'
 import css from './faq.module.scss'
-
-import IconMinus from 'src/assets/icons/minus.svg'
 
 interface FaqProps {
   data: Array<Category>
@@ -12,40 +10,25 @@ interface FaqProps {
   customCategoryTitle?: string // ideally used with a single FAQ category
 }
 
-export function FAQ(props: FaqProps) {  
-  const renderTitle = (title: string) => {
-    if (props.customCategoryTitle) return props.customCategoryTitle
+export function FAQ(props: FaqProps) {
 
-    return title;
-  }
-
-  function toggleExpand(category: string) { 
-    console.log("EXPAND", category);
-  }
-
-  function filter(questions: Array<FaqType>): Array<FaqType> { 
+  function filter(questions: Array<FaqType>): Array<AccordionItem> { 
     if (!props.filter) return questions;
 
     const filter = props.filter.toLowerCase();
-    return questions.filter(i => i.title.toLowerCase().includes(filter) || 
+    const filtered = questions.filter(i => i.title.toLowerCase().includes(filter) || 
       i.body.toLowerCase().includes(filter))
+    return filtered.map(i => { return { id: i.id, title: i.title, body: i.body }})
   }
 
   return (
-    <div>
+    <div className={css['container']}>
       {props.data.map((category: Category) => {
-          return (
-            <div key={category.id}>
-              <div id={category.id} className={css['category']}>
-                <h3 key={category.id}>{renderTitle(category.title)}</h3>
-                <span role='button' className={css['collapse']} onClick={() => toggleExpand(category.title)}><IconMinus /></span>
-              </div>
-
-              {category.questions.length > 0 && filter(category.questions).map((question: FaqType) => {
-                return <Collapse key={question.id} title={question.title} body={question.body} expanded={true} />
-              })}
-            </div>
-          )
+        return (
+          <Accordion key={category.id} open={false}
+            title={props.customCategoryTitle || category.title} 
+            items={filter(category.questions)} />
+        )
       })}
     </div>
   )
