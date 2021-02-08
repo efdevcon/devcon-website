@@ -17,12 +17,11 @@ type CTALink = {
 }
 
 type PageHeroProps = {
-  title?: string
+  title: string
   logo?: any
   cta?: Array<CTALink>
-  type: 'dip' | 'faq'
-  navigation?: Array<NavigationLink>
-  renderCustom?(props?: any): JSX.Element
+  type: 'contribute' | 'about' | 'location'
+  navigation: Array<NavigationLink>
 }
 
 const resolvePageCategory = (pathname: string, link: LinkType, parent?: string): undefined | JSX.Element => {
@@ -53,7 +52,6 @@ export const PageHero = (props: PageHeroProps) => {
   const headerHeight = useGetElementHeight('header')
   const pageHeaderHeight = useGetElementHeight('page-navigation')
   const pageHeroHeight = useGetElementHeight('page-hero')
-  // console.log(headerHeight, pageHeaderHeight, pageHeroHeight, '123')
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
 
   const pageCategory = pageContext?.navigation.site.reduce((acc: null | JSX.Element, link) => {
@@ -71,28 +69,24 @@ export const PageHero = (props: PageHeroProps) => {
       </div>
       <div className="section">
         <div className={css['info']}>
-          {pageCategory && <p className="font-xs text-uppercase">{pageCategory}</p>}
+          <p className="font-xs text-uppercase">{pageCategory}</p>
 
-          {props.title && (
-            <div className={css['title-block']}>
-              <h1>{props.title}</h1>
+          <div className={css['title-block']}>
+            <h1>{props.title}</h1>
 
-              {props.cta && (
-                <div className={css['buttons']}>
-                  {props.cta.map((link: CTALink) => {
-                    return (
-                      <Link key={link.to + link.title} className="button lg" to={link.to}>
-                        {link.icon}
-                        <span>{link.title}</span>
-                      </Link>
-                    )
-                  })}
-                </div>
-              )}
-            </div>
-          )}
-
-          {props.renderCustom && props.renderCustom()}
+            {props.cta && (
+              <div className={css['buttons']}>
+                {props.cta.map((link: CTALink) => {
+                  return (
+                    <Link key={link.to + link.title} className="button lg" to={link.to}>
+                      {link.icon}
+                      <span>{link.title}</span>
+                    </Link>
+                  )
+                })}
+              </div>
+            )}
+          </div>
 
           {props.navigation && (
             <div id="page-navigation" className={css['page-navigation']}>

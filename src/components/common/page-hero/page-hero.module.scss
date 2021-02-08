@@ -34,7 +34,7 @@
     }
   }
 
-  .dip { 
+  .contribute { 
     @extend .backdrop;
 
     background: radial-gradient(
@@ -46,7 +46,7 @@
       #ffffff;
   }
 
-  .faq { 
+  .about { 
     @extend .backdrop;
     background: radial-gradient(
       73.15% 179.46% at 90.19% 25.94%,
@@ -56,6 +56,15 @@
       rgba(136, 196, 63, 0) 100%
       ),
     #FFFFFF;
+  }
+
+  .location { 
+    @extend .backdrop;
+    background: radial-gradient(
+      64.03% 140.53% at 90.8% 48.82%, 
+      #E55066 0%, 
+      rgba(242, 186, 44, 0.391893) 65.84%,
+      rgba(250, 255, 7, 0) 100%);
   }
 }
 

@@ -10,7 +10,7 @@ import Content from 'src/components/layouts/content'
 import css from './templates.module.scss'
 
 import AskDeva from 'src/assets/images/ask-deva.png'
-import IconFAQ from 'src/assets/images/logo-faq.svg'
+import PageHeroLogo from 'src/assets/images/logo-faq.svg'
 
 export default function FaqTemplate({ data, location }: any) {
   const page = data.markdownRemark
@@ -23,8 +23,8 @@ export default function FaqTemplate({ data, location }: any) {
 
       <PageHero
         title={page.frontmatter.title}
-        type="faq"
-        logo={IconFAQ}
+        type="about"
+        logo={PageHeroLogo}
         navigation={faq.map((category: Category) => {
           return { title: category.title, to: `#${category.id}` }
         })}

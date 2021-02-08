@@ -8,11 +8,7 @@ import BulletList from 'src/assets/icons/bullet_list.svg'
 import { Proposals } from './proposals'
 import { useDIPs } from 'src/hooks/useDIPs'
 
-type DIPProps = {
-  DIPBody: string
-}
-
-export function DIPOverview(props: DIPProps) {
+export function DIPOverview() {
   const { dips, contributors } = useDIPs()
 
   return (
@@ -20,16 +16,16 @@ export function DIPOverview(props: DIPProps) {
       <PageHero
         title="DIPs"
         logo={dipLogo}
-        type="dip"
+        type='contribute'
         cta={[
           {
             title: 'Review DIPs',
-            to: '#proposals',
+            to: 'https://forum.devcon.org',
             icon: <BulletList />,
           },
           {
             title: 'Create Proposal',
-            to: 'https://github.com/efdevcon/DIPs',
+            to: 'https://forum.devcon.org',
             icon: <Pencil />,
           },
         ]}
@@ -54,7 +50,7 @@ export function DIPOverview(props: DIPProps) {
       />
       <div className="section">
         <div className="content">
-          <Contribute DIPBody={props.DIPBody} contributors={contributors} />
+          <Contribute contributors={contributors} />
           <Proposals dips={dips} />
         </div>
       </div>

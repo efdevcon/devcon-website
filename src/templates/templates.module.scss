@@ -8,11 +8,20 @@
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px; // safari
 
+  p {
+    @include fonts.font-xl;
+
+    margin-bottom: $gap-8;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    // flex-wrap: wrap;
     margin-bottom: $gap-10;
 
     @media (max-width: $screen-md) {
@@ -68,5 +77,11 @@
       @extend .right-section;
       margin-left: auto;
     }
+  }
+}
+
+.location { 
+  a { 
+    color: #E55066;
   }
 }

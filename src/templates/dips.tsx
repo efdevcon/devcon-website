@@ -4,14 +4,14 @@ import { SEO } from 'src/components/common/seo'
 import { DIPOverview } from 'src/components/dip-overview'
 import Content from 'src/components/layouts/content'
 
-export default function ContentTemplate({ data, location }: any) {
+export default function DIPsTemplate({ data, location }: any) {
   const page = data.markdownRemark
 
   return (
     <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
-      <DIPOverview DIPBody={data.markdownRemark.html} />
+      <DIPOverview />
     </Content>
   )
 }

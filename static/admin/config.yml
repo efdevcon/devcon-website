@@ -49,7 +49,7 @@ collections:
           label: 'Template',
           widget: 'select',
           i18n: 'duplicate',
-          options: ['none', 'content', 'dips', 'faq'],
+          options: ['none', 'content', 'dips', 'faq', 'city-guide'],
           default: 'content',
         }
       - {
@@ -80,6 +80,21 @@ collections:
         }
       - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
       - { name: 'metadata', label: 'Metadata', widget: text, i18n: 'duplicate', required: false }
+
+  - name: 'Content blocks'
+    label: 'Content blocks'
+    label_singular: 'Content Block'
+    folder: 'src/content/blocks'
+    create: true
+    i18n: true
+    fields:
+      - { name: 'title', label: 'Title', widget: 'string', i18n: true }
+      - { name: 'left', widget: 'markdown', i18n: true }
+      - { name: 'right', widget: 'markdown', i18n: true }
+      - label: Images
+        name: images
+        widget: list
+        field: { label: Image, name: image, widget: image }
 
   - name: faq
     label: FAQ
