@@ -20,5 +20,17 @@
   "state_warning": "Advertencia",
   "state_info": "Info",
   "state_alert": "Alerta",
-  "faq_filter": "Filtrar FAQs usando términos de clave relevantes."
+  "faq_filter": "Filtrar FAQs usando términos de clave relevantes.",
+  "snapshot_timezone": "Timezone",
+  "snapshot_currency": "Currency",
+  "snapshot_colombian_peso": "Colombian Peso (COP)",
+  "snapshot_exchange_rate": "Exchange rate",
+  "snapshot_language": "Official Language",
+  "snapshot_spanish": "Spanish",
+  "snapshot_language_guide": "Language guide",
+  "snapshot_temperature": "Avg. Temp",
+  "snapshot_packing_tips": "Packing tips",
+  "snapshot_water": "Water",
+  "snapshot_tap_water": "Tap water is safe to drink in Bogota",
+  "snapshot_FAQs": "FAQs"
 }

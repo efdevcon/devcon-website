@@ -7,6 +7,7 @@
 
 .list {
   list-style-type: none;
+  margin-bottom: $gap-4;
 }
 
 .list-item {
@@ -44,4 +45,8 @@
   &:active {
     background: #f8f8f8;
   }
+}
+
+.primary { 
+  color: $color-primary !important;
 }

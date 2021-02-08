@@ -43,9 +43,13 @@ export default function CityGuideTemplate({ data, location }: any) {
             </div>
           </section>
 
-          <Carousel />
+          <section id="carousel" className={css['section']}>
+            <Carousel />
+          </section>
 
-          <FAQ data={faq.filter(i => i.id === 'location')} customCategoryTitle="Frequently Asked Questions" />
+          <section id="FAQ" className={css['section']}>
+            <FAQ data={faq.filter(i => i.id === 'location')} customCategoryTitle="Frequently Asked Questions" />
+          </section>
         </div>
       </div>
     </Content>
