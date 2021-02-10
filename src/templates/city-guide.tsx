@@ -10,10 +10,23 @@ import css from './templates.module.scss'
 import PageHeroLogo from 'src/assets/images/logo-city-guide.svg'
 import { Carousel } from 'src/components/common/carousel'
 import { Snapshot } from 'src/components/snapshot'
+import { TwoColumns } from 'src/components/sections/2column'
 
 export default function CityGuideTemplate({ data, location }: any) {
   const page = data.markdownRemark
   const faq = ToFaqData(data)
+  const todo = {
+    title: data.todo.nodes[0].frontmatter.title,
+    show_title: data.todo.nodes[0].frontmatter.show_title,
+    left: data.todo.nodes[0].fields.frontmattermd.left.html,
+    right: data.todo.nodes[0].fields.frontmattermd.right.html,
+  }
+  const why = {
+    title: data.why.nodes[0].frontmatter.title,
+    show_title: data.why.nodes[0].frontmatter.show_title,
+    left: data.why.nodes[0].fields.frontmattermd.left.html,
+    right: data.why.nodes[0].fields.frontmattermd.right.html,
+  }
 
   return (
     <Content navigationData={data.navigationData} location={location}>
@@ -47,6 +60,10 @@ export default function CityGuideTemplate({ data, location }: any) {
             <Carousel />
           </section>
 
+          <TwoColumns id="things-todo" left={todo.left} right={todo.right} />
+
+          <TwoColumns id="why-bogota" title={why.title} left={why.left} right={why.right} />
+
           <section id="FAQ" className={css['section']}>
             <FAQ data={faq.filter(i => i.id === 'location')} customCategoryTitle="Frequently Asked Questions" />
           </section>
@@ -72,5 +89,43 @@ export const query = graphql`
     ...NavigationData
     ...Categories
     ...FAQs
+    todo: allMarkdownRemark(filter: {fields: {lang: {eq: $language}, collection: {eq: "sections"}, id: {eq: "things-to-do"}}, frontmatter: {title: {ne: ""}}}) {
+      nodes {
+        frontmatter {
+          title
+          show_title
+        }
+        fields {
+          id
+          frontmattermd {
+            left {
+              html
+            }
+            right {
+              html
+            }
+          }
+        }
+      }
+    }
+    why: allMarkdownRemark(filter: {fields: {lang: {eq: $language}, collection: {eq: "sections"}, id: {eq: "why-devcon-in-bogota"}}, frontmatter: {title: {ne: ""}}}) {
+      nodes {
+        frontmatter {
+          title
+          show_title
+        }
+        fields {
+          id
+          frontmattermd {
+            left {
+              html
+            }
+            right {
+              html
+            }
+          }
+        }
+      }
+    }
   }
 `

@@ -44,6 +44,8 @@ links:
     links:
       - type: header
         slug: bogota
+      - type: page
+        slug: bogota
       - type: header
         slug: event
 ---

@@ -185,7 +185,37 @@ module.exports = {
         path: `${__dirname}/src/content/news`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'sections',
+        path: `${__dirname}/src/content/sections`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              beginMarker: `[[`,
+              endMarker: `]]`,
+              width: 600,
+              related: false,
+              containerClass: "embedded-video-container",
+            },
+          },
+          {
+            resolve: 'gatsby-transformer-remark-frontmatter',
+            options: {
+              whitelist: ['left', 'right'],
+            }
+          },
+        ],
+      }
+    },
+    "gatsby-remark-responsive-iframe",
     'gatsby-transformer-json',
     {
       resolve: `gatsby-plugin-intl`,

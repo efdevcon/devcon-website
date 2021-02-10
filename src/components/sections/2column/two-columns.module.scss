@@ -1,0 +1,71 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/fonts';
+
+.content-section,
+.section {
+  margin-top: $gap-12;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  a { 
+    text-transform: uppercase;
+  }
+
+  p {
+    @include fonts.font-xl;
+    margin-bottom: $gap-8;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: $gap-10;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
+  }
+
+  .left {
+    margin-right: $gap-8;
+    margin-bottom: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+
+    @media (max-width: $screen-md) {
+      margin-right: 0;
+      margin-bottom: $gap-4;
+      flex-basis: auto;
+    }
+
+    p {
+      &:last-child {
+        @include fonts.font-md;
+      }
+    }
+  }
+
+  .right {
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: $gap-8;
+    margin-top: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+
+    @media (max-width: $screen-md) {
+      margin-left: 0;
+      margin-top: $gap-4;
+      flex-basis: auto;
+    }
+
+    p {
+      @include fonts.font-md;
+    }
+  }
+}

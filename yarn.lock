@@ -7640,6 +7640,26 @@ gatsby-recipes@^0.5.1:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
+gatsby-remark-embed-video@^3.0.12:
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-3.0.12.tgz#51ee006b9168e90ef63de3933b150867a2528931"
+  integrity sha512-ucfFK3E+JogltKjE899ypwyqb9vgGZ+nDqkETc80oPgqcKeJfMymaGYwmehuufTpP5/Ws3fJmG55kWHx9K+LWA==
+  dependencies:
+    get-video-id "^3.1.9"
+    remark-burger "^1.0.1"
+    unist-util-visit "^2.0.3"
+
+gatsby-remark-responsive-iframe@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-2.11.0.tgz#c5b68f06324138a31f85fdb5da5503ab812b5446"
+  integrity sha512-qqrYfUb4+9VhndBeEaKrhiyyKIReAK4BHL3/8ZCtFDem5ZQQd5pUdgYhExRLcoGxzwJrqVxI6+dtT/RoXLqC/g==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    cheerio "^1.0.0-rc.3"
+    common-tags "^1.8.0"
+    lodash "^4.17.20"
+    unist-util-visit "^1.4.1"
+
 gatsby-source-filesystem@^2.5.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.7.0.tgz#09da0ecfb85a6527858029d38b7bc2c68c9a91a3"
@@ -7706,6 +7726,11 @@ gatsby-transformer-json@^2.10.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
     bluebird "^3.7.2"
+
+gatsby-transformer-remark-frontmatter@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark-frontmatter/-/gatsby-transformer-remark-frontmatter-0.1.0.tgz#96cc5363a41eca4eba779c8fbb78595c29450475"
+  integrity sha512-xd18dt0LgFwssm8QtU0R+eAeWXJseUKcdXsuEKfIrn7ht1/r9RNLQtkb3qHCinp46BXWp5JKg80qG3NCP6HHZA==
 
 gatsby-transformer-remark@^2.10.0:
   version "2.12.0"
@@ -7978,6 +8003,11 @@ get-proxy@^2.0.0:
   dependencies:
     npm-conf "^1.1.0"
 
+get-src@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/get-src/-/get-src-1.0.1.tgz#ca11dbe4a93c7f3aa85cec95fcb0b2dfaa9539ee"
+  integrity sha1-yhHb5Kk8fzqoXOyV/LCy36qVOe4=
+
 get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
@@ -8014,6 +8044,13 @@ get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
+
+get-video-id@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.1.9.tgz#e20634444cac0b25162a637e81b8746b4ae077bd"
+  integrity sha512-N6zOItV21/Z7DedqPCQ0lgi5IZJjXz6a4FjW0tDCDrTlLsfPnsIjfPDP+yyqlTwuHLefynCrZjBLDqETB+oafw==
+  dependencies:
+    get-src "^1.0.1"
 
 get-window@^1.1.1:
   version "1.1.2"
@@ -14685,6 +14722,11 @@ relateurl@0.2.x:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
 
+remark-burger@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/remark-burger/-/remark-burger-1.0.1.tgz#cda57d4bc1e952ae86b2407fbcf36492ab352106"
+  integrity sha512-F91SyEzat4hBkWsWElHIvMcCQuWoSeZXTuR4DmLvhUIjYkzzVLaX6GRxhkiDrZb/9asvTrYzwEr9HvxN1tqs9Q==
+
 remark-mdx@^2.0.0-next.4:
   version "2.0.0-next.8"
   resolved "https://registry.yarnpkg.com/remark-mdx/-/remark-mdx-2.0.0-next.8.tgz#db1c3cbc606ea0d01526242199bb134d99020363"
@@ -17263,7 +17305,7 @@ unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.1:
   dependencies:
     unist-util-visit-parents "^2.0.0"
 
-unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
+unist-util-visit@^2.0.0, unist-util-visit@^2.0.2, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
   integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==

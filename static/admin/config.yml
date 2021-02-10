@@ -81,20 +81,17 @@ collections:
       - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
       - { name: 'metadata', label: 'Metadata', widget: text, i18n: 'duplicate', required: false }
 
-  - name: 'Content blocks'
-    label: 'Content blocks'
-    label_singular: 'Content Block'
-    folder: 'src/content/blocks'
+  - name: 'Content sections'
+    label: 'Content sections'
+    label_singular: 'Content section'
+    folder: 'src/content/sections'
     create: true
     i18n: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', i18n: true }
+      - { name: 'show title', label: 'Show title', widget: 'boolean', i18n: 'duplicate', required: false, default: false }
       - { name: 'left', widget: 'markdown', i18n: true }
       - { name: 'right', widget: 'markdown', i18n: true }
-      - label: Images
-        name: images
-        widget: list
-        field: { label: Image, name: image, widget: image }
 
   - name: faq
     label: FAQ
