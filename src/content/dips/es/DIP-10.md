@@ -47,6 +47,7 @@ También podemos utilizar incentivos para conseguir que los asistentes realicen 
 obtener un nombre ens para que sean más fáciles de identificar por sus pares en el suelo códigos QR en las salas para unirse a chats en vivo sobre lo que está sucediendo en una sala/etapa específica (o hacer preguntas a los alta) Dado que la tarjeta viene con algunos activos precargados. un token POAP, 10 SNTs, x DAI para comprar alimentos, etc. podemos fusionar fácilmente la experiencia con la comunicación en un paquete liso y enchufar en los tokens de cualquier otro proyecto de socio.
 
 ## Requisitos operacionales & Propiedad
+
 Por favor, responda a las siguientes preguntas:
 
 El equipo de Devcon necesita estar involucrado de la siguiente manera:
