@@ -100,10 +100,16 @@ const tableColumns: Array<TableColumn> = [
     title: 'tags',
     key: 'tags',
     sort: (item1, item2) => {
-      const a = item1.tags.slice().sort().join('')
-      const b = item2.tags.slice().sort().join('')
+      const a = item1.tags
+        .map(item => item.trim().toLowerCase())
+        .sort()
+        .join('')
+      const b = item2.tags
+        .map(item => item.trim().toLowerCase())
+        .sort()
+        .join('')
 
-      return ('' + a.attr).localeCompare(b.attr)
+      return a.localeCompare(b)
     },
     render: item => {
       return item.tags
@@ -246,7 +252,7 @@ export const Proposals = (props: ProposalsProps) => {
         </div>
       </div>
 
-      <Table items={filteredDips} columns={tableColumns} />
+      <Table itemKey="number" items={filteredDips} columns={tableColumns} />
     </section>
   )
 }
