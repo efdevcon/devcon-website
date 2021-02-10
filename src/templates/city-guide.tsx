@@ -11,8 +11,10 @@ import PageHeroLogo from 'src/assets/images/logo-city-guide.svg'
 import { Carousel } from 'src/components/common/carousel'
 import { Snapshot } from 'src/components/snapshot'
 import { TwoColumns } from 'src/components/sections/2column'
+import { useIntl } from 'gatsby-plugin-intl'
 
 export default function CityGuideTemplate({ data, location }: any) {
+  const intl = useIntl();
   const page = data.markdownRemark
   const faq = ToFaqData(data)
   const todo = {
@@ -36,14 +38,31 @@ export default function CityGuideTemplate({ data, location }: any) {
         title={page.frontmatter.title}
         type="location"
         logo={PageHeroLogo}
-        navigation={[]}
+        navigation={[
+          {
+            title: intl.formatMessage({ id: 'location_title' }),
+            to: '#location',
+          },
+          {
+            title: intl.formatMessage({ id: 'location_things_todo' }),
+            to: '#things-todo',
+          },
+          {
+            title: intl.formatMessage({ id: 'location_why_bogota' }),
+            to: '#why-bogota',
+          },
+          {
+            title: 'Frequently Asked Questions',
+            to: '#FAQ',
+          },
+        ]}
       />
 
       <div className="section">
         <div className={"content " + css['location']}>
 
-          <section id="contribute" className={css['section']}>
-            <h3 className="subsection-header">{page.frontmatter.title}</h3>
+          <section id="about" className={css['section']}>
+            <h3 className="subsection-header">{intl.formatMessage({ id: 'location_title' })}</h3>
             <div className={css['container']}>
               <div className={css['left-70']}>
                 <div className={css['description']}>
