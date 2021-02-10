@@ -8,8 +8,6 @@ import { DIP } from 'src/types/dip'
 export default function DIPsTemplate({ data, location }: any) {
   const page = data.markdownRemark
 
-  console.log(data, 'data')
-
   return (
     <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
