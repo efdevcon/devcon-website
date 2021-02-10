@@ -1,9 +1,8 @@
 import React from 'react'
 import css from './page-hero.module.scss'
 import { Link } from 'src/components/common/link'
-import { Link as LinkType } from 'src/types/Link'
-import { usePageContext } from 'src/context/page-context'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
+import usePageCategory from './usePageCategory'
 
 type NavigationLink = {
   to: string
@@ -17,50 +16,20 @@ type CTALink = {
 }
 
 type PageHeroProps = {
-  title: string
+  title?: string
   logo?: any
   cta?: Array<CTALink>
-  type: 'contribute' | 'about' | 'location'
-  navigation: Array<NavigationLink>
-}
-
-const resolvePageCategory = (pathname: string, link: LinkType, parent?: string): undefined | JSX.Element => {
-  const urlMatch = link.url.includes(pathname)
-
-  if (urlMatch) {
-    if (parent)
-      return (
-        <>
-          {parent} / <b>{link.title}</b>
-        </>
-      )
-
-    return <b>{link.title}</b>
-  }
-
-  if (link.links) {
-    for (let i = 0; i < link.links.length; i++) {
-      const match = resolvePageCategory(pathname, link.links[i], link.title)
-
-      if (match) return match
-    }
-  }
+  type: 'contribute' | 'about' | 'location' | 'dip'
+  renderCustom?(props?: any): JSX.Element
+  navigation?: Array<NavigationLink>
 }
 
 export const PageHero = (props: PageHeroProps) => {
-  const pageContext = usePageContext()
   const headerHeight = useGetElementHeight('header')
   const pageHeaderHeight = useGetElementHeight('page-navigation')
   const pageHeroHeight = useGetElementHeight('page-hero')
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
-
-  const pageCategory = pageContext?.navigation.site.reduce((acc: null | JSX.Element, link) => {
-    const category = resolvePageCategory(pageContext.location.pathname, link)
-
-    if (category) acc = category
-
-    return acc
-  }, null)
+  const pageCategory = usePageCategory()
 
   return (
     <div id="page-hero" className={css['hero']} style={{ '--negative-offset': negativeOffset }}>
@@ -87,6 +56,8 @@ export const PageHero = (props: PageHeroProps) => {
               </div>
             )}
           </div>
+
+          {props.renderCustom && props.renderCustom()}
 
           {props.navigation && (
             <div id="page-navigation" className={css['page-navigation']}>

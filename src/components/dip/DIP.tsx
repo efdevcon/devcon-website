@@ -80,7 +80,7 @@ export function DIP(props: { dip: DIPType }) {
   return (
     <div className={css['dip-container']}>
       <PageHero
-        type="dip"
+        type="contribute"
         logo={dipLogo}
         renderCustom={() => {
           return (
@@ -111,7 +111,7 @@ export function DIP(props: { dip: DIPType }) {
 
             <Links dip={formattedDIP} />
           </div>
-          <Table items={[formattedDIP]} columns={tableColumns} />
+          <Table itemKey="number" items={[formattedDIP]} columns={tableColumns} />
           <div dangerouslySetInnerHTML={{ __html: props.dip.html }} className="markdown" />
         </div>
       </div>

@@ -7,7 +7,7 @@ import { Tooltip } from 'src/components/common/tooltip'
 
 type ContributeProps = {
   contributors: Array<Contributor>
-  DIPBody: any
+  dipDescription: any
 }
 
 type ThumbnailProps = {
@@ -26,7 +26,7 @@ const chunkArray = (array: Array<any>, nChunks: number): Array<Array<any>> => {
 
 const Thumbnail = ({ contributor }: ThumbnailProps) => {
   return (
-    <Tooltip sticky content={contributor.name}>
+    <Tooltip content={contributor.name}>
       <img
         key={contributor.name}
         className={css['thumbnail']}
@@ -107,7 +107,10 @@ export const Contribute = (props: ContributeProps) => {
 
       <div className={css['container']}>
         <div className={css['left-section']}>
-          <div dangerouslySetInnerHTML={{ __html: props.DIPBody }} className={`${css['dip-description']} markdown`} />
+          <div
+            dangerouslySetInnerHTML={{ __html: props.dipDescription }}
+            className={`${css['dip-description']} markdown`}
+          />
           <div className={css['links']}>
             <Link to="https://forum.devcon.org" indicateExternal className="font-lg bold font-secondary">
               VISIT FORUM

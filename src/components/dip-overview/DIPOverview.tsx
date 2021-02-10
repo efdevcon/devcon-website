@@ -2,21 +2,24 @@ import React from 'react'
 import { Contribute } from './contribute'
 import { PageHero } from 'src/components/common/page-hero'
 import dipLogo from 'src/assets/images/dip-logo.svg'
-// import css from './dip-overview.module.scss'
 import Pencil from 'src/assets/icons/pencil.svg'
 import BulletList from 'src/assets/icons/bullet_list.svg'
 import { Proposals } from './proposals'
-import { useDIPs } from 'src/hooks/useDIPs'
+import { DIP, Contributor } from 'src/types/dip'
 
-export function DIPOverview() {
-  const { dips, contributors } = useDIPs()
+type DIPProps = {
+  dips: Array<DIP>
+  contributors: Array<Contributor>
+  dipDescription: string
+}
 
+export function DIPOverview({ dips, contributors, dipDescription }: DIPProps) {
   return (
     <>
       <PageHero
         title="DIPs"
         logo={dipLogo}
-        type='contribute'
+        type="contribute"
         cta={[
           {
             title: 'Review DIPs',
@@ -50,7 +53,7 @@ export function DIPOverview() {
       />
       <div className="section">
         <div className="content">
-          <Contribute contributors={contributors} />
+          <Contribute dipDescription={dipDescription} contributors={contributors} />
           <Proposals dips={dips} />
         </div>
       </div>

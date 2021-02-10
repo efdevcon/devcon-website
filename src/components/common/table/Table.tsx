@@ -12,6 +12,7 @@ type HeaderProps = {
 }
 type RowProps = {
   columns: TableColumn[]
+  itemKey: string
   items: any[]
 }
 type TableColumn = {
@@ -24,6 +25,7 @@ type TableColumn = {
 type TableProps = {
   columns: TableColumn[]
   items: any[]
+  itemKey: string // Which value to use to resolve a unique key for React
   [key: string]: any
 }
 
@@ -75,7 +77,7 @@ const TableRows = (props: RowProps) => {
     <>
       {props.items.map(item => {
         return (
-          <div key={item.key} className={css['row']}>
+          <div key={item[props.itemKey]} className={css['row']}>
             {props.columns.map(column => {
               const value = item[column.key]
 
@@ -107,7 +109,7 @@ export const Table = (props: TableProps) => {
         sortedBy={sortedBy}
         sortDirection={sortDirection}
       />
-      <TableRows columns={props.columns} items={sortedItems} />
+      <TableRows itemKey={props.itemKey} columns={props.columns} items={sortedItems} />
     </div>
   )
 }

@@ -34,7 +34,7 @@
     }
   }
 
-  .contribute { 
+  .contribute {
     @extend .backdrop;
 
     background: radial-gradient(
@@ -46,25 +46,26 @@
       #ffffff;
   }
 
-  .about { 
+  .about {
     @extend .backdrop;
     background: radial-gradient(
-      73.15% 179.46% at 90.19% 25.94%,
-      #88C43F 0%,
-      #50D100 0.01%,
-      rgba(140, 255, 0, 0.4) 58.33%,
-      rgba(136, 196, 63, 0) 100%
+        73.15% 179.46% at 90.19% 25.94%,
+        #88c43f 0%,
+        #50d100 0.01%,
+        rgba(140, 255, 0, 0.4) 58.33%,
+        rgba(136, 196, 63, 0) 100%
       ),
-    #FFFFFF;
+      #ffffff;
   }
 
-  .location { 
+  .location {
     @extend .backdrop;
     background: radial-gradient(
-      64.03% 140.53% at 90.8% 48.82%, 
-      #E55066 0%, 
+      64.03% 140.53% at 90.8% 48.82%,
+      #e55066 0%,
       rgba(242, 186, 44, 0.391893) 65.84%,
-      rgba(250, 255, 7, 0) 100%);
+      rgba(250, 255, 7, 0) 100%
+    );
   }
 }
 
