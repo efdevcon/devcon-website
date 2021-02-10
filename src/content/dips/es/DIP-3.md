@@ -41,7 +41,7 @@ Lo que es bueno es que no necesitamos construir nada a partir de cero, sólo mod
 ### 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
 
 - necesitamos obtener una lista de hoteles equipo de Devcon planeado para el objetivo de bloques de habitación
-- Contingente con la aprobación del equipo de Devcon (que se basará en parte en *ver* un [estelar UX y un minucioso plan de servicio al cliente](https://github.com/efdevcon/DIPs/pull/33) en acción), queremos integrar nuestra interfaz en el sitio web de Devcon
+- Contingent on the Devcon team's approval (which will be based in part on _seeing_ a [stellar UX and thorough customer service plan](https://github.com/efdevcon/DIPs/pull/33) in action), we would like to integrate our interface into the Devcon website
 
 ### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
 
