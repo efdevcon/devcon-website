@@ -4,16 +4,15 @@ export default () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useLayoutEffect(() => {
-    
     const handleScroll = () => {
-      const scrolled = window.scrollY > 0; // Reading scrollY causes repaint; keep an eye out for perf issues
-      
-      setIsScrolled(scrolled);
+      const scrolled = window.scrollY > 0 // Reading scrollY causes repaint; keep an eye out for perf issues
+
+      setIsScrolled(scrolled)
     }
-    
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
 
     // let options = {
     //   threshold: [0, 1],

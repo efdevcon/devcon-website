@@ -39,7 +39,7 @@ export const useDIPs = (): DIPData => {
 
   return {
     dips: data.dips.nodes.map((i: any) => mapToDIP(i)),
-    contributors: data.contributors.nodes.map((i: any) => i)
+    contributors: data.contributors.nodes.map((i: any) => i),
   }
 }
 

@@ -9,7 +9,6 @@ import Image5 from './images/image5.jpg'
 import Image6 from './images/image6.jpg'
 
 export function Carousel() {
-
   return (
     <div className={css['container']}>
       <h3>Bogota Colombia</h3>

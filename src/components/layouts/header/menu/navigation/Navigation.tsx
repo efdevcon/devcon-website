@@ -13,7 +13,7 @@ export const Navigation = () => {
     <>
       <ul className={css['navigation']}>
         {navigation.site.map((i: LinkType, index: number) => {
-          const primaryKey = `site-nav-1_${index}`;
+          const primaryKey = `site-nav-1_${index}`
           const hasChildren = i.links && i.links.length > 0
 
           const link = (
@@ -32,7 +32,7 @@ export const Navigation = () => {
                     {i.links && i.links.length > 0 && (
                       <ul>
                         {i.links?.map((c: LinkType, subIndex: number) => {
-                          const subKey = `site-nav-2_${subIndex}`;
+                          const subKey = `site-nav-2_${subIndex}`
 
                           if (c.type === 'header') {
                             return (

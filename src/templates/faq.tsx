@@ -15,7 +15,7 @@ import PageHeroLogo from 'src/assets/images/logo-faq.svg'
 export default function FaqTemplate({ data, location }: any) {
   const page = data.markdownRemark
   const faq = ToFaqData(data)
-  const [searchFilter, setSearchFilter] = useState('');
+  const [searchFilter, setSearchFilter] = useState('')
 
   return (
     <Content navigationData={data.navigationData} location={location}>
@@ -32,7 +32,6 @@ export default function FaqTemplate({ data, location }: any) {
 
       <div className="section">
         <div className="content">
-
           <section id="contribute" className={css['section']}>
             <h3 className="subsection-header">{page.frontmatter.title}</h3>
             <div className={css['container']}>
@@ -41,7 +40,7 @@ export default function FaqTemplate({ data, location }: any) {
                   <p dangerouslySetInnerHTML={{ __html: page.html }} />
                 </div>
 
-                <Search onSearch={(e) => setSearchFilter(e)} />
+                <Search onSearch={e => setSearchFilter(e)} />
               </div>
               <div className={css['right-deva']}>
                 <img src={AskDeva} alt="Ask Deva" />

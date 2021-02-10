@@ -8,7 +8,10 @@ export const query = graphql`
         avatarUrl
       }
     }
-    dips: allMarkdownRemark(filter: { fields: { lang: { eq: $language }, collection: { eq: "dips" } } }, sort: { fields: frontmatter___DIP }) {
+    dips: allMarkdownRemark(
+      filter: { fields: { lang: { eq: $language }, collection: { eq: "dips" } } }
+      sort: { fields: frontmatter___DIP }
+    ) {
       nodes {
         frontmatter {
           DIP
@@ -29,4 +32,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

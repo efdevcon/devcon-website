@@ -5,11 +5,11 @@ import './design-system.module.scss'
 
 export function DesignSystem() {
   const items = [
-    { id: "1", title: "Accordion item #1", body: "This is the extended body of accordion item #1" },
-    { id: "2", title: "Accordion item #2", body: "This is the extended body of accordion item #2" },
-    { id: "3", title: "Accordion item #3", body: "This is the extended body of accordion item #3" },
-    { id: "4", title: "Accordion item #4", body: "This is the extended body of accordion item #4" },
-    { id: "5", title: "Accordion item #5", body: "This is the extended body of accordion item #5" },
+    { id: '1', title: 'Accordion item #1', body: 'This is the extended body of accordion item #1' },
+    { id: '2', title: 'Accordion item #2', body: 'This is the extended body of accordion item #2' },
+    { id: '3', title: 'Accordion item #3', body: 'This is the extended body of accordion item #3' },
+    { id: '4', title: 'Accordion item #4', body: 'This is the extended body of accordion item #4' },
+    { id: '5', title: 'Accordion item #5', body: 'This is the extended body of accordion item #5' },
   ]
 
   return (

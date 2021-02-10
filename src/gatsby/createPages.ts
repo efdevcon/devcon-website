@@ -61,7 +61,7 @@ async function createDipPages({ actions, graphql, reporter }: CreatePagesArgs) {
 
   result.data.dips.nodes.forEach((node: any) => {
     createDynamicPage(actions, node.fields.slug, 'dip', node.fields.lang)
-  });
+  })
 }
 
 async function createBlogPages({ actions, graphql, reporter }: CreatePagesArgs) {

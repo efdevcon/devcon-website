@@ -1,6 +1,6 @@
 import { CreateSchemaCustomizationArgs } from 'gatsby'
 import { links as linksResolver } from './resolvers/links'
-import { dip as dipResolver } from './resolvers/dip';
+import { dip as dipResolver } from './resolvers/dip'
 
 const baseTypes = `
   type MarkdownRemark implements Node { 
@@ -25,7 +25,7 @@ export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCusto
       fields: {
         links: linksResolver,
         next_dip: dipResolver('next'),
-        prev_dip: dipResolver('prev')
+        prev_dip: dipResolver('prev'),
       },
     }),
   ]

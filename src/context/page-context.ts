@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react'
 import { NavigationData } from 'src/types/NavigationData'
 
 export interface PageContextType {
-  navigation: NavigationData,
+  navigation: NavigationData
   location: any
 }
 

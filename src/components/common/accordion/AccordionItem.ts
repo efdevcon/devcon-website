@@ -1,6 +1,5 @@
-
 export interface AccordionItem {
-  id: string;
-  title: string;
-  body: string;
+  id: string
+  title: string
+  body: string
 }

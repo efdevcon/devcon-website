@@ -3,5 +3,5 @@ export default (number: string) => {
     return '0' + number
   }
 
-  return number;
+  return number
 }

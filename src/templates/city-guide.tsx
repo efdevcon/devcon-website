@@ -14,7 +14,7 @@ import { TwoColumns } from 'src/components/sections/2column'
 import { useIntl } from 'gatsby-plugin-intl'
 
 export default function CityGuideTemplate({ data, location }: any) {
-  const intl = useIntl();
+  const intl = useIntl()
   const page = data.markdownRemark
   const faq = ToFaqData(data)
   const todo = {
@@ -59,8 +59,7 @@ export default function CityGuideTemplate({ data, location }: any) {
       />
 
       <div className="section">
-        <div className={"content " + css['location']}>
-
+        <div className={'content ' + css['location']}>
           <section id="about" className={css['section']}>
             <h3 className="subsection-header">{intl.formatMessage({ id: 'location_title' })}</h3>
             <div className={css['container']}>
@@ -108,7 +107,12 @@ export const query = graphql`
     ...NavigationData
     ...Categories
     ...FAQs
-    todo: allMarkdownRemark(filter: {fields: {lang: {eq: $language}, collection: {eq: "sections"}, id: {eq: "things-to-do"}}, frontmatter: {title: {ne: ""}}}) {
+    todo: allMarkdownRemark(
+      filter: {
+        fields: { lang: { eq: $language }, collection: { eq: "sections" }, id: { eq: "things-to-do" } }
+        frontmatter: { title: { ne: "" } }
+      }
+    ) {
       nodes {
         frontmatter {
           title
@@ -127,7 +131,12 @@ export const query = graphql`
         }
       }
     }
-    why: allMarkdownRemark(filter: {fields: {lang: {eq: $language}, collection: {eq: "sections"}, id: {eq: "why-devcon-in-bogota"}}, frontmatter: {title: {ne: ""}}}) {
+    why: allMarkdownRemark(
+      filter: {
+        fields: { lang: { eq: $language }, collection: { eq: "sections" }, id: { eq: "why-devcon-in-bogota" } }
+        frontmatter: { title: { ne: "" } }
+      }
+    ) {
       nodes {
         frontmatter {
           title

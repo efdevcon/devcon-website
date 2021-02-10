@@ -11,7 +11,7 @@ type TwoColumnsProps = {
 export const TwoColumns = (props: TwoColumnsProps) => {
   return (
     <section id={props.id} className={css['content-section']}>
-      { props.title && <h3 className="subsection-header">{props.title}</h3> }
+      {props.title && <h3 className="subsection-header">{props.title}</h3>}
 
       <div className={css['container']}>
         <div className={css['left']}>
