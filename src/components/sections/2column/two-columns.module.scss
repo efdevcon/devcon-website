@@ -12,7 +12,7 @@
   }
 
   p {
-    @include fonts.font-xl;
+    @include fonts.font-md;
     margin-bottom: $gap-8;
 
     &:last-child {
@@ -42,10 +42,10 @@
       margin-bottom: $gap-4;
       flex-basis: auto;
     }
-
+    
     p {
-      &:last-child {
-        @include fonts.font-md;
+      &:first-child {
+        @include fonts.font-xl;
       }
     }
   }
