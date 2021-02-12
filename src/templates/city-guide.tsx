@@ -61,19 +61,8 @@ export default function CityGuideTemplate({ data, location }: any) {
 
       <div className="section">
         <div className={'content ' + css['location']}>
-          <section id="about" className={css['section']}>
-            <h3 className="subsection-header">{intl.formatMessage({ id: 'location_title' })}</h3>
-            <div className={css['container']}>
-              <div className={css['left-70']}>
-                <div className={css['description']}>
-                  <p dangerouslySetInnerHTML={{ __html: page.html }} />
-                </div>
-              </div>
-              <div className={css['right-deva']}>
-                <Snapshot />
-              </div>
-            </div>
-          </section>
+          <TwoColumns id="about" title={intl.formatMessage({ id: 'location_title' })} 
+            left={page.html} right={<Snapshot />} />
 
           <section id="carousel" className={css['section']}>
             <Carousel />

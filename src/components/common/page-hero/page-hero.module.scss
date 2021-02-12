@@ -6,7 +6,7 @@
   position: sticky;
   // "Pulls up" the entire section except for the page menu, effectively making it look like just the page menu is sticky
   top: var(--negative-offset, -1000px);
-  z-index: 1;
+  z-index: 10;
   overflow: hidden;
   width: 100%;
   padding-top: $gap-4;
