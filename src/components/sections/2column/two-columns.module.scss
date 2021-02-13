@@ -2,7 +2,6 @@
 @use 'src/assets/css/partials/layout';
 @use 'src/assets/css/partials/fonts';
 
-.content-section,
 .section {
   margin-top: $gap-12;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -12,7 +11,7 @@
   }
 
   p {
-    @include fonts.font-xl;
+    @include fonts.font-md;
     margin-bottom: $gap-8;
 
     &:last-child {
@@ -26,7 +25,7 @@
     align-items: flex-start;
     margin-bottom: $gap-10;
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-lg) {
       flex-direction: column;
     }
   }
@@ -37,28 +36,32 @@
     flex-grow: 1;
     flex-basis: 0;
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-lg) {
       margin-right: 0;
       margin-bottom: $gap-4;
       flex-basis: auto;
     }
-
+    
     p {
-      &:last-child {
-        @include fonts.font-md;
+      &:first-child {
+        @include fonts.font-xl;
       }
     }
   }
 
+  .left-2x { 
+    @extend .left;
+    flex-grow: 2;
+  }
+
   .right {
-    padding-top: 0;
-    margin-top: 0;
     margin-left: $gap-8;
     margin-top: 0;
     flex-grow: 1;
     flex-basis: 0;
+    width: 100%;
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-lg) {
       margin-left: 0;
       margin-top: $gap-4;
       flex-basis: auto;
@@ -66,6 +69,23 @@
 
     p {
       @include fonts.font-md;
+    }
+  }
+
+  .right-2x { 
+    @extend .right;
+    flex-grow: 2;
+  }
+}
+
+.section-about {
+  @extend .section;
+
+  border-bottom: 0;
+
+  .left {
+    p {
+      @include fonts.font-xl;
     }
   }
 }

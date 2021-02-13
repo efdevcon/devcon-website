@@ -16,7 +16,8 @@ import { useIntl } from 'gatsby-plugin-intl'
 export default function CityGuideTemplate({ data, location }: any) {
   const intl = useIntl()
   const page = data.markdownRemark
-  const faq = ToFaqData(data)
+  const faqs = ToFaqData(data)
+  const faq = faqs.filter(i => i.id === 'location');
   const todo = {
     title: data.todo.nodes[0].frontmatter.title,
     show_title: data.todo.nodes[0].frontmatter.show_title,
@@ -29,7 +30,7 @@ export default function CityGuideTemplate({ data, location }: any) {
     left: data.why.nodes[0].fields.frontmattermd.left.html,
     right: data.why.nodes[0].fields.frontmattermd.right.html,
   }
-
+  
   return (
     <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
@@ -60,19 +61,8 @@ export default function CityGuideTemplate({ data, location }: any) {
 
       <div className="section">
         <div className={'content ' + css['location']}>
-          <section id="about" className={css['section']}>
-            <h3 className="subsection-header">{intl.formatMessage({ id: 'location_title' })}</h3>
-            <div className={css['container']}>
-              <div className={css['left-70']}>
-                <div className={css['description']}>
-                  <p dangerouslySetInnerHTML={{ __html: page.html }} />
-                </div>
-              </div>
-              <div className={css['right-deva']}>
-                <Snapshot />
-              </div>
-            </div>
-          </section>
+          <TwoColumns id="about" title={intl.formatMessage({ id: 'location_title' })} 
+            left={page.html} right={<Snapshot />} />
 
           <section id="carousel" className={css['section']}>
             <Carousel />
@@ -83,7 +73,7 @@ export default function CityGuideTemplate({ data, location }: any) {
           <TwoColumns id="why-bogota" title={why.title} left={why.left} right={why.right} />
 
           <section id="FAQ" className={css['section']}>
-            <FAQ data={faq.filter(i => i.id === 'location')} customCategoryTitle="Frequently Asked Questions" />
+            <FAQ data={faq} customCategoryTitle="Frequently Asked Questions" />
           </section>
         </div>
       </div>

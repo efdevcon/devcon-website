@@ -10,5 +10,6 @@ left: >-
 
   The city is also very green thanks to its parks and the hills that extend along its eastern boundary, dwarfed by their two highest points,  **Monserrate** and **Guadalupe**. The landscape that the people of Bogotá enjoy daily—the sea of green that makes up the Andes mountain range, rising up in the east—would be nearly impossible to find in any other large city.
 right: >-
+  Watch the top 10 things to do in Colombia 
   [[youtube: https://www.youtube.com/watch?v=czfKyc-HtF4]]
 ---
