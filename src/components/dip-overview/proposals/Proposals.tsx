@@ -9,6 +9,7 @@ import GithubIcon from 'src/assets/icons/github.svg'
 import TooltipIcon from 'src/assets/icons/tooltip.svg'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Share } from 'src/components/common/share'
+import { useIntl } from 'gatsby-plugin-intl'
 
 export const Links = ({ dip }: { dip: DIP }) => {
   return (
@@ -43,7 +44,7 @@ const tableColumns: Array<TableColumn> = [
     },
   },
   {
-    title: 'name',
+    intl: 'dips_name',
     key: 'title',
     className: css['name-column'],
     sort: SortVariation.basic,
@@ -52,12 +53,12 @@ const tableColumns: Array<TableColumn> = [
     },
   },
   {
-    title: 'summary',
+    intl: 'dips_summary',
     className: css['summary-column'],
     key: 'summary',
   },
   {
-    title: 'status',
+    intl: 'dips_status',
     key: 'status',
     className: css['status-column'],
     sort: SortVariation.basic,
@@ -88,7 +89,7 @@ const tableColumns: Array<TableColumn> = [
     },
   },
   {
-    title: 'themes',
+    intl: 'dips_themes',
     key: 'themes',
     className: css['themes-column'],
     sort: SortVariation.basic,
@@ -97,7 +98,7 @@ const tableColumns: Array<TableColumn> = [
     },
   },
   {
-    title: 'tags',
+    intl: 'dips_tags',
     key: 'tags',
     sort: (item1, item2) => {
       const a = item1.tags
@@ -122,7 +123,7 @@ const tableColumns: Array<TableColumn> = [
     },
   },
   {
-    title: 'authors',
+    intl: 'dips_authors',
     className: css['authors-column'],
     key: 'authors',
     // Authors have no standard format so this is a tricky one
@@ -148,7 +149,7 @@ const tableColumns: Array<TableColumn> = [
     // },
   },
   {
-    title: 'links',
+    intl: 'dips_links',
     key: 'links',
     className: css['links-column'],
     render: item => {
@@ -156,7 +157,7 @@ const tableColumns: Array<TableColumn> = [
     },
   },
   {
-    title: 'expand',
+    intl: 'dips_expand',
     key: 'link',
     className: css['expand-column'],
     render: item => {
@@ -211,8 +212,9 @@ const resolveStatuses = (dips: Array<DIP>) => {
 export const Proposals = (props: ProposalsProps) => {
   const [statusFilter, setStatusFilter] = React.useState<string | null>(null)
   const noFilter = !statusFilter
+  const intl = useIntl()
 
-  // // Pushing an extra column into the table to make room for a link back to the page
+  // Pushing an extra column into the table to make room for a link back to the page
   const dipsWithLink = React.useMemo(() => {
     return props.dips.map(dip => {
       return {
@@ -229,10 +231,10 @@ export const Proposals = (props: ProposalsProps) => {
   return (
     <section id="proposals" className={css['container']}>
       <div className={css['top-container']}>
-        <h3 className="subsection-header">PROPOSALS</h3>
+        <h3 className="subsection-header">{intl.formatMessage({ id: 'dips_proposals' })}</h3>
         <div className={css['filters']}>
           <p onClick={() => setStatusFilter(null)} className={noFilter ? css['active-filter'] : undefined}>
-            All
+            {intl.formatMessage({ id: 'dips_all' })}
           </p>
 
           {resolveStatuses(props.dips).map(status => {

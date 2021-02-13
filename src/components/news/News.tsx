@@ -6,6 +6,7 @@ import css from './news.module.scss'
 import moment from 'moment'
 // import Twitter from 'src/assets/icons/twitter.svg'
 import { NewsItem } from 'src/types/NewsItem'
+import { useIntl } from 'gatsby-plugin-intl'
 // import { useSiteNavigationContext } from 'src/context/site-navigation-context'
 
 type NewsProps = {
@@ -65,11 +66,12 @@ const settings = {
 
 export const News = ({ data: rawData }: NewsProps) => {
   const data = formatNewsData(sortNews(rawData.nodes))
+  const intl = useIntl()
 
   return (
     <div className="section">
       <div className={css['news-container']}>
-        <h2 className="section-header">News</h2>
+        <h2 className="section-header">{intl.formatMessage({ id: 'news' })}</h2>
         {/* Only visible on mobile */}
         <div className={css['slider']}>
           <Slider {...settings}>
@@ -85,7 +87,7 @@ export const News = ({ data: rawData }: NewsProps) => {
             })}
           </div>
           <div className={css['feed']}>
-            <Feed title="News feed" items={data} />
+            <Feed title={intl.formatMessage({ id: 'news feed' })} items={data} />
           </div>
         </div>
       </div>

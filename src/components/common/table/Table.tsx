@@ -3,6 +3,7 @@ import useSort, { SortVariation } from './useSort'
 import css from './table.module.scss'
 import ArrowAsc from 'src/assets/icons/arrow_asc.svg'
 import ArrowDesc from 'src/assets/icons/arrow_desc.svg'
+import { useIntl } from 'gatsby-plugin-intl'
 
 type HeaderProps = {
   columns: TableColumn[]
@@ -16,7 +17,8 @@ type RowProps = {
   items: any[]
 }
 type TableColumn = {
-  title: string
+  title?: string
+  intl?: string
   key: string
   className?: string
   render?(args: any): Element
@@ -30,6 +32,8 @@ type TableProps = {
 }
 
 const TableHeader = (props: HeaderProps) => {
+  const intl = useIntl()
+
   return (
     <div className={css['header']}>
       {props.columns.map((column, index) => {
@@ -58,7 +62,7 @@ const TableHeader = (props: HeaderProps) => {
               if (column.sort) props.setSortedBy(index)
             }}
           >
-            <p>{column.title.toUpperCase()}</p>
+            <p className="text-uppercase">{column.intl ? intl.formatMessage({ id: column.intl }) : column.title}</p>
             {column.sort && (
               <div className={css['sort']}>
                 {shouldRenderAsc && <ArrowAsc />}

@@ -4,6 +4,7 @@ import css from './contribute.module.scss'
 import { Link } from 'src/components/common/link'
 import { Contributor } from 'src/types/dip'
 import { Tooltip } from 'src/components/common/tooltip'
+import { useIntl } from 'gatsby-plugin-intl'
 
 type ContributeProps = {
   contributors: Array<Contributor>
@@ -45,18 +46,31 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
   const containerRef = React.useRef<HTMLDivElement>()
 
   useLayoutEffect(() => {
-    const syncTrackSize = () => {
-      const { width } = containerRef.current?.getBoundingClientRect()!
+    if (window.ResizeObserver) {
+      const el = containerRef.current
+      const observer = new window.ResizeObserver(entries => {
+        setContainerSize(entries[0].contentRect.width)
+      })
 
-      setContainerSize(width)
-    }
+      observer.observe(el)
 
-    syncTrackSize()
+      return () => {
+        observer.unobserve(el)
+      }
+    } else {
+      const syncTrackSize = () => {
+        const { width } = containerRef.current?.getBoundingClientRect()!
 
-    window.addEventListener('resize', syncTrackSize)
+        setContainerSize(width)
+      }
 
-    return () => {
-      window.removeEventListener('resize', syncTrackSize)
+      syncTrackSize()
+
+      window.addEventListener('resize', syncTrackSize)
+
+      return () => {
+        window.removeEventListener('resize', syncTrackSize)
+      }
     }
   }, [])
 
@@ -101,9 +115,11 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
 }
 
 export const Contribute = (props: ContributeProps) => {
+  const intl = useIntl()
+
   return (
     <section id="contribute" className={css['section']}>
-      <h3 className="subsection-header">CONTRIBUTE</h3>
+      <h3 className="subsection-header">{intl.formatMessage({ id: 'dips_contribute' })}</h3>
 
       <div className={css['container']}>
         <div className={css['left-section']}>
@@ -112,18 +128,18 @@ export const Contribute = (props: ContributeProps) => {
             className={`${css['dip-description']} markdown`}
           />
           <div className={css['links']}>
-            <Link to="https://forum.devcon.org" indicateExternal className="font-lg bold font-secondary">
-              VISIT FORUM
+            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
+              {intl.formatMessage({ id: 'dips_visit_forum' })}
             </Link>
-            <Link to="https://forum.devcon.org" indicateExternal className="font-lg bold font-secondary">
-              CREATE PROPOSAL
+            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
+              {intl.formatMessage({ id: 'dips_create_proposal' })}
             </Link>
           </div>
         </div>
         <div className={css['contributors']}>
           <AutoScroller contributors={props.contributors} />
           <div className={css['info']}>
-            <p>* DIP Github Contributors</p> <Github />
+            <p>* {intl.formatMessage({ id: 'dips_contributors' })}</p> <Github />
           </div>
         </div>
       </div>

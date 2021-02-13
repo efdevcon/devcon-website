@@ -6,6 +6,7 @@ import Pencil from 'src/assets/icons/pencil.svg'
 import BulletList from 'src/assets/icons/bullet_list.svg'
 import { Proposals } from './proposals'
 import { DIP, Contributor } from 'src/types/dip'
+import { useIntl } from 'gatsby-plugin-intl'
 
 type DIPProps = {
   dips: Array<DIP>
@@ -14,6 +15,8 @@ type DIPProps = {
 }
 
 export function DIPOverview({ dips, contributors, dipDescription }: DIPProps) {
+  const intl = useIntl()
+
   return (
     <>
       <PageHero
@@ -22,19 +25,19 @@ export function DIPOverview({ dips, contributors, dipDescription }: DIPProps) {
         type="contribute"
         cta={[
           {
-            title: 'Review DIPs',
+            title: intl.formatMessage({ id: 'dips_review_dips' }),
             to: 'https://forum.devcon.org',
             icon: <BulletList />,
           },
           {
-            title: 'Create Proposal',
+            title: intl.formatMessage({ id: 'dips_create_proposal' }),
             to: 'https://forum.devcon.org',
             icon: <Pencil />,
           },
         ]}
         navigation={[
           {
-            title: 'FORUM',
+            title: intl.formatMessage({ id: 'dips_forum' }).toUpperCase(),
             to: 'https://forum.devcon.org',
           },
           {
@@ -42,7 +45,7 @@ export function DIPOverview({ dips, contributors, dipDescription }: DIPProps) {
             to: 'https://github.com/efdevcon/DIPs',
           },
           {
-            title: 'CONTRIBUTE',
+            title: intl.formatMessage({ id: 'dips_contribute' }).toUpperCase(),
             to: '#contribute',
           },
           {
