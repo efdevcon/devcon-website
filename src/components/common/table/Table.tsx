@@ -77,29 +77,25 @@ const TableHeader = (props: HeaderProps) => {
 }
 
 const TableRows = (props: RowProps) => {
-  return (
-    <>
-      {props.items.map(item => {
-        return (
-          <div key={item[props.itemKey]} className={css['row']}>
-            {props.columns.map(column => {
-              const value = item[column.key]
+  return props.items.map(item => {
+    return (
+      <div key={item[props.itemKey]} className={css['row']}>
+        {props.columns.map(column => {
+          const value = item[column.key]
 
-              let className = css['cell']
+          let className = css['cell']
 
-              if (column.className) className = `${column.className} ${className}`
+          if (column.className) className = `${column.className} ${className}`
 
-              return (
-                <div key={column.key} className={className}>
-                  {column.render ? column.render(item, column) : <p>{value}</p>}
-                </div>
-              )
-            })}
-          </div>
-        )
-      })}
-    </>
-  )
+          return (
+            <div key={column.key} className={className}>
+              {column.render ? column.render(item, column) : <p>{value}</p>}
+            </div>
+          )
+        })}
+      </div>
+    )
+  })
 }
 
 export const Table = (props: TableProps) => {

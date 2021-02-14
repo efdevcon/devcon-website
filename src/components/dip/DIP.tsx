@@ -12,10 +12,11 @@ import leftPad from 'src/utils/left-pad'
 import { DIP as DIPType } from 'src/types/dip'
 import ArrowLeft from 'src/assets/icons/arrow_left.svg'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const tableColumns = [
   {
-    title: 'status',
+    intl: 'dips_status',
     key: 'status',
     // className: proposalCss['status-column'],
     render: (item: DIPType) => {
@@ -45,7 +46,7 @@ const tableColumns = [
     },
   },
   {
-    title: 'themes',
+    intl: 'dips_themes',
     key: 'themes',
     // className: proposalCss['themes-column'],
     render: (item: DIPType) => {
@@ -53,7 +54,7 @@ const tableColumns = [
     },
   },
   {
-    title: 'tags',
+    intl: 'dips_tags',
     key: 'tags',
     render: (item: DIPType) => {
       return item.tags
@@ -66,13 +67,14 @@ const tableColumns = [
     },
   },
   {
-    title: 'authors',
+    intl: 'dips_authors',
     // className: proposalCss['authors-column'],
     key: 'authors',
   },
 ]
 
 export function DIP(props: { dip: DIPType }) {
+  const intl = useIntl()
   const formattedDIP = React.useMemo(() => {
     return mapToDIP(props.dip)
   }, [props.dip])
@@ -91,7 +93,7 @@ export function DIP(props: { dip: DIPType }) {
 
               {formattedDIP.next_dip && (
                 <Link to={formattedDIP.next_dip} className={css['next']}>
-                  <p className="bold">Next DIP</p>
+                  <p className="bold">{intl.formatMessage({ id: 'dips_next_dip' })}</p>
                   <ArrowRight style={{ fontSize: '0.8em' }} />
                 </Link>
               )}

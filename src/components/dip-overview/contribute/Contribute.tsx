@@ -43,23 +43,27 @@ const Thumbnail = ({ contributor }: ThumbnailProps) => {
 */
 const AutoScroller = (props: { contributors: Array<Contributor> }) => {
   const [containerSize, setContainerSize] = React.useState(0)
-  const containerRef = React.useRef<HTMLDivElement>()
+  const cleanupRef = React.useRef<any>()
 
-  useLayoutEffect(() => {
+  const setRef = React.useCallback(node => {
+    if (cleanupRef.current) cleanupRef.current()
+    if (!node) return
+
+    const el = node
+
     if (window.ResizeObserver) {
-      const el = containerRef.current
       const observer = new window.ResizeObserver(entries => {
-        setContainerSize(entries[0].contentRect.width)
+        setContainerSize(entries[0].borderBoxSize[0].inlineSize)
       })
 
       observer.observe(el)
 
-      return () => {
+      cleanupRef.current = () => {
         observer.unobserve(el)
       }
     } else {
       const syncTrackSize = () => {
-        const { width } = containerRef.current?.getBoundingClientRect()!
+        const { width } = el.getBoundingClientRect()
 
         setContainerSize(width)
       }
@@ -68,7 +72,7 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
 
       window.addEventListener('resize', syncTrackSize)
 
-      return () => {
+      cleanupRef.current = () => {
         window.removeEventListener('resize', syncTrackSize)
       }
     }
@@ -80,11 +84,10 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
   let containerClass = css['scroll-container']
 
   const chunkedContributors = chunkArray(props.contributors, nRows)
-
   return (
     <div
       key={containerSize === 0 ? 'loading' : containerSize} // Remounting the element when containerSize changes solves a lot of safari edge cases by resetting the CSS animations
-      ref={containerRef}
+      ref={setRef}
       className={containerClass}
       style={{
         '--container-size': `${containerSize}px`,
