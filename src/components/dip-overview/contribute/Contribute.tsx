@@ -84,6 +84,7 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
   let containerClass = css['scroll-container']
 
   const chunkedContributors = chunkArray(props.contributors, nRows)
+
   return (
     <div
       key={containerSize === 0 ? 'loading' : containerSize} // Remounting the element when containerSize changes solves a lot of safari edge cases by resetting the CSS animations
