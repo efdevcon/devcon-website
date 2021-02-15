@@ -1,5 +1,5 @@
 ---
-
+title: verdad
 show 
 left: >-
   In Bogotá we found the seeds for an ambitious community that our ecosystem
