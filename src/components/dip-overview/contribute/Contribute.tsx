@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import Github from 'src/assets/icons/github.svg'
 import css from './contribute.module.scss'
 import { Link } from 'src/components/common/link'

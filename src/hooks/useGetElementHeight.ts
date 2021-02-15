@@ -20,9 +20,9 @@ export default (elementID: string) => {
 
   useLayoutEffect(() => {
     if (window.ResizeObserver) {
-      const el = document.getElementById(elementID);
-      
-      if (!el) return;
+      const el = document.getElementById(elementID)
+
+      if (!el) return
 
       const observer = new window.ResizeObserver(entries => {
         setElementHeight(entries[0].borderBoxSize[0].blockSize)
@@ -36,16 +36,16 @@ export default (elementID: string) => {
     } else {
       const determineHeight = () => {
         const nextElementHeight = getElementHeight(elementID)
-  
+
         if (nextElementHeight) setElementHeight(nextElementHeight)
       }
-  
+
       // Set initial height (on component mount)
       determineHeight()
-  
+
       // Keep height in sync when browser resizes
       window.addEventListener('resize', determineHeight)
-  
+
       return () => {
         window.removeEventListener('resize', determineHeight)
       }

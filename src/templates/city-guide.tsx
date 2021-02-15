@@ -17,7 +17,7 @@ export default function CityGuideTemplate({ data, location }: any) {
   const intl = useIntl()
   const page = data.markdownRemark
   const faqs = ToFaqData(data)
-  const faq = faqs.filter(i => i.id === 'location');
+  const faq = faqs.filter(i => i.id === 'location')
   const todo = {
     title: data.todo.nodes[0].frontmatter.title,
     show_title: data.todo.nodes[0].frontmatter.show_title,
@@ -30,7 +30,7 @@ export default function CityGuideTemplate({ data, location }: any) {
     left: data.why.nodes[0].fields.frontmattermd.left.html,
     right: data.why.nodes[0].fields.frontmattermd.right.html,
   }
-  
+
   return (
     <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
@@ -61,8 +61,12 @@ export default function CityGuideTemplate({ data, location }: any) {
 
       <div className="section">
         <div className={'content ' + css['location']}>
-          <TwoColumns id="about" title={intl.formatMessage({ id: 'location_title' })} 
-            left={page.html} right={<Snapshot />} />
+          <TwoColumns
+            id="about"
+            title={intl.formatMessage({ id: 'location_title' })}
+            left={page.html}
+            right={<Snapshot />}
+          />
 
           <section id="carousel" className={css['section']}>
             <Carousel />

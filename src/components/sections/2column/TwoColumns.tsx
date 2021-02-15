@@ -20,12 +20,12 @@ export const TwoColumns = (props: TwoColumnsProps) => {
 
       <div className={css['container']}>
         <div className={css[leftClassName]}>
-          { typeof props.left === 'string' && <p dangerouslySetInnerHTML={{ __html: props.left }} /> }
-          { typeof props.left === 'object' && props.left }
+          {typeof props.left === 'string' && <p dangerouslySetInnerHTML={{ __html: props.left }} />}
+          {typeof props.left === 'object' && props.left}
         </div>
         <div className={css[rightClassName]}>
-          { typeof props.right === 'string' && <p dangerouslySetInnerHTML={{ __html: props.right }} /> }
-          { typeof props.right === 'object' && props.right }
+          {typeof props.right === 'string' && <p dangerouslySetInnerHTML={{ __html: props.right }} />}
+          {typeof props.right === 'object' && props.right}
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@ import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment DipsData on Query {
-    contributors: allContributorsJson(filter: {url: {ne: null}}) {
+    contributors: allContributorsJson(filter: { url: { ne: null } }) {
       nodes {
         name
         avatarUrl
