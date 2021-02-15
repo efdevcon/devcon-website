@@ -59,7 +59,7 @@ Lo que no he ordenado aún se refiere a la localización y la ejecución:
 
 - Marketing. Las "experiencias" de eventos limitados son lo suficientemente difíciles para promover, pero esto se ve agravado por la naturaleza secreta de una sala de escape. Esta es una área en la que la ayuda del equipo de Devcon realmente podría marcar la diferencia.
 
-- Financiación. Between working hours, travel expenses, and custom equipment/furniture builds, this is not a _cheap_ proposal by any stretch of the imagination. Creo que existe alguna oportunidad de financiación externa por parte del ecosistema, como el patrocinio de empresas de ferreterías o promociones (sabrosas e impuestas) en la sala. Puedo presentar a petición un presupuesto específico de la producción anterior, pero prefiero no incluirlo aquí.
+- Financiación. Entre el horario de trabajo, gastos de viaje, y construcciones personalizadas de equipamiento/muebles, esta no es una propuesta _barata_ de cualquier estiramiento de la imaginación. Creo que existe alguna oportunidad de financiación externa por parte del ecosistema, como el patrocinio de empresas de ferreterías o promociones (sabrosas e impuestas) en la sala. Puedo presentar a petición un presupuesto específico de la producción anterior, pero prefiero no incluirlo aquí.
 
 - Traducción. Aunque sería una cantidad tremenda de trabajo, vale la pena producir la historia y materiales compatibles con el español, la OMI. El sentido de la sala es para el cifrado y una opción en español favorecería mucha más participación local.
 
