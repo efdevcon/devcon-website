@@ -18,13 +18,13 @@ Adición al [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md
 
 ## Resumen
 
-Como se describe en [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md), queremos ofrecer a los asistentes la capacidad de compensar las emisiones de carbono de Devcon. En el primer DIP explicamos la racional general detrás de la propuesta y dejamos algunos detalles abiertos a una mayor clarificación. This DIP aims to answer the following question which was raised in the first DIP: _How the funds gathered during the ticketing process will be used to offset the event's carbon footprint will be discussed in a future DIP?_
+Como se describe en [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md), queremos ofrecer a los asistentes la capacidad de compensar las emisiones de carbono de Devcon. En el primer DIP explicamos la racional general detrás de la propuesta y dejamos algunos detalles abiertos a una mayor clarificación. Este DIP apunta a responder a la siguiente pregunta que fue recaudada en el primer DIP: _¿Cómo se usarán los fondos recogidos durante el proceso de ticketing para compensar la huella de carbono del evento se discutirá en un futuro DIP?_
 
 En resumen, desplegaremos un DAO que contiene las contribuciones para compensar los proyectos recolectados durante el proceso de ticketing hasta que Devcon tenga lugar en agosto de 2021. Además, La DAO dará a los colaboradores la posibilidad de votar por los proyectos de carbono que favorecen, participando activamente en la forma en que se asignan los fondos recaudados.
 
-_How does voting affect the projects?_ There will a pre-selection of projects that contributors can vote on. La asignación de contribuciones no seguirá un enfoque del ganador, sino que será relativo a los votos totales, i. Si un proyecto recibió el 60% de los votos, obtendrá el 60% de los fondos. Los colaboradores podrán votar a favor de múltiples proyectos indicando así cómo piensan que los fondos deben dividirse entre los proyectos.
+_¿Cómo afecta el voto a los proyectos?_ Habrá una pre-selección de proyectos en los que los colaboradores pueden votar. La asignación de contribuciones no seguirá un enfoque del ganador, sino que será relativo a los votos totales, i. Si un proyecto recibió el 60% de los votos, obtendrá el 60% de los fondos. Los colaboradores podrán votar a favor de múltiples proyectos indicando así cómo piensan que los fondos deben dividirse entre los proyectos.
 
-_What if only 50% of the people vote?_ Whether or not a person votes, their funds are going to carbon projects. Si la gente no vota, asumimos una distribución equitativa de votos entre los proyectos propuestos. De esta forma, nos aseguramos de que el peso de un voto no sea excesivo en caso de baja participación.
+_¿Qué pasa si solo el 50% de la gente vota?_ Si una persona vota, sus fondos van a proyectos de carbono. Si la gente no vota, asumimos una distribución equitativa de votos entre los proyectos propuestos. De esta forma, nos aseguramos de que el peso de un voto no sea excesivo en caso de baja participación.
 
 ## Motivación & Racionalidad
 
@@ -47,7 +47,7 @@ Las DAO están saliendo de la Ether como setas tratando de abordar los desafíos
 **Experiencia anterior**
 
 - Ya hemos implementado un DAO de PoC durante la [incubadora BSIC](https://blockchainforsocialimpact.com/incubator-winners-2020/) que puedes echar un vistazo [aquí](http://dao.co2ken.io/).
-- At Curve Labs (broader CO2ken family), we are building _PrimeDAO_ which you can learn more about [here](https://liquiddao.eth.link/#/).
+- En Curve Labs (familia CO2ken más amplia), estamos construyendo _PrimeDAO_ que puedes aprender más sobre [aquí](https://liquiddao.eth.link/#/).
 
 **Post-evento**
 
@@ -56,14 +56,14 @@ Las DAO están saliendo de la Ether como setas tratando de abordar los desafíos
 
 ## Requisitos operacionales & Propiedad
 
-1. _What actions are required to implement the proposal at Devcon?_
+1. _¿Qué medidas son necesarias para aplicar la propuesta en Devcon?_
    - Necesitaremos el equipo de Devcon para convertir las contribuciones de fiat a crypto y enviarlas al DAO.
    - Los colaboradores necesitan recibir el NFT que les otorga derechos de voto en el DAO. El enfoque basado en la verificación propuesto por [Alpha Wallet en DIP–6](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md) podría ser una buena opción que permite a los contribuyentes reclamar su NFT.
    - Necesitaremos las direcciones de correo electrónico de aquellos que contribuyeron a explicar el proceso de votación y sus derechos de participación en el DAO.
    - Necesitaremos un stand en Devcon durante toda la duración del evento a
      - presentar los diferentes proyectos (tal vez incluso conseguir desarrolladores de proyectos allí en persona) y dar a los colaboradores una oportunidad de involucrarse directamente con la DAO;
      - sensibilizar sobre los desafíos ambientales en el espacio criptográfico y sobre las formas de abordarlos. La [Iniciativa de la Naturaleza Soberana](http://sovereignnature.com/) nos apoyará en ese frente.
-2. _Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)_
+2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)_
    - CO2ken será responsable de la exitosa aplicación de esta propuesta.
 3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))_
    - vea [original DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md).
