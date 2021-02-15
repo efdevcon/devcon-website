@@ -83,14 +83,14 @@ Usted, el autor DIP, acaba de encontrar una gran idea para Devcon. O bien (a) su
 
 Esto es opcional para que los DI respondan a un RFP.
 
-Antes de escribir un borrador DIP, tómese el tiempo para examinar su idea. Open a discussion thread on the [Devcon Forum](https://forum.devcon.org/) and make sure to clearly state your idea to allow the community to provide feedback. Esto se hace para asegurar que no pierdas el tiempo escribiendo un DIP que no obtendrá suficiente tracción, no es factible o es un duplicado. Tómese cinco minutos para leer los RFMs y asegúrese de que su idea no encaja en uno, ¡puede que le ahorre algo de tiempo!
+Antes de escribir un borrador DIP, tómese el tiempo para examinar su idea. Abra un hilo de discusión en el [Foro de desarrollo](https://forum.devcon.org/) y asegúrese de exponer claramente su idea para permitir que la comunidad proporcione sus comentarios. Esto se hace para asegurar que no pierdas el tiempo escribiendo un DIP que no obtendrá suficiente tracción, no es factible o es un duplicado. Tómese cinco minutos para leer los RFMs y asegúrese de que su idea no encaja en uno, ¡puede que le ahorre algo de tiempo!
 
 #### Proceso
 
 1.  **Borrador DIP** - ¡Elige tu pluma digital y escribe tu DIP! Sigue la ruta de ladrillo amarillo: [formato DIP](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-0.md#dip-format)
 2.  **Enviar DIP** - Haga clic en el botón aterrador y envíe su DIP. Asegúrese de incluir toda la información requerida en la plantilla bajo el formato DIP a continuación.
-3.  **Editor Review** - Your DIP is now in the hands of the DIP editors team for review. Editors might request more information and ask to resubmit the DIP.
-4.  **Devcon team Review**
+3.  **Revisión del editor** - Su DIP está ahora en manos del equipo de editores DIP para su revisión. Los editores pueden solicitar más información y pedir que vuelva a enviar el DIP.
+4.  **Reseña del equipo de Devcon**
     - **Borrador** - Tu DIP que está experimentando una rápida iteración y cambios
     - **Aceptado** - ¡Tu idea DIP ha sido aprobada! Ahora es el momento de trabajar en la implementación!
     - **Posteado** - Tu DIP no será posible el próximo Devcon - pero nos encanta la idea.
