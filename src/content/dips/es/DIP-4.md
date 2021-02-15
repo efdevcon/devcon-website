@@ -37,6 +37,7 @@ El juego también es software libre y de código abierto para que otros desarrol
 
 # Motivación & Racionalidad
 
+
 <!--
 
 Social Dist0rtion Protocol (SDP), is a Decentralized Autonomous Organization from the future. We come from a time where transplanetary corporations commodified democracy, manipulated governments, and destroyed the environment, and there is nothing we can to to fix that. The only thing we have left is to travel back in time to convince humans to not repeat the same mistakes we did.
