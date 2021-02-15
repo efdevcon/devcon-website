@@ -1,43 +1,102 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/grids';
+@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/layout';
+
+.card {
+  height: 420px;
+
+  &.slider {
+    margin-right: $gap-4;
+    margin-bottom: $gap-4;
+  }
+}
 
 .news-container {
   display: flex;
+  flex-direction: column;
+  @include layout.content;
 
-  @media (max-width: $screen-lg) {
-    flex-wrap: wrap;
-  }
-
-  .cards {
-    display: flex;
-    margin-right: 32px;
-    flex-basis: 50%;
+  .slider {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    // https://github.com/kenwheeler/slick/issues/187 <-- can't use display: none; for the slider because react-slick needs to measure elements
+    display: block;
+    height: 0;
+    overflow: hidden;
 
     @media (max-width: $screen-lg) {
-      flex-basis: 100%;
-      margin-right: 0px;
-      margin-bottom: 37px;
+      display: flex;
+      height: 300px;
+      overflow: unset;
     }
+  }
 
-    > * {
-      flex-basis: 0;
-      flex-grow: 1;
+  .body {
+    display: flex;
 
-      &:first-child {
-        margin-right: 32px;
+    // @media (max-width: $screen-lg) {
+    //   flex-wrap: wrap;
+    // }
 
-        @media (max-width: $screen-lg) {
-          margin-right: 43px;
+    .cards {
+      display: flex;
+      margin-right: $gap-8;
+      flex-basis: 60%;
+
+      @media (max-width: $screen-lg) {
+        display: none;
+      }
+
+      @media (max-width: $screen-xxl) {
+        margin-right: $gap-4;
+        flex-basis: 40%;
+      }
+
+      // @media (max-width: $screen-tiny) {
+      //   display: none;
+      // }
+      // @media (max-width: $screen-lg) {
+      //   flex-basis: 100%;
+      //   margin-right: 0px;
+      //   margin-bottom: 18px;
+      // }
+
+      > * {
+        height: 410px;
+        flex-basis: 0;
+        flex-grow: 1;
+
+        &:first-child {
+          margin-right: $gap-8;
+
+          @media (max-width: $screen-xxl) {
+            margin-right: 0px;
+          }
+        }
+
+        @media (max-width: $screen-xxl) {
+          min-height: 300px;
+          &:last-child {
+            display: none;
+          }
         }
       }
     }
-  }
 
-  .feed {
-    flex-basis: 50%;
+    .feed {
+      flex-grow: 1;
+      flex-basis: 40%;
 
-    @media (max-width: $screen-lg) {
-      flex-basis: 100%;
+      @media (max-width: $screen-lg) {
+        display: none;
+      }
+
+      // @media (max-width: $screen-lg) {
+      //   flex-basis: 100%;
+      // }
     }
   }
 }

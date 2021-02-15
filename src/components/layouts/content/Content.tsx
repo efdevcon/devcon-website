@@ -1,21 +1,25 @@
 import React, { ReactNode } from 'react'
 import { Header } from 'src/components/layouts/header'
 import { Footer } from 'src/components/layouts/footer'
+import { PageContextProvider } from 'src/context/page-context-provider'
 import './content.module.scss'
 
 type LayoutProps = {
   children: ReactNode
-  footerData: any
+  navigationData: any
+  location: any
 }
 
-export default function Content({ children, footerData }: LayoutProps) {
+export default function Content({ children, navigationData, location }: LayoutProps) {
   return (
     <div className="layout">
-      <Header withHero={false} />
+      <PageContextProvider navigationData={navigationData} location={location}>
+        <Header withHero={false} />
 
-      <div className="content">{children}</div>
+        <div className="content">{children}</div>
 
-      <Footer data={footerData} />
+        <Footer />
+      </PageContextProvider>
     </div>
   )
 }

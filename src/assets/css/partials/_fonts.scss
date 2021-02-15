@@ -41,7 +41,7 @@
   font-family: $font-primary;
 }
 
-@mixin font-seconary {
+@mixin font-secondary {
   font-family: $font-secondary;
 }
 
@@ -50,40 +50,35 @@
 }
 
 // Misc
+@mixin normal {
+  font-weight: 400;
+}
+@mixin semi-bold {
+  font-weight: 600;
+}
 @mixin bold {
   font-weight: 700;
 }
-
 @mixin very-bold {
   font-weight: 800;
 }
 
-@mixin semi-bold {
-  font-weight: 600;
+@mixin section-header {
+  font-weight: 400;
+  margin-bottom: $gap-8;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
+  }
 }
 
-// https://hackingui.com/a-pure-css-solution-for-multiline-text-truncation/
-@mixin multilineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
-  overflow: hidden;
-  position: relative;
-  line-height: $lineHeight;
-  max-height: $lineHeight * $lineCount;
-  text-align: justify;
-  margin-right: -1em;
-  padding-right: 1em;
-  &:before {
-    content: '...';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 1em;
-    height: 1em;
-    margin-top: 0.2em;
-    background: $bgColor;
+@mixin subsection-header {
+  @include bold;
+  @include font-tertiary;
+  text-transform: uppercase;
+  margin-bottom: $gap-6;
+
+  @media (max-width: $screen-lg) {
+    margin-bottom: $gap-4;
   }
 }

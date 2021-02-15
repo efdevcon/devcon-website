@@ -1,7 +1,7 @@
 ---
 title: Why Bogota?
-category:
-  - Location
+category: location
+order: 2
 ---
 
 In Bogota we found the seeds for an ambitious community that our ecosystem could help grow. From builders, to educational entities, local business and industry leaders and more, we’re excited to meet and to work with those making real-world use of Ethereum’s technology locally, and to further those efforts.

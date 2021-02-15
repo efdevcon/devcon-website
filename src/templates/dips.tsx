@@ -3,20 +3,43 @@ import { graphql } from 'gatsby'
 import { SEO } from 'src/components/common/seo'
 import { DIPOverview } from 'src/components/dip-overview'
 import Content from 'src/components/layouts/content'
+import { DIP } from 'src/types/dip'
 
-export default function ContentTemplate({ data }: any) {
+export default function DIPsTemplate({ data, location }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content footerData={data.footer}>
+    <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
-      <h2>{page.frontmatter.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
-
-      <DIPOverview />
+      <DIPOverview
+        dips={React.useMemo(() => data.dips.nodes.map((dip: DIP) => mapToDIP(dip)), [data.dips])}
+        dipDescription={data.markdownRemark.html}
+        contributors={data.contributors.nodes}
+      />
     </Content>
   )
+}
+
+export function mapToDIP(source: any): DIP {
+  return {
+    github: source.frontmatter.Github_URL,
+    // summary: source.frontmatter.Summary,
+    summary: source.excerpt,
+    number: source.frontmatter.DIP,
+    title: source.frontmatter.Title,
+    status: source.frontmatter.Status,
+    themes: source.frontmatter.Themes ? source.frontmatter.Themes.split(',') : [],
+    tags: source.frontmatter.Tags ? source.frontmatter.Tags.split(',') : [],
+    authors: source.frontmatter.Authors ? source.frontmatter.Authors.split(',') : [],
+    resources: source.frontmatter.Resources,
+    discussion: source.frontmatter.Discussion,
+    created: new Date(source.frontmatter.Created),
+    next_dip: source.frontmatter.next_dip,
+    prev_dip: source.frontmatter.prev_dip,
+    // body: source.html,
+    slug: source.fields?.slug,
+  }
 }
 
 export const query = graphql`
@@ -32,6 +55,7 @@ export const query = graphql`
         description
       }
     }
-    ...FooterData
+    ...DipsData
+    ...NavigationData
   }
 `

@@ -1,32 +1,27 @@
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { Header } from 'src/components/layouts/header'
 import { Footer } from 'src/components/layouts/footer'
+import { Hero } from 'src/components/hero'
+import { PageContextProvider } from 'src/context/page-context-provider'
 import './default.module.scss'
-import { Newsletter } from 'src/components/newsletter'
 
 type LayoutProps = {
   children: ReactNode
-  HeroComponent?: FunctionComponent
-  footerData: any
+  navigationData: any
+  location: any
 }
 
-export default function Default({ children, footerData, HeroComponent }: LayoutProps) {
+export default function Default({ children, navigationData, location }: LayoutProps) {
   return (
-    <div className="layout">
-      <Header withHero={!!HeroComponent} />
+    <div className="layout-default">
+      <PageContextProvider navigationData={navigationData} location={location}>
+        <Header withHero={true} />
+        <Hero />
 
-      {/* 
-        The hero component is pretty big, so passing it in as a prop rather than explicitly in this component means we only have to load it on the index page 
-        This assume gatsby does code splitting - worth confirming
-      */}
-      {HeroComponent && <HeroComponent />}
+        <div className="content">{children}</div>
 
-      <div className="content">
-        {children}
-        <Newsletter />
-      </div>
-
-      <Footer data={footerData} />
+        <Footer />
+      </PageContextProvider>
     </div>
   )
 }

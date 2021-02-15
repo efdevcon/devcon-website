@@ -1,9 +1,6 @@
 ---
-title: Lugar de eventos
+title: Lugar
 template: content
-parent: location
-order: 1
-showInMenu: true
 ---
 
-Venue
+Lugar

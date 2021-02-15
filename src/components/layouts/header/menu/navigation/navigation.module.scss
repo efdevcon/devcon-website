@@ -4,9 +4,11 @@
 .navigation {
   display: none;
   flex-direction: row;
+  min-width: 0;
+  flex-wrap: wrap;
   font-family: $font-secondary;
 
-  @media (min-width: $screen-lg) {
+  @media (min-width: $screen-lg + 1) {
     display: flex;
   }
 
@@ -33,6 +35,7 @@
     .foldout {
       position: absolute;
       padding: 16px;
+      z-index: 10;
       padding-right: 64px;
       top: 100%;
       left: 0px;
@@ -42,7 +45,12 @@
       color: $color-primary;
       background-color: #ffffff;
 
+      .foldout-link {
+        text-transform: uppercase;
+      }
+
       > ul {
+        list-style-type: none;
         > li {
           margin-top: 8px;
         }
@@ -72,4 +80,12 @@
   &:hover {
     text-decoration: underline;
   }
+}
+
+.foldout-header {
+  @include fonts.font-xxs;
+  font-family: $font-secondary;
+  line-height: 100%;
+  opacity: 0.5;
+  text-transform: uppercase;
 }

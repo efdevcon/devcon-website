@@ -1,17 +1,24 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import css from './hero.module.scss'
-import Logo from './svgs/Logo'
-import Clouds from './svgs/Clouds'
+import logo from 'src/assets/images/devcon-logo.svg'
 import Rays from './svgs/Rays'
+import IconEventNote from 'src/assets/icons/event_note.svg'
+import { useIntl } from 'gatsby-plugin-intl'
+import { TITLE } from 'src/utils/constants'
+import { Link } from 'src/components/common/link'
 
 const parallax = (intersectionRatio: any) => {
   return {
-    transform: `translateY(${(100 - intersectionRatio) / 2.5}%)`,
+    '--translateY': `${(100 - intersectionRatio) / 5}%`,
   }
 }
 
 // Might want to benchmark SVG performance (should be less CPU intensive to go with pngs, at the cost of not being able to animate)
+// TO-DO: requestAnimationFrame (+ debounce?)
 export const Hero = () => {
+  const intl = useIntl()
   const heroEl = React.useRef(null)
   const [intersectionRatio, setIntersectionRatio] = React.useState(0)
 
@@ -37,13 +44,77 @@ export const Hero = () => {
     }
   }, [])
 
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { relativePath: { in: ["clouds.png", "mountains.png", "shading.png"] } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 80) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <div ref={heroEl} className={css['hero']}>
-      <Clouds style={parallax(intersectionRatio)} className={css['clouds']} />
+    <div ref={heroEl} className={`${css['hero']}`}>
+      {/* Grants some text visibility */}
+      {/* <div className={css['shading']} /> */}
+      {/* <img alt="" className={css['shading']} src={shading} /> */}
+      <Img alt="" className={css['shading']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
+
       <Rays className={css['rays']} />
-      <Logo className={css['logo']} />
+
+      <div className={css['mountain-container']}>
+        <Img
+          alt=""
+          style={parallax(intersectionRatio)}
+          className={css['mountains']}
+          fluid={data.allFile.nodes[1].childImageSharp.fluid}
+        />
+        {/* <img alt="" style={parallax(intersectionRatio)} className={css['mountains']} src={mountains} /> */}
+        {/* <Mountains style={parallax(intersectionRatio)} className={css['mountains']} /> */}
+      </div>
+
+      <div className={css['cloud-container']}>
+        <Img
+          alt=""
+          style={parallax(intersectionRatio)}
+          className={css['clouds']}
+          fluid={data.allFile.nodes[2].childImageSharp.fluid}
+        />
+        {/* <img alt="" style={parallax(intersectionRatio)} className={css['clouds']} src={clouds} /> */}
+        {/* <Clouds style={parallax(intersectionRatio)} className={css['clouds']} /> */}
+      </div>
+
+      <div className={css['left-rotated']}>
+        <p className={css['text-uppercase']}>{intl.formatMessage({ id: 'subtitle' })}</p>
+      </div>
+      <div className={css['right-rotated']}>
+        <p className={css['text-uppercase']}>{intl.formatMessage({ id: 'journey' })}</p>
+      </div>
+
+      <div className={css['logo-container']}>
+        <img alt={TITLE} className={css['logo']} src={logo} />
+      </div>
+
+      <div className={css['date']}>
+        <p className="h2">
+          Aug 2021
+          <br />
+          10 → 13
+        </p>
+      </div>
+
+      <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>
+        <p>{intl.formatMessage({ id: 'description' })}</p>
+        <button>
+          <IconEventNote className={`icon ${css['icon']}`} />
+          <p>{intl.formatMessage({ id: 'addtocalendar' })}</p>
+        </button>
+      </Link>
     </div>
   )
 }
-
-// Animation resource: https://whoisryosuke.com/blog/2020/handling-scroll-based-animations-in-react/

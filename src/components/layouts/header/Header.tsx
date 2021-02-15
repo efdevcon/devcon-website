@@ -5,41 +5,40 @@ import { Menu } from './menu'
 import { Strip } from './strip'
 import css from './header.module.scss'
 import useIsScrolled from 'src/hooks/useIsScrolled'
+import HeaderLogo from './HeaderLogo'
 
 type HeaderProps = {
   withHero?: boolean
+  className?: string
 }
 
 export function Header({ withHero }: HeaderProps) {
   const intl = useIntl()
   const isScrolled = useIsScrolled()
-  const headerEl = React.useRef() as any
 
-  let className = css['header-wrapper']
+  const body = (
+    <>
+      <Strip />
+      <header id="header" className={css['header']}>
+        <div className={css['menu-container']}>
+          <Link to={`/${intl.locale}/`}>
+            <HeaderLogo />
+          </Link>
+          <Menu />
+        </div>
+      </header>
+    </>
+  )
 
   if (withHero) {
-    className += ` ${css['hero']}`
+    let className = css['header-fixed-container']
+
+    if (isScrolled) {
+      className += ` ${css['scrolled']}`
+    }
+
+    return <div className={className}>{body}</div>
   }
 
-  if (isScrolled) {
-    className += ` ${css['scrolled']}`
-  }
-
-  return (
-    <div className={className}>
-      <div ref={headerEl} className={css['header-wrapper-inner']}>
-        <header className={css['header']}>
-          <Strip />
-
-          <div className={css['menu-container']}>
-            <h1>
-              <Link to={`/${intl.locale}/`}>{intl.formatMessage({ id: 'title' })}</Link>
-            </h1>
-
-            <Menu />
-          </div>
-        </header>
-      </div>
-    </div>
-  )
+  return body
 }

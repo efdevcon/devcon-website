@@ -15,7 +15,7 @@ const supportedLanguages = [defaultLanguage, secondaryLanguage]
 const matomoSiteId = '8'
 const matomoUrl = 'https://matomo.ethereum.org'
 
-const offlinePages = ['/en/', '/es/', '/en/contact/', '/es/contact/']
+const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
 module.exports = {
   siteMetadata: {
@@ -26,6 +26,8 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
@@ -109,15 +111,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/content/pages`,
+        name: 'images',
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'categories',
-        path: `${__dirname}/src/content/categories`,
+        name: 'pages',
+        path: `${__dirname}/src/content/pages`,
       },
     },
     {
@@ -130,8 +132,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'categories',
+        path: `${__dirname}/src/content/categories`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'dips',
         path: `${__dirname}/src/content/dips`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'dip-contributors',
+        path: `${__dirname}/src/content/dips/contributors.json`,
       },
     },
     {
@@ -144,11 +160,63 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'footer',
-        path: `${__dirname}/src/content/footer`,
+        name: 'navigation',
+        path: `${__dirname}/src/content/navigation`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'links',
+        path: `${__dirname}/src/content/links`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'headers',
+        path: `${__dirname}/src/content/headers`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'news',
+        path: `${__dirname}/src/content/news`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'sections',
+        path: `${__dirname}/src/content/sections`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              beginMarker: `[[`,
+              endMarker: `]]`,
+              width: 600,
+              related: false,
+              containerClass: "embedded-video-container",
+            },
+          },
+          {
+            resolve: 'gatsby-transformer-remark-frontmatter',
+            options: {
+              whitelist: ['left', 'right'],
+            }
+          },
+        ],
+      }
+    },
+    "gatsby-remark-responsive-iframe",
+    'gatsby-transformer-json',
     {
       resolve: `gatsby-plugin-intl`,
       options: {

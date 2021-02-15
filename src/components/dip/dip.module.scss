@@ -1,0 +1,89 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  > a {
+    padding: $gap-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background: white;
+    margin-bottom: $gap-5;
+    margin-top: $gap-5;
+    @include fonts.font-sm;
+
+    &:disabled {
+      background: grey;
+    }
+
+    &:first-child {
+      min-width: 56px;
+    }
+
+    &:last-child {
+      > p {
+        margin-right: $gap-3;
+      }
+    }
+  }
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @media (max-width: $screen-lg) {
+    flex-wrap: wrap;
+  }
+
+  .dip-number {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    > * {
+      // line-height: 0;
+      &:first-child {
+        margin-right: $gap-1;
+      }
+
+      &:last-child {
+        margin-top: -5px;
+      }
+    }
+  }
+
+  .title {
+    flex-grow: 1;
+    overflow: hidden;
+    padding-left: 5%;
+    padding-bottom: $gap-5;
+    margin-top: -10px;
+
+    @media (max-width: $screen-lg) {
+      padding-top: $gap-5;
+      padding-left: 0%;
+      order: 3;
+    }
+  }
+
+  > * {
+    &:first-child {
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    &:last-child {
+      flex-grow: 1;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

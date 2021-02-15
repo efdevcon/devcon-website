@@ -5,11 +5,11 @@ const languages = ['en', 'es']
 const defaultLang = 'en'
 
 export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesArgs) => {
-  console.log('createPages - Languages', languages, 'default', defaultLang)
+  console.log('createPages', languages, 'default', defaultLang)
 
   await createContentPages(args)
-  await createDipPages(args)
   await createBlogPages(args)
+  await createDipPages(args)
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -47,6 +47,7 @@ async function createDipPages({ actions, graphql, reporter }: CreatePagesArgs) {
         nodes {
           fields {
             slug
+            lang
           }
         }
       }
@@ -58,7 +59,9 @@ async function createDipPages({ actions, graphql, reporter }: CreatePagesArgs) {
     return
   }
 
-  result.data.dips.nodes.forEach((node: any) => createDynamicPage(actions, node.fields.slug, 'dip', defaultLang))
+  result.data.dips.nodes.forEach((node: any) => {
+    createDynamicPage(actions, node.fields.slug, 'dip', node.fields.lang)
+  })
 }
 
 async function createBlogPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -93,6 +96,7 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
 
   // console.log("Creating page", slug, 'with template:', template, lang);
   const { createPage } = actions
+
   createPage({
     path: slug,
     component: path.resolve(`./src/templates/${template}.tsx`),

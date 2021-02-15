@@ -49,31 +49,9 @@ collections:
           label: 'Template',
           widget: 'select',
           i18n: 'duplicate',
-          options: ['none', 'content', 'dips', 'faq'],
+          options: ['none', 'content', 'dips', 'faq', 'city-guide'],
           default: 'content',
         }
-      - {
-          name: 'parent',
-          label: 'Parent',
-          widget: 'relation',
-          i18n: duplicate,
-          required: false,
-          collection: pages,
-          value_field: '{{slug}}',
-          search_fields: ['{{slug}}'],
-        }
-      - {
-          name: 'order',
-          label: 'Order',
-          widget: 'number',
-          i18n: 'duplicate',
-          required: false,
-          value_type: 'int',
-          min: 1,
-          max: 1000,
-          step: 1,
-        }
-      - { name: 'showInMenu', label: 'Show page in Menu', widget: 'boolean', i18n: 'duplicate', default: true }
       - {
           name: 'translationVerified',
           label: 'If this translation has been (manually) verified',
@@ -82,6 +60,7 @@ collections:
           required: false,
           default: false,
         }
+
   - name: 'news'
     label: 'News'
     label_singular: 'News item'
@@ -89,37 +68,30 @@ collections:
     create: true
     i18n: true
     fields:
-      - { name: 'url', label: 'URL', widget: 'string' }
-      - { name: 'type', label: 'Type', widget: 'select', options: ['twitter', 'other'] }
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: true }
+      - { name: 'title', label: 'Title', widget: 'string', i18n: true, required: true }
+      - {
+          name: 'description',
+          pattern: ['^.{0,280}$', 'Must have less than 280 characters'],
+          label: 'Description',
+          widget: 'text',
+          i18n: true,
+          required: false,
+        }
+      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
+      - { name: 'metadata', label: 'Metadata', widget: text, i18n: 'duplicate', required: false }
+
+  - name: 'Content sections'
+    label: 'Content sections'
+    label_singular: 'Content section'
+    folder: 'src/content/sections'
+    create: true
+    i18n: true
+    fields:
       - { name: 'title', label: 'Title', widget: 'string', i18n: true }
-      - { name: 'description', label: 'Description', widget: 'text', i18n: true, required: false }
-      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true }
-      # - label: URL
-      #   name: url
-      #   fields:
-      #     - { name: title, label: Title, widget: string }
-      #     - { name: url, label: URL, widget: string }
-      # - label: 'Link'
-      #   name: 'link'
-      #   widget: list
-      #   i18n: true
-      #   types:
-      #     - label: Page
-      #       name: page
-      #       fields:
-      #         - {
-      #             name: slug,
-      #             label: Page,
-      #             value_field: '{{slug}}',
-      #             search_fields: ['{{slug}}'],
-      #             widget: relation,
-      #             collection: pages,
-      #           }
-      #     - label: URL
-      #       name: url
-      #       fields:
-      #         - { name: title, label: Title, widget: string }
-      #         - { name: url, label: URL, widget: string }
+      - { name: 'show title', label: 'Show title', widget: 'boolean', i18n: 'duplicate', required: false, default: false }
+      - { name: 'left', widget: 'markdown', i18n: true }
+      - { name: 'right', widget: 'markdown', i18n: true }
 
   - name: faq
     label: FAQ
@@ -136,9 +108,9 @@ collections:
           widget: relation,
           i18n: duplicate,
           collection: categories,
-          value_field: title,
+          value_field: '{{slug}}',
           search_fields: ['title'],
-          multiple: true,
+          multiple: false,
         }
       - {
           name: order,
@@ -170,90 +142,116 @@ collections:
     fields:
       - { name: title, label: Title, widget: string, i18n: true }
 
-  - name: footer
-    label: Footer
-    files:
-      - label: 'Footer settings'
-        name: 'footer settings'
-        file: src/content/footer/settings.md
-        fields:
-          - label: Highlighted links
-            name: highlightedLinks
-            widget: list
-            types:
-              - label: Page
-                name: page
-                fields:
-                  - {
-                      name: slug,
-                      label: Page,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: pages,
-                    }
-              - label: URL
-                name: url
-                fields:
-                  - { name: title, label: Title, widget: string }
-                  - { name: url, label: URL, widget: string }
-          - label: Left links
-            name: leftLinks
-            widget: list
-            types:
-              - label: Page
-                name: page
-                fields:
-                  - {
-                      name: slug,
-                      label: Page,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: pages,
-                    }
-              - label: URL
-                name: url
-                fields:
-                  - { name: title, label: Title, widget: string }
-                  - { name: url, label: URL, widget: string }
-          - label: Right links
-            name: rightLinks
-            widget: list
-            types:
-              - label: Page
-                name: page
-                fields:
-                  - {
-                      name: slug,
-                      label: Page,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: pages,
-                    }
-              - label: URL
-                name: url
-                fields:
-                  - { name: title, label: Title, widget: string }
-                  - { name: url, label: URL, widget: string }
-          - label: Bottom links
-            name: bottomLinks
-            widget: list
-            types:
-              - label: Page
-                name: page
-                fields:
-                  - {
-                      name: slug,
-                      label: Page,
-                      value_field: '{{slug}}',
-                      search_fields: ['{{slug}}'],
-                      widget: relation,
-                      collection: pages,
-                    }
-              - label: URL
-                name: url
-                fields:
-                  - { name: title, label: Title, widget: string }
-                  - { name: url, label: URL, widget: string }
+  - name: headers
+    label: Headers
+    label_singular: Header
+    folder: src/content/headers
+    create: true
+    i18n: true
+    fields:
+      - { name: title, label: Title, widget: string, i18n: true }
+
+  - name: links
+    label: Links
+    label_singular: Link
+    folder: src/content/links
+    create: true
+    i18n: true
+    fields:
+      - { name: title, label: Title, widget: string, i18n: true }
+      - { name: url, label: URL, widget: string, i18n: duplicate }
+
+  - name: navigation
+    label: Navigation
+    label_singular: Navigation
+    folder: src/content/navigation
+    create: true
+    i18n: false
+    fields:
+      - { name: title, label: Title, widget: string }
+      - label: Links
+        name: links
+        widget: list
+        collapsed: false
+        types:
+          - label: Page
+            name: page
+            fields:
+              - {
+                  name: slug,
+                  label: Page,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: pages,
+                }
+          - label: Link
+            name: link
+            fields:
+              - {
+                  name: slug,
+                  label: Link,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: links,
+                }
+          - label: Header
+            name: header
+            fields:
+              - {
+                  name: slug,
+                  label: Header,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: headers,
+                }
+          - label: Links
+            name: links
+            fields:
+              - {
+                  name: slug,
+                  label: Header,
+                  value_field: '{{slug}}',
+                  search_fields: ['{{slug}}'],
+                  widget: relation,
+                  collection: headers,
+                }
+              - label: Links
+                name: links
+                widget: list
+                types:
+                  - label: Page
+                    name: page
+                    fields:
+                      - {
+                          name: slug,
+                          label: Page,
+                          value_field: '{{slug}}',
+                          search_fields: ['{{slug}}'],
+                          widget: relation,
+                          collection: pages,
+                        }
+                  - label: Link
+                    name: link
+                    fields:
+                      - {
+                          name: slug,
+                          label: Link,
+                          value_field: '{{slug}}',
+                          search_fields: ['{{slug}}'],
+                          widget: relation,
+                          collection: links,
+                        }
+                  - label: Header
+                    name: header
+                    fields:
+                      - {
+                          name: slug,
+                          label: Header,
+                          value_field: '{{slug}}',
+                          search_fields: ['{{slug}}'],
+                          widget: relation,
+                          collection: headers,
+                        }

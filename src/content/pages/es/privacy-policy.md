@@ -1,9 +1,6 @@
 ---
-title: Privacy policy
+title: Política de privacidad
 template: content
-parent: footer
-order: 3
-showInMenu: true
 ---
 
-Privacy policy
+Política de privacidad

@@ -3,11 +3,11 @@ import { graphql } from 'gatsby'
 import { SEO } from 'src/components/common/seo'
 import Content from 'src/components/layouts/content'
 
-export default function ContentTemplate({ data }: any) {
+export default function ContentTemplate({ data, location }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content footerData={data.footer}>
+    <Content navigationData={data.navigationData} location={location}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <h2>{page.frontmatter.title}</h2>
@@ -29,6 +29,6 @@ export const query = graphql`
         description
       }
     }
-    ...FooterData
+    ...NavigationData
   }
 `

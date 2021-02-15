@@ -1,12 +1,9 @@
 @use 'src/assets/css/variables' as *;
 @use 'partials/fonts';
 
-html,
-body {
-  height: 100%;
-}
-
 html {
+  position: relative;
+  overflow-x: hidden;
   margin: 0 auto;
   font-family: $font-primary;
   color: $color-primary;

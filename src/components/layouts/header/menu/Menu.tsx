@@ -2,23 +2,22 @@ import React from 'react'
 import css from './menu.module.scss'
 import { Link } from 'src/components/common/link'
 import { Navigation } from './navigation'
-import { useIntl } from 'gatsby-plugin-intl'
+import { usePageContext } from 'src/context/page-context'
+import { Link as LinkType } from 'src/types/Link'
 
 export const Menu = () => {
-  const intl = useIntl()
+  const { navigation } = usePageContext()
 
   return (
     <div className={css['menu']}>
       <div className={css['left']}>
-        <Link external to="https://archive.devcon.org/" className={css['highlighted-link']}>
-          {intl.formatMessage({ id: 'archive' })}
-        </Link>
-        <Link external to="https://forum.devcon.org/" className={css['highlighted-link']}>
-          {intl.formatMessage({ id: 'forum' })}
-        </Link>
-        <Link external to="https://blog.ethereum.org/category/devcon/" className={css['highlighted-link']}>
-          {intl.formatMessage({ id: 'blog' })}
-        </Link>
+        {navigation.top.map((i: LinkType) => {
+          return (
+            <Link key={`top-${i.url}`} external to={i.url} className={css['highlighted-link']}>
+              {i.title}
+            </Link>
+          )
+        })}
       </div>
 
       <div className={css['right']}>

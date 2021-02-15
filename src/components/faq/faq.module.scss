@@ -1,0 +1,16 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/fonts';
+
+.container {
+  margin-bottom: $gap-10;
+
+  a {
+    color: #88c43f;
+  }
+
+  svg {
+    fill: $color-primary;
+  }
+}
+

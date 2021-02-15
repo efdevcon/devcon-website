@@ -7,7 +7,7 @@ type Props = {
 export default React.memo((props: Props) => {
   return (
     <svg {...props} viewBox="0 0 1884 1884" fill="none" xmlns="http://www.w3.org/2000/svg" id="rays">
-      <g opacity="0.5">
+      <g opacity="0.15">
         <path d="M942.171 1153.79H940.783L941.167 1103.83H941.845L942.171 1153.79Z" fill="white" />
         <path d="M940.783 729.171H942.171L941.845 779.125H941.152L940.783 729.171Z" fill="white" />
         <path d="M729.17 942.173V940.785L779.125 941.169V941.847L729.17 942.173Z" fill="white" />
