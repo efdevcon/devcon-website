@@ -64,7 +64,7 @@ Los juegos de caza del tesoro son personalizados y adaptados alrededor de una co
 
 ## Experiencia anterior
 
-We set up [Planetscape][planetscape], a dystopian escape game for [36C3][36c3] based on the dreadful effects of climate change (CCC did **not** sponsor the game).
+Configuramos [Planetscape][planetscape], un juego de escape distópico para [36C3][36c3] basado en los terribles efectos del cambio climático (CCC) **no** patrocina el juego).
 
 El Planetscape está organizado en 20 capítulos, y requiere que los jugadores resuelvan las misiones en la vida real, exploren la congestión para encontrar pistas e interactuar con las personas. Planetscape tenía **20 niveles**, **254 jugadores**, [**1300** transacciones][ps:transactions] al contrato inteligente, y **7 equipos** terminaron el juego y reclamaron su premio.
 
@@ -112,7 +112,7 @@ El Protocolo de Dist0rción Social desarrolló [THC][thc] (Creador de Cacería d
 .                                         +---------------------+
 ```
 
-THC creates a _user-friendly application that relies on decentralized technology only_. Queremos vivir el sueño descentralizado sin compromisos, desarrollar un potente dApp que usaría Ethereum bajo la capa sin exponer ningún detalle sobre blockchain e IPFS al jugador.
+THC crea una aplicación _amigable con el usuario que se basa en la tecnología descentralizada sólo_. Queremos vivir el sueño descentralizado sin compromisos, desarrollar un potente dApp que usaría Ethereum bajo la capa sin exponer ningún detalle sobre blockchain e IPFS al jugador.
 
 El juego tiene **incorporación instantánea** al permitir que la gente juegue solo visitando un sitio web. A estas alturas, esto sucede usando un método similar al de "burner-wallet" (el monedero del jugador se crea sobre la marcha cuando se abre la dApp por primera vez). Con el fin de hacer transacciones los jugadores necesitaban Ether. Mientras que el enfoque actual es simplemente [transferir][gasstation] una pequeña cantidad de Ether (prueba) a nuevos jugadores, queremos mejorar esto usando [OpenGSN][opengsn].
 
@@ -165,27 +165,27 @@ Con el fin de desarrollar un juego similar para Devcon, la información sobre la
 
 # Requisitos operacionales & Propiedad
 
-1. _What actions are required to implement the proposal at Devcon?_
+1. _¿Qué medidas son necesarias para aplicar la propuesta en Devcon?_
 
-   - The game must be deployed few days before the conference. Physical and digital puzzles must be ready on the first day of the event.
-   - Serving the game under `devcon.org` subdomain would make the game more trustworthy.
-   - Add the link to the game to the paper guide (if any) provided at Devcon.
-   - If Devcon's designers have bandwitdh, create few official NFTs "signed by Devcon" to distribute to for the winners.
+   - El juego debe ser desplegado pocos días antes de la conferencia. Los rompecabezas físicos y digitales deben estar listos el primer día del evento.
+   - El juego bajo el subdominio `devcon.org` haría que el juego fuera más fiable.
+   - Añade el enlace al juego a la guía de papel (si los hay) proporcionada en Devcon.
+   - Si los diseñadores de Devcon tienen bandwitdh, cree algunos NFT oficiales "firmado por Devcon" para distribuirlos para los ganadores.
 
-2. _Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)_
+2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)_
 
-   - Social Dist0rtion Protocol will be responsible for the successful implementation of this proposal.
+   - El Protocolo de distensión social será responsable de la correcta aplicación de esta propuesta.
 
-3. _What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))_
-   - One of the goals of the game is to discover Devcon and its projects. Knowing in advance the list of projects would allow us to create levels around them.
+3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))_
+   - Uno de los objetivos del juego es descubrir Devcon y sus proyectos. Conocer de antemano la lista de proyectos nos permitiría crear niveles a su alrededor.
 
 # Enlaces & Información adicional
 
 Puede encontrar información adicional aquí:
 
-- :camera: [The photos](https://imgur.com/a/PCe4hCo) of the dApp and some of the puzzles.
-- :writing_hand: [Our extensive blog post](https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/) about the game.
-- :speaking_head: [Lightning Talk](https://www.youtube.com/watch?v=7RJn2gowj2I) at IPFS Pinning Summit
+- :camera: [Las fotos](https://imgur.com/a/PCe4hCo) del dApp y algunos de los rompecabezas.
+- :writing_hand: [Nuestro extenso post en el blog](https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/) sobre el juego.
+- :speaking_head: [relámpago](https://www.youtube.com/watch?v=7RJn2gowj2I) en IPFS Pinning Summit
 
 [planetscape]: https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/
 [36c3]: https://events.ccc.de/congress/2019/wiki/index.php/Main_Page
