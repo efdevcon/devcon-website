@@ -1,6 +1,6 @@
 ---
-title: Do people speak English?
+title: '¿La gente habla inglés?'
 category: location
 ---
 
-The majority of locals in Bogota speak Spanish, although you are more likely to run into English speakers in tourist-friendly areas like Candelaria, Sante Fe and Chapinero.
+La mayoría de los locales de Bogota hablan español, Aunque es más probable que usted se encuentre con hablantes de inglés en áreas turísticas como Candelaria, Sante Fe y Chapinero.
