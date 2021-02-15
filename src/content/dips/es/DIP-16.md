@@ -98,37 +98,37 @@ Podemos garantizar una primera versión de la herramienta para principios de mar
 
 Se prepara 7 semanas de trabajo (a partir de hoy) para tener la primera versión lista para la prueba piloto detallada en RFP-4.
 
-- **First week**
-  1. Joint call to make Vocdoni and POAP's proposal known in depth and to solve potential doubts. Also through the Devcon forum.
-  2. Vocdoni Bridge development
-- **Second week**
-  1. Devcon organizers provide a detailed picture of how they would like to organize the voting and how the content will be structured.
-  2. Vocdoni Bridge development
-- **Third week**
-  1. Vocdoni Bridge dev: Integration with POAP tokens
-  2. Vocdoni Bridge dev: Frontend with simple and multiple choice voting
-  3. Devcon bring feedback
+- **Primera semana**
+  1. Llamamiento conjunto para dar a conocer en profundidad la propuesta de Vocdoni y POAP y para resolver posibles dudas. También a través del foro de Devcon.
+  2. Desarrollo del puente de Vocdoni
+- **Segunda semana**
+  1. Los organizadores de Devcon proporcionan una imagen detallada de cómo les gustaría organizar la votación y cómo se estructurará el contenido.
+  2. Desarrollo del puente de Vocdoni
+- **Tercera semana**
+  1. Vocdoni Bridge dev: Integración con tokens POAP
+  2. Vocdoni Bridge dev: Interfaz con votación simple y múltiple
+  3. Devcon trae comentarios
   4. Demo
-- **Fourth week**
-  1. Vocdoni Bridge dev: Integration with POAP tokens
+- **Cuatro semana**
+  1. Vocdoni Bridge dev: Integración con tokens POAP
   2. Vocdoni Bridge dev: Frontend
-  3. Vocdoni Bridge dev: Implementing Quadratic voting in frontend
-- **Fifth week**
-  1. Vocdoni Bridge dev: Support for Web3modal
-  2. Vocdoni Bridge dev: Addressing issues
-  3. Vocdoni Bridge dev: Devcon customizations if needed
-  4. Run a test
-- **Sixth week**
-  1. Run a test
-  2. Vocdoni Bridge dev: Addressing issues
-- **Seventh week**
-  1. Run the last test before launch
-  2. Launch
-- **To address post-pilot**
-  1. Vocdoni Bridge dev: AlphaWallet integration
-  2. Vocdoni Bridge dev: Advanced privacy enhancements
-  3. Vocdoni Bridge dev: More voting type options
-  4. Explore and introduce more anti-collusion strategies
+  3. Vocdoni Bridge dev: Implementación de la votación cuadrática en el frontend
+- **Cinco semanas**
+  1. Vocdoni Bridge dev: Soporte para Web3modal
+  2. Vocdoni Bridge dev: Abordando problemas
+  3. Vocdoni Bridge dev: Personalizaciones de Devcon si es necesario
+  4. Ejecutar una prueba
+- **Seis semana**
+  1. Ejecutar una prueba
+  2. Vocdoni Bridge dev: Abordando problemas
+- **Séptima semana**
+  1. Ejecutar la última prueba antes de lanzar
+  2. Iniciar
+- **Para direccionar post-piloto**
+  1. Vocdoni Bridge dev: integración de AlphaWallet
+  2. Vocdoni Bridge dev: Mejoras avanzadas de privacidad
+  3. Puente Vocdoni dev: Más opciones de tipo de votación
+  4. Explora e introduce más estrategias anticolusión
 
 3. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
 
