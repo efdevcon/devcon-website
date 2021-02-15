@@ -1,6 +1,6 @@
 ---
 title: Why Devcon in Bogota?
-show title: true
+showTitle: true
 left: >-
   In Bogotá we found the seeds for an ambitious community that our ecosystem
   could help grow. From builders, to educational entities, local business and
