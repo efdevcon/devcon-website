@@ -57,14 +57,12 @@ Las DAO están saliendo de la Ether como setas tratando de abordar los desafíos
 ## Requisitos operacionales & Propiedad
 
 1. _¿Qué medidas son necesarias para aplicar la propuesta en Devcon?_
-
    - Necesitaremos el equipo de Devcon para convertir las contribuciones de fiat a crypto y enviarlas al DAO.
    - Los colaboradores necesitan recibir el NFT que les otorga derechos de voto en el DAO. El enfoque basado en la verificación propuesto por [Alpha Wallet en DIP–6](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md) podría ser una buena opción que permite a los contribuyentes reclamar su NFT.
    - Necesitaremos las direcciones de correo electrónico de aquellos que contribuyeron a explicar el proceso de votación y sus derechos de participación en el DAO.
    - Necesitaremos un stand en Devcon durante toda la duración del evento a
      - presentar los diferentes proyectos (tal vez incluso conseguir desarrolladores de proyectos allí en persona) y dar a los colaboradores una oportunidad de involucrarse directamente con la DAO;
      - sensibilizar sobre los desafíos ambientales en el espacio criptográfico y sobre las formas de abordarlos. La [Iniciativa de la Naturaleza Soberana](http://sovereignnature.com/) nos apoyará en ese frente.
-
 2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)_
    - CO2ken será responsable de la exitosa aplicación de esta propuesta.
 3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))_
