@@ -76,7 +76,7 @@ Estado será:
 
 El estado puede:
 
-- make public the list of public keys preloaded in the Keycard Cash Applet of each keycard.See: https://keycard.tech/docs/sdk/cash.html and https://keycard.tech/docs/web3.html
+- hacer pública la lista de claves públicas precargadas en el Keycard Cash Applet de cada keycard.Ver: https://keycard.tech/docs/sdk/cash.html y https://keycard.tech/docs/web3.html
 
 El estado será responsable de asegurarse de que el siguiente trabajo es correcto:
 
