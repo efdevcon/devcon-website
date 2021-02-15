@@ -1,8 +1,8 @@
 ---
-title: City Guide
+title: Guía de la ciudad
 template: city-guide
 ---
 
-Devcon 6 will be held in **Bogota**, Colombia's capital and largest city.
+El Devcon 6 se celebrará en **Bogota**, capital de Colombia y ciudad más grande.
 
-**Bogota** is the capital of and largest city in Colombia. It is a place of convergence for people from all around the country and is therefore diverse and multicultural. Within this city, the past and present come together.
+**Bogota** es la capital y la ciudad más grande de Colombia. Es un lugar de convergencia para personas de todo el país y, por lo tanto, es diverso y multicultural. Dentro de esta ciudad, el pasado y el presente se unen.
