@@ -98,14 +98,37 @@ Podemos garantizar una primera versión de la herramienta para principios de mar
 
 Se prepara 7 semanas de trabajo (a partir de hoy) para tener la primera versión lista para la prueba piloto detallada en RFP-4.
 
-- **Primera semana** 1) Llamada conjunta para dar a conocer en profundidad la propuesta de Vocdoni y POAP y para resolver posibles dudas. También a través del foro de Devcon. 2) Desarrollo del puente de Vocdoni
-- **Segunda semana** 1) Los organizadores de desarrolladores proporcionan una imagen detallada de cómo les gustaría organizar la votación y cómo se estructurará el contenido. 2) Desarrollo del puente de Vocdoni
-- **Tercera semana** 1) Vocdoni Bridge dev: Integración con tokens POAP 2) Vocdoni Bridge dev: interfaz con votación simple y múltiple 3) Devcon traer feedback 4) Demo
-- **Cuatra semana** 1) Vocdoni Bridge dev: Integración con tokens POAP 2) Vocdoni Bridge dev: Frontend 3) Vocdoni Bridge dev: Implementación de la votación cuadrática en el frontend
-- **Fifta semana** 1) Vocdoni Bridge dev: Support for Web3modal 2) Vocdoni Bridge dev: Addressing issues 3) Vocdoni Bridge dev: Devcon customizations if needed 4) Ejecute una prueba
-- **Seis semanas** 1) Ejecutar una prueba 2) Vocdoni Bridge dev: Direccionar problemas
-- **Séptima semana** 1) Ejecute la última prueba antes de lanzar 3) Iniciar
-- **Para dirigirse después del piloto** 1) Vocdoni Bridge dev: integración de AlphaWallet 2) Vocdoni Bridge dev: Avanzadas mejoras de privacidad 3) Vocdoni Bridge dev: Más opciones de tipo de votación 4) Explora e introduce más estrategias anticolusión
+- **Primera semana**
+  1. Llamamiento conjunto para dar a conocer en profundidad la propuesta de Vocdoni y POAP y para resolver posibles dudas. También a través del foro de Devcon.
+  2. Desarrollo del puente de Vocdoni
+- **Segunda semana**
+  1. Los organizadores de Devcon proporcionan una imagen detallada de cómo les gustaría organizar la votación y cómo se estructurará el contenido.
+  2. Desarrollo del puente de Vocdoni
+- **Tercera semana**
+  1. Vocdoni Bridge dev: Integración con tokens POAP
+  2. Vocdoni Bridge dev: Interfaz con votación simple y múltiple
+  3. Devcon trae comentarios
+  4. Demo
+- **Cuatro semana**
+  1. Vocdoni Bridge dev: Integración con tokens POAP
+  2. Vocdoni Bridge dev: Frontend
+  3. Vocdoni Bridge dev: Implementación de la votación cuadrática en el frontend
+- **Cinco semanas**
+  1. Vocdoni Bridge dev: Soporte para Web3modal
+  2. Vocdoni Bridge dev: Abordando problemas
+  3. Vocdoni Bridge dev: Personalizaciones de Devcon si es necesario
+  4. Ejecutar una prueba
+- **Seis semana**
+  1. Ejecutar una prueba
+  2. Vocdoni Bridge dev: Abordando problemas
+- **Séptima semana**
+  1. Ejecutar la última prueba antes de lanzar
+  2. Iniciar
+- **Para direccionar post-piloto**
+  1. Vocdoni Bridge dev: integración de AlphaWallet
+  2. Vocdoni Bridge dev: Mejoras avanzadas de privacidad
+  3. Puente Vocdoni dev: Más opciones de tipo de votación
+  4. Explora e introduce más estrategias anticolusión
 
 3. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
 
@@ -115,11 +138,11 @@ Los equipos Vocdoni y POAP ya están trabajando en el proyecto para permitir a l
 
 **Entregables y Propiedades\u00BB**
 
-| #   | Entregable                              | Descripción                                                                                                                                                            | Propietario |
-| --- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| 1.  | Sistema de votación basado en token web | <ul><li>Plataforma de voto del puente Vocdoni</li><li>Bibliotecas para tener compatibilidad con los tokens NFT</li><li>Despliegue bajo un dominio específico</li></ul> | Vocdoni     |
-| 2.  | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul>                                                                                                                              | PUEDAR      |
-| 3.  | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul>                                                                            | DevCon      |
+| #  | Entregable                              | Descripción               | Propietario |
+| -- | --------------------------------------- | ------------------------- | ----------- |
+| 1. | Sistema de votación basado en token web | <ul><li>Plataforma de voto del puente Vocdoni</li><li>Bibliotecas para tener compatibilidad con los tokens NFT</li><li>Despliegue bajo un dominio específico</li></ul> | Vocdoni     |
+| 2. | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul> | PUEDAR      |
+| 3. | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul> | DevCon      |
 
 4. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
 
