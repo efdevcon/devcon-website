@@ -17,7 +17,7 @@ Created: 2020-11-25
 
 ## Resumen de la propuesta
 
-For all those people who wanted to speak, but didn't get approved: Mark off space in the venue and allow for the submission of posters of their ideas / talks. Presentar los carteles durante la conferencia. Permitir que respondan a las preguntas en intervalos de tiempo asignados, por ejemplo, a través del chat o el correo electrónico.
+Para todas aquellas personas que querían hablar, pero no se aprobó: Marque el espacio en el lugar y permita la presentación de carteles de sus ideas / conversaciones. Presentar los carteles durante la conferencia. Permitir que respondan a las preguntas en intervalos de tiempo asignados, por ejemplo, a través del chat o el correo electrónico.
 
 ## Resumen
 
@@ -47,7 +47,7 @@ El equipo de organización. Quiero asistir a DevCon 2021 de todos modos, así qu
 
 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
 
-Maybe POAP :D There are awards for "Best Poster Presentation" or "Best Talk" at other conferences. ¿Por qué no hacer fichas POAP especiales que se conceden a las personas que ganaron esos premios?
+Tal vez POAP :D Hay premios por "Mejor presentación de carteles" o "Mejor charla" en otras conferencias. ¿Por qué no hacer fichas POAP especiales que se conceden a las personas que ganaron esos premios?
 
 ## Enlaces & Información adicional
 
