@@ -20,13 +20,13 @@ export default function CityGuideTemplate({ data, location }: any) {
   const faq = faqs.filter(i => i.id === 'location')
   const todo = {
     title: data.todo.nodes[0].frontmatter.title,
-    show_title: data.todo.nodes[0].frontmatter.show_title,
+    showTitle: data.todo.nodes[0].frontmatter.showTitle,
     left: data.todo.nodes[0].fields.frontmattermd.left.html,
     right: data.todo.nodes[0].fields.frontmattermd.right.html,
   }
   const why = {
     title: data.why.nodes[0].frontmatter.title,
-    show_title: data.why.nodes[0].frontmatter.show_title,
+    showTitle: data.why.nodes[0].frontmatter.showTitle,
     left: data.why.nodes[0].fields.frontmattermd.left.html,
     right: data.why.nodes[0].fields.frontmattermd.right.html,
   }
@@ -110,7 +110,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
-          show_title
+          showTitle
         }
         fields {
           id
@@ -134,7 +134,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
-          show_title
+          showTitle
         }
         fields {
           id
