@@ -1,6 +1,6 @@
 ---
-title: Why Devcon in Bogota?
-show title: true
+title: verdad
+show 
 left: >-
   In Bogotá we found the seeds for an ambitious community that our ecosystem
   could help grow. From builders, to educational entities, local business and
@@ -16,8 +16,10 @@ right: >-
   conference center is built to handle everything the Devcon requires, from
   catering, to wifi, meeting-space and more.
 
+
   Our search for fitting Devcon 6 began prior to Devcon 5. After exploring venues in over ten cities across the world, and meticulously evaluating each against an extensive set of criteria, the clear winner was Bogota, Colombia.
 
 
   This process has been long and somewhat delicate given the complicated year that we’ve all had, but we are excited and confident for Devcon 6 in Bogota.
 ---
+
