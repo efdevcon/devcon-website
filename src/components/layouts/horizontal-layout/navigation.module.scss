@@ -1,0 +1,177 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/fonts';
+
+@mixin nav-number {
+  font-size: 10px;
+  line-height: 1em;
+  display: inline-block;
+  font-family: $font-secondary;
+  width: $gap-5;
+  color: rgba(144, 152, 161, 1);
+}
+
+.header {
+  height: 64px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  justify-content: space-between;
+
+  &.open {
+    .toggle {
+      > * {
+        &:nth-child(1) {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          display: inline-block;
+          font-size: 15px;
+        }
+      }
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    .foldout {
+      transform: translateX(0%);
+    }
+  }
+
+  .toggle {
+    @extend .header;
+    @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+
+    > * {
+      &:nth-child(1) {
+        display: inline-block;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  .logo {
+    width: 100%;
+    @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-1);
+
+    img {
+      width: 32px;
+      user-select: none;
+    }
+  }
+
+  .backdrop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: -1;
+  }
+
+  .foldout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 348px;
+    background: white;
+    height: 100%;
+    top: 0px;
+    left: 100%;
+    z-index: -2;
+    transform: translateX(calc(-100% + 1px));
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-out;
+
+    .header {
+      @extend .header;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: $gap-5;
+      padding-right: $gap-5;
+
+      > svg {
+        fill: none;
+        font-size: $size-12;
+        margin-top: -$size-4;
+      }
+    }
+
+    .nav {
+      @include gaps.responsive-gap($attribute: padding, $top: $gap-6, $bottom: $gap-4, $min-gap: $gap-1);
+      flex-grow: 1;
+      list-style-type: none;
+
+      li {
+        @include fonts.font-xl;
+        @include fonts.bold;
+        // @include gaps.responsive-gap($attribute: padding, $left: $gap-4, $min-gap: $gap-1);
+        position: relative;
+        cursor: pointer;
+        margin-bottom: $gap-6;
+        line-height: 1em;
+        vertical-align: text-top;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        &:before {
+          content: attr(data-index);
+          @include nav-number;
+        }
+      }
+    }
+
+    .nav-footer {
+      @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-1);
+    }
+  }
+
+  .inline-nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: -3;
+    bottom: 0;
+    left: 100%;
+    @include gaps.responsive-gap($attribute: margin, $left: $gap-10, $bottom: $gap-5, $min-gap: $gap-4);
+
+    > svg {
+      margin-top: -$size-4;
+      width: $size-8;
+      height: $size-8;
+    }
+
+    .inline-nav-list {
+      display: flex;
+      list-style-type: none;
+
+      > li {
+        cursor: pointer;
+        @include nav-number;
+        font-size: 12px;
+        margin-left: $gap-3;
+      }
+    }
+  }
+}

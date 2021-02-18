@@ -55,5 +55,12 @@
   "dips_expand": "Expand",
   "dips_all": "All",
   "dips_forum": "Forum",
-  "dips_next_dip": "Next DIP"
+  "dips_next_dip": "Next DIP",
+  "rtd": "Road to Devcon",
+  "rtd_get_informed": "Get informed",
+  "rtd_participate": "Participate",
+  "rtd_contribute": "Contribute",
+  "rtd_learn": "Learn",
+  "rtd_message_from_deva": "Message from Deva",
+  "rtd_invite": "Invite"
 }
