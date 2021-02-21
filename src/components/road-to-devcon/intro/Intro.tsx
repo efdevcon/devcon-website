@@ -25,6 +25,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
             page. It is still possible to render custom things on the rest of the page - like the background image in on
             this page.
           </p>
+          <div className={css['background']}></div>
         </div>
       </PageContent>
     </Page>

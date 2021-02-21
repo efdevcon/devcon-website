@@ -12,21 +12,42 @@
 }
 
 .layout-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
-  height: 100vh; // This will not work for iOS/safari - need to find alternative at some point (maybe just calculate screen-size on load)
-  width: 100%;
-  overflow: hidden;
+
+  @media (max-width: $screen-md) {
+    flex-direction: column;
+    padding-top: 64px;
+  }
 
   .page-track {
+    position: relative;
     display: flex;
     flex-grow: 1;
     flex-direction: row;
     flex-wrap: nowrap;
     transition: transform 0.05s linear;
+    margin-left: 64px;
+
+    // If not using mouse, we just fall back to native scroll behaviour (i.e. swipe)
+    @media (hover: none) {
+      overflow: auto;
+    }
+
+    @media (max-width: $screen-md) {
+      margin-left: 0px;
+    }
 
     .page {
+      position: relative;
       flex-basis: 100%;
       flex-shrink: 0;
+      max-height: 100%;
+      overflow: hidden;
 
       .layer {
         display: flex;

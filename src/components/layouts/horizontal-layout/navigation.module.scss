@@ -2,6 +2,8 @@
 @use 'src/assets/css/partials/gaps';
 @use 'src/assets/css/partials/fonts';
 
+$nav-width: 348px;
+
 @mixin nav-number {
   font-size: 10px;
   line-height: 1em;
@@ -17,13 +19,25 @@
 }
 
 .navigation {
-  position: relative;
+  position: fixed;
+  height: 100%;
+  width: 64px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 1000;
   justify-content: space-between;
+
+  @media (max-width: $screen-md) {
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    top: 0px;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+  }
 
   &.open {
     .toggle {
@@ -57,6 +71,13 @@
     font-size: 18px;
     cursor: pointer;
 
+    @media (max-width: $screen-md) {
+      width: 64px;
+      font-size: 24px;
+      border-bottom: none;
+      order: 1;
+    }
+
     > * {
       &:nth-child(1) {
         display: inline-block;
@@ -72,16 +93,37 @@
     width: 100%;
     @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-1);
 
+    @media (max-width: $screen-md) {
+      display: none;
+    }
+
     img {
       width: 32px;
       user-select: none;
     }
   }
 
+  .logo-mobile {
+    display: none;
+    @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-4);
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $screen-md) {
+      display: flex;
+    }
+
+    > svg {
+      height: 38px;
+      fill: #2f354b;
+    }
+  }
+
   .backdrop {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: calc(#{$nav-width} + 100%);
+    right: 0;
     background: white;
     z-index: -1;
   }
@@ -91,15 +133,28 @@
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    width: 348px;
+    width: $nav-width;
     background: white;
     height: 100%;
     top: 0px;
     left: 100%;
+    overflow: auto;
     z-index: -2;
     transform: translateX(calc(-100% + 1px));
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-out;
+    transition: transform 0.15s linear;
+
+    @media (max-width: $screen-md) {
+      padding: $gap-4;
+      width: 100%;
+      height: auto;
+      bottom: 0;
+      top: 64px;
+      position: fixed;
+      transform: translateY(calc(-100% - 1px));
+      border-right: none;
+      left: 0px;
+    }
 
     .header {
       @extend .header;
@@ -108,6 +163,10 @@
       justify-content: space-between;
       padding-left: $gap-5;
       padding-right: $gap-5;
+
+      @media (max-width: $screen-md) {
+        display: none;
+      }
 
       > svg {
         fill: none;
@@ -156,6 +215,10 @@
     left: 100%;
     @include gaps.responsive-gap($attribute: margin, $left: $gap-10, $bottom: $gap-5, $min-gap: $gap-4);
 
+    @media (max-width: $screen-md) {
+      display: none;
+    }
+
     > svg {
       margin-top: -$size-4;
       width: $size-8;
@@ -174,4 +237,14 @@
       }
     }
   }
+}
+
+.drag-to-continue {
+  position: fixed;
+  z-index: 100;
+  color: rgba(0, 179, 164, 1);
+  font-family: $font-secondary;
+  right: $gap-4;
+  bottom: $gap-4;
+  text-transform: uppercase;
 }

@@ -42,18 +42,18 @@ export const PageContent = (props: PageContentProps) => {
   return (
     <div className={css['layer']}>
       <div className={css['header']}>
-        <h3 className={css['page-title']} data-index={props.index}>
+        <h3 className={`${css['page-title']}`} data-index={props.index}>
           {props.title}
         </h3>
 
-        <h2 className={css['background-text']}>
+        <h2 className={`${css['background-text']}`}>
           {props.backgroundText.split(' ').map((word, index) => {
             return <span key={index}>{word}</span>
           })}
         </h2>
 
         {props.links && (
-          <div className={css['links']}>
+          <div className={`${css['links']}`}>
             {props.links.map((link: LinkType) => {
               return (
                 <h3 key={link.url}>
@@ -69,6 +69,10 @@ export const PageContent = (props: PageContentProps) => {
 
       <div
         className={css['content']}
+        onMouseDown={e => e.stopPropagation()}
+        onScroll={e => {
+          if (scrollTimeout) e.preventDefault()
+        }}
         onWheel={e => {
           if (!recentlyScrolled) {
             e.nativeEvent.stopImmediatePropagation()
@@ -84,12 +88,14 @@ export const PageContent = (props: PageContentProps) => {
 }
 
 let recentlyScrolled = false
-let scrollTimeout
+let scrollTimeout: NodeJS.Timeout
+const isTouchDevice = matchMedia('(hover: none)').matches
 
 export const HorizontalLayout = (props: any) => {
   const [scrollX, setScrollX] = React.useState(0)
   const [trackWidth, setTrackWidth] = React.useState(0)
   const [pageWidth, setPageWidth] = React.useState(0)
+  const dragging = React.useRef<boolean>(false)
   const trackRef = React.useRef<HTMLDivElement>()
   const pages = props.children
   const pageRefs = React.useRef<any>({})
@@ -118,6 +124,8 @@ export const HorizontalLayout = (props: any) => {
   }, [trackWidth, pageWidth])
 
   React.useLayoutEffect(() => {
+    if (isTouchDevice) return
+
     if (window.ResizeObserver) {
       const el = trackRef.current
 
@@ -137,11 +145,50 @@ export const HorizontalLayout = (props: any) => {
     }
   }, [trackWidth, pageWidth])
 
+  const onDragEnd = () => {
+    if (dragging.current === false) return
+    if (isTouchDevice) return
+    // Resync state when dragging ends
+    setScrollX(dragging.current)
+
+    dragging.current = false
+    trackRef.current.style.transition = ''
+    trackRef.current.style.cursor = ''
+  }
+
   return (
     <div className={css['layout-container']}>
-      <Navigation setScrollX={setScrollX} pages={pages} pageRefs={pageRefs} />
+      <Navigation setScrollX={setScrollX} pages={pages} pageTrackRef={trackRef} pageRefs={pageRefs} />
 
-      <div ref={trackRef} className={css['page-track']} style={{ transform: `translateX(${-scrollX}px)` }}>
+      <div
+        ref={trackRef}
+        // Record current X when dragging begins
+        onMouseDown={e => {
+          e.preventDefault()
+
+          dragging.current = scrollX
+        }}
+        onMouseLeave={onDragEnd}
+        onMouseUp={onDragEnd}
+        onMouseMove={e => {
+          if (isTouchDevice) return
+          if (dragging.current === false) return
+          e.preventDefault()
+
+          const lastX = dragging.current
+          const speed = 1.5
+          const nextX = Math.min(trackWidth - pageWidth, Math.max(0, lastX - e.movementX * speed))
+
+          // Animate element directly for performance - resync state when drag ends.
+          trackRef.current.style.transform = `translateX(-${nextX}px)`
+          // Disable transition (enabled for smoother scrolling), because it works poorly when dragging
+          trackRef.current.style.transition = 'none'
+          trackRef.current.style.cursor = 'grabbing'
+          dragging.current = nextX
+        }}
+        className={css['page-track']}
+        style={{ transform: `translateX(${-scrollX}px)` }}
+      >
         {React.Children.map(pages, (Page, index) => {
           return React.cloneElement(Page, {
             ref: (ref: HTMLDivElement) => {
