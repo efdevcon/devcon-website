@@ -130,7 +130,7 @@ export const HorizontalLayout = (props: any) => {
 
   React.useEffect(() => {
     const scrollHandler = (e: any) => {
-      if (trackRef.current) return
+      if (!trackRef.current) return
 
       const scrolledDown = e.deltaY > 0
 
