@@ -55,5 +55,17 @@
   "dips_expand": "Expandir",
   "dips_all": "Todos",
   "dips_forum": "Foro",
-  "dips_next_dip": "Siguiente DIP"
+  "dips_next_dip": "Siguiente DIP",
+  "rtd": "Road to Devcon",
+  "rtd_get_informed": "Get informed",
+  "rtd_participate": "Participate",
+  "rtd_community_events": "Community Events",
+  "rtd_contribute": "Contribute",
+  "rtd_improvement_proposals": "Improvement Proposals",  
+  "rtd_learn": "Learn",
+  "rtd_educational_resources": "Educational Resources",
+  "rtd_message_from_deva": "Message from Deva",
+  "rtd_ask_deva": "Ask Deva",
+  "rtd_frequently_asked_questions": "Frequently Asked Questions",
+  "rtd_invite": "Invite"
 }

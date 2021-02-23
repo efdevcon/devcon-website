@@ -28,7 +28,11 @@ export function Search(props: SearchProp) {
           value={searchFilter}
           onChange={e => onSearch(e)}
         />
-        <span className={css['subtitle']}>{intl.formatMessage({ id: 'faq_filter' })}</span>
+        
+        {/* 
+        RTD: remove sub-text
+        <span className={css['subtitle']}>{intl.formatMessage({ id: 'faq_filter' })}</span> 
+        */}
       </div>
     </>
   )
