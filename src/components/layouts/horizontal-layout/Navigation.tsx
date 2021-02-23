@@ -21,8 +21,8 @@ type NavigationProps = {
   pages: React.ReactNode
   links: LinkType[]
   pageRefs: PageRefs
-  pageTrackRefs: any
-  setScrollX: any
+  pageTrackRef: any
+  lastX: any
 }
 
 const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
@@ -65,10 +65,14 @@ export const Navigation = (props: NavigationProps) => {
                   key={title}
                   data-index={leftPad(index + 1 + '')}
                   onClick={() => {
+                    const offsetLeft = props.pageRefs.current[title].offsetLeft
+
                     if (isTouchDevice) {
-                      props.pageTrackRef.current.scrollLeft = props.pageRefs.current[title].offsetLeft
+                      props.pageTrackRef.current.scrollLeft = offsetLeft
                     } else {
-                      props.setScrollX(props.pageRefs.current[title].offsetLeft)
+                      props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
+
+                      props.lastX.current = offsetLeft
                     }
                   }}
                 >
@@ -113,10 +117,14 @@ export const Navigation = (props: NavigationProps) => {
                   key={title}
                   data-index={leftPad(index + 1 + '')}
                   onClick={() => {
+                    const offsetLeft = props.pageRefs.current[title].offsetLeft
+
                     if (isTouchDevice) {
-                      props.pageTrackRef.current.scrollLeft = props.pageRefs.current[title].offsetLeft
+                      props.pageTrackRef.current.scrollLeft = offsetLeft
                     } else {
-                      props.setScrollX(props.pageRefs.current[title].offsetLeft)
+                      props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
+
+                      props.lastX.current = offsetLeft
                     }
                   }}
                 >
