@@ -6,11 +6,20 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { ToLinks } from 'src/context/query-mapper'
 import { Link } from 'src/types/Link'
 
-export default (props: any) => {
+import { Contribute } from 'src/components/road-to-devcon/contribute'
+import { ToDIPData } from 'src/components/dip-overview/queryMapper'
+import { ToFaqData } from 'src/components/faq/queryMapper'
+import { Ask } from 'src/components/road-to-devcon/ask'
+import { Learn } from 'src/components/road-to-devcon/learn'
+import { Participate } from 'src/components/road-to-devcon/participate'
+
+export default function Index({ data }: any) {
   const intl = useIntl()
+  const dips = ToDIPData(data.dips)
+  const faqs = ToFaqData(data)
 
   return (
-    <HorizontalLayout links={ToLinks(props.data.navigationData.nodes, 'road-to-devcon')}>
+    <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
       <Intro title={intl.formatMessage({ id: 'rtd' })} />
 
       <Page title={intl.formatMessage({ id: 'rtd_get_informed' })}>
@@ -19,18 +28,15 @@ export default (props: any) => {
           style={{ height: '500px', width: '500px', marginLeft: '150px', marginTop: '200px', background: 'pink' }}
         ></div>
       </Page>
-      <Page title={intl.formatMessage({ id: 'rtd_participate' })}>
-        <h1>Page 3</h1>
-      </Page>
-      <Page title={intl.formatMessage({ id: 'rtd_contribute' })}>
-        <h1>Page 4</h1>
-      </Page>
-      <Page title={intl.formatMessage({ id: 'rtd_learn' })}>
-        <h1>Page 5</h1>
-      </Page>
-      <Page title={intl.formatMessage({ id: 'rtd_message_from_deva' })}>
-        <h1>Page 6</h1>
-      </Page>
+
+      <Participate title={intl.formatMessage({ id: 'rtd_participate' })} />
+
+      <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
+
+      <Learn title={intl.formatMessage({ id: 'rtd_learn' })} />
+
+      <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
+
       <Page title={intl.formatMessage({ id: 'rtd_invite' })}>
         <h1>Page 7</h1>
       </Page>
@@ -59,5 +65,8 @@ export const query = graphql`
         }
       }
     }
+    ...DipsData
+    ...Categories
+    ...FAQs
   }
 `

@@ -6,15 +6,17 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: $gap-10;
+  // RTD: remove margin-bottom
+  // margin-bottom: $gap-10;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px;
 
   .top-container {
-    @include gaps.responsive-gap($attribute: padding, $top: $gap-10, $bottom: $gap-10, $min-gap: $gap-4);
-    // padding-top: $gap-10;
-    // padding-bottom: $gap-10;
-    border-top: 1px solid #30354b;
+    // RTD: remove border-top + smaller paddings
+    @include gaps.responsive-gap($attribute: padding, $bottom: $gap-4, $min-gap: $gap-2);
+    // @include gaps.responsive-gap($attribute: padding, $top: $gap-10, $bottom: $gap-10, $min-gap: $gap-4);
+    // border-top: 1px solid #30354b;
+    // END
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -154,11 +156,15 @@
 }
 
 .links {
-  font-size: 1.5rem;
+  // RTD: smaller font-size
+  // font-size: 1.5rem;
+  font-size: 1rem;
 
   > * {
     cursor: pointer;
-    @include gaps.responsive-gap($attribute: margin, $right: $gap-4, $min-gap: $gap-2);
+    // RTD: smaller gaps
+    // @include gaps.responsive-gap($attribute: margin, $right: $gap-4, $min-gap: $gap-2);
+    @include gaps.responsive-gap($attribute: margin, $right: $gap-2, $min-gap: $gap-1);
 
     &:last-child {
       margin-right: 0px;

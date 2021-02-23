@@ -3,7 +3,8 @@
 @use 'src/assets/css/partials/fonts';
 
 .search-bar {
-    padding: $gap-8 0;
+    // RTD: remove padding
+    // padding: $gap-8 0;
   
     input {
       font-size: $size-12;

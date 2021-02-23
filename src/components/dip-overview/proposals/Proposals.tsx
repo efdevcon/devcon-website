@@ -156,18 +156,19 @@ const tableColumns: Array<TableColumn> = [
       return <Links dip={item} />
     },
   },
-  {
-    intl: 'dips_expand',
-    key: 'link',
-    className: css['expand-column'],
-    render: item => {
-      return (
-        <Link to={item.slug}>
-          <ArrowRight />
-        </Link>
-      )
-    },
-  },
+  // RTD: remove expand colum/link
+  // {
+  //   intl: 'dips_expand',
+  //   key: 'link',
+  //   className: css['expand-column'],
+  //   render: item => {
+  //     return (
+  //       <Link to={item.slug}>
+  //         <ArrowRight />
+  //       </Link>
+  //     )
+  //   },
+  // },
 ]
 
 type ProposalsProps = {

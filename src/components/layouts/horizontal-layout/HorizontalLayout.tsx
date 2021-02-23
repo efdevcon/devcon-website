@@ -4,6 +4,10 @@ import { Navigation } from './Navigation'
 import leftPad from 'src/utils/left-pad'
 import { Link } from 'src/components/common/link'
 
+import IconGithub from 'src/assets/icons/github.svg'
+import IconGlobe from 'src/assets/icons/globe.svg'
+import IconDiscussion from 'src/assets/icons/discussion.svg'
+
 type PageProps = {
   title: string
   index?: string
@@ -13,7 +17,7 @@ type PageProps = {
 type LinkType = {
   title: string
   url: string
-  icon?: string
+  icon?: 'github' | 'forum' | 'web'
 }
 
 type PageContentProps = {
@@ -39,6 +43,20 @@ export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
 })
 
 export const PageContent = (props: PageContentProps) => {
+
+  const renderIcon = (type: string) => {
+    if (!type) return <></>
+
+    switch (type) {
+      case 'github':
+        return <span className={`${css['icon-link']}`}><IconGithub /></span>
+      case 'forum':
+        return <span className={`${css['icon-link']}`}><IconDiscussion /></span>
+      case 'web':
+        return <span className={`${css['icon-link']}`}><IconGlobe /></span>
+    }
+  }
+
   return (
     <div className={css['layer']}>
       <div className={css['header']}>
@@ -46,7 +64,7 @@ export const PageContent = (props: PageContentProps) => {
           {props.title}
         </h3>
 
-        <h2 className={`${css['background-text']}`}>
+        <h2 className={`${css['background-text-gradient']}`}>
           {props.backgroundText.split(' ').map((word, index) => {
             return <span key={index}>{word}</span>
           })}
@@ -57,7 +75,8 @@ export const PageContent = (props: PageContentProps) => {
             {props.links.map((link: LinkType) => {
               return (
                 <h3 key={link.url}>
-                  <Link to={link.url} indicateExternal>
+                  <Link to={link.url} className={css['link-class']}>
+                    {link.icon && renderIcon(link.icon)}
                     {link.title}
                   </Link>
                 </h3>
@@ -81,7 +100,9 @@ export const PageContent = (props: PageContentProps) => {
           }
         }}
       >
-        {props.children}
+        <div>
+          {props.children}
+        </div>
       </div>
     </div>
   )

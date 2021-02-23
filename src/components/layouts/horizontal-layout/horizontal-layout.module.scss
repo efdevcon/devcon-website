@@ -75,6 +75,8 @@
 
           .page-title {
             font-family: $font-secondary;
+            text-transform: uppercase;
+
             &:before {
               content: attr(data-index);
               @include nav-number;
@@ -83,21 +85,48 @@
 
           .background-text {
             font-size: $size-8 * 9;
-            line-height: $size-8 * 8;
+            line-height: $size-8 * 8;            
             > span {
               display: block;
             }
           }
 
+          .background-text-gradient { 
+            @extend .background-text;
+
+            background: conic-gradient(from 178.57deg at 60.56% 57.14%, #EDEFCF 0deg, #EDEDCE 24.56deg, #EEEBCC 51.02deg, #F3C4BA 102.55deg, #C5D4E4 137.2deg, #C5D8ED 169.68deg, #C5D7EA 170.39deg, #D9CDD2 202.5deg, #FF7852 265.36deg, #D4D1D8 328.41deg, #D4D3D9 339.22deg, #D3D7DA 360deg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
           .links {
             display: flex;
+            text-transform: uppercase;
+
+            h3 {
+              margin-right: $gap-8;
+    
+              &:last-child {
+                margin-right: 0px;
+              }
+            }
+
+            svg { 
+              height: 18px;
+            }
+          }
+
+          .icon-link { 
+            margin-right: $gap-2;
           }
         }
 
         .content {
-          border: 1px solid black;
           overflow: auto;
           height: 570px;
+          box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+          background: #fff;
+          padding: $gap-6;
         }
       }
     }
