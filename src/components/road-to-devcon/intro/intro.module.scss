@@ -2,9 +2,118 @@
 @use 'src/assets/css/partials/gaps';
 @use 'src/assets/css/partials/fonts';
 
-.background {
+.container {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-image: url('https://images.unsplash.com/photo-1613558065025-b7d6834083a4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+
+  @include gaps.responsive-gap(
+    $attribute: padding,
+    $top: $gap-16 + $gap-2,
+    $left: $gap-16 + $gap-2,
+    $right: $gap-10,
+    $bottom: $gap-10,
+    $min-gap: $gap-4
+  );
+
+  .text {
+    width: 750px;
+    max-width: 80%;
+
+    h1 {
+      font-size: $size-8 * 9;
+      line-height: $size-8 * 8;
+
+      @media (max-width: $screen-sm) {
+        font-size: $size-8 * 6;
+        line-height: $size-8 * 5;
+      }
+    }
+
+    h1,
+    p {
+      @include gaps.responsive-gap($attribute: margin, $bottom: $gap-6, $min-gap: $gap-4);
+    }
+
+    button {
+      > * {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+.hash-tag {
+  color: rgba(13, 174, 208, 1);
+  position: absolute;
+  top: $gap-4;
+  right: $gap-4;
+}
+
+.leslie {
+}
+
+.guy {
+}
+
+.marker {
+}
+
+.angle {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  // bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #62f3e5;
+  opacity: 0.3;
+  transform: skewY(-17deg);
+  z-index: -1;
+
+  // position: absolute;
+  // top: 0px;
+  // width: 100%;
+  // z-index: -2;
+  // height: 80%;
+  // background-color: blue;
+  // margin-right: 50%;
+  // opacity: 0.3;
+
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   top: -100%;
+  //   left: 0;
+  //   width: 200%;
+  //   height: 100%;
+  //   background-color: #62f3e5;
+  //   transform: skewY(-15deg);
+  //   z-index: -1;
+  // }
+}
+
+.road {
+  position: absolute;
+  height: 80%;
+  top: 20%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: 8%;
+
+  @media (max-width: 1500px) {
+    object-position: 12%;
+  }
+
+  @media (max-width: 1300px) {
+    object-position: 16%;
+  }
+
+  @media (max-width: 1100px) {
+    object-position: 24%;
+  }
+
+  @media (max-width: 800px) {
+    object-position: 30%;
+  }
 }

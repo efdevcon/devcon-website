@@ -43,35 +43,46 @@ export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
 })
 
 export const PageContent = (props: PageContentProps) => {
-
   const renderIcon = (type: string) => {
     if (!type) return <></>
 
     switch (type) {
       case 'github':
-        return <span className={`${css['icon-link']}`}><IconGithub /></span>
+        return (
+          <span className={`${css['icon-link']}`}>
+            <IconGithub />
+          </span>
+        )
       case 'forum':
-        return <span className={`${css['icon-link']}`}><IconDiscussion /></span>
+        return (
+          <span className={`${css['icon-link']}`}>
+            <IconDiscussion />
+          </span>
+        )
       case 'web':
-        return <span className={`${css['icon-link']}`}><IconGlobe /></span>
+        return (
+          <span className={`${css['icon-link']}`}>
+            <IconGlobe />
+          </span>
+        )
     }
   }
 
   return (
     <div className={css['layer']}>
       <div className={css['header']}>
-        <h3 className={`${css['page-title']}`} data-index={props.index}>
+        <h3 className={`${css['page-title']} no-select`} data-index={props.index}>
           {props.title}
         </h3>
 
-        <h2 className={`${css['background-text-gradient']}`}>
+        <h2 className={`${css['background-text-gradient']} no-select`}>
           {props.backgroundText.split(' ').map((word, index) => {
             return <span key={index}>{word}</span>
           })}
         </h2>
 
         {props.links && (
-          <div className={`${css['links']}`}>
+          <div className={`${css['links']} no-select`}>
             {props.links.map((link: LinkType) => {
               return (
                 <h3 key={link.url}>
@@ -95,14 +106,10 @@ export const PageContent = (props: PageContentProps) => {
         onWheel={e => {
           if (!recentlyScrolled) {
             e.nativeEvent.stopImmediatePropagation()
-          } else {
-            e.stopPropagation()
           }
         }}
       >
-        <div>
-          {props.children}
-        </div>
+        <div>{props.children}</div>
       </div>
     </div>
   )
