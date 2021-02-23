@@ -19,7 +19,7 @@
   left: 0;
   display: flex;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-sm) {
     flex-direction: column;
     padding-top: 64px;
   }
@@ -38,7 +38,7 @@
       overflow: auto;
     }
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-sm) {
       margin-left: 0px;
     }
 

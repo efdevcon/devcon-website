@@ -16,8 +16,8 @@ export default function Index({ data }: any) {
 }
 
 export const query = graphql`
-  query($language: String!, $withNews: Boolean!) {
+  query($language: String!) {
     ...NavigationData
-    ...NewsData @include(if: $withNews)
+    ...NewsData
   }
 `

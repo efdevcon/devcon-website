@@ -8,18 +8,24 @@ import ethLogo from 'src/assets/images/eth.svg'
 import devconLogoSimple from 'src/assets/images/devcon-logo-simple.svg'
 import leftPad from 'src/utils/left-pad'
 import HeaderLogo from '../header/HeaderLogo'
+import { Newsletter } from 'src/components/newsletter'
+import { SocialMedia } from 'src/components/layouts/footer'
+import { Link as LinkType } from 'src/types/Link'
+import { Link } from 'src/components/common/link'
 
 type PageRefs = {
-  [key: string]: Ref<HTMLDivElement>
+  [key: string]: React.Ref<HTMLDivElement>
 }
 
 type NavigationProps = {
   pages: React.ReactNode
+  links: LinkType[]
   pageRefs: PageRefs
+  pageTrackRefs: any
   setScrollX: any
 }
 
-const isTouchDevice = matchMedia('(hover: none)').matches
+const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
 
 export const Navigation = (props: NavigationProps) => {
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
@@ -72,12 +78,28 @@ export const Navigation = (props: NavigationProps) => {
             })}
           </ul>
 
+          {props.links && (
+            <nav className={css['links']}>
+              {props.links.map(link => {
+                return (
+                  <Link className="bold" to={link.url}>
+                    {link.title}
+                  </Link>
+                )
+              })}
+              <Link className="bold" to="age">
+                aeagae
+              </Link>
+              <Link className="bold" to="aefae">
+                aegaegaegea
+              </Link>
+            </nav>
+          )}
+
           <div className={css['nav-footer']}>
-            <p>SOCIAL MEDIA ICONS</p>
-            <p>Subscribe to newsletter</p>
-            <p>Enter email address</p>
-            <p>Subscribe</p>
-            {intl.formatMessage({ id: 'rtd_footer' })}
+            <SocialMedia />
+            <Newsletter />
+            <div className={css['info']}>{intl.formatMessage({ id: 'rtd_footer' })}</div>
           </div>
         </div>
 

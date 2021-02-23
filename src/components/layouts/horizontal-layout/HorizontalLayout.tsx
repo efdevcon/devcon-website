@@ -89,7 +89,7 @@ export const PageContent = (props: PageContentProps) => {
 
 let recentlyScrolled = false
 let scrollTimeout: NodeJS.Timeout
-const isTouchDevice = matchMedia('(hover: none)').matches
+const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
 
 export const HorizontalLayout = (props: any) => {
   const [scrollX, setScrollX] = React.useState(0)
@@ -158,7 +158,13 @@ export const HorizontalLayout = (props: any) => {
 
   return (
     <div className={css['layout-container']}>
-      <Navigation setScrollX={setScrollX} pages={pages} pageTrackRef={trackRef} pageRefs={pageRefs} />
+      <Navigation
+        links={props.links}
+        setScrollX={setScrollX}
+        pages={pages}
+        pageTrackRef={trackRef}
+        pageRefs={pageRefs}
+      />
 
       <div
         ref={trackRef}

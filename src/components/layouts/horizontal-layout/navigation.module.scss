@@ -29,7 +29,7 @@ $nav-width: 348px;
   z-index: 1000;
   justify-content: space-between;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-sm) {
     position: fixed;
     height: 64px;
     width: 100%;
@@ -64,14 +64,14 @@ $nav-width: 348px;
 
   .toggle {
     @extend .header;
-    @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-1);
+    @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
     cursor: pointer;
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-sm) {
       width: 64px;
       font-size: 24px;
       border-bottom: none;
@@ -91,9 +91,9 @@ $nav-width: 348px;
 
   .logo {
     width: 100%;
-    @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-1);
+    @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-sm) {
       display: none;
     }
 
@@ -109,7 +109,7 @@ $nav-width: 348px;
     justify-content: center;
     align-items: center;
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-sm) {
       display: flex;
     }
 
@@ -135,7 +135,7 @@ $nav-width: 348px;
     position: absolute;
     width: $nav-width;
     background: white;
-    height: 100%;
+    min-height: 100%;
     top: 0px;
     left: 100%;
     overflow: auto;
@@ -143,11 +143,16 @@ $nav-width: 348px;
     transform: translateX(calc(-100% + 1px));
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform 0.15s linear;
+    overflow: auto;
 
-    @media (max-width: $screen-md) {
+    > * {
+      flex-shrink: 0;
+    }
+
+    @media (max-width: $screen-sm) {
       padding: $gap-4;
       width: 100%;
-      height: auto;
+      min-height: auto;
       bottom: 0;
       top: 64px;
       position: fixed;
@@ -164,7 +169,7 @@ $nav-width: 348px;
       padding-left: $gap-5;
       padding-right: $gap-5;
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $screen-sm) {
         display: none;
       }
 
@@ -176,14 +181,13 @@ $nav-width: 348px;
     }
 
     .nav {
-      @include gaps.responsive-gap($attribute: padding, $top: $gap-6, $bottom: $gap-4, $min-gap: $gap-1);
-      flex-grow: 1;
+      @include gaps.responsive-gap($attribute: margin, $top: $gap-6, $right: $gap-4, $min-gap: $gap-2);
+      padding-bottom: $gap-6;
       list-style-type: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
       li {
         @include fonts.font-xl;
-        @include fonts.bold;
-        // @include gaps.responsive-gap($attribute: padding, $left: $gap-4, $min-gap: $gap-1);
         position: relative;
         cursor: pointer;
         margin-bottom: $gap-6;
@@ -201,8 +205,35 @@ $nav-width: 348px;
       }
     }
 
+    .links {
+      margin-bottom: $gap-4;
+      margin-top: $gap-2;
+      margin-right: $gap-4;
+
+      > a {
+        display: inline-block;
+        @include gaps.responsive-gap($attribute: margin, $gap: $gap-4, $min-gap: $gap-2);
+      }
+    }
+
     .nav-footer {
-      @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-1);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      > * {
+        @include gaps.responsive-gap($attribute: margin, $gap: $gap-4, $min-gap: $gap-2);
+        padding-bottom: $gap-4;
+
+        &:nth-child(1) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        &:nth-child(2) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
     }
   }
 
@@ -215,7 +246,7 @@ $nav-width: 348px;
     left: 100%;
     @include gaps.responsive-gap($attribute: margin, $left: $gap-10, $bottom: $gap-5, $min-gap: $gap-4);
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-sm) {
       display: none;
     }
 

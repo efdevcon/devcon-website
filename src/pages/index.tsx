@@ -1,13 +1,16 @@
 import React from 'react'
 import { HorizontalLayout, Page } from 'src/components/layouts/horizontal-layout'
 import { Intro } from 'src/components/road-to-devcon/intro/Intro'
+import { graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
+import { ToLinks } from 'src/context/query-mapper'
+import { Link } from 'src/types/Link'
 
-export default () => {
+export default (props: any) => {
   const intl = useIntl()
 
   return (
-    <HorizontalLayout>
+    <HorizontalLayout links={ToLinks(props.data.navigationData.nodes, 'road-to-devcon')}>
       <Intro title={intl.formatMessage({ id: 'rtd' })} />
 
       <Page title={intl.formatMessage({ id: 'rtd_get_informed' })}>
@@ -34,3 +37,27 @@ export default () => {
     </HorizontalLayout>
   )
 }
+
+export const query = graphql`
+  query($language: String!) {
+    navigationData: allMarkdownRemark(
+      filter: { frontmatter: { title: { eq: "road-to-devcon" } }, fields: { collection: { eq: "navigation" } } }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          links(language: $language) {
+            title
+            type
+            url
+            links {
+              title
+              type
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`
