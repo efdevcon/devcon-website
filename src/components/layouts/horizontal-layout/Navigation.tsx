@@ -12,6 +12,7 @@ import { Newsletter } from 'src/components/newsletter'
 import { SocialMedia } from 'src/components/layouts/footer'
 import { Link as LinkType } from 'src/types/Link'
 import { Link } from 'src/components/common/link'
+import { COPYRIGHT_NOTICE } from 'src/utils/constants'
 
 type PageRefs = {
   [key: string]: React.Ref<HTMLDivElement>
@@ -84,26 +85,23 @@ export const Navigation = (props: NavigationProps) => {
 
           {props.links && (
             <nav className={css['links']}>
-              {props.links.map(link => {
+              {props.links.map((link, index) => {
                 return (
-                  <Link className="bold" to={link.url}>
+                  <Link key={index} className="bold" to={link.url}>
                     {link.title}
                   </Link>
                 )
               })}
-              <Link className="bold" to="age">
-                aeagae
-              </Link>
-              <Link className="bold" to="aefae">
-                aegaegaegea
-              </Link>
             </nav>
           )}
 
           <div className={css['nav-footer']}>
             <SocialMedia />
             <Newsletter />
-            <div className={css['info']}>{intl.formatMessage({ id: 'rtd_footer' })}</div>
+            <div className={css['info']}>
+              <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>
+              <p>{COPYRIGHT_NOTICE}</p>
+            </div>
           </div>
         </div>
 
@@ -135,6 +133,7 @@ export const Navigation = (props: NavigationProps) => {
           </ul>
         </div>
       </div>
+
       <div className={css['drag-to-continue']}>{intl.formatMessage({ id: 'drag_to_continue' })} →</div>
     </>
   )

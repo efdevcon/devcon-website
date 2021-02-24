@@ -234,6 +234,10 @@ $nav-width: 348px;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
       }
+
+      .info {
+        @include fonts.font-xs;
+      }
     }
   }
 

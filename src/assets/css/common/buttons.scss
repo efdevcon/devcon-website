@@ -33,7 +33,7 @@ button {
     outline: none;
   }
 
-  .sm {
+  &.sm {
     @include fonts.font-sm;
     padding: $gap-1 $gap-2;
 
@@ -42,7 +42,7 @@ button {
     }
   }
 
-  .lg {
+  &.lg {
     @include fonts.font-lg;
     padding: $gap-4 $gap-5;
 

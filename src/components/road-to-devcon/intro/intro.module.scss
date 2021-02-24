@@ -35,6 +35,12 @@
     }
 
     button {
+      text-transform: uppercase;
+
+      @media (max-width: $screen-sm) {
+        background: white;
+      }
+
       > * {
         margin-left: 1em;
       }
@@ -49,47 +55,109 @@
   right: $gap-4;
 }
 
-.leslie {
+.dog-and-guy {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  z-index: -1;
+  left: 10%;
+  bottom: 0%;
+  transform-origin: 0 100%;
+
+  @media (max-width: $screen-xxl) {
+    transform: scale(0.9);
+  }
+
+  @media (max-width: $screen-xl) {
+    transform: scale(0.8);
+  }
+
+  @media (max-width: $screen-lg) {
+    transform: scale(0.75);
+  }
+
+  @media (max-width: $screen-md) {
+    transform: scale(0.65);
+    left: 0%;
+  }
+
+  @media (max-width: $screen-tiny) {
+    transform: scale(0.45);
+  }
+
+  .guy {
+    flex-basis: 60%;
+    flex-shrink: 0;
+  }
+
+  .dog {
+    position: relative;
+    height: 0%;
+    flex-basis: 40%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+
+    .wow {
+      position: absolute;
+      top: -10%;
+      right: 50%;
+      transform: rotate(-25deg);
+      color: rgba(0, 218, 205, 1);
+      font-size: 32px;
+
+      @media (hover: none) {
+        display: none;
+      }
+    }
+
+    .doge {
+      position: absolute;
+      top: -10%;
+      right: 0%;
+
+      @media (hover: none) {
+        display: none;
+      }
+    }
+  }
 }
 
-.guy {
+.leslie {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
 }
 
 .marker {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  cursor: pointer;
+
+  @media (hover: none) {
+    display: none;
+  }
+
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
 }
 
 .angle {
   position: absolute;
-  top: -50%;
+  top: -45%;
   left: 0;
-  // bottom: 0;
   width: 100%;
   height: 100%;
   background-color: #62f3e5;
   opacity: 0.3;
-  transform: skewY(-17deg);
+  transform: skewY(-14deg);
   z-index: -1;
-
-  // position: absolute;
-  // top: 0px;
-  // width: 100%;
-  // z-index: -2;
-  // height: 80%;
-  // background-color: blue;
-  // margin-right: 50%;
-  // opacity: 0.3;
-
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   top: -100%;
-  //   left: 0;
-  //   width: 200%;
-  //   height: 100%;
-  //   background-color: #62f3e5;
-  //   transform: skewY(-15deg);
-  //   z-index: -1;
-  // }
 }
 
 .road {
@@ -101,19 +169,33 @@
   object-fit: cover;
   object-position: 8%;
 
-  @media (max-width: 1500px) {
+  @media (max-width: $screen-xxl) {
     object-position: 12%;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: $screen-xl) {
     object-position: 16%;
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: $screen-lg) {
     object-position: 24%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: $screen-md) {
     object-position: 30%;
+  }
+}
+
+.checkpoint {
+  @include fonts.font-xs;
+  max-width: 200px;
+
+  > * {
+    &:nth-child(1) {
+      color: rgb(187, 187, 187);
+    }
+    &:nth-child(3) {
+      color: rgb(187, 187, 187);
+    }
   }
 }

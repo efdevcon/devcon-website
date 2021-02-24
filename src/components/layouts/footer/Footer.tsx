@@ -14,7 +14,7 @@ import { usePageContext } from 'src/context/page-context'
 import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
-export const SocialMedia = props => {
+export const SocialMedia = () => {
   return (
     <div className={css['social-media']}>
       <Link to="https://twitter.com/efdevcon">
