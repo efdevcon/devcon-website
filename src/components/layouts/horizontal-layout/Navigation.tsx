@@ -134,7 +134,7 @@ export const Navigation = (props: NavigationProps) => {
         </div>
       </div>
 
-      <div className={css['drag-to-continue']}>{intl.formatMessage({ id: 'drag_to_continue' })} →</div>
+      <div className={css['drag-to-continue']}>{intl.formatMessage({ id: 'rtd_drag_to_continue' })} →</div>
     </>
   )
 }

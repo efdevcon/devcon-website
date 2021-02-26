@@ -54,28 +54,34 @@ END:VCALENDAR`
     <div className={css['events']}>
       {props.data.map((event: EventType) => {
         return (
-          <div className={css['event']}>
-            <a className={css['link']} href={event.url}>
+          <div key={event.id} className={css['event']}>
+            <div className={css['link']}>
               <div>
-                <span className={css['day']}>{moment(event.startDate).format('DD')}</span>
-                <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
+                <a href={event.url}>
+                  <span className={css['day']}>{moment(event.startDate).format('DD')}</span>
+                  <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
+                </a>
 
                 <a className={css['event-add']} href="#" onClick={() => downloadIcs(event)}>
                   <EventIcon />
                 </a>
               </div>
               <div>
-                <p className={css['date']}>{renderEventDate(event)}</p>
-                <p className={css['title']}>{event.title}</p>
+                <a href={event.url}>
+                  <p className={css['date']}>{renderEventDate(event)}</p>
+                  <p className={css['title']}>{event.title}</p>
 
-                <a className={css['url']} href={event.url}>
-                  {renderDomainName(event.url)}
+                  <span className={css['url']}>
+                    {renderDomainName(event.url)}
+                  </span>
                 </a>
               </div>
               <div className={css['image-column']}>
-                <img src={event.imageUrl} alt={event.title} />
+                <a href={event.url}>
+                  <img src={event.imageUrl} alt={event.title} />
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         )
       })}
