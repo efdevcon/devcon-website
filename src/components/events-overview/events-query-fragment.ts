@@ -9,7 +9,7 @@ export const query = graphql`
       nodes {
         id
         html
-        fields { 
+        fields {
           id
         }
         frontmatter {

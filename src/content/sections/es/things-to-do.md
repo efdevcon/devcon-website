@@ -13,4 +13,3 @@ right: >-
   Watch the top 10 things to do in Colombia 
   [[youtube: https://www.youtube.com/watch?v=czfKyc-HtF4]]
 ---
-

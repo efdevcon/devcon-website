@@ -4,7 +4,6 @@ import { Intro } from 'src/components/road-to-devcon/intro/Intro'
 import { graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 import { ToLinks } from 'src/context/query-mapper'
-import { Link } from 'src/types/Link'
 
 import { Contribute } from 'src/components/road-to-devcon/contribute'
 import { ToDIPData } from 'src/components/dip-overview/queryMapper'
@@ -16,12 +15,10 @@ import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryM
 
 export default function Index({ data }: any) {
   const intl = useIntl()
-  const events = ToEventData(data);
-  const meetups = ToMeetupData(data);
+  const events = ToEventData(data)
+  const meetups = ToMeetupData(data)
   const dips = ToDIPData(data.dips)
   const faqs = ToFaqData(data)
-
-  console.log("EVENTS", events)
 
   return (
     <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>

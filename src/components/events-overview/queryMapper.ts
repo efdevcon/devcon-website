@@ -29,4 +29,3 @@ export function ToMeetup(node: any): Meetup {
     url: node.frontmatter.url,
   } as Meetup
 }
-

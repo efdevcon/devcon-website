@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageContent, Page } from 'src/components/layouts/horizontal-layout'
+import { Page } from 'src/components/layouts/horizontal-layout'
 import css from './intro.module.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import road from 'src/assets/images/road.svg'

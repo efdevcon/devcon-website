@@ -9,22 +9,21 @@ interface EventOverviewProps {
 }
 
 export function EventOverview(props: EventOverviewProps) {
-
   const renderEventDate = (event: EventType) => {
-    const start = moment(event.startDate);
-    const end = moment(event.endDate);
+    const start = moment(event.startDate)
+    const end = moment(event.endDate)
 
-    if (start.day() === end.day()) { 
+    if (start.day() === end.day()) {
       return start.format('MMM DD YYYY')
     }
-    if (start.month() === end.month()) { 
+    if (start.month() === end.month()) {
       return `${start.format('MMM')} ${start.format('DD')}-${end.format('DD')} ${start.format('YYYY')}`
     }
     return `${start.format('MMM DD')}-${end.format('MMM DD')} ${end.format('YYYY')}`
   }
 
-  const renderDomainName = (url: string) => { 
-    return url.replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0];
+  const renderDomainName = (url: string) => {
+    return url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[/?#]/)[0]
   }
 
   const downloadIcs = (event: EventType) => {
@@ -43,12 +42,12 @@ LOCATION:${event.url}
 END:VEVENT
 END:VCALENDAR`
 
-    const element = document.createElement("a");
-    const file = new Blob([ics], {type: 'text/plain;charset=utf-8'});
-    element.href = URL.createObjectURL(file);
-    element.download = `${event.title}.ics`;
-    document.body.appendChild(element);
-    element.click();
+    const element = document.createElement('a')
+    const file = new Blob([ics], { type: 'text/plain;charset=utf-8' })
+    element.href = URL.createObjectURL(file)
+    element.download = `${event.title}.ics`
+    document.body.appendChild(element)
+    element.click()
   }
 
   return (
@@ -69,7 +68,9 @@ END:VCALENDAR`
                 <p className={css['date']}>{renderEventDate(event)}</p>
                 <p className={css['title']}>{event.title}</p>
 
-                <a className={css['url']} target={event.url}>{renderDomainName(event.url)}</a>
+                <a className={css['url']} href={event.url}>
+                  {renderDomainName(event.url)}
+                </a>
               </div>
               <div className={css['image-column']}>
                 <img src={event.imageUrl} alt={event.title} />

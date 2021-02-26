@@ -2,13 +2,11 @@ import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment MeetupData on Query {
-    meetups: allMarkdownRemark(
-      filter: { fields: { collection: { eq: "meetups" }, lang: { eq: $language } } }
-    ) {
+    meetups: allMarkdownRemark(filter: { fields: { collection: { eq: "meetups" }, lang: { eq: $language } } }) {
       nodes {
         id
         html
-        fields { 
+        fields {
           id
         }
         frontmatter {

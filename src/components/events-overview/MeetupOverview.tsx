@@ -1,5 +1,5 @@
 import React from 'react'
-import { Meetup } from 'src/types/Meetup';
+import { Meetup } from 'src/types/Meetup'
 import css from './events.module.scss'
 
 interface MeetupOverviewProps {
@@ -7,9 +7,8 @@ interface MeetupOverviewProps {
 }
 
 export function MeetupOverview(props: MeetupOverviewProps) {
-
-  const renderDomainName = (url: string) => { 
-    return url.replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0];
+  const renderDomainName = (url: string) => {
+    return url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[/?#]/)[0]
   }
 
   return (
@@ -22,7 +21,9 @@ export function MeetupOverview(props: MeetupOverviewProps) {
                 <p className={css['date']}>{event.location}</p>
                 <p className={css['title']}>{event.title}</p>
 
-                <a className={css['url']} target={event.url}>{renderDomainName(event.url)}</a>
+                <a className={css['url']} href={event.url}>
+                  {renderDomainName(event.url)}
+                </a>
               </div>
               <div className={css['image-column']}>
                 <img src={event.imageUrl} alt={event.title} />

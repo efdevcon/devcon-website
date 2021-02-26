@@ -21,7 +21,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
         <div className={css['container']}>
           <div className={css['header']}>
             <h3 className="subsection-header">FAQ</h3>
-            <Search onSearch={e => setSearchFilter(e)} />            
+            <Search onSearch={e => setSearchFilter(e)} />
           </div>
           <div className={css['content']}>
             <FAQ data={props.faqs} filter={searchFilter} />

@@ -16,13 +16,13 @@ export const Participate = React.forwardRef((props: any, ref) => {
       <PageContent backgroundText={intl.formatMessage({ id: 'rtd_community_events' })}>
         <div className={css['container']}>
           <Tabs>
-            <Tab title='Events'>
+            <Tab title="Events">
               <EventOverview data={props.events} />
             </Tab>
-            <Tab title='Meetups'>
+            <Tab title="Meetups">
               <MeetupOverview data={props.meetups} />
             </Tab>
-          </Tabs>          
+          </Tabs>
         </div>
       </PageContent>
     </Page>
