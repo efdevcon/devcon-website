@@ -9,6 +9,8 @@ interface EventOverviewProps {
 }
 
 export function EventOverview(props: EventOverviewProps) {
+  const date = new Date()
+  console.log(date.toISOString())
   const renderEventDate = (event: EventType) => {
     const start = moment(event.startDate)
     const end = moment(event.endDate)
@@ -27,17 +29,21 @@ export function EventOverview(props: EventOverviewProps) {
   }
 
   const downloadIcs = (event: EventType) => {
+    const start = moment(event.startDate).format('YYYYMMDD');
+    const end = moment(event.endDate).format('YYYYMMDD');
+
     const ics = `BEGIN:VCALENDAR
+METHOD:PUBLISH
 VERSION:2.0
 CALSCALE:GREGORIAN
-
+PRODID:${event.title}
 BEGIN:VEVENT
 UID:${event.id}
-DTSTART;VALUE=DATE:${event.startDate}
-DTEND;VALUE=DATE:${event.endDate}
+DTSTART;VALUE=DATE:${start}
+DTEND;VALUE=DATE:${end}
 SUMMARY:${event.title}
 DESCRIPTION:${event.title}
-URL:${event.url}
+URL;VALUE=URI:${event.url}
 LOCATION:${event.url}
 END:VEVENT
 END:VCALENDAR`
