@@ -12,11 +12,16 @@ import { ToFaqData } from 'src/components/faq/queryMapper'
 import { Ask } from 'src/components/road-to-devcon/ask'
 import { Learn } from 'src/components/road-to-devcon/learn'
 import { Participate } from 'src/components/road-to-devcon/participate'
+import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
+  const events = ToEventData(data);
+  const meetups = ToMeetupData(data);
   const dips = ToDIPData(data.dips)
   const faqs = ToFaqData(data)
+
+  console.log("EVENTS", events)
 
   return (
     <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
@@ -29,7 +34,7 @@ export default function Index({ data }: any) {
         ></div>
       </Page>
 
-      <Participate title={intl.formatMessage({ id: 'rtd_participate' })} />
+      <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
 
       <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
 
@@ -65,6 +70,8 @@ export const query = graphql`
         }
       }
     }
+    ...EventsData
+    ...MeetupData
     ...DipsData
     ...Categories
     ...FAQs

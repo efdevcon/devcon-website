@@ -193,6 +193,20 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'events',
+        path: `${__dirname}/src/content/events`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'meetups',
+        path: `${__dirname}/src/content/meetups`,
+      },
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
