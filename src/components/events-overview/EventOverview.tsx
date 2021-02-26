@@ -55,32 +55,30 @@ END:VCALENDAR`
       {props.data.map((event: EventType) => {
         return (
           <div key={event.id} className={css['event']}>
-            <div className={css['link']}>
-              <div>
-                <a href={event.url}>
-                  <span className={css['day']}>{moment(event.startDate).format('DD')}</span>
-                  <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
-                </a>
+            <div className={css['date-column']}>
+              <a href={event.url}>
+                <span className={css['day']}>{moment(event.startDate).format('DD')}</span>
+                <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
+              </a>
 
-                <a className={css['event-add']} href="#" onClick={() => downloadIcs(event)}>
-                  <EventIcon />
-                </a>
-              </div>
-              <div>
-                <a href={event.url}>
-                  <p className={css['date']}>{renderEventDate(event)}</p>
-                  <p className={css['title']}>{event.title}</p>
+              <a className={css['event-add']} href="#" onClick={() => downloadIcs(event)}>
+                <EventIcon />
+              </a>
+            </div>
+            <div>
+              <a href={event.url}>
+                <p className={css['date']}>{renderEventDate(event)}</p>
+                <p className={css['title']}>{event.title}</p>
 
-                  <span className={css['url']}>
-                    {renderDomainName(event.url)}
-                  </span>
-                </a>
-              </div>
-              <div className={css['image-column']}>
-                <a href={event.url}>
-                  <img src={event.imageUrl} alt={event.title} />
-                </a>
-              </div>
+                <span className={css['url']}>
+                  {renderDomainName(event.url)}
+                </span>
+              </a>
+            </div>
+            <div className={css['image-column']}>
+              <a href={event.url}>
+                <img src={event.imageUrl} alt={event.title} />
+              </a>
             </div>
           </div>
         )

@@ -11,15 +11,8 @@
 .event {
   padding: $gap-4 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.link { 
   display: flex;
   align-items: flex-start;
-
-  div:first-child {
-    margin-right: $gap-16;
-  }
 
   div:last-child {
     margin-left: auto;
@@ -67,11 +60,24 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
+.date-column { 
+  margin-right: $gap-16;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
 .image-column { 
-  border: 1px solid rgba(0, 0, 0, 0.2);  
+  border: 1px solid rgba(0, 0, 0, 0.2);
   width: $size-88;
   height: $size-40;
   position: relative;
+
+  @media (max-width: $screen-sm) {
+    width: $size-64;
+    height: $size-32;
+  }
 
   img { 
     position: absolute;

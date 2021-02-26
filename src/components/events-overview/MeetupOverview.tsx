@@ -16,19 +16,17 @@ export function MeetupOverview(props: MeetupOverviewProps) {
       {props.data.map((event: Meetup) => {
         return (
           <div className={css['event']}>
-            <a className={css['link']} href={event.url}>
-              <div>
-                <p className={css['date']}>{event.location}</p>
-                <p className={css['title']}>{event.title}</p>
+            <div>
+              <p className={css['date']}>{event.location}</p>
+              <p className={css['title']}>{event.title}</p>
 
-                <a className={css['url']} href={event.url}>
-                  {renderDomainName(event.url)}
-                </a>
-              </div>
-              <div className={css['image-column']}>
-                <img src={event.imageUrl} alt={event.title} />
-              </div>
-            </a>
+              <a className={css['url']} href={event.url}>
+                {renderDomainName(event.url)}
+              </a>
+            </div>
+            <div className={css['image-column']}>
+              <img src={event.imageUrl} alt={event.title} />
+            </div>
           </div>
         )
       })}
