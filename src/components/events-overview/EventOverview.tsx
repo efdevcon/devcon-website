@@ -9,8 +9,6 @@ interface EventOverviewProps {
 }
 
 export function EventOverview(props: EventOverviewProps) {
-  const date = new Date()
-  console.log(date.toISOString())
   const renderEventDate = (event: EventType) => {
     const start = moment(event.startDate)
     const end = moment(event.endDate)
