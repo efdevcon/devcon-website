@@ -138,11 +138,11 @@ Los equipos Vocdoni y POAP ya están trabajando en el proyecto para permitir a l
 
 **Entregables y Propiedades\u00BB**
 
-| #  | Entregable                              | Descripción               | Propietario |
-| -- | --------------------------------------- | ------------------------- | ----------- |
-| 1. | Sistema de votación basado en token web | <ul><li>Plataforma de voto del puente Vocdoni</li><li>Bibliotecas para tener compatibilidad con los tokens NFT</li><li>Despliegue bajo un dominio específico</li></ul> | Vocdoni     |
-| 2. | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul> | PUEDAR      |
-| 3. | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul> | DevCon      |
+| #   | Entregable                              | Descripción                                                                                                                                                            | Propietario |
+| --- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| 1.  | Sistema de votación basado en token web | <ul><li>Plataforma de voto del puente Vocdoni</li><li>Bibliotecas para tener compatibilidad con los tokens NFT</li><li>Despliegue bajo un dominio específico</li></ul> | Vocdoni     |
+| 2.  | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul>                                                                                                                              | PUEDAR      |
+| 3.  | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul>                                                                            | DevCon      |
 
 4. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
 

@@ -7,7 +7,6 @@ import { Table, SortVariation, TableColumn } from 'src/components/common/table'
 import { DIP } from 'src/types/dip'
 import GithubIcon from 'src/assets/icons/github.svg'
 import TooltipIcon from 'src/assets/icons/tooltip.svg'
-import ArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Share } from 'src/components/common/share'
 import { useIntl } from 'gatsby-plugin-intl'
 

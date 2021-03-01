@@ -46,7 +46,7 @@ export const Navigation = (props: NavigationProps) => {
         </div>
 
         <div className={css['logo']}>
-          <img src={ethLogo} />
+          <img src={ethLogo} alt="Ethereum logo" />
         </div>
 
         {/* Need a layer with a filled in background so we avoid content overlapping when menu slides in */}
@@ -54,7 +54,7 @@ export const Navigation = (props: NavigationProps) => {
 
         <div className={css['foldout']}>
           <div className={css['header']}>
-            <img src={devconLogoSimple} />
+            <img src={devconLogoSimple} alt="Devcon logo" />
             <IconRoad className="abc" />
           </div>
 
@@ -134,7 +134,7 @@ export const Navigation = (props: NavigationProps) => {
         </div>
       </div>
 
-      <div className={css['drag-to-continue']}>{intl.formatMessage({ id: 'drag_to_continue' })} →</div>
+      <div className={css['drag-to-continue']}>{intl.formatMessage({ id: 'rtd_drag_to_continue' })} →</div>
     </>
   )
 }

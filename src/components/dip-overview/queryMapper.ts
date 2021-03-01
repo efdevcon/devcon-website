@@ -4,7 +4,7 @@ export function ToDIPData(source: any): Array<DIP> {
   return source.nodes.map((dip: DIP) => ToDIP(dip))
 }
 
-export function ToDIP(source: any): DIP { 
+export function ToDIP(source: any): DIP {
   return {
     github: source.frontmatter.Github_URL,
     // summary: source.frontmatter.Summary,

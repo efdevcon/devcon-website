@@ -4,7 +4,6 @@ import { Intro } from 'src/components/road-to-devcon/intro/Intro'
 import { graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 import { ToLinks } from 'src/context/query-mapper'
-import { Link } from 'src/types/Link'
 
 import { Contribute } from 'src/components/road-to-devcon/contribute'
 import { ToDIPData } from 'src/components/dip-overview/queryMapper'
@@ -13,9 +12,12 @@ import { Ask } from 'src/components/road-to-devcon/ask'
 import { Learn } from 'src/components/road-to-devcon/learn'
 import { Participate } from 'src/components/road-to-devcon/participate'
 import { Blog } from 'src/components/road-to-devcon/blog'
+import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
+  const events = ToEventData(data)
+  const meetups = ToMeetupData(data)
   const dips = ToDIPData(data.dips)
   const faqs = ToFaqData(data)
 
@@ -32,7 +34,7 @@ export default function Index({ data }: any) {
 
       <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
 
-      <Participate title={intl.formatMessage({ id: 'rtd_participate' })} />
+      <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
 
       <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
 
@@ -68,6 +70,8 @@ export const query = graphql`
         }
       }
     }
+    ...EventsData
+    ...MeetupData
     ...DipsData
     ...Categories
     ...FAQs

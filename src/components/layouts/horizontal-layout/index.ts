@@ -1,1 +1,1 @@
-export { HorizontalLayout, Page, PageContent } from './HorizontalLayout';
+export { HorizontalLayout, Page, PageContent } from './HorizontalLayout'
