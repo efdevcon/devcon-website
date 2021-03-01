@@ -12,6 +12,7 @@ import { ToFaqData } from 'src/components/faq/queryMapper'
 import { Ask } from 'src/components/road-to-devcon/ask'
 import { Learn } from 'src/components/road-to-devcon/learn'
 import { Participate } from 'src/components/road-to-devcon/participate'
+import { Blog } from 'src/components/road-to-devcon/blog'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
@@ -28,6 +29,8 @@ export default function Index({ data }: any) {
           style={{ height: '500px', width: '500px', marginLeft: '150px', marginTop: '200px', background: 'pink' }}
         ></div>
       </Page>
+
+      <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
 
       <Participate title={intl.formatMessage({ id: 'rtd_participate' })} />
 

@@ -64,7 +64,7 @@
           $left: $gap-10 + $gap-6,
           $right: $gap-10 + $gap-6,
           $bottom: $gap-10 * 4,
-          $min-gap: $gap-10
+          $min-gap: $gap-1
         );
 
         .header {
@@ -85,16 +85,30 @@
 
           .background-text {
             font-size: $size-8 * 9;
-            line-height: $size-8 * 8;            
+            line-height: $size-8 * 8;
             > span {
               display: block;
             }
           }
 
-          .background-text-gradient { 
+          .background-text-gradient {
             @extend .background-text;
 
-            background: conic-gradient(from 178.57deg at 60.56% 57.14%, #EDEFCF 0deg, #EDEDCE 24.56deg, #EEEBCC 51.02deg, #F3C4BA 102.55deg, #C5D4E4 137.2deg, #C5D8ED 169.68deg, #C5D7EA 170.39deg, #D9CDD2 202.5deg, #FF7852 265.36deg, #D4D1D8 328.41deg, #D4D3D9 339.22deg, #D3D7DA 360deg);
+            background: conic-gradient(
+              from 178.57deg at 60.56% 57.14%,
+              #edefcf 0deg,
+              #ededce 24.56deg,
+              #eeebcc 51.02deg,
+              #f3c4ba 102.55deg,
+              #c5d4e4 137.2deg,
+              #c5d8ed 169.68deg,
+              #c5d7ea 170.39deg,
+              #d9cdd2 202.5deg,
+              #ff7852 265.36deg,
+              #d4d1d8 328.41deg,
+              #d4d3d9 339.22deg,
+              #d3d7da 360deg
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -105,28 +119,37 @@
 
             h3 {
               margin-right: $gap-8;
-    
+
               &:last-child {
                 margin-right: 0px;
               }
             }
 
-            svg { 
+            svg {
               height: 18px;
             }
           }
 
-          .icon-link { 
+          .icon-link {
             margin-right: $gap-2;
           }
         }
 
         .content {
           overflow: auto;
+          flex-shrink: 0;
           height: 570px;
+          --content-height: 570px;
           box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
           background: #fff;
           padding: $gap-6;
+
+          &.transparent {
+            box-shadow: none;
+            background: none;
+            overflow: visible;
+            padding: 0px;
+          }
         }
       }
     }

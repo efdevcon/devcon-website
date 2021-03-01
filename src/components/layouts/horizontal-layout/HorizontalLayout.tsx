@@ -27,6 +27,7 @@ type PageContentProps = {
   title?: string
   index?: string
   children: React.ReactNode
+  transparent?: boolean
 }
 
 export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
@@ -98,7 +99,7 @@ export const PageContent = (props: PageContentProps) => {
       </div>
 
       <div
-        className={css['content']}
+        className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']}
         onMouseDown={e => e.stopPropagation()}
         onScroll={e => {
           if (scrollTimeout) e.preventDefault()
@@ -109,7 +110,7 @@ export const PageContent = (props: PageContentProps) => {
           }
         }}
       >
-        <div>{props.children}</div>
+        {props.children}
       </div>
     </div>
   )

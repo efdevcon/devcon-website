@@ -8,9 +8,7 @@ import { BlogPost } from 'src/types/BlogPost'
 import ArrowLeft from 'src/assets/icons/arrow_left.svg'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 
-export function BlogOverview() {
-  const blogs = useBlogs()
-  const [currentIndex, setCurrentIndex] = useState(0)
+export const Cards = React.forwardRef((props: any, ref: any) => {
   const sliderRef = useRef<Slider>()
 
   const settings = {
@@ -22,7 +20,7 @@ export function BlogOverview() {
     touchThreshold: 100,
     mobileFirst: true,
     beforeChange: (_: any, next: number) => {
-      setCurrentIndex(Math.round(next))
+      if (props.setCurrentIndex) props.setCurrentIndex(Math.round(next))
     },
     responsive: [
       {
@@ -41,6 +39,42 @@ export function BlogOverview() {
       },
     ],
   }
+
+  return (
+    <div className={css['cards']}>
+      <Slider
+        ref={el => {
+          sliderRef.current = el
+          if (ref) ref.current = el
+        }}
+        {...settings}
+      >
+        {props.blogs.map((blog: BlogPost, i: number) => {
+          let className = css['card']
+
+          if (props.customCardClass) className += ` ${props.customCardClass}`
+          if (i === props.blogs.length - 1) className += ` ${css['last']}`
+
+          return (
+            <Card
+              className={className}
+              key={blog.slug}
+              title={blog.title}
+              imageUrl={blog.imageUrl}
+              linkUrl={blog.slug}
+              metadata={[moment(blog.date).format('ll'), blog.author]}
+            />
+          )
+        })}
+      </Slider>
+    </div>
+  )
+})
+
+export function BlogOverview() {
+  const blogs = useBlogs()
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const sliderRef = useRef<Slider>()
 
   return (
     <div className={css['blog-container']}>
@@ -66,26 +100,7 @@ export function BlogOverview() {
         </div>
       </div>
 
-      <div className={css['cards']}>
-        <Slider ref={sliderRef} {...settings}>
-          {blogs.map((blog: BlogPost, i) => {
-            let className = css['card']
-
-            if (i === blogs.length - 1) className += ` ${css['last']}`
-
-            return (
-              <Card
-                className={className}
-                key={blog.slug}
-                title={blog.title}
-                imageUrl={blog.imageUrl}
-                linkUrl={blog.slug}
-                metadata={[moment(blog.date).format('ll'), blog.author]}
-              />
-            )
-          })}
-        </Slider>
-      </div>
+      <Cards ref={sliderRef} blogs={blogs} setCurrentIndex={setCurrentIndex} />
     </div>
   )
 }

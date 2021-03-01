@@ -28,7 +28,6 @@
     overflow: hidden;
     position: relative;
     flex-grow: 1;
-    background: green;
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -39,6 +38,7 @@
       position: absolute;
       top: 0;
       min-width: 100%;
+      overflow: hidden;
       height: 100%;
       object-fit: cover;
     }
