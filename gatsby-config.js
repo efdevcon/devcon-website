@@ -27,6 +27,7 @@ module.exports = {
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
     `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-sitemap',
@@ -204,6 +205,13 @@ module.exports = {
       options: {
         name: 'meetups',
         path: `${__dirname}/src/content/meetups`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'archive',
+        path: `${__dirname}/src/content/archive`,
       },
     },
     {

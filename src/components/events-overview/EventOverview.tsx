@@ -27,8 +27,8 @@ export function EventOverview(props: EventOverviewProps) {
   }
 
   const downloadIcs = (event: EventType) => {
-    const start = moment(event.startDate).format('YYYYMMDD');
-    const end = moment(event.endDate).format('YYYYMMDD');
+    const start = moment(event.startDate).format('YYYYMMDD')
+    const end = moment(event.endDate).format('YYYYMMDD')
 
     const ics = `BEGIN:VCALENDAR
 METHOD:PUBLISH
@@ -74,9 +74,7 @@ END:VCALENDAR`
                 <p className={css['date']}>{renderEventDate(event)}</p>
                 <p className={css['title']}>{event.title}</p>
 
-                <span className={css['url']}>
-                  {renderDomainName(event.url)}
-                </span>
+                <span className={css['url']}>{renderDomainName(event.url)}</span>
               </a>
             </div>
             <div className={css['image-column']}>

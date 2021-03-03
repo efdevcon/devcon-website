@@ -21,9 +21,7 @@ export function MeetupOverview(props: MeetupOverviewProps) {
                 <p className={css['date']}>{event.location}</p>
                 <p className={css['title']}>{event.title}</p>
 
-                <span className={css['url']}>
-                  {renderDomainName(event.url)}
-                </span>
+                <span className={css['url']}>{renderDomainName(event.url)}</span>
               </a>
             </div>
             <div className={css['image-column']}>

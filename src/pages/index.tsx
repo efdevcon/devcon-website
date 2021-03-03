@@ -15,6 +15,7 @@ import { Blog } from 'src/components/road-to-devcon/blog'
 import { MessageFromDeva } from 'src/components/road-to-devcon/message-from-deva'
 import { Invite } from 'src/components/road-to-devcon/invite'
 import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
+import { ToArchiveData } from 'src/components/archive-overview/queryMapper'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
@@ -22,6 +23,7 @@ export default function Index({ data }: any) {
   const meetups = ToMeetupData(data)
   const dips = ToDIPData(data.dips)
   const faqs = ToFaqData(data)
+  const videos = ToArchiveData(data)
 
   return (
     <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
@@ -35,7 +37,7 @@ export default function Index({ data }: any) {
 
       <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
 
-      <Learn title={intl.formatMessage({ id: 'rtd_learn' })} />
+      <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
 
       <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
 
@@ -68,6 +70,7 @@ export const query = graphql`
     ...EventsData
     ...MeetupData
     ...DipsData
+    ...ArchiveData
     ...Categories
     ...FAQs
   }

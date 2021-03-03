@@ -1,0 +1,26 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/fonts';
+
+.container {
+  // RTD: remove padding
+  // padding: $gap-8 0;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+
+  p {
+    cursor: pointer;
+    padding: $gap-2;
+    @include gaps.responsive-gap($attribute: margin, $right: $gap-8, $min-gap: $gap-2);
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  .active-filter {
+    @include fonts.bold;
+    border-bottom: 2px solid black;
+  }
+}
