@@ -91,6 +91,13 @@ export const Intro = React.forwardRef((props: any, ref) => {
         <img className={css['guy']} src={guy} />
       </div>
 
+      <div className={css['drag-to-continue']}>
+        <p>
+          <span>{intl.formatMessage({ id: 'rtd_drag_to_continue' })}</span>
+          <span>{intl.formatMessage({ id: 'rtd_swipe_to_continue' })}</span>→
+        </p>
+      </div>
+
       {/* <PageContent
         backgroundText="Message from Deva"
         links={[

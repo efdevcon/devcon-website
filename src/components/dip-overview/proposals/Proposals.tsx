@@ -99,6 +99,7 @@ const tableColumns: Array<TableColumn> = [
   {
     intl: 'dips_tags',
     key: 'tags',
+    className: css['tag-column'],
     sort: (item1, item2) => {
       const a = item1.tags
         .map(item => item.trim().toLowerCase())

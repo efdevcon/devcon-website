@@ -23,6 +23,7 @@ type LinkType = {
 type PageContentProps = {
   backgroundText?: string
   links?: LinkType[]
+  renderTopRight?: () => React.ReactNode
   bottomLinks?: LinkType[]
   title?: string
   index?: string
@@ -76,11 +77,15 @@ export const PageContent = (props: PageContentProps) => {
           {props.title}
         </h3>
 
-        <h2 className={`${css['background-text-gradient']} no-select`}>
-          {props.backgroundText.split(' ').map((word, index) => {
-            return <span key={index}>{word}</span>
-          })}
-        </h2>
+        {props.backgroundText && (
+          <h2 className={`${css['background-text-gradient']} no-select`}>
+            {props.backgroundText.split(' ').map((word, index) => {
+              return <span key={index}>{word}</span>
+            })}
+          </h2>
+        )}
+
+        {props.renderTopRight && <div className={`${css['top-right']} no-select`}>{props.renderTopRight()}</div>}
 
         {props.links && (
           <div className={`${css['links']} no-select`}>
@@ -89,7 +94,7 @@ export const PageContent = (props: PageContentProps) => {
                 <h3 key={link.url}>
                   <Link to={link.url} className={css['link-class']}>
                     {link.icon && renderIcon(link.icon)}
-                    {link.title}
+                    <span className={css['text']}>{link.title}</span>
                   </Link>
                 </h3>
               )
@@ -100,7 +105,7 @@ export const PageContent = (props: PageContentProps) => {
 
       <div
         className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']}
-        onMouseDown={e => e.stopPropagation()}
+        // onMouseDown={e => e.stopPropagation()}
         onScroll={e => {
           if (scrollTimeout) e.preventDefault()
         }}
@@ -112,6 +117,21 @@ export const PageContent = (props: PageContentProps) => {
       >
         {props.children}
       </div>
+
+      {props.bottomLinks && (
+        <div className={`${css['bottom-links']} no-select`}>
+          {props.bottomLinks.map((link: LinkType) => {
+            return (
+              <p key={link.url}>
+                <Link to={link.url} indicateExternal>
+                  {link.icon && renderIcon(link.icon)}
+                  {link.title}
+                </Link>
+              </p>
+            )
+          })}
+        </div>
+      )}
     </div>
   )
 }

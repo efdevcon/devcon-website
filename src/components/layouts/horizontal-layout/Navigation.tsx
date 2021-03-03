@@ -75,6 +75,8 @@ export const Navigation = (props: NavigationProps) => {
 
                       props.lastX.current = offsetLeft
                     }
+
+                    setFoldoutOpen(false)
                   }}
                 >
                   {title}
@@ -124,6 +126,8 @@ export const Navigation = (props: NavigationProps) => {
 
                       props.lastX.current = offsetLeft
                     }
+
+                    setFoldoutOpen(false)
                   }}
                 >
                   {leftPad(index + 1 + '')}
@@ -133,8 +137,6 @@ export const Navigation = (props: NavigationProps) => {
           </ul>
         </div>
       </div>
-
-      <div className={css['drag-to-continue']}>{intl.formatMessage({ id: 'rtd_drag_to_continue' })} →</div>
     </>
   )
 }

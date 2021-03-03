@@ -24,8 +24,8 @@
       line-height: $size-8 * 8;
 
       @media (max-width: $screen-sm) {
-        font-size: $size-8 * 6;
-        line-height: $size-8 * 5;
+        font-size: $size-8 * 5;
+        line-height: $size-8 * 4;
       }
     }
 
@@ -53,6 +53,10 @@
   position: absolute;
   top: $gap-4;
   right: $gap-4;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
 }
 
 .dog-and-guy {
@@ -196,6 +200,34 @@
     }
     &:nth-child(3) {
       color: rgb(187, 187, 187);
+    }
+  }
+}
+
+.drag-to-continue {
+  position: absolute;
+  z-index: 100;
+  color: rgba(0, 179, 164, 1);
+  font-family: $font-secondary;
+  right: $gap-4;
+  bottom: $gap-4;
+  text-transform: uppercase;
+
+  > p > span {
+    &:nth-child(1) {
+      display: inline-block;
+
+      @media (hover: none) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      display: none;
+
+      @media (hover: none) {
+        display: inline-block;
+      }
     }
   }
 }

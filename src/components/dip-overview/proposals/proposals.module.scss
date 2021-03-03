@@ -127,6 +127,12 @@
   }
 }
 
+.tag-column {
+  @media (max-width: $screen-sm) {
+    display: none !important;
+  }
+}
+
 .tag {
   margin-right: $gap-1;
   margin-bottom: $gap-1;

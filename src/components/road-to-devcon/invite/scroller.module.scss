@@ -1,0 +1,91 @@
+.scroller {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: slide 30s linear infinite;
+
+  .first {
+    position: relative;
+    height: 100%;
+
+    > * {
+      max-width: 20%;
+
+      &:nth-child(1) {
+        position: absolute;
+        left: 10%;
+        top: 70%;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        left: 20%;
+        top: 32%;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        left: 25%;
+        top: 0%;
+      }
+      &:nth-child(4) {
+        position: absolute;
+        right: 10%;
+        bottom: 22%;
+      }
+      &:nth-child(5) {
+        position: absolute;
+        left: 65%;
+        top: 12%;
+      }
+      &:nth-child(6) {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+      }
+    }
+  }
+
+  .rest {
+    position: relative;
+    height: 100%;
+
+    > * {
+      max-width: 15%;
+      &:nth-child(1) {
+        position: absolute;
+        left: 10%;
+        top: 5%;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        left: 40%;
+        top: 12%;
+      }
+      &:nth-child(3) {
+        position: absolute;
+        left: 36%;
+        top: 32%;
+      }
+      &:nth-child(4) {
+        position: absolute;
+        right: 10%;
+        bottom: 22%;
+      }
+      &:nth-child(5) {
+        position: absolute;
+        left: 20%;
+        top: 62%;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-200%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

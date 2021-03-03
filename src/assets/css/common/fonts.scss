@@ -31,6 +31,12 @@ h4,
   @include fonts.font-md;
 }
 
+.massive {
+  @include fonts.font-tertiary;
+  font-size: $size-16 + $size-16;
+  line-height: 125%;
+}
+
 p {
   @include fonts.font-secondary;
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Tooltip } from 'src/components/common/tooltip'
 import ShareIcon from 'src/assets/icons/share.svg'
+import css from './share.module.scss'
 
-export const Share = ({ url }: any) => {
+const CopyToClipboard = ({ url }: any) => {
   const [clicked, setClicked] = React.useState(false)
 
   return (
@@ -25,4 +26,8 @@ export const Share = ({ url }: any) => {
       </div>
     </Tooltip>
   )
+}
+
+export const Share = (props: any) => {
+  return <CopyToClipboard {...props} />
 }

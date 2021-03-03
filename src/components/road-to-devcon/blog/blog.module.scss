@@ -15,7 +15,6 @@ $blog-bg-color: #f3f9ff;
   height: 100%;
   position: relative;
 
-  // Pseudo-elements
   &:before {
     content: '';
     position: absolute;
@@ -40,16 +39,6 @@ $blog-bg-color: #f3f9ff;
 }
 
 .card {
-  height: var(--content-height) !important;
-  // @media (max-width: $screen-lg) {
-  //   height: 400px;
-  // }
-
-  // @media (max-width: $screen-md) {
-  //   height: 300px;
-  // }
-
-  // &.last {
-  //   margin-right: 0px;
-  // }
+  height: 100% !important;
+  // cursor: auto !important;
 }

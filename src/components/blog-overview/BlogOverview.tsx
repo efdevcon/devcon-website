@@ -8,18 +8,57 @@ import { BlogPost } from 'src/types/BlogPost'
 import ArrowLeft from 'src/assets/icons/arrow_left.svg'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 
+export const useBlogState = () => {
+  const blogs = useBlogs()
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const sliderRef = useRef<Slider>()
+
+  console.log(currentIndex, 'cindex')
+
+  return {
+    blogs,
+    currentIndex,
+    setCurrentIndex,
+    sliderRef,
+  }
+}
+
+export const Arrows = (props: any) => {
+  let className = css['arrow-button']
+
+  if (props.noSwipe) {
+    className += ` ${css['always-buttons']}`
+  }
+
+  return (
+    <div className={css['arrows']}>
+      <button className={className} onClick={() => props.sliderRef.current?.slickPrev()}>
+        <ArrowLeft />
+      </button>
+
+      <button className={className} onClick={() => props.sliderRef.current?.slickNext()}>
+        <ArrowRight />
+      </button>
+    </div>
+  )
+}
+
 export const Cards = React.forwardRef((props: any, ref: any) => {
   const sliderRef = useRef<Slider>()
+
+  console.log(props.currentIndex, 'c index')
 
   const settings = {
     infinite: false,
     speed: 500,
     slidesToShow: 3.1,
+    swipe: false,
     arrows: false,
     slidesToScroll: 3,
     touchThreshold: 100,
     mobileFirst: true,
     beforeChange: (_: any, next: number) => {
+      console.log(next, 'next')
       if (props.setCurrentIndex) props.setCurrentIndex(Math.round(next))
     },
     responsive: [
@@ -72,35 +111,17 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
 })
 
 export function BlogOverview() {
-  const blogs = useBlogs()
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const sliderRef = useRef<Slider>()
+  const blogState = useBlogState()
 
   return (
     <div className={css['blog-container']}>
       <div className={css['top-section']}>
         <h3 className="subsection-header">Blog</h3>
 
-        <div className={css['arrows']}>
-          <button
-            className={css['arrow-button']}
-            disabled={currentIndex === 0}
-            onClick={() => sliderRef.current?.slickPrev()}
-          >
-            <ArrowLeft />
-          </button>
-
-          <button
-            className={css['arrow-button']}
-            disabled={currentIndex >= blogs.length - 3}
-            onClick={() => sliderRef.current?.slickNext()}
-          >
-            <ArrowRight />
-          </button>
-        </div>
+        <Arrows {...blogState} />
       </div>
 
-      <Cards ref={sliderRef} blogs={blogs} setCurrentIndex={setCurrentIndex} />
+      <Cards {...blogState} ref={blogState.sliderRef} />
     </div>
   )
 }

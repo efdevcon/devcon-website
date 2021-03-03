@@ -58,14 +58,45 @@
         right: 0;
         bottom: 0;
 
-        @include gaps.responsive-gap(
-          $attribute: padding,
-          $top: $gap-10 * 2,
-          $left: $gap-10 + $gap-6,
-          $right: $gap-10 + $gap-6,
-          $bottom: $gap-10 * 4,
-          $min-gap: $gap-1
-        );
+        $left: $gap-10 + $gap-6;
+        $right: $gap-10 + $gap-6;
+        $top: $gap-10 * 2;
+        $bottom: $gap-10 * 4;
+
+        margin-left: $left;
+        margin-right: $right;
+        margin-top: $top;
+        margin-bottom: $bottom;
+
+        @media (max-width: $screen-lg) {
+          margin-left: $left / 2;
+          margin-right: $right / 2;
+          margin-top: $top / 2;
+          margin-bottom: $bottom / 2;
+        }
+
+        @media (max-width: $screen-md) {
+          margin-left: $left / 3;
+          margin-right: $right / 3;
+          margin-top: $top / 3;
+          margin-bottom: $bottom / 3;
+        }
+
+        @media (max-width: $screen-sm) {
+          margin-left: $gap-4;
+          margin-right: $gap-4;
+          margin-top: $gap-4;
+          margin-bottom: 15%;
+        }
+
+        // @include gaps.responsive-gap(
+        //   $attribute: padding,
+        //   $top: $gap-10 * 2,
+        //   $left: $gap-10 + $gap-6,
+        //   $right: $gap-10 + $gap-6,
+        //   $bottom: $gap-10 * 4,
+        //   $min-gap: $gap-1
+        // );
 
         .header {
           font-family: $font-secondary;
@@ -75,6 +106,7 @@
 
           .page-title {
             font-family: $font-secondary;
+            z-index: 1;
             text-transform: uppercase;
 
             &:before {
@@ -84,10 +116,32 @@
           }
 
           .background-text {
+            margin-left: $gap-8;
+            flex-grow: 1;
             font-size: $size-8 * 9;
             line-height: $size-8 * 8;
             > span {
               display: block;
+            }
+
+            @media (max-width: 1600px) {
+              margin-top: $gap-4;
+              position: absolute;
+              font-size: $size-8 * 7;
+              line-height: $size-8 * 6;
+            }
+
+            @media (max-width: $screen-md) {
+              top: $gap-4;
+              left: 0px;
+              font-size: $size-8 * 7;
+              line-height: $size-8 * 6;
+            }
+
+            @media (max-width: $screen-sm) {
+              display: none;
+              font-size: $size-8 * 5;
+              line-height: $size-8 * 4;
             }
           }
 
@@ -113,43 +167,98 @@
             -webkit-text-fill-color: transparent;
           }
 
+          .top-right {
+            z-index: 1;
+          }
+
           .links {
             display: flex;
             text-transform: uppercase;
+            z-index: 1;
 
-            h3 {
+            > h3 {
               margin-right: $gap-8;
+
+              @media (max-width: $screen-sm) {
+                margin-right: $gap-5;
+                font-size: 24px;
+              }
 
               &:last-child {
                 margin-right: 0px;
+              }
+
+              .text {
+                @media (max-width: $screen-sm) {
+                  display: none;
+                }
               }
             }
 
             svg {
               height: 18px;
+
+              @media (max-width: $screen-sm) {
+                height: 1em;
+              }
             }
           }
 
           .icon-link {
             margin-right: $gap-2;
+
+            @media (max-width: $screen-sm) {
+              margin-right: 0px;
+            }
           }
         }
 
         .content {
           overflow: auto;
           flex-shrink: 0;
+          z-index: 1;
           height: 570px;
-          --content-height: 570px;
           box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
           background: #fff;
           padding: $gap-6;
 
+          &::-webkit-scrollbar {
+            width: 8px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 5px;
+          }
+
+          @media (max-width: $screen-lg) {
+            height: 80%;
+          }
+
+          @media (max-width: $screen-sm) {
+            height: 90%;
+          }
+
           &.transparent {
             box-shadow: none;
-            background: none;
+            background: transparent;
             overflow: visible;
             padding: 0px;
           }
+        }
+
+        .bottom-links {
+          position: absolute;
+          top: 100%;
+          @include gaps.responsive-gap($attribute: margin, $top: $gap-10, $min-gap: $gap-2);
+          @include fonts.bold;
+          margin-top: $gap-8;
+          @include fonts.font-lg;
+          text-transform: uppercase;
         }
       }
     }

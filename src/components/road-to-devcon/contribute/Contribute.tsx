@@ -10,13 +10,14 @@ export const Contribute = React.forwardRef((props: any, ref) => {
   return (
     <Page {...props} ref={ref}>
       <div className={css['background']}></div>
+
       <PageContent
         backgroundText={intl.formatMessage({ id: 'rtd_improvement_proposals' })}
         links={[
           { url: 'https://github.com/efdevcon/DIPs', title: 'Github', icon: 'github' },
           { url: 'https://forum.devcon.org/', title: 'Forum', icon: 'forum' },
         ]}
-        bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: 'GITHUB' }]}
+        bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: 'DIPS' }]}
       >
         <div className={css['container']}>
           <Proposals dips={props.dips} />

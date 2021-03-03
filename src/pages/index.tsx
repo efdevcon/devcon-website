@@ -12,6 +12,8 @@ import { Ask } from 'src/components/road-to-devcon/ask'
 import { Learn } from 'src/components/road-to-devcon/learn'
 import { Participate } from 'src/components/road-to-devcon/participate'
 import { Blog } from 'src/components/road-to-devcon/blog'
+import { MessageFromDeva } from 'src/components/road-to-devcon/message-from-deva'
+import { Invite } from 'src/components/road-to-devcon/invite'
 import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
 
 export default function Index({ data }: any) {
@@ -25,12 +27,7 @@ export default function Index({ data }: any) {
     <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
       <Intro title={intl.formatMessage({ id: 'rtd' })} />
 
-      <Page title={intl.formatMessage({ id: 'rtd_get_informed' })}>
-        <h1>Unstructured example - can render whatever we want in pages</h1>
-        <div
-          style={{ height: '500px', width: '500px', marginLeft: '150px', marginTop: '200px', background: 'pink' }}
-        ></div>
-      </Page>
+      <MessageFromDeva title={intl.formatMessage({ id: 'rtd_message_from_deva' })} />
 
       <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
 
@@ -42,9 +39,7 @@ export default function Index({ data }: any) {
 
       <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
 
-      <Page title={intl.formatMessage({ id: 'rtd_invite' })}>
-        <h1>Page 7</h1>
-      </Page>
+      <Invite title={intl.formatMessage({ id: 'rtd_invite' })} />
     </HorizontalLayout>
   )
 }

@@ -1,0 +1,61 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    315deg,
+    hsla(338, 98%, 57%, 1) 0%,
+    hsla(21, 100%, 70%, 1) 73%,
+    hsla(18, 100%, 81%, 1) 100%
+  );
+
+  @media (max-width: $screen-md) {
+    font-size: 7px;
+  }
+
+  .text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    > .top {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      > p {
+        @media (max-width: $screen-md) {
+          font-size: 14px;
+        }
+      }
+
+      > h1 {
+        position: absolute;
+        color: rgba(0, 0, 0, 0.1);
+        font-size: 12em;
+        top: $gap-2;
+      }
+    }
+
+    > h2 {
+      font-size: 6em;
+      z-index: 1;
+    }
+
+    > span {
+      font-size: 32px;
+      --text-color: white;
+      z-index: 1;
+    }
+  }
+}
