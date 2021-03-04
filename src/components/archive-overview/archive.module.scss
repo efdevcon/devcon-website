@@ -25,6 +25,7 @@
   flex-grow: 2;
   flex-basis: 0;
   width: 100%;
+  margin-right: $gap-4;
 
   @media (max-width: $screen-md) { 
     margin-right: 0;
