@@ -28,22 +28,27 @@
     position: relative;
     width: 100%;
 
-    > .top {
+    .backdrop {
       display: flex;
-      width: 100%;
-      justify-content: center;
+      justify-self: center;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: -5em;
 
       > p {
+        color: #000000a3;
+        font-size: 18px;
+
         @media (max-width: $screen-md) {
           font-size: 14px;
         }
       }
 
       > h1 {
-        position: absolute;
         color: rgba(0, 0, 0, 0.1);
         font-size: 12em;
-        top: $gap-2;
+        line-height: 75%;
       }
     }
 
@@ -58,4 +63,12 @@
       z-index: 1;
     }
   }
+}
+
+.hash-tag {
+  color: #000000a3;
+  position: absolute;
+  top: $gap-4;
+  right: $gap-4;
+  z-index: 2;
 }

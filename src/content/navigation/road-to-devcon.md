@@ -7,4 +7,8 @@ links:
     slug: forum
   - type: link
     slug: blog
+  - type: link
+    slug: sponsor
+  - type: link
+    slug: contact
 ---

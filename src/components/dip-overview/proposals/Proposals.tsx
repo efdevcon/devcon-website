@@ -23,7 +23,7 @@ export const Links = ({ dip }: { dip: DIP }) => {
           <GithubIcon />
         </Link>
       )}
-      <Share url={`https://devcon.org${dip.slug}`} />
+      <Share url={dip.github} /*commented out until DIP page is deployed: url={`https://devcon.org${dip.slug}`}*/ />
     </div>
   )
 }
@@ -37,7 +37,9 @@ const tableColumns: Array<TableColumn> = [
     render: item => {
       return (
         <p className={`${css['index']} h3`}>
-          <Link to={item.slug}>{leftPad(item.number)}</Link>
+          <Link to={item.github} /*commented out until DIP page is deployed: to={item.slug}*/>
+            {leftPad(item.number)}
+          </Link>
         </p>
       )
     },
@@ -48,7 +50,7 @@ const tableColumns: Array<TableColumn> = [
     className: css['name-column'],
     sort: SortVariation.basic,
     render: item => {
-      return <Link to={item.slug}>{item.title}</Link>
+      return <Link to={item.github} /*commented out until DIP page is deployed: to={item.slug}*/>{item.title}</Link>
     },
   },
   {

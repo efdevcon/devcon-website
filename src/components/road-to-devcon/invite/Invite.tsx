@@ -11,14 +11,17 @@ export const Invite = React.forwardRef((props: any, ref) => {
   return (
     <Page {...props} ref={ref}>
       <GifScroller />
+      <p className={css['hash-tag']}>#ROADTODEVCON</p>
       <div className={css['container']}>
         <div className={css['text']}>
-          <div className={css['top']}>
-            <p>LET'S CELEBRATE TOGETHER AT</p>
+          {/* <div className={css['title']}> */}
+          <div className={css['backdrop']}>
+            <p className="bold">LET'S CELEBRATE TOGETHER AT</p>
             <h1>DEVCON</h1>
           </div>
 
           <h2>BOGOTA</h2>
+          {/* </div> */}
 
           <span>
             <Share />

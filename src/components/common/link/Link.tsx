@@ -11,6 +11,16 @@ type LinkProps = {
 }
 
 export const Link = ({ children, indicateExternal, external, to, ...rest }: LinkProps) => {
+  const isMailTo = to.startsWith('mailto:')
+
+  if (isMailTo) {
+    return (
+      <a href={to} {...rest}>
+        {children}
+      </a>
+    )
+  }
+
   // Detects fully qualified domain name
   // One caveat to this approach is that you could link to a devcon.org page via a FQDN, and it would be detected as external.
   // Possible solutions: 1) Make sure to always use relative links for internal navigation 2) Add an escape hatch if "devcon.org" is in the url

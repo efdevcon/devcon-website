@@ -13,8 +13,6 @@ export const useBlogState = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const sliderRef = useRef<Slider>()
 
-  console.log(currentIndex, 'cindex')
-
   return {
     blogs,
     currentIndex,
@@ -46,19 +44,16 @@ export const Arrows = (props: any) => {
 export const Cards = React.forwardRef((props: any, ref: any) => {
   const sliderRef = useRef<Slider>()
 
-  console.log(props.currentIndex, 'c index')
-
   const settings = {
     infinite: false,
     speed: 500,
     slidesToShow: 3.1,
-    swipe: false,
+    swipe: !props.noSwipe,
     arrows: false,
     slidesToScroll: 3,
     touchThreshold: 100,
     mobileFirst: true,
     beforeChange: (_: any, next: number) => {
-      console.log(next, 'next')
       if (props.setCurrentIndex) props.setCurrentIndex(Math.round(next))
     },
     responsive: [
@@ -93,6 +88,7 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
 
           if (props.customCardClass) className += ` ${props.customCardClass}`
           if (i === props.blogs.length - 1) className += ` ${css['last']}`
+          if (props.noSwipe) className += ` ${css['no-swipe']}`
 
           return (
             <Card
@@ -100,7 +96,8 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
               key={blog.slug}
               title={blog.title}
               imageUrl={blog.imageUrl}
-              linkUrl={blog.slug}
+              // linkUrl={blog.slug}
+              linkUrl={blog.permaLink} // Linking to blog domain temporarily until blog page is done (static-phase)
               metadata={[moment(blog.date).format('ll'), blog.author]}
             />
           )
