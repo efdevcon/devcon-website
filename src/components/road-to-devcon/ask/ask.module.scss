@@ -11,6 +11,8 @@
 
 .container { 
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 60%;
   height: 100%;
   background: #fff;
@@ -30,9 +32,10 @@
 }
 
 .content { 
-  overflow-y: scroll;
-  height: 450px;
+  overflow-y: auto;
+  height: 100%;
   width: 100%;
+  padding-right: $gap-4;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -45,21 +48,5 @@
   &::-webkit-scrollbar-thumb {
     background: #c1c1c1;
     border-radius: 5px;
-  }
-
-  @media (max-width: $screen-lg) {
-    height: 635px;
-  }
-
-  @media (max-width: $screen-md) {
-    height: 685px;
-  }
-
-  @media (max-width: $screen-sm) {
-    height: 700px;
-  }
-
-  @media (max-width: $screen-tiny) {
-    height: 740px;
   }
 }
