@@ -61,6 +61,7 @@
   overflow-y: scroll;
   height: 100%;
   width: 100%;
+  padding: 0 $gap-4 0 0;
 
   .item {
     cursor: pointer;
@@ -69,6 +70,19 @@
     span { 
       display: block;
     }
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 5px;
   }
 }
 
