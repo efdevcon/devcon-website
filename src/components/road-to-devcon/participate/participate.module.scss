@@ -9,7 +9,6 @@
 }
 
 .container { 
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -23,51 +22,18 @@
 }
 
 .content { 
-  position: absolute;
-  overflow-y: auto;
   height: 100%;
   width: 100%;
-  padding-right: $gap-4;
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 5px;
-  }
-
-  // @media (max-width: $screen-lg) {
-  //   height: 635px;
-  // }
-
-  // @media (max-width: $screen-md) {
-  //   height: 785px;
-  // }
-
-  // @media (max-width: $screen-sm) {
-  //   height: 820px;
-  // }
-
-  // @media (max-width: $screen-tiny) {
-  //   height: 490px;
-  // }
+  padding: 0 0 0 $gap-4;
 }
 
 .footer { 
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 0 $gap-8 0 $gap-6;
 
   a { 
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    padding: $gap-4 0;
+    padding: $gap-4 0 $gap-8 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
