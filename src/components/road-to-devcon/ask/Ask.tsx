@@ -9,14 +9,14 @@ export const Ask = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const [searchFilter, setSearchFilter] = useState('')
 
-  // Important to pass props and ref to the Page component
   return (
     <Page {...props} ref={ref}>
       <div className={css['background']}></div>
       <PageContent
+        transparent
         backgroundText={intl.formatMessage({ id: 'rtd_frequently_asked_questions' })}
         links={[]}
-        bottomLinks={[{ url: 'https://github.com', title: 'Visit Forums' }]}
+        bottomLinks={[{ url: 'https://forum.devcon.org/', title: intl.formatMessage({ id: 'dips_visit_forum'}) }]}
       >
         <div className={css['container']}>
           <div className={css['header']}>
