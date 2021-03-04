@@ -16,7 +16,8 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   span {
-    @include fonts.font-xxl;
+    // RTD: @include fonts.font-xxl;
+    @include fonts.font-lg;
   }
 
   &:hover,

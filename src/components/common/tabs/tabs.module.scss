@@ -10,25 +10,24 @@
         // border: 1px solid #f00;\
         cursor: pointer;
         padding: $gap-6;
-    }
-
-    a { 
-        color: $color-primary;
+        color: #30354B;
         font-weight: bold;
-        opacity: 0.5;
         text-transform: uppercase;
+        opacity: 0.5;
     }
 
     .active { 
         @extend li;
+        opacity: 1.0;
         background: rgba(133,142,169,0.15);
 
         -webkit-box-shadow: inset 0px -2px 0px 0px #30354B;
         -moz-box-shadow: inset 0px -2px 0px 0px #30354B;
         box-shadow: inset 0px -2px 0px 0px #30354B;
-
-        a { 
-            opacity: 1.0;
-        }
     }
 }
+
+// .tab-content {
+//     height: 550px;
+//     overflow: auto;
+// }

@@ -77,9 +77,11 @@ END:VCALENDAR`
                 <span className={css['url']}>{renderDomainName(event.url)}</span>
               </a>
             </div>
-            <div className={css['image-column']}>
+            <div>
               <a href={event.url}>
-                <img src={event.imageUrl} alt={event.title} />
+                <div className={css['image-column']}>
+                  <img src={event.imageUrl} alt={event.title} />
+                </div>
               </a>
             </div>
           </div>
