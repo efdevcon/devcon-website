@@ -58,6 +58,7 @@
 
 .url { 
   @include fonts.font-xs;
+  @include fonts.semi-bold;
   display: block;
   margin-top: $gap-6;
   text-transform: uppercase;
