@@ -1,0 +1,54 @@
+@use 'src/assets/css/variables' as *;
+
+.share {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  max-width: 100%;
+
+  > * {
+    margin-bottom: $gap-4;
+  }
+
+  > h2 {
+    font-family: $font-secondary;
+    margin-right: 20%;
+  }
+
+  .twitter {
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email {
+    display: flex;
+    justify-content: center;
+    width: 175px;
+  }
+}
+
+.copy-to-clipboard {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: $gap-4;
+  display: flex;
+
+  .link-text {
+    display: flex;
+    padding-left: $gap-4;
+    padding-right: $gap-4;
+    align-items: center;
+    background: #f7f7f7;
+    flex-basis: 70%;
+    overflow: hidden;
+  }
+
+  .copy-button {
+    flex-grow: 1;
+    margin-left: $gap-2;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

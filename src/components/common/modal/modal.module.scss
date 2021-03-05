@@ -1,0 +1,31 @@
+@use 'src/assets/css/variables' as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  .content {
+    box-shadow: 0px 4px 11px rgb(0 0 0 / 10%);
+    padding: $gap-4;
+    margin: $gap-4;
+    background: white;
+    position: relative;
+    cursor: auto;
+
+    .close {
+      position: absolute;
+      z-index: 1;
+      top: $gap-4;
+      right: $gap-4;
+      cursor: pointer;
+    }
+  }
+}

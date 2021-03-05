@@ -24,9 +24,24 @@
     overflow: auto;
     margin-left: $gap-10;
     flex-grow: 1;
+    max-width: 40%;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 5px;
+    }
 
     @media (max-width: $screen-md) {
       margin-left: 0px;
+      max-width: none;
 
       > h1 {
         font-size: 2rem;

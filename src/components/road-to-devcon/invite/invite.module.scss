@@ -72,3 +72,13 @@
   right: $gap-4;
   z-index: 2;
 }
+
+.share {
+  color: white;
+  // border-color: white;
+  border: 1px solid white;
+
+  > span {
+    margin-right: $gap-2;
+  }
+}

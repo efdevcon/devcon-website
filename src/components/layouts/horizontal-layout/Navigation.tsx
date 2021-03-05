@@ -13,6 +13,8 @@ import { SocialMedia } from 'src/components/layouts/footer'
 import { Link as LinkType } from 'src/types/Link'
 import { Link } from 'src/components/common/link'
 import { COPYRIGHT_NOTICE } from 'src/utils/constants'
+// import usePageInView from './usePageInView'
+import { useLanguageToggle } from 'src/components/layouts/header/strip/language-toggle'
 
 type PageRefs = {
   [key: string]: React.Ref<HTMLDivElement>
@@ -24,6 +26,23 @@ type NavigationProps = {
   pageRefs: PageRefs
   pageTrackRef: any
   lastX: any
+}
+
+const LanguageToggle = () => {
+  const { redirectPath, currentLanguage } = useLanguageToggle()
+
+  return (
+    <div className={css['language-toggle']}>
+      <div className={css['']}>
+        <Link className={currentLanguage === 'en' ? 'semi-bold' : ''} to={`/en/${redirectPath}`}>
+          EN
+        </Link>
+        <Link className={currentLanguage === 'es' ? 'semi-bold' : ''} to={`/es/${redirectPath}`}>
+          ES
+        </Link>
+      </div>
+    </div>
+  )
 }
 
 const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
@@ -45,6 +64,8 @@ export const Navigation = (props: NavigationProps) => {
           <IconClose />
         </div>
 
+        <LanguageToggle />
+
         <div className={css['logo']}>
           <img src={ethLogo} alt="Ethereum logo" />
         </div>
@@ -57,6 +78,8 @@ export const Navigation = (props: NavigationProps) => {
             <img src={devconLogoSimple} alt="Devcon logo" />
             <IconRoad className="abc" />
           </div>
+
+          <LanguageToggle />
 
           <ul className={css['nav']}>
             {pageTitles?.map((title, index) => {

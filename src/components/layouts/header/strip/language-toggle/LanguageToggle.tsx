@@ -4,12 +4,20 @@ import { useLocation } from '@reach/router'
 import IconGlobe from 'src/assets/icons/globe.svg'
 import css from './language-toggle.module.scss'
 
-export function LanguageToggle() {
+export const useLanguageToggle = () => {
   const location = useLocation()
   const paths = location.pathname.split('/').filter(String)
   paths.shift()
   const path = paths.join('/')
-  const redirectPath = path ? path + '/' : ''
+
+  return {
+    redirectPath: path ? path + '/' : '',
+    currentLanguage: location.pathname.split('/')[1],
+  }
+}
+
+export function LanguageToggle() {
+  const { redirectPath } = useLanguageToggle()
 
   return (
     <div className={css['language-toggle']}>
