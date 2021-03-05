@@ -19,6 +19,7 @@ Tags: Event Production
 Authors: Alberto Granzotto <agranzot@mailbox.org>
 Resources Required: Communication support, Access to the venue before the event starts
 Discussion: https://forum.devcon.org/t/dip-a-treasure-hunt-game-for-devcon/45
+Created: 2020-08-07
 ---
 
 # Summary of Proposal
