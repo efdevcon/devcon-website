@@ -5,6 +5,7 @@ import css from './invite.module.scss'
 import ShareIcon from 'src/assets/icons/share.svg'
 import { Share } from 'src/components/common/share'
 import { GifScroller } from './GifScroller'
+import partyImg from 'src/assets/images/party.png'
 
 export const Invite = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -21,6 +22,8 @@ export const Invite = React.forwardRef((props: any, ref) => {
           </div>
 
           <h2>BOGOTA</h2>
+
+          <img className={css['party']} src={partyImg} alt="party" />
 
           <span>
             <Share

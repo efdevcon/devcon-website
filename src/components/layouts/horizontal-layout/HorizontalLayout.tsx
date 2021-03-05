@@ -113,7 +113,7 @@ export const PageContent = (props: PageContentProps) => {
 
       <div
         className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']}
-        onMouseDown={e => e.stopPropagation()}
+        // onMouseDown={e => e.stopPropagation()}
         onScroll={e => {
           if (scrollTimeout) e.preventDefault()
         }}
