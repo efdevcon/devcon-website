@@ -126,10 +126,10 @@ $nav-width: 348px;
         }
 
         &:first-child {
-          padding-right: calc($gap-1);
+          padding-right: $gap-1;
 
           @media (max-width: $screen-sm) {
-            padding-right: calc($gap-2 + 1px);
+            padding-right: calc(#{$gap-2} + 1px);
           }
 
           &:before {
