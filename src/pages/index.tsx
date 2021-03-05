@@ -17,6 +17,7 @@ import { Invite } from 'src/components/road-to-devcon/invite'
 import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
 import { ToArchiveData } from 'src/components/archive-overview/queryMapper'
 import { SEO } from 'src/components/common/seo'
+import IconRoad from 'src/assets/icons/road.svg'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
@@ -27,25 +28,26 @@ export default function Index({ data }: any) {
   const videos = ToArchiveData(data)
 
   return (
-    <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
+    <>
       <SEO />
+      <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
+        <Intro title={intl.formatMessage({ id: 'rtd' })} />
 
-      <Intro title={intl.formatMessage({ id: 'rtd' })} />
+        <MessageFromDeva customIndex={<IconRoad />} title={intl.formatMessage({ id: 'rtd_message_from_deva' })} />
 
-      <MessageFromDeva title={intl.formatMessage({ id: 'rtd_message_from_deva' })} />
+        <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
 
-      <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
+        <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
 
-      <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
+        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
 
-      <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
+        <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
 
-      <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
+        <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
 
-      <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
-
-      <Invite title={intl.formatMessage({ id: 'rtd_invite' })} />
-    </HorizontalLayout>
+        <Invite title={intl.formatMessage({ id: 'rtd_invite' })} />
+      </HorizontalLayout>
+    </>
   )
 }
 

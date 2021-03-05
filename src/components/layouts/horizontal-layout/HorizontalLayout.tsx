@@ -262,7 +262,7 @@ export const HorizontalLayout = (props: any) => {
             ref: (ref: HTMLDivElement) => {
               pageRefs.current[Page.props.title] = ref
             },
-            index: leftPad(index + 1 + ''),
+            index: leftPad(index + ''),
           })
         })}
       </div>

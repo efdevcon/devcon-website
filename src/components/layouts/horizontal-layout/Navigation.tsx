@@ -33,7 +33,7 @@ const LanguageToggle = () => {
 
   return (
     <div className={css['language-toggle']}>
-      <div className={css['']}>
+      <div>
         <Link className={currentLanguage === 'en' ? 'semi-bold' : ''} to={`/en/${redirectPath}`}>
           EN
         </Link>
@@ -79,7 +79,7 @@ export const Navigation = (props: NavigationProps) => {
             <IconRoad className="abc" />
           </div>
 
-          <LanguageToggle />
+          {/* <LanguageToggle /> */}
 
           <ul className={css['nav']}>
             {pageTitles?.map((title, index) => {
@@ -87,7 +87,7 @@ export const Navigation = (props: NavigationProps) => {
                 <li
                   className="text-uppercase font-secondary"
                   key={title}
-                  data-index={leftPad(index + 1 + '')}
+                  data-index={leftPad(index + '')}
                   onClick={() => {
                     const offsetLeft = props.pageRefs.current[title].offsetLeft
 
@@ -138,7 +138,7 @@ export const Navigation = (props: NavigationProps) => {
               return (
                 <li
                   key={title}
-                  data-index={leftPad(index + 1 + '')}
+                  data-index={leftPad(index + '')}
                   onClick={() => {
                     const offsetLeft = props.pageRefs.current[title].offsetLeft
 
@@ -153,7 +153,7 @@ export const Navigation = (props: NavigationProps) => {
                     setFoldoutOpen(false)
                   }}
                 >
-                  {leftPad(index + 1 + '')}
+                  {leftPad(index + '')}
                 </li>
               )
             })}

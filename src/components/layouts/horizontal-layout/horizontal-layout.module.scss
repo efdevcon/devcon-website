@@ -166,11 +166,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-          
+
           .background-text-solid {
             @extend .background-text;
-            
-            color: #30354B;
+
+            color: #30354b;
           }
 
           .top-right {
@@ -253,6 +253,11 @@
             background: transparent;
             overflow: visible;
             padding: 0px;
+            pointer-events: none;
+
+            > * {
+              pointer-events: auto;
+            }
           }
         }
 
