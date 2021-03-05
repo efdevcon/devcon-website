@@ -46,8 +46,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
           <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
 
           <p>
-            Join us on the adventurous journey ahead to Devcon 6 in Bogota, Colombia. Devcon is the annual premier
-            conference for all Ethereum developers, researchers, thinkers, and makers.
+            {intl.formatMessage({ id: 'rtd_intro' })}
           </p>
 
           <button
@@ -97,25 +96,6 @@ export const Intro = React.forwardRef((props: any, ref) => {
           <span>{intl.formatMessage({ id: 'rtd_swipe_to_continue' })}</span>→
         </p>
       </div>
-
-      {/* <PageContent
-        backgroundText="Message from Deva"
-        links={[
-          { url: 'https://github.com', title: 'GITHUB', icon: 'abc' },
-          { url: 'https://ethereum.org', title: 'ETHEREUM.ORG', icon: 'abc' },
-        ]}
-        bottomLinks={[{ url: 'https://github.com', title: 'GITHUB' }]}
-      >
-        <div style={{ height: '100%', width: '100%', background: 'white' }}>
-          <h2>Structured page example</h2>
-          <p>
-            Simply render "PageContent" as a child of "Page", and it will provide the basic structural elements for the
-            page. It is still possible to render custom things on the rest of the page - like the background image in on
-            this page.
-          </p>
-          <div className={css['background']}></div>
-        </div>
-      </PageContent>*/}
     </Page>
   )
 })
