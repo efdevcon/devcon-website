@@ -33,8 +33,9 @@ export default function Index({ data }: any) {
       <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
         <Intro title={intl.formatMessage({ id: 'rtd' })} />
 
-        <MessageFromDeva customIndex={<IconRoad />} title={intl.formatMessage({ id: 'rtd_message_from_deva' })} />
-
+        <MessageFromDeva title={intl.formatMessage({ id: 'rtd_message_from_deva' })} 
+        messageFromDeva={data.messageFromDeva.nodes[0]?.html} whatIsDevcon={data.whatIsDevcon.nodes[0]?.html} />
+        
         <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
 
         <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
@@ -70,6 +71,16 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    messageFromDeva: allMarkdownRemark(filter: {frontmatter: {title: {in: ["Message from Deva", "Mensaje de Deva"]}}, fields: {lang: {eq: $language}}}) {
+      nodes {
+        html
+      }
+    }
+    whatIsDevcon: allMarkdownRemark(filter: {frontmatter: {title: {in: ["What is Devcon", "Que es Devcon"]}}, fields: {lang: {eq: $language}}}) {
+      nodes {
+        html
       }
     }
     ...EventsData

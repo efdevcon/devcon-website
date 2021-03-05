@@ -30,17 +30,11 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
           <Img alt="front_deva" className={css['deva']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
 
           <div className={css['message']}>
-            <h1>Embarking on the Journey Ahead</h1>
+            <h1>{intl.formatMessage({ id: 'rtd_embarking' })}</h1>
 
-            <p className="bold">Devcon Bogota</p>
+            <p className="bold">Devcon {intl.formatMessage({ id: 'rtd_bogota' })}</p>
 
-            <p>
-              Devcon Improvement Proposals (DIPs) provide a mechanism for collecting collaborative community input on
-              what should be included at the upcoming Devcon. Devcon Improvement Proposals (DIPs) provide a mechanism
-              for collecting collaborative community input on what should be included at the upcoming Devcon. Devcon
-              Improvement Proposals (DIPs) provide a mechanism for collecting collaborative community input on what
-              should be included at the upcoming Devcon.
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: props.messageFromDeva }} />
 
             <img className={css['signature']} src={devaSignature} alt="Deva signature" />
           </div>
