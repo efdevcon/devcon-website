@@ -29,6 +29,7 @@ export default function Index({ data }: any) {
   return (
     <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
       <SEO />
+
       <Intro title={intl.formatMessage({ id: 'rtd' })} />
 
       <MessageFromDeva title={intl.formatMessage({ id: 'rtd_message_from_deva' })} />

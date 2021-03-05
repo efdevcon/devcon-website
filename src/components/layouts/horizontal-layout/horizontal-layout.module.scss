@@ -166,6 +166,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+          
+          .background-text-solid {
+            @extend .background-text;
+            
+            color: #30354B;
+          }
 
           .top-right {
             z-index: 1;

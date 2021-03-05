@@ -4,6 +4,7 @@ import css from './ask.module.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Search } from 'src/components/faq/search'
 import { FAQ } from 'src/components/faq'
+import { Checkpoint } from '../checkpoint'
 
 export const Ask = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -16,7 +17,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
         transparent
         backgroundText={intl.formatMessage({ id: 'rtd_frequently_asked_questions' })}
         links={[]}
-        bottomLinks={[{ url: 'https://forum.devcon.org/', title: intl.formatMessage({ id: 'dips_visit_forum'}) }]}
+        bottomLinks={[{ url: 'https://forum.devcon.org/', title: intl.formatMessage({ id: 'dips_visit_forum' }) }]}
       >
         <div className={css['container']}>
           <div className={css['header']}>
@@ -27,6 +28,13 @@ export const Ask = React.forwardRef((props: any, ref) => {
             <FAQ data={props.faqs} filter={searchFilter} />
           </div>
         </div>
+
+        <Checkpoint
+          number="03"
+          description={intl.formatMessage({ id: 'rtd_checkpoint_3' })}
+          action={intl.formatMessage({ id: 'rtd_take_survey' })}
+          markerClassName={css['marker']}
+        />
       </PageContent>
     </Page>
   )

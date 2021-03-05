@@ -190,20 +190,6 @@
   }
 }
 
-.checkpoint {
-  @include fonts.font-xs;
-  max-width: 200px;
-
-  > * {
-    &:nth-child(1) {
-      color: rgb(187, 187, 187);
-    }
-    &:nth-child(3) {
-      color: rgb(187, 187, 187);
-    }
-  }
-}
-
 .drag-to-continue {
   position: absolute;
   z-index: 100;

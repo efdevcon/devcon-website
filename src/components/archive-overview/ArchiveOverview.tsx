@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import css from './archive.module.scss'
-import { useIntl } from 'gatsby-plugin-intl'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 
 interface ArchiveProps {
@@ -10,13 +9,12 @@ interface ArchiveProps {
 }
 
 export function ArchiveOverview(props: ArchiveProps) {
-  const intl = useIntl()
   const initialVideo = props.defaultVideo ?? props.videos[0]?.url ?? ''
   const [selectedVideo, setSelectedVideo] = useState(initialVideo)
   const [videos, setVideos] = useState(props.videos)
 
   useEffect(() => {
-    if (props.filter && Number(props.filter) !== NaN) {
+    if (props.filter && !Number.isNaN(props.filter)) {
       const filtered = props.videos.filter(i => i.devcon === Number(props.filter))
       setVideos(filtered)
     } else {

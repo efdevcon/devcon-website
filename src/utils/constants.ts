@@ -1,6 +1,6 @@
 // Only use constants for values that don't require translations
 
-export const TITLE = 'Devcon'
+export const TITLE = 'Road to Devcon: The Ethereum developer conference'
 
 export const EMAIL_DEVCON = 'devcon@ethereum.org'
 export const EMAIL_SPONSORSHIP = 'sponsorships@ethereum.org'

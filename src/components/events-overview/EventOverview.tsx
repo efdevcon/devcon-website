@@ -65,9 +65,9 @@ END:VCALENDAR`
                 <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
               </a>
 
-              <a className={css['event-add']} href="#" onClick={() => downloadIcs(event)}>
+              <span role="button" className={css['event-add']} onClick={() => downloadIcs(event)}>
                 <EventIcon />
-              </a>
+              </span>
             </div>
             <div>
               <a href={event.url}>

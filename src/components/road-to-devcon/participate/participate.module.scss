@@ -5,7 +5,13 @@
 .background {
   width: 100%;
   height: 100%;
-  background-color: #f3f9ff;
+  background-size: cover;
+  background-image: url('src/assets/images/participate_background.png');
+  background-position: 85%;
+
+  @media (max-width: $screen-md) {
+    background-position: 0%;
+  }
 }
 
 .container { 
@@ -46,5 +52,24 @@
     svg {
       fill: #323232;
     }
+  }
+}
+
+.marker {
+  position: absolute;
+  right: 28%;
+  bottom: 0;
+  cursor: pointer;
+
+  @media (max-width: $screen-xxl) {
+    right: 25%;
+  }
+  
+  @media (hover: none) {
+    display: none;
+  }
+
+  @media (max-width: $screen-lg) {
+    display: none;
   }
 }

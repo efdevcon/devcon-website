@@ -16,7 +16,9 @@ export const Learn = React.forwardRef((props: any, ref) => {
       <PageContent
         backgroundText={intl.formatMessage({ id: 'rtd_educational_resources' })}
         links={[{ url: 'https://ethereum.org', title: 'Ethereum.org', icon: 'web' }]}
-        bottomLinks={[{ url: 'https://archive.devcon.org', title: 'Devcon ' + intl.formatMessage({ id: 'rtd_archive' }) }]}
+        bottomLinks={[
+          { url: 'https://archive.devcon.org', title: 'Devcon ' + intl.formatMessage({ id: 'rtd_archive' }) },
+        ]}
       >
         <div className={css['container']}>
           <div className={css['header']}>

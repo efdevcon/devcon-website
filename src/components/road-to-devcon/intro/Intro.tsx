@@ -7,32 +7,8 @@ import SurveyIcon from 'src/assets/icons/survey.svg'
 import dog from 'src/assets/images/dog.svg'
 import guy from 'src/assets/images/scouting-guy.svg'
 import leslie from 'src/assets/images/leslie.svg'
-import marker from 'src/assets/images/marker.svg'
-// import Dog from './Dog'
 import dogeHead from 'src/assets/images/doge-head.svg'
-import { Tooltip } from 'src/components/common/tooltip'
-
-type CheckpointProps = {
-  number: string
-  description: string
-  action: string
-}
-
-export const Checkpoint = (props: CheckpointProps) => {
-  return (
-    <Tooltip
-      content={
-        <div className={css['checkpoint']}>
-          <p>{props.number} ―</p>
-          <p>{props.description}</p>
-          <p>{props.action}</p>
-        </div>
-      }
-    >
-      <img className={css['marker']} src={marker} />
-    </Tooltip>
-  )
-}
+import { Checkpoint } from '../checkpoint'
 
 export const Intro = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -45,9 +21,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
         <div className={css['text']}>
           <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
 
-          <p>
-            {intl.formatMessage({ id: 'rtd_intro' })}
-          </p>
+          <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
 
           <button
             className="lg"
@@ -67,27 +41,29 @@ export const Intro = React.forwardRef((props: any, ref) => {
       <p className={css['hash-tag']}>#ROADTODEVCON</p>
 
       <div className={css['angle']}></div>
-      <img className={css['road']} src={road} />
-      <img className={css['leslie']} src={leslie} />
+      <img className={css['road']} src={road} alt="Road to Devcon" />
+      <img className={css['leslie']} src={leslie} alt="Ethereum Leslie" />
+
       <Checkpoint
         number="01"
         description={intl.formatMessage({ id: 'rtd_checkpoint_1' })}
         action={intl.formatMessage({ id: 'rtd_take_survey' })}
+        markerClassName={css['marker']}
       />
 
       <div className={css['dog-and-guy']}>
         <div className={css['dog']}>
-          <img src={dog} />
+          <img src={dog} alt="Ethereum dog" />
 
           {showDoge && (
             <>
-              <img className={css['doge']} src={dogeHead} />
+              <img className={css['doge']} src={dogeHead} alt="Doge" />
               <p className={css['wow']}>wow</p>
             </>
           )}
         </div>
         {/* <Dog className={css['dog']} /> */}
-        <img className={css['guy']} src={guy} />
+        <img className={css['guy']} src={guy} alt="Ethereum guy" />
       </div>
 
       <div className={css['drag-to-continue']}>
