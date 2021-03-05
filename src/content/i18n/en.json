@@ -57,6 +57,7 @@
   "dips_forum": "Forum",
   "dips_next_dip": "Next DIP",
   "rtd": "Road to Devcon",
+  "rtd_intro": "Join us on the adventurous journey ahead to Devcon 6 in Bogota, Colombia. Devcon is the annual premier conference for all Ethereum developers, researchers, thinkers, and makers.",
   "rtd_drag_to_continue": "Drag to continue",
   "rtd_swipe_to_continue": "Swipe to continue",
   "rtd_get_informed": "Get informed",
@@ -66,6 +67,7 @@
   "rtd_contribute": "Contribute",
   "rtd_improvement_proposals": "Improvement Proposals",
   "rtd_learn": "Learn",
+  "rtd_archive": "Archive",
   "rtd_educational_resources": "Educational Resources",
   "rtd_message_from_deva": "Message from Deva",
   "rtd_ask_deva": "Ask Deva",
@@ -73,5 +75,10 @@
   "rtd_invite": "Invite",
   "rtd_footer": "Crafted in safe distance with ❤️ from the EF",
   "rtd_checkpoint_1": "Participate in our survey and set your intentions for an amazing in-person Devcon.",
-  "rtd_take_survey": "Take Devcon survey"
+  "rtd_checkpoint_2": "Participate in our survey and set your intentions for an amazing in-person Devcon.",
+  "rtd_checkpoint_3": "Participate in our survey and set your intentions for an amazing in-person Devcon.",
+  "rtd_take_survey": "Take Devcon survey",
+  "rtd_events": "Events",
+  "rtd_meetups": "Meetups",
+  "rtd_submit_community_event": "Submit Community Event"
 }

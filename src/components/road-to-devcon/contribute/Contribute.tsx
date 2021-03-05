@@ -17,7 +17,7 @@ export const Contribute = React.forwardRef((props: any, ref) => {
           { url: 'https://github.com/efdevcon/DIPs', title: 'Github', icon: 'github' },
           { url: 'https://forum.devcon.org/', title: 'Forum', icon: 'forum' },
         ]}
-        bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: 'DIPS' }]}
+        bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: 'DIPs' }]}
       >
         <div className={css['container']}>
           <Proposals dips={props.dips} />

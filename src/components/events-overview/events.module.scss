@@ -17,6 +17,10 @@
   div:last-child {
     margin-left: auto;
   }
+
+  &:last-child {
+    border-bottom: 0;
+  }
 }
 
 .day { 
@@ -69,6 +73,7 @@
 }
 
 .image-column { 
+  background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: $size-88;
   height: $size-40;

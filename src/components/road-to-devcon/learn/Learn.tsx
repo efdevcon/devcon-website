@@ -16,11 +16,13 @@ export const Learn = React.forwardRef((props: any, ref) => {
       <PageContent
         backgroundText={intl.formatMessage({ id: 'rtd_educational_resources' })}
         links={[{ url: 'https://ethereum.org', title: 'Ethereum.org', icon: 'web' }]}
-        bottomLinks={[{ url: 'https://archive.devcon.org', title: 'Devcon Archive' }]}
+        bottomLinks={[
+          { url: 'https://archive.devcon.org', title: 'Devcon ' + intl.formatMessage({ id: 'rtd_archive' }) },
+        ]}
       >
         <div className={css['container']}>
           <div className={css['header']}>
-            <h3 className="subsection-header">Archive</h3>
+            <h3 className="subsection-header">{intl.formatMessage({ id: 'rtd_archive' })}</h3>
             <Filter onFilter={e => setFilter(e)} />
           </div>
           <div className={css['content']}>

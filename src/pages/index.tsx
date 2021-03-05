@@ -16,6 +16,7 @@ import { MessageFromDeva } from 'src/components/road-to-devcon/message-from-deva
 import { Invite } from 'src/components/road-to-devcon/invite'
 import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
 import { ToArchiveData } from 'src/components/archive-overview/queryMapper'
+import { SEO } from 'src/components/common/seo'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
@@ -27,6 +28,8 @@ export default function Index({ data }: any) {
 
   return (
     <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
+      <SEO />
+
       <Intro title={intl.formatMessage({ id: 'rtd' })} />
 
       <MessageFromDeva title={intl.formatMessage({ id: 'rtd_message_from_deva' })} />

@@ -18,11 +18,12 @@ export function SEO(props: SEOProps) {
 
   const titleTemplate = props.title ? `%s · ${TITLE}` : TITLE
   const title = props.title || TITLE
-  const description = props.description || intl.formatMessage({ id: 'description' })
+  const description = props.description || intl.formatMessage({ id: 'rtd_intro' })
   const lang = props.lang || intl.locale || intl.defaultLocale
   const canonical = props.canonicalUrl || ''
 
-  const image = '/assets/images//seo.jpg'
+  const image = 'https://road-to-devcon--efdevcon.netlify.app/assets/images/rtd-social.png'
+
   const siteUrl = location.origin
   const url = `${siteUrl}${location.pathname || '/'}`.replace(/\/$/, '')
 

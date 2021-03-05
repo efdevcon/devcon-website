@@ -42,7 +42,7 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
               should be included at the upcoming Devcon.
             </p>
 
-            <img className={css['signature']} src={devaSignature} />
+            <img className={css['signature']} src={devaSignature} alt="Deva signature" />
           </div>
         </div>
       </PageContent>

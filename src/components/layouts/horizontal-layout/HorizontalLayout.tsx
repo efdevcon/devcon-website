@@ -7,6 +7,7 @@ import { Link } from 'src/components/common/link'
 import IconGithub from 'src/assets/icons/github.svg'
 import IconGlobe from 'src/assets/icons/globe.svg'
 import IconDiscussion from 'src/assets/icons/discussion.svg'
+import { useIntl } from 'gatsby-plugin-intl'
 
 type PageProps = {
   title: string
@@ -45,6 +46,8 @@ export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
 })
 
 export const PageContent = (props: PageContentProps) => {
+  const intl = useIntl()
+
   const renderIcon = (type: string) => {
     if (!type) return <></>
 
@@ -70,6 +73,11 @@ export const PageContent = (props: PageContentProps) => {
     }
   }
 
+  const backgroundTextClassName =
+    props.backgroundText === intl.formatMessage({ id: 'rtd_community_events' })
+      ? 'background-text-solid'
+      : 'background-text-gradient'
+
   return (
     <div className={css['layer']}>
       <div className={css['header']}>
@@ -78,7 +86,7 @@ export const PageContent = (props: PageContentProps) => {
         </h3>
 
         {props.backgroundText && (
-          <h2 className={`${css['background-text-gradient']} no-select`}>
+          <h2 className={`${css[backgroundTextClassName]} no-select`}>
             {props.backgroundText.split(' ').map((word, index) => {
               return <span key={index}>{word}</span>
             })}

@@ -25,7 +25,7 @@ export function Tabs(props: TabsProps) {
           })}
       </ul>
 
-      <div className="tab-content">
+      <div className={css['tab-content']}>
         {props.children &&
           props.children.map((child: any) => {
             if (child.props.title !== activeTab) return undefined
