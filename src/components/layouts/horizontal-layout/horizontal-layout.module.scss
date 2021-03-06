@@ -114,6 +114,11 @@
               @include nav-number;
             }
           }
+          
+          .page-title-inverted {
+            @extend .page-title;
+            color: #fff;
+          }
 
           .background-text {
             margin-left: $gap-8;
@@ -149,7 +154,7 @@
             @extend .background-text;
 
             background: conic-gradient(
-              from 178.57deg at 60.56% 57.14%,
+              from 178.57deg at 30% 50%,
               #edefcf 0deg,
               #ededce 24.56deg,
               #eeebcc 51.02deg,
@@ -165,12 +170,32 @@
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @media (min-width: $screen-xxl) {
+              background: conic-gradient(
+                from 178.57deg at 10% 50%,
+                #edefcf 0deg,
+                #ededce 24.56deg,
+                #eeebcc 51.02deg,
+                #f3c4ba 102.55deg,
+                #c5d4e4 137.2deg,
+                #c5d8ed 169.68deg,
+                #c5d7ea 170.39deg,
+                #d9cdd2 202.5deg,
+                #ff7852 265.36deg,
+                #d4d1d8 328.41deg,
+                #d4d3d9 339.22deg,
+                #d3d7da 360deg
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
 
           .background-text-solid {
             @extend .background-text;
 
-            color: #30354b;
+            color: #3b445d;
           }
 
           .top-right {

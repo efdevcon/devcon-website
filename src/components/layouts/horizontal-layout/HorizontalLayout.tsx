@@ -30,6 +30,7 @@ type PageContentProps = {
   index?: string
   children: React.ReactNode
   transparent?: boolean
+  inverted?: boolean
 }
 
 export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
@@ -78,10 +79,12 @@ export const PageContent = (props: PageContentProps) => {
       ? 'background-text-solid'
       : 'background-text-gradient'
 
+  const pageTitleClassName = props.inverted ? 'page-title-inverted' : 'page-title'
+
   return (
     <div className={css['layer']}>
       <div className={css['header']}>
-        <h3 className={`${css['page-title']} no-select`} data-index={props.index}>
+        <h3 className={`${css[pageTitleClassName]} no-select`} data-index={props.index}>
           {props.title}
         </h3>
 

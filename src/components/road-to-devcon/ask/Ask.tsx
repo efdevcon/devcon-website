@@ -32,7 +32,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
         <Checkpoint
           number="03"
           description={intl.formatMessage({ id: 'rtd_checkpoint_3' })}
-          action={intl.formatMessage({ id: 'rtd_take_survey' })}
+          action={intl.formatMessage({ id: 'rtd_share_experience' })}
           markerClassName={css['marker']}
         />
       </PageContent>
