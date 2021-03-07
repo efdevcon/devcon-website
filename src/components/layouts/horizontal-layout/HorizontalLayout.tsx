@@ -33,6 +33,10 @@ type PageContentProps = {
   inverted?: boolean
 }
 
+let recentlyScrolled = false
+let scrollTimeout: NodeJS.Timeout
+const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
+
 export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
   return (
     <div className={css['page']} ref={ref}>
@@ -147,19 +151,18 @@ export const PageContent = (props: PageContentProps) => {
   )
 }
 
-let recentlyScrolled = false
-let scrollTimeout: NodeJS.Timeout
-const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
-
 export const HorizontalLayout = (props: any) => {
-  const [trackWidth, setTrackWidth] = React.useState(0)
-  const [pageWidth, setPageWidth] = React.useState(0)
+  // const [trackWidth, setTrackWidth] = React.useState(0)
+  // const [pageWidth, setPageWidth] = React.useState(0)
   const dragging = React.useRef<boolean>(false)
   const trackRef = React.useRef<HTMLDivElement>()
   const pageRefs = React.useRef<any>({})
   const lastX = React.useRef(0)
   const pages = props.children
+  const pageWidth = React.useRef(0)
+  const trackWidth = React.useRef(0)
 
+  // Mouse wheel scroll
   React.useEffect(() => {
     const scrollHandler = (e: any) => {
       if (!trackRef.current) return
@@ -167,7 +170,7 @@ export const HorizontalLayout = (props: any) => {
       const scrolledDown = e.deltaY > 0
 
       const pixelsToMove = scrolledDown ? 100 : -100
-      const nextX = Math.min(trackWidth - pageWidth, Math.max(0, lastX.current + pixelsToMove))
+      const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current + pixelsToMove))
 
       trackRef.current.style.transform = `translateX(-${nextX}px)`
 
@@ -187,26 +190,36 @@ export const HorizontalLayout = (props: any) => {
     return () => {
       document.removeEventListener('wheel', scrollHandler)
     }
-  }, [trackWidth, pageWidth])
+  }, [])
 
+  // Resync when track changes size to ensure we're never scrolled outside the visible area
   React.useLayoutEffect(() => {
     if (isTouchDevice) return
     if (!trackRef.current) return
 
     if (window.ResizeObserver) {
       const el = trackRef.current
+      let firstCall = true
 
       const observer = new window.ResizeObserver(entries => {
         const entry = entries[0]
         const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
-        setPageWidth(borderBoxSize.inlineSize)
-        setTrackWidth(el.scrollWidth)
+        pageWidth.current = borderBoxSize.inlineSize
+        trackWidth.current = el.scrollWidth
 
-        const nextX = Math.min(trackWidth - pageWidth, lastX.current)
+        const nextX = Math.min(trackWidth.current - pageWidth.current, lastX.current)
+
+        lastX.current = nextX
+
+        if (firstCall) {
+          firstCall = false
+
+          return
+        }
 
         el.style.transform = `translateX(-${nextX}px)`
 
-        lastX.current = nextX
+        console.log(nextX, 'next x')
       })
 
       observer.observe(el)
@@ -215,7 +228,7 @@ export const HorizontalLayout = (props: any) => {
         observer.unobserve(el)
       }
     }
-  }, [trackWidth, pageWidth])
+  }, [])
 
   const onDragEnd = () => {
     if (!dragging.current) return
@@ -248,7 +261,10 @@ export const HorizontalLayout = (props: any) => {
 
           // const lastX = dragging.current
           const speed = 1.5
-          const nextX = Math.min(trackWidth - pageWidth, Math.max(0, lastX.current - e.movementX * speed))
+          const nextX = Math.min(
+            trackWidth.current - pageWidth.current,
+            Math.max(0, lastX.current - e.movementX * speed)
+          )
 
           // Animate element directly for performance - resync state when drag ends.
           trackRef.current.style.transform = `translateX(-${nextX}px)`

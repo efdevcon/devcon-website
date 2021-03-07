@@ -36,10 +36,13 @@
 
     button {
       text-transform: uppercase;
+      background: white;
+      margin-right: $gap-2;
+      margin-bottom: $gap-2;
 
-      @media (max-width: $screen-sm) {
-        background: white;
-      }
+      // @media (max-width: $screen-sm) {
+      //   background: white;
+      // }
 
       > * {
         margin-left: 1em;

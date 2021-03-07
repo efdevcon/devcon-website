@@ -4,15 +4,18 @@ import css from './intro.module.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import road from 'src/assets/images/road.svg'
 import SurveyIcon from 'src/assets/icons/survey.svg'
+import InfoIcon from 'src/assets/icons/info.svg'
 import dog from 'src/assets/images/dog.svg'
 import guy from 'src/assets/images/scouting-guy.svg'
 import leslie from 'src/assets/images/leslie.svg'
 import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
+import { Modal } from 'src/components/common/modal'
 
 export const Intro = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const [showDoge, setShowDoge] = React.useState(false)
+  const [modalOpen, setModalOpen] = React.useState(false)
 
   // Important to pass props and ref to the Page component
   return (
@@ -22,6 +25,20 @@ export const Intro = React.forwardRef((props: any, ref) => {
           <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
 
           <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
+
+          <button
+            className="lg"
+            onClick={() => {
+              setModalOpen(true)
+            }}
+          >
+            {intl.formatMessage({ id: 'rtd_what_is_devcon' })}
+            <InfoIcon />
+          </button>
+
+          <Modal open={modalOpen} close={() => setModalOpen(false)}>
+            Test
+          </Modal>
 
           <button
             className="lg"

@@ -59,12 +59,13 @@ $nav-width: 348px;
 
     .foldout {
       transform: translateX(0%);
-    }
 
-    // .language-toggle {
-    //   display: none;
-    //   flex-grow: 0;
-    // }
+      .language-toggle {
+        @media (max-width: $screen-sm) {
+          display: none;
+        }
+      }
+    }
   }
 
   .toggle {
@@ -95,64 +96,10 @@ $nav-width: 348px;
     }
   }
 
-  .language-toggle {
-    color: #000000ba;
-    flex-grow: 1;
+  .logo {
     display: flex;
     justify-content: center;
-    font-size: 12px;
-    margin-top: $gap-2;
-
-    @media (max-width: $screen-sm) {
-      align-items: center;
-      justify-content: flex-end;
-      margin-right: $gap-4;
-      margin-top: 0px;
-    }
-
-    div {
-      display: flex;
-      justify-content: center;
-
-      height: fit-content;
-
-      > * {
-        position: relative;
-
-        padding: $gap-1;
-
-        @media (max-width: $screen-sm) {
-          padding: $gap-2;
-        }
-
-        &:first-child {
-          padding-right: $gap-1;
-
-          @media (max-width: $screen-sm) {
-            padding-right: calc(#{$gap-2} + 1px);
-          }
-
-          &:before {
-            content: '';
-            position: absolute;
-            height: 10px;
-            top: 50%;
-            margin-top: -5px;
-            right: 0px;
-
-            @media (max-width: $screen-sm) {
-              right: -1px;
-            }
-
-            background: #ababab;
-            width: 1px;
-          }
-        }
-      }
-    }
-  }
-
-  .logo {
+    align-items: center;
     width: 100%;
     @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
 
@@ -225,7 +172,7 @@ $nav-width: 348px;
     }
 
     .language-toggle {
-      display: block !important;
+      opacity: 0;
     }
 
     .header {
@@ -248,16 +195,20 @@ $nav-width: 348px;
     }
 
     .nav {
-      @include gaps.responsive-gap($attribute: margin, $top: $gap-3, $right: $gap-4, $min-gap: $gap-2);
-      padding-bottom: $gap-6;
+      // @include gaps.responsive-gap($attribute: margin, $top: $gap-3, $right: $gap-4, $min-gap: $gap-2);
+      // padding-bottom: $gap-6;
       list-style-type: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
       li {
+        @include gaps.responsive-gap($attribute: padding, $left: $gap-4, $min-gap: $gap-2);
         @include fonts.font-xl;
+        display: flex;
+        align-items: center;
         position: relative;
         cursor: pointer;
-        margin-bottom: $gap-6;
+        height: 48px;
+        padding-top: $gap-3;
+        padding-bottom: $gap-3;
         line-height: 1em;
         vertical-align: text-top;
 
@@ -265,21 +216,24 @@ $nav-width: 348px;
           margin-bottom: 0px;
         }
 
-        &:before {
-          content: attr(data-index);
-          @include nav-number;
+        @media (max-width: $screen-sm) {
+          &:before {
+            content: attr(data-index);
+            @include nav-number;
+          }
         }
       }
     }
 
     .links {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
       margin-bottom: $gap-4;
       margin-top: $gap-2;
       margin-right: $gap-4;
 
       > a {
         display: inline-block;
-        @include gaps.responsive-gap($attribute: margin, $gap: $gap-4, $min-gap: $gap-2);
+        @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
       }
     }
 
@@ -309,7 +263,7 @@ $nav-width: 348px;
   }
 
   .inline-nav {
-    display: flex;
+    display: none;
     align-items: center;
     position: absolute;
     z-index: -3;
@@ -318,7 +272,7 @@ $nav-width: 348px;
     @include gaps.responsive-gap($attribute: margin, $left: $gap-10, $bottom: $gap-5, $min-gap: $gap-4);
 
     @media (max-width: $screen-sm) {
-      display: none;
+      display: flex;
     }
 
     > svg {
@@ -349,4 +303,103 @@ $nav-width: 348px;
   right: $gap-4;
   bottom: $gap-4;
   text-transform: uppercase;
+}
+
+.selected {
+  background: rgba(196, 196, 196, 0.2);
+
+  @media (max-width: $screen-sm) {
+    background: none;
+  }
+}
+
+.selected-inline {
+  text-decoration: underline;
+}
+
+.nav-middle {
+  color: #000000ba;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+
+  @media (max-width: $screen-sm) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: $gap-4;
+    margin-top: 0px;
+  }
+
+  .slide-nav {
+    text-align: center;
+    width: 100%;
+    list-style-type: none;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
+
+    > li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include fonts.font-lg;
+      position: relative;
+      cursor: pointer;
+      height: 48px;
+      line-height: 1em;
+      padding-top: $gap-3;
+      padding-bottom: $gap-3;
+      vertical-align: text-top;
+      color: #9098a1;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+.language-toggle {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  padding: 8px;
+
+  > * {
+    position: relative;
+    padding: $gap-1;
+
+    @media (max-width: $screen-sm) {
+      padding: $gap-2;
+    }
+
+    &:first-child {
+      padding-right: $gap-1;
+
+      @media (max-width: $screen-sm) {
+        padding-right: calc(#{$gap-2} + 1px);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 10px;
+        top: 50%;
+        margin-top: -5px;
+        right: 0px;
+
+        @media (max-width: $screen-sm) {
+          right: -1px;
+        }
+
+        background: #ababab;
+        width: 1px;
+      }
+    }
+  }
 }
