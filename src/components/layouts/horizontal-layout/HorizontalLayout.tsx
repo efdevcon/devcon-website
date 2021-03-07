@@ -218,8 +218,6 @@ export const HorizontalLayout = (props: any) => {
         }
 
         el.style.transform = `translateX(-${nextX}px)`
-
-        console.log(nextX, 'next x')
       })
 
       observer.observe(el)

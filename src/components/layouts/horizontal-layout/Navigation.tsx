@@ -53,8 +53,6 @@ const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: any) =>
 
   const offsetLeft = targetSlide.offsetLeft
 
-  console.log(offsetLeft, 'offsetleft being set hello')
-
   if (isTouchDevice) {
     props.pageTrackRef.current.scrollLeft = offsetLeft
   } else {
@@ -105,7 +103,7 @@ export const Navigation = (props: NavigationProps) => {
           <IconClose />
         </div>
 
-        <nav className={css['nav-middle']}>
+        <div className={css['nav-middle']}>
           <LanguageToggle />
 
           <ul className={css['slide-nav']}>
@@ -123,7 +121,7 @@ export const Navigation = (props: NavigationProps) => {
               )
             })}
           </ul>
-        </nav>
+        </div>
 
         <div className={css['logo']}>
           <img src={ethLogo} alt="Ethereum logo" />
@@ -174,11 +172,13 @@ export const Navigation = (props: NavigationProps) => {
           )}
 
           <div className={css['nav-footer']}>
-            <SocialMedia />
-            <Newsletter />
-            <div className={css['info']}>
-              <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>
-              <p>{COPYRIGHT_NOTICE}</p>
+            <div>
+              <SocialMedia />
+              <Newsletter />
+              <div className={css['info']}>
+                <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>
+                <p>{COPYRIGHT_NOTICE}</p>
+              </div>
             </div>
           </div>
         </div>

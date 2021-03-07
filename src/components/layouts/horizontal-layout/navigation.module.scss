@@ -239,25 +239,29 @@ $nav-width: 348px;
 
     .nav-footer {
       flex-grow: 1;
+      overflow: auto;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
 
-      > * {
-        @include gaps.responsive-gap($attribute: margin, $gap: $gap-4, $min-gap: $gap-2);
-        padding-bottom: $gap-4;
+      > div {
+        > * {
+          @include gaps.responsive-gap($attribute: margin, $gap: $gap-4, $min-gap: $gap-2);
+          padding-bottom: $gap-4;
+          flex-shrink: 0;
 
-        &:nth-child(1) {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          &:nth-child(1) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          }
+
+          &:nth-child(2) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          }
         }
 
-        &:nth-child(2) {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        .info {
+          @include fonts.font-xs;
         }
-      }
-
-      .info {
-        @include fonts.font-xs;
       }
     }
   }
