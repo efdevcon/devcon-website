@@ -15,6 +15,7 @@ export const query = graphql`
           speakers
           url
           featured
+          category
         }
       }
     }

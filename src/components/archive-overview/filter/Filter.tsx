@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import css from './filter.module.scss'
 
 interface FilterProps {
+  filters: string[]
   onFilter?: (value: string) => void
 }
 
 export function Filter(props: FilterProps) {
-  const editions = ['0', '1', '2', '3', '4', '5']
   const [filter, setFilter] = useState('')
 
   function onFilter(value: string) {
@@ -20,7 +20,7 @@ export function Filter(props: FilterProps) {
       <p onClick={() => onFilter('')} className={filter === '' ? css['active-filter'] : undefined}>
         All
       </p>
-      {editions.map(i => {
+      {props.filters.map(i => {
         return (
           <p
             key={'archive_filter_' + i}

@@ -15,7 +15,7 @@ export function ArchiveOverview(props: ArchiveProps) {
 
   useEffect(() => {
     if (props.filter && !Number.isNaN(props.filter)) {
-      const filtered = props.videos.filter(i => i.devcon === Number(props.filter))
+      const filtered = props.videos.filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
       setVideos(filtered)
     } else {
       setVideos(props.videos)

@@ -9,4 +9,5 @@ url: 'https://www.youtube.com/embed/66SaEDzlmP4'
 day: 'Day 1'
 room: 'Main Stage'
 type: Talk
+category: ethos
 ---

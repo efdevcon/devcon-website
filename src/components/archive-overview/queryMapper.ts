@@ -12,5 +12,6 @@ export function ToArchiveVideo(source: any): ArchiveVideo {
     description: source.frontmatter.description,
     speakers: source.frontmatter.speakers,
     url: source.frontmatter.url,
+    category: source.frontmatter.category,
   }
 }
