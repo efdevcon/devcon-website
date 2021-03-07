@@ -9,4 +9,5 @@ url: 'https://www.youtube.com/embed/wNCKJtGuL5g'
 day: N/A
 room: N/A
 type: N/A
+category: ethos
 ---

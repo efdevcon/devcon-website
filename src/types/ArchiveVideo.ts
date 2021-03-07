@@ -5,4 +5,5 @@ export interface ArchiveVideo {
   description: string
   speakers: string
   url: string
+  category: string
 }
