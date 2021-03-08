@@ -25,15 +25,17 @@ export function ArchiveOverview(props: ArchiveProps) {
   return (
     <div className={css['container']}>
       <div className={css['player']}>
-        <iframe
-          title="Devon Archive video player"
-          className={css['video-iframe']}
-          src={selectedVideo}
-          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true"
-          allowFullScreen
-        />
+        <div className={css['wrapper']}>    
+          <iframe
+            title="Road to Devon video player"
+            className={css['video-iframe']}
+            src={selectedVideo}
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowFullScreen
+          />
+        </div>
       </div>
       <div className={css['list']}>
         {videos &&

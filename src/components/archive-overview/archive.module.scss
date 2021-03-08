@@ -6,24 +6,15 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  height: 450px;
-
-  @media (max-width: $screen-lg) {
-    height: 470px;
-  }
+  height: 100%;
 
   @media (max-width: $screen-md) { 
     flex-direction: column;
-    height: 470px;
-  }
-  @media (max-width: $screen-tiny) {
-    height: 330px;
   }
 }
 
 .player { 
   flex-grow: 2;
-  flex-basis: 0;
   width: 100%;
   margin-right: $gap-4;
 
@@ -38,27 +29,23 @@
   }
 }
 
-.video-iframe {
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.video-iframe { 
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 450px;
-
-  @media (max-width: $screen-lg) {
-    height: 470px;
-  }
-
-  @media (max-width: $screen-md) {
-    height: 300px;
-  }
-
-  @media (max-width: $screen-tiny) {
-    height: 200px;
-  }
+  height: 100%;
+  border: 0;
 }
 
 .list {
   flex-grow: 1;
-  flex-basis: 0;
-  display: block;
   overflow-y: scroll;
   height: 100%;
   width: 100%;
