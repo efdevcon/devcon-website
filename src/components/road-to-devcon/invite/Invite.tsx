@@ -18,12 +18,12 @@ export const Invite = React.forwardRef((props: any, ref) => {
         <div className={css['text']}>
           <div className={css['backdrop']}>
             <p className="bold">LET'S CELEBRATE TOGETHER AT</p>
-            <h1>DEVCON</h1>
+            <h1>
+              DEVCON <img className={css['party']} src={partyImg} alt="party" />
+            </h1>
           </div>
 
           <h2>BOGOTA</h2>
-
-          <img className={css['party']} src={partyImg} alt="party" />
 
           <span>
             <Share
