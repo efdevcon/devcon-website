@@ -8,6 +8,7 @@ type ModalProps = {
   className?: string
   close: () => void
   children: React.ReactNode
+  [key: string]: any
 }
 
 export const Modal = (props: ModalProps) => {
@@ -18,7 +19,7 @@ export const Modal = (props: ModalProps) => {
   if (props.className) contentClass += ` ${props.className}`
 
   return createPortal(
-    <div className={css['modal']} onClick={props.close}>
+    <div className={css['modal']} onClick={props.close} {...props}>
       <div
         className={contentClass}
         onClick={e => {

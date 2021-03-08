@@ -84,7 +84,7 @@ export const Share = (props: ShareProps) => {
   if (props.renderTrigger)
     return (
       <>
-        <Modal open={open} close={toggle}>
+        <Modal open={open} close={toggle} onWheel={e => e.nativeEvent.stopImmediatePropagation()}>
           <div className={css['share']}>
             <h2>SHARE ROAD TO DEVCON</h2>
 

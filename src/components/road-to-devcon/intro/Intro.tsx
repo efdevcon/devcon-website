@@ -36,7 +36,11 @@ export const Intro = React.forwardRef((props: any, ref) => {
             <InfoIcon />
           </button>
 
-          <Modal open={modalOpen} close={() => setModalOpen(false)}>
+          <Modal
+            open={modalOpen}
+            close={() => setModalOpen(false)}
+            onWheel={e => e.nativeEvent.stopImmediatePropagation()}
+          >
             <div className={css['what-is-devcon']}>
               <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
               <div className="markdown" dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }} />
