@@ -18,6 +18,7 @@
   span {
     // RTD: @include fonts.font-xxl;
     @include fonts.font-lg;
+    margin-right: $gap-2;
   }
 
   &:hover,
@@ -25,6 +26,10 @@
   &:active {
     background: #f8f8f8;
   }
+}
+
+.icon {
+  flex-shrink: 0;
 }
 
 .active {
