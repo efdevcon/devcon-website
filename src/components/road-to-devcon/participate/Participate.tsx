@@ -44,7 +44,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
         <Checkpoint
           number="02"
           description={intl.formatMessage({ id: 'rtd_checkpoint_2' })}
-          action=''
+          action=""
           markerClassName={css['marker']}
         />
       </PageContent>

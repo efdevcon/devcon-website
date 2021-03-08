@@ -7,7 +7,8 @@ interface FilterProps {
 }
 
 export function Filter(props: FilterProps) {
-  const [filter, setFilter] = useState('')
+  const defaultValue = props.filters[0]
+  const [filter, setFilter] = useState(defaultValue)
 
   function onFilter(value: string) {
     setFilter(value)
@@ -17,9 +18,6 @@ export function Filter(props: FilterProps) {
 
   return (
     <div className={css['container']}>
-      <p onClick={() => onFilter('')} className={filter === '' ? css['active-filter'] : undefined}>
-        All
-      </p>
       {props.filters.map(i => {
         return (
           <p

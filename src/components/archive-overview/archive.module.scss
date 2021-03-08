@@ -87,7 +87,7 @@
 }
 
 .speakers { 
-  @include fonts.font-xs;
+  @include fonts.font-sm;
   display: block;
   margin: $gap-2 0;
   text-transform: uppercase;
