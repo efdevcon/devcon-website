@@ -32,12 +32,15 @@ export const Intro = React.forwardRef((props: any, ref) => {
               setModalOpen(true)
             }}
           >
-            {intl.formatMessage({ id: 'rtd_what_is_devcon' })}
+            {props.whatIsDevcon.frontmatter.title}
             <InfoIcon />
           </button>
 
           <Modal open={modalOpen} close={() => setModalOpen(false)}>
-            Test
+            <div className={css['what-is-devcon']}>
+              <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
+              <div className="markdown" dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }} />
+            </div>
           </Modal>
 
           <button
@@ -79,7 +82,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
             </>
           )}
         </div>
-        {/* <Dog className={css['dog']} /> */}
+
         <img className={css['guy']} src={guy} alt="Ethereum guy" />
       </div>
 

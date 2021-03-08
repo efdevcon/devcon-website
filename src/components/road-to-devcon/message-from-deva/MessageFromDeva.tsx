@@ -34,7 +34,7 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
 
             <p className="bold">Devcon {intl.formatMessage({ id: 'rtd_bogota' })}</p>
 
-            <div dangerouslySetInnerHTML={{ __html: props.messageFromDeva }} />
+            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.messageFromDeva }} />
 
             <img className={css['signature']} src={devaSignature} alt="Deva signature" />
           </div>
