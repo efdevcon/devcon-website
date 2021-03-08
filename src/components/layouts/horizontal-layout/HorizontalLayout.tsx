@@ -152,8 +152,6 @@ export const PageContent = (props: PageContentProps) => {
 }
 
 export const HorizontalLayout = (props: any) => {
-  // const [trackWidth, setTrackWidth] = React.useState(0)
-  // const [pageWidth, setPageWidth] = React.useState(0)
   const dragging = React.useRef<boolean>(false)
   const trackRef = React.useRef<HTMLDivElement>()
   const pageRefs = React.useRef<any>({})

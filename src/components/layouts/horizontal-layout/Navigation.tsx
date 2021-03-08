@@ -91,6 +91,11 @@ export const Navigation = (props: NavigationProps) => {
     }
   }, [])
 
+  // Keep anchor in sync
+  React.useEffect(() => {
+    if (pageInView) window.location.replace(hashSlug(pageInView))
+  }, [pageInView])
+
   return (
     <>
       <div className={`${css['navigation']} ${foldoutOpen ? css['open'] : ''}`}>
