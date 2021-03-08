@@ -3,8 +3,10 @@ title: Mensaje de Deva
 template: content
 ---
 
-Devcon es una introducción intensiva para los nuevos exploradores de Ethereum, una reunión familiar global para aquellos que ya forman parte de nuestro ecosistema y una fuente de energía y creatividad para todos.
+Si bien tenemos algo de tiempo hasta Devcon, hay muchas formas de participar y contribuir a Devcon, y mucho en lo que aprender y participar en todo el ecosistema de Ethereum. Hemos pensado mucho en cómo lograr todo lo que nos propusimos lograr con Devcon en el futuro y en dónde podríamos encontrar espacio para generar un impacto incluso antes del evento.
 
-Hospedamos Devcon para educar y empoderar a la comunidad para construir y usar sistemas descentralizados. Y es una conferencia para constructores de todo tipo: desarrolladores, diseñadores, investigadores, implementadores de clientes, ingenieros de pruebas, operadores de infraestructura, organizadores comunitarios, economistas sociales, artistas y más.
+Comenzamos el año pasado diciendo que Devcon tiene que ver con la colaboración, el intercambio de conocimientos y la comprensión de la vanguardia en el espacio Ethereum. Durante los últimos meses, gran parte de este trabajo se ha realizado en línea. Y aunque todavía planeamos usar nuestro escenario más grande para enviar un mensaje sobre lo que Ethereum ha logrado (y hacer uso de las herramientas creadas por nuestra comunidad mientras trabajamos para hacer crecer el ecosistema Ethereum), mientras tanto, hemos estado sentando las bases para el evento y su futuro para que estemos listos cuando el mundo también lo esté para nosotros.
 
-Nuestro objetivo es ampliar los límites de las posibilidades en nuestra misión de llevar protocolos, herramientas y cultura descentralizadas al mundo. La programación cubre contenidos que van desde lo profundamente técnico hasta lo profundamente humano.
+Ahora, nos gustaría encontrar nuevas formas de dar la bienvenida a viejos amigos y a nuevos amigos al redil. Y a medida que el ritmo de la batería comienza a sonar un poco más fuerte con las primeras reuniones no muy lejanas, haremos lo que podamos para destacar los principales eventos del ecosistema, ya sean reuniones regionales, virtuales o accesibles localmente.
+
+Cada tipo de evento ha experimentado para aprovechar al máximo el año que hemos tenido para construir nuevas relaciones, explorar nuevas ideas y presentar nuevos equipos, rostros y avances. Y vamos a ayudar a que el ritmo de la batería siga aumentando hasta que los veamos a todos de nuevo en Devcon. En las páginas siguientes, encontrará recursos e información sobre formas de participar y permanezca atento a las noticias sobre más formas de participar pronto.
