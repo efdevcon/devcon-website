@@ -27,6 +27,7 @@
     align-items: center;
     position: relative;
     width: 100%;
+    pointer-events: none;
 
     .backdrop {
       display: flex;
@@ -77,6 +78,7 @@
   color: white;
   // border-color: white;
   border: 1px solid white;
+  pointer-events: auto;
 
   > span {
     margin-right: $gap-2;
