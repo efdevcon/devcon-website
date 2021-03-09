@@ -8,10 +8,9 @@ import devaSignature from 'src/assets/images/deva_signature.png'
 
 export const MessageFromDeva = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
-
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativePath: { in: ["front-deva.png"] } }) {
+      allFile(filter: { relativePath: { in: ["lying-deva.png", "sitting-deva.png"] } }) {
         nodes {
           childImageSharp {
             fluid(maxWidth: 500, quality: 80) {
@@ -27,14 +26,16 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
     <Page {...props} ref={ref}>
       <PageContent transparent backgroundText={intl.formatMessage({ id: 'rtd_message_from_deva' })}>
         <div className={css['container']}>
-          <Img alt="front_deva" className={css['deva']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
+
+          <Img alt="Lying Deva" className={css['lying-deva']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
+          <Img alt="Sitting Deva" className={css['sitting-deva']} fluid={data.allFile.nodes[1].childImageSharp.fluid} />
 
           <div className={css['message']}>
             <h1>{intl.formatMessage({ id: 'rtd_embarking' })}</h1>
 
             <p className="bold">Devcon {intl.formatMessage({ id: 'rtd_bogota' })}</p>
 
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.messageFromDeva }} />
+            <div className={css['content'] + ' markdown'} dangerouslySetInnerHTML={{ __html: props.messageFromDeva }} />
 
             <img className={css['signature']} src={devaSignature} alt="Deva signature" />
           </div>

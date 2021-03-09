@@ -43,7 +43,10 @@ export const Intro = React.forwardRef((props: any, ref) => {
           >
             <div className={css['what-is-devcon']}>
               <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
-              <div className="markdown" dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }} />
+              <div className={css['modal-content'] + ' markdown'}  dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }} />
+              {/* <div className={css['modal-footer']}>
+                <a href="#message-from-deva">{intl.formatMessage({ id: 'rtd_message_from_deva' })}</a>
+              </div> */}
             </div>
           </Modal>
 
