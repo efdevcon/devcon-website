@@ -10,6 +10,7 @@ Authors: raphael@curvelabs.eu
 Resources Required: Tech support, Communication support
 Discussion: https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27
 Requires: DIP-1
+Created: 2020-10-22
 ---
 
 ## Resumen de la propuesta
