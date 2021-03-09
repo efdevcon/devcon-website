@@ -8,33 +8,13 @@ interface ArchiveProps {
 }
 
 export function ArchiveOverview(props: ArchiveProps) {
-  const [selectedVideo, setSelectedVideo] = useState('')
-  const [allVideos, setAllVideos] = useState(props.videos)
-  const [videos, setVideos] = useState(props.videos)
+  const [selectedVideo, setSelectedVideo] = useState(props.videos[0].url ?? '')
 
-  useEffect(() => {
-    let ordered = props.videos
-    for (let i = ordered.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[ordered[i], ordered[j]] = [ordered[j], ordered[i]]
-    }
-    const initialVideo = ordered[0]?.url ?? ''
-
-    setVideos(ordered)
-    setSelectedVideo(initialVideo)
-  }, [props.videos])
-
-  useEffect(() => {
-    if (props.filter && props.filter !== 'All') {
-      const filtered = allVideos
-        .filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
-        .sort((a, b) => a.title.localeCompare(b.title))
-
-      setVideos(filtered)
-    } else {
-      setVideos(allVideos)
-    }
-  }, [props.filter])
+  const filtered = React.useMemo(() => {
+    return props.filter === '' || props.filter === 'All' ? props.videos : props.videos
+      .filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
+      .sort((a, b) => a.title.localeCompare(b.title))
+  }, [props.filter, props.videos])
 
   return (
     <div className={css['container']}>
@@ -52,8 +32,8 @@ export function ArchiveOverview(props: ArchiveProps) {
         </div>
       </div>
       <div className={css['list']}>
-        {videos &&
-          videos.map((video: ArchiveVideo) => {
+        {filtered &&
+          filtered.map((video: ArchiveVideo) => {
             return (
               <div key={video.id} className={css['item']} onClick={() => setSelectedVideo(video.url)}>
                 <span className={css['devcon']}>Devcon {video.devcon}</span>
