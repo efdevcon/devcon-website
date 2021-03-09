@@ -1,7 +1,7 @@
 ---
-title: When will Applications open for Discount tickets (Builder, Speaker,
+title: Cuando se abrirán las solicitudes de tickets de descuento (constructor, orador,
   Student, etc.)?
 category: ticketing
 ---
 
-Applications will open with our first Ticket Wave, and will be posted publicly with the rest of the ticketing information in a future EF blog post.
+Las aplicaciones se abrirán con nuestra primera onda de Ticket, y será publicado públicamente con el resto de la información de ticketing en una futura entrada de EF blog.

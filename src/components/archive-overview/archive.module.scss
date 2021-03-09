@@ -20,8 +20,9 @@
 
   @media (max-width: $screen-md) { 
     flex-grow: 1;
+    flex-shrink: 0;
     margin-right: 0;
-    margin-bottom: 0;
+    margin-bottom: $gap-4;
   }
 
   @media (min-width: $screen-xl) { 
@@ -46,7 +47,7 @@
 
 .list {
   flex-grow: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
   width: 100%;
   padding: 0 $gap-4 0 0;
@@ -86,7 +87,7 @@
 }
 
 .speakers { 
-  @include fonts.font-xs;
+  @include fonts.font-sm;
   display: block;
   margin: $gap-2 0;
   text-transform: uppercase;

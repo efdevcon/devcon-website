@@ -3,13 +3,13 @@ import { PageContent, Page } from 'src/components/layouts/horizontal-layout'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './learn.module.scss'
 import { ArchiveOverview } from 'src/components/archive-overview'
-import { Filter } from 'src/components/archive-overview/filter'
+import { Filter } from 'src/components/common/filter'
+import { Dropdown } from 'src/components/common/dropdown'
 
 export const Learn = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const [filter, setFilter] = useState('')
-  const filters = ['Ethos', 'Keynotes', 'LATAM', 'Research']
-  const defaultVideo = 'https://www.youtube.com/embed/wNCKJtGuL5g';
+  const filters = ['All', 'Ethos', 'Keynotes', 'LATAM', 'Research']
 
   return (
     <Page {...props} ref={ref}>
@@ -25,14 +25,15 @@ export const Learn = React.forwardRef((props: any, ref) => {
         <div className={css['container']}>
           <div className={css['header']}>
             <h3 className="subsection-header">{intl.formatMessage({ id: 'rtd_archive' })}</h3>
-            <Filter onFilter={e => setFilter(e)} filters={filters} />
+            <div className={css['dropdown']}>
+              <Dropdown onFilter={e => setFilter(e)} filters={filters} />
+            </div>
+            <div className={css['filter']}>
+              <Filter onFilter={e => setFilter(e)} filters={filters} />
+            </div>
           </div>
           <div className={css['content']}>
-            <ArchiveOverview
-              videos={props.videos}
-              defaultVideo={defaultVideo}
-              filter={filter}
-            />
+            <ArchiveOverview videos={props.videos} filter={filter} />
           </div>
         </div>
       </PageContent>

@@ -3,10 +3,8 @@ title: Que es Devcon
 template: content
 ---
 
-While we have some time until Devcon, there are many ways to get involved and contribute to Devcon, and lots to learn and participate in across the Ethereum ecosystem. We’ve thought a lot about how to accomplish all that we set out to achieve with Devcon moving forward, and about where we might find room to make an impact even before the event.
+Devcon es una introducción intensiva para los nuevos exploradores de Ethereum, una reunión familiar global para aquellos que ya forman parte de nuestro ecosistema y una fuente de energía y creatividad para todos.
 
-We started last year by saying that Devcon is all about collaboration, knowledge sharing, and understanding the cutting edge in the Ethereum space. Over the last months, much of this work has been done online. And while we still plan to use our biggest stage to send a message about what Ethereum has accomplished (and to make use of tools built by our community while working to grow the Ethereum ecosystem), in the meantime we’ve been laying the groundwork for the event and its future so that we’re ready when the world is ready for us too.
+Hospedamos Devcon para educar y empoderar a la comunidad para construir y usar sistemas descentralizados. Y es una conferencia para constructores de todo tipo: desarrolladores, diseñadores, investigadores, implementadores de clientes, ingenieros de pruebas, operadores de infraestructura, organizadores comunitarios, economistas sociales, artistas y más.
 
-Now, we’d like to find new ways to welcome old friends back, and new friends into the fold. And as the drumbeat starts to get a little louder with the first reunions not too far away, we’ll do what we can to highlight leading ecosystem events, whether regional, virtual, or locally accessible meetups.
-
-Each type of event has experimented with making the most of the year we’ve had to  build new relationships, explore new ideas, and to feature new teams, faces and breakthroughs. And we’re going to help that drumbeat keep growing louder until we see you all again at Devcon. Over the next pages, find resources and information on ways to get involved, and stay tuned for news on more ways to get involved soon.
+Nuestro objetivo es ampliar los límites de las posibilidades en nuestra misión de llevar protocolos, herramientas y cultura descentralizadas al mundo. La programación cubre contenidos que van desde lo profundamente técnico hasta lo profundamente humano.

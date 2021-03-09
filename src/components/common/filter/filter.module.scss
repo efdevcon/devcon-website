@@ -6,7 +6,6 @@
   // RTD: remove padding
   // padding: $gap-8 0;
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
 
   p {
@@ -23,4 +22,12 @@
     @include fonts.bold;
     border-bottom: 2px solid black;
   }
+}
+
+.link {
+  border: 1px solid red;
+}
+
+.icon { 
+  margin-left: $gap-4;
 }

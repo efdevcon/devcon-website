@@ -17,7 +17,7 @@ export function MeetupOverview(props: MeetupOverviewProps) {
         return (
           <div key={event.id} className={css['event']}>
             <div>
-              <a href={event.url}>
+              <a href={event.url} target='_blank'>
                 <p className={css['date']}>{event.location}</p>
                 <p className={css['title']}>{event.title}</p>
 
@@ -25,7 +25,7 @@ export function MeetupOverview(props: MeetupOverviewProps) {
               </a>
             </div>
             <div>
-              <a href={event.url}>
+              <a href={event.url} target='_blank'>
                 <div className={css['image-column']}>
                   <img src={event.imageUrl} alt={event.title} />
                 </div>

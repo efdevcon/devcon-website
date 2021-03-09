@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PageContent, Page } from 'src/components/layouts/horizontal-layout'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './contribute.module.scss'
 import { Proposals } from 'src/components/dip-overview/proposals'
+import { Dropdown } from 'src/components/common/dropdown'
+import { Filter } from 'src/components/common/filter'
 
 export const Contribute = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
+  const [filter, setFilter] = useState('')
+  const filters = ['All', 'Draft', 'Accepted', 'Withdrawn', 'Rejected']
 
   return (
     <Page {...props} ref={ref}>
@@ -20,7 +24,18 @@ export const Contribute = React.forwardRef((props: any, ref) => {
         bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: 'DIPs' }]}
       >
         <div className={css['container']}>
-          <Proposals dips={props.dips} />
+          <div className={css['header']}>
+            <h3 className="subsection-header">{intl.formatMessage({ id: 'dips_proposals' })}</h3>
+            <div className={css['dropdown']}>
+              <Dropdown onFilter={e => setFilter(e)} filters={filters} />
+            </div>
+            <div className={css['filter']}>
+              <Filter onFilter={e => setFilter(e)} filters={filters} />
+            </div>
+          </div>
+          <div className={css['content']}>
+            <Proposals dips={props.dips} filter={filter} />
+          </div>
         </div>
       </PageContent>
     </Page>

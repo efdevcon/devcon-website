@@ -4,28 +4,42 @@ import { ArchiveVideo } from 'src/types/ArchiveVideo'
 
 interface ArchiveProps {
   videos: Array<ArchiveVideo>
-  defaultVideo?: string
   filter?: string
 }
 
 export function ArchiveOverview(props: ArchiveProps) {
-  const initialVideo = props.defaultVideo ?? props.videos[0]?.url ?? ''
-  const [selectedVideo, setSelectedVideo] = useState(initialVideo)
+  const [selectedVideo, setSelectedVideo] = useState('')
+  const [allVideos, setAllVideos] = useState(props.videos)
   const [videos, setVideos] = useState(props.videos)
 
   useEffect(() => {
-    if (props.filter && !Number.isNaN(props.filter)) {
-      const filtered = props.videos.filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
+    let ordered = props.videos
+    for (let i = ordered.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[ordered[i], ordered[j]] = [ordered[j], ordered[i]]
+    }
+    const initialVideo = ordered[0]?.url ?? ''
+
+    setVideos(ordered)
+    setSelectedVideo(initialVideo)
+  }, [props.videos])
+
+  useEffect(() => {
+    if (props.filter && props.filter !== 'All') {
+      const filtered = allVideos
+        .filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
+        .sort((a, b) => a.title.localeCompare(b.title))
+
       setVideos(filtered)
     } else {
-      setVideos(props.videos)
+      setVideos(allVideos)
     }
-  }, [props.filter, props.videos])
+  }, [props.filter])
 
   return (
     <div className={css['container']}>
       <div className={css['player']}>
-        <div className={css['wrapper']}>    
+        <div className={css['wrapper']}>
           <iframe
             title="Road to Devon video player"
             className={css['video-iframe']}

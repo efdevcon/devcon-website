@@ -1,13 +1,14 @@
 ---
 devconNum: 4
-title: "Making Sense of Layer 2"
+title: 'Hacer sentir la capa 2'
 featured: false
-description: "This talk will be a high-level overview of the state-of-the-art in Layer 2 scaling technology. The goal is to give the audience a comparative understanding of techniques like state channels, plasma, and other layer 2 technologies."
-speakers: "Josh Stark"
+description: 'Esta charla será una visión general de alto nivel de la tecnología de escalado de capa 2. El objetivo es dar a la audiencia una comprensión comparativa de técnicas como canales estatales, plasma y otras tecnologías de capa 2.'
+speakers: 'Josh Stark'
 bios: N/A
-url: "https://www.youtube.com/embed/RghzB4C9aSg"
-day: "Day 1"
+url: 'https://www.youtube.com/embed/RghzB4C9aSg'
+day: 'Day 1'
 room: Spectrum
 type: Talk
 category: research
 ---
+

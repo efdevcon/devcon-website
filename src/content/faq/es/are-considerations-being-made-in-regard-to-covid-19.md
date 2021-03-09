@@ -1,6 +1,6 @@
 ---
-title: ¿Se están haciendo consideraciones con respecto a COVID-19?
+title: '¿Se están haciendo consideraciones con respecto a COVID-19?'
 category: general
 ---
 
-Though we are happy to see the overall situation improving, we are actively monitoring it and taking on-site measures to ensure safety throughout the event.
+Aunque nos complace ver mejorar la situación general, estamos supervisando activamente la situación y adoptando medidas in situ para garantizar la seguridad durante todo el evento.
