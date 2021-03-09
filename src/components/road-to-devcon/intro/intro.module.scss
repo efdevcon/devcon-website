@@ -34,15 +34,18 @@
       @include gaps.responsive-gap($attribute: margin, $bottom: $gap-6, $min-gap: $gap-4);
     }
 
+    > p {
+      font-size: 1.3rem;
+
+      @media (max-width: $screen-sm) {
+        font-size: unset;
+      }
+    }
+
     button {
       text-transform: uppercase;
-      background: white;
       margin-right: $gap-2;
       margin-bottom: $gap-2;
-
-      // @media (max-width: $screen-sm) {
-      //   background: white;
-      // }
 
       > * {
         margin-left: 1em;
@@ -67,9 +70,11 @@
   display: flex;
   align-items: flex-end;
   z-index: -1;
-  left: 10%;
+  left: 20%;
   bottom: 0%;
   transform-origin: 0 100%;
+
+  transform: scale(1.2);
 
   @media (max-width: $screen-xxl) {
     transform: scale(0.9);
@@ -224,12 +229,6 @@
 
 // Sort out the padding later - probably has to be more deeply integrated with the modal itself
 .what-is-devcon {
-  padding: $gap-4;
-
-  @media (max-width: $screen-sm) {
-    padding: 0px;
-  }
-
   > h4 {
     font-family: $font-secondary;
     text-transform: uppercase;

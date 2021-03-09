@@ -3,6 +3,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import css from './navigation.module.scss'
 import IconMenu from 'src/assets/icons/menu.svg'
 import IconClose from 'src/assets/icons/cross.svg'
+import IconGlobe from 'src/assets/icons/globe.svg'
 import IconRoad from 'src/assets/icons/road.svg'
 import ethLogo from 'src/assets/images/eth.svg'
 import devconLogoSimple from 'src/assets/images/devcon-logo-simple.svg'
@@ -35,7 +36,7 @@ const LanguageToggle = () => {
   const { redirectPath, currentLanguage } = useLanguageToggle()
 
   return (
-    <div className={css['language-toggle']}>
+    <div className={`no-select ${css['language-toggle']}`}>
       <Link className={currentLanguage === 'en' ? 'semi-bold' : ''} to={`/en/${redirectPath}`}>
         EN
       </Link>
@@ -59,9 +60,9 @@ const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: any) =>
     props.pageTrackRef.current.style.transition = `none`
     props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
 
-    setTimeout(() => {
+    setImmediate(() => {
       props.pageTrackRef.current.style.transition = ``
-    }, 0)
+    })
 
     props.lastX.current = offsetLeft
   }
@@ -75,15 +76,18 @@ const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: any) =>
 
 export const Navigation = (props: NavigationProps) => {
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
-  const pageTitles: string[] | null | undefined = React.Children.map(props.pages, page => page.props.title)
+  const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const intl = useIntl()
   const pageInView = usePageInView(props.pageRefs)
 
   React.useEffect(() => {
     const hash = window.location.hash
 
+    // console.log('child')
+    // console.log(props.pageRefs, 'p title')
+
     if (hash) {
-      pageTitles?.find(pageTitle => {
+      pageProps?.find(({ title: pageTitle }) => {
         if (hashSlug(pageTitle) === hash) {
           navigateToSlide(pageTitle, props)
         }
@@ -112,16 +116,16 @@ export const Navigation = (props: NavigationProps) => {
           <LanguageToggle />
 
           <ul className={css['slide-nav']}>
-            {pageTitles?.map((title, index) => {
+            {pageProps?.map(({ title, icon }, index) => {
               const selected = pageInView === title
 
-              let className = 'text-uppercase font-secondary'
+              let className = 'text-uppercase font-secondary no-select'
 
               if (selected) className += ` ${css['selected']}`
 
               return (
                 <li className={className} key={title} onClick={() => navigateToSlide(title, props, setFoldoutOpen)}>
-                  {leftPad(index + '')}
+                  {icon || leftPad(index + '')}
                 </li>
               )
             })}
@@ -138,16 +142,19 @@ export const Navigation = (props: NavigationProps) => {
         <div className={css['foldout']}>
           <div className={css['header']}>
             <img src={devconLogoSimple} alt="Devcon logo" />
-            <IconRoad className="abc" />
+            <IconRoad className="override" style={{ marginTop: '-3px' }} />
           </div>
 
-          <LanguageToggle />
+          <div className={css['globe-icon']}>
+            <IconGlobe />
+            <LanguageToggle /> {/* 0 opacity language toggle to synchronize the height of the sidebar */}
+          </div>
 
           <ul className={css['nav']}>
-            {pageTitles?.map((title, index) => {
+            {pageProps?.map(({ title }, index) => {
               const selected = pageInView === title
 
-              let className = 'text-uppercase font-secondary'
+              let className = 'text-uppercase font-secondary no-select'
 
               if (selected) className += ` ${css['selected']}`
 
@@ -188,7 +195,7 @@ export const Navigation = (props: NavigationProps) => {
           </div>
         </div>
 
-        <div className={css['inline-nav']}>
+        {/* <div className={css['inline-nav']}>
           <IconRoad className="abc" />
 
           <ul className={css['inline-nav-list']}>
@@ -207,7 +214,7 @@ export const Navigation = (props: NavigationProps) => {
               )
             })}
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   )

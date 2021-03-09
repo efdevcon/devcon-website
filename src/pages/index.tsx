@@ -31,7 +31,15 @@ export default function Index({ data }: any) {
     <>
       <SEO />
       <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
-        <Intro title={intl.formatMessage({ id: 'rtd' })} whatIsDevcon={data.whatIsDevcon.nodes[0]} />
+        <Intro
+          title={intl.formatMessage({ id: 'rtd' })}
+          icon={
+            <div style={{ marginTop: '-3px' }}>
+              <IconRoad width="1.4em" height="1.4em" className="override" />
+            </div>
+          }
+          whatIsDevcon={data.whatIsDevcon.nodes[0]}
+        />
 
         <MessageFromDeva
           title={intl.formatMessage({ id: 'rtd_message_from_deva' })}

@@ -27,7 +27,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
           <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
 
           <button
-            className="lg"
+            className="lg white"
             onClick={() => {
               setModalOpen(true)
             }}
@@ -48,7 +48,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
           </Modal>
 
           <button
-            className="lg"
+            className="lg white"
             onMouseOver={() => {
               setShowDoge(true)
             }}

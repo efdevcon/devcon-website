@@ -32,6 +32,7 @@ export const Tweet = React.memo(() => {
     <a
       href="https://twitter.com/share?ref_src=twsrc%5Etfw"
       data-hashtags="roadtodevcon"
+      data-size="large"
       className={`${css['twitter']} twitter-share-button`}
       data-show-count="false"
     >

@@ -21,10 +21,11 @@
   }
 
   .message {
+    position: relative;
     overflow: auto;
     margin-left: $gap-10;
     flex-grow: 1;
-    max-width: 40%;
+    max-width: 700px;
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -46,6 +47,17 @@
       > h1 {
         font-size: 2rem;
       }
+
+      // Has to be more sophisticated to work, e.g. use JS to detect if scrolling is possible, and remove the gradient when fully scrolled
+      // &:after {
+      //   content: '';
+      //   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, white);
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      // }
     }
 
     > * {

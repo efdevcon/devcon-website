@@ -121,21 +121,21 @@ export const PageContent = (props: PageContentProps) => {
       <div
         className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']}
         // onMouseDown={e => e.stopPropagation()}
-        onScroll={e => {
-          if (scrollTimeout) e.preventDefault()
-        }}
-        onWheel={e => {
-          if (!recentlyScrolled) {
-            e.nativeEvent.stopImmediatePropagation()
-          }
-        }}
+        // onScroll={e => {
+        //   if (scrollTimeout) e.preventDefault()
+        // }}
+        // onWheel={e => {
+        //   if (!recentlyScrolled) {
+        //     e.nativeEvent.stopImmediatePropagation()
+        //   }
+        // }}
       >
         {props.children}
       </div>
 
-      {props.bottomLinks && (
-        <div className={`${css['bottom-links']} no-select`}>
-          {props.bottomLinks.map((link: LinkType) => {
+      <div className={`${css['bottom-links']} no-select`}>
+        {props.bottomLinks &&
+          props.bottomLinks.map((link: LinkType) => {
             return (
               <p key={link.url}>
                 <Link to={link.url} indicateExternal>
@@ -145,8 +145,7 @@ export const PageContent = (props: PageContentProps) => {
               </p>
             )
           })}
-        </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -191,7 +190,7 @@ export const HorizontalLayout = (props: any) => {
   }, [])
 
   // Resync when track changes size to ensure we're never scrolled outside the visible area
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (isTouchDevice) return
     if (!trackRef.current) return
 
@@ -243,7 +242,10 @@ export const HorizontalLayout = (props: any) => {
       <div
         ref={trackRef}
         onMouseDown={e => {
+          if (e.target.nodeName === 'INPUT') return
+
           e.preventDefault()
+          document.activeElement.blur()
 
           dragging.current = true
         }}

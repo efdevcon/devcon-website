@@ -61,46 +61,33 @@
         $left: $gap-10 + $gap-6;
         $right: $gap-10 + $gap-6;
         $top: $gap-10 * 2;
-        $bottom: $gap-10 * 4;
 
         margin-left: $left;
         margin-right: $right;
         margin-top: $top;
-        margin-bottom: $bottom;
 
         @media (max-width: $screen-lg) {
           margin-left: $left / 2;
           margin-right: $right / 2;
           margin-top: $top / 2;
-          margin-bottom: $bottom / 2;
         }
 
         @media (max-width: $screen-md) {
           margin-left: $left / 3;
           margin-right: $right / 3;
           margin-top: $top / 3;
-          margin-bottom: $bottom / 3;
         }
 
         @media (max-width: $screen-sm) {
           margin-left: $gap-4;
           margin-right: $gap-4;
           margin-top: $gap-4;
-          margin-bottom: 15%;
         }
-
-        // @include gaps.responsive-gap(
-        //   $attribute: padding,
-        //   $top: $gap-10 * 2,
-        //   $left: $gap-10 + $gap-6,
-        //   $right: $gap-10 + $gap-6,
-        //   $bottom: $gap-10 * 4,
-        //   $min-gap: $gap-1
-        // );
 
         .header {
           font-family: $font-secondary;
           flex-grow: 1;
+          height: 10%;
           display: flex;
           justify-content: space-between;
 
@@ -114,7 +101,7 @@
               @include nav-number;
             }
           }
-          
+
           .page-title-inverted {
             @extend .page-title;
             color: #fff;
@@ -271,6 +258,7 @@
 
           @media (max-width: $screen-sm) {
             height: 90%;
+            flex-shrink: 1;
           }
 
           &.transparent {
@@ -287,11 +275,11 @@
         }
 
         .bottom-links {
-          position: absolute;
-          top: 100%;
-          @include gaps.responsive-gap($attribute: margin, $top: $gap-10, $min-gap: $gap-2);
+          display: flex;
+          align-items: center;
+          height: 8%;
+          flex-shrink: 0;
           @include fonts.bold;
-          margin-top: $gap-8;
           @include fonts.font-lg;
           text-transform: uppercase;
         }

@@ -29,7 +29,7 @@ export const Invite = React.forwardRef((props: any, ref) => {
             <Share
               renderTrigger={toggleShare => {
                 return (
-                  <button className={css['share']} onClick={toggleShare}>
+                  <button className={`white ${css['share']}`} onClick={toggleShare}>
                     <span>SHARE THE ROAD TO DEVCON </span> <ShareIcon />
                   </button>
                 )

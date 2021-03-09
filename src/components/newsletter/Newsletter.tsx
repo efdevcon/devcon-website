@@ -61,7 +61,7 @@ export const Newsletter = () => {
                   placeholder={intl.formatMessage({ id: 'newsletter_enter' })}
                   {...emailField}
                 />
-                <button className={css['button']} type="submit">
+                <button className={`white ${css['button']}`} type="submit">
                   {intl.formatMessage({ id: 'newsletter_subscribe' })}
                 </button>
               </div>

@@ -5,6 +5,7 @@ import { Modal } from 'src/components/common/modal'
 import { Tweet } from './Tweet'
 import { Link } from 'src/components/common/link'
 import css from './share.module.scss'
+import { Newsletter } from 'src/components/newsletter'
 
 type ShareProps = {
   renderTrigger: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
@@ -45,7 +46,7 @@ const CopyToClipboard = ({ url }: any) => {
 
       <Tooltip arrow={false} visible={clicked} content={<p>Copied to clipboard</p>}>
         <button
-          className={css['copy-button']}
+          className={`white ${css['copy-button']}`}
           onClick={() => {
             // TO-DO: Make SSR safe so we can conditionally render component
             if (window?.navigator?.clipboard) {
@@ -84,7 +85,12 @@ export const Share = (props: ShareProps) => {
   if (props.renderTrigger)
     return (
       <>
-        <Modal open={open} close={toggle} onWheel={e => e.nativeEvent.stopImmediatePropagation()}>
+        <Modal
+          open={open}
+          close={toggle}
+          onMouseDown={e => e.stopPropagation()}
+          onWheel={e => e.nativeEvent.stopImmediatePropagation()}
+        >
           <div className={css['share']}>
             <h2>SHARE ROAD TO DEVCON</h2>
 
@@ -96,10 +102,12 @@ export const Share = (props: ShareProps) => {
               title="Share by Email"
               to="mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com."
             >
-              <button className={css['email']}>Email</button>
+              <button className={`white ${css['email']}`}>Email</button>
             </Link>
 
-            <CopyToClipboard />
+            <Newsletter />
+
+            {/* <CopyToClipboard /> */}
           </div>
         </Modal>
 
