@@ -36,9 +36,9 @@ En términos prácticos, se puede celebrar un debate de seguimiento entre las pa
 
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? Varias conversaciones sobre requisitos específicos y funcionalidades deseadas. También sobre temas como el apoyo in situ y asuntos prácticos.
 
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) Un grupo combinado de nuestro equipo de desarrollo + desarrolladores de negocios.
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) Un grupo combinado de nuestro equipo de desarrollo + desarrolladores de negocios.
 
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Ya estamos en conversaciones con POAP sobre la posible integración para vincular las insignias de asistencia a nuestros Tickets digitales. Esto parece un ajuste de zapatos. Ciertamente estamos abiertos a más integraciones.
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Ya estamos en conversaciones con POAP sobre la posible integración para vincular las insignias de asistencia a nuestros Tickets digitales. Esto parece un ajuste de zapatos. Ciertamente estamos abiertos a más integraciones.
 
 ## Enlaces & Información adicional
 
