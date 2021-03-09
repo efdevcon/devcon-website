@@ -1,6 +1,6 @@
 ---
-title: Who can be a speaker at Devcon?
+title: '¿Quién puede ser orador en Devcon?'
 category: programming
 ---
 
-Devcon has a public application process. Anybody can apply. Stay updated on our [social media](https://twitter.com/efdevcon) to know when we'll open our call for speakers.
+Devcon tiene un proceso de aplicación pública. Cualquiera puede solicitarlo. Manténgase actualizado sobre nuestras [redes sociales](https://twitter.com/efdevcon) para saber cuándo abriremos nuestra llamada a los oradores.
