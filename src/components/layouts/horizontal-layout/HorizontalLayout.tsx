@@ -83,6 +83,11 @@ export const PageContent = (props: PageContentProps) => {
       ? 'background-text-solid'
       : 'background-text-gradient'
 
+  const bottomLinksClassName =
+    props.backgroundText === intl.formatMessage({ id: 'rtd_frequently_asked_questions' })
+      ? 'bottom-links-white'
+      : 'bottom-links'
+
   const pageTitleClassName = props.inverted ? 'page-title-inverted' : 'page-title'
 
   return (
@@ -133,7 +138,7 @@ export const PageContent = (props: PageContentProps) => {
         {props.children}
       </div>
 
-      <div className={`${css['bottom-links']} no-select`}>
+      <div className={`${css[bottomLinksClassName]} no-select`}>
         {props.bottomLinks &&
           props.bottomLinks.map((link: LinkType) => {
             return (

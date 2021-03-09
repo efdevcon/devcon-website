@@ -283,6 +283,15 @@
           @include fonts.font-lg;
           text-transform: uppercase;
         }
+
+        .bottom-links-white { 
+          @extend .bottom-links;
+          color: #fff;
+
+          svg {
+            fill: #fff;
+          }
+        }
       }
     }
   }
