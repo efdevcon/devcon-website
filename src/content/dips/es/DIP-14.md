@@ -41,11 +41,11 @@ Esta propuesta se ha aplicado en un gran número de otros acontecimientos, princ
 
 Ofrecer la posibilidad de enviar carteles - o paralelamente durante la convocatoria de "espacios para hablar" o específicamente a aquellos cuya presentación de la charla fue rechazada.
 
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 El equipo de organización. Quiero asistir a DevCon 2021 de todos modos, así que estaría encantado de ayudar en la prem.
 
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
 
 Tal vez POAP :D Hay premios por "Mejor presentación de carteles" o "Mejor charla" en otras conferencias. ¿Por qué no hacer fichas POAP especiales que se conceden a las personas que ganaron esos premios?
 
