@@ -36,5 +36,5 @@ Es importante dedicar recursos para crear una implementación de alta calidad. L
 ## Requisitos operacionales & Propiedad
 
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? La implementación abarca varias áreas tanto físicas como virtuales. Es importante elaborar un plan y seguirlo de forma consolidada.
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de POAP y los voluntarios ad-hoc deben estar disponibles para esto.
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de POAP y los voluntarios ad-hoc deben estar disponibles para esto. (es decir, trabajar el día 0) El equipo de POAP y los voluntarios ad-hoc deben estar disponibles para esto.
 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonificación para la colaboración entre equipos :)) POAP tiene un historial de varias integraciones exitosas con otros productos. permanecemos abiertos a colaborar con cualquier persona con buenas intenciones.
