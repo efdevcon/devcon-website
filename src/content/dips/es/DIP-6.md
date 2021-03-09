@@ -85,7 +85,7 @@ El diagrama de natación adjunto muestra cómo las diferentes partes implicadas 
 
 Nuestra primera implementación de entradas fue en 2018, como un experimento con Shankai Sports para tokenise los billetes VIP de la Copa Mundial de la FIFA 2018. El experimento tuvo éxito, donde 50 usuarios recibieron enlaces mágicos a través del correo electrónico y 28 de ellos convirtieron esos enlaces mágicos en tokens de Ethereum.
 
-La próxima implementación completa fue en 2019, con Shankai Deportes tokenising tickets de evento VIP del Campeonato O.O 2020 con pases de hospitalidad integrados (Los tickets fueron tokenizados y las aplicaciones estaban listas para ir, pero el evento se canceló 😭😭😭)
+La próxima implementación completa fue en 2019, con Shankai Deportes tokenising tickets de evento VIP del Campeonato O. O 2020 con pases de hospitalidad integrados (Los tickets fueron tokenizados y las aplicaciones estaban listas para ir, pero el evento se canceló 😭😭😭)
 
 En 2019, también trabajamos para implementar entradas de eventos EDCON 2020 en blockchain. Una vez más, la aplicación y los tickets estaban listos, pero gracias al pandemic, el evento se canceló 😭😭😭.
 
@@ -106,29 +106,29 @@ Desarrollo:
 
 Las operaciones para el evento deberían ser más o menos las mismas que el Devcon anterior. Se necesitaría más apoyo técnico para las personas que están probando el nuevo sistema.
 
-2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0)
+2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 AlphaWallet y el equipo de Devcon serán responsables de la implementación. La gobernanza del proyecto se realizaría a través de reuniones semanales o de forma duradera gestionadas de forma ágil.
 
 **Entregables y posesiones:**
-| # | Entregable | Descripción | Propietario |
+| #   | Entregable                                               | Descripción                | Propietario                     |
 | --- | -------------------------------------------------------- | -------------------------- | ------------------------------- |
-| 1. | Atributos de ticket de Devcon | <ul><li>Todos los atributos que definen un ticket.</li></ul> | Discón |
-| 2. | Módulos de Attestation | <ul><li>Biblioteca para sitios web que gestionen los certificados, que están disponibles como cookie en el navegador.</li><li>Los sitios web creados por Devcon y otras terceras partes que quieran verificar un portador de tickets válido de Devcon tendrán que incorporar esta biblioteca en su sitio web.</li></ul> | AlphaWallet |
-| 3. | Biblioteca Attes.sol | <ul><li>Biblioteca para contratos inteligentes para gestionar los certificados, para verificar un titular de tickets válido.</li></ul> | AlphaWallet |
-| 4. | Documentaciones de la biblioteca | <ul><li>Documentación para las bibliotecas TS_Attestation.js y Attes.sol.</li></ul> | AlphaWallet |
-| 5. | Sitio web de Attestation.id | <ul><li>El sitio web que envía OTP para verificar el ID de correo electrónico del usuario y genera la comprobación de correo electrónico. </li></ul> | AlphaWallet |
-| 6. | Página web de ejemplo: Página web del emisor de tickets | <ul><li>Un sitio web de muestra que muestra sólo los detalles del ticket y genera una cookie de verificación de tickets para ser almacenada en el navegador del usuario. </li></ul> | AlphaWallet |
-| 7. | Ejemplo dApp: DApp simple usando certificados | <ul><li>Un simple ejemplo de aplicación distribuida para mostrar cómo implementar la verificación de certificación. Utiliza un contrato inteligente de marcador de posición.</li></ul> | AlphaWallet |
-| 8. | Generador de Attestation de Ticket | <ul><li>Componente Java para crear enlaces para la certificación de tickets.</li></ul> | AlphaWallet |
-| 9. | Rutina del correo electrónico de verificación de tickets | <ul><li>Utilice el componente generador de certificados de tickets para crear certificaciones e incorporarlo en los correos electrónicos de confirmación de ticket.</li></ul> | Discón |
-| 10. | Página de Ticket de Devcon | <ul><li>La página web a la que el enlace de verificación de tickets dirige al usuario. </li></ul> | Discón |
-| 11. | Devcon Dapps | <ul><li>Las Dapps que permiten a los usuarios votar, generan NFT etc basado en la verificación de tickets.</li></ul> | Discón |
-| 12. | Dapps de terceros | <ul><li>Cualquier otro servicio que pueda ser ofrecido por la comunidad, para titulares de boletos válidos.</li></ul> | Equipos de terceros respetuosos |
+| 1.  | Atributos de ticket de Devcon                            | <ul><li>Todos los atributos que definen un ticket.</li></ul>  | Discón                          |
+| 2.  | Módulos de Attestation                                   | <ul><li>Biblioteca para sitios web que gestionen los certificados, que están disponibles como cookie en el navegador.</li><li>Los sitios web creados por Devcon y otras terceras partes que quieran verificar un portador de tickets válido de Devcon tendrán que incorporar esta biblioteca en su sitio web.</li></ul>  | AlphaWallet                     |
+| 3.  | Biblioteca Attes.sol                                     | <ul><li>Biblioteca para contratos inteligentes para gestionar los certificados, para verificar un titular de tickets válido.</li></ul>  | AlphaWallet                     |
+| 4.  | Documentaciones de la biblioteca                         | <ul><li>Documentación para las bibliotecas TS_Attestation.js y Attes.sol.</li></ul>  | AlphaWallet                     |
+| 5.  | Sitio web de Attestation.id                              | <ul><li>El sitio web que envía OTP para verificar el ID de correo electrónico del usuario y genera la comprobación de correo electrónico. </li></ul>  | AlphaWallet                     |
+| 6.  | Página web de ejemplo: Página web del emisor de tickets  | <ul><li>Un sitio web de muestra que muestra sólo los detalles del ticket y genera una cookie de verificación de tickets para ser almacenada en el navegador del usuario. </li></ul>  | AlphaWallet                     |
+| 7.  | Ejemplo dApp: DApp simple usando certificados            | <ul><li>Un simple ejemplo de aplicación distribuida para mostrar cómo implementar la verificación de certificación. Utiliza un contrato inteligente de marcador de posición.</li></ul>  | AlphaWallet                     |
+| 8.  | Generador de Attestation de Ticket                       | <ul><li>Componente Java para crear enlaces para la certificación de tickets.</li></ul>  | AlphaWallet                     |
+| 9.  | Rutina del correo electrónico de verificación de tickets | <ul><li>Utilice el componente generador de certificados de tickets para crear certificaciones e incorporarlo en los correos electrónicos de confirmación de ticket.</li></ul>  | Discón                          |
+| 10. | Página de Ticket de Devcon                               | <ul><li>La página web a la que el enlace de verificación de tickets dirige al usuario. </li></ul>  | Discón                          |
+| 11. | Devcon Dapps                                             | <ul><li>Las Dapps que permiten a los usuarios votar, generan NFT etc basado en la verificación de tickets.</li></ul> | Discón                          |
+| 12. | Dapps de terceros                                        | <ul><li>Cualquier otro servicio que pueda ser ofrecido por la comunidad, para titulares de boletos válidos.</li></ul> | Equipos de terceros respetuosos |
 
 ---
 
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀)
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀)
 
 Cualquier servicio que requiera verificar a los asistentes, tales como descuento para los productos, vales redimibles, desbloqueo de contenido, IoT (puerta abierta, pantalla de control), colateral para DeFis y otros.
 
