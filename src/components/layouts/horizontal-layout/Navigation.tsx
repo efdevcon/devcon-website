@@ -47,7 +47,7 @@ const LanguageToggle = () => {
   )
 }
 
-const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: any) => {
+export const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: any) => {
   const targetSlide = props.pageRefs.current[pageTitle]
 
   if (!targetSlide) return

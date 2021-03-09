@@ -5,6 +5,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Search } from 'src/components/faq/search'
 import { FAQ } from 'src/components/faq'
 import { Checkpoint } from '../checkpoint'
+import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
 
 export const Ask = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -24,7 +25,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
             <h3 className="subsection-header">FAQ</h3>
             <Search onSearch={e => setSearchFilter(e)} />
           </div>
-          <div className={css['content']}>
+          <div className={css['content']} {...scrollLock}>
             <FAQ data={props.faqs} filter={searchFilter} />
           </div>
         </div>

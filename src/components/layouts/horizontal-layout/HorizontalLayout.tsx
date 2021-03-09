@@ -31,12 +31,26 @@ type PageContentProps = {
   children: React.ReactNode
   transparent?: boolean
   inverted?: boolean
+  applyScrollLock?: boolean
 }
 
 let recentlyScrolled = false
 let scrollTimeout: NodeJS.Timeout
 const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
 
+// const elementIsScrollable = (e: React.SyntheticEvent) => {}
+
+export const scrollLock = {
+  onScroll: (e: React.SyntheticEvent) => {
+    // Disable scrolling if we recently scrolled scrolled the layout
+
+    if (recentlyScrolled) e.preventDefault()
+  },
+  onWheel: (e: React.SyntheticEvent) => {
+    // Disable global scrolling if we haven't scrolled the layout recently
+    if (!recentlyScrolled /* && elementIsScrollable(e)*/) e.nativeEvent.stopImmediatePropagation()
+  },
+}
 export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
   return (
     <div className={css['page']} ref={ref}>
@@ -90,6 +104,8 @@ export const PageContent = (props: PageContentProps) => {
 
   const pageTitleClassName = props.inverted ? 'page-title-inverted' : 'page-title'
 
+  const scrollProps = props.applyScrollLock ? scrollLock : {}
+
   return (
     <div className={css['layer']}>
       <div className={css['header']}>
@@ -125,15 +141,8 @@ export const PageContent = (props: PageContentProps) => {
 
       <div
         className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']}
+        {...scrollProps}
         // onMouseDown={e => e.stopPropagation()}
-        // onScroll={e => {
-        //   if (scrollTimeout) e.preventDefault()
-        // }}
-        // onWheel={e => {
-        //   if (!recentlyScrolled) {
-        //     e.nativeEvent.stopImmediatePropagation()
-        //   }
-        // }}
       >
         {props.children}
       </div>
@@ -284,6 +293,9 @@ export const HorizontalLayout = (props: any) => {
             ref: (ref: HTMLDivElement) => {
               pageRefs.current[Page.props.title] = ref
             },
+            lastX,
+            pageTrackRef: trackRef,
+            pageRefs,
             index: leftPad(index + ''),
           })
         })}

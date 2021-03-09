@@ -11,6 +11,7 @@ import leslie from 'src/assets/images/leslie.svg'
 import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
 import { Modal } from 'src/components/common/modal'
+import { navigateToSlide } from 'src/components/layouts/horizontal-layout/Navigation'
 
 export const Intro = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -44,6 +45,16 @@ export const Intro = React.forwardRef((props: any, ref) => {
             <div className={css['what-is-devcon']}>
               <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
               <div className="markdown" dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }} />
+              <button
+                onClick={() => {
+                  const mfdPageTitle = intl.formatMessage({ id: 'rtd_message_from_deva' })
+
+                  navigateToSlide(mfdPageTitle, props)
+                  setModalOpen(false)
+                }}
+              >
+                MFD PAGE GO
+              </button>
             </div>
           </Modal>
 

@@ -50,7 +50,7 @@ export default function Index({ data }: any) {
 
         <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
 
-        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
+        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} applyScrollLock />
 
         <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import css from './archive.module.scss'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
 
 interface ArchiveProps {
   videos: Array<ArchiveVideo>
@@ -11,9 +12,11 @@ export function ArchiveOverview(props: ArchiveProps) {
   const [selectedVideo, setSelectedVideo] = useState(props.videos[0].url ?? '')
 
   const filtered = React.useMemo(() => {
-    return props.filter === '' || props.filter === 'All' ? props.videos : props.videos
-      .filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
-      .sort((a, b) => a.title.localeCompare(b.title))
+    return props.filter === '' || props.filter === 'All'
+      ? props.videos
+      : props.videos
+          .filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
+          .sort((a, b) => a.title.localeCompare(b.title))
   }, [props.filter, props.videos])
 
   return (
@@ -31,7 +34,7 @@ export function ArchiveOverview(props: ArchiveProps) {
           />
         </div>
       </div>
-      <div className={css['list']}>
+      <div className={css['list']} {...scrollLock}>
         {filtered &&
           filtered.map((video: ArchiveVideo) => {
             return (

@@ -17,7 +17,12 @@ export const Participate = React.forwardRef((props: any, ref) => {
   return (
     <Page {...props} ref={ref}>
       <div className={css['background']}></div>
-      <PageContent transparent inverted backgroundText={intl.formatMessage({ id: 'rtd_community_events' })}>
+      <PageContent
+        applyScrollLock
+        transparent
+        inverted
+        backgroundText={intl.formatMessage({ id: 'rtd_community_events' })}
+      >
         <div className={css['container']}>
           <Tabs>
             <Tab title={intl.formatMessage({ id: 'rtd_events' })}>

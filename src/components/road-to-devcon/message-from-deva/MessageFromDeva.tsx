@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { useIntl } from 'gatsby-plugin-intl'
 import { useStaticQuery, graphql } from 'gatsby'
 import css from './mfd.module.scss'
+import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
 import devaSignature from 'src/assets/images/deva_signature.png'
 
 export const MessageFromDeva = React.forwardRef((props: any, ref) => {
@@ -29,7 +30,7 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
         <div className={css['container']}>
           <Img alt="front_deva" className={css['deva']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
 
-          <div className={css['message']}>
+          <div className={css['message']} {...scrollLock}>
             <h1>{intl.formatMessage({ id: 'rtd_embarking' })}</h1>
 
             <p className="bold">Devcon {intl.formatMessage({ id: 'rtd_bogota' })}</p>
