@@ -10,55 +10,6 @@
   // margin-bottom: $gap-10;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px;
-
-  .top-container {
-    // RTD: remove border-top + smaller paddings
-    @include gaps.responsive-gap($attribute: padding, $bottom: $gap-4, $min-gap: $gap-2);
-    // @include gaps.responsive-gap($attribute: padding, $top: $gap-10, $bottom: $gap-10, $min-gap: $gap-4);
-    // border-top: 1px solid #30354b;
-    // END
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    @media (max-width: 550px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    h3 {
-      flex-shrink: 0;
-      margin-bottom: 0px;
-
-      @media (max-width: 550px) {
-        flex-direction: column;
-        margin-bottom: $gap-4;
-        align-items: flex-start;
-      }
-    }
-
-    .filters {
-      display: flex;
-      max-width: 100%;
-      flex-wrap: wrap;
-
-      > * {
-        cursor: pointer;
-        padding: $gap-2;
-        @include gaps.responsive-gap($attribute: margin, $right: $gap-8, $min-gap: $gap-2);
-
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
-
-      .active-filter {
-        @include fonts.bold;
-        border-bottom: 2px solid black;
-      }
-    }
-  }
 }
 
 .index-column {

@@ -19,16 +19,15 @@ export function Dropdown(props: FilterProps) {
     } else {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [open])
+  }, [handleClickOutside, open])
 
-  const handleClickOutside = (e: any) => {
+  function handleClickOutside(e: any) {
     if (ref.current && !ref.current.contains(e.target)) {
       setOpen(false)
     }
   }
 
   function onFilter(value: string) {
-    console.log('ON FILTER', value)
     setFilter(value)
     setOpen(false)
 
