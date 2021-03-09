@@ -1,6 +1,6 @@
 ---
-title: Things to do
-showTitle: false
+title: Cosas que hacer
+showTitle: falso
 left: >-
   The capital of Colombia is located in one of the six regions of the country,
   the Andean Region, which is located throughout the center of the Colombian
@@ -13,3 +13,4 @@ right: >-
   Watch the top 10 things to do in Colombia 
   [[youtube: https://www.youtube.com/watch?v=czfKyc-HtF4]]
 ---
+
