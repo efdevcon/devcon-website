@@ -44,17 +44,22 @@ export const Intro = React.forwardRef((props: any, ref) => {
           >
             <div className={css['what-is-devcon']}>
               <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
-              <div className="markdown" dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }} />
-              <button
-                onClick={() => {
-                  const mfdPageTitle = intl.formatMessage({ id: 'rtd_message_from_deva' })
+              <div
+                className={css['modal-content'] + ' markdown'}
+                dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }}
+              />
+              <div className={css['modal-footer']}>
+                <a
+                  onClick={() => {
+                    const mfdPageTitle = intl.formatMessage({ id: 'rtd_message_from_deva' })
 
-                  navigateToSlide(mfdPageTitle, props)
-                  setModalOpen(false)
-                }}
-              >
-                MFD PAGE GO
-              </button>
+                    navigateToSlide(mfdPageTitle, props)
+                    setModalOpen(false)
+                  }}
+                >
+                  {intl.formatMessage({ id: 'rtd_message_from_deva' })}
+                </a>
+              </div>
             </div>
           </Modal>
 

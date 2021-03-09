@@ -230,6 +230,7 @@
 // Sort out the padding later - probably has to be more deeply integrated with the modal itself
 .what-is-devcon {
   > h4 {
+    @include fonts.font-xl;
     font-family: $font-secondary;
     text-transform: uppercase;
     margin-bottom: $gap-4;
@@ -244,5 +245,24 @@
     @media (max-width: $screen-sm) {
       padding-right: 0px;
     }
+  }
+}
+
+.modal-content {
+  @include fonts.font-lg;
+
+  p:first-child {
+    @include fonts.font-xl;
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: $gap-6;
+  @include fonts.semi-bold;
+  text-transform: uppercase;
+
+  > a {
+    cursor: pointer;
   }
 }
