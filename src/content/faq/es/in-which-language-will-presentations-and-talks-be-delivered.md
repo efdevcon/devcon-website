@@ -1,6 +1,6 @@
 ---
-title: In which language will presentations and talks be delivered?
+title: '¿En qué idioma se entregarán las presentaciones y las charlas?'
 category: general
 ---
 
-The main language of the conference will be English. Main stage talks will be translated into Spanish, and we will provide translations for side stage talks and workshops where possible.
+El idioma principal de la conferencia será el inglés. Las charlas de la etapa principal se traducirán al español, y proporcionaremos traducciones para las charlas paralelas y los talleres siempre que sea posible.

@@ -1,8 +1,8 @@
 ---
 devconNum: 4
-title: 'The Web We Want'
+title: 'La web que queremos'
 featured: false
-description: '"The Web We Want" outlines the problems and possibilities to create a Web that isn''t creepy (it doesn''t spy on us), that has no centralized points of control, and most importantly, is locked open for good. He will do a live demo of Dweb.archive.org that uses IPFS, WebTorrent, GUN, YJS to create decentralized storage of some of our 40 Petabytes of data.'
+description: '"La web que queremos" describe los problemas y posibilidades de crear una web que no es espía (no nos espía), que no tiene puntos centralizados de control, y lo que es más importante, está abierto para siempre. Él hará una demostración en vivo de Dweb.archive. rg que utiliza IPFS, WebTorrent, GUN, YJS para crear almacenamiento descentralizado de algunos de nuestros 40 Petabytes de datos.'
 speakers: 'Brewster Kahle'
 bios: N/A
 url: 'https://www.youtube.com/embed/rkdFko6wNuc'
@@ -11,3 +11,4 @@ room: Spectrum
 type: Talk
 category: keynotes
 ---
+

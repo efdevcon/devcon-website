@@ -36,8 +36,8 @@ La comunidad hizo muchas mejoras este año: EIP-1159, Medalla Testnet, Reddit Sc
 ## Requisitos operacionales & Propiedad
 
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? Compartir con la comunidad, definir lo que queremos probar en esta edición virtual, definir lo grande que queremos este evento.
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP.
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP. (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP.
 
 ## Enlaces & Información adicional
 

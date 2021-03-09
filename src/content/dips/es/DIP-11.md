@@ -39,7 +39,7 @@ En un evento como Devcon en el que a la gente 'guía' le gusta mostrar su poder 
 
 Como se ha dicho anteriormente, fui el productor principal de la sala de escape de ETHBerlinZwei. Después de haber ejecutado con éxito esa experiencia del evento, sólo ahora me siento lo suficientemente confiado como para proponer una sala de escape de Devcon.
 
-Aunque la mayoría de los DI que se contienen aquí están destinados a ser en cierto sentido públicamente discutidos y guiados, en este caso creo que la experiencia es mejor manejada por las pocas personas que sé que son confiables y capaces, i. El equipo de Daedalus.Industries del año pasado en ETHBerlin. Proyectos creativos y técnicos como este no se prestan muy bien a la sabiduría de la corona, y me gustaría mantener un apoyo al misterio a lo largo del proceso de desarrollo. Sé que es mucho que pedir, pero estoy solicitando un control creativo completo centralizado sobre el proyecto.
+Aunque la mayoría de los DI que se contienen aquí están destinados a ser en cierto sentido públicamente discutidos y guiados, en este caso creo que la experiencia es mejor manejada por las pocas personas que sé que son confiables y capaces, i. El equipo de Daedalus. Industries del año pasado en ETHBerlin. Proyectos creativos y técnicos como este no se prestan muy bien a la sabiduría de la corona, y me gustaría mantener un apoyo al misterio a lo largo del proceso de desarrollo. Sé que es mucho que pedir, pero estoy solicitando un control creativo completo centralizado sobre el proyecto.
 
 ## Requisitos operacionales & Propiedad
 
