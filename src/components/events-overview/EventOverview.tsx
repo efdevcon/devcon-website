@@ -60,7 +60,7 @@ END:VCALENDAR`
         return (
           <div key={event.id} className={css['event']}>
             <div className={css['date-column']}>
-              <a href={event.url} target='_blank'>
+              <a href={event.url} target="_blank" rel="oopener noreferrer">
                 <span className={css['day']}>{moment(event.startDate).format('DD')}</span>
                 <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
               </a>
@@ -70,7 +70,7 @@ END:VCALENDAR`
               </span>
             </div>
             <div>
-              <a href={event.url} target='_blank'>
+              <a href={event.url} target="_blank" rel="oopener noreferrer">
                 <p className={css['date']}>{renderEventDate(event)}</p>
                 <p className={css['title']}>{event.title}</p>
 
@@ -78,7 +78,7 @@ END:VCALENDAR`
               </a>
             </div>
             <div>
-              <a href={event.url} target='_blank'>
+              <a href={event.url} target="_blank" rel="oopener noreferrer">
                 <div className={css['image-column']}>
                   <img src={event.imageUrl} alt={event.title} />
                 </div>

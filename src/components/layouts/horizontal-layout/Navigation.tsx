@@ -93,7 +93,7 @@ export const Navigation = (props: NavigationProps) => {
         }
       })
     }
-  }, [])
+  }, [pageProps, props])
 
   // Keep anchor in sync
   React.useEffect(() => {

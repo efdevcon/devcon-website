@@ -27,7 +27,6 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
     <Page {...props} ref={ref}>
       <PageContent transparent backgroundText={intl.formatMessage({ id: 'rtd_message_from_deva' })}>
         <div className={css['container']}>
-
           <Img alt="Lying Deva" className={css['lying-deva']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
           <Img alt="Sitting Deva" className={css['sitting-deva']} fluid={data.allFile.nodes[1].childImageSharp.fluid} />
 

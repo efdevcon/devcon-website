@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef, useState } from 'react'
+import React, { createRef, useEffect, useState } from 'react'
 import css from './dropdown.module.scss'
 import IconArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
 

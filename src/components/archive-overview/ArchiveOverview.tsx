@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import css from './archive.module.scss'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
@@ -9,7 +9,7 @@ interface ArchiveProps {
 }
 
 export function ArchiveOverview(props: ArchiveProps) {
-  const [selectedVideo, setSelectedVideo] = useState(props.videos[0].url ?? '')
+  const [selectedVideo, setSelectedVideo] = useState(props.videos[0]?.url ?? '')
 
   const filtered = React.useMemo(() => {
     return props.filter === '' || props.filter === 'All'
