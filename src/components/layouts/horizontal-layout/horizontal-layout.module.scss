@@ -30,7 +30,7 @@
     flex-grow: 1;
     flex-direction: row;
     flex-wrap: nowrap;
-    transition: transform 0.05s linear;
+    transition: transform 400ms ease-out;
     margin-left: 64px;
 
     // If not using mouse, we just fall back to native scroll behaviour (i.e. swipe)
@@ -284,7 +284,7 @@
           text-transform: uppercase;
         }
 
-        .bottom-links-white { 
+        .bottom-links-white {
           @extend .bottom-links;
           color: #fff;
 

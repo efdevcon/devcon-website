@@ -11,7 +11,6 @@ import leslie from 'src/assets/images/leslie.svg'
 import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
 import { Modal } from 'src/components/common/modal'
-import { navigateToSlide } from 'src/components/layouts/horizontal-layout/Navigation'
 
 export const Intro = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -40,7 +39,8 @@ export const Intro = React.forwardRef((props: any, ref) => {
           <Modal
             open={modalOpen}
             close={() => setModalOpen(false)}
-            onWheel={e => e.nativeEvent.stopImmediatePropagation()}
+            onWheel={(e: React.SyntheticEvent) => e.nativeEvent.stopImmediatePropagation()}
+            onMouseDown={(e: React.SyntheticEvent) => e.stopPropagation()}
           >
             <div className={css['what-is-devcon']}>
               <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
@@ -51,9 +51,9 @@ export const Intro = React.forwardRef((props: any, ref) => {
               <div className={css['modal-footer']}>
                 <a
                   onClick={() => {
-                    const mfdPageTitle = intl.formatMessage({ id: 'rtd_message_from_deva' })
+                    // const mfdPageTitle = intl.formatMessage({ id: 'rtd_message_from_deva' })
+                    props.navigationRef.current.goToSlide('next')
 
-                    navigateToSlide(mfdPageTitle, props)
                     setModalOpen(false)
                   }}
                 >

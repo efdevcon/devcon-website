@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useImperativeHandle } from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './navigation.module.scss'
 import IconMenu from 'src/assets/icons/menu.svg'
@@ -8,13 +8,13 @@ import IconRoad from 'src/assets/icons/road.svg'
 import ethLogo from 'src/assets/images/eth.svg'
 import devconLogoSimple from 'src/assets/images/devcon-logo-simple.svg'
 import leftPad from 'src/utils/left-pad'
-import HeaderLogo from '../header/HeaderLogo'
+import HeaderLogo from '../../header/HeaderLogo'
 import { Newsletter } from 'src/components/newsletter'
 import { SocialMedia } from 'src/components/layouts/footer'
 import { Link as LinkType } from 'src/types/Link'
 import { Link } from 'src/components/common/link'
 import { COPYRIGHT_NOTICE } from 'src/utils/constants'
-import usePageInView from './usePageInView'
+import usePageInView, { hashSlug } from './usePageInView'
 import { useLanguageToggle } from 'src/components/layouts/header/strip/language-toggle'
 
 type PageRefs = {
@@ -22,7 +22,7 @@ type PageRefs = {
 }
 
 type NavigationProps = {
-  pages: React.ReactNode
+  pages: any[]
   links: LinkType[]
   pageRefs: PageRefs
   pageTrackRef: any
@@ -30,7 +30,6 @@ type NavigationProps = {
 }
 
 const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
-const hashSlug = (slug: string) => '#' + slug.replaceAll(' ', '-').toLowerCase()
 
 const LanguageToggle = () => {
   const { redirectPath, currentLanguage } = useLanguageToggle()
@@ -57,34 +56,75 @@ export const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: 
   if (isTouchDevice) {
     props.pageTrackRef.current.scrollLeft = offsetLeft
   } else {
-    props.pageTrackRef.current.style.transition = `none`
     props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
-
-    setImmediate(() => {
-      props.pageTrackRef.current.style.transition = ``
-    })
-
     props.lastX.current = offsetLeft
   }
 
-  if (setFoldoutOpen) {
-    window.location.replace(hashSlug(pageTitle))
+  window.location.replace(hashSlug(pageTitle))
 
+  if (setFoldoutOpen) {
     setFoldoutOpen(false)
   }
 }
 
-export const Navigation = (props: NavigationProps) => {
+export const Navigation = React.forwardRef((props: NavigationProps, ref: any) => {
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const intl = useIntl()
   const pageInView = usePageInView(props.pageRefs)
 
+  const goToSlide = (action: 'next' | 'prev' | 'syncCurrent') => {
+    const currentPageIndex = props.pages.findIndex(page => page.props.title === pageInView)
+    let nextPageIndex
+
+    if (action === 'prev') {
+      nextPageIndex = Math.max(0, currentPageIndex - 1)
+    } else if (action === 'next') {
+      const lastPageIndex = props.pages.length - 1
+
+      nextPageIndex = Math.min(lastPageIndex, currentPageIndex + 1)
+    }
+
+    const isSamePage = nextPageIndex === currentPageIndex
+
+    if (isSamePage) return
+
+    // When resizing the window, we have to resynchronize the position of the current page so it snaps into the new viewport size
+    if (action === 'syncCurrent') {
+      nextPageIndex = currentPageIndex
+    }
+
+    const nextPage = pageProps[nextPageIndex]
+
+    if (!nextPage) return
+
+    navigateToSlide(nextPage.title, props, setFoldoutOpen)
+  }
+
+  useImperativeHandle(ref, () => ({
+    goToSlide,
+  }))
+
+  // Wheel scrolling
+  React.useEffect(() => {
+    const scrollHandler = (e: any) => {
+      if (!props.pageTrackRef.current) return
+
+      const scrolledDown = e.deltaY > 0
+
+      goToSlide(scrolledDown ? 'next' : 'prev')
+    }
+
+    document.addEventListener('wheel', scrollHandler)
+
+    return () => {
+      document.removeEventListener('wheel', scrollHandler)
+    }
+  }, [pageInView])
+
+  // Sync page position with anchor on mount
   React.useEffect(() => {
     const hash = window.location.hash
-
-    // console.log('child')
-    // console.log(props.pageRefs, 'p title')
 
     if (hash) {
       pageProps?.find(({ title: pageTitle }) => {
@@ -94,11 +134,6 @@ export const Navigation = (props: NavigationProps) => {
       })
     }
   }, [])
-
-  // Keep anchor in sync
-  React.useEffect(() => {
-    if (pageInView) window.location.replace(hashSlug(pageInView))
-  }, [pageInView])
 
   return (
     <>
@@ -218,4 +253,4 @@ export const Navigation = (props: NavigationProps) => {
       </div>
     </>
   )
-}
+})
