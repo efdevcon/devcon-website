@@ -34,9 +34,9 @@
     margin-left: 64px;
 
     // If not using mouse, we just fall back to native scroll behaviour (i.e. swipe)
-    @media (hover: none) {
-      overflow: auto;
-    }
+    // @media (hover: none) {
+    //   overflow: auto;
+    // }
 
     @media (max-width: $screen-sm) {
       margin-left: 0px;

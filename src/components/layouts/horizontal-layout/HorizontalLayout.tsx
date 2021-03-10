@@ -180,7 +180,7 @@ export const HorizontalLayout = (props: any) => {
 
   // Resync when track changes size to ensure we're never scrolled outside the visible area
   React.useEffect(() => {
-    if (isTouchDevice) return
+    // if (isTouchDevice) return
     if (!trackRef.current) return
 
     if (window.ResizeObserver) {
@@ -215,7 +215,7 @@ export const HorizontalLayout = (props: any) => {
   const onDragEnd = () => {
     if (!dragging.current) return
     if (!trackRef.current) return
-    if (isTouchDevice) return
+    // if (isTouchDevice) return
 
     dragging.current = false
     trackRef.current.style.transition = ''
@@ -237,7 +237,7 @@ export const HorizontalLayout = (props: any) => {
 
   const onDragMove = (e: React.SyntheticEvent) => {
     if (!trackRef.current) return
-    if (isTouchDevice) return
+    // if (isTouchDevice) return
     if (!dragging.current) return
     e.preventDefault()
 
@@ -269,12 +269,12 @@ export const HorizontalLayout = (props: any) => {
       <div
         ref={trackRef}
         onMouseDown={onDragStart}
-        // onTouchDown={onDragStart}
         onMouseLeave={onDragEnd}
         onMouseUp={onDragEnd}
-        // onTouchUp={onDragEnd}
-        // onTouchMove={onDragMove}
         onMouseMove={onDragMove}
+        onTouchStart={onDragStart}
+        onTouchEnd={onDragEnd}
+        onTouchMove={onDragMove}
         className={css['page-track']}
       >
         {React.Children.map(pages, (Page, index) => {
