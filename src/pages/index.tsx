@@ -26,6 +26,14 @@ export default function Index({ data }: any) {
   const dips = useMemo(() => ToDIPData(data), [data])
   const faqs = useMemo(() => ToFaqData(data), [data])
   const videos = useMemo(() => ToArchiveData(data), [data])
+  const whatIsDevcon = {
+    title: data.whatIsDevcon ? data.whatIsDevcon.nodes[0]?.frontmatter.title : '',
+    body: data.whatIsDevcon ? data.whatIsDevcon?.nodes[0]?.html : ''
+  }
+  const messageFromDeva = {
+    title: data.messageFromDeva ? data.messageFromDeva.nodes[0]?.frontmatter.title : '',
+    body: data.messageFromDeva ? data.messageFromDeva?.nodes[0]?.html : ''
+  }
 
   return (
     <>
@@ -38,12 +46,12 @@ export default function Index({ data }: any) {
               <IconRoad width="1.4em" height="1.4em" className="override" />
             </div>
           }
-          whatIsDevcon={data.whatIsDevcon.nodes[0]}
+          whatIsDevcon={whatIsDevcon}
         />
 
         <MessageFromDeva
-          title={intl.formatMessage({ id: 'rtd_message_from_deva' })}
-          messageFromDeva={data.messageFromDeva.nodes[0]?.html}
+          title={messageFromDeva.title}
+          messageFromDeva={messageFromDeva.body}
         />
 
         <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
@@ -91,6 +99,9 @@ export const query = graphql`
     ) {
       nodes {
         html
+        frontmatter {
+          title
+        }
       }
     }
     whatIsDevcon: allMarkdownRemark(

@@ -32,7 +32,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
               setModalOpen(true)
             }}
           >
-            {props.whatIsDevcon.frontmatter.title}
+            {props.whatIsDevcon.title}
             <InfoIcon />
           </button>
 
@@ -43,10 +43,10 @@ export const Intro = React.forwardRef((props: any, ref) => {
             onMouseDown={(e: React.SyntheticEvent) => e.stopPropagation()}
           >
             <div className={css['what-is-devcon']}>
-              <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
+              <h4>{props.whatIsDevcon.title} — </h4>
               <div
                 className={css['modal-content'] + ' markdown'}
-                dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }}
+                dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.body }}
               />
               <div className={css['modal-footer']}>
                 <a
