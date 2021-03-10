@@ -187,7 +187,7 @@ export const HorizontalLayout = (props: any) => {
       const el = trackRef.current
 
       const observer = new window.ResizeObserver(entries => {
-        // navigationRef.current.goToSlide('syncCurrent')
+        navigationRef.current.goToSlide('syncCurrent')
         const entry = entries[0]
         const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
         pageWidth.current = borderBoxSize.inlineSize
