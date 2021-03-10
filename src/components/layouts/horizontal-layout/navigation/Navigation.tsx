@@ -29,8 +29,6 @@ type NavigationProps = {
   lastX: any
 }
 
-let wheelLock: boolean
-
 const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
 
 const LanguageToggle = () => {
@@ -73,6 +71,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const intl = useIntl()
   const pageInView = usePageInView(props.pageRefs)
+  const wheelLock = React.useRef(false)
 
   const goToSlide = (action: 'next' | 'prev' | 'syncCurrent', lockWheel?: true) => {
     const currentPageIndex = props.pages.findIndex(page => page.props.title === pageInView)
@@ -100,11 +99,11 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
     if (!nextPage) return
 
     if (lockWheel) {
-      wheelLock = true
+      wheelLock.current = true
 
       setTimeout(() => {
-        wheelLock = false
-      }, 500)
+        wheelLock.current = false
+      }, 300)
     }
 
     navigateToSlide(nextPage.title, props, setFoldoutOpen)
@@ -117,13 +116,16 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   // Wheel scrolling
   React.useEffect(() => {
     const scrollHandler = (e: any) => {
-      if (wheelLock) return
+      if (wheelLock.current) {
+        console.log('wheel locked')
+        return
+      }
       if (!props.pageTrackRef.current) return
       if (e.deltaY === 0) return
 
       const scrolledDown = e.deltaY > 0
 
-      goToSlide(scrolledDown ? 'next' : 'prev', false)
+      goToSlide(scrolledDown ? 'next' : 'prev', true)
     }
 
     document.addEventListener('wheel', scrollHandler)
