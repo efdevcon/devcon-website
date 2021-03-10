@@ -60,9 +60,8 @@ export const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: 
     props.lastX.current = offsetLeft
   }
 
-  window.location.replace(hashSlug(pageTitle))
-
   if (setFoldoutOpen) {
+    window.location.replace(hashSlug(pageTitle))
     setFoldoutOpen(false)
   }
 }
@@ -133,7 +132,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
         }
       })
     }
-  }, [pageProps, props])
+  }, [])
 
   return (
     <>

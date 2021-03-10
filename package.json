@@ -11,7 +11,7 @@
     "local-cms": "npx netlify-cms-proxy-server",
     "debug": "node node_modules/.bin/gatsby develop --inspect",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,md}\"",
-    "lint": "eslint --fix src/**/*.{ts,tsx}",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest --watch"

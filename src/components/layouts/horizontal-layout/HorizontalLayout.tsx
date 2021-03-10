@@ -33,8 +33,8 @@ type PageContentProps = {
   applyScrollLock?: boolean
 }
 
-let recentlyScrolled = false
-let scrollTimeout: NodeJS.Timeout
+// let recentlyScrolled = false
+// let scrollTimeout: NodeJS.Timeout
 const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
 
 const elementIsScrollable = (e: React.SyntheticEvent) => {
@@ -187,11 +187,11 @@ export const HorizontalLayout = (props: any) => {
       const el = trackRef.current
 
       const observer = new window.ResizeObserver(entries => {
+        // navigationRef.current.goToSlide('syncCurrent')
         const entry = entries[0]
         const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
         pageWidth.current = borderBoxSize.inlineSize
         trackWidth.current = el.scrollWidth
-        navigationRef.current.goToSlide('syncCurrent')
       })
 
       observer.observe(el)
@@ -269,11 +269,11 @@ export const HorizontalLayout = (props: any) => {
       <div
         ref={trackRef}
         onMouseDown={onDragStart}
-        onTouchDown={onDragStart}
+        // onTouchDown={onDragStart}
         onMouseLeave={onDragEnd}
         onMouseUp={onDragEnd}
-        onTouchUp={onDragEnd}
-        onTouchMove={onDragMove}
+        // onTouchUp={onDragEnd}
+        // onTouchMove={onDragMove}
         onMouseMove={onDragMove}
         className={css['page-track']}
       >
