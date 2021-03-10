@@ -189,7 +189,9 @@ export const Proposals = (props: ProposalsProps) => {
   }, [props.dips])
 
   const filteredDips = React.useMemo(() => {
-    return props.filter === '' || props.filter === 'All' ? dipsWithLink : dipsWithLink.filter(dip => dip.status.toLowerCase() === props.filter?.toLowerCase())
+    return props.filter === '' || props.filter === 'All'
+      ? dipsWithLink
+      : dipsWithLink.filter(dip => dip.status.toLowerCase() === props.filter?.toLowerCase())
   }, [dipsWithLink, props.filter])
 
   return (

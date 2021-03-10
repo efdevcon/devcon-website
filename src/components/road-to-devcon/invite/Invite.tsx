@@ -8,8 +8,6 @@ import { GifScroller } from './GifScroller'
 import partyImg from 'src/assets/images/party.png'
 
 export const Invite = React.forwardRef((props: any, ref) => {
-  const intl = useIntl()
-
   return (
     <Page {...props} ref={ref}>
       <GifScroller />

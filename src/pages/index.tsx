@@ -1,5 +1,5 @@
-import React from 'react'
-import { HorizontalLayout, Page } from 'src/components/layouts/horizontal-layout'
+import React, { useMemo } from 'react'
+import { HorizontalLayout } from 'src/components/layouts/horizontal-layout'
 import { Intro } from 'src/components/road-to-devcon/intro/Intro'
 import { graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
@@ -21,11 +21,11 @@ import IconRoad from 'src/assets/icons/road.svg'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
-  const events = ToEventData(data)
-  const meetups = ToMeetupData(data)
-  const dips = ToDIPData(data.dips)
-  const faqs = ToFaqData(data)
-  const videos = ToArchiveData(data)
+  const events = useMemo(() => ToEventData(data), [data])
+  const meetups = useMemo(() => ToMeetupData(data), [data])
+  const dips = useMemo(() => ToDIPData(data), [data])
+  const faqs = useMemo(() => ToFaqData(data), [data])
+  const videos = useMemo(() => ToArchiveData(data), [data])
 
   return (
     <>

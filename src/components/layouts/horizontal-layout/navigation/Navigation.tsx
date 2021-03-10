@@ -133,7 +133,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
         }
       })
     }
-  }, [])
+  }, [pageProps, props])
 
   return (
     <>
