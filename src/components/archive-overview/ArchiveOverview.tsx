@@ -31,6 +31,7 @@ export function ArchiveOverview(props: ArchiveProps) {
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
             webkitallowfullscreen="true"
             mozallowfullscreen="true"
+            loading="lazy"
             allowFullScreen
           />
         </div>
