@@ -43,6 +43,6 @@ function mapToBlog(source: any): BlogPost {
     body: source.html,
     slug: source.fields.slug,
     permaLink: source.frontmatter.permaLink,
-    imageUrl: source.frontmatter.image.childImageSharp.fluid.src,
+    imageUrl: source.frontmatter.image ? source.frontmatter.image.childImageSharp.fluid.src : source.frontmatter.imageUrl
   }
 }
