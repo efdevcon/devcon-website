@@ -14,7 +14,7 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
       allFile(filter: { relativePath: { in: ["lying-deva.png", "sitting-deva.png"] } }) {
         nodes {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 80) {
+            fluid(maxWidth: 600, quality: 80) {
               ...GatsbyImageSharpFluid_noBase64
             }
           }

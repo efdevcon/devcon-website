@@ -11,7 +11,6 @@ interface ArchiveProps {
 export function ArchiveOverview(props: ArchiveProps) {
   const initialVideo = props.videos[0]?.url ?? ''
   const [selectedVideo, setSelectedVideo] = useState(initialVideo)
-  console.log("Initial video", initialVideo)
 
   const filtered = React.useMemo(() => {
     return props.filter === '' || props.filter === 'All'
