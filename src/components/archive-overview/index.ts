@@ -1,1 +1,1 @@
-export { ArchiveOverview } from './ArchiveOverview'
+export { ArchiveOverview as default } from './ArchiveOverview'
