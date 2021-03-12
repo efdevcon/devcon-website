@@ -63,6 +63,7 @@ export const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: 
 
 export const Navigation = React.forwardRef((props: NavigationProps, ref: any) => {
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
+  const [hover, setHover] = React.useState(-1)
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const intl = useIntl()
   const pageInView = usePageInView(props.pageRefs)
@@ -161,10 +162,15 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
               let className = 'text-uppercase font-secondary no-select'
 
-              if (selected) className += ` ${css['selected']}`
+              if (selected || hover === index) className += ` ${css['selected']}`
 
               return (
-                <li className={className} key={title} onClick={() => navigateToSlide(title, props, setFoldoutOpen)}>
+                <li 
+                  onMouseEnter={() => setHover(index)}
+                  onMouseLeave={() => setHover(-1)}
+                  className={className} 
+                  key={title} 
+                  onClick={() => navigateToSlide(title, props, setFoldoutOpen)}>
                   {icon || leftPad(index + '')}
                 </li>
               )
@@ -196,10 +202,12 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
               let className = 'text-uppercase font-secondary no-select'
 
-              if (selected) className += ` ${css['selected']}`
+              if (selected || hover === index) className += ` ${css['selected']}`
 
               return (
                 <li
+                  onMouseEnter={() => setHover(index)}
+                  onMouseLeave={() => setHover(-1)}
                   className={className}
                   key={title}
                   data-index={leftPad(index + '')}
