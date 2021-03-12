@@ -179,9 +179,12 @@ export const HorizontalLayout = (props: any) => {
           trackWidth.current = el.scrollWidth
         }
 
-        console.log('RESYNCING')
+        // The resync happens on component mount, which clashes with the anchor navigating to a slide - we let the anchor do it's thing here
+        const anchorWillSync = window.location.hash && !window.__anchor_handled
 
-        navigationRef.current.goToSlide('syncCurrent')
+        if (!anchorWillSync) {
+          navigationRef.current.goToSlide('syncCurrent')
+        }
       })
 
       observer.observe(el)

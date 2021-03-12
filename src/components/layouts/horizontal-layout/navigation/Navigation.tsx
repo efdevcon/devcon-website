@@ -133,9 +133,17 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
     const hash = window.location.hash
 
     if (hash) {
+      props.pageTrackRef.current.style.transition = 'none'
+
       pageProps?.find(({ title: pageTitle }) => {
         if (hashSlug(pageTitle) === hash) {
           navigateToSlide(pageTitle, props)
+
+          // Dirty fix for letting anchor navigate on mount - other hooks can read the window object to see if anchor has been handled or not before deciding to navigate
+          setTimeout(() => {
+            props.pageTrackRef.current.style.transition = ''
+            window.__anchor_handled = true
+          }, 100)
         }
       })
     }
@@ -165,12 +173,13 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
               if (selected || hover === index) className += ` ${css['selected']}`
 
               return (
-                <li 
+                <li
                   onMouseEnter={() => setHover(index)}
                   onMouseLeave={() => setHover(-1)}
-                  className={className} 
-                  key={title} 
-                  onClick={() => navigateToSlide(title, props, setFoldoutOpen)}>
+                  className={className}
+                  key={title}
+                  onClick={() => navigateToSlide(title, props, setFoldoutOpen)}
+                >
                   {icon || leftPad(index + '')}
                 </li>
               )
