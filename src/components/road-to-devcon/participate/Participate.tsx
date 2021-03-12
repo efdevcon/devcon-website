@@ -16,7 +16,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativePath: { in: ["participate_background.png"] } }) {
+      allFile(filter: { relativePath: { in: ["participate_background.webp"] } }) {
         nodes {
           childImageSharp {
             fluid(maxWidth: 1800, quality: 80) {
@@ -27,7 +27,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
       }
     }
   `)
-  const bg = data.allFile.nodes[0]?.childImageSharp?.fluid?.src ?? 'src/assets/images/participate_background.png'
+  const bg = data.allFile.nodes[0]?.childImageSharp?.fluid?.src ?? 'src/assets/images/participate_background.webp'
 
   return (
     <Page {...props} ref={ref}>
