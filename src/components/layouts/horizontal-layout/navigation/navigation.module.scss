@@ -387,18 +387,18 @@ $nav-width: 348px;
   display: flex;
   justify-content: center;
   height: fit-content;
-  padding: 8px;
+  padding: 4px;
 
   > * {
     position: relative;
-    padding: $gap-1;
+    padding: $gap-2;
 
     @media (max-width: $screen-sm) {
       padding: $gap-2;
     }
-
+    
     &:first-child {
-      padding-right: $gap-1;
+      padding-right: $gap-2;
 
       @media (max-width: $screen-sm) {
         padding-right: calc(#{$gap-2} + 1px);
