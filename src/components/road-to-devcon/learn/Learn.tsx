@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { PageContent, Page } from 'src/components/layouts/horizontal-layout'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './learn.module.scss'
-import { ArchiveOverview } from 'src/components/archive-overview'
 import { Filter } from 'src/components/common/filter'
 import { Dropdown } from 'src/components/common/dropdown'
+import Loadable from "@loadable/component"
+
+const ArchiveOverview = Loadable(() => import('src/components/archive-overview'))
 
 export const Learn = React.forwardRef((props: any, ref) => {
   const intl = useIntl()

@@ -10,13 +10,29 @@ import { MeetupOverview } from 'src/components/events-overview/MeetupOverview'
 import IconPlus from 'src/assets/icons/plus.svg'
 import { LINK_SUBMIT_EVENT } from 'src/utils/constants'
 import { Checkpoint } from '../checkpoint'
+import { graphql, useStaticQuery } from 'gatsby'
 
 export const Participate = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { relativePath: { in: ["participate_background.png"] } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 1800, quality: 80) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+      }
+    }
+  `)
+  const bg = data.allFile.nodes[0]?.childImageSharp?.fluid?.src ?? 'src/assets/images/participate_background.png'
 
   return (
     <Page {...props} ref={ref}>
-      <div className={css['background']}></div>
+      <div className={css['background']} 
+        style={{ backgroundImage: `url(${bg})` }}></div>
       <PageContent
         applyScrollLock
         transparent
