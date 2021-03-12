@@ -75,7 +75,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
         </div>
       </div>
 
-      <p className={css['hash-tag']}>#ROADTODEVCON</p>
+      <a href='https://twitter.com/search?q=%23roadtodevcon' target='_blank' className={css['hash-tag']}>#ROADTODEVCON</a>
 
       <div className={css['angle']}></div>
       <img className={css['road']} src={road} alt="Road to Devcon" />
