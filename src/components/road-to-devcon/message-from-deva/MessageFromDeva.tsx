@@ -5,6 +5,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { useStaticQuery, graphql } from 'gatsby'
 import css from './mfd.module.scss'
 import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
+import { ScrollGradient } from 'src/components/common/scroll-gradient'
 import devaSignature from 'src/assets/images/deva_signature.png'
 
 export const MessageFromDeva = React.forwardRef((props: any, ref) => {
@@ -30,15 +31,20 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
           <Img alt="Lying Deva" className={css['lying-deva']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
           <Img alt="Sitting Deva" className={css['sitting-deva']} fluid={data.allFile.nodes[1].childImageSharp.fluid} />
 
-          <div className={css['message']} {...scrollLock}>
-            <h1>{intl.formatMessage({ id: 'rtd_embarking' })}</h1>
+          <ScrollGradient height="200px">
+            <div className={css['message']} {...scrollLock}>
+              <h1>{intl.formatMessage({ id: 'rtd_embarking' })}</h1>
 
-            <p className="bold">Devcon {intl.formatMessage({ id: 'rtd_bogota' })}</p>
+              <p className="bold">Devcon {intl.formatMessage({ id: 'rtd_bogota' })}</p>
 
-            <div className={css['content'] + ' markdown'} dangerouslySetInnerHTML={{ __html: props.messageFromDeva }} />
+              <div
+                className={css['content'] + ' markdown'}
+                dangerouslySetInnerHTML={{ __html: props.messageFromDeva }}
+              />
 
-            <img className={css['signature']} src={devaSignature} alt="Deva signature" />
-          </div>
+              <img className={css['signature']} src={devaSignature} alt="Deva signature" />
+            </div>
+          </ScrollGradient>
         </div>
       </PageContent>
     </Page>
