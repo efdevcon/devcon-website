@@ -80,8 +80,9 @@
   "rtd_checkpoint_2": "Participe y recoja POAPs de eventos para descuentos especiales y experiencias en Devcon.",
   "rtd_checkpoint_3": "¡Este es sólo el comienzo de nuestro Diario juntos! Comparte esta experiencia para que otros se unan a ti en el camino al desarrollo y mantente atento para que más misiones sigan adelante.",
   "rtd_take_survey": "Tomar encuesta de Devcon",
-  "rtd_share_experience": "Compartir esta experiencia",
   "rtd_events": "Eventos",
   "rtd_meetups": "Reuniones",
-  "rtd_submit_community_event": "Enviar evento de la comunidad"
+  "rtd_submit_community_event": "Enviar evento de la comunidad",
+  "rtd_celebrate_together": "Celebremos juntas en",
+  "rtd_share": "Comparte el camino hacia Devcon"
 }

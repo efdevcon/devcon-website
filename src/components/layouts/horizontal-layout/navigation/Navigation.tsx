@@ -6,7 +6,6 @@ import IconClose from 'src/assets/icons/cross.svg'
 import IconGlobe from 'src/assets/icons/globe.svg'
 import IconRoad from 'src/assets/icons/road.svg'
 import ethLogo from 'src/assets/images/eth.svg'
-import devconLogoSimple from 'src/assets/images/devcon-logo-simple.svg'
 import leftPad from 'src/utils/left-pad'
 import HeaderLogo from '../../header/HeaderLogo'
 import { Newsletter } from 'src/components/newsletter'
@@ -64,6 +63,7 @@ export const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: 
 
 export const Navigation = React.forwardRef((props: NavigationProps, ref: any) => {
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
+  const [hover, setHover] = React.useState(-1)
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const intl = useIntl()
   const pageInView = usePageInView(props.pageRefs)
@@ -162,10 +162,15 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
               let className = 'text-uppercase font-secondary no-select'
 
-              if (selected) className += ` ${css['selected']}`
+              if (selected || hover === index) className += ` ${css['selected']}`
 
               return (
-                <li className={className} key={title} onClick={() => navigateToSlide(title, props, setFoldoutOpen)}>
+                <li 
+                  onMouseEnter={() => setHover(index)}
+                  onMouseLeave={() => setHover(-1)}
+                  className={className} 
+                  key={title} 
+                  onClick={() => navigateToSlide(title, props, setFoldoutOpen)}>
                   {icon || leftPad(index + '')}
                 </li>
               )
@@ -182,7 +187,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
         <div className={css['foldout']}>
           <div className={css['header']}>
-            <img src={devconLogoSimple} alt="Devcon logo" />
+            <HeaderLogo />
             <IconRoad className="override" style={{ marginTop: '-3px' }} />
           </div>
 
@@ -197,10 +202,12 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
               let className = 'text-uppercase font-secondary no-select'
 
-              if (selected) className += ` ${css['selected']}`
+              if (selected || hover === index) className += ` ${css['selected']}`
 
               return (
                 <li
+                  onMouseEnter={() => setHover(index)}
+                  onMouseLeave={() => setHover(-1)}
                   className={className}
                   key={title}
                   data-index={leftPad(index + '')}
