@@ -53,12 +53,8 @@ export const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: 
 
   const offsetLeft = targetSlide.offsetLeft
 
-  // if (isTouchDevice) {
-  //   props.pageTrackRef.current.scrollLeft = offsetLeft
-  // } else {
   props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
   props.lastX.current = offsetLeft
-  // }
 
   if (setFoldoutOpen) {
     window.location.replace(hashSlug(pageTitle))
@@ -116,10 +112,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   // Wheel scrolling
   React.useEffect(() => {
     const scrollHandler = (e: any) => {
-      if (wheelLock.current) {
-        console.log('wheel locked')
-        return
-      }
+      if (wheelLock.current) return
       if (!props.pageTrackRef.current) return
       if (e.deltaY === 0) return
 

@@ -23,9 +23,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
       <div className={css['container']}>
         <div className={css['text']}>
           <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
-
           <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
-
           <button
             className="lg white"
             onClick={() => {
@@ -35,7 +33,6 @@ export const Intro = React.forwardRef((props: any, ref) => {
             {props.whatIsDevcon.frontmatter.title}
             <InfoIcon />
           </button>
-
           <Modal
             open={modalOpen}
             close={() => setModalOpen(false)}

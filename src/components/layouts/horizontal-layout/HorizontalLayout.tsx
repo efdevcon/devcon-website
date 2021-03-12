@@ -7,6 +7,7 @@ import IconGithub from 'src/assets/icons/github.svg'
 import IconGlobe from 'src/assets/icons/globe.svg'
 import IconDiscussion from 'src/assets/icons/discussion.svg'
 import { useIntl } from 'gatsby-plugin-intl'
+import { useDrag, useGesture } from 'react-use-gesture'
 
 type PageProps = {
   title: string
@@ -41,10 +42,37 @@ const elementIsScrollable = (e: React.SyntheticEvent) => {
   return e.currentTarget.scrollHeight > e.currentTarget.clientHeight
 }
 
+let initX
+let initY
+let dragging = false
+
 export const scrollLock = {
   onScroll: (e: React.SyntheticEvent) => {
-    // Disable scrolling if we recently scrolled scrolled the layout
-    // if (recentlyScrolled) e.preventDefault()
+    // dragging = false
+  },
+  onTouchStart: (e: React.SyntheticEvent) => {
+    // initX = e.touches[0].clientX
+    // initY = e.touches[0].clientY
+    // dragging = false
+  },
+  onTouchMove: (e: React.SyntheticEvent) => {
+    console.log('touch test')
+    // const deltaX = Math.abs(initX - e.touches[0].clientX)
+    // const deltaY = Math.abs(initY - e.touches[0].clientY)
+    // if (dragging) {
+    //   e.stopPropagation()
+    //   e.preventDefault()
+    //   return
+    // }
+    // if (deltaX > 15 && deltaX > deltaY) {
+    //   dragging = true
+    // }
+  },
+  onTouchEnd: () => {
+    // dragging = false
+  },
+  style: {
+    // touchAction: 'pan-y',
   },
   onWheel: (e: React.SyntheticEvent) => {
     // Disable global scrolling if we haven't scrolled the layout recently
@@ -173,25 +201,33 @@ export const HorizontalLayout = (props: any) => {
   const pageRefs = React.useRef<any>({})
   const navigationRef = React.useRef<any>()
   const lastX = React.useRef(0)
-  const movementX = React.useRef(0)
+  const deltaX = React.useRef(0)
+  const initialX = React.useRef(0)
   const pages = props.children
   const pageWidth = React.useRef(0)
   const trackWidth = React.useRef(0)
 
   // Resync when track changes size to ensure we're never scrolled outside the visible area
   React.useEffect(() => {
-    // if (isTouchDevice) return
     if (!trackRef.current) return
+    // if (isTouchDevice) return
 
     if (window.ResizeObserver) {
       const el = trackRef.current
 
       const observer = new window.ResizeObserver(entries => {
-        navigationRef.current.goToSlide('syncCurrent')
         const entry = entries[0]
-        const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
-        pageWidth.current = borderBoxSize.inlineSize
-        trackWidth.current = el.scrollWidth
+
+        if (entry.contentBoxSize) {
+          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
+          pageWidth.current = borderBoxSize.inlineSize
+          trackWidth.current = el.scrollWidth
+        } else {
+          pageWidth.current = entry.contentRect.width
+          trackWidth.current = el.scrollWidth
+        }
+
+        navigationRef.current.goToSlide('syncCurrent')
       })
 
       observer.observe(el)
@@ -202,58 +238,122 @@ export const HorizontalLayout = (props: any) => {
     }
   }, [])
 
-  const onDragStart = (e: React.SyntheticEvent) => {
-    if (e.target.nodeName === 'INPUT') return
+  // const onDragStart = (e: React.SyntheticEvent) => {
+  //   if (e.target.nodeName === 'INPUT') return
 
-    e.preventDefault()
-    document.activeElement.blur()
+  //   if (isTouchDevice) {
+  //     if (!e.touches[0]) return
+  //     initialX.current = e.touches[0].clientX
+  //   } else {
+  //     initialX.current = lastX.current
 
-    dragging.current = true
-    movementX.current = 0
-  }
+  //     e.preventDefault()
+  //   }
 
-  const onDragEnd = () => {
-    if (!dragging.current) return
-    if (!trackRef.current) return
-    // if (isTouchDevice) return
+  //   document.activeElement.blur()
 
-    dragging.current = false
-    trackRef.current.style.transition = ''
-    trackRef.current.style.cursor = ''
+  //   dragging.current = true
+  //   deltaX.current = 0
+  // }
 
-    if (Math.abs(movementX.current) > pageWidth.current / 2) {
-      // If we drag more than half a slides width, we're already on the next slide, so we just have to resync at that point
-      navigationRef.current.goToSlide('syncCurrent')
-    } else if (movementX.current > 100) {
-      navigationRef.current.goToSlide('prev')
-    } else if (movementX.current < -100) {
-      navigationRef.current.goToSlide('next')
-    } else {
-      navigationRef.current.goToSlide('syncCurrent')
-    }
+  // const onDragEnd = () => {
+  //   if (!dragging.current) return
+  //   if (!trackRef.current) return
 
-    movementX.current = 0
-  }
+  //   dragging.current = false
+  //   trackRef.current.style.transition = ''
+  //   trackRef.current.style.cursor = ''
 
-  const onDragMove = (e: React.SyntheticEvent) => {
-    if (!trackRef.current) return
-    // if (isTouchDevice) return
-    if (!dragging.current) return
-    e.preventDefault()
+  //   const threshold: number = pageWidth.current / 8
 
-    const speed = 1.5
-    const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current - e.movementX * speed))
+  //   if (Math.abs(deltaX.current) > pageWidth.current / 2) {
+  //     // If we drag more than half a slides width, we're already on the next slide, so we just have to resync at that point
+  //     navigationRef.current.goToSlide('syncCurrent')
+  //   } else if (deltaX.current > threshold) {
+  //     navigationRef.current.goToSlide('next')
+  //   } else if (deltaX.current < -threshold) {
+  //     navigationRef.current.goToSlide('prev')
+  //   } else {
+  //     navigationRef.current.goToSlide('syncCurrent')
+  //   }
 
-    movementX.current += e.movementX * speed
+  //   deltaX.current = 0
+  // }
 
-    // Animate element directly for performance - resync state when drag ends.
-    trackRef.current.style.transform = `translateX(-${nextX}px)`
-    // Disable transition (enabled for smoother scrolling), because it works poorly when dragging
-    trackRef.current.style.transition = 'none'
-    trackRef.current.style.cursor = 'grabbing'
+  // const onDragMove = (e: React.SyntheticEvent) => {
+  //   if (!trackRef.current) return
+  //   if (!dragging.current) return
 
-    lastX.current = nextX
-  }
+  //   // const speed = 1.5
+
+  //   if (isTouchDevice) {
+  //     deltaX.current = initialX.current - e.touches[0].clientX
+  //   } else {
+  //     e.preventDefault()
+
+  //     deltaX.current += e.movementX
+  //   }
+
+  //   const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current + deltaX.current))
+
+  //   // Animate element directly for performance - resync state when drag ends.
+  //   trackRef.current.style.transform = `translateX(-${nextX}px)`
+  //   // Disable transition (enabled for smoother scrolling), because it works poorly when dragging
+  //   trackRef.current.style.transition = 'none'
+  //   trackRef.current.style.cursor = 'grabbing'
+
+  //   // lastX.current = nextX
+  // }
+
+  // const dragHandlers = isTouchDevice
+  //   ? {
+  //       onTouchStart: onDragStart,
+  //       onTouchEnd: onDragEnd,
+  //       onTouchMove: onDragMove,
+  //     }
+  //   : {
+  //       onMouseDown: onDragStart,
+  //       onMouseLeave: onDragEnd,
+  //       onMouseUp: onDragEnd,
+  //       onMouseMove: onDragMove,
+  //     }
+
+  const bind = useGesture(
+    {
+      onDrag: state => {
+        const [deltaX] = state.delta
+        const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current - deltaX))
+
+        console.log(state._threshold, 'threshold')
+
+        lastX.current = nextX
+
+        trackRef.current.style.transform = `translateX(-${nextX}px)`
+        trackRef.current.style.transition = 'none'
+        trackRef.current.style.cursor = 'grabbing'
+      },
+      onDragEnd: state => {
+        trackRef.current.style.transition = ''
+        trackRef.current.style.cursor = ''
+
+        const [movementX] = state.movement
+
+        const threshold: number = Math.min(pageWidth.current / 10, 100)
+
+        if (Math.abs(movementX) > pageWidth.current / 2) {
+          // If we drag more than half a slides width, we're already on the next slide, so we just have to resync at that point
+          navigationRef.current.goToSlide('syncCurrent')
+        } else if (movementX > threshold) {
+          navigationRef.current.goToSlide('prev')
+        } else if (movementX < -threshold) {
+          navigationRef.current.goToSlide('next')
+        } else {
+          navigationRef.current.goToSlide('syncCurrent')
+        }
+      },
+    },
+    { drag: { useTouch: true, threshold: 20 } }
+  )
 
   return (
     <div className={css['layout-container']}>
@@ -265,18 +365,7 @@ export const HorizontalLayout = (props: any) => {
         pageTrackRef={trackRef}
         pageRefs={pageRefs}
       />
-
-      <div
-        ref={trackRef}
-        onMouseDown={onDragStart}
-        onMouseLeave={onDragEnd}
-        onMouseUp={onDragEnd}
-        onMouseMove={onDragMove}
-        onTouchStart={onDragStart}
-        onTouchEnd={onDragEnd}
-        onTouchMove={onDragMove}
-        className={css['page-track']}
-      >
+      <div ref={trackRef} {...bind()} className={css['page-track']}>
         {React.Children.map(pages, (Page, index) => {
           return React.cloneElement(Page, {
             ref: (ref: HTMLDivElement) => {

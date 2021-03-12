@@ -30,6 +30,7 @@
     flex-grow: 1;
     flex-direction: row;
     flex-wrap: nowrap;
+    // touch-action: pan-y;
     transition: transform 400ms ease-out;
     margin-left: 64px;
 
