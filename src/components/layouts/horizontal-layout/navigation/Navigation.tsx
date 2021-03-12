@@ -6,7 +6,6 @@ import IconClose from 'src/assets/icons/cross.svg'
 import IconGlobe from 'src/assets/icons/globe.svg'
 import IconRoad from 'src/assets/icons/road.svg'
 import ethLogo from 'src/assets/images/eth.svg'
-import devconLogoSimple from 'src/assets/images/devcon-logo-simple.svg'
 import leftPad from 'src/utils/left-pad'
 import HeaderLogo from '../../header/HeaderLogo'
 import { Newsletter } from 'src/components/newsletter'
@@ -182,7 +181,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
         <div className={css['foldout']}>
           <div className={css['header']}>
-            <img src={devconLogoSimple} alt="Devcon logo" />
+            <HeaderLogo />
             <IconRoad className="override" style={{ marginTop: '-3px' }} />
           </div>
 

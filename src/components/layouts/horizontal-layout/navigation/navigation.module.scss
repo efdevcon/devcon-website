@@ -192,9 +192,9 @@ $nav-width: 348px;
       }
 
       > svg {
-        fill: none;
-        font-size: $size-12;
-        margin-top: -$size-4;
+        fill: $color-primary;
+        height: 38px;
+        margin-left: -$size-4;
       }
     }
 
