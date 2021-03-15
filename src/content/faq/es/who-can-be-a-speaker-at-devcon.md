@@ -3,4 +3,4 @@ title: '¿Quién puede ser orador en Devcon?'
 category: programming
 ---
 
-Devcon tiene un proceso de aplicación pública. Cualquiera puede solicitarlo. Manténgase actualizado sobre nuestras [redes sociales](https://twitter.com/efdevcon) para saber cuándo abriremos nuestra llamada a los oradores.
+Devcon tiene un proceso de aplicación pública. Cualquiera puede solicitarlo. Stay tuned to [Devcon Blog](https://blog.ethereum.org/category/devcon/), [@EFDevcon Twitter](https://twitter.com/EFDevcon), and [Devcon.org](https://devcon.org) to know when we'll open our call for speakers.
