@@ -161,7 +161,9 @@ export const HorizontalLayout = (props: any) => {
   const trackWidth = React.useRef(0)
 
   React.useEffect(() => {
-    trackRef.current.addEventListener("touchstart", (e) => {
+    const element = document.getElementById('page-track');
+
+    element.addEventListener("touchstart", (e) => {
       // is not near edge of view, exit
       if (e.pageX > 25 && e.pageX < window.innerWidth - 25) return;
   
