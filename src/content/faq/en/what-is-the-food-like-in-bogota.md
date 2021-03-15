@@ -11,4 +11,4 @@ Below are a few of the popular dishes, but one can expect most of the food found
 - Empanadas are common breakfast items/snacks.
 - Tamales! Need we say more?
 - Hot chocolate, which is an absolute necessity in the lives of the locals, is served alongside a plate of cheese that can then be dipped into the beverage – causing it to melt.
-- Despite the large amount of coffee Colombia exports, specialty coffee shops are relatively new in Bogota and lucky for us, on the rise!
+- Despite the large amount of coffee Colombia exports, specialty coffee shops are relatively new in Bogota, but lucky for us they’re on the rise!
