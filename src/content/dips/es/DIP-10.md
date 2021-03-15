@@ -6,7 +6,7 @@ Title: Estado como capa de comunicación de Devcon
 Status: DRAFT
 Themes: Social
 Tags: Communication, Event Production, Sponsorship
-Authors: jonathan@status.im
+Authors: Jonathan Zerah <jonathan@status.im>
 Resources Required: from the Devcon team side - support and communication
 Discussion: https://forum.devcon.org/t/dip-10-status-as-communication-layer-for-devcon/115
 Created: 2020-08-21
