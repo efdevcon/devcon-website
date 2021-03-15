@@ -3,4 +3,4 @@ title: '¿Habrá Wifi?'
 category: general
 ---
 
-¡Sí! Yes! Wifi is a priority for us this year. Wifi rápido y fiable estará disponible para todos los asistentes durante la duración del evento.
+¡Sí! Fast, reliable WiFi is a priority to us this year, and it will be available to all attendees for the duration of the event.
