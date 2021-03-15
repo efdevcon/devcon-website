@@ -1,6 +1,5 @@
 ---
-title: Cuando se abrirán las solicitudes de tickets de descuento (constructor, orador,
-  Student, etc.)?
+title: When will Applications open for Discount tickets (Builder, Speaker, Student, etc.)?
 category: ticketing
 order: 2
 ---
