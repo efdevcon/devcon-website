@@ -4,4 +4,4 @@ category: general
 order: 2
 ---
 
-El idioma principal de la conferencia será el inglés. Main-stage talks will be translated into Spanish, and we will provide translations for side-stage talks and workshops where possible.
+El idioma principal de la conferencia será el inglés. Las conferencias de la primera etapa se traducirán al español y proporcionaremos traducciones para las conferencias y talleres de la segunda fase siempre que sea posible.
