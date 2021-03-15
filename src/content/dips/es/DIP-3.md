@@ -6,7 +6,7 @@ Title: Las reservas de vuelo y hoteles proceden del mercado descentralizado de v
 Status: Accepted
 Themes: Ticketing, Purchases & ID
 Tags: Attendee Experience
-Authors: <Maksim Izmaylov> max@windingtree.com
+Authors: Maksim Izmaylov <max@windingtree.com>
 Resources Required: Some Devcon dev time, connecting about hotels in Bogota
 Discussion: https://forum.devcon.org/t/flights-and-hotels-sourced-via-decentralized-marketplace/42
 Created: 2020-07-29
