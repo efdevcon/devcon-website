@@ -161,16 +161,16 @@ export const HorizontalLayout = (props: any) => {
   const trackWidth = React.useRef(0)
 
   React.useEffect(() => {
-    const element = document.getElementById('page-track');
+    const element = document.getElementById('page-track')
 
-    element.addEventListener("touchstart", (e) => {
+    element.addEventListener('touchstart', e => {
       // is not near edge of view, exit
-      if (e.pageX > 25 && e.pageX < window.innerWidth - 25) return;
-  
+      if (e.pageX > 25 && e.pageX < window.innerWidth - 25) return
+
       // prevent swipe to navigate back gesture
-      e.preventDefault();
-    });
-  }, []);
+      e.preventDefault()
+    })
+  }, [])
 
   // Resync when track changes size to ensure we're never scrolled outside the visible area
   React.useEffect(() => {
@@ -214,7 +214,7 @@ export const HorizontalLayout = (props: any) => {
         // event.preventDefault();
         // alert(updateChecker)
       },
-      onDrag: (state) => {
+      onDrag: state => {
         const [deltaX] = state.delta
         const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current - deltaX))
 

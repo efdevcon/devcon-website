@@ -31,8 +31,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
 
   return (
     <Page {...props} ref={ref}>
-      <div className={css['background']} 
-        style={{ backgroundImage: `url(${bg})` }}></div>
+      <div className={css['background']} style={{ backgroundImage: `url(${bg})` }}></div>
       <PageContent
         applyScrollLock
         transparent

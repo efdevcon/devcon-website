@@ -28,11 +28,11 @@ export default function Index({ data }: any) {
   const videos = useMemo(() => ToArchiveData(data), [data])
   const whatIsDevcon = {
     title: data.whatIsDevcon ? data.whatIsDevcon.nodes[0]?.frontmatter.title : '',
-    body: data.whatIsDevcon ? data.whatIsDevcon?.nodes[0]?.html : ''
+    body: data.whatIsDevcon ? data.whatIsDevcon?.nodes[0]?.html : '',
   }
   const messageFromDeva = {
     title: data.messageFromDeva ? data.messageFromDeva.nodes[0]?.frontmatter.title : '',
-    body: data.messageFromDeva ? data.messageFromDeva?.nodes[0]?.html : ''
+    body: data.messageFromDeva ? data.messageFromDeva?.nodes[0]?.html : '',
   }
 
   return (
@@ -49,10 +49,7 @@ export default function Index({ data }: any) {
           whatIsDevcon={whatIsDevcon}
         />
 
-        <MessageFromDeva
-          title={messageFromDeva.title}
-          messageFromDeva={messageFromDeva.body}
-        />
+        <MessageFromDeva title={messageFromDeva.title} messageFromDeva={messageFromDeva.body} />
 
         <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
 

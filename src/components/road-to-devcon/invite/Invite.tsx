@@ -13,7 +13,9 @@ export const Invite = React.forwardRef((props: any, ref) => {
   return (
     <Page {...props} ref={ref}>
       <GifScroller />
-      <a href='https://twitter.com/search?q=%23roadtodevcon' target='_blank' className={css['hash-tag']}>#ROADTODEVCON</a>
+      <a href="https://twitter.com/search?q=%23roadtodevcon" target="_blank" className={css['hash-tag']}>
+        #ROADTODEVCON
+      </a>
       <div className={css['container']}>
         <div className={css['text']}>
           <div className={css['backdrop']}>

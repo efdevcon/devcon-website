@@ -36,7 +36,7 @@ export function Dropdown(props: FilterProps) {
 
   return (
     <div className={css['container']} ref={ref}>
-      <span role="button" aria-label='Toggle dropdown' className={css['link']} onClick={() => setOpen(!open)}>
+      <span role="button" aria-label="Toggle dropdown" className={css['link']} onClick={() => setOpen(!open)}>
         {filter}
         <span className={css['icon']}>
           <IconArrowDropdown />

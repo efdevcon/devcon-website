@@ -29,8 +29,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
 
   return (
     <Page {...props} ref={ref}>
-    <div className={css['background']} 
-      style={{ backgroundImage: `url(${bg})` }}></div>
+      <div className={css['background']} style={{ backgroundImage: `url(${bg})` }}></div>
       <PageContent
         transparent
         backgroundText={intl.formatMessage({ id: 'rtd_frequently_asked_questions' })}

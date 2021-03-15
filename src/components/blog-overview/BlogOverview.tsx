@@ -30,11 +30,11 @@ export const Arrows = (props: any) => {
 
   return (
     <div className={css['arrows']}>
-      <button className={className} aria-label='Slide left' onClick={() => props.sliderRef.current?.slickPrev()}>
+      <button className={className} aria-label="Slide left" onClick={() => props.sliderRef.current?.slickPrev()}>
         <ArrowLeft />
       </button>
 
-      <button className={className}  aria-label='Slide right' onClick={() => props.sliderRef.current?.slickNext()}>
+      <button className={className} aria-label="Slide right" onClick={() => props.sliderRef.current?.slickNext()}>
         <ArrowRight />
       </button>
     </div>

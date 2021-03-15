@@ -23,7 +23,9 @@ export const Intro = React.forwardRef((props: any, ref) => {
       <div className={css['container']}>
         <div className={css['text']}>
           <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
-          <div><p>{intl.formatMessage({ id: 'rtd_intro' })}</p></div>
+          <div>
+            <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
+          </div>
           <button
             className="lg white"
             onClick={() => {
@@ -75,7 +77,9 @@ export const Intro = React.forwardRef((props: any, ref) => {
         </div>
       </div>
 
-      <a href='https://twitter.com/search?q=%23roadtodevcon' target='_blank' className={css['hash-tag']}>#ROADTODEVCON</a>
+      <a href="https://twitter.com/search?q=%23roadtodevcon" target="_blank" className={css['hash-tag']}>
+        #ROADTODEVCON
+      </a>
 
       <div className={css['angle']}></div>
       <img className={css['road']} src={road} alt="Road to Devcon" />
