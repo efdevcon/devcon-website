@@ -23,32 +23,47 @@ export const Intro = React.forwardRef((props: any, ref) => {
       <div className={css['container']}>
         <div className={css['text']}>
           <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
-
-          <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
-
+          <div>
+            <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
+          </div>
           <button
-            className="lg"
+            className="lg white"
             onClick={() => {
               setModalOpen(true)
             }}
           >
-            {props.whatIsDevcon.frontmatter.title}
+            {props.whatIsDevcon.title}
             <InfoIcon />
           </button>
-
           <Modal
             open={modalOpen}
             close={() => setModalOpen(false)}
-            onWheel={e => e.nativeEvent.stopImmediatePropagation()}
+            onWheel={(e: React.SyntheticEvent) => e.nativeEvent.stopImmediatePropagation()}
+            onMouseDown={(e: React.SyntheticEvent) => e.stopPropagation()}
           >
             <div className={css['what-is-devcon']}>
-              <h4>{props.whatIsDevcon.frontmatter.title} — </h4>
-              <div className="markdown" dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.html }} />
+              <h4>{props.whatIsDevcon.title} — </h4>
+              <div
+                className={css['modal-content'] + ' markdown'}
+                dangerouslySetInnerHTML={{ __html: props.whatIsDevcon.body }}
+              />
+              <div className={css['modal-footer']}>
+                <a
+                  onClick={() => {
+                    // const mfdPageTitle = intl.formatMessage({ id: 'rtd_message_from_deva' })
+                    props.navigationRef.current.goToSlide('next')
+
+                    setModalOpen(false)
+                  }}
+                >
+                  {intl.formatMessage({ id: 'rtd_message_from_deva' })}
+                </a>
+              </div>
             </div>
           </Modal>
 
           <button
-            className="lg"
+            className="lg white"
             onMouseOver={() => {
               setShowDoge(true)
             }}
@@ -62,7 +77,9 @@ export const Intro = React.forwardRef((props: any, ref) => {
         </div>
       </div>
 
-      <p className={css['hash-tag']}>#ROADTODEVCON</p>
+      <a href="https://twitter.com/search?q=%23roadtodevcon" target="_blank" className={css['hash-tag']}>
+        #ROADTODEVCON
+      </a>
 
       <div className={css['angle']}></div>
       <img className={css['road']} src={road} alt="Road to Devcon" />

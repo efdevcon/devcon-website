@@ -17,7 +17,7 @@
 
   .text {
     width: 750px;
-    max-width: 80%;
+    max-width: 100%;
 
     h1 {
       font-size: $size-8 * 9;
@@ -30,19 +30,26 @@
     }
 
     h1,
-    p {
+    div
+     {
       @include gaps.responsive-gap($attribute: margin, $bottom: $gap-6, $min-gap: $gap-4);
+    }
+
+    > div > p {
+      font-size: 1.3rem;
+      box-shadow: 0.3em 0px rgba(208, 251, 247, 0.75);
+      display: inline;
+      background:rgba(208, 251, 247, 0.75);
+
+      @media (max-width: $screen-sm) {
+        font-size: unset;
+      }
     }
 
     button {
       text-transform: uppercase;
-      background: white;
       margin-right: $gap-2;
       margin-bottom: $gap-2;
-
-      // @media (max-width: $screen-sm) {
-      //   background: white;
-      // }
 
       > * {
         margin-left: 1em;
@@ -67,9 +74,11 @@
   display: flex;
   align-items: flex-end;
   z-index: -1;
-  left: 10%;
+  left: 20%;
   bottom: 0%;
   transform-origin: 0 100%;
+
+  transform: scale(1.12);
 
   @media (max-width: $screen-xxl) {
     transform: scale(0.9);
@@ -224,13 +233,8 @@
 
 // Sort out the padding later - probably has to be more deeply integrated with the modal itself
 .what-is-devcon {
-  padding: $gap-4;
-
-  @media (max-width: $screen-sm) {
-    padding: 0px;
-  }
-
   > h4 {
+    @include fonts.font-xl;
     font-family: $font-secondary;
     text-transform: uppercase;
     margin-bottom: $gap-4;
@@ -245,5 +249,24 @@
     @media (max-width: $screen-sm) {
       padding-right: 0px;
     }
+  }
+}
+
+.modal-content {
+  @include fonts.font-lg;
+
+  p:first-child {
+    @include fonts.font-xl;
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: $gap-6;
+  @include fonts.semi-bold;
+  text-transform: uppercase;
+
+  > a {
+    cursor: pointer;
   }
 }

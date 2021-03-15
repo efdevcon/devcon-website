@@ -16,6 +16,7 @@ export const Contribute = React.forwardRef((props: any, ref) => {
       <div className={css['background']}></div>
 
       <PageContent
+        applyScrollLock
         backgroundText={intl.formatMessage({ id: 'rtd_improvement_proposals' })}
         links={[
           { url: 'https://github.com/efdevcon/DIPs', title: 'Github', icon: 'github' },

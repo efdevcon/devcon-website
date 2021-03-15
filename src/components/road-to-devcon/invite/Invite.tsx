@@ -13,24 +13,26 @@ export const Invite = React.forwardRef((props: any, ref) => {
   return (
     <Page {...props} ref={ref}>
       <GifScroller />
-      <p className={css['hash-tag']}>#ROADTODEVCON</p>
+      <a href="https://twitter.com/search?q=%23roadtodevcon" target="_blank" className={css['hash-tag']}>
+        #ROADTODEVCON
+      </a>
       <div className={css['container']}>
         <div className={css['text']}>
           <div className={css['backdrop']}>
-            <p className="bold">LET'S CELEBRATE TOGETHER AT</p>
+            <p className="bold text-uppercase">{intl.formatMessage({ id: 'rtd_celebrate_together' })}</p>
             <h1>
               DEVCON <img className={css['party']} src={partyImg} alt="party" />
             </h1>
           </div>
 
-          <h2>BOGOTA</h2>
+          <h2 className="text-uppercase">{intl.formatMessage({ id: 'rtd_bogota' })}</h2>
 
           <span>
             <Share
               renderTrigger={toggleShare => {
                 return (
-                  <button className={css['share']} onClick={toggleShare}>
-                    <span>SHARE THE ROAD TO DEVCON </span> <ShareIcon />
+                  <button className={`white ${css['share']}`} onClick={toggleShare}>
+                    <span className="text-uppercase">{intl.formatMessage({ id: 'rtd_share' })} </span> <ShareIcon />
                   </button>
                 )
               }}

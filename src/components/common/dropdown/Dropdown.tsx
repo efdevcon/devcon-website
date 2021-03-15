@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef, useState } from 'react'
+import React, { createRef, useEffect, useState } from 'react'
 import css from './dropdown.module.scss'
 import IconArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
 
@@ -36,7 +36,7 @@ export function Dropdown(props: FilterProps) {
 
   return (
     <div className={css['container']} ref={ref}>
-      <span role="button" className={css['link']} onClick={() => setOpen(!open)}>
+      <span role="button" aria-label="Toggle dropdown" className={css['link']} onClick={() => setOpen(!open)}>
         {filter}
         <span className={css['icon']}>
           <IconArrowDropdown />

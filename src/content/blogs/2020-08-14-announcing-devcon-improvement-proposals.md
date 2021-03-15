@@ -7,6 +7,7 @@ author: Devcon Team
 categories: Devcon
 permaLink: https://blog.ethereum.org/2020/08/14/announcing-devcon-improvement-proposals/
 imageUrl: https://storage.googleapis.com/ethereum-hackmd/upload_3cce07d58a164be59f66c80f3bee57aa.png
+image: ../../assets/images/dips.webp
 ---
 
 ![](https://storage.googleapis.com/ethereum-hackmd/upload_3cce07d58a164be59f66c80f3bee57aa.png)

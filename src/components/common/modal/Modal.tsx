@@ -11,7 +11,7 @@ type ModalProps = {
   [key: string]: any
 }
 
-export const Modal = (props: ModalProps) => {
+export const Modal = ({ close, ...props }: ModalProps) => {
   if (!props.open) return false
 
   let contentClass = css['content']
@@ -19,14 +19,14 @@ export const Modal = (props: ModalProps) => {
   if (props.className) contentClass += ` ${props.className}`
 
   return createPortal(
-    <div className={css['modal']} onClick={props.close} {...props}>
+    <div className={css['modal']} onClick={close} {...props}>
       <div
         className={contentClass}
         onClick={e => {
           e.stopPropagation()
         }}
       >
-        <IconClose onClick={props.close} className={`icon ${css['close']}`} />
+        <IconClose onClick={close} className={`icon ${css['close']}`} />
         {props.children}
       </div>
     </div>,

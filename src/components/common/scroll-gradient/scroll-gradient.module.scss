@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+
+  &:before {
+    content: '';
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    width: 100%;
+    -webkit-transform-style: preserve-3d; 
+    -webkit-backface-visibility: hidden;
+    height: var(--scroll-gradient-height);
+  }
+}

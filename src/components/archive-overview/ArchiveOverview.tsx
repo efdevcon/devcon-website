@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import css from './archive.module.scss'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
 
 interface ArchiveProps {
   videos: Array<ArchiveVideo>
@@ -8,33 +9,16 @@ interface ArchiveProps {
 }
 
 export function ArchiveOverview(props: ArchiveProps) {
-  const [selectedVideo, setSelectedVideo] = useState('')
-  const [allVideos, setAllVideos] = useState(props.videos)
-  const [videos, setVideos] = useState(props.videos)
+  const initialVideo = props.videos[0]?.url ?? ''
+  const [selectedVideo, setSelectedVideo] = useState(initialVideo)
 
-  useEffect(() => {
-    let ordered = props.videos
-    for (let i = ordered.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[ordered[i], ordered[j]] = [ordered[j], ordered[i]]
-    }
-    const initialVideo = ordered[0]?.url ?? ''
-
-    setVideos(ordered)
-    setSelectedVideo(initialVideo)
-  }, [props.videos])
-
-  useEffect(() => {
-    if (props.filter && props.filter !== 'All') {
-      const filtered = allVideos
-        .filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
-        .sort((a, b) => a.title.localeCompare(b.title))
-
-      setVideos(filtered)
-    } else {
-      setVideos(allVideos)
-    }
-  }, [props.filter])
+  const filtered = React.useMemo(() => {
+    return props.filter === '' || props.filter === 'All'
+      ? props.videos
+      : props.videos
+          .filter(i => i.category?.toLowerCase() === props.filter?.toLowerCase())
+          .sort((a, b) => a.title.localeCompare(b.title))
+  }, [props.filter, props.videos])
 
   return (
     <div className={css['container']}>
@@ -47,13 +31,14 @@ export function ArchiveOverview(props: ArchiveProps) {
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
             webkitallowfullscreen="true"
             mozallowfullscreen="true"
+            loading="lazy"
             allowFullScreen
           />
         </div>
       </div>
-      <div className={css['list']}>
-        {videos &&
-          videos.map((video: ArchiveVideo) => {
+      <div className={css['list']} {...scrollLock}>
+        {filtered &&
+          filtered.map((video: ArchiveVideo) => {
             return (
               <div key={video.id} className={css['item']} onClick={() => setSelectedVideo(video.url)}>
                 <span className={css['devcon']}>Devcon {video.devcon}</span>

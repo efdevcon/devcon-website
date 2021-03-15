@@ -1,4 +1,5 @@
 @use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
 
 .container {
   display: flex;
@@ -13,6 +14,21 @@
     max-width: 500px;
     flex-basis: 40%;
     flex-shrink: 0;
+    background: conic-gradient(
+      from 178.57deg at 30% 50%,
+      #edefcf 0deg,
+      #ededce 24.56deg,
+      #eeebcc 51.02deg,
+      #f3c4ba 102.55deg,
+      #c5d4e4 137.2deg,
+      #c5d8ed 169.68deg,
+      #c5d7ea 170.39deg,
+      #d9cdd2 202.5deg,
+      #ff7852 265.36deg,
+      #d4d1d8 328.41deg,
+      #d4d3d9 339.22deg,
+      #d3d7da 360deg
+    );
 
     @media (max-width: $screen-md) {
       flex-basis: 35%;
@@ -20,11 +36,38 @@
     }
   }
 
+  .lying-deva {
+    @extend .deva;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  .sitting-deva {
+    @extend .deva;
+
+    @media (max-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  .content {
+    @include fonts.font-lg;
+
+    p:first-child {
+      @include fonts.font-xl;
+    }
+  }
+
   .message {
+    flex-grow: 1;
+    // height: 100%;
+    // position: relative;
     overflow: auto;
     margin-left: $gap-10;
-    flex-grow: 1;
-    max-width: 40%;
+    max-width: 1100px;
+    padding-bottom: 150px;
 
     &::-webkit-scrollbar {
       width: 8px;

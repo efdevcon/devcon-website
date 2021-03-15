@@ -88,6 +88,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-remove-serviceworker',
     //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
     // {
     //   resolve: 'gatsby-plugin-offline',

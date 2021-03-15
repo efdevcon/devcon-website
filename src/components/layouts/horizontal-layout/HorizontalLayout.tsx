@@ -1,13 +1,13 @@
 import React, { Ref } from 'react'
 import css from './horizontal-layout.module.scss'
-import { Navigation } from './Navigation'
+import { Navigation } from './navigation'
 import leftPad from 'src/utils/left-pad'
 import { Link } from 'src/components/common/link'
-
 import IconGithub from 'src/assets/icons/github.svg'
 import IconGlobe from 'src/assets/icons/globe.svg'
 import IconDiscussion from 'src/assets/icons/discussion.svg'
 import { useIntl } from 'gatsby-plugin-intl'
+import { useDrag, useGesture } from 'react-use-gesture'
 
 type PageProps = {
   title: string
@@ -31,11 +31,16 @@ type PageContentProps = {
   children: React.ReactNode
   transparent?: boolean
   inverted?: boolean
+  applyScrollLock?: boolean
 }
 
-let recentlyScrolled = false
-let scrollTimeout: NodeJS.Timeout
-const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
+export const scrollLock = {
+  onWheel: (e: React.SyntheticEvent) => {
+    const scrollable = e.currentTarget.scrollHeight > e.currentTarget.clientHeight
+
+    if (scrollable) e.nativeEvent.stopImmediatePropagation()
+  },
+}
 
 export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
   return (
@@ -83,7 +88,14 @@ export const PageContent = (props: PageContentProps) => {
       ? 'background-text-solid'
       : 'background-text-gradient'
 
+  const bottomLinksClassName =
+    props.backgroundText === intl.formatMessage({ id: 'rtd_frequently_asked_questions' })
+      ? 'bottom-links-white'
+      : 'bottom-links'
+
   const pageTitleClassName = props.inverted ? 'page-title-inverted' : 'page-title'
+
+  const scrollProps = props.applyScrollLock ? scrollLock : {}
 
   return (
     <div className={css['layer']}>
@@ -118,24 +130,13 @@ export const PageContent = (props: PageContentProps) => {
         )}
       </div>
 
-      <div
-        className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']}
-        // onMouseDown={e => e.stopPropagation()}
-        onScroll={e => {
-          if (scrollTimeout) e.preventDefault()
-        }}
-        onWheel={e => {
-          if (!recentlyScrolled) {
-            e.nativeEvent.stopImmediatePropagation()
-          }
-        }}
-      >
+      <div className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']} {...scrollProps}>
         {props.children}
       </div>
 
-      {props.bottomLinks && (
-        <div className={`${css['bottom-links']} no-select`}>
-          {props.bottomLinks.map((link: LinkType) => {
+      <div className={`${css[bottomLinksClassName]} no-select`}>
+        {props.bottomLinks &&
+          props.bottomLinks.map((link: LinkType) => {
             return (
               <p key={link.url}>
                 <Link to={link.url} indicateExternal>
@@ -145,77 +146,57 @@ export const PageContent = (props: PageContentProps) => {
               </p>
             )
           })}
-        </div>
-      )}
+      </div>
     </div>
   )
 }
 
 export const HorizontalLayout = (props: any) => {
-  const dragging = React.useRef<boolean>(false)
   const trackRef = React.useRef<HTMLDivElement>()
   const pageRefs = React.useRef<any>({})
+  const navigationRef = React.useRef<any>()
   const lastX = React.useRef(0)
   const pages = props.children
   const pageWidth = React.useRef(0)
   const trackWidth = React.useRef(0)
 
-  // Mouse wheel scroll
   React.useEffect(() => {
-    const scrollHandler = (e: any) => {
-      if (!trackRef.current) return
+    const element = document.getElementById('page-track')
 
-      const scrolledDown = e.deltaY > 0
+    element.addEventListener('touchstart', e => {
+      // is not near edge of view, exit
+      if (e.pageX > 25 && e.pageX < window.innerWidth - 25) return
 
-      const pixelsToMove = scrolledDown ? 100 : -100
-      const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current + pixelsToMove))
-
-      trackRef.current.style.transform = `translateX(-${nextX}px)`
-
-      lastX.current = nextX
-
-      recentlyScrolled = true
-
-      if (scrollTimeout) clearTimeout(scrollTimeout)
-
-      scrollTimeout = setTimeout(() => {
-        recentlyScrolled = false
-      }, 500)
-    }
-
-    document.addEventListener('wheel', scrollHandler)
-
-    return () => {
-      document.removeEventListener('wheel', scrollHandler)
-    }
+      // prevent swipe to navigate back gesture
+      e.preventDefault()
+    })
   }, [])
 
   // Resync when track changes size to ensure we're never scrolled outside the visible area
-  React.useLayoutEffect(() => {
-    if (isTouchDevice) return
+  React.useEffect(() => {
     if (!trackRef.current) return
 
     if (window.ResizeObserver) {
       const el = trackRef.current
-      let firstCall = true
 
       const observer = new window.ResizeObserver(entries => {
         const entry = entries[0]
-        const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
-        pageWidth.current = borderBoxSize.inlineSize
-        trackWidth.current = el.scrollWidth
 
-        const nextX = Math.min(trackWidth.current - pageWidth.current, lastX.current)
-
-        lastX.current = nextX
-
-        if (firstCall) {
-          firstCall = false
-
-          return
+        if (entry.contentBoxSize) {
+          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
+          pageWidth.current = borderBoxSize.inlineSize
+          trackWidth.current = el.scrollWidth
+        } else {
+          pageWidth.current = entry.contentRect.width
+          trackWidth.current = el.scrollWidth
         }
 
-        el.style.transform = `translateX(-${nextX}px)`
+        // The resync happens on component mount, which clashes with the anchor navigating to a slide - we let the anchor do it's thing here
+        const anchorWillSync = window.location.hash && !window.__anchor_handled
+
+        if (!anchorWillSync) {
+          navigationRef.current.goToSlide('syncCurrent')
+        }
       })
 
       observer.observe(el)
@@ -226,57 +207,63 @@ export const HorizontalLayout = (props: any) => {
     }
   }, [])
 
-  const onDragEnd = () => {
-    if (!dragging.current) return
-    if (!trackRef.current) return
-    if (isTouchDevice) return
+  // Drag/hover handlers
+  const bind = useGesture(
+    {
+      onDragStart: ({ event }) => {
+        // event.preventDefault();
+        // alert(updateChecker)
+      },
+      onDrag: state => {
+        const [deltaX] = state.delta
+        const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current - deltaX))
 
-    dragging.current = false
-    trackRef.current.style.transition = ''
-    trackRef.current.style.cursor = ''
-  }
+        lastX.current = nextX
+
+        trackRef.current.style.transform = `translateX(-${nextX}px)`
+        trackRef.current.style.transition = 'none'
+        trackRef.current.style.cursor = 'grabbing'
+      },
+      onDragEnd: state => {
+        trackRef.current.style.transition = ''
+        trackRef.current.style.cursor = ''
+
+        const [movementX] = state.movement
+
+        const threshold: number = Math.min(pageWidth.current / 10, 100)
+
+        if (Math.abs(movementX) > pageWidth.current / 2) {
+          // If we drag more than half a slides width, we're already on the next slide, so we just have to resync at that point
+          navigationRef.current.goToSlide('syncCurrent')
+        } else if (movementX > threshold) {
+          navigationRef.current.goToSlide('prev')
+        } else if (movementX < -threshold) {
+          navigationRef.current.goToSlide('next')
+        } else {
+          navigationRef.current.goToSlide('syncCurrent')
+        }
+      },
+    },
+    { drag: { useTouch: true, threshold: 20 } }
+  )
 
   return (
     <div className={css['layout-container']}>
-      <Navigation links={props.links} lastX={lastX} pages={pages} pageTrackRef={trackRef} pageRefs={pageRefs} />
-
-      <div
-        ref={trackRef}
-        onMouseDown={e => {
-          e.preventDefault()
-
-          dragging.current = true
-        }}
-        onMouseLeave={onDragEnd}
-        onMouseUp={onDragEnd}
-        onMouseMove={e => {
-          if (!trackRef.current) return
-          if (isTouchDevice) return
-          if (!dragging.current) return
-          e.preventDefault()
-
-          // const lastX = dragging.current
-          const speed = 1.5
-          const nextX = Math.min(
-            trackWidth.current - pageWidth.current,
-            Math.max(0, lastX.current - e.movementX * speed)
-          )
-
-          // Animate element directly for performance - resync state when drag ends.
-          trackRef.current.style.transform = `translateX(-${nextX}px)`
-          // Disable transition (enabled for smoother scrolling), because it works poorly when dragging
-          trackRef.current.style.transition = 'none'
-          trackRef.current.style.cursor = 'grabbing'
-
-          lastX.current = nextX
-        }}
-        className={css['page-track']}
-      >
+      <Navigation
+        ref={navigationRef}
+        links={props.links}
+        lastX={lastX}
+        pages={pages}
+        pageTrackRef={trackRef}
+        pageRefs={pageRefs}
+      />
+      <div ref={trackRef} {...bind()} id="page-track" className={css['page-track']}>
         {React.Children.map(pages, (Page, index) => {
           return React.cloneElement(Page, {
             ref: (ref: HTMLDivElement) => {
               pageRefs.current[Page.props.title] = ref
             },
+            navigationRef,
             index: leftPad(index + ''),
           })
         })}

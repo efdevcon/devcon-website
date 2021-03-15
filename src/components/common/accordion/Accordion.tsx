@@ -29,7 +29,7 @@ export function Accordion(props: AccordionProps) {
     <div>
       <div className={css['category']}>
         <h3>{props.title}</h3>
-        <span role="button" className={css['collapse']} onClick={() => toggle(-1)}>
+        <span role="button" className={css['collapse']} aria-label={`Toggle ${props.title}`} onClick={() => toggle(-1)}>
           <IconMinus />
         </span>
       </div>

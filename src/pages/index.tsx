@@ -1,5 +1,5 @@
-import React from 'react'
-import { HorizontalLayout, Page } from 'src/components/layouts/horizontal-layout'
+import React, { useMemo } from 'react'
+import { HorizontalLayout } from 'src/components/layouts/horizontal-layout'
 import { Intro } from 'src/components/road-to-devcon/intro/Intro'
 import { graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
@@ -21,28 +21,41 @@ import IconRoad from 'src/assets/icons/road.svg'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
-  const events = ToEventData(data)
-  const meetups = ToMeetupData(data)
-  const dips = ToDIPData(data.dips)
-  const faqs = ToFaqData(data)
-  const videos = ToArchiveData(data)
+  const events = useMemo(() => ToEventData(data), [data])
+  const meetups = useMemo(() => ToMeetupData(data), [data])
+  const dips = useMemo(() => ToDIPData(data), [data])
+  const faqs = useMemo(() => ToFaqData(data), [data])
+  const videos = useMemo(() => ToArchiveData(data), [data])
+  const whatIsDevcon = {
+    title: data.whatIsDevcon ? data.whatIsDevcon.nodes[0]?.frontmatter.title : '',
+    body: data.whatIsDevcon ? data.whatIsDevcon?.nodes[0]?.html : '',
+  }
+  const messageFromDeva = {
+    title: data.messageFromDeva ? data.messageFromDeva.nodes[0]?.frontmatter.title : '',
+    body: data.messageFromDeva ? data.messageFromDeva?.nodes[0]?.html : '',
+  }
 
   return (
     <>
       <SEO />
       <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
-        <Intro title={intl.formatMessage({ id: 'rtd' })} whatIsDevcon={data.whatIsDevcon.nodes[0]} />
-
-        <MessageFromDeva
-          title={intl.formatMessage({ id: 'rtd_message_from_deva' })}
-          messageFromDeva={data.messageFromDeva.nodes[0]?.html}
+        <Intro
+          title={intl.formatMessage({ id: 'rtd' })}
+          icon={
+            <div style={{ marginTop: '-3px' }}>
+              <IconRoad width="1.4em" height="1.4em" className="override" />
+            </div>
+          }
+          whatIsDevcon={whatIsDevcon}
         />
+
+        <MessageFromDeva title={messageFromDeva.title} messageFromDeva={messageFromDeva.body} />
 
         <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
 
         <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
 
-        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
+        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} applyScrollLock />
 
         <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
 
@@ -83,6 +96,9 @@ export const query = graphql`
     ) {
       nodes {
         html
+        frontmatter {
+          title
+        }
       }
     }
     whatIsDevcon: allMarkdownRemark(

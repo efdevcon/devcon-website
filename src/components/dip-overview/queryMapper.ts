@@ -1,7 +1,7 @@
 import { DIP } from 'src/types/DIP'
 
 export function ToDIPData(source: any): Array<DIP> {
-  return source.nodes.map((dip: DIP) => ToDIP(dip))
+  return source.dips ? source.dips.nodes.map((dip: DIP) => ToDIP(dip)) : []
 }
 
 export function ToDIP(source: any): DIP {

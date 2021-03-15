@@ -22,10 +22,11 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
   if (props.className) className = `${props.className} ${className}`
   if (props.imageUrl) className = `${className} ${css['img']}`
 
+  // RTD entire card as a link
   const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title
 
   return (
-    <div className={className} ref={ref}>
+    <a className={className} ref={ref} href={props.linkUrl} target="_blank" rel="noopener noreferrer">
       {props.imageUrl && (
         <div className={css['img-wrapper']}>
           <img src={props.imageUrl} className={css['img']} alt={props.title} />
@@ -33,7 +34,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
       )}
 
       <div className={css['body']}>
-        <h4 className={css['title']}>{link}</h4>
+        <h4 className={css['title']}>{props.title}</h4>
         {props.description && <p className={css['text']}>{GetExcerpt(props.description)}</p>}
 
         <div className={css['bottom-section']}>
@@ -48,17 +49,15 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
           {props.linkUrl && (
             <div className={css['read-more']}>
               <p>
-                <Link to={props.linkUrl} className={css['text-uppercase']}>
-                  {intl.formatMessage({ id: 'readmore' })}
-                </Link>
+                <span className={css['text-uppercase']}>{intl.formatMessage({ id: 'readmore' })}</span>
               </p>
-              <Link to={props.linkUrl}>
+              <span>
                 <IconArrowRight />
-              </Link>
+              </span>
             </div>
           )}
         </div>
       </div>
-    </div>
+    </a>
   )
 })

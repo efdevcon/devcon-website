@@ -50,6 +50,14 @@ button {
       @include fonts.font-md;
     }
   }
+
+  &.white {
+    background: white;
+    --text-color: black;
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
 }
 
 // <button class="lg transparent">

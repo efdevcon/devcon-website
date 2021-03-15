@@ -68,6 +68,10 @@ $nav-width: 348px;
     }
   }
 
+  .slide-nav li:hover {
+    background: rgba(196, 196, 196, 0.2);
+  }
+
   .toggle {
     @extend .header;
     @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
@@ -145,7 +149,7 @@ $nav-width: 348px;
     position: absolute;
     width: $nav-width;
     background: white;
-    min-height: 100%;
+    height: 100%;
     top: 0px;
     left: 100%;
     overflow: auto;
@@ -163,6 +167,7 @@ $nav-width: 348px;
       padding: $gap-4;
       width: 100%;
       min-height: auto;
+      height: auto;
       bottom: 0;
       top: 64px;
       position: fixed;
@@ -182,15 +187,29 @@ $nav-width: 348px;
       justify-content: space-between;
       padding-left: $gap-5;
       padding-right: $gap-5;
+      position: sticky;
+      top: 0px;
+      z-index: 1;
+      background: white;
 
       @media (max-width: $screen-sm) {
         display: none;
       }
 
       > svg {
-        fill: none;
-        font-size: $size-12;
-        margin-top: -$size-4;
+        fill: $color-primary;
+        height: 38px;
+        margin-left: -$size-4;
+      }
+    }
+
+    .globe-icon {
+      display: flex;
+      align-items: center;
+      @include gaps.responsive-gap($attribute: padding, $left: $gap-4, $min-gap: $gap-2);
+
+      @media (max-width: $screen-sm) {
+        display: none;
       }
     }
 
@@ -233,7 +252,8 @@ $nav-width: 348px;
 
       > a {
         display: inline-block;
-        @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
+        padding: $gap-4;
+        @include gaps.responsive-gap($attribute: padding, $left: $gap-4, $min-gap: $gap-2);
       }
     }
 
@@ -372,18 +392,18 @@ $nav-width: 348px;
   display: flex;
   justify-content: center;
   height: fit-content;
-  padding: 8px;
+  padding: 4px;
 
   > * {
     position: relative;
-    padding: $gap-1;
+    padding: $gap-2;
 
     @media (max-width: $screen-sm) {
       padding: $gap-2;
     }
-
+    
     &:first-child {
-      padding-right: $gap-1;
+      padding-right: $gap-2;
 
       @media (max-width: $screen-sm) {
         padding-right: calc(#{$gap-2} + 1px);
