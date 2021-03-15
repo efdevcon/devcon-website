@@ -1,6 +1,7 @@
 ---
-title: '¿Puedo comprar boletos con ETH o DAI?'
+title: ¿Puedo comprar boletos con ETH o DAI?
 category: ticketing
+order: 3
 ---
 
-Sí — este año aceptaremos pagos ETH y DAI por entradas además de las compras estándar de tarjetas de crédito/débito y cualquier token ERC® a través de una integración de Uniswap.
+Yes — we will be accepting both ETH and DAI payments for tickets this year, in addition to standard credit/debit card purchases and any ERC-20 token through a Uniswap [integration](https://github.com/esPass/pretix-eth-payment-plugin).

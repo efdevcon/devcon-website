@@ -4,7 +4,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import css from './learn.module.scss'
 import { Filter } from 'src/components/common/filter'
 import { Dropdown } from 'src/components/common/dropdown'
-import Loadable from "@loadable/component"
+import Loadable from '@loadable/component'
 
 const ArchiveOverview = Loadable(() => import('src/components/archive-overview'))
 

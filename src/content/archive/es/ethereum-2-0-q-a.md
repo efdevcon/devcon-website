@@ -11,4 +11,3 @@ room: Convention
 type: Panel
 category: research
 ---
-

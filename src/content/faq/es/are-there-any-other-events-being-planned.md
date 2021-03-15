@@ -1,6 +1,7 @@
 ---
-title: '¿Se está planeando algún otro acontecimiento?'
+title: ¿Se está planeando algún otro acontecimiento?
 category: general
+order: 5
 ---
 
 Devcon es el único evento organizado por la Fundación Ethereum, pero es probable que haya otros eventos planeados por la comunidad alrededor y durante Devcon!

@@ -17,7 +17,7 @@ export const useBlogs = (): Array<BlogPost> => {
             imageUrl
             image {
               childImageSharp {
-                fluid(maxHeight: 1024, quality:80) {
+                fluid(maxHeight: 1024, quality: 80) {
                   src
                 }
               }
@@ -43,6 +43,8 @@ function mapToBlog(source: any): BlogPost {
     body: source.html,
     slug: source.fields.slug,
     permaLink: source.frontmatter.permaLink,
-    imageUrl: source.frontmatter.image ? source.frontmatter.image.childImageSharp.fluid.src : source.frontmatter.imageUrl
+    imageUrl: source.frontmatter.image
+      ? source.frontmatter.image.childImageSharp.fluid.src
+      : source.frontmatter.imageUrl,
   }
 }

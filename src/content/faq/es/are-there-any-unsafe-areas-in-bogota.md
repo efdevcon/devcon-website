@@ -1,6 +1,7 @@
 ---
-title: '¿Hay zonas inseguras en Bogota?'
+title: ¿Hay zonas inseguras en Bogota?
 category: location
+order: 6
 ---
 
 En la actualidad, Bogota es más seguro que en cualquier momento de los últimos 50 años en términos de tasas de delincuencia. Dicho esto, como en París, la ciudad de Nueva York o cualquier otra metropolis, recomendamos tener cuidado al caminar por el centro de la ciudad.
