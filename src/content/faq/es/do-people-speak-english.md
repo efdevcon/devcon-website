@@ -1,5 +1,5 @@
 ---
-title: Do locals speak English?
+title: '¿Los locales hablan inglés?'
 category: location
 order: 4
 ---
