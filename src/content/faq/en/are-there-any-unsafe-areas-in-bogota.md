@@ -1,6 +1,7 @@
 ---
 title: Are there any unsafe areas in Bogota?
 category: location
+order: 6
 ---
 
 Bogota is safer today than at any point in the last 50 years in terms of crime rates. That said, like in Paris, New York City, or any other metropolis, we recommend exercising caution when walking around downtown.

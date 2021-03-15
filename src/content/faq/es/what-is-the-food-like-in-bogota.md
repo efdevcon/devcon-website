@@ -1,6 +1,7 @@
 ---
-title: '¿Cómo es la comida en Bogota?'
+title: ¿Cómo es la comida en Bogota?
 category: location
+order: 7
 ---
 
 A continuación se muestran algunos de los platos populares, pero uno puede esperar que la mayor parte de la comida que se encuentra en Bogota sean platos típicos de América Latina, rodeado de muchos productos frescos.
