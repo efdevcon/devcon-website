@@ -110,23 +110,26 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   }))
 
   // Wheel scrolling
-  React.useEffect(() => {
-    const scrollHandler = (e: any) => {
-      if (wheelLock.current) return
-      if (!props.pageTrackRef.current) return
-      if (e.deltaY === 0) return
+  // React.useEffect(() => {
+  //   const scrollHandler = (e: any) => {
+  //     if (wheelLock.current) return
+  //     if (!props.pageTrackRef.current) return
+  //     if (e.deltaY === 0) return
 
-      const scrolledDown = e.deltaY > 0
+  //     console.log(e, 'e');
 
-      goToSlide(scrolledDown ? 'next' : 'prev', true)
-    }
+  //     const scrolledLeft = e.deltaX > 0;
+  //     const scrolledDown = e.deltaY > 0
 
-    document.addEventListener('wheel', scrollHandler)
+  //     goToSlide(scrolledDown ? 'next' : 'prev', true)
+  //   }
 
-    return () => {
-      document.removeEventListener('wheel', scrollHandler)
-    }
-  }, [pageInView])
+  //   document.addEventListener('wheel', scrollHandler)
+
+  //   return () => {
+  //     document.removeEventListener('wheel', scrollHandler)
+  //   }
+  // }, [pageInView])
 
   // Sync page position with anchor on mount
   React.useEffect(() => {
