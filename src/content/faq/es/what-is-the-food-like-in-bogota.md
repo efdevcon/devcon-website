@@ -11,4 +11,4 @@ A continuación se muestran algunos de los platos populares, pero uno puede espe
 - Las empanadas son objetos comunes para el desayuno.
 - ¡Tamales! Tamales! Need we say more?
 - Chocolate caliente, que es una necesidad absoluta en la vida de los locales, se sirve junto a un plato de queso que luego se puede sumergir en la bebida, causando que se derrite.
-- A pesar de la gran cantidad de exportaciones de café, los cafés especializados son relativamente nuevos en Bogota y la suerte para nosotros, en ascenso!
+- Despite the large amount of coffee Colombia exports, specialty coffee shops are relatively new in Bogota, but lucky for us they’re on the rise!
