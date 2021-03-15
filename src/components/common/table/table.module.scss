@@ -54,9 +54,11 @@
 
     background: $bg-color;
 
-    &:hover {
-      outline: 1px solid rgba(121, 128, 135, 1);
-      background: darken($bg-color, 5%);
+    @media not all and (hover: none) {
+      &:hover {
+        outline: 1px solid rgba(121, 128, 135, 1);
+        background: darken($bg-color, 5%);
+      }
     }
 
     &:nth-child(even) {

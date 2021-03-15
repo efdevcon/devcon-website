@@ -149,7 +149,7 @@ $nav-width: 348px;
     position: absolute;
     width: $nav-width;
     background: white;
-    min-height: 100%;
+    height: 100%;
     top: 0px;
     left: 100%;
     overflow: auto;
@@ -167,6 +167,7 @@ $nav-width: 348px;
       padding: $gap-4;
       width: 100%;
       min-height: auto;
+      height: auto;
       bottom: 0;
       top: 64px;
       position: fixed;
@@ -186,6 +187,10 @@ $nav-width: 348px;
       justify-content: space-between;
       padding-left: $gap-5;
       padding-right: $gap-5;
+      position: sticky;
+      top: 0px;
+      z-index: 1;
+      background: white;
 
       @media (max-width: $screen-sm) {
         display: none;

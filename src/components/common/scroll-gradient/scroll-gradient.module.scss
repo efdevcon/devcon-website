@@ -8,6 +8,8 @@
     bottom: 0;
     pointer-events: none;
     width: 100%;
+    -webkit-transform-style: preserve-3d; 
+    -webkit-backface-visibility: hidden;
     height: var(--scroll-gradient-height);
   }
 }

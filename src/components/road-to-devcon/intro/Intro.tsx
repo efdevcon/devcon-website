@@ -23,7 +23,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
       <div className={css['container']}>
         <div className={css['text']}>
           <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
-          <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
+          <div><p>{intl.formatMessage({ id: 'rtd_intro' })}</p></div>
           <button
             className="lg white"
             onClick={() => {

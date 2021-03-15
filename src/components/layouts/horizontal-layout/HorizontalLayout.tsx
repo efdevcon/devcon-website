@@ -160,6 +160,16 @@ export const HorizontalLayout = (props: any) => {
   const pageWidth = React.useRef(0)
   const trackWidth = React.useRef(0)
 
+  React.useEffect(() => {
+    trackRef.current.addEventListener("touchstart", (e) => {
+      // is not near edge of view, exit
+      if (e.pageX > 25 && e.pageX < window.innerWidth - 25) return;
+  
+      // prevent swipe to navigate back gesture
+      e.preventDefault();
+    });
+  }, []);
+
   // Resync when track changes size to ensure we're never scrolled outside the visible area
   React.useEffect(() => {
     if (!trackRef.current) return
@@ -198,7 +208,11 @@ export const HorizontalLayout = (props: any) => {
   // Drag/hover handlers
   const bind = useGesture(
     {
-      onDrag: state => {
+      onDragStart: ({ event }) => {
+        // event.preventDefault();
+        // alert(updateChecker)
+      },
+      onDrag: (state) => {
         const [deltaX] = state.delta
         const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current - deltaX))
 
@@ -241,7 +255,7 @@ export const HorizontalLayout = (props: any) => {
         pageTrackRef={trackRef}
         pageRefs={pageRefs}
       />
-      <div ref={trackRef} {...bind()} className={css['page-track']}>
+      <div ref={trackRef} {...bind()} id="page-track" className={css['page-track']}>
         {React.Children.map(pages, (Page, index) => {
           return React.cloneElement(Page, {
             ref: (ref: HTMLDivElement) => {

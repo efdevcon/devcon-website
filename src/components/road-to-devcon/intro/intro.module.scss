@@ -17,7 +17,7 @@
 
   .text {
     width: 750px;
-    max-width: 80%;
+    max-width: 100%;
 
     h1 {
       font-size: $size-8 * 9;
@@ -30,12 +30,16 @@
     }
 
     h1,
-    p {
+    div
+     {
       @include gaps.responsive-gap($attribute: margin, $bottom: $gap-6, $min-gap: $gap-4);
     }
 
-    > p {
+    > div > p {
       font-size: 1.3rem;
+      box-shadow: 0.3em 0px rgba(208, 251, 247, 0.75);
+      display: inline;
+      background:rgba(208, 251, 247, 0.75);
 
       @media (max-width: $screen-sm) {
         font-size: unset;
