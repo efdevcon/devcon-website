@@ -1,12 +1,6 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
 
-.container {
-  svg {
-    fill: $color-primary;
-  }
-}
-
 .header {
   cursor: pointer;
   display: flex;
@@ -47,13 +41,15 @@
   justify-content: space-between;
   align-items: center;
   margin: $gap-4 0;
+  cursor: pointer;
 
   h3 {
     @include fonts.font-lg;
     text-transform: uppercase;
   }
-}
 
-.collapse {
-  cursor: pointer;
+  svg {
+    color: red;
+    fill: red;
+  }
 }

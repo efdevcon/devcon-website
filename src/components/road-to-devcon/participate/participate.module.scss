@@ -47,10 +47,6 @@
     color: $color-primary;
     opacity: 0.5;
 
-    svg {
-      fill: #323232;
-    }
-    
     &:hover {
       color: #000;
 
@@ -58,7 +54,6 @@
         fill: #000;
       }
     }
-
   }
 }
 
