@@ -13,6 +13,10 @@
     padding: $gap-2;
     @include gaps.responsive-gap($attribute: margin, $right: $gap-8, $min-gap: $gap-2);
 
+    &:hover { 
+      @include fonts.bold;
+    }
+    
     &:last-child {
       margin-right: 0px;
     }
