@@ -52,7 +52,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
             </Tab>
           </Tabs>
           <div className={css['footer']}>
-            <a href={LINK_SUBMIT_EVENT}>
+            <a href={LINK_SUBMIT_EVENT} target='_blank' rel="noopener noreferrer">
               <span>{intl.formatMessage({ id: 'rtd_submit_community_event' })}</span>
               <span>
                 <IconPlus />

@@ -44,12 +44,21 @@
 
     @include fonts.font-lg;
     @include fonts.semi-bold;
-    color: #30354B;
+    color: $color-primary;
     opacity: 0.5;
 
     svg {
       fill: #323232;
     }
+    
+    &:hover {
+      color: #000;
+
+      svg {
+        fill: #000;
+      }
+    }
+
   }
 }
 
