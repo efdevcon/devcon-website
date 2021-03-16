@@ -33,10 +33,10 @@ export const Tweet = React.memo(() => {
       href="https://twitter.com/share?ref_src=twsrc%5Etfw"
       data-hashtags="roadtodevcon"
       data-size="large"
+      data-text="I can&#39;t wait to have a reunion at Devcon Bogota with @[tag your friends and colleagues]. Join me on the Road to Devcon!"
+      data-url="https://devcon.org"
       className={`${css['twitter']} twitter-share-button`}
       data-show-count="false"
-    >
-      Tweet
-    </a>
+    />
   )
 })

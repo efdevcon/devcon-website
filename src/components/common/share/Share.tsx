@@ -6,6 +6,7 @@ import { Tweet } from './Tweet'
 import { Link } from 'src/components/common/link'
 import css from './share.module.scss'
 import { Newsletter } from 'src/components/newsletter'
+import { useIntl } from 'react-intl'
 
 type ShareProps = {
   renderTrigger: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
@@ -69,12 +70,16 @@ const CopyToClipboard = ({ url }: any) => {
 
 export const Share = (props: ShareProps) => {
   const [open, setOpen] = React.useState(false)
+  const intl = useIntl()
+
+  const title = 'Road to Devcon'
+  const text = "I can't wait to have a reunion at Devcon Bogota. Join me on the Road to Devcon! http://devcon.org/"
 
   const toggle = () => {
-    if (navigator && navigator.share) {
+    if (false && navigator && navigator.share) {
       navigator.share({
-        title: 'Road to Devcon',
-        text: 'Join us on the Road to Devcon!',
+        title,
+        text,
         url: window.location.href,
       })
     } else {
@@ -92,16 +97,13 @@ export const Share = (props: ShareProps) => {
           onWheel={e => e.nativeEvent.stopImmediatePropagation()}
         >
           <div className={css['share']}>
-            <h2>SHARE ROAD TO DEVCON</h2>
+            <h2>{intl.formatMessage({ id: 'rtd_share' })}</h2>
 
             <div className={css['twitter']}>
               <Tweet />
             </div>
 
-            <Link
-              title="Share by Email"
-              to="mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com."
-            >
+            <Link title="Share by Email" to={`mailto:?subject=${title}&body=${text}`}>
               <button className={`white ${css['email']}`}>Email</button>
             </Link>
 

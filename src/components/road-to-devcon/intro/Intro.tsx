@@ -11,6 +11,7 @@ import leslie from 'src/assets/images/leslie.svg'
 import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
 import { Modal } from 'src/components/common/modal'
+import { Link } from 'src/components/common/link'
 
 export const Intro = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -22,9 +23,9 @@ export const Intro = React.forwardRef((props: any, ref) => {
     <Page {...props} ref={ref}>
       <div className={css['container']}>
         <div className={css['text']}>
-          <h1>{intl.formatMessage({ id: 'rtd' })}</h1>
+          <h1 className="no-select">{intl.formatMessage({ id: 'rtd' })}</h1>
           <div>
-            <p>{intl.formatMessage({ id: 'rtd_intro' })}</p>
+            <p className="no-select">{intl.formatMessage({ id: 'rtd_intro' })}</p>
           </div>
           <button
             className="lg white"
@@ -62,18 +63,20 @@ export const Intro = React.forwardRef((props: any, ref) => {
             </div>
           </Modal>
 
-          <button
-            className="lg white"
-            onMouseOver={() => {
-              setShowDoge(true)
-            }}
-            onMouseLeave={() => {
-              setShowDoge(false)
-            }}
-          >
-            {intl.formatMessage({ id: 'rtd_take_survey' })}
-            <SurveyIcon />
-          </button>
+          <Link to="https://forms.gle/13wmHHbmgK2DQZXm9">
+            <button
+              className="lg white"
+              onMouseOver={() => {
+                setShowDoge(true)
+              }}
+              onMouseLeave={() => {
+                setShowDoge(false)
+              }}
+            >
+              {intl.formatMessage({ id: 'rtd_take_survey' })}
+              <SurveyIcon />
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -108,7 +111,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
         <img className={css['guy']} src={guy} alt="Ethereum guy" />
       </div>
 
-      <div className={css['drag-to-continue']}>
+      <div className={`no-select ${css['drag-to-continue']}`}>
         <p>
           <span>{intl.formatMessage({ id: 'rtd_drag_to_continue' })}</span>
           <span>{intl.formatMessage({ id: 'rtd_swipe_to_continue' })}</span>→
