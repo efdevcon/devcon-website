@@ -6,7 +6,7 @@ Title: Encuestas verificables fuera de cadena para Devcon 6
 Status: Draft
 Themes: Community Involvement, Ticketing
 Tags: Software, Event production
-Authors: pau@vocdoni.io, worthalter@poap.xyz, ferran@vocdoni.io
+Authors: Pau Escrich <pau@vocdoni.io>, Patricio Worthalter <worthalter@poap.xyz>, Ferran Reyes <ferran@vocdoni.io>
 Resources Required: Communication support
 Discussion: https://forum.devcon.org/t/dip-16-universally-verifiable-off-chain-polls-for-devcon-6/204
 Created: 2021-01-05
@@ -138,11 +138,11 @@ Los equipos Vocdoni y POAP ya están trabajando en el proyecto para permitir a l
 
 **Entregables y Propiedades\u00BB**
 
-| #   | Entregable                              | Descripción                                                                                                                                                            | Propietario |
-| --- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| 1.  | Sistema de votación basado en token web | <ul><li>Plataforma de voto del puente Vocdoni</li><li>Bibliotecas para tener compatibilidad con los tokens NFT</li><li>Despliegue bajo un dominio específico</li></ul> | Vocdoni     |
-| 2.  | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul>                                                                                                                              | PUEDAR      |
-| 3.  | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul>                                                                            | DevCon      |
+| #  | Entregable                              | Descripción               | Propietario |
+| -- | --------------------------------------- | ------------------------- | ----------- |
+| 1. | Sistema de votación basado en token web | <ul><li>Plataforma de voto del puente Vocdoni</li><li>Bibliotecas para tener compatibilidad con los tokens NFT</li><li>Despliegue bajo un dominio específico</li></ul> | Vocdoni     |
+| 2. | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul> | PUEDAR      |
+| 3. | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul> | DevCon      |
 
 4. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
 

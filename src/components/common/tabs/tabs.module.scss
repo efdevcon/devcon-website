@@ -15,6 +15,10 @@
         font-weight: bold;
         text-transform: uppercase;
         opacity: 0.5;
+
+        &:hover { 
+            background: rgba(133,142,169,0.15);
+        }
     }
 
     .active { 

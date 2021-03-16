@@ -1,6 +1,5 @@
 ---
-title: When will Applications open for Discount tickets (Builder, Speaker,
-  Student, etc.)?
+title: When will Applications open for Discount tickets (Builder, Speaker, Student, etc.)?
 category: ticketing
 order: 2
 ---

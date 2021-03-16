@@ -1,5 +1,5 @@
 ---
-title: Is the tap water in Bogota potable?
+title: '¿Es potable el agua del grifo en Bogota?'
 category: location
 order: 9
 ---

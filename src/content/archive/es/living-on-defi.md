@@ -1,6 +1,6 @@
 ---
 devconNum: 5
-title: 'Vivir en Defi: Cómo sobrevivir a la inflación del 50% de Argentina'
+title: "Vivir en Defi: Cómo sobrevivir a la inflación del 50% de Argentina"
 featured: false
 description: "Vivir en Argentina pero pagar en Dai, Mariano puede acceder a sistemas financieros que normalmente no están disponibles para nosotros.\n\nQuiere mostrar cómo el movimiento DeFi de Ethereum ha estado funcionando bien durante los últimos 2 años, mediante el apalancamiento del Dai y las plataformas de préstamos secundarios, y cómo esto está cambiando la realidad financiera para la gente de las economías en desarrollo."
 speakers: 'Mariano Conti'
@@ -11,3 +11,4 @@ room: A2
 type: Talk
 category: latam
 ---
+

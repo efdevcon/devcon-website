@@ -1,8 +1,7 @@
 ---
-title: Cuando se abrirán las solicitudes de tickets de descuento (constructor,
-  orador, Student, etc.)?
+title: '¿Cuándo se abrirán las solicitudes de tickets con descuento (constructor, orador, estudiante, etc.)?'
 category: ticketing
 order: 2
 ---
 
-Las aplicaciones se abrirán con nuestra primera onda de Ticket, y será publicado públicamente con el resto de la información de ticketing en una futura entrada de EF blog.
+Las solicitudes se publicarán públicamente con el resto de la información de ticketing.

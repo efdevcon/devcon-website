@@ -1,9 +1,9 @@
 ---
-title: Will there be food at the conference?
+title: '¿Habrá comida en la conferencia?'
 category: general
 order: 7
 ---
 
-Attendees can expect fresh breakfast, lunch, snacks, tea, and local Colombian coffee. All food will be professionally catered, with a focus on high-quality, sufficient quantity, and sanitary preparation and delivery.
+Los asistentes pueden esperar desayuno fresco, almuerzo, snacks, té y café local colombiano. Todos los alimentos serán atendidos profesionalmente, con un enfoque en la alta calidad, la cantidad suficiente y la preparación y el suministro sanitarios.
 
-We will be collecting dietary information during the ticket checkout process, and we will do our best to accommodate everyone.
+Recopilaremos información dietética durante el proceso de compra de entradas y haremos todo lo posible para acomodar a todos.

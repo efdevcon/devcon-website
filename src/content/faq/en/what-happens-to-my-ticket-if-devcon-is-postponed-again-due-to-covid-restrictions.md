@@ -1,6 +1,5 @@
 ---
-title: What happens to my ticket if Devcon is postponed again due to COVID
-  restrictions?
+title: What happens to my ticket if Devcon is postponed again due to COVID restrictions?
 category: ticketing
 order: 5
 ---

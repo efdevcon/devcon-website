@@ -1,11 +1,11 @@
 ---
-title: What is the plan regarding COVID-19?
+title: '¿Cuál es el plan con respecto a COVID-19?'
 category: general
 order: 1
 ---
 
-Our team has been actively monitoring the COVID-19 situation, both in Colombia and around the world. We’re keeping a keen eye on the number of cases, rate of vaccinations, and projected trends, and we’re staying optimistic that we’ll be able to meet in-person in Bogota for Devcon soon™.
+Nuestro equipo ha estado supervisando activamente la situación de COVID-19, tanto en Colombia como en todo el mundo. Estamos muy atentos al número de casos, tasa de vacunas y tendencias proyectadas, y nos mantenemos optimistas para poder conocer en persona en Bogota para Devcon pronto.
 
-In the meantime, our venue Agora Bogota [has qualified for Bureau Veritas Safe Guard certification](https://agora-bogota.com/en/protocolos-bioseguridad), meaning they have satisfied a rigorous set of biosafety criteria operationally and in their physical space.
+Mientras tanto, nuestra sede Agora Bogota [ha calificado para la certificación Bureau Veritas Safe Guard](https://agora-bogota.com/en/protocolos-bioseguridad), es decir, han satisfecho un riguroso conjunto de criterios de bioseguridad operacionalmente y en su espacio físico.
 
-As the global situation continues to improve, our team will actively monitor and provide updated plans to our [Devcon Blog](https://blog.ethereum.org/category/devcon/), [@EFDevcon Twitter](https://twitter.com/EFDevcon), and [Devcon.org](https://devcon.org). Stay tuned for more!
+A medida que la situación global siga mejorando, nuestro equipo supervisará activamente y proporcionará planes actualizados a nuestro [Blog de desarrollo](https://blog.ethereum.org/category/devcon/), [@EFDevcon Twitter](https://twitter.com/EFDevcon)y [Devcon. rg](https://devcon.org). ¡Mantente atento para más!
