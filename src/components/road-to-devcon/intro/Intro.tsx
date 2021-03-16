@@ -89,6 +89,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
         number="01"
         description={intl.formatMessage({ id: 'rtd_checkpoint_1' })}
         action={intl.formatMessage({ id: 'rtd_take_survey' })}
+        link="https://forms.gle/13wmHHbmgK2DQZXm9"
         markerClassName={css['marker']}
       />
 

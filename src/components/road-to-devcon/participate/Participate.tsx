@@ -33,7 +33,6 @@ export const Participate = React.forwardRef((props: any, ref) => {
     <Page {...props} ref={ref}>
       <div className={css['background']} style={{ backgroundImage: `url(${bg})` }}></div>
       <PageContent
-        applyScrollLock
         transparent
         inverted
         backgroundText={intl.formatMessage({ id: 'rtd_community_events' })}

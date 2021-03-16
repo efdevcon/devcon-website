@@ -15,6 +15,7 @@ import { Link } from 'src/components/common/link'
 import { COPYRIGHT_NOTICE } from 'src/utils/constants'
 import usePageInView, { hashSlug } from './usePageInView'
 import { useLanguageToggle } from 'src/components/layouts/header/strip/language-toggle'
+import useKeyBinding from 'src/hooks/useKeybinding'
 
 type PageRefs = {
   [key: string]: React.Ref<HTMLDivElement>
@@ -27,8 +28,6 @@ type NavigationProps = {
   pageTrackRef: any
   lastX: any
 }
-
-const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
 
 const LanguageToggle = () => {
   const { redirectPath, currentLanguage } = useLanguageToggle()
@@ -67,7 +66,6 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const intl = useIntl()
   const pageInView = usePageInView(props.pageRefs)
-  const wheelLock = React.useRef(false)
 
   const goToSlide = (action: 'next' | 'prev' | 'syncCurrent', lockWheel?: true) => {
     const currentPageIndex = props.pages.findIndex(page => page.props.title === pageInView)
@@ -94,14 +92,6 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
     if (!nextPage) return
 
-    if (lockWheel) {
-      wheelLock.current = true
-
-      setTimeout(() => {
-        wheelLock.current = false
-      }, 300)
-    }
-
     navigateToSlide(nextPage.title, props, setFoldoutOpen)
   }
 
@@ -109,27 +99,8 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
     goToSlide,
   }))
 
-  // Wheel scrolling
-  // React.useEffect(() => {
-  //   const scrollHandler = (e: any) => {
-  //     if (wheelLock.current) return
-  //     if (!props.pageTrackRef.current) return
-  //     if (e.deltaY === 0) return
-
-  //     console.log(e, 'e');
-
-  //     const scrolledLeft = e.deltaX > 0;
-  //     const scrolledDown = e.deltaY > 0
-
-  //     goToSlide(scrolledDown ? 'next' : 'prev', true)
-  //   }
-
-  //   document.addEventListener('wheel', scrollHandler)
-
-  //   return () => {
-  //     document.removeEventListener('wheel', scrollHandler)
-  //   }
-  // }, [pageInView])
+  useKeyBinding(() => goToSlide('prev'), ['ArrowLeft'])
+  useKeyBinding(() => goToSlide('next'), ['ArrowRight'])
 
   // Sync page position with anchor on mount
   React.useEffect(() => {
@@ -254,27 +225,6 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
             </div>
           </div>
         </div>
-
-        {/* <div className={css['inline-nav']}>
-          <IconRoad className="abc" />
-
-          <ul className={css['inline-nav-list']}>
-            {pageTitles?.map((title, index) => {
-              const selected = title === pageInView
-
-              return (
-                <li
-                  key={title}
-                  className={selected ? css['selected-inline'] : undefined}
-                  data-index={leftPad(index + '')}
-                  onClick={() => navigateToSlide(title, props, setFoldoutOpen)}
-                >
-                  {leftPad(index + '')}
-                </li>
-              )
-            })}
-          </ul>
-        </div> */}
       </div>
     </>
   )

@@ -297,3 +297,23 @@
     }
   }
 }
+
+.gesture-blocker {
+  display: none;
+
+  @media (max-width: $screen-sm) {
+    display: block;
+  }
+
+  position: fixed;
+  left: 0px;
+  top: 64px;
+  z-index: 10000;
+  width: $gap-4;
+  height: 100%;
+
+  &.right {
+    left: unset;
+    right: 0px;
+  }
+}

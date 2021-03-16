@@ -7,7 +7,7 @@ import IconGithub from 'src/assets/icons/github.svg'
 import IconGlobe from 'src/assets/icons/globe.svg'
 import IconDiscussion from 'src/assets/icons/discussion.svg'
 import { useIntl } from 'gatsby-plugin-intl'
-import { useDrag, useGesture } from 'react-use-gesture'
+import { useGesture } from 'react-use-gesture'
 
 type PageProps = {
   title: string
@@ -31,15 +31,6 @@ type PageContentProps = {
   children: React.ReactNode
   transparent?: boolean
   inverted?: boolean
-  applyScrollLock?: boolean
-}
-
-export const scrollLock = {
-  onWheel: (e: React.SyntheticEvent) => {
-    const scrollable = e.currentTarget.scrollHeight > e.currentTarget.clientHeight
-
-    if (scrollable) e.nativeEvent.stopImmediatePropagation()
-  },
 }
 
 export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
@@ -95,8 +86,6 @@ export const PageContent = (props: PageContentProps) => {
 
   const pageTitleClassName = props.inverted ? 'page-title-inverted' : 'page-title'
 
-  const scrollProps = props.applyScrollLock ? scrollLock : {}
-
   return (
     <div className={css['layer']}>
       <div className={css['header']}>
@@ -130,7 +119,7 @@ export const PageContent = (props: PageContentProps) => {
         )}
       </div>
 
-      <div className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']} {...scrollProps}>
+      <div className={props.transparent ? `${css['content']} ${css['transparent']}` : css['content']}>
         {props.children}
       </div>
 
@@ -160,16 +149,26 @@ export const HorizontalLayout = (props: any) => {
   const pageWidth = React.useRef(0)
   const trackWidth = React.useRef(0)
 
+  // Prevent gestures from triggering native back/forward
   React.useEffect(() => {
-    const element = document.getElementById('page-track')
+    const elements: any[] = [
+      document.getElementById('gesture-blocker'),
+      document.getElementById('gesture-blocker-right'),
+    ]
 
-    element.addEventListener('touchstart', e => {
-      // is not near edge of view, exit
-      if (e.pageX > 25 && e.pageX < window.innerWidth - 25) return
-
-      // prevent swipe to navigate back gesture
+    const handler = (e: React.SyntheticEvent) => {
       e.preventDefault()
+    }
+
+    elements.forEach(element => {
+      element.addEventListener('touchstart', handler)
     })
+
+    return () => {
+      elements.forEach(element => {
+        element.removeEventListener('touchstart', handler)
+      })
+    }
   }, [])
 
   // Resync when track changes size to ensure we're never scrolled outside the visible area
@@ -210,10 +209,6 @@ export const HorizontalLayout = (props: any) => {
   // Drag/hover handlers
   const bind = useGesture(
     {
-      onDragStart: ({ event }) => {
-        // event.preventDefault();
-        // alert(updateChecker)
-      },
       onDrag: state => {
         const [deltaX] = state.delta
         const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current - deltaX))
@@ -257,6 +252,11 @@ export const HorizontalLayout = (props: any) => {
         pageTrackRef={trackRef}
         pageRefs={pageRefs}
       />
+
+      {/* Prevents gesture back/forward navigation for mobile devices */}
+      <div className={css['gesture-blocker']} id="gesture-blocker" />
+      <div className={`${css['gesture-blocker']} ${css['right']}`} id="gesture-blocker-right" />
+
       <div ref={trackRef} {...bind()} id="page-track" className={css['page-track']}>
         {React.Children.map(pages, (Page, index) => {
           return React.cloneElement(Page, {

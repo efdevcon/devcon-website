@@ -5,7 +5,6 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Search } from 'src/components/faq/search'
 import { FAQ } from 'src/components/faq'
 import { Checkpoint } from '../checkpoint'
-import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
 import { graphql, useStaticQuery } from 'gatsby'
 
 export const Ask = React.forwardRef((props: any, ref) => {
@@ -41,7 +40,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
             <h3 className="subsection-header">FAQ</h3>
             <Search onSearch={e => setSearchFilter(e)} />
           </div>
-          <div className={css['content']} {...scrollLock}>
+          <div className={css['content']}>
             <FAQ data={props.faqs} filter={searchFilter} />
           </div>
         </div>
@@ -51,6 +50,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
           description={intl.formatMessage({ id: 'rtd_checkpoint_3' })}
           action={intl.formatMessage({ id: 'rtd_share' })}
           markerClassName={css['marker']}
+          onClick={() => props.navigationRef.current.goToSlide('next')}
         />
       </PageContent>
     </Page>

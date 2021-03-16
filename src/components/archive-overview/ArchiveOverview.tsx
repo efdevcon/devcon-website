@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import css from './archive.module.scss'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
-import { scrollLock } from 'src/components/layouts/horizontal-layout/HorizontalLayout'
 
 interface ArchiveProps {
   videos: Array<ArchiveVideo>
@@ -36,7 +35,7 @@ export function ArchiveOverview(props: ArchiveProps) {
           />
         </div>
       </div>
-      <div className={css['list']} {...scrollLock}>
+      <div className={css['list']}>
         {filtered &&
           filtered.map((video: ArchiveVideo) => {
             return (
