@@ -13,6 +13,28 @@ import { Checkpoint } from '../checkpoint'
 import { Modal } from 'src/components/common/modal'
 import { Link } from 'src/components/common/link'
 
+export const HashTag = (props: { className: string }) => {
+  const [hovered, setHovered] = React.useState(false)
+
+  let className = `hover-underline ${css['hash-tag']}`
+
+  if (hovered) className += ` bold`
+  if (props.className) className += ` ${props.className}`
+
+  return (
+    <a
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      href="https://twitter.com/search?q=%23roadtodevcon"
+      target="_blank"
+      className={className}
+    >
+      {hovered && <span>😀👋</span>}
+      #ROADTODEVCON
+    </a>
+  )
+}
+
 export const Intro = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const [showDoge, setShowDoge] = React.useState(false)
@@ -80,9 +102,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
         </div>
       </div>
 
-      <a href="https://twitter.com/search?q=%23roadtodevcon" target="_blank" className={css['hash-tag']}>
-        #ROADTODEVCON
-      </a>
+      <HashTag />
 
       <div className={css['angle']}></div>
       <img className={css['road']} src={road} alt="Road to Devcon" />

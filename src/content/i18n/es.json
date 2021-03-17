@@ -84,5 +84,7 @@
   "rtd_meetups": "Reuniones",
   "rtd_submit_community_event": "Enviar evento de la comunidad",
   "rtd_celebrate_together": "Celebremos juntos en",
-  "rtd_share": "Compartir el camino a Devcon"
+  "rtd_share": "Compartir el camino a Devcon",
+  "rtd_share_text": "I can't wait to have a reunion at Devcon Bogota. Join me on the Road to Devcon! http://devcon.org/",
+  "rtd_share_tweet": "I can't wait to have a reunion at Devcon Bogota with @[tag your friends and colleagues]. Join me on the Road to Devcon!"
 }

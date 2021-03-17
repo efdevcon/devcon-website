@@ -7,7 +7,11 @@
   max-width: 100%;
 
   > * {
-    margin-bottom: $gap-4;
+    margin-bottom: $gap-8;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 
   > h2 {
@@ -15,16 +19,31 @@
     margin-right: 20%;
   }
 
-  .twitter {
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .email {
+  .buttons {
     display: flex;
-    justify-content: center;
-    width: 175px;
+    flex-direction: row;
+
+    > a {
+      width: 175px;
+      
+      &:first-child {
+        margin-right: $gap-4;
+      }
+
+      > button {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+    
+          > svg {
+            margin-right: 0.5rem;
+          }
+    
+          &:first-child {
+            margin-right: 20px;
+          }
+      }
+    }
   }
 }
 

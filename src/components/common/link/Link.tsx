@@ -5,7 +5,7 @@ import NorthEast from 'src/assets/icons/north_east.svg'
 
 type LinkProps = {
   children: ReactNode
-  markExternal?: boolean // Whether or not to add an external link indicator (if the url is a FQDN)
+  indicateExternal?: boolean // Whether or not to add an external link indicator (if the url is a FQDN)
   to: string
   [key: string]: any
 }

@@ -108,7 +108,7 @@ export const PageContent = (props: PageContentProps) => {
             {props.links.map((link: LinkType) => {
               return (
                 <h3 key={link.url}>
-                  <Link to={link.url} className={css['link-class']}>
+                  <Link to={link.url} className={`${css['link-class']} hover-underline`}>
                     {link.icon && renderIcon(link.icon)}
                     <span className={css['text']}>{link.title}</span>
                   </Link>
@@ -128,7 +128,7 @@ export const PageContent = (props: PageContentProps) => {
           props.bottomLinks.map((link: LinkType) => {
             return (
               <p key={link.url}>
-                <Link to={link.url} indicateExternal>
+                <Link to={link.url} indicateExternal className="hover-underline">
                   {link.icon && renderIcon(link.icon)}
                   {link.title}
                 </Link>

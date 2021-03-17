@@ -7,6 +7,7 @@ import { Link } from 'src/components/common/link'
 import css from './share.module.scss'
 import { Newsletter } from 'src/components/newsletter'
 import { useIntl } from 'react-intl'
+import IconEmail from 'src/assets/icons/pencil.svg'
 
 type ShareProps = {
   renderTrigger: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
@@ -38,42 +39,42 @@ const CopyToClipboardLegacy = ({ url }: any) => {
   )
 }
 
-const CopyToClipboard = ({ url }: any) => {
-  const [clicked, setClicked] = React.useState(false)
+// const CopyToClipboard = ({ url }: any) => {
+//   const [clicked, setClicked] = React.useState(false)
 
-  return (
-    <div className={css['copy-to-clipboard']}>
-      <div className={css['link-text']}>{window.location.href}</div>
+//   return (
+//     <div className={css['copy-to-clipboard']}>
+//       <div className={css['link-text']}>{window.location.href}</div>
 
-      <Tooltip arrow={false} visible={clicked} content={<p>Copied to clipboard</p>}>
-        <button
-          className={`white ${css['copy-button']}`}
-          onClick={() => {
-            // TO-DO: Make SSR safe so we can conditionally render component
-            if (window?.navigator?.clipboard) {
-              navigator.clipboard.writeText(window.location.href)
+//       <Tooltip arrow={false} visible={clicked} content={<p>Copied to clipboard</p>}>
+//         <button
+//           className={`white ${css['copy-button']}`}
+//           onClick={() => {
+//             // TO-DO: Make SSR safe so we can conditionally render component
+//             if (window?.navigator?.clipboard) {
+//               navigator.clipboard.writeText(window.location.href)
 
-              setClicked(true)
+//               setClicked(true)
 
-              setTimeout(() => {
-                setClicked(false)
-              }, 800)
-            }
-          }}
-        >
-          Copy Link
-        </button>
-      </Tooltip>
-    </div>
-  )
-}
+//               setTimeout(() => {
+//                 setClicked(false)
+//               }, 800)
+//             }
+//           }}
+//         >
+//           Copy Link
+//         </button>
+//       </Tooltip>
+//     </div>
+//   )
+// }
 
 export const Share = (props: ShareProps) => {
   const [open, setOpen] = React.useState(false)
   const intl = useIntl()
 
-  const title = 'Road to Devcon'
-  const text = "I can't wait to have a reunion at Devcon Bogota. Join me on the Road to Devcon! http://devcon.org/"
+  const title = intl.formatMessage({ id: 'rtd' })
+  const text = intl.formatMessage({ id: 'rtd_share_text' })
 
   const toggle = () => {
     if (false && navigator && navigator.share) {
@@ -97,15 +98,17 @@ export const Share = (props: ShareProps) => {
           onWheel={e => e.nativeEvent.stopImmediatePropagation()}
         >
           <div className={css['share']}>
-            <h2>{intl.formatMessage({ id: 'rtd_share' })}</h2>
+            <h2 className="text-uppercase">{intl.formatMessage({ id: 'rtd_share' })}</h2>
 
-            <div className={css['twitter']}>
+            <div className={css['buttons']}>
               <Tweet />
-            </div>
 
-            <Link title="Share by Email" to={`mailto:?subject=${title}&body=${text}`}>
-              <button className={`white ${css['email']}`}>Email</button>
-            </Link>
+              <Link title="Share by Email" to={`mailto:?subject=${title}&body=${text}`}>
+                <button className={`white ${css['email']}`}>
+                  <IconEmail /> Email
+                </button>
+              </Link>
+            </div>
 
             <Newsletter />
 

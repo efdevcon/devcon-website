@@ -34,10 +34,16 @@ const LanguageToggle = () => {
 
   return (
     <div className={`no-select ${css['language-toggle']}`}>
-      <Link className={currentLanguage === 'en' ? 'semi-bold' : ''} to={`/en/${redirectPath}`}>
+      <Link
+        className={currentLanguage === 'en' ? 'semi-bold hover-underline' : 'hover-underline'}
+        to={`/en/${redirectPath}`}
+      >
         EN
       </Link>
-      <Link className={currentLanguage === 'es' ? 'semi-bold' : ''} to={`/es/${redirectPath}`}>
+      <Link
+        className={currentLanguage === 'es' ? 'semi-bold hover-underline' : 'hover-underline'}
+        to={`/es/${redirectPath}`}
+      >
         ES
       </Link>
     </div>
@@ -206,7 +212,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
             <nav className={css['links']}>
               {props.links.map((link, index) => {
                 return (
-                  <Link key={index} className="bold" to={link.url}>
+                  <Link key={index} className="bold hover-underline" to={link.url}>
                     {link.title}
                   </Link>
                 )

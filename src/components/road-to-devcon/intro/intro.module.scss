@@ -64,6 +64,14 @@
   top: $gap-4;
   right: $gap-4;
 
+  > span {
+    position: absolute;
+    height: 100%;
+    top: 120%;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+  }
+
   @media (max-width: $screen-sm) {
     display: none;
   }

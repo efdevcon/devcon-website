@@ -6,6 +6,7 @@ import ShareIcon from 'src/assets/icons/share.svg'
 import { Share } from 'src/components/common/share'
 import { GifScroller } from './GifScroller'
 import partyImg from 'src/assets/images/party.png'
+import { HashTag } from 'src/components/road-to-devcon/intro'
 
 export const Invite = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -13,9 +14,9 @@ export const Invite = React.forwardRef((props: any, ref) => {
   return (
     <Page {...props} ref={ref}>
       <GifScroller />
-      <a href="https://twitter.com/search?q=%23roadtodevcon" target="_blank" className={css['hash-tag']}>
-        #ROADTODEVCON
-      </a>
+
+      <HashTag className={css['hash-tag']} />
+
       <div className={css['container']}>
         <div className={css['text']}>
           <div className={css['backdrop']}>
