@@ -1,5 +1,6 @@
 import React from 'react'
 import { Meetup } from 'src/types/Meetup'
+import { GetDomainName } from 'src/utils/formatting'
 import css from './events.module.scss'
 
 interface MeetupOverviewProps {
@@ -7,9 +8,6 @@ interface MeetupOverviewProps {
 }
 
 export function MeetupOverview(props: MeetupOverviewProps) {
-  const renderDomainName = (url: string) => {
-    return url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[/?#]/)[0]
-  }
 
   return (
     <div className={css['events']}>
@@ -21,7 +19,7 @@ export function MeetupOverview(props: MeetupOverviewProps) {
                 <p className={css['date']}>{event.location}</p>
                 <p className={css['title']}>{event.title}</p>
 
-                <span className={css['url']}>{renderDomainName(event.url)}</span>
+                <span className={css['url']}>{GetDomainName(event.url)}</span>
               </a>
             </div>
             <div>

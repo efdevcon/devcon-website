@@ -59,6 +59,9 @@
     span { 
       display: block;
     }
+    &:hover { 
+      background: #f8f8f8;
+    }
   }
 
   &::-webkit-scrollbar {

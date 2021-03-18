@@ -9,10 +9,14 @@
 }
 
 .event {
-  padding: $gap-4 0;
+  padding: $gap-4 $gap-6;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: flex-start;
+  
+  &:hover { 
+    background: rgba(0, 0, 0, 0.05);
+  }
 
   div:last-child {
     margin-left: auto;
