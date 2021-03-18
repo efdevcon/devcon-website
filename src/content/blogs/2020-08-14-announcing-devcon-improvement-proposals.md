@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: 'Announcing Devcon Improvement Proposals (DIPs) [Eng / Esp]'
+title: 'Announcing Devcon Improvement Proposals (DIPs) [ENG/ESP]'
 date: '2020-08-14'
 author: Devcon Team
 categories: Devcon
