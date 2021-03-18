@@ -3,6 +3,7 @@ import React from 'react'
 import { Event as EventType } from 'src/types/Event'
 import css from './events.module.scss'
 import EventIcon from 'src/assets/icons/event_add.svg'
+import { GetDomainName } from 'src/utils/formatting'
 
 interface EventOverviewProps {
   data: Array<EventType>
@@ -20,10 +21,6 @@ export function EventOverview(props: EventOverviewProps) {
       return `${start.format('MMM')} ${start.format('DD')}-${end.format('DD')} ${start.format('YYYY')}`
     }
     return `${start.format('MMM DD')}-${end.format('MMM DD')} ${end.format('YYYY')}`
-  }
-
-  const renderDomainName = (url: string) => {
-    return url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[/?#]/)[0]
   }
 
   const downloadIcs = (event: EventType) => {
@@ -79,7 +76,7 @@ END:VCALENDAR`
                 <p className={css['date']}>{renderEventDate(event)}</p>
                 <p className={css['title']}>{event.title}</p>
 
-                <span className={css['url']}>{renderDomainName(event.url)}</span>
+                <span className={css['url']}>{GetDomainName(event.url)}</span>
               </a>
             </div>
             <div>

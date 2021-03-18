@@ -23,7 +23,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
   if (props.imageUrl) className = `${className} ${css['img']}`
 
   // RTD entire card as a link
-  const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title
+  // const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title
 
   return (
     <a className={className} ref={ref} href={props.linkUrl} target="_blank" rel="noopener noreferrer">

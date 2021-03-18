@@ -14,6 +14,11 @@
   flex-direction: column;
   position: relative;
 
+  &:hover .read-more {
+    color: rgba(0, 0, 0, 0.5) !important;
+    --text-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
   @media (min-width: $screen-lg + 1) {
     &:hover {
       .img-wrapper {
