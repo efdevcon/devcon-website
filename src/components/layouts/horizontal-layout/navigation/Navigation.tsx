@@ -73,7 +73,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   const intl = useIntl()
   const pageInView = usePageInView(props.pageRefs)
 
-  const goToSlide = (action: 'next' | 'prev' | 'syncCurrent', lockWheel?: true) => {
+  const goToSlide = (action: ('next' | 'prev' | 'syncCurrent') | number) => {
     const currentPageIndex = props.pages.findIndex(page => page.props.title === pageInView)
     let nextPageIndex
 
@@ -83,6 +83,8 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
       const lastPageIndex = props.pages.length - 1
 
       nextPageIndex = Math.min(lastPageIndex, currentPageIndex + 1)
+    } else if (typeof action === 'number') {
+      nextPageIndex = action
     }
 
     const isSamePage = nextPageIndex === currentPageIndex
@@ -222,7 +224,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
           <div className={css['nav-footer']}>
             <div>
-              <SocialMedia />
+              <SocialMedia onShare={() => goToSlide(props.pages.length - 1)} />
               <Newsletter />
               <div className={css['info']}>
                 <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>

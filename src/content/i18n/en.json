@@ -85,6 +85,11 @@
   "rtd_submit_community_event": "Submit Community Event",
   "rtd_celebrate_together": "Let's celebrate together at",
   "rtd_share": "Share the road to Devcon",
-  "rtd_share_text": "I can't wait to have a reunion at Devcon Bogota. Join me on the Road to Devcon! http://devcon.org/",
-  "rtd_share_tweet": "I can't wait to have a reunion at Devcon Bogota with @[tag your friends and colleagues]. Join me on the Road to Devcon!"
+  "rtd_share_looking_forward_to": "What are you most looking forward to?",
+  "rtd_share_reunion": "Reunion",
+  "rtd_share_excitement": "Excitement",
+  "rtd_share_speakers": "Speakers",
+  "rtd_share_reunion_text": "I'm most excited for #[hashtag what are you excited for at devcon] at Devcon Bogota",
+  "rtd_share_excitement_text": "I can't wait to reunite with @ [tag who ] at Devcon Bogota",
+  "rtd_share_speakers_text": "Really hoping to hear @ [tag who would be a good speaker] speak at Devcon Bogota!"
 }

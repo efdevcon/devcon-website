@@ -14,7 +14,7 @@ type ShareProps = {
 }
 
 // Remove soon
-const CopyToClipboardLegacy = ({ url }: any) => {
+const CopyToClipboardLegacy = ({ url, onShare }: any) => {
   const [clicked, setClicked] = React.useState(false)
 
   return (
@@ -22,7 +22,12 @@ const CopyToClipboardLegacy = ({ url }: any) => {
       <div style={{ display: 'inline-block', cursor: 'pointer' }}>
         <ShareIcon
           onClick={() => {
-            // TO-DO: Make SSR safe so we can conditionally render component
+            if (onShare) {
+              onShare()
+
+              return
+            }
+
             if (window?.navigator?.clipboard) {
               navigator.clipboard.writeText(url)
 
@@ -69,56 +74,112 @@ const CopyToClipboardLegacy = ({ url }: any) => {
 //   )
 // }
 
-export const Share = (props: ShareProps) => {
-  const [open, setOpen] = React.useState(false)
+const messages = (intl: any) => [
+  {
+    text: intl.formatMessage({ id: 'rtd_share_reunion' }),
+    value: intl.formatMessage({ id: 'rtd_share_reunion_text' }),
+  },
+  {
+    text: intl.formatMessage({ id: 'rtd_share_excitement' }),
+    value: intl.formatMessage({ id: 'rtd_share_excitement_text' }),
+  },
+  {
+    text: intl.formatMessage({ id: 'rtd_share_speakers' }),
+    value: intl.formatMessage({ id: 'rtd_share_speakers_text' }),
+  },
+]
+
+const ExcitedFor = (props: { onChange: (...rest: any[]) => any; value: number | null; native: boolean }) => {
   const intl = useIntl()
 
-  const title = intl.formatMessage({ id: 'rtd' })
-  const text = intl.formatMessage({ id: 'rtd_share_text' })
+  return (
+    <div className={css['excited-for']}>
+      <p className="semi-bold">{intl.formatMessage({ id: 'rtd_share_looking_forward_to' })}</p>
 
-  const toggle = () => {
-    if (false && navigator && navigator.share) {
-      navigator.share({
-        title,
-        text,
-        url: window.location.href,
-      })
-    } else {
-      setOpen(!open)
-    }
-  }
+      <div>
+        {messages(intl).map(({ text, value }, index) => {
+          if (props.native) {
+            return (
+              <button
+                key={index}
+                onClick={() => {
+                  navigator.share({
+                    title: intl.formatMessage({ id: 'rtd' }),
+                    text: value,
+                    url: window.location.href,
+                  })
+                }}
+                className="text-uppercase white"
+              >
+                {text}
+              </button>
+            )
+          }
 
-  if (props.renderTrigger)
+          const selected = index === props.value
+
+          return (
+            <p
+              key={index}
+              onClick={() => props.onChange(index)}
+              className={`hover-underline text-uppercase${selected ? ' bold text-underline' : ''}`}
+            >
+              {text}
+            </p>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+export const Share = (props: ShareProps) => {
+  const nativeSharePossible = !!(typeof window !== 'undefined' && window.navigator && window.navigator.share)
+  const [open, setOpen] = React.useState(false)
+  const [excitedFor, setExcitedFor] = React.useState(nativeSharePossible ? null : 0)
+  const intl = useIntl()
+  const message = excitedFor === null ? null : messages(intl)[excitedFor]
+  const toggle = () => setOpen(!open)
+
+  if (props.renderTrigger) {
     return (
       <>
         <Modal
           open={open}
           close={toggle}
-          onMouseDown={e => e.stopPropagation()}
-          onWheel={e => e.nativeEvent.stopImmediatePropagation()}
+          onMouseDown={(e: React.SyntheticEvent) => e.stopPropagation()}
+          onWheel={(e: React.SyntheticEvent) => e.nativeEvent.stopImmediatePropagation()}
         >
           <div className={css['share']}>
             <h2 className="text-uppercase">{intl.formatMessage({ id: 'rtd_share' })}</h2>
 
-            <div className={css['buttons']}>
-              <Tweet />
+            <ExcitedFor value={excitedFor} native={nativeSharePossible} onChange={setExcitedFor} />
 
-              <Link title="Share by Email" to={`mailto:?subject=${title}&body=${text}`}>
-                <button className={`white ${css['email']}`}>
-                  <IconEmail /> Email
-                </button>
-              </Link>
-            </div>
+            {!nativeSharePossible && message && (
+              <>
+                <div className={css['buttons']}>
+                  <Tweet text={message.value} />
 
-            <Newsletter />
+                  <Link
+                    title="Share by Email"
+                    to={`mailto:?subject=${intl.formatMessage({ id: 'rtd' })}&body=${message.value}`}
+                  >
+                    <button className={`white ${css['email']}`}>
+                      <IconEmail /> Email
+                    </button>
+                  </Link>
+                </div>
 
-            {/* <CopyToClipboard /> */}
+                <Newsletter />
+              </>
+            )}
           </div>
         </Modal>
 
         {props.renderTrigger(toggle)}
       </>
     )
+  }
 
   // Remove later
   return <CopyToClipboardLegacy {...props} />

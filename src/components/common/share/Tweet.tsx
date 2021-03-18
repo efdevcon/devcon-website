@@ -3,7 +3,7 @@ import { Link } from 'src/components/common/link'
 import { useIntl } from 'react-intl'
 import IconTwitter from 'src/assets/icons/twitter.svg'
 
-export const Tweet = React.memo(() => {
+export const Tweet = React.memo((props: { text: string }) => {
   // const [ready, setReady] = React.useState(false)
   const intl = useIntl()
 
@@ -31,12 +31,12 @@ export const Tweet = React.memo(() => {
   //   document.head.appendChild(script)
   // }, [])
 
-  const tweet = intl.formatMessage({ id: 'rtd_share_tweet' })
+  // const tweet = intl.formatMessage({ id: 'rtd_share_tweet' })
 
   return (
     <Link
       to={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-        tweet
+        props.text
       )}&hashtags=roadtodevcon&url=${encodeURIComponent('https://devcon.org')}`}
     >
       <button className="white">

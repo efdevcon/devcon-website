@@ -14,7 +14,7 @@ import { usePageContext } from 'src/context/page-context'
 import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
-export const SocialMedia = () => {
+export const SocialMedia = ({ onShare }: any) => {
   return (
     <div className={css['social-media']}>
       <Link to="https://twitter.com/efdevcon">
@@ -26,7 +26,7 @@ export const SocialMedia = () => {
       <Link to="https://www.youtube.com/c/EthereumFoundation/search?query=devcon">
         <IconYoutube style={{ cursor: 'pointer' }} />
       </Link>
-      <Share url="https://devcon.org" />
+      <Share onShare={onShare} />
     </div>
   )
 }

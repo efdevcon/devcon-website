@@ -11,13 +11,17 @@ import ArrowRight from 'src/assets/icons/arrow_right.svg'
 export const useBlogState = () => {
   const blogs = useBlogs()
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [cardsPerSlide, setCardsPerSlide] = React.useState(3)
   const sliderRef = useRef<Slider>()
 
   return {
     blogs,
     currentIndex,
     setCurrentIndex,
+    setCardsPerSlide,
     sliderRef,
+    canNext: currentIndex < blogs.length - cardsPerSlide,
+    canBack: currentIndex > 0,
   }
 }
 
@@ -30,11 +34,21 @@ export const Arrows = (props: any) => {
 
   return (
     <div className={css['arrows']}>
-      <button className={className} aria-label="Slide left" onClick={() => props.sliderRef.current?.slickPrev()}>
+      <button
+        disabled={!props.canBack}
+        className={className}
+        aria-label="Slide left"
+        onClick={() => props.sliderRef.current?.slickPrev()}
+      >
         <ArrowLeft />
       </button>
 
-      <button className={className} aria-label="Slide right" onClick={() => props.sliderRef.current?.slickNext()}>
+      <button
+        disabled={!props.canNext}
+        className={className}
+        aria-label="Slide right"
+        onClick={() => props.sliderRef.current?.slickNext()}
+      >
         <ArrowRight />
       </button>
     </div>
@@ -55,6 +69,22 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
     mobileFirst: true,
     beforeChange: (_: any, next: number) => {
       if (props.setCurrentIndex) props.setCurrentIndex(Math.round(next))
+    },
+    onReInit: () => {
+      if (!sliderRef.current) return
+
+      const { state, props: sliderSettings } = sliderRef.current
+
+      const currentBreakpoint = state.breakpoint
+      const breakpoints = sliderSettings.responsive
+
+      const activeBreakpoint = breakpoints?.find(({ breakpoint }) => {
+        return breakpoint === currentBreakpoint
+      })
+
+      const nextCardsPerSlide = activeBreakpoint?.settings?.slidesToScroll || 3
+
+      if (props.cardsPerSlide !== nextCardsPerSlide) props.setCardsPerSlide(nextCardsPerSlide)
     },
     responsive: [
       {
@@ -109,6 +139,8 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
 
 export function BlogOverview() {
   const blogState = useBlogState()
+
+  console.log(blogState, 'bstate')
 
   return (
     <div className={css['blog-container']}>
