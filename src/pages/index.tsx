@@ -103,7 +103,7 @@ export const query = graphql`
     }
     whatIsDevcon: allMarkdownRemark(
       filter: {
-        frontmatter: { title: { in: ["What is Devcon", "¿Qué es Devcon?"] } }
+        frontmatter: { title: { in: ["What is Devcon", "Qué es Devcon"] } }
         fields: { lang: { eq: $language } }
       }
     ) {

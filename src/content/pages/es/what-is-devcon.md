@@ -1,5 +1,5 @@
 ---
-title: ¿Qué es Devcon?
+title: Qué es Devcon
 template: content
 ---
 

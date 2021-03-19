@@ -23,6 +23,7 @@
   "state_warning": "Warning",
   "state_info": "Info",
   "state_alert": "Alert",
+  "faq_filter_keywords": "Filter by keywords",
   "faq_filter": "Filter FAQs using relevant key terms.",
   "snapshot_timezone": "Timezone",
   "snapshot_currency": "Currency",
@@ -87,9 +88,12 @@
   "rtd_share": "Share the road to Devcon",
   "rtd_share_looking_forward_to": "What are you most looking forward to?",
   "rtd_share_reunion": "Reunion",
-  "rtd_share_excitement": "Excitement",
+  "rtd_share_experience": "Experience",
   "rtd_share_speakers": "Speakers",
-  "rtd_share_reunion_text": "I'm most excited for #[hashtag what are you excited for at devcon] at Devcon Bogota",
-  "rtd_share_excitement_text": "I can't wait to reunite with @ [tag who ] at Devcon Bogota",
-  "rtd_share_speakers_text": "Really hoping to hear @ [tag who would be a good speaker] speak at Devcon Bogota!"
+  "rtd_share_reunion_text": "I can't wait to reunite with @ [tag who] at Devcon Bogota. Join us on the #roadtodevcon.",
+  "rtd_share_experience_text": "I’m most excited for #[hashtag what are you excited for at devcon] at Devcon Bogota. Join me on the #roadtodevcon.",
+  "rtd_share_speakers_text": "Really hoping to hear @ [tag who would be a good speaker] speak at Devcon Bogota! Join us on the #roadtodevcon.",
+  "rtd_share_reunion_text_email": "I can't wait to reunite with you at Devcon Bogota! Join me on the #roadtodevcon.",
+  "rtd_share_experience_text_email": "I'm most excited for the Devcon Experience we will have together at Devcon Bogota. Join me on the #roadtodevcon.",
+  "rtd_share_speakers_text_email": "Really hoping to hear you speak at Devcon Bogota! Join me on the #roadtodevcon."
 }
