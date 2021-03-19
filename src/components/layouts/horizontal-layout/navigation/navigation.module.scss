@@ -118,6 +118,7 @@ $nav-width: 348px;
   }
 
   .logo-mobile {
+    cursor: pointer;
     display: none;
     @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-4);
     justify-content: center;
