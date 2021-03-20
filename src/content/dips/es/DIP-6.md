@@ -1,8 +1,8 @@
 ---
-Summary: 'Implement an attestation-based ticketing system on Ethereum for Devcon. The solution will use two attestations, a ticket attestation and an email attestation, to verify the authenticity of a ticket holder for both on-chain and off-chain use cases. This system will function independently of Pretix.'
+Title: Solución de ticketing basada en comprobación para Devcon
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md
 DIP: 6
-Title: Solución de ticketing basada en comprobación para Devcon
+
 Status: Accepted
 Themes: RFP-1 On-chain Ticketing
 Tags: Event Operations, Event Production, Software
