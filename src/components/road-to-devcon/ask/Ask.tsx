@@ -14,7 +14,7 @@ export const Ask = React.forwardRef((props: any, ref) => {
       allFile(filter: { relativePath: { in: ["ask_background.webp"] } }) {
         nodes {
           childImageSharp {
-            fluid(maxWidth: 1800, quality: 80) {
+            fluid(maxWidth: 2100, quality: 90) {
               ...GatsbyImageSharpFluid_noBase64
             }
           }

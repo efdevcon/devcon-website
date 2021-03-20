@@ -19,7 +19,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
       allFile(filter: { relativePath: { in: ["participate_background.webp"] } }) {
         nodes {
           childImageSharp {
-            fluid(maxWidth: 1800, quality: 80) {
+            fluid(maxWidth: 2100, quality: 90) {
               ...GatsbyImageSharpFluid_noBase64
             }
           }
