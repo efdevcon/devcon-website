@@ -30,7 +30,7 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
           <Img alt="Lying Deva" className={css['lying-deva']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
           <Img alt="Sitting Deva" className={css['sitting-deva']} fluid={data.allFile.nodes[1].childImageSharp.fluid} />
 
-          <ScrollGradient height="150px">
+          <ScrollGradient height="30px">
             <div className={css['message']}>
               <h1>{intl.formatMessage({ id: 'rtd_embarking' })}</h1>
 

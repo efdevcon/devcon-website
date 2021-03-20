@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import css from './archive.module.scss'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import { ScrollGradient } from 'src/components/common/scroll-gradient'
 
 interface ArchiveProps {
   videos: Array<ArchiveVideo>
@@ -35,19 +36,21 @@ export function ArchiveOverview(props: ArchiveProps) {
           />
         </div>
       </div>
-      <div className={css['list']}>
-        {filtered &&
-          filtered.map((video: ArchiveVideo) => {
-            return (
-              <div key={video.id} className={css['item']} onClick={() => setSelectedVideo(video.url)}>
-                <span className={css['devcon']}>Devcon {video.devcon}</span>
-                <span className={css['title']}>{video.title}</span>
+      <ScrollGradient className={css['gradient']} height="30px">
+        <div className={css['list']}>
+          {filtered &&
+            filtered.map((video: ArchiveVideo) => {
+              return (
+                <div key={video.id} className={css['item']} onClick={() => setSelectedVideo(video.url)}>
+                  <span className={css['devcon']}>Devcon {video.devcon}</span>
+                  <span className={css['title']}>{video.title}</span>
 
-                <span className={css['speakers']}>{video.speakers}</span>
-              </div>
-            )
-          })}
-      </div>
+                  <span className={css['speakers']}>{video.speakers}</span>
+                </div>
+              )
+            })}
+        </div>
+      </ScrollGradient>
     </div>
   )
 }

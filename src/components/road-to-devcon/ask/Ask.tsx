@@ -6,6 +6,7 @@ import { Search } from 'src/components/faq/search'
 import { FAQ } from 'src/components/faq'
 import { Checkpoint } from '../checkpoint'
 import { graphql, useStaticQuery } from 'gatsby'
+import { ScrollGradient } from 'src/components/common/scroll-gradient'
 
 export const Ask = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -40,9 +41,11 @@ export const Ask = React.forwardRef((props: any, ref) => {
             <h3 className="subsection-header">FAQ</h3>
             <Search onSearch={e => setSearchFilter(e)} />
           </div>
-          <div className={css['content']}>
-            <FAQ data={props.faqs} filter={searchFilter} />
-          </div>
+          <ScrollGradient height="50px" className={css['gradient']}>
+            <div className={css['content']}>
+              <FAQ data={props.faqs} filter={searchFilter} />
+            </div>
+          </ScrollGradient>
         </div>
 
         <Checkpoint

@@ -13,7 +13,7 @@
   }
 }
 
-.container { 
+.container {
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -32,9 +32,15 @@
   align-items: flex-start;
   padding-bottom: $gap-4;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
-.content { 
+.gradient {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
   overflow-y: auto;
   height: 100%;
   width: 100%;

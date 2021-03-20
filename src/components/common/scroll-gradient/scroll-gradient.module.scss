@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  position: relative;
 
   &:before {
     content: '';
@@ -8,7 +9,8 @@
     bottom: 0;
     pointer-events: none;
     width: 100%;
-    -webkit-transform-style: preserve-3d; 
+    right: 8px; // scrollbar
+    -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
     height: var(--scroll-gradient-height);
   }

@@ -8,24 +8,24 @@
   justify-content: space-between;
   height: 100%;
 
-  @media (max-width: $screen-md) { 
+  @media (max-width: $screen-md) {
     flex-direction: column;
   }
 }
 
-.player { 
+.player {
   flex-grow: 2;
   width: 100%;
   margin-right: $gap-4;
 
-  @media (max-width: $screen-md) { 
+  @media (max-width: $screen-md) {
     flex-grow: 1;
     flex-shrink: 0;
     margin-right: 0;
     margin-bottom: $gap-4;
   }
 
-  @media (min-width: $screen-xl) { 
+  @media (min-width: $screen-xl) {
     flex-grow: 1;
   }
 }
@@ -36,7 +36,7 @@
   padding-bottom: 56.25%;
 }
 
-.video-iframe { 
+.video-iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,21 +45,25 @@
   border: 0;
 }
 
+.gradient {
+  height: 100%;
+  width: 100%;
+}
+
 .list {
   flex-grow: 1;
   overflow-y: auto;
-  height: 100%;
-  width: 100%;
   padding: 0 $gap-4 0 0;
+  padding-bottom: 30px; // scroll gradient
 
   .item {
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-    span { 
+    span {
       display: block;
     }
-    &:hover { 
+    &:hover {
       background: #f8f8f8;
     }
   }
@@ -78,18 +82,18 @@
   }
 }
 
-.devcon { 
+.devcon {
   @include fonts.font-xs;
   line-height: 1.5rem;
   text-transform: uppercase;
 }
 
-.title { 
+.title {
   @include fonts.font-lg;
   line-height: 1.5rem;
 }
 
-.speakers { 
+.speakers {
   @include fonts.font-sm;
   display: block;
   margin: $gap-2 0;
