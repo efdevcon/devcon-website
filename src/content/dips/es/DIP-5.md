@@ -1,5 +1,5 @@
 ---
-Summary: 'Status wants to offer to Devcon attendees a keycard (https://get.keycard.tech/). This card:
+Title: Tarjeta clave en Devcon
 - is a hardware wallet with a face value of 29$
 - helps user downloads status app, which can be used on the show
 - allows any dApp developer to develop applications that interface with the card with the tap of the card on the browser 
@@ -7,7 +7,7 @@ Summary: 'Status wants to offer to Devcon attendees a keycard (https://get.keyca
 Such a dApp could be a redeem dApp, developed by Status, this dApp allowing users to retrieve assets coming preloaded with the card on the wallet of their choice.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-5.md
 DIP: 5
-Title: Tarjeta clave en Devcon
+
 Status: Accepted
 Themes: Ticketing, Purchase & ID
 Tags: Attendee Experience
