@@ -13,7 +13,7 @@ type ShareProps = {
   renderTrigger: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
 }
 
-// Remove soon
+// Remove soon - share should now use the custom share sheet instead of this
 const CopyToClipboardLegacy = ({ url, onShare }: any) => {
   const [clicked, setClicked] = React.useState(false)
 
@@ -44,35 +44,38 @@ const CopyToClipboardLegacy = ({ url, onShare }: any) => {
   )
 }
 
-// const CopyToClipboard = ({ url }: any) => {
-//   const [clicked, setClicked] = React.useState(false)
+const CopyToClipboard = ({ url }: any) => {
+  const [clicked, setClicked] = React.useState(false)
+  const intl = useIntl()
+  const hashIndex = window.location.href.indexOf(window.location.hash)
+  const location = hashIndex ? window.location.href.substring(0, hashIndex) : window.location.href
 
-//   return (
-//     <div className={css['copy-to-clipboard']}>
-//       <div className={css['link-text']}>{window.location.href}</div>
+  return (
+    <div className={css['copy-to-clipboard']}>
+      <div className={css['link-text']}>{location}</div>
 
-//       <Tooltip arrow={false} visible={clicked} content={<p>Copied to clipboard</p>}>
-//         <button
-//           className={`white ${css['copy-button']}`}
-//           onClick={() => {
-//             // TO-DO: Make SSR safe so we can conditionally render component
-//             if (window?.navigator?.clipboard) {
-//               navigator.clipboard.writeText(window.location.href)
+      <Tooltip arrow={false} visible={clicked} content={<p>Copied to clipboard</p>}>
+        <button
+          className={`white ${css['copy-button']}`}
+          onClick={() => {
+            // TO-DO: Make SSR safe so we can conditionally render component
+            if (window?.navigator?.clipboard) {
+              navigator.clipboard.writeText(location)
 
-//               setClicked(true)
+              setClicked(true)
 
-//               setTimeout(() => {
-//                 setClicked(false)
-//               }, 800)
-//             }
-//           }}
-//         >
-//           Copy Link
-//         </button>
-//       </Tooltip>
-//     </div>
-//   )
-// }
+              setTimeout(() => {
+                setClicked(false)
+              }, 800)
+            }
+          }}
+        >
+          {intl.formatMessage({ id: 'share_copy_link' })}
+        </button>
+      </Tooltip>
+    </div>
+  )
+}
 
 const messages = (intl: any) => [
   {
@@ -134,7 +137,7 @@ const ExcitedFor = (props: { onChange: (...rest: any[]) => any; value: number | 
 }
 
 export const Share = (props: ShareProps) => {
-  const nativeSharePossible = !!(typeof window !== 'undefined' && window.navigator && window.navigator.share)
+  const nativeSharePossible = false /*!!(typeof window !== 'undefined' && window.navigator && window.navigator.share) <--- comment back in to enable native share */
   const [open, setOpen] = React.useState(false)
   const [excitedFor, setExcitedFor] = React.useState(nativeSharePossible ? null : 0)
   const intl = useIntl()
@@ -170,7 +173,7 @@ export const Share = (props: ShareProps) => {
                   </Link>
                 </div>
 
-                <Newsletter />
+                <CopyToClipboard />
               </>
             )}
           </div>
