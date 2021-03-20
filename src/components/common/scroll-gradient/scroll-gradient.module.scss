@@ -8,7 +8,7 @@
     position: absolute;
     bottom: 0;
     pointer-events: none;
-    width: 100%;
+    width: calc(100% - 8px);
     right: 8px; // scrollbar
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;

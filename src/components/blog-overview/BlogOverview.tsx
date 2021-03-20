@@ -95,7 +95,7 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
         },
       },
       {
-        breakpoint: 410,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1.1,
           slidesToScroll: 1,

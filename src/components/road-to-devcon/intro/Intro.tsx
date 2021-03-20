@@ -12,6 +12,9 @@ import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
 import { Modal } from 'src/components/common/modal'
 import { Link } from 'src/components/common/link'
+import ArrowLeftIcon from 'src/assets/icons/box-arrow-left.svg'
+import ArrowRightIcon from 'src/assets/icons/box-arrow-right.svg'
+import CircleArrowRightIcon from 'src/assets/icons/circle-arrow-right.svg'
 
 export const HashTag = (props: { className: string }) => {
   const [hovered, setHovered] = React.useState(false)
@@ -42,7 +45,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
 
   // Important to pass props and ref to the Page component
   return (
-    <Page {...props} ref={ref}>
+    <Page {...props} ref={ref} style={{ overflow: 'visible' }}>
       <div className={css['container']}>
         <div className={css['text']}>
           <h1 className="no-select">{intl.formatMessage({ id: 'rtd' })}</h1>
@@ -134,8 +137,11 @@ export const Intro = React.forwardRef((props: any, ref) => {
       <div className={`no-select ${css['drag-to-continue']}`}>
         <p>
           <span>{intl.formatMessage({ id: 'rtd_drag_to_continue' })}</span>
-          <span>{intl.formatMessage({ id: 'rtd_swipe_to_continue' })}</span>→
+          <span>{intl.formatMessage({ id: 'rtd_swipe_to_continue' })}</span>
         </p>
+        <ArrowLeftIcon />
+        <ArrowRightIcon />
+        <CircleArrowRightIcon className={`icon ${css['circle-arrow-right-icon']}`} />
       </div>
     </Page>
   )

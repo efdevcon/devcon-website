@@ -63,6 +63,11 @@
         color: rgba(0, 0, 0, 0.1);
         font-size: 12em;
         line-height: 75%;
+
+        > img {
+          pointer-events: all;
+          cursor: pointer;
+        }
       }
     }
 
@@ -71,10 +76,24 @@
       z-index: 1;
     }
 
-    > span {
+    .buttons {
       font-size: 32px;
       --text-color: white;
       z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: $gap-4;
+      padding-right: $gap-4;
+      margin-top: $gap-2;
+
+      > * {
+        margin-top: $gap-2;
+
+        &:first-child {
+          margin-right: $gap-2;
+        }
+      }
     }
   }
 }

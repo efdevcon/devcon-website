@@ -5,7 +5,6 @@ import { Modal } from 'src/components/common/modal'
 import { Tweet } from './Tweet'
 import { Link } from 'src/components/common/link'
 import css from './share.module.scss'
-import { Newsletter } from 'src/components/newsletter'
 import { useIntl } from 'react-intl'
 import IconEmail from 'src/assets/icons/pencil.svg'
 
@@ -70,7 +69,7 @@ const CopyToClipboard = ({ url }: any) => {
             }
           }}
         >
-          {intl.formatMessage({ id: 'share_copy_link' })}
+          {intl.formatMessage({ id: 'rtd_share_copy_link' })}
         </button>
       </Tooltip>
     </div>

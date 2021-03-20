@@ -13,6 +13,9 @@ type PageProps = {
   title: string
   index?: string
   children: React.ReactNode
+  style?: {
+    [key: string]: any
+  }
 }
 
 type LinkType = {
@@ -35,7 +38,7 @@ type PageContentProps = {
 
 export const Page = React.forwardRef((props: PageProps, ref: Ref<any>) => {
   return (
-    <div className={css['page']} ref={ref}>
+    <div className={css['page']} style={props.style} ref={ref}>
       {React.Children.map(props.children, Child => {
         return React.cloneElement(Child, {
           title: props.title,

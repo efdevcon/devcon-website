@@ -19,6 +19,7 @@
   "dependencies": {
     "@loadable/component": "^5.14.1",
     "@tippyjs/react": "^4.2.0",
+    "canvas-confetti": "^1.4.0",
     "gatsby": "^2.25.3",
     "gatsby-image": "^2.9.0",
     "gatsby-plugin-intl": "^0.3.3",
