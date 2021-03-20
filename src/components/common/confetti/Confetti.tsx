@@ -45,26 +45,26 @@ export const Confetti = React.forwardRef((_, ref) => {
   }))
 
   // Auto-play confetti when fully visible
-  useEffect(() => {
-    const observer = new window.IntersectionObserver(
-      entries => {
-        const target = entries[0]
+  // useEffect(() => {
+  //   const observer = new window.IntersectionObserver(
+  //     entries => {
+  //       const target = entries[0]
 
-        if (target.intersectionRatio === 1) {
-          ref.current.start()
-        }
-      },
-      {
-        threshold: 1,
-      }
-    )
+  //       if (target.intersectionRatio === 1) {
+  //         ref.current.start()
+  //       }
+  //     },
+  //     {
+  //       threshold: 1,
+  //     }
+  //   )
 
-    observer.observe(canvasRef.current)
+  //   observer.observe(canvasRef.current)
 
-    return () => {
-      observer.unobserve(canvasRef.current)
-    }
-  }, [])
+  //   return () => {
+  //     observer.unobserve(canvasRef.current)
+  //   }
+  // }, [])
 
   return (
     <div className={css['container']}>

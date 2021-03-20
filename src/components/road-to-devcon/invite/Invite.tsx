@@ -47,7 +47,7 @@ export const Invite = React.forwardRef((props: any, ref) => {
     <Page {...props} ref={ref}>
       <Confetti ref={confettiRef} />
 
-      {/* <GifScroller /> */}
+      <GifScroller />
 
       <HashTag className={css['hash-tag']} />
 
