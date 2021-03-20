@@ -1,8 +1,8 @@
 ---
-Summary: 'Winding Tree offers Devcon attendees to book their flights and hotels directly from suppliers with discount. Winding Tree is 100% open-source and we aim to be as decentralized as it is possible.'
+Title: Las reservas de vuelo y hoteles proceden del mercado descentralizado de viajes de código abierto
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-3.md
 DIP: 3
-Title: Las reservas de vuelo y hoteles proceden del mercado descentralizado de viajes de código abierto
+
 Status: Accepted
 Themes: Ticketing, Purchases & ID
 Tags: Attendee Experience
