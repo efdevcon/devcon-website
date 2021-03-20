@@ -134,7 +134,10 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   return (
     <>
       <div className={`${css['navigation']} ${foldoutOpen ? css['open'] : ''}`}>
-        <div className={css['logo-mobile']}>
+        <div className={css['logo-mobile']} onClick={() => {
+          goToSlide(0)
+          setFoldoutOpen(false)
+        }}>
           <HeaderLogo />
         </div>
 

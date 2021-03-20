@@ -81,14 +81,17 @@ const messages = (intl: any) => [
   {
     text: intl.formatMessage({ id: 'rtd_share_reunion' }),
     value: intl.formatMessage({ id: 'rtd_share_reunion_text' }),
+    email: intl.formatMessage({ id: 'rtd_share_reunion_text_email' }),
   },
   {
-    text: intl.formatMessage({ id: 'rtd_share_excitement' }),
-    value: intl.formatMessage({ id: 'rtd_share_excitement_text' }),
+    text: intl.formatMessage({ id: 'rtd_share_experience' }),
+    value: intl.formatMessage({ id: 'rtd_share_experience_text' }),
+    email: intl.formatMessage({ id: 'rtd_share_experience_text_email' }),
   },
   {
     text: intl.formatMessage({ id: 'rtd_share_speakers' }),
     value: intl.formatMessage({ id: 'rtd_share_speakers_text' }),
+    email: intl.formatMessage({ id: 'rtd_share_speakers_text_email' }),
   },
 ]
 
@@ -165,7 +168,7 @@ export const Share = (props: ShareProps) => {
 
                   <Link
                     title="Share by Email"
-                    to={`mailto:?subject=${intl.formatMessage({ id: 'rtd' })}&body=${message.value}`}
+                    to={`mailto:?subject=${intl.formatMessage({ id: 'rtd' })}&body=${message.email}`}
                   >
                     <button className={`white ${css['email']}`}>
                       <IconEmail /> Email
