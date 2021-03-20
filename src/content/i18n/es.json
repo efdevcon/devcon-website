@@ -59,8 +59,8 @@
   "dips_next_dip": "Siguiente DIP",
   "rtd": "Camino a Devcon",
   "rtd_intro": "Devcon es la conferencia Ethereum para desarrolladores, investigadores, pensadores y creadores. A medida que avanzamos hacia Devcon en Bogota, le invitamos a unirse a nosotros en un viaje, y explorar recursos comunitarios y nuevas formas de involucrarse.",
-  "rtd_drag_to_continue": "Arrastre para continuar",
-  "rtd_swipe_to_continue": "Desliza para continuar",
+  "rtd_drag_to_continue": "Use arrow keys or drag to continue journey",
+  "rtd_swipe_to_continue": "Swipe to continue journey",
   "rtd_get_informed": "Informar",
   "rtd_blog": "Blog de Devcon",
   "rtd_participate": "Participar",
@@ -95,5 +95,6 @@
   "rtd_share_speakers_text": "Really hoping to hear @ [tag who would be a good speaker] speak at Devcon Bogota! Join us on the #roadtodevcon.",
   "rtd_share_reunion_text_email": "I can't wait to reunite with you at Devcon Bogota! Join me on the #roadtodevcon.",
   "rtd_share_experience_text_email": "I'm most excited for the Devcon Experience we will have together at Devcon Bogota. Join me on the #roadtodevcon.",
-  "rtd_share_speakers_text_email": "Really hoping to hear you speak at Devcon Bogota! Join me on the #roadtodevcon."
+  "rtd_share_speakers_text_email": "Really hoping to hear you speak at Devcon Bogota! Join me on the #roadtodevcon.",
+  "rtd_share_copy_link": "Copy link"
 }
