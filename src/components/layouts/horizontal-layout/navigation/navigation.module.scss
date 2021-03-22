@@ -76,7 +76,6 @@ $nav-width: 348px;
     }
 
     .foldout {
-      touch-action: pan-y;
       transform: translateX(0%);
 
       @media (max-width: $screen-sm) {
@@ -216,12 +215,11 @@ $nav-width: 348px;
     height: 100%;
     top: 0px;
     left: 100%;
-    overflow: auto;
     z-index: -2;
     transform: translateX(calc(-100% + 1px));
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform 0.15s linear;
-    overflow: auto;
+    overflow-y: auto;
 
     > * {
       flex-shrink: 0;

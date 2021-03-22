@@ -2,6 +2,14 @@
 @use 'src/assets/css/partials/gaps';
 @use 'src/assets/css/partials/fonts';
 
+/* iOS safari scroll breaks every once in a while without this fix */
+:global {
+  body,
+  html {
+    overflow: hidden;
+  }
+}
+
 @mixin nav-number {
   font-size: 10px;
   line-height: 1em;
