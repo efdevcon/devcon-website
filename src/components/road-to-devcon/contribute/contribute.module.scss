@@ -25,6 +25,17 @@
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   // margin-bottom: $gap-4;
+
+  .title { 
+    display: flex;
+    align-items: flex-start;
+
+    .info {
+      cursor: pointer;
+      margin-top: 6px;
+      margin-left: $gap-4;
+    }
+  }
 }
 
 .dropdown {
@@ -60,5 +71,45 @@
   &::-webkit-scrollbar-thumb {
     background: #c1c1c1;
     border-radius: 5px;
+  }
+}
+
+
+.modal-container {
+  > h4 {
+    @include fonts.font-xl;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    margin-bottom: $gap-4;
+    padding-bottom: $gap-4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  > div {
+    max-width: 750px;
+    padding-right: $gap-8;
+
+    @media (max-width: $screen-sm) {
+      padding-right: 0px;
+    }
+  }
+}
+
+.modal-content {
+  @include fonts.font-lg;
+
+  p:first-child {
+    @include fonts.font-xl;
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: $gap-6;
+  @include fonts.semi-bold;
+  text-transform: uppercase;
+
+  > a {
+    cursor: pointer;
   }
 }
