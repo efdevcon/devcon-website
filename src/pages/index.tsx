@@ -34,6 +34,10 @@ export default function Index({ data }: any) {
     title: data.messageFromDeva ? data.messageFromDeva.nodes[0]?.frontmatter.title : '',
     body: data.messageFromDeva ? data.messageFromDeva?.nodes[0]?.html : '',
   }
+  const whatIsaDIP = {
+    title: data.whatIsaDIP ? data.whatIsaDIP.nodes[0]?.frontmatter.title : '',
+    body: data.whatIsaDIP ? data.whatIsaDIP?.nodes[0]?.html : '',
+  }
 
   return (
     <>
@@ -55,7 +59,7 @@ export default function Index({ data }: any) {
 
         <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
 
-        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} />
+        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} whatIsaDIP={whatIsaDIP} />
 
         <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
 
@@ -104,6 +108,19 @@ export const query = graphql`
     whatIsDevcon: allMarkdownRemark(
       filter: {
         frontmatter: { title: { in: ["What is Devcon", "Qué es Devcon"] } }
+        fields: { lang: { eq: $language } }
+      }
+    ) {
+      nodes {
+        html
+        frontmatter {
+          title
+        }
+      }
+    }
+    whatIsaDIP: allMarkdownRemark(
+      filter: {
+        frontmatter: { title: { in: ["What is a DIP", "Qué es un DIP"] } }
         fields: { lang: { eq: $language } }
       }
     ) {

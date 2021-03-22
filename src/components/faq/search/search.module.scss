@@ -12,6 +12,10 @@
       color: $color-primary;
       border: 1px solid rgba(0, 0, 0, 0.2);
       padding: $gap-1 $gap-2;
+
+      @media (max-width: $screen-tiny) {
+        max-width: 180px;
+      }
     }
   
     .subtitle {
