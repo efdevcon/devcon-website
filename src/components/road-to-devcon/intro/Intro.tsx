@@ -77,7 +77,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
                 <a
                   onClick={() => {
                     // const mfdPageTitle = intl.formatMessage({ id: 'rtd_message_from_deva' })
-                    props.navigationRef.current.goToSlide('next')
+                    props.navigationRef.current.goToSlide(1)
 
                     setModalOpen(false)
                   }}

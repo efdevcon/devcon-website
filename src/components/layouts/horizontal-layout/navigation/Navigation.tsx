@@ -243,7 +243,10 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
           <div className={css['mobile-navigation']}>
             <p>
-              <span className="bold">{leftPad(pageInViewIndex + '')}</span> / 07
+              <span className="bold">
+                {typeof pageInViewIndex === 'undefined' ? '00' : leftPad(pageInViewIndex + '')}
+              </span>{' '}
+              / 07
             </p>
             <div onClick={() => goToSlide('prev')}>
               <IconChevronLeft />

@@ -76,6 +76,7 @@ $nav-width: 348px;
     }
 
     .foldout {
+      touch-action: pan-y;
       transform: translateX(0%);
 
       @media (max-width: $screen-sm) {
