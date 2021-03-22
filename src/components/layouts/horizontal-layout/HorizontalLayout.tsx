@@ -4,7 +4,7 @@ import { Navigation } from './navigation'
 import leftPad from 'src/utils/left-pad'
 import { Link } from 'src/components/common/link'
 import IconGithub from 'src/assets/icons/github.svg'
-import IconGlobe from 'src/assets/icons/globe.svg'
+import IconLearn from 'src/assets/icons/learn.svg'
 import IconDiscussion from 'src/assets/icons/discussion.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { useGesture } from 'react-use-gesture'
@@ -71,7 +71,7 @@ export const PageContent = (props: PageContentProps) => {
       case 'web':
         return (
           <span className={`${css['icon-link']}`}>
-            <IconGlobe />
+            <IconLearn />
           </span>
         )
     }

@@ -260,7 +260,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
             <HeaderLogo />
           </div>
 
-          {/* Need a layer with a filled in background so we avoid content overlapping when menu slides in */}
+          {/* Need a layer with a filled in background to avoid content overlapping when menu slides in */}
           <div className={css['backdrop']} />
         </div>
 

@@ -87,12 +87,12 @@
       padding-right: $gap-4;
       margin-top: $gap-2;
 
-      > * {
-        margin-top: $gap-2;
+      @media (max-width: $screen-md) {
+        flex-wrap: wrap;
+      }
 
-        &:first-child {
-          margin-right: $gap-2;
-        }
+      > * {
+        margin: $gap-2;
       }
     }
   }
