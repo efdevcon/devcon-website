@@ -117,10 +117,13 @@
           }
 
           .background-text {
+            top: -$gap-8;
             margin-left: $gap-8;
             flex-grow: 1;
             font-size: $size-8 * 9;
             line-height: $size-8 * 8;
+            opacity: 0.2;
+
             > span {
               display: block;
             }
@@ -133,7 +136,6 @@
             }
 
             @media (max-width: $screen-md) {
-              top: $gap-4;
               left: 0px;
               font-size: $size-8 * 7;
               line-height: $size-8 * 6;

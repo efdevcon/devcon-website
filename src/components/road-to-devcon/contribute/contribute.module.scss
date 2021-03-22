@@ -39,9 +39,15 @@
   }
 }
 
+.gradient {
+  height: 100%;
+  width: 100%;
+}
+
 .content {
   flex: 1;
   overflow: auto;
+  padding-bottom: 20px; // scroll gradient
 
   &::-webkit-scrollbar {
     width: 8px;

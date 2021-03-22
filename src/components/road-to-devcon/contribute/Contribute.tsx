@@ -5,6 +5,7 @@ import css from './contribute.module.scss'
 import { Proposals } from 'src/components/dip-overview/proposals'
 import { Dropdown } from 'src/components/common/dropdown'
 import { Filter } from 'src/components/common/filter'
+import { ScrollGradient } from 'src/components/common/scroll-gradient'
 
 export const Contribute = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
@@ -21,7 +22,7 @@ export const Contribute = React.forwardRef((props: any, ref) => {
           { url: 'https://github.com/efdevcon/DIPs', title: 'Github', icon: 'github' },
           { url: 'https://forum.devcon.org/', title: 'Forum', icon: 'forum' },
         ]}
-        bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: 'DIPs' }]}
+        bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: intl.formatMessage({ id: 'rtd_continue_to_github' }) }]}
       >
         <div className={css['container']}>
           <div className={css['header']}>
@@ -33,9 +34,11 @@ export const Contribute = React.forwardRef((props: any, ref) => {
               <Filter onFilter={e => setFilter(e)} filters={filters} />
             </div>
           </div>
-          <div className={css['content']}>
-            <Proposals dips={props.dips} filter={filter} />
-          </div>
+            <ScrollGradient className={css['gradient']} height="50px">
+              <div className={css['content']}>
+                <Proposals dips={props.dips} filter={filter} />
+              </div>
+            </ScrollGradient>
         </div>
       </PageContent>
     </Page>
