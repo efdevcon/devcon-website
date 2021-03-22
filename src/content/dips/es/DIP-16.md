@@ -1,8 +1,8 @@
 ---
-Summary: 'Vocdoni and POAP joint proposal to provide a universally verifiable, affordable and offchain voting system for DevCon ticket-holders. Supports quadratic voting and other governance systems.'
+Title: Encuestas verificables fuera de cadena para Devcon 6
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-16.md
 DIP: 16
-Title: Encuestas verificables fuera de cadena para Devcon 6
+
 Status: Draft
 Themes: Community Involvement, Ticketing
 Tags: Software, Event production
