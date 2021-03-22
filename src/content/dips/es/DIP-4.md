@@ -1,5 +1,5 @@
 ---
-Summary: 'We set up [Planetscape][planetscape], a dystopian escape game for [36C3][36c3] based on the dreadful effects of climate change (CCC did **not** sponsor the game).
+Title: Juego de caza del tesoro
 
 Planetscape is organized in 20 chapters, and requires players to solve quests in real life, explore the congress to find hints and interact with people. Planetscape had **20 levels**, **254 players**, [**1300** transactions][ps:transactions] to the smart contract, and **7 teams** finished the game and claimed their prize.
 
@@ -12,7 +12,7 @@ During the game, players:
 - Understood and enjoyed the theme of game.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-4.md
 DIP: 4
-Title: Juego de caza del tesoro
+
 Status: Accepted
 Themes: Social
 Tags: Event Production
