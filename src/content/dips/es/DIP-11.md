@@ -1,10 +1,10 @@
 ---
-Summary: 'As a continuation of a tradition started in Prague, let"s have an escape room experience at Devcon6!
+Title: Una sala de huida de Cripto-Onboarding
 
 This time, however, the mechanics and story of the room should be fundamentally crypto.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-11.md
 DIP: 11
-Title: Una sala de huida de Cripto-Onboarding
+
 Status: Accepted
 Themes: Freeform
 Tags: Event Production, Other
