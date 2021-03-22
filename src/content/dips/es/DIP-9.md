@@ -3,7 +3,7 @@ Summary: 'Devcon 6 is in 2021, a small virtual version on 2020 can help to test 
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-9.md
 DIP: 9
 Title: Dispositivo 5.1
-Status: Rejected
+Status: Not Implemented
 Themes: Virtual Experience
 Tags: Other
 Authors: Cristian Espinoza (@crisgarner)
