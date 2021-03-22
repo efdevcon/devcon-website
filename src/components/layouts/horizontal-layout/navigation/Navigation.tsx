@@ -4,7 +4,9 @@ import css from './navigation.module.scss'
 import IconMenu from 'src/assets/icons/menu.svg'
 import IconClose from 'src/assets/icons/cross.svg'
 import IconGlobe from 'src/assets/icons/globe.svg'
-import IconRoad from 'src/assets/icons/road.svg'
+import IconChevronRight from 'src/assets/icons/chevron_right.svg'
+import IconChevronLeft from 'src/assets/icons/chevron_left.svg'
+// import IconRoad from 'src/assets/icons/road.svg'
 import ethLogo from 'src/assets/images/eth.svg'
 import leftPad from 'src/utils/left-pad'
 import HeaderLogo from '../../header/HeaderLogo'
@@ -50,28 +52,91 @@ const LanguageToggle = () => {
   )
 }
 
-export const navigateToSlide = (pageTitle: string, props: any, setFoldoutOpen?: any) => {
-  const targetSlide = props.pageRefs.current[pageTitle]
+const Foldout = ({ pageProps, hover, pages, setHover, pageInView, links, goToSlide }: any) => {
+  const intl = useIntl()
 
-  if (!targetSlide) return
+  return (
+    <div className={css['foldout']}>
+      <div className={css['header']}>
+        <HeaderLogo />
+        {/* <IconRoad className="override" style={{ marginTop: '-3px' }} /> */}
+      </div>
 
-  const offsetLeft = targetSlide.offsetLeft
+      <div className={css['globe-icon']}>
+        <IconGlobe />
+        <LanguageToggle /> {/* 0 opacity language toggle to synchronize the height of the sidebar */}
+      </div>
 
-  props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
-  props.lastX.current = offsetLeft
+      <ul className={css['nav']}>
+        {pageProps?.map(({ title }, index) => {
+          const selected = pageInView === title
 
-  if (setFoldoutOpen) {
-    window.location.replace(hashSlug(pageTitle))
-    setFoldoutOpen(false)
-  }
+          let className = 'text-uppercase font-secondary no-select'
+
+          if (selected || hover === index) className += ` ${css['selected']}`
+
+          return (
+            <li
+              onMouseEnter={() => setHover(index)}
+              onMouseLeave={() => setHover(-1)}
+              className={className}
+              key={title}
+              data-index={leftPad(index + '')}
+              onClick={() => goToSlide(index)} //slide(title, props, setFoldoutOpen)}
+            >
+              {title}
+            </li>
+          )
+        })}
+      </ul>
+
+      {links && (
+        <nav className={css['links']}>
+          {links.map((link, index) => {
+            return (
+              <Link key={index} className="bold hover-underline" to={link.url}>
+                {link.title}
+              </Link>
+            )
+          })}
+        </nav>
+      )}
+
+      <div className={css['nav-footer']}>
+        <div>
+          <SocialMedia onShare={() => goToSlide(pages.length - 1)} />
+          <Newsletter />
+          <div className={css['info']}>
+            <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>
+            <p>{COPYRIGHT_NOTICE}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export const Navigation = React.forwardRef((props: NavigationProps, ref: any) => {
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
   const [hover, setHover] = React.useState(-1)
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
-  const intl = useIntl()
-  const pageInView = usePageInView(props.pageRefs)
+  const [pageInView, pageInViewIndex] = usePageInView(props.pageRefs)
+
+  const slide = (pageTitle: string, props: any, setFoldoutOpen?: any) => {
+    const targetSlide = props.pageRefs.current[pageTitle]
+
+    if (!targetSlide) return
+
+    const offsetLeft = targetSlide.offsetLeft
+
+    props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
+    props.lastX.current = offsetLeft
+
+    if (setFoldoutOpen) {
+      window.location.replace(hashSlug(pageTitle))
+      setFoldoutOpen(false)
+    }
+  }
 
   const goToSlide = (action: ('next' | 'prev' | 'syncCurrent') | number) => {
     const currentPageIndex = props.pages.findIndex(page => page.props.title === pageInView)
@@ -100,7 +165,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
     if (!nextPage) return
 
-    navigateToSlide(nextPage.title, props, setFoldoutOpen)
+    slide(nextPage.title, props, setFoldoutOpen)
   }
 
   useImperativeHandle(ref, () => ({
@@ -119,7 +184,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
       pageProps?.find(({ title: pageTitle }) => {
         if (hashSlug(pageTitle) === hash) {
-          navigateToSlide(pageTitle, props)
+          slide(pageTitle, props)
 
           // Dirty fix for letting anchor navigate on mount - other hooks can read the window object to see if anchor has been handled or not before deciding to navigate
           setTimeout(() => {
@@ -134,108 +199,81 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   return (
     <>
       <div className={`${css['navigation']} ${foldoutOpen ? css['open'] : ''}`}>
-        <div className={css['logo-mobile']} onClick={() => {
-          goToSlide(0)
-          setFoldoutOpen(false)
-        }}>
-          <HeaderLogo />
-        </div>
-
-        <div className={css['toggle']} onClick={() => setFoldoutOpen(!foldoutOpen)}>
-          <IconMenu />
-          <IconClose />
-        </div>
-
-        <div className={css['nav-middle']}>
-          <LanguageToggle />
-
-          <ul className={css['slide-nav']}>
-            {pageProps?.map(({ title, icon }, index) => {
-              const selected = pageInView === title
-
-              let className = 'text-uppercase font-secondary no-select'
-
-              if (selected || hover === index) className += ` ${css['selected']}`
-
-              return (
-                <li
-                  onMouseEnter={() => setHover(index)}
-                  onMouseLeave={() => setHover(-1)}
-                  className={className}
-                  key={title}
-                  onClick={() => navigateToSlide(title, props, setFoldoutOpen)}
-                >
-                  {icon || leftPad(index + '')}
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-
-        <div className={css['logo']}>
-          <img src={ethLogo} alt="Ethereum logo" />
-        </div>
-
-        {/* Need a layer with a filled in background so we avoid content overlapping when menu slides in */}
-        <div className={css['backdrop']} />
-
-        <div className={css['foldout']}>
-          <div className={css['header']}>
+        <div className={css['upper-fold']}>
+          {/* <div
+            className={css['logo-mobile']}
+            onClick={() => {
+              goToSlide(0)
+              setFoldoutOpen(false)
+            }}
+          >
             <HeaderLogo />
-            <IconRoad className="override" style={{ marginTop: '-3px' }} />
+          </div> */}
+
+          <div className={css['toggle']} onClick={() => setFoldoutOpen(!foldoutOpen)}>
+            <IconMenu />
+            <IconClose />
           </div>
 
-          <div className={css['globe-icon']}>
-            <IconGlobe />
-            <LanguageToggle /> {/* 0 opacity language toggle to synchronize the height of the sidebar */}
-          </div>
+          <div className={css['nav-middle']}>
+            <LanguageToggle />
 
-          <ul className={css['nav']}>
-            {pageProps?.map(({ title }, index) => {
-              const selected = pageInView === title
+            <ul className={css['slide-nav']}>
+              {pageProps?.map(({ title, icon }, index) => {
+                const selected = pageInView === title
 
-              let className = 'text-uppercase font-secondary no-select'
+                let className = 'text-uppercase font-secondary no-select'
 
-              if (selected || hover === index) className += ` ${css['selected']}`
+                if (selected || hover === index) className += ` ${css['selected']}`
 
-              return (
-                <li
-                  onMouseEnter={() => setHover(index)}
-                  onMouseLeave={() => setHover(-1)}
-                  className={className}
-                  key={title}
-                  data-index={leftPad(index + '')}
-                  onClick={() => navigateToSlide(title, props, setFoldoutOpen)}
-                >
-                  {title}
-                </li>
-              )
-            })}
-          </ul>
-
-          {props.links && (
-            <nav className={css['links']}>
-              {props.links.map((link, index) => {
                 return (
-                  <Link key={index} className="bold hover-underline" to={link.url}>
-                    {link.title}
-                  </Link>
+                  <li
+                    onMouseEnter={() => setHover(index)}
+                    onMouseLeave={() => setHover(-1)}
+                    className={className}
+                    key={title}
+                    onClick={() => slide(title, props, setFoldoutOpen)}
+                  >
+                    {icon || leftPad(index + '')}
+                  </li>
                 )
               })}
-            </nav>
-          )}
+            </ul>
+          </div>
 
-          <div className={css['nav-footer']}>
-            <div>
-              <SocialMedia onShare={() => goToSlide(props.pages.length - 1)} />
-              <Newsletter />
-              <div className={css['info']}>
-                <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>
-                <p>{COPYRIGHT_NOTICE}</p>
-              </div>
+          <div className={css['logo']}>
+            <img src={ethLogo} alt="Ethereum logo" />
+          </div>
+
+          <div className={css['mobile-navigation']}>
+            <p>
+              <span className="bold">{leftPad(pageInViewIndex + '')}</span> / 07
+            </p>
+            <div onClick={() => goToSlide('prev')}>
+              <IconChevronLeft />
+            </div>
+            <div onClick={() => goToSlide('next')}>
+              <IconChevronRight />
             </div>
           </div>
+
+          <div className={css['logo-mobile']}>
+            <HeaderLogo />
+          </div>
+
+          {/* Need a layer with a filled in background so we avoid content overlapping when menu slides in */}
+          <div className={css['backdrop']} />
         </div>
+
+        <Foldout
+          pageProps={pageProps}
+          pages={props.pages}
+          hover={hover}
+          pageInView={pageInView}
+          setHover={setHover}
+          links={props.links}
+          goToSlide={goToSlide}
+        />
       </div>
     </>
   )

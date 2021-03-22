@@ -231,6 +231,12 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: $screen-sm) {
+    bottom: 0px;
+    width: 100%;
+    border-bottom: none;
+  }
+
   > p {
     margin-right: $gap-2;
 

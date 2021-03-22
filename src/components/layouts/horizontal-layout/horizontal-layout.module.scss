@@ -21,7 +21,7 @@
 
   @media (max-width: $screen-sm) {
     flex-direction: column;
-    padding-top: 64px;
+    // padding-top: 64px;
   }
 
   .page-track {
@@ -30,9 +30,8 @@
     flex-grow: 1;
     flex-direction: row;
     flex-wrap: nowrap;
-    // touch-action: pan-y;
     transition: transform 400ms ease-out;
-    margin-left: 64px;
+    // margin-left: 64px;
 
     // If not using mouse, we just fall back to native scroll behaviour (i.e. swipe)
     // @media (hover: none) {
@@ -41,6 +40,7 @@
 
     @media (max-width: $screen-sm) {
       margin-left: 0px;
+      margin-bottom: 64px;
     }
 
     .page {

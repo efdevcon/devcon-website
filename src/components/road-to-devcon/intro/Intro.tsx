@@ -12,9 +12,9 @@ import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
 import { Modal } from 'src/components/common/modal'
 import { Link } from 'src/components/common/link'
-import ArrowLeftIcon from 'src/assets/icons/box-arrow-left.svg'
-import ArrowRightIcon from 'src/assets/icons/box-arrow-right.svg'
-import CircleArrowRightIcon from 'src/assets/icons/circle-arrow-right.svg'
+import ArrowLeftIcon from 'src/assets/icons/box_arrow_left.svg'
+import ArrowRightIcon from 'src/assets/icons/box_arrow_right.svg'
+import CircleArrowRightIcon from 'src/assets/icons/circle_arrow_right.svg'
 
 export const HashTag = (props: { className: string }) => {
   const [hovered, setHovered] = React.useState(false)

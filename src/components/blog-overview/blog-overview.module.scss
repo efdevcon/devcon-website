@@ -59,6 +59,7 @@
   --text-color: white;
   background: black;
   padding: 8px;
+  touch-action: none; // Prevent zoom when tapping button on mobile
 
   &:disabled {
     background: grey;

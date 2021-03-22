@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react'
 export const hashSlug = (slug: string) => '#' + slug.replaceAll(' ', '-').toLowerCase()
 
 const usePageInView = (pageRefs: any) => {
-  const [pageInView, setPageInView] = useState()
+  const [pageInView, setPageInView] = useState<(string|number)[]>([])
 
   useEffect(() => {
     const unobserve = []
 
-    Object.entries(pageRefs.current).forEach(([pageTitle, page]) => {
+    Object.entries(pageRefs.current).forEach(([pageTitle, page], index) => {
       const observer = new window.IntersectionObserver(
         entries => {
           const target = entries[0]
 
           if (target.intersectionRatio > 0.5) {
-            setPageInView(pageTitle)
+            setPageInView([pageTitle, index])
             window.location.replace(hashSlug(pageTitle))
           }
         },
@@ -33,7 +33,7 @@ const usePageInView = (pageRefs: any) => {
     }
   }, [pageRefs])
 
-  return pageInView
+  return pageInView;
 }
 
 export default usePageInView
