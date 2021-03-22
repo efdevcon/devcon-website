@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "target": "es5",
+      "target": "es6",
       "module": "esnext",
       "moduleResolution": "node",
       "jsx": "react",
@@ -9,13 +9,12 @@
       "skipLibCheck": true,
       "esModuleInterop": true,
       "baseUrl": "./",
-      "types": []
+      "types": ["node"],
+      "lib": ["dom", "es2015"],
     },
     "include": [
-      "src"
-    ],
-    "exclude": [
-      "node_modules",
+      "src",
+      "node_modules/@types"
     ]
   }
   

@@ -1,0 +1,1 @@
+export { MessageFromDeva } from './MessageFromDeva'

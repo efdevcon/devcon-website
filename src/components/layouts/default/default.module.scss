@@ -1,0 +1,51 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/layout';
+
+:global {
+  .layout-default {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    > .header {
+      width: 100%;
+    }
+
+    > .content {
+      position: relative;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    > .footer {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// Simplified layout experiment - didn't quite work but worth exploring further
+// :global {
+//   .layout-default {
+//     min-height: 100vh;
+//     position: relative;
+//     display: grid;
+//     grid-template-columns: minmax($gap-16, auto) minmax(auto, 1680px) minmax($gap-16, auto);
+
+//     @media (max-width: $screen-md) {
+//       grid-template-columns: $gap-4 auto $gap-4;
+//     }
+
+//     > * {
+//       grid-column: 2 / 3;
+//     }
+
+//     > .full-width {
+//       grid-column: 1 / 4; // Apply .full-width to ignore padding
+//     }
+//   }
+// }

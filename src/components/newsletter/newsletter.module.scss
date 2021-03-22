@@ -1,0 +1,61 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/gaps';
+
+.container {
+  padding: $size-8 0;
+  display: flex;
+  flex-wrap: nowrap;
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    flex-wrap: wrap;
+  }
+}
+
+.alert-container {
+  padding: $size-8 0;
+}
+
+.input {
+  @include fonts.font-sm;
+
+  flex-grow: 1;
+  color: $color-primary;
+  border-bottom: 1px solid $color-primary;
+  margin-right: $gap-4;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.button {
+  @include fonts.font-sm;
+
+  display: inline-block;
+  background: #fff;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  padding: $gap-2 $gap-3;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none;
+    background: #fff;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+  }
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    padding: $gap-1 $gap-2;
+    width: 100%;
+    margin-top: $gap-2;
+  }
+}

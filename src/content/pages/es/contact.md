@@ -1,10 +1,7 @@
 ---
 title: Contacto
-description: Contacto description ES
+description: Descripción del contacto
 template: content
-order: 8
-showInMenu: true
-autoTranslated: true
 ---
 
-Contacto ES
+Cuerpo de contacto

@@ -1,10 +1,6 @@
 ---
-title: Code of conduct
+title: Código de conducta
 template: content
-parent: footer
-order: 2
-showInMenu: true
-autoTranslated: true
 ---
 
-Code of conduct
+Código de conducta

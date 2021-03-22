@@ -1,0 +1,119 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/fonts';
+
+.hero {
+  position: sticky;
+  // "Pulls up" the entire section except for the page menu, effectively making it look like just the page menu is sticky
+  top: var(--negative-offset, -1000px);
+  z-index: 10;
+  overflow: hidden;
+  width: 100%;
+  padding-top: $gap-4;
+  border-bottom: 1px solid black;
+  margin-bottom: $gap-10;
+
+  .backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    > img {
+      position: absolute;
+      right: 0px;
+      bottom: -50px;
+
+      @media (max-width: $screen-lg) {
+        max-width: 50%;
+        height: 100%;
+        bottom: 0px;
+      }
+    }
+  }
+
+  .contribute {
+    @extend .backdrop;
+
+    background: radial-gradient(
+        73.15% 179.46% at 90.19% 25.94%,
+        #00b3a4 0%,
+        rgba(0, 255, 117, 0.4) 58.33%,
+        rgba(203, 227, 214, 0) 100%
+      ),
+      #ffffff;
+  }
+
+  .about {
+    @extend .backdrop;
+    background: radial-gradient(
+        73.15% 179.46% at 90.19% 25.94%,
+        #88c43f 0%,
+        #50d100 0.01%,
+        rgba(140, 255, 0, 0.4) 58.33%,
+        rgba(136, 196, 63, 0) 100%
+      ),
+      #ffffff;
+  }
+
+  .location {
+    @extend .backdrop;
+    background: radial-gradient(
+      64.03% 140.53% at 90.8% 48.82%,
+      #e55066 0%,
+      rgba(242, 186, 44, 0.391893) 65.84%,
+      rgba(250, 255, 7, 0) 100%
+    ),
+    #ffffff;
+  }
+}
+
+.info {
+  @include layout.content;
+  width: 100%;
+
+  .title-block {
+    padding-top: $gap-16;
+    padding-bottom: $gap-12;
+
+    > h1 {
+      font-size: 9rem;
+    }
+
+    .buttons {
+      margin-top: $gap-5;
+
+      > a {
+        margin-right: $gap-3;
+
+        > svg {
+          @include fonts.font-xs;
+        }
+
+        > span {
+          margin-left: $gap-2;
+        }
+      }
+    }
+  }
+
+  .page-navigation {
+    position: sticky;
+    top: var(--header-height);
+    width: 100%;
+    display: flex;
+    padding-top: $gap-4;
+    padding-bottom: $gap-4;
+    // margin-bottom: $gap-5;
+
+    > * {
+      margin-left: $gap-6;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+}

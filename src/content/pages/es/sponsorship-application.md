@@ -1,10 +1,6 @@
 ---
-title: Sponsorship application
+title: Aplicación de patrocinio
 template: content
-parent: contact
-order: 2
-showInMenu: true
-autoTranslated: true
 ---
 
-Sponsorship application
+Aplicación de patrocinio

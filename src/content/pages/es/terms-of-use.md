@@ -1,10 +1,6 @@
 ---
-title: Terms of use
+title: Términos de uso
 template: content
-parent: footer
-order: 5
-showInMenu: true
-autoTranslated: true
 ---
 
-Terms of use
+Términos de uso

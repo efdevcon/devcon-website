@@ -1,0 +1,136 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/fonts';
+
+.feed {
+  height: 100%;
+  padding: $gap-8;
+  padding-bottom: $gap-4;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  color: $color-primary;
+
+  @media (max-width: $screen-md) {
+    box-shadow: none;
+    background: none;
+    padding: 0px;
+  }
+
+  .header {
+    @include fonts.font-sm;
+    text-transform: uppercase;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-height: 64px * 5;
+    padding-right: $gap-5;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 5px;
+    }
+
+    > a {
+      flex-grow: 1;
+      flex-shrink: 0;
+      height: 64px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @media (max-width: $screen-lg) {
+        height: 64px;
+      }
+
+      @media (max-width: $screen-md) {
+        margin-top: $gap-2;
+        align-items: flex-start;
+      }
+
+      .list-number {
+        @include fonts.font-xl;
+        flex-shrink: 0;
+        font-family: $font-tertiary;
+        color: rgba(0, 0, 0, 0.25);
+        margin-right: 25px;
+        margin-left: $gap-2;
+      }
+
+      .date-handle {
+        flex-shrink: 0;
+        margin-right: 75px;
+
+        .date {
+          @include fonts.font-xs;
+          font-family: $font-secondary;
+        }
+
+        .handle {
+          @include fonts.font-xxs;
+          font-family: $font-secondary;
+          line-height: 100%;
+          opacity: 0.5;
+        }
+      }
+
+      .item-body {
+        display: flex;
+        flex-grow: 1;
+
+        @media (max-width: $screen-md) {
+          flex-direction: column;
+        }
+
+        .title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-family: $font-primary;
+          @include fonts.font-md;
+          @include fonts.bold;
+
+          @media (max-width: $screen-md) {
+            margin-top: $gap-2;
+          }
+        }
+      }
+    }
+
+    .icon {
+      opacity: 0.25;
+    }
+  }
+
+  .load-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-left: $gap-2;
+    opacity: 0.25;
+
+    > p {
+      font-family: $font-secondary;
+      @include fonts.font-lg;
+      @include fonts.bold;
+    }
+  }
+}

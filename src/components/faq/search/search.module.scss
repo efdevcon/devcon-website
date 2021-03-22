@@ -1,0 +1,29 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/fonts';
+
+.search-bar {
+    // RTD: remove padding
+    // padding: $gap-8 0;
+  
+    input {
+      font-family: $font-primary;
+      font-size: $size-12;
+      color: $color-primary;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: $gap-1 $gap-2;
+
+      @media (max-width: $screen-tiny) {
+        max-width: 180px;
+      }
+    }
+  
+    .subtitle {
+      @include fonts.font-xs;
+      @include fonts.bold;
+      text-transform: uppercase;
+      // color: #88c43f;
+      display: block;
+      margin: $gap-4 0;
+    }
+}

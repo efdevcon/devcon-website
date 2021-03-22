@@ -1,9 +1,6 @@
 ---
-title: News ES
+title: Noticias
 template: content
-order: 1
-showInMenu: true
-autoTranslated: true
 ---
 
-News ES
+Noticias
