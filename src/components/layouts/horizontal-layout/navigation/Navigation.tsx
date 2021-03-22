@@ -131,14 +131,10 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
     props.pageTrackRef.current.style.transform = `translateX(-${offsetLeft}px)`
     props.lastX.current = offsetLeft
-
-    if (setFoldoutOpen) {
-      window.location.replace(hashSlug(pageTitle))
-      setFoldoutOpen(false)
-    }
   }
 
   const goToSlide = (action: ('next' | 'prev' | 'syncCurrent') | number) => {
+    setFoldoutOpen(false)
     const currentPageIndex = props.pages.findIndex(page => page.props.title === pageInView)
     let nextPageIndex
 
