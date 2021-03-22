@@ -1,8 +1,8 @@
 ---
-Title: Las reservas de vuelo y hoteles proceden del mercado descentralizado de viajes de código abierto
+Summary: 'Winding Tree offers Devcon attendees to book their flights and hotels directly from suppliers with discount. Winding Tree is 100% open-source and we aim to be as decentralized as it is possible.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-3.md
 DIP: 3
-
+Title: Flight and hotel bookings sourced from decentralized open-source travel marketplace
 Status: Accepted
 Themes: Ticketing, Purchases & ID
 Tags: Attendee Experience
@@ -41,7 +41,7 @@ Lo que es bueno es que no necesitamos construir nada a partir de cero, sólo mod
 ### 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
 
 - necesitamos obtener una lista de hoteles equipo de Devcon planeado para el objetivo de bloques de habitación
-- Contingente con la aprobación del equipo de Devcon (que se basará en parte en _ver_ un [estelar UX y un minucioso plan de servicio al cliente](https://github.com/efdevcon/DIPs/pull/33) en acción), queremos integrar nuestra interfaz en el sitio web de Devcon
+- Contingent on the Devcon team's approval (which will be based in part on *seeing* a [stellar UX and thorough customer service plan](https://github.com/efdevcon/DIPs/pull/33) in action), we would like to integrate our interface into the Devcon website
 
 ### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
