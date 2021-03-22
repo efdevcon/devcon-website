@@ -26,7 +26,7 @@ $nav-width: 348px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 10001;
   justify-content: space-between;
 
   @media (max-width: $screen-sm) {
