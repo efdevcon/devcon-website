@@ -1,8 +1,8 @@
 ---
-Summary: 'The main objective of this DIP is to replicate the experience of using POAP in Devcon 5 (Osaka). This being establishing the process for which every attendee gets one (and only one) POAP redemption code when they show up at the registration desk.'
+Title: Prueba del Protocolo de Asistencia - Básicos
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-8.md
 DIP: 8
-Title: Prueba del Protocolo de Asistencia - Básicos
+
 Status: Accepted
 Themes: Social
 Tags: Event Production
