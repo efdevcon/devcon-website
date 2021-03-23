@@ -67,7 +67,7 @@ const tableColumns: Array<TableColumn> = [
 
       switch (item.status.toLowerCase()) {
         case 'withdrawn':
-        case 'rejected':
+        case 'not implemented':
           labelType = 'error'
 
           break

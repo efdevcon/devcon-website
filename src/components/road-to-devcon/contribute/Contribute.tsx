@@ -12,7 +12,7 @@ import { Modal } from 'src/components/common/modal'
 export const Contribute = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const [filter, setFilter] = useState('')
-  const filters = ['All', 'Draft', 'Accepted', 'Withdrawn', 'Rejected']
+  const filters = ['All', 'Draft', 'Accepted', 'Withdrawn', 'Not Implemented']
   const [modalOpen, setModalOpen] = React.useState(false)
 
   return (

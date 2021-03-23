@@ -2,7 +2,7 @@ export enum Status {
   'Draft',
   'Accepted',
   'Postponed',
-  'Rejected',
+  'Not Implemented',
   'Changes Requested',
   'Active',
 }

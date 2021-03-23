@@ -3,7 +3,7 @@ Summary: 'The on-chain ticketing solution that GET Protocol offers could be the 
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-13.md
 DIP: 13
 Title: Tickets en cadena & sin problemas para Devcon 6 con protocolo GET
-Status: Rejected
+Status: Not Implemented
 Themes: Ticketing
 Tags: Event operations
 Authors: Olivier Biggs <olivier@get-protocol.io>

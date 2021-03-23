@@ -22,9 +22,11 @@ Discussion: https://forum.devcon.org/t/dip-a-treasure-hunt-game-for-devcon/45
 Created: 2020-08-07
 ---
 
+
 # Summary of Proposal
 
 Develop a game for Devcon to push people to explore the event, engage with other people, and learn how to develop a great UX for a fully decentralized app.
+
 
 # Abstract
 
@@ -113,7 +115,7 @@ to create decentralized treasure hunts. Given a story, THC generates all the com
 .                                         +---------------------+
 ```
 
-THC creates a _user-friendly application that relies on decentralized technology only_. We want to live the decentralized dream with no compromises, developing a powerful dApp that would use Ethereum under the hood without exposing any details about blockchain and IPFS to the player.
+THC creates a *user-friendly application that relies on decentralized technology only*. We want to live the decentralized dream with no compromises, developing a powerful dApp that would use Ethereum under the hood without exposing any details about blockchain and IPFS to the player.
 
 The game has **instant onboarding** by allowing people to play the game just by visiting a website. By now, this happens by using a "burner-wallet"-like approach (the player's wallet is created on the fly when opening the dApp for the first time). In order to make transactions players needed Ether. While the current approach is to simply [transfer][gasstation] a small amount of (test) Ether to new players, we want to improve this by using [OpenGSN][opengsn].
 
@@ -166,19 +168,17 @@ In order to develop a similar game for Devcon, information about the conference 
 
 # Operational Requirements & Ownership
 
-1. _What actions are required to implement the proposal at Devcon?_
+1. *What actions are required to implement the proposal at Devcon?*
+    - The game must be deployed few days before the conference. Physical and digital puzzles must be ready on the first day of the event.
+    - Serving the game under `devcon.org` subdomain would make the game more trustworthy.
+    - Add the link to the game to the paper guide (if any) provided at Devcon.
+    - If Devcon's designers have bandwitdh, create few official NFTs "signed by Devcon" to distribute to for the winners.
 
-   - The game must be deployed few days before the conference. Physical and digital puzzles must be ready on the first day of the event.
-   - Serving the game under `devcon.org` subdomain would make the game more trustworthy.
-   - Add the link to the game to the paper guide (if any) provided at Devcon.
-   - If Devcon's designers have bandwitdh, create few official NFTs "signed by Devcon" to distribute to for the winners.
+2. *Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)*
+    - Social Dist0rtion Protocol will be responsible for the successful implementation of this proposal.
 
-2. _Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)_
-
-   - Social Dist0rtion Protocol will be responsible for the successful implementation of this proposal.
-
-3. _What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))_
-   - One of the goals of the game is to discover Devcon and its projects. Knowing in advance the list of projects would allow us to create levels around them.
+3. *What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))*
+    - One of the goals of the game is to discover Devcon and its projects. Knowing in advance the list of projects would allow us to create levels around them.
 
 # Links & Additional Information
 
@@ -187,6 +187,7 @@ Additional information can be found here:
 - :camera: [The photos](https://imgur.com/a/PCe4hCo) of the dApp and some of the puzzles.
 - :writing_hand: [Our extensive blog post](https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/) about the game.
 - :speaking_head: [Lightning Talk](https://www.youtube.com/watch?v=7RJn2gowj2I) at IPFS Pinning Summit
+
 
 [planetscape]: https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/
 [36c3]: https://events.ccc.de/congress/2019/wiki/index.php/Main_Page
