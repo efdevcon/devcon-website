@@ -4,15 +4,15 @@
 
 $nav-width: 348px;
 
-.no-overflow-body {
-  @media (max-width: $screen-sm) {
-    position: fixed;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    touch-action: none;
-  }
-}
+// .no-overflow-body {
+//   @media (max-width: $screen-sm) {
+//     position: fixed;
+//     overflow: hidden;
+//     width: 100%;
+//     height: 100%;
+//     touch-action: none;
+//   }
+// }
 
 /* iOS safari scroll breaks every once in a while without this fix */
 // :global {
@@ -38,7 +38,7 @@ $nav-width: 348px;
 }
 
 .navigation {
-  position: fixed;
+  position: relative;
   height: 100%;
   width: 64px;
   flex-shrink: 0;
@@ -49,7 +49,7 @@ $nav-width: 348px;
   justify-content: space-between;
 
   @media (max-width: $screen-sm) {
-    // position: absolute;
+    position: absolute;
     // height: 64px;
     background: white;
     flex-shrink: 1;
