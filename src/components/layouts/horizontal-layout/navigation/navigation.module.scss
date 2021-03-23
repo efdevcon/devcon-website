@@ -251,6 +251,7 @@ $nav-width: 348px;
       min-height: auto;
       height: calc(100% - 64px);
       top: 64px;
+      z-index: 0;
       transform: translateY(0px);
       border-right: none;
       left: 0px;
