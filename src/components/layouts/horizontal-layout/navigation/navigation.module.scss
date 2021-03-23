@@ -4,6 +4,14 @@
 
 $nav-width: 348px;
 
+// .open {
+//   @media (max-width: $screen-sm) {
+//     overflow: hidden;
+//     height: 100vh;
+//     width: 100vw;
+//   }
+// }
+
 @mixin nav-number {
   font-size: 10px;
   line-height: 1em;
@@ -41,6 +49,7 @@ $nav-width: 348px;
     top: calc(100% - 64px);
     flex-direction: row;
     transition: transform 0.15s linear;
+    overflow: hidden;
 
     &.open {
       transform: translateY(calc(-100% + 64px));
@@ -208,6 +217,7 @@ $nav-width: 348px;
   .foldout {
     display: flex;
     flex-direction: column;
+    -webkit-overflow-scrolling: touch;
     justify-content: space-between;
     position: absolute;
     width: $nav-width;
@@ -219,7 +229,7 @@ $nav-width: 348px;
     transform: translateX(calc(-100% + 1px));
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     transition: transform 0.15s linear;
-    overflow-y: auto;
+    overflow: auto;
 
     > * {
       flex-shrink: 0;

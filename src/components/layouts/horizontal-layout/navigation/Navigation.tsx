@@ -1,4 +1,4 @@
-import React, { useImperativeHandle } from 'react'
+import React, { useEffect, useImperativeHandle } from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './navigation.module.scss'
 import IconMenu from 'src/assets/icons/menu.svg'
@@ -122,7 +122,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const [pageInView, pageInViewIndex] = usePageInView(props.pageRefs)
 
-  const slide = (pageTitle: string, props: any, setFoldoutOpen?: any) => {
+  const slide = (pageTitle: string, props: any) => {
     const targetSlide = props.pageRefs.current[pageTitle]
 
     if (!targetSlide) return
@@ -161,12 +161,20 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
     if (!nextPage) return
 
-    slide(nextPage.title, props, setFoldoutOpen)
+    slide(nextPage.title, props)
   }
 
   useImperativeHandle(ref, () => ({
     goToSlide,
   }))
+
+  // useEffect(() => {
+  //   if (foldoutOpen) {
+  //     document.body.classList.add(css['open'])
+  //   } else {
+  //     document.body.classList.remove(css['open'])
+  //   }
+  // }, [foldoutOpen])
 
   useKeyBinding(() => goToSlide('prev'), ['ArrowLeft'])
   useKeyBinding(() => goToSlide('next'), ['ArrowRight'])
