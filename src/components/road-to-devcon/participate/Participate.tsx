@@ -16,11 +16,11 @@ export const Participate = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativePath: { in: ["participate_background.webp"] } }) {
+      allFile(filter: { relativePath: { in: ["participate_background.png"] } }) {
         nodes {
           childImageSharp {
             fluid(maxWidth: 2100, quality: 90) {
-              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -32,11 +32,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
   return (
     <Page {...props} ref={ref}>
       <div className={css['background']} style={{ backgroundImage: `url(${bg})` }}></div>
-      <PageContent
-        transparent
-        inverted
-        backgroundText={intl.formatMessage({ id: 'rtd_community_events' })}
-      >
+      <PageContent transparent inverted backgroundText={intl.formatMessage({ id: 'rtd_community_events' })}>
         <div className={css['container']}>
           <Tabs>
             <Tab title={intl.formatMessage({ id: 'rtd_events' })}>
@@ -51,7 +47,7 @@ export const Participate = React.forwardRef((props: any, ref) => {
             </Tab>
           </Tabs>
           <div className={css['footer']}>
-            <a href={LINK_SUBMIT_EVENT} target='_blank' rel="noopener noreferrer">
+            <a href={LINK_SUBMIT_EVENT} target="_blank" rel="noopener noreferrer">
               <span>{intl.formatMessage({ id: 'rtd_submit_community_event' })}</span>
               <span>
                 <IconPlus />

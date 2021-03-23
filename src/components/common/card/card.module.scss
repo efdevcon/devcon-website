@@ -40,7 +40,7 @@
     .img {
       transition: transform 0.5s;
       // Kinda tragic positioning strategy here, but this constellation was the only way to make it work in safari
-      position: absolute;
+      position: absolute !important;
       top: 0;
       min-width: 100%;
       overflow: hidden;

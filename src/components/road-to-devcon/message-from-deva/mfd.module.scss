@@ -39,7 +39,7 @@
   .lying-deva {
     @extend .deva;
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-md + 1) {
       display: none;
     }
   }
