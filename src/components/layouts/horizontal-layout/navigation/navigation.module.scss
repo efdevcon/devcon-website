@@ -4,11 +4,22 @@
 
 $nav-width: 348px;
 
-// .open {
-//   @media (max-width: $screen-sm) {
-//     overflow: hidden;
-//     height: 100vh;
-//     width: 100vw;
+.no-overflow-body {
+  @media (max-width: $screen-sm) {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+}
+
+/* iOS safari scroll breaks every once in a while without this fix */
+// :global {
+//   body,
+//   html {
+//     // overflow: hidden;
+//     // pointer-events: none;
 //   }
 // }
 
@@ -27,7 +38,7 @@ $nav-width: 348px;
 }
 
 .navigation {
-  position: relative;
+  position: fixed;
   height: 100%;
   width: 64px;
   flex-shrink: 0;
@@ -38,7 +49,7 @@ $nav-width: 348px;
   justify-content: space-between;
 
   @media (max-width: $screen-sm) {
-    position: absolute;
+    // position: absolute;
     // height: 64px;
     background: white;
     flex-shrink: 1;
@@ -217,7 +228,6 @@ $nav-width: 348px;
   .foldout {
     display: flex;
     flex-direction: column;
-    -webkit-overflow-scrolling: touch;
     justify-content: space-between;
     position: absolute;
     width: $nav-width;
@@ -239,13 +249,8 @@ $nav-width: 348px;
       padding: $gap-4;
       width: 100%;
       min-height: auto;
-      // height: auto;
-      // bottom: 100%;
       height: calc(100% - 64px);
       top: 64px;
-      // position: relative;
-      // position: fixed;
-      // transform: translateY(calc(-100% - 1px));
       transform: translateY(0px);
       border-right: none;
       left: 0px;
