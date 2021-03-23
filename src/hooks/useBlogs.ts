@@ -18,7 +18,7 @@ export const useBlogs = (): Array<BlogPost> => {
             image {
               childImageSharp {
                 fluid(maxHeight: 1024, quality: 80) {
-                  src
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
               }
             }
@@ -31,9 +31,10 @@ export const useBlogs = (): Array<BlogPost> => {
       }
     }
   `)
-
+  
   return data.blogs.nodes.map((i: any) => mapToBlog(i))
 }
+
 
 function mapToBlog(source: any): BlogPost {
   return {
@@ -43,8 +44,9 @@ function mapToBlog(source: any): BlogPost {
     body: source.html,
     slug: source.fields.slug,
     permaLink: source.frontmatter.permaLink,
-    imageUrl: source.frontmatter.image
+    imageUrl: source.frontmatter.image.childImageSharp.fluid
+    /*source.frontmatter.image
       ? source.frontmatter.image.childImageSharp.fluid.src
-      : source.frontmatter.imageUrl,
+      : source.frontmatter.imageUrl*/
   }
 }

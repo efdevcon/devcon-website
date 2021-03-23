@@ -140,8 +140,6 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
 export function BlogOverview() {
   const blogState = useBlogState()
 
-  console.log(blogState, 'bstate')
-
   return (
     <div className={css['blog-container']}>
       <div className={css['top-section']}>

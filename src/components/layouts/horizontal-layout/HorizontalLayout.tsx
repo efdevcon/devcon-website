@@ -99,7 +99,12 @@ export const PageContent = (props: PageContentProps) => {
         {props.backgroundText && (
           <h2 className={`${css[backgroundTextClassName]} no-select`}>
             {props.backgroundText.split(' ').map((word, index) => {
-              return <span key={index}>{word}</span>
+              return (
+                <>
+                  {word}
+                  <br />
+                </>
+              )
             })}
           </h2>
         )}

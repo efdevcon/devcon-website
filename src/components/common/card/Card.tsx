@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'src/components/common/link'
+import Img from 'gatsby-image'
 import { GetExcerpt } from 'src/utils/formatting'
 import css from './card.module.scss'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
@@ -8,7 +9,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 interface CardProps {
   title: string
   description?: string
-  imageUrl?: string
+  imageUrl?: any
   linkUrl?: string
   date?: Date
   metadata?: string[]
@@ -29,7 +30,8 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
     <a className={className} ref={ref} href={props.linkUrl} target="_blank" rel="noopener noreferrer">
       {props.imageUrl && (
         <div className={css['img-wrapper']}>
-          <img src={props.imageUrl} className={css['img']} alt={props.title} />
+          <Img className={css['img']} fluid={props.imageUrl} />
+          {/* <img src={props.imageUrl} className={css['img']} alt={props.title} /> */}
         </div>
       )}
 

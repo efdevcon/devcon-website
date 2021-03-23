@@ -12,11 +12,11 @@ export const Ask = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativePath: { in: ["ask_background.webp"] } }) {
+      allFile(filter: { relativePath: { in: ["ask_background.png"] } }) {
         nodes {
           childImageSharp {
             fluid(maxWidth: 2100, quality: 90) {
-              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }

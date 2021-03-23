@@ -1,13 +1,13 @@
 ---
 layout: post
 published: true
-title: "The Long(er) road to Devcon [ENG/ESP]"
-date: "2021-01-26"
+title: 'The Long(er) road to Devcon [ENG/ESP]'
+date: '2021-01-26'
 author: Devcon Team
 categories: Devcon
 permaLink: https://blog.ethereum.org/2021/01/26/the-longer-road-to-devcon/
 imageUrl: https://storage.googleapis.com/ethereum-hackmd/upload_bb7c2ddd6e5013d15f762229fa168f5f.png
-image: ../../assets/images/devcon6.webp
+image: ../../assets/images/devcon6.png
 ---
 
 Friends,

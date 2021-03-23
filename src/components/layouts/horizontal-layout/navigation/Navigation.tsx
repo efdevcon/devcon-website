@@ -1,4 +1,4 @@
-import React, { useImperativeHandle } from 'react'
+import React, { useEffect, useImperativeHandle } from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './navigation.module.scss'
 import IconMenu from 'src/assets/icons/menu.svg'
@@ -55,8 +55,54 @@ const LanguageToggle = () => {
 const Foldout = ({ pageProps, hover, pages, setHover, pageInView, links, goToSlide }: any) => {
   const intl = useIntl()
 
+  useEffect(() => {
+    var _overlay = document.getElementById('overlay')
+    var _clientY = null // remember Y position on touch start
+
+    function isOverlayTotallyScrolled() {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+      return _overlay.scrollHeight - _overlay.scrollTop <= _overlay.clientHeight
+    }
+
+    function disableRubberBand(event) {
+      var clientY = event.targetTouches[0].clientY - _clientY
+
+      if (_overlay.scrollTop === 0 && clientY > 0) {
+        // element is at the top of its scroll
+        event.preventDefault()
+      }
+
+      if (isOverlayTotallyScrolled() && clientY < 0) {
+        //element is at the top of its scroll
+        event.preventDefault()
+      }
+    }
+
+    _overlay.addEventListener(
+      'touchstart',
+      function (event) {
+        if (event.targetTouches.length === 1) {
+          // detect single touch
+          _clientY = event.targetTouches[0].clientY
+        }
+      },
+      false
+    )
+
+    _overlay.addEventListener(
+      'touchmove',
+      function (event) {
+        if (event.targetTouches.length === 1) {
+          // detect single touch
+          disableRubberBand(event)
+        }
+      },
+      false
+    )
+  })
+
   return (
-    <div className={css['foldout']}>
+    <div id="overlay" className={css['foldout']}>
       <div className={css['header']}>
         <HeaderLogo />
         {/* <IconRoad className="override" style={{ marginTop: '-3px' }} /> */}
@@ -122,7 +168,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
   const pageProps: any[] | null | undefined = React.Children.map(props.pages, page => page.props)
   const [pageInView, pageInViewIndex] = usePageInView(props.pageRefs)
 
-  const slide = (pageTitle: string, props: any, setFoldoutOpen?: any) => {
+  const slide = (pageTitle: string, props: any) => {
     const targetSlide = props.pageRefs.current[pageTitle]
 
     if (!targetSlide) return
@@ -161,12 +207,20 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
 
     if (!nextPage) return
 
-    slide(nextPage.title, props, setFoldoutOpen)
+    slide(nextPage.title, props)
   }
 
   useImperativeHandle(ref, () => ({
     goToSlide,
   }))
+
+  useEffect(() => {
+    if (foldoutOpen) {
+      document.body.classList.add(css['no-overflow-body'])
+    } else {
+      document.body.classList.remove(css['no-overflow-body'])
+    }
+  }, [foldoutOpen])
 
   useKeyBinding(() => goToSlide('prev'), ['ArrowLeft'])
   useKeyBinding(() => goToSlide('next'), ['ArrowRight'])
