@@ -36,9 +36,9 @@
 
     > div > p {
       font-size: 1.3rem;
-      box-shadow: 0.3em 0px rgba(208, 251, 247, 0.75);
+      box-shadow: 0.3em 0px rgba(208, 251, 247, 0.85);
       display: inline;
-      background: rgba(208, 251, 247, 0.75);
+      background: rgba(208, 251, 247, 0.85);
 
       @media (max-width: $screen-sm) {
         font-size: unset;

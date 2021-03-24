@@ -47,11 +47,12 @@ $nav-width: 348px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 10001;
   justify-content: space-between;
+  background: white;
 
   @media (max-width: $screen-sm) {
     position: absolute;
     // height: 64px;
-    background: white;
+
     flex-shrink: 1;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -60,6 +61,7 @@ $nav-width: 348px;
     top: calc(100% - 64px);
     flex-direction: row;
     transition: transform 0.15s linear;
+    // overflow: hidden;
 
     &.open {
       transform: translateY(calc(-100% + 64px));
@@ -113,6 +115,7 @@ $nav-width: 348px;
     display: flex;
     flex-direction: column;
     height: 100%;
+    z-index: 1;
 
     @media (max-width: $screen-sm) {
       flex-direction: row;

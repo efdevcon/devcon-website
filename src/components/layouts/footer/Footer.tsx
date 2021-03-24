@@ -20,7 +20,7 @@ export const SocialMedia = ({ onShare }: any) => {
       <Link to="https://twitter.com/efdevcon">
         <IconTwitter style={{ cursor: 'pointer' }} />
       </Link>
-      <Link to="https://github.com/efdevcon/DIPs">
+      <Link to="https://github.com/efdevcon">
         <IconGithub style={{ cursor: 'pointer' }} />
       </Link>
       <Link to="https://www.youtube.com/c/EthereumFoundation/search?query=devcon">
