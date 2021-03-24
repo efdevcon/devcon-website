@@ -114,7 +114,7 @@
     flex-basis: 60%;
     flex-shrink: 0;
 
-    @media (min-width: $screen-lg + 1) {
+    @media (min-width: $screen-sm + 1) {
       bottom: -20px;
     }
   }
