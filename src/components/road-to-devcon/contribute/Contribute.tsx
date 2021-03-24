@@ -22,18 +22,25 @@ export const Contribute = React.forwardRef((props: any, ref) => {
       <PageContent
         backgroundText={intl.formatMessage({ id: 'rtd_improvement_proposals' })}
         links={[
-          { url: 'https://github.com/efdevcon/DIPs', title: 'Github', icon: 'github' },
+          { url: 'https://github.com/efdevcon/', title: 'Github', icon: 'github' },
           { url: 'https://forum.devcon.org/', title: 'Forum', icon: 'forum' },
         ]}
-        bottomLinks={[{ url: 'https://github.com/efdevcon/DIPs', title: intl.formatMessage({ id: 'rtd_continue_to_github' }) }]}
+        bottomLinks={[
+          { url: 'https://github.com/efdevcon/DIPs', title: intl.formatMessage({ id: 'rtd_continue_to_github' }) },
+        ]}
       >
         <div className={css['container']}>
           <div className={css['header']}>
             <div className={css['title']}>
-              <h3 className="subsection-header">{intl.formatMessage({ id: 'dips_proposals' })}</h3> 
-              <span role='button' className={css['info']} aria-label={props.whatIsaDIP.title} onClick={() => {
-                setModalOpen(true)
-              }}>
+              <h3 className="subsection-header">{intl.formatMessage({ id: 'dips_proposals' })}</h3>
+              <span
+                role="button"
+                className={css['info']}
+                aria-label={props.whatIsaDIP.title}
+                onClick={() => {
+                  setModalOpen(true)
+                }}
+              >
                 <IconInfo />
               </span>
             </div>
@@ -44,11 +51,11 @@ export const Contribute = React.forwardRef((props: any, ref) => {
               <Filter onFilter={e => setFilter(e)} filters={filters} />
             </div>
           </div>
-            <ScrollGradient className={css['gradient']} height="50px">
-              <div className={css['content']}>
-                <Proposals dips={props.dips} filter={filter} />
-              </div>
-            </ScrollGradient>
+          <ScrollGradient className={css['gradient']} height="50px">
+            <div className={css['content']}>
+              <Proposals dips={props.dips} filter={filter} />
+            </div>
+          </ScrollGradient>
         </div>
 
         <Modal

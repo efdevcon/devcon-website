@@ -7,7 +7,7 @@ author: Devcon Team
 categories: Devcon
 permaLink: https://blog.ethereum.org/2021/01/26/the-longer-road-to-devcon/
 imageUrl: https://storage.googleapis.com/ethereum-hackmd/upload_bb7c2ddd6e5013d15f762229fa168f5f.png
-image: ../../assets/images/devcon6.png
+image: ../../assets/images/road-to-devcon-landscape.png
 ---
 
 Friends,
