@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useIntl } from 'react-intl';
 
-export const hashSlug = (slug: string) => '#' + slug.replaceAll(' ', '-').toLowerCase()
+export const hashSlug = (slug: string) => '#' + slug.replace(/\s/g, '-').toLowerCase()
 
 const usePageInView = (pageRefs: any) => {
   const [pageInView, setPageInView] = useState<(string|number)[]>([])
