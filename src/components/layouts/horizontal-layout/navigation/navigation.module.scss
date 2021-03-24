@@ -61,7 +61,7 @@ $nav-width: 348px;
     top: calc(100% - 64px);
     flex-direction: row;
     transition: transform 0.15s linear;
-    // overflow: hidden;
+    overflow: hidden;
 
     &.open {
       transform: translateY(calc(-100% + 64px));
