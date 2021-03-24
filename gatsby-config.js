@@ -17,6 +17,8 @@ const matomoUrl = 'https://matomo.ethereum.org'
 
 const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
+console.log('GATSBY CONFIG:', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'isNetlifyProduction', isNetlifyProduction, siteUrl)
+
 module.exports = {
   siteMetadata: {
     siteUrl: siteUrl,

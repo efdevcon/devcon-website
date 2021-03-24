@@ -22,7 +22,7 @@ export function SEO(props: SEOProps) {
   const lang = props.lang || intl.locale || intl.defaultLocale
   const canonical = props.canonicalUrl || ''
 
-  const image = 'https://efdevcon.netlify.app/assets/images/rtd-social.png'
+  const image = 'https://www.devcon.org/assets/images/rtd-social.png'
 
   const siteUrl = location.origin
   const url = `${siteUrl}${location.pathname || '/'}`.replace(/\/$/, '')
