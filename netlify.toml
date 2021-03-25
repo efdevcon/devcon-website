@@ -4,8 +4,9 @@
 
 [[redirects]]
   from = "/"
-  to = "/en"
+  to = "/en/"
   status = 302
+  force = true
 
 [[redirects]]
   from = '/*'
