@@ -37,7 +37,7 @@ export const Tweet = React.memo((props: { text: string }) => {
     <Link
       to={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
         props.text
-      )}&url=${encodeURIComponent('https://devcon.org')}`}
+      )}&url=${encodeURIComponent('https://www.devcon.org/')}`}
     >
       <button className="white">
         <IconTwitter /> Twitter
