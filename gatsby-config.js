@@ -248,7 +248,7 @@ module.exports = {
         path: `${__dirname}/src/content/i18n`,
         languages: supportedLanguages,
         defaultLanguage: defaultLanguage,
-        redirect: true,
+        redirect: false,
       },
     },
     {

@@ -3,6 +3,11 @@
   publish = "public"
 
 [[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+
+[[redirects]]
   from = '/*'
   to = '/index.html'
   status = 200
