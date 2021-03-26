@@ -1,5 +1,5 @@
 ---
-Summary: 'Implement an attestation-based ticketing system on Ethereum for Devcon. The solution will use two attestations, a ticket attestation and an email attestation, to verify the authenticity of a ticket holder for both on-chain and off-chain use cases. This system will function independently of Pretix.'
+Summary: 'Implementar un sistema de ticketing basado en verificación en Ethereum para Devcon. La solución utilizará dos certificaciones, un certificado de ticket y un certificado de correo electrónico, para verificar la autenticidad de un billete para los casos de uso tanto en cadena como fuera de la cadena. Este sistema funcionará independientemente de Pretix.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md
 DIP: 6
 Title: Solución de ticketing basada en comprobación para Devcon
@@ -13,7 +13,6 @@ Created: 2020-08-13
 ---
 
 ## Resumen de la propuesta
-
 Implementar un sistema de ticketing basado en verificación en Ethereum para Devcon. La solución utilizará dos certificaciones, un certificado de ticket y un certificado de correo electrónico, para verificar la autenticidad de un billete para los casos de uso tanto en cadena como fuera de la cadena. Este sistema funcionará independientemente de Pretix.
 
 ## Resumen
@@ -41,7 +40,6 @@ Esta solución también puede convertir a usuarios no criptográficos en usuario
 Los módulos principales de este sistema de ticketing basado en contratos inteligentes ya han sido implementados por AlphaWallet en proyectos anteriores como [FIFA 2018](https://AlphaWallet.com/for-business/case-study-tickets/) y UEFA 2020.
 
 Los trabajos clave que hay que hacer incluyen:
-
 - Integración del sistema de certificación de entradas en la confirmación de compra de entradas. Este componente generador de certificaciones sería creado por AlphaWallet, con integración en el servicio de verificación de correo electrónico implementado por el equipo de Devcon.
 - Un servicio de verificación por email
 - Componentes JavaScript de Attestation para sitios web
@@ -50,7 +48,6 @@ Los trabajos clave que hay que hacer incluyen:
 El servicio de certificación por correo electrónico creado por AlphaWallet permitirá a los asistentes reclamar sus certificados en el sitio web attestation.id. Esto viene acompañado del objetivo de crear un ecosistema descentralizado de atestiguadores en beneficio del enriquecimiento de las funciones de los contratos inteligentes y de la reducción de las transacciones en cadena. Estos certificados pueden ser reutilizados.
 
 ### Cuadro
-
 ![Tablero para ticketing basado en certificaciones](images/Storyboard_pic_DIP6.jpg)
 
 ### Ataques
@@ -72,13 +69,11 @@ Cuando el usuario desea interactuar con una función de contrato inteligente, co
 Además, se puede generar la prueba de propiedad de un ticket a partir de [TokenScript](https://tokenscript.org/), lo que permite a un sitio web reconocer a los titulares de tickets de Devcon. Esto es útil para los titulares de boletos para reservar servicios o solicitar un descuento. Podemos crear un sitio web de ejemplo para que los proveedores de servicios lo copien.
 
 ### Flujo de Procesos
-
 El diagrama de natación adjunto muestra cómo las diferentes partes implicadas en el proceso de ticketing usarían la solución para probar y verificar la autenticidad del billete.
 
 ![Proceso_Flow](images/Swimlane_DIP6.jpg)
 
 **Integración con Pretix**
-
 - No hay integraciones a la solución Pretix, según el último diseño. La aplicación actual para el check-in del ticket Pretix seguirá siendo usada como está.
 
 **Implementaciones anteriores**
@@ -90,13 +85,11 @@ La próxima implementación completa fue en 2019, con Shankai Deportes tokenisin
 En 2019, también trabajamos para implementar entradas de eventos EDCON 2020 en blockchain. Una vez más, la aplicación y los tickets estaban listos, pero gracias al pandemic, el evento se canceló 😭😭😭.
 
 ## Requisitos operacionales & Propiedad
-
 **Acciones requeridas para implementar la propuesta en Devcon**
 
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
 
 Desarrollo:
-
 - Mejorar nuestro sistema de ticketing basado en certificados y contratos inteligentes
 - Optimizando características para Devcon
 - Desarrollo y despliegue inteligente de contratos de tickets
@@ -106,7 +99,7 @@ Desarrollo:
 
 Las operaciones para el evento deberían ser más o menos las mismas que el Devcon anterior. Se necesitaría más apoyo técnico para las personas que están probando el nuevo sistema.
 
-2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
+2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 AlphaWallet y el equipo de Devcon serán responsables de la implementación. La gobernanza del proyecto se realizaría a través de reuniones semanales o de forma duradera gestionadas de forma ágil.
 
@@ -128,7 +121,7 @@ AlphaWallet y el equipo de Devcon serán responsables de la implementación. La 
 
 ---
 
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀)
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀)
 
 Cualquier servicio que requiera verificar a los asistentes, tales como descuento para los productos, vales redimibles, desbloqueo de contenido, IoT (puerta abierta, pantalla de control), colateral para DeFis y otros.
 
@@ -137,15 +130,13 @@ El proyecto [CO2ken](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27)
 ## Enlaces & Información adicional
 
 **Preguntas posibles**
-
 1. ¿Pueden funcionar los Tickets sin conexión a Internet? R. Sí, el billete se puede utilizar para facturar sin conexión a Internet. Este fue uno de los requisitos clave para las implementaciones de la FIFA y la UEFA. Sin embargo, será necesario que Internet acceda a las características avanzadas de dApp ofrecidas por el boleto, como votar.
 
 2. tbc
 
 **Enlaces**
-
-- [Enlace al Foro de Devon — solución de Ticketing basada en Attestation DIP](https://forum.devcon.org/t/attestation-based-ticketing-system-that-is-managed-by-ethereum-smart-contracts-and-integrated-with-pretix-re-rfp-1-onchain-ticketing/54)
-- [Sitio web de AlphaWallet](https://alphawallet.com/)
-- [Estudio de caso de FIFA Tickets](https://alphawallet.com/for-business/case-study-tickets/)
-- [Pretix Solution GitHub](https://github.com/pretix/pretix)
-- [AlphaWallet GitHub](https://github.com/AlphaWallet)
+* [Enlace al Foro de Devon — solución de Ticketing basada en Attestation DIP](https://forum.devcon.org/t/attestation-based-ticketing-system-that-is-managed-by-ethereum-smart-contracts-and-integrated-with-pretix-re-rfp-1-onchain-ticketing/54)
+* [Sitio web de AlphaWallet](https://alphawallet.com/)
+* [Estudio de caso de FIFA Tickets](https://alphawallet.com/for-business/case-study-tickets/)
+* [Pretix Solution GitHub](https://github.com/pretix/pretix)
+* [AlphaWallet GitHub](https://github.com/AlphaWallet)
