@@ -1,5 +1,5 @@
 ---
-Summary: 'Implement an attestation-based ticketing system on Ethereum for Devcon. The solution will use two attestations, a ticket attestation and an email attestation, to verify the authenticity of a ticket holder for both on-chain and off-chain use cases. This system will function independently of Pretix.'
+Summary: 'Implementar un sistema de ticketing basado en verificación en Ethereum para Devcon. La solución utilizará dos certificaciones, un certificado de ticket y un certificado de correo electrónico, para verificar la autenticidad de un billete para los casos de uso tanto en cadena como fuera de la cadena. Este sistema funcionará independientemente de Pretix.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md
 DIP: 6
 Title: Solución de ticketing basada en comprobación para Devcon
@@ -99,7 +99,7 @@ Desarrollo:
 
 Las operaciones para el evento deberían ser más o menos las mismas que el Devcon anterior. Se necesitaría más apoyo técnico para las personas que están probando el nuevo sistema.
 
-2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (i.e. working on day 0)
+2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 AlphaWallet y el equipo de Devcon serán responsables de la implementación. La gobernanza del proyecto se realizaría a través de reuniones semanales o de forma duradera gestionadas de forma ágil.
 
@@ -121,7 +121,7 @@ AlphaWallet y el equipo de Devcon serán responsables de la implementación. La 
 
 ---
 
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Bonus points for collaboration across teams 🙂🚀)
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀)
 
 Cualquier servicio que requiera verificar a los asistentes, tales como descuento para los productos, vales redimibles, desbloqueo de contenido, IoT (puerta abierta, pantalla de control), colateral para DeFis y otros.
 
