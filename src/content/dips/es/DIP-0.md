@@ -25,7 +25,7 @@ El autor del DIP es responsable de presentar los argumentos a favor de un DIPP p
 El equipo de Devcon tiene la intención de proporcionar un mecanismo para recolectar información de la comunidad colaborativa sobre lo que debe incluirse en el próximo Devcon. Si bien estamos entusiasmados de tener un proceso más formal para escuchar ideas de la comunidad (aproximadamente inspiradas por la PEP más descentralizada, BIP y procesos EIP), este es un experimento, y debe entenderse que la aprobación de propuestas en última instancia corresponde exclusivamente al equipo de Devcon. Los DI se centran en la colaboración en el ecosistema, así que por favor revisen y colaboren en otras propuestas en lugar de enviar posibles duplicados.
 
 ## Temas
-Hay dos maneras de sugerir un DIP. Nosotros, el equipo de Devcon emitimos una lista de deseos (a través de RFPs) para implementaciones que nos gustaría que sucedieran en la próxima edición de la conferencia. ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! También acogemos con satisfacción todas y cualquier gran idea que mejore Devcon. We also welcome all and any great idea that would improve Devcon.
+Hay dos maneras de sugerir un DIP. Nosotros, el equipo de Devcon emitimos una lista de deseos (a través de RFPs) para implementaciones que nos gustaría que sucedieran en la próxima edición de la conferencia. ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! También acogemos con satisfacción todas y cualquier gran idea que mejore Devcon. También acogemos con satisfacción todas y cualquier gran idea que mejore Devcon.
 
 Aquí hay una lista de temas para inspirarte:
 
@@ -128,16 +128,16 @@ __50 palabras resumy__
 
 -----Abstract-----
 __200 palabra descripción de la propuesta.
-- How is this solution better than a non-blockchain experience?
-- How does this proposal introduce attendees to a novel blockchain/ethereum use case?
+- ¿Cómo es esta solución mejor que una experiencia que no sea blockchain?
+- ¿Cómo introduce esta propuesta a los asistentes a un nuevo caso de uso de blockchain/ethereum?
 
------Implementation-----
-__Below are some useful prompts__
-- Has any part of this proposal been implemented at other events? Si es así, por favor describa cómo se fue.
-- Do you require feedback or data from attendees post-event?
+-----Implementación-----
+__Debajo hay algunas indicaciones útiles__
+- ¿Alguna parte de esta propuesta ha sido implementada en otros eventos? Si es así, por favor describa cómo se fue.
+- ¿Necesita comentarios o datos de los asistentes después del evento?
 
------Operational Requirements & Ownership-----
-__Please answer questions below:__
+-----Requisitos operacionales & Propiedad-----
+__Por favor, responde a las siguientes preguntas:__
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
 2.
 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
@@ -148,8 +148,8 @@ __Please answer questions below:__
 __Cualquier información adicional__ (Puntos de bonus para la colaboración entre equipos :))
 
 -----Enlaces & Información Adicional-----
-__Cualquier información adicional__ (Bonus points for collaboration across teams :))
+__Cualquier información adicional__ (Puntos de bonus para la colaboración entre equipos :))
 
------Links & Additional Information-----
-__Any additional information__
+-----Enlaces & Información Adicional-----
+__Cualquier información adicional__
 ```
