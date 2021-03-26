@@ -1,5 +1,5 @@
 ---
-Summary: 'Status as the communication layer for Devcon (on the ground and for satellite events). Utilizing Status as the layer into which many different projects showcased at Devcon plug in for maximum usability.'
+Summary: 'Estado como la capa de comunicación para Devcon (en el suelo y para eventos de satélite). Utilizando el estado como la capa en la que se mostraron muchos proyectos diferentes en el enchufe de Devcon para la máxima usabilidad.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-10.md
 DIP: 10
 Title: Estado como capa de comunicación de Devcon
