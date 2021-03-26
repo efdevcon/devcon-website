@@ -8,7 +8,6 @@ interface MeetupOverviewProps {
 }
 
 export function MeetupOverview(props: MeetupOverviewProps) {
-
   return (
     <div className={css['events']}>
       {props.data.map((event: Meetup) => {

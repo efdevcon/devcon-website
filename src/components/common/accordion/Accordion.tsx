@@ -29,13 +29,19 @@ export function Accordion(props: AccordionProps) {
 
   return (
     <div>
-      <div role="button" className={css['category']} aria-label={`Toggle ${props.title}`} onClick={() => setShowQuestions(!showQuestions)}>
+      <div
+        role="button"
+        className={css['category']}
+        aria-label={`Toggle ${props.title}`}
+        onClick={() => setShowQuestions(!showQuestions)}
+      >
         <h3>{props.title}</h3>
         {showQuestions && <IconMinus />}
         {!showQuestions && <IconPlus />}
       </div>
 
-      {props.items.length > 0 && showQuestions &&
+      {props.items.length > 0 &&
+        showQuestions &&
         props.items.map((item, index) => {
           const open = opens[index]
           return (

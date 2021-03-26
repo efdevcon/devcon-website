@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
-import { useIntl } from 'react-intl';
+import { useIntl } from 'react-intl'
 
 export const hashSlug = (slug: string) => '#' + slug.replace(/\s/g, '-').toLowerCase()
 
 const usePageInView = (pageRefs: any) => {
-  const [pageInView, setPageInView] = useState<(string|number)[]>([])
-  const intl = useIntl();
+  const [pageInView, setPageInView] = useState<(string | number)[]>([])
+  const intl = useIntl()
 
   useEffect(() => {
     const unobserve = []
 
     if (!window.IntersectionObserver) {
-      alert(intl.formatMessage({ id: 'browser_not_supported' }));
+      alert(intl.formatMessage({ id: 'browser_not_supported' }))
 
-      return;
+      return
     }
 
     Object.entries(pageRefs.current).forEach(([pageTitle, page], index) => {
@@ -41,7 +41,7 @@ const usePageInView = (pageRefs: any) => {
     }
   }, [pageRefs])
 
-  return pageInView;
+  return pageInView
 }
 
 export default usePageInView

@@ -18,10 +18,10 @@ export function ToEvent(node: any): Event {
 
 export function ToMeetupData(data: any): Array<Meetup> {
   const meetups = data.meetups ? data.meetups.nodes.map((i: any) => ToMeetup(i)) : []
-  const globalMeetup = meetups.find((i: Meetup) => i.location === 'Global, Worldwide');
-  const otherMeetups = meetups.filter((i: Meetup) => i.location !== 'Global, Worldwide');
-  
-  return [{ ...globalMeetup }, ...otherMeetups];
+  const globalMeetup = meetups.find((i: Meetup) => i.location === 'Global, Worldwide')
+  const otherMeetups = meetups.filter((i: Meetup) => i.location !== 'Global, Worldwide')
+
+  return [{ ...globalMeetup }, ...otherMeetups]
 }
 
 export function ToMeetup(node: any): Meetup {

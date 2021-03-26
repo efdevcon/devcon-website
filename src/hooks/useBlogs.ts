@@ -31,10 +31,9 @@ export const useBlogs = (): Array<BlogPost> => {
       }
     }
   `)
-  
+
   return data.blogs.nodes.map((i: any) => mapToBlog(i))
 }
-
 
 function mapToBlog(source: any): BlogPost {
   return {
@@ -44,7 +43,7 @@ function mapToBlog(source: any): BlogPost {
     body: source.html,
     slug: source.fields.slug,
     permaLink: source.frontmatter.permaLink,
-    imageUrl: source.frontmatter.image.childImageSharp.fluid
+    imageUrl: source.frontmatter.image.childImageSharp.fluid,
     /*source.frontmatter.image
       ? source.frontmatter.image.childImageSharp.fluid.src
       : source.frontmatter.imageUrl*/
