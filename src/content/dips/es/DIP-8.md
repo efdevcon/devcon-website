@@ -1,5 +1,5 @@
 ---
-Summary: 'The main objective of this DIP is to replicate the experience of using POAP in Devcon 5 (Osaka). This being establishing the process for which every attendee gets one (and only one) POAP redemption code when they show up at the registration desk.'
+Summary: 'El objetivo principal de este DIP es replicar la experiencia de usar POAP en Devcon 5 (Osaka). Estando estableciendo el proceso para el cual cada asistente recibe uno (y sólo) código de canje POAP cuando aparecen en el mostrador de registro.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-8.md
 DIP: 8
 Title: Prueba del Protocolo de Asistencia - Básicos
