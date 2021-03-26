@@ -49,11 +49,11 @@ Esta lista de reproducción se pondría en barajado y se reproduciría/pausa cua
 
 Debe ser bastante simple: solicite contenido a las listas de reproducción dedicadas a la conferencia de antemano (equipo de udius rellenará el contenido según sea necesario), obtener permiso explícito por escrito de artistas que están incluidos en las listas de reproducción, distribuye estas listas de reproducción a los emcees y gente que maneja los sistemas de sonido en auditorios más grandes, etc. y luego hacer uso de ellos durante el evento.
 
-### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (i.e. working on Day 0)
+### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 Roneil Rumburg (enviado) para coordinar la creación de listas de reproducción, coordinadores de conferencia para distribuir listas de reproducción a las personas correctas en el equipo de sonido y otros equipos.
 
-### 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Bonus points for collaboration across teams :))
+### 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
 
 Livepeer por distribuir charlas de conferencias en línea, ¿tal vez desbloquear una insignia especial o NFT con tu ticket para contribuir a las listas de reproducción? ¡Muchas cosas podrían funcionar aquí!
 
