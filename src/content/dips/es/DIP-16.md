@@ -1,5 +1,5 @@
 ---
-Summary: 'Vocdoni and POAP joint proposal to provide a universally verifiable, affordable and offchain voting system for DevCon ticket-holders. Supports quadratic voting and other governance systems.'
+Summary: 'Propuesta conjunta de Vocdoni y POAP para proporcionar un sistema de votación universalmente verificable, asequible y offchain para los poseedores de billetes de DevCon. Soporta votaciones cuadráticas y otros sistemas de gobernanza.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-16.md
 DIP: 16
 Title: Encuestas verificables fuera de cadena para Devcon 6
@@ -17,8 +17,7 @@ Created: 2021-01-05
 Propuesta conjunta de Vocdoni y POAP para proporcionar un sistema de votación universalmente verificable, asequible y offchain para los poseedores de billetes de DevCon. Soporta votaciones cuadráticas y otros sistemas de gobernanza.
 
 ## Resumen
-
-**Descripción de 200 palabras de la propuesta.**
+__Descripción de 200 palabras de la propuesta.__
 
 Nuestra propuesta implica el desarrollo de una capa de gobernanza centralizada, escalable, asequible y universalmente verificable, completa con una gran UX/UI. Esto permitirá a los asistentes de Devcon ser escuchados y permitir una amplia gama de posibilidades para la organización del evento mientras estimula el conocimiento colectivo de la corona.
 
@@ -35,9 +34,7 @@ Después de este experimento, creemos que nuestra propuesta puede desarrollarse 
 Del mismo modo, también será posible desarrollar estrategias de gobierno retroactivo incluyendo participantes de anteriores ediciones de Devcon a procesos de votación o incluso dando más poder de voto a quienes son asistentes recurrentes.
 
 ## Motivación & Racionalidad
-
-**Debajo hay algunas sugerencias útiles**
-
+__Debajo hay algunas sugerencias útiles__
 - ¿Cómo mejoraría esto la experiencia de los asistentes?
 
 Los asistentes podrán hacer oír sus voces e influir en algunas decisiones.
@@ -82,6 +79,7 @@ La asociación cultural más grande de Europa (185. 00 miembros) ha utilizado Vo
 
 - ¿Necesita comentarios o datos de los asistentes después del evento? Los comentarios no sólo serán bienintencionados, sino que también serán muy importantes. Especialmente para continuar mejorando la herramienta para cubrir las necesidades de gobernanza de Devcon y otros eventos de la comunidad. Esto es crucial, ya que la gobernanza implica ocuparse del comportamiento humano y este primer piloto sin duda aportará muchos insumos para mejorar el producto. Tendremos disponible un helpdesk (chat+chatbot+KnowledgeBase+ticketsystem) y podríamos establecer canales adicionales (por ejemplo, telegram) para recibir retroalimentación técnica, accesibilidad y UX/UI.
 
+
 ## Requisitos operacionales & Propiedad
 
 **1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?**
@@ -98,39 +96,16 @@ Podemos garantizar una primera versión de la herramienta para principios de mar
 
 Se prepara 7 semanas de trabajo (a partir de hoy) para tener la primera versión lista para la prueba piloto detallada en RFP-4.
 
-- **Primera semana**
-  1. Llamamiento conjunto para dar a conocer en profundidad la propuesta de Vocdoni y POAP y para resolver posibles dudas. También a través del foro de Devcon.
-  2. Desarrollo del puente de Vocdoni
-- **Segunda semana**
-  1. Los organizadores de Devcon proporcionan una imagen detallada de cómo les gustaría organizar la votación y cómo se estructurará el contenido.
-  2. Desarrollo del puente de Vocdoni
-- **Tercera semana**
-  1. Vocdoni Bridge dev: Integración con tokens POAP
-  2. Vocdoni Bridge dev: Interfaz con votación simple y múltiple
-  3. Devcon trae comentarios
-  4. Demo
-- **Cuatro semana**
-  1. Vocdoni Bridge dev: Integración con tokens POAP
-  2. Vocdoni Bridge dev: Frontend
-  3. Vocdoni Bridge dev: Implementación de la votación cuadrática en el frontend
-- **Cinco semanas**
-  1. Vocdoni Bridge dev: Soporte para Web3modal
-  2. Vocdoni Bridge dev: Abordando problemas
-  3. Vocdoni Bridge dev: Personalizaciones de Devcon si es necesario
-  4. Ejecutar una prueba
-- **Seis semana**
-  1. Ejecutar una prueba
-  2. Vocdoni Bridge dev: Abordando problemas
-- **Séptima semana**
-  1. Ejecutar la última prueba antes de lanzar
-  2. Iniciar
-- **Para direccionar post-piloto**
-  1. Vocdoni Bridge dev: integración de AlphaWallet
-  2. Vocdoni Bridge dev: Mejoras avanzadas de privacidad
-  3. Puente Vocdoni dev: Más opciones de tipo de votación
-  4. Explora e introduce más estrategias anticolusión
+* **First week** 1) Joint call to make Vocdoni and POAP's proposal known in depth and to solve potential doubts. También a través del foro de Devcon. Desarrollo del puente de Vocdoni
+* Los organizadores de Devcon proporcionan una imagen detallada de cómo les gustaría organizar la votación y cómo se estructurará el contenido. Desarrollo del puente de Vocdoni
+* **Third week** 1) Vocdoni Bridge dev: Integration with POAP tokens 2) Vocdoni Bridge dev: Frontend with simple and multiple choice voting 3) Devcon bring feedback 4) Demo
+* Vocdoni Bridge dev: Implementación de la votación cuadrática en el frontend
+* **Fifth week** 1) Vocdoni Bridge dev: Support for Web3modal 2) Vocdoni Bridge dev: Addressing issues 3) Vocdoni Bridge dev: Devcon customizations if needed 4) Run a test
+* **Sixth week** 1) Run a test 2) Vocdoni Bridge dev: Addressing issues
+* Ejecutar la última prueba antes de lanzar
+* **To address post-pilot** 1) Vocdoni Bridge dev: AlphaWallet integration 2) Vocdoni Bridge dev: Advanced privacy enhancements 3) Vocdoni Bridge dev: More voting type options 4) Explore and introduce more anti-collusion strategies
 
-3. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
+3. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 El proyecto será coordinado por Pau Escrich (pau@vocdoni.io) y Patricio Worthalter (worthalter@poap.xyz). Vocdoni y POAP unen fuerzas con un equipo mixto de 4 desarrolladores trabajando en el proyecto.
 
@@ -144,7 +119,7 @@ Los equipos Vocdoni y POAP ya están trabajando en el proyecto para permitir a l
 | 2. | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul> | PUEDAR      |
 | 3. | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul> | DevCon      |
 
-4. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
+4. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
 
 El puente Vocdoni puede trabajar con tokens POAP, pero también con tokens ERC-721 y ERC20, permitiendo otras iniciativas de los organizadores, participantes, proyectos o patrocinadores para que surjan de forma natural a lo largo del evento. Dado que el sistema no tiene permiso, permite una forma muy fácil de ejecutar proyectos de gobernanza en el evento lo que puede significar un estallido de iniciativas que faciliten el empoderamiento de la comunidad, doocracia y más.
 
@@ -153,17 +128,16 @@ Creemos que podemos traer una capa de gobernanza para otras propuestas de mejora
 Además, nuestro sistema nos permite ir un paso más allá en el objetivo de integrar a la comunidad. recaudar aportes y tomar decisiones informadas durante todo el año, más allá de los días en que se celebra el evento.
 
 **Siguiente & pasos potenciales después del piloto:**
-
-- Integra Vocdoni Bridge con AlphaWallet
-- Integra zk-SNARKs a través de la web para habilitar el voto anónimo (basado en circuitos Iden3 circom)
-- Implementación del frontend de nuevos tipos de procesos de votación usando [Protocolo de votación](https://www.notion.so/vocdoni/Question-types-eaa2041ec5ec41ee8de642d7a7c062dd) como opción Pesada, ordenada, Rank, opción múltiple, . , e incluso otras votaciones exponenciales (¡no sólo cuadráticas!)
-- Integración con otras carteras como Status.im
+* Integra Vocdoni Bridge con AlphaWallet
+* Integra zk-SNARKs a través de la web para habilitar el voto anónimo (basado en circuitos Iden3 circom)
+* Implementación del frontend de nuevos tipos de procesos de votación usando [Protocolo de votación](https://www.notion.so/vocdoni/Question-types-eaa2041ec5ec41ee8de642d7a7c062dd) como opción Pesada, ordenada, Rank, opción múltiple, . , e incluso otras votaciones exponenciales (¡no sólo cuadráticas!)
+* Integración con otras carteras como Status.im
 
 ## Enlaces & Información adicional
 
-- [Presentando el puente Vocdoni](https://www.notion.so/vocdoni/Introducing-Vocdoni-Bridge-cf7e73d38c4a45788358e9a1497cdf19)
-- [Documentos de la pila abierta de Vocdoni](https://docs.vocdoni.io/)
-- [IU del puente Vocdoni](https://www.figma.com/file/NO5wUEYxKgIppKz5fryBTR/Vocdoni-Bridge?node-id=0:1)
-- [Vocdoni Github repo's](https://github.com/vocdoni)
-- [POAP Github repo](https://github.com/poapxyz/poap)
-- [Lista de eventos con tokens POAP](https://app.poap.xyz/admin/events)
+* [Presentando el puente Vocdoni](https://www.notion.so/vocdoni/Introducing-Vocdoni-Bridge-cf7e73d38c4a45788358e9a1497cdf19)
+* [Documentos de la pila abierta de Vocdoni](https://docs.vocdoni.io/)
+* [IU del puente Vocdoni](https://www.figma.com/file/NO5wUEYxKgIppKz5fryBTR/Vocdoni-Bridge?node-id=0:1)
+* [Vocdoni Github repo's](https://github.com/vocdoni)
+* [POAP Github repo](https://github.com/poapxyz/poap)
+* [Lista de eventos con tokens POAP](https://app.poap.xyz/admin/events)
