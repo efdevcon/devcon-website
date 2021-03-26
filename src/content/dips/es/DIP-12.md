@@ -1,5 +1,5 @@
 ---
-Summary: 'Addition to CO2ken"s [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md) clarifying the collection and allocation of offsetting contributions through a DAO which gives contributors the possibility to vote for the offset projects they want to support.'
+Summary: 'Adición a CO2ken"s [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1. d) clarificar la recolección y asignación de contribuciones compensatorias a través de un DAO que da a los colaboradores la posibilidad de votar por los proyectos compensatorios que desean apoyar.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-12.md
 DIP: 12
 Title: Adicionalmente a DIP–1 — Hacer de Devcon Carbon Neutral
@@ -61,9 +61,9 @@ Las DAO están saliendo de la Ether como setas tratando de abordar los desafíos
         - presentar los diferentes proyectos (tal vez incluso conseguir desarrolladores de proyectos allí en persona) y dar a los colaboradores una oportunidad de involucrarse directamente con la DAO;
         - sensibilizar sobre los desafíos ambientales en el espacio criptográfico y sobre las formas de abordarlos. La [Iniciativa de la Naturaleza Soberana](http://sovereignnature.com/) nos apoyará en ese frente.
 
-2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (i.e. working on Day 0)*
+2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)*
     - CO2ken será responsable de la exitosa aplicación de esta propuesta.
-3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Bonus points for collaboration across teams :))*
+3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))*
     - vea [original DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md).
 
 ## Enlaces & Información adicional
