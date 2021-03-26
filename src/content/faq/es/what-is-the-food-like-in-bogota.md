@@ -10,6 +10,6 @@ A continuación se muestran algunos de los platos populares, pero uno puede espe
 - Muchos platos principales consisten en pulpo, camarón u otros platos de mar.
 - Ajiaco es una sopa abundante común hecha con pollo, patatas y maíz en el café
 - Las empanadas son objetos comunes para el desayuno.
-- ¡Tamales! Tamales! Need we say more?
+- ¡Tamales! Tamales! ¿Hay que decir más?
 - Chocolate caliente, que es una necesidad absoluta en la vida de los locales, se sirve junto a un plato de queso que luego se puede sumergir en la bebida, causando que se derrite.
 - A pesar de la gran cantidad de exportaciones de café, los cafés especializados son relativamente nuevos en Bogota, pero afortunados para nosotros están en ascenso!
