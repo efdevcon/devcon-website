@@ -1,5 +1,5 @@
 ---
-Summary: 'Give Devcon participants a taste of a regenerative economy, by allowing them to offset the carbon emissions associated with the event, as part of the ticketing process.'
+Summary: 'Dar a los participantes de Devcon un sabor a una economía regenerativa. permitiéndoles compensar las emisiones de carbono asociadas al evento, como parte del proceso de facturación.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md
 DIP: 1
 Title: Hacer a Devcon carbono neutral
@@ -13,7 +13,7 @@ Created: 2020-07-20
 ---
 
 ## Resumen de la propuesta
-Give Devcon participants a taste of a regenerative economy, by allowing them to offset the carbon emissions associated with the event, as part of the ticketing process.
+Dar a los participantes de Devcon un sabor a una economía regenerativa. permitiéndoles compensar las emisiones de carbono asociadas al evento, como parte del proceso de facturación.
 
 ## Resumen
 Queremos ofrecer a los asistentes la capacidad de compensar las emisiones de carbono de Devcon. Esto incluye tanto **emisiones directas** que ocurren durante el evento: uso de energía, aire acondicionado, alimentos, etc. así como **emisiones indirectas** que están estrechamente acopladas a ella—lo que es más importante, alojamiento y vuelos.
@@ -65,10 +65,10 @@ Precio de compensación de carbono de alta calidad por tonelada:
 1. *¿Qué medidas son necesarias para aplicar la propuesta en Devcon?*
     - El único esfuerzo que se necesita en Devcon sería incluir cualquier bracetet o swag a la hora de registrarse. Todos los demás esfuerzos se centran en la integración del proceso de reserva.
 
-2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (i.e. working on Day 0)*
+2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)*
     - CO2ken será responsable de la exitosa aplicación de esta propuesta.
 
-3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Bonus points for collaboration across teams :))*
+3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))*
     - Cualquiera que contrarreste sus emisiones recibirá un TNF que represente su contribución.
     - Nos encantaría ver que otros equipos lo recogen para crear un refuerzo positivo, por ejemplo, los participantes con el NFT reciben un cambio especial, descuentos, etc.
     - Nos acercaremos activamente a otros proyectos en los que vemos formas divertidas de colaborar a medida que aparezcan más DI.
