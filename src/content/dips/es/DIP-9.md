@@ -1,5 +1,5 @@
 ---
-Summary: 'Devcon 6 is in 2021, a small virtual version on 2020 can help to test streaming, consensus rules on talks, and anything that could help to improve the experience for next year"s physical event.'
+Summary: 'El Devcon 6 es en 2021, una pequeña versión virtual en 2020 puede ayudar a probar streaming, reglas de consenso sobre conversaciones, y cualquier cosa que pueda ayudar a mejorar la experiencia para el evento físico del próximo año.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-9.md
 DIP: 9
 Title: Dispositivo 5.1
@@ -33,7 +33,7 @@ La comunidad hizo muchas mejoras este año: EIP-1159, Medalla Testnet, Reddit Sc
 
 ## Requisitos operacionales & Propiedad
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? Compartir con la comunidad, definir lo que queremos probar en esta edición virtual, definir lo grande que queremos este evento.
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad (i.e. working on Day 0) The Devcon Team and the Community
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad
 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP. (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP.
 
 ## Enlaces & Información adicional
