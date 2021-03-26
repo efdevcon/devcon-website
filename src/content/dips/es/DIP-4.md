@@ -97,7 +97,7 @@ El Protocolo de Dist0rción Social desarrolló [THC][thc] (Creador de Cacería d
 ```
 
 .                                         +---------------------+
-.                                         |                     |
+.                                         |
 .                                 +------>+ IPFS: Nivel Enc |
 +----------------+ | |
 | | | | | +-------------+
@@ -111,7 +111,7 @@ El Protocolo de Dist0rción Social desarrolló [THC][thc] (Creador de Cacería d
 | | | +---------------------+
 +----------------+ | | |
 .                                 +------>+ IPFS: dApp          |
-.                                         |                     |
+.                                         |
 .                                         +---------------------+
 ```
 
@@ -170,14 +170,14 @@ Con el fin de desarrollar un juego similar para Devcon, la información sobre la
 
 1. *¿Qué medidas son necesarias para aplicar la propuesta en Devcon?*
     - El juego debe ser desplegado pocos días antes de la conferencia. Los rompecabezas físicos y digitales deben estar listos el primer día del evento.
-    - Serving the game under `devcon.org` subdomain would make the game more trustworthy.
-    - Add the link to the game to the paper guide (if any) provided at Devcon.
+    - El juego bajo el subdominio `devcon.org` haría que el juego fuera más fiable.
+    - Añade el enlace al juego a la guía de papel (si los hay) proporcionada en Devcon.
     - Si los diseñadores de Devcon tienen bandwitdh, cree algunos NFT oficiales "firmado por Devcon" para distribuirlos para los ganadores.
 
-2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (i.e. working on Day 0)*
+2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)*
     - El Protocolo de distensión social será responsable de la correcta aplicación de esta propuesta.
 
-3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Bonus points for collaboration across teams :))*
+3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))*
     - Uno de los objetivos del juego es descubrir Devcon y sus proyectos. Conocer de antemano la lista de proyectos nos permitiría crear niveles a su alrededor.
 
 # Enlaces & Información adicional
