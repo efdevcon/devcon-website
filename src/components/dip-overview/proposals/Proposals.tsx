@@ -7,9 +7,7 @@ import { Table, SortVariation, TableColumn } from 'src/components/common/table'
 import { DIP } from 'src/types/dip'
 import GithubIcon from 'src/assets/icons/github.svg'
 import TooltipIcon from 'src/assets/icons/tooltip.svg'
-import ArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Share } from 'src/components/common/share'
-import { useIntl } from 'gatsby-plugin-intl'
 
 export const Links = ({ dip }: { dip: DIP }) => {
   return (
@@ -24,7 +22,7 @@ export const Links = ({ dip }: { dip: DIP }) => {
           <GithubIcon />
         </Link>
       )}
-      <Share url={`https://devcon.org${dip.slug}`} />
+      <Share url={dip.github} /*commented out until DIP page is deployed: url={`https://devcon.org${dip.slug}`}*/ />
     </div>
   )
 }
@@ -38,7 +36,9 @@ const tableColumns: Array<TableColumn> = [
     render: item => {
       return (
         <p className={`${css['index']} h3`}>
-          <Link to={item.slug}>{leftPad(item.number)}</Link>
+          <Link to={item.github} /*commented out until DIP page is deployed: to={item.slug}*/>
+            {leftPad(item.number)}
+          </Link>
         </p>
       )
     },
@@ -49,7 +49,7 @@ const tableColumns: Array<TableColumn> = [
     className: css['name-column'],
     sort: SortVariation.basic,
     render: item => {
-      return <Link to={item.slug}>{item.title}</Link>
+      return <Link to={item.github} /*commented out until DIP page is deployed: to={item.slug}*/>{item.title}</Link>
     },
   },
   {
@@ -67,7 +67,7 @@ const tableColumns: Array<TableColumn> = [
 
       switch (item.status.toLowerCase()) {
         case 'withdrawn':
-        case 'rejected':
+        case 'not implemented':
           labelType = 'error'
 
           break
@@ -100,6 +100,7 @@ const tableColumns: Array<TableColumn> = [
   {
     intl: 'dips_tags',
     key: 'tags',
+    className: css['tag-column'],
     sort: (item1, item2) => {
       const a = item1.tags
         .map(item => item.trim().toLowerCase())
@@ -156,64 +157,27 @@ const tableColumns: Array<TableColumn> = [
       return <Links dip={item} />
     },
   },
-  {
-    intl: 'dips_expand',
-    key: 'link',
-    className: css['expand-column'],
-    render: item => {
-      return (
-        <Link to={item.slug}>
-          <ArrowRight />
-        </Link>
-      )
-    },
-  },
+  // RTD: remove expand colum/link
+  // {
+  //   intl: 'dips_expand',
+  //   key: 'link',
+  //   className: css['expand-column'],
+  //   render: item => {
+  //     return (
+  //       <Link to={item.slug}>
+  //         <ArrowRight />
+  //       </Link>
+  //     )
+  //   },
+  // },
 ]
 
 type ProposalsProps = {
   dips: Array<DIP>
-}
-
-const filterOrder: { [key: string]: number } = {
-  draft: 0,
-  review: 1,
-  accepted: 2,
-  withdrawn: 3,
-  rejected: 4,
-}
-
-const resolveStatuses = (dips: Array<DIP>) => {
-  const uniqueStatuses: { [key: string]: string } = {}
-
-  dips.forEach((dip: DIP) => {
-    const normalizedStatus: string = dip.status.toLowerCase()
-
-    if (!uniqueStatuses[normalizedStatus]) {
-      if (typeof filterOrder[normalizedStatus] === 'undefined') return
-
-      uniqueStatuses[normalizedStatus] = normalizedStatus
-    }
-  })
-
-  return Object.values(uniqueStatuses).sort((a, b) => {
-    const aPriority = filterOrder[a]
-    const bPriority = filterOrder[b]
-
-    if (aPriority > bPriority) {
-      return 1
-    } else if (aPriority < bPriority) {
-      return -1
-    }
-
-    return 0
-  })
+  filter?: string
 }
 
 export const Proposals = (props: ProposalsProps) => {
-  const [statusFilter, setStatusFilter] = React.useState<string | null>(null)
-  const noFilter = !statusFilter
-  const intl = useIntl()
-
   // Pushing an extra column into the table to make room for a link back to the page
   const dipsWithLink = React.useMemo(() => {
     return props.dips.map(dip => {
@@ -225,35 +189,13 @@ export const Proposals = (props: ProposalsProps) => {
   }, [props.dips])
 
   const filteredDips = React.useMemo(() => {
-    return noFilter ? dipsWithLink : dipsWithLink.filter(dip => dip.status.toLowerCase() === statusFilter)
-  }, [noFilter, dipsWithLink, statusFilter])
+    return props.filter === '' || props.filter === 'All'
+      ? dipsWithLink
+      : dipsWithLink.filter(dip => dip.status.toLowerCase() === props.filter?.toLowerCase())
+  }, [dipsWithLink, props.filter])
 
   return (
     <section id="proposals" className={css['container']}>
-      <div className={css['top-container']}>
-        <h3 className="subsection-header">{intl.formatMessage({ id: 'dips_proposals' })}</h3>
-        <div className={css['filters']}>
-          <p onClick={() => setStatusFilter(null)} className={noFilter ? css['active-filter'] : undefined}>
-            {intl.formatMessage({ id: 'dips_all' })}
-          </p>
-
-          {resolveStatuses(props.dips).map(status => {
-            const normalizedStatus = status?.toLowerCase()
-            const active = normalizedStatus === statusFilter
-
-            return (
-              <p
-                key={normalizedStatus}
-                onClick={() => setStatusFilter(statusFilter === normalizedStatus ? null : normalizedStatus)}
-                className={active ? css['active-filter'] : undefined}
-              >
-                {normalizedStatus[0].toUpperCase() + normalizedStatus.slice(1)}
-              </p>
-            )
-          })}
-        </div>
-      </div>
-
       <Table itemKey="number" items={filteredDips} columns={tableColumns} />
     </section>
   )

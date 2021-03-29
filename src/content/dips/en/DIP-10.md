@@ -6,7 +6,7 @@ Title: Status as Devcon Communication Layer
 Status: DRAFT
 Themes: Social
 Tags: Communication, Event Production, Sponsorship
-Authors: jonathan@status.im
+Authors: Jonathan Zerah <jonathan@status.im>
 Resources Required: from the Devcon team side - support and communication
 Discussion: https://forum.devcon.org/t/dip-10-status-as-communication-layer-for-devcon/115
 Created: 2020-08-21
@@ -56,7 +56,6 @@ QR codes on rooms to join live chats about what’s happening in a specific room
 Since keycard comes with some preloaded assets e.g a POAP token, 10 SNTs, x DAIs to buy food etc. we can easily merge experiential with communication in a smooth bundle and plug in any other partner projects’ tokens.
 
 ## Operational Requirements & Ownership
-
 Please answer questions below:
 
 Devcon team needs to be involved in the following manner:

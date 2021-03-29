@@ -15,6 +15,13 @@ export const useBlogs = (): Array<BlogPost> => {
             author
             permaLink
             imageUrl
+            image {
+              childImageSharp {
+                fluid(maxHeight: 1024, quality: 80) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+              }
+            }
           }
           fields {
             slug
@@ -36,6 +43,9 @@ function mapToBlog(source: any): BlogPost {
     body: source.html,
     slug: source.fields.slug,
     permaLink: source.frontmatter.permaLink,
-    imageUrl: source.frontmatter.imageUrl,
+    imageUrl: source.frontmatter.image.childImageSharp.fluid,
+    /*source.frontmatter.image
+      ? source.frontmatter.image.childImageSharp.fluid.src
+      : source.frontmatter.imageUrl*/
   }
 }

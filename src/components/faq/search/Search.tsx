@@ -24,11 +24,15 @@ export function Search(props: SearchProp) {
         <input
           id="search"
           type="text"
-          placeholder="Filter by keywords"
+          placeholder={intl.formatMessage({ id: 'faq_filter_keywords' })}
           value={searchFilter}
           onChange={e => onSearch(e)}
         />
-        <span className={css['subtitle']}>{intl.formatMessage({ id: 'faq_filter' })}</span>
+
+        {/* 
+        RTD: remove sub-text
+        <span className={css['subtitle']}>{intl.formatMessage({ id: 'faq_filter' })}</span> 
+        */}
       </div>
     </>
   )

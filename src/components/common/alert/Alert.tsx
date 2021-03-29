@@ -63,7 +63,7 @@ export function Alert(props: AlertProps) {
       <div className={css.message}>
         {props.dismissable && (
           <div className={css.right}>
-            <span role="button" className={css.dismiss} onClick={dismiss}>
+            <span role="button" className={css.dismiss} aria-label="Dismiss alert" onClick={dismiss}>
               <IconCross />
             </span>
           </div>

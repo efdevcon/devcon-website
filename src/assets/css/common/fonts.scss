@@ -1,6 +1,5 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
@@ -29,6 +28,12 @@ h4,
 .h4 {
   @include fonts.font-tertiary;
   @include fonts.font-md;
+}
+
+.massive {
+  @include fonts.font-tertiary;
+  font-size: $size-16 + $size-16;
+  line-height: 125%;
 }
 
 p {
@@ -126,4 +131,10 @@ p {
 
 .no-underline {
   text-decoration: none;
+}
+
+.hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
 }

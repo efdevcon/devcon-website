@@ -21,7 +21,7 @@
 
 .container {
   @include fonts.font-secondary;
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  // border-top: 2px solid rgba(0, 0, 0, 0.2);
   position: relative;
 
   .header {
@@ -54,9 +54,11 @@
 
     background: $bg-color;
 
-    &:hover {
-      outline: 1px solid rgba(121, 128, 135, 1);
-      background: darken($bg-color, 5%);
+    @media not all and (hover: none) {
+      &:hover {
+        outline: 1px solid rgba(121, 128, 135, 1);
+        background: darken($bg-color, 5%);
+      }
     }
 
     &:nth-child(even) {

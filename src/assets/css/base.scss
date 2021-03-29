@@ -31,6 +31,10 @@ a {
   text-decoration: none;
 }
 
+.no-select {
+  user-select: none;
+}
+
 // For cases where we don't want default link styling
 a.plain {
   color: inherit;

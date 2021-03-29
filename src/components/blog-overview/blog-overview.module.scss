@@ -15,42 +15,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .arrow-button {
-      --text-color: white;
-      background: black;
-      padding: 8px;
-
-      &:disabled {
-        background: grey;
-      }
-
-      &:last-child {
-        margin-left: 20px;
-      }
-
-      @media (max-width: $screen-lg) {
-        display: none;
-      }
-    }
   }
 
   .cards {
     @include layout.content;
-    display: flex;
-    flex-direction: column;
-    // overflow: hidden;
-    // max-width: 100%;
   }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // overflow: hidden;
+  // max-width: 100%;
 
   .card {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+    &:not(.no-swipe) {
+      cursor: move; /* fallback if grab cursor is unsupported */
+      cursor: grab;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+    }
     height: 500px;
     margin-right: $gap-4;
     margin-bottom: $gap-4;
+    background: white;
 
     @media (max-width: $screen-lg) {
       height: 400px;
@@ -62,6 +51,27 @@
 
     &.last {
       margin-right: 0px;
+    }
+  }
+}
+
+.arrow-button {
+  --text-color: white;
+  background: black;
+  padding: 8px;
+  touch-action: none; // Prevent zoom when tapping button on mobile
+
+  &:disabled {
+    background: grey;
+  }
+
+  &:last-child {
+    margin-left: 20px;
+  }
+
+  &:not(.always-buttons) {
+    @media (max-width: $screen-lg) {
+      display: none;
     }
   }
 }

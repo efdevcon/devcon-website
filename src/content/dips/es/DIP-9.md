@@ -3,10 +3,10 @@ Summary: 'Devcon 6 is in 2021, a small virtual version on 2020 can help to test 
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-9.md
 DIP: 9
 Title: Dispositivo 5.1
-Status: Rejected
+Status: Not Implemented
 Themes: Virtual Experience
 Tags: Other
-Authors: <Cristian Espinoza> @crisgarner
+Authors: Cristian Espinoza (@crisgarner)
 Discussion: https://forum.devcon.org/t/devcon-5-1-or-devcon-6-alpha/71
 Created: 2020-08-14
 ---
@@ -36,8 +36,8 @@ La comunidad hizo muchas mejoras este año: EIP-1159, Medalla Testnet, Reddit Sc
 ## Requisitos operacionales & Propiedad
 
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? Compartir con la comunidad, definir lo que queremos probar en esta edición virtual, definir lo grande que queremos este evento.
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP.
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP. (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP.
 
 ## Enlaces & Información adicional
 

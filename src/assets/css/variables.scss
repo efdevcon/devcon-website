@@ -28,7 +28,7 @@ $color-light: #323232;
 $color-light-light: #ffffff;
 
 // Fonts
-$font-primary: 'Montserrat', sans-serif;
+$font-primary: 'Roboto', serif; // 'Montserrat', sans-serif;
 $font-secondary: 'Roboto', serif;
 $font-tertiary: 'Space Mono', monospace;
 
@@ -48,12 +48,17 @@ $size-12: $size-1 * 12;
 $size-13: $size-1 * 13;
 $size-14: $size-1 * 14;
 $size-15: $size-1 * 15;
-$size-16: $size-1 * 16; // 2rem 32px
+$size-16: $size-1 * 16; // 2rem 32px;
 $size-20: $size-1 * 20; // 2rem 40px;
 $size-32: $size-1 * 32; // 4rem 64px;
+$size-40: $size-1 * 40; // 5rem 80px;
+$size-44: $size-1 * 44; // 5.5rem 88px;
 $size-48: $size-1 * 48; // 6rem 96px;
 $size-64: $size-1 * 64; // 8rem 128px;
 $size-72: $size-1 * 72; // 9rem 144px;
+$size-80: $size-1 * 80; // 10rem 160px;
+$size-88: $size-1 * 88; // 11rem 176px;
+
 
 $gap-1: 4px;
 $gap-2: $gap-1 * 2; // 8px

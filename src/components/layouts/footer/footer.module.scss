@@ -197,17 +197,6 @@
             margin-bottom: 32px;
           }
         }
-
-        .social-media {
-          > * {
-            margin-right: $size-9;
-            font-size: 1.5em;
-
-            &:last-child {
-              margin-right: 0;
-            }
-          }
-        }
       }
 
       .col-5 {
@@ -354,6 +343,17 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.social-media {
+  > * {
+    margin-right: $size-9;
+    font-size: 1.5em;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

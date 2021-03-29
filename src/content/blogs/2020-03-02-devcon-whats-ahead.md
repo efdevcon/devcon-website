@@ -7,6 +7,7 @@ author: Devcon Team
 category: 'Devcon'
 permaLink: https://blog.ethereum.org/2020/03/02/devcon-whats-ahead/
 imageUrl: https://blog.ethereum.org/img/2019/09/eth-wallpaper.jpg
+image: ../../assets/images/eth-wallpaper.jpg
 ---
 
 ![Eth wallpaper](https://blog.ethereum.org/img/2019/09/eth-wallpaper.jpg)

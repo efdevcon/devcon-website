@@ -1,12 +1,13 @@
 ---
 layout: post
 published: true
-title: 'Announcing Devcon Improvement Proposals (DIPs) [Eng / Esp]'
+title: 'Announcing Devcon Improvement Proposals (DIPs) [ENG/ESP]'
 date: '2020-08-14'
 author: Devcon Team
 categories: Devcon
 permaLink: https://blog.ethereum.org/2020/08/14/announcing-devcon-improvement-proposals/
 imageUrl: https://storage.googleapis.com/ethereum-hackmd/upload_3cce07d58a164be59f66c80f3bee57aa.png
+image: ../../assets/images/dips.png
 ---
 
 ![](https://storage.googleapis.com/ethereum-hackmd/upload_3cce07d58a164be59f66c80f3bee57aa.png)

@@ -17,6 +17,8 @@ const matomoUrl = 'https://matomo.ethereum.org'
 
 const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
+console.log('GATSBY CONFIG:', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'isNetlifyProduction', isNetlifyProduction, siteUrl)
+
 module.exports = {
   siteMetadata: {
     siteUrl: siteUrl,
@@ -27,6 +29,7 @@ module.exports = {
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-yaml`,
     `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-plugin-sitemap',
@@ -87,13 +90,14 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-remove-serviceworker',
     //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        precachePages: offlinePages,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-offline',
+    //   options: {
+    //     precachePages: offlinePages,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-matomo',
       options: {
@@ -193,6 +197,27 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'events',
+        path: `${__dirname}/src/content/events`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'meetups',
+        path: `${__dirname}/src/content/meetups`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'archive',
+        path: `${__dirname}/src/content/archive`,
+      },
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
@@ -223,7 +248,7 @@ module.exports = {
         path: `${__dirname}/src/content/i18n`,
         languages: supportedLanguages,
         defaultLanguage: defaultLanguage,
-        redirect: true,
+        redirect: false,
       },
     },
     {

@@ -6,7 +6,7 @@ Title: Solución de ticketing basada en comprobación para Devcon
 Status: Accepted
 Themes: RFP-1 On-chain Ticketing
 Tags: Event Operations, Event Production, Software
-Authors: weiwu.zhang@alphawallet.com, sunil.tom.jose@alphawallet.com, victor.zhang@alphawallet.com
+Authors: Weiwu Zhang <weiwu.zhang@alphawallet.com>, Sunil Tom <sunil.tom.jose@alphawallet.com>, Victor Zhang <victor.zhang@alphawallet.com>
 Resources Required: software development, operations Support and tech support
 Discussion: https://forum.devcon.org/t/attestation-based-ticketing-system-that-is-managed-by-ethereum-smart-contracts-and-integrated-with-pretix-re-rfp-1-onchain-ticketing/54
 Created: 2020-08-13
@@ -85,7 +85,7 @@ El diagrama de natación adjunto muestra cómo las diferentes partes implicadas 
 
 Nuestra primera implementación de entradas fue en 2018, como un experimento con Shankai Sports para tokenise los billetes VIP de la Copa Mundial de la FIFA 2018. El experimento tuvo éxito, donde 50 usuarios recibieron enlaces mágicos a través del correo electrónico y 28 de ellos convirtieron esos enlaces mágicos en tokens de Ethereum.
 
-La próxima implementación completa fue en 2019, con Shankai Deportes tokenising tickets de evento VIP del Campeonato O.O 2020 con pases de hospitalidad integrados (Los tickets fueron tokenizados y las aplicaciones estaban listas para ir, pero el evento se canceló 😭😭😭)
+La próxima implementación completa fue en 2019, con Shankai Deportes tokenising tickets de evento VIP del Campeonato O. O 2020 con pases de hospitalidad integrados (Los tickets fueron tokenizados y las aplicaciones estaban listas para ir, pero el evento se canceló 😭😭😭)
 
 En 2019, también trabajamos para implementar entradas de eventos EDCON 2020 en blockchain. Una vez más, la aplicación y los tickets estaban listos, pero gracias al pandemic, el evento se canceló 😭😭😭.
 
@@ -106,7 +106,7 @@ Desarrollo:
 
 Las operaciones para el evento deberían ser más o menos las mismas que el Devcon anterior. Se necesitaría más apoyo técnico para las personas que están probando el nuevo sistema.
 
-2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0)
+2. ¿Quién será responsable de la aplicación de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 AlphaWallet y el equipo de Devcon serán responsables de la implementación. La gobernanza del proyecto se realizaría a través de reuniones semanales o de forma duradera gestionadas de forma ágil.
 
@@ -128,7 +128,7 @@ AlphaWallet y el equipo de Devcon serán responsables de la implementación. La 
 
 ---
 
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀)
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀) (Puntos de bonus para la colaboración entre equipos: tly_smiling_face:🚀)
 
 Cualquier servicio que requiera verificar a los asistentes, tales como descuento para los productos, vales redimibles, desbloqueo de contenido, IoT (puerta abierta, pantalla de control), colateral para DeFis y otros.
 

@@ -1,0 +1,47 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/fonts';
+
+.container {
+  position: relative;
+  display: inline-block;
+
+  .active-filter {
+    @include fonts.bold;
+  }
+}
+
+.link {
+  cursor: pointer;
+
+  .icon { 
+    margin-left: $gap-4;
+  }
+
+  svg { 
+    @include fonts.font-sm;
+  }
+}
+
+.dropdown {
+  background: #fff;
+  position: absolute;
+  list-style-type: none;
+  left: auto !important;
+  right: 0 !important;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+
+  li { 
+    @include fonts.font-lg;
+    padding: $gap-2 $gap-4;
+    padding-left: $gap-12;
+    text-align: right;
+
+    &:hover {
+      background:#F8F8F8;
+    }
+  }
+}

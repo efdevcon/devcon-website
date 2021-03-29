@@ -6,9 +6,10 @@ Title: Hacer a Devcon carbono neutral
 Status: Accepted
 Themes: Ticketing, Environmental Sustainability
 Tags: Event production, Software
-Authors: raphael@curvelabs.eu
+Authors: Raphaël Haupt <raphael@curvelabs.eu>
 Resources Required: Tech support, Communication support
 Discussion: https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27
+Created: 2020-07-20
 ---
 
 ## Resumen de la propuesta
@@ -69,11 +70,11 @@ Precio de compensación de carbono de alta calidad por tonelada:
 
    - El único esfuerzo que se necesita en Devcon sería incluir cualquier bracetet o swag a la hora de registrarse. Todos los demás esfuerzos se centran en la integración del proceso de reserva.
 
-2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)_
+2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)_
 
    - CO2ken será responsable de la exitosa aplicación de esta propuesta.
 
-3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))_
+3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))_
    - Cualquiera que contrarreste sus emisiones recibirá un TNF que represente su contribución.
    - Nos encantaría ver que otros equipos lo recogen para crear un refuerzo positivo, por ejemplo, los participantes con el NFT reciben un cambio especial, descuentos, etc.
    - Nos acercaremos activamente a otros proyectos en los que vemos formas divertidas de colaborar a medida que aparezcan más DI.

@@ -8,7 +8,7 @@ Title: Propósito DIP y directrices
 Status: Active
 Themes: Meta
 Tags: Other
-Authors: <Bettina Boon Falleur> @BettinaBF, <Ligi> @ligi, <Heather Davidson> @p0unce, <Skylar> @skylarweaver, <Joseph Schweitzer> @ethjoe
+Authors: Bettina Boon Falleur (@BettinaBF), Ligi (@ligi), Heather Davidson (@p0unce), Skylar (@skylarweaver), Joseph Schweitzer (@ethjoe)
 Discussion: https://forum.devcon.org
 Created: 2020-07-06
 ---
@@ -25,7 +25,7 @@ El equipo de Devcon tiene la intención de proporcionar un mecanismo para recole
 
 ## Temas
 
-Hay dos maneras de sugerir un DIP. Nosotros, el equipo de Devcon emitimos una lista de deseos (a través de RFPs) para implementaciones que nos gustaría que sucedieran en la próxima edición de la conferencia. ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! También acogemos con satisfacción todas y cualquier gran idea que mejore Devcon.
+Hay dos maneras de sugerir un DIP. Nosotros, el equipo de Devcon emitimos una lista de deseos (a través de RFPs) para implementaciones que nos gustaría que sucedieran en la próxima edición de la conferencia. ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! También acogemos con satisfacción todas y cualquier gran idea que mejore Devcon.
 
 Aquí hay una lista de temas para inspirarte:
 
@@ -119,8 +119,10 @@ Título: (Piensen en una atracción descriptiva, descriptiva, título corto)
 Estado: Borrador
 Temas: (Ver temas arriba)
 Etiquetas: (Por favor seleccione todos los que apliquen: Programación, ...)
-Autores: (Emails de los contactos principales)
+Autores:
+(Emails de los contactos principales)
 Recursos requeridos: Espacio físico en el lugar, Soporte de Operaciones, etc.)
+Discusión:
 Discusión: (URL de donde se discute este DIP, preferiblemente en https://forum.devcon. rg)
 ---
 
@@ -145,8 +147,13 @@ __Debajo hay algunas indicaciones útiles__
 -----Requisitos operacionales & Propiedad-----
 __Por favor, responde a las siguientes preguntas:__
 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
+2.
 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
+3. (es decir, trabajar el día 0)
 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
+
+-----Enlaces & Información Adicional-----
+__Cualquier información adicional__ (Puntos de bonus para la colaboración entre equipos :))
 
 -----Enlaces & Información Adicional-----
 __Cualquier información adicional__

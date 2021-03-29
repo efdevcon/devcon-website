@@ -7,6 +7,7 @@ author: Devcon Team
 category: Devcon
 permaLink: https://blog.ethereum.org/2020/05/28/devcon-hacia-colombia-en-2021/
 imageUrl: https://storage.googleapis.com/ethereum-hackmd/upload_1f83bbd5e1224e93451262fdd26e7cd8.png
+image: ../../assets/images/devcon6.png
 ---
 
 ![](https://storage.googleapis.com/ethereum-hackmd/upload_1f83bbd5e1224e93451262fdd26e7cd8.png)

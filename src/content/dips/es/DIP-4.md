@@ -19,6 +19,7 @@ Tags: Event Production
 Authors: Alberto Granzotto <agranzot@mailbox.org>
 Resources Required: Communication support, Access to the venue before the event starts
 Discussion: https://forum.devcon.org/t/dip-a-treasure-hunt-game-for-devcon/45
+Created: 2020-08-07
 ---
 
 # Resumen de la propuesta
@@ -104,7 +105,7 @@ El Protocolo de Dist0rción Social desarrolló [THC][thc] (Creador de Cacería d
 | - Puzzle +------>+ THC +------->+ ETH: Contrato inteligente |
 | - Contraseña | | | | | | | |
 | - Nivel N | +-------+---------------------+
-| - . . | |
+| - . | |
 | | | +---------------------+
 +----------------+ | | |
 .                                 +------>+ IPFS: dApp          |
@@ -172,11 +173,11 @@ Con el fin de desarrollar un juego similar para Devcon, la información sobre la
    - Añade el enlace al juego a la guía de papel (si los hay) proporcionada en Devcon.
    - Si los diseñadores de Devcon tienen bandwitdh, cree algunos NFT oficiales "firmado por Devcon" para distribuirlos para los ganadores.
 
-2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)_
+2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)_
 
    - El Protocolo de distensión social será responsable de la correcta aplicación de esta propuesta.
 
-3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))_
+3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))_
    - Uno de los objetivos del juego es descubrir Devcon y sus proyectos. Conocer de antemano la lista de proyectos nos permitiría crear niveles a su alrededor.
 
 # Enlaces & Información adicional

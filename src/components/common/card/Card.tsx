@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'src/components/common/link'
+import Img from 'gatsby-image'
 import { GetExcerpt } from 'src/utils/formatting'
 import css from './card.module.scss'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
@@ -8,7 +9,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 interface CardProps {
   title: string
   description?: string
-  imageUrl?: string
+  imageUrl?: any
   linkUrl?: string
   date?: Date
   metadata?: string[]
@@ -22,18 +23,20 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
   if (props.className) className = `${props.className} ${className}`
   if (props.imageUrl) className = `${className} ${css['img']}`
 
-  const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title
+  // RTD entire card as a link
+  // const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title
 
   return (
-    <div className={className} ref={ref}>
+    <a className={className} ref={ref} href={props.linkUrl} target="_blank" rel="noopener noreferrer">
       {props.imageUrl && (
         <div className={css['img-wrapper']}>
-          <img src={props.imageUrl} className={css['img']} alt={props.title} />
+          <Img className={css['img']} fluid={props.imageUrl} />
+          {/* <img src={props.imageUrl} className={css['img']} alt={props.title} /> */}
         </div>
       )}
 
       <div className={css['body']}>
-        <h4 className={css['title']}>{link}</h4>
+        <h4 className={css['title']}>{props.title}</h4>
         {props.description && <p className={css['text']}>{GetExcerpt(props.description)}</p>}
 
         <div className={css['bottom-section']}>
@@ -48,17 +51,15 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
           {props.linkUrl && (
             <div className={css['read-more']}>
               <p>
-                <Link to={props.linkUrl} className={css['text-uppercase']}>
-                  {intl.formatMessage({ id: 'readmore' })}
-                </Link>
+                <span className={css['text-uppercase']}>{intl.formatMessage({ id: 'readmore' })}</span>
               </p>
-              <Link to={props.linkUrl}>
+              <span>
                 <IconArrowRight />
-              </Link>
+              </span>
             </div>
           )}
         </div>
       </div>
-    </div>
+    </a>
   )
 })

@@ -6,57 +6,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: $gap-10;
+  // RTD: remove margin-bottom
+  // margin-bottom: $gap-10;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px;
-
-  .top-container {
-    @include gaps.responsive-gap($attribute: padding, $top: $gap-10, $bottom: $gap-10, $min-gap: $gap-4);
-    // padding-top: $gap-10;
-    // padding-bottom: $gap-10;
-    border-top: 1px solid #30354b;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    @media (max-width: 550px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    h3 {
-      flex-shrink: 0;
-      margin-bottom: 0px;
-
-      @media (max-width: 550px) {
-        flex-direction: column;
-        margin-bottom: $gap-4;
-        align-items: flex-start;
-      }
-    }
-
-    .filters {
-      display: flex;
-      max-width: 100%;
-      flex-wrap: wrap;
-
-      > * {
-        cursor: pointer;
-        padding: $gap-2;
-        @include gaps.responsive-gap($attribute: margin, $right: $gap-8, $min-gap: $gap-2);
-
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
-
-      .active-filter {
-        @include fonts.bold;
-        border-bottom: 2px solid black;
-      }
-    }
-  }
 }
 
 .index-column {
@@ -96,7 +49,7 @@
   flex-basis: 110px !important;
 
   @media (max-width: $screen-sm) {
-    flex-basis: 70px !important;
+    flex-basis: 90px !important;
   }
 }
 
@@ -122,6 +75,12 @@
 
   @media (max-width: $screen-sm) {
     flex-basis: 70px !important;
+  }
+}
+
+.tag-column {
+  @media (max-width: $screen-sm) {
+    display: none !important;
   }
 }
 
@@ -154,11 +113,15 @@
 }
 
 .links {
-  font-size: 1.5rem;
+  // RTD: smaller font-size
+  // font-size: 1.5rem;
+  font-size: 1rem;
 
   > * {
     cursor: pointer;
-    @include gaps.responsive-gap($attribute: margin, $right: $gap-4, $min-gap: $gap-2);
+    // RTD: smaller gaps
+    // @include gaps.responsive-gap($attribute: margin, $right: $gap-4, $min-gap: $gap-2);
+    @include gaps.responsive-gap($attribute: margin, $right: $gap-2, $min-gap: $gap-1);
 
     &:last-child {
       margin-right: 0px;

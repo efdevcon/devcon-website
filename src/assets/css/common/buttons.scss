@@ -33,7 +33,7 @@ button {
     outline: none;
   }
 
-  .sm {
+  &.sm {
     @include fonts.font-sm;
     padding: $gap-1 $gap-2;
 
@@ -42,12 +42,20 @@ button {
     }
   }
 
-  .lg {
+  &.lg {
     @include fonts.font-lg;
     padding: $gap-4 $gap-5;
 
     @media (max-width: $screen-md) {
       @include fonts.font-md;
+    }
+  }
+
+  &.white {
+    background: white;
+    --text-color: black;
+    &:hover {
+      background: #f2f2f2;
     }
   }
 }

@@ -6,7 +6,7 @@ Title: Encuestas verificables fuera de cadena para Devcon 6
 Status: Draft
 Themes: Community Involvement, Ticketing
 Tags: Software, Event production
-Authors: pau@vocdoni.io, worthalter@poap.xyz, ferran@vocdoni.io
+Authors: Pau Escrich <pau@vocdoni.io>, Patricio Worthalter <worthalter@poap.xyz>, Ferran Reyes <ferran@vocdoni.io>
 Resources Required: Communication support
 Discussion: https://forum.devcon.org/t/dip-16-universally-verifiable-off-chain-polls-for-devcon-6/204
 Created: 2021-01-05
@@ -130,7 +130,7 @@ Se prepara 7 semanas de trabajo (a partir de hoy) para tener la primera versión
   3. Puente Vocdoni dev: Más opciones de tipo de votación
   4. Explora e introduce más estrategias anticolusión
 
-3. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
+3. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
 
 El proyecto será coordinado por Pau Escrich (pau@vocdoni.io) y Patricio Worthalter (worthalter@poap.xyz). Vocdoni y POAP unen fuerzas con un equipo mixto de 4 desarrolladores trabajando en el proyecto.
 
@@ -144,7 +144,7 @@ Los equipos Vocdoni y POAP ya están trabajando en el proyecto para permitir a l
 | 2. | Asistentes de Devcon                    | <ul><li>Devcon Osaka POAP token</li></ul> | PUEDAR      |
 | 3. | Tipos de preguntas + copias             | <ul><li>Número de preguntas + opciones</li><li>Tipo de votación</li><li>Contenido</li></ul> | DevCon      |
 
-4. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
+4. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
 
 El puente Vocdoni puede trabajar con tokens POAP, pero también con tokens ERC-721 y ERC20, permitiendo otras iniciativas de los organizadores, participantes, proyectos o patrocinadores para que surjan de forma natural a lo largo del evento. Dado que el sistema no tiene permiso, permite una forma muy fácil de ejecutar proyectos de gobernanza en el evento lo que puede significar un estallido de iniciativas que faciliten el empoderamiento de la comunidad, doocracia y más.
 

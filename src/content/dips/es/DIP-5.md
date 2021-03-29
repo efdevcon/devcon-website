@@ -11,9 +11,10 @@ Title: Tarjeta clave en Devcon
 Status: Accepted
 Themes: Ticketing, Purchase & ID
 Tags: Attendee Experience
-Authors: guylouis@status.im
+Authors: Guy-Louis Grau <guylouis@status.im>
 Resources Required: Operational support, Communication support
 Discussion: https://forum.devcon.org/t/dip-5-keycard-at-devcon/46
+Created: 2020-08-10
 ---
 
 ## Summary
@@ -62,7 +63,7 @@ Para interacciones con dApps (recuperando NFT precargados, recolectándolos, pro
 El equipo de Devcon necesita estar involucrado de la siguiente manera:
 
 - soporte de comunicación antes de la conferencia:
-  - si se propone canjear los activos precargados, identificar proyectos que quieran ofrecer activos como parte del paquete inicial de activos precargados con cada tarjeta de clave (e. Token POAP)
+  - si se propone canjear los activos precargados, identificar proyectos que quieran ofrecer activos como parte del paquete inicial de activos precargados con cada tarjeta de clave (e.
   - comunicar a los proyectos cómo pueden construir dApps que interactúen con las teclas de los asistentes a través de la API de keycard web3 https://keycard.tech/docs/web3.html
 - soporte operativo
   - distribuir tarjetas en el sitio
@@ -76,7 +77,7 @@ Estado será:
 
 El estado puede:
 
-- hacer pública la lista de claves públicas precargadas en el Keycard Cash Applet de cada keycard.Ver: https://keycard.tech/docs/sdk/cash.html y https://keycard.tech/docs/web3.html
+- hacer pública la lista de claves públicas precargadas en el Keycard Cash Applet de cada keycard. Ver: https://keycard.tech/docs/sdk/cash.html y https://keycard.tech/docs/web3.html
 
 El estado será responsable de asegurarse de que el siguiente trabajo es correcto:
 

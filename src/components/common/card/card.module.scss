@@ -14,6 +14,11 @@
   flex-direction: column;
   position: relative;
 
+  &:hover .read-more {
+    color: rgba(0, 0, 0, 0.5) !important;
+    --text-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
   @media (min-width: $screen-lg + 1) {
     &:hover {
       .img-wrapper {
@@ -28,7 +33,6 @@
     overflow: hidden;
     position: relative;
     flex-grow: 1;
-    background: green;
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -36,9 +40,10 @@
     .img {
       transition: transform 0.5s;
       // Kinda tragic positioning strategy here, but this constellation was the only way to make it work in safari
-      position: absolute;
+      position: absolute !important;
       top: 0;
       min-width: 100%;
+      overflow: hidden;
       height: 100%;
       object-fit: cover;
     }

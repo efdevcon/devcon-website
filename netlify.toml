@@ -2,6 +2,15 @@
   command = "yarn build"
   publish = "public"
 
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
+  
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+
 [[redirects]]
   from = '/*'
   to = '/index.html'

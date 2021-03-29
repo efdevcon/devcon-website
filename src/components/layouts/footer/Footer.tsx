@@ -14,6 +14,23 @@ import { usePageContext } from 'src/context/page-context'
 import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
+export const SocialMedia = ({ onShare }: any) => {
+  return (
+    <div className={css['social-media']}>
+      <Link to="https://twitter.com/efdevcon">
+        <IconTwitter style={{ cursor: 'pointer' }} />
+      </Link>
+      <Link to="https://github.com/efdevcon">
+        <IconGithub style={{ cursor: 'pointer' }} />
+      </Link>
+      <Link to="https://www.youtube.com/c/EthereumFoundation/search?query=devcon">
+        <IconYoutube style={{ cursor: 'pointer' }} />
+      </Link>
+      <Share onShare={onShare} />
+    </div>
+  )
+}
+
 export const Footer = () => {
   const context = usePageContext()
   const footerData = context?.navigation.footer
@@ -41,18 +58,7 @@ export const Footer = () => {
               )
             })}
 
-            <div className={css['social-media']}>
-              <Link to="https://twitter.com/efdevcon">
-                <IconTwitter style={{ cursor: 'pointer' }} />
-              </Link>
-              <Link to="https://github.com/efdevcon/DIPs">
-                <IconGithub style={{ cursor: 'pointer' }} />
-              </Link>
-              <Link to="https://www.youtube.com/c/EthereumFoundation/search?query=devcon">
-                <IconYoutube style={{ cursor: 'pointer' }} />
-              </Link>
-              <Share url="https://devcon.org" />
-            </div>
+            <SocialMedia />
           </div>
 
           <div className={css['col-3']}>
