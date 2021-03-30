@@ -27,5 +27,5 @@ jobs:
         uses: treosh/lighthouse-ci-action@v7
         with:
           urls: |
-            ${{ steps.netlify.outputs.url 
+            ${{ steps.netlify.outputs.url }}
           uploadArtifacts: true
