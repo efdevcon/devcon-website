@@ -49,7 +49,7 @@ collections:
           label: 'Template',
           widget: 'select',
           i18n: 'duplicate',
-          options: ['none', 'content', 'dips', 'faq', 'city-guide'],
+          options: ['none', 'content', 'dips', 'faq', 'city-guide', 'road-to-devcon'],
           default: 'content',
         }
       - {
@@ -89,7 +89,14 @@ collections:
     i18n: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', i18n: true }
-      - { name: 'showTitle', label: 'Show title', widget: 'boolean', i18n: 'duplicate', required: false, default: false }
+      - {
+          name: 'showTitle',
+          label: 'Show title',
+          widget: 'boolean',
+          i18n: 'duplicate',
+          required: false,
+          default: false,
+        }
       - { name: 'left', widget: 'markdown', i18n: true }
       - { name: 'right', widget: 'markdown', i18n: true }
 
