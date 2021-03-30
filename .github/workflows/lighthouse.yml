@@ -7,6 +7,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -17,15 +18,7 @@ jobs:
           yarn install
           yarn build
 
-      - name: Wait for the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
-        id: netlify
-        with:
-          site_name: 'efdevcon'
-          
-      - name: Audit URLs using Lighthouse
+      - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v7
         with:
-          urls: |
-            ${{ steps.netlify.outputs.url }}
-          uploadArtifacts: true
+          configPath: './lighthouserc.json'
