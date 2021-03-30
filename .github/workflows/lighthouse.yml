@@ -1,5 +1,6 @@
 name: Lighthouse CI for Netlify sites
-on: pull_request
+on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,15 +11,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+
       - name: Install & Build
         run: |
           yarn install
           yarn build
+
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1
         id: netlify
         with:
           site_name: 'efdevcon'
+          
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v7
         with:
