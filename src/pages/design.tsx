@@ -1,10 +1,10 @@
 import React from 'react'
-import { DesignSystem } from 'src/components/common/design-system'
 
 export default function Index() {
   return (
     <div>
-      <DesignSystem />
+      <a href='/design/typography'>Typography</a><br/>
+      <a href='/design/components'>Components</a>
     </div>
   )
 }

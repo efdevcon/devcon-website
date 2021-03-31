@@ -73,12 +73,16 @@ p {
   @include fonts.font-tertiary;
 }
 
+.semi-bold {
+  @include fonts.semi-bold;
+}
+
 .bold {
   @include fonts.bold;
 }
 
-.semi-bold {
-  @include fonts.semi-bold;
+.very-bold {
+  @include fonts.very-bold;
 }
 
 .section-header {
