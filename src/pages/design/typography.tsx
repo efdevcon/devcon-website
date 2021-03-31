@@ -42,11 +42,6 @@ export default function Typography() {
         <p className="semi-bold">Semi Bold</p>
         <p className="bold">Bold</p>
         <p className="very-bold">Extra Bold</p>
-
-        <h2>Colors</h2>
-        <p className="text-primary">Primary</p>
-        <p className="text-secondary">Secondary</p>
-        <p className="text-tertiary">Tertiary</p>
     </div>
   )
 }
