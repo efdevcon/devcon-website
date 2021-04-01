@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "prebuild": "sed -i \"s|%BRANCH_PLACEHOLDER%|$BRANCH|g\" ./static/admin/config.yml && sed -i \"s|local_backend: true||g\" ./static/admin/config.yml",
     "build": "gatsby build",
     "dev": "netlify dev",
     "start": "gatsby develop -H 0.0.0.0 -p 8000",

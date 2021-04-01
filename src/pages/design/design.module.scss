@@ -1,0 +1,90 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/grids';
+@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/gaps';
+
+.colors { 
+  display: flex;
+}
+
+.colors > li {
+  width: 40px;
+  height: 40px;
+  display: inline;
+}
+
+.bg-color-primary {
+  background: $color-primary;
+}
+.bg-color-secondary {
+  background: $color-secondary;
+}
+.bg-color-tertiary {
+  background: $color-tertiary;
+}
+
+
+.color-success {
+  color: $color-success;
+}
+.color-success-light {
+  color: $color-success-light;
+}
+.bg-color-success {
+  background: $color-success;
+}
+.bg-color-success-light {
+  background: $color-success-light;
+}
+
+.color-error {
+  color: $color-error;
+}
+.color-error-light {
+  color: $color-error-light;
+}
+.bg-color-error {
+  background: $color-error;
+}
+.bg-color-error-light {
+  background: $color-error-light;
+}
+
+.color-warning {
+  color: $color-warning;
+}
+.color-warning-light {
+  color: $color-warning-light;
+}
+.bg-color-warning {
+  background: $color-warning;
+}
+.bg-color-warning-light {
+  background: $color-warning-light;
+}
+
+.color-info {
+  color: $color-info;
+}
+.color-info-light {
+  color: $color-info-light;
+}
+.bg-color-info {
+  background: $color-info;
+}
+.bg-color-info-light {
+  background: $color-info-light;
+}
+
+.color-light {
+  color: $color-light;
+}
+.color-light-light {
+  color: $color-light-light;
+}
+.bg-color-light {
+  background: $color-light;
+}
+.bg-color-light-light {
+  background: $color-light-light;
+}
