@@ -1,9 +1,6 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/grids';
-@use 'src/assets/css/partials/layout';
-@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/index' as *;
 
-.colors { 
+.colors {
   display: flex;
 }
 
@@ -14,77 +11,76 @@
 }
 
 .bg-color-primary {
-  background: $color-primary;
+  background: $colors-primary;
 }
 .bg-color-secondary {
-  background: $color-secondary;
+  background: $colors-secondary;
 }
 .bg-color-tertiary {
-  background: $color-tertiary;
+  background: $colors-tertiary;
 }
-
 
 .color-success {
-  color: $color-success;
+  color: $colors-success;
 }
 .color-success-light {
-  color: $color-success-light;
+  color: $colors-success-light;
 }
 .bg-color-success {
-  background: $color-success;
+  background: $colors-success;
 }
 .bg-color-success-light {
-  background: $color-success-light;
+  background: $colors-success-light;
 }
 
 .color-error {
-  color: $color-error;
+  color: $colors-error;
 }
 .color-error-light {
-  color: $color-error-light;
+  color: $colors-error-light;
 }
 .bg-color-error {
-  background: $color-error;
+  background: $colors-error;
 }
 .bg-color-error-light {
-  background: $color-error-light;
+  background: $colors-error-light;
 }
 
 .color-warning {
-  color: $color-warning;
+  color: $colors-warning;
 }
 .color-warning-light {
-  color: $color-warning-light;
+  color: $colors-warning-light;
 }
 .bg-color-warning {
-  background: $color-warning;
+  background: $colors-warning;
 }
 .bg-color-warning-light {
-  background: $color-warning-light;
+  background: $colors-warning-light;
 }
 
 .color-info {
-  color: $color-info;
+  color: $colors-info;
 }
 .color-info-light {
-  color: $color-info-light;
+  color: $colors-info-light;
 }
 .bg-color-info {
-  background: $color-info;
+  background: $colors-info;
 }
 .bg-color-info-light {
-  background: $color-info-light;
+  background: $colors-info-light;
 }
 
 .color-light {
-  color: $color-light;
+  color: $colors-light;
 }
 .color-light-light {
-  color: $color-light-light;
+  color: $colors-light-light;
 }
 .bg-color-light {
-  background: $color-light;
+  background: $colors-light;
 }
 .bg-color-light-light {
-  background: $color-light-light;
+  background: $colors-light-light;
 }
