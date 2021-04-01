@@ -1,6 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .background {
   width: 100%;
@@ -8,7 +6,7 @@
   background-size: cover;
   background-position: 75%;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     background-position: 0%;
   }
 }
@@ -19,9 +17,9 @@
   width: 60%;
   height: 100%;
   background: #fff;
-  padding: $gap-6;
+  padding: $gaps-gap-6;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     width: 100%;
   }
 }
@@ -30,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: $gap-4;
+  padding-bottom: $gaps-gap-4;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
@@ -44,7 +42,7 @@
   overflow-y: auto;
   height: 100%;
   width: 100%;
-  padding-right: $gap-4;
+  padding-right: $gaps-gap-4;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -66,11 +64,11 @@
   bottom: 10%;
   cursor: pointer;
 
-  @media (max-width: $screen-xxl) {
+  @media (max-width: $breakpoints-xxl) {
     right: 13%;
   }
 
-  @media (max-width: $screen-xl) {
+  @media (max-width: $breakpoints-xl) {
     right: 9%;
   }
 
@@ -78,7 +76,7 @@
     display: none;
   }
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     display: none;
   }
 }

@@ -1,20 +1,18 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .container {
   svg {
-    fill: $color-primary;
+    fill: $colors-primary;
   }
 }
 
 .event {
-  padding: $gap-4 $gap-6;
+  padding: $gaps-gap-4 $gaps-gap-6;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: flex-start;
-  
-  &:hover { 
+
+  &:hover {
     background: rgba(0, 0, 0, 0.05);
   }
 
@@ -27,23 +25,23 @@
   }
 }
 
-.day { 
-  @include fonts.font-xxl;
-  @include fonts.font-tertiary;
+.day {
+  @include fonts-xxl;
+  @include fonts-tertiary;
   display: block;
 }
 
-.month { 
-  @include fonts.font-sm;
-  @include fonts.font-secondary;
-  @include fonts.bold;
+.month {
+  @include fonts-sm;
+  @include fonts-secondary;
+  @include fonts-bold;
   display: block;
   text-transform: uppercase;
 }
 
-.event-add { 
+.event-add {
   cursor: pointer;
-  margin-top: $gap-2;
+  margin-top: $gaps-gap-2;
   display: block;
 
   svg {
@@ -51,46 +49,46 @@
   }
 }
 
-.date { 
-  @include fonts.font-xs;
+.date {
+  @include fonts-xs;
   line-height: 1.5rem;
   text-transform: uppercase;
 }
 
-.title { 
-  @include fonts.font-lg;
+.title {
+  @include fonts-lg;
 }
 
-.url { 
-  @include fonts.font-xs;
-  @include fonts.semi-bold;
+.url {
+  @include fonts-xs;
+  @include fonts-semi-bold;
   display: block;
-  margin-top: $gap-6;
+  margin-top: $gaps-gap-6;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.4);
 }
 
-.date-column { 
-  margin-right: $gap-16;
+.date-column {
+  margin-right: $gaps-gap-16;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     display: none;
   }
 }
 
-.image-column { 
+.image-column {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  width: $size-88;
-  height: $size-40;
+  width: $sizes-size-88;
+  height: $sizes-size-40;
   position: relative;
 
-  @media (max-width: $screen-sm) {
-    width: $size-64;
-    height: $size-32;
+  @media (max-width: $breakpoints-sm) {
+    width: $sizes-size-64;
+    height: $sizes-size-32;
   }
 
-  img { 
+  img {
     position: absolute;
     max-height: 100%;
     max-width: 100%;
@@ -103,4 +101,3 @@
     right: 0;
   }
 }
-

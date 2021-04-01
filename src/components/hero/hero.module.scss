@@ -1,8 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/grids';
-@use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/partials/layout';
-@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/index' as *;
 
 @keyframes sway {
   0% {
@@ -48,11 +44,11 @@ $logo-offset: 50px;
 
   // Using 100vh on mobile devices often doesn't account for the navigation bar at the bottom, so this is a decent compromise - if it's important to fill the entire
   // screen we can fall back to a JS solution - pending feedback
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     height: 90vh;
   }
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     height: 80vh;
   }
 
@@ -76,23 +72,23 @@ $logo-offset: 50px;
       transform: translateY(var(--translateY));
       width: 42%;
 
-      @media (max-width: $screen-xl) {
+      @media (max-width: $breakpoints-xl) {
         width: 60%;
       }
 
-      @media (max-width: $screen-lg) {
+      @media (max-width: $breakpoints-lg) {
         width: 65%;
       }
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         width: 75%;
       }
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $breakpoints-sm) {
         width: 100%;
       }
 
-      @media (max-width: $screen-tiny) {
+      @media (max-width: $breakpoints-tiny) {
         width: 100%;
       }
 
@@ -114,14 +110,14 @@ $logo-offset: 50px;
       transform: translateY(var(--translateY));
       // animation: sway linear 13s infinite;
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         transform: scale(1.5) translateY(var(--translateY));
         margin-bottom: -3%;
         margin-left: 0%;
         width: 100%;
       }
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $breakpoints-sm) {
         transform: scale(2.5) translateY(var(--translateY));
         margin-bottom: -3%;
         margin-left: 0%;
@@ -145,11 +141,11 @@ $logo-offset: 50px;
     top: -$logo-offset;
     transform: scale(2);
 
-    @media (max-width: $screen-tiny) {
+    @media (max-width: $breakpoints-tiny) {
       top: -($logo-offset / 2);
     }
 
-    @media (max-width: $screen-lg) and (orientation: landscape) {
+    @media (max-width: $breakpoints-lg) and (orientation: landscape) {
       top: -($logo-offset / 2);
     }
   }
@@ -164,13 +160,13 @@ $logo-offset: 50px;
     height: 100%;
     align-items: center;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       display: none;
     }
 
     p {
-      @include fonts.font-xs;
-      @include fonts.bold;
+      @include fonts-xs;
+      @include fonts-bold;
       white-space: nowrap;
     }
   }
@@ -217,27 +213,27 @@ $logo-offset: 50px;
       align-items: center;
       top: -$logo-offset;
 
-      @media (max-width: $screen-xl) {
+      @media (max-width: $breakpoints-xl) {
         width: 35%;
       }
 
-      @media (max-width: $screen-lg) {
+      @media (max-width: $breakpoints-lg) {
         width: 50%;
       }
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         width: 60%;
       }
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $breakpoints-sm) {
         width: 60%;
       }
 
-      @media (max-width: $screen-tiny) {
+      @media (max-width: $breakpoints-tiny) {
         top: -($logo-offset / 2);
       }
 
-      @media (max-width: $screen-lg) and (orientation: landscape) {
+      @media (max-width: $breakpoints-lg) and (orientation: landscape) {
         width: 20%;
         top: -($logo-offset / 2);
       }
@@ -253,8 +249,8 @@ $logo-offset: 50px;
       line-height: 100%;
     }
 
-    @media (max-width: $screen-lg) {
-      @include gaps.lg(true);
+    @media (max-width: $breakpoints-lg) {
+      @include gaps-lg(true);
       display: flex;
       left: unset;
       width: 100%;
@@ -273,8 +269,8 @@ $logo-offset: 50px;
     bottom: 20%;
     max-width: 350px;
 
-    @media (max-width: $screen-lg) {
-      @include gaps.lg(true);
+    @media (max-width: $breakpoints-lg) {
+      @include gaps-lg(true);
       max-width: 100%;
       display: flex;
       justify-content: center;
@@ -283,48 +279,48 @@ $logo-offset: 50px;
       width: 100%;
     }
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       bottom: 15%;
     }
 
     > p {
-      font-family: $font-tertiary;
+      font-family: $fonts-tertiary;
 
-      @media (max-width: $screen-lg) {
+      @media (max-width: $breakpoints-lg) {
         display: none;
       }
     }
 
     button {
-      @include fonts.font-xl;
-      @include fonts.bold;
+      @include fonts-xl;
+      @include fonts-bold;
       cursor: pointer;
       width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       background: none;
-      margin-top: $gap-4;
+      margin-top: $gaps-gap-4;
       display: flex;
       align-items: center;
       color: white;
-      padding-left: $gap-7;
-      padding-right: $gap-7;
-      padding-top: $gap-3;
-      padding-bottom: $gap-3;
+      padding-left: $gaps-gap-7;
+      padding-right: $gaps-gap-7;
+      padding-top: $gaps-gap-3;
+      padding-bottom: $gaps-gap-3;
       border: 2px solid white;
 
-      @media (max-width: $screen-lg) {
-        @include fonts.font-xxl;
+      @media (max-width: $breakpoints-lg) {
+        @include fonts-xxl;
         width: 70%;
         max-width: 300px;
       }
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $breakpoints-sm) {
         width: 100%;
       }
 
-      @media (max-width: $screen-lg) and (orientation: landscape) {
+      @media (max-width: $breakpoints-lg) and (orientation: landscape) {
         font-size: 16px;
       }
 
@@ -333,7 +329,7 @@ $logo-offset: 50px;
       }
 
       .icon {
-        margin-right: $gap-2;
+        margin-right: $gaps-gap-2;
         flex-shrink: 0;
       }
     }

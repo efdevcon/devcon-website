@@ -1,18 +1,16 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/layout';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .section {
-  margin-top: $gap-12;
+  margin-top: $gaps-gap-12;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-  a { 
+  a {
     text-transform: uppercase;
   }
 
   p {
-    @include fonts.font-md;
-    margin-bottom: $gap-8;
+    @include fonts-md;
+    margin-bottom: $gaps-gap-8;
 
     &:last-child {
       margin-bottom: 0;
@@ -23,56 +21,56 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: $gap-10;
+    margin-bottom: $gaps-gap-10;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       flex-direction: column;
     }
   }
 
   .left {
-    margin-right: $gap-8;
+    margin-right: $gaps-gap-8;
     margin-bottom: 0;
     flex-grow: 1;
     flex-basis: 0;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       margin-right: 0;
-      margin-bottom: $gap-4;
+      margin-bottom: $gaps-gap-4;
       flex-basis: auto;
     }
-    
+
     p {
       &:first-child {
-        @include fonts.font-xl;
+        @include fonts-xl;
       }
     }
   }
 
-  .left-2x { 
+  .left-2x {
     @extend .left;
     flex-grow: 2;
   }
 
   .right {
-    margin-left: $gap-8;
+    margin-left: $gaps-gap-8;
     margin-top: 0;
     flex-grow: 1;
     flex-basis: 0;
     width: 100%;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       margin-left: 0;
-      margin-top: $gap-4;
+      margin-top: $gaps-gap-4;
       flex-basis: auto;
     }
 
     p {
-      @include fonts.font-md;
+      @include fonts-md;
     }
   }
 
-  .right-2x { 
+  .right-2x {
     @extend .right;
     flex-grow: 2;
   }
@@ -85,7 +83,7 @@
 
   .left {
     p {
-      @include fonts.font-xl;
+      @include fonts-xl;
     }
   }
 }

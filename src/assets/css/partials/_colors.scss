@@ -1,0 +1,54 @@
+/* 
+  Color palette (basically just a dump of all colors sourced from Figma, easy to append to, can be fairly unstructured without issues)
+
+  Idea is to never reference these colors directly - they're mapped to a purpose below, which can be referenced from the outside
+
+  This way it's easy to add more colors, or to change them, without any side effects
+*/
+$success: #027357;
+$success-light: #eefff2;
+$error: #df320c;
+$error-light: #feefef;
+$warning: #c33e01;
+$warning-light: #fffacc;
+$info: #224490;
+$info-light: #eef2fa;
+$light: #323232;
+$light-light: #ffffff;
+$black-1: #30354b;
+$black-2: #1b1d24;
+$teal-1: #0daed0;
+$yellow-1: #fbcd11;
+
+/* PURPOSED COLORS - i.e. mappings of colors to a specific purpose */
+
+// Neutral colors (borders, headers, etc.)
+$typography-primary: $black-1;
+$typography-secondary: $black-1;
+$typography-tertiary: $black-1;
+
+// States
+$state-success: #027357;
+$state-success-light: #eefff2;
+$state-error: #df320c;
+$state-error-light: #feefef;
+$state-warning: #c33e01;
+$state-warning-light: #fffacc;
+$state-info: #224490;
+$state-info-light: #eef2fa;
+$state-light: #323232;
+$state-light-light: #ffffff;
+
+// Theme
+$primary: $black-1;
+$primary-light: $black-1;
+$primary-dark: $black-1;
+$primary-opaque: $black-1;
+$secondary: $teal-1;
+$secondary-light: $black-1;
+$secondary-dark: $black-1;
+$secondary-opaque: $black-1;
+$tertiary: $yellow-1;
+$tertiary-light: $black-1;
+$tertiary-dark: $black-1;
+$tertiary-opaque: $black-2;

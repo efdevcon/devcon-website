@@ -1,24 +1,23 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .feed {
   height: 100%;
-  padding: $gap-8;
-  padding-bottom: $gap-4;
+  padding: $gaps-gap-8;
+  padding-bottom: $gaps-gap-4;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
   background: white;
   display: flex;
   flex-direction: column;
-  color: $color-primary;
+  color: $colors-primary;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     box-shadow: none;
     background: none;
     padding: 0px;
   }
 
   .header {
-    @include fonts.font-sm;
+    @include fonts-sm;
     text-transform: uppercase;
   }
 
@@ -27,7 +26,7 @@
     flex-direction: column;
     flex-grow: 1;
     max-height: 64px * 5;
-    padding-right: $gap-5;
+    padding-right: $gaps-gap-5;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -56,22 +55,22 @@
         border-bottom: none;
       }
 
-      @media (max-width: $screen-lg) {
+      @media (max-width: $breakpoints-lg) {
         height: 64px;
       }
 
-      @media (max-width: $screen-md) {
-        margin-top: $gap-2;
+      @media (max-width: $breakpoints-md) {
+        margin-top: $gaps-gap-2;
         align-items: flex-start;
       }
 
       .list-number {
-        @include fonts.font-xl;
+        @include fonts-xl;
         flex-shrink: 0;
-        font-family: $font-tertiary;
+        font-family: $fonts-tertiary;
         color: rgba(0, 0, 0, 0.25);
         margin-right: 25px;
-        margin-left: $gap-2;
+        margin-left: $gaps-gap-2;
       }
 
       .date-handle {
@@ -79,13 +78,13 @@
         margin-right: 75px;
 
         .date {
-          @include fonts.font-xs;
-          font-family: $font-secondary;
+          @include fonts-xs;
+          font-family: $fonts-secondary;
         }
 
         .handle {
-          @include fonts.font-xxs;
-          font-family: $font-secondary;
+          @include fonts-xxs;
+          font-family: $fonts-secondary;
           line-height: 100%;
           opacity: 0.5;
         }
@@ -95,7 +94,7 @@
         display: flex;
         flex-grow: 1;
 
-        @media (max-width: $screen-md) {
+        @media (max-width: $breakpoints-md) {
           flex-direction: column;
         }
 
@@ -103,12 +102,12 @@
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          font-family: $font-primary;
-          @include fonts.font-md;
-          @include fonts.bold;
+          font-family: $fonts-primary;
+          @include fonts-md;
+          @include fonts-bold;
 
-          @media (max-width: $screen-md) {
-            margin-top: $gap-2;
+          @media (max-width: $breakpoints-md) {
+            margin-top: $gaps-gap-2;
           }
         }
       }
@@ -124,13 +123,13 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 12px;
-    padding-left: $gap-2;
+    padding-left: $gaps-gap-2;
     opacity: 0.25;
 
     > p {
-      font-family: $font-secondary;
-      @include fonts.font-lg;
-      @include fonts.bold;
+      font-family: $fonts-secondary;
+      @include fonts-lg;
+      @include fonts-bold;
     }
   }
 }

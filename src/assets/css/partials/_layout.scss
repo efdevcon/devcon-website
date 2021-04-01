@@ -1,13 +1,13 @@
-@use 'src/assets/css/variables' as *;
 @use './gaps';
+
+$content-width: 1680px;
+$side-gap: gaps.$gap-16;
+$max-content-width: $content-width + ($side-gap * 2);
 
 @mixin section {
   display: flex;
   justify-content: center;
 }
-
-$side-gap: $gap-16;
-$max-content-width: $content-width + ($side-gap * 2);
 
 @mixin content {
   max-width: $max-content-width;
@@ -18,11 +18,11 @@ $max-content-width: $content-width + ($side-gap * 2);
 @mixin grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: $gap-8;
+  column-gap: gaps.$gap-8;
 }
 
 @mixin grid-6 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: $gap-4;
+  column-gap: gaps.$gap-4;
 }

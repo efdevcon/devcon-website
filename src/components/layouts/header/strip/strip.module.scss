@@ -1,14 +1,13 @@
-@use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/index' as *;
 
 .strip {
-  @include fonts.font-xs;
+  @include fonts-xs;
   width: 100%;
   color: var(--text-color, black);
   background: var(--header-background-color, white);
 
   .body {
-    @include layout.content;
+    @include layout-content;
     display: var(--display-strip, flex);
     justify-content: space-between;
     flex-direction: row;

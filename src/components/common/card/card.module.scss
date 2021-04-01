@@ -1,25 +1,27 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .card {
   // overflow: hidden;
   // max-width: 526px;
-  // margin: $size-8;
+  // margin: $sizes-size8;
   // -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   // -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
-  color: $color-primary;
+  color: $colors-primary;
   display: flex;
   flex-direction: column;
   position: relative;
 
-  &:hover .read-more {
-    color: rgba(0, 0, 0, 0.5) !important;
-    --text-color: rgba(0, 0, 0, 0.5) !important;
+  // Whole card should trigger hover effect
+  &.expand-link {
+    &:hover .read-more {
+      color: rgba(0, 0, 0, 0.5) !important;
+      --text-color: rgba(0, 0, 0, 0.5) !important;
+    }
   }
 
-  @media (min-width: $screen-lg + 1) {
+  @media (min-width: $breakpoints-lg + 1) {
     &:hover {
       .img-wrapper {
         .img {
@@ -67,31 +69,31 @@
   }
 
   .body {
-    padding: $gap-8;
-    padding-bottom: $gap-4;
+    padding: $gaps-gap-8;
+    padding-bottom: $gaps-gap-4;
 
-    @media (max-width: $screen-lg) {
-      padding: $gap-4;
-      padding-bottom: $gap-2;
+    @media (max-width: $breakpoints-lg) {
+      padding: $gaps-gap-4;
+      padding-bottom: $gaps-gap-2;
     }
 
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    font-family: $font-secondary;
+    font-family: $fonts-secondary;
 
     .title {
-      font-family: $font-primary;
+      font-family: $fonts-primary;
       letter-spacing: -0.4px;
       // overflow: hidden;
       // white-space: nowrap;
       // text-overflow: ellipsis;
-      @include fonts.font-xl;
-      @include fonts.bold;
+      @include fonts-xl;
+      @include fonts-bold;
     }
 
     .text {
-      margin-top: $gap-4;
+      margin-top: $gaps-gap-4;
       overflow: hidden;
       // white-space: nowrap;
       color: rgba(97, 97, 97, 1);
@@ -104,14 +106,14 @@
       flex-direction: column;
 
       .metadata {
-        @include fonts.font-sm;
+        @include fonts-sm;
         display: flex;
         text-transform: uppercase;
-        margin-top: $gap-3;
-        margin-bottom: $gap-3;
+        margin-top: $gaps-gap-3;
+        margin-bottom: $gaps-gap-3;
 
         > * {
-          margin-right: $gap-3;
+          margin-right: $gaps-gap-3;
 
           &:last-child {
             margin-right: 0px;
@@ -120,7 +122,7 @@
       }
 
       .read-more {
-        @include fonts.bold;
+        @include fonts-bold;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         padding-top: 13px;
         display: flex;
@@ -128,6 +130,11 @@
         color: rgba(0, 0, 0, 0.25);
         --text-color: rgba(0, 0, 0, 0.25); // for icons
         justify-content: space-between;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.5) !important;
+          --text-color: rgba(0, 0, 0, 0.5) !important;
+        }
       }
     }
   }

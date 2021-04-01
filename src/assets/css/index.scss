@@ -1,0 +1,61 @@
+@use 'src/assets/css/partials/index' as *;
+@use 'css-variables.scss';
+@use 'components/fonts';
+@use 'components/markdown';
+@use 'components/buttons';
+@use 'components/icons';
+@use 'components/layout';
+@use 'vendor/react-slick.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+}
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  margin: 0 auto;
+  font-family: $fonts-primary;
+  color: $colors-primary;
+
+  @include fonts-md;
+
+  @media (max-width: $breakpoints-lg) {
+    @include fonts-sm;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    @include fonts-xs;
+  }
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.no-select {
+  user-select: none;
+}
+
+// For cases where we don't want default link styling
+a.plain {
+  color: inherit;
+  text-decoration: none;
+}
+
+li.plain {
+  list-style-type: none;
+}

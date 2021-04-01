@@ -1,6 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/index' as *;
 
 .distribute-items {
   display: flex;
@@ -13,14 +11,14 @@
 }
 
 .cell {
-  @include gaps.responsive-gap($attribute: padding, $gap: $gap-4, $min-gap: $gap-2);
+  @include gaps-responsive-gap($attribute: padding, $gap: $gaps-gap-4, $min-gap: $gaps-gap-2);
   > * {
     word-break: break-word;
   }
 }
 
 .container {
-  @include fonts.font-secondary;
+  @include fonts-secondary;
   // border-top: 2px solid rgba(0, 0, 0, 0.2);
   position: relative;
 
@@ -29,8 +27,8 @@
     @extend .distribute-items;
 
     .column-header {
-      @include fonts.font-xs;
-      @include fonts.bold;
+      @include fonts-xs;
+      @include fonts-bold;
       display: flex;
       align-items: center;
 
@@ -39,8 +37,8 @@
       }
 
       .sort {
-        margin-left: $gap-3;
-        font-size: $size-4;
+        margin-left: $gaps-gap-3;
+        font-size: $sizes-size-4;
         display: inline-flex;
         flex-direction: column;
       }

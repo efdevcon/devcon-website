@@ -1,24 +1,21 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/grids';
-@use 'src/assets/css/partials/layout';
-@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/index' as *;
 
 .blog-container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: $gap-4;
+  margin-top: $gaps-gap-4;
   position: relative;
 
   .top-section {
-    @include layout.content;
+    @include layout-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .cards {
-    @include layout.content;
+    @include layout-content;
   }
 }
 
@@ -37,15 +34,15 @@
       cursor: -webkit-grab;
     }
     height: 500px;
-    margin-right: $gap-4;
-    margin-bottom: $gap-4;
+    margin-right: $gaps-gap-4;
+    margin-bottom: $gaps-gap-4;
     background: white;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       height: 400px;
     }
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $breakpoints-md) {
       height: 300px;
     }
 
@@ -70,7 +67,7 @@
   }
 
   &:not(.always-buttons) {
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       display: none;
     }
   }

@@ -1,5 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 @keyframes gradient {
   0% {
@@ -29,7 +28,7 @@
   //   hsla(18, 100%, 81%, 1) 100%
   // );
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     font-size: 7px;
   }
 
@@ -54,7 +53,7 @@
       > p {
         font-size: 18px;
 
-        @media (max-width: $screen-md) {
+        @media (max-width: $breakpoints-md) {
           font-size: 14px;
         }
       }
@@ -83,16 +82,16 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding-left: $gap-4;
-      padding-right: $gap-4;
-      margin-top: $gap-2;
+      padding-left: $gaps-gap-4;
+      padding-right: $gaps-gap-4;
+      margin-top: $gaps-gap-2;
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         flex-wrap: wrap;
       }
 
       > * {
-        margin: $gap-2;
+        margin: $gaps-gap-2;
       }
     }
   }
@@ -107,7 +106,7 @@
   pointer-events: auto;
 
   > span {
-    margin-right: $gap-2;
+    margin-right: $gaps-gap-2;
   }
 }
 

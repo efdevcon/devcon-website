@@ -1,6 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .marker {
   position: absolute;
@@ -12,13 +10,13 @@
     display: none;
   }
 
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     display: none;
   }
 }
 
 .checkpoint {
-  @include fonts.font-xs;
+  @include fonts-xs;
   max-width: 200px;
 
   > * {

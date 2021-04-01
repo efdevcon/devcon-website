@@ -1,13 +1,10 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/layout';
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .container {
   display: flex;
   flex-direction: column;
   // RTD: remove margin-bottom
-  // margin-bottom: $gap-10;
+  // margin-bottom: $gaps-gap-10;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px;
 }
@@ -19,7 +16,7 @@
     word-break: normal !important;
   }
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     flex-basis: 40px !important;
   }
 }
@@ -33,13 +30,13 @@
 }
 
 .themes-column {
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     display: none !important;
   }
 }
 
 .authors-column {
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     display: none !important;
   }
 }
@@ -48,13 +45,13 @@
   flex-grow: 0 !important;
   flex-basis: 110px !important;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     flex-basis: 90px !important;
   }
 }
 
 .links-column {
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     display: none !important;
   }
 }
@@ -62,7 +59,7 @@
 .summary-column {
   flex-grow: 2 !important;
 
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     display: none !important;
   }
 }
@@ -73,20 +70,20 @@
   flex-grow: 0 !important;
   flex-basis: 80px !important;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     flex-basis: 70px !important;
   }
 }
 
 .tag-column {
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     display: none !important;
   }
 }
 
 .tag {
-  margin-right: $gap-1;
-  margin-bottom: $gap-1;
+  margin-right: $gaps-gap-1;
+  margin-bottom: $gaps-gap-1;
   display: inline-flex;
   white-space: nowrap;
 
@@ -101,7 +98,7 @@
   align-items: center;
 
   > span {
-    margin-right: $gap-1;
+    margin-right: $gaps-gap-1;
     font-size: 1.2rem;
   }
 
@@ -120,14 +117,14 @@
   > * {
     cursor: pointer;
     // RTD: smaller gaps
-    // @include gaps.responsive-gap($attribute: margin, $right: $gap-4, $min-gap: $gap-2);
-    @include gaps.responsive-gap($attribute: margin, $right: $gap-2, $min-gap: $gap-1);
+    // @include gaps.responsive-gap($attribute: margin, $right: $gaps-gap-4, $min-gap: $gaps-gap-2);
+    @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-2, $min-gap: $gaps-gap-1);
 
     &:last-child {
       margin-right: 0px;
     }
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       font-size: 2rem;
     }
   }

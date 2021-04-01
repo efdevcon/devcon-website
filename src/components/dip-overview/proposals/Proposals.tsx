@@ -188,11 +188,17 @@ export const Proposals = (props: ProposalsProps) => {
     })
   }, [props.dips])
 
+  console.log(dipsWithLink, 'dwithlink')
+
+  console.log(props.dips, 'dips')
+
   const filteredDips = React.useMemo(() => {
     return props.filter === '' || props.filter === 'All'
       ? dipsWithLink
       : dipsWithLink.filter(dip => dip.status.toLowerCase() === props.filter?.toLowerCase())
   }, [dipsWithLink, props.filter])
+
+  console.log(filteredDips, 'filtered dips')
 
   return (
     <section id="proposals" className={css['container']}>

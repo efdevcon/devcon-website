@@ -1,11 +1,8 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/grids';
-@use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/index' as *;
 
 // Split out the positioning to make it easier to reason about
 @mixin top-grid {
-  @include grids.grid-12;
+  @include grids-grid-12;
 
   .col-1 {
     grid-column: 1 / 3;
@@ -37,8 +34,8 @@
     display: none;
   }
 
-  @media (max-width: $screen-md) {
-    @include grids.grid-6;
+  @media (max-width: $breakpoints-md) {
+    @include grids-grid-6;
     row-gap: 40px;
 
     .col-1 {
@@ -81,7 +78,7 @@
 }
 
 @mixin bottom-grid {
-  @include grids.grid-12;
+  @include grids-grid-12;
 
   .col-1 {
     grid-column: 1 / 6;
@@ -95,8 +92,8 @@
     grid-column: 11 / 13;
   }
 
-  @media (max-width: $screen-md) {
-    @include grids.grid-6;
+  @media (max-width: $breakpoints-md) {
+    @include grids-grid-6;
     grid-auto-flow: column;
 
     .col-1 {
@@ -115,7 +112,7 @@
     }
   }
 
-  @media (max-width: $screen-tiny) {
+  @media (max-width: $breakpoints-tiny) {
     grid-auto-flow: row;
 
     .col-1 {
@@ -139,7 +136,7 @@
   border-top: 1px solid #e0e0e0;
 
   .top-section {
-    @include layout.section;
+    @include layout-section;
     position: relative;
 
     &:before {
@@ -155,14 +152,14 @@
       background-repeat: no-repeat;
       background-position: center 10%;
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         background-size: 250%;
         background-position: 20% center;
       }
     }
 
     .content {
-      @include layout.content;
+      @include layout-content;
       @include top-grid;
       flex-grow: 1;
       position: relative;
@@ -171,7 +168,7 @@
       padding-top: 32px;
       padding-bottom: 32px;
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         padding: 16px;
         padding-top: 16px;
         padding-bottom: 16px;
@@ -191,7 +188,7 @@
         flex-direction: column;
 
         > h2 {
-          @include fonts.bold;
+          @include fonts-bold;
 
           &:last-of-type {
             margin-bottom: 32px;
@@ -200,8 +197,8 @@
       }
 
       .col-5 {
-        @include fonts.font-sm;
-        @media (max-width: $screen-md) {
+        @include fonts-sm;
+        @media (max-width: $breakpoints-md) {
           display: flex;
           align-items: flex-end;
         }
@@ -209,11 +206,11 @@
         .contact {
           .email-1,
           .email-2 {
-            margin-bottom: $size-16;
+            margin-bottom: $sizes-size-16;
           }
 
           .email-2 {
-            @media (max-width: $screen-md) {
+            @media (max-width: $breakpoints-md) {
               margin-bottom: 0px;
             }
           }
@@ -224,16 +221,16 @@
         .scroll-up {
           display: flex;
           justify-content: flex-end;
-          font-size: $size-14;
+          font-size: $sizes-size-14;
 
-          @media (max-width: $screen-md) {
+          @media (max-width: $breakpoints-md) {
             display: none;
           }
         }
       }
 
       .col-7 {
-        @include fonts.font-sm;
+        @include fonts-sm;
         // position: relative;
 
         // Not sure if these borders add much; leaving it commented out in case we want to use them later
@@ -263,18 +260,18 @@
   }
 
   .bottom-section {
-    @include layout.section;
+    @include layout-section;
     border-top: 1px solid rgba(34, 68, 144, 0.25);
 
     .content {
-      @include layout.content;
+      @include layout-content;
       @include bottom-grid;
       flex-grow: 1;
       padding: 64px;
       padding-top: 20px;
       padding-bottom: 20px;
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         padding: 16px;
         padding-top: 16px;
         padding-bottom: 16px;
@@ -282,32 +279,32 @@
       }
 
       > .col-1 {
-        @include fonts.font-xs;
+        @include fonts-xs;
         display: flex;
         align-items: center;
 
-        @media (max-width: $screen-tiny) {
+        @media (max-width: $breakpoints-tiny) {
           justify-content: center;
         }
       }
 
       > .col-2 {
-        @include fonts.font-xs;
+        @include fonts-xs;
         display: flex;
         flex-direction: row;
         align-items: center;
 
-        @media (max-width: $screen-md) {
+        @media (max-width: $breakpoints-md) {
           margin-bottom: 8px;
         }
 
-        @media (max-width: $screen-tiny) {
+        @media (max-width: $breakpoints-tiny) {
           justify-content: center;
           flex-wrap: wrap;
         }
 
         > p {
-          margin-right: $size-14;
+          margin-right: $sizes-size-14;
 
           &:last-child {
             margin-right: 0;
@@ -319,7 +316,7 @@
         display: flex;
         justify-content: flex-end;
 
-        @media (max-width: $screen-tiny) {
+        @media (max-width: $breakpoints-tiny) {
           margin-bottom: 8px;
           justify-content: center;
         }
@@ -338,7 +335,7 @@
 
   > p,
   li {
-    @include fonts.font-sm;
+    @include fonts-sm;
     margin-bottom: 14px;
 
     &:last-child {
@@ -349,7 +346,7 @@
 
 .social-media {
   > * {
-    margin-right: $size-9;
+    margin-right: $sizes-size-9;
     font-size: 1.5em;
 
     &:last-child {

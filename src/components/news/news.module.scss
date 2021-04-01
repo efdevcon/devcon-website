@@ -1,21 +1,18 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/grids';
-@use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/index' as *;
 
 .card {
   height: 420px;
 
   &.slider {
-    margin-right: $gap-4;
-    margin-bottom: $gap-4;
+    margin-right: $gaps-gap-4;
+    margin-bottom: $gaps-gap-4;
   }
 }
 
 .news-container {
   display: flex;
   flex-direction: column;
-  @include layout.content;
+  @include layout-content;
 
   .slider {
     cursor: move; /* fallback if grab cursor is unsupported */
@@ -27,7 +24,7 @@
     height: 0;
     overflow: hidden;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       display: flex;
       height: 300px;
       overflow: unset;
@@ -37,28 +34,28 @@
   .body {
     display: flex;
 
-    // @media (max-width: $screen-lg) {
+    // @media (max-width: $breakpoints-lg) {
     //   flex-wrap: wrap;
     // }
 
     .cards {
       display: flex;
-      margin-right: $gap-8;
+      margin-right: $gaps-gap-8;
       flex-basis: 60%;
 
-      @media (max-width: $screen-lg) {
+      @media (max-width: $breakpoints-lg) {
         display: none;
       }
 
-      @media (max-width: $screen-xxl) {
-        margin-right: $gap-4;
+      @media (max-width: $breakpoints-xxl) {
+        margin-right: $gaps-gap-4;
         flex-basis: 40%;
       }
 
-      // @media (max-width: $screen-tiny) {
+      // @media (max-width: $breakpoints-tiny) {
       //   display: none;
       // }
-      // @media (max-width: $screen-lg) {
+      // @media (max-width: $breakpoints-lg) {
       //   flex-basis: 100%;
       //   margin-right: 0px;
       //   margin-bottom: 18px;
@@ -70,14 +67,14 @@
         flex-grow: 1;
 
         &:first-child {
-          margin-right: $gap-8;
+          margin-right: $gaps-gap-8;
 
-          @media (max-width: $screen-xxl) {
+          @media (max-width: $breakpoints-xxl) {
             margin-right: 0px;
           }
         }
 
-        @media (max-width: $screen-xxl) {
+        @media (max-width: $breakpoints-xxl) {
           min-height: 300px;
           &:last-child {
             display: none;
@@ -90,11 +87,11 @@
       flex-grow: 1;
       flex-basis: 40%;
 
-      @media (max-width: $screen-lg) {
+      @media (max-width: $breakpoints-lg) {
         display: none;
       }
 
-      // @media (max-width: $screen-lg) {
+      // @media (max-width: $breakpoints-lg) {
       //   flex-basis: 100%;
       // }
     }

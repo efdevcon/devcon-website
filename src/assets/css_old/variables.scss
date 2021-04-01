@@ -1,21 +1,17 @@
+// @forward 'partials/fonts';
+// @forward 'partials/gaps';
+// @forward 'partials/layout';
+// @forward 'partials/grids';
+
 // https://twitter.com/max_strebel/status/1051435009373016065
 // Color goal: Have a list of specific colors, map them to primary/secondary/tertiary
+/* 
+  Color palette (basically just a dump of all colors sourced from Figma, easy to append to, can be fairly unstructured without issues)
 
-// Core colors
-$color-primary: #30354b;
-$color-primary-light: #30354b;
-$color-primary-dark: #30354b;
-$color-primary-opaque: #30354b;
-$color-secondary: #0daed0;
-$color-secondary-light: #30354b;
-$color-secondary-dark: #30354b;
-$color-secondary-opaque: #30354b;
-$color-tertiary: #fbcd11;
-$color-tertiary-light: #30354b;
-$color-tertiary-dark: #30354b;
-$color-tertiary-opaque: #1b1d24;
+  Idea is to never reference these colors directly - they're mapped to a purpose below, which can be referenced from the outside
 
-// Other colors
+  This way it's easy to add more colors, or to change them, without any side effects
+*/
 $color-success: #027357;
 $color-success-light: #eefff2;
 $color-error: #df320c;
@@ -26,6 +22,43 @@ $color-info: #224490;
 $color-info-light: #eef2fa;
 $color-light: #323232;
 $color-light-light: #ffffff;
+$black-1: #30354b;
+$black-2: #1b1d24;
+$teal-1: #0daed0;
+$yellow-1: #fbcd11;
+
+/* PURPOSED COLORS - i.e. mappings of colors to a specific purpose */
+
+// Neutral colors (borders, headers, etc.)
+// $color-neutral-primary: $black-1;
+// $color-neutral-secondary: $black-2;
+// $color-neutral-tertiary: $black-3;
+
+// States
+$color-state-success: #027357;
+$color-state-success-light: #eefff2;
+$color-state-error: #df320c;
+$color-state-error-light: #feefef;
+$color-state-warning: #c33e01;
+$color-state-warning-light: #fffacc;
+$color-state-info: #224490;
+$color-state-info-light: #eef2fa;
+$color-state-light: #323232;
+$color-state-light-light: #ffffff;
+
+// Theme
+$color-primary: $black-1;
+$color-primary-light: $black-1;
+$color-primary-dark: $black-1;
+$color-primary-opaque: $black-1;
+$color-secondary: $teal-1;
+$color-secondary-light: $black-1;
+$color-secondary-dark: $black-1;
+$color-secondary-opaque: $black-1;
+$color-tertiary: $yellow-1;
+$color-tertiary-light: $black-1;
+$color-tertiary-dark: $black-1;
+$color-tertiary-opaque: $black-2;
 
 // Fonts
 $font-primary: 'Roboto', serif; // 'Montserrat', sans-serif;
@@ -58,7 +91,6 @@ $size-64: $size-1 * 64; // 8rem 128px;
 $size-72: $size-1 * 72; // 9rem 144px;
 $size-80: $size-1 * 80; // 10rem 160px;
 $size-88: $size-1 * 88; // 11rem 176px;
-
 
 $gap-1: 4px;
 $gap-2: $gap-1 * 2; // 8px

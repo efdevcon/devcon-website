@@ -1,13 +1,11 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 @mixin nav-number {
   font-size: 10px;
   line-height: 1em;
   display: inline-block;
-  font-family: $font-secondary;
-  width: $gap-5;
+  font-family: $fonts-secondary;
+  width: $gaps-gap-5;
   color: rgba(144, 152, 161, 1);
 }
 
@@ -19,7 +17,7 @@
   left: 0;
   display: flex;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     flex-direction: column;
     // padding-top: 64px;
   }
@@ -38,7 +36,7 @@
     //   overflow: auto;
     // }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $breakpoints-sm) {
       margin-left: 0px;
       margin-bottom: 64px;
     }
@@ -59,41 +57,41 @@
         right: 0;
         bottom: 0;
 
-        $left: $gap-10 + $gap-6;
-        $right: $gap-10 + $gap-6;
-        $top: $gap-10 * 2;
+        $left: $gaps-gap-10 + $gaps-gap-6;
+        $right: $gaps-gap-10 + $gaps-gap-6;
+        $top: $gaps-gap-10 * 2;
 
         margin-left: $left;
         margin-right: $right;
         margin-top: $top;
 
-        @media (max-width: $screen-lg) {
+        @media (max-width: $breakpoints-lg) {
           margin-left: $left / 2;
           margin-right: $right / 2;
           margin-top: $top / 2;
         }
 
-        @media (max-width: $screen-md) {
+        @media (max-width: $breakpoints-md) {
           margin-left: $left / 3;
           margin-right: $right / 3;
           margin-top: $top / 3;
         }
 
-        @media (max-width: $screen-sm) {
-          margin-left: $gap-4;
-          margin-right: $gap-4;
-          margin-top: $gap-4;
+        @media (max-width: $breakpoints-sm) {
+          margin-left: $gaps-gap-4;
+          margin-right: $gaps-gap-4;
+          margin-top: $gaps-gap-4;
         }
 
         .header {
-          font-family: $font-secondary;
+          font-family: $fonts-secondary;
           flex-grow: 1;
           height: 10%;
           display: flex;
           justify-content: space-between;
 
           .page-title {
-            font-family: $font-secondary;
+            font-family: $fonts-secondary;
             z-index: 1;
             text-transform: uppercase;
 
@@ -109,30 +107,30 @@
           }
 
           .background-text {
-            top: -$gap-8;
-            margin-left: $gap-8;
+            top: -$gaps-gap-8;
+            margin-left: $gaps-gap-8;
             flex-grow: 1;
-            font-size: $size-8 * 9;
-            line-height: $size-8 * 8;
+            font-size: $sizes-size-8 * 9;
+            line-height: $sizes-size-8 * 8;
             opacity: 0.4;
 
             @media (max-width: 1600px) {
-              margin-top: $gap-4;
+              margin-top: $gaps-gap-4;
               position: absolute;
-              font-size: $size-8 * 7;
-              line-height: $size-8 * 6;
+              font-size: $sizes-size-8 * 7;
+              line-height: $sizes-size-8 * 6;
             }
 
-            @media (max-width: $screen-md) {
+            @media (max-width: $breakpoints-md) {
               left: 0px;
-              font-size: $size-8 * 7;
-              line-height: $size-8 * 6;
+              font-size: $sizes-size-8 * 7;
+              line-height: $sizes-size-8 * 6;
             }
 
-            @media (max-width: $screen-sm) {
+            @media (max-width: $breakpoints-sm) {
               display: none;
-              font-size: $size-8 * 5;
-              line-height: $size-8 * 4;
+              font-size: $sizes-size-8 * 5;
+              line-height: $sizes-size-8 * 4;
             }
           }
 
@@ -157,7 +155,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
-            @media (min-width: $screen-xxl) {
+            @media (min-width: $breakpoints-xxl) {
               background: conic-gradient(
                 from 178.57deg at 10% 50%,
                 #edefcf 0deg,
@@ -194,10 +192,10 @@
             z-index: 1;
 
             > h3 {
-              margin-right: $gap-8;
+              margin-right: $gaps-gap-8;
 
-              @media (max-width: $screen-sm) {
-                margin-right: $gap-5;
+              @media (max-width: $breakpoints-sm) {
+                margin-right: $gaps-gap-5;
                 font-size: 24px;
               }
 
@@ -206,7 +204,7 @@
               }
 
               .text {
-                @media (max-width: $screen-sm) {
+                @media (max-width: $breakpoints-sm) {
                   display: none;
                 }
               }
@@ -215,16 +213,16 @@
             svg {
               height: 18px;
 
-              @media (max-width: $screen-sm) {
+              @media (max-width: $breakpoints-sm) {
                 height: 1em;
               }
             }
           }
 
           .icon-link {
-            margin-right: $gap-2;
+            margin-right: $gaps-gap-2;
 
-            @media (max-width: $screen-sm) {
+            @media (max-width: $breakpoints-sm) {
               margin-right: 0px;
             }
           }
@@ -251,11 +249,11 @@
             border-radius: 5px;
           }
 
-          @media (max-width: $screen-lg) {
+          @media (max-width: $breakpoints-lg) {
             height: 80%;
           }
 
-          @media (max-width: $screen-sm) {
+          @media (max-width: $breakpoints-sm) {
             height: 90%;
             flex-shrink: 1;
           }
@@ -278,8 +276,8 @@
           align-items: center;
           height: 8%;
           flex-shrink: 0;
-          @include fonts.bold;
-          @include fonts.font-lg;
+          @include fonts-bold;
+          @include fonts-lg;
           text-transform: uppercase;
         }
 
@@ -299,7 +297,7 @@
 .gesture-blocker {
   display: none;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     display: block;
   }
 
@@ -307,7 +305,7 @@
   left: 0px;
   bottom: 64px;
   z-index: 10000;
-  width: $gap-4;
+  width: $gaps-gap-4;
   height: 100%;
 
   &.right {

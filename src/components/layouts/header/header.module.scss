@@ -1,6 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
-@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/index' as *;
 
 // .header-wrapper {
 //   position: sticky;
@@ -75,7 +73,7 @@
   }
 
   .menu-container {
-    @include layout.content;
+    @include layout-content;
     display: flex;
     flex-direction: row;
     align-items: center;

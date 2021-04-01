@@ -1,14 +1,13 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .navigation {
   display: none;
   flex-direction: row;
   min-width: 0;
   flex-wrap: wrap;
-  font-family: $font-secondary;
+  font-family: $fonts-secondary;
 
-  @media (min-width: $screen-lg + 1) {
+  @media (min-width: $breakpoints-lg + 1) {
     display: flex;
   }
 
@@ -42,7 +41,7 @@
       width: 254px;
       box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
       display: none;
-      color: $color-primary;
+      color: $colors-primary;
       background-color: #ffffff;
 
       .foldout-link {
@@ -83,8 +82,8 @@
 }
 
 .foldout-header {
-  @include fonts.font-xxs;
-  font-family: $font-secondary;
+  @include fonts-xxs;
+  font-family: $fonts-secondary;
   line-height: 100%;
   opacity: 0.5;
   text-transform: uppercase;

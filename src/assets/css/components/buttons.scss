@@ -1,15 +1,14 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 @mixin padding($name, $padding, $padding-sm, $padding-md) {
   &.#{$name} {
     padding: $padding;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $breakpoints-sm) {
       padding: $padding-sm;
     }
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $breakpoints-md) {
       padding: $padding-md;
     }
   }
@@ -20,11 +19,11 @@ button {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  font-family: $font-secondary;
-  @include fonts.font-md;
-  padding: $gap-2 $gap-3;
-  color: $color-primary;
-  border: 2px solid $color-primary;
+  font-family: $fonts-secondary;
+  @include fonts-md;
+  padding: $gaps-gap-2 $gaps-gap-3;
+  color: $colors-primary;
+  border: 2px solid $colors-primary;
   background: none;
 
   &:focus,
@@ -34,20 +33,20 @@ button {
   }
 
   &.sm {
-    @include fonts.font-sm;
-    padding: $gap-1 $gap-2;
+    @include fonts-sm;
+    padding: $gaps-gap-1 $gaps-gap-2;
 
-    @media (max-width: $screen-md) {
-      @include fonts.font-xs;
+    @media (max-width: $breakpoints-md) {
+      @include fonts-xs;
     }
   }
 
   &.lg {
-    @include fonts.font-lg;
-    padding: $gap-4 $gap-5;
+    @include fonts-lg;
+    padding: $gaps-gap-4 $gaps-gap-5;
 
-    @media (max-width: $screen-md) {
-      @include fonts.font-md;
+    @media (max-width: $breakpoints-md) {
+      @include fonts-md;
     }
   }
 
@@ -132,7 +131,7 @@ button {
 //     color: $color-primary;
 // }
 
-// @media (min-width: $screen-md) and (max-width: $screen-xl) {
+// @media (min-width: $breakpoints-md) and (max-width: $breakpoints-xl) {
 //     padding: $gap-1 $gap-2;
 //     width: 100%;
 //     margin-top: $gap-2;

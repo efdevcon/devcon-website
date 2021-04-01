@@ -1,5 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .container {
   width: 100%;
@@ -7,27 +6,28 @@
 
 .list {
   list-style-type: none;
-  margin-bottom: $gap-4;
+  margin-bottom: $gaps-gap-4;
 }
 
 .list-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: $gap-4 $gap-2;
-  border-bottom: 1px solid $color-primary;
+  padding: $gaps-gap-4 $gaps-gap-2;
+  border-bottom: 1px solid $colors-primary;
 
-  svg { 
-    margin-right: $gap-2;
+  svg {
+    margin-right: $gaps-gap-2;
   }
 
   a {
-    @include fonts.font-xs;
+    @include fonts-xs;
     text-transform: uppercase;
   }
 
-  span, a { 
-    margin-right: $gap-2;
+  span,
+  a {
+    margin-right: $gaps-gap-2;
 
     &:last-child {
       margin-left: auto;
@@ -36,10 +36,10 @@
   }
 
   .label {
-    @include fonts.bold;
+    @include fonts-bold;
     text-transform: uppercase;
   }
-  
+
   &:hover,
   &:focus,
   &:active {
@@ -47,6 +47,6 @@
   }
 }
 
-.primary { 
-  color: $color-primary !important;
+.primary {
+  color: $colors-primary !important;
 }

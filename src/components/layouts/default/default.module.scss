@@ -1,5 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/layout';
+@use 'src/assets/css/partials/index' as *;
 
 :global {
   .layout-default {
@@ -34,10 +33,10 @@
 //     min-height: 100vh;
 //     position: relative;
 //     display: grid;
-//     grid-template-columns: minmax($gap-16, auto) minmax(auto, 1680px) minmax($gap-16, auto);
+//     grid-template-columns: minmax($gaps-gap-16, auto) minmax(auto, 1680px) minmax($gaps-gap-16, auto);
 
-//     @media (max-width: $screen-md) {
-//       grid-template-columns: $gap-4 auto $gap-4;
+//     @media (max-width: $breakpoints-md) {
+//       grid-template-columns: $gaps-gap-4 auto $gaps-gap-4;
 //     }
 
 //     > * {

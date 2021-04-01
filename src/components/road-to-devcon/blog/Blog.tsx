@@ -20,7 +20,7 @@ export const Blog = React.forwardRef((props: any, ref) => {
         backgroundText={intl.formatMessage({ id: 'rtd_blog' })}
       >
         <div className={css['container']}>
-          <Cards customCardClass={css['card']} {...blogState} noSwipe ref={blogState.sliderRef} />
+          <Cards customCardClass={css['card']} {...blogState} expandLink noSwipe ref={blogState.sliderRef} />
         </div>
       </PageContent>
     </Page>

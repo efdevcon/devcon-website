@@ -1,5 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .tabs {
   display: flex;
@@ -9,8 +8,8 @@
 
   li {
     cursor: pointer;
-    padding: $gap-6;
-    padding-bottom: $gap-5; // off-set border
+    padding: $gaps-gap-6;
+    padding-bottom: $gaps-gap-5; // off-set border
     color: #30354b;
     font-weight: bold;
     text-transform: uppercase;

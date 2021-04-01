@@ -11,6 +11,7 @@ interface CardProps {
   description?: string
   imageUrl?: any
   linkUrl?: string
+  expandLink?: boolean
   date?: Date
   metadata?: string[]
   className?: string
@@ -21,22 +22,29 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
   let className = css['card']
 
   if (props.className) className = `${props.className} ${className}`
+  if (props.expandLink) className = `${css['expand-link']} ${className}`
   if (props.imageUrl) className = `${className} ${css['img']}`
 
   // RTD entire card as a link
-  // const link = props.linkUrl ? <Link to={props.linkUrl}>{props.title}</Link> : props.title
+  const link =
+    props.expandLink || !props.linkUrl ? (
+      props.title
+    ) : (
+      <Link className="hover-underline" to={props.linkUrl}>
+        {props.title}
+      </Link>
+    )
 
-  return (
-    <a className={className} ref={ref} href={props.linkUrl} target="_blank" rel="noopener noreferrer">
+  const cardContent = (
+    <>
       {props.imageUrl && (
         <div className={css['img-wrapper']}>
           <Img className={css['img']} fluid={props.imageUrl} />
-          {/* <img src={props.imageUrl} className={css['img']} alt={props.title} /> */}
         </div>
       )}
 
       <div className={css['body']}>
-        <h4 className={css['title']}>{props.title}</h4>
+        <h4 className={css['title']}>{link}</h4>
         {props.description && <p className={css['text']}>{GetExcerpt(props.description)}</p>}
 
         <div className={css['bottom-section']}>
@@ -49,17 +57,31 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
           )}
 
           {props.linkUrl && (
-            <div className={css['read-more']}>
+            <Link to={props.linkUrl} className={css['read-more']}>
               <p>
                 <span className={css['text-uppercase']}>{intl.formatMessage({ id: 'readmore' })}</span>
               </p>
               <span>
                 <IconArrowRight />
               </span>
-            </div>
+            </Link>
           )}
         </div>
       </div>
-    </a>
+    </>
+  )
+
+  if (props.expandLink && props.linkUrl) {
+    return (
+      <Link className={className} to={props.linkUrl}>
+        {cardContent}
+      </Link>
+    )
+  }
+
+  return (
+    <div className={className} ref={ref}>
+      {cardContent}
+    </div>
   )
 })

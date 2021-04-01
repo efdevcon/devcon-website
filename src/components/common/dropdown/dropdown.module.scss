@@ -1,25 +1,23 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .container {
   position: relative;
   display: inline-block;
 
   .active-filter {
-    @include fonts.bold;
+    @include fonts-bold;
   }
 }
 
 .link {
   cursor: pointer;
 
-  .icon { 
-    margin-left: $gap-4;
+  .icon {
+    margin-left: $gaps-gap-4;
   }
 
-  svg { 
-    @include fonts.font-sm;
+  svg {
+    @include fonts-sm;
   }
 }
 
@@ -34,14 +32,14 @@
   z-index: 1;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
 
-  li { 
-    @include fonts.font-lg;
-    padding: $gap-2 $gap-4;
-    padding-left: $gap-12;
+  li {
+    @include fonts-lg;
+    padding: $gaps-gap-2 $gaps-gap-4;
+    padding-left: $gaps-gap-12;
     text-align: right;
 
     &:hover {
-      background:#F8F8F8;
+      background: #f8f8f8;
     }
   }
 }

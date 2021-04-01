@@ -1,5 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .menu {
   display: flex;
@@ -9,14 +8,14 @@
 
   .highlighted-link {
     margin-right: 32px;
-    font-family: $font-primary;
-    @include fonts.bold;
+    font-family: $fonts-primary;
+    @include fonts-bold;
   }
 
   .left {
     display: none;
 
-    @media (min-width: $screen-lg + 1) {
+    @media (min-width: $breakpoints-lg + 1) {
       display: flex;
     }
   }

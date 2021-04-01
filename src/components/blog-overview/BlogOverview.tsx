@@ -126,7 +126,7 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
               key={blog.slug}
               title={blog.title}
               imageUrl={blog.imageUrl}
-              // linkUrl={blog.slug}
+              expandLink={props.expandLink}
               linkUrl={blog.permaLink} // Linking to blog domain temporarily until blog page is done (static-phase)
               metadata={[moment(blog.date).format('ll'), blog.author]}
             />

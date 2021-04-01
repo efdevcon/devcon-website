@@ -1,6 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/layout';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 @keyframes auto-scroll {
   100% {
@@ -30,9 +28,9 @@
     display: flex;
     flex-direction: row;
     // flex-wrap: wrap;
-    margin-bottom: $gap-10;
+    margin-bottom: $gaps-gap-10;
 
-    @media (max-width: $screen-lg) {
+    @media (max-width: $breakpoints-lg) {
       flex-direction: column;
     }
 
@@ -49,15 +47,15 @@
       .dip-description {
         flex-shrink: 0;
 
-        @media (max-width: $screen-lg) {
+        @media (max-width: $breakpoints-lg) {
           flex-basis: 100%;
         }
       }
 
       .links {
-        margin-top: $gap-6;
+        margin-top: $gaps-gap-6;
         > * {
-          margin-right: $gap-12;
+          margin-right: $gaps-gap-12;
 
           &:last-child {
             margin-right: 0px;
@@ -73,8 +71,8 @@
       justify-content: center;
       flex-basis: 50%;
 
-      @media (max-width: $screen-lg) {
-        margin-top: $gap-10;
+      @media (max-width: $breakpoints-lg) {
+        margin-top: $gaps-gap-10;
         flex-basis: 100%;
       }
 
@@ -143,16 +141,16 @@
           //   transform: translateX(var(--track-width));
           // }
 
-          @media (max-width: $screen-md) {
+          @media (max-width: $breakpoints-md) {
             --thumbnails-per-view: 5;
             // --thumbnail-spacing: 40px;
           }
 
-          @media (max-width: $screen-sm) {
+          @media (max-width: $breakpoints-sm) {
             --thumbnails-per-view: 4;
           }
 
-          @media (max-width: $screen-tiny) {
+          @media (max-width: $breakpoints-tiny) {
             --thumbnails-per-view: 3;
           }
 
@@ -167,19 +165,19 @@
             margin-bottom: var(--thumbnail-spacing);
             border-radius: 100px;
 
-            @media (max-width: $screen-md) {
+            @media (max-width: $breakpoints-md) {
               &:nth-last-child(-n + 1) {
                 display: none;
               }
             }
 
-            @media (max-width: $screen-sm) {
+            @media (max-width: $breakpoints-sm) {
               &:nth-last-child(-n + 2) {
                 display: none;
               }
             }
 
-            @media (max-width: $screen-tiny) {
+            @media (max-width: $breakpoints-tiny) {
               &:nth-last-child(-n + 3) {
                 display: none;
               }
@@ -195,11 +193,11 @@
         align-items: center;
 
         p {
-          margin-right: $gap-4;
+          margin-right: $gaps-gap-4;
         }
 
         svg {
-          font-size: $size-14;
+          font-size: $sizes-size-14;
         }
       }
     }

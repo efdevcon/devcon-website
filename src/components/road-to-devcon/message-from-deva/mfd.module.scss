@@ -1,12 +1,11 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .container {
   display: flex;
   width: 100%;
   height: 100%;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     flex-direction: column;
   }
 
@@ -30,7 +29,7 @@
       #d3d7da 360deg
     );
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $breakpoints-md) {
       flex-basis: 35%;
       max-width: none;
     }
@@ -39,7 +38,7 @@
   .lying-deva {
     @extend .deva;
 
-    @media (min-width: $screen-md + 1) {
+    @media (min-width: $breakpoints-md + 1) {
       display: none;
     }
   }
@@ -47,16 +46,16 @@
   .sitting-deva {
     @extend .deva;
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $breakpoints-md) {
       display: none;
     }
   }
 
   .content {
-    @include fonts.font-lg;
+    @include fonts-lg;
 
     p:first-child {
-      @include fonts.font-xl;
+      @include fonts-xl;
     }
   }
 
@@ -65,8 +64,8 @@
     // height: 100%;
     // position: relative;
     overflow: auto;
-    margin-left: $gap-10;
-    padding-right: $gap-4;
+    margin-left: $gaps-gap-10;
+    padding-right: $gaps-gap-4;
     max-width: 1100px;
     padding-bottom: 30px;
 
@@ -83,7 +82,7 @@
       border-radius: 5px;
     }
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $breakpoints-md) {
       margin-left: 0px;
       max-width: none;
 
@@ -93,25 +92,25 @@
     }
 
     > * {
-      margin-top: $gap-8;
+      margin-top: $gaps-gap-8;
 
       &:first-child {
         margin-top: 0px;
       }
 
-      @media (max-width: $screen-md) {
+      @media (max-width: $breakpoints-md) {
         margin-top: 0px;
-        margin-bottom: $gap-2;
+        margin-bottom: $gaps-gap-2;
       }
     }
   }
 }
 
 .signature {
-  margin-top: $gap-2;
+  margin-top: $gaps-gap-2;
   max-width: 75px;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     max-width: 50px;
   }
 }

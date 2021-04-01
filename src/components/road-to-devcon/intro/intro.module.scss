@@ -1,18 +1,16 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .container {
   width: 100%;
   height: 100%;
 
-  @include gaps.responsive-gap(
+  @include gaps-responsive-gap(
     $attribute: padding,
-    $top: $gap-16 + $gap-2,
-    $left: $gap-16 + $gap-2,
-    $right: $gap-10,
-    $bottom: $gap-10,
-    $min-gap: $gap-4
+    $top: $gaps-gap-16 + $gaps-gap-2,
+    $left: $gaps-gap-16 + $gaps-gap-2,
+    $right: $gaps-gap-10,
+    $bottom: $gaps-gap-10,
+    $min-gap: $gaps-gap-4
   );
 
   .text {
@@ -20,18 +18,18 @@
     max-width: 100%;
 
     h1 {
-      font-size: $size-8 * 9;
-      line-height: $size-8 * 8;
+      font-size: $sizes-size-8 * 9;
+      line-height: $sizes-size-8 * 8;
 
-      @media (max-width: $screen-sm) {
-        font-size: $size-8 * 4;
-        line-height: $size-8 * 3;
+      @media (max-width: $breakpoints-sm) {
+        font-size: $sizes-size-8 * 4;
+        line-height: $sizes-size-8 * 3;
       }
     }
 
     h1,
     div {
-      @include gaps.responsive-gap($attribute: margin, $bottom: $gap-6, $min-gap: $gap-4);
+      @include gaps-responsive-gap($attribute: margin, $bottom: $gaps-gap-6, $min-gap: $gaps-gap-4);
     }
 
     > div > p {
@@ -40,15 +38,15 @@
       display: inline;
       background: rgba(208, 251, 247, 0.85);
 
-      @media (max-width: $screen-sm) {
+      @media (max-width: $breakpoints-sm) {
         font-size: unset;
       }
     }
 
     button {
       text-transform: uppercase;
-      margin-right: $gap-2;
-      margin-bottom: $gap-2;
+      margin-right: $gaps-gap-2;
+      margin-bottom: $gaps-gap-2;
 
       > * {
         margin-left: 1em;
@@ -60,8 +58,8 @@
 .hash-tag {
   color: rgba(13, 174, 208, 1);
   position: absolute;
-  top: $gap-4;
-  right: $gap-4;
+  top: $gaps-gap-4;
+  right: $gaps-gap-4;
 
   > span {
     position: absolute;
@@ -71,7 +69,7 @@
     text-decoration: none !important;
   }
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     display: none;
   }
 }
@@ -87,25 +85,25 @@
 
   transform: scale(1.12);
 
-  @media (max-width: $screen-xxl) {
+  @media (max-width: $breakpoints-xxl) {
     transform: scale(0.9);
   }
 
-  @media (max-width: $screen-xl) {
+  @media (max-width: $breakpoints-xl) {
     transform: scale(0.8);
   }
 
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     transform: scale(0.75);
   }
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     transform: scale(0.65);
     bottom: 0px;
     left: 0%;
   }
 
-  @media (max-width: $screen-tiny) {
+  @media (max-width: $breakpoints-tiny) {
     transform: scale(0.45);
   }
 
@@ -114,7 +112,7 @@
     flex-basis: 60%;
     flex-shrink: 0;
 
-    @media (min-width: $screen-sm + 1) {
+    @media (min-width: $breakpoints-sm + 1) {
       bottom: -20px;
     }
   }
@@ -157,7 +155,7 @@
   top: 10%;
   right: 10%;
 
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     display: none;
   }
 }
@@ -172,7 +170,7 @@
     display: none;
   }
 
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     display: none;
   }
 }
@@ -198,52 +196,52 @@
   object-fit: cover;
   object-position: 8%;
 
-  @media (max-width: $screen-xxl) {
+  @media (max-width: $breakpoints-xxl) {
     object-position: 12%;
   }
 
-  @media (max-width: $screen-xl) {
+  @media (max-width: $breakpoints-xl) {
     object-position: 16%;
   }
 
-  @media (max-width: $screen-lg) {
+  @media (max-width: $breakpoints-lg) {
     object-position: 24%;
   }
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $breakpoints-md) {
     object-position: 30%;
   }
 }
 
 .drag-to-continue {
-  @include fonts.bold;
-  @include fonts.font-sm;
+  @include fonts-bold;
+  @include fonts-sm;
   position: absolute;
   background: white;
   z-index: 100;
   color: rgba(0, 179, 164, 1);
-  font-family: $font-secondary;
+  font-family: $fonts-secondary;
   right: -1px;
-  bottom: $gap-4;
+  bottom: $gaps-gap-4;
   text-transform: uppercase;
-  padding-left: $gap-6;
-  padding-right: $gap-4;
-  padding-top: $gap-1;
-  padding-bottom: $gap-1;
+  padding-left: $gaps-gap-6;
+  padding-right: $gaps-gap-4;
+  padding-top: $gaps-gap-1;
+  padding-bottom: $gaps-gap-1;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $breakpoints-sm) {
     bottom: 0px;
     width: 100%;
     border-bottom: none;
   }
 
   > p {
-    margin-right: $gap-2;
+    margin-right: $gaps-gap-2;
 
     > span {
       &:nth-child(1) {
@@ -276,7 +274,7 @@
     }
 
     font-size: 1.1rem;
-    margin-right: $gap-2;
+    margin-right: $gaps-gap-2;
     &:last-child {
       margin-right: 0px;
     }
@@ -286,36 +284,36 @@
 // Sort out the padding later - probably has to be more deeply integrated with the modal itself
 .what-is-devcon {
   > h4 {
-    @include fonts.font-xl;
-    font-family: $font-secondary;
+    @include fonts-xl;
+    font-family: $fonts-secondary;
     text-transform: uppercase;
-    margin-bottom: $gap-4;
-    padding-bottom: $gap-4;
+    margin-bottom: $gaps-gap-4;
+    padding-bottom: $gaps-gap-4;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   > div {
     max-width: 750px;
-    padding-right: $gap-8;
+    padding-right: $gaps-gap-8;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $breakpoints-sm) {
       padding-right: 0px;
     }
   }
 }
 
 .modal-content {
-  @include fonts.font-lg;
+  @include fonts-lg;
 
   p:first-child {
-    @include fonts.font-xl;
+    @include fonts-xl;
   }
 }
 
 .modal-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: $gap-6;
-  @include fonts.semi-bold;
+  padding-top: $gaps-gap-6;
+  @include fonts-semi-bold;
   text-transform: uppercase;
 
   > a {

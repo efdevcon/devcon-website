@@ -1,29 +1,27 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .container {
   // RTD: remove padding
-  // padding: $gap-8 0;
+  // padding: $gaps-gap-8 0;
   display: flex;
   flex-wrap: wrap;
 
   p {
     cursor: pointer;
-    padding: $gap-2;
-    @include gaps.responsive-gap($attribute: margin, $right: $gap-8, $min-gap: $gap-2);
+    padding: $gaps-gap-2;
+    @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-8, $min-gap: $gaps-gap-2);
 
-    &:hover { 
-      @include fonts.bold;
+    &:hover {
+      @include fonts-bold;
     }
-    
+
     &:last-child {
       margin-right: 0px;
     }
   }
 
   .active-filter {
-    @include fonts.bold;
+    @include fonts-bold;
     border-bottom: 2px solid black;
   }
 }
@@ -32,6 +30,6 @@
   border: 1px solid red;
 }
 
-.icon { 
-  margin-left: $gap-4;
+.icon {
+  margin-left: $gaps-gap-4;
 }

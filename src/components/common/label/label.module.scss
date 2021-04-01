@@ -1,13 +1,11 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
-
+@use 'src/assets/css/partials/index' as *;
 .label {
-  @include fonts.font-secondary;
-  @include fonts.font-xxs;
+  @include fonts-secondary;
+  @include fonts-xxs;
   display: inline-block;
-  padding: $gap-2;
-  padding-top: $gap-1;
-  padding-bottom: $gap-1;
+  padding: $gaps-gap-2;
+  padding-top: $gaps-gap-1;
+  padding-bottom: $gaps-gap-1;
   max-width: 100%;
   color: black;
   background: rgba(0, 0, 0, 0.1);
@@ -18,7 +16,7 @@
   }
 
   &.success {
-    color: $color-success;
-    background: $color-success-light;
+    color: $colors-success;
+    background: $colors-success-light;
   }
 }

@@ -1,6 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/layout';
-@use 'src/assets/css/partials/fonts';
+@use 'src/assets/css/partials/index' as *;
 
 .hero {
   position: sticky;
@@ -9,9 +7,9 @@
   z-index: 10;
   overflow: hidden;
   width: 100%;
-  padding-top: $gap-4;
+  padding-top: $gaps-gap-4;
   border-bottom: 1px solid black;
-  margin-bottom: $gap-10;
+  margin-bottom: $gaps-gap-10;
 
   .backdrop {
     position: absolute;
@@ -26,7 +24,7 @@
       right: 0px;
       bottom: -50px;
 
-      @media (max-width: $screen-lg) {
+      @media (max-width: $breakpoints-lg) {
         max-width: 50%;
         height: 100%;
         bottom: 0px;
@@ -61,39 +59,39 @@
   .location {
     @extend .backdrop;
     background: radial-gradient(
-      64.03% 140.53% at 90.8% 48.82%,
-      #e55066 0%,
-      rgba(242, 186, 44, 0.391893) 65.84%,
-      rgba(250, 255, 7, 0) 100%
-    ),
-    #ffffff;
+        64.03% 140.53% at 90.8% 48.82%,
+        #e55066 0%,
+        rgba(242, 186, 44, 0.391893) 65.84%,
+        rgba(250, 255, 7, 0) 100%
+      ),
+      #ffffff;
   }
 }
 
 .info {
-  @include layout.content;
+  @include layout-content;
   width: 100%;
 
   .title-block {
-    padding-top: $gap-16;
-    padding-bottom: $gap-12;
+    padding-top: $gaps-gap-16;
+    padding-bottom: $gaps-gap-12;
 
     > h1 {
       font-size: 9rem;
     }
 
     .buttons {
-      margin-top: $gap-5;
+      margin-top: $gaps-gap-5;
 
       > a {
-        margin-right: $gap-3;
+        margin-right: $gaps-gap-3;
 
         > svg {
-          @include fonts.font-xs;
+          @include fonts-xs;
         }
 
         > span {
-          margin-left: $gap-2;
+          margin-left: $gaps-gap-2;
         }
       }
     }
@@ -104,12 +102,11 @@
     top: var(--header-height);
     width: 100%;
     display: flex;
-    padding-top: $gap-4;
-    padding-bottom: $gap-4;
-    // margin-bottom: $gap-5;
+    padding-top: $gaps-gap-4;
+    padding-bottom: $gaps-gap-4;
 
     > * {
-      margin-left: $gap-6;
+      margin-left: $gaps-gap-6;
 
       &:first-child {
         margin-left: 0px;

@@ -1,52 +1,59 @@
-@use 'src/assets/css/variables' as *;
+@use 'sizes';
+@use 'gaps';
+@use 'breakpoints';
+
+// Fonts
+$primary: 'Roboto', serif; // 'Montserrat', sans-serif;
+$secondary: 'Roboto', serif;
+$tertiary: 'Space Mono', monospace;
 
 // Add more sizes as needed. Make sure to reference any newly added mixins from typegraphy.scss so we have one source of truth for text sizes.
-@mixin font-xxs {
-  font-size: $size-5;
+@mixin xxs {
+  font-size: sizes.$size-5;
   line-height: 150%;
 }
 
-@mixin font-xs {
-  font-size: $size-6;
+@mixin xs {
+  font-size: sizes.$size-6;
   line-height: 150%;
 }
 
-@mixin font-sm {
-  font-size: $size-7;
+@mixin sm {
+  font-size: sizes.$size-7;
   line-height: 150%;
 }
 
-@mixin font-md {
-  font-size: $size-8;
+@mixin md {
+  font-size: sizes.$size-8;
   line-height: 150%;
 }
 
-@mixin font-lg {
-  font-size: $size-9;
+@mixin lg {
+  font-size: sizes.$size-9;
   line-height: 125%;
 }
 
-@mixin font-xl {
-  font-size: $size-12;
+@mixin xl {
+  font-size: sizes.$size-12;
   line-height: 125%;
 }
 
-@mixin font-xxl {
-  font-size: $size-16;
+@mixin xxl {
+  font-size: sizes.$size-16;
   line-height: 125%;
 }
 
 // Font-family
-@mixin font-primary {
-  font-family: $font-primary;
+@mixin primary {
+  font-family: $primary;
 }
 
-@mixin font-secondary {
-  font-family: $font-secondary;
+@mixin secondary {
+  font-family: $secondary;
 }
 
-@mixin font-tertiary {
-  font-family: $font-tertiary;
+@mixin tertiary {
+  font-family: $tertiary;
 }
 
 // Misc
@@ -65,20 +72,20 @@
 
 @mixin section-header {
   font-weight: 400;
-  margin-bottom: $gap-8;
+  margin-bottom: gaps.$gap-8;
 
-  @media (max-width: $screen-lg) {
-    margin-bottom: $gap-4;
+  @media (max-width: breakpoints.$lg) {
+    margin-bottom: gaps.$gap-4;
   }
 }
 
 @mixin subsection-header {
   @include bold;
-  @include font-tertiary;
+  @include tertiary;
   text-transform: uppercase;
-  margin-bottom: $gap-6;
+  margin-bottom: gaps.$gap-6;
 
-  @media (max-width: $screen-lg) {
-    margin-bottom: $gap-4;
+  @media (max-width: breakpoints.$lg) {
+    margin-bottom: gaps.$gap-4;
   }
 }
