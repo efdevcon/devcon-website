@@ -256,7 +256,11 @@ module.exports = {
       options: {
         implementation: require('sass'),
         cssLoaderOptions: {
-          camelCase: false,
+          esModule: false,
+          modules: {
+            namedExport: false,
+            exportLocalsConvention: 'asIs',
+          },
         },
       },
     },
