@@ -54,8 +54,10 @@ END:VCALENDAR`
   return (
     <div className={css['events']}>
       {props.data.map((event: EventType) => {
+        const isPastEvent = moment(event.endDate).isBefore(moment())
+
         return (
-          <div key={event.id} className={css['event']}>
+          <div key={event.id} className={isPastEvent ? css['past-event'] : css['event']}>
             <div className={css['date-column']}>
               <a href={event.url} target="_blank" rel="oopener noreferrer">
                 <span className={css['day']}>{moment(event.startDate).format('DD')}</span>
