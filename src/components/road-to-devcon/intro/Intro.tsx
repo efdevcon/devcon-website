@@ -3,7 +3,7 @@ import { Page } from 'src/components/layouts/horizontal-layout'
 import css from './intro.module.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import road from 'src/assets/images/road.svg'
-import SurveyIcon from 'src/assets/icons/survey.svg'
+import EmailIcon from 'src/assets/icons/ui-email.svg'
 import InfoIcon from 'src/assets/icons/info.svg'
 import dog from 'src/assets/images/dog.svg'
 import guy from 'src/assets/images/scouting-guy.svg'
@@ -11,10 +11,10 @@ import leslie from 'src/assets/images/leslie.svg'
 import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
 import { Modal } from 'src/components/common/modal'
-import { Link } from 'src/components/common/link'
 import ArrowLeftIcon from 'src/assets/icons/box_arrow_left.svg'
 import ArrowRightIcon from 'src/assets/icons/box_arrow_right.svg'
 import CircleArrowRightIcon from 'src/assets/icons/circle_arrow_right.svg'
+import { Newsletter } from 'src/components/newsletter'
 
 export const HashTag = (props: { className: string }) => {
   const [hovered, setHovered] = React.useState(false)
@@ -42,6 +42,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const [showDoge, setShowDoge] = React.useState(false)
   const [modalOpen, setModalOpen] = React.useState(false)
+  const [subscribeModalOpen, setSubscribeModalOpen] = React.useState(false)
 
   // Important to pass props and ref to the Page component
   return (
@@ -88,20 +89,28 @@ export const Intro = React.forwardRef((props: any, ref) => {
             </div>
           </Modal>
 
-          <Link to="https://forms.gle/13wmHHbmgK2DQZXm9">
-            <button
-              className="lg white"
-              onMouseOver={() => {
-                setShowDoge(true)
-              }}
-              onMouseLeave={() => {
-                setShowDoge(false)
-              }}
-            >
-              {intl.formatMessage({ id: 'rtd_take_survey' })}
-              <SurveyIcon />
-            </button>
-          </Link>
+          <button
+            className="lg white"
+            onClick={() => setSubscribeModalOpen(true)}
+            onMouseOver={() => {
+              setShowDoge(true)
+            }}
+            onMouseLeave={() => {
+              setShowDoge(false)
+            }}
+          >
+            {intl.formatMessage({ id: 'rtd_subscribe_for_updates' })}
+            <EmailIcon />
+          </button>
+
+          <Modal
+            open={subscribeModalOpen}
+            close={() => setSubscribeModalOpen(false)}
+            onWheel={(e: React.SyntheticEvent) => e.nativeEvent.stopImmediatePropagation()}
+            onMouseDown={(e: React.SyntheticEvent) => e.stopPropagation()}
+          >
+            <Newsletter />
+          </Modal>
         </div>
       </div>
 
@@ -114,8 +123,10 @@ export const Intro = React.forwardRef((props: any, ref) => {
       <Checkpoint
         number="01"
         description={intl.formatMessage({ id: 'rtd_checkpoint_1' })}
-        action={intl.formatMessage({ id: 'rtd_take_survey' })}
-        link="https://forms.gle/13wmHHbmgK2DQZXm9"
+        action={intl.formatMessage({ id: 'rtd_subscribe_for_updates' })}
+        onClick={() => {
+          setSubscribeModalOpen(true)
+        }}
         markerClassName={css['marker']}
       />
 
