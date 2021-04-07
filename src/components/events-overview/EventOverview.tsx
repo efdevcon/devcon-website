@@ -64,14 +64,16 @@ END:VCALENDAR`
                 <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
               </a>
 
-              <span
-                role="button"
-                aria-label={`Add ${event.title}`}
-                className={css['event-add']}
-                onClick={() => downloadIcs(event)}
-              >
-                <EventIcon />
-              </span>
+              {!isPastEvent && 
+                <span
+                  role="button"
+                  aria-label={`Add ${event.title}`}
+                  className={css['event-add']}
+                  onClick={() => downloadIcs(event)}
+                >
+                  <EventIcon />
+                </span>
+              }
             </div>
             <div>
               <a href={event.url} target="_blank" rel="oopener noreferrer">
