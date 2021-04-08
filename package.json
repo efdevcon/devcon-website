@@ -16,8 +16,7 @@
     "lint": "eslint src/**/*.{ts,tsx}",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest",
-    "test-watch": "jest --watch"
+    "test": "jest --watch"
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
