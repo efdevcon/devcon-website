@@ -59,7 +59,7 @@ export const Hero = () => {
   `)
 
   return (
-    <div ref={heroEl} className={`${css['hero']}`}>
+    <div ref={heroEl} data-jest="hero" className={`${css['hero']}`}>
       {/* Grants some text visibility */}
       {/* <div className={css['shading']} /> */}
       {/* <img alt="" className={css['shading']} src={shading} /> */}

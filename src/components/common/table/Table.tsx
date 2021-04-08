@@ -101,8 +101,6 @@ const TableRows = (props: RowProps) => {
 export const Table = (props: TableProps) => {
   const [sortedItems, sortedBy, setSortedBy, sortDirection] = useSort(props.items, props.columns)
 
-  console.log(props.items, 'sorted items')
-
   return (
     <div className={css['container']}>
       <TableHeader

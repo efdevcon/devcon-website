@@ -14,16 +14,14 @@ export const createSchemaCustomization: any = createSchemaCustomizationPlugin //
 // Ordering doesn't matter since we're using scoped/prefixed classes, which means we can safely ignore order (prevents warnings in build step)
 // https://stackoverflow.com/questions/63124432/how-do-i-configure-mini-css-extract-plugin-in-gatsby
 const ignoreCSSOrder = ({ stage, actions, getConfig }: any) => {
-  if (stage === 'build-javascript') {
-    const config = getConfig()
-    const miniCssExtractPlugin = config.plugins.find(
-      (plugin: any) => plugin.constructor.name === 'MiniCssExtractPlugin'
-    )
-    if (miniCssExtractPlugin) {
-      miniCssExtractPlugin.options.ignoreOrder = true
-    }
-    actions.replaceWebpackConfig(config)
+  const config = getConfig()
+  const miniCssExtractPlugin = config.plugins.find(
+    (plugin: any) => plugin.constructor.name === 'MiniCssExtractPlugin'
+  )
+  if (miniCssExtractPlugin) {
+    miniCssExtractPlugin.options.ignoreOrder = true
   }
+  actions.replaceWebpackConfig(config)
 }
 
 export const onCreateWebpackConfig = (args: any) => {
