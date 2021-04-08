@@ -78,7 +78,7 @@
   "rtd_frequently_asked_questions": "Preguntas frecuentes",
   "rtd_invite": "Invitar",
   "rtd_footer": "Creado en una distancia segura con ❤️ del EF",
-  "rtd_checkpoint_1": "Participe en nuestra encuesta y establezca sus intenciones para un Devcon en persona.",
+  "rtd_checkpoint_1": "Establezca sus intenciones para un Devcon en persona increíble.",
   "rtd_checkpoint_2": "Participe y recoja POAPs de eventos para descuentos especiales y experiencias en Devcon.",
   "rtd_checkpoint_3": "¡Este es sólo el comienzo de nuestro Diario juntos! Comparte esta experiencia para que otros se unan a ti en el camino al desarrollo y mantente atento para que más misiones sigan adelante.",
   "rtd_take_survey": "Tomar encuesta de Devcon",
@@ -98,5 +98,6 @@
   "rtd_share_experience_text_email": "Realmente emocionad@ por la experiencia que viviremos juntos en Devcon Bogotá. Acompáñame en este Camino a Devcon #roadtodevcon",
   "rtd_share_speakers_text_email": "Espero oírte hablar en Devcon Bogotá. Acompáñame en este Camino a Devcon #roadtodevcon",
   "rtd_share_copy_link": "Copiar link",
+  "rtd_subscribe_for_updates": "Boletín de Devcon",
   "browser_not_supported": "Su navegador actual está desactualizado y no es compatible con las tecnologías web modernas. Actualice su navegador a la última versión o utilice otro navegador."
 }
