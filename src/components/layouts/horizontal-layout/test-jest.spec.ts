@@ -1,5 +1,7 @@
 import { Browser, BrowserContext, chromium, devices, Page } from 'playwright';
 
+console.log(Object.keys(devices, 'devices'))
+
 let browser: Browser;
 let context: BrowserContext;
 let page: Page;
@@ -8,7 +10,7 @@ beforeAll(async () => {
   browser = await chromium.launch();
   
   context = await browser.newContext({
-    ...devices['iPhone 6']
+    ...devices['iPhone 7']
   })
 });
 
