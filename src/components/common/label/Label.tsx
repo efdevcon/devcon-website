@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import css from './label.module.scss'
 
-type LabelProps = {
+export type LabelProps = {
   type?: string
   className?: string
   children?: ReactNode
