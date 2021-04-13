@@ -18,7 +18,7 @@
     "clean": "gatsby clean",
     "test": "jest --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "rm -f ./netlify.toml && build-storybook"
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
