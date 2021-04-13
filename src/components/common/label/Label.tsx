@@ -18,6 +18,7 @@ export const Label = (props: LabelProps) => {
   switch (props.type) {
     case 'success':
     case 'error':
+    case 'notification':
     case 'warning': {
       className += ` ${css[props.type]}`
     }

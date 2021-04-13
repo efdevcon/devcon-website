@@ -37,7 +37,7 @@ $logo-offset: 50px;
   position: relative;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
+  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #d529c6, #f25c37);
   background-size: 600% 100%;
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
@@ -49,7 +49,7 @@ $logo-offset: 50px;
   }
 
   @media (max-width: $breakpoints-md) {
-    height: 80vh;
+    height: 85vh;
   }
 
   .shading {

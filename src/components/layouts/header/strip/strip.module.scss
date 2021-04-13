@@ -6,6 +6,10 @@
   color: var(--text-color, black);
   background: var(--header-background-color, white);
 
+  &:not(.hero) {
+    border-bottom: var(--strip-border, 1px solid rgba(0, 0, 0, 0.1));
+  }
+
   .body {
     @include layout-content;
     display: var(--display-strip, flex);
@@ -13,10 +17,25 @@
     flex-direction: row;
     align-items: center;
     margin: auto;
-    height: var(--strip-height, 24px);
+    height: var(--strip-height, 32px);
     padding-top: var(--strip-padding, 4px);
     padding-bottom: var(--strip-padding, 4px);
     opacity: var(--strip-opacity, 1);
     transition: height 0.3s, opacity 0.3s;
+
+    .notification {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      > svg {
+        fill: none !important;
+        stroke: var(--text-color, black);
+      }
+
+      > * {
+        margin-right: $gaps-gap-2;
+      }
+    }
   }
 }

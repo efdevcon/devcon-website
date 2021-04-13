@@ -1,6 +1,6 @@
 import { Browser, BrowserContext, chromium, devices, Page } from 'playwright';
 
-console.log(Object.keys(devices, 'devices'))
+// console.log(Object.keys(devices, 'devices'))
 
 let browser: Browser;
 let context: BrowserContext;

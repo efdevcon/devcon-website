@@ -1,12 +1,26 @@
 import React from 'react'
 import { LanguageToggle } from './language-toggle'
+import IconVirus from 'src/assets/icons/virus.svg'
+import { Label } from 'src/components/common/label'
 import css from './strip.module.scss'
 
-export const Strip = () => {
+type HeaderProps = {
+  withHero?: boolean
+}
+
+export const Strip = ({ withHero }: HeaderProps) => {
+  let className = css['strip']
+
+  if (withHero) className += ` ${css['hero']}`
+
   return (
-    <div className={css['strip']}>
+    <div className={className}>
       <div className={css['body']}>
-        <p>COVID 19 Update - Notification</p>
+        <div className={css['notification']}>
+          <IconVirus />
+          <Label type="notification">COVID-19 UPDATE</Label>
+          <p>Notification</p>
+        </div>
         <LanguageToggle />
       </div>
     </div>

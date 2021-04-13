@@ -6,16 +6,41 @@ import NorthEast from 'src/assets/icons/north_east.svg'
 type LinkProps = {
   children: ReactNode
   indicateExternal?: boolean // Whether or not to add an external link indicator (if the url is a FQDN)
+  allowDrag?: boolean
   to: string
   [key: string]: any
 }
 
-export const Link = ({ children, indicateExternal, external, to, ...rest }: LinkProps) => {
+export const Link = ({ children, indicateExternal, external, allowDrag, to, ...rest }: LinkProps) => {
   const isMailTo = to.startsWith('mailto:')
+  const dragging = React.useRef(false)
+
+  const linkAttributes = {
+    ...rest,
+  }
+
+  // Links can exist within a draggable context; we don't want drag events to be mistaken for clicks, so we preventDefault if the mouse is moving
+  if (allowDrag) {
+    linkAttributes.onMouseDown = () => {
+      dragging.current = false
+    }
+
+    linkAttributes.onMouseMove = () => {
+      dragging.current = true
+    }
+
+    linkAttributes.onClick = (e: React.SyntheticEvent) => {
+      if (dragging.current) {
+        e.preventDefault()
+      }
+    }
+
+    linkAttributes.draggable = false
+  }
 
   if (isMailTo) {
     return (
-      <a href={to} {...rest}>
+      <a href={to} {...linkAttributes}>
         {children}
       </a>
     )
@@ -29,14 +54,14 @@ export const Link = ({ children, indicateExternal, external, to, ...rest }: Link
   // GatsbyLink is only used for internal links, as per the gatsby documentation
   if (isExternal) {
     return (
-      <a href={to} {...rest} target="_blank" rel="noopener noreferrer">
+      <a href={to} {...linkAttributes} target="_blank" rel="noopener noreferrer">
         {children} {indicateExternal && <NorthEast style={{ fontSize: '0.5rem' }} />}
       </a>
     )
   }
 
   return (
-    <GatsbyLink to={to} {...rest}>
+    <GatsbyLink to={to} {...linkAttributes}>
       {children}
     </GatsbyLink>
   )

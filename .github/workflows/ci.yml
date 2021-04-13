@@ -36,3 +36,26 @@ jobs:
         with:
           name: screenshots
           path: screenshots
+
+      # - name: 'BrowserStack Env Setup'
+      #   uses: 'browserstack/github-actions/setup-env@master'
+      #   with:
+      #     username: lassejacobsen2
+      #     access-key: mBqtLq8ffDpp1UFA5679
+      # build-name: 'BUILD_INFO'
+      # project-name: 'REPO_NAME'
+
+      # - name: 'Start BrowserStackLocal Tunnel'
+      #   uses: 'browserstack/github-actions/setup-local@master'
+      #   with:
+      #     local-testing: 'start'
+      #     local-logging-level: 'all-logs'
+      #     local-identifier: 'random'
+
+      # - name: Serve build to test against
+      #   run: yarn browserstack
+
+      # - name: 'Stop BrowserStackLocal'
+      #   uses: 'browserstack/github-actions/setup-local@master'
+      #   with:
+      #     local-testing: 'stop'
