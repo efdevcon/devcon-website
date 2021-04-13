@@ -19,7 +19,9 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "browserstack": "node browserstack/test",
-    "browserstack-ts": "ts-node --project ./tsconfig.json browserstack/test.ts"
+    "browserstack-ts": "ts-node --project ./tsconfig.json browserstack/test.ts",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "rm -f ./netlify.toml && build-storybook"
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
@@ -59,7 +61,13 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-typescript": "^7.13.0",
+    "@storybook/addon-actions": "^6.2.7",
+    "@storybook/addon-essentials": "^6.2.7",
+    "@storybook/addon-links": "^6.2.7",
+    "@storybook/react": "^6.2.7",
     "@types/jest": "^26.0.22",
     "@types/loadable__component": "^5.13.3",
     "@types/node": "^14.14.37",
@@ -69,7 +77,10 @@
     "@types/react-slick": "^0.23.4",
     "@types/react-test-renderer": "^16.9.3",
     "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-remove-graphql-queries": "^3.2.0",
     "babel-preset-gatsby": "^1.2.0",
+    "babel-preset-react-app": "^10.0.0",
     "browserstack-local": "^1.4.8",
     "gatsby-plugin-root-import": "^2.0.6",
     "gatsby-plugin-ts-config": "^1.1.5",
@@ -79,10 +90,11 @@
     "netlify-cli": "^3.15.0",
     "playwright": "^1.10.0",
     "prettier": "^2.1.2",
+    "react-svg-loader": "^3.0.3",
     "react-test-renderer": "^17.0.2",
     "sass": "^1.32.8",
     "selenium-webdriver": "^4.0.0-beta.2",
-    "ts-node": "^9.1.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.2.3"
   },
   "jest": {
