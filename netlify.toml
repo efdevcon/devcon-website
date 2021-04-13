@@ -5,15 +5,15 @@
 # [[plugins]]
 #   package = "netlify-plugin-gatsby-cache"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
 
-  [plugins.inputs.thresholds]
-    performance = 0.3
-    accessibility = 0.8
-    best-practices = 0.8
-    seo = 0.8
-    pwa = 0.8
+#   [plugins.inputs.thresholds]
+#     performance = 0.3
+#     accessibility = 0.8
+#     best-practices = 0.8
+#     seo = 0.8
+#     pwa = 0.8
 
 [[redirects]]
   from = "/"
