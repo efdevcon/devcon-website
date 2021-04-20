@@ -12,6 +12,10 @@ __snapshots__
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build
 
+# Netlify functions
+/functions
+/server
+
 # Dependency directories
 node_modules/
 jspm_packages/
