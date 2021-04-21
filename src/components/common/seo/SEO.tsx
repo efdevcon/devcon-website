@@ -30,6 +30,7 @@ export function SEO(props: SEOProps) {
   return (
     <>
       <Helmet title={title} titleTemplate={titleTemplate} htmlAttributes={{ lang: lang }}>
+        <meta name="msvalidate.01" content="077564F2866385AF8AAAA98C9B8B892C" />
         <meta name="description" content={description} />
         <meta name="image" content={image} />
 
