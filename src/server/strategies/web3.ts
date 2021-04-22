@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import Web3Strategy from 'passport-web3';
 
-const addresses = ['0x0b046f9e580ffe534ebae659d1fce83928793ff6', '0x791c398792a43dE1519147c0103815693181fc45']
+const addresses = ['0x0b046f9e580ffe534ebae659d1fce83928793ff6', '0x791c398792a43de1519147c0103815693181fc45']
 
 const onAuth = (address: string, done: any) => {
   try {

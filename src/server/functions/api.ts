@@ -18,7 +18,6 @@ userRoutes.register(router);
 
 server.use(json());
 server.use(urlencoded());
-server.use('/.netlify/functions/api', router);
 
 // Express-sessions
 if (!SERVER_CONFIG.SESSION_SECRET) throw new Error('Required SESSION_SECRET not found.')
@@ -36,5 +35,7 @@ server.use(passport.session());
 
 passport.serializeUser(serializeUser);
 passport.deserializeUser(deserializeUser);
+
+server.use('/api', router);
 
 export const handler = serverless(server);
