@@ -1,9 +1,6 @@
-# [build]
-#   command = "yarn build"
-#   publish = "public"
-
-# [[plugins]]
-#   package = "netlify-plugin-gatsby-cache"
+[build]
+  command = "yarn build"
+  publish = "public"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
@@ -14,6 +11,20 @@
     best-practices = 0.8
     seo = 0.8
     pwa = 0.8
+
+[context.storybook]
+  command = "yarn build-storybook"
+  publish = "storybook-static"
+
+[[context.storybook.plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [context.storybook.plugins.inputs.thresholds]
+    performance = 0
+    accessibility = 0
+    best-practices = 0
+    seo = 0
+    pwa = 0
 
 [[redirects]]
   from = "/"
