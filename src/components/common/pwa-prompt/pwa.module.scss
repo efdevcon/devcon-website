@@ -18,6 +18,7 @@
 
     .tag {
       > * {
+        display: inline-block;
         color: $colors-state-error;
         border: 1px solid $colors-state-error;
         padding-left: $gaps-gap-2;
