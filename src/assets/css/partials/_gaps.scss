@@ -122,3 +122,11 @@ $gap-16: $gap-1 * 16; // 64px
     }
   }
 }
+
+@mixin margin-bottom($initial, $breakpoint) {
+  margin-bottom: $initial;
+
+  @media (max-width: breakpoints.$lg) {
+    margin-bottom: $breakpoint;
+  }
+}

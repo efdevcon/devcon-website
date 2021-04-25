@@ -99,7 +99,7 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
 
   createPage({
     path: slug,
-    component: path.resolve(`./src/templates/${template}.tsx`),
+    component: path.resolve(`./src/components/domain/page-templates/${template}.tsx`),
     context: {
       slug: slug,
       lang: lang,

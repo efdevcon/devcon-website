@@ -1,5 +1,5 @@
 @use 'src/assets/css/partials/index' as *;
-@use 'css-variables.scss';
+@use 'components/colors';
 @use 'components/fonts';
 @use 'components/markdown';
 @use 'components/buttons';
@@ -21,7 +21,7 @@ html {
   overflow-x: hidden;
   margin: 0 auto;
   font-family: $fonts-primary;
-  color: $colors-primary;
+  color: $colors-main;
 
   @include fonts-md;
 

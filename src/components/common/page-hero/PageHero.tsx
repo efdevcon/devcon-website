@@ -41,13 +41,13 @@ export const PageHero = (props: PageHeroProps) => {
           <p className="font-xs text-uppercase">{pageCategory}</p>
 
           <div className={css['title-block']}>
-            <h1>{props.title}</h1>
+            <h1 className="font-massive">{props.title}</h1>
 
             {props.cta && (
               <div className={css['buttons']}>
                 {props.cta.map((link: CTALink) => {
                   return (
-                    <Link key={link.to + link.title} className="button lg" to={link.to}>
+                    <Link key={link.to + link.title} className="button white lg" to={link.to}>
                       {link.icon}
                       <span>{link.title}</span>
                     </Link>
@@ -67,7 +67,7 @@ export const PageHero = (props: PageHeroProps) => {
                     key={link.to + link.title}
                     to={link.to}
                     indicateExternal
-                    className="font-xs bold font-secondary text-uppercase"
+                    className="font-xs bold text-uppercase"
                   >
                     {link.title}
                   </Link>

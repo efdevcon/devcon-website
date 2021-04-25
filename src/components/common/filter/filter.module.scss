@@ -1,8 +1,12 @@
 @use 'src/assets/css/partials/index' as *;
 
-.container {
-  // RTD: remove padding
-  // padding: $gaps-gap-8 0;
+.dropdown {
+  @media (min-width: $breakpoints-md + 1) {
+    display: none !important;
+  }
+}
+
+.filter {
   display: flex;
   flex-wrap: wrap;
 
@@ -22,12 +26,16 @@
 
   .active-filter {
     @include fonts-bold;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid $colors-monochrome-10;
+  }
+
+  @media (max-width: $breakpoints-md) {
+    display: none;
   }
 }
 
 .link {
-  border: 1px solid red;
+  border: 1px solid $colors-track-pink;
 }
 
 .icon {

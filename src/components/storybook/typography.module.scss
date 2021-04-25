@@ -1,0 +1,10 @@
+@use 'src/assets/css/partials/index' as *;
+
+.typography {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin-top: $gaps-gap-2;
+  }
+}

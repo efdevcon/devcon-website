@@ -1,13 +1,13 @@
 @use 'sizes';
 @use 'gaps';
 @use 'breakpoints';
+@use 'colors';
 
 // Fonts
-$primary: 'Roboto', serif; // 'Montserrat', sans-serif;
-$secondary: 'Roboto', serif;
-$tertiary: 'Space Mono', monospace;
+$primary: 'Roboto', serif;
+$secondary: 'Space Mono', monospace;
 
-// Add more sizes as needed. Make sure to reference any newly added mixins from typegraphy.scss so we have one source of truth for text sizes.
+// Add more sizes as needed. Make sure to reference any newly added mixins from typography.scss so we have one source of truth for text sizes.
 @mixin xxs {
   font-size: sizes.$size-5;
   line-height: 150%;
@@ -43,6 +43,35 @@ $tertiary: 'Space Mono', monospace;
   line-height: 125%;
 }
 
+@mixin title {
+  @include secondary;
+  @include bold;
+  font-size: sizes.$size-11;
+  line-height: 150%;
+}
+
+@mixin subtitle {
+  @include secondary;
+  @include normal;
+  font-size: sizes.$size-11;
+  line-height: 150%;
+}
+
+@mixin massive {
+  @include secondary;
+  @include normal;
+  font-size: sizes.$size-16 + sizes.$size-16 + sizes.$size-8;
+  line-height: 150%;
+}
+
+@mixin section-link {
+  @include bold;
+  font-size: sizes.$size-9;
+  color: colors.$track-light-blue;
+  --color-icon: colors.$main;
+  text-transform: uppercase;
+}
+
 // Font-family
 @mixin primary {
   font-family: $primary;
@@ -52,26 +81,41 @@ $tertiary: 'Space Mono', monospace;
   font-family: $secondary;
 }
 
-@mixin tertiary {
-  font-family: $tertiary;
-}
-
 // Misc
 @mixin normal {
   font-weight: 400;
 }
+
 @mixin semi-bold {
   font-weight: 600;
 }
+
 @mixin bold {
   font-weight: 700;
 }
+
 @mixin very-bold {
-  font-weight: 800;
+  font-weight: 900;
 }
 
-@mixin section-header {
-  font-weight: 400;
+@mixin title {
+  @include secondary;
+  @include bold;
+  font-size: sizes.$size-11;
+  line-height: 150%;
+  margin-bottom: gaps.$gap-6;
+
+  @media (max-width: breakpoints.$lg) {
+    margin-bottom: gaps.$gap-4;
+  }
+}
+
+@mixin subtitle {
+  @include secondary;
+  @include normal;
+  font-size: sizes.$size-11;
+  line-height: 150%;
+
   margin-bottom: gaps.$gap-8;
 
   @media (max-width: breakpoints.$lg) {
@@ -79,13 +123,6 @@ $tertiary: 'Space Mono', monospace;
   }
 }
 
-@mixin subsection-header {
-  @include bold;
-  @include tertiary;
+@mixin uppercase {
   text-transform: uppercase;
-  margin-bottom: gaps.$gap-6;
-
-  @media (max-width: breakpoints.$lg) {
-    margin-bottom: gaps.$gap-4;
-  }
 }

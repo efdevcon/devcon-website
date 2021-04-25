@@ -48,33 +48,35 @@ export default function Components() {
       <button>Button</button>
       <button className="button-primary">Primary Button</button>
       <button className="button-secondary">Secondary Button</button>
-      <button className="button-tertiary">Terietary Button</button>
+      {/* <button className="button-tertiary">Terietary Button</button> */}
       <br />
       <br />
       <h2>Cards</h2>
-      <Card
-        title="Card with Description"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        imageUrl="https://blog.ethereum.org/img/2019/09/eth-wallpaper.jpg"
-        linkUrl="https://www.devcon.org/"
-        metadata={[moment(new Date()).format('ll'), 'devcon team']}
-      />
-      <Card
-        title="Card with Image"
-        imageUrl="https://devcon.org/assets/images/rtd-social.png"
-        linkUrl="https://www.devcon.org/"
-        metadata={[moment(new Date()).format('ll'), 'devcon team']}
-      />
+      <div style={{ width: '454px' }}>
+        <Card
+          title="Card with Description"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+          imageUrl="https://blog.ethereum.org/img/2019/09/eth-wallpaper.jpg"
+          linkUrl="https://www.devcon.org/"
+          metadata={[moment(new Date()).format('ll'), 'devcon team']}
+        />
+        <Card
+          title="Card with Image"
+          imageUrl="https://devcon.org/assets/images/rtd-social.png"
+          linkUrl="https://www.devcon.org/"
+          metadata={[moment(new Date()).format('ll'), 'devcon team']}
+        />
+      </div>
       <br />
       <h2>Carousel</h2>
       <Carousel />
       <br />
       <h2>Dropdown</h2>
-      <Dropdown filters={filters} />
+      {/* <Dropdown filters={filters} /> */}
       <br />
       <br />
       <h2>Filter</h2>
-      <Filter filters={filters} />
+      {/* <Filter filters={filters} /> */}
       <br />
       <br />
       <h2>Label</h2>

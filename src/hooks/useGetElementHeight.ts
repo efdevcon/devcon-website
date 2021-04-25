@@ -4,12 +4,6 @@ import { useState, useLayoutEffect } from 'react'
 const getElementHeight = (elementID: string) => {
   const element = document.getElementById(elementID)
 
-  // NEED TO FIX: some pages load before the CSS arrives, while others don't - this causes miscalculations in components that rely on this utility but resize once loaded
-  // console.log(element, 'element')
-  // console.log(element?.clientHeight, 'client height')
-
-  // debugger;
-
   return element?.clientHeight || 0
 }
 
@@ -25,7 +19,9 @@ export default (elementID: string) => {
       if (!el) return
 
       const observer = new window.ResizeObserver(entries => {
-        setElementHeight(entries[0].borderBoxSize[0].blockSize)
+        const borderBoxSize = entries[0].borderBoxSize[0] || entries[0].borderBoxSize
+
+        setElementHeight(borderBoxSize.blockSize)
       })
 
       observer.observe(el)

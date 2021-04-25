@@ -17,7 +17,7 @@
     max-height: calc(100% - #{$gaps-gap-8});
     padding: $gaps-gap-8;
     margin: $gaps-gap-4;
-    background: white;
+    background: $colors-monochrome-1;
     position: relative;
     overflow: auto;
     cursor: auto;

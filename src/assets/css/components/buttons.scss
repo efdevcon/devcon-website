@@ -16,14 +16,14 @@
 
 .button,
 button {
+  @include fonts-md;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  font-family: $fonts-secondary;
-  @include fonts-md;
+  font-family: $fonts-primary;
   padding: $gaps-gap-2 $gaps-gap-3;
-  color: $colors-primary;
-  border: 2px solid $colors-primary;
+  color: $colors-main;
+  border: 2px solid $colors-monochrome-10;
   background: none;
 
   &:focus,
@@ -32,12 +32,27 @@ button {
     outline: none;
   }
 
+  // Square buttons (usually used with icons?)
+  &.squared {
+    width: 48px;
+    height: 48px;
+    padding: 0px !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Sizes
   &.sm {
     @include fonts-sm;
     padding: $gaps-gap-1 $gaps-gap-2;
 
     @media (max-width: $breakpoints-md) {
       @include fonts-xs;
+    }
+
+    &.squared {
+      width: 36px;
+      height: 36px;
     }
   }
 
@@ -48,91 +63,59 @@ button {
     @media (max-width: $breakpoints-md) {
       @include fonts-md;
     }
+
+    &.squared {
+      width: 56px;
+      height: 56px;
+    }
   }
 
+  // Colors
   &.white {
-    background: white;
-    --text-color: black;
+    background: $colors-monochrome-1;
+    --color-icon: #{$colors-main}; // For icons nested in the button
+    color: $colors-main;
+    border: 2px solid $colors-monochrome-10;
+
     &:hover {
       background: #f2f2f2;
     }
+
+    &.inverted {
+      background: $colors-monochrome-10;
+      --color-icon: #{$colors-monochrome-1};
+      color: $colors-monochrome-1;
+      border: 2px solid $colors-monochrome-10;
+
+      &:disabled {
+        background: $colors-monochrome-7;
+      }
+    }
+  }
+
+  &.light-blue {
+    background: $colors-track-light-blue;
+    color: $colors-monochrome-1;
+    --color-icon: #{$colors-monochrome-1};
+    border-color: $colors-track-light-blue;
+
+    &.inverted {
+      background: $colors-monochrome-1;
+      color: $colors-track-light-blue;
+      --color-icon: #{$colors-track-light-blue};
+    }
+  }
+
+  &.blue {
+    background: $colors-track-blue;
+    color: $colors-monochrome-1;
+    --color-icon: #{$colors-monochrome-1};
+    border-color: $colors-track-blue;
+
+    &.inverted {
+      background: $colors-monochrome-1;
+      color: $colors-track-blue;
+      --color-icon: #{$colors-track-blue};
+    }
   }
 }
-
-// <button class="lg transparent">
-
-// button,
-// .button-primary {
-//   background-color: $color-primary;
-//   color: $color-secondary-dark;
-//   padding: $size-4 $size-3;
-
-//   &:hover {
-//     background-color: $color-primary-light;
-//   }
-
-//   &:active {
-//     background-color: $color-primary-dark;
-//   }
-
-//   &:disabled {
-//     background-color: $color-primary-opaque;
-//   }
-// }
-
-// .button-secondary {
-//   cursor: pointer;
-//   background-color: $color-secondary;
-//   color: $color-secondary-dark;
-//   padding: $size-4 $size-3;
-
-//   &:hover {
-//     background-color: $color-secondary-light;
-//   }
-
-//   &:active {
-//     background-color: $color-secondary-dark;
-//   }
-
-//   &:disabled {
-//     background-color: $color-secondary-opaque;
-//   }
-// }
-
-// .button-tertiary {
-//   cursor: pointer;
-//   background-color: $color-tertiary;
-//   color: $color-secondary-dark;
-//   padding: $size-4 $size-3;
-
-//   &:hover {
-//     background-color: $color-tertiary-light;
-//   }
-
-//   &:active {
-//     background-color: $color-tertiary-dark;
-//   }
-
-//   &:disabled {
-//     background-color: $color-tertiary-opaque;
-//   }
-// }
-
-// Size (sm, md, lg)
-// Color (any color reference, seethrough)
-// Responsiveness
-
-// &:focus,
-// &:active,
-// &:hover {
-//     outline: none;
-//     background: #fff;
-//     border: 2px solid $color-primary;
-//     color: $color-primary;
-// }
-
-// @media (min-width: $breakpoints-md) and (max-width: $breakpoints-xl) {
-//     padding: $gap-1 $gap-2;
-//     width: 100%;
-//     margin-top: $gap-2;
-// }

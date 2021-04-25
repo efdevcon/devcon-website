@@ -1,0 +1,20 @@
+@use 'src/assets/css/partials/index' as *;
+
+:root {
+  --color-icon: inherit; // Since icons don't respond to the color attribute, they can use this variable to retrieve and apply the color context
+  --color-text: $colors-main;
+
+  // Rule of thumb for colors: if something could potentially change color if app goes into dark-mode, use a CSS variable
+  // --color-monochrome-10: #{$colors-monochrome-1};
+  // --color-monochrome-1: #{$colors-monochrome-10};
+
+  // --color-text-black: #{$colors-monochrome-10};
+  // --color-text-white: #{$colors-monochrome-1};
+}
+
+// Invert colors
+.dark-mode {
+  --color-text: $colors-main-light;
+  // --color-text-black: #{$colors-monochrome-10};
+  // --color-text-white: #{$colors-monochrome-1};
+}

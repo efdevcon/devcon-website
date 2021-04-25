@@ -1,0 +1,33 @@
+@use 'src/assets/css/partials/index' as *;
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  min-width: 0;
+  height: 100%;
+
+  .highlighted-link {
+    @include fonts-primary;
+    @include fonts-bold;
+    margin-right: 32px;
+  }
+
+  .left {
+    display: none;
+
+    @media (min-width: $breakpoints-lg + 1) {
+      display: flex;
+    }
+  }
+
+  .right {
+    height: 100%;
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
