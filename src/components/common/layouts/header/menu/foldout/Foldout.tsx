@@ -14,9 +14,11 @@ const FoldoutContent = (props: any) => {
   const stripHeight = useGetElementHeight('strip')
   const fullHeaderHeight = headerHeight + stripHeight
 
-  let foldoutClassName = `${css['foldout']}`
+  let foldoutClassName = `${css['foldout']} ${css['open']}`
 
-  if (props.foldoutOpen) foldoutClassName += ` ${css['open']}`
+  // if (props.foldoutOpen) foldoutClassName += ` ${css['open']}`
+
+  if (!props.foldoutOpen) return false
 
   // Moving the foldout content to the root so we have better control over z-index in relation to the header
   return createPortal(
