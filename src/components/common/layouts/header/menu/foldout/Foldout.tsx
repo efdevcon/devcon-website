@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import IconMenu from 'src/assets/icons/menu.svg'
 import IconCross from 'src/assets/icons/cross.svg'
 import css from './foldout.module.scss'
@@ -13,12 +13,17 @@ const FoldoutContent = (props: any) => {
   const headerHeight = useGetElementHeight('header')
   const stripHeight = useGetElementHeight('strip')
   const fullHeaderHeight = headerHeight + stripHeight
+  const [mounted, setMounted] = React.useState(false)
 
-  let foldoutClassName = `${css['foldout']} ${css['open']}`
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-  // if (props.foldoutOpen) foldoutClassName += ` ${css['open']}`
+  if (!mounted) return null
 
-  if (!props.foldoutOpen) return false
+  let foldoutClassName = `${css['foldout']}`
+
+  if (props.foldoutOpen) foldoutClassName += ` ${css['open']}`
 
   // Moving the foldout content to the root so we have better control over z-index in relation to the header
   return createPortal(
