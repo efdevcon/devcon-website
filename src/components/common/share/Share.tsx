@@ -9,7 +9,9 @@ import { useIntl } from 'react-intl'
 import IconEmail from 'src/assets/icons/pencil.svg'
 
 type ShareProps = {
-  renderTrigger: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
+  renderTrigger?: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
+  url?: string
+  onShare?: () => any
 }
 
 // Remove soon - share should now use the custom share sheet instead of this

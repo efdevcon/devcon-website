@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/common/seo'
+import { SEO } from 'src/components/domain/seo'
 import { DIPOverview } from 'src/components/domain/dips/overview'
 import Content from 'src/components/common/layouts/content'
 import { DIP } from 'src/types/dip'

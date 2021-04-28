@@ -1,0 +1,61 @@
+@use 'src/assets/css/partials/index' as *;
+
+.toggle {
+  @include fonts-xl;
+  display: none !important;
+  margin-left: $gaps-gap-5;
+  cursor: pointer;
+
+  @media (max-width: $breakpoints-lg) {
+    display: inline-block !important;
+  }
+}
+
+.foldout {
+  @include layout-content;
+  @include fonts-md;
+  display: none;
+  position: fixed;
+  padding-top: $gaps-gap-4;
+  padding-bottom: $gaps-gap-4;
+  background: $colors-monochrome-1;
+  color: $colors-main;
+  --color-icon: #{$colors-main};
+  z-index: 19;
+  top: 0px;
+  left: 0px;
+  bottom: var(--headerHeight);
+  width: 100%;
+  overflow: auto;
+  transform: translateY(-100%);
+  transition: transform 400ms ease-out;
+
+  @media (max-width: $breakpoints-lg) {
+    display: block;
+  }
+
+  &.open {
+    transform: translateY(calc(0px + var(--headerHeight)));
+  }
+
+  > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > *,
+    > * > * {
+      &:not(:nth-child(1)) {
+        margin-top: $gaps-gap-4;
+        padding-top: $gaps-gap-4;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .newsletter {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}

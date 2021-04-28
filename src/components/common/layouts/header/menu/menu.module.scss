@@ -1,17 +1,17 @@
 @use 'src/assets/css/partials/index' as *;
 
+.highlighted-link {
+  @include fonts-primary;
+  @include fonts-bold;
+  margin-right: 32px;
+}
+
 .menu {
   display: flex;
   align-items: center;
   flex-grow: 1;
   min-width: 0;
   height: 100%;
-
-  .highlighted-link {
-    @include fonts-primary;
-    @include fonts-bold;
-    margin-right: 32px;
-  }
 
   .left {
     display: none;
@@ -29,5 +29,43 @@
     align-items: center;
     flex-direction: row;
     justify-content: flex-end;
+  }
+}
+
+.account {
+  // Move to separate file?
+  .account-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid $colors-monochrome-1;
+    padding: $gaps-gap-2;
+
+    > svg {
+      @include fonts-xl;
+      margin-right: $gaps-gap-2;
+    }
+  }
+
+  .account-icon {
+    @include fonts-xl;
+    margin-left: $gaps-gap-7;
+    cursor: pointer;
+  }
+}
+
+.desktop {
+  display: none !important;
+
+  @media (min-width: $breakpoints-lg + 1) {
+    display: flex !important;
+  }
+}
+
+.mobile {
+  display: none !important;
+
+  @media (max-width: $breakpoints-lg) {
+    display: block !important;
   }
 }

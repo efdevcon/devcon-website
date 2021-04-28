@@ -223,8 +223,6 @@ export const Proposals = (props: ProposalsProps) => {
     },
   })
 
-  console.log(dipsWithLink, 'lol')
-
   return (
     <section id="proposals" className={css['container']}>
       <div className={css['top-container']}>

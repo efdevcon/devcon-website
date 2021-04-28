@@ -7,11 +7,11 @@ import { Modal } from 'src/components/common/modal'
 import IconPlus from 'src/assets/icons/plus.svg'
 
 const getIsPWAPossible = () => {
-  return true
+  return false
 }
 
 export const PWAPrompt = (props: any) => {
-  const [open, setOpen] = React.useState(getIsPWAPossible())
+  const [open, setOpen] = React.useState(false)
   const intl = useIntl()
 
   const data = useStaticQuery(graphql`
@@ -28,8 +28,13 @@ export const PWAPrompt = (props: any) => {
     }
   `)
 
+  useEffect(() => {
+    setOpen(getIsPWAPossible())
+  }, [])
+
   return (
     <Modal open={open} close={() => setOpen(!open)} className={css['container']}>
+      <Img alt="Devcon wizard" className={css['background']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
       <div className={css['content']}>
         <div className={css['tag']}>
           <p className="font-xs bold">DEVCON WEB APP</p>
@@ -50,7 +55,6 @@ export const PWAPrompt = (props: any) => {
           </div>
         </div>
       </div>
-      <Img alt="Devcon wizard" className={css['background']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
     </Modal>
   )
 }

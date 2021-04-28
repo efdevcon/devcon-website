@@ -9,7 +9,7 @@ const getElementHeight = (elementID: string) => {
 
 // Returns the height of an element by ID
 // Assumes the target element is rendered
-export default (elementID: string) => {
+const useGetElementHeight = (elementID: string) => {
   const [elementHeight, setElementHeight] = useState(0)
 
   useLayoutEffect(() => {
@@ -19,9 +19,15 @@ export default (elementID: string) => {
       if (!el) return
 
       const observer = new window.ResizeObserver(entries => {
-        const borderBoxSize = entries[0].borderBoxSize[0] || entries[0].borderBoxSize
+        const entry = entries[0];
 
-        setElementHeight(borderBoxSize.blockSize)
+        if (entry.borderBoxSize) {
+          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
+
+          setElementHeight(borderBoxSize.blockSize);
+        } else {
+          setElementHeight(entry.contentRect.height);
+        }
       })
 
       observer.observe(el)
@@ -50,3 +56,5 @@ export default (elementID: string) => {
 
   return elementHeight
 }
+
+export default useGetElementHeight;

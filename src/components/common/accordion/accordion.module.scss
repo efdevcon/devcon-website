@@ -1,5 +1,23 @@
 @use 'src/assets/css/partials/index' as *;
 
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: $gaps-gap-4 0;
+  cursor: pointer;
+
+  h3 {
+    @include fonts-lg;
+    text-transform: uppercase;
+  }
+
+  svg {
+    color: $colors-system-error;
+    fill: $colors-system-error;
+  }
+}
+
 .header {
   cursor: pointer;
   display: flex;
@@ -21,34 +39,22 @@
   }
 }
 
-.icon {
-  flex-shrink: 0;
+.item-container {
+  padding: $gaps-gap-4;
+  background: $colors-monochrome-2;
+
+  .active {
+    @extend .header;
+    border-bottom: none;
+    background: $colors-monochrome-2;
+  }
 }
 
-.active {
-  @extend .header;
-  background: $colors-monochrome-2;
+.icon {
+  flex-shrink: 0;
 }
 
 .body {
   padding: $gaps-gap-8 0;
   border-bottom: 1px solid rgba($colors-monochrome-10, 0.2);
-}
-
-.category {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: $gaps-gap-4 0;
-  cursor: pointer;
-
-  h3 {
-    @include fonts-lg;
-    text-transform: uppercase;
-  }
-
-  svg {
-    color: $colors-system-error;
-    fill: $colors-system-error;
-  }
 }

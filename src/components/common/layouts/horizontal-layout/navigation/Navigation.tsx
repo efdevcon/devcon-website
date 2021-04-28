@@ -14,10 +14,10 @@ import { Newsletter } from 'src/components/common/newsletter'
 import { SocialMedia } from 'src/components/common/layouts/footer'
 import { Link as LinkType } from 'src/types/Link'
 import { Link } from 'src/components/common/link'
-import { COPYRIGHT_NOTICE } from 'src/utils/constants'
 import usePageInView, { hashSlug } from './usePageInView'
 import { useLanguageToggle } from 'src/components/common/layouts/header/strip/language-toggle'
 import useKeyBinding from 'src/hooks/useKeybinding'
+import { Copyright } from 'src/components/common/layouts/Copyright'
 
 type PageRefs = {
   [key: string]: React.Ref<HTMLDivElement>
@@ -152,10 +152,7 @@ const Foldout = ({ pageProps, hover, pages, setHover, pageInView, links, goToSli
         <div>
           <SocialMedia onShare={() => goToSlide(pages.length - 1)} />
           <Newsletter />
-          <div className={css['info']}>
-            <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>
-            <p>{COPYRIGHT_NOTICE}</p>
-          </div>
+          <Copyright />
         </div>
       </div>
     </div>

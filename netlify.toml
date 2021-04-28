@@ -7,10 +7,10 @@
 
   [plugins.inputs.thresholds]
     performance = 0.3
-    accessibility = 0.8
-    best-practices = 0.8
-    seo = 0.8
-    pwa = 0.8
+    accessibility = 0.6
+    best-practices = 0.6
+    seo = 0.6
+    pwa = 0.6
 
 [context.storybook]
   command = "yarn build-storybook"

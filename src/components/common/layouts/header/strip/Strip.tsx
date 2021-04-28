@@ -14,7 +14,7 @@ export const Strip = ({ withHero }: HeaderProps) => {
   if (withHero) className += ` ${css['hero']}`
 
   return (
-    <div className={className}>
+    <div className={className} id="strip">
       <div className={css['body']}>
         <div className={css['notification']}>
           <IconVirus />

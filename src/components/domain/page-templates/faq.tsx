@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/common/seo'
+import { SEO } from 'src/components/domain/seo'
 import { FAQ } from 'src/components/domain/faq'
 import { PageHero } from 'src/components/common/page-hero'
 import { ToFaqData } from 'src/components/domain/faq/queryMapper'

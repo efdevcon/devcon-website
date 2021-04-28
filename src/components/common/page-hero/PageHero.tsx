@@ -3,6 +3,7 @@ import css from './page-hero.module.scss'
 import { Link } from 'src/components/common/link'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
 import usePageCategory from './usePageCategory'
+import useIsScrolled from 'src/hooks/useIsScrolled'
 
 type NavigationLink = {
   to: string
@@ -25,14 +26,22 @@ type PageHeroProps = {
 }
 
 export const PageHero = (props: PageHeroProps) => {
+  const stripHeight = useGetElementHeight('strip')
   const headerHeight = useGetElementHeight('header')
   const pageHeaderHeight = useGetElementHeight('page-navigation')
   const pageHeroHeight = useGetElementHeight('page-hero')
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
   const pageCategory = usePageCategory()
+  const isScrolled = useIsScrolled()
+
+  console.log(stripHeight, headerHeight)
 
   return (
-    <div id="page-hero" className={css['hero']} style={{ '--negative-offset': negativeOffset }}>
+    <div
+      id="page-hero"
+      className={`${css['hero']} ${isScrolled ? css['scrolled'] : ''}`}
+      style={{ '--negative-offset': negativeOffset, '--strip-height': `${stripHeight}px` }}
+    >
       <div className={css[props.type]}>
         <img alt="" src={props.logo} />
       </div>

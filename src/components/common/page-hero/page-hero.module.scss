@@ -11,6 +11,13 @@
   border-bottom: 1px solid black;
   margin-bottom: $gaps-gap-10;
 
+  // Strip is always present on mobile (but not on desktop) - we have to account for that:
+  &.scrolled {
+    @media (max-width: $breakpoints-lg) {
+      top: calc(var(--negative-offset) + var(--strip-height));
+    }
+  }
+
   .backdrop {
     position: absolute;
     top: 0;

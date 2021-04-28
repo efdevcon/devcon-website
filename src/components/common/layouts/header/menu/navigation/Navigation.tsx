@@ -1,18 +1,37 @@
 import React from 'react'
-import IconMenu from 'src/assets/icons/menu.svg'
 import IconArrowDown from 'src/assets/icons/arrow_drop_down.svg'
 import { Link } from 'src/components/common/link'
 import css from './navigation.module.scss'
-import { usePageContext } from 'src/context/page-context'
 import { Link as LinkType } from 'src/types/Link'
+import ArrowCollapse from 'src/assets/icons/arrow_collapse.svg'
+import ArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
 
-export const Navigation = () => {
-  const { navigation } = usePageContext()
+const Mobile = (props: any) => {
+  return (
+    <div className={css['mobile-navigation']}>
+      <ul className={css['accordion']}>
+        {props.navigationData.site.map((i: LinkType, index: number) => {
+          return (
+            <li key={i.title}>
+              {i.title}
+              {true ? <ArrowCollapse /> : <ArrowDropdown />}
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+}
+
+export const Navigation = (props: any) => {
+  if (props.mobile) {
+    return <Mobile {...props} />
+  }
 
   return (
     <>
       <ul className={css['navigation']}>
-        {navigation.site.map((i: LinkType, index: number) => {
+        {props.navigationData.site.map((i: LinkType, index: number) => {
           const primaryKey = `site-nav-1_${index}`
           const hasChildren = i.links && i.links.length > 0
 
@@ -64,8 +83,6 @@ export const Navigation = () => {
           )
         })}
       </ul>
-
-      <IconMenu style={{ width: '30px', height: '20px', marginLeft: '28px', cursor: 'pointer' }} />
     </>
   )
 }

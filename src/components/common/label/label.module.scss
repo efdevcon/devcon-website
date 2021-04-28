@@ -22,7 +22,8 @@
   }
 
   &.notification {
-    color: $colors-monochrome-10;
-    background: $colors-state-error-light;
+    @include fonts-bold;
+    color: $colors-monochrome-1;
+    background: $colors-state-error;
   }
 }

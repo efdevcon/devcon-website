@@ -75,6 +75,26 @@
   }
 }
 
+.mobile-navigation {
+  > ul {
+    list-style-type: none;
+
+    > li {
+      @include fonts-xl;
+      display: flex;
+      justify-content: space-between;
+
+      &:not(:first-child) {
+        margin-top: $gaps-gap-4;
+      }
+
+      svg {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
 .foldout-link {
   position: relative;
   cursor: pointer;

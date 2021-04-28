@@ -12,7 +12,7 @@ type ModalProps = {
 }
 
 export const Modal = ({ close, ...props }: ModalProps) => {
-  if (!props.open) return false
+  if (!props.open) return null
 
   let contentClass = css['content']
 

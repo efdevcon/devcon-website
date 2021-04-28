@@ -118,6 +118,10 @@ h6,
   @include fonts-md;
 }
 
+.font-lg {
+  @include fonts-lg;
+}
+
 .font-xl {
   @include fonts-xl;
 }

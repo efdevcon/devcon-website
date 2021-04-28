@@ -16,7 +16,7 @@ import { MessageFromDeva } from 'src/components/domain/road-to-devcon/message-fr
 import { Invite } from 'src/components/domain/road-to-devcon/invite'
 import { ToEventData, ToMeetupData } from 'src/components/domain/events-overview/queryMapper'
 import { ToArchiveData } from 'src/components/domain/archive-overview/queryMapper'
-import { SEO } from 'src/components/common/seo'
+import { SEO } from 'src/components/domain/seo'
 import IconRoad from 'src/assets/icons/road.svg'
 
 export default function RoadToDevcon({ data }: any) {

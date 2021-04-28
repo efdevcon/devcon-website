@@ -20,7 +20,7 @@ export function LanguageToggle() {
   const { redirectPath } = useLanguageToggle()
 
   return (
-    <div className={css['language-toggle']}>
+    <div id="language-toggle" className={css['language-toggle']}>
       <IconLanguage style={{ fontSize: '14px' }} />
       <Link to={`/en/${redirectPath}`} className="bold">
         EN

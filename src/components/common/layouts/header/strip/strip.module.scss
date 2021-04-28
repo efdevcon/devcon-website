@@ -1,10 +1,24 @@
 @use 'src/assets/css/partials/index' as *;
 
 .strip {
-  @include fonts-xs;
+  @include fonts-sm;
+  position: relative;
+  z-index: 20;
   width: 100%;
   color: var(--color-icon, $colors-main);
   background: var(--header-background-color, $colors-monochrome-1);
+
+  :global(#language-toggle) {
+    @media (max-width: $breakpoints-lg) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    background: $colors-ef-pink;
+    color: #{$colors-monochrome-10};
+    --color-icon: #{$colors-system-error};
+  }
 
   &:not(.hero) {
     border-bottom: var(--strip-border, 1px solid rgba(0, 0, 0, 0.1));
@@ -29,8 +43,13 @@
       align-items: center;
 
       > svg {
+        @include fonts-md;
         fill: none !important;
         stroke: var(--color-icon, $colors-main);
+
+        @media (max-width: $breakpoints-lg) {
+          @include fonts-lg;
+        }
       }
 
       > * {

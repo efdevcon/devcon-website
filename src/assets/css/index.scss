@@ -18,7 +18,6 @@
 
 html {
   position: relative;
-  overflow-x: hidden;
   margin: 0 auto;
   font-family: $fonts-primary;
   color: $colors-main;
@@ -36,6 +35,7 @@ html {
 
 body {
   position: relative;
+  overflow-x: hidden;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
