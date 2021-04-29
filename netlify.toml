@@ -27,6 +27,16 @@
     seo = 0
     pwa = 0
 
+[[context.web3-login.plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [context.web3-login.plugins.inputs.thresholds]
+    performance = 0
+    accessibility = 0
+    best-practices = 0
+    seo = 0
+    pwa = 0
+
 [[redirects]]
   from = "/"
   to = "/en/"
