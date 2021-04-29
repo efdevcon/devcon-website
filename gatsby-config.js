@@ -23,7 +23,7 @@ module.exports = {
     siteUrl: siteUrl,
   },
   developMiddleware: app => {
-    app.use('/.netlify/functions/',
+    app.use('/api/',
       createProxyMiddleware({
         target: 'http://localhost:9000',
         pathRewrite: {

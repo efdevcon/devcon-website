@@ -5,7 +5,7 @@ export default function Profile() {
 
   React.useEffect(() => {
     async function asyncEffect() { 
-      const response = await fetch('/.netlify/functions/api/users/profile')
+      const response = await fetch('/api/users/profile')
       if(response.status === 200 && response.body) {
         const body = await response.json()
         setProfile(body.data)

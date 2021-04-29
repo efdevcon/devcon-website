@@ -59,7 +59,7 @@ export default function Connect() {
         }
 
         try {
-            const response = await fetch('/.netlify/functions/api/users/nonce')
+            const response = await fetch('/api/users/nonce')
             const body = await response.json()
             rawMessage = body.data
 
@@ -81,7 +81,7 @@ export default function Connect() {
         }
 
         try {
-            const response = await fetch('/.netlify/functions/api/users/login', {
+            const response = await fetch('/api/users/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
@@ -117,7 +117,7 @@ export default function Connect() {
         }
 
         web3Context.web3Modal.clearCachedProvider()
-        await fetch('/.netlify/functions/api/users/lgout', { method: 'POST' })        
+        await fetch('/api/users/lgout', { method: 'POST' })        
         setWeb3Context(undefined)
     }
 
