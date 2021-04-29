@@ -1,19 +1,16 @@
 import React from 'react'
 
-const LazyConnectComponent = React.lazy(() =>
-  import("../../components/Connect")
-)
-
-export default function Index() {
+export default function Profile() {
   const isBrowser = typeof window !== "undefined"
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>User Profile</h2>
 
       {isBrowser && (
           <React.Suspense fallback={<div />}>
-            <LazyConnectComponent />
+            <p>Logged-in user profile.</p>
+            <p>Address, Email, Username, Ticket, etc.</p>
           </React.Suspense>
       )}
     </div>
