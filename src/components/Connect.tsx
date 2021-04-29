@@ -3,6 +3,7 @@ import Web3Modal from "web3modal";
 import { utils, providers } from "ethers";
 import { Helmet } from "react-helmet"
 import Profile from './Profile';
+import Torus from '@toruslabs/torus-embed';
 
 interface Web3Context {
     web3Modal: any
@@ -26,6 +27,9 @@ export default function Connect() {
                         infuraId: process.env.INFURA_ID,
                     }
                 },
+                torus: {
+                    package: Torus,
+                }
             }
 
             return new Web3Modal({

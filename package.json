@@ -29,6 +29,7 @@
   "dependencies": {
     "@loadable/component": "^5.14.1",
     "@tippyjs/react": "^4.2.5",
+    "@toruslabs/torus-embed": "^1.10.9",
     "canvas-confetti": "^1.4.0",
     "dotenv": "^8.2.0",
     "ethers": "^5.1.3",
