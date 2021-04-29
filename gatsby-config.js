@@ -35,7 +35,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-root-import',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-netlify-cms',
+    // 'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-sharp`,
     `gatsby-transformer-yaml`,
@@ -227,29 +227,29 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               beginMarker: `[[`,
               endMarker: `]]`,
               width: 600,
               related: false,
-              containerClass: "embedded-video-container",
+              containerClass: 'embedded-video-container',
             },
           },
           {
             resolve: 'gatsby-transformer-remark-frontmatter',
             options: {
               whitelist: ['left', 'right'],
-            }
+            },
           },
         ],
-      }
+      },
     },
-    "gatsby-remark-responsive-iframe",
+    'gatsby-remark-responsive-iframe',
     'gatsby-transformer-json',
     {
       resolve: `gatsby-plugin-intl`,

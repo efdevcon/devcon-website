@@ -8,7 +8,7 @@ import IconArrowCollapse from 'src/assets/icons/arrow_collapse.svg'
 import IconArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
 
 interface AccordionProps {
-  title: string
+  title?: string
   items: AccordionItem[]
   open: boolean
 }
@@ -29,35 +29,37 @@ export function Accordion(props: AccordionProps) {
 
   return (
     <div>
-      <div
-        role="button"
-        className={css['category']}
-        aria-label={`Toggle ${props.title}`}
-        onClick={() => setShowQuestions(!showQuestions)}
-      >
-        <h3>{props.title}</h3>
-        {showQuestions && <IconMinus />}
-        {!showQuestions && <IconPlus />}
-      </div>
+      {props.title && (
+        <div
+          role="button"
+          className={css['category']}
+          aria-label={`Toggle ${props.title}`}
+          onClick={() => setShowQuestions(!showQuestions)}
+        >
+          <h3>{props.title}</h3>
+          {showQuestions && <IconMinus />}
+          {!showQuestions && <IconPlus />}
+        </div>
+      )}
 
       {props.items.length > 0 &&
         showQuestions &&
         props.items.map((item, index) => {
           const open = opens[index]
+
           return (
-            <div key={item.id} className={css['container']}>
+            <div key={item.id} className={css['item-container']}>
               <div className={css[open ? 'active' : 'header']} onClick={() => toggle(index)}>
-                <span>{item.title}</span>
-                <div className={css['icon']}>
-                  {!open && <IconArrowDropdown />}
-                  {open && <IconArrowCollapse />}
-                </div>
+                <p className="font-lg">{item.title}</p>
+                <div className={css['icon']}>{open ? <IconArrowCollapse /> : <IconArrowDropdown />}</div>
               </div>
-              {open && (
+
+              {open && item.body}
+              {/* {open && (
                 <div className={css['body']}>
                   <p dangerouslySetInnerHTML={{ __html: item.body }} />
                 </div>
-              )}
+              )} */}
             </div>
           )
         })}

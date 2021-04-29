@@ -1,0 +1,111 @@
+@use 'src/assets/css/partials/index' as *;
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: #f3f9ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: $gaps-gap-6;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  // margin-bottom: $gaps-gap-4;
+
+  .title {
+    display: flex;
+    align-items: flex-start;
+
+    .info {
+      cursor: pointer;
+      margin-top: 6px;
+      margin-left: $gaps-gap-4;
+    }
+  }
+}
+
+.dropdown {
+  @media (min-width: $breakpoints-md) {
+    display: none;
+  }
+}
+
+.filter {
+  @media (max-width: $breakpoints-md) {
+    display: none;
+  }
+}
+
+.gradient {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  padding-bottom: 20px; // scroll gradient
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 5px;
+  }
+}
+
+.modal-container {
+  > h4 {
+    @include fonts-xl;
+    font-family: $fonts-primary;
+    text-transform: uppercase;
+    margin-bottom: $gaps-gap-4;
+    padding-bottom: $gaps-gap-4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  > div {
+    max-width: 750px;
+    padding-right: $gaps-gap-8;
+
+    @media (max-width: $breakpoints-sm) {
+      padding-right: 0px;
+    }
+  }
+}
+
+.modal-content {
+  @include fonts-lg;
+
+  p:first-child {
+    @include fonts-xl;
+  }
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: $gaps-gap-6;
+  @include fonts-semi-bold;
+  text-transform: uppercase;
+
+  > a {
+    cursor: pointer;
+  }
+}

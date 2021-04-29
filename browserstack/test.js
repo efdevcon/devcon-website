@@ -16,13 +16,21 @@ const capabilities = [
     name: 'Parallel_test_4',
   },
   {
-    browserName: 'chrome',
-    browser_version: 'latest',
-    os: 'Windows',
-    os_version: '10',
+    device: 'Google Pixel 5',
+    browserName: 'Android',
+    os_version: '11.0',
+    real_mobile: 'true',
     build,
-    name: 'Parallel_test_1',
+    name: 'Parallel_test_4',
   },
+  // {
+  //   browserName: 'chrome',
+  //   browser_version: 'latest',
+  //   os: 'Windows',
+  //   os_version: '10',
+  //   build,
+  //   name: 'Parallel_test_1',
+  // },
   {
     browserName: 'firefox',
     browser_version: 'latest-beta',
@@ -64,10 +72,12 @@ const runTest = async capabilities => {
     const host = `http://bs-local.com:8000`
 
     await driver.get(host)
-    await driver.wait(webdriver.until.titleMatches(/The Ethereum developer conference/i), 5000)
-    console.log('Test passed')
+    await driver.sleep(5000)
+    await driver.findElement(webdriver.By.id('hamburger-toggle')).click()
+
+    // await driver.wait(webdriver.until.titleMatches(/The Ethereum developer conference/i), 5000)
     await driver.executeScript(
-      'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Title contains BrowserStack!"}}'
+      'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Test went great!"}}'
     )
   } catch (e) {
     console.error(e, 'test error')
@@ -77,6 +87,24 @@ const runTest = async capabilities => {
   } finally {
     await driver.quit()
   }
+
+  // try {
+  //   const host = `http://bs-local.com:8000`
+
+  //   await driver.get(host)
+  //   await driver.wait(webdriver.until.titleMatches(/The Ethereum developer conference/i), 5000)
+  //   console.log('Test passed')
+  //   await driver.executeScript(
+  //     'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Title contains BrowserStack!"}}'
+  //   )
+  // } catch (e) {
+  //   console.error(e, 'test error')
+  //   await driver.executeScript(
+  //     'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "Test errored out"}}'
+  //   )
+  // } finally {
+  //   await driver.quit()
+  // }
 }
 
 async function runTests() {

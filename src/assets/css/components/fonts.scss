@@ -2,61 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-// Defaults
-h1,
-.h1 {
-  @include fonts-tertiary;
-  font-size: $sizes-size-16 + $sizes-size-8;
-  line-height: 125%;
-}
-
-h2,
-.h2 {
-  @include fonts-tertiary;
-  font-size: $sizes-size-16;
-  line-height: 150%;
-}
-
-h3,
-.h3 {
-  @include fonts-tertiary;
-  @include fonts-xl;
-}
-
-h4,
-.h4 {
-  @include fonts-tertiary;
-  @include fonts-md;
-}
-
-.massive {
-  @include fonts-tertiary;
-  font-size: $sizes-size-16 + $sizes-size-16;
-  line-height: 125%;
-}
-
 p {
-  @include fonts-secondary;
-}
-
-.font-xxl {
-  font-size: $sizes-size-16 + $sizes-size-8;
-}
-
-.font-xl {
-  @include fonts-xl;
-}
-
-.font-md {
-  @include fonts-md;
-}
-
-.font-sm {
-  @include fonts-sm;
-}
-
-.font-xs {
-  @include fonts-xs;
+  @include fonts-primary;
 }
 
 .font-primary {
@@ -67,40 +14,140 @@ p {
   @include fonts-secondary;
 }
 
-.font-tertiary {
-  @include fonts-tertiary;
+// Headers
+h1,
+.h1 {
+  @include fonts-secondary;
+  @include fonts-bold;
+  font-size: $sizes-size-16 + $sizes-size-16;
+  line-height: 125%;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
 }
 
-.bold {
+h2,
+.h2 {
+  @include fonts-secondary;
+  @include fonts-normal;
+  font-size: $sizes-size-16 + $sizes-size-2;
+  line-height: 120%;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
+}
+
+h3,
+.h3 {
+  @include fonts-secondary;
+  @include fonts-bold;
+  font-size: $sizes-size-12;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
+}
+
+h4,
+.h4 {
+  @include fonts-secondary;
+  @include fonts-normal;
+  font-size: $sizes-size-10;
+  line-height: 125%;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
+}
+
+h5,
+.h5 {
+  @include fonts-secondary;
+  @include fonts-bold;
+  font-size: $sizes-size-9;
+  line-height: 150%;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
+}
+
+h6,
+.h6 {
+  @include fonts-secondary;
+  @include fonts-bold;
+  font-size: $sizes-size-8;
+  line-height: 150%;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
+}
+
+// Titles
+.title {
+  @include fonts-title;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
+}
+
+.subtitle {
+  @include fonts-subtitle;
+
+  &.spaced {
+    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  }
+}
+
+// Sizes
+.font-xs {
+  @include fonts-xs;
+}
+
+.font-sm {
+  @include fonts-sm;
+}
+
+.font-md {
+  @include fonts-md;
+}
+
+.font-lg {
+  @include fonts-lg;
+}
+
+.font-xl {
+  @include fonts-xl;
+}
+
+.font-xxl {
+  @include fonts-xxl;
+  font-size: $sizes-size-16 + $sizes-size-8;
+}
+
+.font-massive {
+  @include fonts-massive;
+}
+
+.bold,
+.text-bold {
   @include fonts-bold;
 }
 
-.semi-bold {
+.semi-bold,
+.text-semi-bold {
   @include fonts-semi-bold;
 }
 
-.section-header {
-  @include fonts-section-header;
-}
-
-.subsection-header {
-  @include fonts-subsection-header;
-}
-
-.text-primary {
-  color: $colors-primary;
-}
-
-.text-secondary {
-  color: $colors-secondary;
-}
-
-.text-tertiary {
-  color: $colors-tertiary;
-}
-
-.text-bold {
-  @include fonts-bold;
+.very-bold,
+.text-very-bold {
+  @include fonts-very-bold;
 }
 
 .text-italic {

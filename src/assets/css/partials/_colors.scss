@@ -1,54 +1,55 @@
-/* 
-  Color palette (basically just a dump of all colors sourced from Figma, easy to append to, can be fairly unstructured without issues)
+$main: #30354b;
+$main-light: #b5bbca;
 
-  Idea is to never reference these colors directly - they're mapped to a purpose below, which can be referenced from the outside
+$track-blue: #1b6fae;
+$track-blue-hover: #0889c0;
+$track-light-blue: #0fadcf;
+$track-teal: #00b3a4;
+$track-green: #88c43f;
+$track-yellow: #f5d222;
+$track-orange: #f69022;
+$track-pink: #e55066;
+$track-purple: #7958a5;
 
-  This way it's easy to add more colors, or to change them, without any side effects
-*/
-$success: #027357;
-$success-light: #eefff2;
-$error: #df320c;
-$error-light: #feefef;
-$warning: #c33e01;
-$warning-light: #fffacc;
-$info: #224490;
-$info-light: #eef2fa;
-$light: #323232;
-$light-light: #ffffff;
-$black-1: #30354b;
-$black-2: #1b1d24;
-$teal-1: #0daed0;
-$yellow-1: #fbcd11;
+$track-light-blue-hover: #264fb8;
+$track-teal-hover: #0c92a5;
+$track-green-hover: #40ad2e;
+$track-yellow-hover: #e0b417;
+$track-orange-hover: #eb6e28;
+$track-pink-hover: #c93b3b;
+$track-purple-hover: #5742a9;
 
-/* PURPOSED COLORS - i.e. mappings of colors to a specific purpose */
+$ef-green: #cae2d5;
+$ef-green-2: #e3f5eb; // _DS
+$ef-blue: #cdeaef;
+$ef-beige: #f8e2b8;
+$ef-cream: #fff3dd;
+$ef-pink: #eddfde;
 
-// Neutral colors (borders, headers, etc.)
-$typography-primary: $black-1;
-$typography-secondary: $black-1;
-$typography-tertiary: $black-1;
+$system-success: #0b7602;
+$system-error: #cb2e44;
+$system-warning: #e16f1d;
 
-// States
-$state-success: #027357;
-$state-success-light: #eefff2;
-$state-error: #df320c;
-$state-error-light: #feefef;
-$state-warning: #c33e01;
-$state-warning-light: #fffacc;
-$state-info: #224490;
-$state-info-light: #eef2fa;
-$state-light: #323232;
-$state-light-light: #ffffff;
+$monochrome-1: #ffffff;
+$monochrome-2: #f8f8f8;
+$monochrome-3: #f3f3f3;
+$monochrome-4: #eeeeee;
+$monochrome-5: #dddddd;
+$monochrome-6: #999999;
+$monochrome-7: #666666;
+$monochrome-8: #444444;
+$monochrome-9: #333333;
+$monochrome-10: #000000;
 
-// Theme
-$primary: $black-1;
-$primary-light: $black-1;
-$primary-dark: $black-1;
-$primary-opaque: $black-1;
-$secondary: $teal-1;
-$secondary-light: $black-1;
-$secondary-dark: $black-1;
-$secondary-opaque: $black-1;
-$tertiary: $yellow-1;
-$tertiary-light: $black-1;
-$tertiary-dark: $black-1;
-$tertiary-opaque: $black-2;
+// If some use case needs a color that could potentially change with time, create an independent variable for it -
+// this way we can easily swap out the colors without changing the underlying color palette:
+$state-success: $system-success;
+$state-success-light: $ef-green-2;
+$state-error: $system-error;
+$state-error-light: $ef-pink;
+$state-warning: $system-warning;
+$state-warning-light: $ef-cream;
+$state-info: $track-blue;
+$state-info-light: $ef-blue;
+$state-neutral: $monochrome-10;
+$state-neutral-light: $monochrome-1;

@@ -35,16 +35,32 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
       </Link>
     )
 
-  const cardContent = (
-    <>
-      {props.imageUrl && (
+  const image = (() => {
+    if (!props.imageUrl) return null
+
+    const isGatsbyOptimized = typeof props.imageUrl !== 'string'
+
+    if (isGatsbyOptimized) {
+      return (
         <div className={css['img-wrapper']}>
           <Img className={css['img']} fluid={props.imageUrl} />
         </div>
-      )}
+      )
+    }
+
+    return (
+      <div className={css['img-wrapper']}>
+        <img alt="" className={`${css['img']} ${css['not-gatsby']}`} src={props.imageUrl} />
+      </div>
+    )
+  })()
+
+  const cardContent = (
+    <>
+      {image}
 
       <div className={css['body']}>
-        <h4 className={css['title']}>{link}</h4>
+        <p className={css['title']}>{link}</p>
         {props.description && <p className={css['text']}>{GetExcerpt(props.description)}</p>}
 
         <div className={css['bottom-section']}>
@@ -58,12 +74,8 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
 
           {props.linkUrl && (
             <Link to={props.linkUrl} className={css['read-more']}>
-              <p>
-                <span className={css['text-uppercase']}>{intl.formatMessage({ id: 'readmore' })}</span>
-              </p>
-              <span>
-                <IconArrowRight />
-              </span>
+              {intl.formatMessage({ id: 'readmore' })}
+              <IconArrowRight />
             </Link>
           )}
         </div>

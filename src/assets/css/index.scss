@@ -1,5 +1,5 @@
 @use 'src/assets/css/partials/index' as *;
-@use 'css-variables.scss';
+@use 'components/colors';
 @use 'components/fonts';
 @use 'components/markdown';
 @use 'components/buttons';
@@ -18,10 +18,9 @@
 
 html {
   position: relative;
-  overflow-x: hidden;
   margin: 0 auto;
   font-family: $fonts-primary;
-  color: $colors-primary;
+  color: $colors-main;
 
   @include fonts-md;
 
@@ -36,6 +35,7 @@ html {
 
 body {
   position: relative;
+  overflow-x: hidden;
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

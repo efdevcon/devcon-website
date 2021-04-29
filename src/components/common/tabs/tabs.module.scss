@@ -10,7 +10,7 @@
     cursor: pointer;
     padding: $gaps-gap-6;
     padding-bottom: $gaps-gap-5; // off-set border
-    color: #30354b;
+    color: $colors-main;
     font-weight: bold;
     text-transform: uppercase;
     opacity: 0.5;
@@ -25,9 +25,9 @@
     opacity: 1;
     background: rgba(133, 142, 169, 0.15);
 
-    -webkit-box-shadow: inset 0px -2px 0px 0px #30354b;
-    -moz-box-shadow: inset 0px -2px 0px 0px #30354b;
-    box-shadow: inset 0px -2px 0px 0px #30354b;
+    -webkit-box-shadow: inset 0px -2px 0px 0px $colors-main;
+    -moz-box-shadow: inset 0px -2px 0px 0px $colors-main;
+    box-shadow: inset 0px -2px 0px 0px $colors-main;
   }
 }
 
