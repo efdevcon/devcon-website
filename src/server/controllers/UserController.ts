@@ -41,7 +41,6 @@ export class UserController {
 
   public async Profile(req: Request, res: Response) {
     try {
-      // GET User profile
       res.status(200).send({ code: 200, message: '', data: req.user });
     }
     catch (e) {

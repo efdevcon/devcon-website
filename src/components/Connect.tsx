@@ -2,6 +2,7 @@ import React from 'react'
 import Web3Modal from "web3modal";
 import { utils, providers } from "ethers";
 import { Helmet } from "react-helmet"
+import Profile from './Profile';
 
 interface Web3Context {
     web3Modal: any
@@ -9,18 +10,20 @@ interface Web3Context {
     address: string
 }
 
+declare var window: any
+
 export default function Connect() {
     const [web3Context, setWeb3Context] = React.useState<Web3Context | undefined>();
+    const [email, setEmail] = React.useState('')
     const [error, setError] = React.useState('')
 
     async function initWeb3Modal() { 
         if (typeof window !== "undefined" && typeof window.WalletConnectProvider !== "undefined") {
-            const WalletConnectProvider = window.WalletConnectProvider.default;
             const providerOptions = {
                 walletconnect: {
-                    package: WalletConnectProvider,
+                    package: window.WalletConnectProvider.default,
                     options: {
-                        infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+                        infuraId: process.env.INFURA_ID,
                     }
                 },
             }
@@ -37,11 +40,12 @@ export default function Connect() {
 
     const connectWeb3 = async () => {
         const web3Modal = await initWeb3Modal();
+        if(web3Modal) web3Modal.clearCachedProvider()
         
-        let network, signer, address, rawMessage, signedMessage = {}
+        let web3, provider, network, signer, address, rawMessage, signedMessage = {}
         try {
-            const web3 = await web3Modal.connect();    
-            const provider = new providers.Web3Provider(web3);
+            web3 = await web3Modal.connect();    
+            provider = new providers.Web3Provider(web3);
 
             network = await provider.getNetwork();
             signer = provider.getSigner()
@@ -59,7 +63,15 @@ export default function Connect() {
             const body = await response.json()
             rawMessage = body.data
 
-            signedMessage = await signer.signMessage(rawMessage)
+            if (web3.wc) {
+                signedMessage = await provider.send(
+                    'personal_sign',
+                    [ utils.hexlify(utils.toUtf8Bytes(rawMessage)), address.toLowerCase() ]
+                );
+            }
+            else { 
+                signedMessage = await signer.signMessage(rawMessage)
+            }
         }
         catch (e) {
             const msg = "Did not received signed message."
@@ -119,12 +131,7 @@ export default function Connect() {
             {error && <div>STATUS: {error}</div>}
             {!web3Context && <button onClick={connectWeb3}>Connect</button>}
             {web3Context && <button onClick={disconnect}>Logout</button>}
-            {web3Context && 
-                <div>
-                    <p>Network ID: {web3Context.chainId}</p>
-                    <p>Address: {web3Context.address}</p>
-                </div>
-            }
+            {web3Context && <Profile />}
         </div>
     )
 }
