@@ -2,8 +2,9 @@ import React from 'react'
 import Web3Modal from "web3modal";
 import { utils, providers } from "ethers";
 import { Helmet } from "react-helmet"
-import Profile from './Profile';
+import { navigate } from "gatsby"
 import Torus from '@toruslabs/torus-embed';
+import { useAccountContext } from 'src/context/account-context';
 
 interface Web3Context {
     web3Modal: any
@@ -14,8 +15,7 @@ interface Web3Context {
 declare var window: any
 
 export default function Connect() {
-    const [web3Context, setWeb3Context] = React.useState<Web3Context | undefined>();
-    const [email, setEmail] = React.useState('')
+    const accountContext = useAccountContext();
     const [error, setError] = React.useState('')
 
     async function initWeb3Modal() { 
@@ -98,10 +98,10 @@ export default function Connect() {
             if (response.status === 200) {
                 // const data = await response.json()
 
-                setWeb3Context({
-                    web3Modal,
-                    chainId: network.chainId,
-                    address
+                navigate("profile")
+                accountContext.login({
+                    uid: address,
+                    addresses: [address]
                 })
             } else {
                 const data = await response.json()
@@ -115,14 +115,7 @@ export default function Connect() {
     }
 
     const disconnect = async () => {
-        if (!web3Context.web3Modal) {
-            console.log('web3Modal not initialized.')
-            return
-        }
-
-        web3Context.web3Modal.clearCachedProvider()
-        await fetch('/api/users/lgout', { method: 'POST' })        
-        setWeb3Context(undefined)
+        accountContext.logout()
     }
 
     return (
@@ -133,9 +126,8 @@ export default function Connect() {
             </Helmet>
             
             {error && <div>STATUS: {error}</div>}
-            {!web3Context && <button onClick={connectWeb3}>Connect</button>}
-            {web3Context && <button onClick={disconnect}>Logout</button>}
-            {web3Context && <Profile />}
+            {!accountContext.account && <button onClick={connectWeb3}>Connect</button>}
+            {accountContext.account && <button onClick={disconnect}>Logout</button>}
         </div>
     )
 }

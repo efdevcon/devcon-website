@@ -1,24 +1,13 @@
 import React from 'react'
+import { useAccountContext } from 'src/context/account-context'
 
 export default function Profile() {
-  const [profile, setProfile] = React.useState();
+  const accountContext = useAccountContext();
 
-  React.useEffect(() => {
-    async function asyncEffect() { 
-      const response = await fetch('/api/users/profile')
-      if(response.status === 200 && response.body) {
-        const body = await response.json()
-        setProfile(body.data)
-      }
-    }
-
-    asyncEffect()
-  }, [])
   return (
     <div>
-      <h2>User Profile</h2>
-      {!profile && <span>Not logged in.</span>}
-      {profile && <span>Account: {profile}</span>}
+      {!accountContext.account && <span>Not logged in.</span>}
+      {accountContext.account && <span>Account: {accountContext.account?.uid}</span>}
     </div>
   )
 }

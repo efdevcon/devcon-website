@@ -1,18 +1,36 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Content from 'src/components/common/layouts/content'
+import { AccountContextProvider } from 'src/context/account-context-provider'
 
-export default function Profile() {
+const LazyProfileComponent = React.lazy(() =>
+  import("../../components/Profile")
+)
+
+export default function Profile({ data }: any) {
   const isBrowser = typeof window !== "undefined"
 
   return (
-    <div>
-      <h2>User Profile</h2>
+    <Content navigationData={data.navigationData}>
+      <div>
+        <h2>Profile</h2>
 
-      {isBrowser && (
-          <React.Suspense fallback={<div />}>
-            <p>Logged-in user profile.</p>
-            <p>Address, Email, Username, Ticket, etc.</p>
-          </React.Suspense>
-      )}
-    </div>
+        {isBrowser && (
+          <AccountContextProvider>
+            <React.Suspense fallback={<div />}>
+              <LazyProfileComponent />
+            </React.Suspense>
+          </AccountContextProvider>
+        )}
+      </div>
+    </Content>
   )
 }
+
+export const query = graphql`
+  query($language: String!) {
+    ...NavigationData
+    ...NewsData
+  }
+`
+
