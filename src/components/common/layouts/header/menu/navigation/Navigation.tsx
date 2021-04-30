@@ -7,14 +7,61 @@ import ArrowCollapse from 'src/assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
 
 const Mobile = (props: any) => {
+  const [openItem, setOpenItem] = React.useState<string | undefined>()
+
   return (
     <div className={css['mobile-navigation']}>
       <ul className={css['accordion']}>
         {props.navigationData.site.map((i: LinkType, index: number) => {
+          const children = i.links
+          const hasChildren = children && children.length > 0
+          const open = openItem === i.title
+
           return (
-            <li key={i.title}>
-              {i.title}
-              {true ? <ArrowCollapse /> : <ArrowDropdown />}
+            <li key={i.title} className={open && hasChildren ? css['open'] : ''}>
+              {hasChildren ? (
+                <div
+                  className={css['accordion-toggle']}
+                  onClick={() => {
+                    setOpenItem(open ? undefined : i.title)
+                  }}
+                >
+                  {i.title}
+                  {hasChildren && (open ? <ArrowCollapse /> : <ArrowDropdown />)}
+                </div>
+              ) : (
+                <div className={`${css['accordion-toggle']} ${css['no-children']}`}>
+                  <Link className="plain hover-underline" to={i.url}>
+                    {i.title}
+                  </Link>
+                </div>
+              )}
+
+              {hasChildren && (
+                <>
+                  {open && (
+                    <div className={css['accordion-content']}>
+                      {children?.map(child => {
+                        const isHeader = child.type === 'header'
+
+                        if (isHeader) {
+                          return <p className={css['category-header']}>{child.title}</p>
+                        }
+
+                        return (
+                          <ul key={child.title} className={css['category-items']}>
+                            <li key={child.title}>
+                              <Link className="plain hover-underline" to={child.url}>
+                                {child.title}
+                              </Link>
+                            </li>
+                          </ul>
+                        )
+                      })}
+                    </div>
+                  )}
+                </>
+              )}
             </li>
           )
         })}

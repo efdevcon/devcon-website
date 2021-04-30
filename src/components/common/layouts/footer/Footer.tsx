@@ -14,9 +14,19 @@ import { usePageContext } from 'src/context/page-context'
 import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
-export const SocialMedia = ({ onShare, url }: any) => {
+type SocialMedia = {
+  onShare: () => void
+  url?: string
+  className?: string
+}
+
+export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialMedia) => {
+  let className = css['social-media']
+
+  if (extraClassName) className += ` ${extraClassName}`
+
   return (
-    <div className={css['social-media']}>
+    <div className={className}>
       <Link to="https://twitter.com/efdevcon">
         <IconTwitter style={{ cursor: 'pointer' }} />
       </Link>
@@ -50,7 +60,7 @@ export const Footer = () => {
           <div className={css['col-2']}>
             {footerData?.highlights.map((link: LinkType, index: number) => {
               return (
-                <h2 key={index}>
+                <h2 key={index} className="spaced">
                   <Link to={link.url} className="plain">
                     {link.title}
                   </Link>

@@ -11,6 +11,7 @@ $gap-8: $gap-1 * 8; // 32px
 $gap-10: $gap-1 * 10; // 40px
 $gap-12: $gap-1 * 12; // 48px
 $gap-16: $gap-1 * 16; // 64px
+$gap-32: $gap-1 * 32; // 128px
 
 // Here are some common gap constellations with responsiveness built in
 @mixin lg($sidesOnly: false) {

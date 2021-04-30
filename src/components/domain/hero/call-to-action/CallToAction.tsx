@@ -17,24 +17,24 @@ export const CallToAction = (props: CTAProps) => {
 
   const callsToAction = [
     <Link key="1" to="https://google.com" allowDrag className={`no-select ${css['item']}`}>
-      <p>Call to Action 01 —</p>
-      <p>subheader</p>
+      <p className="bold">Call to Action 01 —</p>
+      <p className="font-sm">subheader</p>
     </Link>,
     <div key="2" className={`no-select ${css['item']}`}>
-      <p>Call to Action 02 —</p>
-      <p>subheader</p>
+      <p className="bold">Call to Action 02 —</p>
+      <p className="font-sm">subheader</p>
     </div>,
     <div key="3" className={`no-select ${css['item']}`}>
-      <p>Call to Action 03 —</p>
-      <p>subheader</p>
+      <p className="bold">Call to Action 03 —</p>
+      <p className="font-sm">subheader</p>
     </div>,
     <div key="4" className={`no-select ${css['item']}`}>
-      <p>Call to Action 04 —</p>
-      <p>subheader</p>
+      <p className="bold">Call to Action 04 —</p>
+      <p className="font-sm">subheader</p>
     </div>,
     <div key="5" className={`no-select ${css['item']}`}>
-      <p>Call to Action 05 —</p>
-      <p>subheader</p>
+      <p className="bold">Call to Action 05 —</p>
+      <p className="font-sm">subheader</p>
     </div>,
   ]
 

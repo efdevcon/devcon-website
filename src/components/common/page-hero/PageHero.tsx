@@ -34,17 +34,16 @@ export const PageHero = (props: PageHeroProps) => {
   const pageCategory = usePageCategory()
   const isScrolled = useIsScrolled()
 
-  console.log(stripHeight, headerHeight)
-
   return (
     <div
       id="page-hero"
       className={`${css['hero']} ${isScrolled ? css['scrolled'] : ''}`}
       style={{ '--negative-offset': negativeOffset, '--strip-height': `${stripHeight}px` }}
     >
-      <div className={css[props.type]}>
+      {/* <div className={css[props.type]}>
         <img alt="" src={props.logo} />
-      </div>
+      </div> */}
+
       <div className="section">
         <div className={css['info']}>
           <p className="font-xs text-uppercase">{pageCategory}</p>

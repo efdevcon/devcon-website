@@ -13,7 +13,7 @@ $padding: 4px 10px 4px 20px;
   @extend .dropdown-box;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   padding: $padding;
@@ -24,25 +24,32 @@ $padding: 4px 10px 4px 20px;
 }
 
 .dropdown {
-  @extend .dropdown-box;
-  border-top: none;
   background: $colors-monochrome-1;
+  border: 2px solid #f3f3f3;
   position: absolute;
   list-style-type: none;
   right: -2px;
   min-width: calc(100% + 4px);
-  top: calc(100% - 2px);
+  top: calc(100% + 2px);
   margin: 0;
   padding: 0;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s;
+
+  &.open {
+    opacity: 1;
+  }
 
   li {
+    @include fonts-normal;
+    white-space: nowrap;
     padding: $padding;
     text-align: right;
     border-top: 1px solid $colors-monochrome-3;
 
     &:hover {
-      background: #f8f8f8;
+      background: $colors-monochrome-3;
     }
   }
 }

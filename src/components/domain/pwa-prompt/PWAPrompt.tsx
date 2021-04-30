@@ -7,7 +7,7 @@ import { Modal } from 'src/components/common/modal'
 import IconPlus from 'src/assets/icons/plus.svg'
 
 const getIsPWAPossible = () => {
-  return false
+  return true
 }
 
 export const PWAPrompt = (props: any) => {
