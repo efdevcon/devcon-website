@@ -1,35 +1,47 @@
 import { Request, Response, NextFunction } from 'express';
 import Web3Strategy from 'passport-web3';
+import UserAccountModel from '../models/UserAccountModel';
+import { UserAccountRepository } from '../repositories/UserAccountRepository';
 
-const onAuth = (address: string, done: any) => {
+const onAuth = async (address: string, done: any) => {
+  const repo = new UserAccountRepository()
   try {
-    // Find User Profile
-    // const user = addresses.find(i => i === address);
-    const user = address
+    const userAccount = await repo.findUserAccountByAddress(address)
 
-    if (user) {
-      done(null, user);
+    if (userAccount) {
+      done(null, userAccount);
     }
     else {
-      done(null, false, { message: 'User not found.' })
+      const model = new UserAccountModel()
+      model.addresses.push(address)
+      
+      const userAccount = await repo.create(model)
+      
+      if (userAccount) {
+        done(null, userAccount)
+      } 
+      else {
+        done(null, false, { message: 'Could not authenticate user.' })
+      }        
     }
   }
   catch (e) {
     console.error(e)
-    done(new Error('Unexpected error.'))
+    done(new Error('Unexpected error. Could not authenticate user.'))
   }
 };
 
 export const web3Strategy = new Web3Strategy(onAuth);
 
 export const serializeUser = (user: any, done: any) => {
-  // return uuid, adress 
-  done(null, user);
+  done(null, user._id);
 }
 
-export const deserializeUser = (user: any, done: any) => {
-  // get profile info, based on uuid, address 
-  done(null, user);
+export const deserializeUser = async (user: any, done: any) => {
+  const repo = new UserAccountRepository()
+  const userAccount = await repo.findOne(user)
+  
+  done(null, userAccount);
 }
 
 export const isAuthenticated = (req: Request, res: Response, next: NextFunction) => { 

@@ -20,7 +20,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       if(response.status === 200 && response.body) {
         const body = await response.json()
         setContext({ 
-          account: { uid: body.data },
+          account: body.data,
           login,
           logout
         })

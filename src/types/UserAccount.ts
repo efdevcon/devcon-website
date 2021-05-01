@@ -1,6 +1,8 @@
 export interface UserAccount {
-    uid: string
+    _id?: any
     username?: string
     email?: string
-    addresses?: Array<string>
+    addresses: Array<string>
+    disabled: boolean
+    created: Date
 }

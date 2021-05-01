@@ -1,7 +1,13 @@
 import { Request, Response, NextFunction } from 'express';
 import passport from 'passport';
+import { IUserAccountRepository } from '../repositories/interfaces/IUserAccountRepository';
 
 export class UserController {
+  private _repository: IUserAccountRepository
+
+  constructor(repository: IUserAccountRepository) {
+    this._repository = repository
+  }
 
   public async Nonce(req: Request, res: Response) {
     try {
@@ -41,7 +47,9 @@ export class UserController {
 
   public async Profile(req: Request, res: Response) {
     try {
-      res.status(200).send({ code: 200, message: '', data: req.user });
+      const data = await this._repository.findOne(req.user)
+
+      res.status(200).send({ code: 200, message: '', data: data });
     }
     catch (e) {
       console.error(e)

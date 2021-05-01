@@ -96,13 +96,9 @@ export default function Connect() {
             })
 
             if (response.status === 200) {
-                // const data = await response.json()
-
+                const body = await response.json()
+                accountContext.login(body.data)
                 navigate("profile")
-                accountContext.login({
-                    uid: address,
-                    addresses: [address]
-                })
             } else {
                 const data = await response.json()
                 setError(data.message)
