@@ -1,10 +1,18 @@
 import { navigate } from '@reach/router';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAccountContext } from 'src/context/account-context'
+import { UserAccount } from 'src/types/UserAccount';
 
 export default function Profile() {
   const accountContext = useAccountContext();
-  const [account, setAccount] = useState(accountContext.account)
+  const [account, setAccount] = useState<UserAccount>()
+
+  useEffect(() => {
+    if (accountContext.account) {
+      setAccount(accountContext.account)
+    }
+
+  }, [accountContext.account])
 
   function onChange(e: any, type: string) {
     if (!account) return
@@ -23,7 +31,7 @@ export default function Profile() {
 
   async function updateProfile() { 
     if (accountContext && account) { 
-      const result = await accountContext.updateProfile(account)
+      await accountContext.updateProfile(account)
     }
   }
 
