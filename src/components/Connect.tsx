@@ -2,15 +2,9 @@ import React from 'react'
 import Web3Modal from "web3modal";
 import { utils, providers } from "ethers";
 import { Helmet } from "react-helmet"
-import { navigate } from "gatsby"
+import { Link } from "@reach/router"
 import Torus from '@toruslabs/torus-embed';
 import { useAccountContext } from 'src/context/account-context';
-
-interface Web3Context {
-    web3Modal: any
-    chainId: number
-    address: string
-}
 
 declare var window: any
 
@@ -98,7 +92,6 @@ export default function Connect() {
             if (response.status === 200) {
                 const body = await response.json()
                 accountContext.login(body.data)
-                navigate("profile")
             } else {
                 const data = await response.json()
                 setError(data.message)
@@ -123,7 +116,13 @@ export default function Connect() {
             
             {error && <div>STATUS: {error}</div>}
             {!accountContext.account && <button onClick={connectWeb3}>Connect</button>}
-            {accountContext.account && <button onClick={disconnect}>Logout</button>}
+            {accountContext.account && 
+                <div>
+                    <p>You're already logged in. View your <Link to='/app/profile'>profile</Link>.</p>
+                    <br />
+                    <p><button onClick={disconnect}>Logout</button></p>
+                </div>
+            }
         </div>
     )
 }

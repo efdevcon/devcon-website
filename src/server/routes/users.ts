@@ -14,4 +14,5 @@ export const register = (router: Router) => {
   router.post('/users/login', controller.Login.bind(controller));
   router.post('/users/logout', controller.Logout.bind(controller));
   router.get('/users/profile', isAuthenticated, controller.Profile.bind(controller));
+  router.post('/users/update', controller.Update.bind(controller));
 };

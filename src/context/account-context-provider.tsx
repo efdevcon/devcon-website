@@ -1,3 +1,4 @@
+import { navigate } from '@reach/router'
 import React, { ReactNode } from 'react'
 import { UserAccount } from 'src/types/UserAccount'
 import { AccountContext, AccountContextType } from './account-context'
@@ -10,6 +11,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   const [context, setContext] = React.useState<AccountContextType>({
     account: undefined,
     login,
+    updateProfile,
     logout
   })
 
@@ -19,11 +21,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
       if(response.status === 200 && response.body) {
         const body = await response.json()
-        setContext({ 
-          account: body.data,
-          login,
-          logout
-        })
+        updateContext(body.data)
       }
     }
 
@@ -31,14 +29,45 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   }, [])
 
   async function login(account: UserAccount) { 
-    console.log('Login', account)
-    setContext({ ...context, account: account })
+    console.log('login', account)
+
+    updateContext(account)
+
+    navigate("/app/profile")
+  }
+
+  async function updateProfile(account: UserAccount): Promise<boolean> {
+    console.log('updateProfile', account)
+
+    const response = await fetch('/api/users/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ account })
+    })
+
+    if (response.status === 200) {
+      updateContext(account)
+      return true 
+    } else {
+      return false
+    }
   }
 
   async function logout() { 
-    console.log('Logout')
+    console.log('logout')
+
     await fetch('/api/users/logout', { method: 'POST' })
-    setContext({ ...context, account: undefined })
+    updateContext(undefined)
+    navigate("/app/login")
+  }
+
+  function updateContext(account: UserAccount | undefined) {
+    setContext({
+      account,
+      login,
+      updateProfile,
+      logout
+    })
   }
 
   return <AccountContext.Provider value={context}>{children}</AccountContext.Provider>

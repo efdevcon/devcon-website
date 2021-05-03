@@ -1,13 +1,66 @@
-import React from 'react'
+import { navigate } from '@reach/router';
+import React, { useState } from 'react'
 import { useAccountContext } from 'src/context/account-context'
 
 export default function Profile() {
   const accountContext = useAccountContext();
+  const [account, setAccount] = useState(accountContext.account)
+
+  function onChange(e: any, type: string) {
+    if (!account) return
+
+    let newAccount = {...account}
+    if (type === 'username') {
+      newAccount.username = e.target.value
+    }
+
+    if (type === 'email') {
+      newAccount.email = e.target.value
+    }
+
+    setAccount(newAccount)
+  }
+
+  async function updateProfile() { 
+    if (accountContext && account) { 
+      const result = await accountContext.updateProfile(account)
+    }
+  }
+
+  if (!account) {
+    return <></>
+  }
 
   return (
     <div>
-      {!accountContext.account && <span>Not logged in.</span>}
-      {accountContext.account && <span>Account: {accountContext.account?.uid}</span>}
+      {account &&
+        <>
+        <div>
+          <label htmlFor="account-username">Username:</label>
+          <input type="text" id="account-username" placeholder="Enter username" name="username" value={account.username} onChange={(e) => onChange(e, 'username')} />
+        </div>
+
+        <div>
+          <label htmlFor="account-email">Email:</label>
+          <input type="email" id="account-email" placeholder="Enter email" name="email" value={account.email} onChange={(e) => onChange(e, 'email')} />
+        </div>
+
+        <div>
+          <label>Address(es):</label>
+          <ul>
+            {account.addresses.map(i => {
+              return <li key={i}>{i}</li>
+            })}
+          </ul>
+        </div>
+
+        <div>
+          <button type='button' onClick={() => updateProfile()}>Update profile</button> &nbsp;
+          <button type='button' onClick={() => navigate('/app/attest')}>Attest Ticket</button> &nbsp;
+          <button type='button' onClick={() => accountContext.logout()}>Logout</button> &nbsp;
+        </div>
+        </>
+      }
     </div>
   )
 }

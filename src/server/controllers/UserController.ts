@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import passport from 'passport';
+import { UserAccount } from 'src/types/UserAccount';
 import { IUserAccountRepository } from '../repositories/interfaces/IUserAccountRepository';
 
 export class UserController {
@@ -54,6 +55,24 @@ export class UserController {
     catch (e) {
       console.error(e)
       res.status(500).send({ code: 500, message: `Couldn't fetch profile` });
+    }
+  }
+
+  public async Update(req: Request, res: Response) {
+    try {
+      const account = req.body?.account as UserAccount;
+      if (account) { 
+        const data = await this._repository.update(account._id, account)
+        
+        res.status(200).send({ code: 200, message: '', data: data });
+      }
+      else { 
+        res.status(400).send({ code: 400, message: `Provide a valid UserAccount` });
+      }
+    }
+    catch (e) {
+      console.error(e)
+      res.status(500).send({ code: 500, message: `Couldn't update profile` });
     }
   }
 }
