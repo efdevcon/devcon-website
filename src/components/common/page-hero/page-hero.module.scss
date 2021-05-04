@@ -10,7 +10,16 @@
   padding-top: $gaps-gap-4;
   border-bottom: 1px solid black;
   margin-bottom: $gaps-gap-10;
-
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-color: $colors-monochrome-1;
+  background-image: url('src/assets/images/dip-logo.svg'),
+    radial-gradient(
+      73.15% 179.46% at 90.19% 25.94%,
+      #00b3a4 0%,
+      rgba(0, 255, 117, 0.4) 58.33%,
+      rgba(203, 227, 214, 0) 100%
+    );
   // Strip is always present on mobile (but not on desktop) - we have to account for that:
   &.scrolled {
     @media (max-width: $breakpoints-lg) {
@@ -42,13 +51,20 @@
   .contribute {
     @extend .backdrop;
 
-    background: radial-gradient(
+    // background: radial-gradient(
+    //     73.15% 179.46% at 90.19% 25.94%,
+    //     #00b3a4 0%,
+    //     rgba(0, 255, 117, 0.4) 58.33%,
+    //     rgba(203, 227, 214, 0) 100%
+    //   ),
+    //   #ffffff;
+    background-image: url('src/assets/images/dip-logo.svg'),
+      radial-gradient(
         73.15% 179.46% at 90.19% 25.94%,
         #00b3a4 0%,
         rgba(0, 255, 117, 0.4) 58.33%,
         rgba(203, 227, 214, 0) 100%
-      ),
-      #ffffff;
+      );
   }
 
   .about {
@@ -77,7 +93,6 @@
 
 .info {
   @include layout-content;
-  width: 100%;
 
   .title-block {
     padding-top: $gaps-gap-16;

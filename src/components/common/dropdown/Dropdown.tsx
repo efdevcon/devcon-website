@@ -16,6 +16,7 @@ interface DropdownProps {
 export function Dropdown(props: DropdownProps) {
   const [open, setOpen] = useState(false)
   const ref = createRef<HTMLDivElement>()
+  const foldoutRef = createRef<HTMLUListElement>()
   const currentSelection = props.options.find(option => option.value === props.value)
 
   useEffect(() => {
@@ -32,27 +33,26 @@ export function Dropdown(props: DropdownProps) {
   }, [ref, open])
 
   let className = `${css['container']}`
-
   if (props.className) className += ` ${props.className}`
+  let foldoutClassName = css['dropdown']
+  if (open) foldoutClassName += ` ${css['open']}`
 
   return (
     <div role="button" onClick={() => setOpen(!open)} aria-label="Toggle dropdown" className={className} ref={ref}>
       {currentSelection && currentSelection.text}
       <span className={css['icon']}>{open ? <ChevronUp /> : <ChevronDown />}</span>
 
-      {open && (
-        <ul className={css['dropdown']}>
-          {props.options.map(({ text, value }) => {
-            const selected = value === props.value
+      <ul className={foldoutClassName} ref={foldoutRef}>
+        {props.options.map(({ text, value }) => {
+          const selected = value === props.value
 
-            return (
-              <li key={value} onClick={() => props.onChange(value)}>
-                <span className={selected ? css['active-filter'] : undefined}>{text}</span>
-              </li>
-            )
-          })}
-        </ul>
-      )}
+          return (
+            <li key={value} onClick={() => props.onChange(value)}>
+              <span className={selected ? css['active-filter'] : undefined}>{text}</span>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }

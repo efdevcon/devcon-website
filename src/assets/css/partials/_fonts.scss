@@ -103,11 +103,11 @@ $secondary: 'Space Mono', monospace;
   @include bold;
   font-size: sizes.$size-11;
   line-height: 150%;
-  margin-bottom: gaps.$gap-6;
+  // margin-bottom: gaps.$gap-6;
 
-  @media (max-width: breakpoints.$lg) {
-    margin-bottom: gaps.$gap-4;
-  }
+  // @media (max-width: breakpoints.$lg) {
+  //   margin-bottom: gaps.$gap-4;
+  // }
 }
 
 @mixin subtitle {
@@ -116,11 +116,11 @@ $secondary: 'Space Mono', monospace;
   font-size: sizes.$size-11;
   line-height: 150%;
 
-  margin-bottom: gaps.$gap-8;
+  // margin-bottom: gaps.$gap-8;
 
-  @media (max-width: breakpoints.$lg) {
-    margin-bottom: gaps.$gap-4;
-  }
+  // @media (max-width: breakpoints.$lg) {
+  //   margin-bottom: gaps.$gap-4;
+  // }
 }
 
 @mixin uppercase {

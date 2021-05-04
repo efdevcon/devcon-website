@@ -11,22 +11,22 @@ import { LanguageToggle } from 'src/components/common/layouts/header/strip/langu
 /*
   Menu structure overview:
 
-    <STRIP> <--- REUSED
+    <STRIP> 
       <NOTIFICATION> 
-      <LANGUAGE-TOGGLE> <--- HIDDEN
+      <LANGUAGE-TOGGLE> 
     </STRIP>
 
-    <HEADER> <--- REUSED
-      <DEVCON-LOGO> <--- REUSED
-      <LEFT-NAV> <--- HIDDEN
-      <RIGHT-NAV> <--- HIDDEN
-      <ACCOUNT> <--- REUSED
+    <HEADER> 
+      <DEVCON-LOGO> 
+      <LEFT-NAV>
+      <RIGHT-NAV> 
+      <ACCOUNT> 
       <HAMBURGER> 
         <FOLDOUT>
           <LEFT-NAV>
           <LANGUAGE-TOGGLE>
-          <RIGHT-NAV-AS-ACCORDION> <---- DUPLICATED + MODIFIED (SAME DATASET)
-          <SOCIAL-MEDIA> <---- DUPLICATED + MODIFIED
+          <RIGHT-NAV-AS-ACCORDION>
+          <SOCIAL-MEDIA> 
         </FOLDOUT>
       </HAMBURGER>
     <HEADER>
@@ -75,7 +75,7 @@ export const Menu = (props: any) => {
       <Account />
 
       <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className={css['foldout-top']}>
           <Left navigationData={navigation} />
           <LanguageToggle />
         </div>
