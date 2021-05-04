@@ -2,6 +2,11 @@ import { navigate } from '@reach/router'
 import React, { useEffect, useState } from 'react'
 import { useAccountContext } from 'src/context/account-context'
 import { UserAccount } from 'src/types/UserAccount'
+import Torus from '@toruslabs/torus-embed'
+import Web3Modal from 'web3modal'
+import { utils, providers } from 'ethers'
+
+declare var window: any
 
 export default function Profile() {
   const accountContext = useAccountContext()
@@ -31,6 +36,74 @@ export default function Profile() {
   async function updateProfile() {
     if (accountContext && account) {
       await accountContext.updateProfile(account)
+    }
+  }
+
+  async function initWeb3Modal() {
+    if (typeof window !== 'undefined' && typeof window.WalletConnectProvider !== 'undefined') {
+      const providerOptions = {
+        walletconnect: {
+          package: window.WalletConnectProvider.default,
+          options: {
+            infuraId: process.env.INFURA_ID,
+          },
+        },
+        torus: {
+          package: Torus,
+        },
+      }
+
+      return new Web3Modal({
+        network: 'mainnet',
+        cacheProvider: false,
+        providerOptions,
+      })
+    } else {
+      console.log("Can't init Web3modal - window or WalletConnectProvider undefined")
+    }
+  }
+
+  const connectWeb3 = async () => {
+    const web3Modal = await initWeb3Modal()
+    if (web3Modal) web3Modal.clearCachedProvider()
+
+    let web3,
+      provider,
+      network,
+      signer,
+      address,
+      rawMessage,
+      signedMessage = {}
+    try {
+      web3 = await web3Modal.connect()
+      provider = new providers.Web3Provider(web3)
+
+      network = await provider.getNetwork()
+      signer = provider.getSigner()
+      address = await signer.getAddress()
+    } catch (e) {
+      const msg = 'Could not connect to web3 wallet.'
+      console.log(msg, e)
+      return
+    }
+
+    try {
+      const response = await fetch('/api/users/nonce')
+      const body = await response.json()
+      rawMessage = body.data
+
+      if (web3.wc) {
+        signedMessage = await provider.send('personal_sign', [
+          utils.hexlify(utils.toUtf8Bytes(rawMessage)),
+          address.toLowerCase(),
+        ])
+      } else {
+        signedMessage = await signer.signMessage(rawMessage)
+      }
+    } catch (e) {
+      const msg = 'Did not received signed message.'
+      console.log(msg, e)
+      return
     }
   }
 
@@ -66,13 +139,14 @@ export default function Profile() {
             />
           </div>
           <br />
+
           <div>
             <button type="button" onClick={() => updateProfile()}>
               Update profile
-            </button>{' '}
-            &nbsp;
+            </button>
           </div>
           <br />
+
           <h3>Add wallet</h3>
           {account.addresses.length === 0 && <p>No wallet(s) connected.</p>}
           {account.addresses.length > 0 && (
@@ -85,20 +159,24 @@ export default function Profile() {
               </ul>
             </div>
           )}
+
+          <button type="button" onClick={connectWeb3}>
+            Select wallet
+          </button>
           <br />
+
           <h3>Tickets</h3>
           <p>No ticket(s).</p>
           <button type="button" onClick={() => navigate('/app/attest')}>
             Attest Ticket
-          </button>{' '}
-          &nbsp;
+          </button>
           <br />
           <br />
+
           <div>
             <button type="button" onClick={() => accountContext.logout()}>
               Logout
-            </button>{' '}
-            &nbsp;
+            </button>
           </div>
           <br />
         </>

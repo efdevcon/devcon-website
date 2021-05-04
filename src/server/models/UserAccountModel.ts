@@ -8,7 +8,6 @@ const userAccountSchema: Schema = new Schema({
   email: { type: String, match: /.+\@.+\..+/ },
   addresses: { type: [String] },
   disabled: { type: Boolean, required: false, default: false },
-  created: { type: Date, default: Date.now },
-})
+}, { timestamps: true })
 
 export default model<UserAccountModel>('UserAccount', userAccountSchema)
