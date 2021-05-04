@@ -4,4 +4,6 @@ export interface UserAccount {
   email?: string
   addresses: Array<string>
   disabled: boolean
+  createdAt: Date
+  updatedAt: Date
 }

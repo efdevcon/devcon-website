@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import passport from 'passport'
 import { UserAccount } from 'src/types/UserAccount'
+import UserAccountModel from '../models/UserAccountModel'
 import { IUserAccountRepository } from '../repositories/interfaces/IUserAccountRepository'
 
 export class UserController {
@@ -42,16 +43,23 @@ export class UserController {
     try {
       const email = req.body?.email
       if (email) {
-        const data = await this._repository.findUserAccountByEmail(email)
-        if (data) {
-          req.logIn(data, function (err) {
+        let userAccount = await this._repository.findUserAccountByEmail(email)
+
+        if (!userAccount) { 
+          const model = new UserAccountModel()
+          model.email = email
+          userAccount = await this._repository.create(model)
+        }
+
+        if (userAccount) {
+          req.logIn(userAccount, function (err) {
             if (err) {
               return next(err)
             }
-            res.status(200).send({ code: 200, message: '', data: data })
+            res.status(200).send({ code: 200, message: '', data: userAccount })
           })
         } else {
-          res.status(404).send({ code: 404, message: 'Email not found' })
+          res.status(404).send({ code: 404, message: "Couldn't login with email address." })
         }
       } else {
         res.status(400).send({ code: 400, message: `No email address provided.` })
