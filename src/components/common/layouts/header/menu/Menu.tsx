@@ -40,9 +40,9 @@ export const Account = (props: any) => {
           <AccountIcon />
           <p>Account</p>
         </button>
-      </RouterLink>
 
-      <AccountIcon className={`icon ${css['account-icon']} ${css['mobile']}`} />
+        <AccountIcon className={`icon ${css['account-icon']} ${css['mobile']}`} />
+      </RouterLink>
     </div>
   )
 }

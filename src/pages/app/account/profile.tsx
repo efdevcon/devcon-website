@@ -1,22 +1,14 @@
-import React, { lazy } from 'react'
-import { AccountContextProvider } from 'src/context/account-context-provider'
+import React from 'react'
+import Profile from 'src/components/Profile'
 
-const ProfileComponent = lazy(() => import('src/components/Profile'))
-
-export default function Profile() {
+export default function ProfilePage() {
   const isBrowser = typeof window !== 'undefined'
 
   return (
     <div>
       <h2>Profile</h2>
 
-      {isBrowser && (
-        <AccountContextProvider>
-          <React.Suspense fallback={<div />}>
-            <ProfileComponent />
-          </React.Suspense>
-        </AccountContextProvider>
-      )}
+      {isBrowser && <Profile />}
     </div>
   )
 }

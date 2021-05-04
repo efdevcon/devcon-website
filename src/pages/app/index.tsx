@@ -15,11 +15,15 @@ export default function Index({ data, location }: any) {
     <Content navigationData={data.navigationData} location={location}>
       {isBrowser && (
         <AccountContextProvider>
-          <Router basepath="/app">
-            <PrivateRoute path="/profile" component={Profile} />
-            <PrivateRoute path="/attest" component={Attest} />
-            <Login path="/login" />
-          </Router>
+          <div className="section">
+            <div className="content">
+              <Router basepath="/app">
+                <PrivateRoute path="/profile" component={Profile} />
+                <PrivateRoute path="/attest" component={Attest} />
+                <Login path="/login" />
+              </Router>
+            </div>
+          </div>
         </AccountContextProvider>
       )}
     </Content>
