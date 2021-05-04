@@ -12,14 +12,14 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     account: undefined,
     login,
     updateProfile,
-    logout
+    logout,
   })
 
   React.useEffect(() => {
-    async function asyncEffect() { 
+    async function asyncEffect() {
       const response = await fetch('/api/users/profile')
 
-      if(response.status === 200 && response.body) {
+      if (response.status === 200 && response.body) {
         const body = await response.json()
         updateContext(body.data)
       }
@@ -28,12 +28,12 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     asyncEffect()
   }, [])
 
-  async function login(account: UserAccount) { 
+  async function login(account: UserAccount) {
     console.log('login', account)
 
     updateContext(account)
 
-    navigate("/app/profile")
+    navigate('/app/profile')
   }
 
   async function updateProfile(account: UserAccount): Promise<boolean> {
@@ -42,23 +42,23 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     const response = await fetch('/api/users/update', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ account })
+      body: JSON.stringify({ account }),
     })
 
     if (response.status === 200) {
       updateContext(account)
-      return true 
+      return true
     } else {
       return false
     }
   }
 
-  async function logout() { 
+  async function logout() {
     console.log('logout')
 
     await fetch('/api/users/logout', { method: 'POST' })
     updateContext(undefined)
-    navigate("/app/login")
+    navigate('/app/login')
   }
 
   function updateContext(account: UserAccount | undefined) {
@@ -66,7 +66,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       account,
       login,
       updateProfile,
-      logout
+      logout,
     })
   }
 

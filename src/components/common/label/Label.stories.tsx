@@ -1,6 +1,6 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import { Label, LabelProps } from './Label';
+import React from 'react'
+import { Story, Meta } from '@storybook/react'
+import { Label, LabelProps } from './Label'
 
 export default {
   title: 'Elements/Label',
@@ -8,24 +8,24 @@ export default {
   argTypes: {
     type: { control: 'type' },
   },
-} as Meta;
+} as Meta
 
-const Template: Story<LabelProps> = (args) => <Label {...args} />;
+const Template: Story<LabelProps> = args => <Label {...args} />
 
-export const Success = Template.bind({});
+export const Success = Template.bind({})
 Success.args = {
   type: 'success',
-  children: 'Success label'
-};
+  children: 'Success label',
+}
 
-export const Error = Template.bind({});
+export const Error = Template.bind({})
 Error.args = {
   type: 'error',
-  children: 'Error label'
-};
+  children: 'Error label',
+}
 
-export const Warning = Template.bind({});
+export const Warning = Template.bind({})
 Warning.args = {
   type: 'warning',
-  children: 'Warning label'
-};
+  children: 'Warning label',
+}

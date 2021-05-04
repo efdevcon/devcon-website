@@ -19,14 +19,14 @@ const useGetElementHeight = (elementID: string) => {
       if (!el) return
 
       const observer = new window.ResizeObserver(entries => {
-        const entry = entries[0];
+        const entry = entries[0]
 
         if (entry.borderBoxSize) {
           const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
 
-          setElementHeight(borderBoxSize.blockSize);
+          setElementHeight(borderBoxSize.blockSize)
         } else {
-          setElementHeight(entry.contentRect.height);
+          setElementHeight(entry.contentRect.height)
         }
       })
 
@@ -57,4 +57,4 @@ const useGetElementHeight = (elementID: string) => {
   return elementHeight
 }
 
-export default useGetElementHeight;
+export default useGetElementHeight

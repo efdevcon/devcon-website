@@ -1,10 +1,10 @@
 import React, { lazy } from 'react'
 import { AccountContextProvider } from 'src/context/account-context-provider'
 
-const ProfileComponent = lazy(() => import("src/components/Profile"))
+const ProfileComponent = lazy(() => import('src/components/Profile'))
 
 export default function Profile() {
-  const isBrowser = typeof window !== "undefined"
+  const isBrowser = typeof window !== 'undefined'
 
   return (
     <div>

@@ -1,1 +1,1 @@
-export { Foldout } from './Foldout';
+export { Foldout } from './Foldout'

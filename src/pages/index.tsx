@@ -10,7 +10,7 @@ export default function Index({ data }: any) {
   return (
     <Default navigationData={data.navigationData}>
       <SEO />
-      <PWAPrompt />
+      {/* <PWAPrompt /> */}
       <News data={data.newsData} />
       <BlogOverview />
     </Default>

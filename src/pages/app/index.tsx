@@ -1,5 +1,5 @@
-import React, { lazy, Suspense }  from 'react'
-import { Router } from "@reach/router"
+import React from 'react'
+import { Router } from '@reach/router'
 import { graphql } from 'gatsby'
 import Content from 'src/components/common/layouts/content'
 import { AccountContextProvider } from 'src/context/account-context-provider'
@@ -9,19 +9,17 @@ import Profile from './account/profile'
 import Attest from './account/attest'
 
 export default function Index({ data, location }: any) {
-  const isBrowser = typeof window !== "undefined"
+  const isBrowser = typeof window !== 'undefined'
 
   return (
     <Content navigationData={data.navigationData} location={location}>
       {isBrowser && (
         <AccountContextProvider>
-          <Suspense fallback={<div />}>
-            <Router basepath="/app">
-              <PrivateRoute path="/profile" component={Profile} />
-              <PrivateRoute path="/attest" component={Attest} />
-              <Login path="/login" />
-            </Router>
-          </Suspense>
+          <Router basepath="/app">
+            <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute path="/attest" component={Attest} />
+            <Login path="/login" />
+          </Router>
         </AccountContextProvider>
       )}
     </Content>

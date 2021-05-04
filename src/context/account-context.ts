@@ -13,5 +13,5 @@ export const AccountContext = createContext<AccountContextType>({
   account: undefined,
   login: () => {},
   updateProfile: async () => false,
-  logout: () => {}
+  logout: () => {},
 })
