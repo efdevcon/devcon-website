@@ -36,6 +36,31 @@ export class UserController {
     })(req, res, next);
   }
 
+  public async LoginEmail(req: Request, res: Response, next: NextFunction) {
+    try {
+      const email = req.body?.email
+      if (email) { 
+        const data = await this._repository.findUserAccountByEmail(email)
+        if (data) {
+          req.logIn(data, function(err) {
+            if (err) { return next(err); }
+            res.status(200).send({ code: 200, message: '', data: data });
+          });
+        }
+        else {
+          res.status(404).send({ code: 404, message: 'Email not found' });
+        }
+      }
+      else { 
+        res.status(400).send({ code: 400, message: `No email address provided.` });
+      }
+    }
+    catch (e) {
+      console.error(e)
+      res.status(500).send({ code: 500, message: `Couldn't update profile` });
+    }
+  }
+
   public async Logout(req: Request, res: Response) {
     try {
       req.logout();

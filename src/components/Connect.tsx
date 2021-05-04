@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Web3Modal from "web3modal";
 import { utils, providers } from "ethers";
 import { Helmet } from "react-helmet"
 import { Link } from "@reach/router"
 import Torus from '@toruslabs/torus-embed';
 import { useAccountContext } from 'src/context/account-context';
+import { Alert } from './common/alert';
 
 declare var window: any
 
 export default function Connect() {
     const accountContext = useAccountContext();
-    const [error, setError] = React.useState('')
+    const [error, setError] = useState('')
+    const [email, setEmail] = useState('')
 
     async function initWeb3Modal() { 
         if (typeof window !== "undefined" && typeof window.WalletConnectProvider !== "undefined") {
@@ -103,6 +105,22 @@ export default function Connect() {
         }
     }
 
+    const connectEmail = async () => {
+        const response = await fetch('/api/users/login/email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email })
+        })
+
+        if (response.status === 200) {
+            const body = await response.json()
+            accountContext.login(body.data)
+        } else {
+            const data = await response.json()
+            setError(data.message)
+        }
+    }
+
     const disconnect = async () => {
         accountContext.logout()
     }
@@ -114,8 +132,36 @@ export default function Connect() {
                 <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.4.1/dist/umd/index.min.js" />
             </Helmet>
             
-            {error && <div>STATUS: {error}</div>}
-            {!accountContext.account && <button onClick={connectWeb3}>Connect</button>}
+            {error && <Alert type='info' message={error} />}
+            
+            {!accountContext.account && 
+                <div>
+                    <p>If this is the first time you're logging in, it will automatically create a new account.</p>
+                    <p><strong>Choose Web3 Login method.</strong></p>
+                    <br/>
+
+                    <div>
+                        <h3>For beginning web3 users</h3>
+                        <input type='text' placeholder='Enter your email address' value={email} onChange={(e) => setEmail(e.target.value)} /><br/>
+                        <button onClick={connectEmail}>Sign in with email</button>
+                    </div>
+
+                    <br/>
+                    <p>—or—</p>
+                    <br/>
+
+                    <div>
+                        <h3>For experienced users</h3>
+                        <button onClick={connectWeb3}>Sign in with wallet</button>
+                    </div>
+                    <br/>
+
+                    <p>Devcon facilitates complete ownership over your data, while allowing you to access web3 interactivity through our application if you choose to participate.</p>
+                    <p><small>Your general experience and cross device compatibality may be affected if you choose an existing wallet with web3 modal support.</small></p>
+                    <p><a href="#">Learn more</a></p>
+                </div>
+            }
+
             {accountContext.account && 
                 <div>
                     <p>You're already logged in. View your <Link to='/app/profile'>profile</Link>.</p>

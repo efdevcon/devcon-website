@@ -43,6 +43,7 @@ export default function Profile() {
     <div>
       {account &&
         <>
+        <h3>Edit Info</h3>
         <div>
           <label htmlFor="account-username">Username:</label>
           <input type="text" id="account-username" placeholder="Enter username" name="username" value={account.username} onChange={(e) => onChange(e, 'username')} />
@@ -53,20 +54,39 @@ export default function Profile() {
           <input type="email" id="account-email" placeholder="Enter email" name="email" value={account.email} onChange={(e) => onChange(e, 'email')} />
         </div>
 
-        <div>
-          <label>Address(es):</label>
-          <ul>
-            {account.addresses.map(i => {
-              return <li key={i}>{i}</li>
-            })}
-          </ul>
-        </div>
+        <br/>
 
         <div>
           <button type='button' onClick={() => updateProfile()}>Update profile</button> &nbsp;
-          <button type='button' onClick={() => navigate('/app/attest')}>Attest Ticket</button> &nbsp;
+        </div>
+
+        <br/>
+
+        <h3>Add wallet</h3>
+        {account.addresses.length === 0 && <p>No wallet(s) connected.</p>}
+        {account.addresses.length > 0 && 
+          <div>
+            <label>Address(es):</label>
+            <ul>
+              {account.addresses.map(i => {
+                return <li key={i}>{i}</li>
+              })}
+            </ul>
+          </div>
+        }
+
+        <br/>
+
+        <h3>Tickets</h3>
+        <p>No ticket(s).</p>
+        <button type='button' onClick={() => navigate('/app/attest')}>Attest Ticket</button> &nbsp;
+
+        <br/><br/>
+
+        <div>
           <button type='button' onClick={() => accountContext.logout()}>Logout</button> &nbsp;
         </div>
+        <br/>
         </>
       }
     </div>

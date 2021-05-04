@@ -4,9 +4,9 @@ import { graphql } from 'gatsby'
 import Content from 'src/components/common/layouts/content'
 import { AccountContextProvider } from 'src/context/account-context-provider'
 import { PrivateRoute } from 'src/components/common/private-route'
-import Login from './login'
-import Profile from './profile'
-import Attest from './attest'
+import Login from './account/login'
+import Profile from './account/profile'
+import Attest from './account/attest'
 
 export default function Index({ data, location }: any) {
   const isBrowser = typeof window !== "undefined"
