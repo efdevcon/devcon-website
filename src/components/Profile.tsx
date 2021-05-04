@@ -5,12 +5,14 @@ import { UserAccount } from 'src/types/UserAccount'
 import Torus from '@toruslabs/torus-embed'
 import Web3Modal from 'web3modal'
 import { utils, providers } from 'ethers'
+import { Alert } from './common/alert'
 
 declare var window: any
 
 export default function Profile() {
   const accountContext = useAccountContext()
   const [account, setAccount] = useState<UserAccount>()
+  const [error, setError] = useState('')
 
   useEffect(() => {
     if (accountContext.account) {
@@ -35,7 +37,12 @@ export default function Profile() {
 
   async function updateProfile() {
     if (accountContext && account) {
-      await accountContext.updateProfile(account)
+      const updated = await accountContext.updateProfile(account)
+      if (updated) {
+        setError('Profile successfully updated.')
+      } else {
+        setError('Error updating profile.')
+      }
     }
   }
 
@@ -115,6 +122,9 @@ export default function Profile() {
     <div>
       {account && (
         <>
+          {error && <Alert type='info' message={error} />}
+          <br />
+
           <h3>Edit Info</h3>
           <div>
             <label htmlFor="account-username">Username:</label>
