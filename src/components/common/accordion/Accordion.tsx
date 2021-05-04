@@ -53,13 +53,11 @@ export function Accordion(props: AccordionProps) {
                 <p className="font-lg">{item.title}</p>
                 <div className={css['icon']}>{open ? <IconArrowCollapse /> : <IconArrowDropdown />}</div>
               </div>
-
-              {open && item.body}
-              {/* {open && (
+              {open && (
                 <div className={css['body']}>
                   <p dangerouslySetInnerHTML={{ __html: item.body }} />
                 </div>
-              )} */}
+              )}
             </div>
           )
         })}

@@ -40,8 +40,8 @@
 }
 
 .item-container {
-  padding: $gaps-gap-4;
-  background: $colors-monochrome-2;
+  // padding: $gaps-gap-4;
+  // background: $colors-monochrome-2;
 
   .active {
     @extend .header;
