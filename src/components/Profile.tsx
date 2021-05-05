@@ -59,7 +59,7 @@ export default function Profile() {
         walletconnect: {
           package: window.WalletConnectProvider.default,
           options: {
-            infuraId: process.env.INFURA_ID,
+            infuraId: process.env.GATSBY_INFURA_ID,
           },
         },
         torus: {
