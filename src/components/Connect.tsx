@@ -15,13 +15,16 @@ export default function Connect() {
   const [error, setError] = useState('')
   const [email, setEmail] = useState('')
 
+  console.log('INIT Web3Connect', process.env.GATSBY_INFURA_ID, process.env.INFURA_ID)
+  const infuraId = process.env.GATSBY_INFURA_ID ?? process.env.INFURA_ID
+
   async function initWeb3Modal() {
     if (typeof window !== 'undefined' && typeof window.WalletConnectProvider !== 'undefined') {
       const providerOptions = {
         walletconnect: {
           package: window.WalletConnectProvider.default,
           options: {
-            infuraId: process.env.GATSBY_INFURA_ID,
+            infuraId: infuraId,
           },
         },
         torus: {

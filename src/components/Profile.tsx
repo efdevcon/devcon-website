@@ -16,6 +16,9 @@ export default function Profile() {
   const [account, setAccount] = useState<UserAccount>()
   const [error, setError] = useState('')
 
+  console.log('INIT Profile', process.env.GATSBY_INFURA_ID, process.env.INFURA_ID)
+  const infuraId = process.env.GATSBY_INFURA_ID ?? process.env.INFURA_ID
+
   useEffect(() => {
     if (accountContext.account) {
       setAccount(accountContext.account)
@@ -59,7 +62,7 @@ export default function Profile() {
         walletconnect: {
           package: window.WalletConnectProvider.default,
           options: {
-            infuraId: process.env.GATSBY_INFURA_ID,
+            infuraId: process.env.infuraId,
           },
         },
         torus: {
