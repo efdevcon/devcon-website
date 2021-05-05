@@ -6,6 +6,8 @@ import Torus from '@toruslabs/torus-embed'
 import Web3Modal from 'web3modal'
 import { utils, providers } from 'ethers'
 import { Alert } from './common/alert'
+import { POAPs } from './domain/poaps'
+import { isEmail } from 'src/utils/validators'
 
 declare var window: any
 
@@ -37,6 +39,11 @@ export default function Profile() {
 
   async function updateProfile() {
     if (accountContext && account) {
+      if (account.email && !isEmail(account.email)) {
+        setError('No valid email address provided.')
+        return
+      }
+
       const updated = await accountContext.updateProfile(account)
       if (updated) {
         setError('Profile successfully updated.')
@@ -182,6 +189,8 @@ export default function Profile() {
           </button>
           <br />
           <br />
+
+          <POAPs address='' />
 
           <div>
             <button type="button" onClick={() => accountContext.logout()}>

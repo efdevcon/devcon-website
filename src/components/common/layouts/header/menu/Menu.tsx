@@ -35,14 +35,14 @@ import { LanguageToggle } from 'src/components/common/layouts/header/strip/langu
 export const Account = (props: any) => {
   return (
     <div className={css['account']}>
-      <RouterLink to={'/app/profile'}>
+      <Link to={'/app/profile'}>
         <button className={`${css['desktop']} ${css['account-button']} white`}>
           <AccountIcon />
           <p>Account</p>
         </button>
 
         <AccountIcon className={`icon ${css['account-icon']} ${css['mobile']}`} />
-      </RouterLink>
+      </Link>
     </div>
   )
 }

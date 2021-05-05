@@ -6,6 +6,7 @@ import { Link } from '@reach/router'
 import Torus from '@toruslabs/torus-embed'
 import { useAccountContext } from 'src/context/account-context'
 import { Alert } from './common/alert'
+import { isEmail } from 'src/utils/validators'
 
 declare var window: any
 
@@ -108,6 +109,11 @@ export default function Connect() {
   }
 
   const connectEmail = async () => {
+    if (!isEmail(email)) {
+      setError('No valid email address provided.')
+      return
+    }
+
     const response = await fetch('/api/users/login/email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
