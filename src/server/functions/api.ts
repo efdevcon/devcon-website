@@ -2,7 +2,7 @@ import express, { json, Request, Response, urlencoded } from 'express'
 import passport from 'passport'
 import serverless from 'serverless-http'
 import mongoose from 'mongoose'
-import * as userRoutes from '../routes/users'
+import * as userAccountRoutes from '../routes/account'
 import session from 'express-session'
 import { web3Strategy, serializeUser, deserializeUser } from '../strategies/web3'
 import { SERVER_CONFIG } from '../config/server'
@@ -32,7 +32,7 @@ router.get('/', (req: Request, res: Response) => {
   res.status(200).send('Service up and running!')
 })
 
-userRoutes.register(router)
+userAccountRoutes.register(router)
 
 // Express-sessions
 if (!SERVER_CONFIG.SESSION_SECRET) throw new Error('Required SESSION_SECRET not found.')

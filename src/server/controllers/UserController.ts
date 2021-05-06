@@ -11,20 +11,19 @@ export class UserController {
     this._repository = repository
   }
 
-  public async Nonce(req: Request, res: Response) {
+  public async GetNonce(req: Request, res: Response) {
     try {
-      const nonce = Math.floor(Math.random() * (99999 - 10000)) + 10000
-      const data = `Sign this message to prove you have access to this wallet. This won't cost you anything.\n\nSecurity code (you can ignore this): ${nonce}`
-
+      const data = Math.floor(Math.random() * (999999 - 100000)) + 100000
+      
       req.session.nonce = data
-      res.status(200).send({ code: 200, message: '', data: data })
+      res.status(200).send({ code: 200, message: 'OK', data: data })
     } catch (e) {
       console.error(e)
-      res.status(500).send({ code: 500, message: `Internal server error` })
+      res.status(500).send({ code: 500, message: 'Unable to generate security nonce.' })
     }
   }
 
-  public async Login(req: Request, res: Response, next: NextFunction) {
+  public async LoginWeb3(req: Request, res: Response, next: NextFunction) {
     passport.authenticate('web3', (error, user, info) => {
       if (error || !user) {
         res.status(400).send({ code: 400, message: info.message ?? `Bad request` })
@@ -42,32 +41,42 @@ export class UserController {
   public async LoginEmail(req: Request, res: Response, next: NextFunction) {
     try {
       const email = req.body?.email
-      if (email) {
+      const nonce = req.body?.nonce
+
+      if (!email || !nonce) { 
+        return res.status(400).send({ code: 400, message: 'Email login input not provided.' })
+      }
+
+      if (email) { // TODO: & nonce
         let userAccount = await this._repository.findUserAccountByEmail(email)
 
-        if (!userAccount) { 
+        if (!userAccount) {
           const model = new UserAccountModel()
           model.email = email
           userAccount = await this._repository.create(model)
         }
 
-        if (userAccount) {
-          req.logIn(userAccount, function (err) {
-            if (err) {
-              return next(err)
-            }
-            res.status(200).send({ code: 200, message: '', data: userAccount })
-          })
-        } else {
-          res.status(404).send({ code: 404, message: "Couldn't login with email address." })
+        if (!userAccount) {
+          return res.status(404).send({ code: 404, message: "Unable to login by email." })
         }
-      } else {
-        res.status(400).send({ code: 400, message: `No email address provided.` })
+
+        req.logIn(userAccount, function (err) {
+          if (err) {
+            return next(err)
+          }
+          
+          return res.status(200).send({ code: 200, message: '', data: userAccount })
+        })
       }
     } catch (e) {
       console.error(e)
-      res.status(500).send({ code: 500, message: `Couldn't update profile` })
     }
+
+    res.status(500).send({ code: 500, message: `Couldn't update profile` })
+  }
+
+  public async VerifyEmail(req: Request, res: Response) {
+    res.status(200).send({ code: 200, message: '', data: 'Email verified' })
   }
 
   public async Logout(req: Request, res: Response) {
@@ -76,34 +85,72 @@ export class UserController {
       res.status(200).send({ code: 200, message: 'Logout successful' })
     } catch (e) {
       console.error(e)
-      res.status(500).send({ code: 500, message: `Internal server error` })
+      res.status(500).send({ code: 500, message: 'Unable to verify email.' })
     }
   }
 
-  public async Profile(req: Request, res: Response) {
+  public async GetAccount(req: Request, res: Response, next: NextFunction) {
     try {
-      const data = await this._repository.findOne(req.user)
+      const data = await this._repository.findOne(req.user._id)
 
       res.status(200).send({ code: 200, message: '', data: data })
     } catch (e) {
       console.error(e)
-      res.status(500).send({ code: 500, message: `Couldn't fetch profile` })
+      res.status(500).send({ code: 500, message: 'Unable to get user account.' })
     }
   }
 
-  public async Update(req: Request, res: Response) {
+  public async UpdateAccount(req: Request, res: Response) {
     try {
+      const paramId = req.params.id
+      const userId = req.user._id
       const account = req.body?.account as UserAccount
-      if (account) {
-        const data = await this._repository.update(account._id, account)
 
-        res.status(200).send({ code: 200, message: '', data: data })
-      } else {
-        res.status(400).send({ code: 400, message: `Provide a valid UserAccount` })
+      if (!account) { 
+        return res.status(400).send({ code: 400, message: 'User account not provided.' })
+      }
+
+      if (paramId != userId) { 
+        return res.status(405).send({ code: 405, message: 'Not allowed to update user account.' })
+      }
+
+      if (paramId == userId) { 
+        const updated = await this._repository.update(paramId, account)
+        if (updated) {
+          return res.status(204).send({ code: 204, message: 'OK' })
+        }
+                
+        return res.status(404).send({ code: 404, message: 'User account not updated.' })
       }
     } catch (e) {
       console.error(e)
-      res.status(500).send({ code: 500, message: `Couldn't update profile` })
     }
+
+    res.status(500).send({ code: 500, message: 'Unable to update user account.' })
+  }
+
+  public async DeleteAccount(req: Request, res: Response) {
+    try {
+      const paramId = req.params.id
+      const userId = req.user._id
+      
+      if (paramId != userId) { 
+        return res.status(405).send({ code: 405, message: 'Not allowed to delete user account.' })
+      }
+
+      if (paramId == userId) { 
+        const deleted = await this._repository.delete(req.params.id)
+        if (deleted) {
+          req.logout()
+          return res.status(200).send({ code: 200, message: 'OK' })
+        }
+        
+        return res.status(404).send({ code: 404, message: 'User account not found.' })
+      }
+    } catch (e) {
+      console.error(e)
+    }
+
+    res.status(500).send({ code: 500, message: 'Unable to delete user account.' })
   }
 }

@@ -1,4 +1,4 @@
-import { navigate } from '@reach/router'
+import { Link, navigate } from '@reach/router'
 import React, { useEffect, useState } from 'react'
 import { useAccountContext } from 'src/context/account-context'
 import { UserAccount } from 'src/types/UserAccount'
@@ -13,29 +13,21 @@ declare var window: any
 
 export default function Profile() {
   const accountContext = useAccountContext()
-  const [account, setAccount] = useState<UserAccount>()
+  const [account, setAccount] = useState({...accountContext.account} as UserAccount)
   const [error, setError] = useState('')
-  const infuraId = process.env.GATSBY_INFURA_ID
 
-  useEffect(() => {
-    if (accountContext.account) {
-      setAccount(accountContext.account)
-    }
-  }, [accountContext.account])
-
-  function onChange(e: any, type: string) {
+  function onChange(value: string, type: string) {
     if (!account) return
 
-    let newAccount = { ...account }
     if (type === 'username') {
-      newAccount.username = e.target.value
+      account.username = value
     }
 
     if (type === 'email') {
-      newAccount.email = e.target.value
+      account.email = value
     }
 
-    setAccount(newAccount)
+    setAccount(account)
   }
 
   async function updateProfile() {
@@ -45,7 +37,7 @@ export default function Profile() {
         return
       }
 
-      const updated = await accountContext.updateProfile(account)
+      const updated = await accountContext.updateAccount(account._id, account)
       if (updated) {
         setError('Profile successfully updated.')
       } else {
@@ -54,71 +46,25 @@ export default function Profile() {
     }
   }
 
-  async function initWeb3Modal() {
-    if (typeof window !== 'undefined' && typeof window.WalletConnectProvider !== 'undefined') {
-      const providerOptions = {
-        walletconnect: {
-          package: window.WalletConnectProvider.default,
-          options: {
-            infuraId: infuraId,
-          },
-        },
-        torus: {
-          package: Torus,
-        },
+  const connectWallet = async () => {
+    if (accountContext && account) {
+      const nonce = await accountContext.getNonce()
+      const message = `Sign this message to prove you have access to this wallet. This won't cost you anything.\n\nNonce: ${nonce} *\n * You don't need to remember this.`
+      const signedMessage = await accountContext.signMessage(message)
+
+      if (!signedMessage) {
+        setError('Unable to connect to web3')
+        return
       }
-
-      return new Web3Modal({
-        network: 'mainnet',
-        cacheProvider: false,
-        providerOptions,
-      })
-    } else {
-      console.log("Can't init Web3modal - window or WalletConnectProvider undefined")
-    }
-  }
-
-  const connectWeb3 = async () => {
-    const web3Modal = await initWeb3Modal()
-    if (web3Modal) web3Modal.clearCachedProvider()
-
-    let web3,
-      provider,
-      network,
-      signer,
-      address,
-      rawMessage,
-      signedMessage = {}
-    try {
-      web3 = await web3Modal.connect()
-      provider = new providers.Web3Provider(web3)
-
-      network = await provider.getNetwork()
-      signer = provider.getSigner()
-      address = await signer.getAddress()
-    } catch (e) {
-      const msg = 'Could not connect to web3 wallet.'
-      console.log(msg, e)
-      return
-    }
-
-    try {
-      const response = await fetch('/api/users/nonce')
-      const body = await response.json()
-      rawMessage = body.data
-
-      if (web3.wc) {
-        signedMessage = await provider.send('personal_sign', [
-          utils.hexlify(utils.toUtf8Bytes(rawMessage)),
-          address.toLowerCase(),
-        ])
+      
+      account.addresses.push(signedMessage.address)
+      const updated = await accountContext.updateAccount(account._id, account)
+      if (updated) {
+        setError('Profile successfully updated.')
+        setAccount(account)
       } else {
-        signedMessage = await signer.signMessage(rawMessage)
+        setError('Error adding wallet address.')
       }
-    } catch (e) {
-      const msg = 'Did not received signed message.'
-      console.log(msg, e)
-      return
     }
   }
 
@@ -142,7 +88,7 @@ export default function Profile() {
               placeholder="Enter username"
               name="username"
               value={account.username}
-              onChange={e => onChange(e, 'username')}
+              onChange={e => onChange(e.target.value, 'username')}
             />
           </div>
           <div>
@@ -153,7 +99,7 @@ export default function Profile() {
               placeholder="Enter email"
               name="email"
               value={account.email}
-              onChange={e => onChange(e, 'email')}
+              onChange={e => onChange(e.target.value, 'email')}
             />
           </div>
           <br />
@@ -166,8 +112,8 @@ export default function Profile() {
           <br />
 
           <h3>Add wallet</h3>
-          {account.addresses.length === 0 && <p>No wallet(s) connected.</p>}
-          {account.addresses.length > 0 && (
+          {account.addresses?.length === 0 && <p>No wallet(s) connected.</p>}
+          {account.addresses && account.addresses?.length > 0 && (
             <div>
               <label>Address(es):</label>
               <ul>
@@ -178,23 +124,22 @@ export default function Profile() {
             </div>
           )}
 
-          <button type="button" onClick={connectWeb3}>
+          <button type="button" onClick={connectWallet}>
             Select wallet
           </button>
           <br />
 
           <h3>Tickets</h3>
-          <p>No ticket(s).</p>
-          <button type="button" onClick={() => navigate('/app/attest')}>
-            Attest Ticket
-          </button>
-          <br />
-          <br />
+          <small><i>No ticket(s) verified.</i></small>
+          <br/>
 
+          <p>*To attest your ticket, please refer to the confirmation email after purchase.</p>
+          <p>If you've lost the email. Click <Link to="/app/attest"><b>here</b></Link> to re-send an activation email.</p>
+          
           <POAPs address='' />
 
           <div>
-            <button type="button" onClick={() => accountContext.logout()}>
+            <button type="button" onClick={() => accountContext.logout(account._id)}>
               Logout
             </button>
           </div>

@@ -1,111 +1,27 @@
 import React, { useState } from 'react'
-import Web3Modal from 'web3modal'
-import { utils, providers } from 'ethers'
-import { Helmet } from 'react-helmet'
 import { Link } from '@reach/router'
-import Torus from '@toruslabs/torus-embed'
 import { useAccountContext } from 'src/context/account-context'
 import { Alert } from './common/alert'
 import { isEmail } from 'src/utils/validators'
-
-declare var window: any
 
 export default function Connect() {
   const accountContext = useAccountContext()
   const [error, setError] = useState('')
   const [email, setEmail] = useState('')
-  const infuraId = process.env.GATSBY_INFURA_ID
 
-  async function initWeb3Modal() {
-    if (typeof window !== 'undefined' && typeof window.WalletConnectProvider !== 'undefined') {
-      const providerOptions = {
-        walletconnect: {
-          package: window.WalletConnectProvider.default,
-          options: {
-            infuraId: infuraId,
-          },
-        },
-        torus: {
-          package: Torus,
-        },
-      }
+  const connectWeb3AndLogin = async () => {
+    const nonce = await accountContext.getNonce()
+    const message = `Sign this message to prove you have access to this wallet. This won't cost you anything.\n\nNonce: ${nonce} *\n * You don't need to remember this.`
+    const signedMessage = await accountContext.signMessage(message)
 
-      return new Web3Modal({
-        network: 'mainnet',
-        cacheProvider: false,
-        providerOptions,
-      })
-    } else {
-      setError("Can't init Web3modal - window or WalletConnectProvider undefined")
-    }
-  }
-
-  const connectWeb3 = async () => {
-    const web3Modal = await initWeb3Modal()
-    if (web3Modal) web3Modal.clearCachedProvider()
-
-    let web3,
-      provider,
-      network,
-      signer,
-      address,
-      rawMessage,
-      signedMessage = {}
-    try {
-      web3 = await web3Modal.connect()
-      provider = new providers.Web3Provider(web3)
-
-      network = await provider.getNetwork()
-      signer = provider.getSigner()
-      address = await signer.getAddress()
-    } catch (e) {
-      const msg = 'Could not connect to web3 wallet.'
-      console.log(msg, e)
-      setError(msg)
+    if (!signedMessage) {
+      setError('Unable to connect to web3')
       return
     }
 
-    try {
-      const response = await fetch('/api/users/nonce')
-      const body = await response.json()
-      rawMessage = body.data
-
-      if (web3.wc) {
-        signedMessage = await provider.send('personal_sign', [
-          utils.hexlify(utils.toUtf8Bytes(rawMessage)),
-          address.toLowerCase(),
-        ])
-      } else {
-        signedMessage = await signer.signMessage(rawMessage)
-      }
-    } catch (e) {
-      const msg = 'Did not received signed message.'
-      console.log(msg, e)
-      setError(msg)
-      return
-    }
-
-    try {
-      const response = await fetch('/api/users/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          address: address.toLowerCase(),
-          msg: rawMessage,
-          signed: signedMessage,
-        }),
-      })
-
-      if (response.status === 200) {
-        const body = await response.json()
-        accountContext.login(body.data)
-      } else {
-        const data = await response.json()
-        setError(data.message)
-      }
-    } catch (e) {
-      const msg = 'Could not login with web3 account'
-      console.log(msg, e)
+    const userAccount = await accountContext.loginWeb3(signedMessage.address,  signedMessage.message, signedMessage.signature)
+    if (!userAccount) {
+      setError('Unable to login with web3')
     }
   }
 
@@ -115,35 +31,19 @@ export default function Connect() {
       return
     }
 
-    const response = await fetch('/api/users/login/email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
-    })
-
-    if (response.status === 200) {
-      const body = await response.json()
-      accountContext.login(body.data)
-    } else {
-      const data = await response.json()
-      setError(data.message)
+    const userAccount = await accountContext.loginEmail(email, 123456) // TODO: Email nonce
+    if (!userAccount) {
+      const msg = 'Unable to login with email.'
+      setError(msg)
     }
   }
 
   const disconnect = async () => {
-    accountContext.logout()
+    accountContext.logout(accountContext.account?._id)
   }
 
   return (
     <div>
-      {/* Can use either react-helmet or include the script from gatsby-browser */}
-      <Helmet>
-        <script
-          type="text/javascript"
-          src="https://unpkg.com/@walletconnect/web3-provider@1.4.1/dist/umd/index.min.js"
-        />
-      </Helmet>
-
       {error && <Alert type="info" message={error} />}
 
       {!accountContext.account && (
@@ -172,7 +72,7 @@ export default function Connect() {
 
           <div>
             <h3>For experienced users</h3>
-            <button onClick={connectWeb3}>Sign in with wallet</button>
+            <button onClick={connectWeb3AndLogin}>Sign in with wallet</button>
           </div>
           <br />
 
