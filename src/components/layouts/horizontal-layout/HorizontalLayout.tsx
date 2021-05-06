@@ -5,6 +5,8 @@ import leftPad from 'src/utils/left-pad'
 import { Link } from 'src/components/common/link'
 import IconGithub from 'src/assets/icons/github.svg'
 import IconLearn from 'src/assets/icons/learn.svg'
+import IconDiscord from 'src/assets/icons/discord.svg'
+import IconMedal from 'src/assets/icons/medal.svg'
 import IconDiscussion from 'src/assets/icons/discussion.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { useGesture } from 'react-use-gesture'
@@ -21,7 +23,7 @@ type PageProps = {
 type LinkType = {
   title: string
   url: string
-  icon?: 'github' | 'forum' | 'web'
+  icon?: 'github' | 'forum' | 'web' | 'discord' | 'medal'
 }
 
 type PageContentProps = {
@@ -33,6 +35,7 @@ type PageContentProps = {
   index?: string
   children: React.ReactNode
   transparent?: boolean
+  whiteBackgroundText?: boolean
   inverted?: boolean
 }
 
@@ -62,6 +65,21 @@ export const PageContent = (props: PageContentProps) => {
             <IconGithub />
           </span>
         )
+
+      case 'discord':
+        return (
+          <span className={`${css['icon-link']}`}>
+            <IconDiscord />
+          </span>
+        )
+
+      case 'medal':
+        return (
+          <span className={`${css['icon-link']}`}>
+            <IconMedal />
+          </span>
+        )
+
       case 'forum':
         return (
           <span className={`${css['icon-link']}`}>
@@ -77,15 +95,20 @@ export const PageContent = (props: PageContentProps) => {
     }
   }
 
-  const backgroundTextClassName =
+  let backgroundTextClassName =
     props.backgroundText === intl.formatMessage({ id: 'rtd_community_events' })
-      ? 'background-text-solid'
-      : 'background-text-gradient'
+      ? css['background-text-solid']
+      : css['background-text-gradient']
 
-  const bottomLinksClassName =
+  let bottomLinksClassName =
     props.backgroundText === intl.formatMessage({ id: 'rtd_frequently_asked_questions' })
       ? 'bottom-links-white'
       : 'bottom-links'
+
+  if (props.whiteBackgroundText) {
+    backgroundTextClassName += ` ${css['white']}`
+    bottomLinksClassName = 'bottom-links-white'
+  }
 
   const pageTitleClassName = props.inverted ? 'page-title-inverted' : 'page-title'
 
@@ -97,7 +120,7 @@ export const PageContent = (props: PageContentProps) => {
         </h3>
 
         {props.backgroundText && (
-          <h2 className={`${css[backgroundTextClassName]} no-select`}>
+          <h2 className={`${backgroundTextClassName} no-select`}>
             {props.backgroundText.split(' ').map((word, index) => {
               return (
                 <>
@@ -136,9 +159,9 @@ export const PageContent = (props: PageContentProps) => {
           props.bottomLinks.map((link: LinkType) => {
             return (
               <p key={link.url}>
-                <Link to={link.url} indicateExternal className="hover-underline">
-                  {link.icon && renderIcon(link.icon)}
+                <Link to={link.url} indicateExternal={!link.icon} className="hover-underline">
                   {link.title}
+                  {link.icon && renderIcon(link.icon)}
                 </Link>
               </p>
             )
@@ -152,6 +175,7 @@ export const HorizontalLayout = (props: any) => {
   const trackRef = React.useRef<HTMLDivElement>()
   const pageRefs = React.useRef<any>({})
   const navigationRef = React.useRef<any>()
+  const isDraggingRef = React.useRef<boolean>()
   const lastX = React.useRef(0)
   const pages = props.children
   const pageWidth = React.useRef(0)
@@ -217,7 +241,21 @@ export const HorizontalLayout = (props: any) => {
   // Drag/hover handlers
   const bind = useGesture(
     {
+      onDragStart: ({ event }) => {
+        let disallowDrag
+        let nextEl = event.target
+
+        while (nextEl && nextEl.attributes && !disallowDrag) {
+          if (nextEl.attributes['data-no-drag']) disallowDrag = true
+
+          nextEl = nextEl.parentNode
+        }
+
+        if (!disallowDrag) isDraggingRef.current = true
+      },
       onDrag: state => {
+        if (!isDraggingRef.current) return
+
         const [deltaX] = state.delta
         const nextX = Math.min(trackWidth.current - pageWidth.current, Math.max(0, lastX.current - deltaX))
 
@@ -228,6 +266,10 @@ export const HorizontalLayout = (props: any) => {
         trackRef.current.style.cursor = 'grabbing'
       },
       onDragEnd: state => {
+        if (!isDraggingRef.current) return
+
+        isDraggingRef.current = false
+
         trackRef.current.style.transition = ''
         trackRef.current.style.cursor = ''
 
@@ -247,7 +289,9 @@ export const HorizontalLayout = (props: any) => {
         }
       },
     },
-    { drag: { useTouch: true, threshold: 20 } }
+    {
+      drag: { useTouch: true, threshold: 20 },
+    }
   )
 
   return (

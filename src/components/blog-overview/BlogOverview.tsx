@@ -62,7 +62,8 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
     infinite: false,
     speed: 500,
     slidesToShow: 3.1,
-    swipe: !props.noSwipe,
+    // swipe: !props.noSwipe,
+    // swipe:
     arrows: false,
     slidesToScroll: 3,
     touchThreshold: 100,
@@ -105,7 +106,7 @@ export const Cards = React.forwardRef((props: any, ref: any) => {
   }
 
   return (
-    <div className={css['cards']}>
+    <div className={css['cards']} data-no-drag="true">
       <Slider
         ref={el => {
           sliderRef.current = el
