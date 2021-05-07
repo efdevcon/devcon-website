@@ -6,6 +6,7 @@ import { isEmail } from 'src/utils/validators'
 
 export default function Connect() {
   const accountContext = useAccountContext()
+  const location = useLocation()
   const [error, setError] = useState('')
   const [email, setEmail] = useState('')
 
@@ -43,7 +44,12 @@ export default function Connect() {
   }
 
   if (accountContext.account) { 
-    navigate('/app/profile' + useLocation().search)
+    if (location?.search) { 
+      navigate('/app/profile' + location.search)
+    } else {
+      navigate('/app/profile')
+    }
+
     return null
   }
 
