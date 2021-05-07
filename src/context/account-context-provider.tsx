@@ -33,12 +33,6 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     asyncEffect()
   }, [])
 
-  React.useEffect(() => {
-    if (context.account) {
-      setContext({...context, loading: false})
-    }
-  }, [context.account])
-
   async function connectWeb3(): Promise<providers.Web3Provider | undefined> {
     try {
       const web3Modal = getWeb3Modal()
@@ -187,10 +181,11 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       const body = await response.json()
-      setContext({ ...context, account: body.data })
+      setContext({ ...context, account: body.data, loading: false })
       return body.data
     }
 
+    setContext({ ...context, loading: false })
     // else: set error/message
   }
 
