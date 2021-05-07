@@ -7,7 +7,6 @@ import { PrivateRoute } from 'src/components/common/private-route'
 import Login from './account/login'
 import Profile from './account/profile'
 import Attest from './account/attest'
-import Confirm from './account/confirm'
 import { Helmet } from 'react-helmet'
 import css from './app.module.scss'
 
@@ -33,7 +32,6 @@ export default function Index({ data, location }: any) {
                 <Router basepath="/app">
                   <PrivateRoute path="/profile" component={Profile} />
                   <PrivateRoute path="/attest" component={Attest} />
-                  <PrivateRoute path="/confirm" component={Confirm} />
                   <Login path="/login" />
                 </Router>
               </div>

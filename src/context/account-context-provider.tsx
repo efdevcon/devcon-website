@@ -35,7 +35,6 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
   React.useEffect(() => {
     if (context.account) {
-      console.log('SET CONTEXT: useEffect account')
       setContext({...context, loading: false})
     }
   }, [context.account])
@@ -188,7 +187,6 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       const body = await response.json()
-      console.log('SET CONTEXT: getAccount', context.account, context.loading)
       setContext({ ...context, account: body.data })
       return body.data
     }

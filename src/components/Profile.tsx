@@ -1,10 +1,12 @@
-import { Link } from '@reach/router'
 import React, { useState } from 'react'
 import { useAccountContext } from 'src/context/account-context'
 import { UserAccount } from 'src/types/UserAccount'
 import { Alert } from './common/alert'
 import { POAPs } from './domain/poaps'
 import { isEmail } from 'src/utils/validators'
+import { Tabs } from './common/tabs'
+import { Tab } from './common/tabs/Tabs'
+import ConfirmEmail from './ConfirmEmail'
 
 export default function Profile() {
   const accountContext = useAccountContext()
@@ -74,71 +76,87 @@ export default function Profile() {
           {error && <Alert type='info' message={error} />}
           <br />
 
-          <h3>Edit Info</h3>
-          <div>
-            <label htmlFor="account-username">Username:</label>
-            <input
-              type="text"
-              id="account-username"
-              placeholder="Enter username"
-              name="username"
-              value={account.username}
-              onChange={e => onChange(e.target.value, 'username')}
-            />
-          </div>
-          <div>
-            <label htmlFor="account-email">Email:</label>
-            <input
-              type="email"
-              id="account-email"
-              placeholder="Enter email"
-              name="email"
-              value={account.email}
-              onChange={e => onChange(e.target.value, 'email')}
-            />
-          </div>
-          <br />
-
-          <div>
-            <button type="button" onClick={() => updateProfile()}>
-              Update profile
-            </button>
-          </div>
-          <br />
-
-          <h3>Add wallet</h3>
-          {account.addresses?.length === 0 && <p>No wallet(s) connected.</p>}
-          {account.addresses && account.addresses?.length > 0 && (
+          <Tabs>
+          <Tab title="Profile">
             <div>
-              <label>Address(es):</label>
-              <ul>
-                {account.addresses.map(i => {
-                  return <li key={i}>{i}</li>
-                })}
-              </ul>
+              <h3>Edit Info</h3>
+              <div>
+                <label htmlFor="account-username">Username:</label>
+                <input
+                  type="text"
+                  id="account-username"
+                  placeholder="Enter username"
+                  name="username"
+                  value={account.username}
+                  onChange={e => onChange(e.target.value, 'username')}
+                />
+              </div>
+              <div>
+                <label htmlFor="account-email">Email:</label>
+                <input
+                  type="email"
+                  id="account-email"
+                  placeholder="Enter email"
+                  name="email"
+                  value={account.email}
+                  onChange={e => onChange(e.target.value, 'email')}
+                />
+              </div>
+              <br />
+
+              <div>
+                <button type="button" onClick={() => updateProfile()}>
+                  Update profile
+                </button>
+              </div>
             </div>
-          )}
+          </Tab>
+          <Tab title="Wallets">
+            <div>
+              <h3>Add wallet</h3>
+              {account.addresses?.length === 0 && <p>No wallet(s) connected..</p>}
+              {account.addresses && account.addresses?.length > 0 && (
+                <div>
+                  <label>Address(es):</label>
+                  <ul>
+                    {account.addresses.map(i => {
+                      return <li key={i}>{i}</li>
+                    })}
+                  </ul>
+                </div>
+              )}
 
-          <button type="button" onClick={connectWallet}>
-            Select wallet
-          </button>
-          <br />
+              <button type="button" onClick={connectWallet}>
+                Select wallet
+              </button>
+            </div>
+          </Tab>
+          <Tab title="Ticket">
+            <div>
+              <h3>Tickets</h3>
+              <small><i>No ticket(s) verified yet..</i></small>
+              <br/>
 
-          <h3>Tickets</h3>
-          <small><i>No ticket(s) verified.</i></small>
-          <br/>
+              <p>*To attest your ticket, please refer to the confirmation email after purchase.</p>
+              <br/>
 
-          <p>*To attest your ticket, please refer to the confirmation email after purchase.</p>
-          <p>If you've lost the email. Click <Link to="/app/attest"><b>here</b></Link> to re-send an activation email.</p>
-          
-          <POAPs address='' />
+              <p>If you've lost the email, use the form below to re-send an activation email and start the attestation process.</p>
+              <ConfirmEmail />
+            </div>
+          </Tab>
+          <Tab title="Quests">
+            <div>
+              <POAPs address='' />
+            </div>
+          </Tab>
+          <Tab title="Scheduling">
+            <div>
+              <small><i>No talks bookmarked yet..</i></small>
+            </div>
+          </Tab>
+        </Tabs>
 
-          <div>
-            <button type="button" onClick={() => accountContext.logout(account._id)}>
-              Logout
-            </button>
-          </div>
-          <br />
+        <br/><br/>
         </>
       )}
     </div>

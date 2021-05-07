@@ -27,6 +27,10 @@ export default function Attest() {
         <p>Use your web3 account to attest your ticket.</p>
         {ticketId && <p>Ticket ID: <b>{ticketId}</b></p>}
         <br/>
+
+        <button type="button" onClick={() => console.log('Attesting ticket', ticketId)}>
+          Attest
+        </button>
       </div>
       }
     </div>

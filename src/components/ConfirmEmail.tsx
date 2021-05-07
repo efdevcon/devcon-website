@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useAccountContext } from 'src/context/account-context'
 import { UserAccount } from 'src/types/UserAccount'
 import { isEmail } from 'src/utils/validators'
+import { Alert } from './common/alert'
 
-export default function Confirm() {
+export default function ConfirmEmail() {
   const isBrowser = typeof window !== 'undefined'
   const accountContext = useAccountContext()
   const [account, setAccount] = useState({...accountContext.account} as UserAccount)
@@ -38,12 +39,9 @@ export default function Confirm() {
 
   return (
     <div>
-      <h2>Re-send confirmation email</h2>
-
       {isBrowser && 
       <div>
-        <p>If you've purchased a ticket, you should have received a confirmation email to attest your ticket.</p>
-        <p>If you've lost the email, use the form below to re-send an activation email and start the attestation process.</p>
+        {error && <Alert type='info' message={error} />}
         <br/>
 
         <div>
