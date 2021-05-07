@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, navigate } from '@reach/router'
+import { Link, navigate, useLocation } from '@reach/router'
 import { useAccountContext } from 'src/context/account-context'
 import { Alert } from './common/alert'
 import { isEmail } from 'src/utils/validators'
@@ -43,7 +43,7 @@ export default function Connect() {
   }
 
   if (accountContext.account) { 
-    navigate('/app/profile' + location?.search)
+    navigate('/app/profile' + useLocation().search)
     return null
   }
 

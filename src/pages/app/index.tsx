@@ -32,7 +32,7 @@ export default function Index({ data, location }: any) {
                 <Router basepath="/app">
                   <PrivateRoute path="/profile" component={Profile} />
                   <PrivateRoute path="/attest" component={Attest} />
-                  <Login path="/login" />
+                  <Login path="/login" default />
                 </Router>
               </div>
             </div>

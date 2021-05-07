@@ -4,6 +4,7 @@ import { UserAccount } from 'src/types/UserAccount'
 import { AccountContext, AccountContextType } from './account-context'
 import { getWeb3Modal } from 'src/utils/web3'
 import { SignedMessage } from 'src/types/SignedMessage'
+import { navigate } from '@reach/router'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -166,7 +167,8 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     })
 
     if (response.status === 200) {
-      setContext({ ...context, provider: undefined, account: undefined })
+      setContext({ ...context, provider: undefined, account: undefined, loading: true })
+      navigate('/app/login')
       return true
     }
 
