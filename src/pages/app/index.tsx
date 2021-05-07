@@ -7,7 +7,9 @@ import { PrivateRoute } from 'src/components/common/private-route'
 import Login from './account/login'
 import Profile from './account/profile'
 import Attest from './account/attest'
+import Confirm from './account/confirm'
 import { Helmet } from 'react-helmet'
+import css from './app.module.scss'
 
 export default function Index({ data, location }: any) {
   const isBrowser = typeof window !== 'undefined'
@@ -24,17 +26,20 @@ export default function Index({ data, location }: any) {
       </Helmet>
 
       {isBrowser && (
-        <AccountContextProvider>
-          <div className="section">
-            <div className="content">
-              <Router basepath="/app">
-                <PrivateRoute path="/profile" component={Profile} />
-                <PrivateRoute path="/attest" component={Attest} />
-                <Login path="/login" />
-              </Router>
+        <div className={css['app']}>
+          <AccountContextProvider>
+            <div className="section">
+              <div className="content">
+                <Router basepath="/app">
+                  <PrivateRoute path="/profile" component={Profile} />
+                  <PrivateRoute path="/attest" component={Attest} />
+                  <PrivateRoute path="/confirm" component={Confirm} />
+                  <Login path="/login" />
+                </Router>
+              </div>
             </div>
-          </div>
-        </AccountContextProvider>
+          </AccountContextProvider>
+        </div>
       )}
     </Content>
   )

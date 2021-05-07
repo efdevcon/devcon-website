@@ -1,15 +1,10 @@
-import { Link, navigate } from '@reach/router'
-import React, { useEffect, useState } from 'react'
+import { Link } from '@reach/router'
+import React, { useState } from 'react'
 import { useAccountContext } from 'src/context/account-context'
 import { UserAccount } from 'src/types/UserAccount'
-import Torus from '@toruslabs/torus-embed'
-import Web3Modal from 'web3modal'
-import { utils, providers } from 'ethers'
 import { Alert } from './common/alert'
 import { POAPs } from './domain/poaps'
 import { isEmail } from 'src/utils/validators'
-
-declare var window: any
 
 export default function Profile() {
   const accountContext = useAccountContext()

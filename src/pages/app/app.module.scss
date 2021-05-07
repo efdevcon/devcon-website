@@ -1,0 +1,35 @@
+@use 'src/assets/css/partials/index' as *;
+
+.app {
+
+  h3, button, ul { 
+    margin-bottom: 20px;
+  }
+  
+  label { 
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    @include fonts-sm;
+    color: $colors-monochrome-10;
+    border: 1px solid $colors-monochrome-10;
+    padding: $gaps-gap-1;
+    margin-bottom: 10px;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  a { 
+    text-decoration: underline;
+  }
+
+  button:hover {
+    background: $colors-monochrome-3;
+  }
+}

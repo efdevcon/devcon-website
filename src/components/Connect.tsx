@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from '@reach/router'
+import { Link, navigate } from '@reach/router'
 import { useAccountContext } from 'src/context/account-context'
 import { Alert } from './common/alert'
 import { isEmail } from 'src/utils/validators'
@@ -40,6 +40,11 @@ export default function Connect() {
 
   const disconnect = async () => {
     accountContext.logout(accountContext.account?._id)
+  }
+
+  if (accountContext.account) { 
+    navigate('/app/profile' + location?.search)
+    return null
   }
 
   return (

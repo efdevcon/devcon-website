@@ -4,6 +4,7 @@ import { UserAccount } from 'src/types/UserAccount'
 import { SignedMessage } from 'src/types/SignedMessage'
 
 export interface AccountContextType {
+  loading: boolean
   provider: providers.Web3Provider | undefined
   account: UserAccount | undefined
   signMessage: (message: string) => Promise<SignedMessage | undefined>,
@@ -19,6 +20,7 @@ export interface AccountContextType {
 
 export const useAccountContext = () => useContext<AccountContextType>(AccountContext)
 export const AccountContext = createContext<AccountContextType>({
+  loading: false,
   provider: undefined,
   account: undefined,
   signMessage: async () => undefined,

@@ -11,6 +11,7 @@ interface AccountContextProviderProps {
 
 export const AccountContextProvider = ({ children }: AccountContextProviderProps) => {
   const [context, setContext] = useState<AccountContextType>({
+    loading: true,
     provider: undefined,
     account: undefined,
     signMessage,
@@ -26,11 +27,18 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
   React.useEffect(() => {
     async function asyncEffect() {
-      getAccount();
+      await getAccount();
     }
 
     asyncEffect()
   }, [])
+
+  React.useEffect(() => {
+    if (context.account) {
+      console.log('SET CONTEXT: useEffect account')
+      setContext({...context, loading: false})
+    }
+  }, [context.account])
 
   async function connectWeb3(): Promise<providers.Web3Provider | undefined> {
     try {
@@ -180,6 +188,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       const body = await response.json()
+      console.log('SET CONTEXT: getAccount', context.account, context.loading)
       setContext({ ...context, account: body.data })
       return body.data
     }
