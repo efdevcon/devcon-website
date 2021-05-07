@@ -43,6 +43,11 @@
   status = 200
 
 [[redirects]]
+  from = "/app/*"
+  to = "/app/index.html"
+  status = 200
+
+[[redirects]]
   from = "/"
   to = "/en/"
   status = 302
