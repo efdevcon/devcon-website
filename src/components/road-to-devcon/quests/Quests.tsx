@@ -10,61 +10,30 @@ import { HashTag } from 'src/components/road-to-devcon/intro'
 import star from 'src/assets/images/star.svg'
 import moment from 'moment'
 import { useQuests } from 'src/hooks/useQuests'
+import { Arrows } from 'src/components/blog-overview'
 
-const quests = (intl: IntlShape) => [
-  {
-    title: 'Quest 1',
-    issuer: 'ETHSTAKER',
-    url: 'https://devcon.org',
-    description:
-      'Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen',
-    startDate: 'Aug 21 2021',
-  },
-  {
-    title: 'Quest 2',
-    issuer: 'ETHSTAKER',
-    description:
-      'Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen',
-    startDate: 'Jan 21 2021',
-  },
-  {
-    title: 'Quest 3',
-    issuer: 'ETHSTAKER',
-    description:
-      'Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen',
-    startDate: 'Dec 21 2021',
-  },
-  {
-    title: 'Quest 4',
-    issuer: 'ETHSTAKER',
-    description:
-      'Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen',
-    startDate: 'Jan 21 2022',
-  },
-  {
-    title: 'Quest 5',
-    issuer: 'ETHSTAKER',
-    description:
-      'Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen',
-    startDate: 'Jan 21 2021',
-  },
-  {
-    title: 'Quest 6',
-    issuer: 'ETHSTAKER',
-    description:
-      'Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the Andals, the Rhoynar and the First Men, Queen of Meereen',
-    startDate: 'Jan 21 2021',
-  },
-]
+const useSlideState = (quests: any[]) => {
+  const [currentIndex, setCurrentIndex] = React.useState(0)
+  const [cardsPerSlide, setCardsPerSlide] = React.useState(0)
+
+  return {
+    cardsPerSlide,
+    currentIndex,
+    setCurrentIndex,
+    setCardsPerSlide,
+    canNext: currentIndex < quests.length + 1 - cardsPerSlide,
+    canBack: currentIndex > 0,
+  }
+}
 
 export const Quests = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const sliderRef = React.useRef<Slider>()
-  const [activeFilter, setActiveFilter] = React.useState<string>('upcoming')
   const quests = useQuests()
+  const [activeFilter, setActiveFilter] = React.useState<string>('upcoming')
   const filteredQuests = quests.filter(quest => {
     const now = new Date()
-    const questBegin = moment(quest.startDate).toDate()
+    const questBegin = moment(quest.startDate, 'MMM D, YYYY').toDate()
 
     if (activeFilter === 'upcoming') {
       return now < questBegin
@@ -72,6 +41,8 @@ export const Quests = React.forwardRef((props: any, ref) => {
       return questBegin < now
     }
   })
+  const slideState = useSlideState(filteredQuests)
+
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { in: ["quests.png"] } }) {
@@ -110,19 +81,38 @@ export const Quests = React.forwardRef((props: any, ref) => {
     touchThreshold: 100,
     swipe: true,
     mobileFirst: true,
+    beforeChange: (_: any, next: number) => {
+      if (slideState.setCurrentIndex) slideState.setCurrentIndex(Math.round(next))
+    },
+    onReInit: () => {
+      if (!sliderRef.current) return
+
+      const { state, props: sliderSettings } = sliderRef.current
+
+      const currentBreakpoint = state.breakpoint
+      const breakpoints = sliderSettings.responsive
+
+      const activeBreakpoint = breakpoints?.find(({ breakpoint }) => {
+        return breakpoint === currentBreakpoint
+      })
+
+      const nextCardsPerSlide = activeBreakpoint?.settings?.slidesToShow
+
+      if (slideState.cardsPerSlide !== nextCardsPerSlide) slideState.setCardsPerSlide(nextCardsPerSlide)
+    },
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: getNCardsToShow(2),
-          slidesToScroll: Math.min(1, nCards),
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: getNCardsToShow(1),
-          slidesToScroll: Math.min(1, nCards),
+          slidesToScroll: 1,
         },
       },
     ],
@@ -148,6 +138,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
         transparent
         inverted
         backgroundText={intl.formatMessage({ id: 'rtd_quests' })}
+        renderTopRight={() => <Arrows noSwipe sliderRef={sliderRef} {...slideState} />}
         bottomLinks={[
           {
             url: 'https://github.com/efdevcon/DIPsbla',
@@ -161,8 +152,9 @@ export const Quests = React.forwardRef((props: any, ref) => {
           },
         ]}
       >
-        <div className={css['container']} data-no-drag="true">
-          {/* Use filter component once/if RTD converges with static phase branch*/}
+        {/* attrib data-no-drag is used by the horizontal layout to prevent dragging the entire layout on certain elements */}
+        <div className={css['container']} data-no-drag={!slideState.canBack && !slideState.canNext ? 'false' : 'true'}>
+          {/* Use filter component once/if RTD converges with static phase branch */}
           <div className={css['filter']}>
             <p onClick={() => setActiveFilter('upcoming')} className={activeFilter === 'upcoming' ? css['active'] : ''}>
               {intl.formatMessage({ id: 'rtd_quests_upcoming' })}
@@ -172,7 +164,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
             </p>
           </div>
           <Slider ref={sliderRef} {...slickSettings}>
-            <div className={`${css['first']} ${css['card']}`} data-no-drag="true">
+            <div className={`${css['first']} ${css['card']} no-select`}>
               <h2 className={css['title']}>
                 {intl.formatMessage({ id: 'rtd' })} — {intl.formatMessage({ id: 'rtd_quests' })}
               </h2>
@@ -195,7 +187,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
                     key={quest.title}
                     title={quest.title}
                     imageUrl={quest.image}
-                    className={css['card']}
+                    className={`${css['card']} ${activeFilter === 'past' && css['past']}`}
                     customReadMore={intl.formatMessage({ id: 'rtd_quests_participate' }).toUpperCase()}
                     metadata={[quest.startDate, quest.issuer]}
                     linkUrl={quest.url}

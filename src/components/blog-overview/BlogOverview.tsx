@@ -26,6 +26,8 @@ export const useBlogState = () => {
 }
 
 export const Arrows = (props: any) => {
+  if (!props.canBack && !props.canNext) return null
+
   let className = css['arrow-button']
 
   if (props.noSwipe) {

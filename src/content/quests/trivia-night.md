@@ -1,7 +1,7 @@
 ---
 title: DEVCON + ETHSTAKER TRIVIA NIGHT
-startDate: 2022-03-02
-endDate: 2022-03-09
+startDate: '2022-03-02'
+endDate: '2022-03-09'
 issuer: ETHSTAKER
 url: https://devcon.org
 image: ../../assets/images/devcon-category.jpg

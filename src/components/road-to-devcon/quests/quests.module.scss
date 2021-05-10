@@ -168,14 +168,18 @@
   flex-direction: column;
   justify-content: flex-end;
   background: white;
-  touch-action: none;
   cursor: grab;
   margin-left: $gap-8;
   width: calc(100% - #{$gap-8});
+  outline: none;
 
   @media (max-width: $screen-md) {
     margin-left: $gap-6;
     width: calc(100% - #{$gap-6});
+  }
+
+  &.past {
+    filter: grayscale(0.8);
   }
 
   &.first {
@@ -193,12 +197,10 @@
       @include fonts.font-xl;
       margin-bottom: $gap-4;
       margin-top: $gap-4;
-      line-height: 150%;
     }
 
     .description {
       @include fonts.bold;
-      line-height: 200%;
     }
   }
 }

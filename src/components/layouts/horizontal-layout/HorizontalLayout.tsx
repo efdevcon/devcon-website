@@ -246,7 +246,7 @@ export const HorizontalLayout = (props: any) => {
         let nextEl = event.target
 
         while (nextEl && nextEl.attributes && !disallowDrag) {
-          if (nextEl.attributes['data-no-drag']) disallowDrag = true
+          if (nextEl.attributes['data-no-drag']?.value === 'true') disallowDrag = true
 
           nextEl = nextEl.parentNode
         }

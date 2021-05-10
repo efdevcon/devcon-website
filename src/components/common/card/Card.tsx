@@ -93,7 +93,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
   }
 
   return (
-    <div className={className} ref={ref} data-no-drag="true">
+    <div className={className} ref={ref}>
       {cardContent}
     </div>
   )
