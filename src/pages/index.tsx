@@ -10,6 +10,7 @@ import { ToDIPData } from 'src/components/dip-overview/queryMapper'
 import { ToFaqData } from 'src/components/faq/queryMapper'
 import { Ask } from 'src/components/road-to-devcon/ask'
 import { Learn } from 'src/components/road-to-devcon/learn'
+// import { Quests } from 'src/components/road-to-devcon/quests'
 import { Participate } from 'src/components/road-to-devcon/participate'
 import { Blog } from 'src/components/road-to-devcon/blog'
 import { MessageFromDeva } from 'src/components/road-to-devcon/message-from-deva'
@@ -64,6 +65,8 @@ export default function Index({ data }: any) {
         <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
 
         <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
+
+        {/* <Quests title="Quests" /> */}
 
         <Invite title={intl.formatMessage({ id: 'rtd_invite' })} />
       </HorizontalLayout>

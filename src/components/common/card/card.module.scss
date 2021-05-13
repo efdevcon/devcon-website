@@ -1,22 +1,29 @@
 @use 'src/assets/css/variables' as *;
 @use 'src/assets/css/partials/fonts';
 
+/*
+  Whenever RTD and static phase branch converge, discard RTD card css for static phase css
+*/
+
 .card {
   // overflow: hidden;
   // max-width: 526px;
-  // margin: $size-8;
+  // margin: $sizes-size8;
   // -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   // -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 11px rgba(black, 0.1);
   color: $color-primary;
   display: flex;
   flex-direction: column;
   position: relative;
 
-  &:hover .read-more {
-    color: rgba(0, 0, 0, 0.5) !important;
-    --text-color: rgba(0, 0, 0, 0.5) !important;
+  // Whole card should trigger hover effect
+  &.expand-link {
+    &:hover .read-more {
+      color: rgba(black, 0.5) !important;
+      --color-icon: rgba(black, 0.5) !important;
+    }
   }
 
   @media (min-width: $screen-lg + 1) {
@@ -36,6 +43,7 @@
     max-width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: $gap-2;
 
     .img {
       transition: transform 0.5s;
@@ -46,16 +54,20 @@
       overflow: hidden;
       height: 100%;
       object-fit: cover;
+
+      &.not-gatsby {
+        position: relative !important;
+      }
     }
 
     &:after {
       content: '';
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, white);
+      background-image: linear-gradient(180deg, rgba(white, 0) 50%, white);
       position: absolute;
-      top: 0;
       left: 0;
+      bottom: 0;
       width: 100%;
-      height: 100%;
+      height: 50%;
     }
   }
 
@@ -68,32 +80,32 @@
 
   .body {
     padding: $gap-8;
-    padding-bottom: $gap-4;
+    padding-bottom: 0px;
 
     @media (max-width: $screen-lg) {
       padding: $gap-4;
-      padding-bottom: $gap-2;
+      padding-bottom: 0px;
     }
 
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    font-family: $font-secondary;
+    font-family: $font-primary;
 
     .title {
-      font-family: $font-primary;
-      letter-spacing: -0.4px;
-      // overflow: hidden;
-      // white-space: nowrap;
-      // text-overflow: ellipsis;
+      // @include fonts-xl;
+      // @include fonts-bold;
       @include fonts.font-xl;
       @include fonts.bold;
+      margin-bottom: 0px;
+      font-family: $font-primary;
+      letter-spacing: -0.4px;
     }
 
     .text {
       margin-top: $gap-4;
       overflow: hidden;
-      // white-space: nowrap;
+      padding-bottom: $gap-4;
       color: rgba(97, 97, 97, 1);
     }
 
@@ -105,6 +117,7 @@
 
       .metadata {
         @include fonts.font-sm;
+        color: grey;
         display: flex;
         text-transform: uppercase;
         margin-top: $gap-3;
@@ -121,14 +134,163 @@
 
       .read-more {
         @include fonts.bold;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        padding-top: 13px;
+        border-top: 1px solid rgba(black, 0.1);
+        padding-top: $gap-3;
+        padding-bottom: $gap-3;
         display: flex;
         align-items: center;
-        color: rgba(0, 0, 0, 0.25);
-        --text-color: rgba(0, 0, 0, 0.25); // for icons
+        // justify-content: flex-end;
+        // color: $colors-track-light-blue;
+        // --color-icon: $colors-track-light-blue; // for icons
+        color: rgba(229, 80, 102, 1) !important;
+        --text-color: rgba(229, 80, 102, 1) !important;
         justify-content: space-between;
+
+        > svg {
+          margin-left: $gap-3;
+          font-size: 1em;
+        }
+
+        &:hover {
+          color: rgba(229, 80, 102, 1) !important;
+          --color-icon: rgba(229, 80, 102, 1) !important;
+        }
       }
     }
   }
 }
+
+// @use 'src/assets/css/variables' as *;
+// @use 'src/assets/css/partials/fonts';
+
+// .card {
+//   // overflow: hidden;
+//   // max-width: 526px;
+//   // margin: $size-8;
+//   // -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   // -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+//   color: $color-primary;
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+
+//   &:hover .read-more {
+//     color: rgba(0, 0, 0, 0.5) !important;
+//     --text-color: rgba(0, 0, 0, 0.5) !important;
+//   }
+
+//   @media (min-width: $screen-lg + 1) {
+//     &:hover {
+//       .img-wrapper {
+//         .img {
+//           transform: scale(1.15);
+//         }
+//       }
+//     }
+//   }
+
+//   .img-wrapper {
+//     overflow: hidden;
+//     position: relative;
+//     flex-grow: 1;
+//     max-width: 100%;
+//     display: flex;
+//     justify-content: center;
+
+//     .img {
+//       transition: transform 0.5s;
+//       // Kinda tragic positioning strategy here, but this constellation was the only way to make it work in safari
+//       position: absolute !important;
+//       top: 0;
+//       min-width: 100%;
+//       overflow: hidden;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+
+//     &:after {
+//       content: '';
+//       background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, white);
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+
+//   &.img {
+//     .body {
+//       padding-top: 0px;
+//       flex-grow: 0;
+//     }
+//   }
+
+//   .body {
+//     padding: $gap-8;
+//     padding-bottom: $gap-4;
+
+//     @media (max-width: $screen-lg) {
+//       padding: $gap-4;
+//       padding-bottom: $gap-2;
+//     }
+
+//     display: flex;
+//     flex-grow: 1;
+//     flex-direction: column;
+//     font-family: $font-secondary;
+
+//     .title {
+//       font-family: $font-primary;
+//       letter-spacing: -0.4px;
+//       // overflow: hidden;
+//       // white-space: nowrap;
+//       // text-overflow: ellipsis;
+//       @include fonts.font-xl;
+//       @include fonts.bold;
+//     }
+
+//     .text {
+//       margin-top: $gap-4;
+//       overflow: hidden;
+//       // white-space: nowrap;
+//       color: rgba(97, 97, 97, 1);
+//     }
+
+//     .bottom-section {
+//       display: flex;
+//       flex-grow: 1;
+//       justify-content: flex-end;
+//       flex-direction: column;
+
+//       .metadata {
+//         @include fonts.font-sm;
+//         display: flex;
+//         text-transform: uppercase;
+//         margin-top: $gap-3;
+//         margin-bottom: $gap-3;
+
+//         > * {
+//           margin-right: $gap-3;
+
+//           &:last-child {
+//             margin-right: 0px;
+//           }
+//         }
+//       }
+
+//       .read-more {
+//         @include fonts.bold;
+//         border-top: 1px solid rgba(0, 0, 0, 0.1);
+//         padding-top: 13px;
+//         display: flex;
+//         align-items: center;
+//         color: rgba(0, 0, 0, 0.25);
+//         --text-color: rgba(0, 0, 0, 0.25); // for icons
+//         justify-content: space-between;
+//       }
+//     }
+//   }
+// }
