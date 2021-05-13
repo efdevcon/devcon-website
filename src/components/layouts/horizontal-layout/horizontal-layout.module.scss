@@ -106,6 +106,12 @@
           .page-title-inverted {
             @extend .page-title;
             color: #fff;
+
+            &:before {
+              content: attr(data-index);
+              @include nav-number;
+              color: white;
+            }
           }
 
           .background-text {
@@ -138,6 +144,12 @@
 
           .background-text-gradient {
             @extend .background-text;
+
+            &.white {
+              background: none !important;
+              color: white;
+              -webkit-text-fill-color: white;
+            }
 
             background: conic-gradient(
               from 178.57deg at 30% 50%,
@@ -281,6 +293,27 @@
           @include fonts.bold;
           @include fonts.font-lg;
           text-transform: uppercase;
+
+          @media (max-width: $screen-sm) {
+            justify-content: space-between;
+          }
+
+          > p {
+            margin-right: $gap-8;
+            text-align: center;
+            position: relative;
+
+            @media (max-width: $screen-sm) {
+              margin-right: $gap-2;
+            }
+
+            svg {
+              position: relative;
+              top: 0.2em;
+              margin-left: $gap-3;
+              font-size: 1.3em;
+            }
+          }
         }
 
         .bottom-links-white {

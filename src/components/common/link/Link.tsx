@@ -30,7 +30,7 @@ export const Link = ({ children, indicateExternal, external, to, ...rest }: Link
   if (isExternal) {
     return (
       <a href={to} {...rest} target="_blank" rel="noopener noreferrer">
-        {children} {indicateExternal && <NorthEast style={{ fontSize: '0.5rem' }} />}
+        {children} {indicateExternal && <NorthEast style={{ fontSize: '0.5em', marginLeft: '0.5em' }} />}
       </a>
     )
   }
