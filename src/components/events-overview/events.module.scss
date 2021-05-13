@@ -29,6 +29,11 @@
   }
 }
 
+.past-event { 
+  @extend .event;
+  opacity: 0.4;
+}
+
 .day { 
   @include fonts.font-xxl;
   @include fonts.font-tertiary;

@@ -1,8 +1,13 @@
+import moment from 'moment'
 import { Event } from 'src/types/Event'
 import { Meetup } from 'src/types/Meetup'
 
 export function ToEventData(data: any): Array<Event> {
-  return data.events ? data.events.nodes.map((i: any) => ToEvent(i)) : []
+  const allEvents = data.events ? data.events.nodes.map((i: any) => ToEvent(i)) : []
+  const pastEvents = allEvents.filter((i: Event) => moment(i.endDate).isBefore(moment()))
+  const upcomingEvents = allEvents.filter((i: Event) => moment(i.endDate).isAfter(moment()))
+  
+  return [...upcomingEvents, ...pastEvents]
 }
 
 export function ToEvent(node: any): Event {
