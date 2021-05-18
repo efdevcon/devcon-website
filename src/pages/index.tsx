@@ -17,6 +17,7 @@ import { MessageFromDeva } from 'src/components/road-to-devcon/message-from-deva
 import { Invite } from 'src/components/road-to-devcon/invite'
 import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
 import { ToArchiveData } from 'src/components/archive-overview/queryMapper'
+import { toQuestData } from 'src/components/road-to-devcon/quests/queryMapper'
 import { SEO } from 'src/components/common/seo'
 import IconRoad from 'src/assets/icons/road.svg'
 
@@ -24,6 +25,7 @@ export default function Index({ data }: any) {
   const intl = useIntl()
   const events = useMemo(() => ToEventData(data), [data])
   const meetups = useMemo(() => ToMeetupData(data), [data])
+  const quests = useMemo(() => toQuestData(data), [data])
   const dips = useMemo(() => ToDIPData(data), [data])
   const faqs = useMemo(() => ToFaqData(data), [data])
   const videos = useMemo(() => ToArchiveData(data), [data])
@@ -66,7 +68,7 @@ export default function Index({ data }: any) {
 
         <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
 
-        <Quests title={intl.formatMessage({ id: 'rtd_quests' })} />
+        <Quests title={intl.formatMessage({ id: 'rtd_quests' })} quests={quests} />
 
         <Invite title={intl.formatMessage({ id: 'rtd_invite' })} />
       </HorizontalLayout>
@@ -135,6 +137,7 @@ export const query = graphql`
       }
     }
     ...EventsData
+    ...QuestsData
     ...MeetupData
     ...DipsData
     ...ArchiveData

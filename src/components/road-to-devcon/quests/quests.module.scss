@@ -182,6 +182,8 @@
     filter: grayscale(0.8);
   }
 
+  --card-theme-color: rgba(229, 80, 102, 1);
+
   &.first {
     color: white;
     background: none;
@@ -202,5 +204,11 @@
     .description {
       @include fonts.bold;
     }
+  }
+}
+
+.hash-tag {
+  @media (max-width: $screen-lg) {
+    display: none;
   }
 }

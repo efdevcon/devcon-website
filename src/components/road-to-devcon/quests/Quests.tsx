@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { PageContent, Page } from 'src/components/layouts/horizontal-layout'
-import { IntlShape, useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl'
 import css from './quests.module.scss'
 import { graphql, useStaticQuery } from 'gatsby'
 import GatsbyImage from 'gatsby-image'
@@ -9,7 +9,7 @@ import { Card } from 'src/components/common/card'
 import { HashTag } from 'src/components/road-to-devcon/intro'
 import star from 'src/assets/images/star.svg'
 import moment from 'moment'
-import { useQuests } from 'src/hooks/useQuests'
+import { Quest } from 'src/types/Quest'
 import { Arrows } from 'src/components/blog-overview'
 
 const useSlideState = (quests: any[]) => {
@@ -29,7 +29,7 @@ const useSlideState = (quests: any[]) => {
 export const Quests = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
   const sliderRef = React.useRef<Slider>()
-  const quests = useQuests()
+  const quests: Quest[] = props.quests
   const [activeFilter, setActiveFilter] = React.useState<string>('upcoming')
   const filteredQuests = quests.filter(quest => {
     const now = new Date()
@@ -118,6 +118,24 @@ export const Quests = React.forwardRef((props: any, ref) => {
     ],
   }
 
+  const setFilter = (nextFilter: string) => {
+    if (nextFilter === activeFilter) {
+      sliderRef.current.slickGoTo(1)
+    }
+
+    setActiveFilter(nextFilter)
+  }
+
+  const isMounted = React.useRef(false)
+
+  useEffect(() => {
+    if (!isMounted.current) {
+      isMounted.current = true
+    } else {
+      sliderRef.current.slickGoTo(1, false)
+    }
+  }, [activeFilter])
+
   return (
     <Page {...props} ref={ref}>
       <div className={css['background']}>
@@ -156,14 +174,14 @@ export const Quests = React.forwardRef((props: any, ref) => {
         <div className={css['container']} data-no-drag={!slideState.canBack && !slideState.canNext ? 'false' : 'true'}>
           {/* Use filter component once/if RTD converges with static phase branch */}
           <div className={css['filter']}>
-            <p onClick={() => setActiveFilter('upcoming')} className={activeFilter === 'upcoming' ? css['active'] : ''}>
+            <p onClick={() => setFilter('upcoming')} className={activeFilter === 'upcoming' ? css['active'] : ''}>
               {intl.formatMessage({ id: 'rtd_quests_upcoming' })}
             </p>
-            <p onClick={() => setActiveFilter('past')} className={activeFilter === 'past' ? css['active'] : ''}>
+            <p onClick={() => setFilter('past')} className={activeFilter === 'past' ? css['active'] : ''}>
               {intl.formatMessage({ id: 'rtd_quests_past' })}
             </p>
           </div>
-          <Slider ref={sliderRef} {...slickSettings}>
+          <Slider key={activeFilter} ref={sliderRef} {...slickSettings}>
             <div className={`${css['first']} ${css['card']} no-select`}>
               <h2 className={css['title']}>
                 {intl.formatMessage({ id: 'rtd' })} — {intl.formatMessage({ id: 'rtd_quests' })}
@@ -188,9 +206,11 @@ export const Quests = React.forwardRef((props: any, ref) => {
                     title={quest.title}
                     imageUrl={quest.image}
                     className={`${css['card']} ${activeFilter === 'past' && css['past']}`}
-                    customReadMore={intl.formatMessage({ id: 'rtd_quests_participate' }).toUpperCase()}
+                    customReadMore={intl.formatMessage({ id: 'rtd_quests_participate' })}
                     metadata={[quest.startDate, quest.issuer]}
+                    infoUrl={quest.urlInfo}
                     linkUrl={quest.url}
+                    disabled={activeFilter === 'past'}
                     description={quest.description}
                   />
                 )

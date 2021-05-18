@@ -11,11 +11,13 @@ interface CardProps {
   description?: string
   imageUrl?: any
   linkUrl?: string
+  infoUrl?: string
   expandLink?: boolean
   date?: Date
   metadata?: string[]
   customReadMore?: string
   className?: string
+  disabled?: boolean
 }
 
 export const Card = React.forwardRef((props: CardProps, ref: any) => {
@@ -25,13 +27,14 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
   if (props.className) className = `${props.className} ${className}`
   if (props.expandLink) className = `${css['expand-link']} ${className}`
   if (props.imageUrl) className = `${className} ${css['img']}`
+  if (props.disabled) className += ` ${css['disabled']}`
 
   // RTD entire card as a link
   const link =
     props.expandLink || !props.linkUrl ? (
       props.title
     ) : (
-      <Link className="hover-underline" to={props.linkUrl}>
+      <Link className="hover-underline" to={props.infoUrl || props.linkUrl}>
         {props.title}
       </Link>
     )

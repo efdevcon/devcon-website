@@ -4,6 +4,7 @@ export interface Quest {
   endDate: string
   issuer: string
   url: string
+  urlInfo?: string
   image: string
   description: string
 }
