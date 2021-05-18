@@ -189,6 +189,10 @@
     background: none;
     margin-left: 0px;
 
+    > * {
+      background: rgba(255, 109, 93, 0.8);
+    }
+
     .title {
       @include fonts.bold;
       @include fonts.font-xl;

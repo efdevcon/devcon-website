@@ -164,7 +164,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
             icon: 'discord',
           },
           {
-            url: 'https://github.com/efdevcon/DIPs',
+            url: 'https://forum.devcon.org/c/quests/10',
             title: intl.formatMessage({ id: 'rtd_quests_create' }),
             icon: 'medal',
           },
