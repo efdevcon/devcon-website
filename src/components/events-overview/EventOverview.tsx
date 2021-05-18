@@ -11,8 +11,8 @@ interface EventOverviewProps {
 
 export function EventOverview(props: EventOverviewProps) {
   const renderEventDate = (event: EventType) => {
-    const start = moment(event.startDate)
-    const end = moment(event.endDate)
+    const start = moment.utc(event.startDate)
+    const end = moment.utc(event.endDate)
 
     if (start.day() === end.day()) {
       return start.format('MMM DD YYYY')
@@ -24,8 +24,8 @@ export function EventOverview(props: EventOverviewProps) {
   }
 
   const downloadIcs = (event: EventType) => {
-    const start = moment(event.startDate).format('YYYYMMDD')
-    const end = moment(event.endDate).format('YYYYMMDD')
+    const start = moment.utc(event.startDate).format('YYYYMMDD')
+    const end = moment.utc(event.endDate).format('YYYYMMDD')
 
     const ics = `BEGIN:VCALENDAR
 METHOD:PUBLISH
@@ -54,17 +54,16 @@ END:VCALENDAR`
   return (
     <div className={css['events']}>
       {props.data.map((event: EventType) => {
-        const isPastEvent = moment(event.endDate).isBefore(moment())
+        const isPastEvent = moment.utc(event.endDate).isBefore(moment.utc())
 
         return (
           <div key={event.id} className={isPastEvent ? css['past-event'] : css['event']}>
             <div className={css['date-column']}>
               <a href={event.url} target="_blank" rel="oopener noreferrer">
-                <span className={css['day']}>{moment(event.startDate).format('DD')}</span>
-                <span className={css['month']}>{moment(event.startDate).format('MMM')}</span>
+                <span className={css['day']}>{moment.utc(event.startDate).format('DD')}</span>
+                <span className={css['month']}>{moment.utc(event.startDate).format('MMM')}</span>
               </a>
-
-              {!isPastEvent && 
+              {!isPastEvent && (
                 <span
                   role="button"
                   aria-label={`Add ${event.title}`}
@@ -73,7 +72,7 @@ END:VCALENDAR`
                 >
                   <EventIcon />
                 </span>
-              }
+              )}
             </div>
             <div>
               <a href={event.url} target="_blank" rel="oopener noreferrer">
