@@ -1,12 +1,12 @@
 ---
-title: Message from Deva
+title: Mensaje de Deva
 template: content
 ---
 
-While we have some time until Devcon, there are many ways to get involved and contribute to Devcon, and lots to learn and participate in across the Ethereum ecosystem. We’ve thought a lot about how to accomplish all that we set out to achieve with Devcon moving forward, and about where we might find room to make an impact even before the event.
+Mientras que tenemos algún tiempo hasta Devcon, hay muchas maneras de involucrarnos y contribuir a Devcon, y mucho para aprender y participar a través del ecosistema Ethereum. Hemos pensado mucho sobre cómo conseguir todo lo que nos proponemos lograr con Devcon avanzando. y sobre dónde podemos encontrar espacio para hacer un impacto incluso antes del evento.
 
-We started last year by saying that Devcon is all about collaboration, knowledge sharing, and understanding the cutting edge in the Ethereum space. Over the last months, much of this work has been done online. And while we still plan to use our biggest stage to send a message about what Ethereum has accomplished (and to make use of tools built by our community while working to grow the Ethereum ecosystem), in the meantime we’ve been laying the groundwork for the event and its future so that we’re ready when the world is ready for us too.
+Empezamos el año pasado diciendo que Devcon es todo acerca de la colaboración, el intercambio de conocimiento y la comprensión de la vanguardia en el espacio Ethereum. Durante los últimos meses, gran parte de este trabajo se ha realizado en línea. Y aunque todavía planeamos utilizar nuestra etapa más grande para enviar un mensaje sobre lo que Ethereum ha logrado (y hacer uso de herramientas construidas por nuestra comunidad mientras trabajamos para crecer el ecosistema Ethereum), Mientras tanto, hemos estado sentando las bases para el evento y su futuro para que estemos preparados cuando el mundo esté listo para nosotros también.
 
-Now, we’d like to find new ways to welcome old friends back, and new friends into the fold. And as the drumbeat starts to get a little louder with the first reunions not too far away, we’ll do what we can to highlight leading ecosystem events, whether regional, virtual, or locally accessible meetups.
+Ahora, nos gustaría encontrar nuevas formas de dar la bienvenida a viejos amigos y nuevos amigos en el redil de los demás. Y como el tambor empieza a hacerse un poco más fuerte con las primeras reuniones no muy lejos. Haremos todo lo posible para destacar los principales eventos del ecosistema, ya sean reuniones regionales, virtuales o locales accesibles.
 
-Each type of event has experimented with making the most of the year we’ve had to build new relationships, explore new ideas, and to feature new teams, faces and breakthroughs. And we’re going to help that drumbeat keep growing louder until we see you all again at Devcon. Over the next pages, find resources and information on ways to get involved, and stay tuned for news on more ways to get involved soon.
+Cada tipo de evento ha experimentado con el aprovechamiento del año que hemos tenido que construir nuevas relaciones, explorar nuevas ideas y contar con nuevos equipos, rostros y grandes avances. Y vamos a ayudar a que el tambor siga creciendo más alto hasta que volvamos a verte en Devcon. En las páginas siguientes, encuentre recursos e información sobre las formas de involucrarse y manténgase al tanto de las noticias sobre más formas de involucrarse pronto.
