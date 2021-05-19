@@ -1,6 +1,6 @@
 ---
-title: Preguntas frecuentes
+title: Ticket FAQ
 template: content
 ---
 
-Preguntas frecuentes
+Ticket FAQ
