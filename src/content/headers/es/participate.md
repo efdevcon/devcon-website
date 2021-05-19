@@ -1,4 +1,4 @@
 ---
-title: Participate
+title: Participar
 ---
 
