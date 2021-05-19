@@ -1,8 +1,8 @@
 ---
-Summary: 'Give Devcon participants a taste of a regenerative economy, by allowing them to offset the carbon emissions associated with the event, as part of the ticketing process.'
+Summary: 'Dar a los participantes de Devcon un sabor a una economía regenerativa. permitiéndoles compensar las emisiones de carbono asociadas al evento, como parte del proceso de facturación.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md
 DIP: 1
-Title: Make Devcon carbon neutral
+Title: Hacer a Devcon carbono neutral
 Status: Accepted
 Themes: Ticketing, Environmental Sustainability
 Tags: Event production, Software
@@ -12,86 +12,86 @@ Discussion: https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27
 Created: 2020-07-20
 ---
 
-## Summary of Proposal
-Give Devcon participants a taste of a regenerative economy, by allowing them to offset the carbon emissions associated with the event, as part of the ticketing process.
+## Resumen de la propuesta
+Dar a los participantes de Devcon un sabor a una economía regenerativa. permitiéndoles compensar las emisiones de carbono asociadas al evento, como parte del proceso de facturación.
 
-## Abstract
-We want to offer attendees the ability to offset the carbon emissions from Devcon. This includes both **direct** emissions that occur during the event—energy use, air conditioning, food, etc.—as well as **indirect** emissions that are tightly coupled to it—most importantly, accommodation and flights.
+## Resumen
+Queremos ofrecer a los asistentes la capacidad de compensar las emisiones de carbono de Devcon. Esto incluye tanto **emisiones directas** que ocurren durante el evento: uso de energía, aire acondicionado, alimentos, etc. así como **emisiones indirectas** que están estrechamente acopladas a ella—lo que es más importante, alojamiento y vuelos.
 
-We have identified 2 ways of approaching offsetting, each with it's own advantages and disadvantages.  We will outline these options, and [engage the community](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27) to find the most suitable option.
+Hemos identificado dos maneras de acercarse a la compensación, cada una con sus propias ventajas y desventajas.  Te describiremos estas opciones, y [comprometeremos a la comunidad](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27) para encontrar la opción más adecuada.
 
-The user will be able to pay directly within the ticketing process. Offsetting contributions are destined for the highest quality local carbon projects in our host nation of Colombia.
+El usuario podrá pagar directamente dentro del proceso de ticketing. Las contribuciones compensatorias están destinadas a proyectos locales de carbono de la más alta calidad en nuestro país anfitrión de Colombia.
 
-## Motivation & Rationale
-Most of us working on Ethereum are obsessed with building a "better future", and even though we're all focused on different building blocks, we understand that a radical shift is only possible if we combine these blocks into a global, interconnected, social and economic system.
+## Motivación & Racionalidad
+La mayoría de nosotros trabajando en Ethereum estamos obsesionados con construir un "futuro mejor", y aunque todos estamos centrados en diferentes bloques de construcción, entendemos que un cambio radical solo es posible si combinamos estos bloques en un sistema global, interconectado, social y económico.
 
-We believe that any new system needs to learn from the shortcomings of previous systems and strive to be regenerative, forward thinking, keeping the best interests of future generations in mind. Internalising the cost of any negative social and environmental impact is tantamount to achieving this.
+Creemos que cualquier nuevo sistema debe aprender de las deficiencias de los sistemas anteriores y esforzarse por ser regenerativo, pensar en el futuro, teniendo en mente los mejores intereses de las generaciones futuras. Internacionalizar el coste de cualquier impacto social y medioambiental negativo equivale a lograrlo.
 
-Devcon is where we discover, connect, and sync with the global ecosystem and where we set the foundations for future collaborations, and as such plays an essential role in this new system. We see this as an opportunity for Devcon to lead by example by taking action to minimize its negative impact on the natural world, and by doing so we have the opportunity to prompt participants to reflect on their own actions, and not only imagine a better future, but to immediately take action and be a part of that vision by internalizing one relatively well understood externality: the carbon emissions associated with their participation at Devcon. We also hope that this will inspire participants to build value on the potential of such a balanced eco-system.
+Devcon es donde descubrimos, conectamos y sincronizamos con el ecosistema global y donde sentamos las bases para futuras colaboraciones, y como tal desempeña un papel esencial en este nuevo sistema. Vemos esto como una oportunidad para que Devcon lidere con el ejemplo tomando medidas para minimizar su impacto negativo en el mundo natural, y al hacerlo, tenemos la oportunidad de incitar a los participantes a reflexionar sobre sus propias acciones. y no sólo imaginar un futuro mejor, pero para actuar inmediatamente y ser parte de esa visión internalizando una externalidad relativamente bien entendida: las emisiones de carbono asociadas con su participación en Devcon. También esperamos que esto incite a los participantes a generar valor sobre el potencial de un ecosistema tan equilibrado.
 
 ```
-Rough emissions estimates for 3500 attendees and 4 days:
-→ Direct emissions = 150 t
-→ Accommodation = 280 t
-→ Transport = 1350 t
+Estimas estimaciones de emisiones para 3500 asistentes y 4 días:
+→ Emisiones directas = 150 t
+→ Alojamiento = 280 t
+→ Transporte = 1350 t
 
-High quality carbon offset price per ton:
+Precio de compensación de carbono de alta calidad por tonelada:
 → 10 – 20 USD
 ```
 
 
-## Implementation
-**Organizational**
+## Implementación
+**Organizacional**
 
-- How the funds gathered during the ticketing process will be used to offset the event's carbon footprint will be discussed in a future DIP. This DIP should describe the governance and allocation of the funds and could be developed in collboration with other projects like [Terra0](https://terra0.org/) or the [Sovereign Nature Initiative](http://sovereignnature.com/). Inputs from the community are encouraged!
-- Gather data to best estimate the carbon footprint of the event.
+- La forma en que los fondos recaudados durante el proceso de facturación serán utilizados para compensar la huella de carbono del evento será discutida en un futuro DIP. Este DIP debería describir la gobernanza y la asignación de los fondos y podría desarrollarse en colaboración con otros proyectos como [Terra0](https://terra0.org/) o la [Iniciativa Naturaleza Soberana](http://sovereignnature.com/). ¡Se animan las entradas de la comunidad!
+- Recopilar datos para estimar mejor la huella de carbono del evento.
 
-**Technical**
+**Técnico**
 
-- Build a user-friendly front-end integration into Devcon's ticketing process.
-- Users can pay with the same currencies as are accepted by the Devcon ticketing process.
+- Construye una integración fácil de usar en el proceso de ticketing de Devcon.
+- Los usuarios pueden pagar con las mismas monedas que las aceptadas por el proceso de compra de Devcon.
 
-**Previous experience**
+**Experiencia anterior**
 
-- This will be the first time that we integrate carbon offsetting into the ticketing process of an event.
-- We already have a running PoC which you can check out [here](https://www.co2ken.io/).
+- Será la primera vez que integremos la compensación de carbono en el proceso de toma de decisiones de un evento.
+- Ya tenemos un PoC en ejecución que puedes echar un vistazo [aquí](https://www.co2ken.io/).
 
-**Post-event**
+**Post-evento**
 
-- It will be very valuable for us to discover the offsetting appetite of the Ethereum community as well as seeing how people and other projects are using our product.
-- The data we gather at Devcon 2021 will also help us make more accurate predictions about the carbon footprint of Devcon 2022 and other events. Let's improve data accuracy where possible!
+- Será muy valioso para nosotros descubrir el apetito compensador de la comunidad Ethereum, así como ver cómo la gente y otros proyectos están utilizando nuestro producto.
+- Los datos que recopilamos en Devcon 2021 también nos ayudarán a hacer predicciones más precisas sobre la huella de carbono de Devcon 2022 y otros eventos. ¡Mejoremos la precisión de los datos cuando sea posible!
 
-## Operational Requirements & Ownership
-1. *What actions are required to implement the proposal at Devcon?*
-    - The only effort that is needed at Devcon would be including of any bracelet or swag at checkin. All other efforts are focused on the booking process integration.
+## Requisitos operacionales & Propiedad
+1. *¿Qué medidas son necesarias para aplicar la propuesta en Devcon?*
+    - El único esfuerzo que se necesita en Devcon sería incluir cualquier bracetet o swag a la hora de registrarse. Todos los demás esfuerzos se centran en la integración del proceso de reserva.
 
-2. *Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)*
-    - CO2ken will be responsible for the successful implementation of this proposal.
+2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)*
+    - CO2ken será responsable de la exitosa aplicación de esta propuesta.
 
-3. *What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))*
-    - Anyone who offsets their emissions will receive an NFT representing their contribution.
-    - We would love to see other teams pick this up to create positive reinforcement, e.g. participants with the NFT get special swag, discounts, etc.
-    - We will actively approach other projects where we see fun ways to collaborate as more DIPs appear.
-    - We don't want to punish those who decided against (or simply missed the option to) offsetting their carbon footprint. But we want to reward those who did. Creating value around positive behavior is a simple, yet powerful way to change today's economics—carrots, not sticks!
+3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))*
+    - Cualquiera que contrarreste sus emisiones recibirá un TNF que represente su contribución.
+    - Nos encantaría ver que otros equipos lo recogen para crear un refuerzo positivo, por ejemplo, los participantes con el NFT reciben un cambio especial, descuentos, etc.
+    - Nos acercaremos activamente a otros proyectos en los que vemos formas divertidas de colaborar a medida que aparezcan más DI.
+    - No queremos castigar a quienes decidieron en contra (o simplemente perdieron la opción) compensando su huella de carbono. Pero queremos recompensar a quienes lo hicieron. Crear valor alrededor del comportamiento positivo es una manera simple pero poderosa de cambiar la economía actual: ¡zanahorias, no palos!
 
-## Links & Additional Information
-**Questions we often get and possible answers:**
+## Enlaces & Información adicional
+**Preguntas que a menudo recibimos y posibles respuestas:**
 
-- *But we don't have the data to accurately calculate the carbon footprint of `X` ?*
+- *Pero no tenemos los datos para calcular con precisión la huella de carbono de `X`?*
 
-    Unfortunately today, most things fall into the  **`X`** category where we would need more data to fully understand the climate impact of a certain action. But this data is often not measured, siloed or private.  We believe developing systems that can collect and aggregate carbon footprint data are amongst the most important things to focus on right now.
+    Desafortunadamente hoy, la mayoría de las cosas caen en la categoría  **`X`** donde necesitaríamos más datos para entender completamente el impacto climático de una determinada acción. Pero estos datos a menudo no se miden, ni se siloea ni se priva.  Creemos que el desarrollo de sistemas que puedan recopilar y añadir datos sobre la huella de carbono es una de las cosas más importantes en las que concentrarse en este momento.
 
-    But the lack of accurate data should not be used as an excuse for not starting to act in the first place. Let's not forget: we’re dealing with CO2 emissions. If we use the data we have, take the most conservative estimate, and start offsetting these emissions, we will at worst offset too much. Given the state of the planet, we need to do this anyway.
+    Pero la falta de datos precisos no debe servir de excusa para no empezar a actuar en primer lugar. No olvidemos que nos estamos ocupando de las emisiones de CO2. Si utilizamos los datos que tenemos, tomamos las estimaciones más conservadoras y empezamos a compensar estas emisiones, en el peor de los casos compensaremos demasiado. Dada la situación del planeta, tenemos que hacerlo de todos modos.
 
-- *Aren't carbon offsets the new letters of indulgence?*
+- *¿No es el carbono compensa las nuevas letras de la indulgencia?*
 
-    We want to make it clear that offsetting is no silver bullet. Studies estimate that three quarters of circulating carbon credits are “hot air” and don’t lead to additional emission reductions. We should foremost aim to reduce our carbon footprint overall, and only compensate for those activities for which no good alternatives exist today.
+    Queremos dejar claro que la compensación no es una bala de plata. Los estudios estiman que las tres cuartas partes de los créditos de carbono circulantes son “aire caliente” y no conducen a reducciones adicionales de las emisiones. En primer lugar, deberíamos aspirar a reducir nuestra huella de carbono en general, y solo compensar aquellas actividades para las que actualmente no existen buenas alternativas.
 
-    This is why a lot of research has to go into sourcing the right projects. Ultimately, our goal at CO2ken is to shed light into the opaque carbon offset value chain in order to unlock the rapid growth we need to see in climate finance.
+    Es por ello que mucha investigación tiene que dedicarse a la obtención de los proyectos adecuados. En última instancia, nuestro objetivo en CO2ken es arrojar luz a la opaca cadena de valor de compensación de carbono para desbloquear el rápido crecimiento que necesitamos ver en la financiación del clima.
 
 
-**Links:**
-* [Link to Devon Forum — CO2ken DIP](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27)
-* [CO2ken Website](https://www.co2ken.io/)
-* [Medium post describing the project's Genesis (things have changed since then)](https://medium.com/curve-labs/co2ken-genesis-74d7a1387ea1)
-* [@CO2ken_io on Twitter](https://twitter.com/CO2ken_io)
+**Enlaces:**
+* [Enlace al Foro de Devon — CO2ken DIP](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27)
+* [Sitio web de CO2ken](https://www.co2ken.io/)
+* [Publicación media que describe el Génesis del proyecto (las cosas han cambiado desde entonces)](https://medium.com/curve-labs/co2ken-genesis-74d7a1387ea1)
+* [@CO2ken_io en Twitter](https://twitter.com/CO2ken_io)
