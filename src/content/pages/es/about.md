@@ -1,10 +1,10 @@
 ---
-title: Acerca de Devcon
+title: About Devcon
 template: content
 ---
 
-Devcon es una reunión anual celebrada por la Fundación Ethereum. Es una introducción intensiva para los nuevos exploradores de Ethereum, una reunión familiar global para aquellos que ya están incrustados en nuestro ecosistema, y una fuente de energía y creatividad para todos.
+Devcon is an annual gathering held by the Ethereum Foundation. It is an intensive introduction for new Ethereum explorers, a global family reunion for those already embedded within our ecosystem, and a source of energy and creativity for all.
 
-La programación cubre el contenido que va desde lo profundamente técnico hasta lo profundamente humano. Esta es una conferencia para constructores de todo tipo: desarrolladores, diseñadores, investigadores, implementadores de clientes, ingenieros de pruebas, operadores de infraestructuras, organizadores comunitarios, economistas sociales, artistas y más.
+Programming covers content ranging from the deeply technical to the profoundly human. This is a conference for builders of all kinds: developers, designers, researchers, client implementers, test engineers, infrastructure operators, community organizers, social economists, artists, and more.
 
-Alojamos a Devcon para educar y capacitar a la comunidad para construir y usar sistemas descentralizados. Nuestro objetivo es empujar los límites de la posibilidad en nuestra misión de llevar al mundo protocolos, herramientas y cultura descentralizados
+We host Devcon to educate and empower the community to build and use decentralized systems. Our goal is to push the boundaries of possibility in our mission to bring decentralized protocols, tools, and culture to the world
