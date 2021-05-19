@@ -1,5 +1,5 @@
 ---
-Title: Presentaciones del póster ---
+ ---
 Mark off space in the venue and allow for the submission of posters of their ideas / talks. 
 Present the posters during the conference. 
 Allow them to answer questions in allotted time slots, i.e. via Chat or Email.'
@@ -15,35 +15,35 @@ Discussion: https://forum.devcon.org/t/dip-14-using-posters-as-a-medium-alongsid
 Created: 2020-11-25
 ---
 
-## Resumen de la propuesta
+## Summary of Proposal
 
-Para todas aquellas personas que querían hablar, pero no se aprobó: Marque el espacio en el lugar y permita la presentación de carteles de sus ideas / conversaciones. Presentar los carteles durante la conferencia. Permitir que respondan a las preguntas en intervalos de tiempo asignados, por ejemplo, a través del chat o el correo electrónico.
+For all those people who wanted to speak, but didn't get approved: Mark off space in the venue and allow for the submission of posters of their ideas / talks. Present the posters during the conference. Allow them to answer questions in allotted time slots, i.e. via Chat or Email.
 
-## Resumen
-Muchas conferencias científicas obtienen más aplicaciones de abstractos / temas, que tienen franjas horarias en las etapas. Dar a la gente la oportunidad de presentar sus ideas y proyectos sin poder darles tiempo de palabra en las etapas, el formato del póster puede ser utilizado. Esto hace que sea fácil para los recién llegados presentar algo, mientras que para los asistentes en persona es fácil navegar por los carteles en su propio tiempo. El formato también se aplica fácilmente digitalmente, ya que los archivos del póster pueden estar disponibles en línea, mientras que el creador del póster responde preguntas en vivo o se retrasa por chat o correo electrónico.
+## Abstract
+A lot of scientific conferences get more applications of abstracts / topics, than they have time slots on the stages. To give people a chance to present their ideas and projects without being able to give them speaking time on the stages, the poster format can be used. This makes it easy for newcomers to actually present something, while it is easy for in-person attendee's to browse the posters in their own time. The format also applies easily digitally, since the poster-files can be made online available while the poster-originator answers questions live or delayed via chat or email.
 
-En la comunidad científica, es común que los veteranos de la conferencia vayan a la zona del póster colectivamente a revisar y hacer preguntas a los estudiantes de los teléfonos que hicieron los pósteres - mientras que todo el mundo bebe grandes cantidades de cerveza. Colocar esto cerca del final del día de la conferencia y dar cerveza gratuita también mejora el factor de red en gran medida ;)
+In the scientific community, it is common that the conference "veterans" go to the poster area collectively to review and ask questions to the phd-students that made the posters - while everybody drinks large amounts of beer. Putting this near the end of the conference day and giving off free beer also enhances the networking factor greatly ;)
 
-## Motivación & Racionalidad
-Más espacio para más ideas sin quitar espacios de tiempo de las etapas o sesiones de ruptura.
+## Motivation & Rationale
+More space for more ideas without taking away time slots from the stages or breakout sessions.
 
-Además, la gente puede visitar el área de presentación en su propio tiempo y permanecer todo el tiempo o tan corto como desee.
+Also, people can visit the presentation area in their own time and stay as long or as short as they want.
 
-## Implementación
-Esta propuesta se ha aplicado en un gran número de otros acontecimientos, principalmente en el sector científico. Es bastante común, a veces incluso celebrado (cuando la cerveza entra en juego) y siendo fácil y barato de implementar, ofrece muchos buenos efectos de sinergias en red.
+## Implementation
+This proposal has been implemented at a large number of other events, mainly in the scientific sector. It is quite common, sometimes even celebrated (when the beer comes into play) and while being easy and cheap to implement, offers many good networking synergy effects.
 
-## Requisitos operacionales & Propiedad
-1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
+## Operational Requirements & Ownership
+1. What actions are required to implement the proposal at Devcon?
 
-Ofrecer la posibilidad de enviar carteles - o paralelamente durante la convocatoria de "espacios para hablar" o específicamente a aquellos cuya presentación de la charla fue rechazada.
+Offer the possibility to submit posters - either parallelly during the call for "speaking slots" or specifically to those, whose talk submission got rejected.
 
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)
+2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)
 
-El equipo de organización. Quiero asistir a DevCon 2021 de todos modos, así que estaría encantado de ayudar en la prem.
+The organization team. I want to attend DevCon 2021 anyways, so I'd be happy to help on prem.
 
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
+3. What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))
 
-Tal vez POAP :D Hay premios por "Mejor presentación de carteles" o "Mejor charla" en otras conferencias. ¿Por qué no hacer fichas POAP especiales que se conceden a las personas que ganaron esos premios?
+Maybe POAP :D There are awards for "Best Poster Presentation" or "Best Talk" at other conferences. Why not make special POAP tokens that get awarded to the people who won those awards?
 
-## Enlaces & Información adicional
-Ninguna
+## Links & Additional Information
+None
