@@ -1,15 +1,5 @@
 ---
-Summary: 'We set up [Planetscape][planetscape], a dystopian escape game for [36C3][36c3] based on the dreadful effects of climate change (CCC did **not** sponsor the game).
-
-Planetscape is organized in 20 chapters, and requires players to solve quests in real life, explore the congress to find hints and interact with people. Planetscape had **20 levels**, **254 players**, [**1300** transactions][ps:transactions] to the smart contract, and **7 teams** finished the game and claimed their prize.
-
-The players" feedback was heartwarming: "We were about to leave the congress but we found Planetscape, and we stayed longer to play!", "Please make another escape game for the next congress!", "This was the best thing of the congress", "Highlight of this year" ([tweet][ps:highlight]).
-
-During the game, players:
-
-- Discovered new areas and activities, the game kept them engaged with the event.
-- United forces with others while playing the game.
-- Understood and enjoyed the theme of game.'
+Summary: 'Desarrollar un juego para Devcon para empujar a la gente a explorar el evento, comprometerse con otras personas, y aprender cómo desarrollar una gran UX para una aplicación completamente descentralizada.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-4.md
 DIP: 4
 Title: Juego de caza del tesoro
@@ -22,9 +12,11 @@ Discussion: https://forum.devcon.org/t/dip-a-treasure-hunt-game-for-devcon/45
 Created: 2020-08-07
 ---
 
+
 # Resumen de la propuesta
 
 Desarrollar un juego para Devcon para empujar a la gente a explorar el evento, comprometerse con otras personas, y aprender cómo desarrollar una gran UX para una aplicación completamente descentralizada.
+
 
 # Resumen
 
@@ -105,7 +97,7 @@ El Protocolo de Dist0rción Social desarrolló [THC][thc] (Creador de Cacería d
 | - Puzzle +------>+ THC +------->+ ETH: Contrato inteligente |
 | - Contraseña | | | | | | | |
 | - Nivel N | +-------+---------------------+
-| - . | |
+| - . . | |
 | | | +---------------------+
 +----------------+ | | |
 .                                 +------>+ IPFS: dApp          |
@@ -113,7 +105,7 @@ El Protocolo de Dist0rción Social desarrolló [THC][thc] (Creador de Cacería d
 .                                         +---------------------+
 ```
 
-THC crea una aplicación _amigable con el usuario que se basa en la tecnología descentralizada sólo_. Queremos vivir el sueño descentralizado sin compromisos, desarrollar un potente dApp que usaría Ethereum bajo la capa sin exponer ningún detalle sobre blockchain e IPFS al jugador.
+THC crea una aplicación *amigable con el usuario que se basa en la tecnología descentralizada sólo*. Queremos vivir el sueño descentralizado sin compromisos, desarrollar un potente dApp que usaría Ethereum bajo la capa sin exponer ningún detalle sobre blockchain e IPFS al jugador.
 
 El juego tiene **incorporación instantánea** al permitir que la gente juegue solo visitando un sitio web. A estas alturas, esto sucede usando un método similar al de "burner-wallet" (el monedero del jugador se crea sobre la marcha cuando se abre la dApp por primera vez). Con el fin de hacer transacciones los jugadores necesitaban Ether. Mientras que el enfoque actual es simplemente [transferir][gasstation] una pequeña cantidad de Ether (prueba) a nuevos jugadores, queremos mejorar esto usando [OpenGSN][opengsn].
 
@@ -166,19 +158,17 @@ Con el fin de desarrollar un juego similar para Devcon, la información sobre la
 
 # Requisitos operacionales & Propiedad
 
-1. _¿Qué medidas son necesarias para aplicar la propuesta en Devcon?_
+1. *¿Qué medidas son necesarias para aplicar la propuesta en Devcon?*
+    - El juego debe ser desplegado pocos días antes de la conferencia. Los rompecabezas físicos y digitales deben estar listos el primer día del evento.
+    - El juego bajo el subdominio `devcon.org` haría que el juego fuera más fiable.
+    - Añade el enlace al juego a la guía de papel (si los hay) proporcionada en Devcon.
+    - Si los diseñadores de Devcon tienen bandwitdh, cree algunos NFT oficiales "firmado por Devcon" para distribuirlos para los ganadores.
 
-   - El juego debe ser desplegado pocos días antes de la conferencia. Los rompecabezas físicos y digitales deben estar listos el primer día del evento.
-   - El juego bajo el subdominio `devcon.org` haría que el juego fuera más fiable.
-   - Añade el enlace al juego a la guía de papel (si los hay) proporcionada en Devcon.
-   - Si los diseñadores de Devcon tienen bandwitdh, cree algunos NFT oficiales "firmado por Devcon" para distribuirlos para los ganadores.
+2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)*
+    - El Protocolo de distensión social será responsable de la correcta aplicación de esta propuesta.
 
-2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)_
-
-   - El Protocolo de distensión social será responsable de la correcta aplicación de esta propuesta.
-
-3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))_
-   - Uno de los objetivos del juego es descubrir Devcon y sus proyectos. Conocer de antemano la lista de proyectos nos permitiría crear niveles a su alrededor.
+3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))*
+    - Uno de los objetivos del juego es descubrir Devcon y sus proyectos. Conocer de antemano la lista de proyectos nos permitiría crear niveles a su alrededor.
 
 # Enlaces & Información adicional
 
@@ -187,6 +177,7 @@ Puede encontrar información adicional aquí:
 - :camera: [Las fotos](https://imgur.com/a/PCe4hCo) del dApp y algunos de los rompecabezas.
 - :writing_hand: [Nuestro extenso post en el blog](https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/) sobre el juego.
 - :speaking_head: [relámpago](https://www.youtube.com/watch?v=7RJn2gowj2I) en IPFS Pinning Summit
+
 
 [planetscape]: https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/
 [36c3]: https://events.ccc.de/congress/2019/wiki/index.php/Main_Page

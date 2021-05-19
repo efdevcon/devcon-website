@@ -300,6 +300,7 @@
 
           > p {
             margin-right: $gap-8;
+            white-space: nowrap;
             text-align: center;
             position: relative;
 
@@ -312,6 +313,14 @@
               top: 0.2em;
               margin-left: $gap-3;
               font-size: 1.3em;
+
+              @media (max-width: $screen-sm) {
+                margin-left: $gap-2;
+              }
+
+              @media (max-width: 320px) {
+                display: none;
+              }
             }
           }
         }

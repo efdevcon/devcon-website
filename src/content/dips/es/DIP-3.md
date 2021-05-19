@@ -1,5 +1,5 @@
 ---
-Summary: 'Winding Tree offers Devcon attendees to book their flights and hotels directly from suppliers with discount. Winding Tree is 100% open-source and we aim to be as decentralized as it is possible.'
+Summary: 'Winding Tree ofrece a Devcon asistentes para reservar sus vuelos y hoteles directamente de proveedores con descuento. Winding Tree es 100% de código abierto y nuestro objetivo es ser tan descentralizado como sea posible.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-3.md
 DIP: 3
 Title: Las reservas de vuelo y hoteles proceden del mercado descentralizado de viajes de código abierto
@@ -41,13 +41,13 @@ Lo que es bueno es que no necesitamos construir nada a partir de cero, sólo mod
 ### 1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
 
 - necesitamos obtener una lista de hoteles equipo de Devcon planeado para el objetivo de bloques de habitación
-- Contingente con la aprobación del equipo de Devcon (que se basará en parte en _ver_ un [estelar UX y un minucioso plan de servicio al cliente](https://github.com/efdevcon/DIPs/pull/33) en acción), queremos integrar nuestra interfaz en el sitio web de Devcon
+- Contingente con la aprobación del equipo de Devcon (que se basará en parte en *ver* un [estelar UX y un minucioso plan de servicio al cliente](https://github.com/efdevcon/DIPs/pull/33) en acción), queremos integrar nuestra interfaz en el sitio web de Devcon
 
-### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
+### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
 
 Maksim Izmaylov <max@windingtree.com>
 
-### 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
+### 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
 
 Ya estamos trabajando con soluciones como Kleros y zkSync. Existe la oportunidad de integrarse con CO2ken y alimentar nuestros datos de vuelo y alojamiento en su sistema para permitir a los asistentes compensar su huella de carbono.
 

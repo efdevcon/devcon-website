@@ -101,13 +101,13 @@
   "rtd_subscribe_for_updates": "Subscribe for Devcon updates",
   "rtd_quests": "Quests",
   "rtd_quests_join_discord": "Join quest discord",
-  "rtd_quests_create": "Create quest",
-  "rtd_quests_participate": "Participate",
+  "rtd_quests_create": "Submit quest idea",
+  "rtd_quests_learn_more": "Learn More",
   "rtd_quests_upcoming": "Upcoming",
   "rtd_quests_upcoming_no_results": "There are no planned quests for now",
   "rtd_quests_past": "Past",
   "rtd_quests_past_no_results": "There's nothing to show!",
   "rtd_quests_cta": "Stay engaged along the Road to Devcon through participating in Road to Devcon Quests",
-  "rtd_quests_description": "Quests are periodic [mini-adventures or engagements] for our community to continually collaborate, contribute, and learn. Earn a POAP for each Quest — see how many you can collect!",
+  "rtd_quests_description": "Quests are periodic engagements for our community to continually collaborate, contribute, and learn. Earn a POAP for each Quest — see how many you can collect!",
   "browser_not_supported": "Your current browser is outdated and does not support modern web technologies, please upgrade your browser to the latest version or use another browser"
 }

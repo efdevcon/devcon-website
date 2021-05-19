@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo será el clima en Bogota?
+title: '¿Cómo será el clima en Bogota?'
 category: location
 order: 3
 ---

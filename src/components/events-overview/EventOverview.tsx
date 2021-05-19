@@ -63,8 +63,7 @@ END:VCALENDAR`
                 <span className={css['day']}>{moment.utc(event.startDate).format('DD')}</span>
                 <span className={css['month']}>{moment.utc(event.startDate).format('MMM')}</span>
               </a>
-
-              {!isPastEvent && 
+              {!isPastEvent && (
                 <span
                   role="button"
                   aria-label={`Add ${event.title}`}
@@ -73,7 +72,7 @@ END:VCALENDAR`
                 >
                   <EventIcon />
                 </span>
-              }
+              )}
             </div>
             <div>
               <a href={event.url} target="_blank" rel="oopener noreferrer">
