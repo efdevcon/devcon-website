@@ -1,5 +1,5 @@
 ---
-title: '¿Por qué Bogotá?'
+title: Why Bogota?
 category: location
 order: 2
 ---
