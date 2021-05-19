@@ -1,7 +1,7 @@
 ---
-title: '¿Cómo puedo contribuir?'
+title: How can I contribute?
 category: general
 order: 4
 ---
 
-¿Tienes una idea para Devcon? ¿Un evento de gestión comunitaria? ¿Una experiencia interactiva genial? ¿Una experiencia interactiva genial? Something out-of-the-box? Let us hear your idea! ¡Déjenos escuchar su idea! ¡Participa en nuestro [foro](https://forum.devcon.org/) y/o envía una propuesta de mejora de desarrollador!
+Have an idea for Devcon? A community-run event? A cool interactive experience? Something out-of-the-box? Let us hear your idea! Participate in our [forum](https://forum.devcon.org/) and/or submit a Devcon Improvement Proposal!
