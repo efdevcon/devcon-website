@@ -1,6 +1,6 @@
 ---
-title: Involucrarse
+title: Get Involved
 template: content
 ---
 
-Involucrarse
+Get Involved
