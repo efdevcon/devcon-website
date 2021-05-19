@@ -1,5 +1,5 @@
 ---
-title: The Greek Cryptocurrency Community meets the Ethereum Foundation
+title: La Comunidad Griega de Criptomonedas se encuentra con la Fundación Ethereum
 startDate: 2021-05-15
 endDate: 2021-05-15
 imageUrl: /assets/uploads/events/greek-cc-meet-ef.png
