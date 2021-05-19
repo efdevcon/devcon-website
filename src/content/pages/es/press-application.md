@@ -1,6 +1,6 @@
 ---
-title: Press application
+title: Presione la aplicación
 template: content
 ---
 
-Press application
+Presione la aplicación
