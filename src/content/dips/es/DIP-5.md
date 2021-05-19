@@ -1,4 +1,9 @@
 ---
+Summary: 'Status quiere ofrecer a los asistentes de Devcon una tarjeta de teclado (https://get.keycard.tech/). Esta tarjeta:
+- es una cartera de hardware con un valor nominal de 29$
+- ayuda al usuario a descargar la aplicación de estado, que puede ser usada en la serie
+- permite a cualquier desarrollador de dApp desarrollar aplicaciones que interactúen con la tarjeta con el toque de la tarjeta en el navegador
+Tal dApp podría ser un canjeo dApp, desarrollado por Status, esta dApp permite a los usuarios recuperar los activos que se cargan previamente con la tarjeta en la cartera de su elección.'
 Title: Tarjeta clave en Devcon ---
 - is a hardware wallet with a face value of 29$
 - helps user downloads status app, which can be used on the show
@@ -7,7 +12,7 @@ Title: Tarjeta clave en Devcon ---
 Such a dApp could be a redeem dApp, developed by Status, this dApp allowing users to retrieve assets coming preloaded with the card on the wallet of their choice.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-5.md
 DIP: 5
-
+Title: Tarjeta clave en Devcon
 Status: Accepted
 Themes: Ticketing, Purchase & ID
 Tags: Attendee Experience

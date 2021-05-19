@@ -1,9 +1,8 @@
 ---
-Title: Música de audio en áreas comunes y entre charlas en Devcon ---
-be used at Devcon to play music during downtime.'
+Summary: 'Audius tiene mucha música con licencia libre. El audio también se construye sobre Ethereum. El audio puede utilizarse en Devcon para reproducir música durante el tiempo de inactividad.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-2.md
 DIP: 2
-
+Title: Música de Audius en áreas comunes y entre charlas en Devcon
 Status: Withdrawn
 Themes: Art & Beauty
 Tags: Event Operations, Event Production

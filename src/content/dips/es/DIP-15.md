@@ -1,9 +1,8 @@
 ---
-Title: Seguro de viaje ---
-flight Delays, baggage loss, theft, and others. We will build a decentralized travel insurance for DevConVI participants.'
+Summary: 'Muchas personas viajarán a DevConVI. Esto impondrá una serie de riesgos a estas personas: retrasos de vuelo, pérdida de maletas, robo y otros. Construiremos un seguro de viaje descentralizado para los participantes de DevConVI.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-15.md
 DIP: 15
-
+Title: Seguro de viaje
 Status: Draft
 Themes: Travel, Safety
 Tags: DeFi, Insurance, Peer2Peer

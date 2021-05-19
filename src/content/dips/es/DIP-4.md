@@ -1,18 +1,8 @@
 ---
-
-
-Planetscape is organized in 20 chapters, and requires players to solve quests in real life, explore the congress to find hints and interact with people. Planetscape had **20 levels**, **254 players**, [**1300** transactions][ps:transactions] to the smart contract, and **7 teams** finished the game and claimed their prize.
-
-The players" feedback was heartwarming: "We were about to leave the congress but we found Planetscape, and we stayed longer to play!", "Please make another escape game for the next congress!", "This was the best thing of the congress", "Highlight of this year" ([tweet][ps:highlight]).
-
-During the game, players:
-
-- Discovered new areas and activities, the game kept them engaged with the event.
-- United forces with others while playing the game.
-- Understood and enjoyed the theme of game.'
+Summary: 'Desarrollar un juego para Devcon para empujar a la gente a explorar el evento, comprometerse con otras personas, y aprender cómo desarrollar una gran UX para una aplicación completamente descentralizada.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-4.md
 DIP: 4
-
+Title: Juego de caza del tesoro
 Status: Accepted
 Themes: Social
 Tags: Event Production
