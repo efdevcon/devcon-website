@@ -1,15 +1,15 @@
 ---
-title: '¿Cómo es la comida en Bogota?'
+title: What is the food like in Bogota?
 category: location
 order: 7
 ---
 
-A continuación se muestran algunos de los platos populares, pero uno puede esperar que la mayor parte de la comida que se encuentra en Bogota sean platos típicos de América Latina, rodeado de muchos productos frescos.
+Below are a few of the popular dishes, but one can expect most of the food found in Bogota to be typical Latin American dishes, surrounded by lots of fresh produce.
 
-- Arepas, tartas circulares de maíz, son un alimento básico de la dieta colombiana que se encuentra en toda la ciudad.
-- Muchos platos principales consisten en pulpo, camarón u otros platos de mar.
-- Ajiaco es una sopa abundante común hecha con pollo, patatas y maíz en el café
-- Las empanadas son objetos comunes para el desayuno.
-- ¡Tamales! Tamales! ¿Hay que decir más?
-- Chocolate caliente, que es una necesidad absoluta en la vida de los locales, se sirve junto a un plato de queso que luego se puede sumergir en la bebida, causando que se derrite.
-- A pesar de la gran cantidad de exportaciones de café, los cafés especializados son relativamente nuevos en Bogota, pero afortunados para nosotros están en ascenso!
+- Arepas, circular corn cakes, are a Colombian diet staple found throughout the city.
+- Many main course dishes consist of octopus, shrimp, or other seafood.
+- Ajiaco is a common hearty soup made with chicken, potatoes, and corn on the cob
+- Empanadas are common breakfast items/snacks.
+- Tamales! Need we say more?
+- Hot chocolate, which is an absolute necessity in the lives of the locals, is served alongside a plate of cheese that can then be dipped into the beverage – causing it to melt.
+- Despite the large amount of coffee Colombia exports, specialty coffee shops are relatively new in Bogota, but lucky for us they’re on the rise!
