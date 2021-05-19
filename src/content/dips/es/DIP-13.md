@@ -1,8 +1,8 @@
 ---
-Summary: 'La solución de ticketing en cadena que ofrece el protocolo GET podría ser perfecta para Devcon 6. Ya cumple muchos de los requisitos y es probable que el equipo sea capaz de facilitar demandas innovadoras específicas.'
+Summary: 'The on-chain ticketing solution that GET Protocol offers could be the perfect fit for Devcon 6. It already meets a lot of the requirements and the team is likely able to facilitate specific innovative demands.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-13.md
 DIP: 13
-Title: Tickets en cadena & sin problemas para Devcon 6 con protocolo GET
+Title: On-chain & trouble-free ticketing for Devcon 6 with GET Protocol
 Status: Not Implemented
 Themes: Ticketing
 Tags: Event operations
@@ -12,33 +12,33 @@ Discussion: https://forum.devcon.org/t/on-chain-trouble-free-ticketing-with-get-
 Created: 2020-6-11
 ---
 
-## Resumen de la propuesta
-La solución de ticketing en cadena que ofrece el protocolo GET podría ser perfecta para Devcon 6. Ya cumple muchos de los requisitos y es probable que el equipo sea capaz de facilitar demandas innovadoras específicas.
+## Summary of Proposal
+The on-chain ticketing solution that GET Protocol offers could be the perfect fit for Devcon 6. It already meets a lot of the requirements and the team is likely able to facilitate specific innovative demands.
 
-## Resumen
-La solución de registro de protocolos GET ya ha emitido más de 500K entradas registradas por ETH, para más de miles de eventos en todo el mundo. Las compañías de boletos en cuatro países la utilizan actualmente para emitir billetes totalmente digitales, cuero cabelludo + prueba de fraude.
-
-
-## Motivación & Racionalidad
-Línea principal: El protocolo GET puede ofrecer una solución de ticketing en cadena que está probada y probada. Podemos asegurar un proceso de ticketing fácil y transparente que es amigable con blockchain y puede ofrecer o integrar características innovadoras a los visitantes de Devcon 6. Podemos ofrecer un proceso de ticketing estable con muchas cerezas de blockchain divertidas arriba.
-
-## Implementación
-Nuestro sistema ha sido aplicado en miles de eventos, desde conciertos hasta conciertos y congresos hasta congresos y direcciones. Aquí está la cobertura de Decrypt sobre un tour nacional de comedia que estaba agotado, que también va un poco a nuestro enfoque técnico: https://decrypt.co/4928/how-comedy-artist-jochem-myjer-beats-ticket-touts-with-guts-ticketing-blockchain
-
-Otro ejemplo más reciente para livestream a gran escala muestra: https://www.iq-mag.net/2020/06/10000-fans-buy-tickets-for-virtual-di-rect-show/
-
-En términos prácticos, se puede celebrar un debate de seguimiento entre las partes interesadas de ambas partes, para alinear los deseos y detalles desde un punto de vista técnico y logístico.
-
-## Requisitos operacionales & Propiedad
-
-1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? Varias conversaciones sobre requisitos específicos y funcionalidades deseadas. También sobre temas como el apoyo in situ y asuntos prácticos.
-
-2. ¿Quién será responsable de la aplicación efectiva de la propuesta? ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) Un grupo combinado de nuestro equipo de desarrollo + desarrolladores de negocios. (es decir, trabajar el día 0) Un grupo combinado de nuestro equipo de desarrollo + desarrolladores de negocios.
-
-3. ¿Con qué otros proyectos se podría integrar esta propuesta? ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Ya estamos en conversaciones con POAP sobre la posible integración para vincular las insignias de asistencia a nuestros Tickets digitales. (Puntos extra para la colaboración entre equipos :)) Ya estamos en conversaciones con POAP sobre la posible integración para vincular las insignias de asistencia a nuestros Tickets digitales. Esto parece un ajuste de zapatos. Ciertamente estamos abiertos a más integraciones.
-
-## Enlaces & Información adicional
-Nuestro sitio web con mucha información básica: get-protocol.io Aquí está nuestra propia empresa de ticketing: guts.tickets Página media con actualizaciones recientes: medio. om/get-protocol Contratos NFT iniciales: https://github.com/GETProtocol/ERC721-Smart-Ticket-Contracts-NFT-P2P-TRADING
+## Abstract
+The GET Protocol ticketing solution has already issued over 500K ETH-registered tickets for more than thousands events of events worldwide. Ticketing companies in four countries currently use it to issue fully digital, scalp + fraud proof tickets.
 
 
-DIP-13: Una experiencia de ticketing confiable y transparente en cadena para Devcon 6.
+## Motivation & Rationale
+Bottom line: GET Protocol can offer an on-chain ticketing solution that is tried and tested. We can ensure an easy and transparent ticketing process that is blockchain friendly and can either offer or integrate innovative features to Devcon 6 visitors. We can offer a stable ticketing process with a lot of fun blockchain cherries on top.
+
+## Implementation
+Our system has been applied at thousands of events, from concerts to comedyshows to conferences to livestreams. Here's coverage from Decrypt about a national comedy tour that was sold out, which also goes a bit into our technical approach: https://decrypt.co/4928/how-comedy-artist-jochem-myjer-beats-ticket-touts-with-guts-ticketing-blockchain
+
+Another more recent example for large-scale livestream shows: https://www.iq-mag.net/2020/06/10000-fans-buy-tickets-for-virtual-di-rect-show/
+
+In practical terms a follow-up discussion can be had between stakeholders on both sides, to align wishes and details from a technical and logistical standpoint.
+
+## Operational Requirements & Ownership
+
+1. What actions are required to implement the proposal at Devcon? Several conversations about specific requirements and desired functionalities. Also on topics such as on-site support and practical matters.
+
+2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0) A combined group of our dev team + business developers.
+
+3. What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :)) We are already in talks with POAP about potential integration to link attendance badges to our digital tickets. This seems like a shoe-in fit. We are certainly open to more of these integrations.
+
+## Links & Additional Information
+Our website with a lot of basic info: get-protocol.io Here's our own ticketing company: guts.tickets Medium page with recent updates: medium.com/get-protocol Initial NFT contracts: https://github.com/GETProtocol/ERC721-Smart-Ticket-Contracts-NFT-P2P-TRADING
+
+
+DIP-13: A reliable and transparent on-chain ticketing experience for Devcon 6.
