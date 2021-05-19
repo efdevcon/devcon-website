@@ -1,6 +1,6 @@
 ---
-title: Eventos pasados
+title: Past events
 template: content
 ---
 
-Eventos pasados
+Past events
