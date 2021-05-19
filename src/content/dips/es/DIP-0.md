@@ -1,5 +1,5 @@
 ---
- ---
+Title: Propósito y directrices DIP ---
 
 The DIP author is responsible for making the case for a proposed DIP, and community members will be able to comment on it. It is up to the Devcon Team to choose which proposals are considered, reviewed, and accepted.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-0.md
@@ -14,136 +14,136 @@ Created: 2020-07-06
 ---
 
 
-## What’s a DIP?
+## ¿Qué es un DIP?
 
-DIP stands for Devcon Improvement Proposal. A DIP is a proposal put forth by members of the community describing a desired new feature or process to improve Devcon. A DIP should be concise and provide as much information as possible as well as a rationale for the proposal.
+DIP significa Devcon Improvement Proposal. Un DIP es una propuesta presentada por miembros de la comunidad que describen una nueva característica o proceso deseado para mejorar Devcon. Un DIP debería ser conciso y proporcionar toda la información posible, así como una racionalidad para la propuesta.
 
-The DIP author is responsible for making the case for a proposed DIP, and community members will be able to comment on it. It is up to the Devcon Team to choose which proposals are considered, reviewed, and accepted.
+El autor del DIP es responsable de presentar los argumentos a favor de un DIPP propuesto, y los miembros de la comunidad podrán comentar al respecto. Corresponde al equipo de Devcon elegir qué propuestas son consideradas, revisadas y aceptadas.
 
-## Rationale
+## Racionale
 
-The Devcon Team intends DIPs to provide a mechanism for collecting collaborative community input on what should be included at the upcoming Devcon. While we are excited to have a more formal process to hear ideas from the community (roughly inspired by the more decentralized PEP, BIP and EIP processes), this is an experiment, and it should be understood that approval of proposals ultimately lies solely with the Devcon team. DIPs focus on collaboration in the ecosystem, so please review and collaborate on other proposals rather than submitting possible duplicates.
+El equipo de Devcon tiene la intención de proporcionar un mecanismo para recolectar información de la comunidad colaborativa sobre lo que debe incluirse en el próximo Devcon. Si bien estamos entusiasmados de tener un proceso más formal para escuchar ideas de la comunidad (aproximadamente inspiradas por la PEP más descentralizada, BIP y procesos EIP), este es un experimento, y debe entenderse que la aprobación de propuestas en última instancia corresponde exclusivamente al equipo de Devcon. Los DI se centran en la colaboración en el ecosistema, así que por favor revisen y colaboren en otras propuestas en lugar de enviar posibles duplicados.
 
-## Themes
-There are two ways to suggest a DIP. We, the Devcon team issue a wishlist (via RFPs) for implementations that we would like to see happen at the next edition of the conference. Check [them out here](https://forum.devcon.org/c/devcon-rfps/5)! We also welcome all and any great idea that would improve Devcon.
+## Temas
+Hay dos maneras de sugerir un DIP. Nosotros, el equipo de Devcon emitimos una lista de deseos (a través de RFPs) para implementaciones que nos gustaría que sucedieran en la próxima edición de la conferencia. ¡Échale un vistazo a [aquí](https://forum.devcon.org/c/devcon-rfps/5)! También acogemos con satisfacción todas y cualquier gran idea que mejore Devcon.
 
-Here is a list of themes to inspire you:
+Aquí hay una lista de temas para inspirarte:
 
- * **Ticketing** - Anything useful concerning ticketing (e.g. usage of NFTs)
- * **Social** - How to make people connect, prior, during and after Devcon?
- * **Environmental Sustainability** - Any idea that helps us make Devcon more environmentally sustainable
- * **Virtual Experience** - Live streaming, and other ways of interacting with people unable to be physically present at Devcon
- * **Purchases & ID** - Let’s do more to use crypto at Devcon! Onsite and Offsite purchases, bookings,...
- * **Community Involvement** - How can we integrate more community input into Devcon?
- * **Art & Beauty** - A cool design for swag items, an art piece, ...
- * **Freeform** - Any great ideas you have! From tutu-Tuesday to Bring your own T-rex for closing ceremony
- * **Meta** - Any improvement to the DIP process itself. This process is new, and it could benefit from anything that you’ve got in mind. We’d love to hear your thoughts.
+ * **Ticketing** - Cualquier cosa útil con respecto al ticketing (por ejemplo, el uso de NFTs)
+ * **Social** - ¿Cómo hacer que la gente se conecte, anterior, durante y después de Devcon?
+ * **Sostenibilidad Ambiental** - Cualquier idea que nos ayude a hacer que Devcon sea más medioambientalmente sostenible
+ * **Experiencia virtual** - streaming en vivo y otras formas de interactuar con personas que no pueden estar físicamente presentes en Devcon
+ * **Compras & ID** - ¡Hagamos más para usar criptomonedas en Devcon! Compras in situ y offsite, reservas,...
+ * **Participación de la comunidad** - ¿Cómo podemos integrar más información de la comunidad en Devcon?
+ * **Arte & Belleza** - Un diseño genial para artículos de swag, un pianista de arte...
+ * **Freeform** - ¡Cualquier gran idea que tengas! Desde tutu-martes hasta traer tu propio T-rex para la ceremonia de cierre
+ * **Meta** - Cualquier mejora del proceso DIP en sí. Este proceso es nuevo, y podría beneficiarse de cualquier cosa que tengas en mente. Nos encantaría escuchar tus pensamientos.
 
-## Tags
-Devcon has several aspects to its organisation. To help us better guide you, select the area of focus that concern your DIP:
+## Etiquetas
+Devcon tiene varios aspectos de su organización. Para ayudarnos a guiarle mejor, seleccione el área de enfoque que concierne a su DIP:
 
-* **Event Operations** - Anything related to the general organisation of Devcon
-* **Event Production** - Anything to do with the on-site attendee experience
-* **Software** - Anything to do with software needs, devcon.org, subdomains, ...
-* **Communications** -Anything to do with Devcon-related communication, media, blog posts, ...
-* **Sponsorships** - Anything to do with sponsorships, benefits and more.
-* **Other** - Anything else
+* **Operaciones de eventos** - Cualquier cosa relacionada con la organización general de Devcon
+* **Producción de eventos** - Cualquier cosa que tenga que ver con la experiencia de los asistentes en el sitio
+* **Software** - Cualquier cosa que tenga que ver con las necesidades de software, devcon.org, subdominios, ...
+* **Comunicaciones** -Cualquier cosa que tenga que ver con las comunicaciones relacionadas con Devcon, los medios, artículos de blog, ...
+* **Patrocinaciones** - Cualquier cosa que tenga que ver con patrocinaciones, beneficios y más.
+* **Otras** - Cualquier otra cosa
 
-## Resources
-Your DIP may require resources from the Devcon team, so make sure to add them to your draft. This will save us both precious time when evaluating the feasibility of a DIP.
+## Recursos
+Su DIP puede requerir recursos del equipo de Devcon, así que asegúrese de agregarlos a su borrador. Esto nos ahorrará tanto tiempo precioso al evaluar la feasibilidad de un DIP.
 
-* Tech support
-* Physical room at venue
-* Operational support
-* Communication support
-* Other: please specify
+* Soporte técnico
+* Sala física en el lugar
+* Soporte operacional
+* Soporte de comunicación
+* Otro: por favor especifique
 
-## Criteria for a Successful DIP
-* Aligned with Devcon’s Code of Conduct and values
-* Integration is driven and owned by the stakeholder/project/community
-* Willing to collaborate with other projects and people
-* Can be integrated with other dApps & projects at Devcon
-* As good as, or better than the non-blockchain alternative (explain why and how)
-* FOSS mentality
+## Criterios para un DIP exitoso
+* Alineado con el Código de Conducta y los valores de Devcon
+* Integración es impulsada y propiedad de los accionistas/proyecto/comunidad
+* Deseando colaborar con otros proyectos y personas
+* Se puede integrar con otros dApps & proyectos en Devcon
+* Tan bueno o mejor que la alternativa que no es blockchain (explicar por qué y cómo)
+* mentalidad FOSS
 
-## Team
-The Devcon team is the final decision maker on the status of a DIP (Accepted - Postponed - Not Implemented). A dedicated team will work together to provide a technical and operational review of all DIP drafts submitted. They are responsible for communicating with the DIP authors and relaying information between teams, and accompany projects through their production-implementation phase to ensure Accepted DIPs are ready for Devcon.
+## Equipo
+El equipo de Devcon es el tomador de decisión final sobre el estado de un DIP (Aceptado - Posteado - No Implementado). Un equipo dedicado trabajará juntos para proporcionar una revisión técnica y operativa de todos los borradores DIP presentados. Ellos son responsables de comunicarse con los autores de DIP y retransmitir información entre equipos, y acompañar proyectos a través de su fase de producción-implementación para asegurar que los DI aceptados estén listos para Devcon.
 
-## Workflow
+## Flujo trabajo
 
 #### Eureka!
 
-You, the DIP author, just came up with a great idea for Devcon. Either (a) your DIP answers one (or several) of Devcon's yearly RFPs or (b) you came up with another improvement you'd like to suggest.
+Usted, el autor DIP, acaba de encontrar una gran idea para Devcon. O bien (a) su DIP responde a uno (o varios) de Devcon, o bien (b) ha encontrado otra mejora que le gustaría sugerir.
 
-#### Community Feedback
+#### Comentarios comunitarios
 
-This is optional for DIPs responding to an RFP.
+Esto es opcional para que los DI respondan a un RFP.
 
-Before writing a formal DIP Draft, take the time to vet your idea. Open a discussion thread  on the [Devcon Forum](https://forum.devcon.org/) and make sure to clearly state your idea to allow the community to provide feedback. This is done to ensure you don't waste your time writing a DIP that either won't get enough traction, is not feasible, or is a duplicate. Take five minutes to read through the RFPs to make sure your idea doesn’t fit in one — it may save you some time!
+Antes de escribir un borrador DIP, tómese el tiempo para examinar su idea. Abra un hilo de discusión en el [Foro de desarrollo](https://forum.devcon.org/) y asegúrese de exponer claramente su idea para permitir que la comunidad proporcione sus comentarios. Esto se hace para asegurar que no pierdas el tiempo escribiendo un DIP que no obtendrá suficiente tracción, no es factible o es un duplicado. Tómese cinco minutos para leer los RFMs y asegúrese de que su idea no encaja en uno, ¡puede que le ahorre algo de tiempo!
 
-#### Process
+#### Proceso
 
- 1. **Draft DIP** - Choose your prettiest digital pen and write your DIP! Follow the yellow brick road: [DIP format](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-0.md#dip-format)
- 2. **Submit DIP** - Click on the scary button and submit your DIP. Ensure you include all information required in the template under DIP Format below.
- 3. **Editor Review** - Your DIP is now in the hands of the DIP editors team for review. Editors might request more information and ask to resubmit the DIP.
- 4. **Devcon team Review**
-     * **Draft** - Your DIP that is undergoing rapid iteration and changes
-     * **Accepted** - Your DIP idea is approved! Now it's time to work on the implementation!
-     * **Postponed** - Your DIP won’t be possible the upcoming Devcon - but we love the idea.
-     * **Not Implemented** - Oh no, the mean Devcon team, reach out to them and ask for more context to understand their reasoning
-     * **Changes Requested** - The DIP needs modifications conditional to its validation.
+ 1. **Borrador DIP** - ¡Elige tu pluma digital y escribe tu DIP! Sigue la ruta de ladrillo amarillo: [formato DIP](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-0.md#dip-format)
+ 2. **Enviar DIP** - Haga clic en el botón aterrador y envíe su DIP. Asegúrese de incluir toda la información requerida en la plantilla bajo el formato DIP a continuación.
+ 3. **Revisión del editor** - Su DIP está ahora en manos del equipo de editores DIP para su revisión. Los editores pueden solicitar más información y pedir que vuelva a enviar el DIP.
+ 4. **Reseña del equipo de Devcon**
+     * **Borrador** - Tu DIP que está experimentando una rápida iteración y cambios
+     * **Aceptado** - ¡Tu idea DIP ha sido aprobada! Ahora es el momento de trabajar en la implementación!
+     * **Posteado** - Tu DIP no será posible el próximo Devcon - pero nos encanta la idea.
+     * **No implementado** - Oh no, el equipo de desarrollo medio, póngase en contacto con ellos y pida más contexto para entender su razonamiento
+     * **Cambios Solicitados** - El DIP necesita modificaciones condicionales a su validación.
 
-#### Implementation
+#### Implementación
 
-  * Definition of project timeline
-  * Bi-monthly sync with DIP editors & other DIP-authors
-  * Collaboration with other DIP projects
-  * Testing
+  * Definición de la línea de tiempo del proyecto
+  * Sincronización bimensual con editores DIP & otros autores DIP
+  * Colaboración con otros proyectos DIP
+  * Pruebas
 
-#### Production
+#### Producción
 
-  * Ready for take-off!
+  * ¡Listo para despegar!
 
 ## DIP Format
 
-All DIPs should be written in markdown format. Please use the template below:
+Todos los DI deben estar escritos en formato markdown. Por favor, utilice la siguiente plantilla:
 
 ```
 ---
-DIP: (Number of DIP)
-Title: (Think of a catchy, descriptive, short title)
-Status: Draft
-Themes: (See themes above)
-Tags: (Please select all that apply: Programming, ...)
-Authors: (Emails of primary contacts)
-Resources Required: (Physical space at venue, Operations Support, etc.)
-Discussion: (URL of where this DIP gets discussed, preferably on https://forum.devcon.org)
+DIP: (Número de DIP)
+Título: (Piensen en una atracción descriptiva, descriptiva, título corto)
+Estado: Borrador
+Temas: (Ver temas arriba)
+Etiquetas: (Por favor seleccione todos los que apliquen: Programación, ...)
+Autores: (Emails de los contactos principales)
+Recursos requeridos: Espacio físico en el lugar, Soporte de Operaciones, etc.)
+Discusión: (URL de donde se discute este DIP, preferiblemente en https://forum.devcon. rg)
 ---
 
------Summary of Proposal-----
-__Simple Summary__
-__50 word summary__
+-----Resumen de Propuesta-----
+__Resumen simple__
+__50 palabras resumy__
 
 -----Abstract-----
-__200 word description of the proposal.__
+__200 palabra descripción de la propuesta. _
 
------Motivation & Rationale-----
-__Below are some useful prompts__
-- How would this enhance attendee experience?
-- How is this solution better than a non-blockchain experience?
-- How does this proposal introduce attendees to a novel blockchain/ethereum use case?
+-----Motivación & Rationale-----
+__Debajo hay algunas indicaciones útiles__
+- ¿Cómo mejoraría la experiencia de los asistentes?
+- ¿Cómo es esta solución mejor que una experiencia que no sea blockchain?
+- ¿Cómo introduce esta propuesta a los asistentes a un nuevo caso de uso de blockchain/ethereum?
 
------Implementation-----
-__Below are some useful prompts__
-- Has any part of this proposal been implemented at other events? If so, please describe how it went.
-- Do you require feedback or data from attendees post-event?
+-----Implementación-----
+__Debajo hay algunas indicaciones útiles__
+- ¿Alguna parte de esta propuesta ha sido implementada en otros eventos? Si es así, por favor describa cómo se fue.
+- ¿Necesita comentarios o datos de los asistentes después del evento?
 
------Operational Requirements & Ownership-----
-__Please answer questions below:__
-1. What actions are required to implement the proposal at Devcon?
-2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)
-3. What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))
+-----Requisitos operacionales & Propiedad-----
+__Por favor, responde a las siguientes preguntas:__
+1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon?
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
 
------Links & Additional Information-----
-__Any additional information__
+-----Enlaces & Información Adicional-----
+__Cualquier información adicional__
 ```
