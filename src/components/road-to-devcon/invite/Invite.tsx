@@ -6,6 +6,7 @@ import ShareIcon from 'src/assets/icons/share.svg'
 import { Share } from 'src/components/common/share'
 import { GifScroller } from './GifScroller'
 import partyImg from 'src/assets/images/party.png'
+import EmailIcon from 'src/assets/icons/ui-email.svg'
 import { HashTag } from 'src/components/road-to-devcon/intro'
 import { Modal } from 'src/components/common/modal'
 import { Newsletter } from 'src/components/newsletter'
@@ -24,7 +25,8 @@ const Subscribe = (props: any) => {
   return (
     <>
       <button className={`white ${css['share']}`} onClick={toggle}>
-        <span className="text-uppercase">{intl.formatMessage({ id: 'newsletter_title' })} </span>
+        <span className="text-uppercase">{intl.formatMessage({ id: 'rtd_subscribe_for_updates' })}</span>
+        <EmailIcon />
       </button>
 
       <Modal

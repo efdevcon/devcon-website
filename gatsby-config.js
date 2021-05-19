@@ -17,7 +17,16 @@ const matomoUrl = 'https://matomo.ethereum.org'
 
 const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
-console.log('GATSBY CONFIG:', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'isNetlifyProduction', isNetlifyProduction, siteUrl)
+console.log(
+  'GATSBY CONFIG:',
+  'NODE_ENV',
+  NODE_ENV,
+  'NETLIFY_ENV',
+  NETLIFY_ENV,
+  'isNetlifyProduction',
+  isNetlifyProduction,
+  siteUrl
+)
 
 module.exports = {
   siteMetadata: {
@@ -164,6 +173,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'quests',
+        path: `${__dirname}/src/content/quests`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'navigation',
         path: `${__dirname}/src/content/navigation`,
       },
@@ -218,29 +234,29 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-embed-video",
+            resolve: 'gatsby-remark-embed-video',
             options: {
               beginMarker: `[[`,
               endMarker: `]]`,
               width: 600,
               related: false,
-              containerClass: "embedded-video-container",
+              containerClass: 'embedded-video-container',
             },
           },
           {
             resolve: 'gatsby-transformer-remark-frontmatter',
             options: {
               whitelist: ['left', 'right'],
-            }
+            },
           },
         ],
-      }
+      },
     },
-    "gatsby-remark-responsive-iframe",
+    'gatsby-remark-responsive-iframe',
     'gatsby-transformer-json',
     {
       resolve: `gatsby-plugin-intl`,

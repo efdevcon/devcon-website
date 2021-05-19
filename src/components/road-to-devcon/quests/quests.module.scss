@@ -1,0 +1,233 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/fonts';
+
+@keyframes fade-1 {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-2 {
+  50%,
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-3 {
+  25%,
+  75% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // background: rgb(255, 255, 255);
+  // background: radial-gradient(
+  //   circle at top right,
+  //   rgba(251, 190, 146, 1) 0%,
+  //   rgba(255, 122, 92, 1) 40%,
+  //   rgba(255, 94, 94, 1) 100%
+  // );
+
+  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+
+  .quests {
+    position: absolute;
+    pointer-events: none;
+    height: 50%;
+    width: 50%;
+    max-width: 550px;
+    left: 0px;
+    top: 20%;
+    z-index: 1;
+
+    > * {
+      &:not(.star) {
+        opacity: 0.8;
+      }
+    }
+
+    .star {
+      position: absolute;
+      opacity: 0;
+
+      &.one {
+        top: 5%;
+        left: 20%;
+        animation: fade-3 2s linear infinite;
+      }
+
+      &.two {
+        top: -15%;
+        left: 48%;
+        animation: fade-1 2s linear infinite;
+      }
+
+      &.three {
+        top: 10%;
+        right: 15%;
+        animation: fade-1 2s linear infinite;
+      }
+
+      &.four {
+        top: -7%;
+        left: 15%;
+        animation: fade-2 2s linear infinite;
+      }
+
+      &.five {
+        top: 0%;
+        right: 12%;
+        animation: fade-2 2s linear infinite;
+      }
+
+      &.six {
+        left: 27%;
+        top: -10%;
+        animation: fade-1 2s linear infinite;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      opacity: 0.4;
+      width: 100%;
+      top: 10%;
+      max-width: 100%;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hash-tag {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: $gap-10;
+
+  @media (max-width: $screen-md) {
+    margin-bottom: $gap-4;
+  }
+
+  > p {
+    @include fonts.font-xl;
+    @include fonts.bold;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: $gap-16;
+
+      @media (max-width: $screen-md) {
+        margin-right: $gap-8;
+      }
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.no-results {
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  > p {
+    color: white;
+    @include fonts.font-xxl;
+  }
+}
+
+.card {
+  height: 100%;
+  display: inline-flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: white;
+  cursor: grab;
+  margin-left: $gap-8;
+  width: calc(100% - #{$gap-8});
+  outline: none;
+
+  @media (max-width: $screen-md) {
+    margin-left: $gap-6;
+    width: calc(100% - #{$gap-6});
+  }
+
+  &.past {
+    filter: grayscale(0.8);
+  }
+
+  --card-theme-color: rgba(229, 80, 102, 1);
+
+  &.first {
+    color: white;
+    background: none;
+    margin-left: 0px;
+
+    > * {
+      // background: rgba(255, 109, 93, 0.8);
+    }
+
+    .title {
+      @include fonts.bold;
+      @include fonts.font-xl;
+      text-transform: uppercase;
+    }
+
+    .cta {
+      @include fonts.font-xl;
+      margin-bottom: $gap-4;
+      margin-top: $gap-4;
+    }
+
+    .description {
+      @include fonts.bold;
+    }
+  }
+}
+
+.hash-tag {
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
+}
