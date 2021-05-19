@@ -1,6 +1,6 @@
 ---
 devconNum: 5
-title: 'Criptoeconomía en 30 minutos'
+title: 'Cryptoeconomics In 30 Minutes'
 featured: true
 description: N/A
 speakers: 'Vitalik Buterin'
