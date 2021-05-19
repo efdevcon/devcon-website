@@ -1,5 +1,5 @@
 ---
-Summary: 'Status as the communication layer for Devcon (on the ground and for satellite events). Utilizing Status as the layer into which many different projects showcased at Devcon plug in for maximum usability.'
+Summary: 'Estado como la capa de comunicación para Devcon (en el suelo y para eventos de satélite). Utilizando el estado como la capa en la que se mostraron muchos proyectos diferentes en el enchufe de Devcon para la máxima usabilidad.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-10.md
 DIP: 10
 Title: Estado como capa de comunicación de Devcon
@@ -47,7 +47,6 @@ También podemos utilizar incentivos para conseguir que los asistentes realicen 
 obtener un nombre ens para que sean más fáciles de identificar por sus pares en el suelo códigos QR en las salas para unirse a chats en vivo sobre lo que está sucediendo en una sala/etapa específica (o hacer preguntas a los alta) Dado que la tarjeta viene con algunos activos precargados. un token POAP, 10 SNTs, x DAI para comprar alimentos, etc. podemos fusionar fácilmente la experiencia con la comunicación en un paquete liso y enchufar en los tokens de cualquier otro proyecto de socio.
 
 ## Requisitos operacionales & Propiedad
-
 Por favor, responda a las siguientes preguntas:
 
 El equipo de Devcon necesita estar involucrado de la siguiente manera:

@@ -1,5 +1,5 @@
 ---
-Summary: 'Addition to CO2ken"s [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md) clarifying the collection and allocation of offsetting contributions through a DAO which gives contributors the possibility to vote for the offset projects they want to support.'
+Summary: 'Adición a CO2ken"s [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1. d) clarificar la recolección y asignación de contribuciones compensatorias a través de un DAO que da a los colaboradores la posibilidad de votar por los proyectos compensatorios que desean apoyar.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-12.md
 DIP: 12
 Title: Adicionalmente a DIP–1 — Hacer de Devcon Carbon Neutral
@@ -14,25 +14,22 @@ Created: 2020-10-22
 ---
 
 ## Resumen de la propuesta
-
 Adición al [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md) de CO2ken aclarando la recolección y asignación de contribuciones compensatorias a través de un DAO que da a los contribuyentes la posibilidad de votar por los proyectos compensatorios que quieren apoyar.
 
 ## Resumen
-
-Como se describe en [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md), queremos ofrecer a los asistentes la capacidad de compensar las emisiones de carbono de Devcon. En el primer DIP explicamos la racional general detrás de la propuesta y dejamos algunos detalles abiertos a una mayor clarificación. Este DIP apunta a responder a la siguiente pregunta que fue recaudada en el primer DIP: _¿Cómo se usarán los fondos recogidos durante el proceso de ticketing para compensar la huella de carbono del evento se discutirá en un futuro DIP?_
+Como se describe en [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md), queremos ofrecer a los asistentes la capacidad de compensar las emisiones de carbono de Devcon. En el primer DIP explicamos la racional general detrás de la propuesta y dejamos algunos detalles abiertos a una mayor clarificación. Este DIP apunta a responder a la siguiente pregunta que fue recaudada en el primer DIP: *¿Cómo se usarán los fondos recogidos durante el proceso de ticketing para compensar la huella de carbono del evento se discutirá en un futuro DIP?*
 
 En resumen, desplegaremos un DAO que contiene las contribuciones para compensar los proyectos recolectados durante el proceso de ticketing hasta que Devcon tenga lugar en agosto de 2021. Además, La DAO dará a los colaboradores la posibilidad de votar por los proyectos de carbono que favorecen, participando activamente en la forma en que se asignan los fondos recaudados.
 
-_¿Cómo afecta el voto a los proyectos?_ Habrá una pre-selección de proyectos en los que los colaboradores pueden votar. La asignación de contribuciones no seguirá un enfoque del ganador, sino que será relativo a los votos totales, i. Si un proyecto recibió el 60% de los votos, obtendrá el 60% de los fondos. Los colaboradores podrán votar a favor de múltiples proyectos indicando así cómo piensan que los fondos deben dividirse entre los proyectos.
+*¿Cómo afecta el voto a los proyectos?* Habrá una pre-selección de proyectos en los que los colaboradores pueden votar. La asignación de contribuciones no seguirá un enfoque del ganador, sino que será relativo a los votos totales, i. Si un proyecto recibió el 60% de los votos, obtendrá el 60% de los fondos. Los colaboradores podrán votar a favor de múltiples proyectos indicando así cómo piensan que los fondos deben dividirse entre los proyectos.
 
-_¿Qué pasa si solo el 50% de la gente vota?_ Si una persona vota, sus fondos van a proyectos de carbono. Si la gente no vota, asumimos una distribución equitativa de votos entre los proyectos propuestos. De esta forma, nos aseguramos de que el peso de un voto no sea excesivo en caso de baja participación.
+*¿Qué pasa si solo el 50% de la gente vota?* Si una persona vota, sus fondos van a proyectos de carbono. Si la gente no vota, asumimos una distribución equitativa de votos entre los proyectos propuestos. De esta forma, nos aseguramos de que el peso de un voto no sea excesivo en caso de baja participación.
 
 ## Motivación & Racionalidad
-
 Las DAO están saliendo de la Ether como setas tratando de abordar los desafíos de la coordinación humana como la asignación de fondos, la colaboración o la gobernanza descentralizada. Estamos eligiendo este camino para la recaudación y asignación de las contribuciones compensatorias porque queremos quitar la compensación del "rincón de la caridad" e integrar a los colaboradores en el proceso tanto como sea posible y porque nos da tiempo hasta el evento para encontrar y involucrar los mejores proyectos de carbono.
 
-## Implementación
 
+## Implementación
 **Organizacional**
 
 - Los colaboradores recibirán un NFT que les da acceso al DAO. Estamos discutiendo la mejor manera de dar a los contribuyentes este NFT con el menor riesgo posible para la privacidad de datos. Una integración con la tarjeta de estado [](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-5.md) o cualquier sistema de ticketing en cadena (como el propuesto por [Alpha Wallet en DIP–6](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md)) podría ser una buena solución.
@@ -48,7 +45,7 @@ Las DAO están saliendo de la Ether como setas tratando de abordar los desafíos
 **Experiencia anterior**
 
 - Ya hemos implementado un DAO de PoC durante la [incubadora BSIC](https://blockchainforsocialimpact.com/incubator-winners-2020/) que puedes echar un vistazo [aquí](http://dao.co2ken.io/).
-- En Curve Labs (familia CO2ken más amplia), estamos construyendo _PrimeDAO_ que puedes aprender más sobre [aquí](https://liquiddao.eth.link/#/).
+- En Curve Labs (familia CO2ken más amplia), estamos construyendo *PrimeDAO* que puedes aprender más sobre [aquí](https://liquiddao.eth.link/#/).
 
 **Post-evento**
 
@@ -56,24 +53,23 @@ Las DAO están saliendo de la Ether como setas tratando de abordar los desafíos
 - Nos esforzamos por descentralizar la gobernanza del protocolo CO2ken. Este DAO será un primer grupo de usuarios alineados con valor.
 
 ## Requisitos operacionales & Propiedad
+1. *¿Qué medidas son necesarias para aplicar la propuesta en Devcon?*
+    - Necesitaremos el equipo de Devcon para convertir las contribuciones de fiat a crypto y enviarlas al DAO.
+    - Los colaboradores necesitan recibir el NFT que les otorga derechos de voto en el DAO. El enfoque basado en la verificación propuesto por [Alpha Wallet en DIP–6](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md) podría ser una buena opción que permite a los contribuyentes reclamar su NFT.
+    - Necesitaremos las direcciones de correo electrónico de aquellos que contribuyeron a explicar el proceso de votación y sus derechos de participación en el DAO.
+    - Necesitaremos un stand en Devcon durante toda la duración del evento a
+        - presentar los diferentes proyectos (tal vez incluso conseguir desarrolladores de proyectos allí en persona) y dar a los colaboradores una oportunidad de involucrarse directamente con la DAO;
+        - sensibilizar sobre los desafíos ambientales en el espacio criptográfico y sobre las formas de abordarlos. La [Iniciativa de la Naturaleza Soberana](http://sovereignnature.com/) nos apoyará en ese frente.
 
-1. _¿Qué medidas son necesarias para aplicar la propuesta en Devcon?_
-   - Necesitaremos el equipo de Devcon para convertir las contribuciones de fiat a crypto y enviarlas al DAO.
-   - Los colaboradores necesitan recibir el NFT que les otorga derechos de voto en el DAO. El enfoque basado en la verificación propuesto por [Alpha Wallet en DIP–6](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md) podría ser una buena opción que permite a los contribuyentes reclamar su NFT.
-   - Necesitaremos las direcciones de correo electrónico de aquellos que contribuyeron a explicar el proceso de votación y sus derechos de participación en el DAO.
-   - Necesitaremos un stand en Devcon durante toda la duración del evento a
-     - presentar los diferentes proyectos (tal vez incluso conseguir desarrolladores de proyectos allí en persona) y dar a los colaboradores una oportunidad de involucrarse directamente con la DAO;
-     - sensibilizar sobre los desafíos ambientales en el espacio criptográfico y sobre las formas de abordarlos. La [Iniciativa de la Naturaleza Soberana](http://sovereignnature.com/) nos apoyará en ese frente.
-2. _¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)_
-   - CO2ken será responsable de la exitosa aplicación de esta propuesta.
-3. _¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))_
-   - vea [original DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md).
+2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)*
+    - CO2ken será responsable de la exitosa aplicación de esta propuesta.
+3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))*
+    - vea [original DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md).
 
 ## Enlaces & Información adicional
 
 **Enlaces:**
-
-- [Enlace al Foro de Devon — CO2ken DIP](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27)
-- [Sitio web de CO2ken](https://www.co2ken.io/)
-- [Publicación media que describe el Génesis del proyecto (las cosas han cambiado desde entonces)](https://medium.com/curve-labs/co2ken-genesis-74d7a1387ea1)
-- [@CO2ken_io en Twitter](https://twitter.com/CO2ken_io)
+* [Enlace al Foro de Devon — CO2ken DIP](https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27)
+* [Sitio web de CO2ken](https://www.co2ken.io/)
+* [Publicación media que describe el Génesis del proyecto (las cosas han cambiado desde entonces)](https://medium.com/curve-labs/co2ken-genesis-74d7a1387ea1)
+* [@CO2ken_io en Twitter](https://twitter.com/CO2ken_io)

@@ -1,6 +1,6 @@
 ---
-title: Entradas
+title: Tickets
 template: content
 ---
 
-Entradas
+Tickets ES

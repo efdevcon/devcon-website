@@ -3,4 +3,4 @@ title: Noticias
 template: content
 ---
 
-Noticias
+Últimas noticias & actualizaciones

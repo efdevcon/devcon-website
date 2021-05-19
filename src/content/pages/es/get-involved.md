@@ -1,6 +1,6 @@
 ---
-title: Involucrarse
+title: Participar
 template: content
 ---
 
-Involucrarse
+Participar

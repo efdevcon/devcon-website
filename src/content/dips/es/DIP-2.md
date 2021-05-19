@@ -1,9 +1,9 @@
 ---
-Summary: 'Audius has lots of freely-licensed music. Audius is also built on Ethereum. Audius could
+Title: Música de audio en áreas comunes y entre charlas en Devcon ---
 be used at Devcon to play music during downtime.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-2.md
 DIP: 2
-Title: Música de audio en áreas comunes y entre charlas en Devcon
+
 Status: Withdrawn
 Themes: Art & Beauty
 Tags: Event Operations, Event Production
@@ -49,11 +49,11 @@ Esta lista de reproducción se pondría en barajado y se reproduciría/pausa cua
 
 Debe ser bastante simple: solicite contenido a las listas de reproducción dedicadas a la conferencia de antemano (equipo de udius rellenará el contenido según sea necesario), obtener permiso explícito por escrito de artistas que están incluidos en las listas de reproducción, distribuye estas listas de reproducción a los emcees y gente que maneja los sistemas de sonido en auditorios más grandes, etc. y luego hacer uso de ellos durante el evento.
 
-### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0)
+### 2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0)
 
 Roneil Rumburg (enviado) para coordinar la creación de listas de reproducción, coordinadores de conferencia para distribuir listas de reproducción a las personas correctas en el equipo de sonido y otros equipos.
 
-### 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))
+### 3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :))
 
 Livepeer por distribuir charlas de conferencias en línea, ¿tal vez desbloquear una insignia especial o NFT con tu ticket para contribuir a las listas de reproducción? ¡Muchas cosas podrían funcionar aquí!
 
