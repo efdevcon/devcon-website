@@ -1,4 +1,4 @@
 ---
-title: Contribuir
+title: Contribute
 ---
 
