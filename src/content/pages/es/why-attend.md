@@ -1,6 +1,6 @@
 ---
-title: Why Attend
+title: Por qué asistir
 template: content
 ---
 
-Why Attend
+Por qué asistir
