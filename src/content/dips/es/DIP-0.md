@@ -1,10 +1,10 @@
 ---
-Summary: 'DIP significa Devcon Improvement Proposal. Un DIP es una propuesta presentada por miembros de la comunidad que describen una nueva característica o proceso deseado para mejorar Devcon. Un DIP debería ser conciso y proporcionar toda la información posible, así como una racionalidad para la propuesta.
+Title: Propósito y directrices DIP ---
 
-El autor del DIP es responsable de presentar los argumentos a favor de un DIPP propuesto, y los miembros de la comunidad podrán comentar al respecto. Corresponde al equipo de Devcon elegir qué propuestas son consideradas, revisadas y aceptadas.'
+The DIP author is responsible for making the case for a proposed DIP, and community members will be able to comment on it. It is up to the Devcon Team to choose which proposals are considered, reviewed, and accepted.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-0.md
 DIP: 0
-Title: Propósito DIP y directrices
+
 Status: Active
 Themes: Meta
 Tags: Other
