@@ -1,8 +1,11 @@
 ---
-Summary: 'Para todas aquellas personas que querían hablar, pero no se aprobó: Marque el espacio en el lugar y permita la presentación de carteles de sus ideas / conversaciones. Presentar los carteles durante la conferencia. Permitir que respondan a las preguntas en intervalos de tiempo asignados, por ejemplo, a través del chat o el correo electrónico.'
+Title: Presentaciones del póster ---
+Mark off space in the venue and allow for the submission of posters of their ideas / talks. 
+Present the posters during the conference. 
+Allow them to answer questions in allotted time slots, i.e. via Chat or Email.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-14.md
 DIP: 14
-Title: Presentaciones del póster
+
 Status: Draft
 Themes: Community Involvement
 Tags: Event Operations

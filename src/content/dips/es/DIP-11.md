@@ -1,10 +1,10 @@
 ---
-Summary: 'Como continuación de una tradición iniciada en Praga, ¡vamos a tener una experiencia en la sala de escape en Devcon6!
+Title: Una sala de huida de Cripto-Onboarding ---
 
-Esta vez, sin embargo, la mecánica y la historia de la sala deberían ser fundamentalmente criptografía.'
+This time, however, the mechanics and story of the room should be fundamentally crypto.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-11.md
 DIP: 11
-Title: Una sala de huida de Cripto-Onboarding
+
 Status: Accepted
 Themes: Freeform
 Tags: Event Production, Other
