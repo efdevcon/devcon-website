@@ -1,9 +1,9 @@
 ---
-title: Where is Devcon taking place?
+title: '¿Dónde se está llevando a cabo Devcon?'
 category: location
 order: 1
 ---
 
-We’re excited to announce that Devcon 6 will be held in Bogota, Colombia's capital and largest city.
+Estamos encantados de anunciar que Devcon 6 se celebrará en Bogota, capital de Colombia y ciudad más grande.
 
-Our venue is the [Agora Bogota Convention Center](https://goo.gl/maps/Ee3dz2XbQfbNKeR36); a newly constructed and state of the art venue that we hope will be, by far, the most suitable venue to ever host Devcon.
+Nuestro lugar es el [Centro de convenciones Agora Bogota](https://goo.gl/maps/Ee3dz2XbQfbNKeR36); un lugar recientemente construido y de vanguardia que esperamos que sea el lugar más adecuado para albergar a Devcon.
