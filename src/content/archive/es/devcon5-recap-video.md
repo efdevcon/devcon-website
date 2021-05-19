@@ -1,6 +1,6 @@
 ---
 devconNum: 5
-title: 'Devcon5 Recap Video'
+title: 'Video Recapitular Devcon5'
 featured: true
 description: N/A
 speakers: N/A
