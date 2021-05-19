@@ -23,22 +23,22 @@ Created: 2020-08-07
 ---
 
 
-# Resumen de la propuesta
+# Summary of Proposal
 
-Desarrollar un juego para Devcon para empujar a la gente a explorar el evento, comprometerse con otras personas, y aprender cómo desarrollar una gran UX para una aplicación completamente descentralizada.
+Develop a game for Devcon to push people to explore the event, engage with other people, and learn how to develop a great UX for a fully decentralized app.
 
 
-# Resumen
+# Abstract
 
-Un juego es una gran herramienta para romper el hielo e iniciar una conversación con otros, para descubrir los alrededores y aprender algo nuevo. Un juego también puede transmitir un mensaje para concienciar a la gente acerca de temas específicos, y puede ser divertido jugar sin ser ingenuo.
+A game is a great tool to break the ice and start a conversation with others, to discover the surroundings, and learn something new. A game can also convey a message to make people aware about specific issues, and can be fun to play without being naive.
 
-Proponemos construir un juego de caza de tesoros para Devcon usando tecnología descentralizada **solo** (sin APIs centralizadas). El juego requiere que los jugadores resuelvan misiones en la vida real, exploren la conferencia para encontrar pistas e interactuar con la gente. Para presentar soluciones y avances con la historia, los jugadores utilizan una aplicación web descentralizada desde su navegador (móvil).
+We propose to build a treasure hunt game for Devcon using decentralized technology **only** (no centralized APIs). The game requires players to solve quests in real life, explore the conference to find hints and interact with people. To submit solutions and progress with the story, players use a decentralized web application from their (mobile) browser.
 
-Mezclando diferentes enfoques como prueba de conocimiento cero, redes de gasolineras y carteras de quemadores, el juego pretende ser un ejemplo de gran experiencia de usuario en términos de incorporación y jugabilidad.
+By mixing different approaches like zero-knowledge proof, gas station networks, and burner wallets, the game aims to be an example of great user experience in terms of onboarding and playability.
 
-El juego también es software libre y de código abierto para que otros desarrolladores puedan aprender de él.
+The game is also free and open source software so other developers can learn from it.
 
-# Motivación & Racionalidad
+# Motivation & Rationale
 
 
 <!--
@@ -50,143 +50,144 @@ We know that Devcon attendees deeply care about the future of Gaia—our Mother 
 We hereby propose to create a treasure hunt game
 -->
 
-Una Cacería de Tesoros (o Cacería de Scaveng) es un juego que se juega en un espacio físico como un edificio, un vecindario, una ciudad. El juego se construye alrededor de una historia y está organizado en niveles. Cada nivel contiene:
+A Treasure Hunt (or Scavenger Hunt) is a game played in a physical space like a building, a neighborhood, a city. The game is build around a story, and it is organized in levels. Each level contains:
 
-- **Una misión**: revela una parte de la historia y una pista sobre dónde encontrar el rompecabezas.
-- **Un rompecabezas**: un acertijo a resolver para obtener una **contraseña**.
-- **Una contraseña**: una cadena que permite al jugador pasar al siguiente nivel.
+- **A quest**: reveals a part of the story and a hint on where to find the puzzle.
+- **A puzzle**: a riddle to solve in order to get a **password**.
+- **A password**: a string that allows the player to progress to the next level.
 
-El juego no es una secuencia de rompecabezas desconectados a resolver. Los participantes descubren el capítulo de la historia por capítulo, interactuando con el espacio físico que les rodea.
+The game is not a sequence of disconnected puzzles to solve. Participants discover the story chapter by chapter, interacting with the physical space around them.
 
-Los juegos de caza del tesoro son personalizados y adaptados alrededor de una conferencia o evento. Un juego de caza de tesoros bien ejecutado sería una experiencia notable para los asistentes de Devcon porque anima a la gente a:
+Treasure hunt games are customized and tailored around a conference or event. A well executed treasure hunt game would be a remarkable experience for Devcon attendees because it encourages people to:
 
-- **Descubrer.** El juego requiere explorar diferentes áreas del evento y descubrir lo que hay a su alrededor.
-- **Socializar.** Hace que la gente se socialice fuera del contexto de hacer negocios y diviértete juntos. Individuales o grupos de jugadores pueden unirse y jugar juntos el juego.
-- **Piense.** El juego está construido alrededor de una historia. Nuestro juego anterior mostró una historia que se desarrolla en un futuro donde las corporaciones transplanetarias comercializaron la democracia, manipuló a los gobiernos y destruyó el medio ambiente para advertir a la gente sobre el futuro distópico que enfrentan si no luchan.
-- **Aprender.** El dApp para interactuar con el juego, los contratos inteligentes, y las herramientas para compilar e implementar la historia son software libre y de código abierto. Para luchar contra la centralización, debemos dejar de construir sistemas centralizados. Por eso todo el juego se desarrolla usando sólo Ethereum e IPFS, y no hay APIs centralizadas. El juego en sí es un escaparate de lo que se puede construir **hoy** utilizando protocolos descentralizados.
+- **Discover.** The game requires to go around and explore different areas of the event and discover what's around them.
+- **Socialize.** It makes people socialize outside the context of doing business and have fun together. Individuals or groups of players can team up and play the game together.
+- **Think.** The game is built around a story. Our previous game featured a story that develops in a future where transplanetary corporations commodified democracy, manipulated governments, and destroyed the environment, to warn people about the dystopian future they face if they don't fight.
+- **Learn.** The dApp to interact with the game, the smart contracts, and the tools to compile and deploy the story are free and open source software. To fight centralization, we must stop building centralized systems. That's why the whole game is developed using only Ethereum and IPFS, and no centralized APIs. The game itself is a showcase of what can be built **today** using decentralized protocols.
 
-## Experiencia anterior
+## Previous Experience
 
-Configuramos [Planetscape][planetscape], un juego de escape distópico para [36C3][36c3] basado en los terribles efectos del cambio climático (CCC) **no** patrocina el juego).
+We set up [Planetscape][planetscape], a dystopian escape game for [36C3][36c3] based on the dreadful effects of climate change (CCC did **not** sponsor the game).
 
-El Planetscape está organizado en 20 capítulos, y requiere que los jugadores resuelvan las misiones en la vida real, exploren la congestión para encontrar pistas e interactuar con las personas. Planetscape tenía **20 niveles**, **254 jugadores**, [**1300** transacciones][ps:transactions] al contrato inteligente, y **7 equipos** terminaron el juego y reclamaron su premio.
+Planetscape is organized in 20 chapters, and requires players to solve quests in real life, explore the congress to find hints and interact with people. Planetscape had **20 levels**, **254 players**, [**1300** transactions][ps:transactions] to the smart contract, and **7 teams** finished the game and claimed their prize.
 
-El comentario de los jugadores fue reconfortante: "Estábamos a punto de dejar el atasco pero encontramos a Planetscape, ¡y nos quedamos más tiempo para jugar! , "¡Por favor haz otro juego de escape para la siguiente congreso! , "This was the best thing of the congress", "Highlight of this year" ([tweet][ps:highlight]).
+The players' feedback was heartwarming: "We were about to leave the congress but we found Planetscape, and we stayed longer to play!", "Please make another escape game for the next congress!", "This was the best thing of the congress", "Highlight of this year" ([tweet][ps:highlight]).
 
-Durante el juego, jugadores:
+During the game, players:
 
-- Descubrieron nuevas áreas y actividades, el juego los mantuvo comprometidos con el evento.
-- Fuerzas unidas con otros mientras juegan el juego.
-- Encendido y disfrutó del tema del juego.
+- Discovered new areas and activities, the game kept them engaged with the event.
+- United forces with others while playing the game.
+- Understood and enjoyed the theme of game.
 
-# Implementación
+# Implementation
 
-Hay dos aspectos relacionados con la aplicación de una caza de tesoros.
+There are two aspects related to the implementation of a treasure hunt game.
 
-- El primero es el aspecto técnico: ¿cuál es la infraestructura necesaria para ayudar a los asistentes a jugar el juego? Esta parte será pública y libre y software de código abierto que cualquiera pueda auditar.
-- El segundo está relacionado con la historia y los rompecabezas: ¿cuál es la trama del juego? ¿Qué tipo de rompecabezas necesitan resolver los jugadores para avanzar en el juego? Esta parte será desarrollada por pocas personas en un repositorio privado. El repositorio se publicará después del final del evento.
+- The first one is the technical aspect: what is the infrastructure needed to support attendees playing the game? This part will be public and free and open source software anyone can audit.
+- The second one is related to the story an the puzzles: what is the plot of the game? What kind of puzzles players need to solve in order to progress with the game? This part will be developed by few people in a private repository. The repository will be published after the end of the event.
 
-## Infraestructura técnica
+## Technical infrastructure
 
-El Protocolo de Dist0rción Social desarrolló [THC][thc] (Creador de Cacería del Tesoro). THC no es un juego en sí mismo. En cambio, es un marco para crear cacerías de tesoros descentralizadas. Dada una historia, THC genera todos los componentes necesarios para reproducir la caza del tesoro:
+Social Dist0rtion Protocol developed [THC][thc] (Treasure Hunt Creator). THC is not a game itself. Instead, it is a framework to create decentralized treasure hunts. Given a story, THC generates all the components needed to play the treasure hunt:
 
-- Un dApp web que los jugadores utilizan para leer la historia, enviar contraseñas y comprobar la tabla de posiciones.
-- Un contrato inteligente para almacenar la estructura de la historia, validar las presentaciones de los jugadores y leer la tabla de posiciones.
-- Documentos JSON cifrados almacenados en IPFS que contienen el texto real de los capítulos.
+- A web dApp that players use to read the story, submit passwords, and check the leaderboard.
+- A smart contract to store the structure of the story, validate players' submissions, and read the leaderboard.
+- Encrypted JSON documents stored in IPFS that contain the actual text of the chapters.
 
 ```
 
 .                                         +---------------------+
-.                                         |
-.                                 +------>+ IPFS: Nivel Enc |
-+----------------+ | |
-| | | | | +-------------+
-| Juego |
-| - Nivel 0 | +-------++ +---------------------+
-| - Misión | | | | |
-| - Puzzle +------>+ THC +------->+ ETH: Contrato inteligente |
-| - Contraseña | | | | | | | |
-| - Nivel N | +-------+---------------------+
-| - . | |
-| | | +---------------------+
-+----------------+ | | |
+.                                         |                     |
+.                                 +------>+ IPFS: Enc levels    |
++----------------+                |       |                     |
+|                |                |       +---------------------+
+|  Game          |                |
+|  - Level 0     |       +-------++       +---------------------+
+|    - Quest     |       |       |        |                     |
+|    - Puzzle    +------>+  THC  +------->+ ETH: Smart Contract |
+|    - Password  |       |       |        |                     |
+|  - Level N     |       +-------++       +---------------------+
+|    - ...       |                |
+|                |                |       +---------------------+
++----------------+                |       |                     |
 .                                 +------>+ IPFS: dApp          |
-.                                         |
+.                                         |                     |
 .                                         +---------------------+
 ```
 
-THC crea una aplicación _amigable con el usuario que se basa en la tecnología descentralizada sólo_. Queremos vivir el sueño descentralizado sin compromisos, desarrollar un potente dApp que usaría Ethereum bajo la capa sin exponer ningún detalle sobre blockchain e IPFS al jugador.
+THC creates a *user-friendly application that relies on decentralized technology only*. We want to live the decentralized dream with no compromises, developing a powerful dApp that would use Ethereum under the hood without exposing any details about blockchain and IPFS to the player.
 
-El juego tiene **incorporación instantánea** al permitir que la gente juegue solo visitando un sitio web. A estas alturas, esto sucede usando un método similar al de "burner-wallet" (el monedero del jugador se crea sobre la marcha cuando se abre la dApp por primera vez). Con el fin de hacer transacciones los jugadores necesitaban Ether. Mientras que el enfoque actual es simplemente [transferir][gasstation] una pequeña cantidad de Ether (prueba) a nuevos jugadores, queremos mejorar esto usando [OpenGSN][opengsn].
+The game has **instant onboarding** by allowing people to play the game just by visiting a website. By now, this happens by using a "burner-wallet"-like approach (the player's wallet is created on the fly when opening the dApp for the first time). In order to make transactions players needed Ether. While the current approach is to simply [transfer][gasstation] a small amount of (test) Ether to new players, we want to improve this by using [OpenGSN][opengsn].
 
-En el contexto de Devcon, y si se asigna una dirección de Ethereum a cada participante, usar OpenGSN funcionaría sin problemas porque podemos tener un `Paymaster` personalizado que solo paga a los asistentes reales.
+In the context of Devcon, and if an Ethereum address is assigned to every participant, using OpenGSN would work smoothly because we can have a custom `Paymaster` that only pays for the actual attendees.
 
-### Prueba de conocimiento cero
+### Zero Knowledge Proof
 
-Como se mencionó anteriormente, cada vez que se encuentra una contraseña correcta, se envía una transacción al contrato inteligente. Las transacciones de ethereum son públicas y no queremos que los jugadores eliminen las contraseñas enviadas por otros. Para evitarlo, aplicamos un sistema barato de prueba de conocimiento cero.
+As mentioned earlier, every time a correct password is found, a transaction is sent to the smart contract. Ethereum transactions are public and we don't want players to sniff passwords submitted by others. To avoid that, we implemented a cheap zero-knowledge proof scheme.
 
-En primer lugar, necesitamos entender cómo un capítulo está asociado a su dirección. No queremos incluir contraseñas en el contrato inteligente, de lo contrario cualquiera podría leerlas. En su lugar, guardamos la dirección del capítulo. Para generar la dirección que hacemos:
+First of all we need to understand how a chapter is associated to its address. We don't want to put passwords in the smart contract, otherwise anyone would be able to read them. Instead we store the address of the chapter. To generate the address we do:
 
 ```
 chapter_address = private_key_to_address(
   private_key_from_seed(
     keccak256(
-      capter_password)))
+      chapter_password)))
 ```
 
-El `chapter_address` se utiliza para verificar si un usuario encontró la contraseña correcta.
+The `chapter_address` is then used to verify if a user found the correct password.
 
-El contrato inteligente almacena la siguiente información:
+The smart contract stores the following information:
 
-- Capítulos, identificados por su secuencial `id` como `id (id) [0, 2^96)`. Cada `id` apunta a:
-  - La dirección **del capítulo**.
-  - El ID de contenido de IPFS (CID) que apunta al contenido del capítulo.
-  - La matriz de jugadores que llegaron al capítulo.
-- Jugadores, identificados por su dirección de Ethereum (tipo `dirección`, que es un `uint160`). Cada jugador está asociado con el capítulo actual en el que se encuentran.
+- Chapters, identified by their sequential `id` such as `id ∈ [0, 2^96)`. Each `id` points to:
+  - The **address of the chapter**.
+  - The IPFS Content ID (CID) that points to the content of the chapter.
+  - The array of players that reached chapter.
+- Players, identified by their Ethereum address (type `address`, that is a `uint160`). Each player is associated with the current chapter they are in.
 
-Hablando, el esquema de prueba de conocimiento cero funciona con la firma del capítulo de la dirección del jugador. El contrato inteligente tiene toda la información para verificar la firma. Si la firma es válida, el jugador puede pasar al siguiente capítulo.
+Roughly speaking, the zero-knowledge proof scheme works by having the chapter signing the player's address. The smart contract has all information to check the signature. If the signature is valid, the player can progress to the next chapter.
 
-Dado un `chapter_password válido` y un `player_address`, esta es la interacción entre el dApp y el contrato inteligente:
+Given a valid `chapter_password` and a `player_address`, this is the interaction between the dApp and the smart contract:
 
-1. El dApp genera `chapter_seed = keccak256(chapter_password)`.
-1. El dApp genera `chapter_private_key = private_key_from_seed(chapter_seed)`.
-1. El dApp genera `chapter_proof = sign(player_address, chapter_private_key)`
-1. DApp llama al método `submit` del contrato inteligente pasando `capter_proof`.
-1. El contrato inteligente comprueba el actual `capter_address` para `player_address` en su almacenamiento.
-1. Los contratos inteligentes calculan `signing_address` haciendo `ecrecover(player_address, firma)`.
-1. Si `signing_address == chapter_address`, entonces el contrato inteligente actualiza el capítulo actual del jugador, moviéndolos al siguiente capítulo.
+1. The dApp generates `chapter_seed = keccak256(chapter_password)`.
+1. The dApp generates `chapter_private_key = private_key_from_seed(chapter_seed)`.
+1. The dApp generates `chapter_proof = sign(player_address, chapter_private_key)`
+1. The dApp calls the `submit` method of the smart contract passing `chapter_proof`.
+1. The smart contract checks the current `chapter_address` for `player_address` in its storage.
+1. The smart contracts calculates `signing_address` by doing `ecrecover(player_address, signature)`.
+1. If `signing_address == chapter_address`, then the smart contract updates the current chapter for the player, moving them to the next chapter.
 
-Puede encontrar más información sobre la [creación][zk:creation] y [verificación][zk:verification] de la prueba en el código fuente.
+More information about the [creation][zk:creation] and [verification][zk:verification] of the proof can be found in the source code.
 
-## Historia y rompecabezas
+## Story and Puzzles
 
-Un jugador comienza el juego visitando el sitio web del juego. Abriendo el sitio web el jugador tiene acceso al primer **capítulo** del juego que contiene tanto una pieza de la historia de fondo como una pista sobre dónde encontrar el **puzzle**. Si se resuelve, el rompecabezas revela la **contraseña** al siguiente capítulo. Al enviar la contraseña al sitio web, el jugador recibirá una nueva pieza de la historia y un nuevo rompecabezas a resolver, y así hasta el final del juego.
+A player starts the game by visiting the game website. By opening the website, the player has access to the first **chapter** of the game that contains both a piece of the background story and a hint on where to find the **puzzle**. If solved, the puzzle reveals the **password** to the next chapter. By submitting the password to the website, the player will get a new piece of the story and a new puzzle to solve, and so on until the end of the game.
 
-Un juego suele tener veinte capítulos de dificultad creciente. Como un clásico juego de escape, tanto la historia como los rompecabezas se integraron en el entorno circundante. En el contexto de **Planetscape**, el centro de congestión se convirtió en una base planetaria futurista rodeada de un poste apocalíptico. Los rompecabezas obligaban a los jugadores a moverse alrededor del progreso para encontrar códigos secretos (geocaching), utilizar el mapa de navegación interno para descubrir lugares específicos, encontrar un punto de acceso WiFi específico para conectarse a la red social que agravó la Internet gratuita, bloquear un cuadro para revelar la contraseña, y muchos otros.
+A game usually features twenty chapters of increasing difficulty. Like a classic escape game, both story and puzzles were integrated with the surrounding environment. In the context of **Planetscape**, the congress center became a futuristic planetary base surrounded by a post apocalyptic desert. Puzzles required players to move around the congress to find secret codes (geocaching), use the internal navigation map to discover specific places, find a specific WiFi access point to connect to the social network that gobbled up the free internet, lockpick a box to reveal the password, and many others.
 
-Con el fin de desarrollar un juego similar para Devcon, la información sobre la zona de conferencias, las salas, el tema, la identidad visual debe ser conocida de antemano. Desarrollar una historia lleva algún tiempo.
+In order to develop a similar game for Devcon, information about the conference area, rooms, theme, visual identity must be known in advance. Developing a story takes some time.
 
-# Requisitos operacionales & Propiedad
+# Operational Requirements & Ownership
 
-1. *¿Qué medidas son necesarias para aplicar la propuesta en Devcon?*
-    - El juego debe ser desplegado pocos días antes de la conferencia. Los rompecabezas físicos y digitales deben estar listos el primer día del evento.
-    - El juego bajo el subdominio `devcon.org` haría que el juego fuera más fiable.
-    - Añade el enlace al juego a la guía de papel (si los hay) proporcionada en Devcon.
-    - Si los diseñadores de Devcon tienen bandwitdh, cree algunos NFT oficiales "firmado por Devcon" para distribuirlos para los ganadores.
+1. *What actions are required to implement the proposal at Devcon?*
+    - The game must be deployed few days before the conference. Physical and digital puzzles must be ready on the first day of the event.
+    - Serving the game under `devcon.org` subdomain would make the game more trustworthy.
+    - Add the link to the game to the paper guide (if any) provided at Devcon.
+    - If Devcon's designers have bandwitdh, create few official NFTs "signed by Devcon" to distribute to for the winners.
 
-2. *¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) (es decir, trabajar el día 0) (es decir, trabajar el día 0)*
-    - El Protocolo de distensión social será responsable de la correcta aplicación de esta propuesta.
+2. *Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0)*
+    - Social Dist0rtion Protocol will be responsible for the successful implementation of this proposal.
 
-3. *¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :)) (Puntos de bonus para la colaboración entre equipos :))*
-    - Uno de los objetivos del juego es descubrir Devcon y sus proyectos. Conocer de antemano la lista de proyectos nos permitiría crear niveles a su alrededor.
+3. *What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :))*
+    - One of the goals of the game is to discover Devcon and its projects. Knowing in advance the list of projects would allow us to create levels around them.
 
-# Enlaces & Información adicional
+# Links & Additional Information
 
-Puede encontrar información adicional aquí:
+Additional information can be found here:
 
-- :camera: [Las fotos](https://imgur.com/a/PCe4hCo) del dApp y algunos de los rompecabezas.
-- El juego bajo el subdominio `devcon.org` haría que el juego fuera más fiable.
-- Añade el enlace al juego a la guía de papel (si los hay) proporcionada en Devcon.
+- :camera: [The photos](https://imgur.com/a/PCe4hCo) of the dApp and some of the puzzles.
+- :writing_hand: [Our extensive blog post](https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/) about the game.
+- :speaking_head: [Lightning Talk](https://www.youtube.com/watch?v=7RJn2gowj2I) at IPFS Pinning Summit
+
 
 [planetscape]: https://www.dist0rtion.com/2020/01/30/Planetscape-a-dystopian-escape-game-for-36C3/
 [36c3]: https://events.ccc.de/congress/2019/wiki/index.php/Main_Page
