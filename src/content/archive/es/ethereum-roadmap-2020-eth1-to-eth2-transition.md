@@ -1,6 +1,6 @@
 ---
 devconNum: 5
-title: 'Plan de ruta Ethereum 2020 Eth1 a Eth2 Transition'
+title: 'Ethereum Roadmap 2020 Eth1 to Eth2 Transition'
 featured: true
 description: N/A
 speakers: N/A
