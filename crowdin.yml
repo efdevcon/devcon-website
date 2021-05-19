@@ -1,4 +1,4 @@
-commit_message: "[skip ci]"
+commit_message: '[skip ci]'
 preserve_hierarchy: true
 files:
   - source: /src/content/**/en/*.md
