@@ -1,8 +1,8 @@
 ---
-Summary: 'Devcon 6 is in 2021, a small virtual version on 2020 can help to test streaming, consensus rules on talks, and anything that could help to improve the experience for next year"s physical event.'
+Summary: 'El Devcon 6 es en 2021, una pequeña versión virtual en 2020 puede ayudar a probar streaming, reglas de consenso sobre conversaciones, y cualquier cosa que pueda ayudar a mejorar la experiencia para el evento físico del próximo año.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-9.md
 DIP: 9
-Title: Devcon 5.1
+Title: Dispositivo 5.1
 Status: Not Implemented
 Themes: Virtual Experience
 Tags: Other
@@ -12,31 +12,31 @@ Created: 2020-08-14
 ---
 
 
-## Summary of Proposal
-Devcon 6 is in 2021, a small virtual version on 2020 can help to test streaming, consensus rules on talks, and anything that could help to improve the experience for next year's physical event.
+## Resumen de la propuesta
+El Devcon 6 es en 2021, una pequeña versión virtual en 2020 puede ayudar a probar streaming, reglas de consenso sobre conversaciones, y cualquier cosa que pueda ayudar a mejorar la experiencia para el evento físico del próximo año.
 
-## Abstract
-The community did many improvements this year: EIP-1159, Medalla Testnet, Reddit Scaling Bakeoff, multiple launches. The idea is to share this year's advances while testing some features that can be implemented on Devcon 6.
+## Resumen
+La comunidad hizo muchas mejoras este año: EIP-1159, Medalla Testnet, Reddit Scaling Bakeoff, múltiples lanzamientos. La idea es compartir los avances de este año mientras se prueban algunas características que pueden ser implementadas en Devcon 6.
 
-## Motivation & Rationale
-- Testing tools that can be used on Devcon 6
-- The community will still be engaged and learn from this year and what is coming soon
-- A virtual event can allow people from all over the world to participate in this edition
-- Multiple events had been online this year, Ethereal, Edcon, and some ETH Global hackathons.
+## Motivación & Racionalidad
+- Herramientas de prueba que se pueden utilizar en Devcon 6
+- La comunidad todavía estará comprometida y aprenderá de este año y lo que pronto vendrá
+- Un evento virtual puede permitir que personas de todo el mundo participen en esta edición
+- Múltiples eventos habían estado en línea este año, Ethereal, Edcon, y algunos hackathons globales de ETH.
 
-## Implementation
-1. Get speakers
-2. Create a lineup
-3. Use consensus tool for creating the agenda, rooms and selecting speakers
-4. Gather feedback for next year
+## Implementación
+1. Obtener altavoces
+2. Crear una alineación
+3. Utilice la herramienta de consenso para crear la agenda, salas y seleccionar oradores
+4. Recoger comentarios para el próximo año
 
 
-## Operational Requirements & Ownership
-1. What actions are required to implement the proposal at Devcon? Share with the community, define what we want to test on this virtual edition, define how big we want this event.
-2. Who will be responsible for the proposal to be implemented effectively? (i.e. working on Day 0) The Devcon Team and the Community
-3. What other projects could this proposal be integrated with? (Bonus points for collaboration across teams :)) Other community events like Eth Global, POAP.
+## Requisitos operacionales & Propiedad
+1. ¿Qué medidas son necesarias para aplicar la propuesta en Devcon? Compartir con la comunidad, definir lo que queremos probar en esta edición virtual, definir lo grande que queremos este evento.
+2. ¿Quién será responsable de la aplicación efectiva de la propuesta? (es decir, trabajar el día 0) El equipo de desarrollo y la comunidad
+3. ¿Con qué otros proyectos se podría integrar esta propuesta? (Puntos extra para la colaboración entre equipos :)) Otros eventos de la comunidad como Eth Global, POAP.
 
-## Links & Additional Information
-- Ethereal Summit: https://www.etherealsummit.com/
+## Enlaces & Información adicional
+- Cumbre etérea: https://www.etherealsummit.com/
 - Edcon: https://edcon.io/
 - ETH Global Hackathon: https://www.ethonline.org/
