@@ -1,7 +1,7 @@
 ---
-title: '¿Qué tipos de conversaciones existen?'
+title: What types of talks are there?
 category: programming
 order: 3
 ---
 
-Devcon ofrece una experiencia holística de aprendizaje a través de charlas, talleres, paneles, sesiones de iluminación y otros formatos de forma libre! Todo el mundo aprende a su manera, y nuestro objetivo es acomodar tantos estilos como sea posible.
+Devcon makes a point of delivering a holistic learning experience through talks, workshops, panels, lightning sessions, and other freeform formats! Everyone learns in their own way, and we aim to accommodate as many styles as possible.
