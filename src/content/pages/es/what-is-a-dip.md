@@ -1,10 +1,10 @@
 ---
-title: Qué es un DIP
+title: What is a DIP
 template: content
 ---
 
-DIP son las siglas de Devcon Improvement Proposal. Un DIP es una propuesta presentada por miembros de la comunidad que describe una nueva característica o proceso deseado para mejorar Devcon. Un DIP debe ser conciso y proporcionar la mayor cantidad de información posible, así como la justificación de la propuesta.
+DIP stands for Devcon Improvement Proposal. A DIP is a proposal put forth by members of the community describing a desired new feature or process to improve Devcon. A DIP should be concise and provide as much information as possible as well as a rationale for the proposal.
 
-El autor del DIP es responsable de defender un DIP propuesto, y los miembros de la comunidad podrán comentarlo. Depende del equipo de Devcon elegir qué propuestas se consideran, revisan y aceptan.
+The DIP author is responsible for making the case for a proposed DIP, and community members will be able to comment on it. It is up to the Devcon Team to choose which proposals are considered, reviewed, and accepted.
 
-El equipo de Devcon tiene la intención de que los DIP proporcionen un mecanismo para recopilar información colaborativa de la comunidad sobre lo que debería incluirse en la próxima Devcon. Si bien estamos entusiasmados de tener un proceso más formal para escuchar las ideas de la comunidad (más o menos inspirados por los procesos PEP, BIP y EIP más descentralizados), este es un experimento y debe entenderse que la aprobación de las propuestas, en última instancia, recae únicamente en el Equipo de Devcon. Los DIP se centran en la colaboración en el ecosistema, así que revise y colabore en otras propuestas en lugar de enviar posibles duplicados.
+The Devcon Team intends DIPs to provide a mechanism for collecting collaborative community input on what should be included at the upcoming Devcon. While we are excited to have a more formal process to hear ideas from the community (roughly inspired by the more decentralized PEP, BIP and EIP processes), this is an experiment, and it should be understood that approval of proposals ultimately lies solely with the Devcon team. DIPs focus on collaboration in the ecosystem, so please review and collaborate on other proposals rather than submitting possible duplicates.
