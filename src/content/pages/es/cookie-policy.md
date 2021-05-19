@@ -1,6 +1,6 @@
 ---
-title: Cookie policy
+title: Política de cookies
 template: content
 ---
 
-Cookie policy
+Política de cookies
