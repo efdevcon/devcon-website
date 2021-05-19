@@ -1,7 +1,7 @@
 ---
 devconNum: 5
 talk: null
-title: 'En criptografía'
+title: 'On Cryptography'
 featured: false
 description: N/A
 speakers: 'David Chaum'
