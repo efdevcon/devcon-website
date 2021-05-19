@@ -1,8 +1,8 @@
 ---
 devconNum: 5
-title: 'Money At The Edge: How People Stay Afloat in Venezuela'
+title: 'Dinero en el límite: Cómo la gente se queda a flote en Venezuela'
 featured: false
-description: "The Open Money Initiative has gone into the field to understand how Venezuelans survive in the midst of heavy capital controls, criminalization of free markets, and hyperinflation. We'll share stories from places like Cúcuta, where worthless bills are used as art and home decor, and Caracas, where individuals are saving in bitcoin, trading it for local currency only at times of essential purchases. We'll discuss concepts for products and services in places where regimes have a tight grip on society, and how they relate to cryptocurrency."
+description: "La Iniciativa de Dinero Abierto ha entrado en el terreno para entender cómo sobreviven los venezolanos en medio de pesados controles de capitales, criminalización de los mercados libres, e hiperinflación. Compartiremos historias de lugares como Cúcuta, donde se utilizan facturas sin valor como arte y decoración de casa, y Caracas, donde los individuos están ahorrando en bitcoin, intercambiándolo por moneda local sólo en momentos de compras esenciales. Discutiremos conceptos para productos y servicios en lugares donde los regímenes tienen un control estricto de la sociedad y cómo se relacionan con la criptomoneda."
 speakers: 'Alejandro Machado'
 bios: 'Alejandro is a computer scientist, product designer, and founder of the Open Money Initiative. He’s focused on inspiring and shaping digital money products so they can be used by more Venezuelans.'
 url: 'https://www.youtube.com/embed/EKhPppYixDs'
