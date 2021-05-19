@@ -1,6 +1,6 @@
 ---
-title: Términos de uso
+title: Terms of use
 template: content
 ---
 
-Términos de uso
+Terms of use
