@@ -1,8 +1,8 @@
 ---
-Summary: 'Audius tiene mucha música con licencia libre. El audio también se construye sobre Ethereum. El audio puede utilizarse en Devcon para reproducir música durante el tiempo de inactividad.'
+Summary: 'Audius has lots of freely-licensed music. Audius is also built on Ethereum. Audius could be used at Devcon to play music during downtime.'
 Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-2.md
 DIP: 2
-Title: Música de Audius en áreas comunes y entre charlas en Devcon
+Title: Audius music in common areas and between talks at Devcon
 Status: Withdrawn
 Themes: Art & Beauty
 Tags: Event Operations, Event Production
