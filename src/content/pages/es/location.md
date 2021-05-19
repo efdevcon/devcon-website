@@ -1,6 +1,6 @@
 ---
-title: Location
+title: Ubicación
 template: content
 ---
 
-Location EN
+Ubicación EN
