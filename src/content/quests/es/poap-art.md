@@ -1,9 +1,9 @@
 ---
-title: EthStaker Painting Party
+title: Grupo de Pintura de EthStaker
 startDate: 2021-05-29
 issuer: ETHSTAKER
 url: https://ethstaker.cc/road-to-devcon/
 image: ../../../assets/images/poap-art.png
-description: POAP.art is an interactive digital canvas that allows artists of all skill levels to collaborate, create original pieces of pixel art, and mint them as NFTs! Join the event to drop some pixels, hear from Devcon and EthStaker community, and potentially win a chance to participate in the following Trivia game Quest!
+description: POAP.art es un lienzo digital interactivo que permite colaborar a artistas de todos los niveles de habilidades, ¡crea piezas originales de arte de píxeles, y acuñalas como NFTs! Únete al evento para soltar algunos píxeles, escuchar desde la comunidad de Devcon y EthStaker, y potencialmente ganar una oportunidad de participar en el siguiente juego de Trivia Quest!
 ---
 
