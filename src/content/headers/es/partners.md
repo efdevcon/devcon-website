@@ -1,4 +1,4 @@
 ---
-title: Socios
+title: Partners
 ---
 
