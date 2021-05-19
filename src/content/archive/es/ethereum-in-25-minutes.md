@@ -1,8 +1,8 @@
 ---
 devconNum: 2
-title: 'Ethereum in 25 Minutes'
+title: 'Ethereum en 25 minutos'
 featured: true
-description: 'Ethereum Foundation Chief Scientist, Vitalik Buterin, describes Ethereum.'
+description: 'El científico jefe de la Fundación Ethereum, Vitalik Buterin, describe Ethereum.'
 speakers: 'Vitalik Buterin'
 bios: 'Co-founder of Ethereum'
 url: 'https://www.youtube.com/embed/66SaEDzlmP4'
