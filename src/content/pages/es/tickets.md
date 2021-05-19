@@ -3,4 +3,4 @@ title: Tickets
 template: content
 ---
 
-Tickets EN
+Tickets ES
