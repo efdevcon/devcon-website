@@ -1,8 +1,8 @@
 ---
-title: DI
+title: DIPs
 template: dips
 ---
 
-**Devcon Improvement Proposals (DIPs)** proporciona un mecanismo para recolectar información comunitaria colaborativa sobre lo que debería incluirse en el próximo Devcon. Si bien estamos entusiasmados de tener un proceso más formal para escuchar ideas de la comunidad (aproximadamente inspiradas por la PEP más descentralizada, BIP y procesos EIP), este es un experimento, y debe entenderse que la aprobación de propuestas en última instancia corresponde exclusivamente al equipo de Devcon. Los DI se centran en la colaboración en el ecosistema entre diferentes proyectos.
+**Devcon Improvement Proposals (DIPs)** provide a mechanism for collecting collaborative community input on what should be included at the upcoming Devcon. While we are excited to have a more formal process to hear ideas from the community (roughly inspired by the more decentralized PEP, BIP and EIP processes), this is an experiment, and it should be understood that approval of proposals ultimately lies solely with the Devcon team. DIPs focus on collaboration in the ecosystem between different projects.
 
-El equipo de Devcon también publica **Solicitudes para Propuestas (RFPs)**, que son ideas específicas que nos encantaría ver en la próxima edición de Devcon. Están disponibles en nuestro foro.
+The Devcon team also publishes **Requests For Proposals (RFPs)**, which are specific ideas we'd love to see take place for the next Devcon edition. They are available on our forum.
