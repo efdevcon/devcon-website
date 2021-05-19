@@ -159,7 +159,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
         renderTopRight={() => <Arrows noSwipe sliderRef={sliderRef} {...slideState} />}
         bottomLinks={[
           {
-            url: 'https://github.com/efdevcon/DIPsbla',
+            url: 'https://discord.gg/hqtfuwfQBW',
             title: intl.formatMessage({ id: 'rtd_quests_join_discord' }),
             icon: 'discord',
           },
@@ -206,9 +206,8 @@ export const Quests = React.forwardRef((props: any, ref) => {
                     title={quest.title}
                     imageUrl={quest.image}
                     className={`${css['card']} ${activeFilter === 'past' && css['past']}`}
-                    customReadMore={intl.formatMessage({ id: 'rtd_quests_participate' })}
+                    customReadMore={intl.formatMessage({ id: 'rtd_quests_learn_more' })}
                     metadata={[quest.startDate, quest.issuer]}
-                    infoUrl={quest.urlInfo}
                     linkUrl={quest.url}
                     disabled={activeFilter === 'past'}
                     description={quest.description}

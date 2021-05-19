@@ -150,7 +150,7 @@ const Foldout = ({ pageProps, hover, pages, setHover, pageInView, links, goToSli
 
       <div className={css['nav-footer']}>
         <div>
-          <SocialMedia onShare={() => goToSlide(pages.length - 1)} />
+          <SocialMedia />
           <Newsletter />
           <div className={css['info']}>
             <p className="bold">{intl.formatMessage({ id: 'rtd_footer' })}</p>
@@ -300,7 +300,7 @@ export const Navigation = React.forwardRef((props: NavigationProps, ref: any) =>
               <span className="bold">
                 {typeof pageInViewIndex === 'undefined' ? '00' : leftPad(pageInViewIndex + '')}
               </span>{' '}
-              / 08
+              / 07
             </p>
             <div onClick={() => goToSlide('prev')}>
               <IconChevronLeft />

@@ -4,6 +4,7 @@ import IconArrowUpward from 'src/assets/icons/arrow_upward.svg'
 import IconGithub from 'src/assets/icons/github.svg'
 import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconYoutube from 'src/assets/icons/youtube.svg'
+import IconShare from 'src/assets/icons/share.svg'
 import logo from 'src/assets/images/test-asset.svg'
 import smallLogo from 'src/assets/images/footer-logo.svg'
 import { useIntl } from 'gatsby-plugin-intl'
@@ -14,7 +15,7 @@ import { usePageContext } from 'src/context/page-context'
 import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 
-export const SocialMedia = ({ onShare }: any) => {
+export const SocialMedia = () => {
   return (
     <div className={css['social-media']}>
       <Link to="https://twitter.com/efdevcon">
@@ -26,7 +27,11 @@ export const SocialMedia = ({ onShare }: any) => {
       <Link to="https://www.youtube.com/c/EthereumFoundation/search?query=devcon">
         <IconYoutube style={{ cursor: 'pointer' }} />
       </Link>
-      <Share onShare={onShare} />
+      <Share
+        renderTrigger={toggle => {
+          return <IconShare onClick={toggle} />
+        }}
+      />
     </div>
   )
 }

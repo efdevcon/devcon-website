@@ -32,20 +32,35 @@
   }
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
 .background {
   position: relative;
   width: 100%;
   height: 100%;
-  background: rgb(255, 255, 255);
-  background: radial-gradient(
-    circle at top right,
-    rgba(251, 190, 146, 1) 0%,
-    rgba(255, 122, 92, 1) 40%,
-    rgba(255, 94, 94, 1) 100%
-  );
+  // background: rgb(255, 255, 255);
+  // background: radial-gradient(
+  //   circle at top right,
+  //   rgba(251, 190, 146, 1) 0%,
+  //   rgba(255, 122, 92, 1) 40%,
+  //   rgba(255, 94, 94, 1) 100%
+  // );
+
+  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
 
   .quests {
     position: absolute;
+    pointer-events: none;
     height: 50%;
     width: 50%;
     max-width: 550px;
@@ -190,7 +205,7 @@
     margin-left: 0px;
 
     > * {
-      background: rgba(255, 109, 93, 0.8);
+      // background: rgba(255, 109, 93, 0.8);
     }
 
     .title {

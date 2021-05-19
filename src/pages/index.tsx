@@ -14,7 +14,7 @@ import { Quests } from 'src/components/road-to-devcon/quests'
 import { Participate } from 'src/components/road-to-devcon/participate'
 import { Blog } from 'src/components/road-to-devcon/blog'
 import { MessageFromDeva } from 'src/components/road-to-devcon/message-from-deva'
-import { Invite } from 'src/components/road-to-devcon/invite'
+// import { Invite } from 'src/components/road-to-devcon/invite'
 import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
 import { ToArchiveData } from 'src/components/archive-overview/queryMapper'
 import { toQuestData } from 'src/components/road-to-devcon/quests/queryMapper'
@@ -70,7 +70,7 @@ export default function Index({ data }: any) {
 
         <Quests title={intl.formatMessage({ id: 'rtd_quests' })} quests={quests} />
 
-        <Invite title={intl.formatMessage({ id: 'rtd_invite' })} />
+        {/* <Invite title={intl.formatMessage({ id: 'rtd_invite' })} /> */}
       </HorizontalLayout>
     </>
   )
