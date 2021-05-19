@@ -1,6 +1,6 @@
 ---
-title: Get Involved
+title: Participar
 template: content
 ---
 
-Get Involved
+Participar
