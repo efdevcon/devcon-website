@@ -1,7 +1,7 @@
 ---
-title: When will Applications open for Discount tickets (Builder, Speaker, Student, etc.)?
+title: '¿Cuándo se abrirán las solicitudes de tickets con descuento (constructor, orador, estudiante, etc.)?'
 category: ticketing
 order: 2
 ---
 
-Applications will be posted publicly with the rest of the ticketing information.
+Las solicitudes se publicarán públicamente con el resto de la información de ticketing.
