@@ -1,1 +1,1 @@
-export { News } from './News'
+export { News } from './inline/News'

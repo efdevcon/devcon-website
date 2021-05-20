@@ -1,8 +1,10 @@
 @use 'src/assets/css/partials/index' as *;
+@use 'components/general';
 @use 'components/colors';
 @use 'components/fonts';
 @use 'components/markdown';
 @use 'components/buttons';
+@use 'components/labels';
 @use 'components/icons';
 @use 'components/layout';
 @use 'vendor/react-slick.scss';
@@ -39,23 +41,4 @@ body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.no-select {
-  user-select: none;
-}
-
-// For cases where we don't want default link styling
-a.plain {
-  color: inherit;
-  text-decoration: none;
-}
-
-li.plain {
-  list-style-type: none;
 }

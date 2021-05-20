@@ -35,7 +35,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-root-import',
     'gatsby-plugin-typescript',
-    // 'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-sharp`,
     `gatsby-transformer-yaml`,
@@ -166,6 +166,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'news',
+        path: `${__dirname}/src/content/news`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'blogs',
         path: `${__dirname}/src/content/blogs`,
       },
@@ -287,5 +294,20 @@ module.exports = {
         },
       },
     },
+    // {
+    //   resolve: `gatsby-source-rss-feed`,
+    //   options: {
+    //     // Point to real blog domain when it's deployed
+    //     url: `http://localhost:4000/rss/categories/devcon.xml`,
+    //     name: `DevconBlog`,
+    //     // Optional
+    //     // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+    //     parserOption: {
+    //       customFields: {
+    //         item: ['efblog:image'],
+    //       },
+    //     },
+    //   },
+    // },
   ],
 }

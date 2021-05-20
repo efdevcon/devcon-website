@@ -1,8 +1,9 @@
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import css from './filter.module.scss'
 import { Dropdown } from 'src/components/common/dropdown'
+import IconFilter from 'src/assets/icons/filter.svg'
 
-type FilterOptions = {
+export type FilterOptions = {
   filters: {
     text: string
     value: any
@@ -11,13 +12,16 @@ type FilterOptions = {
 }
 
 type FilterState = {
+  collapsed?: boolean
   options: FilterOptions
   activeFilter: string
   setActiveFilter: Dispatch<SetStateAction<string>>
 }
 
-export const useFilter = (options: FilterOptions) => {
-  const [activeFilter, setActiveFilter] = React.useState(options.filters[0].value)
+export const useFilter = (options: FilterOptions | undefined) => {
+  const [activeFilter, setActiveFilter] = React.useState(options?.filters[0].value)
+
+  if (!options) return [[], null] as [any[], null]
 
   const filterState: FilterState = {
     options,
@@ -32,15 +36,16 @@ export const useFilter = (options: FilterOptions) => {
 
 export const Filter = (props: FilterState) => {
   return (
-    <>
+    <div className={`${css['filter']} ${props.collapsed ? css['collapsed'] : ''}`}>
       <Dropdown
         className={css['dropdown']}
+        customIcon={IconFilter}
         options={props.options.filters}
         value={props.activeFilter}
         onChange={nextValue => props.setActiveFilter(nextValue)}
       />
 
-      <div className={css['filter']}>
+      <div className={css['inline']}>
         {props.options.filters.map(i => {
           return (
             <p
@@ -53,6 +58,6 @@ export const Filter = (props: FilterState) => {
           )
         })}
       </div>
-    </>
+    </div>
   )
 }

@@ -132,10 +132,9 @@
         padding-bottom: $gaps-gap-3;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        // color: $colors-track-light-blue;
-        // --color-icon: $colors-track-light-blue; // for icons
-        // justify-content: space-between;
+        justify-content: space-between;
+        color: var(--theme-color, $colors-main);
+        --color-icon: var(--theme-color, $colors-main);
 
         > svg {
           margin-left: $gaps-gap-3;
@@ -143,8 +142,8 @@
         }
 
         &:hover {
-          color: $colors-track-blue !important;
-          --color-icon: $colors-track-blue !important;
+          color: var(--theme-color-hover, $colors-main-light) !important;
+          --color-icon: var(--theme-color-hover, #{$colors-main-light}) !important;
         }
       }
     }

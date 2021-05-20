@@ -71,7 +71,7 @@ END:VCALENDAR`
                 <EventIcon />
               </span>
             </div>
-            <div>
+            <div className={css['description']}>
               <a href={event.url} target="_blank" rel="oopener noreferrer">
                 <p className={css['date']}>{renderEventDate(event)}</p>
                 <p className={css['title']}>{event.title}</p>

@@ -1,3 +1,4 @@
+@forward 'general' as general-*;
 @forward 'fonts' as fonts-*;
 @forward 'breakpoints' as breakpoints-*;
 @forward 'gaps' as gaps-*;

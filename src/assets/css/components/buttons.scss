@@ -22,8 +22,11 @@ button {
   cursor: pointer;
   font-family: $fonts-primary;
   padding: $gaps-gap-2 $gaps-gap-3;
-  color: $colors-main;
-  border: 2px solid $colors-monochrome-10;
+  color: var(--theme-color, #{$colors-main});
+  --color-icon: var(--theme-color, #{$colors-main});
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--theme-color, #{$colors-monochrome-10});
   background: none;
 
   &:focus,
@@ -32,7 +35,6 @@ button {
     outline: none;
   }
 
-  // Square buttons (usually used with icons?)
   &.squared {
     width: 48px;
     height: 48px;
@@ -67,55 +69,6 @@ button {
     &.squared {
       width: 56px;
       height: 56px;
-    }
-  }
-
-  // Colors
-  &.white {
-    background: $colors-monochrome-1;
-    --color-icon: #{$colors-main}; // For icons nested in the button
-    color: $colors-main;
-    border: 2px solid $colors-monochrome-10;
-
-    &:hover {
-      background: #f2f2f2;
-    }
-
-    &.inverted {
-      background: $colors-monochrome-10;
-      --color-icon: #{$colors-monochrome-1};
-      color: $colors-monochrome-1;
-      border: 2px solid $colors-monochrome-10;
-
-      &:disabled {
-        background: $colors-monochrome-7;
-      }
-    }
-  }
-
-  &.light-blue {
-    background: $colors-track-light-blue;
-    color: $colors-monochrome-1;
-    --color-icon: #{$colors-monochrome-1};
-    border-color: $colors-track-light-blue;
-
-    &.inverted {
-      background: $colors-monochrome-1;
-      color: $colors-track-light-blue;
-      --color-icon: #{$colors-track-light-blue};
-    }
-  }
-
-  &.blue {
-    background: $colors-track-blue;
-    color: $colors-monochrome-1;
-    --color-icon: #{$colors-monochrome-1};
-    border-color: $colors-track-blue;
-
-    &.inverted {
-      background: $colors-monochrome-1;
-      color: $colors-track-blue;
-      --color-icon: #{$colors-track-blue};
     }
   }
 }

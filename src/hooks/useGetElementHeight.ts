@@ -4,7 +4,7 @@ import { useState, useLayoutEffect } from 'react'
 const getElementHeight = (elementID: string) => {
   const element = document.getElementById(elementID)
 
-  return element?.clientHeight || 0
+  return element?.offsetHeight || 0
 }
 
 // Returns the height of an element by ID
@@ -26,7 +26,7 @@ const useGetElementHeight = (elementID: string) => {
 
           setElementHeight(borderBoxSize.blockSize);
         } else {
-          setElementHeight(entry.contentRect.height);
+          setElementHeight(el.offsetHeight);
         }
       })
 

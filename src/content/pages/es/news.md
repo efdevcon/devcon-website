@@ -1,6 +1,6 @@
 ---
 title: Noticias
-template: content
+template: news
 ---
 
 Noticias

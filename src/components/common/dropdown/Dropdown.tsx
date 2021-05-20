@@ -4,9 +4,10 @@ import css from './dropdown.module.scss'
 import ChevronDown from 'src/assets/icons/arrow_desc.svg'
 import ChevronUp from 'src/assets/icons/arrow_asc.svg'
 
-interface DropdownProps {
+export interface DropdownProps {
   value: any
   className?: string
+  customIcon?: React.ElementType<SVGAElement>
   onChange: (value: any) => void
   options: {
     [key: string]: any
@@ -37,10 +38,23 @@ export function Dropdown(props: DropdownProps) {
   let foldoutClassName = css['dropdown']
   if (open) foldoutClassName += ` ${css['open']}`
 
+  const Icon = (() => {
+    // Used by e.g. Filter
+    if (props.customIcon) return props.customIcon
+
+    if (open) {
+      return ChevronUp
+    } else {
+      return ChevronDown
+    }
+  })()
+
   return (
     <div role="button" onClick={() => setOpen(!open)} aria-label="Toggle dropdown" className={className} ref={ref}>
       {currentSelection && currentSelection.text}
-      <span className={css['icon']}>{open ? <ChevronUp /> : <ChevronDown />}</span>
+      {/* <span className={css['icon']}> */}
+      <Icon />
+      {/* </span> */}
 
       <ul className={foldoutClassName} ref={foldoutRef}>
         {props.options.map(({ text, value }) => {

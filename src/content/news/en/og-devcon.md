@@ -1,7 +1,13 @@
 ---
-url: https://devcon.org/
 title: OG Devcon
-description: I like to describe my news
-date: 2021-01-12T22:31:49.152Z
-metadata: DEVCON
+url: https://devcon.org/
+date: 2021-03-22
+author: Devcon
+template: news-item
+tags:
+  - Tickets
+  - Corona
+  - Event Date
 ---
+
+This is the bigliest piece of news in the history of news!

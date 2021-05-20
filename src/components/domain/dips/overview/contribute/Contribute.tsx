@@ -53,8 +53,18 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
 
     if (window.ResizeObserver) {
       const observer = new window.ResizeObserver(entries => {
-        const borderBoxSize = entries[0].borderBoxSize[0] || entries[0].borderBoxSize
-        setContainerSize(borderBoxSize.inlineSize)
+        const entry = entries[0]
+
+        let size
+
+        if (entry.contentBoxSize) {
+          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
+          size = borderBoxSize.inlineSize
+        } else {
+          size = entry.contentRect.width
+        }
+
+        setContainerSize(size)
       })
 
       observer.observe(el)

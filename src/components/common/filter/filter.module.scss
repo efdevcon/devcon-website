@@ -1,43 +1,55 @@
 @use 'src/assets/css/partials/index' as *;
 
-.dropdown {
-  @media (min-width: $breakpoints-md + 1) {
-    display: none !important;
-  }
-}
-
 .filter {
-  display: flex;
-  flex-wrap: wrap;
+  &.collapsed {
+    .dropdown {
+      display: flex !important;
+    }
 
-  p {
-    cursor: pointer;
-    padding: $gaps-gap-2;
-    @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-8, $min-gap: $gaps-gap-2);
+    .inline {
+      display: none !important;
+    }
+  }
 
-    &:hover {
+  .dropdown {
+    @media (min-width: $breakpoints-md + 1) {
+      display: none !important;
+    }
+  }
+
+  .inline {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+      cursor: pointer;
+      padding: $gaps-gap-2;
+      @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-8, $min-gap: $gaps-gap-2);
+
+      &:hover {
+        @include fonts-bold;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    .active-filter {
       @include fonts-bold;
+      border-bottom: 2px solid $colors-monochrome-10;
     }
 
-    &:last-child {
-      margin-right: 0px;
+    @media (max-width: $breakpoints-md) {
+      display: none;
     }
   }
 
-  .active-filter {
-    @include fonts-bold;
-    border-bottom: 2px solid $colors-monochrome-10;
+  .link {
+    border: 1px solid $colors-track-pink;
   }
 
-  @media (max-width: $breakpoints-md) {
-    display: none;
+  .icon {
+    margin-left: $gaps-gap-4;
   }
-}
-
-.link {
-  border: 1px solid $colors-track-pink;
-}
-
-.icon {
-  margin-left: $gaps-gap-4;
 }

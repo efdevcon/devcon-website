@@ -1,0 +1,9 @@
+@use 'src/assets/css/partials/index' as *;
+
+.scrollbar {
+  @include general-scrollbar;
+}
+
+.no-select {
+  user-select: none;
+}

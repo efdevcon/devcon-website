@@ -1,6 +1,12 @@
 ---
-url: yjytj
 title: tyjtyj
-date: 2021-01-14T12:12:01.141Z
+date: 2021-03-19
+author: Devcon
+template: news-item
+tags:
+  - Tickets
+  - Corona
+  - Event Date
 ---
 
+This is the bigliest piece of news in the history of news!

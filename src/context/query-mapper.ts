@@ -1,5 +1,6 @@
 import { Link } from 'src/types/Link'
 import { NavigationData } from 'src/types/NavigationData'
+import { Notification } from 'src/types/Notification'
 import { FooterData } from 'src/types/FooterData'
 
 export function ToNavigationData(nodes: any): NavigationData {
@@ -7,6 +8,14 @@ export function ToNavigationData(nodes: any): NavigationData {
     top: ToLinks(nodes, 'top'),
     site: ToLinks(nodes, 'site'),
     footer: ToFooterData(nodes),
+  }
+}
+
+export function ToNotification(data: any): Notification {
+  return {
+    title: data.frontmatter.title,
+    url: '/en/news/',
+    label: 'NEWS',
   }
 }
 

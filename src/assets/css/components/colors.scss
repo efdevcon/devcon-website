@@ -5,16 +5,86 @@
   --color-text: $colors-main;
 
   // Rule of thumb for colors: if something could potentially change color if app goes into dark-mode, use a CSS variable
-  // --color-monochrome-10: #{$colors-monochrome-1};
-  // --color-monochrome-1: #{$colors-monochrome-10};
+  // --color-monochrome-10: #{$colors-monochrome-1} !important;
+  // --color-monochrome-1: #{$colors-monochrome-10} !important;
 
-  // --color-text-black: #{$colors-monochrome-10};
-  // --color-text-white: #{$colors-monochrome-1};
+  // --color-text-black: #{$colors-monochrome-10} !important;
+  // --color-text-white: #{$colors-monochrome-1} !important;
 }
 
 // Invert colors
 .dark-mode {
-  --color-text: $colors-main-light;
-  // --color-text-black: #{$colors-monochrome-10};
-  // --color-text-white: #{$colors-monochrome-1};
+  --color-text: $colors-main-light !important;
+  // --color-text-black: #{$colors-monochrome-10} !important;
+  // --color-text-white: #{$colors-monochrome-1} !important;
+}
+
+// Colors
+.white {
+  background: $colors-monochrome-1 !important;
+  --color-icon: #{$colors-main} !important; // For icons nested in the button
+  color: $colors-main !important;
+  border-color: $colors-monochrome-10 !important;
+
+  &:hover {
+    background: #f2f2f2 !important;
+  }
+
+  &.ghost {
+    background: none !important;
+    color: $colors-monochrome-1 !important;
+    --color-icon: #{$colors-monochrome-1} !important;
+    border-color: $colors-monochrome-1 !important;
+  }
+
+  &.inverted {
+    background: $colors-monochrome-10 !important;
+    --color-icon: #{$colors-monochrome-1} !important;
+    color: $colors-monochrome-1 !important;
+    border-color: $colors-monochrome-10 !important;
+
+    &:disabled {
+      background: $colors-monochrome-7 !important;
+    }
+  }
+}
+
+.light-blue {
+  background: $colors-track-light-blue !important;
+  color: $colors-monochrome-1 !important;
+  --color-icon: #{$colors-monochrome-1} !important;
+  border-color: $colors-track-light-blue !important;
+
+  &.ghost {
+    background: none !important;
+    color: $colors-track-light-blue !important;
+    --color-icon: #{$colors-track-light-blue} !important;
+    border-color: $colors-track-light-blue !important;
+  }
+
+  &.inverted {
+    background: $colors-monochrome-1 !important;
+    color: $colors-track-light-blue !important;
+    --color-icon: #{$colors-track-light-blue} !important;
+  }
+}
+
+.blue {
+  background: $colors-track-blue !important;
+  color: $colors-monochrome-1 !important;
+  --color-icon: #{$colors-monochrome-1} !important;
+  border-color: $colors-track-blue !important;
+
+  &.ghost {
+    background: none !important;
+    color: $colors-track-blue !important;
+    --color-icon: #{$colors-track-blue} !important;
+    border-color: $colors-track-blue !important;
+  }
+
+  &.inverted {
+    background: $colors-monochrome-1 !important;
+    color: $colors-track-blue !important;
+    --color-icon: #{$colors-track-blue} !important;
+  }
 }

@@ -1,0 +1,13 @@
+@use 'src/assets/css/partials/index' as *;
+
+.theme {
+  --theme-color: $colors-track-orange;
+  --theme-color-hover: #{$colors-track-orange-hover};
+  --theme-logo: url('src/assets/images/dip-logo.svg');
+  --theme-gradient: radial-gradient(
+    64.03% 140.53% at 90.8% 48.82%,
+    #e55066 0%,
+    rgba(242, 186, 44, 0.391893) 65.84%,
+    rgba(250, 255, 7, 0) 100%
+  );
+}

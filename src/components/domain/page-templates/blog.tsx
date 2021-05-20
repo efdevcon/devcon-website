@@ -2,12 +2,13 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
+import { pageHOC } from 'src/context/pageHOC'
 
-export default function BlogTemplate({ data }: any) {
+export default pageHOC(function BlogTemplate({ data }: any) {
   const blog = data.markdownRemark
 
   return (
-    <Content navigationData={data.navigationData}>
+    <Content>
       <SEO title={blog.frontmatter.Title} canonicalUrl={blog.frontmatter.permaLink} />
 
       <h2>{blog.frontmatter.title}</h2>
@@ -15,7 +16,7 @@ export default function BlogTemplate({ data }: any) {
       <div dangerouslySetInnerHTML={{ __html: blog.html }} />
     </Content>
   )
-}
+})
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
@@ -32,6 +33,7 @@ export const query = graphql`
       }
       html
     }
+    ...LatestNewsItem
     ...NavigationData
   }
 `

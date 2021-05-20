@@ -19,8 +19,8 @@ type CTALink = {
 type PageHeroProps = {
   title?: string
   logo?: any
+  background?: string
   cta?: Array<CTALink>
-  type: 'contribute' | 'about' | 'location' | 'dip'
   renderCustom?(props?: any): JSX.Element
   navigation?: Array<NavigationLink>
 }
@@ -34,11 +34,23 @@ export const PageHero = (props: PageHeroProps) => {
   const pageCategory = usePageCategory()
   const isScrolled = useIsScrolled()
 
+  let style: any = {
+    '--negative-offset': negativeOffset,
+    '--strip-height': `${stripHeight}px`,
+  }
+
+  if (props.background) {
+    style.backgroundImage = `url(${props.background})`
+    style.backgroundSize = 'cover'
+  }
+
   return (
     <div
       id="page-hero"
-      className={`${css['hero']} ${isScrolled ? css['scrolled'] : ''}`}
-      style={{ '--negative-offset': negativeOffset, '--strip-height': `${stripHeight}px` }}
+      className={`${css['hero']} ${props.background ? css['custom-background'] : ''} ${
+        isScrolled ? css['scrolled'] : ''
+      }`}
+      style={style}
     >
       {/* <div className={css[props.type]}>
         <img alt="" src={props.logo} />
@@ -46,7 +58,7 @@ export const PageHero = (props: PageHeroProps) => {
 
       <div className="section">
         <div className={css['info']}>
-          <p className="font-xs text-uppercase">{pageCategory}</p>
+          <p className={`${css['page-category']} font-xs text-uppercase`}>{pageCategory}</p>
 
           <div className={css['title-block']}>
             <h1 className="font-massive">{props.title}</h1>
@@ -69,18 +81,19 @@ export const PageHero = (props: PageHeroProps) => {
 
           {props.navigation && (
             <div id="page-navigation" className={css['page-navigation']}>
-              {props.navigation.map(link => {
-                return (
-                  <Link
-                    key={link.to + link.title}
-                    to={link.to}
-                    indicateExternal
-                    className="font-xs bold text-uppercase"
-                  >
-                    {link.title}
-                  </Link>
-                )
-              })}
+              {props.navigation &&
+                props.navigation.map(link => {
+                  return (
+                    <Link
+                      key={link.to + link.title}
+                      to={link.to}
+                      indicateExternal
+                      className="font-xs bold text-uppercase"
+                    >
+                      {link.title}
+                    </Link>
+                  )
+                })}
             </div>
           )}
         </div>

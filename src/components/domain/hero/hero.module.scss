@@ -294,21 +294,21 @@ $logo-offset: 50px;
     button {
       @include fonts-xl;
       @include fonts-bold;
-      cursor: pointer;
+      // cursor: pointer;
       width: 100%;
+      margin-top: $gaps-gap-4;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      background: none;
-      margin-top: $gaps-gap-4;
-      display: flex;
-      align-items: center;
-      color: white;
-      padding-left: $gaps-gap-7;
-      padding-right: $gaps-gap-7;
-      padding-top: $gaps-gap-3;
-      padding-bottom: $gaps-gap-3;
-      border: 2px solid white;
+      text-transform: uppercase;
+      // background: none;
+      // display: flex;
+      // align-items: center;
+      // padding-left: $gaps-gap-7;
+      // padding-right: $gaps-gap-7;
+      // padding-top: $gaps-gap-3;
+      // padding-bottom: $gaps-gap-3;
+      // border: 2px solid white;
 
       @media (max-width: $breakpoints-lg) {
         @include fonts-xxl;

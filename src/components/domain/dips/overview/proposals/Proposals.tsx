@@ -66,7 +66,7 @@ const tableColumns: Array<TableColumn> = [
     className: css['status-column'],
     sort: SortVariation.basic,
     render: item => {
-      let labelType
+      let labelType = 'neutral'
 
       switch (item.status.toLowerCase()) {
         case 'withdrawn':

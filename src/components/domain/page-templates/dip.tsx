@@ -3,18 +3,20 @@ import { graphql } from 'gatsby'
 import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { DIP } from 'src/components/domain/dips/dip'
+import css from './dips.module.scss'
+import { pageHOC } from 'src/context/pageHOC'
 
-export default function DIPTemplate({ data, location }: any) {
+export default pageHOC(function DIPTemplate({ data, location }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content navigationData={data.navigationData} location={location}>
+    <Content theme={css['theme']}>
       <SEO title={page.frontmatter.Title} />
 
       <DIP dip={data.markdownRemark} />
     </Content>
   )
-}
+})
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
@@ -34,6 +36,7 @@ export const query = graphql`
         Tags
       }
     }
+    ...LatestNewsItem
     ...NavigationData
   }
 `

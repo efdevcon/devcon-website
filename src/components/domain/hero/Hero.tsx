@@ -114,7 +114,7 @@ export const Hero = () => {
 
         <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>
           <p>{intl.formatMessage({ id: 'description' })}</p>
-          <button>
+          <button className="lg white ghost">
             <IconEventNote className={`icon ${css['icon']}`} />
             <p>{intl.formatMessage({ id: 'addtocalendar' })}</p>
           </button>

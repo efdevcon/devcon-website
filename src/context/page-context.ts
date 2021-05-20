@@ -1,8 +1,10 @@
 import { createContext, useContext } from 'react'
 import { NavigationData } from 'src/types/NavigationData'
+import { Notification } from 'src/types/Notification'
 
 export interface PageContextType {
   navigation: NavigationData
+  notification: Notification
   location: any
 }
 

@@ -3,23 +3,28 @@ import { Header } from 'src/components/common/layouts/header'
 import { Footer } from 'src/components/common/layouts/footer'
 import { PageContextProvider } from 'src/context/page-context-provider'
 import './content.module.scss'
+import { NewsItem } from 'src/types/NewsItem'
 
 type LayoutProps = {
   children: ReactNode
-  navigationData: any
-  location: any
+  theme?: string
+  style?: {
+    [key: string]: any
+  }
 }
 
-export default function Content({ children, navigationData, location }: LayoutProps) {
+export default function Content({ children, theme, style }: LayoutProps) {
+  let className = 'layout'
+
+  if (theme) className += ` ${theme}`
+
   return (
-    <div className="layout">
-      <PageContextProvider navigationData={navigationData} location={location}>
-        <Header withHero={false} />
+    <div className={className} style={style}>
+      <Header withHero={false} />
 
-        <div className="content">{children}</div>
+      <div className="content">{children}</div>
 
-        <Footer />
-      </PageContextProvider>
+      <Footer />
     </div>
   )
 }

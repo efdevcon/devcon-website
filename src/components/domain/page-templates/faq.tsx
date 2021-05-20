@@ -11,14 +11,15 @@ import css from './templates.module.scss'
 
 import AskDeva from 'src/assets/images/ask-deva.png'
 import PageHeroLogo from 'src/assets/images/logo-faq.svg'
+import { pageHOC } from 'src/context/pageHOC'
 
-export default function FaqTemplate({ data, location }: any) {
+export default pageHOC(function FaqTemplate({ data, location }: any) {
   const page = data.markdownRemark
   const faq = ToFaqData(data)
   const [searchFilter, setSearchFilter] = useState('')
 
   return (
-    <Content navigationData={data.navigationData} location={location}>
+    <Content>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <PageHero
@@ -53,7 +54,7 @@ export default function FaqTemplate({ data, location }: any) {
       </div>
     </Content>
   )
-}
+})
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
@@ -69,6 +70,7 @@ export const query = graphql`
       }
     }
     ...NavigationData
+    ...LatestNewsItem
     ...Categories
     ...FAQs
   }

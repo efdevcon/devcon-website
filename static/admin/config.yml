@@ -6,11 +6,12 @@ backend:
     - admin
     - editor
 
+local_backend: true
+
 slug:
   encoding: 'ascii'
   clean_accents: true
   sanitize_replacement: '-'
-
 
 publish_mode: editorial_workflow
 media_folder: static/assets/uploads/images

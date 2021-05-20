@@ -1,7 +1,9 @@
 export interface NewsItem {
-  title: string
-  url: string
-  description: string
-  metadata: any
   date: Date
+  author?: string
+  url: string
+  imageUrl?: string
+  title: string
+  description?: string
+  tags?: string[]
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { LanguageToggle } from './language-toggle'
 import IconVirus from 'src/assets/icons/virus.svg'
 import { Label } from 'src/components/common/label'
+import { usePageContext } from 'src/context/page-context'
 import css from './strip.module.scss'
 
 type HeaderProps = {
@@ -9,6 +10,7 @@ type HeaderProps = {
 }
 
 export const Strip = ({ withHero }: HeaderProps) => {
+  const { notification } = usePageContext()
   let className = css['strip']
 
   if (withHero) className += ` ${css['hero']}`
@@ -18,9 +20,10 @@ export const Strip = ({ withHero }: HeaderProps) => {
       <div className={css['body']}>
         <div className={css['notification']}>
           <IconVirus />
-          <Label type="notification">COVID-19 UPDATE</Label>
-          <p>Notification</p>
+          {notification.label && <Label type="notification">{notification.label}</Label>}
+          <p>{notification.title}</p>
         </div>
+
         <LanguageToggle />
       </div>
     </div>

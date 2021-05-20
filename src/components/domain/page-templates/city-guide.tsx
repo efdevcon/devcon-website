@@ -6,14 +6,16 @@ import { FAQ } from 'src/components/domain/faq'
 import { ToFaqData } from 'src/components/domain/faq/queryMapper'
 import Content from 'src/components/common/layouts/content'
 import css from './templates.module.scss'
+import themeCss from './city-guide.module.scss'
 
 import PageHeroLogo from 'src/assets/images/logo-city-guide.svg'
 import { Carousel } from 'src/components/common/carousel'
 import { Snapshot } from 'src/components/common/snapshot'
 import { TwoColumns } from 'src/components/common/sections/2column'
 import { useIntl } from 'gatsby-plugin-intl'
+import { pageHOC } from 'src/context/pageHOC'
 
-export default function CityGuideTemplate({ data, location }: any) {
+export default pageHOC(function CityGuideTemplate({ data }: any) {
   const intl = useIntl()
   const page = data.markdownRemark
   const faqs = ToFaqData(data)
@@ -32,7 +34,7 @@ export default function CityGuideTemplate({ data, location }: any) {
   }
 
   return (
-    <Content navigationData={data.navigationData} location={location}>
+    <Content theme={themeCss['theme']}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <PageHero
@@ -83,7 +85,7 @@ export default function CityGuideTemplate({ data, location }: any) {
       </div>
     </Content>
   )
-}
+})
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
@@ -99,6 +101,7 @@ export const query = graphql`
       }
     }
     ...NavigationData
+    ...LatestNewsItem
     ...Categories
     ...FAQs
     todo: allMarkdownRemark(

@@ -9,6 +9,7 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
 
   await createContentPages(args)
   await createBlogPages(args)
+  await createNewsPages(args)
   await createDipPages(args)
 }
 
@@ -24,6 +25,7 @@ async function createContentPages({ actions, graphql, reporter }: CreatePagesArg
           frontmatter {
             title
             template
+            url
           }
         }
       }
@@ -35,9 +37,35 @@ async function createContentPages({ actions, graphql, reporter }: CreatePagesArg
     return
   }
 
-  result.data.allMarkdownRemark.nodes.forEach((node: any) =>
+  result.data.allMarkdownRemark.nodes.forEach((node: any) => {
+    if (node.url) return; // No reason to create pages for external news
+
     createDynamicPage(actions, node.fields.slug, node.frontmatter.template, node.fields.lang)
-  )
+  });
+}
+
+async function createNewsPages({ actions, graphql, reporter }: CreatePagesArgs) {
+  const result: any = await graphql(`
+    query {
+      news: allMarkdownRemark(filter: { fields: { collection: { eq: "news" } } }) {
+        nodes {
+          fields {
+            slug
+            lang
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running DIP query.`)
+    return
+  }
+
+  result.data.news.nodes.forEach((node: any) => {
+    createDynamicPage(actions, node.fields.slug, 'news-item', node.fields.lang)
+  })
 }
 
 async function createDipPages({ actions, graphql, reporter }: CreatePagesArgs) {

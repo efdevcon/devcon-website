@@ -4,12 +4,14 @@ import { SEO } from 'src/components/domain/seo'
 import { DIPOverview } from 'src/components/domain/dips/overview'
 import Content from 'src/components/common/layouts/content'
 import { DIP } from 'src/types/dip'
+import css from './dips.module.scss'
+import { pageHOC } from 'src/context/pageHOC'
 
-export default function DIPsTemplate({ data, location }: any) {
+export default pageHOC(function DIPsTemplate({ data }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content navigationData={data.navigationData} location={location}>
+    <Content theme={css['theme']}>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <DIPOverview
@@ -19,7 +21,7 @@ export default function DIPsTemplate({ data, location }: any) {
       />
     </Content>
   )
-}
+})
 
 export function mapToDIP(source: any): DIP {
   return {
@@ -56,6 +58,7 @@ export const query = graphql`
       }
     }
     ...DipsData
+    ...LatestNewsItem
     ...NavigationData
   }
 `

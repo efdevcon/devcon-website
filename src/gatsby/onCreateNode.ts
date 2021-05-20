@@ -158,6 +158,16 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
         name: 'slug',
         value: formattedSlug,
       })
+    } else if (collection === 'news') {
+      const paths = slug.split('/').filter(String)
+      const lang = paths[0]
+      const formattedSlug = `/${lang}/news/${slug.split('/')[2].toLowerCase()}/` // /en/news/something
+
+      createNodeField({
+        node,
+        name: 'slug',
+        value: formattedSlug,
+      })
     } else {
       createNodeField({
         node,

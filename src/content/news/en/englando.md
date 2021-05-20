@@ -1,10 +1,13 @@
 ---
-url: https://stackoverflow.com/questions/52576376/how-to-zoom-in-on-a-complex-svg-structure
 title: Zoom on SVGs Zoom on SVGs Zoom on SVGs
-description: Lorem Ipsum is simply dummy text of the printing and typesetting
-  industry. Lorem Ipsum has been the industry's standard dummy text ever since
-  the 1500s, when an unknown printer took a galley of type and scrambled it to
-  make a type specimen book. It has survived naa
-date: 2021-01-15T10:34:40.692Z
-metadata: aefeaf
+url: https://stackoverflow.com/questions/52576376/how-to-zoom-in-on-a-complex-svg-structure
+date: 2021-03-21
+author: Devcon
+template: news-item
+tags:
+  - Tickets
+  - Corona
+  - Event Date
 ---
+
+This is the bigliest piece of news in the history of news!

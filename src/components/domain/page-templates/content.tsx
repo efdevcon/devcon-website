@@ -2,19 +2,20 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
+import { pageHOC } from 'src/context/pageHOC'
 
-export default function ContentTemplate({ data, location }: any) {
+export default pageHOC(function ContentTemplate({ data, location }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content navigationData={data.navigationData} location={location}>
+    <Content>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
       <h2>{page.frontmatter.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: page.html }} />
     </Content>
   )
-}
+})
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
@@ -29,6 +30,7 @@ export const query = graphql`
         description
       }
     }
+    ...LatestNewsItem
     ...NavigationData
   }
 `

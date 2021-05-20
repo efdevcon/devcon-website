@@ -1,6 +1,6 @@
 ---
 title: News
-template: content
+template: news
 ---
 
 Latest news & updates
