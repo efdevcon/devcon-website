@@ -294,20 +294,20 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-source-rss-feed`,
-    //   options: {
-    //     // Point to real blog domain when it's deployed
-    //     url: `http://localhost:4000/rss/categories/devcon.xml`,
-    //     name: `DevconBlog`,
-    //     // Optional
-    //     // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-    //     parserOption: {
-    //       customFields: {
-    //         item: ['efblog:image'],
-    //       },
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        // Point to real blog domain when it's deployed
+        url: `http://localhost:4000/rss/categories/devcon.xml`,
+        name: `DevconBlog`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        parserOption: {
+          customFields: {
+            item: ['efblog:image'],
+          },
+        },
+      },
+    },
   ],
 }
