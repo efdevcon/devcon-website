@@ -15,9 +15,7 @@ export const createSchemaCustomization: any = createSchemaCustomizationPlugin //
 // https://stackoverflow.com/questions/63124432/how-do-i-configure-mini-css-extract-plugin-in-gatsby
 const ignoreCSSOrder = ({ stage, actions, getConfig }: any) => {
   const config = getConfig()
-  const miniCssExtractPlugin = config.plugins.find(
-    (plugin: any) => plugin.constructor.name === 'MiniCssExtractPlugin'
-  )
+  const miniCssExtractPlugin = config.plugins.find((plugin: any) => plugin.constructor.name === 'MiniCssExtractPlugin')
   if (miniCssExtractPlugin) {
     miniCssExtractPlugin.options.ignoreOrder = true
   }
@@ -25,5 +23,5 @@ const ignoreCSSOrder = ({ stage, actions, getConfig }: any) => {
 }
 
 export const onCreateWebpackConfig = (args: any) => {
-  ignoreCSSOrder(args);
+  ignoreCSSOrder(args)
 }

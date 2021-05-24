@@ -11,7 +11,7 @@ export default pageHOC(function Index({ data }: any) {
   return (
     <Default>
       <SEO />
-      <PWAPrompt />
+      {/* <PWAPrompt /> */}
       <News data={data.newsData} />
       <BlogOverview />
     </Default>

@@ -1,1 +1,1 @@
-export { PWAPrompt } from './PWAPrompt';
+export { PWAPrompt } from './PWAPrompt'

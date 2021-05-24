@@ -1,5 +1,6 @@
 import React from 'react'
 import css from './menu.module.scss'
+import { Link as RouterLink } from '@reach/router'
 import { Link } from 'src/components/common/link'
 import { Navigation } from './navigation'
 import { usePageContext } from 'src/context/page-context'
@@ -34,12 +35,14 @@ import { LanguageToggle } from 'src/components/common/layouts/header/strip/langu
 export const Account = (props: any) => {
   return (
     <div className={css['account']}>
-      <button className={`${css['desktop']} ${css['account-button']} white`}>
-        <AccountIcon />
-        <p>Account</p>
-      </button>
+      <Link to={'/app/profile'}>
+        <button className={`${css['desktop']} ${css['account-button']} white`}>
+          <AccountIcon />
+          <p>Account</p>
+        </button>
 
-      <AccountIcon className={`icon ${css['account-icon']} ${css['mobile']}`} />
+        <AccountIcon className={`icon ${css['account-icon']} ${css['mobile']}`} />
+      </Link>
     </div>
   )
 }

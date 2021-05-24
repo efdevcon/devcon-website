@@ -1,3 +1,4 @@
+const { createProxyMiddleware } = require("http-proxy-middleware")
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://devcon.org',
@@ -17,20 +18,19 @@ const matomoUrl = 'https://matomo.ethereum.org'
 
 const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
-console.log(
-  'GATSBY CONFIG:',
-  'NODE_ENV',
-  NODE_ENV,
-  'NETLIFY_ENV',
-  NETLIFY_ENV,
-  'isNetlifyProduction',
-  isNetlifyProduction,
-  siteUrl
-)
-
 module.exports = {
   siteMetadata: {
     siteUrl: siteUrl,
+  },
+  developMiddleware: app => {
+    app.use('/api/',
+      createProxyMiddleware({
+        target: 'http://localhost:9000',
+        pathRewrite: {
+          '^/\\.netlify/functions': ''
+        },
+      })
+    )
   },
   plugins: [
     'gatsby-plugin-root-import',

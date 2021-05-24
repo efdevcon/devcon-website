@@ -1,6 +1,7 @@
 [build]
   command = "yarn build"
   publish = "public"
+  functions = "server/functions"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
@@ -25,6 +26,26 @@
     best-practices = 0
     seo = 0
     pwa = 0
+
+[[context.web3-login.plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [context.web3-login.plugins.inputs.thresholds]
+    performance = 0
+    accessibility = 0
+    best-practices = 0
+    seo = 0
+    pwa = 0
+
+[[redirects]]
+  from = '/api/*'
+  to = '/.netlify/functions/api/:splat'
+  status = 200
+
+[[redirects]]
+  from = "/app/*"
+  to = "/app/index.html"
+  status = 200
 
 [[redirects]]
   from = "/"
