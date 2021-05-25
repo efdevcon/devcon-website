@@ -1,4 +1,4 @@
-import { NewsItem } from 'src/types/NewsItem';
+// import { NewsItem } from 'src/types/NewsItem';
 // date: Date
 // author?: string
 // url: string
@@ -7,37 +7,37 @@ import { NewsItem } from 'src/types/NewsItem';
 // description?: string
 // tags?: string[]
 
-const sourceData = () => {
+// const sourceData = () => {
 
-}
+// }
 
-const NewsFactory = () => {
-  const api = {
-    fetchNews: () => {
-      async 
-    },
-    standardizeData: () => {
+// const NewsFactory = () => {
+//   const api = {
+//     fetchNews: () => {
+//       async 
+//     },
+//     standardizeData: () => {
 
-    },
-    sortNews: () => {
+//     },
+//     sortNews: () => {
 
-    },
-  }
+//     },
+//   }
 
-  return api;
-}
+//   return api;
+// }
 
 
-const fetchNews = async () => {
-  const fetchBlog = async () => {
-    return fetch('localhost:4000/rss/categories/devcon.xml');
-  };
-  const fetchNews = async () => {
-    return fetch('localhost:4000/rss/categories/devcon.xml');
-  };
+// const fetchNews = async () => {
+//   const fetchBlog = async () => {
+//     return fetch('localhost:4000/rss/categories/devcon.xml');
+//   };
+//   const fetchNews = async () => {
+//     return fetch('localhost:4000/rss/categories/devcon.xml');
+//   };
 
-  return Promise.all([])
-}
+//   return Promise.all([])
+// }
 
 // const useNews = () => {
 //   const [data, setData] = React.useState(null);
