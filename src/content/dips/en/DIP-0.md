@@ -1,16 +1,6 @@
 ---
 Summary: 'DIP stands for Devcon Improvement Proposal. A DIP is a proposal put forth by members of the community describing a desired new feature or process to improve Devcon. A DIP should be concise and provide as much information as possible as well as a rationale for the proposal.
-
-The DIP author is responsible for making the case for a proposed DIP, and community members will be able to comment on it. It is up to the Devcon Team to choose which proposals are considered, reviewed, and accepted.'
-Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-0.md
-DIP: 0
 Title: DIP Purpose and Guidelines
-Status: Active
-Themes: Meta
-Tags: Other
-Authors: Bettina Boon Falleur (@BettinaBF), Ligi (@ligi), Heather Davidson (@p0unce), Skylar (@skylarweaver), Joseph Schweitzer (@ethjoe)
-Discussion: https://forum.devcon.org
-Created: 2020-07-06
 ---
 
 
