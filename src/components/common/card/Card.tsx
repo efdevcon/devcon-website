@@ -50,7 +50,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
 
     return (
       <div className={css['img-wrapper']}>
-        <img alt="" className={`${css['img']} ${css['not-gatsby']}`} src={props.imageUrl} />
+        <img alt={props.title} className={`${css['img']} ${css['not-gatsby']}`} src={props.imageUrl} />
       </div>
     )
   })()
