@@ -6,7 +6,7 @@ backend:
     - admin
     - editor
 
-local_backend: true
+
 
 slug:
   encoding: 'ascii'

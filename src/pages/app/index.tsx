@@ -9,19 +9,19 @@ import Profile from './account/profile'
 import Attest from './account/attest'
 import { Helmet } from 'react-helmet'
 import css from './app.module.scss'
+import { pageHOC } from 'src/context/pageHOC'
 
-export default function Index({ data, location }: any) {
+export default pageHOC(function Index({ data, location }: any) {
   const isBrowser = typeof window !== 'undefined'
 
   return (
-    <Content navigationData={data.navigationData} location={location}>
+    <Content>
       <Helmet>
         <script
           type="text/javascript"
-          src="https://unpkg.com/@walletconnect/web3-provider@1.4.1/dist/umd/index.min.js" />
-        <script
-          type="text/javascript"
-          src="https://unpkg.com/@toruslabs/torus-embed" />
+          src="https://unpkg.com/@walletconnect/web3-provider@1.4.1/dist/umd/index.min.js"
+        />
+        <script type="text/javascript" src="https://unpkg.com/@toruslabs/torus-embed" />
       </Helmet>
 
       {isBrowser && (
@@ -41,11 +41,12 @@ export default function Index({ data, location }: any) {
       )}
     </Content>
   )
-}
+})
 
 export const query = graphql`
   query($language: String!) {
     ...NavigationData
+    ...LatestNewsItem
     ...NewsData
   }
 `
