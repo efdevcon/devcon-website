@@ -1,6 +1,5 @@
 ---
 title: City Guide
-template: city-guide
 ---
 
 Devcon 6 will be held in **Bogota**, Colombia's capital and largest city.
