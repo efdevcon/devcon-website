@@ -1,18 +1,6 @@
 ---
 Summary: 'For all those people who wanted to speak, but didn"t get approved: 
-Mark off space in the venue and allow for the submission of posters of their ideas / talks. 
-Present the posters during the conference. 
-Allow them to answer questions in allotted time slots, i.e. via Chat or Email.'
-Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-14.md
-DIP: 14
 Title: Poster Presentations
-Status: Draft
-Themes: Community Involvement
-Tags: Event Operations
-Authors: Valerie Vaske <valerie.vaske@gmail.com>
-Resources Required: Physical space at venue, Communication support
-Discussion: https://forum.devcon.org/t/dip-14-using-posters-as-a-medium-alongside-talks/174/2
-Created: 2020-11-25
 ---
 
 ## Summary of Proposal
