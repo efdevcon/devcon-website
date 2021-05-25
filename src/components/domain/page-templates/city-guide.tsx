@@ -39,7 +39,6 @@ export default pageHOC(function CityGuideTemplate({ data }: any) {
 
       <PageHero
         title={page.frontmatter.title}
-        type="location"
         logo={PageHeroLogo}
         navigation={[
           {

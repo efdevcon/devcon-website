@@ -16,8 +16,8 @@
   // Whole card should trigger hover effect
   &.expand-link {
     &:hover .read-more {
-      color: rgba($colors-monochrome-10, 0.5) !important;
-      --color-icon: rgba($colors-monochrome-10, 0.5) !important;
+      color: var(--theme-color-hover, $colors-main-light) !important;
+      --color-icon: var(--theme-color-hover, #{$colors-main-light}) !important;
     }
   }
 
