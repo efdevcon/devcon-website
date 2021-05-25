@@ -1,7 +1,5 @@
 ---
 title: Where is Devcon taking place?
-category: location
-order: 1
 ---
 
 We’re excited to announce that Devcon 6 will be held in Bogota, Colombia's capital and largest city.
