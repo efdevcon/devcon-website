@@ -11,6 +11,7 @@ export const query = graphql`
           date
           tags
         }
+        rawMarkdownBody
       }
     }
   }

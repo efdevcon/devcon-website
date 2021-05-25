@@ -1,2 +1,2 @@
-export { Table, TableColumn } from './Table'
+export { Table } from './Table'
 export { SortVariation } from './useSort'

@@ -14,7 +14,7 @@
   // background: $colors-monochrome-3;
 
   color: var(--theme-color, #{$colors-main});
-  border: 1px solid var(--theme-color, #{$colors-monochrome-10});
+  border: 1px solid var(--theme-color, #{$colors-main});
 
   .ghost {
     background: none;

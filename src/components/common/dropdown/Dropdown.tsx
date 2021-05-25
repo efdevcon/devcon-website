@@ -56,7 +56,7 @@ export function Dropdown(props: DropdownProps) {
       <Icon />
       {/* </span> */}
 
-      <ul className={foldoutClassName} ref={foldoutRef}>
+      <ul className={foldoutClassName} ref={foldoutRef} onClick={e => e.stopPropagation()}>
         {props.options.map(({ text, value }) => {
           const selected = value === props.value
 

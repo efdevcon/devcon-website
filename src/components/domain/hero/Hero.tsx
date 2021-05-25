@@ -121,7 +121,6 @@ export const Hero = () => {
         </Link>
       </div>
       <CallToAction mobile />
-      <Button className="light-blue inverted">Super cool button</Button>
     </>
   )
 }

@@ -22,7 +22,7 @@ export const formatNewsData = (data: any): Array<NewsItem> => {
 
     return {
       title,
-      description,
+      description: node.rawMarkdownBody,
       url: url || title,
       date,
       imageUrl,

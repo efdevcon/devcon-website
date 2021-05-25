@@ -42,7 +42,7 @@ export const News = ({ data: rawData }: NewsProps) => {
         <div className={css['slider']}>
           <Slider {...settings}>
             {newsItems.map((item: any, index) => {
-              return <Card className={`${css['card']} ${css['slider']}`} key={index} {...item} />
+              return <Card className={`${css['card']} ${css['slider']}`} key={index} metadata={[item.date]} {...item} />
             })}
           </Slider>
         </div>
@@ -53,7 +53,7 @@ export const News = ({ data: rawData }: NewsProps) => {
             })}
           </div>
           <div className={css['feed']}>
-            <Feed inline title={intl.formatMessage({ id: 'news feed' })} items={newsItems} />
+            <Feed inline title={intl.formatMessage({ id: 'news feed' })} items={newsItems /*.slice(2)*/} />
           </div>
         </div>
       </div>

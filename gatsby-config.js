@@ -1,4 +1,4 @@
-const { createProxyMiddleware } = require("http-proxy-middleware")
+const { createProxyMiddleware } = require('http-proxy-middleware')
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://devcon.org',
@@ -23,11 +23,12 @@ module.exports = {
     siteUrl: siteUrl,
   },
   developMiddleware: app => {
-    app.use('/api/',
+    app.use(
+      '/api/',
       createProxyMiddleware({
         target: 'http://localhost:9000',
         pathRewrite: {
-          '^/\\.netlify/functions': ''
+          '^/\\.netlify/functions': '',
         },
       })
     )
@@ -294,20 +295,20 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        // Point to real blog domain when it's deployed
-        url: `http://localhost:4000/rss/categories/devcon.xml`,
-        name: `DevconBlog`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-        parserOption: {
-          customFields: {
-            item: ['efblog:image'],
-          },
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-rss-feed`,
+    //   options: {
+    //     // Point to real blog domain when it's deployed
+    //     url: `http://localhost:4000/rss/categories/devcon.xml`,
+    //     name: `DevconBlog`,
+    //     // Optional
+    //     // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+    //     parserOption: {
+    //       customFields: {
+    //         item: ['efblog:image'],
+    //       },
+    //     },
+    //   },
+    // },
   ],
 }

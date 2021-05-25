@@ -38,13 +38,9 @@ type Props = {
   }
 }
 
-const Icon = ({ item, className }: { className?: string; item: FeedItem }) => {
-  let clazzName = 'icon'
-
-  if (clazzName) clazzName += ` ${className}`
-
+const Icon = ({ item }: { item: FeedItem }) => {
   if (item.url.includes('twitter')) {
-    return <IconTwitter className={clazzName} />
+    return <IconTwitter className={`icon ${css['icon']}`} />
   }
 
   return null
@@ -56,8 +52,6 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
   const filteredItems = filterOptions ? filteredData : items
   const sortedItems = sortOptions ? sortOptions.sort(filteredItems, sortBy) : filteredItems
 
-  console.log(sortOptions, sortBy, 'sort by')
-
   const formattedItems = sortedItems.map((item: FeedItem, index) => {
     return (
       <Link to={item.url} key={item.url}>
@@ -65,7 +59,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
           <div className={css['metadata']}>
             <p className={css['date']}>{moment.utc(item.date).format('MMM D, YYYY')}</p>
             <p className={css['author']}>{item.author}</p>
-            <Icon item={item} className={css['icon-desktop']} />
+            {/* <Icon item={item} className={css['icon-desktop']} /> */}
           </div>
           <div className={css['text']}>
             <p className={`${css['title']} title`}>{item.title}</p>
@@ -90,8 +84,8 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
               </div>
             )}
           </div>
+          <Icon item={item} />
         </div>
-        <Icon item={item} />
       </Link>
     )
   })
