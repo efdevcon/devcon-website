@@ -1,15 +1,6 @@
 ---
 Summary: 'The main objective of this DIP is to replicate the experience of using POAP in Devcon 5 (Osaka). This being establishing the process for which every attendee gets one (and only one) POAP redemption code when they show up at the registration desk.'
-Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-8.md
-DIP: 8
 Title: Proof of Attendance Protocol - basics
-Status: Accepted
-Themes: Social
-Tags: Event Production
-Authors: Patricio Worthalter <worthalter@poap.xyz>
-Resources Required: Strong operations supports
-Discussion: https://forum.devcon.org/t/issuance-of-proof-of-attendance-nfts-with-poap/76/5
-Created: 2020-08-17
 ---
 
 ## Summary of Proposal
