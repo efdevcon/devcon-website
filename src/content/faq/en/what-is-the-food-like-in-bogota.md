@@ -1,7 +1,5 @@
 ---
 title: What is the food like in Bogota?
-category: location
-order: 7
 ---
 
 Below are a few of the popular dishes, but one can expect most of the food found in Bogota to be typical Latin American dishes, surrounded by lots of fresh produce.
