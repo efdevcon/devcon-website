@@ -1,15 +1,6 @@
 ---
 Summary: 'Implement an attestation-based ticketing system on Ethereum for Devcon. The solution will use two attestations, a ticket attestation and an email attestation, to verify the authenticity of a ticket holder for both on-chain and off-chain use cases. This system will function independently of Pretix.'
-Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-6.md
-DIP: 6
 Title: Attestation based ticketing solution for Devcon
-Status: Accepted
-Themes: RFP-1 On-chain Ticketing
-Tags: Event Operations, Event Production, Software
-Authors: Weiwu Zhang <weiwu.zhang@alphawallet.com>, Sunil Tom <sunil.tom.jose@alphawallet.com>, Victor Zhang <victor.zhang@alphawallet.com>
-Resources Required: software development, operations Support and tech support
-Discussion: https://forum.devcon.org/t/attestation-based-ticketing-system-that-is-managed-by-ethereum-smart-contracts-and-integrated-with-pretix-re-rfp-1-onchain-ticketing/54
-Created: 2020-08-13
 ---
 
 ## Summary of Proposal
