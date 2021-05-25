@@ -1,6 +1,5 @@
 ---
 title: About Devcon
-template: content
 ---
 
 Devcon is an annual gathering held by the Ethereum Foundation. It is an intensive introduction for new Ethereum explorers, a global family reunion for those already embedded within our ecosystem, and a source of energy and creativity for all.
