@@ -209,6 +209,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'tags',
+        path: `${__dirname}/src/content/tags`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'sections',
         path: `${__dirname}/src/content/sections`,
       },

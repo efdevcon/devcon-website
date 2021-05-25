@@ -14,6 +14,7 @@ import { Snapshot } from 'src/components/common/snapshot'
 import { TwoColumns } from 'src/components/common/sections/2column'
 import { useIntl } from 'gatsby-plugin-intl'
 import { pageHOC } from 'src/context/pageHOC'
+import { PageContentSection } from './page-content-section'
 
 export default pageHOC(function CityGuideTemplate({ data }: any) {
   const intl = useIntl()
@@ -60,28 +61,26 @@ export default pageHOC(function CityGuideTemplate({ data }: any) {
         ]}
       />
 
-      <div className="section">
-        <div className={'content ' + css['location']}>
-          <TwoColumns
-            id="about"
-            title={intl.formatMessage({ id: 'location_title' })}
-            left={page.html}
-            right={<Snapshot />}
-          />
+      <PageContentSection>
+        <TwoColumns
+          id="about"
+          title={intl.formatMessage({ id: 'location_title' })}
+          left={page.html}
+          right={<Snapshot />}
+        />
 
-          <section id="carousel" className={css['section']}>
-            <Carousel />
-          </section>
+        <section id="carousel" className={css['section']}>
+          <Carousel />
+        </section>
 
-          <TwoColumns id="things-todo" left={todo.left} right={todo.right} />
+        <TwoColumns id="things-todo" left={todo.left} right={todo.right} />
 
-          <TwoColumns id="why-bogota" title={why.title} left={why.left} right={why.right} />
+        <TwoColumns id="why-bogota" title={why.title} left={why.left} right={why.right} />
 
-          <section id="FAQ" className={css['section']}>
-            <FAQ data={faq} customCategoryTitle="Frequently Asked Questions" />
-          </section>
-        </div>
-      </div>
+        <section id="FAQ" className={css['section']}>
+          <FAQ data={faq} customCategoryTitle="Frequently Asked Questions" />
+        </section>
+      </PageContentSection>
     </Content>
   )
 })
@@ -99,6 +98,7 @@ export const query = graphql`
         description
       }
     }
+    ...Tags
     ...NavigationData
     ...LatestNewsItem
     ...Categories

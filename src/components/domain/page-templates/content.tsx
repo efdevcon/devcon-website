@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { pageHOC } from 'src/context/pageHOC'
+import { PageContentSection } from './page-content-section'
 
 export default pageHOC(function ContentTemplate({ data, location }: any) {
   const page = data.markdownRemark
@@ -11,8 +12,10 @@ export default pageHOC(function ContentTemplate({ data, location }: any) {
     <Content>
       <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
 
-      <h2>{page.frontmatter.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
+      <PageContentSection>
+        <h2>{page.frontmatter.title}</h2>
+        <div dangerouslySetInnerHTML={{ __html: page.html }} />
+      </PageContentSection>
     </Content>
   )
 })
@@ -30,6 +33,7 @@ export const query = graphql`
         description
       }
     }
+    ...Tags
     ...LatestNewsItem
     ...NavigationData
   }

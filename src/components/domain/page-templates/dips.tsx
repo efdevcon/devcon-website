@@ -57,6 +57,7 @@ export const query = graphql`
         description
       }
     }
+    ...Tags
     ...DipsData
     ...LatestNewsItem
     ...NavigationData

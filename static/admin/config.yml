@@ -41,7 +41,7 @@ collections:
           i18n: 'duplicate',
           required: false,
           collection: 'tags',
-          value_field: 'title',
+          value_field: '{{slug}}',
           search_fields: ['title'],
           multiple: true,
         }
@@ -50,7 +50,7 @@ collections:
           label: 'Template',
           widget: 'select',
           i18n: 'duplicate',
-          options: ['none', 'content', 'dips', 'faq', 'city-guide', 'road-to-devcon'],
+          options: ['none', 'blogs', 'city-guide', 'content', 'dips', 'faq', news', 'road-to-devcon'],
           default: 'content',
         }
       - {

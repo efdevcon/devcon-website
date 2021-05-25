@@ -66,7 +66,7 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
       })
     }
 
-    if (collection === 'categories') {
+    if (collection === 'categories' || collection === 'tags') {
       const paths = slug.split('/').filter(String)
       const lang = paths[0]
       const id = paths[1]

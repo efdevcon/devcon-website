@@ -7,6 +7,7 @@ import { formatNewsData } from 'src/components/domain/news/formatNewsData'
 import { Feed } from 'src/components/common/feed'
 import css from './news.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
+import { PageContentSection } from './page-content-section'
 
 export default pageHOC(function NewsTemplate({ data }: any) {
   const page = data.markdownRemark
@@ -17,65 +18,61 @@ export default pageHOC(function NewsTemplate({ data }: any) {
       <SEO title={page.frontmatter.title} lang={page.fields.lang} />
 
       <PageHero title={page.frontmatter.title} />
-
-      <div className="section">
-        <div className="content">
-          <Feed
-            title="Devcon updates"
-            items={newsItems}
-            sortOptions={{
-              options: [
-                {
-                  text: 'RECENT',
-                  value: 'recent',
-                },
-                {
-                  text: 'OLDEST',
-                  value: 'oldest',
-                },
-              ],
-              sort: (items: any[], sortBy: string) => {
-                return items.sort((a, b) => {
-                  if (a.date < b.date) {
-                    return sortBy === 'recent' ? -1 : 1
-                  } else if (a.date === b.date) {
-                    return 0
-                  } else {
-                    return sortBy === 'recent' ? 1 : -1
-                  }
-                })
+      <PageContentSection>
+        <Feed title="Devcon updates"
+          items={newsItems}
+          sortOptions={{
+            options: [
+              {
+                text: 'RECENT',
+                value: 'recent',
               },
-            }}
-            filterOptions={{
-              filters: [
-                {
-                  text: 'All',
-                  value: 'all',
-                },
-                {
-                  text: 'Tickets',
-                  value: 'tickets',
-                },
-                {
-                  text: 'Corona',
-                  value: 'corona',
-                },
-                {
-                  text: 'Event Date',
-                  value: 'event date',
-                },
-              ],
-              filterFunction: activeFilter => {
-                return !activeFilter || activeFilter === 'all'
-                  ? newsItems
-                  : newsItems.filter(newsItem => {
-                      return newsItem?.tags?.some(tag => tag.toLowerCase() === activeFilter.toLowerCase())
-                    })
+              {
+                text: 'OLDEST',
+                value: 'oldest',
               },
-            }}
-          />
-        </div>
-      </div>
+            ],
+            sort: (items: any[], sortBy: string) => {
+              return items.sort((a, b) => {
+                if (a.date < b.date) {
+                  return sortBy === 'recent' ? -1 : 1
+                } else if (a.date === b.date) {
+                  return 0
+                } else {
+                  return sortBy === 'recent' ? 1 : -1
+                }
+              })
+            },
+          }}
+          filterOptions={{
+            filters: [
+              {
+                text: 'All',
+                value: 'all',
+              },
+              {
+                text: 'Tickets',
+                value: 'tickets',
+              },
+              {
+                text: 'Corona',
+                value: 'corona',
+              },
+              {
+                text: 'Event Date',
+                value: 'event date',
+              },
+            ],
+            filterFunction: activeFilter => {
+              return !activeFilter || activeFilter === 'all'
+                ? newsItems
+                : newsItems.filter(newsItem => {
+                    return newsItem?.tags?.some(tag => tag.toLowerCase() === activeFilter.toLowerCase())
+                  })
+            },
+          }}
+        />
+      </PageContentSection>
     </Content>
   )
 })
@@ -91,6 +88,7 @@ export const query = graphql`
       }
       html
     }
+    ...Tags
     ...NavigationData
     ...LatestNewsItem
     ...NewsData

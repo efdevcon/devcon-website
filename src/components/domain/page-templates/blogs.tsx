@@ -6,6 +6,7 @@ import { PageHero } from 'src/components/common/page-hero'
 import css from './blogs.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
 import { Feed } from '../blog-overview/Feed'
+import { PageContentSection } from './page-content-section'
 
 export default pageHOC(function BlogsTemplate({ data }: any) {
   const page = data.markdownRemark
@@ -16,11 +17,9 @@ export default pageHOC(function BlogsTemplate({ data }: any) {
 
       <PageHero title={page.frontmatter.title} />
 
-      <div className="section">
-        <div className="content">
-          <Feed />
-        </div>
-      </div>
+      <PageContentSection>
+        <Feed />
+      </PageContentSection>
     </Content>
   )
 })
@@ -36,6 +35,7 @@ export const query = graphql`
       }
       html
     }
+    ...Tags
     ...NavigationData
     ...LatestNewsItem
     ...NewsData

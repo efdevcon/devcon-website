@@ -2,6 +2,7 @@ import { Link } from 'src/types/Link'
 import { NavigationData } from 'src/types/NavigationData'
 import { Notification } from 'src/types/Notification'
 import { FooterData } from 'src/types/FooterData'
+import { Tag } from 'src/types/Tag'
 
 export function ToNavigationData(nodes: any): NavigationData {
   return {
@@ -43,4 +44,14 @@ export function ToLink(node: any): Link {
     type: node.type,
     links: node.links?.map((i: any) => ToLink(i)),
   } as Link
+}
+
+export function ToTags(source: any): Array<Tag> {
+  if (!source?.frontmatter?.tagItems) { 
+    return []
+  }
+
+  return source?.frontmatter?.tagItems?.map((i: any) => { 
+    return { slug: i.slug, title: i.title }
+  })
 }

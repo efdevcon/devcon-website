@@ -1,5 +1,7 @@
 ---
 title: Acerca de Devcon
+tags:
+  - devcon
 template: content
 ---
 
