@@ -1,7 +1,5 @@
 ---
 title: What is the plan regarding COVID-19?
-category: general
-order: 1
 ---
 
 Our team has been actively monitoring the COVID-19 situation, both in Colombia and around the world. We’re keeping a keen eye on the number of cases, rate of vaccinations, and projected trends, and we’re staying optimistic that we’ll be able to meet in-person in Bogota for Devcon soon™.
