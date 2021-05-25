@@ -1,16 +1,6 @@
 ---
 Summary: 'Addition to CO2ken"s [DIP–1](https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-1.md) clarifying the collection and allocation of offsetting contributions through a DAO which gives contributors the possibility to vote for the offset projects they want to support.'
-Github URL: https://github.com/efdevcon/DIPs/blob/master/DIPs/DIP-12.md
-DIP: 12
 Title: Addition to DIP–1 — Make Devcon Carbon Neutral
-Status: Draft
-Themes: Ticketing, Environmental Sustainability
-Tags: Event production, Software
-Authors: Raphaël Haupt <raphael@curvelabs.eu>
-Resources Required: Tech support, Communication support
-Discussion: https://forum.devcon.org/t/co2ken-carbon-neutral-devcon/27
-Requires: DIP-1
-Created: 2020-10-22
 ---
 
 ## Summary of Proposal
