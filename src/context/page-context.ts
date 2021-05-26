@@ -1,13 +1,13 @@
 import { createContext, useContext } from 'react'
 import { NavigationData } from 'src/types/NavigationData'
 import { Notification } from 'src/types/Notification'
-import { Tag } from 'src/types/Tag'
+import { Page } from 'src/types/Page'
 
 export interface PageContextType {
   navigation: NavigationData
   notification: Notification
   location: any
-  tags: Array<Tag>
+  current: Page | undefined
 }
 
 export const usePageContext = () => useContext<PageContextType | undefined>(PageContext)

@@ -4,6 +4,7 @@ import { useLocation } from '@reach/router'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Twitter } from './Twitter'
 import { TITLE } from 'src/utils/constants'
+import { usePageContext } from 'src/context/page-context'
 
 interface SEOProps {
   title?: string
@@ -15,11 +16,34 @@ interface SEOProps {
 export function SEO(props: SEOProps) {
   const intl = useIntl()
   const location = useLocation()
+  const pageContext = usePageContext();
 
-  const titleTemplate = props.title ? `%s · ${TITLE}` : TITLE
-  const title = props.title || TITLE
-  const description = props.description || intl.formatMessage({ id: 'rtd_intro' })
-  const lang = props.lang || intl.locale || intl.defaultLocale
+  // props > pageContext > default values
+  let title = TITLE
+  if (pageContext?.current?.title) { 
+    title = pageContext?.current.title
+  }
+  if (props.title) {
+    title = props.title
+  }
+
+  let description = intl.formatMessage({ id: 'rtd_intro' })
+  if (pageContext?.current?.description) { 
+    description = pageContext?.current?.description
+  }
+  if (props.description) {
+    description = props.description
+  }
+
+  let lang = intl.locale || intl.defaultLocale
+  if (pageContext?.current?.lang) { 
+    lang = pageContext?.current.lang
+  }
+  if (props.lang) {
+    lang = props.lang
+  }
+
+  const titleTemplate = (props.title || pageContext?.current?.title) ? `%s · ${TITLE}` : TITLE
   const canonical = props.canonicalUrl || ''
 
   const image = 'https://www.devcon.org/assets/images/rtd-social.png'

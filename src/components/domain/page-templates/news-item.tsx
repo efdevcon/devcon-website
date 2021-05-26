@@ -5,7 +5,7 @@ import Content from 'src/components/common/layouts/content'
 import { PageHero } from 'src/components/common/page-hero'
 import { formatNewsData } from 'src/components/domain/news/formatNewsData'
 import { NewsPage } from 'src/components/domain/news/page/NewsPage'
-import css from './news.module.scss'
+import themes from './themes.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
 
 export default pageHOC(function NewsTemplate({ data, location }: any) {
@@ -13,7 +13,7 @@ export default pageHOC(function NewsTemplate({ data, location }: any) {
   const newsItem = formatNewsData(data.newsData.nodes)[0]
 
   return (
-    <Content theme={css['theme']}>
+    <Content theme={themes['orange']}>
       <SEO title={page.frontmatter.title} lang={page.fields.lang} />
 
       <PageHero title={page.frontmatter.title} background={newsItem.imageUrl} />

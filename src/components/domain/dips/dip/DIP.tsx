@@ -5,11 +5,10 @@ import { Links } from 'src/components/domain/dips/overview/proposals/Proposals'
 import { PageHero } from 'src/components/common/page-hero'
 import { Link } from 'src/components/common/link'
 import { Label } from 'src/components/common/label'
-import dipLogo from 'src/assets/images/dip-logo.svg'
 import { Table } from 'src/components/common/table'
 import { mapToDIP } from 'src/hooks/useDIPs'
 import leftPad from 'src/utils/left-pad'
-import { DIP as DIPType } from 'src/types/dip'
+import { DIP as DIPType } from 'src/types/DIP'
 import ArrowLeft from 'src/assets/icons/arrow_left.svg'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 import { useIntl } from 'gatsby-plugin-intl'
@@ -82,8 +81,6 @@ export function DIP(props: { dip: DIPType }) {
   return (
     <div className={css['dip-container']}>
       <PageHero
-        type="contribute"
-        logo={dipLogo}
         renderCustom={() => {
           return (
             <div className={css['nav']}>

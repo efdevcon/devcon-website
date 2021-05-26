@@ -3,14 +3,14 @@ import { graphql } from 'gatsby'
 import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { DIP } from 'src/components/domain/dips/dip'
-import css from './dips.module.scss'
+import themes from './themes.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
 
 export default pageHOC(function DIPTemplate({ data, location }: any) {
   const page = data.markdownRemark
 
   return (
-    <Content theme={css['theme']}>
+    <Content theme={themes['teal']}>
       <SEO title={page.frontmatter.Title} />
 
       <DIP dip={data.markdownRemark} />

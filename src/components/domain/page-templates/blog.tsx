@@ -3,12 +3,13 @@ import { graphql } from 'gatsby'
 import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { pageHOC } from 'src/context/pageHOC'
+import themes from './themes.module.scss'
 
 export default pageHOC(function BlogTemplate({ data }: any) {
   const blog = data.markdownRemark
 
   return (
-    <Content>
+    <Content theme={themes['blue']}>
       <SEO title={blog.frontmatter.Title} canonicalUrl={blog.frontmatter.permaLink} />
 
       <h2>{blog.frontmatter.title}</h2>

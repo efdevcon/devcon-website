@@ -1,23 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { PageHero } from 'src/components/common/page-hero'
 import { formatNewsData } from 'src/components/domain/news/formatNewsData'
 import { Feed } from 'src/components/common/feed'
-import css from './news.module.scss'
+import themes from './themes.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
 import { PageContentSection } from './page-content-section'
 
 export default pageHOC(function NewsTemplate({ data }: any) {
-  const page = data.markdownRemark
   const newsItems = formatNewsData(data.newsData.nodes)
 
   return (
-    <Content theme={css['theme']}>
-      <SEO title={page.frontmatter.title} lang={page.fields.lang} />
+    <Content theme={themes['orange']}>
+      <PageHero />
 
-      <PageHero title={page.frontmatter.title} />
       <PageContentSection>
         <Feed title="Devcon updates"
           items={newsItems}
@@ -79,16 +76,7 @@ export default pageHOC(function NewsTemplate({ data }: any) {
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-      }
-      fields {
-        lang
-      }
-      html
-    }
-    ...Tags
+    ...Page
     ...NavigationData
     ...LatestNewsItem
     ...NewsData

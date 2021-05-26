@@ -15,8 +15,8 @@ export function PageContentSection(props: Props) {
         <div className="content">
             {props.children}
 
-            {props.hideTags !== true && pageContext?.tags &&
-              <Tags items={pageContext?.tags} viewOnly={true} />
+            {props.hideTags !== true && pageContext?.current?.tags &&
+              <Tags items={pageContext?.current.tags} viewOnly={true} />
             }
         </div>
       </div>

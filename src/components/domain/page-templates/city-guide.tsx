@@ -1,24 +1,22 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/domain/seo'
 import { PageHero } from 'src/components/common/page-hero'
 import { FAQ } from 'src/components/domain/faq'
 import { ToFaqData } from 'src/components/domain/faq/queryMapper'
 import Content from 'src/components/common/layouts/content'
 import css from './templates.module.scss'
-import themeCss from './city-guide.module.scss'
-
-import PageHeroLogo from 'src/assets/images/logo-city-guide.svg'
+import themes from './themes.module.scss'
 import { Carousel } from 'src/components/common/carousel'
 import { Snapshot } from 'src/components/common/snapshot'
 import { TwoColumns } from 'src/components/common/sections/2column'
 import { useIntl } from 'gatsby-plugin-intl'
 import { pageHOC } from 'src/context/pageHOC'
 import { PageContentSection } from './page-content-section'
+import { usePageContext } from 'src/context/page-context'
 
 export default pageHOC(function CityGuideTemplate({ data }: any) {
   const intl = useIntl()
-  const page = data.markdownRemark
+  const pageContext = usePageContext()
   const faqs = ToFaqData(data)
   const faq = faqs.filter(i => i.id === 'location')
   const todo = {
@@ -35,12 +33,8 @@ export default pageHOC(function CityGuideTemplate({ data }: any) {
   }
 
   return (
-    <Content theme={themeCss['theme']}>
-      <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
-
+    <Content theme={themes['purple']}>
       <PageHero
-        title={page.frontmatter.title}
-        logo={PageHeroLogo}
         navigation={[
           {
             title: intl.formatMessage({ id: 'location_title' }),
@@ -65,7 +59,7 @@ export default pageHOC(function CityGuideTemplate({ data }: any) {
         <TwoColumns
           id="about"
           title={intl.formatMessage({ id: 'location_title' })}
-          left={page.html}
+          left={pageContext?.current?.body}
           right={<Snapshot />}
         />
 
@@ -87,18 +81,7 @@ export default pageHOC(function CityGuideTemplate({ data }: any) {
 
 export const query = graphql`
   query($slug: String!, $language: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      fields {
-        lang
-      }
-      frontmatter {
-        title
-        template
-        description
-      }
-    }
-    ...Tags
+    ...Page
     ...NavigationData
     ...LatestNewsItem
     ...Categories

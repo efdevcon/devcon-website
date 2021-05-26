@@ -1,5 +1,5 @@
 import React from 'react'
-import { ToNavigationData, ToNotification, ToTags } from 'src/context/query-mapper'
+import { ToNavigationData, ToNotification, ToPage, ToTags } from 'src/context/query-mapper'
 import { PageContext } from './page-context'
 
 type pageProps = {
@@ -16,7 +16,7 @@ export const pageHOC = (
     navigation: ToNavigationData(props.data.navigationData.nodes),
     notification: ToNotification(props.data.latestNewsItem.nodes[0]),
     ...(mapDataToContext && mapDataToContext(props)),
-    tags: props.data.tags ? ToTags(props.data.tags) : []
+    current: props.data.page ? ToPage(props.data.page) : undefined
   }
 
   return (

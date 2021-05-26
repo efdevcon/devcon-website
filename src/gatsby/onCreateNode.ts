@@ -24,6 +24,7 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
     if (collection === 'pages') {
       const paths = slug.split('/').filter(String)
       const lang = paths[0]
+      const id = paths[1]
       const level = frontmatter.parent ? 1 : 0
       const parent = frontmatter.parent ? '/' + lang + '/' + frontmatter.parent + '/' : ''
 
@@ -45,6 +46,12 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
         node,
         name: 'parent',
         value: parent,
+      })
+      
+      createNodeField({
+        node,
+        name: 'id',
+        value: id,
       })
     }
 

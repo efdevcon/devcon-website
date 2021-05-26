@@ -3,6 +3,7 @@ import { NavigationData } from 'src/types/NavigationData'
 import { Notification } from 'src/types/Notification'
 import { FooterData } from 'src/types/FooterData'
 import { Tag } from 'src/types/Tag'
+import { Page } from 'src/types/Page'
 
 export function ToNavigationData(nodes: any): NavigationData {
   return {
@@ -44,6 +45,19 @@ export function ToLink(node: any): Link {
     type: node.type,
     links: node.links?.map((i: any) => ToLink(i)),
   } as Link
+}
+
+export function ToPage(source: any): Page {
+  return {
+    title: source.frontmatter.title,
+    description: source.frontmatter.description,
+    body: source.html,
+    template: source.frontmatter.template,
+    tags: ToTags(source),
+    lang: source.fields.lang,
+    id: source.fields.id,
+    slug: source.fields.slug
+  } as Page
 }
 
 export function ToTags(source: any): Array<Tag> {
