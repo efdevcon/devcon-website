@@ -58,7 +58,7 @@ export const PageHero = (props: PageHeroProps) => {
           <p className={`${css['page-category']} font-xs text-uppercase`}>{pageCategory}</p>
 
           <div className={css['title-block']}>
-            <h1 className="font-massive">{props.title || pageContext?.current.title}</h1>
+            <h1 className="font-massive">{props.title || pageContext?.current?.title}</h1>
 
             {props.cta && (
               <div className={css['buttons']}>
