@@ -13,7 +13,7 @@ export const tagsResolver = {
                 eq: 'tags',
               },
               id: {
-                in: pageTags
+                in: pageTags,
               },
               lang: {
                 eq: language,
@@ -25,10 +25,10 @@ export const tagsResolver = {
       })
       .then((tags: any) => {
         return tags.map((i: any) => {
-          return { 
+          return {
             id: i.id,
             slug: i.fields.id,
-            title: i.frontmatter.title
+            title: i.frontmatter.title,
           }
         })
       })

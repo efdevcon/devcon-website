@@ -56,7 +56,6 @@ export default pageHOC(function DIPsTemplate({ data }: any) {
         <Contribute dipDescription={pageContext?.current?.body} contributors={data.contributors.nodes} />
         <Proposals dips={React.useMemo(() => data.dips.nodes.map((dip: DIP) => mapToDIP(dip)), [data.dips])} />
       </PageContentSection>
-
     </Content>
   )
 })
@@ -83,7 +82,7 @@ export function mapToDIP(source: any): DIP {
 }
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...DipsData
     ...LatestNewsItem

@@ -11,9 +11,9 @@ export default pageHOC(function ContentTemplate() {
   const pageContext = usePageContext()
 
   return (
-    <Content theme={themes['orange']} >
+    <Content theme={themes['orange']}>
       <PageHero />
-      
+
       <PageContentSection>
         <h2>{pageContext?.current?.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: pageContext?.current?.body ?? '' }} />
@@ -23,7 +23,7 @@ export default pageHOC(function ContentTemplate() {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...LatestNewsItem
     ...NavigationData

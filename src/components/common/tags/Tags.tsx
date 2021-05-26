@@ -15,16 +15,19 @@ export function Tags(props: Props) {
 
   return (
     <div className={className}>
-      {props.items.map((item) => {
-        if (props.viewOnly) { 
-          return <div key={item.slug} className="label bold">
-            {item.title}
-          </div>
-        }
-        else { 
-          return <Link key={item.slug} className="label bold" to={'/en/tags/' + item.slug}>
-            {item.title}
-          </Link>
+      {props.items.map(item => {
+        if (props.viewOnly) {
+          return (
+            <div key={item.slug} className="label bold">
+              {item.title}
+            </div>
+          )
+        } else {
+          return (
+            <Link key={item.slug} className="label bold" to={'/en/tags/' + item.slug}>
+              {item.title}
+            </Link>
+          )
         }
       })}
     </div>

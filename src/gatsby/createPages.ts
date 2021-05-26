@@ -38,10 +38,10 @@ async function createContentPages({ actions, graphql, reporter }: CreatePagesArg
   }
 
   result.data.allMarkdownRemark.nodes.forEach((node: any) => {
-    if (node.url) return; // No reason to create pages for external news
+    if (node.url) return // No reason to create pages for external news
 
     createDynamicPage(actions, node.fields.slug, node.frontmatter.template, node.fields.lang)
-  });
+  })
 }
 
 async function createNewsPages({ actions, graphql, reporter }: CreatePagesArgs) {

@@ -72,7 +72,7 @@ export default function RoadToDevcon({ data }: any) {
 }
 
 export const query = graphql`
-  query($language: String!) {
+  query ($language: String!) {
     navigationData: allMarkdownRemark(
       filter: { frontmatter: { title: { eq: "road-to-devcon" } }, fields: { collection: { eq: "navigation" } } }
     ) {

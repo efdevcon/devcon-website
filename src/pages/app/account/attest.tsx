@@ -1,4 +1,4 @@
-import { useLocation } from '@reach/router';
+import { useLocation } from '@reach/router'
 import React from 'react'
 import { useAccountContext } from 'src/context/account-context'
 
@@ -6,7 +6,7 @@ export default function Attest() {
   const isBrowser = typeof window !== 'undefined'
   const accountContext = useAccountContext()
 
-  const search = new URLSearchParams(useLocation().search);
+  const search = new URLSearchParams(useLocation().search)
   const ticketId = search.get('ticketId')
 
   if (!accountContext.account) {
@@ -17,22 +17,28 @@ export default function Attest() {
     <div>
       <h2>Attest Ticket</h2>
 
-      {isBrowser && 
-      <div>
-        <p>
-          <small><i>*AlphaWallet integration</i></small>
-        </p>
-        <br/>
+      {isBrowser && (
+        <div>
+          <p>
+            <small>
+              <i>*AlphaWallet integration</i>
+            </small>
+          </p>
+          <br />
 
-        <p>Use your web3 account to attest your ticket.</p>
-        {ticketId && <p>Ticket ID: <b>{ticketId}</b></p>}
-        <br/>
+          <p>Use your web3 account to attest your ticket.</p>
+          {ticketId && (
+            <p>
+              Ticket ID: <b>{ticketId}</b>
+            </p>
+          )}
+          <br />
 
-        <button type="button" onClick={() => console.log('Attesting ticket', ticketId)}>
-          Attest
-        </button>
-      </div>
-      }
+          <button type="button" onClick={() => console.log('Attesting ticket', ticketId)}>
+            Attest
+          </button>
+        </div>
+      )}
     </div>
   )
 }

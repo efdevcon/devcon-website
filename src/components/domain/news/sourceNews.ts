@@ -14,7 +14,7 @@
 // const NewsFactory = () => {
 //   const api = {
 //     fetchNews: () => {
-//       async 
+//       async
 //     },
 //     standardizeData: () => {
 
@@ -26,7 +26,6 @@
 
 //   return api;
 // }
-
 
 // const fetchNews = async () => {
 //   const fetchBlog = async () => {

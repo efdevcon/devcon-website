@@ -11,23 +11,25 @@ const sortNews = (data: any): Array<NewsItem> => {
 }
 
 export const formatNewsData = (data: any): Array<NewsItem> => {
-  return sortNews(data.map((node: any) => {
-    const { date, description, author, title, url, imageUrl, tags } = node.frontmatter
+  return sortNews(
+    data.map((node: any) => {
+      const { date, description, author, title, url, imageUrl, tags } = node.frontmatter
 
-    // const formattedDate = moment(date).format('ll')
-    // const formattedMetaData = [formattedDate, metadata]
+      // const formattedDate = moment(date).format('ll')
+      // const formattedMetaData = [formattedDate, metadata]
 
-    // Need a stronger regex here probably
-    // if (url.includes('twitter')) formattedMetaData.push(<Twitter />)
+      // Need a stronger regex here probably
+      // if (url.includes('twitter')) formattedMetaData.push(<Twitter />)
 
-    return {
-      title,
-      description: node.rawMarkdownBody,
-      url: url || title,
-      date,
-      imageUrl,
-      tags,
-      author
-    } as NewsItem
-  }));
+      return {
+        title,
+        description: node.rawMarkdownBody,
+        url: url || title,
+        date,
+        imageUrl,
+        tags,
+        author,
+      } as NewsItem
+    })
+  )
 }

@@ -9,7 +9,7 @@ export const query = graphql`
         template
         translationVerified
         tags
-        tagItems(language: $language) { 
+        tagItems(language: $language) {
           id
           slug
           title

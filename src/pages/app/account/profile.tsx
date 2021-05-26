@@ -11,13 +11,15 @@ export default function ProfilePage(props: RouteComponentProps) {
   return (
     <div>
       <h2>Profile</h2>
-      <a href='#' role='button' onClick={() => accountContext.logout(accountContext.account?._id)}>Logout</a>
+      <a href="#" role="button" onClick={() => accountContext.logout(accountContext.account?._id)}>
+        Logout
+      </a>
 
-      {isBrowser &&
+      {isBrowser && (
         <Suspense fallback={<div />}>
           <Profile />
         </Suspense>
-      }
+      )}
     </div>
   )
 }

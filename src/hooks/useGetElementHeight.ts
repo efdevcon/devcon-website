@@ -26,7 +26,7 @@ const useGetElementHeight = (elementID: string) => {
 
           setElementHeight(borderBoxSize.blockSize)
         } else {
-          setElementHeight(el.offsetHeight);
+          setElementHeight(el.offsetHeight)
         }
       })
 

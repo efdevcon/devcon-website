@@ -44,7 +44,7 @@ export default pageHOC(function Index({ data, location }: any) {
 })
 
 export const query = graphql`
-  query($language: String!) {
+  query ($language: String!) {
     ...NavigationData
     ...LatestNewsItem
     ...NewsData

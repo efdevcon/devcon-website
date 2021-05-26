@@ -80,7 +80,7 @@ export default pageHOC(function CityGuideTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...NavigationData
     ...LatestNewsItem

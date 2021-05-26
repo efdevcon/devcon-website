@@ -16,11 +16,11 @@ interface SEOProps {
 export function SEO(props: SEOProps) {
   const intl = useIntl()
   const location = useLocation()
-  const pageContext = usePageContext();
+  const pageContext = usePageContext()
 
   // props > pageContext > default values
   let title = TITLE
-  if (pageContext?.current?.title) { 
+  if (pageContext?.current?.title) {
     title = pageContext?.current.title
   }
   if (props.title) {
@@ -28,7 +28,7 @@ export function SEO(props: SEOProps) {
   }
 
   let description = intl.formatMessage({ id: 'rtd_intro' })
-  if (pageContext?.current?.description) { 
+  if (pageContext?.current?.description) {
     description = pageContext?.current?.description
   }
   if (props.description) {
@@ -36,14 +36,14 @@ export function SEO(props: SEOProps) {
   }
 
   let lang = intl.locale || intl.defaultLocale
-  if (pageContext?.current?.lang) { 
+  if (pageContext?.current?.lang) {
     lang = pageContext?.current.lang
   }
   if (props.lang) {
     lang = props.lang
   }
 
-  const titleTemplate = (props.title || pageContext?.current?.title) ? `%s · ${TITLE}` : TITLE
+  const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${TITLE}` : TITLE
   const canonical = props.canonicalUrl || ''
 
   const image = 'https://www.devcon.org/assets/images/rtd-social.png'

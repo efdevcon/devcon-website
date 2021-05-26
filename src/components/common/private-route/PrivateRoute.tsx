@@ -10,9 +10,11 @@ export const PrivateRoute = ({ component: Component, location, ...rest }: Privat
   const accountContext = useAccountContext()
 
   if (!accountContext.account && accountContext.loading) {
-    return <div>
-      <p>Loading...</p>
-    </div>
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    )
   }
 
   if (!accountContext.account && location?.pathname !== `/app/login`) {

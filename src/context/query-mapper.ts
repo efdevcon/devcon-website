@@ -56,16 +56,16 @@ export function ToPage(source: any): Page {
     tags: ToTags(source),
     lang: source.fields.lang,
     id: source.fields.id,
-    slug: source.fields.slug
+    slug: source.fields.slug,
   } as Page
 }
 
 export function ToTags(source: any): Array<Tag> {
-  if (!source?.frontmatter?.tagItems) { 
+  if (!source?.frontmatter?.tagItems) {
     return []
   }
 
-  return source?.frontmatter?.tagItems?.map((i: any) => { 
+  return source?.frontmatter?.tagItems?.map((i: any) => {
     return { slug: i.slug, title: i.title }
   })
 }

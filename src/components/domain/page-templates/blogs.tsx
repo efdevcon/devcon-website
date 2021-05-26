@@ -8,7 +8,6 @@ import { Feed } from '../blog-overview/Feed'
 import { PageContentSection } from './page-content-section'
 
 export default pageHOC(function BlogsTemplate() {
-
   return (
     <Content theme={themes['blue']}>
       <PageHero />
@@ -21,7 +20,7 @@ export default pageHOC(function BlogsTemplate() {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...NavigationData
     ...LatestNewsItem

@@ -16,7 +16,7 @@ import { PageContentSection } from './page-content-section'
 import { usePageContext } from 'src/context/page-context'
 
 export default pageHOC(function FaqTemplate({ data, location }: any) {
-  const pageContext = usePageContext();
+  const pageContext = usePageContext()
   const faq = ToFaqData(data)
   const [searchFilter, setSearchFilter] = useState('')
 
@@ -27,7 +27,7 @@ export default pageHOC(function FaqTemplate({ data, location }: any) {
           return { title: category.title, to: `#${category.id}` }
         })}
       />
-      
+
       <PageContentSection>
         <section id="contribute" className={css['section']}>
           <h3 className="spaced">{pageContext?.current?.title}</h3>
@@ -52,7 +52,7 @@ export default pageHOC(function FaqTemplate({ data, location }: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...NavigationData
     ...LatestNewsItem

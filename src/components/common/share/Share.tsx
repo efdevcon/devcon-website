@@ -141,7 +141,8 @@ const ExcitedFor = (props: { onChange: (...rest: any[]) => any; value: number | 
 }
 
 export const Share = (props: ShareProps) => {
-  const nativeSharePossible = false /*!!(typeof window !== 'undefined' && window.navigator && window.navigator.share) <--- comment back in to enable native share */
+  const nativeSharePossible =
+    false /*!!(typeof window !== 'undefined' && window.navigator && window.navigator.share) <--- comment back in to enable native share */
   const [open, setOpen] = React.useState(false)
   const [excitedFor, setExcitedFor] = React.useState(nativeSharePossible ? null : 0)
   const intl = useIntl()

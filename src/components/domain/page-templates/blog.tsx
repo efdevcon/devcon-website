@@ -20,7 +20,7 @@ export default pageHOC(function BlogTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title

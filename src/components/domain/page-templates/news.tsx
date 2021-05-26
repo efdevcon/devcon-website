@@ -16,7 +16,8 @@ export default pageHOC(function NewsTemplate({ data }: any) {
       <PageHero />
 
       <PageContentSection>
-        <Feed title="Devcon updates"
+        <Feed
+          title="Devcon updates"
           items={newsItems}
           sortOptions={{
             options: [
@@ -75,7 +76,7 @@ export default pageHOC(function NewsTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...NavigationData
     ...LatestNewsItem
