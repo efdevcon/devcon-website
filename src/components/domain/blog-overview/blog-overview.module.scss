@@ -30,6 +30,11 @@
 }
 
 .card {
-  height: 400px;
+  height: 535px;
   background: white;
+
+
+  @media (max-width: $breakpoints-md) {
+    height: 400px;
+  }
 }

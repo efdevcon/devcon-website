@@ -29,6 +29,7 @@ export const useBlogs = (maxItems: number = defaultMaxItems): Array<BlogPost> =>
 function mapToBlog(source: any): BlogPost {
   return {
     title: source.title,
+    description: source.description,
     date: new Date(source.pubDate),
     author: 'Devcon Team',
     body: source.content?.encoded,

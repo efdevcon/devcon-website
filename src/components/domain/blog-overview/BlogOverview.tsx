@@ -25,6 +25,7 @@ export const BlogOverview = (props: Props) => {
               className={css['card']}
               key={blog.slug}
               title={blog.title}
+              description={blog.description}
               imageUrl={blog.imageUrl}
               expandLink={true}
               linkUrl={blog.permaLink}
