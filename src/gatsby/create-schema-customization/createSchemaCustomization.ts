@@ -1,6 +1,6 @@
 import { CreateSchemaCustomizationArgs } from 'gatsby'
 import { links as linksResolver } from './resolvers/links'
-import { tagsResolver } from './resolvers/tags'
+import { tagCountResolver, tagsResolver } from './resolvers/tags'
 import { dip as dipResolver } from './resolvers/dip'
 
 const baseTypes = `
@@ -34,6 +34,7 @@ export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCusto
         next_dip: dipResolver('next'),
         prev_dip: dipResolver('prev'),
         tagItems: tagsResolver,
+        tagCount: tagCountResolver,
       },
     }),
   ]

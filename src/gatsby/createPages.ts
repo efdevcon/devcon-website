@@ -11,6 +11,7 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
   await createBlogPages(args)
   await createNewsPages(args)
   await createDipPages(args)
+  // await createTagPages(args)
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -119,7 +120,40 @@ async function createBlogPages({ actions, graphql, reporter }: CreatePagesArgs) 
   result.data.blogs.nodes.forEach((node: any) => createDynamicPage(actions, node.fields.slug, 'blog', defaultLang))
 }
 
-function createDynamicPage(actions: Actions, slug: string, template: string, lang: string): void {
+async function createTagPages({ actions, graphql, reporter }: CreatePagesArgs) {
+  const result: any = await graphql(`
+    query {
+      taggedPages : allMarkdownRemark(filter: {frontmatter: {tagCount: {gt: 0}}}) {
+        nodes {
+          frontmatter {
+            tags
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running Tags query.`)
+    return
+  }
+
+  let tags: string[] = []
+  result.data.taggedPages.nodes.forEach((node: any) => {
+    tags = tags.concat(node.frontmatter.tags)
+  })
+  tags = [...new Set(tags)];
+
+  tags.forEach((tag: string) => {
+    createDynamicPage(actions, `/en/tags/${tag}/`, 'tag', 'en', tag)
+    createDynamicPage(actions, `/es/tags/${tag}/`, 'tag', 'es', tag)
+  })
+}
+
+function createDynamicPage(actions: Actions, slug: string, template: string, lang: string, tag: string = ''): void {
   if (template === 'none') return
 
   // console.log("Creating page", slug, 'with template:', template, lang);
@@ -130,6 +164,7 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
     component: path.resolve(`./src/components/domain/page-templates/${template}.tsx`),
     context: {
       slug: slug,
+      tag: tag,
       lang: lang,
       language: lang, // Merge with lang (language is better because gatsby-intl-plugin writes to the language key)
       intl: {

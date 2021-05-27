@@ -39,3 +39,12 @@ export const tagsResolver = {
     },
   },
 }
+
+export const tagCountResolver = {
+  type: 'Int',
+  resolve: (source: any) => {
+    const pageTags = source['tags']
+    if (!pageTags) return 0
+    return pageTags.length
+  }
+}
