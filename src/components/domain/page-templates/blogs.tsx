@@ -4,7 +4,7 @@ import Content from 'src/components/common/layouts/content'
 import { PageHero } from 'src/components/common/page-hero'
 import themes from './themes.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
-import { Feed } from '../blog-overview/Feed'
+import { BlogOverview } from '../blog-overview'
 import { PageContentSection } from './page-content-section'
 
 export default pageHOC(function BlogsTemplate() {
@@ -13,7 +13,7 @@ export default pageHOC(function BlogsTemplate() {
       <PageHero />
 
       <PageContentSection>
-        <Feed />
+        <BlogOverview maxItems={10} />
       </PageContentSection>
     </Content>
   )

@@ -1,1 +1,2 @@
-export { BlogOverview, Cards, useBlogState, Arrows } from './BlogOverview'
+export { BlogReel, Cards, useBlogState, Arrows } from './BlogReel'
+export { BlogOverview } from './BlogOverview'

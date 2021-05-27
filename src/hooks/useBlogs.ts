@@ -1,51 +1,39 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import { BlogPost } from 'src/types/BlogPost'
 
-export const useBlogs = (): Array<BlogPost> => {
+const defaultMaxItems = 5;
+
+export const useBlogs = (maxItems: number = defaultMaxItems): Array<BlogPost> => {
   const data = useStaticQuery(graphql`
     query {
-      blogs: allMarkdownRemark(
-        filter: { fields: { collection: { eq: "blogs" } } }
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
+      blogs: allFeedDevconBlog {
         nodes {
-          frontmatter {
-            title
-            date
-            author
-            permaLink
-            imageUrl
-            image {
-              childImageSharp {
-                fluid(maxHeight: 1024, quality: 80) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
-                }
-              }
-            }
+          title
+          description
+          pubDate
+          link
+          efblog {
+            image
           }
-          fields {
-            slug
+          content {
+            encoded
           }
-          html
         }
       }
     }
   `)
 
-  return data.blogs.nodes.map((i: any) => mapToBlog(i))
+  return data.blogs.nodes.map((i: any) => mapToBlog(i)).slice(0, maxItems)
 }
 
 function mapToBlog(source: any): BlogPost {
   return {
-    title: source.frontmatter.title,
-    date: new Date(source.frontmatter.date),
-    author: source.frontmatter.author,
-    body: source.html,
-    slug: source.fields.slug,
-    permaLink: source.frontmatter.permaLink,
-    imageUrl: source.frontmatter.image.childImageSharp.fluid,
-    /*source.frontmatter.image
-      ? source.frontmatter.image.childImageSharp.fluid.src
-      : source.frontmatter.imageUrl*/
+    title: source.title,
+    date: new Date(source.pubDate),
+    author: 'Devcon Team',
+    body: source.content?.encoded,
+    slug: '/',
+    permaLink: source.link,
+    imageUrl: source.efblog?.image
   }
 }
