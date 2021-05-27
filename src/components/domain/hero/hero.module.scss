@@ -1,3 +1,4 @@
+@use "sass:math";
 @use 'src/assets/css/partials/index' as *;
 
 @keyframes sway {
@@ -142,11 +143,11 @@ $logo-offset: 50px;
     transform: scale(2);
 
     @media (max-width: $breakpoints-tiny) {
-      top: -($logo-offset / 2);
+      top: -(math.div($logo-offset, 2));
     }
 
     @media (max-width: $breakpoints-lg) and (orientation: landscape) {
-      top: -($logo-offset / 2);
+      top: -(math.div($logo-offset, 2));
     }
   }
 
@@ -230,12 +231,12 @@ $logo-offset: 50px;
       }
 
       @media (max-width: $breakpoints-tiny) {
-        top: -($logo-offset / 2);
+        top: -(math.div($logo-offset, 2));
       }
 
       @media (max-width: $breakpoints-lg) and (orientation: landscape) {
         width: 20%;
-        top: -($logo-offset / 2);
+        top: -(math.div($logo-offset, 2));
       }
     }
   }

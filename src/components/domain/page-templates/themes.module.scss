@@ -41,10 +41,11 @@
   --theme-color-hover: #{$colors-track-green-hover};
   --theme-logo: url('src/assets/images/theme/info.svg');
   --theme-gradient: radial-gradient(
-    73.15% 179.46% at 90.19% 25.94%, 
-    #88C43F 0%, 
-    #50D100 0.01%, 
-    rgba(140, 255, 0, 0.4) 58.33%, rgba(136, 196, 63, 0) 100%);
+    73.15% 179.46% at 90.19% 25.94%,
+    #88C43F 0%,
+    #50D100 0.01%,
+    rgba(140, 255, 0, 0.4) 58.33%,
+    rgba(136, 196, 63, 0) 100%);
 }
 
 .yellow {
@@ -52,11 +53,10 @@
   --theme-color-hover: #{$colors-track-yellow-hover};
   --theme-logo: url('src/assets/images/theme/news.svg');
   --theme-gradient: radial-gradient(
-    73.15% 179.46% at 90.19% 25.94%,
-    #e55066 0%,
-    rgba(255, 183, 0, 0.4) 58.33%,
-    rgba(255, 184, 0, 0) 100%
-  );
+    73.15% 179.46% at 90.19% 25.94%, 
+    #FEE506 0%, 
+    rgba(247, 232, 104, 0.4) 58.33%, 
+    rgba(242, 238, 166, 0) 100%)
 }
 
 .orange {
@@ -71,16 +71,15 @@
   );
 }
 
-.pink {
-  --theme-color: #{$colors-track-pink};
-  --theme-color-hover: #{$colors-track-pink-hover};
+.red {
+  --theme-color: #{$colors-track-red};
+  --theme-color-hover: #{$colors-track-red-hover};
   --theme-logo: url('src/assets/images/theme/news.svg');
   --theme-gradient: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
-    #e55066 0%,
-    rgba(255, 183, 0, 0.4) 58.33%,
-    rgba(255, 184, 0, 0) 100%
-  );
+    #E92639 0%, 
+    rgba(232, 123, 104, 0.4) 58.33%, 
+    rgba(232, 125, 104, 0) 100%);
 }
 
 .purple {

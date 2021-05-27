@@ -1,3 +1,4 @@
+@use "sass:math";
 @use './breakpoints';
 
 $gap-1: 4px;
@@ -89,37 +90,37 @@ $gap-32: $gap-1 * 32; // 128px
 
   @media (max-width: breakpoints.$md) {
     @if not($gap == '') {
-      #{$attribute}: max($min-gap, $gap / 2);
+      #{$attribute}: max($min-gap, math.div($gap, 2));
     }
     @if not($top == '') {
-      #{$attribute}-top: max($min-gap, $top / 2);
+      #{$attribute}-top: max($min-gap, math.div($top, 2));
     }
     @if not($right == '') {
-      #{$attribute}-right: max($min-gap, $right / 2);
+      #{$attribute}-right: max($min-gap, math.div($right, 2));
     }
     @if not($bottom == '') {
-      #{$attribute}-bottom: max($min-gap, $bottom / 2);
+      #{$attribute}-bottom: max($min-gap, math.div($bottom, 2));
     }
     @if not($left == '') {
-      #{$attribute}-left: max($min-gap, $left / 2);
+      #{$attribute}-left: max($min-gap, math.div($left, 2));
     }
   }
 
   @media (max-width: breakpoints.$tiny) {
     @if not($gap == '') {
-      #{$attribute}: max($min-gap, $gap / 4);
+      #{$attribute}: max($min-gap, math.div($gap, 4));
     }
     @if not($top == '') {
-      #{$attribute}-top: max($min-gap, $top / 4);
+      #{$attribute}-top: max($min-gap, math.div($top, 4));
     }
     @if not($right == '') {
-      #{$attribute}-right: max($min-gap, $right / 4);
+      #{$attribute}-right: max($min-gap, math.div($right, 4));
     }
     @if not($bottom == '') {
-      #{$attribute}-bottom: max($min-gap, $bottom / 4);
+      #{$attribute}-bottom: max($min-gap, math.div($bottom, 4));
     }
     @if not($left == '') {
-      #{$attribute}-left: max($min-gap, $left / 4);
+      #{$attribute}-left: max($min-gap, math.div($left, 4));
     }
   }
 }
