@@ -3,8 +3,8 @@ on:
   pull_request:
   push:
     paths-ignore:
-      - 'src/content/news/tweets'
-      - 'src/content/news/blog-posts'
+      - 'src/content/news/tweets/**'
+      - 'src/content/news/blog-posts/**'
 
 jobs:
   build:

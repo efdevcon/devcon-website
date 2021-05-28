@@ -1,5 +1,5 @@
 ---
-title: 'Devcon: Hacia Colombia en 2021aa'
+title: 'Devcon: Hacia Colombia en 2021'
 url: 'http://localhost:4000/2020/05/28/devcon-hacia-colombia-en-2021/'
 date: '2020-05-28T07:00:00.000Z'
 author: Devcon Team
