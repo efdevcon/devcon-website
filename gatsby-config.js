@@ -299,7 +299,7 @@ module.exports = {
       resolve: `gatsby-source-rss-feed`,
       options: {
         // Point to real blog domain when it's deployed
-        url: `https://blog.ethereum.org/rss/categories/devcon.xml`,
+        url: `https://blog.ethereum.org/feed/category/devcon.xml`,
         name: `DevconBlog`,
         // Optional
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
