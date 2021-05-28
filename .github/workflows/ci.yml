@@ -1,5 +1,10 @@
 name: Devcon CI
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    paths-ignore:
+      - 'src/content/news/tweets'
+      - 'src/content/news/blog-posts'
 
 jobs:
   build:
@@ -11,6 +16,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
+      - name: Fetch news
+        run: cd tools && yarn && yarn news
+
+      # - name: Commit news
+      #   run: git add . && git commit -m 'Update news' && git push
+
+      - name: Branch name test
+        run: echo running on branch ${GITHUB_REF##*/}
 
       - name: Install dependencies
         run: yarn
@@ -36,26 +50,3 @@ jobs:
         with:
           name: screenshots
           path: screenshots
-
-      # - name: 'BrowserStack Env Setup'
-      #   uses: 'browserstack/github-actions/setup-env@master'
-      #   with:
-      #     username: lassejacobsen2
-      #     access-key: mBqtLq8ffDpp1UFA5679
-      # build-name: 'BUILD_INFO'
-      # project-name: 'REPO_NAME'
-
-      # - name: 'Start BrowserStackLocal Tunnel'
-      #   uses: 'browserstack/github-actions/setup-local@master'
-      #   with:
-      #     local-testing: 'start'
-      #     local-logging-level: 'all-logs'
-      #     local-identifier: 'random'
-
-      # - name: Serve build to test against
-      #   run: yarn browserstack
-
-      # - name: 'Stop BrowserStackLocal'
-      #   uses: 'browserstack/github-actions/setup-local@master'
-      #   with:
-      #     local-testing: 'stop'

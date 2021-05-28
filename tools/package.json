@@ -1,10 +1,17 @@
 {
   "scripts": {
     "prestart": "yarn install",
-    "start": "ts-node src/dips"
+    "start": "ts-node src/dips",
+    "news": "node --inspect -r ts-node/register src/news/fetch",
+    "md": "ts-node src/news/file"
   },
   "dependencies": {
-    "@octokit/rest": "^18.0.9"
+    "@octokit/rest": "^18.0.9",
+    "cross-env": "^7.0.3",
+    "gray-matter": "^4.0.3",
+    "node-fetch": "^2.6.1",
+    "parse-md": "^2.0.4",
+    "rss-parser": "^3.12.0"
   },
   "devDependencies": {
     "@octokit/types": "^5.5.0",

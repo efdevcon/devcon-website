@@ -6,6 +6,7 @@ import { Dropdown } from 'src/components/common/dropdown'
 import { Filter, useFilter } from 'src/components/common/filter'
 import { FilterOptions } from 'src/components/common/filter/Filter'
 import { DropdownProps } from 'src/components/common/dropdown/Dropdown'
+import { useIntl } from 'gatsby-plugin-intl'
 import moment from 'moment'
 
 // Pagination <-- TODO
@@ -40,10 +41,32 @@ type Props = {
 
 const Icon = ({ item }: { item: FeedItem }) => {
   if (item.url.includes('twitter')) {
-    return <IconTwitter className={`icon ${css['icon']}`} />
+    return (
+      <div className={css['icon-container']}>
+        <IconTwitter />
+      </div>
+    )
+  }
+
+  if (item.url.includes('blog.ethereum.org')) {
+    return (
+      <div className={css['icon-container']}>
+        <IconTwitter />
+      </div>
+    )
   }
 
   return null
+}
+
+const Title = ({ item }: { item: FeedItem }) => {
+  const intl = useIntl()
+
+  if (item.url.includes('twitter')) {
+    return intl.formatMessage({ id: 'news.tweet' })
+  }
+
+  return item.title
 }
 
 export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props) => {
@@ -62,15 +85,13 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
             {/* <Icon item={item} className={css['icon-desktop']} /> */}
           </div>
           <div className={css['text']}>
-            <p className={`${css['title']} title`}>{item.title}</p>
+            <p className={`${css['title']} title`}>
+              <Title item={item} />
+            </p>
 
             {/* {item.description && <p className={css['description']}>{item.description}</p>} */}
 
-            <p className={css['description']}>
-              A lot of people will travel to DevConVI. This will impose a number of risks to these people: flight
-              Delays, baggage loss, theft, and others. We will build a decentralized travel insurance for DevConVI
-              participants.
-            </p>
+            <p className={css['description']}>{item.description}</p>
 
             {item.tags && item.tags.length > 0 && (
               <div className={css['tags']}>
