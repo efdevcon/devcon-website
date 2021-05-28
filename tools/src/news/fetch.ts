@@ -164,7 +164,7 @@ const blog = (() => {
   const _interface = {
     blogDir,
     getPosts: async () => {
-      const feed = await rssParser.parseURL('http://localhost:4000/feed/category/devcon.xml');
+      const feed = await rssParser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml');
 
       console.log(feed, 'feed');
   
@@ -191,10 +191,6 @@ twitter
 //   .catch(e => {
 //     console.error('Blog failed: ', e)
 //   })
-
-setInterval(() => {
-
-}, 5000)
 
 /*
   1) Trigger GITHUB build on: push, pull_request, new tweets ONLY with the correct hashtag, new blog posts

@@ -2,7 +2,8 @@
   "scripts": {
     "prestart": "yarn install",
     "start": "ts-node src/dips",
-    "news": "node --inspect -r ts-node/register src/news/fetch",
+    "news": "node -r ts-node/register src/news/fetch",
+    "news-inspect": "node --inspect -r ts-node/register src/news/fetch",
     "md": "ts-node src/news/file"
   },
   "dependencies": {
