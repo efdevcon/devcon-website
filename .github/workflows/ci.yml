@@ -20,8 +20,8 @@ jobs:
       - name: Fetch news
         run: cd tools && yarn && yarn news
 
-      # - name: Commit news
-      #   run: git add . && git commit -m 'Update news' && git push
+      - name: Commit news
+        run: git add . && git commit -m 'Update news' && git push
 
       - name: Branch name test
         run: echo running on branch ${GITHUB_REF##*/}
