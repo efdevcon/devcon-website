@@ -62,8 +62,6 @@ const markdown = (() => {
       return matter.stringify(newsItem.description || '', newsItem);
     },
     write: (directory: string, computeFileName: (newsItem: NewsItem) => string) => (newsItems: NewsItem[]) => {
-      files.ensureDirectory(directory);
-
       return Promise.all(newsItems.map(newsItem => {
         return files.writeFile(path.resolve(directory, computeFileName(newsItem)), _interface.newsItemToFrontmatter(newsItem));
       }));
