@@ -122,6 +122,9 @@ const twitter = (() => {
 
   const _interface = {
     twitterDir,
+    ensureDirectory: async () => {
+      files.ensureDirectory(twitterDir);
+    },
     getTweets: async (sinceID: number) => {
       const result = await fetchWrapper(`/users/${userID}/tweets`, {
         exclude: 'retweets,replies',
@@ -163,6 +166,9 @@ const blog = (() => {
 
   const _interface = {
     blogDir,
+    ensureDirectory: async () => {
+      files.ensureDirectory(blogDir);
+    },
     getPosts: async () => {
       const feed = await rssParser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml');
 
@@ -176,7 +182,8 @@ const blog = (() => {
 })();
 
 twitter
-  .getLatestTweetID()
+  .ensureDirectory()
+  .then(twitter.getLatestTweetID)
   .then(twitter.getTweets)
   .then(tweets => tweets.map(formatting.formatTweet))
   .then(markdown.write(twitter.twitterDir, (newsItem) => `${newsItem.tweetID}.md`))
