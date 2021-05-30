@@ -5,6 +5,8 @@ import { Feed } from 'src/components/common/feed'
 import css from './news.module.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import { formatNewsData } from '../formatNewsData'
+import { NewsItem } from 'src/types/NewsItem'
+import moment from 'moment'
 
 type NewsProps = {
   data?: any
@@ -41,19 +43,46 @@ export const News = ({ data: rawData }: NewsProps) => {
         {/* Only visible on mobile */}
         <div className={css['slider']}>
           <Slider {...settings}>
-            {newsItems.map((item: any, index) => {
-              return <Card className={`${css['card']} ${css['slider']}`} key={index} metadata={[item.date]} {...item} />
+            {newsItems.map((item: NewsItem, index) => {
+              let formattedItem = item
+
+              if (item.url?.includes('twitter')) {
+                formattedItem = {
+                  ...formattedItem,
+                  title: intl.formatMessage({ id: 'news_tweet' }),
+                }
+              }
+
+              return (
+                <Card
+                  className={`${css['card']} ${css['slider']}`}
+                  key={index}
+                  metadata={[moment.utc(formattedItem.date).format('MMM D, YYYY')]}
+                  {...formattedItem}
+                />
+              )
             })}
           </Slider>
         </div>
         <div className={css['body']}>
           <div className={css['cards']}>
             {newsItems.slice(0, 2).map((item: any, index) => {
-              return <Card className={css['card']} key={index} {...item} />
+              if (item.url?.includes('twitter')) {
+                item.title = intl.formatMessage({ id: 'news_tweet' })
+              }
+
+              return (
+                <Card
+                  className={css['card']}
+                  metadata={[moment.utc(item.date).format('MMM D, YYYY')]}
+                  key={index}
+                  {...item}
+                />
+              )
             })}
           </div>
           <div className={css['feed']}>
-            <Feed inline title={intl.formatMessage({ id: 'news feed' })} items={newsItems /*.slice(2)*/} />
+            <Feed inline title={intl.formatMessage({ id: 'news feed' })} items={newsItems.slice(2)} />
           </div>
         </div>
       </div>

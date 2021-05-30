@@ -37,11 +37,11 @@ export default pageHOC(function NewsTemplate({ data }: any) {
               sort: (items: any[], sortBy: string) => {
                 return items.sort((a, b) => {
                   if (a.date < b.date) {
-                    return sortBy === 'recent' ? -1 : 1
+                    return sortBy === 'recent' ? 1 : -1
                   } else if (a.date === b.date) {
                     return 0
                   } else {
-                    return sortBy === 'recent' ? 1 : -1
+                    return sortBy === 'recent' ? -1 : 1
                   }
                 })
               },
@@ -81,7 +81,7 @@ export default pageHOC(function NewsTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query($slug: String!, $language: String!, $skip: Int!, $limit: Int!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title

@@ -1,6 +1,7 @@
 import React from 'react'
 import css from './feed.module.scss'
 import IconTwitter from 'src/assets/icons/twitter.svg'
+import IconPencil from 'src/assets/icons/pencil.svg'
 import { Link } from 'src/components/common/link'
 import { Dropdown } from 'src/components/common/dropdown'
 import { Filter, useFilter } from 'src/components/common/filter'
@@ -22,7 +23,7 @@ import moment from 'moment'
 type FeedItem = {
   date?: Date
   author?: string
-  url: string
+  url?: string
   title: string
   description?: string
   tags?: string[]
@@ -40,7 +41,7 @@ type Props = {
 }
 
 const Icon = ({ item }: { item: FeedItem }) => {
-  if (item.url.includes('twitter')) {
+  if (item?.url?.includes('twitter')) {
     return (
       <div className={css['icon-container']}>
         <IconTwitter />
@@ -48,10 +49,10 @@ const Icon = ({ item }: { item: FeedItem }) => {
     )
   }
 
-  if (item.url.includes('blog.ethereum.org')) {
+  if (item?.url?.includes('blog.ethereum.org')) {
     return (
       <div className={css['icon-container']}>
-        <IconTwitter />
+        <IconPencil />
       </div>
     )
   }
@@ -59,11 +60,11 @@ const Icon = ({ item }: { item: FeedItem }) => {
   return null
 }
 
-const Title = ({ item }: { item: FeedItem }) => {
+export const Title = ({ item }: { item: FeedItem }) => {
   const intl = useIntl()
 
-  if (item.url.includes('twitter')) {
-    return intl.formatMessage({ id: 'news.tweet' })
+  if (item?.url?.includes('twitter')) {
+    return intl.formatMessage({ id: 'news_tweet' })
   }
 
   return item.title
@@ -89,9 +90,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
               <Title item={item} />
             </p>
 
-            {/* {item.description && <p className={css['description']}>{item.description}</p>} */}
-
-            <p className={css['description']}>{item.description}</p>
+            <p className={css['description']} dangerouslySetInnerHTML={{ __html: item.description }} />
 
             {item.tags && item.tags.length > 0 && (
               <div className={css['tags']}>

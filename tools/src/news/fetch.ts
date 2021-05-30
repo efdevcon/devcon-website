@@ -58,12 +58,21 @@ const files = (() => {
 
 const markdown = (() => {
   const _interface = {
-    newsItemToFrontmatter: (newsItem: NewsItem) => {
-      return matter.stringify(newsItem.description || '', newsItem);
+    newsItemToMarkdown: (newsItem: NewsItem) => {
+      // return matter.stringify(newsItem.description || '', newsItem);
+      const attributes = Object.entries(newsItem);
+
+      const markdown = `---${attributes.reduce((acc, [key, value], index) => {
+        if (typeof value === 'undefined' || key === 'description') return acc;
+
+          return acc += `\n${key}: '${value.trim()}'`;
+        }, '')}\n---\n${newsItem.description?.trim()}`;
+
+      return markdown;
     },
     write: (directory: string, computeFileName: (newsItem: NewsItem) => string) => (newsItems: NewsItem[]) => {
       return Promise.all(newsItems.map(newsItem => {
-        return files.writeFile(path.resolve(directory, computeFileName(newsItem)), _interface.newsItemToFrontmatter(newsItem));
+        return files.writeFile(path.resolve(directory, computeFileName(newsItem)), _interface.newsItemToMarkdown(newsItem));
       }));
     }
   }
@@ -189,13 +198,14 @@ twitter
     console.error('Twitter failed: ', e)
   })
 
-// blog
-//   .getPosts()
-//   .then(posts => posts.map(formatting.formatBlogPost))
-//   .then(markdown.write(blog.blogDir, (newsItem) => `${files.createSafeFilename(newsItem.title)}.md`))
-//   .catch(e => {
-//     console.error('Blog failed: ', e)
-//   })
+blog
+  .ensureDirectory()
+  .then(blog.getPosts)
+  .then(posts => posts.map(formatting.formatBlogPost))
+  .then(markdown.write(blog.blogDir, (newsItem) => `${files.createSafeFilename(newsItem.title)}.md`))
+  .catch(e => {
+    console.error('Blog failed: ', e)
+  })
 
 /*
   1) Trigger GITHUB build on: push, pull_request, new tweets ONLY with the correct hashtag, new blog posts

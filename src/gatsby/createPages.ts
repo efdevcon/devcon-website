@@ -40,7 +40,35 @@ async function createContentPages({ actions, graphql, reporter }: CreatePagesArg
   result.data.allMarkdownRemark.nodes.forEach((node: any) => {
     if (node.url) return; // No reason to create pages for external news
 
-    createDynamicPage(actions, node.fields.slug, node.frontmatter.template, node.fields.lang)
+    if (node.frontmatter.template === 'news') {
+      createPaginatedPage(actions, node.fields.lang, node.fields.slug, 'news', 10, async () => {
+        const result = await graphql(`
+            {
+              allNews: allMarkdownRemark(
+                filter: { 
+                  fields: { lang: { in: ["${node.fields.lang}", "tweets", "blog-posts"] }, collection: { eq: "news" } } 
+                }, 
+                sort: { fields: [frontmatter___date], order: DESC }
+              ) {
+                nodes {
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
+        `);
+
+        if (result.errors) {
+          reporter.panicOnBuild(`Error while running News query.`)
+          return
+        }
+
+        return result.data.allNews.nodes;
+      });
+    } else {
+      createDynamicPage(actions, node.fields.slug, node.frontmatter.template, node.fields.lang)
+    }
   });
 }
 
@@ -59,11 +87,14 @@ async function createNewsPages({ actions, graphql, reporter }: CreatePagesArgs) 
   `)
 
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running DIP query.`)
+    reporter.panicOnBuild(`Error while running News query.`)
     return
   }
 
   result.data.news.nodes.forEach((node: any) => {
+    // No need to generate pages for tweets or blog posts 
+    if (node.fields.lang === 'tweets' || node.fields.lang === 'blog-posts') return;
+    
     createDynamicPage(actions, node.fields.slug, 'news-item', node.fields.lang)
   })
 }
@@ -140,5 +171,33 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
         redirect: false,
       },
     },
+  })
+}
+
+async function createPaginatedPage(actions: Actions, lang: string, slug: string, template: string, itemsPerPage = 10, getAllItems: any): Promise<void> {
+  const items = await getAllItems();
+  const numPages = Math.ceil(items.length / itemsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    actions.createPage({
+      path: i === 0 ? `${slug}` : `${slug}${i + 1}`,
+      component: path.resolve(`./src/components/domain/page-templates/${template}.tsx`),
+      context: {
+        slug,
+        lang,
+        language: lang,
+        limit: itemsPerPage,
+        skip: i * itemsPerPage,
+        numPages,
+        currentPage: i + 1,
+        intl: {
+          language: lang,
+          languages: languages,
+          messages: require(`../content/i18n/${lang}.json`),
+          routed: true,
+          redirect: false,
+        },
+      },
+    })
   })
 }

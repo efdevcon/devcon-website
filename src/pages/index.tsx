@@ -12,7 +12,7 @@ export default pageHOC(function Index({ data }: any) {
     <Default>
       <SEO />
       {/* <PWAPrompt /> */}
-      <News data={data.newsData} />
+      <News data={data.newsDataInline} />
       <BlogOverview />
     </Default>
   )
@@ -21,7 +21,7 @@ export default pageHOC(function Index({ data }: any) {
 export const query = graphql`
   query($language: String!) {
     ...NavigationData
-    ...NewsData
+    ...NewsDataInline
     ...LatestNewsItem
   }
 `

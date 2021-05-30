@@ -61,7 +61,9 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
 
       <div className={css['body']}>
         <p className={css['title']}>{link}</p>
-        {props.description && <p className={css['text']}>{GetExcerpt(props.description)}</p>}
+        {props.description && (
+          <p className={css['text']} dangerouslySetInnerHTML={{ __html: GetExcerpt(props.description) }} />
+        )}
 
         <div className={css['bottom-section']}>
           {props.metadata && (

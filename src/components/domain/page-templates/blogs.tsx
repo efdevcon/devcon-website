@@ -38,7 +38,5 @@ export const query = graphql`
     }
     ...NavigationData
     ...LatestNewsItem
-    ...NewsData
   }
 `
-

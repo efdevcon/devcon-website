@@ -11,6 +11,7 @@ export const pageHOC = (
   PageTemplate: React.ComponentType<pageProps>,
   mapDataToContext?: (props: pageProps) => { [key: string]: any }
 ) => (props: pageProps) => {
+  console.log(props)
   const context = {
     location: props.location,
     navigation: ToNavigationData(props.data.navigationData.nodes),

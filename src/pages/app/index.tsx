@@ -47,6 +47,5 @@ export const query = graphql`
   query($language: String!) {
     ...NavigationData
     ...LatestNewsItem
-    ...NewsData
   }
 `

@@ -2,7 +2,35 @@ import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment NewsData on Query {
-    newsData: allMarkdownRemark(filter: { fields: { lang: { in: [$language, "tweets", "blog-posts"] }, collection: { eq: "news" } } }, sort: { fields: frontmatter___date, order: ASC }) {
+    newsData: allMarkdownRemark(
+      filter: { 
+        fields: { lang: { in: [$language, "tweets", "blog-posts"] }, collection: { eq: "news" } } 
+      }, 
+      sort: { fields: frontmatter___date, order: ASC },
+      limit: $limit
+      skip: $skip
+    ) {
+      nodes {
+        frontmatter {
+          url
+          title
+          author
+          date
+          tags
+        }
+        rawMarkdownBody
+      }
+    }
+  }
+
+  fragment NewsDataInline on Query {
+    newsDataInline: allMarkdownRemark(
+      filter: { 
+        fields: { lang: { in: [$language, "tweets", "blog-posts"] }, collection: { eq: "news" } } 
+      }, 
+      sort: { fields: frontmatter___date, order: DESC },
+      limit: 10
+    ) {
       nodes {
         frontmatter {
           url

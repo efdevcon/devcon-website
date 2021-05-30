@@ -12,7 +12,7 @@ const sortNews = (data: any): Array<NewsItem> => {
 
 export const formatNewsData = (data: any): Array<NewsItem> => {
   return sortNews(data.map((node: any) => {
-    const { date, description, author, title, url, imageUrl, tags } = node.frontmatter
+    const { date, author, title, url, imageUrl, tags } = node.frontmatter
 
     // const formattedDate = moment(date).format('ll')
     // const formattedMetaData = [formattedDate, metadata]
