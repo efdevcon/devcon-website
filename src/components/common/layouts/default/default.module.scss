@@ -26,25 +26,3 @@
     }
   }
 }
-
-// Simplified layout experiment - didn't quite work but worth exploring further
-// :global {
-//   .layout-default {
-//     min-height: 100vh;
-//     position: relative;
-//     display: grid;
-//     grid-template-columns: minmax($gaps-gap-16, auto) minmax(auto, 1680px) minmax($gaps-gap-16, auto);
-
-//     @media (max-width: $breakpoints-md) {
-//       grid-template-columns: $gaps-gap-4 auto $gaps-gap-4;
-//     }
-
-//     > * {
-//       grid-column: 2 / 3;
-//     }
-
-//     > .full-width {
-//       grid-column: 1 / 4; // Apply .full-width to ignore padding
-//     }
-//   }
-// }

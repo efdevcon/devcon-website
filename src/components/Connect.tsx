@@ -20,7 +20,11 @@ export default function Connect() {
       return
     }
 
-    const userAccount = await accountContext.loginWeb3(signedMessage.address,  signedMessage.message, signedMessage.signature)
+    const userAccount = await accountContext.loginWeb3(
+      signedMessage.address,
+      signedMessage.message,
+      signedMessage.signature
+    )
     if (!userAccount) {
       setError('Unable to login with web3')
     }
@@ -43,8 +47,8 @@ export default function Connect() {
     accountContext.logout(accountContext.account?._id)
   }
 
-  if (accountContext.account) { 
-    if (location?.search) { 
+  if (accountContext.account) {
+    if (location?.search) {
       navigate('/app/profile' + location.search)
     } else {
       navigate('/app/profile')

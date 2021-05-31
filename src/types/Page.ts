@@ -1,22 +1,13 @@
-import { Tag } from './tag'
-
-export enum PageTemplateType {
-  'none',
-  'content',
-  'dips',
-}
+import { Tag } from './Tag'
 
 export interface Page {
   title: string
   description?: string
   body?: string
-  tags?: Array<Tag>
-  template: PageTemplateType
-  parent?: Page
-  order?: number
-  slug: string
-  showInMenu: boolean
+  template: string
   translationVerified?: boolean
+  tags: Array<Tag>
   lang: string
-  children: Array<Page>
+  id: string
+  slug: string
 }

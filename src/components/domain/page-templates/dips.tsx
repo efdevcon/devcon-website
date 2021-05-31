@@ -1,24 +1,61 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/domain/seo'
-import { DIPOverview } from 'src/components/domain/dips/overview'
 import Content from 'src/components/common/layouts/content'
-import { DIP } from 'src/types/dip'
-import css from './dips.module.scss'
+import { DIP } from 'src/types/DIP'
+import themes from './themes.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
+import { PageHero } from 'src/components/common/page-hero'
+import { usePageContext } from 'src/context/page-context'
+import { useIntl } from 'gatsby-plugin-intl'
+import Pencil from 'src/assets/icons/pencil.svg'
+import BulletList from 'src/assets/icons/bullet_list.svg'
+import { PageContentSection } from './page-content-section'
+import { Contribute } from '../dips/overview/contribute'
+import { Proposals } from '../dips/overview/proposals'
 
 export default pageHOC(function DIPsTemplate({ data }: any) {
-  const page = data.markdownRemark
+  const intl = useIntl()
+  const pageContext = usePageContext()
 
   return (
-    <Content theme={css['theme']}>
-      <SEO title={page.frontmatter.title} description={page.frontmatter.description} lang={page.fields.lang} />
-
-      <DIPOverview
-        dips={React.useMemo(() => data.dips.nodes.map((dip: DIP) => mapToDIP(dip)), [data.dips])}
-        dipDescription={data.markdownRemark.html}
-        contributors={data.contributors.nodes}
+    <Content theme={themes['teal']}>
+      <PageHero
+        cta={[
+          {
+            title: intl.formatMessage({ id: 'dips_review_dips' }),
+            to: 'https://forum.devcon.org',
+            icon: <BulletList />,
+          },
+          {
+            title: intl.formatMessage({ id: 'dips_create_proposal' }),
+            to: 'https://forum.devcon.org',
+            icon: <Pencil />,
+          },
+        ]}
+        navigation={[
+          {
+            title: intl.formatMessage({ id: 'dips_forum' }).toUpperCase(),
+            to: 'https://forum.devcon.org',
+          },
+          {
+            title: 'GITHUB',
+            to: 'https://github.com/efdevcon/DIPs',
+          },
+          {
+            title: intl.formatMessage({ id: 'dips_contribute' }).toUpperCase(),
+            to: '#contribute',
+          },
+          {
+            title: 'DIPS',
+            to: '#proposals',
+          },
+        ]}
       />
+
+      <PageContentSection>
+        <Contribute dipDescription={pageContext?.current?.body} contributors={data.contributors.nodes} />
+        <Proposals dips={React.useMemo(() => data.dips.nodes.map((dip: DIP) => mapToDIP(dip)), [data.dips])} />
+      </PageContentSection>
     </Content>
   )
 })
@@ -45,18 +82,8 @@ export function mapToDIP(source: any): DIP {
 }
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      fields {
-        lang
-      }
-      frontmatter {
-        title
-        template
-        description
-      }
-    }
+  query ($slug: String!, $language: String!) {
+    ...Page
     ...DipsData
     ...LatestNewsItem
     ...NavigationData

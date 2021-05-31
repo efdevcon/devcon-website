@@ -46,9 +46,9 @@ export const query = graphql`
 
   fragment LatestNewsItem on Query {
     latestNewsItem: allMarkdownRemark(
-      filter: {fields: {collection: {eq: "news"}, lang: {eq: $language}}}
+      filter: { fields: { collection: { eq: "news" }, lang: { eq: $language } } }
       limit: 1
-      sort: {fields: frontmatter___date, order: ASC}
+      sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
         frontmatter {
@@ -60,7 +60,9 @@ export const query = graphql`
   }
 
   fragment NewsItemData on Query {
-    newsData: allMarkdownRemark(filter: { fields: { slug: { eq: $slug }, lang: { eq: $language }, collection: { eq: "news" } } }) {
+    newsData: allMarkdownRemark(
+      filter: { fields: { slug: { eq: $slug }, lang: { eq: $language }, collection: { eq: "news" } } }
+    ) {
       nodes {
         frontmatter {
           url

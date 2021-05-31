@@ -34,7 +34,7 @@ router.get('/', (req: Request, res: Response) => {
 })
 
 // userAccountRoutes.register(router)
-twitterRoutes.register(router);
+twitterRoutes.register(router)
 
 // Express-sessions
 if (!SERVER_CONFIG.SESSION_SECRET) throw new Error('Required SESSION_SECRET not found.')

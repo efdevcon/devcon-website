@@ -174,13 +174,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'blogs',
-        path: `${__dirname}/src/content/blogs`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'navigation',
         path: `${__dirname}/src/content/navigation`,
       },
@@ -204,6 +197,13 @@ module.exports = {
       options: {
         name: 'news',
         path: `${__dirname}/src/content/news`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'tags',
+        path: `${__dirname}/src/content/tags`,
       },
     },
     {
@@ -298,14 +298,12 @@ module.exports = {
     {
       resolve: `gatsby-source-rss-feed`,
       options: {
-        // Point to real blog domain when it's deployed
         url: `https://blog.ethereum.org/feed/category/devcon.xml`,
         name: `DevconBlog`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        // Documentation: https://github.com/bobby-brennan/rss-parser#readme
         parserOption: {
           customFields: {
-            item: ['efblog:image'],
+            item: ['efblog:image', 'description'],
           },
         },
       },

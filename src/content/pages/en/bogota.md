@@ -1,5 +1,8 @@
 ---
 title: City Guide
+tags:
+  - devcon
+  - location
 template: city-guide
 ---
 

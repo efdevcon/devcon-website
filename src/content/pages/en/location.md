@@ -1,5 +1,7 @@
 ---
 title: Location
+tags:
+  - location
 template: content
 ---
 

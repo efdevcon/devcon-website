@@ -232,29 +232,6 @@
       .col-7 {
         @include fonts-sm;
         // position: relative;
-
-        // Not sure if these borders add much; leaving it commented out in case we want to use them later
-
-        // &:before {
-        //   content: '';
-        //   position: absolute;
-        //   top: 0px;
-        //   left: 0px;
-        //   width: calc(100vw + 128px);
-        //   margin-left: -64px;
-        //   height: 1px;
-        //   background: rgba(0, 0, 0, 0.1);
-        // }
-        // &:after {
-        //   content: '';
-        //   position: absolute;
-        //   bottom: 0px;
-        //   left: 0px;
-        //   width: calc(100vw + 128px);
-        //   margin-left: -64px;
-        //   height: 1px;
-        //   background: rgba(0, 0, 0, 0.1);
-        // }
       }
     }
   }

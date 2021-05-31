@@ -1,1 +1,0 @@
-export { DIPOverview } from './DIPOverview'

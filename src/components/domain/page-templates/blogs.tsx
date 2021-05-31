@@ -1,41 +1,27 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { PageHero } from 'src/components/common/page-hero'
-import css from './blogs.module.scss'
+import themes from './themes.module.scss'
 import { pageHOC } from 'src/context/pageHOC'
-import { Feed } from '../blog-overview/Feed'
+import { BlogOverview } from '../blog-overview'
+import { PageContentSection } from './page-content-section'
 
-export default pageHOC(function BlogsTemplate({ data }: any) {
-  const page = data.markdownRemark
-
+export default pageHOC(function BlogsTemplate() {
   return (
-    <Content theme={css['theme']}>
-      <SEO title={page.frontmatter.title} lang={page.fields.lang} />
+    <Content theme={themes['blue']}>
+      <PageHero />
 
-      <PageHero title={page.frontmatter.title} />
-
-      <div className="section">
-        <div className="content">
-          <Feed />
-        </div>
-      </div>
+      <PageContentSection>
+        <BlogOverview maxItems={10} />
+      </PageContentSection>
     </Content>
   )
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-      }
-      fields {
-        lang
-      }
-      html
-    }
+  query ($slug: String!, $language: String!) {
+    ...Page
     ...NavigationData
     ...LatestNewsItem
   }

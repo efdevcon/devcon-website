@@ -14,6 +14,9 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
     const frontmatter = node.frontmatter as NodeFrontmatter
     const collection = getNode(node.parent || '').sourceInstanceName
     const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const paths = slug.split('/').filter(String)
+    const lang = paths[0]
+    const id = paths[1]
 
     createNodeField({
       node,
@@ -21,19 +24,21 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
       value: collection,
     })
 
+    createNodeField({
+      node,
+      name: 'lang',
+      value: lang,
+    })
+
+    createNodeField({
+      node,
+      name: 'id',
+      value: id,
+    })
+
     if (collection === 'pages') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
       const level = frontmatter.parent ? 1 : 0
       const parent = frontmatter.parent ? '/' + lang + '/' + frontmatter.parent + '/' : ''
-
-      // console.log("Create node", collection, slug, lang, level, parent)
-
-      createNodeField({
-        node,
-        name: 'lang',
-        value: lang,
-      })
 
       createNodeField({
         node,
@@ -48,132 +53,21 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
       })
     }
 
-    if (collection === 'faq') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-      const id = paths[1]
-
-      createNodeField({
-        node,
-        name: 'lang',
-        value: lang,
-      })
-
-      createNodeField({
-        node,
-        name: 'id',
-        value: id,
-      })
-    }
-
-    if (collection === 'categories') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-      const id = paths[1]
-
-      createNodeField({
-        node,
-        name: 'lang',
-        value: lang,
-      })
-
-      createNodeField({
-        node,
-        name: 'id',
-        value: id,
-      })
-    }
-
-    if (collection === 'sections') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-      const id = paths[1]
-
-      createNodeField({
-        node,
-        name: 'lang',
-        value: lang,
-      })
-
-      createNodeField({
-        node,
-        name: 'id',
-        value: id,
-      })
-    }
-
-    if (collection === 'news') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-
-      createNodeField({
-        node,
-        name: 'lang',
-        value: lang,
-      })
-    }
-
-    if (collection === 'events' || collection === 'meetups' || collection === 'archive') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-      const id = paths[1]
-
-      createNodeField({
-        node,
-        name: 'lang',
-        value: lang,
-      })
-
-      createNodeField({
-        node,
-        name: 'id',
-        value: id,
-      })
-    }
-
-    if (collection === 'dips') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-
-      createNodeField({
-        node,
-        name: 'lang',
-        value: lang,
-      })
-    }
-
+    let formattedSlug = slug
     if (collection === 'blogs') {
-      createNodeField({
-        node,
-        name: 'slug',
-        value: '/blog' + slug,
-      })
-    } else if (collection === 'dips') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-      const formattedSlug = `/${lang}/dips/${slug.split('/')[2].toLowerCase()}/` // /en/dips/dip-0/
-
-      createNodeField({
-        node,
-        name: 'slug',
-        value: formattedSlug,
-      })
-    } else if (collection === 'news') {
-      const paths = slug.split('/').filter(String)
-      const lang = paths[0]
-      const formattedSlug = `/${lang}/news/${slug.split('/')[2].toLowerCase()}/` // /en/news/something
-
-      createNodeField({
-        node,
-        name: 'slug',
-        value: formattedSlug,
-      })
-    } else {
-      createNodeField({
-        node,
-        name: 'slug',
-        value: slug,
-      })
+      formattedSlug = '/blog' + slug
     }
+    if (collection === 'dips') {
+      formattedSlug = `/${lang}/dips/${slug.split('/')[2].toLowerCase()}/` // /en/dips/dip-0/
+    }
+    if (collection === 'news') {
+      formattedSlug = `/${lang}/news/${slug.split('/')[2].toLowerCase()}/` // /en/news/something
+    }
+
+    createNodeField({
+      node,
+      name: 'slug',
+      value: formattedSlug,
+    })
   }
 }

@@ -7,7 +7,7 @@ import { Alert } from './common/alert'
 export default function ConfirmEmail() {
   const isBrowser = typeof window !== 'undefined'
   const accountContext = useAccountContext()
-  const [account, setAccount] = useState({...accountContext.account} as UserAccount)
+  const [account, setAccount] = useState({ ...accountContext.account } as UserAccount)
   const [error, setError] = useState('')
 
   function onChange(value: string) {
@@ -24,11 +24,11 @@ export default function ConfirmEmail() {
         return
       }
 
-      if (account.email != accountContext.account?.email) { 
+      if (account.email != accountContext.account?.email) {
         await accountContext.updateAccount(account._id, account)
       }
 
-      // TODO: Send email 
+      // TODO: Send email
       setError('Ticket attestation email has been sent.')
     }
   }
@@ -39,31 +39,31 @@ export default function ConfirmEmail() {
 
   return (
     <div>
-      {isBrowser && 
-      <div>
-        {error && <Alert type='info' message={error} />}
-        <br/>
-
+      {isBrowser && (
         <div>
-          <label htmlFor="account-email">Email: </label>
-          <input
-            type="email"
-            id="account-email"
-            placeholder="Enter email"
-            name="email"
-            value={account.email}
-            onChange={e => onChange(e.target.value)}
-          />
-        </div>
-        <br />
+          {error && <Alert type="info" message={error} />}
+          <br />
 
-        <div>
-          <button type="button" onClick={sendConfirmationEmail}>
-            Submit
-          </button>
+          <div>
+            <label htmlFor="account-email">Email: </label>
+            <input
+              type="email"
+              id="account-email"
+              placeholder="Enter email"
+              name="email"
+              value={account.email}
+              onChange={e => onChange(e.target.value)}
+            />
+          </div>
+          <br />
+
+          <div>
+            <button type="button" onClick={sendConfirmationEmail}>
+              Submit
+            </button>
+          </div>
         </div>
-      </div>
-      }
+      )}
     </div>
   )
 }

@@ -1,5 +1,8 @@
 ---
 title: Guía de la ciudad
+tags:
+  - devcon
+  - location
 template: city-guide
 ---
 

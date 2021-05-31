@@ -23,12 +23,12 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     logout,
     getAccount,
     updateAccount,
-    deleteAccount
+    deleteAccount,
   })
 
   React.useEffect(() => {
     async function asyncEffect() {
-      await getAccount();
+      await getAccount()
     }
 
     asyncEffect()
@@ -47,8 +47,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       const provider = new providers.Web3Provider(web3)
       setContext({ ...context, provider: provider })
       return provider
-    }
-    catch (e) {
+    } catch (e) {
       console.log('Unable to connect to web3')
       console.error(e)
     }
@@ -59,7 +58,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     if (!provider) {
       provider = await connectWeb3()
     }
-    if (!provider) { 
+    if (!provider) {
       console.error('Unable to initialize Web3Provider')
       return
     }
@@ -83,15 +82,14 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
         message,
         signature,
       } as SignedMessage
-    }
-    catch (e) {
+    } catch (e) {
       console.log('Unable to sign message')
       console.error(e)
     }
   }
 
   async function getNonce(): Promise<number | undefined> {
-    const response = await fetch('/api/account/nonce', { 
+    const response = await fetch('/api/account/nonce', {
       method: 'GET',
     })
 
@@ -102,7 +100,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   }
 
   async function loginWeb3(address: string, message: string, signature: string): Promise<UserAccount | undefined> {
-    const response = await fetch('/api/account/login/web3', { 
+    const response = await fetch('/api/account/login/web3', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -122,7 +120,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   }
 
   async function loginEmail(email: string, nonce: number): Promise<UserAccount | undefined> {
-    const response = await fetch('/api/account/login/email', { 
+    const response = await fetch('/api/account/login/email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -141,7 +139,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   }
 
   async function verifyEmail(email: string): Promise<boolean> {
-    const response = await fetch('/api/account/login/email/verify', { 
+    const response = await fetch('/api/account/login/email/verify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -161,7 +159,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     // if (!context.web3Modal) return false // isSSR
 
     // context.web3Modal.clearCachedProvider()
-    const response = await fetch('/api/account/logout', { 
+    const response = await fetch('/api/account/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     })
@@ -209,11 +207,11 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
   async function deleteAccount(id: string): Promise<boolean> {
     const response = await fetch('/api/account/delete/' + id, {
-      method: 'DELETE'
+      method: 'DELETE',
     })
 
     if (response.status === 200) {
-      // TODO: delete & logout 
+      // TODO: delete & logout
       return true
     }
 

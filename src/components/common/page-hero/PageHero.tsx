@@ -4,6 +4,7 @@ import { Link } from 'src/components/common/link'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
 import usePageCategory from './usePageCategory'
 import useIsScrolled from 'src/hooks/useIsScrolled'
+import { usePageContext } from 'src/context/page-context'
 
 type NavigationLink = {
   to: string
@@ -18,7 +19,6 @@ type CTALink = {
 
 type PageHeroProps = {
   title?: string
-  logo?: any
   background?: string
   cta?: Array<CTALink>
   renderCustom?(props?: any): JSX.Element
@@ -26,6 +26,7 @@ type PageHeroProps = {
 }
 
 export const PageHero = (props: PageHeroProps) => {
+  const pageContext = usePageContext()
   const stripHeight = useGetElementHeight('strip')
   const headerHeight = useGetElementHeight('header')
   const pageHeaderHeight = useGetElementHeight('page-navigation')
@@ -52,16 +53,12 @@ export const PageHero = (props: PageHeroProps) => {
       }`}
       style={style}
     >
-      {/* <div className={css[props.type]}>
-        <img alt="" src={props.logo} />
-      </div> */}
-
       <div className="section">
         <div className={css['info']}>
           <p className={`${css['page-category']} font-xs text-uppercase`}>{pageCategory}</p>
 
           <div className={css['title-block']}>
-            <h1 className="font-massive">{props.title}</h1>
+            <h1 className="font-massive">{props.title || pageContext?.current?.title}</h1>
 
             {props.cta && (
               <div className={css['buttons']}>

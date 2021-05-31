@@ -13,16 +13,7 @@
   background-repeat: no-repeat;
   background-position: center right;
   background-color: $colors-monochrome-1;
-  background-image: var(--theme-logo),
-    var(
-      --theme-gradient,
-      radial-gradient(
-        73.15% 179.46% at 90.19% 25.94%,
-        #00b3a4 0%,
-        rgba(0, 255, 117, 0.4) 58.33%,
-        rgba(203, 227, 214, 0) 100%
-      )
-    );
+  background-image: var(--theme-logo), var(--theme-gradient);
 
   // Strip is always present on mobile (but not on desktop) - we have to account for that:
   &.scrolled {

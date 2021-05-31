@@ -10,11 +10,11 @@ export default function LoginPage(props: RouteComponentProps) {
     <div>
       <h2>Signin</h2>
 
-      {isBrowser &&
+      {isBrowser && (
         <Suspense fallback={<div />}>
           <Connect />
         </Suspense>
-      }
+      )}
     </div>
   )
 }
