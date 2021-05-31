@@ -1,0 +1,22 @@
+@use 'src/assets/css/partials/index' as *;
+
+.form {
+    display: flex;
+
+    .container {
+        cursor: pointer;
+    }
+
+    input {
+        width: 260px;
+        padding: 2px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: var(--theme-color, #{$colors-monochrome-10});
+
+        &:active,
+        &:focus { 
+            outline: none;
+        }
+    }
+}

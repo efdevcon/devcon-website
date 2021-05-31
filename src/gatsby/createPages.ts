@@ -1,5 +1,7 @@
 import { GatsbyNode, CreatePagesArgs, Actions } from 'gatsby'
 import path from 'path'
+import { SearchItem } from 'src/types/SearchItem'
+import { Tag } from 'src/types/Tag'
 
 const languages = ['en', 'es']
 const defaultLang = 'en'
@@ -12,6 +14,7 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
   await createNewsPages(args)
   await createDipPages(args)
   // await createTagPages(args)
+  await createSearchPage(args)
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -123,7 +126,7 @@ async function createBlogPages({ actions, graphql, reporter }: CreatePagesArgs) 
 async function createTagPages({ actions, graphql, reporter }: CreatePagesArgs) {
   const result: any = await graphql(`
     query {
-      taggedPages : allMarkdownRemark(filter: {frontmatter: {tagCount: {gt: 0}}}) {
+      taggedPages: allMarkdownRemark(filter: { frontmatter: { tagCount: { gt: 0 } } }) {
         nodes {
           frontmatter {
             tags
@@ -145,11 +148,79 @@ async function createTagPages({ actions, graphql, reporter }: CreatePagesArgs) {
   result.data.taggedPages.nodes.forEach((node: any) => {
     tags = tags.concat(node.frontmatter.tags)
   })
-  tags = [...new Set(tags)];
+  tags = [...new Set(tags)]
 
   tags.forEach((tag: string) => {
     createDynamicPage(actions, `/en/tags/${tag}/`, 'tag', 'en', tag)
     createDynamicPage(actions, `/es/tags/${tag}/`, 'tag', 'es', tag)
+  })
+}
+
+async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs) {
+  const result: any = await graphql(`
+    query {
+      items: allMarkdownRemark(filter: { fields: { collection: { in: ["archive", "faq", "news", "pages"] } } }) {
+        nodes {
+          fields {
+            id
+            slug
+            lang
+            collection
+          }
+          frontmatter {
+            title
+            description
+            tagItems {
+              id
+              slug
+              lang
+              title
+            }
+          }
+          html
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running search query.`)
+    return
+  }
+
+  const { createPage } = actions
+  languages.forEach((language: string) => {
+    const data = result.data?.items?.nodes
+      ?.filter((i: any) => i.fields.lang === language)
+      .map((i: any) => {
+        return {
+          id: i.fields.id,
+          slug: i.fields.slug,
+          lang: i.fields.lang,
+          type: i.fields.collection,
+          title: i.frontmatter.title,
+          description: i.frontmatter.description,
+          body: i.frontmatter.title,
+          tags: i.frontmatter.tagItems.filter((i: Tag) => i.lang === language).map((i: Tag) => i.title),
+        } as SearchItem
+      })
+
+    createPage({
+      path: `/${language}/search/`,
+      component: path.resolve(`./src/components/domain/page-templates/search.tsx`),
+      context: {
+        slug: `/${language}/search/`,
+        language: language,
+        allSearchData: data,
+        intl: {
+          language: language,
+          languages: languages,
+          messages: require(`../content/i18n/${language}.json`),
+          routed: true,
+          redirect: false,
+        },
+      },
+    })
   })
 }
 

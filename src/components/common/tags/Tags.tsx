@@ -2,6 +2,7 @@ import React from 'react'
 import css from './tags.module.scss'
 import { Tag } from 'src/types/Tag'
 import { Link } from '../link'
+import { useIntl } from 'gatsby-plugin-intl'
 
 interface Props {
   items: Tag[]
@@ -10,6 +11,8 @@ interface Props {
 }
 
 export function Tags(props: Props) {
+  const intl = useIntl()
+
   let className = css['tags']
   if (props.className) className += ` ${props.className}`
 
@@ -24,7 +27,7 @@ export function Tags(props: Props) {
           )
         } else {
           return (
-            <Link key={item.slug} className="label bold" to={'/en/tags/' + item.slug}>
+            <Link key={item.slug} className="label bold" to={`/${item.lang}/search/?q=${item.title}`}>
               {item.title}
             </Link>
           )

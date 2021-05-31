@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import { BlogPost } from 'src/types/BlogPost'
 
-const defaultMaxItems = 5;
+const defaultMaxItems = 5
 
 export const useBlogs = (maxItems: number = defaultMaxItems): Array<BlogPost> => {
   const data = useStaticQuery(graphql`
@@ -35,6 +35,6 @@ function mapToBlog(source: any): BlogPost {
     body: source.content?.encoded,
     slug: '/',
     permaLink: source.link,
-    imageUrl: source.efblog?.image
+    imageUrl: source.efblog?.image,
   }
 }

@@ -18,6 +18,7 @@ const baseTypes = `
   type Tag {
     id: String,
     slug: String,
+    lang: String,
     title: String
   }
 `
