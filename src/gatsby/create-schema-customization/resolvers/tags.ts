@@ -4,22 +4,26 @@ export const tagsResolver = {
     const pageTags = source['tags']
     if (!pageTags) return []
 
+    const filter: any = {
+      fields: {
+        collection: {
+          eq: 'tags',
+        },
+        id: {
+          in: pageTags,
+        },
+      },
+    }
+    if (language) {
+      filter.fields.lang = {
+        eq: language,
+      }
+    }
+
     return context.nodeModel
       .runQuery({
         query: {
-          filter: {
-            fields: {
-              collection: {
-                eq: 'tags',
-              },
-              id: {
-                in: pageTags,
-              },
-              lang: {
-                eq: language,
-              },
-            },
-          },
+          filter,
         },
         type: 'MarkdownRemark',
       })
@@ -29,13 +33,14 @@ export const tagsResolver = {
             id: i.id,
             slug: i.fields.id,
             title: i.frontmatter.title,
+            lang: i.fields.lang,
           }
         })
       })
   },
   args: {
     language: {
-      type: 'String!',
+      type: 'String',
     },
   },
 }
@@ -46,5 +51,5 @@ export const tagCountResolver = {
     const pageTags = source['tags']
     if (!pageTags) return 0
     return pageTags.length
-  }
+  },
 }

@@ -20,7 +20,7 @@ export const BlogOverview = (props: Props) => {
     <div className={className}>
       {blogs.map((blog: BlogPost) => {
         return (
-          <div className={css['outer']}>
+          <div className={css['outer']} id={blog.id}>
             <Card
               className={css['card']}
               key={blog.slug}

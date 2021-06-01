@@ -68,7 +68,5 @@ export function ToTags(source: any): Array<Tag> {
     return []
   }
 
-  return source?.frontmatter?.tagItems?.map((i: any) => {
-    return { slug: i.slug, title: i.title }
-  })
+  return source?.frontmatter?.tagItems
 }

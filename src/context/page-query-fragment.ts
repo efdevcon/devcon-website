@@ -12,6 +12,7 @@ export const query = graphql`
         tagItems(language: $language) {
           id
           slug
+          lang
           title
         }
       }

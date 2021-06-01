@@ -36,7 +36,7 @@ export default pageHOC(function TagTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!, $tag: String!) {
+  query ($slug: String!, $language: String!, $tag: String!) {
     results: allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } }, fields: { lang: { eq: $language } } }) {
       nodes {
         frontmatter {

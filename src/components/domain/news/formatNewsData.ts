@@ -21,6 +21,7 @@ export const formatNewsData = (data: any): Array<NewsItem> => {
       // if (url.includes('twitter')) formattedMetaData.push(<Twitter />)
 
       return {
+        id,
         title,
         description: node.rawMarkdownBody,
         url: url || title,

@@ -48,7 +48,7 @@ export function Accordion(props: AccordionProps) {
           const open = opens[index]
 
           return (
-            <div key={item.id} className={css['item-container']}>
+            <div id={item.id} key={item.id} className={css['item-container']}>
               <div className={css[open ? 'active' : 'header']} onClick={() => toggle(index)}>
                 <p className="font-lg">{item.title}</p>
                 <div className={css['icon']}>{open ? <IconArrowCollapse /> : <IconArrowDropdown />}</div>

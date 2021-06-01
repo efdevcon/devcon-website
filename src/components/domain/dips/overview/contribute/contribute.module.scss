@@ -1,4 +1,3 @@
-@use "sass:math";
 @use 'src/assets/css/partials/index' as *;
 
 @keyframes auto-scroll {
@@ -116,7 +115,7 @@
           // yikes
           --odd-offset: calc(
             (
-              (math.div((math.div(var(--container-size), var(--thumbnails-per-view)) - (var(--thumbnail-spacing) * 2))), 2) +
+              ((var(--container-size) / var(--thumbnails-per-view) - (var(--thumbnail-spacing) * 2)) / 2) +
                 var(--thumbnail-spacing)
             )
           );
@@ -160,7 +159,7 @@
 
             // img {
             cursor: pointer;
-            width: calc(math.div(var(--container-size), var(--thumbnails-per-view)) - (var(--thumbnail-spacing) * 2));
+            width: calc(var(--container-size) / var(--thumbnails-per-view) - (var(--thumbnail-spacing) * 2));
             margin-left: var(--thumbnail-spacing);
             margin-right: var(--thumbnail-spacing);
             margin-bottom: var(--thumbnail-spacing);

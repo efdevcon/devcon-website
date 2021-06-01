@@ -1,4 +1,5 @@
 export interface NewsItem {
+  id: string
   date: Date
   author?: string
   url?: string
