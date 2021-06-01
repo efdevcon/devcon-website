@@ -83,6 +83,6 @@ export const query = graphql`
   query ($slug: String!, $language: String!) {
     ...Page
     ...NavigationData
-    ...LatestNewsItem
+    ...Notification
   }
 `
