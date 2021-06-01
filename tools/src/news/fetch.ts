@@ -1,12 +1,10 @@
 import { NewsItem } from '../../../src/types/NewsItem';
-import * as matter from 'gray-matter';
+require('dotenv').config()
 const nodeFetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const RSSParser = require('rss-parser');
 const rssParser = new RSSParser();
-
-console.log(process.env.NODE_ENV, 'test');
 
 const files = (() => {
   const _interface = {
@@ -130,7 +128,7 @@ const twitter = (() => {
   const twitterDir = path.resolve(__dirname, '../../../src/content/news-external/tweets');
   const curationHashtag = 'Devcon';
   const host = 'https://api.twitter.com/2';
-  const bearer = 'Bearer AAAAAAAAAAAAAAAAAAAAAMwLQAEAAAAA4jN75oBs9B3waNjeZVf02Hp0kOc%3DIgSciJXZu23fLg4y5DisVYjTQkT0CDG0PZ0kT1idJbUPH3LTcZ';
+  const bearer = `Bearer ${process.env.TWITTER_API_KEY}`;
   const userID = '1013526003015184385';
 
   const fetchWrapper = (pathname = '', queryParams?: { [key: string]: any }) => {
@@ -152,17 +150,28 @@ const twitter = (() => {
     ensureDirectory: async () => {
       files.ensureDirectory(twitterDir);
     },
-    getTweets: async (sinceID: number) => {
-      const result = await fetchWrapper(`/users/${userID}/tweets`, {
+    getTweets: async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
+      const queryParams = {
         exclude: 'retweets,replies',
         since_id: sinceID,
+        max_results: 5,
         'tweet.fields': 'created_at,entities'
-      });
+      } as any
 
-      if (result.meta.result_count === 0) return [];
+      if (nextToken) {
+        queryParams.pagination_token = nextToken;
+      }
 
-      // We only collect tweets that are marked with the curation hashtag
-      return result.data.filter((tweet: any) => tweet?.entities?.hashtags?.some((hashtag: any) => hashtag.tag === curationHashtag));
+      const result = await fetchWrapper(`/users/${userID}/tweets`, queryParams);
+
+      if (result.meta.result_count === 0) return results;
+      if (result.meta.next_token) { 
+        results = [...results, ...result.data]; 
+        return await _interface.getTweets(sinceID, results, result.meta.next_token);
+      } else {
+        // We only collect tweets that are marked with the curation hashtag
+        return results.filter((tweet: any) => tweet?.entities?.hashtags?.some((hashtag: any) => hashtag.tag === curationHashtag));
+      }
     },
     getUserID: async () => {
       const result = await fetchWrapper(`/users/by/username/EFDevcon`);
@@ -210,7 +219,7 @@ twitter
   .ensureDirectory()
   .then(twitter.getLatestTweetID)
   .then(twitter.getTweets)
-  .then(tweets => tweets.map(formatting.formatTweet))
+  .then((tweets: any) => console.log(tweets) as any || tweets.map(formatting.formatTweet))
   .then(markdown.write(twitter.twitterDir, (newsItem) => `${newsItem.tweetID}.md`))
   .catch(e => {
     console.error('Twitter failed: ', e)

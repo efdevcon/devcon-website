@@ -9,9 +9,8 @@
   "dependencies": {
     "@octokit/rest": "^18.0.9",
     "cross-env": "^7.0.3",
-    "gray-matter": "^4.0.3",
+    "dotenv": "^10.0.0",
     "node-fetch": "^2.6.1",
-    "parse-md": "^2.0.4",
     "rss-parser": "^3.12.0"
   },
   "devDependencies": {

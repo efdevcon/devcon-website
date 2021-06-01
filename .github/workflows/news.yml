@@ -1,7 +1,6 @@
 name: Fetch and commit news
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   build:
@@ -13,6 +12,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
+      - name: Create env file
+        run: |
+          cd tools
+          touch .env
+          echo TWITTER_API_KEY=${{ secrets.TWITTER_API_KEY }} >> .env
 
       - name: Fetch news
         run: cd tools && yarn && yarn news

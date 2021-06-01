@@ -116,6 +116,62 @@ collections:
         }
       - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
 
+  - name: 'news-tweets'
+    label: 'News: Tweets'
+    label_singular: 'News item: Tweet'
+    folder: 'src/content/news-external/tweets'
+    create: true
+    fields:
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate' }
+      - { name: 'title', label: 'Title', widget: 'hidden', i18n: true, required: true }
+      - {
+          name: 'body',
+          label: 'Body',
+          pattern: ['^.{0,280}$', 'Must have less than 280 characters'],
+          widget: 'markdown',
+          i18n: true,
+        }
+      - {
+          name: 'tags',
+          label: 'Tags',
+          widget: 'relation',
+          i18n: 'duplicate',
+          required: false,
+          collection: 'tags',
+          value_field: '{{slug}}',
+          search_fields: ['title'],
+          multiple: true,
+        }
+      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
+
+  - name: 'news-blog-posts'
+    label: 'News: Blog Posts'
+    label_singular: 'News item: Blog Post'
+    folder: 'src/content/news-external/blog-posts'
+    create: true
+    fields:
+      - { name: 'url', label: 'URL', widget: 'string' }
+      - { name: 'title', label: 'Title', widget: 'hidden' }
+      - {
+          name: 'body',
+          label: 'Body',
+          pattern: ['^.{0,280}$', 'Must have less than 280 characters'],
+          widget: 'markdown',
+          i18n: true,
+        }
+      - {
+          name: 'tags',
+          label: 'Tags',
+          widget: 'relation',
+          i18n: 'duplicate',
+          required: false,
+          collection: 'tags',
+          value_field: '{{slug}}',
+          search_fields: ['title'],
+          multiple: true,
+        }
+      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, required: true }
+
   - name: 'Content sections'
     label: 'Content sections'
     label_singular: 'Content section'
