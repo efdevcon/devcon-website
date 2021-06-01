@@ -6,6 +6,8 @@ const path = require('path');
 const RSSParser = require('rss-parser');
 const rssParser = new RSSParser();
 
+const newsDirectory = path.resolve(__dirname, '../../../src/content/news-external');
+
 const files = (() => {
   const _interface = {
     readFile: (filepath: string): Promise<File> => {
@@ -125,7 +127,7 @@ const formatting = (() => {
 })();
 
 const twitter = (() => {
-  const twitterDir = path.resolve(__dirname, '../../../src/content/news-external/tweets');
+  const twitterDir = path.resolve(newsDirectory, 'tweets');
   const curationHashtag = 'Devcon';
   const host = 'https://api.twitter.com/2';
   const bearer = `Bearer ${process.env.TWITTER_API_KEY}`;
@@ -198,7 +200,7 @@ const twitter = (() => {
 })();
 
 const blog = (() => {
-  const blogDir = path.resolve(__dirname, '../../../src/content/news-external/blog-posts');
+  const blogDir = path.resolve(newsDirectory, 'blog-posts');
 
   const _interface = {
     blogDir,
@@ -214,6 +216,8 @@ const blog = (() => {
 
   return _interface;
 })();
+
+files.ensureDirectory(newsDirectory);
 
 twitter
   .ensureDirectory()
