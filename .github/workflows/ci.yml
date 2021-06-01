@@ -3,8 +3,8 @@ on:
   pull_request:
   push:
     paths-ignore:
-      - 'src/content/news/tweets/**'
-      - 'src/content/news/blog-posts/**'
+      - 'src/content/news-external/**'
+      - 'src/content/news-external/**'
 
 jobs:
   build:
@@ -17,15 +17,7 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Fetch news
-        run: cd tools && yarn && yarn news
-
-      - uses: EndBug/add-and-commit@v7
-        with:
-          default_author: github_actions
-          message: 'Fetch news'
-
-      - name: Branch name test
+      - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/}
 
       - name: Install dependencies

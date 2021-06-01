@@ -4,11 +4,9 @@ export const query = graphql`
   fragment NewsData on Query {
     newsData: allMarkdownRemark(
       filter: { 
-        fields: { lang: { in: [$language, "tweets", "blog-posts"] }, collection: { eq: "news" } } 
+        fields: { lang: { in: [$language, "tweets", "blog-posts"] }, collection: { in: ["news", "news-external"] } } 
       }, 
-      sort: { fields: frontmatter___date, order: ASC },
-      limit: $limit
-      skip: $skip
+      sort: { fields: frontmatter___date, order: DESC },
     ) {
       nodes {
         frontmatter {
@@ -26,7 +24,7 @@ export const query = graphql`
   fragment NewsDataInline on Query {
     newsDataInline: allMarkdownRemark(
       filter: { 
-        fields: { lang: { in: [$language, "tweets", "blog-posts"] }, collection: { eq: "news" } } 
+        fields: { lang: { in: [$language, "tweets", "blog-posts"] }, collection: { in: ["news", "news-external"] } } 
       }, 
       sort: { fields: frontmatter___date, order: DESC },
       limit: 10
@@ -44,17 +42,18 @@ export const query = graphql`
     }
   }
 
-  fragment LatestNewsItem on Query {
-    latestNewsItem: allMarkdownRemark(
-      filter: { fields: { collection: { eq: "news" }, lang: { eq: $language } } }
+  fragment Notification on Query {
+    notification: allMarkdownRemark(
+      filter: {fields: {collection: {eq: "notifications"}, lang: { eq: $language }}, frontmatter: { active: { eq:true }}}
       limit: 1
-      sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
         frontmatter {
-          title
-          date
+          url
+          label
+          labelType
         }
+        rawMarkdownBody
       }
     }
   }

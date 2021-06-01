@@ -14,10 +14,13 @@ export function ToNavigationData(nodes: any): NavigationData {
 }
 
 export function ToNotification(data: any): Notification {
+  console.log(data, 'data');
+
   return {
-    title: data.frontmatter.title,
-    url: '/en/news/',
-    label: 'NEWS',
+    title: data.rawMarkdownBody,
+    url: data.frontmatter.url,
+    label: data.frontmatter.label,
+    labelType: data.frontmatter.labelType
   }
 }
 

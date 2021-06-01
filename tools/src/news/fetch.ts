@@ -32,8 +32,17 @@ const files = (() => {
         });
       })
     },
-    writeFile: (filepath: string, contents: string): Promise<boolean> => {
+    writeFile: async (filepath: string, contents: string): Promise<boolean> => {
+      // If file with given path already exists we don't want to override it - that allows us to change them using the CMS
+      const exists = await _interface.checkFileExists(filepath);
+
       return new Promise((resolve, reject) => {
+        if (exists) {
+          resolve(true);
+
+          return;
+        }
+
         fs.writeFile(filepath, contents, (err: any) => {
           if (err) {
             reject(err) 
@@ -47,6 +56,17 @@ const files = (() => {
       if (!fs.existsSync(directory)){
           fs.mkdirSync(directory);
       }
+    },
+    checkFileExists: (filepath: string) => {
+      return new Promise((resolve, reject) => {
+        fs.access(filepath, (err: any, exists: any) => {
+          if (err) {
+            resolve(false);
+          } else {
+            resolve(true);
+          }
+        })
+      });
     },
     createSafeFilename: (filename: string) => {
       return filename.replace(/[^a-z0-9]/gi, '_').toLowerCase();
@@ -107,7 +127,7 @@ const formatting = (() => {
 })();
 
 const twitter = (() => {
-  const twitterDir = path.resolve(__dirname, '../../../src/content/news/tweets');
+  const twitterDir = path.resolve(__dirname, '../../../src/content/news-external/tweets');
   const curationHashtag = 'Devcon';
   const host = 'https://api.twitter.com/2';
   const bearer = 'Bearer AAAAAAAAAAAAAAAAAAAAAMwLQAEAAAAA4jN75oBs9B3waNjeZVf02Hp0kOc%3DIgSciJXZu23fLg4y5DisVYjTQkT0CDG0PZ0kT1idJbUPH3LTcZ';
@@ -169,7 +189,7 @@ const twitter = (() => {
 })();
 
 const blog = (() => {
-  const blogDir = path.resolve(__dirname, '../../../src/content/news/blog-posts');
+  const blogDir = path.resolve(__dirname, '../../../src/content/news-external/blog-posts');
 
   const _interface = {
     blogDir,
@@ -178,8 +198,6 @@ const blog = (() => {
     },
     getPosts: async () => {
       const feed = await rssParser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml');
-
-      console.log(feed, 'feed');
   
       return feed.items;
     },

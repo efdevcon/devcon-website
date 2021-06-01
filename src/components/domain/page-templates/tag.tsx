@@ -18,9 +18,17 @@ export default pageHOC(function TagTemplate({ data }: any) {
       <PageContentSection>
         <h2>Tag Results</h2>
         <ul>
-        {results && results.nodes?.length > 0 && results.nodes.map((i: any) => {
-          return <li><Link key={i.fields.slug} to={i.fields.slug}>{i.frontmatter.title}</Link></li>
-        })}
+          {results &&
+            results.nodes?.length > 0 &&
+            results.nodes.map((i: any) => {
+              return (
+                <li>
+                  <Link key={i.fields.slug} to={i.fields.slug}>
+                    {i.frontmatter.title}
+                  </Link>
+                </li>
+              )
+            })}
         </ul>
       </PageContentSection>
     </Content>
@@ -28,10 +36,8 @@ export default pageHOC(function TagTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query ($slug: String!, $language: String!, $tag: String!) {
-    results: allMarkdownRemark(
-      filter: {frontmatter: {tags: {in: [$tag]}}, fields: {lang: {eq: $language}}}
-    ) {
+  query($slug: String!, $language: String!, $tag: String!) {
+    results: allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } }, fields: { lang: { eq: $language } } }) {
       nodes {
         frontmatter {
           title
@@ -49,6 +55,6 @@ export const query = graphql`
     }
     ...Page
     ...NavigationData
-    ...LatestNewsItem
+    ...Notification
   }
 `

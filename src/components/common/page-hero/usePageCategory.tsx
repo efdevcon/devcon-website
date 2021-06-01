@@ -48,6 +48,9 @@ export default () => {
     We match and resolve the first part (the "group"), and if there is a second part, we append it after resolving the group
   */
   const pageComponents = pageContext?.location.pathname.match(/(\/[^/]*\/[^/]*\/)(.*)/)
+
+  if (!pageComponents) return null
+
   const group = pageComponents[1]
   const page = pageComponents[2]
 

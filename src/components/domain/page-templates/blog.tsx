@@ -22,8 +22,8 @@ export default pageHOC(function BlogTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query ($language: String!) {
-    ...LatestNewsItem
+  query($language: String!) {
+    ...Notification
     ...NavigationData
   }
 `

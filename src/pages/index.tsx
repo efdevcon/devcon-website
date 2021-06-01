@@ -8,7 +8,6 @@ import { News } from 'src/components/domain/news'
 import { pageHOC } from 'src/context/pageHOC'
 
 export default pageHOC(function Index({ data }: any) {
-  console.log(data, 'data')
   return (
     <Default>
       <SEO />
@@ -23,6 +22,6 @@ export const query = graphql`
   query($language: String!) {
     ...NavigationData
     ...NewsDataInline
-    ...LatestNewsItem
+    ...Notification
   }
 `

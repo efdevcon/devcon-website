@@ -174,6 +174,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'news-external',
+        path: `${__dirname}/src/content/news-external`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'navigation',
         path: `${__dirname}/src/content/navigation`,
       },
@@ -197,6 +204,13 @@ module.exports = {
       options: {
         name: 'news',
         path: `${__dirname}/src/content/news`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'notifications',
+        path: `${__dirname}/src/content/notifications`,
       },
     },
     {

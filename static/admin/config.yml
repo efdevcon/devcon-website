@@ -6,7 +6,7 @@ backend:
     - admin
     - editor
 
-
+local_backend: true
 
 slug:
   encoding: 'ascii'
@@ -62,6 +62,31 @@ collections:
           default: false,
         }
 
+  - name: 'notification'
+    label: 'Notifications'
+    label_singular: 'Notification'
+    folder: 'src/content/notifications'
+    i18n: true
+    fields:
+      - {
+          name: 'body',
+          label: 'Body',
+          pattern: ['^.{0,50}$', 'Must have less than 50 characters'],
+          widget: 'markdown',
+          i18n: true,
+        }
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: false }
+      - { name: 'label', Label: 'Label', widget: 'string', i18n: true, required: false }
+      - {
+          name: 'labelType',
+          Label: 'Label Type',
+          widget: 'select',
+          options: ['neutral', 'success', 'error'],
+          required: false,
+          i18n: 'duplicate',
+        }
+      - { label: 'Active', name: 'active', widget: 'boolean', default: true, i18n: duplicate }
+
   - name: 'news'
     label: 'News'
     label_singular: 'News item'
@@ -69,18 +94,27 @@ collections:
     create: true
     i18n: true
     fields:
-      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: true }
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate' }
       - { name: 'title', label: 'Title', widget: 'string', i18n: true, required: true }
       - {
-          name: 'description',
+          name: 'body',
+          label: 'Body',
           pattern: ['^.{0,280}$', 'Must have less than 280 characters'],
-          label: 'Description',
-          widget: 'text',
+          widget: 'markdown',
           i18n: true,
+        }
+      - {
+          name: 'tags',
+          label: 'Tags',
+          widget: 'relation',
+          i18n: 'duplicate',
           required: false,
+          collection: 'tags',
+          value_field: '{{slug}}',
+          search_fields: ['title'],
+          multiple: true,
         }
       - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
-      - { name: 'metadata', label: 'Metadata', widget: text, i18n: 'duplicate', required: false }
 
   - name: 'Content sections'
     label: 'Content sections'

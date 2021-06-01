@@ -41,35 +41,35 @@ async function createContentPages({ actions, graphql, reporter }: CreatePagesArg
   result.data.allMarkdownRemark.nodes.forEach((node: any) => {
     if (node.url) return // No reason to create pages for external news
 
-    if (node.frontmatter.template === 'news') {
-      createPaginatedPage(actions, node.fields.lang, node.fields.slug, 'news', 10, async () => {
-        const result = await graphql(`
-            {
-              allNews: allMarkdownRemark(
-                filter: { 
-                  fields: { lang: { in: ["${node.fields.lang}", "tweets", "blog-posts"] }, collection: { eq: "news" } } 
-                }, 
-                sort: { fields: [frontmatter___date], order: DESC }
-              ) {
-                nodes {
-                  fields {
-                    slug
-                  }
-                }
-              }
-            }
-        `);
+    // if (node.frontmatter.template === 'news') {
+    //   createPaginatedPage(actions, node.fields.lang, node.fields.slug, 'news', 10, async () => {
+    //     const result = await graphql(`
+    //         {
+    //           allNews: allMarkdownRemark(
+    //             filter: { 
+    //               fields: { lang: { in: ["${node.fields.lang}", "tweets", "blog-posts"] }, collection: { eq: "news" } } 
+    //             }, 
+    //             sort: { fields: [frontmatter___date], order: DESC }
+    //           ) {
+    //             nodes {
+    //               fields {
+    //                 slug
+    //               }
+    //             }
+    //           }
+    //         }
+    //     `);
 
-        if (result.errors) {
-          reporter.panicOnBuild(`Error while running News query.`)
-          return
-        }
+    //     if (result.errors) {
+    //       reporter.panicOnBuild(`Error while running News query.`)
+    //       return
+    //     }
 
-        return result.data.allNews.nodes;
-      });
-    } else {
-      createDynamicPage(actions, node.fields.slug, node.frontmatter.template, node.fields.lang)
-    }
+    //     return result.data.allNews.nodes;
+    //   });
+    // } else {
+    createDynamicPage(actions, node.fields.slug, node.frontmatter.template, node.fields.lang)
+    // }
   });
 }
 

@@ -4,6 +4,7 @@ import { PageContext } from './page-context'
 
 type pageProps = {
   data: any
+  pageContext: any
   location: any
 }
 
@@ -13,8 +14,9 @@ export const pageHOC = (
 ) => (props: pageProps) => {
   const context = {
     location: props.location,
+    pageContext: props.pageContext,
     navigation: ToNavigationData(props.data.navigationData.nodes),
-    notification: ToNotification(props.data.latestNewsItem.nodes[0]),
+    notification: ToNotification(props.data.notification.nodes[0]),
     ...(mapDataToContext && mapDataToContext(props)),
     current: props.data.page ? ToPage(props.data.page) : undefined,
   }
