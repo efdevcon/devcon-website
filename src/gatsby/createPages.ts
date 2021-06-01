@@ -5,6 +5,9 @@ import { Tag } from 'src/types/Tag'
 
 const languages = ['en', 'es']
 const defaultLang = 'en'
+const english = require(`../content/i18n/en.json`)
+const spanish = require(`../content/i18n/es.json`)
+
 
 export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesArgs) => {
   console.log('createPages', languages, 'default', defaultLang)
@@ -180,6 +183,22 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
           html
         }
       }
+      blogs: allFeedDevconBlog(limit: 10) {
+        nodes {
+          id
+          guid
+          title
+          description
+          pubDate
+          link
+          efblog {
+            image
+          }
+          content {
+            encoded
+          }
+        }
+      }
     }
   `)
 
@@ -189,8 +208,22 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
   }
 
   const { createPage } = actions
+  
+  const blogs: Array<SearchItem> = result.data?.blogs?.nodes?.map((i: any) => {
+    return {
+      id: i.id,
+      slug: i.guid,
+      lang: 'en',
+      type: 'blog',
+      title: i.title,
+      description: i.description,
+      body: i.content.encoded,
+      tags: []
+    } as SearchItem
+  })
+
   languages.forEach((language: string) => {
-    const data = result.data?.items?.nodes
+    let data: Array<SearchItem> = result.data?.items?.nodes
       ?.filter((i: any) => i.fields.lang === language)
       .map((i: any) => {
         return {
@@ -200,10 +233,11 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
           type: i.fields.collection,
           title: i.frontmatter.title,
           description: i.frontmatter.description,
-          body: i.frontmatter.title,
+          body: i.html,
           tags: i.frontmatter.tagItems.filter((i: Tag) => i.lang === language).map((i: Tag) => i.title),
         } as SearchItem
       })
+    data.push(...blogs)
 
     createPage({
       path: `/${language}/search/`,
@@ -215,7 +249,7 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
         intl: {
           language: language,
           languages: languages,
-          messages: require(`../content/i18n/${language}.json`),
+          messages: language === 'es' ? spanish : english,
           routed: true,
           redirect: false,
         },
@@ -223,6 +257,7 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
     })
   })
 }
+
 
 function createDynamicPage(actions: Actions, slug: string, template: string, lang: string, tag: string = ''): void {
   if (template === 'none') return
@@ -241,7 +276,7 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
       intl: {
         language: lang,
         languages: languages,
-        messages: require(`../content/i18n/${lang}.json`),
+        messages: lang === 'es' ? spanish : english,
         routed: true,
         redirect: false,
       },

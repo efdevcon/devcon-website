@@ -8,6 +8,7 @@ export const useBlogs = (maxItems: number = defaultMaxItems): Array<BlogPost> =>
     query {
       blogs: allFeedDevconBlog {
         nodes {
+          id
           title
           description
           pubDate
@@ -28,6 +29,7 @@ export const useBlogs = (maxItems: number = defaultMaxItems): Array<BlogPost> =>
 
 function mapToBlog(source: any): BlogPost {
   return {
+    id: source.id,
     title: source.title,
     description: source.description,
     date: new Date(source.pubDate),

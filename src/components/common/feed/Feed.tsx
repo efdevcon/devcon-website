@@ -19,6 +19,7 @@ import moment from 'moment'
 // </div>
 
 type FeedItem = {
+  id: string
   date?: Date
   author?: string
   url: string
@@ -55,7 +56,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
   const formattedItems = sortedItems.map((item: FeedItem, index) => {
     return (
       <Link to={item.url} key={item.url}>
-        <div className={css['item-body']}>
+        <div id={item.id} className={css['item-body']}>
           <div className={css['metadata']}>
             <p className={css['date']}>{moment.utc(item.date).format('MMM D, YYYY')}</p>
             <p className={css['author']}>{item.author}</p>

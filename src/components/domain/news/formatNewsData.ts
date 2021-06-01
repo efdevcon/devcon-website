@@ -13,6 +13,7 @@ const sortNews = (data: any): Array<NewsItem> => {
 export const formatNewsData = (data: any): Array<NewsItem> => {
   return sortNews(
     data.map((node: any) => {
+      const { id } = node.fields
       const { date, description, author, title, url, imageUrl, tags } = node.frontmatter
 
       // const formattedDate = moment(date).format('ll')
@@ -22,6 +23,7 @@ export const formatNewsData = (data: any): Array<NewsItem> => {
       // if (url.includes('twitter')) formattedMetaData.push(<Twitter />)
 
       return {
+        id,
         title,
         description: node.rawMarkdownBody,
         url: url || title,

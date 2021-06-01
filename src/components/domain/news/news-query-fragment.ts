@@ -7,6 +7,9 @@ export const query = graphql`
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
+        fields {
+          id
+        }
         frontmatter {
           url
           title

@@ -42,7 +42,7 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
       return i.slug
     }
 
-    return `/${i.lang}/${i.type}/`
+    return `/${i.lang}/${i.type}/#${i.id}`
   }
 
   function onChange(value: string) {
