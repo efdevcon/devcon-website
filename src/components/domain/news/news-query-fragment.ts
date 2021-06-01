@@ -29,6 +29,9 @@ export const query = graphql`
       sort: { fields: frontmatter___date, order: ASC }
     ) {
       nodes {
+        fields { 
+          id
+        }
         frontmatter {
           title
           date
@@ -42,6 +45,9 @@ export const query = graphql`
       filter: { fields: { slug: { eq: $slug }, lang: { eq: $language }, collection: { eq: "news" } } }
     ) {
       nodes {
+        fields { 
+          id
+        }
         frontmatter {
           url
           title
