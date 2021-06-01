@@ -14,9 +14,6 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
-
       - name: Install dependencies
         run: yarn
 
