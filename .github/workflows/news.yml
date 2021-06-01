@@ -1,5 +1,7 @@
 name: Fetch and commit news
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
 
 jobs:
   build:
