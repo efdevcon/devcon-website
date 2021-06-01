@@ -104,6 +104,7 @@ const formatting = (() => {
   const _interface = {
     formatBlogPost: (post: any): NewsItem => {
       return {
+        id: post.title,
         title: post.title,
         url: post.link,     
         date: post.isoDate,
@@ -113,6 +114,7 @@ const formatting = (() => {
     },
     formatTweet: (tweet: any): NewsItem => {
       return {
+        id: tweet.id,
         title: tweet.id,
         url: `https://twitter.com/EFDevcon/status/${tweet.id}`,
         date: tweet.created_at,
