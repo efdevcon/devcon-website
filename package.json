@@ -6,7 +6,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prebuild": "sed -i \"s|%BRANCH_PLACEHOLDER%|$BRANCH|g\" ./static/admin/config.yml && sed -i \"s|local_backend: true||g\" ./static/admin/config.yml",
+    "prebuild": "yarn prebuild:cache && yarn prebuild:cms",
+    "prebuild:cache": "sh ./update_config.sh",
+    "prebuild:cms": "sed -i \"s|%BRANCH_PLACEHOLDER%|$BRANCH|g\" ./static/admin/config.yml && sed -i \"s|local_backend: true||g\" ./static/admin/config.yml",
     "build": "gatsby build && yarn build:lambda",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/server/functions --config ./src/server/webpack.config.js",
