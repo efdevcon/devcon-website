@@ -2,9 +2,6 @@ name: Devcon CI
 on:
   pull_request:
   push:
-    paths-ignore:
-      - 'src/content/news-external/**'
-      - 'src/content/news-external/**'
 
 jobs:
   build:
