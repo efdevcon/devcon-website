@@ -156,7 +156,7 @@ const twitter = (() => {
       const queryParams = {
         exclude: 'retweets,replies',
         since_id: sinceID,
-        max_results: 5,
+        max_results: 100,
         'tweet.fields': 'created_at,entities'
       } as any
 
