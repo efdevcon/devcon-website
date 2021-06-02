@@ -94,7 +94,7 @@ collections:
     create: true
     i18n: true
     fields:
-      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate' }
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: false }
       - { name: 'title', label: 'Title', widget: 'string', i18n: true, required: true }
       - {
           name: 'body',
