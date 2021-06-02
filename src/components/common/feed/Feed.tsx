@@ -72,6 +72,7 @@ export const Title = ({ item }: { item: FeedItem }) => {
 }
 
 export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props) => {
+  const intl = useIntl()
   const [sortBy, setSortBy] = React.useState(sortOptions?.options[0].value)
   const [filteredData, filterState] = useFilter(filterOptions)
   const filteredItems = filterOptions ? filteredData : items
@@ -111,6 +112,8 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
     )
   })
 
+  const noResults = formattedItems.length === 0
+
   return (
     <div className={`${css['feed']} ${inline ? css['inline'] : ''}`}>
       <div className={css['header']}>
@@ -122,7 +125,11 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
         </div>
       </div>
 
-      <div className={css['body']}>{formattedItems}</div>
+      {noResults ? (
+        <div className={css['no-results']}>{intl.formatMessage({ id: 'feed_no_results' })}</div>
+      ) : (
+        <div className={css['body']}>{formattedItems}</div>
+      )}
     </div>
   )
 }

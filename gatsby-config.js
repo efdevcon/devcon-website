@@ -36,7 +36,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-root-import',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-sharp`,
     `gatsby-transformer-yaml`,
@@ -324,5 +329,5 @@ module.exports = {
     },
   ],
 }
-// 
-// 
+//
+//

@@ -167,8 +167,10 @@ const twitter = (() => {
       const result = await fetchWrapper(`/users/${userID}/tweets`, queryParams);
 
       if (result.meta.result_count === 0) return results;
-      if (result.meta.next_token) { 
-        results = [...results, ...result.data]; 
+
+      results = [...results, ...result.data]; 
+
+      if (result.meta.next_token) {
         return await _interface.getTweets(sinceID, results, result.meta.next_token);
       } else {
         // We only collect tweets that are marked with the curation hashtag

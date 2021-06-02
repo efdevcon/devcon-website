@@ -1,39 +1,39 @@
 import React from 'react'
 import { Feed } from 'src/components/common/feed'
-import css from './overview.module.scss'
 import { NewsItem } from 'src/types/NewsItem'
-import { usePageContext } from 'src/context/page-context'
-import { Link } from 'src/components/common/link'
+// import css from './overview.module.scss'
+// import { usePageContext } from 'src/context/page-context'
+// import { Link } from 'src/components/common/link'
 
 type NewsOverviewProps = {
   newsItems: NewsItem[]
 }
 
-const PrevNext = () => {
-  const context = usePageContext()
+// const PrevNext = () => {
+//   const context = usePageContext()
 
-  const { currentPage, numPages, lang }: any = context.pageContext
-  const isFirst = currentPage === 1
-  const isSecond = currentPage === 2
-  const isLast = currentPage === numPages
-  const prevPage = isSecond ? `/${lang}/news/` : `/${lang}/news/${currentPage - 1}`
-  const nextPage = `/${lang}/news/${currentPage + 1}`
+//   const { currentPage, numPages, lang }: any = context.pageContext
+//   const isFirst = currentPage === 1
+//   const isSecond = currentPage === 2
+//   const isLast = currentPage === numPages
+//   const prevPage = isSecond ? `/${lang}/news/` : `/${lang}/news/${currentPage - 1}`
+//   const nextPage = `/${lang}/news/${currentPage + 1}`
 
-  return (
-    <div className={css['pagination-buttons']}>
-      {!isFirst && (
-        <Link to={prevPage} className="button">
-          ← Previous Page
-        </Link>
-      )}
-      {!isLast && (
-        <Link to={nextPage} className="button">
-          Next Page →
-        </Link>
-      )}
-    </div>
-  )
-}
+//   return (
+//     <div className={css['pagination-buttons']}>
+//       {!isFirst && (
+//         <Link to={prevPage} className="button">
+//           ← Previous Page
+//         </Link>
+//       )}
+//       {!isLast && (
+//         <Link to={nextPage} className="button">
+//           Next Page →
+//         </Link>
+//       )}
+//     </div>
+//   )
+// }
 
 export const NewsOverview = (props: NewsOverviewProps) => {
   const { newsItems } = props
@@ -95,7 +95,7 @@ export const NewsOverview = (props: NewsOverviewProps) => {
         }}
       />
 
-      <PrevNext />
+      {/* <PrevNext /> */}
     </>
   )
 }
