@@ -128,7 +128,8 @@ const formatting = (() => {
 
 const twitter = (() => {
   const twitterDir = path.resolve(newsDirectory, 'tweets');
-  const curationHashtag = 'Devcon';
+  // We only include tweets which include a specific hashtag
+  const curationHashtag = 'Devcon'; 
   const host = 'https://api.twitter.com/2';
   const bearer = `Bearer ${process.env.TWITTER_API_KEY}`;
   const userID = '1013526003015184385';
@@ -182,6 +183,10 @@ const twitter = (() => {
 
       return result;
     },
+    /* 
+      Collected tweets are named by IDs (which are sequential) - we can retrieve the latest fetched tweet ID by finding the highest number among the saved tweets, which is useful for
+      only requesting tweets that happened after that tweet
+    */
     getLatestTweetID: async () => {
       const filenames = await files.getFilenamesByDirectory(path.resolve(__dirname, twitterDir));
       let latestRecordedTweet: number = 1379132185274384384;

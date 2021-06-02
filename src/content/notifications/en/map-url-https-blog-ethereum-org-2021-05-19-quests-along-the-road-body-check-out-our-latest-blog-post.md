@@ -5,4 +5,4 @@ label_type: neutral
 labelType: neutral
 active: true
 ---
-Check out our latest blog post!
+Check out our latest blog post
