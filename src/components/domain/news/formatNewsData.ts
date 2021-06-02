@@ -11,18 +11,17 @@ const sortNews = (data: any): Array<NewsItem> => {
 
 export const formatNewsData = (data: any): Array<NewsItem> => {
   return sortNews(data.map((node: any) => {
-    const { id, date, author, title, url, imageUrl, tags } = node.frontmatter
-
-      return {
-        id,
-        title,
-        description: node.rawMarkdownBody,
-        url: url || title,
-        date,
-        imageUrl,
-        tags,
-        author,
-      } as NewsItem
-    })
-  )
+    const { date, author, title, url, imageUrl, tags } = node.frontmatter
+    
+    return {
+      id: node.fields.id,
+      title,
+      description: node.rawMarkdownBody,
+      url: url || title,
+      date,
+      imageUrl,
+      tags,
+      author,
+    } as NewsItem
+  }));
 }
