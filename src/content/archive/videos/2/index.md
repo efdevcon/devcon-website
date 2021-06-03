@@ -1,4 +1,4 @@
 ---
-title: 2
+title: '2'
 folder: true
 ---
