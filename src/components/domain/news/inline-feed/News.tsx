@@ -82,7 +82,7 @@ export const News = ({ data: rawData }: NewsProps) => {
             })}
           </div>
           <div className={css['feed']}>
-            <Feed inline title={intl.formatMessage({ id: 'news_feed' })} items={newsItems /*.slice(2)*/} />
+            <Feed inline title={intl.formatMessage({ id: 'news_feed' })} items={newsItems.slice(2)} />
           </div>
         </div>
       </div>

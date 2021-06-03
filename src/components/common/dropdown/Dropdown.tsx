@@ -61,7 +61,14 @@ export function Dropdown(props: DropdownProps) {
           const selected = value === props.value
 
           return (
-            <li key={value} onClick={() => props.onChange(value)}>
+            <li
+              key={value}
+              onClick={() => {
+                props.onChange(value)
+
+                setOpen(false)
+              }}
+            >
               <span className={selected ? css['active-filter'] : undefined}>{text}</span>
             </li>
           )

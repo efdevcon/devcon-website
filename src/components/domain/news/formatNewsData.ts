@@ -2,8 +2,8 @@ import { NewsItem } from 'src/types/NewsItem'
 
 const sortNews = (data: any): Array<NewsItem> => {
   return data.slice().sort((a: any, b: any) => {
-    const d1 = new Date(a.frontmatter?.date)
-    const d2 = new Date(b.frontmatter?.date)
+    const d1 = new Date(a.date)
+    const d2 = new Date(b.date)
 
     return d1 < d2 ? 1 : -1
   })

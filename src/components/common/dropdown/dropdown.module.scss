@@ -36,9 +36,11 @@ $padding: 4px 10px 4px 20px;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.4s;
+  pointer-events: none;
 
   &.open {
     opacity: 1;
+    pointer-events: auto;
   }
 
   li {

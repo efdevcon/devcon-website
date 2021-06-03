@@ -21,7 +21,7 @@ import moment from 'moment'
 // </div>
 
 type FeedItem = {
-  id: string
+  id?: string
   date?: Date
   author?: string
   url?: string

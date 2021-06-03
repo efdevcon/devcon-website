@@ -38,6 +38,22 @@ type NewsOverviewProps = {
 export const NewsOverview = (props: NewsOverviewProps) => {
   const { newsItems } = props
 
+  const filterItems = React.useMemo(() => {
+    const tags = {} as { [key: string]: any }
+
+    newsItems.forEach(newsItem => {
+      newsItem?.tags?.forEach(tag => {
+        if (!tags[tag])
+          tags[tag] = {
+            text: tag,
+            value: tag,
+          }
+      })
+    })
+
+    return [{ text: 'All', value: 'all' }].concat(Object.values(tags))
+  }, [newsItems])
+
   return (
     <>
       <Feed
@@ -67,24 +83,26 @@ export const NewsOverview = (props: NewsOverviewProps) => {
           },
         }}
         filterOptions={{
-          filters: [
-            {
-              text: 'All',
-              value: 'all',
-            },
-            {
-              text: 'Tickets',
-              value: 'tickets',
-            },
-            {
-              text: 'Corona',
-              value: 'corona',
-            },
-            {
-              text: 'Event Date',
-              value: 'event date',
-            },
-          ],
+          filters: filterItems,
+          // filters: [{ text: 'All', value: 'all' }].concat(newsItems.map(item => ({ text: '', value: item.tags. })),
+          //  [
+          //   {
+          //     text: 'All',
+          //     value: 'all',
+          //   },
+          //   {
+          //     text: 'Tickets',
+          //     value: 'tickets',
+          //   },
+          //   {
+          //     text: 'Corona',
+          //     value: 'corona',
+          //   },
+          //   {
+          //     text: 'Event Date',
+          //     value: 'event date',
+          //   },
+          // ],
           filterFunction: activeFilter => {
             return !activeFilter || activeFilter === 'all'
               ? newsItems
