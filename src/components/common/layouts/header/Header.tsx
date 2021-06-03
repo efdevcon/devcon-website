@@ -8,11 +8,12 @@ import useIsScrolled from 'src/hooks/useIsScrolled'
 import HeaderLogo from './HeaderLogo'
 
 type HeaderProps = {
+  withStrip?: boolean
   withHero?: boolean
   className?: string
 }
 
-export function Header({ withHero }: HeaderProps) {
+export function Header({ withStrip, withHero }: HeaderProps) {
   const intl = useIntl()
   const isScrolled = useIsScrolled()
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
@@ -36,7 +37,7 @@ export function Header({ withHero }: HeaderProps) {
 
   const body = (
     <div className={css['header-container']}>
-      <Strip withHero={withHero} />
+      {withStrip && <Strip withHero={withHero} />}
       <header id="header" className={headerClass}>
         <div className={css['menu-container']}>
           <Link to={`/${intl.locale}/`}>

@@ -21,7 +21,7 @@ export default function Content({ children, theme, style }: LayoutProps) {
   return (
     <div className={className} style={style}>
       <SEO />
-      <Header withHero={false} />
+      <Header withStrip={true} withHero={false} />
 
       <div className="content">{children}</div>
 

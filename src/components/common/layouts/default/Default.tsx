@@ -15,7 +15,7 @@ export default function Default({ children }: LayoutProps) {
   return (
     <div className="layout-default">
       {/* <PageContextProvider navigationData={navigationData} latestNewsItem={latestNewsItem} location={location}> */}
-      <Header withHero={true} />
+      <Header withStrip={true} withHero={true} />
       <Hero />
 
       <div className="content">{children}</div>
