@@ -1,9 +1,8 @@
 export interface ArchiveVideo {
   id: string
-  devcon: number
+  edition: number
   title: string
   description: string
-  speakers: string
-  url: string
-  category: string
+  youtubeUrl: string
+  ipfsHash: string
 }

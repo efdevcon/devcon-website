@@ -134,8 +134,10 @@ export const query = graphql`
     ...EventsData
     ...MeetupData
     ...DipsData
-    ...ArchiveData
+    
     ...Categories
     ...FAQs
   }
 `
+
+// ...ArchiveData

@@ -249,8 +249,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'archive',
-        path: `${__dirname}/src/content/archive`,
+        name: 'videos',
+        path: `${__dirname}/src/content/archive/videos`,
       },
     },
     {
@@ -264,7 +264,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'playlists',
-        path: `${__dirname}/src/content/playlists`,
+        path: `${__dirname}/src/content/archive/playlists`,
       },
     },
     {
