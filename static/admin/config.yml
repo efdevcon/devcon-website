@@ -114,6 +114,7 @@ collections:
           search_fields: ['title'],
           multiple: true,
         }
+      - { name: 'author', label: 'Author', widget: 'string', required: false }
       - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
 
   - name: 'news-tweets'

@@ -107,7 +107,7 @@ const formatting = (() => {
         title: post.title,
         url: post.link,     
         date: post.isoDate,
-        author: post.author,
+        author: post.author || 'Devcon Team',
         description: post.content,
      }
     },
@@ -230,7 +230,7 @@ twitter
   .ensureDirectory()
   .then(twitter.getLatestTweetID)
   .then(twitter.getTweets)
-  .then((tweets: any) => console.log(tweets) as any || tweets.map(formatting.formatTweet))
+  .then((tweets: any) => tweets.map(formatting.formatTweet))
   .then(markdown.write(twitter.twitterDir, (newsItem) => `${newsItem.tweetID}.md`))
   .catch(e => {
     console.error('Twitter failed: ', e)
@@ -244,27 +244,3 @@ blog
   .catch(e => {
     console.error('Blog failed: ', e)
   })
-
-/*
-  1) Trigger GITHUB build on: push, pull_request, new tweets ONLY with the correct hashtag, new blog posts
-    Github actions:
-      1) Load existing news files from markdown
-      2) Get latest tweet, request all tweets after that date
-      3) Get blog RSS feed
-      4) Write markdown files
-      5) Git add . git commit -m 'Fetch news' git push
-      6) Yarn build
-      7) curl netlify build hook
-
-  Issues:
-    1) If generating markdown files from tweets and blogs, do we translate them? If no, how do we prevent them from reaching crowdin? DONE/solved
-    2) Rate limits on tweets
-    3) Triggering builds (create server, or use zapier?). Zapier has to be intelligent enough to only trigger builds when necessary, or we will build too often
-      3.1) If we use a server to trigger builds, we might as well generate the markdown files on that server and commit them from there, rather than doing it in github actions
-
-    Left to do:
-      0) Slight adjustments
-      1) Listen to feed updates/new tweets and trigger github build
-      2) Pagination 
-      3) Refresh twitter API tokens (do not push this as well)
-*/

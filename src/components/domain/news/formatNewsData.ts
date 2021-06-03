@@ -21,7 +21,7 @@ export const formatNewsData = (data: any): Array<NewsItem> => {
       date,
       imageUrl,
       tags,
-      author,
+      author: author || 'Devcon Team',
     } as NewsItem
   }));
 }
