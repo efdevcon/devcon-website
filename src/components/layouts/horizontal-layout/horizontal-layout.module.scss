@@ -294,10 +294,6 @@
           @include fonts.font-lg;
           text-transform: uppercase;
 
-          @media (max-width: $screen-sm) {
-            justify-content: space-between;
-          }
-
           > p {
             margin-right: $gap-8;
             white-space: nowrap;
@@ -316,10 +312,6 @@
 
               @media (max-width: $screen-sm) {
                 margin-left: $gap-2;
-              }
-
-              @media (max-width: 320px) {
-                display: none;
               }
             }
           }
