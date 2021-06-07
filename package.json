@@ -38,6 +38,7 @@
     "express-session": "^1.17.1",
     "gatsby": "^3.2.1",
     "gatsby-image": "^3.2.0",
+    "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^3.2.0",

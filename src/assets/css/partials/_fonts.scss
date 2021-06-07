@@ -43,6 +43,15 @@ $secondary: 'Space Mono', monospace;
   line-height: 125%;
 }
 
+// This is not in the design system, so giving it a temporary name
+@mixin massive-2 {
+  @include secondary;
+  @include very-bold;
+  text-transform: uppercase;
+  font-size: 8rem;
+  letter-spacing: -1.5px;
+}
+
 @mixin title {
   @include secondary;
   @include bold;

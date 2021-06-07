@@ -135,6 +135,10 @@ h6,
   @include fonts-massive;
 }
 
+.font-massive-2 {
+  @include fonts-massive-2;
+}
+
 .bold,
 .text-bold {
   @include fonts-bold;

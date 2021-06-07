@@ -15,17 +15,42 @@ interface CardProps {
   date?: Date
   metadata?: string[]
   className?: string
+  children?: React.ReactNode
 }
 
-export const Card = React.forwardRef((props: CardProps, ref: any) => {
-  const intl = useIntl()
+interface BasicCardProps {
+  expandLink?: boolean
+  linkUrl?: string
+  imageUrl?: string
+  className?: string
+  children?: React.ReactNode
+}
+
+// Card has too many variations to be encapsulated by the default Card export
+// For places where we need more customization, you can import BasicCard instead of Card and fill in the contents yourself
+export const BasicCard = React.forwardRef((props: BasicCardProps, ref: any) => {
   let className = css['card']
 
   if (props.className) className = `${props.className} ${className}`
-  if (props.expandLink) className = `${css['expand-link']} ${className}`
-  if (props.imageUrl) className = `${className} ${css['img']}`
 
-  // RTD entire card as a link
+  if (props.expandLink && props.linkUrl) {
+    return (
+      <Link className={className} to={props.linkUrl} ref={ref}>
+        {props.children}
+      </Link>
+    )
+  }
+
+  return (
+    <div className={className} ref={ref}>
+      {props.children}
+    </div>
+  )
+})
+
+export const Card = React.forwardRef((props: CardProps, ref: any) => {
+  const intl = useIntl()
+
   const link =
     props.expandLink || !props.linkUrl ? (
       props.title
@@ -85,17 +110,14 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
     </>
   )
 
-  if (props.expandLink && props.linkUrl) {
-    return (
-      <Link className={className} to={props.linkUrl}>
-        {cardContent}
-      </Link>
-    )
-  }
+  let className = ''
+
+  if (props.expandLink) className = `${css['expand-link']} ${className}`
+  if (props.imageUrl) className = `${className} ${css['img']}`
 
   return (
-    <div className={className} ref={ref}>
+    <BasicCard className={className} {...props} ref={ref}>
       {cardContent}
-    </div>
+    </BasicCard>
   )
 })

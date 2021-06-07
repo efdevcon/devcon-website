@@ -1,0 +1,22 @@
+.search {
+}
+
+.content {
+  display: flex;
+
+  .filter {
+    flex-basis: 40%;
+    flex-shrink: 0;
+    background: yellow;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .videos {
+    flex-grow: 1;
+    background: purple;
+  }
+}

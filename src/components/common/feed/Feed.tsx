@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './feed.module.scss'
 import IconTwitter from 'src/assets/icons/twitter.svg'
-import IconPencil from 'src/assets/icons/pencil.svg'
+import IconStickyNote from 'src/assets/icons/sticky-note.svg'
 import { Link } from 'src/components/common/link'
 import { Dropdown } from 'src/components/common/dropdown'
 import { Filter, useFilter } from 'src/components/common/filter'
@@ -53,7 +53,7 @@ const Icon = ({ item }: { item: FeedItem }) => {
   if (item?.url?.includes('blog.ethereum.org')) {
     return (
       <div className={css['icon-container']}>
-        <IconPencil />
+        <IconStickyNote /> {/* Maybe a better icon for this */}
       </div>
     )
   }
@@ -88,7 +88,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
             {/* <Icon item={item} className={css['icon-desktop']} /> */}
           </div>
           <div className={css['text']}>
-            <p className={`${css['title']} title`}>
+            <p className={`${css['title']} fonts-xxl bold`}>
               <Title item={item} />
             </p>
 

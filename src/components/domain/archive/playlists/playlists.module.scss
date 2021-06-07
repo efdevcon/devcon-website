@@ -1,0 +1,46 @@
+@use 'src/assets/css/partials/index' as *;
+
+.slider {
+  margin-left: -$gaps-gap-4;
+  margin-bottom: $gaps-gap-10;
+
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+.playlists,
+.curated-playlists {
+  padding-top: $gaps-gap-8;
+  padding-bottom: $gaps-gap-16;
+}
+
+.card {
+  margin-left: $gaps-gap-4;
+
+  .body {
+    padding: $gaps-gap-2 $gaps-gap-3 $gaps-gap-3 $gaps-gap-3;
+
+    h4 {
+      margin-top: $gaps-gap-1;
+      margin-bottom: $gaps-gap-4;
+    }
+  }
+
+  &.big {
+    .body {
+      padding-left: $gaps-gap-8;
+      padding-top: $gaps-gap-4;
+
+      h4 {
+        margin-top: $gaps-gap-2;
+        margin-bottom: $gaps-gap-2;
+      }
+
+      span.opaque {
+        color: $colors-main-light;
+        font-weight: 400;
+      }
+    }
+  }
+}

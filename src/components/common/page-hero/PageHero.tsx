@@ -5,6 +5,7 @@ import useGetElementHeight from 'src/hooks/useGetElementHeight'
 import usePageCategory from './usePageCategory'
 import useIsScrolled from 'src/hooks/useIsScrolled'
 import { usePageContext } from 'src/context/page-context'
+import { Gallery } from './Gallery'
 
 type NavigationLink = {
   to: string
@@ -19,6 +20,8 @@ type CTALink = {
 
 type PageHeroProps = {
   title?: string
+  titleSubtext?: string
+  gallery?: any
   background?: string
   cta?: Array<CTALink>
   renderCustom?(props?: any): JSX.Element
@@ -58,7 +61,10 @@ export const PageHero = (props: PageHeroProps) => {
           <p className={`${css['page-category']} font-xs text-uppercase`}>{pageCategory}</p>
 
           <div className={css['title-block']}>
-            <h1 className="font-massive">{props.title || pageContext?.current?.title}</h1>
+            <h1 className={`${props.titleSubtext ? css['subtext'] : ''} font-massive-2`}>
+              {props.title || pageContext?.current?.title}
+              {props.titleSubtext && <span>{props.titleSubtext}</span>}
+            </h1>
 
             {props.cta && (
               <div className={css['buttons']}>
@@ -73,6 +79,12 @@ export const PageHero = (props: PageHeroProps) => {
               </div>
             )}
           </div>
+
+          {props.gallery && (
+            <div className={css['hero-gallery']}>
+              <Gallery {...props.gallery} />
+            </div>
+          )}
 
           {props.renderCustom && props.renderCustom()}
 

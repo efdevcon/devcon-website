@@ -1,0 +1,13 @@
+@use 'src/assets/css/partials/index' as *;
+
+.img {
+  margin-right: $gaps-gap-4;
+  display: flex;
+  position: relative;
+  // background: yellow;
+  // max-height: 400px;
+  // overflow: hidden;
+
+  // > * {
+  // }
+}

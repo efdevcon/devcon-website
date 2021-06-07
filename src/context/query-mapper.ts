@@ -14,8 +14,6 @@ export function ToNavigationData(nodes: any): NavigationData {
 }
 
 export function ToNotification(data: any): Notification {
-  console.log(data, 'data');
-
   return {
     title: data.rawMarkdownBody,
     url: data.frontmatter.url,

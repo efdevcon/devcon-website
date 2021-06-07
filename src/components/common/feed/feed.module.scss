@@ -180,6 +180,10 @@
             font-family: $fonts-primary;
           }
 
+          @media (max-width: $breakpoints-md) {
+            width: auto;
+          }
+
           .author {
             @include fonts-xs;
             text-transform: uppercase;
@@ -196,9 +200,6 @@
           }
 
           .title {
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
             line-height: 100%;
           }
 
@@ -236,8 +237,15 @@
       flex-grow: 1;
       justify-content: flex-end;
 
-      svg {
+      @media (max-width: $breakpoints-md) {
         @include fonts-xl;
+        position: absolute;
+        top: $gaps-gap-4;
+        right: 0px;
+      }
+
+      svg {
+        @include fonts-lg;
         --color-icon: var(--theme-color);
         margin-bottom: $gaps-gap-2;
         margin-right: $gaps-gap-4;
@@ -251,7 +259,7 @@
     align-items: center;
     padding-top: $gaps-gap-8;
     padding-bottom: $gaps-gap-8;
-    @include fonts-xl;
+    @include fonts-lg;
   }
 
   // .load-more {

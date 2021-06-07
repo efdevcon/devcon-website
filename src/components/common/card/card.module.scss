@@ -88,12 +88,12 @@
     font-family: $fonts-primary;
 
     .title {
-      // @include fonts-xl;
-      // @include fonts-bold;
-      @include fonts-title;
+      @include fonts-lg;
+      @include fonts-bold;
+      // @include fonts-title;
       margin-bottom: 0px;
-      font-family: $fonts-primary;
-      letter-spacing: -0.4px;
+      // font-family: $fonts-primary;
+      // letter-spacing: -0.4px;
     }
 
     .text {
