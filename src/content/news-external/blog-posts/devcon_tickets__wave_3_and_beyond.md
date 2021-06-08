@@ -2,6 +2,7 @@
 title: 'Devcon Tickets: Wave 3 and beyond'
 url: 'https://blog.ethereum.org/2019/08/14/devcon-tickets-wave-three-and-beyond/'
 date: '2019-08-14T07:00:00.000Z'
+author: 'Devcon Team'
 ---
 各位,
 

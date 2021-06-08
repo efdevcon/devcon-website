@@ -2,6 +2,7 @@
 title: 'The Long(er) road to Devcon [ENG/ESP]'
 url: 'https://blog.ethereum.org/2021/01/26/the-longer-road-to-devcon/'
 date: '2021-01-26T08:00:00.000Z'
+author: 'Devcon Team'
 ---
 Friends,
 

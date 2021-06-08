@@ -8,6 +8,31 @@ type PlaylistProps = {
   items: any[]
 }
 
+export const Video = (props: any) => {
+  let className = css['card']
+
+  if (props.className) className += ` ${props.className}`
+
+  return (
+    <BasicCard className={className}>
+      <div className="aspect">
+        <StaticImage
+          src={'../../../../assets/images/pwa_prompt.png'}
+          alt="Fellow: Benson Njuguna"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
+      </div>
+      <div className={css['body']}>
+        <h4 className="font-sm bold">Session Name</h4>
+
+        <p className="font-xs">Speakers</p>
+        <p className="font-xs">Session Types</p>
+      </div>
+    </BasicCard>
+  )
+}
+
 export const CuratedPlaylists = (props: PlaylistProps) => {
   const nItems = 4 // Make dynamic later
 
@@ -111,28 +136,9 @@ export const Playlists = (props: PlaylistProps) => {
           {props.items.map((item: any, i: number) => {
             const first = i === 0
 
-            let className = css['card']
+            const className = first ? css['first'] : ''
 
-            if (first) className += ` ${css['first']}`
-
-            return (
-              <BasicCard key={i} className={className}>
-                <div className="aspect">
-                  <StaticImage
-                    src={'../../../../assets/images/pwa_prompt.png'}
-                    alt="Fellow: Benson Njuguna"
-                    placeholder="blurred"
-                    layout="fullWidth"
-                  />
-                </div>
-                <div className={css['body']}>
-                  <h4 className="font-sm bold">Session Name</h4>
-
-                  <p className="font-xs">Speakers</p>
-                  <p className="font-xs">Session Types</p>
-                </div>
-              </BasicCard>
-            )
+            return <Video key={i} className={className} />
           })}
         </Slider>
       </div>
@@ -143,28 +149,9 @@ export const Playlists = (props: PlaylistProps) => {
           {props.items.map((item: any, i: number) => {
             const first = i === 0
 
-            let className = css['card']
+            const className = first ? css['first'] : ''
 
-            if (first) className += ` ${css['first']}`
-
-            return (
-              <BasicCard key={i} className={className}>
-                <div className="aspect">
-                  <StaticImage
-                    src={'../../../../assets/images/pwa_prompt.png'}
-                    alt="Fellow: Benson Njuguna"
-                    placeholder="blurred"
-                    layout="fullWidth"
-                  />
-                </div>
-                <div className={css['body']}>
-                  <h4 className="font-sm bold">Session Name</h4>
-
-                  <p className="font-xs">Speakers</p>
-                  <p className="font-xs">Session Types</p>
-                </div>
-              </BasicCard>
-            )
+            return <Video key={i} className={className} />
           })}
         </Slider>
       </div>
@@ -175,28 +162,9 @@ export const Playlists = (props: PlaylistProps) => {
           {props.items.map((item: any, i: number) => {
             const first = i === 0
 
-            let className = css['card']
+            const className = first ? css['first'] : ''
 
-            if (first) className += ` ${css['first']}`
-
-            return (
-              <BasicCard key={i} className={className}>
-                <div className="aspect">
-                  <StaticImage
-                    src={'../../../../assets/images/pwa_prompt.png'}
-                    alt="Fellow: Benson Njuguna"
-                    placeholder="blurred"
-                    layout="fullWidth"
-                  />
-                </div>
-                <div className={css['body']}>
-                  <h4 className="font-sm bold">Session Name</h4>
-
-                  <p className="font-xs">Speakers</p>
-                  <p className="font-xs">Session Types</p>
-                </div>
-              </BasicCard>
-            )
+            return <Video key={i} className={className} />
           })}
         </Slider>
       </div>

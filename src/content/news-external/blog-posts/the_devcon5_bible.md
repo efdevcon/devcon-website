@@ -2,6 +2,7 @@
 title: 'The Devcon5 Bible'
 url: 'https://blog.ethereum.org/2019/10/03/the-devcon5-bible/'
 date: '2019-10-03T07:00:00.000Z'
+author: 'Devcon Team'
 ---
 Important Things to Know - 
           

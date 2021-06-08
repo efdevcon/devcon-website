@@ -15,6 +15,33 @@
   background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
   background-image: var(--theme-logo), var(--theme-gradient);
 
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0px;
+  //   left: 0px;
+  //   right: 0px;
+  //   bottom: 0px;
+  //   background-repeat: no-repeat;
+  //   background-position: center right;
+  //   background-image: var(--theme-gradient);
+  // }
+
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0px;
+  //   left: 0px;
+  //   right: 0px;
+  //   bottom: 0px;
+  //   background-repeat: no-repeat;
+  //   background-position: center right;
+  //   // background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
+  //   background-image: var(--theme-gradient);
+  // }
+
   // Strip is always present on mobile (but not on desktop) - we have to account for that:
   &.scrolled {
     @media (max-width: $breakpoints-lg) {
@@ -71,6 +98,10 @@
       position: relative;
       display: block;
 
+      @media (max-width: $breakpoints-lg) {
+        font-size: 6rem;
+      }
+
       &.subtext {
         color: $colors-monochrome-1;
       }
@@ -120,19 +151,111 @@
   }
 }
 
-.hero-gallery {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
+.scenes {
+  margin-bottom: $gaps-gap-4;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  :global(.slick-track) {
-    display: flex;
+  .scene {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s;
+
+    &.active {
+      top: 0px;
+      transform: translateY(0px);
+      opacity: 1;
+    }
   }
 
-  :global(.slick-track),
-  :global(.slick-slide) {
+  .controls {
     display: flex;
-    height: auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .watch-now {
+      height: 48px;
+      margin-right: $gaps-gap-3;
+
+      > span {
+        text-transform: uppercase;
+        margin-right: $gaps-gap-2;
+      }
+
+      > svg {
+        position: relative;
+        top: -1px;
+      }
+    }
+
+    .arrow {
+    }
+  }
+
+  .controls-dots {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .dot {
+      padding: 6px;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.active {
+        .circle {
+          background-color: $colors-state-error;
+        }
+      }
+
+      .circle {
+        height: 8px;
+        width: 8px;
+        border-radius: 8px;
+        background-color: $colors-monochrome-7;
+      }
+    }
   }
 }
+
+.scene-background-image {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 40%;
+  z-index: -1;
+  display: grid;
+
+  opacity: 0;
+  transition: all 0.5s;
+
+  &.active {
+    opacity: 1;
+  }
+
+  > * {
+    img {
+      mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0));
+    }
+
+    grid-area: 1 / 1;
+  }
+}
+
+// .bg-test {
+//   position: absolute;
+//   right: 0px;
+//   top: 0px;
+//   bottom: 0px;
+//   width: 500px;
+//   z-index: 1;
+//   background-image: linear-gradient(to right, yellow, transparent);
+// }

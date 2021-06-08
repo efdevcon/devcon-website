@@ -6,6 +6,7 @@ import IconFilter from 'src/assets/icons/filter.svg'
 // import { Filter, useFilter } from 'src/components/common/filter'
 import css from './watch.module.scss'
 import { PageHero } from 'src/components/common/page-hero'
+import { Video } from './playlists'
 
 type WatchProps = {}
 
@@ -29,7 +30,20 @@ export const Watch = (props: WatchProps) => {
           </div>
         </div>
 
-        <div className={css['videos']}></div>
+        <div className={css['videos']}>
+          <div className={css['header']}>
+            <p className="title">Videos</p>
+            <button>
+              <IconFilter />
+            </button>
+          </div>
+
+          <Video />
+          <Video />
+          <Video />
+          <Video />
+          <Video />
+        </div>
       </div>
 
       <Footer />

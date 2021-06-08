@@ -2,6 +2,7 @@
 title: 'Devcon: What is Ahead'
 url: 'https://blog.ethereum.org/2020/03/02/devcon-whats-ahead/'
 date: '2020-03-02T08:00:00.000Z'
+author: 'Devcon Team'
 ---
 What Devcon is all about
 

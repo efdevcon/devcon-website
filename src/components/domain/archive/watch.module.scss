@@ -1,22 +1,36 @@
-.search {
-}
+.container {
+  --theme-logo: url('src/assets/images/theme/news.svg');
+  --theme-gradient-background-color: #f1d8c3;
+  --theme-gradient: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #e55066 0%,
+    rgba(255, 183, 0, 0.4) 58.33%,
+    rgba(255, 184, 0, 0) 100%
+  );
 
-.content {
-  display: flex;
-
-  .filter {
-    flex-basis: 40%;
-    flex-shrink: 0;
-    background: yellow;
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-    }
+  .search {
   }
 
-  .videos {
-    flex-grow: 1;
-    background: purple;
+  .content {
+    display: flex;
+
+    .filter {
+      flex-basis: 30%;
+      flex-shrink: 0;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .videos {
+      flex-grow: 1;
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 }

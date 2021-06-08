@@ -1,0 +1,13 @@
+@use 'src/assets/css/partials/index' as *;
+
+.controls {
+  position: absolute;
+  right: $gaps-gap-4;
+  display: flex;
+
+  .watch-now {
+  }
+}
+
+.controls-dots {
+}

@@ -2,6 +2,7 @@
 title: 'Introducing the Devcon Archive (and an event update)'
 url: 'https://blog.ethereum.org/2020/03/30/introducing-the-devcon-archive/'
 date: '2020-03-30T07:00:00.000Z'
+author: 'Devcon Team'
 ---
 Friends,
 

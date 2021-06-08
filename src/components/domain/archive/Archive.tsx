@@ -17,67 +17,98 @@ export const Archive = (props: ArchiveProps) => {
       <Header />
 
       <PageHero
-        gallery={{
-          scenes: [
-            {
-              render: () => {
-                return (
-                  <div className={css['hero-staff-picks']}>
-                    <div className="label">Staff Pick</div>
-                    <p>Ethereum in 25 minutes</p>
-                    <p>Take a journey through the Ethereum consensus mechanism</p>
+        scenes={[
+          {
+            image: () => {
+              return (
+                <StaticImage
+                  src="../../../assets/images/vitalik_3x.png"
+                  alt="cool alt text"
+                  placeholder="blurred"
+                  layout="fullWidth"
+                />
+              )
+            },
+            content: () => {
+              return (
+                <div>
+                  <div className="label">Staff Pick</div>
+                  <p>Ethereum in 25 minutes</p>
+                  <p>Take a journey through the Ethereum consensus mechanism</p>
 
-                    <div className={css['metadata']}>
-                      <p>Vitalik Buterin</p>
-                      <p>20:45</p>
-                      <p>Devcon 2</p>
-                    </div>
+                  <div className={css['metadata']}>
+                    <p>Vitalik Buterin</p>
+                    <p>20:45</p>
+                    <p>Devcon 2</p>
+                  </div>
+                </div>
+              )
+            },
+          },
+          {
+            image: () => {
+              return (
+                <StaticImage
+                  src="../../../assets/images/vitalik_2_3x.png"
+                  alt="cool alt text"
+                  placeholder="blurred"
+                  layout="fullWidth"
+                />
+              )
+            },
+            content: () => {
+              return (
+                <div>
+                  <div className="label">Staff Pick</div>
+                  <p>Different text</p>
+                  <p>Also different text</p>
 
-                    <div className={css['img']}>
-                      <StaticImage
-                        src={'../../../assets/images/vitalik.png'}
-                        alt="Fellow: Benson Njuguna"
-                        placeholder="blurred"
-                        layout="fullWidth"
-                      />
-                    </div>
+                  <div className={css['metadata']}>
+                    <p>Pwa Prompt</p>
+                    <p>20:45</p>
+                    <p>Devcon 2</p>
                   </div>
-                )
-              },
+                </div>
+              )
             },
-            {
-              render: () => {
-                return (
-                  <div>
-                    <div className="label">Staff Pick</div>
-                    <p>Ethereum in 25 minutes</p>
-                    <p>Take a journey through the Ethereum consensus mechanism</p>
+          },
+          {
+            image: () => {
+              return (
+                <StaticImage
+                  src="../../../assets/images/vitalik_3x.png"
+                  alt="cool alt text"
+                  placeholder="blurred"
+                  layout="fullWidth"
+                />
+              )
+            },
+            content: () => {
+              return (
+                <div>
+                  <div className="label">Staff Pick</div>
+                  <p>Ethereum in 25 minutes</p>
+                  <p>Take a journey through the Ethereum consensus mechanism</p>
+
+                  <div className={css['metadata']}>
+                    <p>Vitalik Buterin</p>
+                    <p>20:45</p>
+                    <p>Devcon 2</p>
                   </div>
-                )
-              },
+                </div>
+              )
             },
-            {
-              render: () => {
-                return (
-                  <div>
-                    <div className="label">Staff Pick</div>
-                    <p>Ethereum in 25 minutes</p>
-                    <p>Take a journey through the Ethereum consensus mechanism</p>
-                  </div>
-                )
-              },
-            },
-          ],
-        }}
+          },
+        ]}
         title="Archive"
         titleSubtext="Devcon"
       />
 
-      <div className={`section ${css['tags']}`}>
+      {/* <div className={`section ${css['tags']}`}>
         <div className="content">
           <h1>Tagging section</h1>
         </div>
-      </div>
+      </div> */}
       <div className={css['staff-picks']}>
         <StaffPicks />
       </div>

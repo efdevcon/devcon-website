@@ -5,7 +5,10 @@ import useGetElementHeight from 'src/hooks/useGetElementHeight'
 import usePageCategory from './usePageCategory'
 import useIsScrolled from 'src/hooks/useIsScrolled'
 import { usePageContext } from 'src/context/page-context'
-import { Gallery } from './Gallery'
+import ChevronLeft from 'src/assets/icons/chevron_left.svg'
+import ChevronRight from 'src/assets/icons/chevron_right.svg'
+import WatchIcon from 'src/assets/icons/local_play.svg'
+import { StaticImage } from 'gatsby-plugin-image'
 
 type NavigationLink = {
   to: string
@@ -21,7 +24,7 @@ type CTALink = {
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
-  gallery?: any
+  scenes: any[]
   background?: string
   cta?: Array<CTALink>
   renderCustom?(props?: any): JSX.Element
@@ -37,6 +40,7 @@ export const PageHero = (props: PageHeroProps) => {
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
   const pageCategory = usePageCategory()
   const isScrolled = useIsScrolled()
+  const [currentScene, setCurrentScene] = React.useState(0)
 
   let style: any = {
     '--negative-offset': negativeOffset,
@@ -80,10 +84,64 @@ export const PageHero = (props: PageHeroProps) => {
             )}
           </div>
 
-          {props.gallery && (
-            <div className={css['hero-gallery']}>
-              <Gallery {...props.gallery} />
-            </div>
+          {props.scenes && (
+            <>
+              <div className={css['scenes']}>
+                {props.scenes.map((scene: any, i: number) => {
+                  const selected = i === currentScene
+
+                  let className = css['scene']
+
+                  if (selected) className += ` ${css['active']}`
+
+                  return (
+                    <div key={i} className={className}>
+                      {scene.content()}
+                    </div>
+                  )
+                })}
+
+                <div className={css['controls-dots']}>
+                  {props.scenes.map((_: any, i: number) => {
+                    const selected = i === currentScene
+
+                    let className = css['dot']
+
+                    if (selected) className += ` ${css['active']}`
+
+                    return (
+                      <div key={i} className={className} onClick={() => setCurrentScene(i)}>
+                        <div className={css['circle']}></div>
+                      </div>
+                    )
+                  })}
+                </div>
+
+                <div className={css['controls']}>
+                  <button className={`red ${css['watch-now']}`}>
+                    <span>WATCH NOW</span> <WatchIcon />{' '}
+                  </button>
+
+                  <button
+                    className={`${css['arrow']} red squared`}
+                    disabled={currentScene === 0}
+                    onClick={() => setCurrentScene(Math.max(0, currentScene - 1))}
+                  >
+                    <ChevronLeft />
+                  </button>
+                  <button
+                    className={`${css['arrow']} red squared`}
+                    disabled={currentScene === props.scenes.length - 1}
+                    onClick={() => setCurrentScene(Math.min(props.scenes.length - 1, currentScene + 1))}
+                  >
+                    <ChevronRight />
+                  </button>
+                </div>
+              </div>
+              {/* <div className={css['bg-test']}>ay</div> */}
+
+              {/* <div className={css['scene-background-image']}>{activeScene.image()}</div> */}
+            </>
           )}
 
           {props.renderCustom && props.renderCustom()}
@@ -107,6 +165,19 @@ export const PageHero = (props: PageHeroProps) => {
           )}
         </div>
       </div>
+      {props.scenes?.map((scene: any, i: number) => {
+        const selected = i === currentScene
+
+        let className = css['scene-background-image']
+
+        if (selected) className += ` ${css['active']}`
+
+        return (
+          <div key={i} className={className}>
+            {scene.image()}
+          </div>
+        )
+      })}
     </div>
   )
 }

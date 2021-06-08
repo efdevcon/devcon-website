@@ -2,6 +2,7 @@
 title: 'Quests along the Road to Devcon'
 url: 'https://blog.ethereum.org/2021/05/19/quests-along-the-road/'
 date: '2021-05-19T07:00:00.000Z'
+author: 'Devcon Team'
 ---
 Friends,
 

@@ -88,3 +88,30 @@
     --color-icon: #{$colors-track-blue} !important;
   }
 }
+
+.red {
+  background: $colors-track-red !important;
+  color: $colors-monochrome-1 !important;
+  --color-icon: #{$colors-monochrome-1} !important;
+  border-color: $colors-track-red !important;
+
+  &.ghost {
+    background: none !important;
+    color: $colors-track-red !important;
+    --color-icon: #{$colors-track-red} !important;
+    border-color: $colors-track-red !important;
+  }
+
+  &.inverted {
+    background: $colors-monochrome-1 !important;
+    color: $colors-track-red !important;
+    --color-icon: #{$colors-track-red} !important;
+  }
+
+  &:disabled {
+    background: $colors-ef-pink !important;
+    color: $colors-track-red !important;
+    --color-icon: #{$colors-track-red} !important;
+    border: none;
+  }
+}

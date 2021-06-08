@@ -17,7 +17,7 @@ export const formatNewsData = (data: any): Array<NewsItem> => {
       id: node.fields.id,
       title,
       description: node.rawMarkdownBody,
-      url: url || title,
+      url,
       date,
       imageUrl,
       tags,

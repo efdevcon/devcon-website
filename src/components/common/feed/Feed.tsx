@@ -9,6 +9,7 @@ import { FilterOptions } from 'src/components/common/filter/Filter'
 import { DropdownProps } from 'src/components/common/dropdown/Dropdown'
 import { useIntl } from 'gatsby-plugin-intl'
 import moment from 'moment'
+import { isFrontmatterMarkdownFileNode } from 'gatsby-transformer-remark-frontmatter'
 
 // Pagination <-- TODO
 // const itemsPerPage = 5
@@ -65,10 +66,10 @@ export const Title = ({ item }: { item: FeedItem }) => {
   const intl = useIntl()
 
   if (item?.url?.includes('twitter')) {
-    return intl.formatMessage({ id: 'news_tweet' })
+    return <>{intl.formatMessage({ id: 'news_tweet' })}</>
   }
 
-  return item.title
+  return <>{item.title}</>
 }
 
 export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props) => {
@@ -79,37 +80,45 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
   const sortedItems = sortOptions ? sortOptions.sort(filteredItems, sortBy) : filteredItems
 
   const formattedItems = sortedItems.map((item: FeedItem, index) => {
-    return (
-      <Link to={item.url} key={item.url}>
-        <div id={item.id} className={css['item-body']}>
-          <div className={css['metadata']}>
-            <p className={css['date']}>{moment.utc(item.date).format('MMM D, YYYY')}</p>
-            <p className={css['author']}>{item.author}</p>
-            {/* <Icon item={item} className={css['icon-desktop']} /> */}
-          </div>
-          <div className={css['text']}>
-            <p className={`${css['title']} fonts-xxl bold`}>
-              <Title item={item} />
-            </p>
-
-            <p className={css['description']} dangerouslySetInnerHTML={{ __html: item.description }} />
-
-            {item.tags && item.tags.length > 0 && (
-              <div className={css['tags']}>
-                {item.tags.map(tag => {
-                  return (
-                    <div key={tag} className="label bold">
-                      {tag}
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-          </div>
-          <Icon item={item} />
+    const body = (
+      <div id={item.id} className={css['item-body']}>
+        <div className={css['metadata']}>
+          <p className={css['date']}>{moment.utc(item.date).format('MMM D, YYYY')}</p>
+          <p className={css['author']}>{item.author}</p>
+          {/* <Icon item={item} className={css['icon-desktop']} /> */}
         </div>
-      </Link>
+        <div className={css['text']}>
+          <p className={`${css['title']} fonts-xxl bold`}>
+            <Title item={item} />
+          </p>
+
+          <p className={css['description']} dangerouslySetInnerHTML={{ __html: item.description }} />
+
+          {item.tags && item.tags.length > 0 && (
+            <div className={css['tags']}>
+              {item.tags.map(tag => {
+                return (
+                  <div key={tag} className="label bold">
+                    {tag}
+                  </div>
+                )
+              })}
+            </div>
+          )}
+        </div>
+        <Icon item={item} />
+      </div>
     )
+
+    if (item.url) {
+      return (
+        <Link to={item.url} key={item.url} className={css['item']}>
+          {body}
+        </Link>
+      )
+    }
+
+    return <div className={css['item']}>{body}</div>
   })
 
   const noResults = formattedItems.length === 0

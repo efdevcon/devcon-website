@@ -2,6 +2,7 @@
 title: 'An Update on Devcon4 Ticket Allocations & Sales'
 url: 'https://blog.ethereum.org/2018/07/17/an-update-on-devcon4-ticket-allocations-and-sales/'
 date: '2018-07-17T07:00:00.000Z'
+author: 'Devcon Team'
 ---
 Friends,
 

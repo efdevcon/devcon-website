@@ -1,1 +1,1 @@
-export { CuratedPlaylists, Playlists } from './Playlists'
+export { CuratedPlaylists, Playlists, Video } from './Playlists'

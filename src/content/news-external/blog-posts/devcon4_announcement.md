@@ -2,6 +2,7 @@
 title: 'Devcon4 Announcement'
 url: 'https://blog.ethereum.org/2018/05/11/devcon4-announcement/'
 date: '2018-05-11T16:29:37.000Z'
+author: 'Devcon Team'
 ---
 Přátelé,
 

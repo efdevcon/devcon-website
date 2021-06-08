@@ -2,6 +2,7 @@
 title: 'Devcon: Hacia Colombia en 2021'
 url: 'https://blog.ethereum.org/2020/05/28/devcon-hacia-colombia-en-2021/'
 date: '2020-05-28T07:00:00.000Z'
+author: 'Devcon Team'
 ---
 Queridos Amigos,
 
