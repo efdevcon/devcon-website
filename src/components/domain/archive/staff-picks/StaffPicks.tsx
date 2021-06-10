@@ -8,10 +8,11 @@ export const StaffPicks = (props: any) => {
 
   const sliderSettings = {
     infinite: false,
-    speed: 500,
-    slidesToShow: Math.min(nItems, 2.6),
+    touchThreshold: 100,
+    slidesToShow: 2.6,
     arrows: false,
-    slidesToScroll: 2,
+    swipeToSlide: true,
+    // slidesToScroll: 1,
     // mobileFirst: true,
     // responsive: [
     //   {
@@ -35,32 +36,50 @@ export const StaffPicks = (props: any) => {
       <Slider {...sliderSettings}>
         <div className={`${css['img']}`}>
           <div className="aspect">
-            <StaticImage
-              src={'../../../../assets/images/pwa_prompt.png'}
-              alt="Fellow: Benson Njuguna"
-              placeholder="blurred"
-              layout="fullWidth"
-            />
+            <div className={css['first']}>
+              <StaticImage
+                src={'../../../../assets/images/vitalik_3x.png'}
+                alt="Fellow: Benson Njuguna"
+                placeholder="blurred"
+                layout="fullWidth"
+              />
+              <div className={css['info']}>
+                <p className="font-lg">Title</p>
+                <p>Description</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className={`${css['img']}`}>
           <div className="aspect">
-            <StaticImage
-              src={'../../../../assets/images/pwa_prompt.png'}
-              alt="Fellow: Benson Njuguna"
-              placeholder="blurred"
-              layout="fullWidth"
-            />
+            <div>
+              <StaticImage
+                src={'../../../../assets/images/pwa_prompt.png'}
+                alt="Fellow: Benson Njuguna"
+                placeholder="blurred"
+                layout="fullWidth"
+              />
+              <div className={css['info']}>
+                <p className="font-lg">Title</p>
+                <p>Description</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className={`${css['img']}`}>
           <div className="aspect">
-            <StaticImage
-              src={'../../../../assets/images/pwa_prompt.png'}
-              alt="Fellow: Benson Njuguna"
-              placeholder="blurred"
-              layout="fullWidth"
-            />
+            <div>
+              <StaticImage
+                src={'../../../../assets/images/vitalik_3x.png'}
+                alt="Fellow: Benson Njuguna"
+                placeholder="blurred"
+                layout="fullWidth"
+              />
+              <div className={css['info']}>
+                <p className="font-lg">Title</p>
+                <p>Description</p>
+              </div>
+            </div>
           </div>
         </div>
       </Slider>

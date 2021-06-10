@@ -18,31 +18,38 @@ export const Watch = (props: WatchProps) => {
 
       <PageHero title="Watch" titleSubtext="Devcon" />
 
-      <div className={css['search']}>Search</div>
-
-      <div className={css['content']}>
-        <div className={css['filter']}>
-          <div className={css['header']}>
-            <p className="title">Filter</p>
-            <button>
-              <IconFilter />
-            </button>
-          </div>
+      <div className="section">
+        <div className="content">
+          <div className={css['search']}>Search</div>
         </div>
+      </div>
+      <div className="section">
+        <div className="content">
+          <div className={`${css['content']}`}>
+            <div className={css['filter']}>
+              <div className={css['header']}>
+                <p className="title">Filter</p>
+                <button>
+                  <IconFilter />
+                </button>
+              </div>
+            </div>
 
-        <div className={css['videos']}>
-          <div className={css['header']}>
-            <p className="title">Videos</p>
-            <button>
-              <IconFilter />
-            </button>
+            <div className={css['videos']}>
+              <div className={css['header']}>
+                <p className="title">Videos</p>
+                <button>
+                  <IconFilter />
+                </button>
+              </div>
+
+              <Video />
+              <Video />
+              <Video />
+              <Video />
+              <Video />
+            </div>
           </div>
-
-          <Video />
-          <Video />
-          <Video />
-          <Video />
-          <Video />
         </div>
       </div>
 

@@ -8,7 +8,6 @@ import { usePageContext } from 'src/context/page-context'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
 import WatchIcon from 'src/assets/icons/local_play.svg'
-import { StaticImage } from 'gatsby-plugin-image'
 
 type NavigationLink = {
   to: string
@@ -24,7 +23,7 @@ type CTALink = {
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
-  scenes: any[]
+  scenes?: any[]
   background?: string
   cta?: Array<CTALink>
   renderCustom?(props?: any): JSX.Element
@@ -41,6 +40,7 @@ export const PageHero = (props: PageHeroProps) => {
   const pageCategory = usePageCategory()
   const isScrolled = useIsScrolled()
   const [currentScene, setCurrentScene] = React.useState(0)
+  const hasScenes = !!props.scenes
 
   let style: any = {
     '--negative-offset': negativeOffset,
@@ -57,7 +57,7 @@ export const PageHero = (props: PageHeroProps) => {
       id="page-hero"
       className={`${css['hero']} ${props.background ? css['custom-background'] : ''} ${
         isScrolled ? css['scrolled'] : ''
-      }`}
+      } ${hasScenes ? css['has-scenes'] : ''}`}
       style={style}
     >
       <div className="section">
@@ -85,43 +85,43 @@ export const PageHero = (props: PageHeroProps) => {
           </div>
 
           {props.scenes && (
-            <>
-              <div className={css['scenes']}>
-                {props.scenes.map((scene: any, i: number) => {
+            <div className={css['scenes']}>
+              {props.scenes.map((scene: any, i: number) => {
+                const selected = i === currentScene
+
+                let className = css['scene']
+
+                if (selected) className += ` ${css['active']}`
+
+                return (
+                  <div key={i} className={className}>
+                    {scene.content()}
+                  </div>
+                )
+              })}
+
+              <div className={css['controls-dots']}>
+                {props.scenes.map((_: any, i: number) => {
                   const selected = i === currentScene
 
-                  let className = css['scene']
+                  let className = css['dot']
 
                   if (selected) className += ` ${css['active']}`
 
                   return (
-                    <div key={i} className={className}>
-                      {scene.content()}
+                    <div key={i} className={className} onClick={() => setCurrentScene(i)}>
+                      <div className={css['circle']}></div>
                     </div>
                   )
                 })}
+              </div>
 
-                <div className={css['controls-dots']}>
-                  {props.scenes.map((_: any, i: number) => {
-                    const selected = i === currentScene
+              <div className={css['controls']}>
+                <button className={`red ${css['watch-now']}`}>
+                  <span>WATCH NOW</span> <WatchIcon />{' '}
+                </button>
 
-                    let className = css['dot']
-
-                    if (selected) className += ` ${css['active']}`
-
-                    return (
-                      <div key={i} className={className} onClick={() => setCurrentScene(i)}>
-                        <div className={css['circle']}></div>
-                      </div>
-                    )
-                  })}
-                </div>
-
-                <div className={css['controls']}>
-                  <button className={`red ${css['watch-now']}`}>
-                    <span>WATCH NOW</span> <WatchIcon />{' '}
-                  </button>
-
+                <div className={css['arrows']}>
                   <button
                     className={`${css['arrow']} red squared`}
                     disabled={currentScene === 0}
@@ -138,10 +138,7 @@ export const PageHero = (props: PageHeroProps) => {
                   </button>
                 </div>
               </div>
-              {/* <div className={css['bg-test']}>ay</div> */}
-
-              {/* <div className={css['scene-background-image']}>{activeScene.image()}</div> */}
-            </>
+            </div>
           )}
 
           {props.renderCustom && props.renderCustom()}
@@ -165,6 +162,7 @@ export const PageHero = (props: PageHeroProps) => {
           )}
         </div>
       </div>
+
       {props.scenes?.map((scene: any, i: number) => {
         const selected = i === currentScene
 

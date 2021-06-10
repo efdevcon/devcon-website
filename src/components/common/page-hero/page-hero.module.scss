@@ -15,33 +15,6 @@
   background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
   background-image: var(--theme-logo), var(--theme-gradient);
 
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   z-index: -1;
-  //   top: 0px;
-  //   left: 0px;
-  //   right: 0px;
-  //   bottom: 0px;
-  //   background-repeat: no-repeat;
-  //   background-position: center right;
-  //   background-image: var(--theme-gradient);
-  // }
-
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   z-index: -1;
-  //   top: 0px;
-  //   left: 0px;
-  //   right: 0px;
-  //   bottom: 0px;
-  //   background-repeat: no-repeat;
-  //   background-position: center right;
-  //   // background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
-  //   background-image: var(--theme-gradient);
-  // }
-
   // Strip is always present on mobile (but not on desktop) - we have to account for that:
   &.scrolled {
     @media (max-width: $breakpoints-lg) {
@@ -61,6 +34,17 @@
 
     .title-block {
       opacity: 0;
+    }
+  }
+
+  &.has-scenes {
+    .title-block {
+      min-height: auto;
+      padding-bottom: 0px;
+
+      @media (max-width: $breakpoints-lg) {
+        padding-bottom: $gaps-gap-4;
+      }
     }
   }
 
@@ -110,9 +94,9 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        font-size: 0.4em;
+        font-size: 0.3em;
         color: $colors-main;
-        letter-spacing: 0.4em;
+        letter-spacing: 0.3em;
       }
     }
 
@@ -157,12 +141,25 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
+  @media (max-width: $breakpoints-lg) {
+    .controls {
+      grid-column: 1 / 3;
+      grid-row: 2 / 2;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
   .scene {
     grid-column: 1 / 2;
     grid-row: 1 / 1;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateX(-100px);
     transition: all 0.5s;
+
+    @media (max-width: $breakpoints-lg) {
+      grid-column: 1 / 4;
+    }
 
     &.active {
       top: 0px;
@@ -175,6 +172,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    z-index: 1;
+
+    @media (max-width: $breakpoints-lg) {
+      grid-column: 1 / 4;
+      grid-row: 2 / 2;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
 
     .watch-now {
       height: 48px;
@@ -191,7 +196,7 @@
       }
     }
 
-    .arrow {
+    .arrows {
     }
   }
 
@@ -199,6 +204,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
+    @media (max-width: $breakpoints-lg) {
+      display: none;
+    }
 
     .dot {
       padding: 6px;
@@ -230,32 +239,28 @@
   right: 0px;
   top: 0px;
   bottom: 0px;
-  width: 40%;
+  width: 41%;
   z-index: -1;
   display: grid;
 
+  @media (max-width: $breakpoints-lg) {
+    display: none;
+  }
+
   opacity: 0;
+  transform: translateX(100px);
   transition: all 0.5s;
 
   &.active {
+    transform: translateX(0px);
     opacity: 1;
   }
 
   > * {
     img {
-      mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0));
+      mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 35%, rgba(255, 255, 255, 0));
     }
 
     grid-area: 1 / 1;
   }
 }
-
-// .bg-test {
-//   position: absolute;
-//   right: 0px;
-//   top: 0px;
-//   bottom: 0px;
-//   width: 500px;
-//   z-index: 1;
-//   background-image: linear-gradient(to right, yellow, transparent);
-// }

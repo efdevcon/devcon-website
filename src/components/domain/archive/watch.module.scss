@@ -1,13 +1,6 @@
 .container {
-  --theme-logo: url('src/assets/images/theme/news.svg');
-  --theme-gradient-background-color: #f1d8c3;
-  --theme-gradient: radial-gradient(
-    73.15% 179.46% at 90.19% 25.94%,
-    #e55066 0%,
-    rgba(255, 183, 0, 0.4) 58.33%,
-    rgba(255, 184, 0, 0) 100%
-  );
-
+  --theme-logo: url('src/assets/images/archive/archive-logo-menu.svg');
+  --theme-gradient: linear-gradient(to right, #edeccd 0%, #f1c4bb 50%, #d7cdd3 100%);
   .search {
   }
 

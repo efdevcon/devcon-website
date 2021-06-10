@@ -41,6 +41,7 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
     speed: 500,
     slidesToShow: Math.min(nItems, 4.1),
     arrows: false,
+    touchThreshold: 100,
     slidesToScroll: 4,
     mobileFirst: true,
     responsive: [
@@ -109,6 +110,7 @@ export const Playlists = (props: PlaylistProps) => {
     slidesToShow: Math.min(nItems, 5.1), // 4 = number of items
     arrows: false,
     slidesToScroll: 4,
+    touchThreshold: 100,
     mobileFirst: true,
     responsive: [
       {

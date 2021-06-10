@@ -1,13 +1,33 @@
 @use 'src/assets/css/partials/index' as *;
 
 .img {
-  margin-right: $gaps-gap-4;
+  cursor: grab;
   display: flex;
   position: relative;
-  // background: yellow;
-  // max-height: 400px;
-  // overflow: hidden;
+  overflow: hidden;
 
-  // > * {
-  // }
+  :global(.aspect) {
+    > * {
+      margin-left: $gaps-gap-4;
+
+      &.first {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .info {
+    position: absolute;
+    left: $gaps-gap-12;
+    bottom: 0px;
+    padding-bottom: $gaps-gap-4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    > * {
+      align-self: flex-start;
+      background-color: rgba($colors-monochrome-1, 0.8);
+    }
+  }
 }

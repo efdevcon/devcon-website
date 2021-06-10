@@ -19,27 +19,30 @@ export const Archive = (props: ArchiveProps) => {
       <PageHero
         scenes={[
           {
-            image: () => {
+            image: (props: any) => {
               return (
                 <StaticImage
                   src="../../../assets/images/vitalik_3x.png"
                   alt="cool alt text"
                   placeholder="blurred"
                   layout="fullWidth"
+                  {...props}
                 />
               )
             },
             content: () => {
               return (
-                <div>
-                  <div className="label">Staff Pick</div>
-                  <p>Ethereum in 25 minutes</p>
-                  <p>Take a journey through the Ethereum consensus mechanism</p>
+                <div className={css['page-hero-scene']}>
+                  <div className={css['body']}>
+                    <div className="label bold">Staff Pick</div>
+                    <p className="font-xl bold">Ethereum in 25 minutes.</p>
+                    <p className="font-lg">Take a journey through the Ethereum consensus mechanism.</p>
+                  </div>
 
                   <div className={css['metadata']}>
-                    <p>Vitalik Buterin</p>
-                    <p>20:45</p>
-                    <p>Devcon 2</p>
+                    <p>By Vitalik Buterin</p>
+                    <p className="bold">20:45</p>
+                    <p className="bold">Devcon 2</p>
                   </div>
                 </div>
               )
@@ -58,15 +61,17 @@ export const Archive = (props: ArchiveProps) => {
             },
             content: () => {
               return (
-                <div>
-                  <div className="label">Staff Pick</div>
-                  <p>Different text</p>
-                  <p>Also different text</p>
+                <div className={css['page-hero-scene']}>
+                  <div className={css['body']}>
+                    <div className="label bold">Staff Pick</div>
+                    <p className="font-xl bold">Ethereum in 15 minutes.</p>
+                    <p className="font-lg">Take a slightly faster journey through the Ethereum consensus mechanism</p>
+                  </div>
 
                   <div className={css['metadata']}>
-                    <p>Pwa Prompt</p>
-                    <p>20:45</p>
-                    <p>Devcon 2</p>
+                    <p>By Vitalik Buterin</p>
+                    <p className="bold">15:45</p>
+                    <p className="bold">Devcon 2</p>
                   </div>
                 </div>
               )
@@ -76,7 +81,7 @@ export const Archive = (props: ArchiveProps) => {
             image: () => {
               return (
                 <StaticImage
-                  src="../../../assets/images/vitalik_3x.png"
+                  src="../../../assets/images/pwa_prompt.png"
                   alt="cool alt text"
                   placeholder="blurred"
                   layout="fullWidth"
@@ -85,15 +90,17 @@ export const Archive = (props: ArchiveProps) => {
             },
             content: () => {
               return (
-                <div>
-                  <div className="label">Staff Pick</div>
-                  <p>Ethereum in 25 minutes</p>
-                  <p>Take a journey through the Ethereum consensus mechanism</p>
+                <div className={css['page-hero-scene']}>
+                  <div className={css['body']}>
+                    <div className="label bold">Staff Pick</div>
+                    <p className="font-xl bold">Ethereum in 5 minutes.</p>
+                    <p className="font-lg">Take a very quick journey through the Ethereum consensus mechanism.</p>
+                  </div>
 
                   <div className={css['metadata']}>
-                    <p>Vitalik Buterin</p>
-                    <p>20:45</p>
-                    <p>Devcon 2</p>
+                    <p>By Vitalik Buterin</p>
+                    <p className="bold">5:45</p>
+                    <p className="bold">Devcon 2</p>
                   </div>
                 </div>
               )

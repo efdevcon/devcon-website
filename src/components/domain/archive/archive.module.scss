@@ -1,9 +1,7 @@
 @use 'src/assets/css/partials/index' as *;
 
 .container {
-  // --theme-logo: url('src/assets/images/archive/archive-logo.svg');
   --theme-logo: url('src/assets/images/archive/archive-logo-menu.svg');
-  // --theme-gradient-background-color: #f1d8c3;
   --theme-gradient: linear-gradient(to right, #edeccd 0%, #f1c4bb 50%, #d7cdd3 100%);
 
   .hero-staff-picks {
@@ -39,5 +37,34 @@
 
   .playlists {
     border-top: 1px solid $colors-monochrome-5;
+  }
+}
+
+.page-hero-scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-bottom: $gaps-gap-4;
+
+  .body {
+    text-wrap: nowrap;
+
+    :global(.label) {
+      margin-bottom: $gaps-gap-2;
+    }
+  }
+
+  .metadata {
+    margin-top: $gaps-gap-4;
+    display: flex;
+
+    > * {
+      margin-left: $gaps-gap-4;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
   }
 }
