@@ -7,6 +7,7 @@ import { PageHero } from 'src/components/common/page-hero'
 import { CuratedPlaylists, Playlists } from './playlists'
 import { StaffPicks } from './staff-picks'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Editions } from './Editions'
 
 type ArchiveProps = {}
 
@@ -116,6 +117,9 @@ export const Archive = (props: ArchiveProps) => {
           <h1>Tagging section</h1>
         </div>
       </div> */}
+      <div className={css['editions']}>
+        <Editions />
+      </div>
       <div className={css['staff-picks']}>
         <StaffPicks />
       </div>

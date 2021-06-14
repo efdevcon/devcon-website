@@ -1,0 +1,48 @@
+@use 'src/assets/css/partials/index' as *;
+
+.container {
+  display: flex;
+
+  .numbers { 
+    flex-shrink: 0;
+
+    .number { 
+      cursor: pointer;
+      display: flex; /* or inline-flex */
+      align-items: center; 
+      justify-content: center;
+    }
+
+    .selected { 
+      @extend .number;
+      background: $colors-monochrome-3; // #F5F6F6;
+      border-radius: 50%;
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  .image {
+    max-width: 600px;
+    flex-shrink: 0;
+  }
+
+  .info {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .title {
+      margin-top: 40px;
+    }
+
+    .description {
+      margin: 20px 0;
+    }
+
+    .buttons {
+      padding-bottom: $gaps-gap-8;
+      margin-top: $gaps-gap-8 0;
+    }
+  }
+}
