@@ -11,6 +11,16 @@
     }
   }
 
+  &.never-collapse {
+    .dropdown {
+      display: none !important;
+    }
+
+    .inline {
+      display: flex !important;
+    }
+  }
+
   .dropdown {
     @media (min-width: $breakpoints-md + 1) {
       display: none !important;
@@ -51,5 +61,16 @@
 
   .icon {
     margin-left: $gaps-gap-4;
+  }
+}
+
+.tags {
+  > div {
+    &:hover {
+      cursor: pointer;
+    }
+
+    margin-right: $gaps-gap-2;
+    margin-bottom: $gaps-gap-2;
   }
 }

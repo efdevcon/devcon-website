@@ -143,7 +143,7 @@ export function BlogReel() {
   return (
     <div className={css['blog-container']}>
       <div className={css['top-section']}>
-        <h2 className="spaced">Blog</h2>
+        <h2 className="title spaced">Blog</h2>
 
         <Arrows {...blogState} />
       </div>

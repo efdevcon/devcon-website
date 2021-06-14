@@ -4,6 +4,8 @@ import { Dropdown } from 'src/components/common/dropdown'
 import IconFilter from 'src/assets/icons/filter.svg'
 
 export type FilterOptions = {
+  tags?: boolean
+  multiSelect?: boolean
   filters: {
     text: string
     value: any
@@ -13,30 +15,85 @@ export type FilterOptions = {
 
 type FilterState = {
   collapsed?: boolean
+  neverCollapse?: boolean
+  tags?: boolean
   options: FilterOptions
   activeFilter: string
-  setActiveFilter: Dispatch<SetStateAction<string>>
+  setActiveFilter: (value: string) => void
+  clearFilter: () => void
 }
 
 export const useFilter = (options: FilterOptions | undefined) => {
-  const [activeFilter, setActiveFilter] = React.useState(options?.filters[0].value)
+  const defaultValue = options?.filters[0].value
+  const [activeFilter, setActiveFilter] = React.useState(defaultValue)
+  // Some filters use multiselect
+  const [activeFilterMulti, setActiveFilterMulti] = React.useState({} as { [key: string]: any })
 
   if (!options) return [[], null] as [any[], null]
 
-  const filterState: FilterState = {
-    options,
-    activeFilter,
-    setActiveFilter,
+  const wrappedSetActiveFilter = (value: string) => {
+    if (options.multiSelect) {
+      const nextActiveFilter = {
+        ...activeFilterMulti,
+        [value]: true,
+      }
+
+      const selected = activeFilterMulti[value]
+
+      if (selected) delete nextActiveFilter[value]
+
+      setActiveFilterMulti(nextActiveFilter)
+    } else {
+      setActiveFilter(value)
+    }
   }
 
-  const filteredData = options.filterFunction(activeFilter)
+  const filterState: FilterState = {
+    options,
+    activeFilter: options.multiSelect ? activeFilterMulti : activeFilter,
+    clearFilter: () => {
+      if (options.multiSelect) {
+        setActiveFilterMulti({})
+      } else {
+        setActiveFilter(defaultValue)
+      }
+    },
+    setActiveFilter: wrappedSetActiveFilter,
+  }
+
+  const filteredData = options.filterFunction(filterState.activeFilter)
 
   return [filteredData, filterState] as [any[], FilterState]
 }
 
 export const Filter = (props: FilterState) => {
+  if (props.options.tags) {
+    return (
+      <div className={css['tags']}>
+        {props.options.filters.map(filter => {
+          let className = 'label white'
+
+          const active = props.activeFilter === filter.value || props.activeFilter?.[filter.value]
+
+          if (active) className += ` inverted`
+
+          return (
+            <div key={filter.value} onClick={() => props.setActiveFilter(filter.value)} className={className}>
+              {filter.text}
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
+  let className = css['filter']
+
+  if (props.collapsed) className += ` ${css['collapsed']}`
+  if (props.options.multiSelect) className += ` ${css['never-collapse']}`
+
   return (
-    <div className={`${css['filter']} ${props.collapsed ? css['collapsed'] : ''}`}>
+    <div className={className}>
       <Dropdown
         className={css['dropdown']}
         customIcon={IconFilter}
@@ -46,14 +103,16 @@ export const Filter = (props: FilterState) => {
       />
 
       <div className={css['inline']}>
-        {props.options.filters.map(i => {
+        {props.options.filters.map(filter => {
+          let className = ''
+
+          const active = props.activeFilter === filter.value || props.activeFilter?.[filter.value]
+
+          if (active) className += `${css['active-filter']}`
+
           return (
-            <p
-              key={i.value}
-              onClick={() => props.setActiveFilter(i.value)}
-              className={props.activeFilter === i.value ? css['active-filter'] : undefined}
-            >
-              {i.text}
+            <p key={filter.value} onClick={() => props.setActiveFilter(filter.value)} className={className}>
+              {filter.text}
             </p>
           )
         })}

@@ -39,7 +39,7 @@ export const News = ({ data: rawData }: NewsProps) => {
   return (
     <div className="section">
       <div className={css['news-container']}>
-        <h2 className="spaced">{intl.formatMessage({ id: 'news' })}</h2>
+        <h2 className="title spaced">{intl.formatMessage({ id: 'news' })}</h2>
         {/* Only visible on mobile */}
         <div className={css['slider']}>
           <Slider {...settings}>

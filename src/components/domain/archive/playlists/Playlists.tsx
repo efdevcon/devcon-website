@@ -9,24 +9,30 @@ type PlaylistProps = {
 }
 
 export const Video = (props: any) => {
-  let className = css['card']
+  let className = css['video-card']
 
   if (props.className) className += ` ${props.className}`
+  if (props.slide) className += ` ${css['slide']}`
+  if (props.big) className += ` ${css['big']}`
+  if (props.horizontal) className += ` ${css['horizontal']}`
 
   return (
     <BasicCard className={className}>
-      <div className="aspect">
-        <StaticImage
-          src={'../../../../assets/images/pwa_prompt.png'}
-          alt="Fellow: Benson Njuguna"
-          placeholder="blurred"
-          layout="fullWidth"
-        />
+      {/* Need the wrapper so we can constrain the aspect div */}
+      <div className={css['aspect-wrapper']}>
+        <div className="aspect">
+          <StaticImage
+            src={'../../../../assets/images/vitalik_3x.png'}
+            alt="Fellow: Benson Njuguna"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+        </div>
       </div>
       <div className={css['body']}>
-        <h4 className="font-sm bold">Session Name</h4>
+        <h4 className={css['title']} /*className="font-sm bold"*/>Session Name</h4>
 
-        <p className="font-xs">Speakers</p>
+        <p className={css['description']} /*className="font-xs"*/>Speakers</p>
         <p className="font-xs">Session Types</p>
       </div>
     </BasicCard>
@@ -69,17 +75,14 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
         <Slider {...sliderSettings}>
           {props.items.map((item: any, i: number) => {
             const nTalks = 15
-            const first = i === 0
 
-            let className = `${css['card']} ${css['big']}`
-
-            if (first) className += ` ${css['first']}`
+            let className = `${css['video-card']} ${css['slide']} ${css['big']}`
 
             return (
               <BasicCard key={i} className={className}>
                 <div className="aspect square">
                   <StaticImage
-                    src={'../../../../assets/images/pwa_prompt.png'}
+                    src={'../../../../assets/images/vitalik_3x.png'}
                     alt="Fellow: Benson Njuguna"
                     placeholder="blurred"
                     layout="fullWidth"
@@ -140,7 +143,7 @@ export const Playlists = (props: PlaylistProps) => {
 
             const className = first ? css['first'] : ''
 
-            return <Video key={i} className={className} />
+            return <Video slide key={i} className={className} />
           })}
         </Slider>
       </div>
@@ -153,7 +156,7 @@ export const Playlists = (props: PlaylistProps) => {
 
             const className = first ? css['first'] : ''
 
-            return <Video key={i} className={className} />
+            return <Video slide key={i} className={className} />
           })}
         </Slider>
       </div>
@@ -166,7 +169,7 @@ export const Playlists = (props: PlaylistProps) => {
 
             const className = first ? css['first'] : ''
 
-            return <Video key={i} className={className} />
+            return <Video slide key={i} className={className} />
           })}
         </Slider>
       </div>

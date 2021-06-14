@@ -4,6 +4,7 @@ import css from './input-form.module.scss'
 interface InputFormProps {
   label?: string
   placeholder: string
+  icon?: React.ComponentType<any>
   defaultValue?: string
   className?: string
   onChange?: (value: string) => void
@@ -42,7 +43,10 @@ export function InputForm(props: InputFormProps) {
     <form className={className} onSubmit={handleSubmit}>
       <div className={css['container']}>
         {props.label && <label htmlFor={id}>{props.label}</label>}
+        {/* <div className={css['input']}> */}
         <input type="text" id={id} value={value} placeholder={props.placeholder} onChange={handleChange} />
+        {props.icon && <props.icon className={`${css['icon']} icon`} />}
+        {/* </div> */}
       </div>
     </form>
   )

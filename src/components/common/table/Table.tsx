@@ -1,5 +1,5 @@
 import React from 'react'
-import useSort, { SortVariation } from './useSort'
+import { useSort, SortVariation } from 'src/components/common/sort'
 import css from './table.module.scss'
 import ArrowAsc from 'src/assets/icons/arrow_asc.svg'
 import ArrowDesc from 'src/assets/icons/arrow_desc.svg'
@@ -7,8 +7,8 @@ import { useIntl } from 'gatsby-plugin-intl'
 
 type HeaderProps = {
   columns: TableColumn[]
-  setSortedBy: Function
-  sortedBy: number
+  setSortBy: Function
+  sortBy: number
   sortDirection: string
 }
 type RowProps = {
@@ -42,7 +42,7 @@ const TableHeader = (props: HeaderProps) => {
         if (column.className) className = `${column.className} ${className}`
         if (column.sort) className += ` ${css['sort']}`
 
-        const sortIsActive = props.sortedBy === index
+        const sortIsActive = props.sortBy === index
 
         if (sortIsActive) {
           className += ` ${css[props.sortDirection]}`
@@ -59,7 +59,7 @@ const TableHeader = (props: HeaderProps) => {
               userSelect: 'none', // Prevents accidental text selection when double-clicking
             }}
             onClick={e => {
-              if (column.sort) props.setSortedBy(index)
+              if (column.sort) props.setSortBy(index)
             }}
           >
             <p className="text-uppercase">{column.intl ? intl.formatMessage({ id: column.intl }) : column.title}</p>
@@ -99,17 +99,12 @@ const TableRows = (props: RowProps) => {
 }
 
 export const Table = (props: TableProps) => {
-  const [sortedItems, sortedBy, setSortedBy, sortDirection] = useSort(props.items, props.columns)
+  const { sortedData, sortBy, setSortBy, sortDirection } = useSort(props.items, props.columns)
 
   return (
     <div className={css['container']}>
-      <TableHeader
-        columns={props.columns}
-        setSortedBy={setSortedBy}
-        sortedBy={sortedBy}
-        sortDirection={sortDirection}
-      />
-      <TableRows itemKey={props.itemKey} columns={props.columns} items={sortedItems} />
+      <TableHeader columns={props.columns} setSortBy={setSortBy} sortBy={sortBy} sortDirection={sortDirection} />
+      <TableRows itemKey={props.itemKey} columns={props.columns} items={sortedData} />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Video } from '../playlists'
 import css from './staff-picks.module.scss'
 
 export const StaffPicks = (props: any) => {
@@ -33,7 +34,15 @@ export const StaffPicks = (props: any) => {
         </div>
       </div>
 
-      <Slider {...sliderSettings}>
+      <div className={css['slider']}>
+        <Slider {...sliderSettings}>
+          <Video big slide />
+          <Video big slide />
+          <Video big slide />
+        </Slider>
+      </div>
+
+      {/* <Slider {...sliderSettings}>
         <div className={`${css['img']}`}>
           <div className="aspect">
             <div className={css['first']}>
@@ -82,7 +91,7 @@ export const StaffPicks = (props: any) => {
             </div>
           </div>
         </div>
-      </Slider>
+      </Slider> */}
     </>
   )
 }
