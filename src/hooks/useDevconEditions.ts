@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
-import { DevconEvent } from 'src/types/DevconEvent'
+import { DevconEdition } from 'src/types/DevconEdition'
 
-export const useDevconEvents = (): Array<DevconEvent> => {
+export const useDevconEditions = (): Array<DevconEdition> => {
   const data = useStaticQuery(graphql`
     query {
       events: allMarkdownRemark(filter: { fields: { collection: { eq: "devcon" } } }) {
@@ -25,10 +25,11 @@ export const useDevconEvents = (): Array<DevconEvent> => {
     }
   `)
 
-  return data.events.nodes.map((i: any) => mapToDevconEvent(i))
+  const editions = data.events.nodes.map((i: any) => mapToDevconEdition(i)) as Array<DevconEdition>
+  return editions.sort((a, b) => (a.number < b.number ? 1 : -1))
 }
 
-function mapToDevconEvent(source: any): DevconEvent {
+function mapToDevconEdition(source: any): DevconEdition {
   return {
     id: source.id,
     number: source.frontmatter.number,
@@ -37,6 +38,6 @@ function mapToDevconEvent(source: any): DevconEvent {
     location: source.frontmatter.location,
     startDate: new Date(source.frontmatter.startDate),
     endDate: new Date(source.frontmatter.endDate),
-    imageUrl: source.frontmatter.imageUrl
+    imageUrl: source.frontmatter.imageUrl,
   }
 }
