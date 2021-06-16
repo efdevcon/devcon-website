@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: efdevcon/devcon-website
-  branch: '$BRANCH'
+  branch: '%BRANCH_PLACEHOLDER%'
   accept_roles:
     - admin
     - editor
@@ -10,7 +10,6 @@ slug:
   encoding: 'ascii'
   clean_accents: true
   sanitize_replacement: '-'
-
 
 publish_mode: editorial_workflow
 media_folder: static/assets/uploads/images
@@ -380,7 +379,16 @@ collections:
         label: Videos
         widget: list
         collapsed: false
-        field: { name: video, label: Video, value_field: '{{slug}}', search_fields: ['title'], display_fields: ['title'], widget: relation, collection: videos }
+        field:
+          {
+            name: video,
+            label: Video,
+            value_field: '{{slug}}',
+            search_fields: ['title'],
+            display_fields: ['title'],
+            widget: relation,
+            collection: videos,
+          }
 
   - name: 'videos'
     label: 'Videos'
@@ -390,7 +398,7 @@ collections:
     create: true
     nested:
       depth: 3
-      summary: '{{title}}' 
+      summary: '{{title}}'
     fields:
       - { name: 'isFolder', label: 'Is folder', widget: 'hidden' }
       - { name: 'edition', label: 'Edition', widget: 'number' }
@@ -398,4 +406,13 @@ collections:
       - { name: 'description', label: 'Description', widget: 'text' }
       - { name: 'youtubeUrl', label: 'Youtube URL', widget: 'string' }
       - { name: 'ipfsHash', label: 'IPFS hash', widget: 'string' }
-    meta: { path: { widget: string, label: 'folder', index_file: 'index', hint: 'Should start with the Devcon edition (e.g. 4/talk-name) as specified in the next field'  } }
+    meta:
+      {
+        path:
+          {
+            widget: string,
+            label: 'folder',
+            index_file: 'index',
+            hint: 'Should start with the Devcon edition (e.g. 4/talk-name) as specified in the next field',
+          },
+      }
