@@ -1,5 +1,6 @@
 import { GatsbyNode, CreatePagesArgs, Actions } from 'gatsby'
 import path from 'path'
+import { Playlist } from 'src/types/Playlist'
 import { SearchItem } from 'src/types/SearchItem'
 import { Tag } from 'src/types/Tag'
 
@@ -16,6 +17,7 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
   await createBlogPages(args)
   await createNewsPages(args)
   await createDipPages(args)
+  await createPlaylistPages(args)
   // await createTagPages(args)
   await createSearchPage(args)
 }
@@ -103,6 +105,30 @@ async function createNewsPages({ actions, graphql, reporter }: CreatePagesArgs) 
     if (node.fields.lang === 'tweets' || node.fields.lang === 'blog-posts') return;
     
     createDynamicPage(actions, node.fields.slug, 'news-item', node.fields.lang)
+  })
+}
+
+async function createPlaylistPages({ actions, graphql, reporter }: CreatePagesArgs) {
+  const result: any = await graphql(`
+    query {
+      playlists: allMarkdownRemark(filter: { fields: { collection: { eq: "playlists" } } }) {
+        nodes {
+          fields {
+            collection
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running playlist query.`)
+    return
+  }
+
+  result.data.playlists.nodes.forEach((node: any) => {
+    createDynamicPage(actions, node.fields.slug, 'playlist', 'en')
   })
 }
 

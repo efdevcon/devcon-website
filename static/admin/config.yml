@@ -374,6 +374,7 @@ collections:
       - { name: 'title', label: 'Title', widget: 'string' }
       - { name: 'description', label: 'Description', widget: 'text' }
       - { name: 'imageUrl', label: 'Image URL', widget: 'string' }
+      - { name: 'categories', label: 'Categories', widget: 'list' }
       - { name: 'curators', label: 'Curators', widget: 'list' }
       - name: videos
         label: Videos

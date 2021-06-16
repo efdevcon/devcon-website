@@ -23,6 +23,7 @@ type CTALink = {
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
+  description?: string
   scenes?: any[]
   background?: string
   cta?: Array<CTALink>
@@ -66,9 +67,10 @@ export const PageHero = (props: PageHeroProps) => {
 
           <div className={css['title-block']}>
             <h1 className={`${props.titleSubtext ? css['subtext'] : ''} font-massive-2`}>
-              {props.title || pageContext?.current?.title}
+              {props.title ?? pageContext?.current?.title}
               {props.titleSubtext && <span>{props.titleSubtext}</span>}
             </h1>
+            {props.description && <span className={css['description']}>{props.description}</span>}
 
             {props.cta && (
               <div className={css['buttons']}>

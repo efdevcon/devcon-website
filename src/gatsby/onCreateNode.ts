@@ -63,6 +63,9 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
     if (collection === 'news') {
       formattedSlug = `/${lang}/news/${slug.split('/')[2].toLowerCase()}/` // /en/news/something
     }
+    if (collection === 'playlists') {
+      formattedSlug = '/archive/playlists' + slug
+    }
 
     createNodeField({
       node,

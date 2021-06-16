@@ -8,10 +8,14 @@ import { CuratedPlaylists, Playlists } from './playlists'
 import { StaffPicks } from './staff-picks'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Editions } from './Editions'
+import { usePlaylists } from 'src/hooks/usePlaylists'
 
 type ArchiveProps = {}
 
 export const Archive = (props: ArchiveProps) => {
+  const playlists = usePlaylists()
+  const curated = playlists.filter((i) => i.categories.includes('Community Curated'))
+  
   return (
     <div className={css['container']}>
       <SEO />
@@ -126,7 +130,7 @@ export const Archive = (props: ArchiveProps) => {
 
       <div className={`section ${css['curated-playlists']}`}>
         <div className="content">
-          <CuratedPlaylists items={[1, 2, 3, 4]} />
+          <CuratedPlaylists title='Curated playlists' items={curated} />
         </div>
       </div>
       <div className={`section ${css['playlists']}`}>

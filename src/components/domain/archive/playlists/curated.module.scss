@@ -1,0 +1,73 @@
+@use 'src/assets/css/partials/index' as *;
+
+.slider {
+  margin-left: -$gaps-gap-4;
+  margin-bottom: $gaps-gap-10;
+
+  &:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+
+.curated-playlists {
+  padding-top: $gaps-gap-8;
+  padding-bottom: $gaps-gap-16;
+}
+
+.video-card {
+  &.slide {
+    cursor: grab;
+    margin-left: $gaps-gap-4;
+  }
+
+  .aspect-wrapper {
+    position: relative;
+  }
+
+  .image { 
+    object-fit: cover;
+  }
+
+  .body {
+    padding: $gaps-gap-2 $gaps-gap-3 $gaps-gap-3 $gaps-gap-3;
+
+    h4 {
+      margin-top: $gaps-gap-1;
+      margin-bottom: $gaps-gap-4;
+    }
+
+    .title {
+      @include fonts-sm;
+      @include fonts-bold;
+    }
+
+    .description {
+      @include fonts-xs;
+    }
+  }
+
+  &.big {
+    .body {
+      padding-left: $gaps-gap-8;
+      padding-top: $gaps-gap-4;
+
+      .title {
+        @include fonts-title;
+      }
+
+      .description {
+        @include fonts-md;
+      }
+
+      h4 {
+        margin-top: $gaps-gap-2;
+        margin-bottom: $gaps-gap-2;
+      }
+
+      span.opaque {
+        color: $colors-main-light;
+        font-weight: 400;
+      }
+    }
+  }
+}

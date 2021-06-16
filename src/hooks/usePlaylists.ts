@@ -11,8 +11,9 @@ export const usePlaylists = (): Array<Playlist> => {
             title
             description
             imageUrl
-            videos
+            categories
             curators
+            videos
           }
           fields {
             collection
@@ -26,13 +27,16 @@ export const usePlaylists = (): Array<Playlist> => {
   return data.playlists.nodes.map((i: any) => mapToPlaylist(i))
 }
 
-function mapToPlaylist(source: any): Playlist {
+export function mapToPlaylist(source: any): Playlist {
   return {
     id: source.id,
+    slug: source.fields.slug,
     title: source.frontmatter.title,
     description: source.frontmatter.description,
     imageUrl: source.frontmatter.imageUrl,
-    curators: [],
-    videos: []
+    curators: source.frontmatter.curators,
+    categories: source.frontmatter.categories,
+    videoCount: source.frontmatter.videos.length,
+    videos: [] // properly map/resolve to archive videos
   }
 }
