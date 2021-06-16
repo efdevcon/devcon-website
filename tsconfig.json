@@ -10,7 +10,7 @@
       "esModuleInterop": true,
       "baseUrl": "./",
       "types": ["node"],
-      "lib": ["dom", "es2015"],
+      "lib": ["dom", "es2015", "es2019"],
     },
     "include": [
       "src",

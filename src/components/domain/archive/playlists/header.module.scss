@@ -1,0 +1,49 @@
+@use 'src/assets/css/partials/index' as *;
+
+.container {
+  background: white;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoints-md) {
+    flex-direction: column-reverse;
+  }
+
+  .content-section {
+    flex-basis: 50%;
+    padding: $gaps-gap-8;
+    
+    @media (max-width: $breakpoints-md) {
+      padding: $gaps-gap-4 0;
+    }
+
+    .description { 
+      margin-top: $gaps-gap-2;
+      margin-bottom: $gaps-gap-8;
+    }
+
+    .controls { 
+      margin-bottom: $gaps-gap-4;
+    }
+  }
+
+  .image-section {
+    flex-basis: 50%;
+
+    img {
+      object-fit: cover;
+      height: 400px;
+      width: 100%;
+
+      @media (max-width: $breakpoints-md) {
+        height: 240px;
+      }
+    }
+  }
+}
+
+span.opaque {
+  color: $colors-main-light;
+  font-weight: 400;
+}

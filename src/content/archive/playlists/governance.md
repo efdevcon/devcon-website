@@ -1,7 +1,9 @@
 ---
 title: Governance
-description: Governance playlist description
-imageUrl: /assets/uploads/devcon/dc0.png
+description: 'Decision-making and cooperation are core to all social systems. How can decentralization empower people to coordinate, manage common resources and make positive-sum decisions together? DAOs, Voting, Game Theory, Mechanism Design, PoS, PoW, decentralized governance,...'
+imageUrl: /assets/uploads/playlists/buidl.png
+categories:
+  - Community Curated
 curators:
   - Hudson Jameson
   - Griff Green
