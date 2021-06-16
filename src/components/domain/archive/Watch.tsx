@@ -219,6 +219,10 @@ export const Watch = (props: WatchProps) => {
               <VideoFilter />
             </div>
 
+            <div className={`${css['sort']} ${css['mobile']}`}>
+              <Sort {...sortState} />
+            </div>
+
             <div className={css['videos']}>
               <div className={css['header']}>
                 <h4 className="title">Videos</h4>

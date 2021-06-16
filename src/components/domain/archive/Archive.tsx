@@ -4,32 +4,38 @@ import { Footer } from 'src/components/common/layouts/footer'
 import { SEO } from 'src/components/domain/seo'
 import css from './archive.module.scss'
 import { PageHero } from 'src/components/common/page-hero'
+import { useStaticQuery, graphql } from 'gatsby'
 import { CuratedPlaylists, Playlists } from './playlists'
 import { StaffPicks } from './staff-picks'
-import { StaticImage } from 'gatsby-plugin-image'
 import { Editions } from './Editions'
 
 type ArchiveProps = {}
 
 export const Archive = (props: ArchiveProps) => {
+  // StaticImage has a technical limitation of not being able to pass image src via props https://www.gatsbyjs.com/plugins/gatsby-plugin-image/#restrictions-on-using-staticimage
+  // Essentially means we have to manually query the images and them pass them to PageHero afterwards - a bit convoluted/messy, but it's the recommended way
+  const data = useStaticQuery(graphql`
+    query StaffPicksImageQuery {
+      allFile(filter: { relativePath: { eq: "vitalik_3x.png" } }) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div className={css['container']}>
       <SEO />
       <Header />
-
       <PageHero
         scenes={[
           {
-            image: (props: any) => {
-              return (
-                <StaticImage
-                  src="../../../assets/images/vitalik_3x.png"
-                  alt="cool alt text"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                  {...props}
-                />
-              )
+            image: data.allFile.nodes[0],
+            imageProps: {
+              alt: 'Vitalik',
             },
             content: () => {
               return (
@@ -50,15 +56,9 @@ export const Archive = (props: ArchiveProps) => {
             },
           },
           {
-            image: () => {
-              return (
-                <StaticImage
-                  src="../../../assets/images/vitalik_2_3x.png"
-                  alt="cool alt text"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                />
-              )
+            image: data.allFile.nodes[0],
+            imageProps: {
+              alt: 'Vitalik',
             },
             content: () => {
               return (
@@ -79,15 +79,9 @@ export const Archive = (props: ArchiveProps) => {
             },
           },
           {
-            image: () => {
-              return (
-                <StaticImage
-                  src="../../../assets/images/pwa_prompt.png"
-                  alt="cool alt text"
-                  placeholder="blurred"
-                  layout="fullWidth"
-                />
-              )
+            image: data.allFile.nodes[0],
+            imageProps: {
+              alt: 'Vitalik',
             },
             content: () => {
               return (
@@ -111,7 +105,6 @@ export const Archive = (props: ArchiveProps) => {
         title="Archive"
         titleSubtext="Devcon"
       />
-
       {/* <div className={`section ${css['tags']}`}>
         <div className="content">
           <h1>Tagging section</h1>
@@ -123,7 +116,6 @@ export const Archive = (props: ArchiveProps) => {
       <div className={css['staff-picks']}>
         <StaffPicks />
       </div>
-
       <div className={`section ${css['curated-playlists']}`}>
         <div className="content">
           <CuratedPlaylists items={[1, 2, 3, 4]} />
@@ -134,7 +126,6 @@ export const Archive = (props: ArchiveProps) => {
           <Playlists items={[1, 2, 3, 4, 5]} />
         </div>
       </div>
-
       <Footer />
     </div>
   )

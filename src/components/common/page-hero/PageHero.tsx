@@ -8,6 +8,7 @@ import { usePageContext } from 'src/context/page-context'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
 import WatchIcon from 'src/assets/icons/local_play.svg'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type NavigationLink = {
   to: string
@@ -172,7 +173,7 @@ export const PageHero = (props: PageHeroProps) => {
 
         return (
           <div key={i} className={className}>
-            {scene.image()}
+            <GatsbyImage image={getImage(scene.image)} {...scene.imageProps} placeholder="blurred" layout="fullWidth" />
           </div>
         )
       })}
