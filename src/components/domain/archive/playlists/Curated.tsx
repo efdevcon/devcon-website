@@ -2,10 +2,13 @@ import React from 'react'
 import Slider from 'react-slick'
 import css from './curated.module.scss'
 import { BasicCard } from 'src/components/common/card'
+import { LinkButton } from 'src/components/common/link-button'
 import { Playlist } from 'src/types/Playlist'
+import ArrowRight from 'src/assets/icons/arrow_right.svg'
 
 type PlaylistProps = {
   title?: string
+  viewMore?: boolean
   items: Array<Playlist>
 }
 
@@ -40,7 +43,13 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
 
   return (
     <div className={css['curated-playlists']}>
-      {props.title && <h2 className="spaced title">{props.title}</h2>}
+      <div className={css['header']}>
+        {props.title && <h2 className="spaced title">{props.title}</h2>}
+        {props.viewMore && <LinkButton to={'/archive/playlists'} className={css['button']}>
+          View more <ArrowRight />
+        </LinkButton>
+        }
+      </div>
       <div className={css['slider']}>
         <Slider {...sliderSettings}>
           {props.items.map((i: Playlist) => {
