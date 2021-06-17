@@ -127,7 +127,7 @@ export const Archive = (props: ArchiveProps) => {
       </div>
       <div className={`section ${css['playlists']}`}>
         <div className="content">
-          <Playlists items={[1, 2, 3, 4, 5]} />
+          <Playlists />
         </div>
       </div>
       <Footer />

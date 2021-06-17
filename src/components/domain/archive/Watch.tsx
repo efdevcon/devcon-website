@@ -12,6 +12,8 @@ import { InputForm } from 'src/components/common/input-form'
 import { useSort, SortVariation, SortButton, Sort } from 'src/components/common/sort'
 import IconGrid from 'src/assets/icons/grid.svg'
 import IconListView from 'src/assets/icons/list-view.svg'
+import { useArchiveVideos } from 'src/hooks/useArchiveVideos'
+import { ArchiveVideo } from 'src/types/ArchiveVideo'
 
 type WatchProps = {}
 
@@ -140,27 +142,10 @@ const VideoFilter = (props: any) => {
   )
 }
 
-const dummyData = [
-  {
-    title: Date.now(),
-    duration: Date.now(),
-    views: 100,
-  },
-  {
-    title: Date.now() + 1,
-    duration: Date.now() + 1,
-    views: 200,
-  },
-  {
-    title: Date.now() + 2,
-    duration: Date.now() + 2,
-    views: 300,
-  },
-]
-
 export const Watch = (props: WatchProps) => {
+  const videos = useArchiveVideos()
   const [listViewEnabled, setListViewEnabled] = React.useState(false)
-  const sortState = useSort(dummyData, [
+  const sortState = useSort(videos, [
     {
       title: 'Event',
       key: 'event',
@@ -240,11 +225,9 @@ export const Watch = (props: WatchProps) => {
               </div>
 
               <div className={`${listViewEnabled ? css['list-view'] : ''} ${css['video-list']}`}>
-                {Array(8)
-                  .fill(null)
-                  .map((_, index) => {
-                    return <Video key={index} horizontal={listViewEnabled} />
-                  })}
+                {videos.map((i: ArchiveVideo, index: number) => {
+                  return <Video key={index} horizontal={listViewEnabled} video={i} />
+                })}
               </div>
             </div>
           </div>

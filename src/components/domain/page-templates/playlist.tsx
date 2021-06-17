@@ -8,6 +8,8 @@ import { SEO } from '../seo'
 import { Header } from 'src/components/common/layouts/header'
 import { PlaylistHeader } from '../archive/playlists/Header'
 import { mapToPlaylist } from 'src/hooks/usePlaylists'
+import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import { Video } from '../archive/playlists'
 
 export default pageHOC(function PlaylistTemplate(data: any) {
   const playlist = mapToPlaylist(data.data.playlist)
@@ -22,6 +24,14 @@ export default pageHOC(function PlaylistTemplate(data: any) {
       <div className="section">
         <div className="content">
           <PlaylistHeader playlist={playlist} />
+
+          <div className={css['videos']}>
+            <div className={css['list-view']}>
+              {playlist.videos.map((i: ArchiveVideo) => {
+                  return <Video key={i.id} video={i} horizontal />
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -43,7 +53,20 @@ export const query = graphql`
         imageUrl
         categories
         curators
-        videos
+        archiveVideos {
+          id
+          slug
+          title
+          description
+          edition
+          youtubeUrl
+          ipfsHash
+          expertise
+          type
+          track
+          tags
+          speakers
+        }
       }
       fields {
         collection

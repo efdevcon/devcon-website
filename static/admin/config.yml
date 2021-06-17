@@ -407,6 +407,11 @@ collections:
       - { name: 'description', label: 'Description', widget: 'text' }
       - { name: 'youtubeUrl', label: 'Youtube URL', widget: 'string' }
       - { name: 'ipfsHash', label: 'IPFS hash', widget: 'string' }
+      - { name: 'expertise', label: 'Expertise level', widget: 'string' }
+      - { name: 'type', label: 'Type', widget: 'string' }
+      - { name: 'track', label: 'Track', widget: 'string' }
+      - { name: 'tags', label: 'Tags', widget: 'list' }
+      - { name: 'speakers', label: 'Speakers', widget: 'list' }
     meta:
       {
         path:
