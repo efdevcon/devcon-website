@@ -5,6 +5,7 @@ import { ArchiveVideo } from 'src/types/ArchiveVideo';
 
 interface Props {
     video: ArchiveVideo
+    showDescription?: boolean
     className?: string
     slide?: boolean
     big?: boolean
@@ -24,7 +25,7 @@ export const Video = (props: Props) => {
     className += ` ${css['horizontal']}`;
 
   function getVideoId() {
-    let videoId = props.video?.youtubeUrl ?? ''
+    let videoId = props.video.youtubeUrl ?? ''
     videoId = videoId.replace('https://youtu.be/', '')
     videoId = videoId.replace('https://www.youtube.com/embed/', '')
     videoId = videoId.replace('https://www.youtube.com/watch?v=', '')
@@ -36,22 +37,22 @@ export const Video = (props: Props) => {
   }
 
   return (
-    <BasicCard className={className} expandLink linkUrl={`/archive/watch${props.video?.slug}?playlist=test`}>
+    <BasicCard className={className} expandLink linkUrl={`/archive/watch${props.video.slug}?playlist=test`}>
       {/* Need the wrapper so we can constrain the aspect div */}
       <div className={css['aspect-wrapper']}>
         <div className="aspect">
           <img
             src={`https://img.youtube.com/vi/${getVideoId()}/maxresdefault.jpg`}
-            alt={`${props.video?.title} preview image`}
+            alt={`${props.video.title} preview image`}
             placeholder="blurred"
           />
         </div>
       </div>
       <div className={css['body']}>
-        <h4 className={css['title']}>{props.video?.title}</h4>
-        <p className={css['description']}>{props.video?.description}</p>
-        <p className={css['speakers']}>{props.video?.speakers.join(', ').toUpperCase()}</p>
-        <p className="font-xs">{props.video?.type}</p>
+        <h4 className={css['title']}>{props.video.title}</h4>
+        {props.showDescription && <p className={css['description']}>{props.video.description}</p>}
+        <p className={css['speakers']}>{props.video.speakers.join(', ').toUpperCase()}</p>
+        <p className="font-xs">{props.video.type}</p>
       </div>
     </BasicCard>
   );

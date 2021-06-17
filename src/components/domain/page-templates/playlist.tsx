@@ -28,7 +28,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
           <div className={css['videos']}>
             <div className={css['list-view']}>
               {playlist.videos.map((i: ArchiveVideo) => {
-                  return <Video key={i.id} video={i} horizontal />
+                  return <Video key={i.id} video={i} horizontal showDescription />
               })}
             </div>
           </div>
