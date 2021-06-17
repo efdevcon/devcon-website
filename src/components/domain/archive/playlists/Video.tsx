@@ -1,15 +1,17 @@
-import React from 'react'
-import css from './video.module.scss'
-import { BasicCard } from 'src/components/common/card'
-import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import React from 'react';
+import css from './video.module.scss';
+import { BasicCard } from 'src/components/common/card';
+import { ArchiveVideo } from 'src/types/ArchiveVideo';
+import { Playlist } from 'src/types/Playlist';
 
 interface Props {
-  video: ArchiveVideo
-  showDescription?: boolean
-  className?: string
-  slide?: boolean
-  big?: boolean
-  horizontal?: boolean
+    video: ArchiveVideo
+    playlist?: Playlist
+    showDescription?: boolean
+    className?: string
+    slide?: boolean
+    big?: boolean
+    horizontal?: boolean
 }
 
 export const Video = (props: Props) => {
@@ -32,8 +34,17 @@ export const Video = (props: Props) => {
     return videoId
   }
 
+  function getWatchUrl() {
+    let url = `/archive/watch${props.video.slug}`
+    if (props.playlist) {
+      url += `?playlist=${props.playlist.id}`
+    }
+
+    return url
+  }
+
   return (
-    <BasicCard className={className} expandLink linkUrl={`/archive/watch${props.video.slug}?playlist=test`} allowDrag>
+    <BasicCard className={className} expandLink linkUrl={getWatchUrl()} allowDrag>
       {/* Need the wrapper so we can constrain the aspect div */}
       <div className={css['aspect-wrapper']}>
         <div className="aspect">

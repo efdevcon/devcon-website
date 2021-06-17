@@ -32,6 +32,7 @@ export const usePlaylists = (): Array<Playlist> => {
           fields {
             collection
             slug
+            id
           }
         }
       }
@@ -43,7 +44,7 @@ export const usePlaylists = (): Array<Playlist> => {
 
 export function mapToPlaylist(source: any): Playlist {
   return {
-    id: source.id,
+    id: source.fields.id,
     slug: source.fields.slug,
     title: source.frontmatter.title,
     description: source.frontmatter.description,
