@@ -14,6 +14,20 @@ export const usePlaylists = (): Array<Playlist> => {
             categories
             curators
             videos
+            archiveVideos {
+              id
+              slug
+              title
+              description
+              edition
+              youtubeUrl
+              ipfsHash
+              expertise
+              type
+              track
+              tags
+              speakers
+            }
           }
           fields {
             collection
@@ -36,7 +50,7 @@ export function mapToPlaylist(source: any): Playlist {
     imageUrl: source.frontmatter.imageUrl,
     curators: source.frontmatter.curators,
     categories: source.frontmatter.categories,
-    videoCount: source.frontmatter.videos.length,
-    videos: [] // properly map/resolve to archive videos
+    videoCount: source.frontmatter.archiveVideos.length,
+    videos: source.frontmatter.archiveVideos
   }
 }

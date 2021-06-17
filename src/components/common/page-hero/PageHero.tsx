@@ -26,6 +26,7 @@ type PageHeroProps = {
   titleSubtext?: string
   description?: string
   scenes?: any[]
+  asBackground?: boolean
   background?: string
   cta?: Array<CTALink>
   renderCustom?(props?: any): JSX.Element
@@ -59,7 +60,7 @@ export const PageHero = (props: PageHeroProps) => {
       id="page-hero"
       className={`${css['hero']} ${props.background ? css['custom-background'] : ''} ${
         isScrolled ? css['scrolled'] : ''
-      } ${hasScenes ? css['has-scenes'] : ''}`}
+      } ${hasScenes ? css['has-scenes'] : ''} ${props.asBackground ? css['as-background'] : ''}`}
       style={style}
     >
       <div className="section">

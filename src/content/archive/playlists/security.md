@@ -1,10 +1,9 @@
 ---
-title: Popular
-description: These are the most popular videos
-imageUrl: /assets/uploads/playlists/consensus.png
+title: Security
+description: Security videos
+imageUrl: /assets/uploads/playlists/default.png
 categories:
-  - Devcon
-  - Popular
+  - Topics
 curators:
   - Devcon team
 videos:

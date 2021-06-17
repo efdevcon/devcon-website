@@ -18,6 +18,7 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
   await createNewsPages(args)
   await createDipPages(args)
   await createPlaylistPages(args)
+  await createVideoPages(args)
   // await createTagPages(args)
   await createSearchPage(args)
 }
@@ -129,6 +130,31 @@ async function createPlaylistPages({ actions, graphql, reporter }: CreatePagesAr
 
   result.data.playlists.nodes.forEach((node: any) => {
     createDynamicPage(actions, node.fields.slug, 'playlist', 'en')
+  })
+}
+
+async function createVideoPages({ actions, graphql, reporter }: CreatePagesArgs) {
+  const result: any = await graphql(`
+    query {
+      playlists: allMarkdownRemark(filter: { fields: { collection: { eq: "videos" } } }) {
+        nodes {
+          fields {
+            collection
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running playlist query.`)
+    return
+  }
+
+  result.data.playlists.nodes.forEach((node: any) => {
+    console.log(node.fields.slug, 'SLUG VIDEO')
+    createDynamicPage(actions, node.fields.slug, 'video', 'en')
   })
 }
 

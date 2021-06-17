@@ -3,9 +3,10 @@ import Slider from 'react-slick'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Video } from '../playlists'
 import css from './staff-picks.module.scss'
+import { useStaffPicks } from 'src/hooks/useStaffPicks'
 
 export const StaffPicks = (props: any) => {
-  const nItems = 2
+  const staffPicks = useStaffPicks()
 
   const sliderSettings = {
     infinite: false,
@@ -36,62 +37,11 @@ export const StaffPicks = (props: any) => {
 
       <div className={css['slider']}>
         <Slider {...sliderSettings}>
-          <Video big slide />
-          <Video big slide />
-          <Video big slide />
+          {staffPicks.videos.map((i) => {
+            return <Video key={i.id} big slide video={i} />
+          })}
         </Slider>
       </div>
-
-      {/* <Slider {...sliderSettings}>
-        <div className={`${css['img']}`}>
-          <div className="aspect">
-            <div className={css['first']}>
-              <StaticImage
-                src={'../../../../assets/images/vitalik_3x.png'}
-                alt="Fellow: Benson Njuguna"
-                placeholder="blurred"
-                layout="fullWidth"
-              />
-              <div className={css['info']}>
-                <p className="font-lg">Title</p>
-                <p>Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={`${css['img']}`}>
-          <div className="aspect">
-            <div>
-              <StaticImage
-                src={'../../../../assets/images/pwa_prompt.png'}
-                alt="Fellow: Benson Njuguna"
-                placeholder="blurred"
-                layout="fullWidth"
-              />
-              <div className={css['info']}>
-                <p className="font-lg">Title</p>
-                <p>Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={`${css['img']}`}>
-          <div className="aspect">
-            <div>
-              <StaticImage
-                src={'../../../../assets/images/vitalik_3x.png'}
-                alt="Fellow: Benson Njuguna"
-                placeholder="blurred"
-                layout="fullWidth"
-              />
-              <div className={css['info']}>
-                <p className="font-lg">Title</p>
-                <p>Description</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Slider> */}
     </>
   )
 }

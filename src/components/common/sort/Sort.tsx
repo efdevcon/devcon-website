@@ -148,53 +148,53 @@ export const SortButton = (props: { index: number; field: Field; sortState: Sort
 }
 
 const HorizontalScroller = (props: any) => {
-  // const elementRef = React.useRef<HTMLDivElement | null>(null);
-  // const [elementWidth, setElementWidth] = React.useState<number | 'scroll'>(0);
+  const elementRef = React.useRef<HTMLDivElement | null>(null)
+  const [elementWidth, setElementWidth] = React.useState<number | 'scroll'>(0)
 
-  // React.useLayoutEffect(() => {
-  //   if (window.ResizeObserver) {
-  //     const el = elementRef.current;
+  React.useLayoutEffect(() => {
+    if (window.ResizeObserver) {
+      const el = elementRef.current
 
-  //     if (!el) return;
+      if (!el) return
 
-  //     const observer = new window.ResizeObserver(entries => {
-  //       const entry = entries[0]
+      const observer = new window.ResizeObserver(entries => {
+        const entry = entries[0]
 
-  //       if (entry.borderBoxSize) {
-  //         const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
+        if (entry.borderBoxSize) {
+          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
 
-  //         setElementWidth(borderBoxSize.blockSize)
-  //       } else {
-  //         setElementWidth(el.offsetHeight)
-  //       }
-  //     })
+          setElementWidth(borderBoxSize.blockSize)
+        } else {
+          setElementWidth(el.offsetHeight)
+        }
+      })
 
-  //     observer.observe(el)
+      observer.observe(el)
 
-  //     return () => {
-  //       observer.unobserve(el)
-  //     }
-  //   } else {
-  //     // If there's no resize observer we'll just fall back to native scroll
-  //     setElementWidth('scroll');
-  //   }
-  // }, []);
+      return () => {
+        observer.unobserve(el)
+      }
+    } else {
+      // If there's no resize observer we'll just fall back to native scroll
+      setElementWidth('scroll')
+    }
+  }, [])
 
-  // /*
-  //   0. Overflow hidden element
-  //   1. Measure width of element, if scrollWidth > clientWidth, activate gradient
-  //   2.
-  // */
+  /*
+    0. Overflow hidden element
+    1. Measure width of element, if scrollWidth > clientWidth, activate gradient
+    2.
+  */
 
-  // let className = css['horizontal-scroller'];
+  let className = css['horizontal-scroller']
 
-  // if (elementWidth === 'scroll') className += ` ${css['no-resize-observer']}`;
+  if (elementWidth === 'scroll') className += ` ${css['no-resize-observer']}`
 
-  // return (
-  //   <div className={className} ref={elementRef}>
-  //     {props.children}
-  //   </div>
-  // )
+  return (
+    <div className={className} ref={elementRef}>
+      {props.children}
+    </div>
+  )
 
   const settings = {
     variableWidth: true,

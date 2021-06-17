@@ -2,6 +2,7 @@ import { CreateSchemaCustomizationArgs } from 'gatsby'
 import { links as linksResolver } from './resolvers/links'
 import { tagCountResolver, tagsResolver } from './resolvers/tags'
 import { dip as dipResolver } from './resolvers/dip'
+import { videoResolver } from './resolvers/archive'
 
 const baseTypes = `
   type MarkdownRemark implements Node { 
@@ -21,6 +22,21 @@ const baseTypes = `
     lang: String,
     title: String
   }
+
+  type ArchiveVideo {
+    id: String,
+    slug: String,
+    edition: Int,
+    title: String,
+    description: String,
+    youtubeUrl: String,
+    ipfsHash: String,
+    expertise: String,
+    type: String,
+    track: String,
+    tags: [String],
+    speakers: [String]
+  }
 `
 
 export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizationArgs) => {
@@ -36,6 +52,7 @@ export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCusto
         prev_dip: dipResolver('prev'),
         tagItems: tagsResolver,
         tagCount: tagCountResolver,
+        archiveVideos: videoResolver,
       },
     }),
   ]

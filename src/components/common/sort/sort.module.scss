@@ -39,7 +39,7 @@
 // Horizontal scroller (create component for this)
 .horizontal-scroller {
   overflow-x: hidden;
-  background: yellow;
+  // background: yellow;
 
   &.no-resize-observer {
     overflow-x: auto;

@@ -23,6 +23,7 @@ interface BasicCardProps {
   linkUrl?: string
   imageUrl?: string
   className?: string
+  allowDrag?: boolean
   children?: React.ReactNode
 }
 
@@ -35,7 +36,7 @@ export const BasicCard = React.forwardRef((props: BasicCardProps, ref: any) => {
 
   if (props.expandLink && props.linkUrl) {
     return (
-      <Link className={className} to={props.linkUrl} ref={ref}>
+      <Link className={className} to={props.linkUrl} ref={ref} allowDrag={props.allowDrag}>
         {props.children}
       </Link>
     )
