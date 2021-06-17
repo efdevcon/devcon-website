@@ -8,4 +8,5 @@ curators:
 videos:
   - 2/ethereum-in-25-minutes/index
   - 5/cryptoeconomics-in-30-minutes/index
+  - 5/devcon5-recap-video/index
 ---
