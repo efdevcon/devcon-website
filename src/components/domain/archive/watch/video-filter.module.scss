@@ -1,0 +1,113 @@
+@use 'src/assets/css/partials/index' as *;
+
+.filter {
+  padding-top: $gaps-gap-8;
+  flex-basis: 30%;
+  margin-right: $gaps-gap-8;
+  flex-shrink: 0;
+
+  @media (max-width: $breakpoints-lg) {
+    display: none;
+  }
+}
+
+.mobile-filter {
+  display: none;
+
+  @media (max-width: $breakpoints-lg) {
+    display: block;
+  }
+
+  background: $colors-monochrome-2;
+
+  .icon-close,
+  .icon-open {
+    display: none;
+  }
+
+  &:not(.open) {
+    .icon-open {
+      display: block;
+    }
+  }
+
+  &.open {
+    .icon-close {
+      display: block;
+    }
+
+    .filter-container {
+      max-height: 600px !important;
+    }
+  }
+
+  .header {
+    padding-bottom: $gaps-gap-4;
+    padding-top: $gaps-gap-4;
+  }
+
+  .filter-container {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.6s;
+  }
+}
+
+.clear-container {
+  display: flex;
+  align-items: center;
+  margin-top: $gaps-gap-8;
+
+  button {
+    margin-right: $gaps-gap-3;
+
+    > span {
+      margin-right: $gaps-gap-4;
+    }
+  }
+
+  .clear {
+    opacity: 0;
+    cursor: pointer;
+    padding: $gaps-gap-4;
+
+    &.open {
+      opacity: 1;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: $gaps-gap-10;
+  border-bottom: 1px solid $colors-monochrome-5;
+}
+
+.devcon,
+.expertise,
+.tags {
+  padding-top: $gaps-gap-5;
+  border-bottom: 1px solid $colors-monochrome-5;
+
+  @media (max-width: $breakpoints-lg) {
+    padding-bottom: $gaps-gap-5 !important;
+  }
+
+  > p {
+    padding-bottom: $gaps-gap-5;
+  }
+}
+
+.devcon {
+  padding-bottom: $gaps-gap-10;
+}
+
+.expertise {
+  padding-bottom: $gaps-gap-10;
+}
+
+.tags {
+  padding-bottom: $gaps-gap-10 + $gaps-gap-10;
+}

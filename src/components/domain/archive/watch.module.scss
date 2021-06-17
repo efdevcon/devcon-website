@@ -11,7 +11,10 @@ $left-column-width: 30%;
     align-items: center;
     padding-bottom: $gaps-gap-10;
     border-bottom: 1px solid $colors-monochrome-5;
-    margin-bottom: $gaps-gap-8;
+
+    @media (max-width: $breakpoints-lg) {
+      padding-bottom: $gaps-gap-6;
+    }
 
     .search {
       flex-basis: $left-column-width;
@@ -32,61 +35,24 @@ $left-column-width: 30%;
       flex-direction: column;
     }
 
-    .filter {
-      flex-basis: $left-column-width;
-      margin-right: $gaps-gap-8;
-      flex-shrink: 0;
-
-      .header {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: $gaps-gap-10;
-        border-bottom: 1px solid $colors-monochrome-5;
-      }
-
-      .devcon {
-        padding-top: $gaps-gap-5;
-        padding-bottom: $gaps-gap-10;
-        border-bottom: 1px solid $colors-monochrome-5;
-
-        > p {
-          padding-bottom: $gaps-gap-5;
-        }
-      }
-
-      .expertise {
-        padding-top: $gaps-gap-5;
-        padding-bottom: $gaps-gap-10;
-        border-bottom: 1px solid $colors-monochrome-5;
-
-        > p {
-          padding-bottom: $gaps-gap-5;
-        }
-      }
-
-      .tags {
-        padding-top: $gaps-gap-5;
-        padding-bottom: $gaps-gap-10 + $gaps-gap-10;
-        border-bottom: 1px solid $colors-monochrome-5;
-
-        @media (max-width: $breakpoints-lg) {
-          padding-bottom: $gaps-gap-5;
-          margin-bottom: $gaps-gap-5;
-        }
-
-        > p {
-          padding-bottom: $gaps-gap-5;
-        }
-      }
-    }
-
     .videos {
       flex-grow: 1;
+      margin-top: $gaps-gap-8;
+
+      @media (max-width: $breakpoints-lg) {
+        padding-top: $gaps-gap-4;
+        border-top: 1px solid $colors-monochrome-5;
+        margin-top: 0px;
+      }
 
       .header {
         display: flex;
         justify-content: space-between;
         padding-bottom: $gaps-gap-8;
+
+        @media (max-width: $breakpoints-lg) {
+          padding-bottom: $gaps-gap-4;
+        }
 
         .view-toggle {
           @include fonts-xl;
@@ -130,6 +96,7 @@ $left-column-width: 30%;
 
 .sort {
   display: block;
+  // overflow-x: auto;
 
   @media (max-width: $breakpoints-lg) {
     display: none;

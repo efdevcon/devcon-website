@@ -11,6 +11,7 @@
   padding: $gaps-gap-4;
   display: inline-flex;
   cursor: pointer;
+  flex-shrink: 0;
 
   &:first-child {
     margin-left: 0px;
@@ -33,4 +34,14 @@
 
 .text {
   cursor: auto !important;
+}
+
+// Horizontal scroller (create component for this)
+.horizontal-scroller {
+  overflow-x: hidden;
+  background: yellow;
+
+  &.no-resize-observer {
+    overflow-x: auto;
+  }
 }

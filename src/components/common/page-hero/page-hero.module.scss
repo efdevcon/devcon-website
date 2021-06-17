@@ -15,6 +15,10 @@
   background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
   background-image: var(--theme-logo), var(--theme-gradient);
 
+  @media (max-width: $breakpoints-lg) {
+    margin-bottom: $gaps-gap-6;
+  }
+
   // Strip is always present on mobile (but not on desktop) - we have to account for that:
   &.scrolled {
     @media (max-width: $breakpoints-lg) {
