@@ -4,20 +4,12 @@ import { BasicCard } from 'src/components/common/card'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 
 interface Props {
-<<<<<<< HEAD
   video: ArchiveVideo
+  showDescription?: boolean
   className?: string
   slide?: boolean
   big?: boolean
   horizontal?: boolean
-=======
-    video: ArchiveVideo
-    showDescription?: boolean
-    className?: string
-    slide?: boolean
-    big?: boolean
-    horizontal?: boolean
->>>>>>> f9bdc04d2ac54f11254a79238bf0b99777986705
 }
 
 export const Video = (props: Props) => {
