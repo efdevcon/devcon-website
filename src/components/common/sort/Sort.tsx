@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl'
 import ArrowAsc from 'src/assets/icons/arrow_asc.svg'
 import ArrowDesc from 'src/assets/icons/arrow_desc.svg'
 import css from './sort.module.scss'
-import Slider from 'react-slick'
+import { HorizontalScroller } from 'src/components/common/horizontal-scroller'
 
 /*
   EXAMPLE USAGE:
@@ -147,78 +147,16 @@ export const SortButton = (props: { index: number; field: Field; sortState: Sort
   )
 }
 
-const HorizontalScroller = (props: any) => {
-  const elementRef = React.useRef<HTMLDivElement | null>(null)
-  const [elementWidth, setElementWidth] = React.useState<number | 'scroll'>(0)
-
-  React.useLayoutEffect(() => {
-    if (window.ResizeObserver) {
-      const el = elementRef.current
-
-      if (!el) return
-
-      const observer = new window.ResizeObserver(entries => {
-        const entry = entries[0]
-
-        if (entry.borderBoxSize) {
-          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
-
-          setElementWidth(borderBoxSize.blockSize)
-        } else {
-          setElementWidth(el.offsetHeight)
-        }
-      })
-
-      observer.observe(el)
-
-      return () => {
-        observer.unobserve(el)
-      }
-    } else {
-      // If there's no resize observer we'll just fall back to native scroll
-      setElementWidth('scroll')
-    }
-  }, [])
-
-  /*
-    0. Overflow hidden element
-    1. Measure width of element, if scrollWidth > clientWidth, activate gradient
-    2.
-  */
-
-  let className = css['horizontal-scroller']
-
-  if (elementWidth === 'scroll') className += ` ${css['no-resize-observer']}`
-
-  return (
-    <div className={className} ref={elementRef}>
-      {props.children}
-    </div>
-  )
-
-  const settings = {
-    variableWidth: true,
-    infinite: false,
-    slidesToShow: 0.5,
-  }
-
-  return (
-    <Slider {...settings}>
-      <div style={{ width: '1200px' }}>Test</div>
-    </Slider>
-  )
-}
-
 // Default sort rendering - can rely on useSort and/or SortButton to allow more customizability
 export const Sort = (props: SortState) => {
   return (
-    <div className={css['sort-container']}>
-      <HorizontalScroller>
+    <HorizontalScroller>
+      <div className={css['sort-container']}>
         <p className={`font-lg bold ${css['sort-button']} ${css['text']}`}>Sort:</p>
         {props.fields.map((field: any, index: number) => {
           return <SortButton sortState={props} key={field.key} field={field} index={index} />
         })}
-      </HorizontalScroller>
-    </div>
+      </div>
+    </HorizontalScroller>
   )
 }

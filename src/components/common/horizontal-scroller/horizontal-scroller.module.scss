@@ -1,0 +1,41 @@
+@use 'src/assets/css/partials/index' as *;
+
+.gradients {
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+
+  &.gradient-left {
+    &:before {
+      content: '';
+      z-index: 1;
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 100%);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      pointer-events: none;
+      height: 100%;
+      width: var(--gradient-width, 10px);
+    }
+  }
+
+  &.gradient-right {
+    &:after {
+      content: '';
+      z-index: 1;
+      background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 100%);
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      pointer-events: none;
+      height: 100%;
+      width: var(--gradient-width, 10px);
+    }
+  }
+}
+
+.horizontal-scroller {
+  &.no-resize-observer {
+    overflow-x: auto;
+  }
+}

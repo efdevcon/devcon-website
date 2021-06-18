@@ -17,10 +17,19 @@
     margin-left: 0px;
   }
 
+  @media (max-width: $breakpoints-lg) {
+    margin-left: 0px;
+    padding-left: $gaps-gap-3;
+    padding-right: $gaps-gap-3;
+  }
+
   &.sort-active {
     @include fonts-bold;
-
     border-bottom: 2px solid $colors-main;
+
+    @media (max-width: $breakpoints-lg) {
+      border-bottom: none;
+    }
   }
 
   .sort-arrows {
@@ -34,11 +43,12 @@
 
 .text {
   cursor: auto !important;
+  padding-left: 0px;
 }
 
 // Horizontal scroller (create component for this)
 .horizontal-scroller {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   // background: yellow;
 
   &.no-resize-observer {
