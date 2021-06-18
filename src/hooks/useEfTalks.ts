@@ -32,6 +32,7 @@ export const useEfTalks = (): Playlist => {
         fields {
           collection
           slug
+          id
         }
       }
     }

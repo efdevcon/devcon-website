@@ -32,6 +32,7 @@ export const useLatest = (): Playlist => {
         fields {
           collection
           slug
+          id
         }
       }
     }

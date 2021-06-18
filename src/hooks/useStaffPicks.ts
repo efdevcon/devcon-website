@@ -32,6 +32,7 @@ export const useStaffPicks = (): Playlist => {
         fields {
           collection
           slug
+          id
         }
       }
     }

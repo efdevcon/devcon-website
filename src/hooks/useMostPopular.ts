@@ -32,6 +32,7 @@ export const useMostPopular = (): Playlist => {
         fields {
           collection
           slug
+          id
         }
       }
     }
