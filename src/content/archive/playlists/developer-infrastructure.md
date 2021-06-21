@@ -8,5 +8,6 @@ curators:
   - Trent van Epps
 videos:
   - 2/ethereum-in-25-minutes/index
+  - 3/dai-stablecoin/index
   - 4/a-conversation-with-stewart-brand/index
 ---

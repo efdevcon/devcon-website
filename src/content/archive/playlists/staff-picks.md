@@ -6,6 +6,7 @@ categories: []
 curators:
   - Devcon Team
 videos:
+  - 1/understanding-the-ethereum-blockchain-protocol/index
   - 2/ethereum-in-25-minutes/index
   - 4/ethereum-foundation-values/index
   - 4/a-conversation-with-stewart-brand/index

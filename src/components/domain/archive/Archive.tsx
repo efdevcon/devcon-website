@@ -117,8 +117,10 @@ export const Archive = (props: ArchiveProps) => {
           <h1>Tagging section</h1>
         </div>
       </div> */}
-      <div className={css['editions']}>
-        <Editions />
+      <div className={`section ${css['editions']}`}>
+        <div className="content">
+          <Editions />
+        </div>
       </div>
       <div className={css['staff-picks']}>
         <StaffPicks />

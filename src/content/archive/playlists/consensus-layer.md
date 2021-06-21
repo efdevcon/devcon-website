@@ -8,6 +8,7 @@ curators:
   - Danny Ryan
   - Justin Drake
 videos:
+  - 1/keynote-and-ethereum-roadmap/index
   - 2/ethereum-in-25-minutes/index
   - 4/a-conversation-with-stewart-brand/index
 ---

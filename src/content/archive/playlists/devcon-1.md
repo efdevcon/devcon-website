@@ -6,5 +6,8 @@ categories:
   - Devcon
 curators:
   - Devcon Team
-videos: []
+videos: 
+  - 1/ethereum-for-dummies/index
+  - 1/keynote-and-ethereum-roadmap/index
+  - 1/understanding-the-ethereum-blockchain-protocol/index
 ---
