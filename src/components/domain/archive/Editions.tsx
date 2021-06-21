@@ -3,6 +3,7 @@ import { useDevconEditions } from 'src/hooks/useDevconEditions'
 import moment from 'moment'
 import css from './editions.module.scss'
 import { DevconEdition } from 'src/types/DevconEdition'
+import { LinkButton } from 'src/components/common/link-button'
 
 interface Props {
   className?: string
@@ -36,14 +37,17 @@ export const Editions = (props: Props) => {
       </div>
       <div className={css['info']}>
         <div className={css['title']}>
-          <p>{selectedEdition.location}</p>
-          <p>{selectedEdition.title}</p>
+          <p className='title'>{selectedEdition.title}</p>
+          <p className='subtitle'>{selectedEdition.location}</p>
+          <p>{moment(selectedEdition.startDate).format('MMM DD')} - {moment(selectedEdition.endDate).format('MMM DD')} {moment(selectedEdition.endDate).format('YYYY')}</p>
         </div>
         <div className={css['description']}>
           <p>{selectedEdition.description}</p>
         </div>
         <div className={css['buttons']}>
-          <p>Links -</p>
+          {selectedEdition.links.map((i) => {
+            return <LinkButton key={i.title} to={i.url} className={css['button']}>{i.title}</LinkButton>
+          })}
         </div>
       </div>
     </div>

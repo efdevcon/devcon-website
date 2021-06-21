@@ -15,6 +15,10 @@ export const useDevconEditions = (): Array<DevconEdition> => {
             startDate
             endDate
             imageUrl
+            urls {
+              title
+              url
+            }
           }
           fields {
             collection
@@ -39,5 +43,8 @@ function mapToDevconEdition(source: any): DevconEdition {
     startDate: new Date(source.frontmatter.startDate),
     endDate: new Date(source.frontmatter.endDate),
     imageUrl: source.frontmatter.imageUrl,
+    links: source.frontmatter.urls ? source.frontmatter.urls.map((i: any) => {
+      return { title: i.title, url: i.url }
+    }) : []
   }
 }
