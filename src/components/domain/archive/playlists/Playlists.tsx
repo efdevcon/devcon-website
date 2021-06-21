@@ -11,13 +11,13 @@ export const Playlists = () => {
   const latest = useLatest()
   const efTalks = useEfTalks()
 
-  function getSliderSettings(nItems: number) { 
+  function getSliderSettings(nItems: number) {
     return {
       infinite: false,
       speed: 500,
-      slidesToShow: Math.min(nItems, 5.1),
+      slidesToShow: Math.min(nItems, 4.1),
       arrows: false,
-      slidesToScroll: 4,
+      slidesToScroll: Math.min(nItems, 4),
       touchThreshold: 100,
       mobileFirst: true,
       responsive: [
@@ -25,7 +25,7 @@ export const Playlists = () => {
           breakpoint: 1024,
           settings: {
             slidesToShow: Math.min(nItems, 3.1),
-            slidesToScroll: 2,
+            slidesToScroll: Math.min(nItems, 3),
           },
         },
         {

@@ -1,11 +1,14 @@
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import css from './filter.module.scss'
 import { Dropdown } from 'src/components/common/dropdown'
+import IconCheck from 'src/assets/icons/check_circle.svg'
+import IconPlus from 'src/assets/icons/plus.svg'
 import IconFilter from 'src/assets/icons/filter.svg'
 
 export type FilterOptions = {
   tags?: boolean
   multiSelect?: boolean
+  initialFilter?: any
   filters: {
     text: string
     value: any
@@ -25,9 +28,11 @@ type FilterState = {
 
 export const useFilter = (options: FilterOptions | undefined) => {
   const defaultValue = options?.filters[0].value
-  const [activeFilter, setActiveFilter] = React.useState(defaultValue)
+  const [activeFilter, setActiveFilter] = React.useState(options?.initialFilter || defaultValue)
   // Some filters use multiselect
-  const [activeFilterMulti, setActiveFilterMulti] = React.useState({} as { [key: string]: any })
+  const [activeFilterMulti, setActiveFilterMulti] = React.useState(
+    (options?.initialFilter || {}) as { [key: string]: any }
+  )
 
   if (!options) return [[], null] as [any[], null]
 
@@ -71,16 +76,18 @@ export const Filter = (props: FilterState) => {
     return (
       <div className={css['tags']}>
         {props.options.filters.map(filter => {
-          let className = 'label white'
+          let className = `${css['tag']} label white`
 
           const active = props.activeFilter === filter.value || props.activeFilter?.[filter.value]
 
-          if (active) className += ` inverted`
+          if (active) className += ` ${css['active']} inverted`
 
           return (
-            <div key={filter.value} onClick={() => props.setActiveFilter(filter.value)} className={className}>
-              {filter.text}
-            </div>
+            <button key={filter.value} onClick={() => props.setActiveFilter(filter.value)} className={className}>
+              <IconCheck className={`icon ${css['icon-check']}`} />
+              <IconPlus className={`icon ${css['icon-plus']}`} />
+              <span>{filter.text}</span>
+            </button>
           )
         })}
       </div>

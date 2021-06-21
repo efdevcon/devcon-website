@@ -4,8 +4,14 @@ import IconClose from 'src/assets/icons/cross.svg'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Filter, useFilter } from 'src/components/common/filter'
 import css from './video-filter.module.scss'
+import { useLocation } from '@reach/router'
+import { useEffect } from 'react'
+import queryString from 'query-string'
 
 export const useVideoFilter = () => {
+  const location = useLocation()
+  const queryParams = queryString.parse(location.search)
+
   const [filteredDevcon, devconFilterState] = useFilter({
     tags: true,
     multiSelect: true,
@@ -65,26 +71,55 @@ export const useVideoFilter = () => {
   const [filteredTags, tagsFilterState] = useFilter({
     tags: true,
     multiSelect: true,
+    initialFilter: queryParams?.tags?.reduce((acc, tag) => {
+      acc[tag] = true
+
+      return acc
+    }, {}),
     filters: [
       {
-        text: 'All',
-        value: 'all',
+        text: 'Society and Systems',
+        value: 'Society and Systems',
       },
       {
-        text: 'Draft',
-        value: 'draft',
+        text: 'Scalability',
+        value: 'Scalability',
       },
       {
-        text: 'Accepted',
-        value: 'accepted',
+        text: 'UX & Design',
+        value: 'UX & Design',
       },
       {
-        text: 'Withdrawn',
-        value: 'withdrawn',
+        text: 'Security',
+        value: 'Security',
       },
       {
-        text: 'Not Implemented',
-        value: 'not implemented',
+        text: 'Cryptography',
+        value: 'Cryptography',
+      },
+      {
+        text: 'Community',
+        value: 'Community',
+      },
+      {
+        text: 'Economics',
+        value: 'Economics',
+      },
+      {
+        text: 'Standards',
+        value: 'Standards',
+      },
+      {
+        text: 'Privacy',
+        value: 'Privacy',
+      },
+      {
+        text: 'Consensus Layer',
+        value: 'Consensus Layer',
+      },
+      {
+        text: 'Application Layer',
+        value: 'Application Layer',
       },
     ],
     filterFunction: activeFilters => {

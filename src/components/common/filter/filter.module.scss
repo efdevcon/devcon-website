@@ -65,12 +65,44 @@
 }
 
 .tags {
-  > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .tag {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: $gaps-gap-2;
+    margin-bottom: $gaps-gap-1;
+
+    svg {
+      font-size: 0.9em;
+    }
+
+    > span {
+      margin-left: $gaps-gap-2;
+    }
+
     &:hover {
       cursor: pointer;
     }
 
-    margin-right: $gaps-gap-2;
-    margin-bottom: $gaps-gap-2;
+    .icon-check {
+      display: none;
+    }
+
+    .icon-plus {
+      display: block;
+    }
+
+    &.active {
+      .icon-plus {
+        display: none;
+      }
+
+      .icon-check {
+        display: block;
+      }
+    }
   }
 }

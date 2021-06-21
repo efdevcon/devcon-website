@@ -5,3 +5,15 @@
 .slick-list {
   overflow: unset !important;
 }
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto;
+
+  > div {
+    height: 100%;
+  }
+}

@@ -5,6 +5,7 @@ import { Link } from 'src/components/common/link'
 import { Contributor } from 'src/types/dip'
 import { Tooltip } from 'src/components/common/tooltip'
 import { useIntl } from 'gatsby-plugin-intl'
+import { chunkArray } from 'src/utils/chunk-array'
 
 type ContributeProps = {
   contributors: Array<Contributor>
@@ -13,16 +14,6 @@ type ContributeProps = {
 
 type ThumbnailProps = {
   contributor: Contributor
-}
-
-const chunkArray = (array: Array<any>, nChunks: number): Array<Array<any>> => {
-  const results = []
-  const size = Math.ceil(array.length / nChunks)
-  let i = 0
-
-  while (i < array.length) results.push(array.slice(i, (i += size)))
-
-  return results
 }
 
 const Thumbnail = ({ contributor }: ThumbnailProps) => {

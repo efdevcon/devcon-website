@@ -8,7 +8,7 @@
   overflow: hidden;
   width: 100%;
   padding-top: $gaps-gap-4;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $colors-monochrome-6;
   margin-bottom: $gaps-gap-10;
   background-repeat: no-repeat;
   background-position: center right;
@@ -21,6 +21,8 @@
 
   &.as-background {
     position: absolute;
+    top: 0px;
+    z-index: -1;
   }
 
   // Strip is always present on mobile (but not on desktop) - we have to account for that:

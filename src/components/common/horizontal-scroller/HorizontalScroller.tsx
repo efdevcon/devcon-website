@@ -2,6 +2,7 @@ import React from 'react'
 import { useCallback } from 'react'
 import { useGesture } from 'react-use-gesture'
 import css from './horizontal-scroller.module.scss'
+import useIsTouchDevice from 'src/hooks/useIsTouchDevice'
 
 // Dragging shouldn't lead to a click
 const usePreventClickWhileDragging = (elementRef: any, threshold = 10) => {
@@ -50,6 +51,7 @@ export const HorizontalScroller = (props: any) => {
   const scrolledBy = React.useRef(0)
   // const [gradientVisibleLeft, setGradientVisibleLeft] = React.useState(false)
   const [gradientVisibleRight, setGradientVisibleRight] = React.useState(false)
+  const isTouchDevice = useIsTouchDevice()
 
   usePreventClickWhileDragging(elementRef)
 
@@ -84,7 +86,7 @@ export const HorizontalScroller = (props: any) => {
 
         elementRef.current.style.transform = `translateX(-${nextX}px)`
         elementRef.current.style.transition = 'none'
-        elementRef.current.style.cursor = 'grabbing'
+        elementRef.current.style.cursor = 'grab'
         // elementRef.current.style['touch-action'] = 'none'
 
         syncGradients()
@@ -135,8 +137,8 @@ export const HorizontalScroller = (props: any) => {
   let className = css['horizontal-scroller']
   let gradientsClassName = css['gradients']
 
-  if (typeof window !== 'undefined' && !window.ResizeObserver) className += ` ${css['no-resize-observer']}`
-  if (gradientVisibleRight) gradientsClassName += ` ${css['gradient-right']}`
+  if ((typeof window !== 'undefined' && !window.ResizeObserver) || isTouchDevice) className += ` ${css['native-drag']}`
+  if (gradientVisibleRight && !isTouchDevice) gradientsClassName += ` ${css['gradient-right']}`
   // if (gradientVisibleLeft) gradientsClassName += ` ${css['gradient-left']}`
 
   return (

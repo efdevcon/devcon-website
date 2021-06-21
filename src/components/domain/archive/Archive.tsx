@@ -9,6 +9,7 @@ import { CuratedPlaylists, Playlists } from './playlists'
 import { StaffPicks } from './staff-picks'
 import { Editions } from './Editions'
 import { usePlaylists } from 'src/hooks/usePlaylists'
+import { Interests } from './interests'
 
 type ArchiveProps = {}
 
@@ -109,6 +110,8 @@ export const Archive = (props: ArchiveProps) => {
         title="Archive"
         titleSubtext="Devcon"
       />
+
+      <Interests />
       {/* <div className={`section ${css['tags']}`}>
         <div className="content">
           <h1>Tagging section</h1>

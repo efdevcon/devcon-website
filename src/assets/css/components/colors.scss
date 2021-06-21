@@ -38,10 +38,10 @@
   }
 
   &.inverted {
-    background: $colors-monochrome-10 !important;
+    background: $colors-main !important;
     --color-icon: #{$colors-monochrome-1} !important;
     color: $colors-monochrome-1 !important;
-    border-color: $colors-monochrome-10 !important;
+    border-color: $colors-main !important;
 
     &:disabled {
       background: $colors-monochrome-7 !important;

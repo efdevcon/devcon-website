@@ -1,17 +1,17 @@
-import React from 'react';
-import css from './video.module.scss';
-import { BasicCard } from 'src/components/common/card';
-import { ArchiveVideo } from 'src/types/ArchiveVideo';
-import { Playlist } from 'src/types/Playlist';
+import React from 'react'
+import css from './video.module.scss'
+import { BasicCard } from 'src/components/common/card'
+import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import { Playlist } from 'src/types/Playlist'
 
 interface Props {
-    video: ArchiveVideo
-    playlist?: Playlist
-    showDescription?: boolean
-    className?: string
-    slide?: boolean
-    big?: boolean
-    horizontal?: boolean
+  video: ArchiveVideo
+  playlist?: Playlist
+  showDescription?: boolean
+  className?: string
+  slide?: boolean
+  big?: boolean
+  horizontal?: boolean
 }
 
 export const Video = (props: Props) => {
@@ -35,7 +35,7 @@ export const Video = (props: Props) => {
   }
 
   function getWatchUrl() {
-    let url = `/archive/watch${props.video.slug}`
+    let url = `${props.video.slug}`
     if (props.playlist) {
       url += `?playlist=${props.playlist.id}`
     }
@@ -50,16 +50,21 @@ export const Video = (props: Props) => {
         <div className="aspect">
           <img
             src={`https://img.youtube.com/vi/${getVideoId()}/maxresdefault.jpg`}
-            alt={`${props.video.title} preview image`}
+            alt={`${props.video.title} preview`}
             placeholder="blurred"
           />
         </div>
       </div>
       <div className={css['body']}>
-        <h4 className={css['title']}>{props.video.title}</h4>
-        {props.showDescription && <p className={css['description']}>{props.video.description}</p>}
-        <p className={css['speakers']}>{props.video.speakers.join(', ').toUpperCase()}</p>
-        <p className="font-xs">{props.video.type}</p>
+        <div className={css['top']}>
+          <p className={css['title']}>{props.video.title}</p>
+          {props.showDescription && <p className={css['description']}>{props.video.description}</p>}
+        </div>
+
+        <div className={css['bottom']}>
+          <p className="font-xs">{props.video.speakers.join(', ').toUpperCase()}</p>
+          <p className="font-xs">{props.video.type}</p>
+        </div>
       </div>
     </BasicCard>
   )

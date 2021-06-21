@@ -1,0 +1,75 @@
+@use 'src/assets/css/partials/index' as *;
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  &:first-child {
+    margin-top: $gaps-gap-4;
+  }
+
+  .tag {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: $gaps-gap-2;
+    margin-bottom: $gaps-gap-1;
+
+    svg {
+      font-size: 0.9em;
+    }
+
+    > span {
+      margin-left: $gaps-gap-2;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .icon-check {
+      display: none;
+    }
+
+    .icon-plus {
+      display: block;
+    }
+
+    &.selected {
+      .icon-plus {
+        display: none;
+      }
+
+      .icon-check {
+        display: block;
+      }
+    }
+  }
+}
+
+.clear {
+  display: flex;
+  align-items: center;
+  padding-top: $gaps-gap-1;
+  padding-bottom: $gaps-gap-3;
+
+  svg {
+    font-size: 0.8em;
+  }
+
+  .continue {
+    margin-right: $gaps-gap-3;
+
+    > span {
+      margin-right: $gaps-gap-4;
+    }
+  }
+
+  .clear {
+    padding: $gaps-gap-2;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

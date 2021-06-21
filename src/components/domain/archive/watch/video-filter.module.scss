@@ -56,7 +56,7 @@
 .clear-container {
   display: flex;
   align-items: center;
-  margin-top: $gaps-gap-8;
+  margin-top: $gaps-gap-4;
 
   button {
     margin-right: $gaps-gap-3;
@@ -70,6 +70,11 @@
     opacity: 0;
     cursor: pointer;
     padding: $gaps-gap-4;
+    padding-left: 0px;
+
+    @media (max-width: $breakpoints-lg) {
+      padding-left: $gaps-gap-4;
+    }
 
     &.open {
       opacity: 1;
@@ -110,4 +115,9 @@
 
 .tags {
   padding-bottom: $gaps-gap-10 + $gaps-gap-10;
+  border-bottom: none !important;
+
+  @media (max-width: $breakpoints-lg) {
+    border-bottom: 1px solid $colors-monochrome-5 !important;
+  }
 }
