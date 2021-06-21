@@ -128,7 +128,7 @@ h6,
 
 .font-xxl {
   @include fonts-xxl;
-  font-size: $sizes-size-16 + $sizes-size-8;
+  // font-size: $sizes-size-16 + $sizes-size-8;
 }
 
 .font-massive {

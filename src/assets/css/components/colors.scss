@@ -24,7 +24,7 @@
   background: $colors-monochrome-1 !important;
   --color-icon: #{$colors-main} !important; // For icons nested in the button
   color: $colors-main !important;
-  border-color: $colors-monochrome-10 !important;
+  border-color: $colors-main !important;
 
   &:hover {
     background: #f2f2f2 !important;

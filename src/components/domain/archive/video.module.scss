@@ -1,6 +1,99 @@
 @use 'src/assets/css/partials/index' as *;
 
-.body {
+.container {
   padding-top: $gaps-gap-16;
   padding-bottom: $gaps-gap-16;
+
+  .player {
+    max-width: 1200px;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+    .tabs-video {
+      background: $colors-monochrome-2;
+      border-bottom: 1px solid $colors-monochrome-5;
+      grid-column: 1 / 6;
+      grid-row: 1;
+    }
+
+    .content {
+      grid-column: 1 / 6;
+      grid-row: 2;
+      border-bottom: 1px solid $colors-monochrome-5;
+      padding-top: $gaps-gap-6;
+
+      h1 {
+        margin-bottom: $gaps-gap-4;
+        color: $colors-monochrome-7;
+      }
+
+      .descriptors {
+        display: flex;
+        margin-bottom: $gaps-gap-3;
+
+        .descriptor {
+          @include fonts-bold;
+          @include fonts-xs;
+
+          text-transform: uppercase;
+          margin-right: $gaps-gap-4;
+
+          > span {
+            font-weight: 500;
+            color: $colors-monochrome-7;
+            margin-right: $gaps-gap-2;
+          }
+        }
+      }
+
+      .description {
+        display: flex;
+        border-top: 1px solid $colors-monochrome-5;
+        padding-top: $gaps-gap-4;
+        padding-bottom: $gaps-gap-6;
+
+        .text {
+        }
+
+        .tags {
+          .group {
+            .title {
+            }
+
+            .tag {
+            }
+          }
+        }
+      }
+    }
+
+    .speakers {
+      grid-column: 1 / 6;
+      grid-row: 4;
+    }
+
+    .tabs-suggested {
+      grid-column: 6 / 9;
+      grid-row: 1;
+      border: 1px solid $colors-monochrome-5;
+    }
+
+    .list-description {
+      grid-column: 6 / 9;
+      grid-row: 2;
+      border: 1px solid $colors-monochrome-5;
+      border-top: none;
+    }
+
+    .list {
+      grid-column: 6 / 9;
+      grid-row: 3;
+      border: 1px solid $colors-monochrome-5;
+      border-top: none;
+      max-height: 640px;
+    }
+  }
 }
