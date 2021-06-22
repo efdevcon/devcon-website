@@ -7,7 +7,7 @@ categories:
 curators:
   - Devcon team
 videos:
-  - 2/ethereum-in-25-minutes/index
+  - 3/dai-stablecoin/index
   - 4/ethereum-foundation-values/index
   - 4/a-conversation-with-stewart-brand/index
   - 5/cryptoeconomics-in-30-minutes/index

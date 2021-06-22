@@ -9,4 +9,7 @@ curators:
 videos:
   - 5/cryptoeconomics-in-30-minutes/index
   - 5/devcon5-recap-video/index
+  - 1/keynote-and-ethereum-roadmap/index
+  - 4/ethereum-foundation-values/index
+  - 1/understanding-the-ethereum-blockchain-protocol/index
 ---
