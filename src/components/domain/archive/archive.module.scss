@@ -1,8 +1,9 @@
 @use 'src/assets/css/partials/index' as *;
 
 .container {
-  --theme-logo: url('src/assets/images/archive/archive-logo-menu.svg');
+  --theme-logo: url('src/assets/images/archive/archive-logo.svg');
   --theme-gradient: linear-gradient(to right, #edeccd 0%, #f1c4bb 50%, #d7cdd3 100%);
+  overflow-x: hidden;
 
   .hero-staff-picks {
     position: relative;
@@ -59,6 +60,13 @@
     :global(.label) {
       margin-bottom: $gaps-gap-2;
     }
+
+    .description {
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+    }
   }
 
   .metadata {
@@ -72,5 +80,20 @@
         margin-left: 0px;
       }
     }
+  }
+}
+
+.call-to-action {
+  height: 48px;
+  margin-right: $gaps-gap-3;
+
+  .watch-now {
+    text-transform: uppercase;
+    margin-right: $gaps-gap-2;
+  }
+
+  .watch-now-icon {
+    position: relative;
+    top: -1px;
   }
 }

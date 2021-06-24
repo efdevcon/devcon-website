@@ -7,7 +7,6 @@ import useIsScrolled from 'src/hooks/useIsScrolled'
 import { usePageContext } from 'src/context/page-context'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
-import WatchIcon from 'src/assets/icons/local_play.svg'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type NavigationLink = {
@@ -21,11 +20,20 @@ type CTALink = {
   icon: any
 }
 
+type Scene = {
+  image: any
+  imageProps: {
+    [key: string]: any
+  }
+  callToAction: () => JSX.Element
+  content: () => JSX.Element
+}
+
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
   description?: string
-  scenes?: any[]
+  scenes?: Scene[]
   asBackground?: boolean
   background?: string
   cta?: Array<CTALink>
@@ -43,7 +51,6 @@ export const PageHero = (props: PageHeroProps) => {
   const pageCategory = usePageCategory()
   const isScrolled = useIsScrolled()
   const [currentScene, setCurrentScene] = React.useState(0)
-  const hasScenes = !!props.scenes
 
   let style: any = {
     '--negative-offset': negativeOffset,
@@ -55,14 +62,40 @@ export const PageHero = (props: PageHeroProps) => {
     style.backgroundSize = 'cover'
   }
 
+  let className = css['hero']
+
+  if (props.background) className += ` ${css['custom-background']}`
+  if (isScrolled) className += ` ${css['scrolled']}`
+  if (props.asBackground) className += ` ${css['as-background']}`
+  if (props.navigation) className += ` ${css['with-navigation']}`
+
+  const setNextScene = React.useMemo(
+    () => (increment: number) => {
+      const nextScene = currentScene + increment
+
+      if (nextScene >= props.scenes.length) {
+        setCurrentScene(0)
+      } else if (nextScene < 0) {
+        setCurrentScene(props.scenes.length - 1)
+      } else {
+        setCurrentScene(nextScene)
+      }
+    },
+    [currentScene, setCurrentScene, props.scenes]
+  )
+
+  React.useEffect(() => {
+    if (props.scenes) {
+      const timeout = setTimeout(() => {
+        setNextScene(1)
+      }, 1000 * 15)
+
+      return () => clearTimeout(timeout)
+    }
+  }, [setNextScene])
+
   return (
-    <div
-      id="page-hero"
-      className={`${css['hero']} ${props.background ? css['custom-background'] : ''} ${
-        isScrolled ? css['scrolled'] : ''
-      } ${hasScenes ? css['has-scenes'] : ''} ${props.asBackground ? css['as-background'] : ''}`}
-      style={style}
-    >
+    <div id="page-hero" className={className} style={style}>
       <div className="section">
         <div className={css['info']}>
           <p className={`${css['page-category']} font-xs text-uppercase`}>{pageCategory}</p>
@@ -121,22 +154,20 @@ export const PageHero = (props: PageHeroProps) => {
               </div>
 
               <div className={css['controls']}>
-                <button className={`red ${css['watch-now']}`}>
-                  <span>WATCH NOW</span> <WatchIcon />{' '}
-                </button>
+                {props.scenes[currentScene].callToAction()}
 
                 <div className={css['arrows']}>
                   <button
                     className={`${css['arrow']} red squared`}
-                    disabled={currentScene === 0}
-                    onClick={() => setCurrentScene(Math.max(0, currentScene - 1))}
+                    // disabled={currentScene === 0}
+                    onClick={() => setNextScene(-1)}
                   >
                     <ChevronLeft />
                   </button>
                   <button
                     className={`${css['arrow']} red squared`}
-                    disabled={currentScene === props.scenes.length - 1}
-                    onClick={() => setCurrentScene(Math.min(props.scenes.length - 1, currentScene + 1))}
+                    // disabled={currentScene === props.scenes.length - 1}
+                    onClick={() => setNextScene(1)}
                   >
                     <ChevronRight />
                   </button>
@@ -167,7 +198,7 @@ export const PageHero = (props: PageHeroProps) => {
         </div>
       </div>
 
-      {props.scenes?.map((scene: any, i: number) => {
+      {props.scenes?.map((scene, i: number) => {
         const selected = i === currentScene
 
         let className = css['scene-background-image']
@@ -176,7 +207,9 @@ export const PageHero = (props: PageHeroProps) => {
 
         return (
           <div key={i} className={className}>
-            <GatsbyImage image={getImage(scene.image)} {...scene.imageProps} placeholder="blurred" layout="fullWidth" />
+            <img src={scene.image} {...scene.imageProps} />
+            {/* Use optimized images asap */}
+            {/* <GatsbyImage image={getImage(scene.image)} {...scene.imageProps} placeholder="blurred" layout="fullWidth" /> */}
           </div>
         )
       })}

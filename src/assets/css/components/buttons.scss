@@ -16,59 +16,63 @@
 
 .button,
 button {
-  @include fonts-md;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: $fonts-primary;
-  padding: $gaps-gap-2 $gaps-gap-3;
-  color: var(--theme-color, #{$colors-main});
-  --color-icon: var(--theme-color, #{$colors-main});
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--theme-color, #{$colors-monochrome-10});
-  background: none;
-
-  &:focus,
-  &:active,
-  &:hover {
-    outline: none;
-  }
-
-  &.squared {
-    width: 48px;
-    height: 48px;
-    padding: 0px !important;
-    justify-content: center;
+  // Sometimes the button element can be useful for semantic reasons, add "plain" class to remove default styles
+  &:not(.plain) {
+    @include fonts-md;
+    display: inline-flex;
     align-items: center;
-  }
+    cursor: pointer;
+    touch-action: manipulation;
+    font-family: $fonts-primary;
+    padding: $gaps-gap-2 $gaps-gap-3;
+    color: var(--theme-color, #{$colors-main});
+    --color-icon: var(--theme-color, #{$colors-main});
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--theme-color, #{$colors-monochrome-10});
+    background: none;
 
-  // Sizes
-  &.sm {
-    @include fonts-sm;
-    padding: $gaps-gap-1 $gaps-gap-2;
-
-    @media (max-width: $breakpoints-md) {
-      @include fonts-xs;
+    &:focus,
+    &:active,
+    &:hover {
+      outline: none;
     }
 
     &.squared {
-      width: 36px;
-      height: 36px;
-    }
-  }
-
-  &.lg {
-    @include fonts-lg;
-    padding: $gaps-gap-4 $gaps-gap-5;
-
-    @media (max-width: $breakpoints-md) {
-      @include fonts-md;
+      width: 48px;
+      height: 48px;
+      padding: 0px !important;
+      justify-content: center;
+      align-items: center;
     }
 
-    &.squared {
-      width: 56px;
-      height: 56px;
+    // Sizes
+    &.sm {
+      @include fonts-sm;
+      padding: $gaps-gap-1 $gaps-gap-2;
+
+      @media (max-width: $breakpoints-md) {
+        @include fonts-xs;
+      }
+
+      &.squared {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    &.lg {
+      @include fonts-lg;
+      padding: $gaps-gap-4 $gaps-gap-5;
+
+      @media (max-width: $breakpoints-md) {
+        @include fonts-md;
+      }
+
+      &.squared {
+        width: 56px;
+        height: 56px;
+      }
     }
   }
 }

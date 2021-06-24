@@ -9,26 +9,31 @@ import { CuratedPlaylists, Playlists } from './playlists'
 import { StaffPicks } from './staff-picks'
 import { Editions } from './Editions'
 import { usePlaylists } from 'src/hooks/usePlaylists'
+import { useStaffPicks } from 'src/hooks/useStaffPicks'
 import { Interests } from './interests'
+import { Link } from 'src/components/common/link'
+import WatchIcon from 'src/assets/icons/local_play.svg'
+import { videoResolver } from 'src/gatsby/create-schema-customization/resolvers/archive'
 
 type ArchiveProps = {}
 
 export const Archive = (props: ArchiveProps) => {
   // StaticImage has a technical limitation of not being able to pass image src via props https://www.gatsbyjs.com/plugins/gatsby-plugin-image/#restrictions-on-using-staticimage
   // Essentially means we have to manually query the images and them pass them to PageHero afterwards - a bit convoluted/messy, but it's the recommended way
-  const data = useStaticQuery(graphql`
-    query StaffPicksImageQuery {
-      allFile(filter: { relativePath: { eq: "vitalik_3x.png" } }) {
-        nodes {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query StaffPicksImageQuery {
+  //     allFile(filter: { relativePath: { eq: "vitalik_3x.png" } }) {
+  //       nodes {
+  //         childImageSharp {
+  //           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   const playlists = usePlaylists()
+  const staffpicks = useStaffPicks()
   const curated = playlists.filter(i => i.categories.includes('Community Curated'))
 
   return (
@@ -36,87 +41,49 @@ export const Archive = (props: ArchiveProps) => {
       <SEO />
       <Header />
       <PageHero
-        scenes={[
-          {
-            image: data.allFile.nodes[0],
+        scenes={staffpicks.videos.map(video => {
+          return {
+            image: `https://i3.ytimg.com/vi/${video.youtubeUrl.split('/').pop()}/maxresdefault.jpg`,
             imageProps: {
-              alt: 'Vitalik',
+              alt: 'Staff pick',
+            },
+            callToAction: () => {
+              return (
+                <Link to={video.slug} className={`button red ${css['call-to-action']}`}>
+                  <span className={css['watch-now']}>Watch Now</span>
+                  <WatchIcon className={`icon ${css['watch-now-icon']}`} />
+                </Link>
+              )
             },
             content: () => {
               return (
                 <div className={css['page-hero-scene']}>
                   <div className={css['body']}>
                     <div className="label bold">Staff Pick</div>
-                    <p className="font-xl bold">Ethereum in 25 minutes.</p>
-                    <p className="font-lg">Take a journey through the Ethereum consensus mechanism.</p>
+                    <p className="font-xl bold">{video.title}</p>
+                    <p className={`${css['description']} font-lg`}>{video.description}</p>
                   </div>
 
                   <div className={css['metadata']}>
-                    <p>By Vitalik Buterin</p>
-                    <p className="bold">20:45</p>
-                    <p className="bold">Devcon 2</p>
+                    {video.speakers.length > 0 && (
+                      <p>
+                        By <span className="bold">{video.speakers.join(',')}</span>
+                      </p>
+                    )}
+                    {/* <p className="bold">5:45</p> */}
+                    <p className="bold">Devcon {video.edition}</p>
                   </div>
                 </div>
               )
             },
-          },
-          {
-            image: data.allFile.nodes[0],
-            imageProps: {
-              alt: 'Vitalik',
-            },
-            content: () => {
-              return (
-                <div className={css['page-hero-scene']}>
-                  <div className={css['body']}>
-                    <div className="label bold">Staff Pick</div>
-                    <p className="font-xl bold">Ethereum in 15 minutes.</p>
-                    <p className="font-lg">Take a slightly faster journey through the Ethereum consensus mechanism</p>
-                  </div>
-
-                  <div className={css['metadata']}>
-                    <p>By Vitalik Buterin</p>
-                    <p className="bold">15:45</p>
-                    <p className="bold">Devcon 2</p>
-                  </div>
-                </div>
-              )
-            },
-          },
-          {
-            image: data.allFile.nodes[0],
-            imageProps: {
-              alt: 'Vitalik',
-            },
-            content: () => {
-              return (
-                <div className={css['page-hero-scene']}>
-                  <div className={css['body']}>
-                    <div className="label bold">Staff Pick</div>
-                    <p className="font-xl bold">Ethereum in 5 minutes.</p>
-                    <p className="font-lg">Take a very quick journey through the Ethereum consensus mechanism.</p>
-                  </div>
-
-                  <div className={css['metadata']}>
-                    <p>By Vitalik Buterin</p>
-                    <p className="bold">5:45</p>
-                    <p className="bold">Devcon 2</p>
-                  </div>
-                </div>
-              )
-            },
-          },
-        ]}
+          }
+        })}
         title="Archive"
         titleSubtext="Devcon"
       />
 
       <Interests />
-      {/* <div className={`section ${css['tags']}`}>
-        <div className="content">
-          <h1>Tagging section</h1>
-        </div>
-      </div> */}
+
       <div className={`section ${css['editions']}`}>
         <div className="content">
           <Editions />

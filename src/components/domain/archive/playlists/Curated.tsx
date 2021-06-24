@@ -45,18 +45,19 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
     <div className={css['curated-playlists']}>
       <div className={css['header']}>
         {props.title && <h2 className="spaced title">{props.title}</h2>}
-        {props.viewMore && <LinkButton to={'/archive/playlists'} className={css['button']}>
-          View more <ArrowRight />
-        </LinkButton>
-        }
+        {props.viewMore && (
+          <LinkButton to={'/archive/playlists'} className={css['button']}>
+            View more <ArrowRight />
+          </LinkButton>
+        )}
       </div>
       <div className={css['slider']}>
         <Slider {...sliderSettings}>
           {props.items.map((i: Playlist) => {
             let className = `${css['video-card']} ${css['slide']} ${css['big']}`
-            
+
             return (
-              <BasicCard key={i.id} className={className} linkUrl={i.slug} expandLink>
+              <BasicCard key={i.id} className={className} allowDrag linkUrl={i.slug} expandLink>
                 <div className="aspect square">
                   <img
                     src={i.imageUrl}
@@ -68,11 +69,11 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
                 <div className={css['body']}>
                   <div className="label">{i.videoCount ?? 0} talks</div>
                   <h4 className="title">{i.title}</h4>
-                  {i.curators && i.curators.length > 0 && 
+                  {i.curators && i.curators.length > 0 && (
                     <p className="bold font-xs">
                       <span className={css['opaque']}>BY</span> {i.curators?.join(', ').toUpperCase()}
                     </p>
-                  }
+                  )}
                 </div>
               </BasicCard>
             )

@@ -3,11 +3,8 @@
 .tags {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-
-  &:first-child {
-    margin-top: $gaps-gap-4;
-  }
+  flex-wrap: wrap;
+  margin-top: $gaps-gap-1;
 
   .tag {
     display: flex;

@@ -3,6 +3,8 @@ import { useCallback } from 'react'
 import { useGesture } from 'react-use-gesture'
 import css from './horizontal-scroller.module.scss'
 import useIsTouchDevice from 'src/hooks/useIsTouchDevice'
+import ChevronRight from 'src/assets/icons/chevron_right.svg'
+import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 
 // Dragging shouldn't lead to a click
 const usePreventClickWhileDragging = (elementRef: any, threshold = 10) => {
@@ -49,30 +51,33 @@ export const HorizontalScroller = (props: any) => {
   const elementWidth = React.useRef(0)
   const scrollWidth = React.useRef(0)
   const scrolledBy = React.useRef(0)
-  // const [gradientVisibleLeft, setGradientVisibleLeft] = React.useState(false)
-  const [gradientVisibleRight, setGradientVisibleRight] = React.useState(false)
+  const [indicatorVisibleLeft, setIndicatorVisibleLeft] = React.useState(false)
+  const [indicatorVisibleRight, setIndicatorVisibleRight] = React.useState(false)
   const isTouchDevice = useIsTouchDevice()
 
   usePreventClickWhileDragging(elementRef)
 
-  const syncGradients = useCallback(() => {
+  const syncIndicators = useCallback(() => {
     const contentOverflowing = scrollWidth.current > elementWidth.current
 
     if (contentOverflowing) {
       const isScrolledToEnd = scrolledBy.current + elementWidth.current >= scrollWidth.current
-      // const isScrolled = scrolledBy.current > 0
+      const isScrolled = scrolledBy.current > 0
 
       if (isScrolledToEnd) {
-        setGradientVisibleRight(false)
+        setIndicatorVisibleRight(false)
       } else {
-        setGradientVisibleRight(true)
+        setIndicatorVisibleRight(true)
       }
 
-      // if (isScrolled) {
-      //   setGradientVisibleLeft(true)
-      // } else {
-      //   setGradientVisibleLeft(false)
-      // }
+      if (isScrolled) {
+        setIndicatorVisibleLeft(true)
+      } else {
+        setIndicatorVisibleLeft(false)
+      }
+    } else {
+      setIndicatorVisibleRight(false)
+      setIndicatorVisibleLeft(false)
     }
   }, [])
 
@@ -85,11 +90,11 @@ export const HorizontalScroller = (props: any) => {
         scrolledBy.current = nextX
 
         elementRef.current.style.transform = `translateX(-${nextX}px)`
-        elementRef.current.style.transition = 'none'
         elementRef.current.style.cursor = 'grab'
+        elementRef.current.style.transition = 'none'
         // elementRef.current.style['touch-action'] = 'none'
 
-        syncGradients()
+        syncIndicators()
       },
       onDragEnd: () => {
         elementRef.current.style.transition = ''
@@ -109,21 +114,21 @@ export const HorizontalScroller = (props: any) => {
       const observer = new window.ResizeObserver(entries => {
         const entry = entries[0]
 
-        scrollWidth.current = el.scrollWidth
+        scrollWidth.current = Math.round(el.scrollWidth)
 
         if (entry.borderBoxSize) {
           const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
 
-          elementWidth.current = borderBoxSize.inlineSize
+          elementWidth.current = Math.round(borderBoxSize.inlineSize)
         } else {
-          elementWidth.current = el.offsetWidth
+          elementWidth.current = Math.round(el.offsetWidth)
         }
 
         scrolledBy.current = 0
 
         elementRef.current.style.transform = `translateX(0px)`
 
-        syncGradients()
+        syncIndicators()
       })
 
       observer.observe(el)
@@ -134,17 +139,41 @@ export const HorizontalScroller = (props: any) => {
     }
   }, [])
 
+  const goToEnd = () => {
+    const nextX = scrollWidth.current - elementWidth.current
+
+    scrolledBy.current = nextX
+
+    elementRef.current.style.transform = `translateX(-${nextX}px)`
+
+    syncIndicators()
+  }
+
+  const goToStart = () => {
+    scrolledBy.current = 0
+
+    elementRef.current.style.transform = `translateX(0px)`
+
+    syncIndicators()
+  }
+
   let className = css['horizontal-scroller']
-  let gradientsClassName = css['gradients']
+  let indicatorsClassName = css['indicators']
 
   if ((typeof window !== 'undefined' && !window.ResizeObserver) || isTouchDevice) className += ` ${css['native-drag']}`
-  if (gradientVisibleRight && !isTouchDevice) gradientsClassName += ` ${css['gradient-right']}`
-  // if (gradientVisibleLeft) gradientsClassName += ` ${css['gradient-left']}`
+  if (indicatorVisibleRight && !isTouchDevice) indicatorsClassName += ` ${css['indicator-right']}`
+  if (indicatorVisibleLeft && !isTouchDevice) indicatorsClassName += ` ${css['indicator-left']}`
 
   return (
-    <div className={gradientsClassName}>
+    <div className={indicatorsClassName}>
+      <div className={css['left']} onClick={goToStart}>
+        <ChevronLeft />
+      </div>
       <div className={className} {...bind()} ref={elementRef} data-type="horizontal-scroller">
         {props.children}
+      </div>
+      <div className={css['right']} onClick={goToEnd}>
+        <ChevronRight />
       </div>
     </div>
   )

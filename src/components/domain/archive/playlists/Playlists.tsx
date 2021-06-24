@@ -4,7 +4,7 @@ import { useEfTalks } from 'src/hooks/useEfTalks'
 import { useLatest } from 'src/hooks/useLatest'
 import { useMostPopular } from 'src/hooks/useMostPopular'
 import css from './playlists.module.scss'
-import { Video } from './Video'
+import { VideoCard } from './VideoCard'
 
 export const Playlists = () => {
   const mostPopular = useMostPopular()
@@ -48,7 +48,7 @@ export const Playlists = () => {
             const first = i === 0
             const className = first ? css['first'] : ''
 
-            return <Video slide key={i} className={className} video={item} />
+            return <VideoCard slide key={i} className={className} video={item} />
           })}
         </Slider>
       </div>
@@ -60,7 +60,7 @@ export const Playlists = () => {
             const first = i === 0
             const className = first ? css['first'] : ''
 
-            return <Video slide key={i} className={className} video={item} />
+            return <VideoCard slide key={i} className={className} video={item} />
           })}
         </Slider>
       </div>
@@ -72,7 +72,7 @@ export const Playlists = () => {
             const first = i === 0
             const className = first ? css['first'] : ''
 
-            return <Video slide key={i} className={className} video={item} />
+            return <VideoCard slide key={i} className={className} video={item} />
           })}
         </Slider>
       </div>

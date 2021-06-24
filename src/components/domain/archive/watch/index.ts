@@ -1,1 +1,1 @@
-export { useVideoFilter, VideoFilterMobile, VideoFilter } from'./VideoFilter'; 
+export { useVideoFilter, VideoFilterMobile, VideoFilter, filterToQueryString } from'./VideoFilter'; 

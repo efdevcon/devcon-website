@@ -5,7 +5,7 @@ import IconPlus from 'src/assets/icons/plus.svg'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import css from './interests.module.scss'
 import { chunkArray } from 'src/utils/chunk-array'
-import queryString from 'query-string'
+import { filterToQueryString } from 'src/components/domain/archive/watch/VideoFilter'
 import { Link } from 'src/components/common/link'
 
 const tags = [
@@ -44,14 +44,6 @@ const tags = [
   },
 ]
 
-const toQueryString = (selectedTags: { [key: string]: any }): string => {
-  const tagsAsArray = Object.keys(selectedTags)
-
-  if (tagsAsArray.length === 0) return ''
-
-  return `?${queryString.stringify({ tags: tagsAsArray })}`
-}
-
 export const Interests = (props: any) => {
   const [selectedTags, setSelectedTags] = React.useState({} as { [key: string]: any })
   const tagRows = chunkArray(tags, 1 /*2*/) // Accounts currently missing, so we'll wait with chunking the array to take up more horizontal space in the meantime
@@ -62,35 +54,47 @@ export const Interests = (props: any) => {
         <h5 className="font-sm font-primary">Interests</h5>
         <p className="font-xs">Select topics most relevant to your interest.</p>
 
-        <HorizontalScroller>
-          {tagRows.map((tagRow, index) => {
-            return (
-              <div key={index} className={css['tags']}>
-                {tagRow.map(tag => {
-                  let className = `${css['tag']} label white`
-                  const selected = selectedTags[tag.title]
+        {tagRows.map((tagRow, index) => {
+          return (
+            <div key={index} className={css['tags']}>
+              {tagRow.map(tag => {
+                let className = `${css['tag']} label plain white`
+                const selected = selectedTags[tag.title]
 
-                  if (selected) className += ` ${css['selected']} inverted`
+                if (selected) className += ` ${css['selected']} inverted`
 
-                  return (
-                    <button
-                      className={className}
-                      key={tag.title}
-                      onClick={() => setSelectedTags({ ...selectedTags, [tag.title]: !selectedTags[tag.title] })}
-                    >
-                      <IconCheck className={`icon ${css['icon-check']}`} />
-                      <IconPlus className={`icon ${css['icon-plus']}`} />
-                      <span>{tag.title}</span>
-                    </button>
-                  )
-                })}
-              </div>
-            )
-          })}
-        </HorizontalScroller>
+                return (
+                  <button
+                    className={className}
+                    key={tag.title}
+                    onClick={() => {
+                      const nextTags = {
+                        ...selectedTags,
+                        [tag.title]: true,
+                      } as any
+
+                      const selected = selectedTags[tag.title]
+
+                      if (selected) delete nextTags[tag.title]
+
+                      setSelectedTags(nextTags)
+                    }}
+                  >
+                    <IconCheck className={`icon ${css['icon-check']}`} />
+                    <IconPlus className={`icon ${css['icon-plus']}`} />
+                    <span>{tag.title}</span>
+                  </button>
+                )
+              })}
+            </div>
+          )
+        })}
 
         <div className={css['clear']}>
-          <Link className={`${css['continue']} button red`} to={`/archive/watch${toQueryString(selectedTags)}`}>
+          <Link
+            className={`${css['continue']} button red`}
+            to={`/archive/watch${filterToQueryString({ tags: selectedTags })}`}
+          >
             <span>Get Started</span> <IconArrowRight />
           </Link>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import css from './video.module.scss'
+import css from './video-card.module.scss'
 import { BasicCard } from 'src/components/common/card'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { Playlist } from 'src/types/Playlist'
@@ -9,17 +9,17 @@ interface Props {
   playlist?: Playlist
   showDescription?: boolean
   className?: string
-  slide?: boolean
-  big?: boolean
+  slide?: Boolean
+  size?: 'big' | 'sm'
   horizontal?: boolean
 }
 
-export const Video = (props: Props) => {
+export const VideoCard = (props: Props) => {
   let className = css['video-card']
 
   if (props.className) className += ` ${props.className}`
   if (props.slide) className += ` ${css['slide']}`
-  if (props.big) className += ` ${css['big']}`
+  if (props.size) className += ` ${css[props.size]}`
   if (props.horizontal) className += ` ${css['horizontal']}`
 
   function getVideoId() {
@@ -62,8 +62,12 @@ export const Video = (props: Props) => {
         </div>
 
         <div className={css['bottom']}>
-          <p className="font-xs">{props.video.speakers.join(', ').toUpperCase()}</p>
-          <p className="font-xs">{props.video.type}</p>
+          <div>
+            <p className="font-xs">{props.video.speakers.join(', ').toUpperCase()}</p>
+            <p className="font-xs">{props.video.type}</p>
+          </div>
+
+          <div className="label sm">Devcon {props.video.edition}</div>
         </div>
       </div>
     </BasicCard>

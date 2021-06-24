@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Video } from '../playlists'
+import { VideoCard } from '../playlists'
 import css from './staff-picks.module.scss'
 import { useStaffPicks } from 'src/hooks/useStaffPicks'
 
@@ -37,8 +37,8 @@ export const StaffPicks = (props: any) => {
 
       <div className={css['slider']}>
         <Slider {...sliderSettings}>
-          {staffPicks.videos.map((i) => {
-            return <Video key={i.id} big slide video={i} />
+          {staffPicks.videos.map(i => {
+            return <VideoCard key={i.id} big slide video={i} />
           })}
         </Slider>
       </div>

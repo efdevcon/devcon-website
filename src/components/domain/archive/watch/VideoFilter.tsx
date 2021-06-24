@@ -5,50 +5,79 @@ import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Filter, useFilter } from 'src/components/common/filter'
 import css from './video-filter.module.scss'
 import { useLocation } from '@reach/router'
-import { useEffect } from 'react'
 import queryString from 'query-string'
+
+export const filterToQueryString = (filters: { [key: string]: any }): string => {
+  let formattedObject = {} as any
+
+  Object.entries(filters).forEach(([key, filter]) => {
+    if (!filter) return
+
+    formattedObject[key] = Object.keys(filter)
+  })
+
+  const result = `?${queryString.stringify(formattedObject)}`
+
+  if (result === '?') return ''
+
+  return result
+}
 
 export const useVideoFilter = () => {
   const location = useLocation()
-  const queryParams = queryString.parse(location.search)
+  const initialFilters = React.useMemo((): any => {
+    // Extract params from query string
+    const filters = queryString.parse(location.search)
 
-  const [filteredDevcon, devconFilterState] = useFilter({
+    // Format to fit filter state shape
+    return Object.entries(filters).reduce((acc, [key, filter]: [any, any]) => {
+      acc[key] = filter?.reduce((acc: any, tag: any) => {
+        acc[tag] = true
+
+        return acc
+      }, {})
+
+      return acc
+    }, {})
+  }, [])
+
+  const [_, devconFilterState] = useFilter({
     tags: true,
     multiSelect: true,
+    initialFilter: initialFilters.devcon,
     filters: [
       {
         text: '0',
-        value: 'zero',
+        value: '0',
       },
       {
         text: '1',
-        value: 'all',
+        value: '1',
       },
       {
         text: '2',
-        value: 'draft',
+        value: '2',
       },
       {
         text: '3',
-        value: 'accepted',
+        value: '3',
       },
       {
         text: '4',
-        value: 'withdrawn',
+        value: '4',
       },
       {
         text: '5',
-        value: 'not implemented',
+        value: '5',
       },
     ],
-    filterFunction: activeFilters => {
-      return []
-    },
+    filterFunction: () => [],
   })
 
-  const [filteredExpertise, expertiseFilterState] = useFilter({
+  const [__, expertiseFilterState] = useFilter({
     tags: true,
     multiSelect: true,
+    initialFilter: initialFilters.expertise,
     filters: [
       {
         text: 'Beginner',
@@ -63,19 +92,13 @@ export const useVideoFilter = () => {
         value: 'accepted',
       },
     ],
-    filterFunction: activeFilters => {
-      return []
-    },
+    filterFunction: () => [],
   })
 
-  const [filteredTags, tagsFilterState] = useFilter({
+  const [___, tagsFilterState] = useFilter({
     tags: true,
     multiSelect: true,
-    initialFilter: queryParams?.tags?.reduce((acc, tag) => {
-      acc[tag] = true
-
-      return acc
-    }, {}),
+    initialFilter: initialFilters.tags,
     filters: [
       {
         text: 'Society and Systems',
@@ -122,14 +145,25 @@ export const useVideoFilter = () => {
         value: 'Application Layer',
       },
     ],
-    filterFunction: activeFilters => {
-      return []
-    },
+    filterFunction: () => [],
   })
 
   const devconFilter = devconFilterState && Object.keys(devconFilterState.activeFilter)
   const expertiseFilter = expertiseFilterState && Object.keys(expertiseFilterState.activeFilter)
   const tagsFilter = tagsFilterState && Object.keys(tagsFilterState.activeFilter)
+
+  // Sync filter state with query params in the url whenever filter state changes
+  React.useEffect(() => {
+    const result = filterToQueryString({
+      devcon: devconFilterState?.activeFilter,
+      tags: tagsFilterState?.activeFilter,
+      expertise: expertiseFilterState?.activeFilter,
+    })
+
+    const url = `${location.pathname}${result}`
+
+    window.history.replaceState({ path: url }, '', url)
+  }, [devconFilterState?.activeFilter, expertiseFilterState?.activeFilter, tagsFilterState?.activeFilter])
 
   const combinedFilter = (() => {
     // Finish this one later - the combined filter will change depending on the filtering solution (e.g. inline JS vs query a search service)
@@ -200,7 +234,7 @@ export const VideoFilter = (props: any) => {
 }
 
 export const VideoFilterMobile = (props: any) => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(props.combinedFilter)
 
   let className = `${css['mobile-filter']} section`
 

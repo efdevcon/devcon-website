@@ -7,90 +7,85 @@ import archiveCss from './archive.module.scss'
 import css from './video.module.scss'
 import { Tabs } from 'src/components/common/tabs'
 import { Tab } from 'src/components/common/tabs/Tabs'
+import { useMostPopular } from 'src/hooks/useMostPopular'
+import { VideoCard } from 'src/components/domain/archive/playlists'
 
 type VideoProps = {}
 
-const Description = () => {
+const Suggested = ({ video }: any) => {
+  const dummy = useMostPopular()
+
   return (
-    <>
-      <div className={css['tabs-video']}>
-        {/* <Tabs>
-          <Tab title="Profile">Details</Tab>
-          <Tab title="Profile">Resources</Tab>
-        </Tabs> */}
-        <p>Details</p>
-        <p>Resources</p>
-      </div>
+    <div className={css['suggested']}>
+      <Tabs>
+        {video.related && <Tab title="Related">Some tab content</Tab>}
 
-      <div className={css['content']}>
-        <h1 className="font-xxl">Ethereum in 25 minutes.</h1>
-
-        <div className={css['descriptors']}>
-          <p className={css['descriptor']}>
-            <span>Duration:</span> 25:16
-          </p>
-          <p className={css['descriptor']}>
-            <span>Speaker:</span> Vitalik Buterin
-          </p>
-        </div>
-
-        <div className={css['descriptors']}>
-          <p className={css['descriptor']}>
-            <span>Event:</span> Devcon 2
-          </p>
-          <p className={css['descriptor']}>
-            <span>Type:</span> Keynote
-          </p>
-          <p className={css['descriptor']}>
-            <span>Expertise:</span> Beginner
-          </p>
-        </div>
-
-        <div className={css['description']}>
-          <div className={css['text']}>
-            Machine learning is being adopted more and more broadly in technology. Such success is largely due to a
-            combination of algorithmic breakthroughs, computation resource improvements, and the access to a large
-            amount of diverse training data. The collection of data can raise concerns about siloing, security, and user
-            privacy. In this talk, I will highlight a new blockchain-based machine learning technology that allows users
-            to share their data, train models in a fully decentralized way, and incentivize end users to keep their data
-            on the network using the Oasis network. This technology, called HiveMind, leverages a federated learning
-            framework to reduce overhead both in communication and computation. In addition, the talk will highlight the
-            benefits of a novel blockchain-based secure aggregation protocol that ensures client-level differential
-            privacy, and thus prevents information leakage from trained model parameters.
+        <Tab title="In playlist">
+          <div className={css['description']}>
+            <div className="label">15 talks</div>
+            <h2 className="title">Buidl Guidl</h2>
+            <p>By Austin Griffith, Kevin Owocki</p>
           </div>
-          <div className={css['tags']}>
-            <div className={css['group']}>
-              <p className="font-bold">Related Tags:</p>
-            </div>
-            <div className={css['group']}>
-              <p className="font-bold">Playlists:</p>
-            </div>
+          <div className={css['list']}>
+            {dummy.videos.map((i: any, index: number) => {
+              return <VideoCard key={index} horizontal size="sm" video={i} />
+            })}
           </div>
-        </div>
-      </div>
-
-      <div className={css['speakers']}>speakers</div>
-    </>
+        </Tab>
+      </Tabs>
+    </div>
   )
 }
 
-const Suggested = () => {
+const Labels = ({ video }: any) => {
+  const hasPlaylists = video.playlists && video.playlists.length > 0
+  const hasTags = video.tags && video.tags.length > 0
+
+  video.tags = ['test', 'two', 'three']
+  video.playlists = ['test', 'two', 'three']
+
+  if (!hasTags) return null
+
   return (
-    <>
-      <div className={css['tabs-suggested']}>suggested</div>
+    <div className={css['labels-container']}>
+      {hasTags && (
+        <div className={css['group']}>
+          <p className="font-xs">Related Tags:</p>
+          <div className={css['labels']}>
+            {video.tags.map((tag: any) => {
+              return (
+                <div key={tag} className="label bold sm">
+                  {tag}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
 
-      <div className={css['list-description']}>
-        <p>Description playlist</p>
-      </div>
-
-      <div className={css['list']}>
-        <p>List of videos</p>
-      </div>
-    </>
+      {hasPlaylists && (
+        <div className={css['group']}>
+          <p className="font-xs">Playlists:</p>
+          <div className={css['labels']}>
+            {video.playlists.map((playlist: any) => {
+              return (
+                <div key={playlist} className="label bold sm">
+                  {playlist}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 
 export const Video = (props: VideoProps) => {
+  const dummy = useMostPopular()
+
+  const video = dummy.videos[0]
+
   return (
     <div className={archiveCss['container']}>
       <SEO />
@@ -98,27 +93,77 @@ export const Video = (props: VideoProps) => {
 
       <PageHero asBackground />
 
-      <div className={css['container']}>
-        <div className="section">
-          <div className="content">
-            <div className={css['player']}>
-              <div className="aspect">
-                <iframe
-                  src="https://www.youtube.com/embed/lCcwn6bGUtU"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                />
+      <div className="section">
+        <div className="content">
+          <div className={css['container']}>
+            <div className={css['video']}>
+              <div className={css['player']}>
+                <div className="aspect">
+                  <iframe
+                    src={video.youtubeUrl}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  />
+                </div>
+              </div>
+
+              <div className={css['tabs-video']}>
+                <Tabs>
+                  <Tab title="Details">
+                    <div className={css['content']}>
+                      <h1 className="font-xxl">{video.title}</h1>
+
+                      <div className={css['descriptors']}>
+                        <p className={css['descriptor']}>
+                          <span>Speaker:</span> {video.speakers.join(',')}
+                        </p>
+                      </div>
+                      <div className={css['descriptors']}>
+                        <p className={css['descriptor']}>
+                          <span>Type:</span> {video.type}
+                        </p>
+                        <p className={css['descriptor']}>
+                          <span>Expertise:</span> {video.expertise}
+                        </p>
+                        <p className={css['descriptor']}>
+                          <span>Event:</span> Devcon {video.edition}
+                        </p>
+                      </div>
+
+                      <Labels video={video} />
+
+                      <div className={css['description']}>
+                        <div className={css['text']}>{video.description}</div>
+                      </div>
+                    </div>
+
+                    <p className="text-uppercase font-sm">About the speakers</p>
+
+                    <div className={css['speakers']}>
+                      <div className={css['speaker']}>
+                        <img className={css['thumbnail']} src="https://i3.ytimg.com/vi/66SaEDzlmP4/maxresdefault.jpg" />
+
+                        <div className={css['text']}>
+                          <div className={css['title']}>
+                            <p className="bold">Vitalik Buterin</p>
+                            <p className="font-xs"> Researcher</p>
+                          </div>
+                          <p className="font-sm">
+                            Machine learning is being adopted more and more broadly in technology. Such success is
+                            largely due to a combination of algorithmic breakthroughs, computation resource
+                            improvements, and the access to a large amount of diverse training data.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Tab>
+
+                  {video.resources && <Tab title="Resources">Resources</Tab>}
+                </Tabs>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="section">
-          <div className="content">
-            <div className={css['body']}>
-              <Description />
-              <Suggested />
-            </div>
+            <Suggested video={video} />
           </div>
         </div>
       </div>

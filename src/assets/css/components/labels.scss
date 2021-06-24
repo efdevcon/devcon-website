@@ -3,15 +3,14 @@
 .label {
   @include fonts-primary;
   @include fonts-xs;
-  // @include fonts-bold;
   display: inline-block;
   padding: $gaps-gap-2;
   padding-top: $gaps-gap-1;
   padding-bottom: $gaps-gap-1;
   max-width: 100%;
   text-transform: uppercase;
-  // color: $colors-monochrome-10;
-  // background: $colors-monochrome-3;
+  display: inline-flex;
+  align-items: center;
 
   color: var(--theme-color, #{$colors-main});
   border: 1px solid var(--theme-color, #{$colors-main});
@@ -42,5 +41,10 @@
     color: $colors-monochrome-1;
     border: none;
     background: $colors-state-error;
+  }
+
+  &.sm {
+    padding: 2px $gaps-gap-1;
+    @include fonts-xxs;
   }
 }

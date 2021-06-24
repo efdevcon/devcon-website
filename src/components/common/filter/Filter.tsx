@@ -76,7 +76,7 @@ export const Filter = (props: FilterState) => {
     return (
       <div className={css['tags']}>
         {props.options.filters.map(filter => {
-          let className = `${css['tag']} label white`
+          let className = `${css['tag']} label white plain`
 
           const active = props.activeFilter === filter.value || props.activeFilter?.[filter.value]
 
