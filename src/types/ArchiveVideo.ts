@@ -9,6 +9,7 @@ export interface ArchiveVideo {
   expertise: string,
   type: string
   track: string
+  keywords: Array<string>
   tags: Array<string>
   speakers: Array<string>
 }
