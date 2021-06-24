@@ -21,14 +21,17 @@ export const Editions = (props: Props) => {
     <div className={className}>
       <div className={css['numbers']}>
         {editions.map((i: DevconEdition, index: number) => {
-            let className = css['number']
-            if (i.number === selectedEdition.number)
-                className += ` ${css['selected']}`
+          let className = css['edition']
+          if (i.number === selectedEdition.number)
+              className += ` ${css['selected']}`
 
           return (
-            <p key={i.number} className={className} onClick={() => setSelectedEdition(editions[index])}>
-              {i.number}
-            </p>
+            <div key={i.number} className={className}>
+              <p className={css['number']} onClick={() => setSelectedEdition(editions[index])}>
+                {i.number}
+              </p>
+              <p className={css['conference']}>Ethereum developer conference</p>
+            </div>
           )
         })}
       </div>
