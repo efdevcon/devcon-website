@@ -5,7 +5,7 @@ import { SEO } from 'src/components/domain/seo'
 import IconSearch from 'src/assets/icons/search.svg'
 import css from './watch.module.scss'
 import { PageHero } from 'src/components/common/page-hero'
-import { Video } from './playlists'
+import { VideoCard } from './playlists'
 import { InputForm } from 'src/components/common/input-form'
 import { useSort, SortVariation, Sort } from 'src/components/common/sort'
 import IconGrid from 'src/assets/icons/grid.svg'
@@ -94,7 +94,7 @@ export const Watch = (props: WatchProps) => {
 
               <div className={`${listViewEnabled ? css['list-view'] : ''} ${css['video-list']}`}>
                 {videos.map((i: ArchiveVideo, index: number) => {
-                  return <Video key={index} horizontal={listViewEnabled} video={i} />
+                  return <VideoCard key={index} horizontal={listViewEnabled} video={i} />
                 })}
               </div>
             </div>
