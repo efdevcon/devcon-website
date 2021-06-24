@@ -9,7 +9,7 @@ import { Header } from 'src/components/common/layouts/header'
 import { PlaylistHeader } from '../archive/playlists/Header'
 import { mapToPlaylist } from 'src/hooks/usePlaylists'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
-import { Video } from '../archive/playlists'
+import { VideoCard } from '../archive/playlists'
 
 export default pageHOC(function PlaylistTemplate(data: any) {
   const playlist = mapToPlaylist(data.data.playlist)
@@ -19,7 +19,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
       <SEO />
       <Header />
 
-      <PageHero title='' />
+      <PageHero title="" />
 
       <div className="section">
         <div className="content">
@@ -28,7 +28,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
           <div className={css['videos']}>
             <div className={css['list-view']}>
               {playlist.videos.map((i: ArchiveVideo) => {
-                  return <Video key={i.id} video={i} playlist={playlist} horizontal showDescription />
+                return <VideoCard key={i.id} video={i} playlist={playlist} horizontal showDescription />
               })}
             </div>
           </div>
@@ -41,7 +41,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...Notification
     ...NavigationData
