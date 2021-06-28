@@ -3,6 +3,7 @@ import css from './tabs.module.scss'
 
 interface TabsProps {
   children: any
+  tabContentClassName?: string
 }
 
 const findFirstValidTab = (children: React.ReactChildren): any => {
@@ -13,6 +14,12 @@ const findFirstValidTab = (children: React.ReactChildren): any => {
 export function Tabs(props: TabsProps) {
   const defaultTab = props.children ? findFirstValidTab(props.children).props.title : ''
   const [activeTab, setActiveTab] = useState(defaultTab)
+
+  let tabContentClassName = css['tab-content']
+
+  if (props.tabContentClassName) tabContentClassName += ` ${props.tabContentClassName}`
+
+  console.log(tabContentClassName, 'uh')
 
   return (
     <>
@@ -32,7 +39,7 @@ export function Tabs(props: TabsProps) {
           })}
       </ul>
 
-      <div className={css['tab-content']}>
+      <div className={tabContentClassName}>
         {props.children &&
           props.children.map((child: any) => {
             if (!child) return null

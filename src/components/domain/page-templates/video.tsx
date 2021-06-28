@@ -2,10 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { pageHOC } from 'src/context/pageHOC'
 import { Video } from 'src/components/domain/archive'
+import { mapToArchiveVideo } from 'src/hooks/useArchiveVideos'
+import { mapToPlaylist } from 'src/hooks/usePlaylists'
 
-export default pageHOC(function ArchiveVideoTemplate(data: any) {
-  console.log('PAGE BEING CREATED')
-  return <Video />
+export default pageHOC(function ArchiveVideoTemplate(props: any) {
+  console.log(props)
+  const video = mapToArchiveVideo(props.data.video.nodes[0])
+  const playlists = props.data.playlists && props.data.playlists.nodes.map(mapToPlaylist)
+
+  return <Video video={video} playlists={playlists} />
 })
 
 export const query = graphql`
@@ -13,5 +18,7 @@ export const query = graphql`
     ...Page
     ...Notification
     ...NavigationData
+    ...VideoData
+    ...VideoPlaylists
   }
 `

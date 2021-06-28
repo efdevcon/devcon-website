@@ -7,28 +7,41 @@ import archiveCss from './archive.module.scss'
 import css from './video.module.scss'
 import { Tabs } from 'src/components/common/tabs'
 import { Tab } from 'src/components/common/tabs/Tabs'
-import { useMostPopular } from 'src/hooks/useMostPopular'
 import { VideoCard } from 'src/components/domain/archive/playlists'
+import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import { Playlist } from 'src/types/Playlist'
+import ShuffleIcon from 'src/assets/icons/shuffle.svg'
+import PlaylistIcon from 'src/assets/icons/playlist.svg'
 
-type VideoProps = {}
+type VideoProps = {
+  video: ArchiveVideo
+  playlists: Playlist[]
+}
 
-const Suggested = ({ video }: any) => {
-  const dummy = useMostPopular()
+const Suggested = ({ video, playlists }: VideoProps) => {
+  const playlist = playlists[0]
+  const nVideos = playlist.videos.length
 
   return (
     <div className={css['suggested']}>
-      <Tabs>
+      <Tabs tabContentClassName={css['tab-content']}>
         {video.related && <Tab title="Related">Some tab content</Tab>}
 
         <Tab title="In playlist">
           <div className={css['description']}>
-            <div className="label">15 talks</div>
-            <h2 className="title">Buidl Guidl</h2>
-            <p>By Austin Griffith, Kevin Owocki</p>
+            <div className="label">{nVideos} talks</div>
+            <h2 className="title">{playlist.title}</h2>
+            <p className="text-uppercase">
+              By <span className="bold">{playlist.curators.join(', ')}</span>
+            </p>
+            <div className={css['icons']}>
+              <PlaylistIcon />
+              <ShuffleIcon />
+            </div>
           </div>
           <div className={css['list']}>
-            {dummy.videos.map((i: any, index: number) => {
-              return <VideoCard key={index} horizontal size="sm" video={i} />
+            {playlist.videos.map((i: any, index: number) => {
+              return <VideoCard key={index} horizontal video={i} compact />
             })}
           </div>
         </Tab>
@@ -37,14 +50,11 @@ const Suggested = ({ video }: any) => {
   )
 }
 
-const Labels = ({ video }: any) => {
-  const hasPlaylists = video.playlists && video.playlists.length > 0
-  const hasTags = video.tags && video.tags.length > 0
+const Labels = ({ tags, playlists }: any) => {
+  const hasPlaylists = playlists.length > 0
+  const hasTags = tags.length > 0
 
-  video.tags = ['test', 'two', 'three']
-  video.playlists = ['test', 'two', 'three']
-
-  if (!hasTags) return null
+  if (!hasTags && !hasPlaylists) return null
 
   return (
     <div className={css['labels-container']}>
@@ -52,7 +62,7 @@ const Labels = ({ video }: any) => {
         <div className={css['group']}>
           <p className="font-xs">Related Tags:</p>
           <div className={css['labels']}>
-            {video.tags.map((tag: any) => {
+            {tags.map((tag: any) => {
               return (
                 <div key={tag} className="label bold sm">
                   {tag}
@@ -67,10 +77,10 @@ const Labels = ({ video }: any) => {
         <div className={css['group']}>
           <p className="font-xs">Playlists:</p>
           <div className={css['labels']}>
-            {video.playlists.map((playlist: any) => {
+            {playlists.map((playlist: any) => {
               return (
-                <div key={playlist} className="label bold sm">
-                  {playlist}
+                <div key={playlist.title} className="label bold sm">
+                  {playlist.title}
                 </div>
               )
             })}
@@ -82,9 +92,7 @@ const Labels = ({ video }: any) => {
 }
 
 export const Video = (props: VideoProps) => {
-  const dummy = useMostPopular()
-
-  const video = dummy.videos[0]
+  const video = props.video
 
   return (
     <div className={archiveCss['container']}>
@@ -112,14 +120,12 @@ export const Video = (props: VideoProps) => {
                 <Tabs>
                   <Tab title="Details">
                     <div className={css['content']}>
-                      <h1 className="font-xxl">{video.title}</h1>
+                      <h1 className="font-xxl title">{video.title}</h1>
 
                       <div className={css['descriptors']}>
                         <p className={css['descriptor']}>
                           <span>Speaker:</span> {video.speakers.join(',')}
                         </p>
-                      </div>
-                      <div className={css['descriptors']}>
                         <p className={css['descriptor']}>
                           <span>Type:</span> {video.type}
                         </p>
@@ -131,16 +137,15 @@ export const Video = (props: VideoProps) => {
                         </p>
                       </div>
 
-                      <Labels video={video} />
-
                       <div className={css['description']}>
                         <div className={css['text']}>{video.description}</div>
                       </div>
                     </div>
 
-                    <p className="text-uppercase font-sm">About the speakers</p>
+                    <Labels tags={video.tags} playlists={props.playlists} />
 
                     <div className={css['speakers']}>
+                      {/* <p className="text-uppercase font-sm">About the speakers</p> */}
                       <div className={css['speaker']}>
                         <img className={css['thumbnail']} src="https://i3.ytimg.com/vi/66SaEDzlmP4/maxresdefault.jpg" />
 
@@ -163,7 +168,7 @@ export const Video = (props: VideoProps) => {
                 </Tabs>
               </div>
             </div>
-            <Suggested video={video} />
+            <Suggested video={video} playlists={props.playlists} />
           </div>
         </div>
       </div>

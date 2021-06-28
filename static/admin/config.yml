@@ -422,3 +422,15 @@ collections:
             hint: 'Should start with the Devcon edition (e.g. 4/talk-name) as specified in the next field',
           },
       }
+
+  - name: 'speakers'
+    label: 'Speakers'
+    label_singular: 'Speaker'
+    folder: 'src/content/speakers'
+    slug: '{{slug}}'
+    create: true
+    i18n: true
+    fields:
+      - { name: 'name', label: 'Title', widget: 'string', i18n: 'duplicate' }
+      - { name: 'description', label: 'Description', widget: 'text', i18n: true }
+      - { name: 'imageUrl', label: 'Image URL', widget: 'string', i18n: true }

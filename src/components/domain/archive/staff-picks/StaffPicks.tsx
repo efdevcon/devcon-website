@@ -14,17 +14,17 @@ export const StaffPicks = (props: any) => {
     slidesToShow: 2.6,
     arrows: false,
     swipeToSlide: true,
-    // slidesToScroll: 1,
-    // mobileFirst: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: Math.min(nItems, 1.1),
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+    slidesToScroll: 1,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   return (

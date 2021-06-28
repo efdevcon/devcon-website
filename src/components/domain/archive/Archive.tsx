@@ -70,7 +70,6 @@ export const Archive = (props: ArchiveProps) => {
                         By <span className="bold">{video.speakers.join(',')}</span>
                       </p>
                     )}
-                    {/* <p className="bold">5:45</p> */}
                     <p className="bold">Devcon {video.edition}</p>
                   </div>
                 </div>

@@ -32,6 +32,7 @@ type Scene = {
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
+  path?: string
   description?: string
   scenes?: Scene[]
   asBackground?: boolean
@@ -88,7 +89,7 @@ export const PageHero = (props: PageHeroProps) => {
     if (props.scenes) {
       const timeout = setTimeout(() => {
         setNextScene(1)
-      }, 1000 * 15)
+      }, 1000 * 5)
 
       return () => clearTimeout(timeout)
     }
@@ -98,7 +99,7 @@ export const PageHero = (props: PageHeroProps) => {
     <div id="page-hero" className={className} style={style}>
       <div className="section">
         <div className={css['info']}>
-          <p className={`${css['page-category']} font-xs text-uppercase`}>{pageCategory}</p>
+          <p className={`${css['page-category']} font-xs text-uppercase`}>{props.path || pageCategory}</p>
 
           <div className={css['title-block']}>
             <h1 className={`${props.titleSubtext ? css['subtext'] : ''} font-massive-2`}>

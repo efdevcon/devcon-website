@@ -12,6 +12,8 @@ interface Props {
   slide?: Boolean
   size?: 'big' | 'sm'
   horizontal?: boolean
+  vertical?: boolean
+  compact?: boolean
 }
 
 export const VideoCard = (props: Props) => {
@@ -21,6 +23,8 @@ export const VideoCard = (props: Props) => {
   if (props.slide) className += ` ${css['slide']}`
   if (props.size) className += ` ${css[props.size]}`
   if (props.horizontal) className += ` ${css['horizontal']}`
+  if (props.vertical) className += ` ${css['force-vertical']}`
+  if (props.compact) className += ` ${css['compact']}`
 
   function getVideoId() {
     let videoId = props.video.youtubeUrl ?? ''
@@ -63,8 +67,8 @@ export const VideoCard = (props: Props) => {
 
         <div className={css['bottom']}>
           <div>
-            <p className="font-xs">{props.video.speakers.join(', ').toUpperCase()}</p>
-            <p className="font-xs">{props.video.type}</p>
+            <p className={`${css['speakers']} font-xs bold`}>{props.video.speakers.join(', ').toUpperCase()}</p>
+            {!props.compact && <p className="font-xxs">{props.video.type}</p>}
           </div>
 
           <div className="label sm">Devcon {props.video.edition}</div>

@@ -18,7 +18,7 @@ type WatchProps = {}
 
 export const Watch = (props: WatchProps) => {
   const videos = useArchiveVideos()
-  const [listViewEnabled, setListViewEnabled] = React.useState(false)
+  const [gridViewEnabled, setGridViewEnabled] = React.useState(true)
   const filterState = useVideoFilter()
   const sortState = useSort(videos, [
     {
@@ -82,19 +82,25 @@ export const Watch = (props: WatchProps) => {
 
                 <div className={css['view-toggle']}>
                   <IconGrid
-                    onClick={() => setListViewEnabled(false)}
-                    className={`${listViewEnabled ? css['active'] : ''} icon`}
+                    onClick={() => setGridViewEnabled(true)}
+                    className={`${gridViewEnabled ? '' : css['faded']} icon`}
                   />
                   <IconListView
-                    onClick={() => setListViewEnabled(true)}
-                    className={`${listViewEnabled ? '' : css['active']} icon`}
+                    onClick={() => setGridViewEnabled(false)}
+                    className={`${gridViewEnabled ? css['faded'] : ''} icon`}
                   />
                 </div>
               </div>
 
-              <div className={`${listViewEnabled ? css['list-view'] : ''} ${css['video-list']}`}>
+              <div className={`${gridViewEnabled ? '' : css['list-view']} ${css['video-list']}`}>
                 {videos.map((i: ArchiveVideo, index: number) => {
-                  return <VideoCard key={index} horizontal={listViewEnabled} video={i} />
+                  return <VideoCard key={index} horizontal={!gridViewEnabled} video={i} />
+                })}
+              </div>
+
+              <div className={`${css['video-list']} ${css['mobile']}`}>
+                {videos.map((i: ArchiveVideo, index: number) => {
+                  return <VideoCard key={index} horizontal vertical={index === 0} video={i} />
                 })}
               </div>
             </div>

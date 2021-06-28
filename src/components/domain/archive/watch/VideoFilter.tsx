@@ -31,11 +31,17 @@ export const useVideoFilter = () => {
 
     // Format to fit filter state shape
     return Object.entries(filters).reduce((acc, [key, filter]: [any, any]) => {
-      acc[key] = filter?.reduce((acc: any, tag: any) => {
-        acc[tag] = true
+      if (typeof filter === 'string') {
+        acc[key] = {
+          [filter]: true,
+        }
+      } else {
+        acc[key] = filter?.reduce((acc: any, tag: any) => {
+          acc[tag] = true
 
-        return acc
-      }, {})
+          return acc
+        }, {})
+      }
 
       return acc
     }, {})

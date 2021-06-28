@@ -65,7 +65,7 @@ $left-column-width: 30%;
             margin-left: $gaps-gap-4;
             cursor: pointer;
 
-            &.active {
+            &.faded {
               --color-icon: #{$colors-monochrome-6};
             }
           }
@@ -77,6 +77,20 @@ $left-column-width: 30%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-row-gap: $gaps-gap-4;
         grid-column-gap: $gaps-gap-8;
+
+        &:not(.mobile) {
+          @media (max-width: $breakpoints-lg) {
+            display: none;
+          }
+        }
+
+        &.mobile {
+          display: none;
+
+          @media (max-width: $breakpoints-lg) {
+            display: grid;
+          }
+        }
 
         @media (max-width: $breakpoints-lg) {
           grid-template-columns: 1fr !important;
