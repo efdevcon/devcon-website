@@ -12,10 +12,11 @@ export const pageHOC = (
   PageTemplate: React.ComponentType<pageProps>,
   mapDataToContext?: (props: pageProps) => { [key: string]: any }
 ) => (props: pageProps) => {
+  const pageType = props.location?.pathname?.startsWith('/archive') ? 'archive' : 'default'
   const context = {
     location: props.location,
     pageContext: props.pageContext,
-    navigation: ToNavigationData(props.data.navigationData.nodes),
+    navigation: ToNavigationData(props.data.navigationData.nodes, pageType),
     notification: ToNotification(props.data.notification.nodes[0]),
     ...(mapDataToContext && mapDataToContext(props)),
     current: props.data.page ? ToPage(props.data.page) : undefined,

@@ -5,12 +5,28 @@ import { FooterData } from 'src/types/FooterData'
 import { Tag } from 'src/types/Tag'
 import { Page } from 'src/types/Page'
 
-export function ToNavigationData(nodes: any): NavigationData {
+export function ToNavigationData(nodes: any, type?: 'default' | 'archive'): NavigationData {
   return {
     top: ToLinks(nodes, 'top'),
-    site: ToLinks(nodes, 'site'),
+    site: type === 'archive' ? ToArchiveNavigation() : ToLinks(nodes, 'site'),
     footer: ToFooterData(nodes),
   }
+}
+
+export function ToArchiveNavigation(): Array<Link> {
+  const links = new Array<Link>()
+  links.push({ title: 'Watch', url: '/archive/watch', type: 'page' })
+  links.push({ title: 'Event', url: '', type: 'links', links: [
+    { title: 'Devcon 5', url: '/archive/playlists/devcon-5/', type: 'page' },
+    { title: 'Devcon 4', url: '/archive/playlists/devcon-4/', type: 'page' },
+    { title: 'Devcon 3', url: '/archive/playlists/devcon-3/', type: 'page' },
+    { title: 'Devcon 2', url: '/archive/playlists/devcon-2/', type: 'page' },
+    { title: 'Devcon 1', url: '/archive/playlists/devcon-1/', type: 'page' },
+    { title: 'Devcon 0', url: '/archive/playlists/devcon-0/', type: 'page' }
+  ]})
+  links.push({ title: 'Playlists', url: '/archive/playlists', type: 'page' })
+
+  return links
 }
 
 export function ToNotification(data: any): Notification {
