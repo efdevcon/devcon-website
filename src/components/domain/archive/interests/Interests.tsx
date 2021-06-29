@@ -7,42 +7,7 @@ import css from './interests.module.scss'
 import { chunkArray } from 'src/utils/chunk-array'
 import { filterToQueryString } from 'src/components/domain/archive/watch/VideoFilter'
 import { Link } from 'src/components/common/link'
-
-const tags = [
-  {
-    title: 'Society and Systems',
-  },
-  {
-    title: 'Scalability',
-  },
-  {
-    title: 'UX & Design',
-  },
-  {
-    title: 'Security',
-  },
-  {
-    title: 'Cryptography',
-  },
-  {
-    title: 'Community',
-  },
-  {
-    title: 'Economics',
-  },
-  {
-    title: 'Standards',
-  },
-  {
-    title: 'Privacy',
-  },
-  {
-    title: 'Consensus Layer',
-  },
-  {
-    title: 'Application Layer',
-  },
-]
+import { tags } from '../tags'
 
 export const Interests = (props: any) => {
   const [selectedTags, setSelectedTags] = React.useState({} as { [key: string]: any })

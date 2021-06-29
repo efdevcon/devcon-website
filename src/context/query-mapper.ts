@@ -4,6 +4,7 @@ import { Notification } from 'src/types/Notification'
 import { FooterData } from 'src/types/FooterData'
 import { Tag } from 'src/types/Tag'
 import { Page } from 'src/types/Page'
+import { tags } from 'src/components/domain/archive/tags'
 
 export function ToNavigationData(nodes: any, type?: 'default' | 'archive'): NavigationData {
   return {
@@ -24,6 +25,8 @@ export function ToArchiveNavigation(): Array<Link> {
     { title: 'Devcon 1', url: '/archive/playlists/devcon-1/', type: 'page' },
     { title: 'Devcon 0', url: '/archive/playlists/devcon-0/', type: 'page' }
   ]})
+  const tagLinks = tags.map(i => { return { title: i.title, url: `/archive/watch?tags=${i.title}`, type: 'page' } as Link })
+  links.push({ title: 'Categories', url: '', type: 'links', links: tagLinks})
   links.push({ title: 'Playlists', url: '/archive/playlists', type: 'page' })
 
   return links
