@@ -14,12 +14,12 @@
   padding-bottom: $gaps-gap-16;
 }
 
-.header { 
+.header {
   display: flex;
   justify-content: space-between;
 
-  .button { 
-    svg { 
+  .button {
+    svg {
       margin-left: $gaps-gap-3;
     }
   }
@@ -35,12 +35,19 @@
     position: relative;
   }
 
-  .image { 
+  .image {
     object-fit: cover;
   }
 
   .body {
     padding: $gaps-gap-2 $gaps-gap-3 $gaps-gap-3 $gaps-gap-3;
+    cursor: pointer;
+
+    &:hover {
+      h4 {
+        text-decoration: underline;
+      }
+    }
 
     h4 {
       margin-top: $gaps-gap-1;

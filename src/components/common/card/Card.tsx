@@ -68,24 +68,32 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
 
     if (isGatsbyOptimized) {
       return (
-        <div className={css['img-wrapper']}>
-          <Img className={css['img']} fluid={props.imageUrl} />
+        <div className="aspect">
+          <div className={css['img-wrapper']}>
+            <Img className={css['img']} fluid={props.imageUrl} />
+          </div>
         </div>
       )
     }
 
     return (
-      <div className={css['img-wrapper']}>
-        <img alt={props.title} className={`${css['img']} ${css['not-gatsby']}`} src={props.imageUrl} />
+      <div className="aspect">
+        <div className={css['img-wrapper']}>
+          <img alt={props.title} className={`${css['img']} ${css['not-gatsby']}`} src={props.imageUrl} />
+        </div>
       </div>
     )
   })()
+
+  let bodyClass = css['body']
+
+  if (!props.linkUrl) bodyClass += ` ${css['no-link']}`
 
   const cardContent = (
     <>
       {image}
 
-      <div className={css['body']}>
+      <div className={bodyClass}>
         <p className={css['title']}>{link}</p>
         {props.description && (
           <p className={css['text']} dangerouslySetInnerHTML={{ __html: GetExcerpt(props.description) }} />

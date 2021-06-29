@@ -32,6 +32,22 @@ const settings = {
   ],
 }
 
+const formatNewsForCard = (intl: any, item: NewsItem) => {
+  let formattedItem = {
+    ...item,
+    linkUrl: item.url,
+  }
+
+  if (item.url?.includes('twitter')) {
+    formattedItem = {
+      ...formattedItem,
+      title: intl.formatMessage({ id: 'news_tweet' }),
+    }
+  }
+
+  return formattedItem
+}
+
 export const News = ({ data: rawData }: NewsProps) => {
   const newsItems = formatNewsData(rawData.nodes)
   const intl = useIntl()
@@ -44,14 +60,7 @@ export const News = ({ data: rawData }: NewsProps) => {
         <div className={css['slider']}>
           <Slider {...settings}>
             {newsItems.map((item: NewsItem, index) => {
-              let formattedItem = item
-
-              if (item.url?.includes('twitter')) {
-                formattedItem = {
-                  ...formattedItem,
-                  title: intl.formatMessage({ id: 'news_tweet' }),
-                }
-              }
+              const formattedItem = formatNewsForCard(intl, item)
 
               return (
                 <Card
@@ -66,17 +75,15 @@ export const News = ({ data: rawData }: NewsProps) => {
         </div>
         <div className={css['body']}>
           <div className={css['cards']}>
-            {newsItems.slice(0, 2).map((item: any, index) => {
-              if (item.url?.includes('twitter')) {
-                item.title = intl.formatMessage({ id: 'news_tweet' })
-              }
+            {newsItems.slice(0, 2).map((item: NewsItem, index) => {
+              const formattedItem = formatNewsForCard(intl, item)
 
               return (
                 <Card
                   className={css['card']}
                   metadata={[moment.utc(item.date).format('MMM D, YYYY')]}
                   key={index}
-                  {...item}
+                  {...formattedItem}
                 />
               )
             })}

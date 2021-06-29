@@ -77,6 +77,16 @@
     padding: $gaps-gap-8;
     padding-bottom: 0px;
 
+    &:not(.no-link) {
+      cursor: pointer !important;
+
+      &:hover {
+        .title {
+          text-decoration: underline;
+        }
+      }
+    }
+
     @media (max-width: $breakpoints-lg) {
       padding: $gaps-gap-4;
       padding-bottom: 0px;
@@ -141,10 +151,10 @@
           font-size: 1em;
         }
 
-        &:hover {
-          color: var(--theme-color-hover, $colors-main-light) !important;
-          --color-icon: var(--theme-color-hover, #{$colors-main-light}) !important;
-        }
+        // &:hover {
+        //   color: var(--theme-color-hover, $colors-main-light) !important;
+        //   --color-icon: var(--theme-color-hover, #{$colors-main-light}) !important;
+        // }
       }
     }
   }

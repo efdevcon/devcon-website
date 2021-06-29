@@ -64,12 +64,14 @@ const Icon = ({ item }: { item: FeedItem }) => {
 
 export const Title = ({ item }: { item: FeedItem }) => {
   const intl = useIntl()
+  const isTweet = item?.url?.includes('twitter')
 
-  if (item?.url?.includes('twitter')) {
-    return <>{intl.formatMessage({ id: 'news_tweet' })}</>
-  }
-
-  return <>{item.title}</>
+  return (
+    <p
+      className={`${css['title']} fonts-xxl bold`}
+      dangerouslySetInnerHTML={{ __html: isTweet ? intl.formatMessage({ id: 'news_tweet' }) : item.title }}
+    />
+  )
 }
 
 export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props) => {
@@ -88,9 +90,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
           {/* <Icon item={item} className={css['icon-desktop']} /> */}
         </div>
         <div className={css['text']}>
-          <p className={`${css['title']} fonts-xxl bold`}>
-            <Title item={item} />
-          </p>
+          <Title item={item} />
 
           <p className={css['description']} dangerouslySetInnerHTML={{ __html: item.description }} />
 

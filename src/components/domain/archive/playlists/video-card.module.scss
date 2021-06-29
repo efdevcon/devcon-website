@@ -52,6 +52,13 @@
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+      .title {
+        text-decoration: underline;
+      }
+    }
 
     h4 {
       margin-top: $gaps-gap-1;
