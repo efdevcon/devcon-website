@@ -142,6 +142,9 @@ async function createVideoPages({ actions, graphql, reporter }: CreatePagesArgs)
             collection
             slug
           }
+          frontmatter {
+            tags
+          }
         }
       }
     }
@@ -153,8 +156,7 @@ async function createVideoPages({ actions, graphql, reporter }: CreatePagesArgs)
   }
 
   result.data.playlists.nodes.forEach((node: any) => {
-    console.log(node.fields.slug, 'SLUG VIDEO')
-    createDynamicPage(actions, node.fields.slug, 'video', 'en')
+    createDynamicPage(actions, node.fields.slug, 'video', 'en', '', node.frontmatter.tags)
   })
 }
 
@@ -342,16 +344,33 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
 }
 
 
-function createDynamicPage(actions: Actions, slug: string, template: string, lang: string, tag: string = ''): void {
+function createDynamicPage(actions: Actions, slug: string, template: string, lang: string, tag: string = '', tags: string[]): void {
   if (template === 'none') return
 
   // console.log("Creating page", slug, 'with template:', template, lang);
   const { createPage } = actions
 
+  const tagsRegex = (() => {
+
+    if (tags) {
+      const asString = tags.reduce((acc, tag) => {
+        if (acc === '') return `${tag}`;
+
+        return `${acc}|${tag}`;
+      }, '');
+
+      // Just returning a regex that won't match anything since an empty regex matches everything with the graphql regex operator
+      if (asString === '') return '/^abc12345/';
+
+      return `/${asString}/`;
+    } 
+  })();
+
   createPage({
     path: slug,
     component: path.resolve(`./src/components/domain/page-templates/${template}.tsx`),
     context: {
+      tags: tagsRegex, // Can't pass arrays as arguments to the graphql query, so have to use regex to simulate the in operator
       slug: slug,
       tag: tag,
       lang: lang,

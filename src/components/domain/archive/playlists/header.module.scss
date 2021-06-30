@@ -5,25 +5,32 @@
   z-index: 10;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.1);
 
   @media (max-width: $breakpoints-md) {
     flex-direction: column-reverse;
   }
 
+  height: 400px;
+
+  @media (max-width: $breakpoints-md) {
+    height: 240px;
+  }
+
   .content-section {
     flex-basis: 50%;
     padding: $gaps-gap-8;
-    
+
     @media (max-width: $breakpoints-md) {
       padding: $gaps-gap-4 0;
     }
 
-    .description { 
+    .description {
       margin-top: $gaps-gap-2;
       margin-bottom: $gaps-gap-8;
     }
 
-    .controls { 
+    .controls {
       margin-bottom: $gaps-gap-4;
     }
   }
@@ -33,12 +40,8 @@
 
     img {
       object-fit: cover;
-      height: 400px;
       width: 100%;
-
-      @media (max-width: $breakpoints-md) {
-        height: 240px;
-      }
+      height: 100%;
     }
   }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import css from './page-hero.module.scss'
 import { Link } from 'src/components/common/link'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
-import usePageCategory from './usePageCategory'
+import usePagePath from './usePageCategory'
 import useIsScrolled from 'src/hooks/useIsScrolled'
 import { usePageContext } from 'src/context/page-context'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
@@ -35,11 +35,11 @@ type PageHeroProps = {
   path?: string
   description?: string
   scenes?: Scene[]
-  asBackground?: boolean
   background?: string
   cta?: Array<CTALink>
   renderCustom?(props?: any): JSX.Element
   navigation?: Array<NavigationLink>
+  children?: React.ReactNode
 }
 
 export const PageHero = (props: PageHeroProps) => {
@@ -49,7 +49,7 @@ export const PageHero = (props: PageHeroProps) => {
   const pageHeaderHeight = useGetElementHeight('page-navigation')
   const pageHeroHeight = useGetElementHeight('page-hero')
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
-  const pageCategory = usePageCategory()
+  const pagePath = usePagePath()
   const isScrolled = useIsScrolled()
   const [currentScene, setCurrentScene] = React.useState(0)
 
@@ -67,8 +67,8 @@ export const PageHero = (props: PageHeroProps) => {
 
   if (props.background) className += ` ${css['custom-background']}`
   if (isScrolled) className += ` ${css['scrolled']}`
-  if (props.asBackground) className += ` ${css['as-background']}`
   if (props.navigation) className += ` ${css['with-navigation']}`
+  if (props.children) className += ` ${css['as-background']}`
 
   const setNextScene = React.useMemo(
     () => (increment: number) => {
@@ -99,7 +99,7 @@ export const PageHero = (props: PageHeroProps) => {
     <div id="page-hero" className={className} style={style}>
       <div className="section">
         <div className={css['info']}>
-          <p className={`${css['page-category']} font-xs text-uppercase`}>{props.path || pageCategory}</p>
+          <p className={`${css['path']} bold font-xs text-uppercase`}>{props.path || pagePath}</p>
 
           <div className={css['title-block']}>
             <h1 className={`${props.titleSubtext ? css['subtext'] : ''} font-massive-2`}>
@@ -121,6 +121,8 @@ export const PageHero = (props: PageHeroProps) => {
               </div>
             )}
           </div>
+
+          {props.children}
 
           {props.scenes && (
             <div className={css['scenes']}>
@@ -158,18 +160,10 @@ export const PageHero = (props: PageHeroProps) => {
                 {props.scenes[currentScene].callToAction()}
 
                 <div className={css['arrows']}>
-                  <button
-                    className={`${css['arrow']} red squared`}
-                    // disabled={currentScene === 0}
-                    onClick={() => setNextScene(-1)}
-                  >
+                  <button className={`${css['arrow']} red squared`} onClick={() => setNextScene(-1)}>
                     <ChevronLeft />
                   </button>
-                  <button
-                    className={`${css['arrow']} red squared`}
-                    // disabled={currentScene === props.scenes.length - 1}
-                    onClick={() => setNextScene(1)}
-                  >
+                  <button className={`${css['arrow']} red squared`} onClick={() => setNextScene(1)}>
                     <ChevronRight />
                   </button>
                 </div>

@@ -19,21 +19,17 @@ export default pageHOC(function PlaylistTemplate(data: any) {
       <SEO />
       <Header />
 
-      <PageHero title="" />
+      <PageHero>
+        <PlaylistHeader playlist={playlist} />
 
-      <div className="section">
-        <div className="content">
-          <PlaylistHeader playlist={playlist} />
-
-          <div className={css['videos']}>
-            <div className={css['list-view']}>
-              {playlist.videos.map((i: ArchiveVideo) => {
-                return <VideoCard key={i.id} video={i} playlist={playlist} horizontal showDescription />
-              })}
-            </div>
+        <div className={css['videos']}>
+          <div className={css['list-view']}>
+            {playlist.videos.map((i: ArchiveVideo) => {
+              return <VideoCard key={i.id} video={i} playlist={playlist} horizontal showDescription />
+            })}
           </div>
         </div>
-      </div>
+      </PageHero>
 
       <Footer />
     </div>

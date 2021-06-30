@@ -8,16 +8,18 @@ import { mapToPlaylist } from 'src/hooks/usePlaylists'
 export default pageHOC(function ArchiveVideoTemplate(props: any) {
   const video = mapToArchiveVideo(props.data.video.nodes[0])
   const playlists = props.data.playlists && props.data.playlists.nodes.map(mapToPlaylist)
+  const relatedVideos = props.data.relatedVideos && props.data.relatedVideos.nodes.map(mapToArchiveVideo)
 
-  return <Video video={video} playlists={playlists} />
+  return <Video video={video} playlists={playlists} relatedVideos={relatedVideos} />
 })
 
 export const query = graphql`
-  query ($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!, $tags: String) {
     ...Page
     ...Notification
     ...NavigationData
     ...VideoData
     ...VideoPlaylists
+    ...RelatedVideos
   }
 `

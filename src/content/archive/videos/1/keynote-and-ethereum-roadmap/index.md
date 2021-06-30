@@ -7,7 +7,8 @@ ipfsHash: ''
 expertise: Beginner
 type: Panel
 track: ''
-tags: []
+tags:
+  - devcon
 speakers:
   - Vitalik Buterin
   - Jeffrey Wilcke

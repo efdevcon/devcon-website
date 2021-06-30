@@ -52,7 +52,11 @@ export const Watch = (props: WatchProps) => {
       <SEO />
       <Header />
 
-      <PageHero title="Watch" titleSubtext="Devcon" />
+      <PageHero
+        title="Watch"
+        titleSubtext="Devcon"
+        description="Devcon content curated and organized for your discovery and learning."
+      />
 
       <div className="section">
         <div className="content">

@@ -7,7 +7,8 @@ ipfsHash: ''
 expertise: Beginner
 type: Panel
 track: 'Developer Experience'
-tags: []
+tags:
+  - devcon
 speakers:
   - Stewart Brand
 ---

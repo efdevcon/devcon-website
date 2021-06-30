@@ -2,7 +2,7 @@
 
 .container {
   display: flex;
-  margin-top: $gaps-gap-16;
+  // margin-top: $gaps-gap-16;
   margin-bottom: $gaps-gap-16;
   align-items: flex-start;
 
@@ -51,18 +51,12 @@
         border-top: 1px solid $colors-monochrome-5;
         padding-top: $gaps-gap-4;
         padding-bottom: $gaps-gap-4;
-
-        .text {
-          flex-basis: 80%;
-        }
       }
     }
 
     .speakers {
       display: flex;
       flex-direction: column;
-      // border-top: 1px solid $colors-monochrome-5;
-      // padding-top: $gaps-gap-10;
 
       > p {
         border-bottom: 1px solid $colors-monochrome-5;
@@ -162,6 +156,14 @@
 
       > * {
         margin-bottom: $gaps-gap-4;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      .selected {
+        background: $colors-monochrome-3;
       }
     }
   }

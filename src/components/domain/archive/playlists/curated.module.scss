@@ -26,6 +26,8 @@
 }
 
 .video-card {
+  height: 100%;
+
   &.slide {
     cursor: grab;
     margin-left: $gaps-gap-4;

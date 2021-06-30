@@ -16,6 +16,18 @@ interface Props {
   compact?: boolean
 }
 
+export function getVideoId(video: ArchiveVideo): string {
+  let videoId = video.youtubeUrl ?? ''
+  videoId = videoId.replace('https://youtu.be/', '')
+  videoId = videoId.replace('https://www.youtube.com/embed/', '')
+  videoId = videoId.replace('https://www.youtube.com/watch?v=', '')
+  videoId = videoId.replace('https://studio.youtube.com/video/', '')
+  videoId = videoId.replace('&feature=youtu.be', '')
+  videoId = videoId.replace('/edit', '')
+
+  return videoId
+}
+
 export const VideoCard = (props: Props) => {
   let className = css['video-card']
 
@@ -26,22 +38,11 @@ export const VideoCard = (props: Props) => {
   if (props.vertical) className += ` ${css['force-vertical']}`
   if (props.compact) className += ` ${css['compact']}`
 
-  function getVideoId() {
-    let videoId = props.video.youtubeUrl ?? ''
-    videoId = videoId.replace('https://youtu.be/', '')
-    videoId = videoId.replace('https://www.youtube.com/embed/', '')
-    videoId = videoId.replace('https://www.youtube.com/watch?v=', '')
-    videoId = videoId.replace('https://studio.youtube.com/video/', '')
-    videoId = videoId.replace('&feature=youtu.be', '')
-    videoId = videoId.replace('/edit', '')
-
-    return videoId
-  }
-
   function getWatchUrl() {
     let url = `${props.video.slug}`
+
     if (props.playlist) {
-      url += `?playlist=${props.playlist.id}`
+      url += `?playlist=${props.playlist.title}`
     }
 
     return url
@@ -53,7 +54,7 @@ export const VideoCard = (props: Props) => {
       <div className={css['aspect-wrapper']}>
         <div className="aspect">
           <img
-            src={`https://img.youtube.com/vi/${getVideoId()}/maxresdefault.jpg`}
+            src={`https://img.youtube.com/vi/${getVideoId(props.video)}/maxresdefault.jpg`}
             alt={`${props.video.title} preview`}
             placeholder="blurred"
           />

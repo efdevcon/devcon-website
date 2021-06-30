@@ -12,13 +12,17 @@ import { CuratedPlaylists } from '../archive/playlists'
 export const Playlists = () => {
   const playlists = usePlaylists()
   const categories = [...new Set(playlists.map(i => i.categories).flat())]
-  
+
   return (
     <div className={css['container']}>
       <SEO />
       <Header />
 
-      <PageHero title="Playlists" titleSubtext="Devcon" description='Devcon collections to help you dive deep into specific topic areas.' />
+      <PageHero
+        title="Playlists"
+        titleSubtext="Devcon"
+        description="Devcon collections to help you dive deep into specific topic areas."
+      />
 
       <div className="section">
         <div className="content">
@@ -30,10 +34,10 @@ export const Playlists = () => {
 
       <div className="section">
         <div className="content">
-          {categories.map((category) => {
+          {categories.map(category => {
             return (
               <div key={category}>
-                <CuratedPlaylists title={category} items={playlists.filter((i) => i.categories.includes(category))} />
+                <CuratedPlaylists title={category} items={playlists.filter(i => i.categories.includes(category))} />
               </div>
             )
           })}

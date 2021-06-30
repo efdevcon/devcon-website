@@ -12,14 +12,12 @@ const findFirstValidTab = (children: React.ReactChildren): any => {
 }
 
 export function Tabs(props: TabsProps) {
-  const defaultTab = props.children ? findFirstValidTab(props.children).props.title : ''
+  const defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
   const [activeTab, setActiveTab] = useState(defaultTab)
 
   let tabContentClassName = css['tab-content']
 
   if (props.tabContentClassName) tabContentClassName += ` ${props.tabContentClassName}`
-
-  console.log(tabContentClassName, 'uh')
 
   return (
     <>
