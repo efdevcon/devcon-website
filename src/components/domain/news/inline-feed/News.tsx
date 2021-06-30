@@ -64,6 +64,7 @@ export const News = ({ data: rawData }: NewsProps) => {
 
               return (
                 <Card
+                  expandLink
                   className={`${css['card']} ${css['slider']}`}
                   key={index}
                   metadata={[moment.utc(formattedItem.date).format('MMM D, YYYY')]}
@@ -80,6 +81,7 @@ export const News = ({ data: rawData }: NewsProps) => {
 
               return (
                 <Card
+                  expandLink
                   className={css['card']}
                   metadata={[moment.utc(item.date).format('MMM D, YYYY')]}
                   key={index}

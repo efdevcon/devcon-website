@@ -61,6 +61,19 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
       </Link>
     )
 
+  const readMore =
+    props.expandLink || !props.linkUrl ? (
+      <div className={css['read-more']}>
+        {intl.formatMessage({ id: 'readmore' })}
+        <IconArrowRight />
+      </div>
+    ) : (
+      <Link to={props.linkUrl} className={css['read-more']}>
+        {intl.formatMessage({ id: 'readmore' })}
+        <IconArrowRight />
+      </Link>
+    )
+
   const image = (() => {
     if (!props.imageUrl) return null
 
@@ -108,12 +121,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
             </div>
           )}
 
-          {props.linkUrl && (
-            <Link to={props.linkUrl} className={css['read-more']}>
-              {intl.formatMessage({ id: 'readmore' })}
-              <IconArrowRight />
-            </Link>
-          )}
+          {props.linkUrl && readMore}
         </div>
       </div>
     </>
