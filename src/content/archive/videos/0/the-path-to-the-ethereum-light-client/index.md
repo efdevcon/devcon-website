@@ -4,6 +4,7 @@ title: "The Path to the Ethereum Light Client"
 description: "Vitalik Buterin and Dr. Gavin Wood take a look at the Ethereum light client roadmap."
 youtubeUrl: "https://youtu.be/WD2sRXbmims"
 ipfsHash: ''
+duration: 1153
 expertise: ''
 type: "Talk"
 track: "Zero"
