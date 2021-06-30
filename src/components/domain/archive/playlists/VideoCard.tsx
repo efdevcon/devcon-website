@@ -48,6 +48,8 @@ export const VideoCard = (props: Props) => {
     return url
   }
 
+  console.log(props.video, 'video')
+
   return (
     <BasicCard className={className} expandLink linkUrl={getWatchUrl()} allowDrag>
       {/* Need the wrapper so we can constrain the aspect div */}
@@ -68,7 +70,9 @@ export const VideoCard = (props: Props) => {
 
         <div className={css['bottom']}>
           <div>
-            <p className={`${css['speakers']} font-xs bold`}>{props.video.speakers.join(', ').toUpperCase()}</p>
+            {props.video.speakers && (
+              <p className={`${css['speakers']} font-xs bold`}>{props.video.speakers.join(', ').toUpperCase()}</p>
+            )}
             {!props.compact && <p className="font-xxs">{props.video.type}</p>}
           </div>
 

@@ -57,12 +57,6 @@ const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
   return (
     <div className={css['suggested']}>
       <Tabs tabContentClassName={css['tab-content']}>
-        {relatedVideos && relatedVideos.length > 0 && (
-          <Tab title="Related">
-            <List video={video} videos={relatedVideos} />
-          </Tab>
-        )}
-
         {playlist && playlist.videos.length > 0 && (
           <Tab title="In playlist">
             <div className={css['description']}>
@@ -78,6 +72,12 @@ const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
             </div>
 
             <List video={video} playlist={playlist} videos={playlist.videos} />
+          </Tab>
+        )}
+
+        {relatedVideos && relatedVideos.length > 0 && (
+          <Tab title="Related">
+            <List video={video} videos={relatedVideos} />
           </Tab>
         )}
       </Tabs>
