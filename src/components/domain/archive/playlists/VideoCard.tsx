@@ -37,8 +37,6 @@ export const VideoCard = (props: Props) => {
     return url
   }
 
-  console.log(props.video, 'video')
-
   return (
     <BasicCard className={className} expandLink linkUrl={getWatchUrl()} allowDrag>
       {/* Need the wrapper so we can constrain the aspect div */}

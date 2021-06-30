@@ -58,17 +58,19 @@ const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
     <div className={css['suggested']}>
       <Tabs tabContentClassName={css['tab-content']}>
         {playlist && playlist.videos.length > 0 && (
-          <Tab title="In playlist">
+          <Tab title="Playlist">
             <div className={css['description']}>
               <div className="label">{playlist.videos.length} talks</div>
               <h2 className="title">{playlist.title}</h2>
-              <p className="text-uppercase">
-                By <span className="bold">{playlist.curators.map(i => i.name).join(', ')}</span>
-              </p>
-              <div className={css['icons']}>
+              {playlist.curators && playlist.curators.length > 0 && (
+                <p className="text-uppercase">
+                  By <span className="bold">{playlist.curators.map(i => i.name).join(', ')}</span>
+                </p>
+              )}
+              {/* <div className={css['icons']}>
                 <PlaylistIcon />
                 <ShuffleIcon />
-              </div>
+              </div> */}
             </div>
 
             <List video={video} playlist={playlist} videos={playlist.videos} />
@@ -129,16 +131,10 @@ const Labels = ({ tags, playlists }: any) => {
 export const Video = (props: VideoProps) => {
   const video = props.video
 
-  console.log(props, 'props in vid')
-
-  console.log(video, 'video')
-
   return (
     <div className={archiveCss['container']}>
       <SEO />
       <Header />
-
-      {/* <PageHero asBackground path={props.video.title} /> */}
 
       <PageHero path={props.video.title}>
         <div className={css['container']}>
