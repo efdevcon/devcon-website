@@ -53,6 +53,15 @@ export const query = graphql`
         imageUrl
         categories
         curators
+        profiles {
+          id
+          name
+          lang
+          description
+          imageUrl
+          role
+          slug
+        }
         archiveVideos {
           id
           slug

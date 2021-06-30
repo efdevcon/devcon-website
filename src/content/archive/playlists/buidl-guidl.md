@@ -8,7 +8,6 @@ categories:
   - Community Curated
 curators:
   - Austin Griffith
-  - Kevin Owocki
 videos:
   - 1/understanding-the-ethereum-blockchain-protocol/index
   - 2/ethereum-in-25-minutes/index

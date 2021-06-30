@@ -3,6 +3,7 @@ import { links as linksResolver } from './resolvers/links'
 import { tagCountResolver, tagsResolver } from './resolvers/tags'
 import { dip as dipResolver } from './resolvers/dip'
 import { videoResolver } from './resolvers/archive'
+import { profileResolver } from './resolvers/profiles'
 
 const baseTypes = `
   type MarkdownRemark implements Node { 
@@ -37,6 +38,16 @@ const baseTypes = `
     tags: [String],
     speakers: [String]
   }
+
+  type Profile {
+    id: String
+    slug: String
+    lang: String
+    name: String
+    role: String
+    description: String
+    imageUrl: String!
+  }
 `
 
 export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCustomizationArgs) => {
@@ -53,6 +64,7 @@ export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCusto
         tagItems: tagsResolver,
         tagCount: tagCountResolver,
         archiveVideos: videoResolver,
+        profiles: profileResolver
       },
     }),
   ]

@@ -32,7 +32,7 @@ const Suggested = ({ video, playlists }: VideoProps) => {
             <div className="label">{nVideos} talks</div>
             <h2 className="title">{playlist.title}</h2>
             <p className="text-uppercase">
-              By <span className="bold">{playlist.curators.join(', ')}</span>
+              By <span className="bold">{playlist.curators.map(i => i.name).join(', ')}</span>
             </p>
             <div className={css['icons']}>
               <PlaylistIcon />
@@ -124,7 +124,7 @@ export const Video = (props: VideoProps) => {
 
                       <div className={css['descriptors']}>
                         <p className={css['descriptor']}>
-                          <span>Speaker:</span> {video.speakers.join(',')}
+                          <span>Speaker:</span> {video.speakers.map(i => i.name).join(',')}
                         </p>
                         <p className={css['descriptor']}>
                           <span>Type:</span> {video.type}

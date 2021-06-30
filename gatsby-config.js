@@ -250,6 +250,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'profiles',
+        path: `${__dirname}/src/content/profiles`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'videos',
         path: `${__dirname}/src/content/archive/videos`,
       },

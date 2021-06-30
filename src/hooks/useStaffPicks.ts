@@ -12,7 +12,16 @@ export const useStaffPicks = (): Playlist => {
           description
           imageUrl
           categories
-          curators
+          curators          
+          profiles {
+            id
+            name
+            lang
+            description
+            imageUrl
+            role
+            slug
+          }
           videos
           archiveVideos {
             id

@@ -1,4 +1,5 @@
 import { ArchiveVideo } from './ArchiveVideo'
+import { UserProfile } from './UserProfile';
 
 export interface Playlist {
   id: string
@@ -7,7 +8,7 @@ export interface Playlist {
   description: string
   imageUrl?: string
   categories: Array<string>
-  curators: Array<string>
+  curators: Array<UserProfile>
   videoCount: number
   videos: Array<ArchiveVideo>
 }

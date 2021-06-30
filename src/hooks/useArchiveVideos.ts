@@ -21,7 +21,16 @@ export const useArchiveVideos = (): Array<ArchiveVideo> => {
             type
             track
             tags
-            speakers            
+            speakers
+            profiles {
+              id
+              name
+              lang
+              description
+              imageUrl
+              role
+              slug
+            }
           }
         }
       }
@@ -43,7 +52,8 @@ export function mapToArchiveVideo(source: any): ArchiveVideo {
     expertise: source.frontmatter.expertise,
     type: source.frontmatter.type,
     track: source.frontmatter.track,
+    keywords: source.frontmatter.keywords,
     tags: source.frontmatter.tags,
-    speakers: source.frontmatter.speakers
+    speakers: source.frontmatter.profiles
   }
 }
