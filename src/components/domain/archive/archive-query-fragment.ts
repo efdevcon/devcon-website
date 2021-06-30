@@ -21,6 +21,15 @@ export const query = graphql`
           track
           tags
           speakers
+          profiles {
+            id
+            name
+            lang
+            description
+            imageUrl
+            role
+            slug
+          }
         }
       }
     }
@@ -59,32 +68,41 @@ export const query = graphql`
       filter: {frontmatter: {archiveVideos: {elemMatch: {slug: {eq: $slug }}}}}
     ) {
       nodes {
-          id
-          fields {
-            collection
-          }
-          frontmatter {
-            title
+        id
+        fields {
+          collection
+        }
+        frontmatter {
+          title
+          description
+          imageUrl
+          categories
+          curators
+          profiles {
+            id
+            name
+            lang
             description
             imageUrl
-            categories
-            curators
-            videos
-            archiveVideos {
-              id
-              slug
-              title
-              description
-              edition
-              youtubeUrl
-              ipfsHash
-              expertise
-              type
-              track
-              tags
-              speakers
-            }
+            role
+            slug
           }
+          videos
+          archiveVideos {
+            id
+            slug
+            title
+            description
+            edition
+            youtubeUrl
+            ipfsHash
+            expertise
+            type
+            track
+            tags
+            speakers
+          }
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import { Playlist } from 'src/types/Playlist'
+import { UserProfile } from 'src/types/UserProfile'
 
 export const usePlaylists = (): Array<Playlist> => {
   const data = useStaticQuery(graphql`
@@ -13,6 +14,15 @@ export const usePlaylists = (): Array<Playlist> => {
             imageUrl
             categories
             curators
+            profiles {
+              id
+              name
+              lang
+              description
+              imageUrl
+              role
+              slug
+            }
             videos
             archiveVideos {
               id
@@ -49,7 +59,7 @@ export function mapToPlaylist(source: any): Playlist {
     title: source.frontmatter.title,
     description: source.frontmatter.description,
     imageUrl: source.frontmatter.imageUrl,
-    curators: source.frontmatter.curators,
+    curators: source.frontmatter.profiles,
     categories: source.frontmatter.categories,
     videoCount: source.frontmatter.archiveVideos.length,
     videos: source.frontmatter.archiveVideos

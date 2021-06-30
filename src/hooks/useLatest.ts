@@ -13,6 +13,15 @@ export const useLatest = (): Playlist => {
           imageUrl
           categories
           curators
+          profiles {
+            id
+            name
+            lang
+            description
+            imageUrl
+            role
+            slug
+          }
           videos
           archiveVideos {
             id

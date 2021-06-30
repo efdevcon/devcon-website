@@ -67,7 +67,7 @@ export const Archive = (props: ArchiveProps) => {
                   <div className={css['metadata']}>
                     {video.speakers.length > 0 && (
                       <p>
-                        By <span className="bold">{video.speakers.join(',')}</span>
+                        By <span className="bold">{video.speakers.map(i => i.name).join(',')}</span>
                       </p>
                     )}
                     <p className="bold">Devcon {video.edition}</p>

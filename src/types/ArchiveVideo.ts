@@ -1,3 +1,5 @@
+import { UserProfile } from "./UserProfile";
+
 export interface ArchiveVideo {
   id: string
   slug: string
@@ -11,7 +13,7 @@ export interface ArchiveVideo {
   track: string
   keywords: Array<string>
   tags: Array<string>
-  speakers: Array<string>
+  speakers: Array<UserProfile>
 }
 
 export function mapToArchiveVideo(source: any) { 

@@ -69,7 +69,7 @@ const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
               <div className="label">{playlist.videos.length} talks</div>
               <h2 className="title">{playlist.title}</h2>
               <p className="text-uppercase">
-                By <span className="bold">{playlist.curators.join(', ')}</span>
+                By <span className="bold">{playlist.curators.map(i => i.name).join(', ')}</span>
               </p>
               <div className={css['icons']}>
                 <PlaylistIcon />
@@ -209,77 +209,6 @@ export const Video = (props: VideoProps) => {
           <Suggested video={video} playlists={props.playlists} relatedVideos={props.relatedVideos} />
         </div>
       </PageHero>
-
-      {/* <div className="section">
-        <div className="content">
-          <div className={css['container']}>
-            <div className={css['video']}>
-              <div className={css['player']}>
-                <div className="aspect">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${getVideoId(props.video)}`}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  />
-                </div>
-              </div>
-
-              <div className={css['tabs-video']}>
-                <Tabs>
-                  <Tab title="Details">
-                    <div className={css['content']}>
-                      <h1 className="font-xxl title">{video.title}</h1>
-
-                      <div className={css['descriptors']}>
-                        <p className={css['descriptor']}>
-                          <span>Speaker:</span> {video.speakers.join(',')}
-                        </p>
-                        <p className={css['descriptor']}>
-                          <span>Type:</span> {video.type}
-                        </p>
-                        <p className={css['descriptor']}>
-                          <span>Expertise:</span> {video.expertise}
-                        </p>
-                        <p className={css['descriptor']}>
-                          <span>Event:</span> Devcon {video.edition}
-                        </p>
-                      </div>
-
-                      <div className={css['description']}>
-                        <div className={css['text']}>{video.description}</div>
-                      </div>
-                    </div>
-
-                    <Labels tags={video.tags} playlists={props.playlists} />
-
-                    <div className={css['speakers']}>
-                      <div className={css['speaker']}>
-                        <img className={css['thumbnail']} src="https://i3.ytimg.com/vi/66SaEDzlmP4/maxresdefault.jpg" />
-
-                        <div className={css['text']}>
-                          <div className={css['title']}>
-                            <p className="bold">Vitalik Buterin</p>
-                            <p className="font-xs"> Researcher</p>
-                          </div>
-                          <p className="font-sm">
-                            Machine learning is being adopted more and more broadly in technology. Such success is
-                            largely due to a combination of algorithmic breakthroughs, computation resource
-                            improvements, and the access to a large amount of diverse training data.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </Tab>
-
-                  {video.resources && <Tab title="Resources">Resources</Tab>}
-                </Tabs>
-              </div>
-            </div>
-            <Suggested video={video} playlists={props.playlists} relatedVideos={props.relatedVideos} />
-          </div>
-        </div>
-      </div> */}
 
       <Footer />
     </div>
