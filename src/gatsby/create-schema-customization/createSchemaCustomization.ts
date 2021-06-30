@@ -32,6 +32,7 @@ const baseTypes = `
     description: String,
     youtubeUrl: String,
     ipfsHash: String,
+    duration: Int,
     expertise: String,
     type: String,
     track: String,
@@ -46,7 +47,7 @@ const baseTypes = `
     name: String
     role: String
     description: String
-    imageUrl: String!
+    imageUrl: String
   }
 `
 

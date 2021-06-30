@@ -66,6 +66,7 @@ export const query = graphql`
           edition
           youtubeUrl
           ipfsHash
+          duration
           expertise
           type
           track

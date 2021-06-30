@@ -31,6 +31,7 @@ export const useMostPopular = (): Playlist => {
             edition
             youtubeUrl
             ipfsHash
+            duration
             expertise
             type
             track

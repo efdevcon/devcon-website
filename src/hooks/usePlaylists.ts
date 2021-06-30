@@ -32,6 +32,7 @@ export const usePlaylists = (): Array<Playlist> => {
               edition
               youtubeUrl
               ipfsHash
+              duration
               expertise
               type
               track
@@ -59,7 +60,8 @@ export function mapToPlaylist(source: any): Playlist {
     title: source.frontmatter.title,
     description: source.frontmatter.description,
     imageUrl: source.frontmatter.imageUrl,
-    curators: source.frontmatter.profiles,
+    curators: source.frontmatter.curators,
+    profiles: source.frontmatter.profiles,
     categories: source.frontmatter.categories,
     videoCount: source.frontmatter.archiveVideos.length,
     videos: source.frontmatter.archiveVideos

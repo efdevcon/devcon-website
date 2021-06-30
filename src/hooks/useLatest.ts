@@ -31,6 +31,7 @@ export const useLatest = (): Playlist => {
             edition
             youtubeUrl
             ipfsHash
+            duration
             expertise
             type
             track

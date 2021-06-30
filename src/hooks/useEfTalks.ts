@@ -31,6 +31,7 @@ export const useEfTalks = (): Playlist => {
             edition
             youtubeUrl
             ipfsHash
+            duration
             expertise
             type
             track

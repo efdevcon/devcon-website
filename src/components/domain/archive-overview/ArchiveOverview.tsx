@@ -45,7 +45,7 @@ export function ArchiveOverview(props: ArchiveProps) {
                   <span className={css['devcon']}>Devcon {video.devcon}</span>
                   <span className={css['title']}>{video.title}</span>
 
-                  <span className={css['speakers']}>{video.speakers}</span>
+                  <span className={css['speakers']}>{video.speakers.join(',')}</span>
                 </div>
               )
             })}

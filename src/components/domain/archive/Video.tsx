@@ -15,6 +15,9 @@ import PlaylistIcon from 'src/assets/icons/playlist.svg'
 import { useLocation } from '@reach/router'
 import { getVideoId } from 'src/utils/video'
 import queryString from 'query-string'
+import moment from 'moment'
+import { UserProfile } from 'src/types/UserProfile'
+import { Avatar } from './Avatar'
 
 type VideoProps = {
   video: ArchiveVideo
@@ -64,7 +67,7 @@ const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
               <h2 className="title">{playlist.title}</h2>
               {playlist.curators && playlist.curators.length > 0 && (
                 <p className="text-uppercase">
-                  By <span className="bold">{playlist.curators.map(i => i.name).join(', ')}</span>
+                  By <span className="bold">{playlist.curators.join(', ')}</span>
                 </p>
               )}
               {/* <div className={css['icons']}>
@@ -157,6 +160,11 @@ export const Video = (props: VideoProps) => {
                     <h1 className="font-xxl title">{video.title}</h1>
 
                     <div className={css['descriptors']}>
+                      {video.duration && 
+                        <p className={css['descriptor']}>
+                          <span>Duration:</span> {moment.utc(video.duration*1000).format('HH:mm:ss')}
+                        </p>
+                      }
                       <p className={css['descriptor']}>
                         <span>Speaker:</span> {video.speakers.join(',')}
                       </p>
@@ -180,21 +188,24 @@ export const Video = (props: VideoProps) => {
 
                   <div className={css['speakers']}>
                     {/* <p className="text-uppercase font-sm">About the speakers</p> */}
-                    <div className={css['speaker']}>
-                      <img className={css['thumbnail']} src="https://i3.ytimg.com/vi/66SaEDzlmP4/maxresdefault.jpg" />
+                    {video.profiles.map((i: UserProfile) => {
+                      return (
+                        <div className={css['speaker']}>
+                          <Avatar profile={i} className={css['thumbnail']} />
+                          {/* <img className={css['thumbnail']} src="https://i3.ytimg.com/vi/66SaEDzlmP4/maxresdefault.jpg" /> */}
 
-                      <div className={css['text']}>
-                        <div className={css['title']}>
-                          <p className="bold">Vitalik Buterin</p>
-                          <p className="font-xs"> Researcher</p>
+                          <div className={css['text']}>
+                            <div className={css['title']}>
+                              <p className="bold">{i.name}</p>
+                              <p className="font-xs"> {i.role}</p>
+                            </div>
+                            <p className="font-sm">
+                              {i.description}
+                            </p>
+                          </div>
                         </div>
-                        <p className="font-sm">
-                          Machine learning is being adopted more and more broadly in technology. Such success is largely
-                          due to a combination of algorithmic breakthroughs, computation resource improvements, and the
-                          access to a large amount of diverse training data.
-                        </p>
-                      </div>
-                    </div>
+                      )
+                    })}
                   </div>
                 </Tab>
 

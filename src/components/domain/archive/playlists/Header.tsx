@@ -27,7 +27,7 @@ export function PlaylistHeader(props: Props) {
           <p className="bold font-xs">
             <span className={css['opaque']}>CURATED BY:</span>
           </p>
-          <p className="bold font-xs">{props.playlist.curators.map(i => i.name).join(', ').toUpperCase()}</p>
+          <p className="bold font-xs">{props.playlist.curators.join(', ').toUpperCase()}</p>
           </>
         )}
       </div>
