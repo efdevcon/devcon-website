@@ -4,6 +4,7 @@ title: "C++ Ethereum and Emacs"
 description: "Lefteris Karapetsas presents on C++ Ethereum and Emacs."
 youtubeUrl: "https://youtu.be/805SMR0uEi0"
 ipfsHash: ''
+duration: 814
 expertise: ''
 type: "Talk"
 track: "Zero"

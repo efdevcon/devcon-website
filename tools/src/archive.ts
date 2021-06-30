@@ -1,4 +1,7 @@
 import { ArchiveVideo } from '../../src/types/ArchiveVideo';
+import { getVideoId } from '../../src/utils/video'
+import fetch from 'node-fetch';
+import moment from 'moment'
 const GSheetReader: any = require('g-sheets-api');
 const slugify = require('slugify')
 const fs = require('fs');
@@ -16,13 +19,24 @@ GSheetReader(
     sheetNumber: edition,
   },
   (results: any) => {
-    const videos: Array<ArchiveVideo> = results.map((result: any) => {
-      return { 
+    console.log('Records found', results.length)
+
+    const videos: Array<ArchiveVideo> = []
+    results.forEach(async (result: any) => {
+      console.log('Processing video..', result['Talk Name'])
+      let duration = 0
+      if (result['Video URL']) {
+        const id = getVideoId(result['Video URL'])
+        duration = await getVideoDuration(id)
+      }
+
+      const video = { 
         edition: edition,
         title: result['Talk Name'],
         description: result['Talk Description'],
         youtubeUrl: result['Video URL'],
         ipfsHash: result['IPFS Hash'],
+        duration: duration,
         expertise: result['Skill level'],
         type: result['Type (Talk, Panel, Workshop, Other)'],
         track: result['Track'],
@@ -30,25 +44,30 @@ GSheetReader(
         tags: result['Tags'] ? result['Tags'].split(',') : undefined,
         speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',') : undefined
       } as ArchiveVideo
-    });
 
-    console.log('Videos found', videos.length)
-    videos.forEach((video) => {
+      videos.push(video)
       writeToFile(video)
-    });
+    })
 
-    if (generatePlaylist) {
-      // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists
-      const editionDir = archiveDir + '/' + edition
-      const videoPaths = videos.map(i => i.edition + '/' + slugify(i.title.toLowerCase(), { strict: true }) + '/index')
-      fs.writeFileSync(editionDir + '/playlist.md', '- ' + videoPaths.join('\n- '));
-    }
+    // if (generatePlaylist) {
+    //   // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists
+    //   const editionDir = archiveDir + '/' + edition
+    //   const videoPaths = videos.map(i => i.edition + '/' + slugify(i.title.toLowerCase(), { strict: true }) + '/index')
+    //   fs.writeFileSync(editionDir + '/playlist.md', '- ' + videoPaths.join('\n- '));
+    // }
   },
   (error: any) => {
     console.log('Unable to fetch sheet results..')
     console.error(error)
   }
-);
+)
+
+async function getVideoDuration(id: string): Promise<number> { 
+  const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&part=contentDetails&key=${process.env.YOUTUBE_API_KEY}`);
+  const body = await response.json();
+  const duration = body?.items?.length > 0 ? body.items[0].contentDetails.duration : 0
+  return moment.duration(duration).asSeconds();
+}
 
 function writeToFile(video: ArchiveVideo) { 
     const editionDir = archiveDir + '/' + video.edition

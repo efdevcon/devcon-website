@@ -3,6 +3,7 @@ import css from './video-card.module.scss'
 import { BasicCard } from 'src/components/common/card'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { Playlist } from 'src/types/Playlist'
+import { getVideoId } from 'src/utils/video'
 
 interface Props {
   video: ArchiveVideo
@@ -14,18 +15,6 @@ interface Props {
   horizontal?: boolean
   vertical?: boolean
   compact?: boolean
-}
-
-export function getVideoId(video: ArchiveVideo): string {
-  let videoId = video.youtubeUrl ?? ''
-  videoId = videoId.replace('https://youtu.be/', '')
-  videoId = videoId.replace('https://www.youtube.com/embed/', '')
-  videoId = videoId.replace('https://www.youtube.com/watch?v=', '')
-  videoId = videoId.replace('https://studio.youtube.com/video/', '')
-  videoId = videoId.replace('&feature=youtu.be', '')
-  videoId = videoId.replace('/edit', '')
-
-  return videoId
 }
 
 export const VideoCard = (props: Props) => {
@@ -56,7 +45,7 @@ export const VideoCard = (props: Props) => {
       <div className={css['aspect-wrapper']}>
         <div className="aspect">
           <img
-            src={`https://img.youtube.com/vi/${getVideoId(props.video)}/maxresdefault.jpg`}
+            src={`https://img.youtube.com/vi/${getVideoId(props.video.youtubeUrl)}/maxresdefault.jpg`}
             alt={`${props.video.title} preview`}
             placeholder="blurred"
           />

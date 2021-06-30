@@ -8,7 +8,8 @@ export interface ArchiveVideo {
   description: string
   youtubeUrl: string
   ipfsHash: string
-  expertise: string,
+  duration: number
+  expertise: string
   type: string
   track: string
   keywords: Array<string>
