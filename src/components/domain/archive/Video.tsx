@@ -13,7 +13,7 @@ import { Playlist } from 'src/types/Playlist'
 import ShuffleIcon from 'src/assets/icons/shuffle.svg'
 import PlaylistIcon from 'src/assets/icons/playlist.svg'
 import { useLocation } from '@reach/router'
-import { getVideoId } from 'src/components/domain/archive/playlists/VideoCard'
+import { getVideoId } from 'src/utils/video'
 import queryString from 'query-string'
 
 type VideoProps = {
@@ -146,7 +146,7 @@ export const Video = (props: VideoProps) => {
             <div className={css['player']}>
               <div className="aspect">
                 <iframe
-                  src={`https://www.youtube.com/embed/${getVideoId(props.video)}`}
+                  src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
