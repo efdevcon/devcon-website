@@ -34,11 +34,13 @@ export const videoResolver = {
             description: source.frontmatter.description,
             youtubeUrl: source.frontmatter.youtubeUrl,
             ipfsHash: source.frontmatter.ipfsHash,
+            duration: source.frontmatter.duration,
             expertise: source.frontmatter.expertise,
             type: source.frontmatter.type,
             track: source.frontmatter.track,
             tags: source.frontmatter.tags,
-            speakers: source.frontmatter.speakers
+            speakers: source.frontmatter.speakers,
+            profiles: source.frontmatter.profiles
           } as ArchiveVideo
         })
       })

@@ -8,7 +8,8 @@ export interface Playlist {
   description: string
   imageUrl?: string
   categories: Array<string>
-  curators: Array<UserProfile>
+  curators: Array<string>
+  profiles: Array<UserProfile>
   videoCount: number
   videos: Array<ArchiveVideo>
 }

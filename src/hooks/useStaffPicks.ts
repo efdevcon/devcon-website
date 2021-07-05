@@ -31,6 +31,7 @@ export const useStaffPicks = (): Playlist => {
             edition
             youtubeUrl
             ipfsHash
+            duration
             expertise
             type
             track

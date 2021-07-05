@@ -17,6 +17,7 @@ export const useArchiveVideos = (): Array<ArchiveVideo> => {
             description
             youtubeUrl
             ipfsHash
+            duration
             expertise
             type
             track
@@ -49,11 +50,13 @@ export function mapToArchiveVideo(source: any): ArchiveVideo {
     description: source.frontmatter.description,
     youtubeUrl: source.frontmatter.youtubeUrl,
     ipfsHash: source.frontmatter.ipfsHash,
+    duration: source.frontmatter.duration,
     expertise: source.frontmatter.expertise,
     type: source.frontmatter.type,
     track: source.frontmatter.track,
     keywords: source.frontmatter.keywords,
     tags: source.frontmatter.tags,
-    speakers: source.frontmatter.profiles
+    speakers: source.frontmatter.speakers,
+    profiles: source.frontmatter.profiles
   }
 }

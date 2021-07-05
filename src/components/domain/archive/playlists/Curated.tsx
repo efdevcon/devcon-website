@@ -71,7 +71,7 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
                   <h4 className="title">{i.title}</h4>
                   {i.curators && i.curators.length > 0 && (
                     <p className="bold font-xs">
-                      <span className={css['opaque']}>BY</span> {i.curators.map(i => i.name).join(', ').toUpperCase()}
+                      <span className={css['opaque']}>BY</span> {i.curators.join(', ').toUpperCase()}
                     </p>
                   )}
                 </div>
