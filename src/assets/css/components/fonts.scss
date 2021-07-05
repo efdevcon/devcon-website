@@ -135,6 +135,36 @@ h6,
   // font-size: $sizes-size-16 + $sizes-size-8;
 }
 
+// Sizes
+.font-xxs-fixed {
+  @include fonts-xxs-fixed;
+}
+
+.font-xs-fixed {
+  @include fonts-xs-fixed;
+}
+
+.font-sm-fixed {
+  @include fonts-sm-fixed;
+}
+
+.font-md-fixed {
+  @include fonts-md-fixed;
+}
+
+.font-lg-fixed {
+  @include fonts-lg-fixed;
+}
+
+.font-xl-fixed {
+  @include fonts-xl-fixed;
+}
+
+.font-xxl-fixed {
+  @include fonts-xxl-fixed;
+  // font-size: $sizes-size-16 + $sizes-size-8;
+}
+
 .font-massive {
   @include fonts-massive;
 }

@@ -1,6 +1,29 @@
 @use 'src/assets/css/partials/index' as *;
 
+@mixin compact-card {
+  &.compact {
+    .aspect-wrapper {
+      flex-basis: 42%;
+    }
+
+    .body {
+      padding: $gaps-gap-2;
+
+      .title {
+        margin: 0px;
+        // @include fonts-sm-fixed;
+      }
+
+      .speakers {
+        @include fonts-xs;
+      }
+    }
+  }
+}
+
 .video-card {
+  border: 1px solid $colors-monochrome-4;
+
   &.slide {
     cursor: grab;
     margin-left: $gaps-gap-4;
@@ -12,7 +35,6 @@
   }
 
   &.horizontal {
-    // And not [!vertical + max-width: $breakpoints-lg)]
     &:not(.force-vertical) {
       display: flex;
       flex-direction: row;
@@ -20,8 +42,13 @@
 
       .aspect-wrapper {
         position: relative;
-        flex-basis: 50%;
+        flex-basis: 30%;
         flex-shrink: 0;
+        border-right: 1px solid $colors-monochrome-4;
+
+        @media (max-width: $breakpoints-xl) {
+          flex-basis: 35%;
+        }
 
         :global(.aspect) {
           height: 100%;
@@ -42,55 +69,38 @@
           display: -webkit-box;
           -webkit-line-clamp: 2;
         }
-      }
-    }
-  }
 
-  .body {
-    padding: $gaps-gap-2 $gaps-gap-3 $gaps-gap-3 $gaps-gap-3;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
-    cursor: pointer;
+        .description {
+          @media (max-width: $breakpoints-xl) {
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+          }
 
-    &:hover {
-      .title {
-        text-decoration: underline;
-      }
-    }
-
-    h4 {
-      margin-top: $gaps-gap-1;
-      margin-bottom: $gaps-gap-4;
-    }
-
-    .title {
-      @include fonts-title;
-      @include fonts-lg;
-      margin-top: $gaps-gap-2;
-      margin-bottom: $gaps-gap-4;
-    }
-
-    .description {
-      @include fonts-sm;
-    }
-
-    .bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-
-      .speakers {
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
+          @media (max-width: $breakpoints-md) {
+            -webkit-line-clamp: 2;
+          }
+        }
       }
 
-      :global(.label) {
-        flex-shrink: 0;
-        margin-left: $gaps-gap-2;
+      @media (max-width: $breakpoints-lg) {
+        .aspect-wrapper {
+          flex-basis: 42%;
+        }
+
+        .body {
+          padding: $gaps-gap-2;
+
+          .title {
+            margin: 0px;
+            @include fonts-sm-fixed;
+          }
+
+          .speakers {
+            @include fonts-xs;
+          }
+        }
       }
     }
   }
@@ -120,23 +130,74 @@
     }
   }
 
-  &.sm {
-    .body {
-      padding-left: $gaps-gap-4;
-      padding-top: $gaps-gap-2;
+  &.compact {
+    .aspect-wrapper {
+      flex-basis: 42% !important;
+    }
 
-      @media (max-width: $breakpoints-lg) {
-        // padding-left: $gaps-gap-2;
-        padding: $gaps-gap-2;
-        padding-top: 0px;
-      }
+    .body {
+      padding: $gaps-gap-2 !important;
 
       .title {
-        @include fonts-md;
+        @include fonts-sm-fixed;
+        margin: 0px !important;
       }
 
-      .description {
+      .speakers {
         @include fonts-xs;
+      }
+    }
+  }
+
+  .body {
+    padding: $gaps-gap-2 $gaps-gap-3 $gaps-gap-3 $gaps-gap-3;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+      .title {
+        text-decoration: underline;
+      }
+    }
+
+    h4 {
+      margin-top: $gaps-gap-1;
+      margin-bottom: $gaps-gap-4;
+    }
+
+    .title {
+      @include fonts-title;
+      @include fonts-lg-fixed;
+      margin-top: $gaps-gap-2;
+      margin-bottom: $gaps-gap-4;
+    }
+
+    .description {
+      margin-bottom: $gaps-gap-2;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .type {
+        @include fonts-xxs;
+      }
+
+      .speakers {
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+      }
+
+      :global(.label) {
+        flex-shrink: 0;
+        margin-left: $gaps-gap-2;
       }
     }
   }

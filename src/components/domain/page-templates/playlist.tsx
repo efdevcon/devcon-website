@@ -17,7 +17,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
   return (
     <div className={css['container']}>
       <SEO />
-      <Header />
+      <Header withStrip />
 
       <PageHero>
         <PlaylistHeader playlist={playlist} />

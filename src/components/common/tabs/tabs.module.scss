@@ -29,7 +29,7 @@
   .active {
     @extend li;
     opacity: 1;
-    // background: rgba(133, 142, 169, 0.15);
+    background: $colors-monochrome-2;
 
     -webkit-box-shadow: inset 0px -2px 0px 0px $colors-main;
     -moz-box-shadow: inset 0px -2px 0px 0px $colors-main;

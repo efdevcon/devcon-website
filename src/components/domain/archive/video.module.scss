@@ -3,7 +3,7 @@
 .container {
   display: flex;
   // margin-top: $gaps-gap-16;
-  margin-bottom: $gaps-gap-16;
+  margin-bottom: $gaps-gap-4;
   align-items: flex-start;
 
   @media (max-width: 1300px) {
@@ -16,6 +16,10 @@
     flex-grow: 1;
     width: 100%;
     background: $colors-monochrome-1;
+
+    .player {
+      border: 1px solid $colors-monochrome-5;
+    }
 
     .content {
       padding-top: $gaps-gap-6;
@@ -55,6 +59,8 @@
     }
 
     .speakers {
+      margin-top: $gaps-gap-4;
+      margin-bottom: $gaps-gap-4;
       display: flex;
       flex-direction: column;
 
@@ -111,6 +117,7 @@
 
     @media (max-width: 1300px) {
       margin-left: 0px;
+      margin-top: $gaps-gap-4;
       border: none;
       flex-basis: auto;
       width: 100%;

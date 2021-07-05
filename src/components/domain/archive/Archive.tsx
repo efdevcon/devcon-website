@@ -39,7 +39,7 @@ export const Archive = (props: ArchiveProps) => {
   return (
     <div className={css['container']}>
       <SEO />
-      <Header />
+      <Header withStrip />
       <PageHero
         scenes={staffpicks.videos.map(video => {
           return {

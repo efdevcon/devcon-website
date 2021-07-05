@@ -38,7 +38,7 @@ export const StaffPicks = (props: any) => {
       <div className={css['slider']}>
         <Slider {...sliderSettings}>
           {staffPicks.videos.map(i => {
-            return <VideoCard key={i.id} big slide video={i} />
+            return <VideoCard key={i.id} slide video={i} />
           })}
         </Slider>
       </div>

@@ -50,7 +50,7 @@ export const Watch = (props: WatchProps) => {
   return (
     <div className={css['container']}>
       <SEO />
-      <Header />
+      <Header withStrip />
 
       <PageHero
         title="Watch"

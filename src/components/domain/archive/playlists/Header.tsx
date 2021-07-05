@@ -16,29 +16,35 @@ export function PlaylistHeader(props: Props) {
   return (
     <div className={className}>
       <div className={css['content-section']}>
-        <div className="label">{props.playlist.videoCount ?? 0} talks</div>
-        <h2 className="title font-xxl">{props.playlist.title}</h2>
-        <p className={css['description']}>{props.playlist.description}</p>
-        <p className={css['controls']}>
-          <IconWatch /> <span className="bold font-xs">WATCH PLAYLIST</span>
-        </p>
-        {props.playlist.curators && props.playlist.curators.length > 0 && (
-          <>
-          <p className="bold font-xs">
-            <span className={css['opaque']}>CURATED BY:</span>
+        <div>
+          <div className="label">{props.playlist.videoCount ?? 0} talks</div>
+          <h2 className="title font-xxl">{props.playlist.title}</h2>
+          <p className={css['description']}>{props.playlist.description}</p>
+        </div>
+
+        <div>
+          <p className={css['controls']}>
+            <IconWatch /> <span className="bold font-xs">WATCH PLAYLIST</span>
           </p>
-          <p className="bold font-xs">{props.playlist.curators.map(i => i.name).join(', ').toUpperCase()}</p>
-          </>
-        )}
+          {props.playlist.curators && props.playlist.curators.length > 0 && (
+            <>
+              <p className="bold font-xs">
+                <span className={css['opaque']}>CURATED BY:</span>
+              </p>
+              <p className="bold font-xs">
+                {props.playlist.curators
+                  .map(i => i.name)
+                  .join(', ')
+                  .toUpperCase()}
+              </p>
+            </>
+          )}
+        </div>
       </div>
+
       <div className={css['image-section']}>
-        <img
-          src={props.playlist.imageUrl}
-          alt={`${props.playlist.title} Devcon playlist`}
-          placeholder="blurred"
-        />
+        <img src={props.playlist.imageUrl} alt={`${props.playlist.title} Devcon playlist`} placeholder="blurred" />
       </div>
     </div>
   )
 }
-

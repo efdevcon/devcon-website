@@ -11,7 +11,6 @@ interface Props {
   showDescription?: boolean
   className?: string
   slide?: Boolean
-  size?: 'big' | 'sm'
   horizontal?: boolean
   vertical?: boolean
   compact?: boolean
@@ -22,7 +21,6 @@ export const VideoCard = (props: Props) => {
 
   if (props.className) className += ` ${props.className}`
   if (props.slide) className += ` ${css['slide']}`
-  if (props.size) className += ` ${css[props.size]}`
   if (props.horizontal) className += ` ${css['horizontal']}`
   if (props.vertical) className += ` ${css['force-vertical']}`
   if (props.compact) className += ` ${css['compact']}`
@@ -58,9 +56,9 @@ export const VideoCard = (props: Props) => {
         <div className={css['bottom']}>
           <div>
             {props.video.speakers && (
-              <p className={`${css['speakers']} font-xs bold`}>{props.video.speakers.join(', ').toUpperCase()}</p>
+              <p className={`${css['speakers']} bold`}>{props.video.speakers.join(', ').toUpperCase()}</p>
             )}
-            {!props.compact && <p className="font-xxs">{props.video.type}</p>}
+            <p className={css['type']}>{props.video.type}</p>
           </div>
 
           <div className="label sm">Devcon {props.video.edition}</div>

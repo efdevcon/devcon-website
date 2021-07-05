@@ -11,6 +11,7 @@
 }
 
 .news-container {
+  margin-top: $gaps-gap-10;
   display: flex;
   flex-direction: column;
   @include layout-content;

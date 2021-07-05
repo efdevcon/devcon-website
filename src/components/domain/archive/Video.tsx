@@ -33,7 +33,7 @@ const List = ({ video, playlist, videos }: { video: ArchiveVideo; playlist?: Pla
         if (isCurrentlyWatching) className = css['selected']
 
         return (
-          <VideoCard playlist={playlist} key={index} horizontal video={playlistVideo} compact className={className} />
+          <VideoCard compact playlist={playlist} key={index} horizontal video={playlistVideo} className={className} />
         )
       })}
     </div>
@@ -97,7 +97,7 @@ const Labels = ({ tags, playlists }: any) => {
     <div className={css['labels-container']}>
       {hasTags && (
         <div className={css['group']}>
-          <p className="font-xs">Related Tags:</p>
+          <p className="font-xs bold">Tags</p>
           <div className={css['labels']}>
             {tags.map((tag: any) => {
               return (
@@ -112,7 +112,7 @@ const Labels = ({ tags, playlists }: any) => {
 
       {hasPlaylists && (
         <div className={css['group']}>
-          <p className="font-xs">Playlists:</p>
+          <p className="font-xs bold">Playlists</p>
           <div className={css['labels']}>
             {playlists.map((playlist: any) => {
               return (
@@ -134,7 +134,7 @@ export const Video = (props: VideoProps) => {
   return (
     <div className={archiveCss['container']}>
       <SEO />
-      <Header />
+      <Header withStrip />
 
       <PageHero path={props.video.title}>
         <div className={css['container']}>

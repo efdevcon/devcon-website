@@ -267,6 +267,14 @@
     align-items: flex-end;
     z-index: 1;
 
+    .arrows {
+      > * {
+        &:first-child {
+          margin-right: $gaps-gap-1;
+        }
+      }
+    }
+
     @media (max-width: $breakpoints-lg) {
       grid-column: 1 / 4;
       grid-row: 2 / 2;
