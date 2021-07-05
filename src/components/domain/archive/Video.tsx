@@ -191,7 +191,7 @@ export const Video = (props: VideoProps) => {
                     {/* <p className="text-uppercase font-sm">About the speakers</p> */}
                     {video.profiles.map((i: UserProfile) => {
                       return (
-                        <div className={css['speaker']}>
+                        <div key={i.name} className={css['speaker']}>
                           <Avatar profile={i} className={css['thumbnail']} />
                           {/* <img className={css['thumbnail']} src="https://i3.ytimg.com/vi/66SaEDzlmP4/maxresdefault.jpg" /> */}
 
