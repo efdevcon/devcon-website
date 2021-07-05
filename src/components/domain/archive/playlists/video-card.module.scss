@@ -32,6 +32,33 @@
 
   .aspect-wrapper {
     position: relative;
+
+    .duration {
+      position: absolute;
+      right: $gaps-gap-2;
+      bottom: $gaps-gap-2;
+      width: auto;
+      height: auto;
+      top: auto;
+      left: auto;
+    }
+
+    .edition {
+      display: flex;
+      position: absolute;
+      left: $gaps-gap-2;
+      bottom: $gaps-gap-2;
+      width: auto;
+      height: auto;
+      top: auto;
+      right: auto;
+
+      > * {
+        display: inline-flex;
+        align-self: flex-start;
+        margin-right: $gaps-gap-1;
+      }
+    }
   }
 
   &.horizontal {
@@ -42,12 +69,13 @@
 
       .aspect-wrapper {
         position: relative;
-        flex-basis: 30%;
+        // flex-basis: 30%;
+        flex-basis: 250px;
         flex-shrink: 0;
         border-right: 1px solid $colors-monochrome-4;
 
         @media (max-width: $breakpoints-xl) {
-          flex-basis: 35%;
+          // flex-basis: 35%;
         }
 
         :global(.aspect) {
@@ -86,7 +114,7 @@
 
       @media (max-width: $breakpoints-lg) {
         .aspect-wrapper {
-          flex-basis: 42%;
+          // flex-basis: 42%;
         }
 
         .body {

@@ -10,8 +10,9 @@ import { Tab } from 'src/components/common/tabs/Tabs'
 import { VideoCard } from 'src/components/domain/archive/playlists'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { Playlist } from 'src/types/Playlist'
-import ShuffleIcon from 'src/assets/icons/shuffle.svg'
-import PlaylistIcon from 'src/assets/icons/playlist.svg'
+// import ShuffleIcon from 'src/assets/icons/shuffle.svg'
+// import PlaylistIcon from 'src/assets/icons/playlist.svg'
+import { Link } from 'src/components/common/link'
 import { useLocation } from '@reach/router'
 import { getVideoId } from 'src/utils/video'
 import queryString from 'query-string'
@@ -104,9 +105,9 @@ const Labels = ({ tags, playlists }: any) => {
           <div className={css['labels']}>
             {tags.map((tag: any) => {
               return (
-                <div key={tag} className="label bold sm">
+                <Link to={`/archive/watch?tags=${encodeURIComponent(tag)}`} key={tag} className="label bold sm">
                   {tag}
-                </div>
+                </Link>
               )
             })}
           </div>
@@ -119,9 +120,9 @@ const Labels = ({ tags, playlists }: any) => {
           <div className={css['labels']}>
             {playlists.map((playlist: any) => {
               return (
-                <div key={playlist.title} className="label bold sm">
+                <Link to={playlist.slug} key={playlist.title} className="label bold sm">
                   {playlist.title}
-                </div>
+                </Link>
               )
             })}
           </div>
@@ -160,11 +161,11 @@ export const Video = (props: VideoProps) => {
                     <h1 className="font-xxl title">{video.title}</h1>
 
                     <div className={css['descriptors']}>
-                      {video.duration && 
+                      {video.duration && (
                         <p className={css['descriptor']}>
-                          <span>Duration:</span> {moment.utc(video.duration*1000).format('HH:mm:ss')}
+                          <span>Duration:</span> {moment.utc(video.duration * 1000).format('HH:mm:ss')}
                         </p>
-                      }
+                      )}
                       <p className={css['descriptor']}>
                         <span>Speaker:</span> {video.speakers.join(',')}
                       </p>
@@ -199,9 +200,7 @@ export const Video = (props: VideoProps) => {
                               <p className="bold">{i.name}</p>
                               <p className="font-xs"> {i.role}</p>
                             </div>
-                            <p className="font-sm">
-                              {i.description}
-                            </p>
+                            <p className="font-sm">{i.description}</p>
                           </div>
                         </div>
                       )

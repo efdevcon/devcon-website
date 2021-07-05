@@ -77,6 +77,11 @@
         display: flex;
         border: 1px solid $colors-monochrome-5;
         padding: $gaps-gap-4;
+        margin-bottom: $gaps-gap-4;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
 
         @media (max-width: 1300px) {
           padding: $gaps-gap-4;
@@ -84,10 +89,15 @@
 
         .title {
           display: flex;
+          align-items: center;
 
           > p {
             &:first-child {
               margin-right: $gaps-gap-2;
+            }
+
+            &:last-child {
+              line-height: 100%;
             }
           }
         }

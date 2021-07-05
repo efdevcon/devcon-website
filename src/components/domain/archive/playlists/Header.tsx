@@ -3,6 +3,7 @@ import React from 'react'
 import IconWatch from 'src/assets/icons/watch.svg'
 import { Playlist } from 'src/types/Playlist'
 import css from './header.module.scss'
+import { Link } from 'src/components/common/link'
 
 type Props = {
   playlist: Playlist
@@ -12,6 +13,8 @@ type Props = {
 export function PlaylistHeader(props: Props) {
   let className = css['container']
   if (props.className) className += ` ${props.className}`
+
+  const firstVideo = props.playlist.videos[0]
 
   return (
     <div className={className}>
@@ -23,20 +26,19 @@ export function PlaylistHeader(props: Props) {
         </div>
 
         <div>
-          <p className={css['controls']}>
+          <Link
+            className={css['controls']}
+            to={`${firstVideo.slug}?playlist=${encodeURIComponent(props.playlist.title)}`}
+          >
             <IconWatch /> <span className="bold font-xs">WATCH PLAYLIST</span>
-          </p>
+          </Link>
+
           {props.playlist.curators && props.playlist.curators.length > 0 && (
             <>
               <p className="bold font-xs">
                 <span className={css['opaque']}>CURATED BY:</span>
               </p>
-              <p className="bold font-xs">
-                {props.playlist.curators
-                  .map(i => i.name)
-                  .join(', ')
-                  .toUpperCase()}
-              </p>
+              <p className="bold font-xs">{props.playlist.curators.join(', ').toUpperCase()}</p>
             </>
           )}
         </div>

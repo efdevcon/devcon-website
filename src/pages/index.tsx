@@ -19,7 +19,7 @@ export default pageHOC(function Index({ data }: any) {
 })
 
 export const query = graphql`
-  query($language: String!) {
+  query ($language: String!) {
     ...NavigationData
     ...NewsDataInline
     ...Notification

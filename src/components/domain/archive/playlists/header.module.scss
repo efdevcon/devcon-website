@@ -37,14 +37,15 @@
 
       &:hover {
         cursor: pointer;
+        text-decoration: underline;
       }
 
-      > svg {
+      svg {
         --color-icon: $colors-monochrome-10;
-        font-size: 2em;
+        font-size: 1.7em;
       }
 
-      > span {
+      span {
         margin-left: $gaps-gap-2;
       }
     }

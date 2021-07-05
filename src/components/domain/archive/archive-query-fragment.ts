@@ -72,6 +72,7 @@ export const query = graphql`
       nodes {
         id
         fields {
+          slug
           collection
         }
         frontmatter {

@@ -4,6 +4,7 @@ import { BasicCard } from 'src/components/common/card'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { Playlist } from 'src/types/Playlist'
 import { getVideoId } from 'src/utils/video'
+import moment from 'moment'
 
 interface Props {
   video: ArchiveVideo
@@ -45,6 +46,20 @@ export const VideoCard = (props: Props) => {
             alt={`${props.video.title} preview`}
             placeholder="blurred"
           />
+
+          {props.video.duration && (
+            <div className={`${css['duration']} label sm white inverted`}>
+              {moment
+                .utc(props.video.duration * 1000)
+                .format('H:mm:ss')
+                .replace(/^0:/, '')}
+            </div>
+          )}
+
+          <div className={`${css['edition']}`}>
+            <div className={`label sm white inverted`}>Devcon {props.video.edition}</div>
+            <div className={`label sm white inverted`}>{props.video.type}</div>
+          </div>
         </div>
       </div>
       <div className={css['body']}>
@@ -54,14 +69,7 @@ export const VideoCard = (props: Props) => {
         </div>
 
         <div className={css['bottom']}>
-          <div>
-            {props.video.speakers && (
-              <p className={`${css['speakers']} bold`}>{props.video.speakers.join(', ').toUpperCase()}</p>
-            )}
-            <p className={css['type']}>{props.video.type}</p>
-          </div>
-
-          <div className="label sm">Devcon {props.video.edition}</div>
+          <div>{props.video.speakers && <p className={`${css['speakers']}`}>{props.video.speakers.join(', ')}</p>}</div>
         </div>
       </div>
     </BasicCard>
