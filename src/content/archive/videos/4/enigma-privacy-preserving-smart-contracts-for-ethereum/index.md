@@ -4,7 +4,7 @@ title: "Enigma: Privacy-preserving Smart Contracts for Ethereum"
 description: "Enigma is a privacy protocol to enable privacy preserving smart contracts on Ethereum. Enigma utilizes secret contracts - smart contracts that let you use private and sensitive data in decentralized applications. Enigma is building a network for privacy preserving computations. Nodes in the Enigma network that execute secret contracts never see the data that is used in their computations.
 In this talk, we would like to give an overview of the first version of Enigma network, which is currently on testnet, and present the roadmap with specific focus on privacy preserving cryptographic methods including Multiparty Computation (MPC) and Zero Knowledge Proofs. Computing over private data is considered one of the “holy grails” of computer science. With secret contracts, Enigma focuses on building blocks for the Ethereum network, such as voting / governance and auctions, in the short term. Longer term, Enigma enables applications on Ethereum that work with sensitive user data to compete with centralized solutions such as Uber. Enigma can also harden the privacy and resiliency of popular solutions like on-chain voting and sealed-bid auctions. Without privacy, applications and users must turn to centralized solutions or accept severe trade-offs."
 youtubeUrl: "https://youtu.be/CtyEOQ7zckE"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/Qmc8aqcwE8o1qpurhe4sP8FShtUnmAuWosbNXuV98PkihQ?filename=Enigma_-_Privacy-preserving_Smart_Contracts_for_Ethereum_by_Guy_Zyskind_Isan_Rivkin_Devcon4-CtyEOQ7zckE.mp4"
+ipfsHash: "Qmc8aqcwE8o1qpurhe4sP8FShtUnmAuWosbNXuV98PkihQ"
 duration: 1705
 expertise: "Intermediate"
 type: "Talk"

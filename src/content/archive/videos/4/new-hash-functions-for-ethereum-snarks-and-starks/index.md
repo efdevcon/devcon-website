@@ -9,7 +9,7 @@ description: "Traditional cryptographic hash functions such as SHA-256 are well 
 -how new designs will affect EVM and smart contract programming. 
 We will also present other directions and potential research bounties that can be offered to motivate the hash research, crucial for SNARKs, STARKs, and Ethereum."
 youtubeUrl: "https://youtu.be/j14L5wjq9pk"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmSxQW5fdiErURx18t9Sy3fFBmoVKFeRZzmccU29oRPijP?filename=New_hash_functions_for_Ethereum_SNARKs_and_STARKs_by_Dmitry_Khovratovich_Devcon4-j14L5wjq9pk.mp4"
+ipfsHash: "QmSxQW5fdiErURx18t9Sy3fFBmoVKFeRZzmccU29oRPijP"
 duration: 1648
 expertise: "Intermediate"
 type: "Talk"

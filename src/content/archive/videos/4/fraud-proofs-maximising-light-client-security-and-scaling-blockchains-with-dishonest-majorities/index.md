@@ -6,7 +6,7 @@ Research paper draft (work-in-progress): https://www.dropbox.com/s/3zj3burdfrw5
 Data availability code: https://github.com/musalbas/rsmt2d 
 Fraud proofs prototype (work-in-progress): https://github.com/asonnino/fraudproofs-prototype"
 youtubeUrl: "https://youtu.be/niqAo4dSLWw"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmVRJQwmY8x786VSPetPAfNUx5u5SQHUUK26bRRrvm6wGT?filename=Fraud_Proofs_-_Maximising_Light_Client_Security_and_Scaling_Blockchains_with_Dishonest_Majorities-niqAo4dSLWw.mp4"
+ipfsHash: "QmVRJQwmY8x786VSPetPAfNUx5u5SQHUUK26bRRrvm6wGT"
 duration: 1565
 expertise: "Intermediate"
 type: "Talk"

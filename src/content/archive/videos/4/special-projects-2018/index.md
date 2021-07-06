@@ -3,7 +3,7 @@ edition: 4
 title: "Special Projects 2018"
 description: "Grab bag of fun projects, including: fancy oracles, ETH-ETC relations and relays, fancy domains, new swag, new wiki release, islamic finance, opt-in backdoors, ether.cards."
 youtubeUrl: "https://youtu.be/LvrT7QqctmQ"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmfJZJpQSh2iepUCnUkoLoJxkxsR9GWCKgsGYSejLatCJe?filename=Special_Projects_2018_by_Virgil_Griffith_Devcon4-LvrT7QqctmQ.mp4"
+ipfsHash: "QmfJZJpQSh2iepUCnUkoLoJxkxsR9GWCKgsGYSejLatCJe"
 duration: 783
 expertise: "Intermediate"
 type: "Talk"

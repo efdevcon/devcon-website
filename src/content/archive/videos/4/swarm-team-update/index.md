@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "SWARM Team Update"
-description: "Swarm aims to be the native data storage and content distribution infrastructure layer of the "Web 3.0".Since our last update at Devcon3 in Cancun, Swarm has seen major progress in its codebase. The long awaited network rewrite has been completed and several new features have been merged. In this talk members of the Swarm Team will present quick updates. For example, here are some of the updates we'd touch upon: 
+description: "Swarm aims to be the native data storage and content distribution infrastructure layer of the \"Web 3.0\".Since our last update at Devcon3 in Cancun, Swarm has seen major progress in its codebase. The long awaited network rewrite has been completed and several new features have been merged. In this talk members of the Swarm Team will present quick updates. For example, here are some of the updates we'd touch upon: 
 -Encryption - Since the 0.3 release Swarm supports native encryption on the chunk level. Daniel will present a quick overview. 
 -Access Control Trees - newly introduced in Swarm is the support for Access Control Trees. This feature increases the utility of Swarm to a wide range of use cases. Elad will sketch the main features. 
 -Swarm Light Client - The requirements and limitations of the mobile phone present unique challenges for Swarm and we have begun to address them with the Swarm Light Client. Attila will give an update on this project. 
@@ -9,7 +9,7 @@ description: "Swarm aims to be the native data storage and content distribution 
 -Spam prevention in Swarm - new ideas for countering a flood of bad data. (dani & Aron) 
 -Databases in Swarm (Viktor)"
 youtubeUrl: "https://youtu.be/VDIW81BrgBA"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmShZtz3hPYyTfe9uZgxJvq4iRUfRJ2sgcE6b944ggrS5x?filename=SWARM_Team_Update_by_Aron_Fischer_Swarm_Team_Devcon4-VDIW81BrgBA.mp4"
+ipfsHash: "QmShZtz3hPYyTfe9uZgxJvq4iRUfRJ2sgcE6b944ggrS5x"
 duration: 2465
 expertise: "Intermediate"
 type: "Talk"

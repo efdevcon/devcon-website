@@ -6,7 +6,7 @@ Joseph Poon, Karl Floersch, Kelvin Fichter, Dan Robinson, David Knott, Xuanj
 You can take a look at the YouTube channel here: https://www.youtube.com/channel/UCG2MeKuKDJRK4gFNk-dQuZQ 
 Please subscribe! ;)"
 youtubeUrl: "https://youtu.be/fKs4IKkHpP4"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmdjK3UFSpCAH2ZeZvBjF5gf4m83CTH8Vb4FVzYuYyqfg4?filename=Plasma_Implementers_Call_Live_by_Karl_Floersch_Devcon4-fKs4IKkHpP4.mp4"
+ipfsHash: "QmdjK3UFSpCAH2ZeZvBjF5gf4m83CTH8Vb4FVzYuYyqfg4"
 duration: 3221
 expertise: "Intermediate"
 type: "Panel"

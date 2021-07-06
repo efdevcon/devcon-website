@@ -3,7 +3,7 @@ edition: 4
 title: "Introduction of Ethereum iOS dev kit"
 description: "We present our dev kit that has been funded by the Ethereum Foundation. With the devkit iOS developers can easily use Ethereum smart contracts in their applications. This will be the official introduction of the dev kit."
 youtubeUrl: "https://youtu.be/VFACx0Cs-Ew"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmatudQ8SSPKsxErmwMPtBghhenfZ6T9BnzfDZ7SJpqq3K?filename=Introduction_of_Ethereum_iOS_dev_kit_by_Josef_Gattermayer_Jan_Misa_Devcon4-VFACx0Cs-Ew.mp4"
+ipfsHash: "QmatudQ8SSPKsxErmwMPtBghhenfZ6T9BnzfDZ7SJpqq3K"
 duration: 622
 expertise: "Intermediate"
 type: "Talk"

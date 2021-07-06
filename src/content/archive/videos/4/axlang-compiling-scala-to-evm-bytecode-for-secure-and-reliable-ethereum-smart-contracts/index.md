@@ -6,7 +6,7 @@ AxLang Backend consists of four main features:
 a clean, minimal intermediate language (IL) that serves as an effective compiler target as well as a human readable/writable languagea standard three-address code IR that is convertible to a static single assignment (SSA) form, as is common in widely-used general purpose compiler frameworksa retargetable code-generation module that converts IR into the desired executable codea decompiler that constructs the above IR from Ethereum bytecode produced by other compilers like Solidity.
 Axoni is developing AxLang because the ability to write verifiable smart contracts is critical to our clients' broad adoption of this technology. AxLang Backend is the underlying structure that makes it possible for AxLang and other high-level languages to efficiently target the EVM."
 youtubeUrl: "https://youtu.be/0LaGkVX0p4M"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmU1yjTKfRotn5uFULghTQoVw7gbmU1H5JceedUrmkoHRU?filename=AxLang_-_Compiling_Scala_to_EVM_Bytecode_for_Secure_and_Reliable_Ethereum_Smart_Contracts_Devcon4-0LaGkVX0p4M.mp4"
+ipfsHash: "QmU1yjTKfRotn5uFULghTQoVw7gbmU1H5JceedUrmkoHRU"
 duration: 357
 expertise: "Intermediate"
 type: "Talk"
