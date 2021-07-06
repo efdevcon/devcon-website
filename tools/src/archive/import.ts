@@ -10,25 +10,29 @@ require('dotenv').config()
 const generatePlaylist = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const edition = 4
-console.log('Importing edition', edition, 'from', sheet, 'to', archiveDir)
+const sheetNr = 0 // 
+const edition = 5 // 
+console.log('Importing edition', edition, 'from', sheetNr, 'to', archiveDir)
 
 GSheetReader(
   {
     sheetId: sheet,
-    sheetNumber: edition,
+    sheetNumber: sheetNr,
   },
   (results: any) => {
     console.log('Records found', results.length)
 
     const videos: Array<ArchiveVideo> = []
-    results.forEach(async (result: any) => {
-      console.log('Processing video..', result['Talk Name'])
+    results.forEach(async (result: any, index: number) => {
+      // console.log('Processing video..', result['Talk Name'])
       let duration = 0
       if (result['Video URL']) {
         const id = getVideoId(result['Video URL'])
         duration = await getVideoDuration(id)
       }
+
+      const tags = result['Tags'] ? result['Tags'].split(',') : []
+      tags.push(result['Track'])
 
       const video = { 
         edition: edition,
@@ -37,11 +41,11 @@ GSheetReader(
         youtubeUrl: result['Video URL'],
         ipfsHash: result['IPFS Hash'],
         duration: duration,
-        expertise: result['Skill level'],
+        expertise: result['Skill Level'],
         type: result['Type (Talk, Panel, Workshop, Other)'],
         track: result['Track'],
         keywords: result['Keywords'] ? result['Keywords'].split(',') : undefined,
-        tags: result['Tags'] ? result['Tags'].split(',') : undefined,
+        tags: tags,
         speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',') : undefined
       } as ArchiveVideo
 

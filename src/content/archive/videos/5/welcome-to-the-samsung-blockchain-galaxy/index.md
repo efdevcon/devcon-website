@@ -1,0 +1,14 @@
+---
+edition: 5
+title: "Welcome to the Samsung Blockchain Galaxy"
+description: "The ideological value of the Blockchain is similar to the chracteristics of Blockchain technology itself. Both the real world as well as the technology are both creating and inspiring new values to communicate to one another. At DevCon5, we look forward to sharing Samsung's vision of Blockchain along with its technical features. We'll explains the background of Samsung Blockchain Keystore launch from a security perspective along with why Ethereum was the first choice for solving the security and tech challenges many face. We'll also look at how the Ethreum ecosystem has allowed Samsung to strategize our blockchain strategy when it comes to regional launch selections, vertical segments, and future roadmap. Samsung would also like to share our market leadership by voicing why we, as the global OEM leader for smartphones, are making the leap into the Blockchain community by making SDK's available for developers and welcoming developers to embrace the platform from a mobile perspective. and welcoming them to partner with us and create amazing decentralized applications. Our scale and market position combined with the dev community's insight and know-how will be very exciting!"
+youtubeUrl: "https://youtu.be/q212wYPTnAM"
+ipfsHash: ''
+duration: 773
+expertise: "Beginner"
+type: "Talk"
+track: "Developer Experience"
+keywords: ['samsung',' technical']
+tags: ['Developer Experience']
+speakers: ['Wook Lim',' Minji Chae']
+---
