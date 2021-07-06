@@ -1,0 +1,14 @@
+---
+edition: 4
+title: "How to Magician: Improving Technological Governance"
+description: "The Fellowship of Ethereum Magicians is a self selecting group of people that collaborate to get to rough consensus and running code that improves the technology ecosystem of Ethereum and related decentralized & cryptographic technologies. We'll discuss what the EthMagicians have done to date, how anyone can join and contribute, and how to self-organize to reach consensus  and commitment on subsequent action."
+youtubeUrl: "https://youtu.be/_NBNZowjAJo"
+ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmYHhptBRv2sRTLzMqKAFZdmvXWE8SJBZCW5sQJx2c5unv?filename=How_to_Magician_-_Improving_Technological_Governance_by_Boris_Mann_Greg_Colvin_Jamie_Pitts_Devcon4-_NBNZowjAJo.mp4"
+duration: 1056
+expertise: "Intermediate"
+type: "Talk"
+track: "Society and Systems"
+keywords: ['governance']
+tags: ['Society and Systems']
+speakers: ['Boris Mann',' Greg Colvin',' Jamie Pitts']
+---

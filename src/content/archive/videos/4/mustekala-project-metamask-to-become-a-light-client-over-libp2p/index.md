@@ -1,0 +1,17 @@
+---
+edition: 4
+title: "Mustekala Project: MetaMask to become a light client over libp2p"
+description: "MetaMask Labs is doing research for the browser extension to become a light client running on top of libp2p.
+The project codename is Mustekala.
+As of now, we have fleshed out a comprehensive architecture (https://github.com/MetaMask/mustekala/blob/master/docs/architecture.md) of four layers, where we extract data from devp2p synchronized clients and make it available in libp2p using the IPLD format. Upstream, an overlay network of peers (named kitsunet) shares this information, allowing data redundancy and decentralization at face value.
+In terms of vision, in a close future low resource devices (browsers, mobile and IoT) should stop depending on JSON RPC communication with ethereum nodes. This is a huge problem today, as nodes became GB-sized machines. Last but not least, every MetaMask user will become a peer of a bigger and more inclusive ethereum network."
+youtubeUrl: "https://youtu.be/v2jySpV_7aM"
+ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmNY267Vj4EuUYxYcEsyi4uVGQGSRgkgdmBWTHFueQ8aaj?filename=Mustekala_Project_-_MetaMask_to_become_a_light_client_over_libp2p_Devcon4-v2jySpV_7aM.mp4"
+duration: 538
+expertise: "Expert"
+type: "Talk"
+track: "Scalability"
+keywords: ['clients',' network',' peers',' nodes',' MM']
+tags: ['Scalability']
+speakers: ['Dmitriy Ryajov',' Frankie Pangilinan']
+---
