@@ -1,5 +1,6 @@
 import { Client } from '@elastic/elasticsearch'
-import { existsSync } from 'fs';
+import { SERVER_CONFIG } from '../config/server';
+require('dotenv').config()
 
 export interface SearchIndexClientInterface {
     createIndex(name: string): void
@@ -8,14 +9,11 @@ export interface SearchIndexClientInterface {
     deleteIndex(name: string): void
 }
 
-const endpoint = 'https://elastic:6phGD1Y7uH6JE4N4lrP4MeYG@memory-optimized-deployment-985249.es.us-east-1.aws.found.io:9243'
-const defaultIndex = 'my-test-index'
-
 export class SearchIndexClient implements SearchIndexClientInterface {
     private elasticClient: any;
 
     constructor() {
-        this.elasticClient = new Client({ node: endpoint })
+        this.elasticClient = new Client({ node: SERVER_CONFIG.ELASTIC_ENDPOINT })
     }
 
     async createIndex(name: string) {
@@ -35,22 +33,25 @@ export class SearchIndexClient implements SearchIndexClientInterface {
             return []
         }
 
+        console.log('Searching Elastic index with query', query)
         const result = await this.elasticClient.search({
             index: index,
+            size: 100,
             body: {
               query: {
-                match: {
-                    name: query
+                query_string: {
+                  query: query,
                 }
               }
             }
         })
+        
         if (result.statusCode !== 200) { 
             console.log(`Search query '${query}' on ${index} index failed..`)
             return []
         }
 
-        return result.body.hits.hits
+        return result.body.hits.hits.map((i: any) => i._source)
     }
 
     async addToIndex<T>(index: string, body: T, refresh: boolean = false) {

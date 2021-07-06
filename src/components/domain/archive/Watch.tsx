@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Header } from 'src/components/common/layouts/header'
 import { Footer } from 'src/components/common/layouts/footer'
 import { SEO } from 'src/components/domain/seo'
@@ -10,16 +10,40 @@ import { InputForm } from 'src/components/common/input-form'
 import { useSort, SortVariation, Sort } from 'src/components/common/sort'
 import IconGrid from 'src/assets/icons/grid.svg'
 import IconListView from 'src/assets/icons/list-view.svg'
-import { VideoFilter, useVideoFilter, VideoFilterMobile } from './watch/VideoFilter'
+import { VideoFilter, useVideoFilter, VideoFilterMobile, filterToQueryString } from './watch/VideoFilter'
 import { useArchiveVideos } from 'src/hooks/useArchiveVideos'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
+import { useEffect } from 'react'
 
 type WatchProps = {}
 
 export const Watch = (props: WatchProps) => {
-  const videos = useArchiveVideos()
+  // const videos = useArchiveVideos()
+  const [videos, setVideos] = useState([])
   const [gridViewEnabled, setGridViewEnabled] = React.useState(true)
   const filterState = useVideoFilter()
+  
+  useEffect(() => {
+    const qs = filterToQueryString({
+      edition: filterState.editionFilterState?.activeFilter,
+      tags: filterState.tagsFilterState?.activeFilter,
+      expertise: filterState.expertiseFilterState?.activeFilter,
+    })
+
+    searchVideos(qs)
+
+    async function searchVideos(qs: string) { 
+      const response = await fetch('/api/archive/search' + qs, {
+        method: 'GET',
+      })
+  
+      if (response.status === 200) {
+        const body = await response.json()
+        setVideos(body.data)
+      }
+    }
+  }, [filterState.editionFilterState?.activeFilter, filterState.tagsFilterState?.activeFilter, filterState.expertiseFilterState?.activeFilter])
+
   const sortState = useSort(videos, [
     {
       title: 'Event',

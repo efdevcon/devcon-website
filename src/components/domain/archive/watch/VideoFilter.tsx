@@ -47,10 +47,10 @@ export const useVideoFilter = () => {
     }, {})
   }, [])
 
-  const [_, devconFilterState] = useFilter({
+  const [_, editionFilterState] = useFilter({
     tags: true,
     multiSelect: true,
-    initialFilter: initialFilters.devcon,
+    initialFilter: initialFilters.edition,
     filters: [
       {
         text: '0',
@@ -87,15 +87,15 @@ export const useVideoFilter = () => {
     filters: [
       {
         text: 'Beginner',
-        value: 'all',
+        value: 'beginner',
       },
       {
         text: 'Intermediate',
-        value: 'draft',
+        value: 'intermediate',
       },
       {
         text: 'Expert',
-        value: 'accepted',
+        value: 'expert',
       },
     ],
     filterFunction: () => [],
@@ -154,14 +154,14 @@ export const useVideoFilter = () => {
     filterFunction: () => [],
   })
 
-  const devconFilter = devconFilterState && Object.keys(devconFilterState.activeFilter)
+  const editionFilter = editionFilterState && Object.keys(editionFilterState.activeFilter)
   const expertiseFilter = expertiseFilterState && Object.keys(expertiseFilterState.activeFilter)
   const tagsFilter = tagsFilterState && Object.keys(tagsFilterState.activeFilter)
 
   // Sync filter state with query params in the url whenever filter state changes
   React.useEffect(() => {
     const result = filterToQueryString({
-      devcon: devconFilterState?.activeFilter,
+      edition: editionFilterState?.activeFilter,
       tags: tagsFilterState?.activeFilter,
       expertise: expertiseFilterState?.activeFilter,
     })
@@ -169,31 +169,31 @@ export const useVideoFilter = () => {
     const url = `${location.pathname}${result}`
 
     window.history.replaceState({ path: url }, '', url)
-  }, [devconFilterState?.activeFilter, expertiseFilterState?.activeFilter, tagsFilterState?.activeFilter])
+  }, [editionFilterState?.activeFilter, expertiseFilterState?.activeFilter, tagsFilterState?.activeFilter])
 
   const combinedFilter = (() => {
     // Finish this one later - the combined filter will change depending on the filtering solution (e.g. inline JS vs query a search service)
     // For now just doing a boolean to test the clear all functionality
-    return [devconFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0)
+    return [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0)
   })()
 
   const clearFilters = () => {
-    devconFilterState?.clearFilter()
+    editionFilterState?.clearFilter()
     expertiseFilterState?.clearFilter()
     tagsFilterState?.clearFilter()
   }
 
-  return { clearFilters, combinedFilter, devconFilterState, expertiseFilterState, tagsFilterState }
+  return { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState }
 }
 
 const Filters = (props: any) => {
-  const { clearFilters, combinedFilter, devconFilterState, expertiseFilterState, tagsFilterState } = props
+  const { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState } = props
 
   return (
     <>
       <div className={css['devcon']}>
         <p className="bold font-xs text-uppercase">Devcon:</p>
-        <Filter {...devconFilterState} />
+        <Filter {...editionFilterState} />
       </div>
 
       <div className={css['expertise']}>

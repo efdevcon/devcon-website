@@ -64,7 +64,7 @@ test('Create "game-of-thrones", index and query', async () => {
     await client.addToIndex(indexName, { name: 'Daenerys Targaryen' }, false)
     await client.addToIndex(indexName, { name: 'Tyrion Lannister' }, true)
     
-    const results = await client.searchIndex(indexName, 'snow')
+    const results = await client.searchIndex(indexName, 'name:snow')
     expect(results).toHaveLength(1)
 });
 

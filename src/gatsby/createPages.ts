@@ -1,6 +1,7 @@
 import { GatsbyNode, CreatePagesArgs, Actions } from 'gatsby'
 import path from 'path'
-import { Playlist } from 'src/types/Playlist'
+import { SearchIndexClient } from '../server/services/search-client'
+import { mapToArchiveVideo } from '../types/ArchiveVideo'
 import { SearchItem } from 'src/types/SearchItem'
 import { Tag } from 'src/types/Tag'
 
@@ -21,6 +22,8 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
   await createVideoPages(args)
   // await createTagPages(args)
   await createSearchPage(args)
+
+  await indexArchive(args)
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -343,6 +346,63 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
   })
 }
 
+async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
+  // search: title, description, speaker name
+  // filter: edition, expertise, tags
+
+  const result: any = await graphql(`
+    query {
+      items: allMarkdownRemark(filter: {fields: {collection: {eq: "videos"}}}) {
+        nodes {
+          id
+          fields {
+            slug
+            path
+          }
+          frontmatter {
+            title
+            edition
+            description
+            youtubeUrl
+            ipfsHash
+            duration
+            expertise
+            type
+            track
+            tags
+            speakers
+            profiles {
+              id
+              name
+              lang
+              description
+              imageUrl
+              role
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running search query.`)
+    return
+  }
+
+  console.log('ElasticSearch client..')
+  const elastic = new SearchIndexClient()
+  const indexName = 'archive'
+  await elastic.deleteIndex(indexName)
+  await elastic.createIndex(indexName)
+
+  console.log(`Adding ${result.data.items.nodes.length} archive videos to Elastic index..`)
+  result.data?.items.nodes.forEach(async (source: any) => {
+    const video = mapToArchiveVideo(source)
+    await elastic.addToIndex(indexName, video)
+  })
+}
 
 function createDynamicPage(actions: Actions, slug: string, template: string, lang: string, tag: string = '', tags: string[]): void {
   if (template === 'none') return
