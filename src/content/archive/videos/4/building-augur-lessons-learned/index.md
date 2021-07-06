@@ -1,0 +1,14 @@
+---
+edition: 4
+title: "Building Augur - Lessons Learned"
+description: "N/A"
+youtubeUrl: "https://youtu.be/ahS6nCgtLU0"
+ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmVrVrc6xqQVRpVdLx5yLtvJrq3fLMTyK5GHtddJZ96y3w?filename=Building_Augur_-_Lessons_Learned_by_Scott_Bigelow_Devcon4-ahS6nCgtLU0.mp4"
+duration: 1695
+expertise: "Intermediate"
+type: "Talk"
+track: "Developer Experience"
+keywords: ['architecure',' testnet',' integration',' 0x',' json-rpc',' json',' rpc']
+tags: ['Developer Experience']
+speakers: ['Scott Bigelow']
+---

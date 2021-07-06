@@ -1,0 +1,14 @@
+---
+edition: 5
+title: "Privacy in Ethereum"
+description: "From mixer to anonDAO, anonSocial media to journalism under authoritarian regimes ethereum offers ways to provide privacy to people who need it most. Come hear what we have done and what we want to do. How *YOU* can help us move forward."
+youtubeUrl: "https://youtu.be/zBUo7G95wYE"
+ipfsHash: ''
+duration: 1264
+expertise: "Intermediate"
+type: "Talk"
+track: "Privacy"
+keywords: ['barry',' whitehat',' security',' technical']
+tags: ['Privacy']
+speakers: ['Barry WhiteHat']
+---

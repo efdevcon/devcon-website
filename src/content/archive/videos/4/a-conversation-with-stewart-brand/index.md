@@ -1,14 +1,14 @@
 ---
 edition: 4
-title: 'A Conversation with Stewart Brand'
-description: "Stewart Brand has witnessed, and participated in, the birth of many movements. Some have run their course, some have expanded beyond all reckoning and some have resulted in civilization hacks so effective that we now take them completely for granted - long before Reddit or Gmail, we had The WELL; and long before TED talks we had The Mother of All Demos. We'll close out the frenzy of activity and innovation that is Devcon with an unscripted discussion of the challenges and potential of the Ethereum space in the context of past cultural and technological revolutions, with the well-earned wisdom and perspective of a career hacker sprinkled throughout."
-youtubeUrl: 'https://www.youtube.com/embed/oLGZdLpHl1w'
-ipfsHash: ''
-expertise: Beginner
-type: Panel
-track: 'Developer Experience'
-tags:
-  - devcon
-speakers:
-  - Stewart Brand
+title: "A Conversation with Stewart Brand"
+description: "N/A"
+youtubeUrl: "https://youtu.be/oLGZdLpHl1w"
+ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmNdYkjrya3DWTGxoyyeB751phmfkESyMRnoQZHezbZktm?filename=A_Conversation_with_Stewart_Brand_Devcon4-oLGZdLpHl1w.mp4"
+duration: 3034
+expertise: "Intermediate"
+type: "Panel"
+track: "Developer Experience"
+keywords: ['society']
+tags: ['Developer Experience']
+speakers: ['Stewart Brand']
 ---

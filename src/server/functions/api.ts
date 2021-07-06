@@ -4,6 +4,7 @@ import serverless from 'serverless-http'
 import mongoose from 'mongoose'
 import * as userAccountRoutes from '../routes/account'
 import * as twitterRoutes from '../routes/twitter'
+import * as archiveRoutes from '../routes/archive'
 import session from 'express-session'
 import { web3Strategy, serializeUser, deserializeUser } from '../strategies/web3'
 import { SERVER_CONFIG } from '../config/server'
@@ -35,6 +36,7 @@ router.get('/', (req: Request, res: Response) => {
 
 // userAccountRoutes.register(router)
 twitterRoutes.register(router)
+archiveRoutes.register(router)
 
 // Express-sessions
 if (!SERVER_CONFIG.SESSION_SECRET) throw new Error('Required SESSION_SECRET not found.')

@@ -29,6 +29,7 @@
     "build-storybook": "rm -f ./netlify.toml && build-storybook"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^7.13.0",
     "@loadable/component": "^5.14.1",
     "@tippyjs/react": "^4.2.5",
     "canvas-confetti": "^1.4.0",

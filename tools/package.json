@@ -2,12 +2,14 @@
   "scripts": {
     "prestart": "yarn install",
     "dips": "ts-node src/dips",
-    "archive": "ts-node src/archive",
+    "archive:import": "ts-node src/archive/import",
+    "search:index": "ts-node src/search/index",
     "news": "node -r ts-node/register src/news/fetch",
     "news-inspect": "node --inspect -r ts-node/register src/news/fetch",
     "md": "ts-node src/news/file"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^7.13.0",
     "@octokit/rest": "^18.0.9",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
