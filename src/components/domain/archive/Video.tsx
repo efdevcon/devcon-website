@@ -36,9 +36,7 @@ const List = ({ video, playlist, videos }: { video: ArchiveVideo; playlist?: Pla
 
         if (isCurrentlyWatching) className = css['selected']
 
-        return (
-          <VideoCard compact playlist={playlist} key={index} horizontal video={playlistVideo} className={className} />
-        )
+        return <VideoCard compact playlist={playlist} key={index} video={playlistVideo} className={className} />
       })}
     </div>
   )

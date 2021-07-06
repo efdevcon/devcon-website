@@ -32,7 +32,7 @@ interface BasicCardProps {
 export const BasicCard = React.forwardRef((props: BasicCardProps, ref: any) => {
   let className = css['card']
 
-  if (props.className) className = `${props.className} ${className}`
+  if (props.className) className = `${className} ${props.className}`
 
   if (props.expandLink && props.linkUrl) {
     return (

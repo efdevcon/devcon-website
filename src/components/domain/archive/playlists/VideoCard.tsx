@@ -18,13 +18,16 @@ interface Props {
 }
 
 export const VideoCard = (props: Props) => {
+  // let className = css['video-card']
   let className = css['video-card']
 
-  if (props.className) className += ` ${props.className}`
+  // if (props.className) className += ` ${props.className}`
   if (props.slide) className += ` ${css['slide']}`
-  if (props.horizontal) className += ` ${css['horizontal']}`
-  if (props.vertical) className += ` ${css['force-vertical']}`
-  if (props.compact) className += ` ${css['compact']}`
+  if (props.horizontal) className = css['horizontal']
+  if (props.compact) className = css['compact']
+  // if (props.horizontal) className += ` ${css['horizontal']}`
+  // if (props.vertical) className += ` ${css['force-vertical']}`
+  // if (props.horizontal) className += ` ${css['horizontal']}`
 
   function getWatchUrl() {
     let url = `${props.video.slug}`
@@ -47,25 +50,35 @@ export const VideoCard = (props: Props) => {
             placeholder="blurred"
           />
 
-          {props.video.duration && (
+          {/* {props.video.duration && (
             <div className={`${css['duration']} label sm white inverted`}>
               {moment
                 .utc(props.video.duration * 1000)
                 .format('H:mm:ss')
                 .replace(/^0:/, '')}
             </div>
-          )}
+          )} */}
 
-          <div className={`${css['edition']}`}>
+          <div className={`${css['labels']}`}>
             <div className={`label sm white inverted`}>Devcon {props.video.edition}</div>
             <div className={`label sm white inverted`}>{props.video.type}</div>
+            {props.video.duration && (
+              <div className={`${css['duration']} label sm white inverted`}>
+                {moment
+                  .utc(props.video.duration * 1000)
+                  .format('H:mm:ss')
+                  .replace(/^0:/, '')}
+              </div>
+            )}
           </div>
         </div>
       </div>
+
       <div className={css['body']}>
         <div className={css['top']}>
           <p className={css['title']}>{props.video.title}</p>
-          {props.showDescription && <p className={css['description']}>{props.video.description}</p>}
+          <p className={css['description']}>{props.video.description}</p>
+          {/* {props.showDescription && <p className={css['description']}>{props.video.description}</p>} */}
         </div>
 
         <div className={css['bottom']}>

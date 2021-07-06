@@ -81,27 +81,29 @@ export const Archive = (props: ArchiveProps) => {
         titleSubtext="Devcon"
       />
 
-      <Interests />
+      <div className={css['content']}>
+        <Interests />
 
-      <div className={`section ${css['editions']}`}>
-        <div className="content">
-          <Editions />
+        <div className={`section ${css['editions']}`}>
+          <div className="content">
+            <Editions />
+          </div>
         </div>
-      </div>
-      <div className={css['staff-picks']}>
-        <StaffPicks />
-      </div>
-      <div className={`section ${css['curated-playlists']}`}>
-        <div className="content">
-          <CuratedPlaylists title="Curated playlists" items={curated} viewMore />
+        <div className={css['staff-picks']}>
+          <StaffPicks />
         </div>
-      </div>
-      <div className={`section ${css['playlists']}`}>
-        <div className="content">
-          <Playlists />
+        <div className={`section ${css['curated-playlists']}`}>
+          <div className="content">
+            <CuratedPlaylists title="Curated playlists" items={curated} viewMore />
+          </div>
         </div>
+        <div className={`section ${css['playlists']}`}>
+          <div className="content">
+            <Playlists />
+          </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }
