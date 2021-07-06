@@ -3,7 +3,7 @@ edition: 5
 title: "Cryptoeconomics In 30 Minutes"
 description: "N/A"
 youtubeUrl: "https://youtu.be/GQR1xjQn5Pg"
-ipfsHash: ''
+ipfsHash: "QmdKCNFWeyddX5T4gt9RLr4hpZ4oiXBDq9dVp57JMeukX9"
 duration: 1901
 expertise: "Intermediate"
 type: "Talk"

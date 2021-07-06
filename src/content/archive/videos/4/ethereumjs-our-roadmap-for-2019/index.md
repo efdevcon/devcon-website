@@ -3,7 +3,7 @@ edition: 4
 title: "EthereumJS - Our Roadmap for 2019"
 description: "In this talk we will give an introduction to the EthereumJS ecosystem and the various libraries we are maintaining and provide an outlook on future developments. We will tell you about the state of our virtual machine implementation and plans on Ewasm integration and we will retrace the progress on our client project. We will further talk about where we think we can contribute to the latest sharding research efforts and explain why we get more and more excited about TypeScript, what AssemblyScript is and what all this has to do with progress and future integration of an Ewasm virtual machine. This will be a combined talk by various members of the EthereumJS team."
 youtubeUrl: "https://youtu.be/4hcZVHzBV9A"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmQkfRoZJSP6LQmM13jL3GPg4SoiBjPWqLcPGzRhWFmfR1?filename=Ewasm_-_Ethereum-flavored_WebAssembly_and_Ethereum_2.0_-_Part_2_Devcon4-W4T4Q_SUQt0.mp4"
+ipfsHash: "QmQkfRoZJSP6LQmM13jL3GPg4SoiBjPWqLcPGzRhWFmfR1"
 duration: 1212
 expertise: "Intermediate"
 type: "Talk"

@@ -3,7 +3,7 @@ edition: 5
 title: "PoS Security and Ethylene"
 description: "N/A"
 youtubeUrl: "https://youtu.be/_WxpSuZ1qg0"
-ipfsHash: ''
+ipfsHash: "QmQLy6f1Jv9VovHyuaxHrn7yTTmti1QWzAEtHXSTxaVbLg"
 duration: 1819
 expertise: "Intermediate"
 type: "Talk"

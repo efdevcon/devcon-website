@@ -7,7 +7,7 @@ description: "How do we achieve user friendly data sync in a p2p network for res
 - making the protocol transport-agnostic.
 Finally, we’ll show how data sync fits into the larger picture, from transport layer to end user applications, and highlight some of the work that still needs to be done, and who is working on it."
 youtubeUrl: "https://youtu.be/zxN-PqYkZ1M"
-ipfsHash: ''
+ipfsHash: "QmZ8wUWGcrdYazwD4QU83WWGoRbPwZGuorY1N9wSLhsMFp"
 duration: 1141
 expertise: "Intermediate"
 type: "Talk"

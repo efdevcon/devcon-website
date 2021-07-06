@@ -3,7 +3,7 @@ edition: 5
 title: "What Do We Do About Libra?"
 description: "N/A"
 youtubeUrl: "https://youtu.be/3dpBy3CCK4Q"
-ipfsHash: ''
+ipfsHash: "QmdeefZBoGcgkYsfiqscHfD5YdgB17uQCzJsCko7pkheM1"
 duration: 1128
 expertise: "Intermediate"
 type: "Talk"

@@ -3,7 +3,7 @@ edition: 5
 title: "Stablecoins"
 description: "N/A"
 youtubeUrl: "https://youtu.be/pFmMavoiL8w"
-ipfsHash: ''
+ipfsHash: "QmV6WjfeHqS4WukemLDLEqd4W9s3BG7Zz3pa2X2yEUMs8s"
 duration: 2733
 expertise: "Intermediate"
 type: "Panel"

@@ -34,12 +34,16 @@ GSheetReader(
       const tags = result['Tags'] ? result['Tags'].split(',') : []
       tags.push(result['Track'])
 
+      let ipfsHash = result['IPFS Hash'] ?? '' as string
+      ipfsHash = ipfsHash.replace('https://ipfs.ethdevops.io/ipfs/', '')
+      ipfsHash = ipfsHash.includes('?') ? ipfsHash.split('?')[0] : ipfsHash
+
       const video = { 
         edition: edition,
         title: result['Talk Name'],
         description: result['Talk Description'],
         youtubeUrl: result['Video URL'],
-        ipfsHash: result['IPFS Hash'],
+        ipfsHash: ipfsHash,
         duration: duration,
         expertise: result['Skill Level'],
         type: result['Type (Talk, Panel, Workshop, Other)'],
@@ -89,11 +93,14 @@ function writeToFile(video: ArchiveVideo) {
 
     const attributes = Object.entries(video)
     const markdown = `---${attributes.reduce((acc, [key, value], index) => {
-        if (typeof value === 'undefined' && key === 'keywords') return acc += `\n${key}: []`;
-        if (typeof value === 'undefined' && key === 'tags') return acc += `\n${key}: []`;
-        if (typeof value === 'undefined') return acc += `\n${key}: ''`;
-        if (typeof value === 'number') return acc += `\n${key}: ${value}`;
-        if (typeof value === 'string') return acc += `\n${key}: "${value.trim()}"`;
+        if (typeof value === 'undefined' && key === 'keywords') return acc += `\n${key}: []`
+        if (typeof value === 'undefined' && key === 'tags') return acc += `\n${key}: []`
+        if (typeof value === 'undefined') return acc += `\n${key}: ''`
+        if (typeof value === 'number') return acc += `\n${key}: ${value}`
+        if (typeof value === 'string') {
+          let stringValue = value.trim().replace(/[\""]/g, '\\"');
+          return acc += `\n${key}: "${stringValue}"`
+        }
         if (typeof value === 'object' && Array.isArray(value)) {
           return acc += `\n${key}: [${value.map(item => `'${item}'`)}]`
         } 

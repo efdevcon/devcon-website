@@ -3,7 +3,7 @@ edition: 5
 title: "Crypto for Activism"
 description: "N/A"
 youtubeUrl: "https://youtu.be/78XNSvXlk8U"
-ipfsHash: ''
+ipfsHash: "QmX92kdDaivGUFaX1tVCYvsq8yvZU4h8RPkEshpND6mk1d"
 duration: 2478
 expertise: "Intermediate"
 type: "Talk"

@@ -5,7 +5,7 @@ description: "Corporate interests monitor and harvest our every contact and clic
 What can we do to know what is happening to us and take back some control from our digital identities?
 In this talk, attendees will learn: Recent scandals highlighting the danger of the current collect-predict-sell data monetization model; Where technology can and can’t help us as we navigate our digital lives; What we can do to educate ourselves and others to sway public opinion on privacy."
 youtubeUrl: "https://youtu.be/tgIEALVJQxc"
-ipfsHash: ''
+ipfsHash: "QmUGgv5Z5WQE54To57TA58vVB15phwbmYWs7TXsBUArDEp"
 duration: 700
 expertise: "Beginner"
 type: "Talk"

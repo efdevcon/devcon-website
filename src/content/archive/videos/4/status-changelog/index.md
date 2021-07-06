@@ -3,7 +3,7 @@ edition: 4
 title: "Status Changelog"
 description: "N/A"
 youtubeUrl: "https://youtu.be/cSiuddKWoCQ"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmaCzvz6dQfZkPn1pBagXYLsWCoKm2huShJy61UFc69nqG?filename=Status_Changelog_by_Jarrad_Hope_Devcon4-cSiuddKWoCQ.mp4"
+ipfsHash: "QmaCzvz6dQfZkPn1pBagXYLsWCoKm2huShJy61UFc69nqG"
 duration: 1766
 expertise: "Intermediate"
 type: "Talk"

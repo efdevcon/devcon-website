@@ -3,7 +3,7 @@ edition: 5
 title: "Ethereum 2.0"
 description: "N/A"
 youtubeUrl: "https://youtu.be/fXoSiHurJBg"
-ipfsHash: ''
+ipfsHash: "QmQAG1pzsxzvwca1wkCFAfbxqNDVR5hQhR4r9BeKANgdDL"
 duration: 2822
 expertise: "Advanced"
 type: "Panel"

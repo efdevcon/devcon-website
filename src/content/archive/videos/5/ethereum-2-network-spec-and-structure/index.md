@@ -3,7 +3,7 @@ edition: 5
 title: "Ethereum 2 Network Spec and Structure"
 description: "N/A"
 youtubeUrl: "https://youtu.be/srAUIsEmqMA"
-ipfsHash: ''
+ipfsHash: "QmT4UcQoeiNCtK3wKS317foECzxNgaEUsqKLVAaidHgKg2"
 duration: 853
 expertise: "Intermediate"
 type: "Talk"

@@ -7,7 +7,7 @@ Thanks to public/private key pairs, users can sign meta transactions and incen
 I will demonstrate how etherless accounts can craft and sign transaction off-chain and send them to a relayer. The relayer, incentivized by the a reward in the transaction, submit the the meta transaction to a bouncer proxy and pay the gas. 
 This also works great for Universal Logins where you have an identity proxy that your etherless devices can transact through."
 youtubeUrl: "https://youtu.be/FI-p5Ru-K3E"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmW4RJ3cbyVQxWdNGebnSDqegTcVR8acPebtgjgtNNNJJa?filename=Recurring_meta_transactions_to_power_l33t_subscriptions_by_Austin_Griffith_Devcon4-FI-p5Ru-K3E.mp4"
+ipfsHash: "QmW4RJ3cbyVQxWdNGebnSDqegTcVR8acPebtgjgtNNNJJa"
 duration: 307
 expertise: "Intermediate"
 type: "Talk"

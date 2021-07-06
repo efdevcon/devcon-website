@@ -3,7 +3,7 @@ edition: 5
 title: "Finding the Simplest Path to Digital Sovereignty & Security"
 description: "N/A"
 youtubeUrl: "https://youtu.be/jKzSSdqNy04"
-ipfsHash: ''
+ipfsHash: "QmRNCsF3FnjucsVsCoKqrFAkaS1vW5cqegWY2FQSdysLzG"
 duration: 1250
 expertise: "Beginner"
 type: "Talk"

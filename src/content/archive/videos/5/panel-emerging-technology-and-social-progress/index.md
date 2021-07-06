@@ -3,7 +3,7 @@ edition: 5
 title: "PANEL: Emerging Technology and Social Progress"
 description: "N/A"
 youtubeUrl: "https://youtu.be/nnXfEr6KJEI"
-ipfsHash: ''
+ipfsHash: "QmdRNW52Mk8BeftLCPv2oL9aaCW4qLnqCAyXUHaXZo3YnQ"
 duration: 2360
 expertise: "Beginner"
 type: "Talk"

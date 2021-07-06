@@ -3,7 +3,7 @@ edition: 5
 title: "Lessons Learned From Phase 0 Testnets"
 description: "N/A"
 youtubeUrl: "https://youtu.be/ljpM2cgTLMM"
-ipfsHash: ''
+ipfsHash: "Qmd7ZT3W98DwpsZT2TZWLpcjSmvur7vbp5rdqtgtsN7Ri3"
 duration: 1045
 expertise: "Intermediate"
 type: "Talk"

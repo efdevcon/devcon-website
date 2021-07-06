@@ -6,7 +6,7 @@ For example, last year, Flyingcarpet built a machine learning model that enabled
 Tech paper: https://drive.google.com/open?id=10TM6bN6excBePftD6l4AoWEfZe484POp
 Website: https://www.flyingcarpet.network/"
 youtubeUrl: "https://youtu.be/OT6sgOqMV_s"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmZ7jsJsn69RXXc2QxFPuXsM18yxV1wdZDbHYNEqD3RUbW?filename=Flyingcarpet_-_An_Open_Network_for_Building_and_Using_Aerial_Analytics_Services_by_Julien_Bouteloup-OT6sgOqMV_s.mp4"
+ipfsHash: "QmZ7jsJsn69RXXc2QxFPuXsM18yxV1wdZDbHYNEqD3RUbW"
 duration: 635
 expertise: "Intermediate"
 type: "Talk"

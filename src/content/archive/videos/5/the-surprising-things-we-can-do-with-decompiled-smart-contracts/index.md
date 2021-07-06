@@ -8,7 +8,7 @@ description: "Over the last year we have seen a lot of development in the field 
 -network analysis.
 The talk will show some interesting things that were built during the last year."
 youtubeUrl: ''
-ipfsHash: ''
+ipfsHash: "QmRBGCtktV7gXjhU3yU49qsgkx6qitL28e5Zo8yPg1P39W"
 duration: 0
 expertise: "Beginner"
 type: "Talk"

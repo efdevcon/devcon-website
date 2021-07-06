@@ -10,7 +10,7 @@ A) We conducted 15 user interviews with current and new users and constructed a 
 Our A/B test of the prototype showed a significant improvement in the amount of time it took for users to go from signing up to staking token. 60+% participants were able to complete the new staking prototype in under 5 minutes*!
 *Given that the user has already installed a wallet and have acquired Livepeer token."
 youtubeUrl: "https://youtu.be/miGj_-Cf_Z8"
-ipfsHash: ''
+ipfsHash: "QmaJ7AUAb3UZJnrduLozJcseFgtw9RDcSzaK5V1pbqrKyH"
 duration: 1189
 expertise: "Beginner"
 type: "Talk"

@@ -7,7 +7,7 @@ description: "Ethereum 2.0 is fast approaching with multiple implementations und
 -Consensus assumptions (honest majority, liveness)
 -Efforts underway (fuzzing, code review, external assessments)"
 youtubeUrl: "https://youtu.be/oB8LqhY6l7I"
-ipfsHash: ''
+ipfsHash: "QmUFxpcJcC9vHe58JvE3kusxCdWJXXp5eJjTc6vF7kDRFq"
 duration: 1266
 expertise: "Intermediate"
 type: "Talk"

@@ -5,7 +5,7 @@ description: "In this talk, we will present the Perun Network: a general framew
 One distinctive feature of Perun is that its channels can be virtual, meaning that once a virtual channel is established transactions can be executed even without involvement of the intermediaries. This enables nearly real-time transaction execution with minimal latency at negligible costs. Moreover, privacy of transactions is significantly improved. An additional property of Perun is that its security is backed up by formal proofs using state-of-the-art scientific methods from cryptographic research. Besides presenting the main conceptual ideas of our system, we will outline some of the the major scientific challenges that need to be addressed when designing secure and efficient 2nd layer protocols.
 Further information available at https://perun.network/"
 youtubeUrl: "https://youtu.be/cgeELCtqE2s"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/Qmamk2oJo4UebEZcTzdDYwxRJFanzg87rhbW7bmbpQYAsU?filename=Perun_-_Virtual_Payment_and_State_Channel_Networks_Devcon4-cgeELCtqE2s.mp4"
+ipfsHash: "Qmamk2oJo4UebEZcTzdDYwxRJFanzg87rhbW7bmbpQYAsU"
 duration: 1489
 expertise: "Intermediate"
 type: "Talk"

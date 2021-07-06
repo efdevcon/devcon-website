@@ -5,7 +5,7 @@ description: "The Safe is the first smart contract based multi-signature wallet 
 The presentation will give a detailed overview about the Safe implementation of the different features and how they can be used for future dApp development.More information and a download to the testnet beta can be found here:
 https://blog.gnosis.pm/announcing-the-gnosis-safe-beta-personal-edition-19a69a4453e8"
 youtubeUrl: "https://youtu.be/9gyZRq162A8"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmPGVnqUHuUgnmfCYxMgX6Cn8iSEkxqZGs29398fYnvW8Q?filename=Gnosis_Safe_-_Make_dealing_with_crypto_a_less_scary_thing_by_Stefan_George_Devcon4-9gyZRq162A8.mp4"
+ipfsHash: "QmPGVnqUHuUgnmfCYxMgX6Cn8iSEkxqZGs29398fYnvW8Q"
 duration: 1577
 expertise: "Intermediate"
 type: "Talk"

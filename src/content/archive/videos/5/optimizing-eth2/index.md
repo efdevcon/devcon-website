@@ -3,7 +3,7 @@ edition: 5
 title: "Optimizing Eth2"
 description: "N/A"
 youtubeUrl: "https://youtu.be/68s_hdM4fHY"
-ipfsHash: ''
+ipfsHash: "QmbP4UY2ivenb1rtuQFkBXCE3NfYtmgfGEhB2zZTWss7n2"
 duration: 715
 expertise: "Advanced"
 type: "Talk"

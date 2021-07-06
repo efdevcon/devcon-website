@@ -5,7 +5,7 @@ description: "To mitigate security issues that were quickly present in the deplo
 In this talk, we take a look at how unique incentives in smart contracts affect the process of securing them. For example, smart contracts are often non-upgradeable: enshrinement at release time encourages security processes that end after the deployment of the contract, leaving blind spots in long-term  security guarantees against evolving threats.  Pressure to ship often leaves critical security guarantees out-of-scope of external reviews, and auditor incentives tend away from detailed or fundamental criticisms of contracts' protocols.
 In this talk, we review the reviews and take a look at several top contracts in the ecosystem: what are the provided guarantees, who were they reviewed by, and what is missing?  How do these guarantees compare to guarantees provided users in systems outside the smart contract ecosystem?  And how can we most effectively deploy the immense talent coming into the community towards more secure, more usable systems for end-users?"
 youtubeUrl: "https://youtu.be/i-oWE8hg6-0"
-ipfsHash: "https://ipfs.ethdevops.io/ipfs/QmbPEi1BFJww21ckuX45PBX6E36z2w2LoGfc43W2MkWkeo?filename=Smart_Contract_Security_-_Incentives_Beyond_the_Launch_by_Phil_Daian_Devcon4-i-oWE8hg6-0.mp4"
+ipfsHash: "QmbPEi1BFJww21ckuX45PBX6E36z2w2LoGfc43W2MkWkeo"
 duration: 1763
 expertise: "Intermediate"
 type: "Talk"
