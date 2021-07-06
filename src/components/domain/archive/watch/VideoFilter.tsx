@@ -207,7 +207,7 @@ const Filters = (props: any) => {
 
         <div className={css['clear-container']}>
           {props.mobile && (
-            <button className="red lg bold" onClick={() => props.setOpen(false)}>
+            <button className="red bold" onClick={() => props.setOpen(false)}>
               <span>Continue</span> <IconArrowRight />
             </button>
           )}

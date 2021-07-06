@@ -18,16 +18,11 @@ interface Props {
 }
 
 export const VideoCard = (props: Props) => {
-  // let className = css['video-card']
   let className = css['video-card']
 
-  // if (props.className) className += ` ${props.className}`
   if (props.slide) className += ` ${css['slide']}`
   if (props.horizontal) className = css['horizontal']
   if (props.compact) className = css['compact']
-  // if (props.horizontal) className += ` ${css['horizontal']}`
-  // if (props.vertical) className += ` ${css['force-vertical']}`
-  // if (props.horizontal) className += ` ${css['horizontal']}`
 
   function getWatchUrl() {
     let url = `${props.video.slug}`
