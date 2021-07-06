@@ -7,8 +7,6 @@ ipfsHash: ''
 expertise: Intermediate
 type: Talk
 track: ''
-tags:
-  - testing
 speakers:
   - Andy Milenius
 ---

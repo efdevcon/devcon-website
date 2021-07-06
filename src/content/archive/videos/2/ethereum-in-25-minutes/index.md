@@ -7,9 +7,6 @@ expertise: Intermediate
 ipfsHash: ''
 type: Talk
 track: ''
-tags:
-  - devcon
-  - testing
 speakers:
   - Vitalik Buterin
 ---
