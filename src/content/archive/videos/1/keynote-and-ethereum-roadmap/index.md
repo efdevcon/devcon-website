@@ -7,6 +7,7 @@ ipfsHash: ''
 expertise: Beginner
 type: Panel
 track: ''
+tags: []
 speakers:
   - Vitalik Buterin
   - Jeffrey Wilcke

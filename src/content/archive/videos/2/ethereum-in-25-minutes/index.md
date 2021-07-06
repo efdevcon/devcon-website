@@ -7,6 +7,7 @@ expertise: Intermediate
 ipfsHash: ''
 type: Talk
 track: ''
+tags: []
 speakers:
   - Vitalik Buterin
 ---
