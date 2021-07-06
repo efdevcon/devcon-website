@@ -3,7 +3,7 @@ edition: 5
 title: "The Future of Value"
 description: "N/A"
 youtubeUrl: "https://youtu.be/tX5ep1JzY6k"
-ipfsHash: ''
+ipfsHash: "QmWCYAFbykCcDtUgZnTVd2GUQtpnCzU3EzSJDid531eXuN"
 duration: 1088
 expertise: "Beginner"
 type: "Talk"

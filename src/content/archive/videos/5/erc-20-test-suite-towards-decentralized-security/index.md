@@ -6,7 +6,7 @@ In my speech, I will tell about a decentralized tool that we created to help dev
 SmartDec ERC20 Test Suite is open source: https://github.com/smartdec/testsuite
 Also, we have deployed our centralized instance of the tool here: http://testsuite.net/ropsten/"
 youtubeUrl: "https://youtu.be/oW63ghqQO_8"
-ipfsHash: ''
+ipfsHash: "QmWG3ayrFzXqS2VNDwVg6bHzZCkHHBYfGDFGMVCYKM5Jw6"
 duration: 1333
 expertise: "Intermediate"
 type: "Talk"

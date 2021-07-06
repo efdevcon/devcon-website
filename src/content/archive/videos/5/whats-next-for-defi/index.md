@@ -6,7 +6,7 @@ Looking forward, we have to challenge ourselves – what are the missing pieces 
 MakerDAO is one of the oldest projects in the Ethereum space that has, aside from bringing the first decentralized stablecoin build on this blockchain, introduced a powerful decentralized credit system. Maker Protocol transitioned into both: a DeFi bedrock and a building block in the set of services never seen before. 
 Look ahead with the project founder Rune Christensen – he has a major revelation planned to finish off the keynote - more on this TBD."
 youtubeUrl: "https://youtu.be/NR5LhdIjxzg"
-ipfsHash: ''
+ipfsHash: "QmSA6g4yyeUK1regygtH3xbfawC4KNiE5dykoKD7QcvQdp"
 duration: 1240
 expertise: "Beginner"
 type: "Talk"

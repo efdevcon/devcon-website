@@ -5,7 +5,7 @@ description: "For smart contracts to achieve mass adoption, they need the abilit
 In this talk, we’ll examine what makes a secure oracle mechanism reliable enough to be trusted by smart contracts for external data delivery, access web APIs, and off-chain payments. We’ll review the security risks and failure scenarios to avoid when using oracles and share how developers should set up methods to maximize success. We’ll examine how a decentralized network makes oracle mechanisms more secure, and how decentralization, combined with approaches like Trusted Execution Environments, can enable the highest level of security when connecting with external systems. 
 Finally, we will show the design patterns which leading smart contracts use to remain reliable and provide high levels of overall security while connecting to external systems."
 youtubeUrl: "https://youtu.be/ibqokbe-PxA"
-ipfsHash: ''
+ipfsHash: "QmZzzB9uB7dgyeYna7kmoWaPbB53vTgYHjeg7q3JWw2B2D"
 duration: 1317
 expertise: "Beginner"
 type: "Talk"

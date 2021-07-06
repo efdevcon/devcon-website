@@ -3,7 +3,7 @@ edition: 5
 title: "Weak Subjectivity and Eth 2.0 Sync"
 description: "N/A"
 youtubeUrl: "https://youtu.be/rxqVvu4trX4"
-ipfsHash: ''
+ipfsHash: "QmRegNZE3zdNXN12pxNncVodUHCmTT5rhVMj22U5RZTWwS"
 duration: 702
 expertise: "Advanced"
 type: "Talk"

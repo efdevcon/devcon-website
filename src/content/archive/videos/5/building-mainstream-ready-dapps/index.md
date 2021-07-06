@@ -3,7 +3,7 @@ edition: 5
 title: "Building Mainstream-Ready dApps"
 description: "N/A"
 youtubeUrl: "https://youtu.be/06_dtE1dcbI"
-ipfsHash: ''
+ipfsHash: "QmejPvwNw8RwybJ44fo2JKJtPXjBDm3WCNpX6B6DuPaHhA"
 duration: 1128
 expertise: "Intermediate"
 type: "Talk"

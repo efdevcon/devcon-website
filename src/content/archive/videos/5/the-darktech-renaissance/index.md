@@ -3,7 +3,7 @@ edition: 5
 title: "The DarkTech Renaissance"
 description: "N/A"
 youtubeUrl: "https://youtu.be/tfFkX4dxsKA"
-ipfsHash: ''
+ipfsHash: "QmaJQUqenNkanT9MEpo74s999RS4ocmboepbRWBUTCa5pS"
 duration: 1290
 expertise: "Intermediate"
 type: "Talk"

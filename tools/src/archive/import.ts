@@ -11,7 +11,7 @@ const generatePlaylist = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
 const sheetNr = 0 // 
-const edition = 4 // 
+const edition = 5 // 
 console.log('Importing edition', edition, 'from', sheetNr, 'to', archiveDir)
 
 GSheetReader(
@@ -34,7 +34,7 @@ GSheetReader(
       const tags = result['Tags'] ? result['Tags'].split(',') : []
       tags.push(result['Track'])
 
-      let ipfsHash = result['IPFS Hash'] as string
+      let ipfsHash = result['IPFS Hash'] ?? '' as string
       ipfsHash = ipfsHash.replace('https://ipfs.ethdevops.io/ipfs/', '')
       ipfsHash = ipfsHash.includes('?') ? ipfsHash.split('?')[0] : ipfsHash
 
