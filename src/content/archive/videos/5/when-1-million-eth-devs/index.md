@@ -8,7 +8,7 @@ duration: 1550
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['million',' devs',' developers',' general']
+keywords: ['million','devs','developers','general']
 tags: ['Eth 2.0']
 speakers: ['Joseph Lubin']
 ---

@@ -8,7 +8,7 @@ duration: 1836
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['vlad',' casper',' CBC',' technical']
+keywords: ['vlad','casper','CBC','technical']
 tags: ['Eth 2.0']
 speakers: ['Vlad Zamfir']
 ---

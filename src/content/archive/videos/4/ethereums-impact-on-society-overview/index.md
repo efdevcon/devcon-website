@@ -8,7 +8,7 @@ duration: 1112
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['islamic',' finance',' venezuela',' sexuality',' international',' law',' identity']
+keywords: ['islamic','finance','venezuela','sexuality','international','law','identity']
 tags: ['Society and Systems']
 speakers: ['Rhys Lindmark']
 ---

@@ -8,7 +8,7 @@ duration: 1333
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['assessing',' technical']
+keywords: ['assessing','technical']
 tags: ['Eth 1.x']
 speakers: ['Homan Farahmand']
 ---

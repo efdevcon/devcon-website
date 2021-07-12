@@ -8,7 +8,7 @@ duration: 3720
 expertise: "Expert"
 type: "Panel"
 track: "Developer Experience"
-keywords: ['eth2',' eth 2.0',' updates']
+keywords: ['eth2','eth 2.0','updates']
 tags: ['Developer Experience']
-speakers: ['Alex Beregszaszi',' Guillaume Ballet',' Paweł Bylica',' Hugo De La Cruz',' Casey Detrio',' Paul Dworzanski',' Jake Lang',' Lane Rettig',' Jared Wasinger']
+speakers: ['Alex Beregszaszi','Guillaume Ballet','Paweł Bylica','Hugo De La Cruz','Casey Detrio','Paul Dworzanski','Jake Lang','Lane Rettig','Jared Wasinger']
 ---

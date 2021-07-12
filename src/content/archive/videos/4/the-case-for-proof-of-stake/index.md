@@ -8,7 +8,7 @@ duration: 1810
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['POS',' eth2']
+keywords: ['POS','eth2']
 tags: ['Eth 2.0']
 speakers: ['Emin Gün Sirer']
 ---

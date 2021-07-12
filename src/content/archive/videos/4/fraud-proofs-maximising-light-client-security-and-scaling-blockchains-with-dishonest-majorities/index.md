@@ -11,7 +11,7 @@ duration: 1565
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['validating',' consensus',' trust']
+keywords: ['validating','consensus','trust']
 tags: ['Scalability']
 speakers: ['Mustafa Al-Bassam']
 ---

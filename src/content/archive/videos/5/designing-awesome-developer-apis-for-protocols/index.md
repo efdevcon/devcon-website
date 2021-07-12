@@ -8,7 +8,7 @@ duration: 1237
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['APIs',' protocols',' technical']
+keywords: ['APIs','protocols','technical']
 tags: ['Developer Experience']
 speakers: ['Nikil Viswanathan']
 ---

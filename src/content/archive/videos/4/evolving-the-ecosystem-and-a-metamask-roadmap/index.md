@@ -8,7 +8,7 @@ duration: 1863
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['metamask',' ecosystem']
+keywords: ['metamask','ecosystem']
 tags: ['UX & Design']
-speakers: ['Bobby Dresser',' Bruno Barbieri',' Kevin Serrano',' Jenny Pollack']
+speakers: ['Bobby Dresser','Bruno Barbieri','Kevin Serrano','Jenny Pollack']
 ---

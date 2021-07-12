@@ -8,7 +8,7 @@ duration: 1213
 expertise: "Beginner"
 type: "Talk"
 track: "Medium as Message"
-keywords: ['open internet',' future',' general']
+keywords: ['open internet','future','general']
 tags: ['Medium as Message']
 speakers: ['Kevin Owocki']
 ---

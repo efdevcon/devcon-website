@@ -8,7 +8,7 @@ duration: 620
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['programming',' runtime',' proof',' security',' general']
+keywords: ['programming','runtime','proof','security','general']
 tags: ['Security']
 speakers: ['John Burnham']
 ---

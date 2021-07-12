@@ -8,7 +8,7 @@ duration: 1847
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['governance',' dapps']
+keywords: ['governance','dapps']
 tags: ['Society and Systems']
 speakers: ['Josh Cincinnati']
 ---

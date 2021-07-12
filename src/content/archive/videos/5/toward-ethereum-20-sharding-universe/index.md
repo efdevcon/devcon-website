@@ -8,7 +8,7 @@ duration: 1216
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['sharding',' technical']
+keywords: ['sharding','technical']
 tags: ['Eth 2.0']
 speakers: ['Hsiao-Wei Wang']
 ---

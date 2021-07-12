@@ -8,7 +8,7 @@ duration: 1643
 expertise: "Beginner"
 type: "Talk"
 track: "Security"
-keywords: ['coding',' development']
+keywords: ['coding','development']
 tags: ['Security']
-speakers: ['Bryant Eisenbach',' Kirill Pimenov']
+speakers: ['Bryant Eisenbach','Kirill Pimenov']
 ---

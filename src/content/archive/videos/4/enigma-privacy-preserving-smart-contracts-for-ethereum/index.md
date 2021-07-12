@@ -9,7 +9,7 @@ duration: 1705
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['dapps',' secret contracts',' zkproofs',' voting',' governance',' auctions']
+keywords: ['dapps','secret contracts','zkproofs','voting','governance','auctions']
 tags: ['Privacy']
-speakers: ['Guy Zyskind',' Isan Rivkin']
+speakers: ['Guy Zyskind','Isan Rivkin']
 ---

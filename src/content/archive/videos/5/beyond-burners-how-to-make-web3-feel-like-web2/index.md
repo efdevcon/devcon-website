@@ -9,7 +9,7 @@ duration: 1196
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['web3',' general']
+keywords: ['web3','general']
 tags: ['UX & Design']
 speakers: ['James Duncan']
 ---

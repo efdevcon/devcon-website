@@ -8,7 +8,7 @@ duration: 276
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['DAOs',' incentives',' games',' technical']
+keywords: ['DAOs','incentives','games','technical']
 tags: ['Developer Experience']
 speakers: ['Tom Nash']
 ---

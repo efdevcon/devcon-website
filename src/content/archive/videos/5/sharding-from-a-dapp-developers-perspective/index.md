@@ -8,7 +8,7 @@ duration: 791
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['developer',' dapps',' sharding',' technical']
+keywords: ['developer','dapps','sharding','technical']
 tags: ['Developer Experience']
 speakers: ['Dieter Shirley']
 ---

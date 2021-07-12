@@ -10,5 +10,5 @@ type: "Panel"
 track: "Developer Experience"
 keywords: ['EVM']
 tags: ['Developer Experience']
-speakers: ['Alex Beregszaszi',' Casey Detrio',' Lane Rettig',' Gregory Colvin',' Danny Ryan',' Paweł Bylica']
+speakers: ['Alex Beregszaszi','Casey Detrio','Lane Rettig','Gregory Colvin','Danny Ryan','Paweł Bylica']
 ---

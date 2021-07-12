@@ -9,7 +9,7 @@ duration: 271
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['java',' android',' library',' updates']
+keywords: ['java','android','library','updates']
 tags: ['Developer Experience']
-speakers: ['Conor Svensson',' Ivaylo Kirilov']
+speakers: ['Conor Svensson','Ivaylo Kirilov']
 ---

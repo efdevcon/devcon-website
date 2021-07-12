@@ -8,7 +8,7 @@ duration: 6679
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['eth2',' technical']
+keywords: ['eth2','technical']
 tags: ['Eth 2.0']
-speakers: ['Danny Ryan',' Alex Stokes',' Chihcheng Liang']
+speakers: ['Danny Ryan','Alex Stokes','Chihcheng Liang']
 ---

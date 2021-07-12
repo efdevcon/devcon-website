@@ -8,7 +8,7 @@ duration: 1695
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['ecosystem',' onboarding',' participating']
+keywords: ['ecosystem','onboarding','participating']
 tags: ['Developer Experience']
 speakers: ['Danny Ryan']
 ---

@@ -8,7 +8,7 @@ duration: 386
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['POA',' search']
+keywords: ['POA','search']
 tags: ['Developer Experience']
 speakers: ['Andrew Cravenho']
 ---

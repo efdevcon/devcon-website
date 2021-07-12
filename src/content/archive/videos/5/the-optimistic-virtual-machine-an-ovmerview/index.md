@@ -8,7 +8,7 @@ duration: 1418
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['OVM',' optimism',' academic']
+keywords: ['OVM','optimism','academic']
 tags: ['Eth 1.x']
 speakers: ['Karl Floersch']
 ---

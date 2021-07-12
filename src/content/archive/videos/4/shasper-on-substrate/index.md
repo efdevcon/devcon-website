@@ -8,7 +8,7 @@ duration: 1421
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['serenity',' parity',' substrate',' casper',' sharding']
+keywords: ['serenity','parity','substrate','casper','sharding']
 tags: ['Developer Experience']
 speakers: ['Robert Habermeier']
 ---

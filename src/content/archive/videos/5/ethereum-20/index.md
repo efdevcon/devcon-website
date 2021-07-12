@@ -8,7 +8,7 @@ duration: 2822
 expertise: "Advanced"
 type: "Panel"
 track: "Eth 2.0"
-keywords: ['eth2',' panel',' technical']
+keywords: ['eth2','panel','technical']
 tags: ['Eth 2.0']
 speakers: ['Ethereum Magicians']
 ---

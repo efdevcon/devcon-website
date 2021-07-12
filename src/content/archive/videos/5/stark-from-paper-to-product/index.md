@@ -8,7 +8,7 @@ duration: 1815
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['stark',' general']
+keywords: ['stark','general']
 tags: ['Eth 1.x']
-speakers: ['Oren Katz',' Daniel Yanev']
+speakers: ['Oren Katz','Daniel Yanev']
 ---

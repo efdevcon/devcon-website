@@ -8,7 +8,7 @@ duration: 1298
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['eth2',' general']
+keywords: ['eth2','general']
 tags: ['Eth 2.0']
 speakers: ['Justin Drake']
 ---

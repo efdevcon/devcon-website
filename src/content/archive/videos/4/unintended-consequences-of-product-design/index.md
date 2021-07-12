@@ -8,7 +8,7 @@ duration: 2011
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['decisions',' keys',' user experience']
+keywords: ['decisions','keys','user experience']
 tags: ['UX & Design']
 speakers: ['Taylor Monahan']
 ---

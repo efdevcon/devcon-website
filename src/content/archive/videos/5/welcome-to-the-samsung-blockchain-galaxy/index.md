@@ -8,7 +8,7 @@ duration: 773
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['samsung',' technical']
+keywords: ['samsung','technical']
 tags: ['Developer Experience']
-speakers: ['Wook Lim',' Minji Chae']
+speakers: ['Wook Lim','Minji Chae']
 ---

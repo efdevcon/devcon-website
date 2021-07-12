@@ -8,7 +8,7 @@ duration: 1333
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['payment',' scaling',' dapps']
+keywords: ['payment','scaling','dapps']
 tags: ['Scalability']
 speakers: ['Lefteris Karapetsas']
 ---

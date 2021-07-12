@@ -9,7 +9,7 @@ duration: 1206
 expertise: "Beginner"
 type: "Talk"
 track: "Security"
-keywords: ['Layer 2',' sidechains',' L2',' general']
+keywords: ['Layer 2','sidechains','L2','general']
 tags: ['Security']
 speakers: ['Georgios Konstantopoulos']
 ---

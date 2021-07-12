@@ -8,7 +8,7 @@ duration: 1046
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['staking',' eth2',' general']
+keywords: ['staking','eth2','general']
 tags: ['Eth 2.0']
 speakers: ['Jun Soo JK Kim']
 ---

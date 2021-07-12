@@ -8,7 +8,7 @@ duration: 605
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['library',' javascript']
+keywords: ['library','javascript']
 tags: ['Developer Experience']
 speakers: ['Richard Moore']
 ---

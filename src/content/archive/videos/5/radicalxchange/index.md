@@ -8,7 +8,7 @@ duration: 7650
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['radicalxchange',' general']
+keywords: ['radicalxchange','general']
 tags: ['Society and Systems']
 speakers: ['Audrey Tang']
 ---

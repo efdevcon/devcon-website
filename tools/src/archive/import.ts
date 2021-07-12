@@ -48,9 +48,9 @@ GSheetReader(
         expertise: result['Skill Level'],
         type: result['Type (Talk, Panel, Workshop, Other)'],
         track: result['Track'],
-        keywords: result['Keywords'] ? result['Keywords'].split(',') : undefined,
+        keywords: result['Keywords'] ? result['Keywords'].split(',').map((i: string) => i.trim()) : undefined,
         tags: tags,
-        speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',') : undefined
+        speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',').map((i: string) => i.trim()) : undefined
       } as ArchiveVideo
 
       videos.push(video)

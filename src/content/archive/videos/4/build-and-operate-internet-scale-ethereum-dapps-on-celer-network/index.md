@@ -10,7 +10,7 @@ duration: 1469
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['dapps',' build']
+keywords: ['dapps','build']
 tags: ['Scalability']
-speakers: ['Mo Dong',' Junda Liu',' Xiaozhou Li',' Qingkai Liang']
+speakers: ['Mo Dong','Junda Liu','Xiaozhou Li','Qingkai Liang']
 ---

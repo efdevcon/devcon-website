@@ -8,7 +8,7 @@ duration: 866
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['coding',' accessibility',' API',' open-source',' building',' POC',' infura']
+keywords: ['coding','accessibility','API','open-source','building','POC','infura']
 tags: ['Developer Experience']
 speakers: ['Jose Luu']
 ---

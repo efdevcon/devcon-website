@@ -8,7 +8,7 @@ duration: 785
 expertise: "Advanced"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['substrate',' eth2',' technical']
+keywords: ['substrate','eth2','technical']
 tags: ['Eth 2.0']
 speakers: ['Wei Tang']
 ---

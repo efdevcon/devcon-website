@@ -8,7 +8,7 @@ duration: 1547
 expertise: "Intermediate"
 type: "Workshop"
 track: "Scalability"
-keywords: ['java',' client',' mainnet']
+keywords: ['java','client','mainnet']
 tags: ['Scalability']
-speakers: ['Shahan Khatchadourian',' Rob Dawson',' Daniel Heyman']
+speakers: ['Shahan Khatchadourian','Rob Dawson','Daniel Heyman']
 ---

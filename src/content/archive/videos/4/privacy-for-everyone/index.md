@@ -8,7 +8,7 @@ duration: 2469
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['zcash',' cryptography',' regulations']
+keywords: ['zcash','cryptography','regulations']
 tags: ['Privacy']
 speakers: ['Zooko Wilcox']
 ---

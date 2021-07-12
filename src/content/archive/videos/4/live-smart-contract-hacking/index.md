@@ -8,7 +8,7 @@ duration: 3344
 expertise: "Expert"
 type: "Talk"
 track: "Security"
-keywords: ['hackers',' builders',' bugs',' audit']
+keywords: ['hackers','builders','bugs','audit']
 tags: ['Security']
-speakers: ['Martin Holst Swende',' Nick Johnson',' Richard Moore',' Matthew Di Ferrante']
+speakers: ['Martin Holst Swende','Nick Johnson','Richard Moore','Matthew Di Ferrante']
 ---

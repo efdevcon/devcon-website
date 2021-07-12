@@ -8,7 +8,7 @@ duration: 1722
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['governance',' ecosystem']
+keywords: ['governance','ecosystem']
 tags: ['Society and Systems']
-speakers: ['Will Warren',' Peter Zeitz']
+speakers: ['Will Warren','Peter Zeitz']
 ---

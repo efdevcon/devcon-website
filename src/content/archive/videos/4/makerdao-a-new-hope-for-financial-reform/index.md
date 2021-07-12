@@ -8,7 +8,7 @@ duration: 1785
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['maker',' defi']
+keywords: ['maker','defi']
 tags: ['Society and Systems']
 speakers: ['Andy Milenius']
 ---

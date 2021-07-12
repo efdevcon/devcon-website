@@ -8,7 +8,7 @@ duration: 1625
 expertise: "Expert"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['tendermint',' dapps',' architecture']
+keywords: ['tendermint','dapps','architecture']
 tags: ['Developer Experience']
 speakers: ['Chris Goes']
 ---

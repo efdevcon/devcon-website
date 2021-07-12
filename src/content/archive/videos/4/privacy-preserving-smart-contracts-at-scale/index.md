@@ -8,7 +8,7 @@ duration: 1812
 expertise: "Beginner"
 type: "Talk"
 track: "Privacy"
-keywords: ['oasis',' contracts',' scalability']
+keywords: ['oasis','contracts','scalability']
 tags: ['Privacy']
 speakers: ['Noah Johnson']
 ---

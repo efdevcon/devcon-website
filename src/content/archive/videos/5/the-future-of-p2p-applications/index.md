@@ -8,7 +8,7 @@ duration: 1259
 expertise: "Beginner"
 type: "Talk"
 track: "Medium as Message"
-keywords: ['p2p',' general']
+keywords: ['p2p','general']
 tags: ['Medium as Message']
 speakers: ['Rich Burdon']
 ---

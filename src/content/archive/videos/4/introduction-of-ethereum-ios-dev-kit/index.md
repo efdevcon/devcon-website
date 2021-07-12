@@ -8,7 +8,7 @@ duration: 622
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['tools',' developers',' devs',' funded']
+keywords: ['tools','developers','devs','funded']
 tags: ['Developer Experience']
-speakers: ['Josef Gattermayer',' Jan Mísař']
+speakers: ['Josef Gattermayer','Jan Mísař']
 ---

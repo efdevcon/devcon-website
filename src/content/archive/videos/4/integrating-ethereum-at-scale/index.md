@@ -8,7 +8,7 @@ duration: 3602
 expertise: "Intermediate"
 type: "Panel"
 track: "Developer Experience"
-keywords: ['growth',' scaling',' privacy',' keys',' forks']
+keywords: ['growth','scaling','privacy','keys','forks']
 tags: ['Developer Experience']
-speakers: ['Eric Scrivner',' Jake Craige',' Pete Kim']
+speakers: ['Eric Scrivner','Jake Craige','Pete Kim']
 ---

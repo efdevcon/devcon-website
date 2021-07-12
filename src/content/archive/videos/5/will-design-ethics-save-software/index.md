@@ -8,7 +8,7 @@ duration: 1304
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['ethics',' design',' general']
+keywords: ['ethics','design','general']
 tags: ['UX & Design']
 speakers: ['Cade Diehm']
 ---

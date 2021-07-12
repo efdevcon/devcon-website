@@ -8,7 +8,7 @@ duration: 1264
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['barry',' whitehat',' security',' technical']
+keywords: ['barry','whitehat','security','technical']
 tags: ['Privacy']
 speakers: ['Barry WhiteHat']
 ---

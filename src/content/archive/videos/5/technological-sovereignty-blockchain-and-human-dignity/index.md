@@ -9,7 +9,7 @@ duration: 1702
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['sovereignty',' dignity',' general']
+keywords: ['sovereignty','dignity','general']
 tags: ['Society and Systems']
 speakers: ['Graham de Barra']
 ---

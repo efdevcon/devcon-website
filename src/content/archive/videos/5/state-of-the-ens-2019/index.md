@@ -8,7 +8,7 @@ duration: 1149
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['ENS',' updates',' technical']
+keywords: ['ENS','updates','technical']
 tags: ['UX & Design']
 speakers: ['Nick Johnson']
 ---

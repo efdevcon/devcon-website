@@ -8,7 +8,7 @@ duration: 2430
 expertise: "Intermediate"
 type: "Panel"
 track: "Society and Systems"
-keywords: ['interoperability',' technical']
+keywords: ['interoperability','technical']
 tags: ['Society and Systems']
-speakers: ['James Prestwich',' Brian Behlendorf',' Justin Drake',' Joseph Schweitzer']
+speakers: ['James Prestwich','Brian Behlendorf','Justin Drake','Joseph Schweitzer']
 ---

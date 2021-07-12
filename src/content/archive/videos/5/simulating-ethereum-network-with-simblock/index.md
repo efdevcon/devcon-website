@@ -8,7 +8,7 @@ duration: 1333
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['simulator',' technical']
+keywords: ['simulator','technical']
 tags: ['Eth 1.x']
 speakers: ['Ryunosuke Nagayama']
 ---

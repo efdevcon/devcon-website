@@ -8,7 +8,7 @@ duration: 2108
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['dapps',' onboarding']
+keywords: ['dapps','onboarding']
 tags: ['UX & Design']
 speakers: ['Nicholas Salloum']
 ---

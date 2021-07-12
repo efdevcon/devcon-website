@@ -8,7 +8,7 @@ duration: 1215
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['state',' devp2p',' language']
+keywords: ['state','devp2p','language']
 tags: ['Security']
 speakers: ['Felix Lange']
 ---

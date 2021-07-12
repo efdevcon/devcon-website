@@ -10,5 +10,5 @@ type: "Talk"
 track: "Society and Systems"
 keywords: ['impact']
 tags: ['Society and Systems']
-speakers: ['Liv Boeree',' Natalie Cargill']
+speakers: ['Liv Boeree','Natalie Cargill']
 ---

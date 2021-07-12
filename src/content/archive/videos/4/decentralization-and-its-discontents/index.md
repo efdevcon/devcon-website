@@ -8,7 +8,7 @@ duration: 582
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['web',' censorship',' POW',' DPOS',' ']
+keywords: ['web','censorship','POW','DPOS','']
 tags: ['Society and Systems']
 speakers: ['Sarah Friend']
 ---

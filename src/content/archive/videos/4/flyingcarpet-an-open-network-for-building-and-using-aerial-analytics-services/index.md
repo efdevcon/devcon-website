@@ -11,7 +11,7 @@ duration: 635
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['machine learning',' AI',' data',' bounties',' distribution',' philanthropy']
+keywords: ['machine learning','AI','data','bounties','distribution','philanthropy']
 tags: ['Society and Systems']
 speakers: ['Julien Bouteloup']
 ---

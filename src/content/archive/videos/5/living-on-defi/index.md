@@ -8,7 +8,7 @@ duration: 1177
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['DeFi',' general']
+keywords: ['DeFi','general']
 tags: ['Society and Systems']
 speakers: ['Mariano Conti']
 ---

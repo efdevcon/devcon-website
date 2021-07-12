@@ -8,7 +8,7 @@ duration: 1302
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['infrastructure',' technical']
+keywords: ['infrastructure','technical']
 tags: ['Developer Experience']
 speakers: ['Péter Szilágyi']
 ---

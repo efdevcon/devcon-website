@@ -8,7 +8,7 @@ duration: 1320
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['religion',' halal',' islam']
+keywords: ['religion','halal','islam']
 tags: ['Society and Systems']
-speakers: ['Wan Hafizi Wan Halim',' Mohd Daud Bakar']
+speakers: ['Wan Hafizi Wan Halim','Mohd Daud Bakar']
 ---

@@ -8,7 +8,7 @@ duration: 1223
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['UX',' DevEx']
+keywords: ['UX','DevEx']
 tags: ['Developer Experience']
 speakers: ['Brooklyn Zelenka']
 ---

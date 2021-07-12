@@ -12,7 +12,7 @@ duration: 307
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['dapps',' adoption',' gas']
+keywords: ['dapps','adoption','gas']
 tags: ['UX & Design']
 speakers: ['Austin Griffith']
 ---

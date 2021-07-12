@@ -8,7 +8,7 @@ duration: 2034
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['eth2',' updates',' sharding']
+keywords: ['eth2','updates','sharding']
 tags: ['Eth 2.0']
 speakers: ['Justin Drake']
 ---

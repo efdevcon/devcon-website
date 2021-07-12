@@ -8,7 +8,7 @@ duration: 1282
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['security',' technical']
+keywords: ['security','technical']
 tags: ['Security']
 speakers: ['Martin Holst Swende']
 ---

@@ -8,7 +8,7 @@ duration: 1788
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['library',' proposals']
+keywords: ['library','proposals']
 tags: ['UX & Design']
-speakers: ['Beltran Berrocal',' Aqeel Mohammad',' Alejandro Machado ',' Laura Giron ',' Gustavo Esquinca']
+speakers: ['Beltran Berrocal','Aqeel Mohammad','Alejandro Machado','Laura Giron','Gustavo Esquinca']
 ---

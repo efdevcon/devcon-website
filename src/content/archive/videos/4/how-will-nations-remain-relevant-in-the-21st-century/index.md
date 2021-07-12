@@ -8,7 +8,7 @@ duration: 1417
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['global',' economy']
+keywords: ['global','economy']
 tags: ['Society and Systems']
 speakers: ['Kaspar Korjus']
 ---

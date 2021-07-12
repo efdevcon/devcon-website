@@ -8,7 +8,7 @@ duration: 596
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['trinity',' client']
+keywords: ['trinity','client']
 tags: ['Developer Experience']
 speakers: ['Piper Merriam']
 ---

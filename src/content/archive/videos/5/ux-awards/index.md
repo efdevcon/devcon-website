@@ -8,7 +8,7 @@ duration: 2540
 expertise: "Beginner"
 type: "Other"
 track: "UX & Design"
-keywords: ['dapps',' apps',' judging',' technical']
+keywords: ['dapps','apps','judging','technical']
 tags: ['UX & Design']
-speakers: ['Amy Jung',' Alex Orchowska',' Graeme Blackwood',' Benny Giang']
+speakers: ['Amy Jung','Alex Orchowska','Graeme Blackwood','Benny Giang']
 ---

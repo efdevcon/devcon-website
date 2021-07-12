@@ -8,7 +8,7 @@ duration: 640
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['state',' channels']
+keywords: ['state','channels']
 tags: ['Scalability']
 speakers: ['Tom Close']
 ---

@@ -8,7 +8,7 @@ duration: 1772
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['games',' sidechains',' UI',' UX',' L2']
+keywords: ['games','sidechains','UI','UX','L2']
 tags: ['Scalability']
 speakers: ['Matthew Campbell']
 ---

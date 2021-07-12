@@ -8,7 +8,7 @@ duration: 1554
 expertise: "Expert"
 type: "Talk"
 track: "Privacy"
-keywords: ['metadata',' dapps',' nodes',' aggregators',' safety']
+keywords: ['metadata','dapps','nodes','aggregators','safety']
 tags: ['Privacy']
 speakers: ['Péter Szilágyi']
 ---

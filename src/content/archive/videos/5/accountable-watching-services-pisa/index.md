@@ -8,7 +8,7 @@ duration: 993
 expertise: "Advanced"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['finance',' accountability',' network',' dapps',' developers',' technical']
+keywords: ['finance','accountability','network','dapps','developers','technical']
 tags: ['Eth 1.x']
 speakers: ['Patrick McCorry']
 ---

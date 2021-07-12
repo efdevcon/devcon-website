@@ -8,7 +8,7 @@ duration: 1415
 expertise: "Expert"
 type: "Talk"
 track: "Security"
-keywords: ['trust',' golem',' privacy']
+keywords: ['trust','golem','privacy']
 tags: ['Security']
 speakers: ['Piotr Janiuk']
 ---

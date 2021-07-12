@@ -13,7 +13,7 @@ duration: 0
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['decompiled',' smart contracts',' general']
+keywords: ['decompiled','smart contracts','general']
 tags: ['Eth 1.x']
 speakers: ['Tomasz Kolinko']
 ---

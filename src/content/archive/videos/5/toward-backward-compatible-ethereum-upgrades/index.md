@@ -8,7 +8,7 @@ duration: 1075
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['upgrades',' hard fork',' technical']
+keywords: ['upgrades','hard fork','technical']
 tags: ['Eth 1.x']
 speakers: ['Wei Tang']
 ---

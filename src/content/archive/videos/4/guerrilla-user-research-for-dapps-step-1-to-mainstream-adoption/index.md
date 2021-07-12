@@ -8,7 +8,7 @@ duration: 1544
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['user',' analysis',' research',' data',' usability']
+keywords: ['user','analysis','research','data','usability']
 tags: ['UX & Design']
 speakers: ['Kevin Kim']
 ---

@@ -8,7 +8,7 @@ duration: 1261
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['airswap',' trading',' geth',' infura',' infrastructure']
+keywords: ['airswap','trading','geth','infura','infrastructure']
 tags: ['Developer Experience']
-speakers: ['Adam Link',' Don Mosites']
+speakers: ['Adam Link','Don Mosites']
 ---

@@ -8,7 +8,7 @@ duration: 0
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['zeppelin',' contracts']
+keywords: ['zeppelin','contracts']
 tags: ['Security']
 speakers: ['Manuel Araoz']
 ---

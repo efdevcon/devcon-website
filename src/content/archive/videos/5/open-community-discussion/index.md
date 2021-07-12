@@ -8,7 +8,7 @@ duration: 3573
 expertise: "Intermediate"
 type: "Panel"
 track: "Community"
-keywords: ['ecosystem',' feedback',' floor',' technical']
+keywords: ['ecosystem','feedback','floor','technical']
 tags: ['Community']
 speakers: ['N/A']
 ---

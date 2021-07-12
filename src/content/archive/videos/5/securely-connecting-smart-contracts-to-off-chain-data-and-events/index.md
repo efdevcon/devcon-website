@@ -10,7 +10,7 @@ duration: 1317
 expertise: "Beginner"
 type: "Talk"
 track: "Security"
-keywords: ['chainlink',' off-chain',' general']
+keywords: ['chainlink','off-chain','general']
 tags: ['Security']
 speakers: ['Sergey Nazarov']
 ---

@@ -8,7 +8,7 @@ duration: 1212
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['ethereumjs',' roadmap']
+keywords: ['ethereumjs','roadmap']
 tags: ['Developer Experience']
-speakers: ['Holger Drewes',' Jared Wasinger',' Casey Detrio',' Vinay Pulim',' Alex Beregszaszi']
+speakers: ['Holger Drewes','Jared Wasinger','Casey Detrio','Vinay Pulim','Alex Beregszaszi']
 ---

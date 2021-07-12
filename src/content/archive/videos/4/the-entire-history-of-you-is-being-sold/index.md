@@ -8,7 +8,7 @@ duration: 395
 expertise: "Beginner"
 type: "Talk"
 track: "Privacy"
-keywords: ['data',' monetization',' commodification']
+keywords: ['data','monetization','commodification']
 tags: ['Privacy ']
 speakers: ['Jesse Leimgruber']
 ---

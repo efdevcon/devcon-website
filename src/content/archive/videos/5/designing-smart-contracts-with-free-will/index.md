@@ -8,7 +8,7 @@ duration: 1244
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['smart contracts',' security',' development',' technical']
+keywords: ['smart contracts','security','development','technical']
 tags: ['Security']
 speakers: ['Philip Daian']
 ---

@@ -9,7 +9,7 @@ duration: 1379
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['staking',' rewards',' general']
+keywords: ['staking','rewards','general']
 tags: ['Society and Systems']
-speakers: ['Peter Zeitz',' Will Warren']
+speakers: ['Peter Zeitz','Will Warren']
 ---

@@ -14,7 +14,7 @@ duration: 2465
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['swarm',' developers']
+keywords: ['swarm','developers']
 tags: ['Scalability']
 speakers: ['Aron Fischer & Swarm Team']
 ---

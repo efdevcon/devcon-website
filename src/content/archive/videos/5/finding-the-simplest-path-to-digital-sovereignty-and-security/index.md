@@ -8,7 +8,7 @@ duration: 1250
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['digital',' winter',' democracy',' security',' technical']
+keywords: ['digital','winter','democracy','security','technical']
 tags: ['Society and Systems']
 speakers: ['Paul Gardnerstephen']
 ---

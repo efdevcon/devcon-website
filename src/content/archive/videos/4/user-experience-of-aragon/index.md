@@ -8,7 +8,7 @@ duration: 1358
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['adoption',' dapps',' developers']
+keywords: ['adoption','dapps','developers']
 tags: ['UX & Design']
 speakers: ['Jouni Helminen']
 ---

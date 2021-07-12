@@ -8,7 +8,7 @@ duration: 1036
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['node',' deploying',' technical']
+keywords: ['node','deploying','technical']
 tags: ['Developer Experience']
 speakers: ['Carl Youngblood']
 ---

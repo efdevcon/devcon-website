@@ -8,7 +8,7 @@ duration: 1321
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['liquidity',' DeFi',' technical']
+keywords: ['liquidity','DeFi','technical']
 tags: ['Developer Experience']
 speakers: ['Loi Luu']
 ---

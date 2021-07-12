@@ -8,7 +8,7 @@ duration: 1866
 expertise: "Expert"
 type: "Panel"
 track: "Security"
-keywords: ['panel',' updates']
+keywords: ['panel','updates']
 tags: ['Security']
-speakers: ['Matthew Di Ferrante',' Martin Swende',' J. Maurelian',' Dan Guido',' Phil Daian',' Kevin Seagraves']
+speakers: ['Matthew Di Ferrante','Martin Swende','J. Maurelian','Dan Guido','Phil Daian','Kevin Seagraves']
 ---

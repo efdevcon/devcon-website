@@ -8,7 +8,7 @@ duration: 715
 expertise: "Advanced"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['eth2',' technical']
+keywords: ['eth2','technical']
 tags: ['Eth 2.0']
 speakers: ['Michael Sproul']
 ---

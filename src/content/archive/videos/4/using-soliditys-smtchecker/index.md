@@ -8,7 +8,7 @@ duration: 1541
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['formal verification',' safety',' formal specification']
+keywords: ['formal verification','safety','formal specification']
 tags: ['Security']
 speakers: ['Leonardo Alt']
 ---

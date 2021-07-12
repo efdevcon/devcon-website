@@ -8,7 +8,7 @@ duration: 1485
 expertise: "Beginner"
 type: "Talk"
 track: "Scalability"
-keywords: ['enterprise',' foundation',' developers',' library',' stack',' permissions',' json-rpc',' impact']
+keywords: ['enterprise','foundation','developers','library','stack','permissions','json-rpc','impact']
 tags: ['Scalability']
-speakers: ['Ron Resnick',' Conor Svensson']
+speakers: ['Ron Resnick','Conor Svensson']
 ---

@@ -8,7 +8,7 @@ duration: 639
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['grants',' OSS',' sustainability',' funding',' CLR',' crowdfunding',' technical']
+keywords: ['grants','OSS','sustainability','funding','CLR','crowdfunding','technical']
 tags: ['UX & Design']
 speakers: ['Dan Lipert']
 ---

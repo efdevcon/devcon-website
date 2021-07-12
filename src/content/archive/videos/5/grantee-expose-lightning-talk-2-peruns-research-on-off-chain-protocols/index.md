@@ -8,7 +8,7 @@ duration: 696
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['Scaling',' scalability',' state channels',' exchange',' privacy',' security',' technical']
+keywords: ['Scaling','scalability','state channels','exchange','privacy','security','technical']
 tags: ['Developer Experience']
 speakers: ['Lisa Eckey']
 ---

@@ -14,7 +14,7 @@ duration: 1082
 expertise: "Beginner"
 type: "Talk"
 track: "Medium as Message"
-keywords: ['videogames',' video',' games',' general']
+keywords: ['videogames','video','games','general']
 tags: ['Medium as Message']
 speakers: ['Christopher Robison']
 ---

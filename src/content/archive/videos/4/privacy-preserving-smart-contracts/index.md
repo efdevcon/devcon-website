@@ -8,7 +8,7 @@ duration: 453
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['TEE',' ZKP',' zkproofs',' sMPC']
+keywords: ['TEE','ZKP','zkproofs','sMPC']
 tags: ['Privacy']
 speakers: ['Julian Koh']
 ---

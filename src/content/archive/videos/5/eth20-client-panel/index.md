@@ -8,7 +8,7 @@ duration: 2160
 expertise: "Advanced"
 type: "Panel"
 track: "Eth 2.0"
-keywords: ['eth2',' technical']
+keywords: ['eth2','technical']
 tags: ['Eth 2.0']
 speakers: ['N/A']
 ---

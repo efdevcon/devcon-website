@@ -8,7 +8,7 @@ duration: 439
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['gas',' gwei',' scaling',' incentives']
+keywords: ['gas','gwei','scaling','incentives']
 tags: ['Security']
-speakers: ['David Yakira',' Ido Grayevsky',' Avi Asayag',' Ido Zilberberg']
+speakers: ['David Yakira','Ido Grayevsky','Avi Asayag','Ido Zilberberg']
 ---

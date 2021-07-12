@@ -8,7 +8,7 @@ duration: 956
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['history',' UN',' global']
+keywords: ['history','UN','global']
 tags: ['Society and Systems']
 speakers: ['Katherine Wu']
 ---

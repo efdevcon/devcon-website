@@ -8,7 +8,7 @@ duration: 1584
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['consistency',' speed',' voting',' thunder']
+keywords: ['consistency','speed','voting','thunder']
 tags: ['Society and Systems']
 speakers: ['Elaine Shi']
 ---

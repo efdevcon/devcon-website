@@ -10,7 +10,7 @@ duration: 1576
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['governance',' social media',' privacy']
+keywords: ['governance','social media','privacy']
 tags: ['Society and Systems']
 speakers: ['Sina Habibian']
 ---

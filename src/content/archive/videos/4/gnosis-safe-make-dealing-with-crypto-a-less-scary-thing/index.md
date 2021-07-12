@@ -10,7 +10,7 @@ duration: 1577
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['gnosis',' wallet',' security']
+keywords: ['gnosis','wallet','security']
 tags: ['UX & Design']
 speakers: ['Stefan George']
 ---

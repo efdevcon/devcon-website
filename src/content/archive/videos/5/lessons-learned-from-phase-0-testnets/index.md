@@ -8,7 +8,7 @@ duration: 1045
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['phase 0',' testnet',' technical']
+keywords: ['phase 0','testnet','technical']
 tags: ['Developer Experience']
 speakers: ['Preston Van Loon']
 ---

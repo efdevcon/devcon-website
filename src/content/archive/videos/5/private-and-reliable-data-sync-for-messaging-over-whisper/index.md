@@ -12,7 +12,7 @@ duration: 1141
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['whisper',' messaging',' technical']
+keywords: ['whisper','messaging','technical']
 tags: ['Privacy']
-speakers: ['Dean Eigenmann',' Oskar Thoren']
+speakers: ['Dean Eigenmann','Oskar Thoren']
 ---

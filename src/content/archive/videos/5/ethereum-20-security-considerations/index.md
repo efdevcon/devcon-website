@@ -12,7 +12,7 @@ duration: 1266
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['eth2',' technical']
+keywords: ['eth2','technical']
 tags: ['Security']
-speakers: ['Adrian Manning',' Paul Hauner']
+speakers: ['Adrian Manning','Paul Hauner']
 ---

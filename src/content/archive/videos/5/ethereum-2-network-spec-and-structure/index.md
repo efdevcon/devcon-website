@@ -8,7 +8,7 @@ duration: 853
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['evolution',' libp2p',' eth2',' technical']
+keywords: ['evolution','libp2p','eth2','technical']
 tags: ['Eth 2.0']
 speakers: ['Zahary Karadjov']
 ---

@@ -8,7 +8,7 @@ duration: 582
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['yul',' language']
+keywords: ['yul','language']
 tags: ['Developer Experience']
 speakers: ['Alex Beregszaszi']
 ---

@@ -8,7 +8,7 @@ duration: 841
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['coinbase',' safety',' transactions']
+keywords: ['coinbase','safety','transactions']
 tags: ['Security']
 speakers: ['Jake Craige']
 ---

@@ -8,7 +8,7 @@ duration: 1333
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['Layer 2',' technical']
+keywords: ['Layer 2','technical']
 tags: ['Eth 1.x']
 speakers: ['Dmitry Kurinskiy']
 ---

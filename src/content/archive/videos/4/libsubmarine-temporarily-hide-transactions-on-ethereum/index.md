@@ -8,7 +8,7 @@ duration: 344
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['frontrunning',' auctions',' voting',' open-source',' gas']
+keywords: ['frontrunning','auctions','voting','open-source','gas']
 tags: ['Privacy']
-speakers: ['Stephane Gosselin',' Shayan Eskandari',' Tyler Kell',' Lorenz Breidenbach']
+speakers: ['Stephane Gosselin','Shayan Eskandari','Tyler Kell','Lorenz Breidenbach']
 ---

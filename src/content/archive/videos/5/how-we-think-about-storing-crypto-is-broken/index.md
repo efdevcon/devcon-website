@@ -8,7 +8,7 @@ duration: 787
 expertise: "Beginner"
 type: "Talk"
 track: "Medium as Message"
-keywords: ['storage',' wallets',' general']
+keywords: ['storage','wallets','general']
 tags: ['Medium as Message']
 speakers: ['Cameron Robertson']
 ---

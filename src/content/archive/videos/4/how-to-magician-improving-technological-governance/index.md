@@ -10,5 +10,5 @@ type: "Talk"
 track: "Society and Systems"
 keywords: ['governance']
 tags: ['Society and Systems']
-speakers: ['Boris Mann',' Greg Colvin',' Jamie Pitts']
+speakers: ['Boris Mann','Greg Colvin','Jamie Pitts']
 ---

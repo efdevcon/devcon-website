@@ -11,7 +11,7 @@ duration: 1326
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['user experience',' awards',' competition',' dapps']
+keywords: ['user experience','awards','competition','dapps']
 tags: ['UX & Design']
 speakers: ['Amy Jung']
 ---

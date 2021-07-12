@@ -8,7 +8,7 @@ duration: 716
 expertise: "Beginner"
 type: "Other"
 track: "Devcon"
-keywords: ['buidl',' casper',' serenity']
+keywords: ['buidl','casper','serenity']
 tags: ['Devcon']
 speakers: ['Jonathan Mann']
 ---

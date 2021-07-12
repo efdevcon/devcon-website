@@ -8,7 +8,7 @@ duration: 783
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['virgil',' projects',' updates']
+keywords: ['virgil','projects','updates']
 tags: ['Society and Systems']
 speakers: ['Virgil Griffith']
 ---

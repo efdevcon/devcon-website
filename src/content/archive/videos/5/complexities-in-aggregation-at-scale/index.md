@@ -8,7 +8,7 @@ duration: 856
 expertise: "Advanced"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['Scaling',' aggregation',' technical']
+keywords: ['Scaling','aggregation','technical']
 tags: ['Eth 1.x']
 speakers: ['Mikhail Kalinin']
 ---

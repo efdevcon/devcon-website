@@ -8,7 +8,7 @@ duration: 2360
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['humanitarian',' global finance',' finance initiatives',' philanthropy',' technical']
+keywords: ['humanitarian','global finance','finance initiatives','philanthropy','technical']
 tags: ['Society and Systems']
-speakers: ['Natalie Cargill',' Will Ruddick',' Adam Bornstein',' Lucas Geiger']
+speakers: ['Natalie Cargill','Will Ruddick','Adam Bornstein','Lucas Geiger']
 ---

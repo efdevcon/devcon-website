@@ -8,7 +8,7 @@ duration: 1259
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['ICO',' initial coin offering']
+keywords: ['ICO','initial coin offering']
 tags: ['Society and Systems']
 speakers: ['Fabian Vogelsteller']
 ---

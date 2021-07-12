@@ -8,7 +8,7 @@ duration: 1057
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['mist',' developers']
+keywords: ['mist','developers']
 tags: ['UX & Design']
-speakers: ['Everton Fraga',' Alex Van de Sande',' Marc Garreau',' Philipp Langhans',' Ryan Ghods']
+speakers: ['Everton Fraga','Alex Van de Sande','Marc Garreau','Philipp Langhans','Ryan Ghods']
 ---

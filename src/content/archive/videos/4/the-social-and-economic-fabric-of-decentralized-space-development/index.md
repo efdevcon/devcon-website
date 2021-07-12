@@ -9,7 +9,7 @@ duration: 1387
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['space',' exploration',' economics']
+keywords: ['space','exploration','economics']
 tags: ['Society and Systems']
 speakers: ['Yalda Mousavinia']
 ---

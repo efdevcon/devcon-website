@@ -8,7 +8,7 @@ duration: 1194
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['eth2',' updates',' technical']
+keywords: ['eth2','updates','technical']
 tags: ['Eth 2.0']
 speakers: ['Danny Ryan']
 ---

@@ -8,7 +8,7 @@ duration: 1603
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['client',' optimisation']
+keywords: ['client','optimisation']
 tags: ['Scalability']
 speakers: ['Alexey Akhunov']
 ---

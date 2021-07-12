@@ -8,7 +8,7 @@ duration: 1901
 expertise: "Beginner"
 type: "Talk"
 track: "Scalability"
-keywords: ['cryptoeconomics',' incentives',' equality']
+keywords: ['cryptoeconomics','incentives','equality']
 tags: ['Scalability']
 speakers: ['Karl Floersch']
 ---

@@ -8,7 +8,7 @@ duration: 1318
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['state channels',' technical']
+keywords: ['state channels','technical']
 tags: ['Eth 1.x']
-speakers: ['Liam Horne',' Tom Close']
+speakers: ['Liam Horne','Tom Close']
 ---

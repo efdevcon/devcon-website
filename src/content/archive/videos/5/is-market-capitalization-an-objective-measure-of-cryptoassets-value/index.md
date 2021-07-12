@@ -8,7 +8,7 @@ duration: 1702
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['market capitalization',' general']
+keywords: ['market capitalization','general']
 tags: ['Society and Systems']
 speakers: ['Bobby Ong']
 ---

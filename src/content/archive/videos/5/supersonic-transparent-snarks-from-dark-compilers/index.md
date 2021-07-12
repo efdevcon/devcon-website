@@ -8,7 +8,7 @@ duration: 1389
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['zkproofs',' privacy',' trust',' technical']
+keywords: ['zkproofs','privacy','trust','technical']
 tags: ['Developer Experience']
 speakers: ['Benedikt Bunz']
 ---

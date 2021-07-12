@@ -8,7 +8,7 @@ duration: 1709
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['scaling',' mvp',' zk',' zero knowledge']
+keywords: ['scaling','mvp','zk','zero knowledge']
 tags: ['Developer Experience']
-speakers: ['David Knott',' Kelvin Fitcher']
+speakers: ['David Knott','Kelvin Fitcher']
 ---

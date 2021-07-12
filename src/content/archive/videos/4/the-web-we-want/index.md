@@ -8,7 +8,7 @@ duration: 2265
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['web3',' internet',' privacy']
+keywords: ['web3','internet','privacy']
 tags: ['Society and Systems']
 speakers: ['Brewster Kahle']
 ---

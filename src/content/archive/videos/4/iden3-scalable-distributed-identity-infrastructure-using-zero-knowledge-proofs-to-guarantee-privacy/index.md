@@ -10,7 +10,7 @@ duration: 2054
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['identity',' zkproofs',' proofs']
+keywords: ['identity','zkproofs','proofs']
 tags: ['Privacy']
 speakers: ['Jordi Baylina']
 ---

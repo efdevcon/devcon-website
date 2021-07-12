@@ -8,7 +8,7 @@ duration: 1522
 expertise: "Expert"
 type: "Talk"
 track: "Scalability"
-keywords: ['gas',' gwei',' fees']
+keywords: ['gas','gwei','fees']
 tags: ['Scalability']
 speakers: ['Christian Reitwiessner']
 ---

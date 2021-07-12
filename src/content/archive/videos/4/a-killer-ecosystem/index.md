@@ -8,7 +8,7 @@ duration: 1810
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['trust',' governance']
+keywords: ['trust','governance']
 tags: ['Society and Systems']
 speakers: ['Joseph Lubin']
 ---

@@ -10,7 +10,7 @@ duration: 1211
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['ENS',' general']
+keywords: ['ENS','general']
 tags: ['Society and Systems']
 speakers: ['Brantly Millegan']
 ---

@@ -8,7 +8,7 @@ duration: 1702
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['protocol',' governance',' general']
+keywords: ['protocol','governance','general']
 tags: ['Society and Systems']
 speakers: ['Dušan Kovačič']
 ---

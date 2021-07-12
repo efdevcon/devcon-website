@@ -8,7 +8,7 @@ duration: 1300
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['sharding',' casper',' security',' node',' gossip']
+keywords: ['sharding','casper','security','node','gossip']
 tags: ['Scalability']
-speakers: ['Jannik Luhn',' Kevin Mai-Hsuan Chia']
+speakers: ['Jannik Luhn','Kevin Mai-Hsuan Chia']
 ---

@@ -8,7 +8,7 @@ duration: 1203
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['ens',' updates']
+keywords: ['ens','updates']
 tags: ['Developer Experience']
 speakers: ['Nick Johnson & Jeff Lau']
 ---

@@ -8,7 +8,7 @@ duration: 633
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['Zksnark',' boolean circuit',' fsm',' category theory',' technical']
+keywords: ['Zksnark','boolean circuit','fsm','category theory','technical']
 tags: ['Developer Experience']
 speakers: ['Fabrizio Romano Genovese']
 ---

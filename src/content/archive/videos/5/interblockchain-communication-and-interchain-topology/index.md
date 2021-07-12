@@ -8,7 +8,7 @@ duration: 860
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['interchain',' interblockchain',' technical']
+keywords: ['interchain','interblockchain','technical']
 tags: ['Eth 2.0']
 speakers: ['Christopher Goes']
 ---

@@ -8,7 +8,7 @@ duration: 1442
 expertise: "Beginner"
 type: "Talk"
 track: "Security"
-keywords: ['internet',' society',' adoption']
+keywords: ['internet','society','adoption']
 tags: ['Security']
 speakers: ['Philipp Langhans']
 ---

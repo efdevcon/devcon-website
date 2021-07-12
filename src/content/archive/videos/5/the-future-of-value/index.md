@@ -8,7 +8,7 @@ duration: 1088
 expertise: "Beginner"
 type: "Talk"
 track: "Economics"
-keywords: ['UBI',' demurrage',' currency',' ecology',' value',' debt',' rewards',' contracts',' tokens',' general']
+keywords: ['UBI','demurrage','currency','ecology','value','debt','rewards','contracts','tokens','general']
 tags: ['Economics']
 speakers: ['Sep Kamvar']
 ---

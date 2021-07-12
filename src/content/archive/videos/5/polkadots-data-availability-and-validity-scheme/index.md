@@ -8,7 +8,7 @@ duration: 924
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['polkadot',' dot',' technical']
+keywords: ['polkadot','dot','technical']
 tags: ['Eth 2.0']
 speakers: ['Alistair Stewart']
 ---

@@ -9,7 +9,7 @@ duration: 369
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['front-running',' miners',' mining',' open-source']
+keywords: ['front-running','miners','mining','open-source']
 tags: ['Security']
-speakers: ['Lorenz Breidenbach',' Tyler Kell']
+speakers: ['Lorenz Breidenbach','Tyler Kell']
 ---

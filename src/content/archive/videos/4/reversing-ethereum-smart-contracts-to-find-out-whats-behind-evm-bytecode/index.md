@@ -8,7 +8,7 @@ duration: 1139
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['solidity',' code']
+keywords: ['solidity','code']
 tags: ['Security']
 speakers: ['Patrick Ventuzelo']
 ---

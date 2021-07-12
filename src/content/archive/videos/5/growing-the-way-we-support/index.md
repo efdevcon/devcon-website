@@ -8,7 +8,7 @@ duration: 1068
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['EF',' foundation',' general']
+keywords: ['EF','foundation','general']
 tags: ['Society and Systems']
 speakers: ['Aya Miyaguchi']
 ---

@@ -8,7 +8,7 @@ duration: 1570
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['incentives',' nonprofits',' general']
+keywords: ['incentives','nonprofits','general']
 tags: ['Society and Systems']
 speakers: ['Griff Green']
 ---

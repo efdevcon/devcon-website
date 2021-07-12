@@ -8,7 +8,7 @@ duration: 1128
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['Libra',' facebook',' governance',' compatibility',' technical']
+keywords: ['Libra','facebook','governance','compatibility','technical']
 tags: ['Society and Systems']
 speakers: ['Lucas Geiger']
 ---

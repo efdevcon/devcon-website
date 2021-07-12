@@ -8,7 +8,7 @@ duration: 1255
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['open money initiative',' venezuela',' general']
+keywords: ['open money initiative','venezuela','general']
 tags: ['Society and Systems']
 speakers: ['Alejandro Machado']
 ---

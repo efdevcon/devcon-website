@@ -8,7 +8,7 @@ duration: 1901
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['satoshi',' Byzantine',' incentives',' pow',' pos',' snark',' zksnark',' general']
+keywords: ['satoshi','Byzantine','incentives','pow','pos','snark','zksnark','general']
 tags: ['Eth 1.x']
 speakers: ['Vitalik Buterin']
 ---

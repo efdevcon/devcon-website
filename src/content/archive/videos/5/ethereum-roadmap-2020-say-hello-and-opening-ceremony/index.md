@@ -8,7 +8,7 @@ duration: 1809
 expertise: "Advanced"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['magicians',' community',' schedule',' core devs',' technical']
+keywords: ['magicians','community','schedule','core devs','technical']
 tags: ['Eth 1.x']
 speakers: ['Ethereum Magicians']
 ---

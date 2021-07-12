@@ -8,7 +8,7 @@ duration: 1560
 expertise: "Expert"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['community',' assets',' fiat',' legal']
+keywords: ['community','assets','fiat','legal']
 tags: ['Society and Systems']
 speakers: ['Vinay Gupta']
 ---

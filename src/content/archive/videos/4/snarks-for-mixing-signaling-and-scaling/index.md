@@ -8,7 +8,7 @@ duration: 3688
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['scaling',' dapps']
+keywords: ['scaling','dapps']
 tags: ['Scalability']
 speakers: ['Barry Whitehat']
 ---

@@ -12,7 +12,7 @@ duration: 1831
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['l2',' layer2']
+keywords: ['l2','layer2']
 tags: ['Scalability']
 speakers: ['Josh Stark']
 ---

@@ -8,7 +8,7 @@ duration: 1543
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['wealth',' hyperinflation',' economics',' policy',' store of value',' currency']
+keywords: ['wealth','hyperinflation','economics','policy','store of value','currency']
 tags: ['Society and Systems']
-speakers: ['Alejandro Machado',' Eduardo Gomez']
+speakers: ['Alejandro Machado','Eduardo Gomez']
 ---

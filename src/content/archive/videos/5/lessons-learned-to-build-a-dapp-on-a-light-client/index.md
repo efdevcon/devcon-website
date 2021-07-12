@@ -8,7 +8,7 @@ duration: 1127
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['build',' dapp',' technical']
+keywords: ['build','dapp','technical']
 tags: ['Developer Experience']
 speakers: ['Thibaut Sardan']
 ---

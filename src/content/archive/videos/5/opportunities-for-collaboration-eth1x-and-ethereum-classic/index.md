@@ -8,7 +8,7 @@ duration: 1214
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['classic',' etc',' general']
+keywords: ['classic','etc','general']
 tags: ['Eth 1.x']
 speakers: ['Terry Culver']
 ---

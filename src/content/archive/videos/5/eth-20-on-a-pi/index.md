@@ -8,7 +8,7 @@ duration: 1064
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['raspberry',' eth2',' technical']
+keywords: ['raspberry','eth2','technical']
 tags: ['Eth 2.0']
 speakers: ['Mamy Ratsimbazafy']
 ---

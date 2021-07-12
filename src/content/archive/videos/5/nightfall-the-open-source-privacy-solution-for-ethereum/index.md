@@ -10,7 +10,7 @@ duration: 1177
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['privacy',' nightfall',' technical']
+keywords: ['privacy','nightfall','technical']
 tags: ['Privacy']
-speakers: ['Duncan Westland',' Chaitanya Konda',' Michael Connor',' Paul Brody']
+speakers: ['Duncan Westland','Chaitanya Konda','Michael Connor','Paul Brody']
 ---

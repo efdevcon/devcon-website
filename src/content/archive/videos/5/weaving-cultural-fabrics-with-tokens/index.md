@@ -8,7 +8,7 @@ duration: 1086
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['tokens',' culture',' general']
+keywords: ['tokens','culture','general']
 tags: ['Society and Systems']
 speakers: ['Mark Beylin']
 ---

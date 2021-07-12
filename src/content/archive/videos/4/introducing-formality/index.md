@@ -8,7 +8,7 @@ duration: 656
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['formality',' language',' programming']
+keywords: ['formality','language','programming']
 tags: ['Security']
-speakers: ['Victor Maia',' Leonardo Souza']
+speakers: ['Victor Maia','Leonardo Souza']
 ---

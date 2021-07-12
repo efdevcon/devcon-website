@@ -8,7 +8,7 @@ duration: 1338
 expertise: "Advanced"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['Open',' hardware',' technical']
+keywords: ['Open','hardware','technical']
 tags: ['Society and Systems']
 speakers: ['Matthias Tarasiewicz']
 ---

@@ -8,7 +8,7 @@ duration: 1001
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['EIP',' upgrades',' implementation',' technical']
+keywords: ['EIP','upgrades','implementation','technical']
 tags: ['Eth 1.x']
-speakers: ['Danno Ferrin',' Tim Beiko']
+speakers: ['Danno Ferrin','Tim Beiko']
 ---

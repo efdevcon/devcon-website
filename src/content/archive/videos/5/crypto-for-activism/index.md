@@ -8,7 +8,7 @@ duration: 2478
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['activist',' occupy',' satoshi',' economics',' logics',' governance',' funding mechanisms',' adversarial',' general']
+keywords: ['activist','occupy','satoshi','economics','logics','governance','funding mechanisms','adversarial','general']
 tags: ['Society and Systems']
-speakers: ['Micah White',' Amir Taaki']
+speakers: ['Micah White','Amir Taaki']
 ---

@@ -8,7 +8,7 @@ duration: 1872
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['philanthropy',' charity']
+keywords: ['philanthropy','charity']
 tags: ['Society and Systems']
 speakers: ['E. Glen Weyl']
 ---

@@ -8,7 +8,7 @@ duration: 7285
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['computation',' trust',' scalability',' privacy']
+keywords: ['computation','trust','scalability','privacy']
 tags: ['Security']
-speakers: ['Sanjay Bakshi',' Marley Gray',' Guy Zyskind',' Nicolas Bacca',' Lei Zhang',' Sebastian Gajek',' Andreas Freund',' Noah Johnson',' John Whelan',' Joanna Rutkowska']
+speakers: ['Sanjay Bakshi','Marley Gray','Guy Zyskind','Nicolas Bacca','Lei Zhang','Sebastian Gajek','Andreas Freund','Noah Johnson','John Whelan','Joanna Rutkowska']
 ---

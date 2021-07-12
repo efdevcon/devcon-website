@@ -10,7 +10,7 @@ duration: 700
 expertise: "Beginner"
 type: "Talk"
 track: "Privacy"
-keywords: ['commodification',' data',' monetization',' general']
+keywords: ['commodification','data','monetization','general']
 tags: ['Privacy']
 speakers: ['Seven Waterhouse']
 ---

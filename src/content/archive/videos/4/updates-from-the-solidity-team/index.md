@@ -8,7 +8,7 @@ duration: 1984
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['solidity',' updates']
+keywords: ['solidity','updates']
 tags: ['Developer Experience']
 speakers: ['Erik Kundt']
 ---

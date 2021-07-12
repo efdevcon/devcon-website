@@ -11,7 +11,7 @@ duration: 538
 expertise: "Expert"
 type: "Talk"
 track: "Scalability"
-keywords: ['clients',' network',' peers',' nodes',' MM']
+keywords: ['clients','network','peers','nodes','MM']
 tags: ['Scalability']
-speakers: ['Dmitriy Ryajov',' Frankie Pangilinan']
+speakers: ['Dmitriy Ryajov','Frankie Pangilinan']
 ---

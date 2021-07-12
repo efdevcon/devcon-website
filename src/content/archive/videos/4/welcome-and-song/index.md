@@ -8,7 +8,7 @@ duration: 823
 expertise: "Beginner"
 type: "Other"
 track: "Devcon"
-keywords: ['introduction',' orientation',' start',' beginning']
+keywords: ['introduction','orientation','start','beginning']
 tags: ['Devcon']
 speakers: ['Jonathan Mann']
 ---

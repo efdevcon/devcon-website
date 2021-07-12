@@ -8,7 +8,7 @@ duration: 1359
 expertise: "Beginner"
 type: "Talk"
 track: "Economics"
-keywords: ['internet archive',' wayback machine',' interest',' history',' general']
+keywords: ['internet archive','wayback machine','interest','history','general']
 tags: ['Economics']
 speakers: ['Brewster Kahle']
 ---

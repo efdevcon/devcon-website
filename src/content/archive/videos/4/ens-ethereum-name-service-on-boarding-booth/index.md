@@ -8,7 +8,7 @@ duration: 2546
 expertise: "Beginner"
 type: "Workshop"
 track: "UX & Design"
-keywords: ['ens',' onboarding',' instruction']
+keywords: ['ens','onboarding','instruction']
 tags: ['UX & Design']
-speakers: ['Beltran Berrocal',' Makato Inoue']
+speakers: ['Beltran Berrocal','Makato Inoue']
 ---

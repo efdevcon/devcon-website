@@ -18,7 +18,7 @@ duration: 729
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['sidechain',' trustless',' technical']
+keywords: ['sidechain','trustless','technical']
 tags: ['Eth 1.x']
 speakers: ['Matt Luongo']
 ---

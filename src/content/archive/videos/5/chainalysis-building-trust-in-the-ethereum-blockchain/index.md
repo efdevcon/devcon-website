@@ -8,7 +8,7 @@ duration: 955
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['Chainalysis',' trust',' technical']
+keywords: ['Chainalysis','trust','technical']
 tags: ['Eth 1.x']
-speakers: ['Mikkel Jensen',' Surya Rastogi']
+speakers: ['Mikkel Jensen','Surya Rastogi']
 ---

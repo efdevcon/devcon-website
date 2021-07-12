@@ -8,7 +8,7 @@ duration: 536
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['p2p',' backup',' networks',' trust']
+keywords: ['p2p','backup','networks','trust']
 tags: ['Security']
 speakers: ['Peg']
 ---

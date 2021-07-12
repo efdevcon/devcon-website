@@ -11,7 +11,7 @@ duration: 1333
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['erc-20',' decentralized security',' technical']
+keywords: ['erc-20','decentralized security','technical']
 tags: ['Security']
 speakers: ['Alexander Seleznev']
 ---

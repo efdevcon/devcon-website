@@ -8,7 +8,7 @@ duration: 1818
 expertise: "Beginner"
 type: "Talk"
 track: "Security"
-keywords: ['casper',' cryptoeconomics',' philosophy']
+keywords: ['casper','cryptoeconomics','philosophy']
 tags: ['Security']
 speakers: ['Vlad Zamfir']
 ---

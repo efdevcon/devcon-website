@@ -8,7 +8,7 @@ duration: 618
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['community',' goals',' web3',' ethprize',' ethsecurity']
+keywords: ['community','goals','web3','ethprize','ethsecurity']
 tags: ['Society and Systems']
 speakers: ['Robbie Bent']
 ---

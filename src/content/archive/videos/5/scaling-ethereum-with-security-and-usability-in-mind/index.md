@@ -8,7 +8,7 @@ duration: 879
 expertise: "Beginner"
 type: "Talk"
 track: "Security"
-keywords: ['scaling',' general']
+keywords: ['scaling','general']
 tags: ['Security']
 speakers: ['Jayntibhai Kanani']
 ---

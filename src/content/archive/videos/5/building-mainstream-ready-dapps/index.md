@@ -8,7 +8,7 @@ duration: 1128
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['dapps',' mainstream',' adoption',' technical']
+keywords: ['dapps','mainstream','adoption','technical']
 tags: ['Developer Experience']
 speakers: ['Matt Slipper']
 ---

@@ -8,7 +8,7 @@ duration: 1097
 expertise: "Beginner"
 type: "Talk"
 track: "Devcon"
-keywords: ['EF',' updates']
+keywords: ['EF','updates']
 tags: ['Devcon']
 speakers: ['Aya Miyaguchi']
 ---

@@ -15,7 +15,7 @@ duration: 1189
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['onboarding',' livepeer',' apps',' ecosystem',' PoS',' adoption',' general']
+keywords: ['onboarding','livepeer','apps','ecosystem','PoS','adoption','general']
 tags: ['UX & Design']
-speakers: ['Adam Soffer',' Xuan Yue']
+speakers: ['Adam Soffer','Xuan Yue']
 ---

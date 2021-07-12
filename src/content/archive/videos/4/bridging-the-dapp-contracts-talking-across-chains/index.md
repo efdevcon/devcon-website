@@ -14,7 +14,7 @@ duration: 1941
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['scaling',' updates',' EVM',' bridging',' sidechains']
+keywords: ['scaling','updates','EVM','bridging','sidechains']
 tags: ['Developer Experience']
 speakers: ['Björn Wagner']
 ---

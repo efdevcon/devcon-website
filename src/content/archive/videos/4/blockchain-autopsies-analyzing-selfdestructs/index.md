@@ -8,7 +8,7 @@ duration: 381
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['contracts',' intentions',' selfdestruct']
+keywords: ['contracts','intentions','selfdestruct']
 tags: ['Security']
 speakers: ['Jay Little']
 ---

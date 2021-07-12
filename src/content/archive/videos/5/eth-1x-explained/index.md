@@ -8,7 +8,7 @@ duration: 1074
 expertise: "Beginner"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['suschainability',' EWASM',' simulation',' state rent',' chain pruning',' core devs',' technical']
+keywords: ['suschainability','EWASM','simulation','state rent','chain pruning','core devs','technical']
 tags: ['Eth 1.x']
 speakers: ['Hudson Jameson']
 ---

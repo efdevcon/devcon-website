@@ -8,7 +8,7 @@ duration: 1798
 expertise: "Intermediate"
 type: "Talk"
 track: "Devcon"
-keywords: ['updates',' developers',' development']
+keywords: ['updates','developers','development']
 tags: ['Devcon']
 speakers: ['Vitalik Buterin']
 ---

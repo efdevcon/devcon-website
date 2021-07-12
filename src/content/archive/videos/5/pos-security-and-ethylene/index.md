@@ -8,7 +8,7 @@ duration: 1819
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['PoW',' PoS',' bandwidth',' nodes',' mining',' security',' athereum',' technical']
+keywords: ['PoW','PoS','bandwidth','nodes','mining','security','athereum','technical']
 tags: ['Security']
 speakers: ['Emin Gün Sirer']
 ---

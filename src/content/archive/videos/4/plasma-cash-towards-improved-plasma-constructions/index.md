@@ -8,7 +8,7 @@ duration: 1935
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['speed',' security',' sidechains',' UI',' developer experience',' NFTs',' liquidity',' R&D']
+keywords: ['speed','security','sidechains','UI','developer experience','NFTs','liquidity','R&D']
 tags: ['Scalability']
 speakers: ['Georgios Konstantopoulos']
 ---

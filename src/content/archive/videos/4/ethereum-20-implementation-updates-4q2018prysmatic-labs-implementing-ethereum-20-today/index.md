@@ -10,7 +10,7 @@ duration: 1952
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['sharding',' python',' eth2',' casper',' developers']
+keywords: ['sharding','python','eth2','casper','developers']
 tags: ['Scalability']
-speakers: ['Hsiao-Wei Wang',' Raul Jordan']
+speakers: ['Hsiao-Wei Wang','Raul Jordan']
 ---

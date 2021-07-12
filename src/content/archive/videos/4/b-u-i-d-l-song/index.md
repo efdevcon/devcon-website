@@ -8,7 +8,7 @@ duration: 443
 expertise: "Beginner"
 type: "Other"
 track: "Devcon"
-keywords: ['build',' songs']
+keywords: ['build','songs']
 tags: ['Devcon']
 speakers: ['Jonathan Mann']
 ---

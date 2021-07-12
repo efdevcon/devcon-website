@@ -10,7 +10,7 @@ duration: 1489
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['payment',' state channels',' L2',' layer 2',' ']
+keywords: ['payment','state channels','L2','layer 2','']
 tags: ['Scalability']
-speakers: ['Sebastian Faust',' Stefan Dziembowski',' Lisa Eckey',' Kristina Hostakova']
+speakers: ['Sebastian Faust','Stefan Dziembowski','Lisa Eckey','Kristina Hostakova']
 ---

@@ -8,7 +8,7 @@ duration: 616
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['Web3j',' Jim',' safety',' java',' account',' transaction',' Quorum',' CLI',' devex',' EVM',' viper',' technical']
+keywords: ['Web3j','Jim','safety','java','account','transaction','Quorum','CLI','devex','EVM','viper','technical']
 tags: ['Developer Experience']
-speakers: ['Conor Svensson',' Ivaylo Kirilov']
+speakers: ['Conor Svensson','Ivaylo Kirilov']
 ---

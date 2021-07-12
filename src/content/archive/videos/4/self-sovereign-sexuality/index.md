@@ -8,7 +8,7 @@ duration: 1743
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['SW',' sex work',' censorship',' privacy',' banking']
+keywords: ['SW','sex work','censorship','privacy','banking']
 tags: ['Society and Systems']
 speakers: ['Ameen Soleimani & Chelsea Palmer']
 ---

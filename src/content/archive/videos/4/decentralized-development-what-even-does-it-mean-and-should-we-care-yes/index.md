@@ -8,7 +8,7 @@ duration: 1383
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['dapps',' architecture',' process',' network',' consent']
+keywords: ['dapps','architecture','process','network','consent']
 tags: ['Developer Experience']
-speakers: ['Amber Baldet',' Patrick Nielsen']
+speakers: ['Amber Baldet','Patrick Nielsen']
 ---

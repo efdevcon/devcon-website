@@ -8,7 +8,7 @@ duration: 1741
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['global',' democracy']
+keywords: ['global','democracy']
 tags: ['Society and Systems']
 speakers: ['Santiago Siri']
 ---

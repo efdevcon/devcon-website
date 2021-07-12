@@ -8,7 +8,7 @@ duration: 1290
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['mixers',' anonymity',' academy',' technical']
+keywords: ['mixers','anonymity','academy','technical']
 tags: ['Society and Systems']
 speakers: ['Amir Taaki']
 ---

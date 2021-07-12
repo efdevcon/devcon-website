@@ -8,7 +8,7 @@ duration: 309
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['ackee',' dev',' tools',' kit']
+keywords: ['ackee','dev','tools','kit']
 tags: ['Developer Experience']
 speakers: ['Josef Gattermayer']
 ---

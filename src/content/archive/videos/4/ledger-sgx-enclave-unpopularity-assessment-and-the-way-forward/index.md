@@ -8,7 +8,7 @@ duration: 1111
 expertise: "Expert"
 type: "Talk"
 track: "Security"
-keywords: ['dapps',' dapplet']
+keywords: ['dapps','dapplet']
 tags: ['Security']
 speakers: ['Nicolas Bacca']
 ---

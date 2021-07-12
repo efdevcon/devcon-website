@@ -10,7 +10,7 @@ duration: 1281
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['akasha',' ecosystem',' general']
+keywords: ['akasha','ecosystem','general']
 tags: ['Society and Systems']
 speakers: ['Mihai Alisie']
 ---

@@ -8,7 +8,7 @@ duration: 1702
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['separation',' decentralization',' money',' state',' general']
+keywords: ['separation','decentralization','money','state','general']
 tags: ['Society and Systems']
 speakers: ['Paul	Almasi']
 ---

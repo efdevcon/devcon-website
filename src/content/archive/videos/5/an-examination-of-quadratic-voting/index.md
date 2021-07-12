@@ -8,7 +8,7 @@ duration: 841
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['quadratic',' voting',' academic']
+keywords: ['quadratic','voting','academic']
 tags: ['Society and Systems']
-speakers: ['Sota Ishii',' Masahiro Yasu']
+speakers: ['Sota Ishii','Masahiro Yasu']
 ---

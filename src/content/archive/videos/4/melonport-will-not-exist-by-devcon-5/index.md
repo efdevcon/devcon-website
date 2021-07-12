@@ -8,7 +8,7 @@ duration: 1605
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['melon',' updates']
+keywords: ['melon','updates']
 tags: ['Society and Systems']
 speakers: ['Jenna Zenk']
 ---

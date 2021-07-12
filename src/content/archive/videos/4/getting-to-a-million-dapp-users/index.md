@@ -8,7 +8,7 @@ duration: 1519
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['dapps',' adoption',' onboarding',' UI',' coinbase']
+keywords: ['dapps','adoption','onboarding','UI','coinbase']
 tags: ['UX & Design']
 speakers: ['Sid Coelho-Prabhu']
 ---

@@ -8,7 +8,7 @@ duration: 646
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['security',' sandboxing',' UX',' light clients',' incentives']
+keywords: ['security','sandboxing','UX','light clients','incentives']
 tags: ['Society and Systems']
 speakers: ['Marcus Ligi']
 ---

@@ -8,7 +8,7 @@ duration: 1702
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['DeFi',' trust',' risk',' general']
+keywords: ['DeFi','trust','risk','general']
 tags: ['Society and Systems']
 speakers: ['Jack	Clancy']
 ---

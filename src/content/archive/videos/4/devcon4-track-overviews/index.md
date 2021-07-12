@@ -8,7 +8,7 @@ duration: 1925
 expertise: "Beginner"
 type: "Talk"
 track: "Devcon"
-keywords: ['tracks',' categories',' song']
+keywords: ['tracks','categories','song']
 tags: ['Devcon']
 speakers: ['N/A']
 ---

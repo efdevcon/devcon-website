@@ -8,7 +8,7 @@ duration: 1092
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['Zeppelin',' upgradeability']
+keywords: ['Zeppelin','upgradeability']
 tags: ['Security']
 speakers: ['Facundo Spagnuolo']
 ---

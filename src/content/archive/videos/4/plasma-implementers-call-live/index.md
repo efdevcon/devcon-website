@@ -11,7 +11,7 @@ duration: 3221
 expertise: "Intermediate"
 type: "Panel"
 track: "Scalability"
-keywords: ['research',' applications',' payments',' exchange',' gas']
+keywords: ['research','applications','payments','exchange','gas']
 tags: ['Scalability']
 speakers: ['Karl Floersch']
 ---

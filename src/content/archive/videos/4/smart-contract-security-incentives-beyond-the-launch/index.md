@@ -10,7 +10,7 @@ duration: 1763
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['contracts',' audits',' incentives',' reviews']
+keywords: ['contracts','audits','incentives','reviews']
 tags: ['Security']
 speakers: ['Phil Daian']
 ---

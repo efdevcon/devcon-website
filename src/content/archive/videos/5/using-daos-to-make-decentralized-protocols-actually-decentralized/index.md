@@ -8,7 +8,7 @@ duration: 1196
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['DeFi',' Aragon',' CeFi',' smart contracts',' immutable',' trustless',' transparency',' technical']
+keywords: ['DeFi','Aragon','CeFi','smart contracts','immutable','trustless','transparency','technical']
 tags: ['Developer Experience']
 speakers: ['Luis Cuende']
 ---

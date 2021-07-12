@@ -8,7 +8,7 @@ duration: 1251
 expertise: "Beginner"
 type: "Talk"
 track: "Privacy"
-keywords: ['cryptography',' IACR',' metadata',' elixxir',' praxxis',' anonymity',' general']
+keywords: ['cryptography','IACR','metadata','elixxir','praxxis','anonymity','general']
 tags: ['Privacy']
 speakers: ['David Chaum']
 ---

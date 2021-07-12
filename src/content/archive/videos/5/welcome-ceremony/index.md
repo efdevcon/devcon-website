@@ -8,7 +8,7 @@ duration: 665
 expertise: "Beginner"
 type: "Other"
 track: "Devcon/About"
-keywords: ['opening',' japan',' traditional',' drums',' general']
+keywords: ['opening','japan','traditional','drums','general']
 tags: ['Devcon/About']
 speakers: ['N/A']
 ---

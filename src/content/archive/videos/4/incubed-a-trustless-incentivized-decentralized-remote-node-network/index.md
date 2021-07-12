@@ -8,7 +8,7 @@ duration: 531
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['node',' incentives',' IoT']
+keywords: ['node','incentives','IoT']
 tags: ['Scalability']
 speakers: ['Christoph Jentzsch']
 ---

@@ -10,5 +10,5 @@ type: "Talk"
 track: "Scalability"
 keywords: ['privacy']
 tags: ['Scalability']
-speakers: ['Sanjay Bakshi',' Andreas Freund']
+speakers: ['Sanjay Bakshi','Andreas Freund']
 ---

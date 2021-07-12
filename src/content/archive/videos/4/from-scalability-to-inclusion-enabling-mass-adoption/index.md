@@ -8,7 +8,7 @@ duration: 1552
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['cryptoeconomics',' society',' digitalisation',' democratisation',' insurance',' lending',' trust',' assets']
+keywords: ['cryptoeconomics','society','digitalisation','democratisation','insurance','lending','trust','assets']
 tags: ['Scalability']
 speakers: ['David Lee Kuo Chuen']
 ---

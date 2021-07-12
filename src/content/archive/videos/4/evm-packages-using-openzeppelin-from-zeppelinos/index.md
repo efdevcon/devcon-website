@@ -8,7 +8,7 @@ duration: 483
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['proxy',' EIP']
+keywords: ['proxy','EIP']
 tags: ['Developer Experience']
 speakers: ['Santiago Palladino']
 ---

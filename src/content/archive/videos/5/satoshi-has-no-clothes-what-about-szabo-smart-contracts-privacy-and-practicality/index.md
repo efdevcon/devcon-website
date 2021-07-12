@@ -8,7 +8,7 @@ duration: 1133
 expertise: "Beginner"
 type: "Talk"
 track: "Privacy"
-keywords: ['Szabo',' contracts',' general']
+keywords: ['Szabo','contracts','general']
 tags: ['Privacy']
 speakers: ['Ian Miers']
 ---

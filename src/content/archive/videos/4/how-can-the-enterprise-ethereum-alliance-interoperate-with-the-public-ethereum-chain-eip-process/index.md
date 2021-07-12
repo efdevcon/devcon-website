@@ -9,7 +9,7 @@ duration: 6925
 expertise: "Intermediate"
 type: "Panel"
 track: "Developer Experience"
-keywords: ['EEA',' EIP',' improvement',' proposal']
+keywords: ['EEA','EIP','improvement','proposal']
 tags: ['Developer Experience']
-speakers: ['Boris Mann',' Nick Johnson',' Conor Svensson',' Bob Summerwill',' Jamie Pitts',' Charles Nevile',' Alessandro Voto']
+speakers: ['Boris Mann','Nick Johnson','Conor Svensson','Bob Summerwill','Jamie Pitts','Charles Nevile','Alessandro Voto']
 ---

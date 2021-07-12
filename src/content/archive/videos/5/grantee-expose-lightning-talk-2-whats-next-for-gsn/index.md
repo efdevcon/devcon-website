@@ -8,7 +8,7 @@ duration: 724
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['Gas',' gas station network',' mass adoption',' adoption',' defi',' technical']
+keywords: ['Gas','gas station network','mass adoption','adoption','defi','technical']
 tags: ['Developer Experience']
 speakers: ['Liraz Siri']
 ---

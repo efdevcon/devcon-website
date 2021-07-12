@@ -8,7 +8,7 @@ duration: 586
 expertise: "Expert"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['Payment',' dex',' dexes',' state channels']
+keywords: ['Payment','dex','dexes','state channels']
 tags: ['Developer Experience']
-speakers: ['Antoine Cote',' Philippe Camacho']
+speakers: ['Antoine Cote','Philippe Camacho']
 ---

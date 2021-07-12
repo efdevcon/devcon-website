@@ -8,7 +8,7 @@ duration: 3638
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['trust',' ethash',' algorithms',' asic',' mining',' cpus',' fnv']
+keywords: ['trust','ethash','algorithms','asic','mining','cpus','fnv']
 tags: ['Society and Systems']
 speakers: ['Kristy-Leigh Minehan']
 ---

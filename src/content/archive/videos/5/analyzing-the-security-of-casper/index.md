@@ -8,7 +8,7 @@ duration: 1074
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['Casper',' ETH2.0',' formal verification',' FFG/CBC',' Technical']
+keywords: ['Casper','ETH2.0','formal verification','FFG/CBC','Technical']
 tags: ['Security']
 speakers: ['Ryuya Nakamura']
 ---

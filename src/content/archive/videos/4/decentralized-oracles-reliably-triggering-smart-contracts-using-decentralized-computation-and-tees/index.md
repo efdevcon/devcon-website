@@ -8,7 +8,7 @@ duration: 1539
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: ['data',' payments',' off-chain']
+keywords: ['data','payments','off-chain']
 tags: ['Security']
 speakers: ['Sergey Nazarov']
 ---

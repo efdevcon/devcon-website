@@ -8,7 +8,7 @@ duration: 416
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['HTC',' phone',' keys',' data',' security']
+keywords: ['HTC','phone','keys','data','security']
 tags: ['Society and Systems']
 speakers: ['Lisa Chu']
 ---

@@ -11,7 +11,7 @@ duration: 1240
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['DeFi',' general']
+keywords: ['DeFi','general']
 tags: ['Society and Systems']
 speakers: ['Rune Christensen']
 ---

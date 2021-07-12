@@ -8,7 +8,7 @@ duration: 1863
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['reputation',' privacy',' security',' accessibility',' flexibility']
+keywords: ['reputation','privacy','security','accessibility','flexibility']
 tags: ['UX & Design']
 speakers: ['Jonny Howle']
 ---

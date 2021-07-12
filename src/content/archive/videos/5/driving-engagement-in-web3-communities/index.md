@@ -8,7 +8,7 @@ duration: 661
 expertise: "Intermediate"
 type: "Talk"
 track: "Community"
-keywords: ['developers',' devs',' grants',' ESP',' devrel',' technical']
+keywords: ['developers','devs','grants','ESP','devrel','technical']
 tags: ['Community']
 speakers: ['Andreas Wallendahl']
 ---

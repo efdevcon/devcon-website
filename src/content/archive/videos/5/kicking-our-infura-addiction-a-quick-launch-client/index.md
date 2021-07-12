@@ -9,7 +9,7 @@ duration: 1278
 expertise: "Intermediate"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['Infura',' mainnet',' launch time',' technical']
+keywords: ['Infura','mainnet','launch time','technical']
 tags: ['Eth 1.x']
 speakers: ['Jason Carver']
 ---

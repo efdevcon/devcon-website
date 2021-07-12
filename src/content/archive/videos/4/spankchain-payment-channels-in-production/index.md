@@ -8,7 +8,7 @@ duration: 1456
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: ['development',' devex',' plasma']
+keywords: ['development','devex','plasma']
 tags: ['Scalability']
-speakers: ['Ameen Soleimani',' Arjun Bhupati']
+speakers: ['Ameen Soleimani','Arjun Bhupati']
 ---

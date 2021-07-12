@@ -14,7 +14,7 @@ duration: 1648
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['zcash',' hash functions',' merkle']
+keywords: ['zcash','hash functions','merkle']
 tags: ['Privacy']
 speakers: ['Dmitry Khovratovich']
 ---

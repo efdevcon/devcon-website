@@ -9,7 +9,7 @@ duration: 1275
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['WEF',' RFPs',' scalability',' consortium',' blockchain',' ROI',' value',' general']
+keywords: ['WEF','RFPs','scalability','consortium','blockchain','ROI','value','general']
 tags: ['Society and Systems']
 speakers: ['Nadia Hewett']
 ---

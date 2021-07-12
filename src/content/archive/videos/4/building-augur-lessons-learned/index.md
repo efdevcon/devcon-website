@@ -8,7 +8,7 @@ duration: 1695
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['architecure',' testnet',' integration',' 0x',' json-rpc',' json',' rpc']
+keywords: ['architecure','testnet','integration','0x','json-rpc','json','rpc']
 tags: ['Developer Experience']
 speakers: ['Scott Bigelow']
 ---

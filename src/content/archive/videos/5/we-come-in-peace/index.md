@@ -8,7 +8,7 @@ duration: 1319
 expertise: "Beginner"
 type: "Talk"
 track: "Economics"
-keywords: ['VC',' venture',' capital',' funding',' investing',' general']
+keywords: ['VC','venture','capital','funding','investing','general']
 tags: ['Economics']
 speakers: ['Jehan Chu']
 ---

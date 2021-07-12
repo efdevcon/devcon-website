@@ -8,7 +8,7 @@ duration: 415
 expertise: "Expert"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['linting',' QA',' testing']
+keywords: ['linting','QA','testing']
 tags: ['Developer Experience']
 speakers: ['Han Liu']
 ---

@@ -11,7 +11,7 @@ duration: 226
 expertise: "Intermediate"
 type: "Workshop"
 track: "Developer Experience"
-keywords: ['graphical',' architecture']
+keywords: ['graphical','architecture']
 tags: ['Developer Experience']
 speakers: ['Heiko Burkhardt']
 ---

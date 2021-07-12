@@ -8,7 +8,7 @@ duration: 550
 expertise: "Beginner"
 type: "Talk"
 track: "Devcon"
-keywords: ['grants',' ef',' ESP']
+keywords: ['grants','ef','ESP']
 tags: ['Devcon']
 speakers: ['Kenneth Ng']
 ---

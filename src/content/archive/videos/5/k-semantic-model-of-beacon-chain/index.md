@@ -8,7 +8,7 @@ duration: 715
 expertise: "Advanced"
 type: "Talk"
 track: "Eth 1.x"
-keywords: ['beacon',' technical']
+keywords: ['beacon','technical']
 tags: ['Eth 1.x']
 speakers: ['Daejun Park']
 ---

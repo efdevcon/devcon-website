@@ -8,7 +8,7 @@ duration: 1189
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"
-keywords: ['philosophy',' ethics',' general']
+keywords: ['philosophy','ethics','general']
 tags: ['UX & Design']
 speakers: ['Taylor Monahan']
 ---

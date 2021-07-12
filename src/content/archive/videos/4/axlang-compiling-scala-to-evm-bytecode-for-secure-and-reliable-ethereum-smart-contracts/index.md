@@ -11,7 +11,7 @@ duration: 357
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['compiler',' language']
+keywords: ['compiler','language']
 tags: ['Developer Experience']
 speakers: ['Athanasios (Thanasis) Konstantinidis']
 ---

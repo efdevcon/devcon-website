@@ -12,7 +12,7 @@ duration: 1308
 expertise: "Advanced"
 type: "Talk"
 track: "Eth 2.0"
-keywords: ['networking',' eth2',' technical']
+keywords: ['networking','eth2','technical']
 tags: ['Eth 2.0']
-speakers: ['Antoine Toulme',' Rene Lubov']
+speakers: ['Antoine Toulme','Rene Lubov']
 ---

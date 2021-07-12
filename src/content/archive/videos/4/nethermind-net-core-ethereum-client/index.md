@@ -8,7 +8,7 @@ duration: 370
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Experience"
-keywords: ['Devp2p',' evm']
+keywords: ['Devp2p','evm']
 tags: ['Developer Experience']
 speakers: ['Tomasz Kajetan Stanczak']
 ---

@@ -8,7 +8,7 @@ duration: 2103
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: ['legal',' law']
+keywords: ['legal','law']
 tags: ['Society and Systems']
 speakers: ['Primavera De Filippi']
 ---

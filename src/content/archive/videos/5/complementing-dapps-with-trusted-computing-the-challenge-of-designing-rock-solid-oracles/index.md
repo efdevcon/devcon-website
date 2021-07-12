@@ -8,7 +8,7 @@ duration: 1569
 expertise: "Beginner"
 type: "Talk"
 track: "Security"
-keywords: ['dapps',' design',' oracles',' general']
+keywords: ['dapps','design','oracles','general']
 tags: ['Security']
 speakers: ['Thomas Bertani']
 ---

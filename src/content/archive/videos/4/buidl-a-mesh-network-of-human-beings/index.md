@@ -8,7 +8,7 @@ duration: 554
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"
-keywords: ['mesh',' network',' p2p']
+keywords: ['mesh','network','p2p']
 tags: ['UX & Design']
-speakers: ['Kevin Owocki',' Vivek Singh']
+speakers: ['Kevin Owocki','Vivek Singh']
 ---
