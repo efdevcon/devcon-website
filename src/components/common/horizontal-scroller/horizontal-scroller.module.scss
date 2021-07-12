@@ -47,8 +47,8 @@
 .horizontal-scroller {
   transition: all 0.5s;
 
-  // &.native-drag {
-  //   overflow-x: auto;
-  //   transform: translateX(0px) !important;
-  // }
+  &.native-drag {
+    overflow-x: auto;
+    transform: translateX(0px) !important;
+  }
 }
