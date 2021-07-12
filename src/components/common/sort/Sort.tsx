@@ -91,6 +91,8 @@ export const useSort = (data: any[], fields: Field[]): SortState => {
 
   const sortedData = React.useMemo(() => {
     const sort = () => {
+      if (!data) return data
+      
       const shouldSort = typeof sortBy === 'number'
 
       if (shouldSort) {

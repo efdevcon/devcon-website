@@ -34,7 +34,6 @@ export const Pagination = (props: Props) => {
         pages.push(i);
       }
     }
-    console.log('ALL PAGES', pages)
 
     let l
     for (let i of pages) {

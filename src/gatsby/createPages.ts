@@ -396,6 +396,14 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
   const indexName = 'archive'
   await elastic.deleteIndex(indexName)
   await elastic.createIndex(indexName)
+  await elastic.updateMapping(indexName, {
+    properties: {
+      title: {
+        type: 'text',
+        fielddata: true
+      }
+    }
+  })
 
   console.log(`Adding ${result.data.items.nodes.length} archive videos to Elastic index..`)
   result.data?.items.nodes.forEach(async (source: any) => {

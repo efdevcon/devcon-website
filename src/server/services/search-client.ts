@@ -1,13 +1,24 @@
 import { Client } from '@elastic/elasticsearch'
+import { PagedResult } from 'src/types/PagedResult';
 import { SERVER_CONFIG } from '../config/server';
 require('dotenv').config()
 
 export interface SearchIndexClientInterface {
     createIndex(name: string): void
-    searchIndex(index: string, query: string): Promise<any[]>
+    searchIndex<T>(index: string, query: string, params?: SearchParams): Promise<PagedResult<T>>
+    getIndexes(name: string): Promise<any[]>
     addToIndex<T>(index: string, doc: T, refresh: boolean): void
     deleteIndex(name: string): void
 }
+
+export interface SearchParams { 
+    sort?: string
+    order?: 'asc' | 'desc'
+    from?: number
+    size?: number
+}
+
+const DEFAULT_ORDER = 'desc';
 
 export class SearchIndexClient implements SearchIndexClientInterface {
     private elasticClient: any;
@@ -26,17 +37,19 @@ export class SearchIndexClient implements SearchIndexClientInterface {
         await this.elasticClient.indices.create({ index: name })
     }
 
-    async searchIndex(index: string, query: string): Promise<any[]> {
+    async searchIndex<T>(index: string, query: string, params?: SearchParams): Promise<PagedResult<T>> {
         const exists = await this.elasticClient.indices.exists({ index: index })
         if (!exists.body) { 
             console.log(`Index ${index} doesn't exists..`)
-            return []
+            return {
+                total: 0,
+                currentPage: 0,
+                items: new Array<T>()
+            }
         }
 
-        console.log('Searching Elastic index with query', query)
-        const result = await this.elasticClient.search({
+        let searchQuery: any = {
             index: index,
-            size: 100,
             body: {
               query: {
                 query_string: {
@@ -44,14 +57,54 @@ export class SearchIndexClient implements SearchIndexClientInterface {
                 }
               }
             }
-        })
+        }
+        
+        if (params?.from) searchQuery.from = params?.from
+        if (params?.size) searchQuery.size = params?.size
+        if (params?.sort) searchQuery.body.sort = [
+            { [params?.sort]: params.order || DEFAULT_ORDER },
+            "_score"
+        ]
+        console.log('Searching Elastic index', index, query, params)
+        const result = await this.elasticClient.search(searchQuery)
         
         if (result.statusCode !== 200) { 
             console.log(`Search query '${query}' on ${index} index failed..`)
+            return {
+                total: 0,
+                currentPage: 0,
+                items: new Array<T>()
+            }
+        }
+
+        const items = result.body.hits.hits.map((i: any) => i._source)
+        const currentPage = !!params?.from && params?.size ? Math.ceil((params.from + 1) / params.size) : 1
+
+        return {
+            total: result.body.hits.total.value,
+            currentPage: currentPage,
+            items: items
+        }
+    }
+
+    async getIndexes(name: string): Promise<any[]> {
+        const result = await this.elasticClient.indices.get({ index: name })
+        if (result.statusCode !== 200) { 
+            console.log(`Unable to get indices '${name}'..`)
             return []
         }
 
-        return result.body.hits.hits.map((i: any) => i._source)
+        return Object.keys(result.body)
+    }
+
+    async updateMapping(index: string, body: any): Promise<boolean> {
+        console.log('Updating mapping for index', index, body)
+        const result = await this.elasticClient.indices.putMapping({
+            index: index,
+            body: body
+        })
+
+        return result.statusCode === 200
     }
 
     async addToIndex<T>(index: string, body: T, refresh: boolean = false) {

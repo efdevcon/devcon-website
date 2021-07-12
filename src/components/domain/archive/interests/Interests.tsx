@@ -1,17 +1,17 @@
 import React from 'react'
-import { HorizontalScroller } from 'src/components/common/horizontal-scroller'
 import IconCheck from 'src/assets/icons/check_circle.svg'
 import IconPlus from 'src/assets/icons/plus.svg'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import css from './interests.module.scss'
 import { chunkArray } from 'src/utils/chunk-array'
-import { filterToQueryString } from 'src/components/domain/archive/watch/VideoFilter'
 import { Link } from 'src/components/common/link'
 import { tags } from '../tags'
+import { useQueryStringer } from 'src/hooks/useQueryStringer'
 
 export const Interests = (props: any) => {
   const [selectedTags, setSelectedTags] = React.useState({} as { [key: string]: any })
   const tagRows = chunkArray(tags, 1 /*2*/) // Accounts currently missing, so we'll wait with chunking the array to take up more horizontal space in the meantime
+  const queryString = useQueryStringer({ tags: selectedTags }, false)
 
   return (
     <div className="section">
@@ -58,7 +58,7 @@ export const Interests = (props: any) => {
         <div className={css['clear']}>
           <Link
             className={`${css['continue']} button red`}
-            to={`/archive/watch${filterToQueryString({ tags: selectedTags })}`}
+            to={`/archive/watch${queryString}`}
           >
             <span>Get Started</span> <IconArrowRight />
           </Link>

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { SearchIndexClientInterface } from 'src/server/services/search-client'
+import { SearchIndexClientInterface, SearchParams } from 'src/server/services/search-client'
 
 export class ArchiveController {
   private _client: SearchIndexClientInterface
@@ -13,7 +13,16 @@ export class ArchiveController {
       const query = new Array<string>();
       const input = req.query
 
+      let params: SearchParams = {}
+      if (req.query['sort']) params.sort = req.query['sort'] as string
+      if (req.query['order']) params.order = req.query['order'] as 'asc' | 'desc'
+      if (req.query['from']) params.from = Number(req.query['from'])
+      if (req.query['size']) params.size = Number(req.query['size'])
+
+      const skipParams = ['sort', 'order', 'from', 'size']
       Object.keys(input).forEach(i => {
+        if (skipParams.includes(i)) return
+
         if (Array.isArray(input[i])) {
           const asArray = input[i] as string[]
           const arrayFilter = asArray.map(value => i + ':' + value)
@@ -27,7 +36,7 @@ export class ArchiveController {
       })
 
       const queryString = query.length ? query.join(' AND ') : "*"
-      const results = await this._client.searchIndex('archive', queryString)
+      const results = await this._client.searchIndex('archive', queryString, params)
       
       res.status(200).send({ code: 200, data: results })
     } catch (e) {

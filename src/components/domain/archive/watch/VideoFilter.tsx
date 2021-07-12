@@ -4,24 +4,8 @@ import IconClose from 'src/assets/icons/cross.svg'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Filter, useFilter } from 'src/components/common/filter'
 import css from './video-filter.module.scss'
-import { useLocation, useParams } from '@reach/router'
+import { useLocation } from '@reach/router'
 import queryString from 'query-string'
-
-export const filterToQueryString = (filters: { [key: string]: any }): string => {
-  let formattedObject = {} as any
-
-  Object.entries(filters).forEach(([key, filter]) => {
-    if (!filter) return
-
-    formattedObject[key] = Object.keys(filter)
-  })
-
-  const result = `?${queryString.stringify(formattedObject)}`
-
-  if (result === '?') return ''
-
-  return result
-}
 
 const queryStringToFilterState = (qs: string) => {
   // Extract params from query string
@@ -162,18 +146,6 @@ export const useVideoFilter = () => {
   const expertiseFilter = expertiseFilterState && Object.keys(expertiseFilterState.activeFilter)
   const tagsFilter = tagsFilterState && Object.keys(tagsFilterState.activeFilter)
 
-  // Sync filter state with query params in the url whenever filter state changes
-  React.useEffect(() => {
-    const result = filterToQueryString({
-      edition: editionFilterState?.activeFilter,
-      tags: tagsFilterState?.activeFilter,
-      expertise: expertiseFilterState?.activeFilter,
-    })
-
-    const url = `${location.pathname}${result}`
-
-    window.history.replaceState({ path: url }, '', url)
-  }, [editionFilterState?.activeFilter, expertiseFilterState?.activeFilter, tagsFilterState?.activeFilter])
 
   const clearFilters = () => {
     editionFilterState?.clearFilter()

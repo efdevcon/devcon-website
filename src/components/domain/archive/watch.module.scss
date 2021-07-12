@@ -104,6 +104,11 @@ $left-column-width: 30%;
         //   flex-basis: 50%;
         // }
       }
+
+      .footer { 
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 }
