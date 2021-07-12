@@ -15,8 +15,8 @@ jobs:
       - name: Create env file
         run: |
           touch .env
-          echo DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }} >> .env
-          echo ELASTIC_ENDPOINT=${{ secrets.ELASTIC_ENDPOINT }} >> .env
+          echo DB_CONNECTION_STRING='${{ secrets.DB_CONNECTION_STRING }}' >> .env
+          echo ELASTIC_ENDPOINT='${{ secrets.ELASTIC_ENDPOINT }}' >> .env
 
       - name: Install dependencies
         run: yarn
