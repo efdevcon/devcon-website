@@ -1,7 +1,18 @@
 import { useEffect, useState } from "react"
 
+interface ClientOS { 
+    userAgent: string
+    isAndroid: boolean
+    isIos: boolean
+    isOpera: boolean
+    isWindows: boolean
+    isSSR: boolean
+    isMobile: boolean
+    isDesktop: boolean
+}
+
 export const useClientOS = () => {
-    const [state, setState] = useState({})
+    const [state, setState] = useState<ClientOS>()
 
     useEffect(() => {
         const userAgent = typeof navigator === 'undefined' ? 'SSR' : navigator.userAgent

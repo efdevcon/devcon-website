@@ -2,6 +2,7 @@ import { useLocation } from '@reach/router'
 import queryString from 'query-string'
 
 export const useQueryStringer = (filters: { [key: string]: any }, replaceState?: boolean): string => {
+    const isBrowser = typeof window !== 'undefined'
     const location = useLocation()
     let formattedObject = {} as any
     
@@ -19,7 +20,7 @@ export const useQueryStringer = (filters: { [key: string]: any }, replaceState?:
     let result = `?${queryString.stringify(formattedObject)}`
     if (result === '?') result = ''
     
-    if (replaceState) {
+    if (replaceState && isBrowser) {
         const url = `${location.pathname}${result}`
         window.history.replaceState({ path: url }, '', url)
     }
