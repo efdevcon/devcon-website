@@ -12,6 +12,7 @@ export interface SearchIndexClientInterface {
 }
 
 export interface SearchParams { 
+    q?: string
     sort?: string
     order?: 'asc' | 'desc'
     from?: number

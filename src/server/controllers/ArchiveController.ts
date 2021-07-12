@@ -19,7 +19,7 @@ export class ArchiveController {
       if (req.query['from']) params.from = Number(req.query['from'])
       if (req.query['size']) params.size = Number(req.query['size'])
 
-      const skipParams = ['sort', 'order', 'from', 'size']
+      const skipParams = ['q', 'sort', 'order', 'from', 'size']
       Object.keys(input).forEach(i => {
         if (skipParams.includes(i)) return
 
@@ -35,6 +35,11 @@ export class ArchiveController {
         }
       })
 
+      if (req.query['q']) {
+        const searchQuery = req.query['q'] as string
+        query.push(`(title:*${searchQuery}* OR description:*${searchQuery}*)`)
+
+      }
       const queryString = query.length ? query.join(' AND ') : "*"
       const results = await this._client.searchIndex('archive', queryString, params)
       

@@ -169,7 +169,7 @@ export const Video = (props: VideoProps) => {
                         </p>
                       )}
                       <p className={css['descriptor']}>
-                        <span>Speaker:</span> {video.speakers.join(',')}
+                        <span>Speaker:</span> {video.speakers.join(', ')}
                       </p>
                       <p className={css['descriptor']}>
                         <span>Type:</span> {video.type}

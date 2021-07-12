@@ -37,6 +37,7 @@ const resetOnPageNavigationHOC = (WatchComponent: React.ComponentType<WatchProps
 export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   const [gridViewEnabled, setGridViewEnabled] = React.useState(true)
   const [from, setFrom] = useState(0)
+  const [searchQuery, setSearchQuery] = useState('')
   const defaultPageSize = 12
   const filterState = useVideoFilter()
   const sortState = useSort([], [
@@ -65,7 +66,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
     order: sortState.sortDirection
   }, true)
 
-  const { data, isLoading, isError } = useArchiveSearch(qs, { from: from, size: defaultPageSize})
+  const { data, isLoading, isError } = useArchiveSearch(qs, { q: searchQuery, from: from, size: defaultPageSize})
 
   // Reset pagination on filter change
   useEffect(() => {
@@ -82,6 +83,10 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
     setFrom(from)
   }
 
+  function onSearch(value: string) {
+    setSearchQuery(value)
+  }
+
   return (
     <div className={css['container']}>
       <SEO />
@@ -96,7 +101,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
       <div className="section">
         <div className="content">
           <div className={css['search-sort']}>
-            <InputForm className={css['search']} placeholder="Search" icon={IconSearch} />
+            <InputForm className={css['search']} placeholder="Search" icon={IconSearch} onChange={onSearch} timeout={300} />
             <div className={css['sort']}>
               <Sort {...sortState} />
             </div>
