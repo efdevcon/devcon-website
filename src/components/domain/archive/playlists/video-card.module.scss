@@ -44,7 +44,7 @@
     }
 
     .description {
-      @include fonts-md;
+      @include fonts-sm-fixed;
       margin-top: $gaps-gap-1;
       margin-bottom: $gaps-gap-1;
       overflow: hidden;

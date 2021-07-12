@@ -61,7 +61,7 @@ export const Footer = () => {
             {footerData?.highlights.map((link: LinkType, index: number) => {
               return (
                 <h2 key={index} className="spaced">
-                  <Link to={link.url} className="plain">
+                  <Link to={link.url} className="plain hover-underline">
                     {link.title}
                   </Link>
                 </h2>
@@ -76,7 +76,7 @@ export const Footer = () => {
               {footerData?.left.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
-                    <Link to={link.url} className="plain">
+                    <Link to={link.url} className="plain hover-underline">
                       {link.title}
                     </Link>
                   </li>
@@ -90,7 +90,7 @@ export const Footer = () => {
               {footerData?.right.map((link: LinkType, index: number) => {
                 return (
                   <li className="semi-bold" key={index}>
-                    <Link to={link.url} className="plain">
+                    <Link to={link.url} className="plain hover-underline">
                       {link.title}
                     </Link>
                   </li>
@@ -138,7 +138,7 @@ export const Footer = () => {
             {footerData?.bottom.map((link: LinkType, index: number) => {
               return (
                 <p className="semi-bold" key={index}>
-                  <Link to={link.url} external={link.type === 'url'} className="plain">
+                  <Link to={link.url} external={link.type === 'url'} className="plain hover-underline">
                     {link.title}
                   </Link>
                 </p>

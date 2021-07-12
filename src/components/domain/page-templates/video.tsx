@@ -17,6 +17,7 @@ export const query = graphql`
   query ($slug: String!, $language: String!, $tags: String) {
     ...Page
     ...Notification
+    ...NavigationArchiveEvents
     ...NavigationData
     ...VideoData
     ...VideoPlaylists

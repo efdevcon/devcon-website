@@ -160,9 +160,10 @@ export const HorizontalScroller = (props: any) => {
   let className = css['horizontal-scroller']
   let indicatorsClassName = css['indicators']
 
-  if ((typeof window !== 'undefined' && !window.ResizeObserver) || isTouchDevice) className += ` ${css['native-drag']}`
-  if (indicatorVisibleRight && !isTouchDevice) indicatorsClassName += ` ${css['indicator-right']}`
-  if (indicatorVisibleLeft && !isTouchDevice) indicatorsClassName += ` ${css['indicator-left']}`
+  if (typeof window !== 'undefined' && !window.ResizeObserver /* || isTouchDevice*/)
+    className += ` ${css['native-drag']}`
+  if (indicatorVisibleRight /* && !isTouchDevice*/) indicatorsClassName += ` ${css['indicator-right']}`
+  if (indicatorVisibleLeft /* && !isTouchDevice*/) indicatorsClassName += ` ${css['indicator-left']}`
 
   return (
     <div className={indicatorsClassName}>

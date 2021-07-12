@@ -24,7 +24,7 @@ export const Strip = ({ withHero }: HeaderProps) => {
           {notification.label && <Label type={notification.labelType || 'notification'}>{notification.label}</Label>}
 
           {notification.url ? (
-            <Link to={notification.url} indicateExternal>
+            <Link to={notification.url} indicateExternal className="hover-underline">
               {notification.title}
             </Link>
           ) : (

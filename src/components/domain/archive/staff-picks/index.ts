@@ -1,1 +1,0 @@
-export { StaffPicks } from './StaffPicks'

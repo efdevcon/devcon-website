@@ -22,7 +22,7 @@ export function PlaylistHeader(props: Props) {
         <div>
           <div className="label">{props.playlist.videoCount ?? 0} talks</div>
           <h2 className="title font-xxl">{props.playlist.title}</h2>
-          <p className={css['description']}>{props.playlist.description}</p>
+          <p className={`${css['description']} font-md-fixed`}>{props.playlist.description}</p>
         </div>
 
         <div>

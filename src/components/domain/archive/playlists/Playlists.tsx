@@ -4,6 +4,7 @@ import { useEfTalks } from 'src/hooks/useEfTalks'
 import { useLatest } from 'src/hooks/useLatest'
 import { useMostPopular } from 'src/hooks/useMostPopular'
 import css from './playlists.module.scss'
+import { useStaffPicks } from 'src/hooks/useStaffPicks'
 import { VideoCard } from './VideoCard'
 
 export const Playlists = () => {
@@ -75,6 +76,47 @@ export const Playlists = () => {
             return <VideoCard slide key={i} className={className} video={item} />
           })}
         </Slider>
+      </div>
+    </div>
+  )
+}
+
+export const StaffPicks = (props: any) => {
+  const staffPicks = useStaffPicks()
+
+  const sliderSettings = {
+    infinite: false,
+    touchThreshold: 100,
+    slidesToShow: 2.6,
+    arrows: false,
+    swipeToSlide: true,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
+
+  return (
+    <div className="section">
+      <div className="content">
+        <h2 className="spaced title">Staff Picks</h2>
+        <div className={css['slider']}>
+          <Slider {...sliderSettings}>
+            {staffPicks.videos.map((video, i) => {
+              const first = i === 0
+              const className = first ? css['first'] : ''
+
+              return <VideoCard slide key={video.id} className={className} video={video} />
+            })}
+          </Slider>
+        </div>
       </div>
     </div>
   )

@@ -6,26 +6,31 @@ import { Tag } from 'src/types/Tag'
 import { Page } from 'src/types/Page'
 import { tags } from 'src/components/domain/archive/tags'
 
-export function ToNavigationData(nodes: any, type?: 'default' | 'archive'): NavigationData {
+export function ToNavigationData(nodes: any, archiveNodes?: any, type?: 'default' | 'archive'): NavigationData {
   return {
-    top: ToLinks(nodes, 'top'),
-    site: type === 'archive' ? ToArchiveNavigation() : ToLinks(nodes, 'site'),
+    top: type === 'archive' ? ToLinks(nodes, 'top-archive') : ToLinks(nodes, 'top'),
+    site: type === 'archive' ? ToArchiveNavigation(archiveNodes) : ToLinks(nodes, 'site'),
     footer: ToFooterData(nodes),
   }
 }
 
-export function ToArchiveNavigation(): Array<Link> {
+export function ToArchiveNavigation(archiveNodes: any): Array<Link> {
   const links = new Array<Link>()
   links.push({ title: 'Watch', url: '/archive/watch', type: 'page' })
-  links.push({ title: 'Event', url: '', type: 'links', links: [
-    { title: 'Devcon 5', url: '/archive/playlists/devcon-5/', type: 'page' },
-    { title: 'Devcon 4', url: '/archive/playlists/devcon-4/', type: 'page' },
-    { title: 'Devcon 3', url: '/archive/playlists/devcon-3/', type: 'page' },
-    { title: 'Devcon 2', url: '/archive/playlists/devcon-2/', type: 'page' },
-    { title: 'Devcon 1', url: '/archive/playlists/devcon-1/', type: 'page' },
-    { title: 'Devcon 0', url: '/archive/playlists/devcon-0/', type: 'page' }
-  ]})
-  const tagLinks = tags.map(i => { return { title: i.title, url: `/archive/watch?tags=${i.title}`, type: 'page' } as Link })
+  // links.push({ title: 'Event', url: '', type: 'links', links: archiveNodes.map((node: any) => {
+  //   return {
+  //     title: node.frontmatter.title,
+  //     url: `${node.frontmatter.archiveVideos[0].slug}?playlist=${encodeURIComponent(node.frontmatter.title)}`,
+  //     type: 'page'
+  //   }
+  // })})
+  const eventLinks = [0,1,2,3,4,5].map(event => ({
+    title: `Devcon ${event}`, 
+    url: `/archive/watch?edition=${event}`,
+    type: 'page'
+  }) as Link);
+  const tagLinks = tags.map(i => { return { title: i.title, url: `/archive/watch?tags=${encodeURIComponent(i.title)}`, type: 'page' } as Link })
+  links.push({ title: 'Event', url: '', type: 'links', links: eventLinks})
   links.push({ title: 'Categories', url: '', type: 'links', links: tagLinks})
   links.push({ title: 'Playlists', url: '/archive/playlists', type: 'page' })
 

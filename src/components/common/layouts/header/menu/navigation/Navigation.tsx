@@ -102,11 +102,12 @@ export const Navigation = (props: any) => {
 
                           if (c.type === 'header') {
                             return (
-                              <li key={subKey}>
+                              <li key={subKey} className={css['header']}>
                                 <span className={css['foldout-header']}>{c.title}</span>
                               </li>
                             )
                           }
+
                           if (c.type === 'links') {
                             // nothing?
                           }

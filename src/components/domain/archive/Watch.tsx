@@ -12,17 +12,32 @@ import IconGrid from 'src/assets/icons/grid.svg'
 import IconListView from 'src/assets/icons/list-view.svg'
 import { VideoFilter, useVideoFilter, VideoFilterMobile, filterToQueryString } from './watch/VideoFilter'
 import { useArchiveVideos } from 'src/hooks/useArchiveVideos'
+import { useLocation } from '@reach/router'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { useEffect } from 'react'
 
 type WatchProps = {}
 
-export const Watch = (props: WatchProps) => {
+/*
+  Problem: Changing filter via page navigation (in the page header) updates the query string used by our filters, causing our filters to be out of sync - you could try to do a 2-way sync, 
+  but it makes the component much more complex
+  Solution: Whenever location.search changes, swap out the entire component by using React keys - this will remount/reset the filters whenever the location changes as a result of a page 
+  navigation, but won't affect window.history.replaceState updates to the query string (which is what the filter uses to resync the url)
+*/
+const resetOnPageNavigationHOC = (WatchComponent: React.ComponentType<WatchProps>) => {
+  return (props: WatchProps) => {
+    const location = useLocation()
+
+    return <WatchComponent key={location.search} {...props} />
+  }
+}
+
+export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   // const videos = useArchiveVideos()
   const [videos, setVideos] = useState([])
   const [gridViewEnabled, setGridViewEnabled] = React.useState(true)
   const filterState = useVideoFilter()
-  
+
   useEffect(() => {
     const qs = filterToQueryString({
       edition: filterState.editionFilterState?.activeFilter,
@@ -32,17 +47,21 @@ export const Watch = (props: WatchProps) => {
 
     searchVideos(qs)
 
-    async function searchVideos(qs: string) { 
+    async function searchVideos(qs: string) {
       const response = await fetch('/api/archive/search' + qs, {
         method: 'GET',
       })
-  
+
       if (response.status === 200) {
         const body = await response.json()
         setVideos(body.data)
       }
     }
-  }, [filterState.editionFilterState?.activeFilter, filterState.tagsFilterState?.activeFilter, filterState.expertiseFilterState?.activeFilter])
+  }, [
+    filterState.editionFilterState?.activeFilter,
+    filterState.tagsFilterState?.activeFilter,
+    filterState.expertiseFilterState?.activeFilter,
+  ])
 
   const sortState = useSort(videos, [
     {
@@ -139,4 +158,4 @@ export const Watch = (props: WatchProps) => {
       <Footer />
     </div>
   )
-}
+})

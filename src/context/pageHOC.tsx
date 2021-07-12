@@ -15,7 +15,11 @@ export const pageHOC =
     const context = {
       location: props.location,
       pageContext: props.pageContext,
-      navigation: ToNavigationData(props.data.navigationData.nodes, pageType),
+      navigation: ToNavigationData(
+        props.data.navigationData.nodes,
+        props.data?.navigationArchiveEvents?.nodes,
+        pageType
+      ),
       notification: ToNotification(props.data.notification.nodes[0]),
       ...(mapDataToContext && mapDataToContext(props)),
       current: props.data.page ? ToPage(props.data.page) : undefined,

@@ -29,10 +29,15 @@ type Scene = {
   content: () => JSX.Element
 }
 
+type PathSegment = {
+  text: string
+  url?: string
+}
+
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
-  path?: string
+  path?: string | PathSegment[]
   description?: string
   scenes?: Scene[]
   background?: string
@@ -42,6 +47,36 @@ type PageHeroProps = {
   children?: React.ReactNode
 }
 
+const PathNavigation = (props: PageHeroProps) => {
+  const pagePath = usePagePath()
+
+  let path
+
+  if (Array.isArray(props.path)) {
+    path = props.path.reduce((acc, pathSegment, index) => {
+      const { url, text } = pathSegment
+
+      if (url) {
+        acc.push(
+          <Link key={`${text} ${index}`} className={`hover-underline bold`} to={url}>
+            {text}
+          </Link>
+        )
+      } else {
+        acc.push(<span key={`${text} ${index}`}>{text}</span>)
+      }
+
+      if (index !== props.path.length - 1) {
+        acc.push(<span key={index}>&nbsp;/&nbsp;</span>)
+      }
+
+      return acc
+    }, [] as React.ReactNode[])
+  }
+
+  return <p className={`${css['path']} font-xs text-uppercase`}>{path || props.path || pagePath}</p>
+}
+
 export const PageHero = (props: PageHeroProps) => {
   const pageContext = usePageContext()
   const stripHeight = useGetElementHeight('strip')
@@ -49,7 +84,6 @@ export const PageHero = (props: PageHeroProps) => {
   const pageHeaderHeight = useGetElementHeight('page-navigation')
   const pageHeroHeight = useGetElementHeight('page-hero')
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
-  const pagePath = usePagePath()
   const isScrolled = useIsScrolled()
   const [currentScene, setCurrentScene] = React.useState(0)
 
@@ -99,7 +133,7 @@ export const PageHero = (props: PageHeroProps) => {
     <div id="page-hero" className={className} style={style}>
       <div className="section">
         <div className={css['info']}>
-          <p className={`${css['path']} bold font-xs text-uppercase`}>{props.path || pagePath}</p>
+          <PathNavigation {...props} />
 
           <div className={css['title-block']}>
             <h1 className={`${props.titleSubtext ? css['subtext'] : ''} font-massive-2`}>

@@ -19,7 +19,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
       <SEO />
       <Header withStrip />
 
-      <PageHero>
+      <PageHero path={[{ text: 'playlists', url: '/archive/playlists' }, { text: playlist.title }]}>
         <PlaylistHeader playlist={playlist} />
 
         <div className={css['videos']}>
@@ -40,6 +40,7 @@ export const query = graphql`
   query ($slug: String!, $language: String!) {
     ...Page
     ...Notification
+    ...NavigationArchiveEvents
     ...NavigationData
     playlist: markdownRemark(fields: { slug: { eq: $slug } }) {
       id

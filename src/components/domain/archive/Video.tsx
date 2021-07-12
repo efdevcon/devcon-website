@@ -103,7 +103,11 @@ const Labels = ({ tags, playlists }: any) => {
           <div className={css['labels']}>
             {tags.map((tag: any) => {
               return (
-                <Link to={`/archive/watch?tags=${encodeURIComponent(tag)}`} key={tag} className="label bold sm">
+                <Link
+                  to={`/archive/watch?tags=${encodeURIComponent(tag)}`}
+                  key={tag}
+                  className="label white bold scale"
+                >
                   {tag}
                 </Link>
               )
@@ -118,7 +122,7 @@ const Labels = ({ tags, playlists }: any) => {
           <div className={css['labels']}>
             {playlists.map((playlist: any) => {
               return (
-                <Link to={playlist.slug} key={playlist.title} className="label bold sm">
+                <Link to={playlist.slug} key={playlist.title} className="label white bold scale">
                   {playlist.title}
                 </Link>
               )
@@ -138,7 +142,7 @@ export const Video = (props: VideoProps) => {
       <SEO />
       <Header withStrip />
 
-      <PageHero path={props.video.title}>
+      <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>
         <div className={css['container']}>
           <div className={css['video']}>
             <div className={css['player']}>

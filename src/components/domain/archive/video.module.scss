@@ -170,6 +170,9 @@
 
     .list {
       padding: $gaps-gap-4;
+      @include general-scrollbar;
+      max-height: 1200px;
+      overflow-y: auto;
 
       @media (max-width: 1300px) {
         padding-left: 0px;

@@ -52,7 +52,7 @@ export const Left = (props: any) => {
     <div className={css['left']}>
       {props.navigationData.top.map((i: LinkType) => {
         return (
-          <Link key={`top-${i.url}`} external to={i.url} className={css['highlighted-link']}>
+          <Link key={`top-${i.url}`} external to={i.url} className={`hover-underline ${css['highlighted-link']}`}>
             {i.title}
           </Link>
         )

@@ -12,9 +12,19 @@
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   color: var(--theme-color, #{$colors-main});
   border: 1px solid var(--theme-color, #{$colors-main});
+
+  &.scale {
+    @media (max-width: $breakpoints-lg) {
+      padding: 2px $gaps-gap-1;
+      @include fonts-xxs;
+    }
+  }
 
   .ghost {
     background: none;

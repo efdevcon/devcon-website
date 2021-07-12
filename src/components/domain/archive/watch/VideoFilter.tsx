@@ -4,7 +4,7 @@ import IconClose from 'src/assets/icons/cross.svg'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Filter, useFilter } from 'src/components/common/filter'
 import css from './video-filter.module.scss'
-import { useLocation } from '@reach/router'
+import { useLocation, useParams } from '@reach/router'
 import queryString from 'query-string'
 
 export const filterToQueryString = (filters: { [key: string]: any }): string => {
@@ -23,28 +23,32 @@ export const filterToQueryString = (filters: { [key: string]: any }): string => 
   return result
 }
 
+const queryStringToFilterState = (qs: string) => {
+  // Extract params from query string
+  const filters = queryString.parse(qs)
+
+  // Format to fit filter state shape
+  return Object.entries(filters).reduce((acc, [key, filter]: [any, any]) => {
+    if (typeof filter === 'string') {
+      acc[key] = {
+        [filter]: true,
+      }
+    } else {
+      acc[key] = filter?.reduce((acc: any, tag: any) => {
+        acc[tag] = true
+
+        return acc
+      }, {})
+    }
+
+    return acc
+  }, {})
+}
+
 export const useVideoFilter = () => {
   const location = useLocation()
   const initialFilters = React.useMemo((): any => {
-    // Extract params from query string
-    const filters = queryString.parse(location.search)
-
-    // Format to fit filter state shape
-    return Object.entries(filters).reduce((acc, [key, filter]: [any, any]) => {
-      if (typeof filter === 'string') {
-        acc[key] = {
-          [filter]: true,
-        }
-      } else {
-        acc[key] = filter?.reduce((acc: any, tag: any) => {
-          acc[tag] = true
-
-          return acc
-        }, {})
-      }
-
-      return acc
-    }, {})
+    return queryStringToFilterState(location.search)
   }, [])
 
   const [_, editionFilterState] = useFilter({
@@ -171,17 +175,17 @@ export const useVideoFilter = () => {
     window.history.replaceState({ path: url }, '', url)
   }, [editionFilterState?.activeFilter, expertiseFilterState?.activeFilter, tagsFilterState?.activeFilter])
 
-  const combinedFilter = (() => {
-    // Finish this one later - the combined filter will change depending on the filtering solution (e.g. inline JS vs query a search service)
-    // For now just doing a boolean to test the clear all functionality
-    return [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0)
-  })()
-
   const clearFilters = () => {
     editionFilterState?.clearFilter()
     expertiseFilterState?.clearFilter()
     tagsFilterState?.clearFilter()
   }
+
+  const combinedFilter = (() => {
+    // Finish this one later - the combined filter will change depending on the filtering solution (e.g. inline JS vs query a search service)
+    // For now just doing a boolean to test the clear all functionality
+    return [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0)
+  })()
 
   return { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState }
 }

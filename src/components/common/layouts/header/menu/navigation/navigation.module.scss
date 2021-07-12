@@ -71,7 +71,14 @@
       > ul {
         list-style-type: none;
         > li {
-          margin-top: 8px;
+          &:not(.header) {
+            &:not(:last-child) {
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+              padding-bottom: $gaps-gap-2;
+            }
+          }
+
+          margin-top: $gaps-gap-2;
         }
       }
 

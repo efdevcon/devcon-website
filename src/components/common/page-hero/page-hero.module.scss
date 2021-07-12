@@ -143,7 +143,19 @@
   height: 100%;
 
   .path {
+    display: flex;
     padding-top: $gaps-gap-4;
+
+    > * {
+      flex-shrink: 0;
+
+      &:last-child {
+        flex-shrink: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   }
 
   .title-block {
