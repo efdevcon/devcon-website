@@ -23,7 +23,7 @@
     "clean": "gatsby clean",
     "test": "jest",
     "test-watch": "jest --watch",
-    "browserstack": "node browserstack/test",
+    "browserstack": "node browserstack/run",
     "browserstack-ts": "ts-node --project ./tsconfig.json browserstack/test.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "rm -f ./netlify.toml && build-storybook"

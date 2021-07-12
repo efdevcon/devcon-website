@@ -3,7 +3,6 @@
 */
 const browserstack = require('browserstack-local')
 const webdriver = require('selenium-webdriver')
-
 const build = Date.now().toString()
 
 const capabilities = [
@@ -13,7 +12,7 @@ const capabilities = [
     os_version: '11.0',
     real_mobile: 'true',
     build,
-    name: 'Parallel_test_4',
+    name: 'Samsung Galaxy S20/Android',
   },
   {
     device: 'Google Pixel 5',
@@ -21,23 +20,15 @@ const capabilities = [
     os_version: '11.0',
     real_mobile: 'true',
     build,
-    name: 'Parallel_test_4',
+    name: 'Google Pixel/Android',
   },
-  // {
-  //   browserName: 'chrome',
-  //   browser_version: 'latest',
-  //   os: 'Windows',
-  //   os_version: '10',
-  //   build,
-  //   name: 'Parallel_test_1',
-  // },
   {
     browserName: 'firefox',
     browser_version: 'latest-beta',
     os: 'Windows',
     os_version: '10',
     build,
-    name: 'Parallel_test_2',
+    name: 'Windows/Firefox:latest',
   },
   {
     device: 'iPhone 12 Pro',
@@ -46,7 +37,7 @@ const capabilities = [
     proxy: true,
     real_mobile: 'true',
     build,
-    name: 'Parallel_test_3',
+    name: 'IPhone 12/Safari',
   },
   {
     browserName: 'Safari',
@@ -54,60 +45,38 @@ const capabilities = [
     os: 'OS X',
     os_version: 'Big Sur',
     build,
-    name: 'Parallel_test_5',
+    name: 'Big Sur/Safari',
   },
 ]
 
-const runTest = async capabilities => {
+const runTest = async (runner, capabilities) => {
   const driver = await new webdriver.Builder()
     .usingServer('http://lassejacobsen2:mBqtLq8ffDpp1UFA5679@hub-cloud.browserstack.com/wd/hub')
     .withCapabilities({
       ...capabilities,
+      name: runner.testName,
       'browserstack.local': true,
       'browserstack.localIdentifier': 'random',
     })
     .build()
 
   try {
-    const host = `http://bs-local.com:8000`
+    await runner(driver)
 
-    await driver.get(host)
-    await driver.sleep(5000)
-    await driver.findElement(webdriver.By.id('hamburger-toggle')).click()
-
-    // await driver.wait(webdriver.until.titleMatches(/The Ethereum developer conference/i), 5000)
     await driver.executeScript(
-      'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Test went great!"}}'
+      'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Test passed"}}'
     )
   } catch (e) {
     console.error(e, 'test error')
     await driver.executeScript(
-      'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "Test errored out"}}'
+      'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "Test failed"}}'
     )
   } finally {
     await driver.quit()
   }
-
-  // try {
-  //   const host = `http://bs-local.com:8000`
-
-  //   await driver.get(host)
-  //   await driver.wait(webdriver.until.titleMatches(/The Ethereum developer conference/i), 5000)
-  //   console.log('Test passed')
-  //   await driver.executeScript(
-  //     'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Title contains BrowserStack!"}}'
-  //   )
-  // } catch (e) {
-  //   console.error(e, 'test error')
-  //   await driver.executeScript(
-  //     'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "Test errored out"}}'
-  //   )
-  // } finally {
-  //   await driver.quit()
-  // }
 }
 
-async function runTests() {
+async function runTests(tests) {
   const browserstackLocal = new browserstack.Local()
 
   await browserstackLocal.start(
@@ -119,9 +88,17 @@ async function runTests() {
       console.log('BS local started')
 
       try {
-        await Promise.allSettled(capabilities.map(runTest))
+        await Promise.allSettled(
+          tests.map(async runner => {
+            await Promise.allSettled(
+              capabilities.map(async capability => {
+                await runTest(runner, capability)
+              })
+            )
+          })
+        )
       } catch (e) {
-        console.error(e, 'wtf')
+        console.error(e, 'Test aborted due to errors')
       }
 
       await browserstackLocal.stop(() => console.log('BS local stopped'))
@@ -129,4 +106,4 @@ async function runTests() {
   )
 }
 
-runTests()
+module.exports = runTests
