@@ -26,12 +26,14 @@ export function PlaylistHeader(props: Props) {
         </div>
 
         <div>
-          <Link
-            className={css['controls']}
-            to={`${firstVideo.slug}?playlist=${encodeURIComponent(props.playlist.title)}`}
-          >
-            <IconWatch /> <span className="bold font-xs">WATCH PLAYLIST</span>
-          </Link>
+          {firstVideo?.slug && 
+            <Link
+              className={css['controls']}
+              to={`${firstVideo.slug}?playlist=${encodeURIComponent(props.playlist.title)}`}
+            >
+              <IconWatch /> <span className="bold font-xs">WATCH PLAYLIST</span>
+            </Link>
+          }
 
           {props.playlist.curators && props.playlist.curators.length > 0 && (
             <>

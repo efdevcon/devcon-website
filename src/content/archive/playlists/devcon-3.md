@@ -6,6 +6,5 @@ categories:
   - Devcon
 curators:
   - Devcon Team
-videos: 
-  - 3/dai-stablecoin/index
+videos: []
 ---

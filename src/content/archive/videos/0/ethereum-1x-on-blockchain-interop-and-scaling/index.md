@@ -3,12 +3,12 @@ edition: 0
 title: "Ethereum 1.x: On blockchain interop and scaling"
 description: "Vlad Zamfir and Vitalik Buterin present their latest research on blockchain interoperability and scaling as part of DEVCON 0."
 youtubeUrl: "https://www.youtube.com/watch?v=fwEsXBDFk6c"
-ipfsHash: ''
+ipfsHash: ""
 duration: 3055
-expertise: ''
+expertise: "Advanced"
 type: "Talk"
-track: "Zero"
-keywords: []
-tags: []
-speakers: ['Vlad Zamfir',' Vitalik Buterin']
+track: "Scalability"
+keywords: ['Interoperability','eth2','eth 1.0','sharding','multichain','architecture','micropayments','transactions','channel','hypercube','tree','heterochain','security','jury','pos','redundancy','superchain','light client','proof']
+tags: ['Scalability']
+speakers: ['Vlad Zamfir','Vitalik Buterin']
 ---

@@ -3,26 +3,32 @@ import { getVideoId } from '../../../src/utils/video'
 import fetch from 'node-fetch';
 import moment from 'moment'
 import { GetUserProfiles, writeProfileToFile } from './profiles';
+import { UserProfile } from '../../../src/types/UserProfile';
 const GSheetReader: any = require('g-sheets-api');
 const slugify = require('slugify')
 const fs = require('fs');
 require('dotenv').config()
 
-const writeToDisk = false
+// for profile generation - need to update the async/duration call
+const fetchProfiles = false
+const writeToDisk = true
 const generatePlaylist = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
 const sheetNr = 0 // 
-const edition = 5 // 
+const edition = 4 // 
 console.log('Importing archive edition', edition, 'from', sheetNr, 'to', archiveDir)
 
 ImportArchiveVideos() 
 
 async function ImportArchiveVideos() {
   const videos: Array<ArchiveVideo> = []
+  let profiles: Array<UserProfile> = []
 
-  const profiles = await GetUserProfiles()
-  console.log('PROFILES', profiles.length)
+  if (fetchProfiles) {
+    profiles = await GetUserProfiles()
+    console.log('PROFILES', profiles.length)
+  }
 
   await GSheetReader(
     {
@@ -32,12 +38,13 @@ async function ImportArchiveVideos() {
     (results: any) => {
       console.log('Archive video records found', results.length)
 
-      results.forEach((result: any, index: number) => {
+      // remove async/duration call for profile generation
+      results.forEach(async (result: any, index: number) => {
         let duration = 0
-        // if (result['Video URL']) {
-        //   const id = getVideoId(result['Video URL'])
-        //   duration = await getVideoDuration(id)
-        // }
+        if (result['Video URL']) {
+          const id = getVideoId(result['Video URL'])
+          duration = await getVideoDuration(id)
+        }
 
         const tags = result['Tags'] ? result['Tags'].split(',') : []
         tags.push(result['Track'])
@@ -67,6 +74,13 @@ async function ImportArchiveVideos() {
           writeToFile(video)
         }
       })
+
+      if (generatePlaylist) {
+        // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists
+        const editionDir = archiveDir + '/' + edition
+        const videoPaths = videos.map(i => i.edition + '/' + slugify(i.title.toLowerCase(), { strict: true }) + '/index')
+        fs.writeFileSync(editionDir + '/playlist.md', '- ' + videoPaths.join('\n- '));
+      }
     },
     (error: any) => {
       console.log('Unable to fetch sheet results..')
@@ -74,25 +88,20 @@ async function ImportArchiveVideos() {
     }
   )
 
-  if (generatePlaylist) {
-    // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists
-    const editionDir = archiveDir + '/' + edition
-    const videoPaths = videos.map(i => i.edition + '/' + slugify(i.title.toLowerCase(), { strict: true }) + '/index')
-    fs.writeFileSync(editionDir + '/playlist.md', '- ' + videoPaths.join('\n- '));
+  if (fetchProfiles) {
+    // unique profiles from videos 
+    console.log('# of videos', videos.length)
+    const speakers = videos.map(i => i.speakers).reduce((acc, val) => acc.concat(val), [])
+    console.log('# of speakers', speakers.length)
+    const uniques = Array.from(new Set(speakers))
+    console.log('Unique speakers', uniques.length)
+    const speakerProfiles = profiles.filter(i => uniques.includes(i.name))
+    console.log('Unique speaker profiles for this event', edition, speakerProfiles.length)
+    
+    speakerProfiles.forEach(i => {
+      writeProfileToFile(i)
+    })
   }
-
-  // unique profiles from videos 
-  console.log('# of videos', videos.length)
-  const speakers = videos.map(i => i.speakers).reduce((acc, val) => acc.concat(val), [])
-  console.log('# of speakers', speakers.length)
-  const uniques = Array.from(new Set(speakers))
-  console.log('Unique speakers', uniques.length)
-  const speakerProfiles = profiles.filter(i => uniques.includes(i.name))
-  console.log('Unique speaker profiles for this event', edition, speakerProfiles.length)
-  
-  speakerProfiles.forEach(i => {
-    writeProfileToFile(i)
-  })
 }
 
 async function getVideoDuration(id: string): Promise<number> { 
