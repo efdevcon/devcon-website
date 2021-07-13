@@ -24,7 +24,8 @@ export async function GetUserProfiles(): Promise<Array<UserProfile>>{
       results.forEach((result: any) => {
         const status = result['Submission Status']
         const presenting = result['Presenting']
-        if (presenting === 'No' || status !== 'Submitted') return
+        // profiles are filtered from the devcon import sheet - no need for filters here
+        // if (presenting === 'No' || status !== 'Submitted') return
 
         let profile: any = { 
           name: `${result['First Name']} ${result['Last Name']}`,
