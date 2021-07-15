@@ -37,7 +37,7 @@ export class ArchiveController {
 
       if (req.query['q']) {
         const searchQuery = req.query['q'] as string
-        query.push(`(title:*${searchQuery}* OR description:*${searchQuery}*)`)
+        query.push(`(title:*${searchQuery}* OR speakers:*${searchQuery}* OR description:*${searchQuery}*)`)
 
       }
       const queryString = query.length ? query.join(' AND ') : "*"
