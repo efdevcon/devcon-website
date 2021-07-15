@@ -8,6 +8,7 @@ export interface PageContextType {
   notification: Notification
   location: any
   current: Page | undefined
+  data: any
 }
 
 export const usePageContext = () => useContext<PageContextType | undefined>(PageContext)

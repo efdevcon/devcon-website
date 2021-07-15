@@ -2,7 +2,7 @@ import { CreateSchemaCustomizationArgs } from 'gatsby'
 import { links as linksResolver } from './resolvers/links'
 import { tagCountResolver, tagsResolver } from './resolvers/tags'
 import { dip as dipResolver } from './resolvers/dip'
-import { videoResolver } from './resolvers/archive'
+import { videoResolver, distinctVideoTagsResolver } from './resolvers/archive'
 import { profileResolver } from './resolvers/profiles'
 
 const baseTypes = `
@@ -65,6 +65,7 @@ export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCusto
         tagItems: tagsResolver,
         tagCount: tagCountResolver,
         archiveVideos: videoResolver,
+        distinctVideoTags: distinctVideoTagsResolver,
         profiles: profileResolver
       },
     }),

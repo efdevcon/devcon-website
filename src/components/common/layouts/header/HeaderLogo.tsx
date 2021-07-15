@@ -1,5 +1,4 @@
 import React from 'react'
-// import css from './clouds.module.scss'
 
 type Props = {
   [key: string]: any

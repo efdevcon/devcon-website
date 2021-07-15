@@ -6,6 +6,8 @@ import { Filter, useFilter } from 'src/components/common/filter'
 import css from './video-filter.module.scss'
 import { useLocation } from '@reach/router'
 import queryString from 'query-string'
+import { usePageContext } from 'src/context/page-context'
+import { distinctVideoTagsResolver } from 'src/gatsby/create-schema-customization/resolvers/archive'
 
 const queryStringToFilterState = (qs: string) => {
   // Extract params from query string
@@ -31,6 +33,7 @@ const queryStringToFilterState = (qs: string) => {
 
 export const useVideoFilter = () => {
   const location = useLocation()
+  const pageContext = usePageContext()
   const initialFilters = React.useMemo((): any => {
     return queryStringToFilterState(location.search)
   }, [])
@@ -93,59 +96,18 @@ export const useVideoFilter = () => {
     tags: true,
     multiSelect: true,
     initialFilter: initialFilters.tags,
-    filters: [
-      {
-        text: 'Society and Systems',
-        value: 'Society and Systems',
-      },
-      {
-        text: 'Scalability',
-        value: 'Scalability',
-      },
-      {
-        text: 'UX & Design',
-        value: 'UX & Design',
-      },
-      {
-        text: 'Security',
-        value: 'Security',
-      },
-      {
-        text: 'Cryptography',
-        value: 'Cryptography',
-      },
-      {
-        text: 'Community',
-        value: 'Community',
-      },
-      {
-        text: 'Economics',
-        value: 'Economics',
-      },
-      {
-        text: 'Standards',
-        value: 'Standards',
-      },
-      {
-        text: 'Privacy',
-        value: 'Privacy',
-      },
-      {
-        text: 'Consensus Layer',
-        value: 'Consensus Layer',
-      },
-      {
-        text: 'Application Layer',
-        value: 'Application Layer',
-      },
-    ],
+    filters: pageContext.data.distinctVideoTags.map(tag => {
+      return {
+        text: tag,
+        value: tag,
+      }
+    }),
     filterFunction: () => [],
   })
 
   const editionFilter = editionFilterState && Object.keys(editionFilterState.activeFilter)
   const expertiseFilter = expertiseFilterState && Object.keys(expertiseFilterState.activeFilter)
   const tagsFilter = tagsFilterState && Object.keys(tagsFilterState.activeFilter)
-
 
   const clearFilters = () => {
     editionFilterState?.clearFilter()
@@ -178,7 +140,7 @@ const Filters = (props: any) => {
       </div>
 
       <div className={css['tags']}>
-        <p className="bold font-xs text-uppercase">Tags:</p>
+        <p className="bold font-xs text-uppercase">Categories:</p>
         <Filter {...tagsFilterState} />
 
         <div className={css['clear-container']}>

@@ -1,11 +1,11 @@
 import React from 'react'
-import Slider from 'react-slick'
 import { useEfTalks } from 'src/hooks/useEfTalks'
 import { useLatest } from 'src/hooks/useLatest'
 import { useMostPopular } from 'src/hooks/useMostPopular'
 import css from './playlists.module.scss'
 import { useStaffPicks } from 'src/hooks/useStaffPicks'
 import { VideoCard } from './VideoCard'
+import { Slider, useSlider } from 'src/components/common/slider'
 
 export const Playlists = () => {
   const mostPopular = useMostPopular()
@@ -40,43 +40,50 @@ export const Playlists = () => {
     }
   }
 
+  const sliderPropsMostPopular = useSlider(getSliderSettings(mostPopular.videoCount))
+  const sliderPropsLatest = useSlider(getSliderSettings(latest.videoCount))
+  const sliderPropsEFTalks = useSlider(getSliderSettings(efTalks.videoCount))
+
   return (
     <div className={css['playlists']}>
-      <h2 className="spaced title">Most Popular</h2>
-      <div className={css['slider']}>
-        <Slider {...getSliderSettings(mostPopular.videoCount)}>
-          {mostPopular.videos.map((item: any, i: number) => {
-            const first = i === 0
-            const className = first ? css['first'] : ''
+      <Slider className={css['slider']} sliderProps={sliderPropsMostPopular} title="Most Popular">
+        {mostPopular.videos.map((item: any, i: number) => {
+          const first = i === 0
+          let className = first ? css['first'] : ''
 
-            return <VideoCard slide key={i} className={className} video={item} />
-          })}
-        </Slider>
-      </div>
+          if (!sliderPropsMostPopular[1].canSlide) {
+            className += ` ${css['no-grab']}`
+          }
 
-      <h2 className="spaced title">Devcon 5</h2>
-      <div className={css['slider']}>
-        <Slider {...getSliderSettings(latest.videoCount)}>
-          {latest.videos.map((item: any, i: number) => {
-            const first = i === 0
-            const className = first ? css['first'] : ''
+          return <VideoCard slide key={i} className={className} video={item} />
+        })}
+      </Slider>
 
-            return <VideoCard slide key={i} className={className} video={item} />
-          })}
-        </Slider>
-      </div>
+      <Slider className={css['slider']} sliderProps={sliderPropsLatest} title="Devcon 5">
+        {latest.videos.map((item: any, i: number) => {
+          const first = i === 0
+          let className = first ? css['first'] : ''
 
-      <h2 className="spaced title">EF Talks</h2>
-      <div className={css['slider']}>
-        <Slider {...getSliderSettings(efTalks.videoCount)}>
-          {efTalks.videos.map((item: any, i: number) => {
-            const first = i === 0
-            const className = first ? css['first'] : ''
+          if (!sliderPropsLatest[1].canSlide) {
+            className += ` ${css['no-grab']}`
+          }
 
-            return <VideoCard slide key={i} className={className} video={item} />
-          })}
-        </Slider>
-      </div>
+          return <VideoCard slide key={i} className={className} video={item} />
+        })}
+      </Slider>
+
+      <Slider className={css['slider']} sliderProps={sliderPropsEFTalks} title="EF Talks">
+        {efTalks.videos.map((item: any, i: number) => {
+          const first = i === 0
+          let className = first ? css['first'] : ''
+
+          if (!sliderPropsEFTalks[1].canSlide) {
+            className += ` ${css['no-grab']}`
+          }
+
+          return <VideoCard slide key={i} className={className} video={item} />
+        })}
+      </Slider>
     </div>
   )
 }
@@ -87,10 +94,10 @@ export const StaffPicks = (props: any) => {
   const sliderSettings = {
     infinite: false,
     touchThreshold: 100,
+    speed: 500,
     slidesToShow: 2.6,
     arrows: false,
-    swipeToSlide: true,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     mobileFirst: true,
     responsive: [
       {
@@ -103,20 +110,22 @@ export const StaffPicks = (props: any) => {
     ],
   }
 
+  const sliderProps = useSlider(sliderSettings)
+
   return (
     <div className="section">
       <div className="content">
-        <h2 className="spaced title">Staff Picks</h2>
-        <div className={css['slider']}>
-          <Slider {...sliderSettings}>
-            {staffPicks.videos.map((video, i) => {
-              const first = i === 0
-              const className = first ? css['first'] : ''
+        <Slider className={css['slider']} sliderProps={sliderProps} title="Staff Picks">
+          {staffPicks.videos.map(i => {
+            let className = ''
 
-              return <VideoCard slide key={video.id} className={className} video={video} />
-            })}
-          </Slider>
-        </div>
+            if (!sliderProps[1].canSlide) {
+              className += ` ${css['no-grab']}`
+            }
+
+            return <VideoCard key={i.id} slide video={i} className={className} />
+          })}
+        </Slider>
       </div>
     </div>
   )

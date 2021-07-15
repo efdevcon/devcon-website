@@ -64,8 +64,8 @@
       margin-top: $gaps-gap-4;
       padding-top: $gaps-gap-4;
       padding-bottom: $gaps-gap-4;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: 1px solid $colors-monochrome-5;
+      border-bottom: 1px solid $colors-monochrome-5;
       margin-bottom: $gaps-gap-4;
       display: flex;
       justify-content: space-between;
@@ -89,11 +89,16 @@
     }
 
     .newsletter {
-      margin-top: $gaps-gap-4;
       padding-top: $gaps-gap-4;
-      // border-top: 1px solid rgba(0, 0, 0, 0.1);
+      // border-top: 1px solid $colors-monochrome-5;
       max-width: 410px;
       width: 100%;
+    }
+
+    .copyright {
+      margin-top: $gaps-gap-4;
+      padding-top: $gaps-gap-4;
+      border-top: 1px solid $colors-monochrome-5;
     }
   }
 }

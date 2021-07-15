@@ -39,45 +39,53 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   const [from, setFrom] = useState(0)
   const defaultPageSize = 12
   const filterState = useVideoFilter()
-  const sortState = useSort([], [
-    {
-      title: 'Event',
-      key: 'edition',
-      sort: SortVariation.basic,
-    },
-    {
-      title: 'Alphabetical',
-      key: 'title',
-      sort: SortVariation.basic,
-    },
-    {
-      title: 'Duration',
-      key: 'duration',
-      sort: SortVariation.date,
-    },
-  ])
+  const sortState = useSort(
+    [],
+    [
+      {
+        title: 'Event',
+        key: 'edition',
+        sort: SortVariation.basic,
+      },
+      {
+        title: 'Alphabetical',
+        key: 'title',
+        sort: SortVariation.basic,
+      },
+      {
+        title: 'Duration',
+        key: 'duration',
+        sort: SortVariation.date,
+      },
+    ],
+    false
+  )
 
-  const qs = useQueryStringer({
-    edition: filterState.editionFilterState?.activeFilter,
-    tags: filterState.tagsFilterState?.activeFilter,
-    expertise: filterState.expertiseFilterState?.activeFilter,
-    sort: sortState.fields[sortState.sortBy].key,
-    order: sortState.sortDirection
-  }, true)
+  const qs = useQueryStringer(
+    {
+      edition: filterState.editionFilterState?.activeFilter,
+      tags: filterState.tagsFilterState?.activeFilter,
+      expertise: filterState.expertiseFilterState?.activeFilter,
+      sort: sortState.fields[sortState.sortBy].key,
+      order: sortState.sortDirection,
+    },
+    true
+  )
 
-  const { data, isLoading, isError } = useArchiveSearch(qs, { from: from, size: defaultPageSize})
+  const { data, isLoading, isError } = useArchiveSearch(qs, { from: from, size: defaultPageSize })
 
   // Reset pagination on filter change
   useEffect(() => {
     setFrom(0)
-  }, [filterState.editionFilterState?.activeFilter, 
+  }, [
+    filterState.editionFilterState?.activeFilter,
     filterState.tagsFilterState?.activeFilter,
     filterState.expertiseFilterState?.activeFilter,
     sortState.fields[sortState.sortBy].key,
-    sortState.sortDirection
+    sortState.sortDirection,
   ])
 
-  function onSelectPagination(nr: number) { 
+  function onSelectPagination(nr: number) {
     const from = (nr - 1) * defaultPageSize
     setFrom(from)
   }
@@ -103,7 +111,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
           </div>
         </div>
       </div>
-      
+
       <VideoFilterMobile {...filterState} />
 
       <div className="section">
@@ -134,32 +142,33 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
               {isLoading && <div>Loading results..</div>}
               {isError && <div>Unable to fetch videos..</div>}
 
-              {data && data.items &&
-              <>
-                <div className={`${gridViewEnabled ? '' : css['list-view']} ${css['video-list']}`}>
-                  {data.items.map((i: ArchiveVideo, index: number) => {
-                    return <VideoCard key={index} horizontal={!gridViewEnabled} video={i} />
-                  })}
-                </div>
-
-                <div className={`${css['video-list']} ${css['mobile']}`}>
-                  {data.items.map((i: ArchiveVideo, index: number) => {
-                    return <VideoCard key={index} horizontal vertical={index === 0} video={i} />
-                  })}
-                </div>
-
-                {data.total > data.items.length && 
-                  <div className={css['footer']}>
-                    <Pagination 
-                      itemsPerPage={defaultPageSize}
-                      totalItems={data.total}
-                      selectedPage={data.currentPage}
-                      onSelectPage={onSelectPagination}
-                      truncate={true} />
+              {data && data.items && (
+                <>
+                  <div className={`${gridViewEnabled ? '' : css['list-view']} ${css['video-list']}`}>
+                    {data.items.map((i: ArchiveVideo, index: number) => {
+                      return <VideoCard key={index} horizontal={!gridViewEnabled} video={i} />
+                    })}
                   </div>
-                }
-              </>
-              }
+
+                  <div className={`${css['video-list']} ${css['mobile']}`}>
+                    {data.items.map((i: ArchiveVideo, index: number) => {
+                      return <VideoCard key={index} horizontal vertical={index === 0} video={i} />
+                    })}
+                  </div>
+
+                  {data.total > data.items.length && (
+                    <div className={css['footer']}>
+                      <Pagination
+                        itemsPerPage={defaultPageSize}
+                        totalItems={data.total}
+                        selectedPage={data.currentPage}
+                        onSelectPage={onSelectPagination}
+                        truncate={true}
+                      />
+                    </div>
+                  )}
+                </>
+              )}
             </div>
           </div>
         </div>

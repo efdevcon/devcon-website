@@ -40,7 +40,9 @@ const FoldoutContent = (props: any) => {
             <Newsletter />
           </div>
 
-          <Copyright />
+          <div className={css['copyright']}>
+            <Copyright />
+          </div>
         </div>
       </div>
     </div>,

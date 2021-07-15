@@ -1,6 +1,6 @@
 @use 'src/assets/css/partials/index' as *;
 
-.blog-container {
+.container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8,22 +8,17 @@
   position: relative;
 
   .top-section {
-    @include layout-content;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-
-  .cards {
-    @include layout-content;
   }
 }
 
-.cards {
+.children {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
+  width: calc(100% + #{$gaps-gap-2 * 2}) !important;
   left: -$gaps-gap-2;
 
   .card {
@@ -54,12 +49,12 @@
   }
 
   &:last-child {
-    margin-left: 20px;
+    margin-left: $gaps-gap-5;
   }
 
-  &:not(.always-buttons) {
-    @media (max-width: $breakpoints-lg) {
-      display: none;
-    }
-  }
+  // &:not(.always-buttons) {
+  //   @media (max-width: $breakpoints-lg) {
+  //     display: none;
+  //   }
+  // }
 }

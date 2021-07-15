@@ -1,72 +1,123 @@
 @use 'src/assets/css/partials/index' as *;
 
-.tags {
+.container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: $gaps-gap-1;
+  padding-bottom: $gaps-gap-8;
+  padding-top: $gaps-gap-4;
 
-  .tag {
+  @media (max-width: $breakpoints-lg) {
+    padding-bottom: $gaps-gap-5;
+    padding-top: $gaps-gap-2;
+  }
+
+  @media (max-width: $breakpoints-lg) {
+    flex-direction: column;
+  }
+
+  .header {
     display: flex;
+    flex-direction: column;
     flex-shrink: 0;
-    margin-right: $gaps-gap-2;
-    margin-bottom: $gaps-gap-1;
+    flex-grow: 0;
+    flex-basis: 400px;
+    margin-right: $gaps-gap-12;
 
-    svg {
-      font-size: 0.9em;
+    @media (max-width: $breakpoints-lg) {
+      flex-basis: auto;
+      margin-bottom: $gaps-gap-6;
     }
 
-    > span {
-      margin-left: $gaps-gap-2;
+    .title {
+      margin-bottom: $gaps-gap-2;
     }
 
-    &:hover {
-      cursor: pointer;
-    }
+    .rabbit {
+      @include fonts-xl;
+      display: flex;
+      flex-grow: 1;
+      align-items: flex-end;
 
-    .icon-check {
-      display: none;
-    }
-
-    .icon-plus {
-      display: block;
-    }
-
-    &.selected {
-      .icon-plus {
+      @media (max-width: $breakpoints-lg) {
         display: none;
-      }
-
-      .icon-check {
-        display: block;
       }
     }
   }
 }
 
-.clear {
+.tags-container {
   display: flex;
-  align-items: center;
-  padding-top: $gaps-gap-1;
-  padding-bottom: $gaps-gap-8;
+  flex-direction: column;
 
-  svg {
-    font-size: 0.8em;
-  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  .continue {
-    margin-right: $gaps-gap-3;
+    .tag {
+      display: flex;
+      flex-shrink: 0;
+      margin-right: $gaps-gap-2;
+      margin-bottom: $gaps-gap-1;
 
-    > span {
-      margin-right: $gaps-gap-4;
+      svg {
+        font-size: 0.9em;
+      }
+
+      > span {
+        margin-left: $gaps-gap-2;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .icon-check {
+        display: none;
+      }
+
+      .icon-plus {
+        display: block;
+      }
+
+      &.selected {
+        .icon-plus {
+          display: none;
+        }
+
+        .icon-check {
+          display: block;
+        }
+      }
     }
   }
 
   .clear {
-    padding: $gaps-gap-2;
+    display: flex;
+    align-items: center;
+    padding-top: $gaps-gap-6;
 
-    &:hover {
-      cursor: pointer;
+    @media (max-width: $breakpoints-lg) {
+      padding-top: $gaps-gap-3;
+    }
+
+    svg {
+      font-size: 0.8em;
+    }
+
+    .continue {
+      margin-right: $gaps-gap-3;
+
+      > span {
+        margin-right: $gaps-gap-4;
+      }
+    }
+
+    .clear {
+      padding: $gaps-gap-2;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

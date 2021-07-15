@@ -69,6 +69,7 @@ export const News = ({ data: rawData }: NewsProps) => {
                   key={index}
                   metadata={[moment.utc(formattedItem.date).format('MMM D, YYYY')]}
                   {...formattedItem}
+                  allowDrag
                 />
               )
             })}

@@ -4,32 +4,24 @@ import { Notification } from 'src/types/Notification'
 import { FooterData } from 'src/types/FooterData'
 import { Tag } from 'src/types/Tag'
 import { Page } from 'src/types/Page'
-import { tags } from 'src/components/domain/archive/tags'
 
-export function ToNavigationData(nodes: any, archiveNodes?: any, type?: 'default' | 'archive'): NavigationData {
+export function ToNavigationData(nodes: any, videoTags?: any[], type?: 'default' | 'archive'): NavigationData {
   return {
     top: type === 'archive' ? ToLinks(nodes, 'top-archive') : ToLinks(nodes, 'top'),
-    site: type === 'archive' ? ToArchiveNavigation(archiveNodes) : ToLinks(nodes, 'site'),
+    site: type === 'archive' ? ToArchiveNavigation(videoTags) : ToLinks(nodes, 'site'),
     footer: ToFooterData(nodes),
   }
 }
 
-export function ToArchiveNavigation(archiveNodes: any): Array<Link> {
+export function ToArchiveNavigation(videoTags?: any[]): Array<Link> {
   const links = new Array<Link>()
   links.push({ title: 'Watch', url: '/archive/watch', type: 'page' })
-  // links.push({ title: 'Event', url: '', type: 'links', links: archiveNodes.map((node: any) => {
-  //   return {
-  //     title: node.frontmatter.title,
-  //     url: `${node.frontmatter.archiveVideos[0].slug}?playlist=${encodeURIComponent(node.frontmatter.title)}`,
-  //     type: 'page'
-  //   }
-  // })})
   const eventLinks = [0,1,2,3,4,5].map(event => ({
     title: `Devcon ${event}`, 
     url: `/archive/watch?edition=${event}`,
     type: 'page'
   }) as Link);
-  const tagLinks = tags.map(i => { return { title: i.title, url: `/archive/watch?tags=${encodeURIComponent(i.title)}`, type: 'page' } as Link })
+  const tagLinks = videoTags?.map(i => { return { title: i, url: `/archive/watch?tags=${encodeURIComponent(i)}`, type: 'page' } as Link })
   links.push({ title: 'Event', url: '', type: 'links', links: eventLinks})
   links.push({ title: 'Categories', url: '', type: 'links', links: tagLinks})
   links.push({ title: 'Playlists', url: '/archive/playlists', type: 'page' })

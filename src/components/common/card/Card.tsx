@@ -15,6 +15,7 @@ interface CardProps {
   date?: Date
   metadata?: string[]
   className?: string
+  allowDrag?: boolean
   children?: React.ReactNode
 }
 

@@ -7,7 +7,7 @@ import { useLocation } from '@reach/router'
 import css from './header.module.scss'
 import useIsScrolled from 'src/hooks/useIsScrolled'
 import HeaderLogo from './HeaderLogo'
-import headerLogoArchive from 'src/assets/images/archive/devcon-logo-archive.svg'
+import HeaderLogoArchive from './HeaderLogoArchive'
 
 type HeaderProps = {
   withStrip?: boolean
@@ -46,7 +46,7 @@ export function Header({ withStrip, withHero }: HeaderProps) {
       <header id="header" className={headerClass}>
         <div className={css['menu-container']}>
           <Link to={isArchive ? '/archive' : `/${intl.locale}/`}>
-            {isArchive ? <img alt="Devcon Archive" src={headerLogoArchive} /> : <HeaderLogo />}
+            {isArchive ? <HeaderLogoArchive /> : <HeaderLogo />}
           </Link>
           <Menu foldoutOpen={foldoutOpen} setFoldoutOpen={setFoldoutOpen} />
         </div>

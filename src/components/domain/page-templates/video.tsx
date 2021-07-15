@@ -15,6 +15,7 @@ export default pageHOC(function ArchiveVideoTemplate(props: any) {
 
 export const query = graphql`
   query ($slug: String!, $language: String!, $tags: String) {
+    distinctVideoTags
     ...Page
     ...Notification
     ...NavigationArchiveEvents

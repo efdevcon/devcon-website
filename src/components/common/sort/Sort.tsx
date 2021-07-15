@@ -69,7 +69,7 @@ export const presetSortingMethods = {
 }
 
 // useSort contains reusable sorting logic to provide rendering flexiblity (e.g. archive sorting is very different from table sorting)
-export const useSort = (data: any[], fields: Field[]): SortState => {
+export const useSort = (data: any[], fields: Field[], resetOnThirdClick = true): SortState => {
   const [sortBy, setSortBy] = React.useState<number>(0)
   const [sortDirection, setSortDirection] = React.useState<any>('asc')
 
@@ -80,7 +80,10 @@ export const useSort = (data: any[], fields: Field[]): SortState => {
       if (sortDirection === 'asc') {
         setSortDirection('desc')
       } else if (sortDirection === 'desc') {
-        setSortBy(0)
+        if (resetOnThirdClick) {
+          setSortBy(0)
+        }
+
         setSortDirection('asc')
       }
     } else {
@@ -92,7 +95,7 @@ export const useSort = (data: any[], fields: Field[]): SortState => {
   const sortedData = React.useMemo(() => {
     const sort = () => {
       if (!data) return data
-      
+
       const shouldSort = typeof sortBy === 'number'
 
       if (shouldSort) {

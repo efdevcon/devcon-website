@@ -45,6 +45,7 @@
 
     &:disabled {
       background: $colors-monochrome-7 !important;
+      border-color: $colors-monochrome-7 !important;
     }
   }
 }

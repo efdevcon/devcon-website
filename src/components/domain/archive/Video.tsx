@@ -99,7 +99,7 @@ const Labels = ({ tags, playlists }: any) => {
     <div className={css['labels-container']}>
       {hasTags && (
         <div className={css['group']}>
-          <p className="font-xs bold">Tags</p>
+          <p className="font-xs bold">Categories</p>
           <div className={css['labels']}>
             {tags.map((tag: any) => {
               return (

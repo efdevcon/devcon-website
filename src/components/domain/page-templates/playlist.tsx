@@ -38,6 +38,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
 
 export const query = graphql`
   query ($slug: String!, $language: String!) {
+    distinctVideoTags
     ...Page
     ...Notification
     ...NavigationArchiveEvents

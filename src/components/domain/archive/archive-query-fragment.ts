@@ -112,6 +112,7 @@ export const query = graphql`
   }
 
   fragment NavigationArchiveEvents on Query {
+    distinctVideoTags
     navigationArchiveEvents: allMarkdownRemark(
       filter: {frontmatter: {title: {in: ["Devcon 0", "Devcon 1", "Devcon 2", "Devcon 3", "Devcon 4", "Devcon 5"]}}}
       sort: {fields: frontmatter___title}

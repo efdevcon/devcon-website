@@ -23,6 +23,7 @@ export const VideoCard = (props: Props) => {
   if (props.slide) className += ` ${css['slide']}`
   if (props.horizontal) className = css['horizontal']
   if (props.compact) className = css['compact']
+  if (props.className) className += ` ${props.className}`
 
   function getWatchUrl() {
     let url = `${props.video.slug}`
