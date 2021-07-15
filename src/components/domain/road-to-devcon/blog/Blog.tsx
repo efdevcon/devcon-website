@@ -3,18 +3,18 @@ import { PageContent, Page } from 'src/components/common/layouts/horizontal-layo
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './blog.module.scss'
 import './react-slick-overrides.scss'
-import { Cards, useBlogState, Arrows } from 'src/components/domain/blog-overview'
+// import { Cards, useBlogState, Arrows } from 'src/components/domain/blog-overview'
 // import { useBlogs } from 'src/hooks/useBlogs'
 
 export const Blog = React.forwardRef((props: any, ref) => {
   const intl = useIntl()
-  const blogState = useBlogState()
+  // const blogState = useBlogState()
 
   return (
     <Page {...props} ref={ref}>
-      <div className={css['background']}></div>
+      <div className={css['background']}> Broken for now</div>
 
-      <PageContent
+      {/* <PageContent
         transparent
         renderTopRight={() => <Arrows noSwipe {...blogState} />}
         backgroundText={intl.formatMessage({ id: 'rtd_blog' })}
@@ -22,7 +22,7 @@ export const Blog = React.forwardRef((props: any, ref) => {
         <div className={css['container']}>
           <Cards customCardClass={css['card']} {...blogState} expandLink noSwipe ref={blogState.sliderRef} />
         </div>
-      </PageContent>
+      </PageContent> */}
     </Page>
   )
 })
