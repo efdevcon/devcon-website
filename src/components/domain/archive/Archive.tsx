@@ -95,7 +95,7 @@ export const Archive = (props: ArchiveProps) => {
         </div>
         <div className={`section ${css['curated-playlists']}`}>
           <div className="content">
-            <CuratedPlaylists title="Curated playlists" items={curated} viewMore />
+            <CuratedPlaylists title="Curated Playlists" items={curated} viewMore />
           </div>
         </div>
         <div className={`section ${css['playlists']}`}>

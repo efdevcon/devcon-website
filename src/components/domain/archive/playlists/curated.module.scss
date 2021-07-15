@@ -9,13 +9,36 @@
 }
 
 .button {
+  margin-top: $gaps-gap-4;
+
   svg {
     margin-left: $gaps-gap-3;
   }
 }
 
+// .view-more {
+//   .button {
+//     @media (max-width: $breakpoints-lg) {
+//       display: none;
+//     }
+
+//     svg {
+//       margin-left: $gaps-gap-3;
+//     }
+//   }
+
+//   .view-more-mobile {
+//     display: none;
+//     text-decoration: underline;
+
+//     @media (max-width: $breakpoints-lg) {
+//       display: inline-block;
+//     }
+//   }
+// }
+
 .curated-playlists {
-  padding-bottom: $gaps-gap-16;
+  padding-bottom: $gaps-gap-12;
 }
 
 .video-card {

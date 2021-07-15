@@ -28,7 +28,6 @@ export function InputForm(props: InputFormProps) {
       if (props.onChange && props.timeout) {
         props.onChange(value)
       }
-
     }, props.timeout)
 
     return () => clearTimeout(delayDebounceFn)
@@ -56,7 +55,14 @@ export function InputForm(props: InputFormProps) {
       <div className={css['container']}>
         {props.label && <label htmlFor={id}>{props.label}</label>}
         {/* <div className={css['input']}> */}
-        <input type="text" id={id} value={value} placeholder={props.placeholder} onChange={handleChange} />
+        <input
+          className="font-md-fixed"
+          type="text"
+          id={id}
+          value={value}
+          placeholder={props.placeholder}
+          onChange={handleChange}
+        />
         {props.icon && <props.icon className={`${css['icon']} icon`} />}
         {/* </div> */}
       </div>

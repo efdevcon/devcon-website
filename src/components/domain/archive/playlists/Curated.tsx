@@ -4,6 +4,7 @@ import css from './curated.module.scss'
 import { BasicCard } from 'src/components/common/card'
 import { LinkButton } from 'src/components/common/link-button'
 import { Playlist } from 'src/types/Playlist'
+import { Link } from 'src/components/common/link'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Slider, useSlider } from 'src/components/common/slider'
 
@@ -50,17 +51,23 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
         sliderProps={sliderProps}
         className={css['slider']}
         title={props.title}
-        custom={
-          props.viewMore
-            ? () => {
-                return (
-                  <LinkButton to={'/archive/playlists'} className={css['button']}>
-                    View more <ArrowRight />
-                  </LinkButton>
-                )
-              }
-            : undefined
-        }
+        // custom={
+        //   props.viewMore
+        //     ? () => {
+        //         return (
+        //           <div className={css['view-more']}>
+        //             <LinkButton to={'/archive/playlists'} className={`${css['button']} sm`}>
+        //               View more <ArrowRight />
+        //             </LinkButton>
+
+        //             <Link to="/archive/playlists" className={css['view-more-mobile']}>
+        //               View More
+        //             </Link>
+        //           </div>
+        //         )
+        //       }
+        //     : undefined
+        // }
       >
         {props.items.map((i: Playlist) => {
           let className = `${css['video-card']} ${css['big']}`
@@ -90,6 +97,10 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
           )
         })}
       </Slider>
+
+      <LinkButton to={'/archive/playlists'} className={`${css['button']} sm`}>
+        View more <ArrowRight />
+      </LinkButton>
     </div>
   )
 }

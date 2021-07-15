@@ -17,10 +17,14 @@
     .controls {
       display: flex;
       align-items: center;
-    }
 
-    .arrows {
-      margin-left: $gaps-gap-8;
+      .arrows {
+        margin-left: $gaps-gap-8;
+
+        @media (max-width: $breakpoints-lg) {
+          margin-left: $gaps-gap-4;
+        }
+      }
     }
   }
 }
@@ -49,23 +53,23 @@
   }
 }
 
-.arrow-button {
-  --color-icon: white;
-  background: black;
-  padding: 8px;
-  touch-action: none; // Prevent zoom when tapping button on mobile
+.arrows {
+  display: flex;
+  flex-wrap: nowrap;
 
-  &:disabled {
-    background: grey;
+  .arrow-button {
+    flex-shrink: 0;
+    padding: 8px;
+    touch-action: none;
+
+    &:last-child {
+      margin-left: $gaps-gap-5;
+    }
+
+    // &:not(.always-buttons) {
+    //   @media (max-width: $breakpoints-lg) {
+    //     display: none;
+    //   }
+    // }
   }
-
-  &:last-child {
-    margin-left: $gaps-gap-5;
-  }
-
-  // &:not(.always-buttons) {
-  //   @media (max-width: $breakpoints-lg) {
-  //     display: none;
-  //   }
-  // }
 }

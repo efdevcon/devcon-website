@@ -10,6 +10,7 @@
   }
 
   input {
+    @include fonts-md-fixed;
     width: 100%;
     padding-left: $gaps-gap-2;
     padding-right: $gaps-gap-3;
