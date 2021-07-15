@@ -8,7 +8,9 @@ curators:
   - Hudson Jameson
   - Griff Green
 videos:
-  - 2/ethereum-in-25-minutes/index
-  - 4/a-conversation-with-stewart-brand/index
+  - 5/we-come-in-peace/index
+  - 5/supersonic-transparent-snarks-from-dark-compilers/index
+  - 5/mapping-finite-state-machines-to-zksnarks/index
+  - 5/ethereum-20/index
   - 5/cryptoeconomics-in-30-minutes/index
 ---

@@ -8,7 +8,9 @@ curators:
   - Danny Ryan
   - Justin Drake
 videos:
-  - 1/keynote-and-ethereum-roadmap/index
-  - 2/ethereum-in-25-minutes/index
-  - 4/a-conversation-with-stewart-brand/index
+  - 5/grantee-expose-lightning-talk-1-formality-an-efficient-proof-language/index
+  - 5/designing-awesome-developer-apis-for-protocols/index
+  - 5/the-cbc-casper-roadmap/index
+  - 5/crypto-for-activism/index
+  - 5/k-semantic-model-of-beacon-chain/index
 ---

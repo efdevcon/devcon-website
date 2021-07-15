@@ -9,8 +9,9 @@ categories:
 curators:
   - Austin Griffith
 videos:
-  - 1/understanding-the-ethereum-blockchain-protocol/index
-  - 2/ethereum-in-25-minutes/index
-  - 4/a-conversation-with-stewart-brand/index
-  - 3/dai-stablecoin/index
+  - 4/plasma-implementers-call-live/index
+  - 4/plugging-the-metadata-leaks-in-the-ethereum-ecosystem/index
+  - 4/post-nation-state-governance/index
+  - 4/practical-plasma-gaming/index
+  - 4/progpow-a-programmatic-proof-of-work/index
 ---

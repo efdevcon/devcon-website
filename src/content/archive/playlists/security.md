@@ -7,8 +7,10 @@ categories:
 curators:
   - Devcon team
 videos:
-  - 2/ethereum-in-25-minutes/index
-  - 4/ethereum-foundation-values/index
-  - 5/cryptoeconomics-in-30-minutes/index
-  - 5/devcon5-recap-video/index
+  - 4/smart-contract-security-incentives-beyond-the-launch/index
+  - 4/current-state-of-security/index
+  - 5/scaling-ethereum-with-security-and-usability-in-mind/index
+  - 5/analyzing-the-security-of-casper/index
+  - 5/ethereum-20-security-considerations/index
+  - 5/erc-20-test-suite-towards-decentralized-security/index
 ---

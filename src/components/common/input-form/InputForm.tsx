@@ -4,6 +4,7 @@ import css from './input-form.module.scss'
 interface InputFormProps {
   label?: string
   placeholder: string
+  timeout?: number
   icon?: React.ComponentType<any>
   defaultValue?: string
   className?: string
@@ -22,10 +23,21 @@ export function InputForm(props: InputFormProps) {
     }
   }, [])
 
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      if (props.onChange && props.timeout) {
+        props.onChange(value)
+      }
+
+    }, props.timeout)
+
+    return () => clearTimeout(delayDebounceFn)
+  }, [value])
+
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setValue(event.target.value)
 
-    if (props.onChange) {
+    if (props.onChange && !props.timeout) {
       props.onChange(event.target.value)
     }
   }

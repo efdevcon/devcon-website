@@ -5,5 +5,7 @@ export interface UserProfile {
   name: string
   role: string
   description: string
+  organization?: string
+  country?: string
   imageUrl?: string
 }

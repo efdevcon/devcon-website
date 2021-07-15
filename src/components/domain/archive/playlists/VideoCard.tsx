@@ -46,15 +46,6 @@ export const VideoCard = (props: Props) => {
             placeholder="blurred"
           />
 
-          {/* {props.video.duration && (
-            <div className={`${css['duration']} label sm white inverted`}>
-              {moment
-                .utc(props.video.duration * 1000)
-                .format('H:mm:ss')
-                .replace(/^0:/, '')}
-            </div>
-          )} */}
-
           <div className={`${css['labels']}`}>
             <div className={`label sm white inverted`}>Devcon {props.video.edition}</div>
             <div className={`label sm white inverted`}>{props.video.type}</div>

@@ -6,6 +6,5 @@ categories:
   - Devcon
 curators:
   - Devcon Team
-videos:
-  - 2/ethereum-in-25-minutes/index
+videos: []
 ---

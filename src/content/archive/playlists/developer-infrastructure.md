@@ -7,7 +7,9 @@ categories:
 curators:
   - Trent van Epps
 videos:
-  - 2/ethereum-in-25-minutes/index
-  - 3/dai-stablecoin/index
-  - 4/a-conversation-with-stewart-brand/index
+  - 5/weak-subjectivity-and-eth-20-sync/index
+  - 5/will-design-ethics-save-software/index
+  - 5/ethereum-2-network-spec-and-structure/index
+  - 5/grantee-expose-lightning-talk-2-whats-next-for-gsn/index
+  - 5/cryptoeconomics-in-30-minutes/index
 ---
