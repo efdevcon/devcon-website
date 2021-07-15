@@ -16,12 +16,15 @@ const useSlideState = (quests: any[]) => {
   const [currentIndex, setCurrentIndex] = React.useState(0)
   const [cardsPerSlide, setCardsPerSlide] = React.useState(0)
 
+  // Have to compensate for injected cards
+  const extraCards = quests.length === 0 ? 2 : 1
+
   return {
     cardsPerSlide,
     currentIndex,
     setCurrentIndex,
     setCardsPerSlide,
-    canNext: currentIndex < quests.length + 1 - cardsPerSlide,
+    canNext: currentIndex < quests.length + extraCards - cardsPerSlide,
     canBack: currentIndex > 0,
   }
 }
@@ -45,7 +48,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
 
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativePath: { in: ["quests.png"] } }) {
+      allFile(filter: { relativePath: { in: ["quests.png", "no-quests-hearts.png"] } }) {
         nodes {
           childImageSharp {
             fluid(maxWidth: 800, quality: 90) {
@@ -82,7 +85,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
     swipe: true,
     mobileFirst: true,
     beforeChange: (_: any, next: number) => {
-      if (slideState.setCurrentIndex) slideState.setCurrentIndex(Math.round(next))
+      if (slideState.setCurrentIndex) slideState.setCurrentIndex(next)
     },
     onReInit: () => {
       if (!sliderRef.current) return
@@ -92,11 +95,12 @@ export const Quests = React.forwardRef((props: any, ref) => {
       const currentBreakpoint = state.breakpoint
       const breakpoints = sliderSettings.responsive
 
-      const activeBreakpoint = breakpoints?.find(({ breakpoint }) => {
-        return breakpoint === currentBreakpoint
-      })
+      const activeBreakpoint =
+        breakpoints?.find(({ breakpoint }) => {
+          return breakpoint === currentBreakpoint
+        })?.settings || slickSettings
 
-      const nextCardsPerSlide = activeBreakpoint?.settings?.slidesToShow
+      const nextCardsPerSlide = activeBreakpoint?.slidesToShow
 
       if (slideState.cardsPerSlide !== nextCardsPerSlide) slideState.setCardsPerSlide(nextCardsPerSlide)
     },
@@ -146,7 +150,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
           <img src={star} className={`${css['star']} ${css['four']}`} />
           <img src={star} className={`${css['star']} ${css['five']}`} />
           <img src={star} className={`${css['star']} ${css['six']}`} />
-          <GatsbyImage fluid={data.allFile.nodes[0].childImageSharp.fluid} />
+          <GatsbyImage fluid={data.allFile.nodes[1].childImageSharp.fluid} />
         </div>
       </div>
       <HashTag className={css['hash-tag']} />
@@ -192,11 +196,14 @@ export const Quests = React.forwardRef((props: any, ref) => {
 
             {filteredQuests.length === 0 ? (
               <div className={css['no-results']}>
-                {activeFilter === 'upcoming' ? (
-                  <p>{intl.formatMessage({ id: 'rtd_quests_upcoming_no_results' })} :-(</p>
-                ) : (
-                  <p>{intl.formatMessage({ id: 'rtd_quests_past_no_results' })}</p>
-                )}
+                <Card
+                  title={intl.formatMessage({ id: 'rtd_quests_no_upcoming' })}
+                  linkUrl={'https://forum.devcon.org/c/quests/10'}
+                  imageUrl={data.allFile.nodes[0].childImageSharp.fluid}
+                  description={intl.formatMessage({ id: 'rtd_quests_no_upcoming_description' })}
+                  customReadMore={intl.formatMessage({ id: 'rtd_quests_create' })}
+                  className={`${css['card']}`}
+                />
               </div>
             ) : (
               filteredQuests.map(quest => {

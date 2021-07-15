@@ -1,0 +1,32 @@
+@use 'src/assets/css/variables' as *;
+@use 'src/assets/css/partials/gaps';
+@use 'src/assets/css/partials/fonts';
+
+.grants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $gap-4;
+  height: 100%;
+
+  h3 {
+    @include fonts.font-secondary;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    align-self: flex-start;
+    text-transform: uppercase;
+    margin-right: $gap-2;
+    margin-bottom: $gap-2;
+
+    > * {
+      font-size: 1.5em;
+      margin-left: 0.5em;
+    }
+  }
+}

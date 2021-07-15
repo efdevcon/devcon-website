@@ -29,6 +29,15 @@
       }
     }
 
+    .no-announcement-date {
+      display: inline-block;
+      margin-top: 1em;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
     h1,
     div {
       @include gaps.responsive-gap($attribute: margin, $bottom: $gap-6, $min-gap: $gap-4);
@@ -45,13 +54,15 @@
       }
     }
 
+    .anchor-as-button,
     button {
       text-transform: uppercase;
       margin-right: $gap-2;
       margin-bottom: $gap-2;
 
       > * {
-        margin-left: 1em;
+        font-size: 1.5em;
+        margin-left: 0.5em;
       }
     }
   }

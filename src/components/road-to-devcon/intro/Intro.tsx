@@ -3,13 +3,14 @@ import { Page } from 'src/components/layouts/horizontal-layout'
 import css from './intro.module.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import road from 'src/assets/images/road.svg'
-import EmailIcon from 'src/assets/icons/ui-email.svg'
+import IconMedal from 'src/assets/icons/medal.svg'
 import InfoIcon from 'src/assets/icons/info.svg'
 import dog from 'src/assets/images/dog.svg'
 import guy from 'src/assets/images/scouting-guy.svg'
 import leslie from 'src/assets/images/leslie.svg'
 import dogeHead from 'src/assets/images/doge-head.svg'
 import { Checkpoint } from '../checkpoint'
+import { Link } from 'src/components/common/link'
 import { Modal } from 'src/components/common/modal'
 import ArrowLeftIcon from 'src/assets/icons/box_arrow_left.svg'
 import ArrowRightIcon from 'src/assets/icons/box_arrow_right.svg'
@@ -52,7 +53,17 @@ export const Intro = React.forwardRef((props: any, ref) => {
           <h1 className="no-select">{intl.formatMessage({ id: 'rtd' })}</h1>
           <div>
             <p className="no-select">{intl.formatMessage({ id: 'rtd_intro' })}</p>
+            <p className={`no-select ${css['no-announcement-date']}`}>
+              {intl.formatMessage({ id: 'rtd_intro_no_date' })}.{' '}
+              <Link
+                className="bold hover-underline"
+                to="https://blog.ethereum.org/2021/01/26/the-longer-road-to-devcon/"
+              >
+                {intl.formatMessage({ id: 'rtd_intro_no_date_learn_more' })}.
+              </Link>
+            </p>
           </div>
+
           <button
             className="lg white"
             onClick={() => {
@@ -89,9 +100,10 @@ export const Intro = React.forwardRef((props: any, ref) => {
             </div>
           </Modal>
 
-          <button
-            className="lg white"
-            onClick={() => setSubscribeModalOpen(true)}
+          <Link
+            to="https://esp.ethereum.foundation/en/devcon-grants/"
+            className={`${css['anchor-as-button']} button lg white`}
+            // onClick={() => setSubscribeModalOpen(true)}
             onMouseOver={() => {
               setShowDoge(true)
             }}
@@ -99,9 +111,9 @@ export const Intro = React.forwardRef((props: any, ref) => {
               setShowDoge(false)
             }}
           >
-            {intl.formatMessage({ id: 'rtd_subscribe_for_updates' })}
-            <EmailIcon />
-          </button>
+            {intl.formatMessage({ id: 'rtd_grants_apply' })}
+            <IconMedal />
+          </Link>
 
           <Modal
             open={subscribeModalOpen}

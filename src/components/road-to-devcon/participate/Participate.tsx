@@ -6,6 +6,7 @@ import { EventOverview } from 'src/components/events-overview'
 import { Tabs } from 'src/components/common/tabs'
 import { Tab } from 'src/components/common/tabs/Tabs'
 import { MeetupOverview } from 'src/components/events-overview/MeetupOverview'
+import { Grants } from 'src/components/events-overview/GrantOverview'
 
 import IconPlus from 'src/assets/icons/plus.svg'
 import { LINK_SUBMIT_EVENT } from 'src/utils/constants'
@@ -44,6 +45,9 @@ export const Participate = React.forwardRef((props: any, ref) => {
               <div className={css['content']}>
                 <MeetupOverview data={props.meetups} />
               </div>
+            </Tab>
+            <Tab title={intl.formatMessage({ id: 'rtd_grants' })}>
+              <Grants />
             </Tab>
           </Tabs>
           <div className={css['footer']}>
