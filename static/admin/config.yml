@@ -424,14 +424,17 @@ collections:
           },
       }
 
-  - name: 'speakers'
-    label: 'Speakers'
-    label_singular: 'Speaker'
-    folder: 'src/content/speakers'
+  - name: 'profiles'
+    label: 'Profiles'
+    label_singular: 'Profile'
+    folder: 'src/content/profiles'
     slug: '{{slug}}'
     create: true
     i18n: true
     fields:
       - { name: 'name', label: 'Title', widget: 'string', i18n: 'duplicate' }
+      - { name: 'role', label: 'Role', widget: 'string', i18n: 'duplicate' }
       - { name: 'description', label: 'Description', widget: 'text', i18n: true }
+      - { name: 'organization', label: 'Organization', widget: 'string', i18n: 'duplicate', required: false }
+      - { name: 'country', label: 'Country', widget: 'string', i18n: 'duplicate', required: false }
       - { name: 'imageUrl', label: 'Image URL', widget: 'string', i18n: true }

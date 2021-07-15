@@ -1,5 +1,5 @@
 import { Client } from '@elastic/elasticsearch'
-import { PagedResult } from 'src/types/PagedResult';
+import { PagedResult } from '../../types/PagedResult';
 import { SERVER_CONFIG } from '../config/server';
 require('dotenv').config()
 
@@ -63,7 +63,7 @@ export class SearchIndexClient implements SearchIndexClientInterface {
         if (params?.from) searchQuery.from = params?.from
         if (params?.size) searchQuery.size = params?.size
         if (params?.sort) searchQuery.body.sort = [
-            { [params?.sort]: params.order || DEFAULT_ORDER },
+            { [params?.sort === 'title' ? 'title.raw' : params?.sort]: params.order || DEFAULT_ORDER },
             "_score"
         ]
         console.log('Searching Elastic index', index, query, params)
@@ -94,6 +94,8 @@ export class SearchIndexClient implements SearchIndexClientInterface {
             console.log(`Unable to get indices '${name}'..`)
             return []
         }
+
+        // console.log('MAPPINGS', result.body.archive.mappings)
 
         return Object.keys(result.body)
     }

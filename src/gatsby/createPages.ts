@@ -400,7 +400,38 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
     properties: {
       title: {
         type: 'text',
-        fielddata: true
+        fielddata: true,
+        fields: {
+          raw: {
+            type: 'keyword'
+          } 
+        }
+      }
+    }
+  })
+  await elastic.updateMapping(indexName, {
+    properties: {
+      description: {
+        type: 'text',
+        fielddata: true,
+        fields: {
+          raw: {
+            type: 'keyword'
+          } 
+        }
+      }
+    }
+  })
+  await elastic.updateMapping(indexName, {
+    properties: {
+      speakers: {
+        type: 'text',
+        fielddata: true,
+        fields: {
+          raw: {
+            type: 'keyword'
+          } 
+        }
       }
     }
   })
