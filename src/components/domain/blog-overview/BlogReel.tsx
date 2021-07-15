@@ -50,6 +50,7 @@ export function BlogReel() {
               return (
                 <Card
                   className={className}
+                  slide={sliderProps[1].canSlide}
                   key={blog.slug}
                   title={blog.title}
                   imageUrl={blog.imageUrl}

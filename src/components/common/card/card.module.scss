@@ -7,9 +7,23 @@
   flex-direction: column;
   position: relative;
 
-  &:active {
-    > * {
-      cursor: grabbing !important;
+  &.slide {
+    &:active {
+      > * {
+        cursor: grabbing !important;
+      }
+    }
+
+    .img {
+      cursor: grab;
+    }
+
+    .body {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing !important;
+      }
     }
   }
 
@@ -77,8 +91,8 @@
     padding: $gaps-gap-8;
     padding-bottom: 0px;
 
-    &:not(.no-link) {
-      cursor: pointer !important;
+    &.with-link {
+      cursor: pointer;
 
       &:hover {
         .title {

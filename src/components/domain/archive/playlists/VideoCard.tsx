@@ -13,6 +13,7 @@ interface Props {
   className?: string
   slide?: Boolean
   horizontal?: boolean
+  canSlide?: boolean
   vertical?: boolean
   compact?: boolean
 }
@@ -36,7 +37,7 @@ export const VideoCard = (props: Props) => {
   }
 
   return (
-    <BasicCard className={className} expandLink linkUrl={getWatchUrl()} allowDrag>
+    <BasicCard className={className} slide={props.canSlide} expandLink linkUrl={getWatchUrl()} allowDrag>
       {/* Need the wrapper so we can constrain the aspect div */}
       <div className={css['aspect-wrapper']}>
         <div className="aspect">

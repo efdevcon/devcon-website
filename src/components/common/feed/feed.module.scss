@@ -4,7 +4,8 @@
   background: white;
   display: flex;
   flex-direction: column;
-  color: $colors-monochrome-10;
+  color: $colors-main;
+  --color-icon: $colors-main;
   margin-bottom: $gaps-gap-8;
 
   @media (max-width: $breakpoints-md) {

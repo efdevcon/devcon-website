@@ -2,35 +2,42 @@
 
 .slider {
   margin-left: -$gaps-gap-4;
-  margin-bottom: $gaps-gap-10;
 
   &:last-of-type {
     margin-bottom: 0px;
   }
 }
 
-.curated-playlists {
-  padding-top: $gaps-gap-8;
-  padding-bottom: $gaps-gap-16;
+.button {
+  svg {
+    margin-left: $gaps-gap-3;
+  }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-
-  .button {
-    svg {
-      margin-left: $gaps-gap-3;
-    }
-  }
+.curated-playlists {
+  padding-bottom: $gaps-gap-16;
 }
 
 .video-card {
   height: 100%;
+  margin-left: $gaps-gap-4;
 
   &.slide {
-    cursor: grab;
-    margin-left: $gaps-gap-4;
+    &:active {
+      > * {
+        cursor: grabbing !important;
+      }
+    }
+
+    .image {
+      cursor: grab;
+    }
+
+    .body {
+      &:active {
+        cursor: grabbing !important;
+      }
+    }
   }
 
   .aspect-wrapper {

@@ -51,11 +51,9 @@ export const Playlists = () => {
           const first = i === 0
           let className = first ? css['first'] : ''
 
-          if (!sliderPropsMostPopular[1].canSlide) {
-            className += ` ${css['no-grab']}`
-          }
-
-          return <VideoCard slide key={i} className={className} video={item} />
+          return (
+            <VideoCard slide canSlide={sliderPropsMostPopular[1].canSlide} key={i} className={className} video={item} />
+          )
         })}
       </Slider>
 
@@ -64,11 +62,7 @@ export const Playlists = () => {
           const first = i === 0
           let className = first ? css['first'] : ''
 
-          if (!sliderPropsLatest[1].canSlide) {
-            className += ` ${css['no-grab']}`
-          }
-
-          return <VideoCard slide key={i} className={className} video={item} />
+          return <VideoCard slide canSlide={sliderPropsLatest[1].canSlide} key={i} className={className} video={item} />
         })}
       </Slider>
 
@@ -77,11 +71,9 @@ export const Playlists = () => {
           const first = i === 0
           let className = first ? css['first'] : ''
 
-          if (!sliderPropsEFTalks[1].canSlide) {
-            className += ` ${css['no-grab']}`
-          }
-
-          return <VideoCard slide key={i} className={className} video={item} />
+          return (
+            <VideoCard slide canSlide={sliderPropsEFTalks[1].canSlide} key={i} className={className} video={item} />
+          )
         })}
       </Slider>
     </div>
@@ -119,11 +111,7 @@ export const StaffPicks = (props: any) => {
           {staffPicks.videos.map(i => {
             let className = ''
 
-            if (!sliderProps[1].canSlide) {
-              className += ` ${css['no-grab']}`
-            }
-
-            return <VideoCard key={i.id} slide video={i} className={className} />
+            return <VideoCard key={i.id} slide canSlide={sliderProps[1].canSlide} video={i} className={className} />
           })}
         </Slider>
       </div>

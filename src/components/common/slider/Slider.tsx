@@ -98,6 +98,7 @@ type SliderProps = {
   sliderProps: any
   className?: string
   children?: React.ReactNode
+  custom?: () => React.ReactNode
   title: string
 }
 
@@ -107,9 +108,12 @@ export const Slider = (props: SliderProps) => {
   return (
     <div className={css['container']}>
       <div className={css['top-section']}>
-        <h2 className="title spaced">{props.title}</h2>
+        <h2 className="title">{props.title}</h2>
 
-        <Arrows {...sliderState} />
+        <div className={css['controls']}>
+          {props.custom && props.custom()}
+          <Arrows {...sliderState} />
+        </div>
       </div>
 
       <div className={`${props.className} ${css['children']}`}>

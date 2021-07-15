@@ -1,13 +1,14 @@
 import React from 'react'
-import Slider from 'react-slick'
+// import Slider from 'react-slick'
 import css from './curated.module.scss'
 import { BasicCard } from 'src/components/common/card'
 import { LinkButton } from 'src/components/common/link-button'
 import { Playlist } from 'src/types/Playlist'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
+import { Slider, useSlider } from 'src/components/common/slider'
 
 type PlaylistProps = {
-  title?: string
+  title: string
   viewMore?: boolean
   items: Array<Playlist>
 }
@@ -41,45 +42,54 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
     ],
   }
 
+  const sliderProps = useSlider(sliderSettings)
+
   return (
     <div className={css['curated-playlists']}>
-      <div className={css['header']}>
-        {props.title && <h2 className="spaced title">{props.title}</h2>}
-        {props.viewMore && (
-          <LinkButton to={'/archive/playlists'} className={css['button']}>
-            View more <ArrowRight />
-          </LinkButton>
-        )}
-      </div>
-      <div className={css['slider']}>
-        <Slider {...sliderSettings}>
-          {props.items.map((i: Playlist) => {
-            let className = `${css['video-card']} ${css['slide']} ${css['big']}`
+      <Slider
+        sliderProps={sliderProps}
+        className={css['slider']}
+        title={props.title}
+        custom={
+          props.viewMore
+            ? () => {
+                return (
+                  <LinkButton to={'/archive/playlists'} className={css['button']}>
+                    View more <ArrowRight />
+                  </LinkButton>
+                )
+              }
+            : undefined
+        }
+      >
+        {props.items.map((i: Playlist) => {
+          let className = `${css['video-card']} ${css['big']}`
 
-            return (
-              <BasicCard key={i.id} className={className} allowDrag linkUrl={i.slug} expandLink>
-                <div className="aspect square">
-                  <img
-                    src={i.imageUrl}
-                    alt={`${i.title} Devcon playlist`}
-                    placeholder="blurred"
-                    className={css['image']}
-                  />
-                </div>
-                <div className={css['body']}>
-                  <div className="label">{i.videoCount ?? 0} talks</div>
-                  <h4 className="title">{i.title}</h4>
-                  {i.curators && i.curators.length > 0 && (
-                    <p className="bold font-xs">
-                      <span className={css['opaque']}>BY</span> {i.curators.join(', ').toUpperCase()}
-                    </p>
-                  )}
-                </div>
-              </BasicCard>
-            )
-          })}
-        </Slider>
-      </div>
+          if (sliderProps[1].canSlide) className += ` ${css['slide']}`
+
+          return (
+            <BasicCard key={i.id} className={className} allowDrag linkUrl={i.slug} expandLink>
+              <div className="aspect square">
+                <img
+                  src={i.imageUrl}
+                  alt={`${i.title} Devcon playlist`}
+                  placeholder="blurred"
+                  className={css['image']}
+                />
+              </div>
+              <div className={css['body']}>
+                <div className="label">{i.videoCount ?? 0} talks</div>
+                <h4 className="title">{i.title}</h4>
+                {i.curators && i.curators.length > 0 && (
+                  <p className="bold font-xs">
+                    <span className={css['opaque']}>BY</span> {i.curators.join(', ').toUpperCase()}
+                  </p>
+                )}
+              </div>
+            </BasicCard>
+          )
+        })}
+      </Slider>
     </div>
   )
 }

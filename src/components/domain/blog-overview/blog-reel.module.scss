@@ -1,65 +1,19 @@
 @use 'src/assets/css/partials/index' as *;
 
-.blog-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: $gaps-gap-10;
-  position: relative;
-
-  .top-section {
-    @include layout-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .cards {
-    @include layout-content;
-  }
-}
-
 .cards {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   left: -$gaps-gap-2;
+  margin-bottom: $gaps-gap-10;
 
   .card {
-    &:not(.no-swipe) {
-      cursor: move; /* fallback if grab cursor is unsupported */
-      cursor: grab;
-      cursor: -moz-grab;
-      cursor: -webkit-grab;
-    }
-
     height: 100%;
     // margin-right: $gaps-gap-4;
     margin-left: $gaps-gap-2;
     margin-right: $gaps-gap-2;
     margin-bottom: $gaps-gap-4;
     background: white;
-  }
-}
-
-.arrow-button {
-  --color-icon: white;
-  background: black;
-  padding: 8px;
-  touch-action: none; // Prevent zoom when tapping button on mobile
-
-  &:disabled {
-    background: grey;
-  }
-
-  &:last-child {
-    margin-left: 20px;
-  }
-
-  &:not(.always-buttons) {
-    @media (max-width: $breakpoints-lg) {
-      display: none;
-    }
   }
 }

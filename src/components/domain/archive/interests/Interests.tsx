@@ -20,7 +20,7 @@ export const Interests = (props: any) => {
         <div className={css['header']}>
           <h4 className={`bold font-xl font-primary ${css['title']}`}>Explore Devcon Archive —</h4>
           <p className="font-xs">
-            Dive into the immersive world of Devcon content by selectingtopics most relevant to your interest.
+            Dive into the immersive world of Devcon content by selecting topics most relevant to your interest.
           </p>
           <p className={css['rabbit']}>✨🦄</p>
         </div>

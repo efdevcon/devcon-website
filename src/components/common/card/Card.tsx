@@ -15,6 +15,7 @@ interface CardProps {
   date?: Date
   metadata?: string[]
   className?: string
+  slide?: boolean
   allowDrag?: boolean
   children?: React.ReactNode
 }
@@ -24,6 +25,7 @@ interface BasicCardProps {
   linkUrl?: string
   imageUrl?: string
   className?: string
+  slide?: boolean
   allowDrag?: boolean
   children?: React.ReactNode
 }
@@ -34,6 +36,7 @@ export const BasicCard = React.forwardRef((props: BasicCardProps, ref: any) => {
   let className = css['card']
 
   if (props.className) className = `${className} ${props.className}`
+  if (props.slide) className = ` ${className} ${css['slide']}`
 
   if (props.expandLink && props.linkUrl) {
     return (
@@ -101,7 +104,7 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
 
   let bodyClass = css['body']
 
-  if (!props.linkUrl) bodyClass += ` ${css['no-link']}`
+  if (props.linkUrl) bodyClass += ` ${css['with-link']}`
 
   const cardContent = (
     <>

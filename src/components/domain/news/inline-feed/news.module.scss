@@ -1,11 +1,10 @@
 @use 'src/assets/css/partials/index' as *;
 
 .card {
-  // height: 420px;
   height: 100%;
 
   &.slider {
-    margin-right: $gaps-gap-4;
+    margin-left: $gaps-gap-4;
     margin-bottom: $gaps-gap-4;
   }
 }
@@ -16,11 +15,17 @@
   flex-direction: column;
   @include layout-content;
 
-  .slider {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+  @media (max-width: $breakpoints-lg) {
+    margin-top: 0px;
+
+    > * {
+      &:not(.slider-container) {
+        display: none;
+      }
+    }
+  }
+
+  .slider-container {
     // https://github.com/kenwheeler/slick/issues/187 <-- can't use display: none; for the slider because react-slick needs to measure elements
     display: block;
     height: 0;
@@ -31,14 +36,14 @@
       height: 100%;
       overflow: unset;
     }
+
+    .slider {
+      left: -$gaps-gap-2;
+    }
   }
 
   .body {
     display: flex;
-
-    // @media (max-width: $breakpoints-lg) {
-    //   flex-wrap: wrap;
-    // }
 
     .cards {
       display: flex;
@@ -54,17 +59,7 @@
         flex-basis: 40%;
       }
 
-      // @media (max-width: $breakpoints-tiny) {
-      //   display: none;
-      // }
-      // @media (max-width: $breakpoints-lg) {
-      //   flex-basis: 100%;
-      //   margin-right: 0px;
-      //   margin-bottom: 18px;
-      // }
-
       > * {
-        // height: 410px;
         flex-basis: 0;
         flex-grow: 1;
 
@@ -77,7 +72,6 @@
         }
 
         @media (max-width: $breakpoints-xxl) {
-          // min-height: 300px;
           &:last-child {
             display: none;
           }
@@ -95,10 +89,6 @@
       @media (max-width: $breakpoints-lg) {
         display: none;
       }
-
-      // @media (max-width: $breakpoints-lg) {
-      //   flex-basis: 100%;
-      // }
     }
   }
 }
