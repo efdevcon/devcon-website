@@ -74,14 +74,16 @@ test('Create "game-of-thrones", index and query', async () => {
     const client = new SearchIndexClient()
     const indexName = 'game-of-thrones'
 
+    await client.deleteIndex(indexName)
     await client.createIndex(indexName)
-    await client.addToIndex(indexName, { name: 'Ned Stark' }, false)
-    await client.addToIndex(indexName, { name: 'Jon Snow' }, false)
-    await client.addToIndex(indexName, { name: 'Daenerys Targaryen' }, false)
+    await client.addToIndex(indexName, { name: 'Ned Stark' }, true)
+    await client.addToIndex(indexName, { name: 'Jon Snow' }, true)
+    await client.addToIndex(indexName, { name: 'Daenerys Targaryen' }, true)
     await client.addToIndex(indexName, { name: 'Tyrion Lannister' }, true)
     
     const results = await client.searchIndex<any>(indexName, 'name:snow')
     expect(results.items).toHaveLength(1)
+    await client.deleteIndex(indexName)
 });
 
 test('Delete "game-of-thrones" index', async () => {
