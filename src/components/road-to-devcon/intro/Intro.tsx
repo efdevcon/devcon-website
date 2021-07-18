@@ -53,6 +53,7 @@ export const Intro = React.forwardRef((props: any, ref) => {
           <h1 className="no-select">{intl.formatMessage({ id: 'rtd' })}</h1>
           <div>
             <p className="no-select">{intl.formatMessage({ id: 'rtd_intro' })}</p>
+            <br />
             <p className={`no-select ${css['no-announcement-date']}`}>
               {intl.formatMessage({ id: 'rtd_intro_no_date' })}.{' '}
               <Link
