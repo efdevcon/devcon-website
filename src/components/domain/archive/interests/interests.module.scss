@@ -2,13 +2,13 @@
 
 .container {
   display: flex;
-  padding-bottom: $gaps-gap-8;
-  padding-top: $gaps-gap-4;
+  // padding-bottom: $gaps-gap-8;
+  // padding-top: $gaps-gap-4;
 
-  @media (max-width: $breakpoints-lg) {
-    padding-bottom: $gaps-gap-5;
-    padding-top: $gaps-gap-2;
-  }
+  // @media (max-width: $breakpoints-lg) {
+  //   padding-bottom: $gaps-gap-5;
+  //   padding-top: $gaps-gap-2;
+  // }
 
   @media (max-width: $breakpoints-lg) {
     flex-direction: column;

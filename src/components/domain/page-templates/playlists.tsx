@@ -32,17 +32,19 @@ export const Playlists = () => {
         </div>
       </div>
 
-      <div className="section">
-        <div className="content">
-          {categories.map(category => {
-            return (
-              <div key={category}>
-                <CuratedPlaylists title={category} items={playlists.filter(i => i.categories.includes(category))} />
-              </div>
-            )
-          })}
-        </div>
-      </div>
+      {categories.map((category, i) => {
+        const first = i === 0
+
+        let className = 'padding-bottom'
+
+        if (first) className = 'padding-bottom margin-top'
+
+        return (
+          <div key={category} className={className}>
+            <CuratedPlaylists title={category} items={playlists.filter(i => i.categories.includes(category))} />
+          </div>
+        )
+      })}
 
       <Footer />
     </div>

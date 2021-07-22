@@ -12,7 +12,7 @@ export function BlogReel() {
   const settings = {
     infinite: false,
     speed: 500,
-    slidesToShow: 3.1,
+    slidesToShow: 3,
     arrows: false,
     slidesToScroll: 3,
     touchThreshold: 100,
@@ -39,8 +39,8 @@ export function BlogReel() {
 
   return (
     <div className="section">
-      <div className="content">
-        <div className={css['cards']}>
+      <div className="content margin-top">
+        <div className={`${css['cards']} border-top`}>
           <Slider sliderProps={sliderProps} title="Blog">
             {blogs.map((blog: BlogPost, i: number) => {
               let className = css['card']

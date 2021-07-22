@@ -106,7 +106,7 @@ const Labels = ({ tags, playlists }: any) => {
                 <Link
                   to={`/archive/watch?tags=${encodeURIComponent(tag)}`}
                   key={tag}
-                  className="label white bold scale"
+                  className="label label-hover white bold scale"
                 >
                   {tag}
                 </Link>
@@ -122,7 +122,7 @@ const Labels = ({ tags, playlists }: any) => {
           <div className={css['labels']}>
             {playlists.map((playlist: any) => {
               return (
-                <Link to={playlist.slug} key={playlist.title} className="label white bold scale">
+                <Link to={playlist.slug} key={playlist.title} className="label label-hover white bold scale">
                   {playlist.title}
                 </Link>
               )
@@ -214,6 +214,7 @@ export const Video = (props: VideoProps) => {
               </Tabs>
             </div>
           </div>
+
           <Suggested video={video} playlists={props.playlists} relatedVideos={props.relatedVideos} />
         </div>
       </PageHero>

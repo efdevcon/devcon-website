@@ -6,6 +6,7 @@ import { mapToArchiveVideo } from 'src/hooks/useArchiveVideos'
 import { mapToPlaylist } from 'src/hooks/usePlaylists'
 
 export default pageHOC(function ArchiveVideoTemplate(props: any) {
+  console.log(props.data.video.nodes[0], 'raw data')
   const video = mapToArchiveVideo(props.data.video.nodes[0])
   const playlists = props.data.playlists && props.data.playlists.nodes.map(mapToPlaylist)
   const relatedVideos = props.data.relatedVideos && props.data.relatedVideos.nodes.map(mapToArchiveVideo)

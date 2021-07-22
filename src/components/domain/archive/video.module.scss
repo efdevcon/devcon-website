@@ -177,6 +177,8 @@
       @media (max-width: 1300px) {
         padding-left: 0px;
         padding-right: 0px;
+        overflow-y: visible;
+        max-height: none;
       }
 
       > * {

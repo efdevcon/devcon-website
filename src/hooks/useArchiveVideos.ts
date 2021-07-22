@@ -52,6 +52,7 @@ export function mapToArchiveVideo(source: any): ArchiveVideo {
     ipfsHash: source.frontmatter.ipfsHash,
     duration: source.frontmatter.duration,
     expertise: source.frontmatter.expertise,
+    relatedVideos: source.frontmatter.relatedVideos,
     type: source.frontmatter.type,
     track: source.frontmatter.track,
     keywords: source.frontmatter.keywords,

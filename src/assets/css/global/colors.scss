@@ -3,58 +3,71 @@
 :root {
   --color-icon: inherit; // Since icons don't respond to the color attribute, they can use this variable to retrieve and apply the color context
   --color-text: $colors-main;
-
-  // Rule of thumb for colors: if something could potentially change color if app goes into dark-mode, use a CSS variable
-  // --color-monochrome-10: #{$colors-monochrome-1} !important;
-  // --color-monochrome-1: #{$colors-monochrome-10} !important;
-
-  // --color-text-black: #{$colors-monochrome-10} !important;
-  // --color-text-white: #{$colors-monochrome-1} !important;
 }
 
 // Invert colors
 .dark-mode {
   --color-text: $colors-main-light !important;
-  // --color-text-black: #{$colors-monochrome-10} !important;
-  // --color-text-white: #{$colors-monochrome-1} !important;
 }
 
-// Colors
+// Label/button colors
 .white {
-  background: $colors-monochrome-1 !important;
-  --color-icon: #{$colors-main} !important; // For icons nested in the button
-  color: $colors-main !important;
-  border-color: $colors-main !important;
-
-  &:hover {
-    background: #f2f2f2 !important;
-  }
+  @include colors-white;
 
   &.ghost {
-    background: none !important;
-    color: $colors-monochrome-1 !important;
-    --color-icon: #{$colors-monochrome-1} !important;
-    border-color: $colors-monochrome-1 !important;
+    @include colors-white-ghost;
   }
 
-  &.inverted {
-    background: $colors-main !important;
-    --color-icon: #{$colors-monochrome-1} !important;
-    color: $colors-monochrome-1 !important;
-    border-color: $colors-main !important;
+  // &:hover {
+  //   @include c
+  //   background: #f2f2f2;
 
-    &:disabled {
-      background: $colors-monochrome-7 !important;
-      border-color: $colors-monochrome-7 !important;
-    }
+  //   // For use by Button component (animates colors when hovering)
+  //   --button-color-background: #{$colors-main};
+  //   --button-color-background-hover: #{darken($colors-main, 15%)};
+  // }
+
+  // &.ghost {
+  //   background: none;
+  //   color: $colors-monochrome-1;
+  //   --color-icon: #{$colors-monochrome-1};
+  //   border-color: $colors-monochrome-1;
+  // }
+
+  // &.inverted {
+  //   background: $colors-main;
+  //   --color-icon: #{$colors-monochrome-1};
+  //   color: $colors-monochrome-1;
+  //   border-color: $colors-main;
+
+  //   &:disabled {
+  //     background: $colors-monochrome-7;
+  //     border-color: $colors-monochrome-7;
+  //   }
+  // }
+}
+
+// Specificity trick to avoid !important hell
+.black.black {
+  @include colors-black;
+
+  &.ghost {
+    @include colors-black-ghost;
   }
 }
 
 .light-blue {
-  background: $colors-track-light-blue !important;
-  color: $colors-monochrome-1 !important;
-  --color-icon: #{$colors-monochrome-1} !important;
-  border-color: $colors-track-light-blue !important;
+  background: $colors-monochrome-1 !important;
+  color: $colors-track-light-blue !important;
+  --color-icon: #{$colors-track-light-blue};
+  --theme-color: #{$colors-track-light-blue};
+
+  &:hover {
+    color: $colors-monochrome-1 !important;
+    // For use by Button component (animates colors when hovering)
+    --button-color-background: #{$colors-track-light-blue};
+    --button-color-background-hover: #{darken($colors-track-light-blue, 15%)};
+  }
 
   &.ghost {
     background: none !important;

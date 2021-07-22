@@ -9,7 +9,7 @@ $left-column-width: 30%;
   .search-sort {
     display: flex;
     align-items: center;
-    padding-bottom: $gaps-gap-10;
+    padding-bottom: $gaps-gap-8;
     border-bottom: 1px solid $colors-monochrome-5;
 
     @media (max-width: $breakpoints-lg) {

@@ -11,13 +11,16 @@ export const useLanguageToggle = () => {
   const path = paths.join('/')
 
   return {
+    pathname: location.pathname,
     redirectPath: path ? path + '/' : '',
     currentLanguage: location.pathname.split('/')[1],
   }
 }
 
 export function LanguageToggle() {
-  const { redirectPath } = useLanguageToggle()
+  const { redirectPath, pathname } = useLanguageToggle()
+
+  if (pathname.startsWith('/archive')) return null
 
   return (
     <div id="language-toggle" className={css['language-toggle']}>

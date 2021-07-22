@@ -9,8 +9,13 @@ $gap-5: $gap-1 * 5;
 $gap-6: $gap-1 * 6;
 $gap-7: $gap-1 * 7;
 $gap-8: $gap-1 * 8; // 32px
+$gap-9: $gap-1 * 9;
 $gap-10: $gap-1 * 10; // 40px
+$gap-11: $gap-1 * 11;
 $gap-12: $gap-1 * 12; // 48px
+$gap-13: $gap-1 * 13;
+$gap-14: $gap-1 * 14;
+$gap-15: $gap-1 * 15;
 $gap-16: $gap-1 * 16; // 64px
 $gap-32: $gap-1 * 32; // 128px
 
@@ -20,14 +25,14 @@ $gap-32: $gap-1 * 32; // 128px
     padding-left: $gap-16;
     padding-right: $gap-16;
 
-    @media (max-width: breakpoints.$md) {
+    @media (max-width: breakpoints.$lg) {
       padding-left: $gap-4;
       padding-right: $gap-4;
     }
   } @else {
     padding: $gap-16;
 
-    @media (max-width: breakpoints.$md) {
+    @media (max-width: breakpoints.$lg) {
       padding: $gap-4;
     }
   }

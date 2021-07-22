@@ -25,3 +25,21 @@
     height: 100%;
   }
 }
+
+$border: 1px solid $colors-monochrome-5;
+
+.border-top {
+  border-top: $border;
+}
+
+.border-bottom {
+  border-bottom: $border;
+}
+
+.border-left {
+  border-left: $border;
+}
+
+.border-right {
+  border-bottom: $border;
+}

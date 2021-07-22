@@ -1,51 +1,51 @@
 import React from 'react'
+import css from './button.module.scss'
 
 export const Button = (props: any) => {
   const buttonRef = React.useRef<HTMLDivElement>()
-
-  // React.useEffect(() => {
-  //   buttonRef.current
-  // }, [])
+  const [x, setX] = React.useState(0)
+  const [y, setY] = React.useState(0)
 
   const onMouseMove = (e: React.SyntheticEvent) => {
     if (buttonRef.current === undefined) return
 
-    // const rect = buttonRef.current.getBoundingClientRect();
+    var rect = e.target.getBoundingClientRect()
+    var x = e.clientX - rect.left // x position within the element.
+    var y = e.clientY - rect.top // y position within the element.
 
-    // const x = rect.off
+    setX(x)
+    setY(y)
+  }
 
-    // const cursorX = e.clientX
-    // const buttonX = buttonRef.current.offsetLeft
-    // const buttonWidth = buttonRef.current.clientWidth
-    // const cursorY = e.clientY
-    // const buttonY = buttonRef.current.offsetTop
-    // const buttonHeight = buttonRef.current.clientHeight
+  let style = props.style
+  let className = css['button']
 
-    // // console.log(buttonRef.current)
+  if (props.className) {
+    className = `${className} ${props.className}`
+  }
 
-    // const x = ((cursorX - buttonX) / buttonWidth) * 100
-    // const y = ((cursorY - buttonY) / buttonHeight) * 100
-
-    // const x = ((e.clientX - e.offsetLeft) / e.offsetWidth) * 100
-    // const y = ((e.clientY - e.offsetTop) / e.offsetHeight) * 100
-
-    // console.log(e.offsetX, e.offsetY)
-
-    // var xCord = e.clientX
-    // var yCord = e.clientY
-
-    // e.persist()
-    // console.log(e, 'e')
-
-    // console.log(xCord, yCord, 'xy')
-
-    // var xPercent = xCord / window.innerWidth
-    // var yPercent = yCord / window.innerHeight
+  if (x || y) {
+    style = {
+      ...props.style,
+      '--mouse-x': x,
+      '--mouse-y': y,
+    }
   }
 
   return (
-    <button ref={buttonRef} onMouseMove={onMouseMove} {...props}>
-      {props.children}
+    <button
+      ref={buttonRef}
+      {...props}
+      className={className}
+      onMouseMove={onMouseMove}
+      onMouseLeave={() => {
+        setX(0)
+        setY(0)
+      }}
+      style={style}
+    >
+      <span className={css['background']}></span>
+      <span className={css['text']}>{props.children}</span>
     </button>
   )
 }

@@ -64,7 +64,7 @@ export const useSlider = (settings: any) => {
 }
 
 const Arrows = (props: any) => {
-  let className = `squared sm white inverted ${css['arrow-button']}`
+  let className = `squared sm black ${css['arrow-button']}`
 
   const canNext = props.currentIndex < props.nCards - props.cardsPerSlide
   const canBack = props.currentIndex > 0

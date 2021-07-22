@@ -12,6 +12,7 @@ import { Modal } from 'src/components/common/modal'
 import { Tabs } from 'src/components/common/tabs'
 import { Tab } from 'src/components/common/tabs/Tabs'
 import { Tooltip } from 'src/components/common/tooltip'
+import { Button } from 'src/components/common/button'
 
 export default function Components() {
   const [modalOpen, setModalOpen] = React.useState(false)
@@ -27,6 +28,20 @@ export default function Components() {
     <div>
       <h1>Components</h1>
       <br />
+      <h2>Button</h2>
+      <div style={{ background: 'green', padding: '50px' }}>
+        <button>Default</button>
+        <button className="white ghost">Square</button>
+        <Button className="white">Testing cool buttons!</Button>
+        <Button className="white ghost">Testing cool buttons!</Button>
+        <Button className="light-blue">Testing cool buttons!</Button>
+      </div>
+      <div style={{ background: 'green', padding: '50px' }}>
+        <button className="black">Default</button>
+        <button className="black ghost">Square</button>
+        <Button className="black">Testing cool buttons!</Button>
+        <Button className="black ghost">Testing cool buttons!</Button>
+      </div>
       <h2>Accordion</h2>
       <Accordion title="Expanded Accordion" open={true} items={items} />
       <Accordion title="Collapsed Accordion" open={false} items={items} />

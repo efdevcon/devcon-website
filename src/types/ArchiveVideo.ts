@@ -5,6 +5,7 @@ export interface ArchiveVideo {
   slug: string
   edition: number
   title: string
+  relatedVideos: [ArchiveVideo]
   description: string
   youtubeUrl: string
   ipfsHash: string

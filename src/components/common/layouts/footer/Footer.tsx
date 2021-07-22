@@ -47,6 +47,9 @@ export const Footer = () => {
   const intl = useIntl()
   const lang = intl.locale
 
+  // Temporary for demo purposes
+  if (context?.location.pathname.startsWith('/archive')) return null
+
   return (
     <footer className={`footer ${css['container']}`}>
       <div className={css['top-section']}>

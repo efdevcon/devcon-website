@@ -76,11 +76,11 @@ export const Filter = (props: FilterState) => {
     return (
       <div className={css['tags']}>
         {props.options.filters.map(filter => {
-          let className = `${css['tag']} label white plain`
+          let className = `${css['tag']} label label-hover white plain`
 
           const active = props.activeFilter === filter.value || props.activeFilter?.[filter.value]
 
-          if (active) className += ` ${css['active']} inverted`
+          if (active) className += ` ${css['active']} black`
 
           return (
             <button key={filter.value} onClick={() => props.setActiveFilter(filter.value)} className={className}>

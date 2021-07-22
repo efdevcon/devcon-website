@@ -58,4 +58,18 @@
     padding: 2px $gaps-gap-1;
     @include fonts-xxs;
   }
+
+  &.label-hover {
+    &.white {
+      &:hover {
+        @include colors-white-hover;
+      }
+    }
+
+    &.black {
+      &:hover {
+        @include colors-black-hover;
+      }
+    }
+  }
 }

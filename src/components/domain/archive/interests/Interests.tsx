@@ -16,7 +16,7 @@ export const Interests = (props: any) => {
 
   return (
     <div className="section">
-      <div className={`${css['container']} content`}>
+      <div className={`${css['container']} content padding-bottom`}>
         <div className={css['header']}>
           <h4 className={`bold font-xl font-primary ${css['title']}`}>Explore Devcon Archive —</h4>
           <p className="font-xs">
@@ -30,10 +30,10 @@ export const Interests = (props: any) => {
             return (
               <div key={index} className={css['tags']}>
                 {tagRow.map(tag => {
-                  let className = `${css['tag']} label plain white`
+                  let className = `${css['tag']} label label-hover plain white`
                   const selected = selectedTags[tag]
 
-                  if (selected) className += ` ${css['selected']} inverted`
+                  if (selected) className += ` ${css['selected']} black`
 
                   return (
                     <button

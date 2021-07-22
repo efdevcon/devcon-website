@@ -16,7 +16,7 @@ export const Playlists = () => {
     return {
       infinite: false,
       speed: 500,
-      slidesToShow: Math.min(nItems, 4.1),
+      slidesToShow: Math.min(nItems, 4),
       arrows: false,
       slidesToScroll: Math.min(nItems, 4),
       touchThreshold: 100,
@@ -25,7 +25,7 @@ export const Playlists = () => {
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: Math.min(nItems, 3.1),
+            slidesToShow: Math.min(nItems, 3),
             slidesToScroll: Math.min(nItems, 3),
           },
         },
@@ -45,37 +45,70 @@ export const Playlists = () => {
   const sliderPropsEFTalks = useSlider(getSliderSettings(efTalks.videoCount))
 
   return (
-    <div className={css['playlists']}>
-      <Slider className={css['slider']} sliderProps={sliderPropsMostPopular} title="Most Popular">
-        {mostPopular.videos.map((item: any, i: number) => {
-          const first = i === 0
-          let className = first ? css['first'] : ''
+    <div className="section">
+      <div className="content">
+        <div className={css['playlists']}>
+          <div className="margin-top border-top padding-bottom">
+            <Slider className={css['slider']} sliderProps={sliderPropsMostPopular} title="Most Popular">
+              {mostPopular.videos.map((item: any, i: number) => {
+                const first = i === 0
+                let className = first ? css['first'] : ''
 
-          return (
-            <VideoCard slide canSlide={sliderPropsMostPopular[1].canSlide} key={i} className={className} video={item} />
-          )
-        })}
-      </Slider>
+                return (
+                  <VideoCard
+                    slide
+                    playlist={mostPopular}
+                    canSlide={sliderPropsMostPopular[1].canSlide}
+                    key={i}
+                    className={className}
+                    video={item}
+                  />
+                )
+              })}
+            </Slider>
+          </div>
 
-      <Slider className={css['slider']} sliderProps={sliderPropsLatest} title="Devcon 5">
-        {latest.videos.map((item: any, i: number) => {
-          const first = i === 0
-          let className = first ? css['first'] : ''
+          <div className="border-top padding-bottom">
+            <Slider className={css['slider']} sliderProps={sliderPropsLatest} title="Devcon 5">
+              {latest.videos.map((item: any, i: number) => {
+                const first = i === 0
+                let className = first ? css['first'] : ''
 
-          return <VideoCard slide canSlide={sliderPropsLatest[1].canSlide} key={i} className={className} video={item} />
-        })}
-      </Slider>
+                return (
+                  <VideoCard
+                    playlist={latest}
+                    slide
+                    canSlide={sliderPropsLatest[1].canSlide}
+                    key={i}
+                    className={className}
+                    video={item}
+                  />
+                )
+              })}
+            </Slider>
+          </div>
 
-      <Slider className={css['slider']} sliderProps={sliderPropsEFTalks} title="EF Talks">
-        {efTalks.videos.map((item: any, i: number) => {
-          const first = i === 0
-          let className = first ? css['first'] : ''
+          <div className="border-top padding-bottom">
+            <Slider className={css['slider']} sliderProps={sliderPropsEFTalks} title="EF Talks">
+              {efTalks.videos.map((item: any, i: number) => {
+                const first = i === 0
+                let className = first ? css['first'] : ''
 
-          return (
-            <VideoCard slide canSlide={sliderPropsEFTalks[1].canSlide} key={i} className={className} video={item} />
-          )
-        })}
-      </Slider>
+                return (
+                  <VideoCard
+                    slide
+                    playlist={efTalks}
+                    canSlide={sliderPropsEFTalks[1].canSlide}
+                    key={i}
+                    className={className}
+                    video={item}
+                  />
+                )
+              })}
+            </Slider>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -87,9 +120,9 @@ export const StaffPicks = (props: any) => {
     infinite: false,
     touchThreshold: 100,
     speed: 500,
-    slidesToShow: 2.6,
+    slidesToShow: 3,
     arrows: false,
-    slidesToScroll: 2,
+    slidesToScroll: 3,
     mobileFirst: true,
     responsive: [
       {
@@ -107,13 +140,24 @@ export const StaffPicks = (props: any) => {
   return (
     <div className="section">
       <div className="content">
-        <Slider className={css['slider']} sliderProps={sliderProps} title="Staff Picks">
-          {staffPicks.videos.map(i => {
-            let className = ''
+        <div className="padding-bottom border-top">
+          <Slider className={css['slider']} sliderProps={sliderProps} title="Staff Picks">
+            {staffPicks.videos.map(i => {
+              let className = ''
 
-            return <VideoCard key={i.id} slide canSlide={sliderProps[1].canSlide} video={i} className={className} />
-          })}
-        </Slider>
+              return (
+                <VideoCard
+                  key={i.id}
+                  playlist={staffPicks}
+                  slide
+                  canSlide={sliderProps[1].canSlide}
+                  video={i}
+                  className={className}
+                />
+              )
+            })}
+          </Slider>
+        </div>
       </div>
     </div>
   )

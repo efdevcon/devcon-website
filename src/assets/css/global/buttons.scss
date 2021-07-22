@@ -1,36 +1,23 @@
 @use 'src/assets/css/partials/index' as *;
 
-@mixin padding($name, $padding, $padding-sm, $padding-md) {
-  &.#{$name} {
-    padding: $padding;
-
-    @media (max-width: $breakpoints-sm) {
-      padding: $padding-sm;
-    }
-
-    @media (max-width: $breakpoints-md) {
-      padding: $padding-md;
-    }
-  }
-}
-
 .button,
 button {
   // Sometimes the button element can be useful for semantic reasons, add "plain" class to remove default styles
   &:not(.plain) {
     @include fonts-md;
+    @include colors-white;
+    font-family: $fonts-primary;
+    padding: $gaps-gap-2 $gaps-gap-4;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
     touch-action: manipulation;
-    font-family: $fonts-primary;
-    padding: $gaps-gap-2 $gaps-gap-4;
-    color: var(--theme-color, #{$colors-main});
-    --color-icon: var(--theme-color, #{$colors-main});
     border-width: 2px;
     border-style: solid;
-    border-color: var(--theme-color, #{$colors-monochrome-10});
-    background: none;
+
+    // &:hover {
+    //   @include colors-white-hover;
+    // }
 
     &:focus,
     &:active,
@@ -41,19 +28,15 @@ button {
     &.squared {
       width: 48px;
       height: 48px;
-      padding: 0px !important;
+      padding: 0px;
       justify-content: center;
       align-items: center;
     }
 
     // Sizes
     &.sm {
-      @include fonts-sm;
+      @include fonts-xs;
       padding: $gaps-gap-2 $gaps-gap-3;
-
-      @media (max-width: $breakpoints-md) {
-        @include fonts-xs;
-      }
 
       &.squared {
         width: 36px;
@@ -72,6 +55,26 @@ button {
       &.squared {
         width: 56px;
         height: 56px;
+      }
+    }
+
+    // &.white {
+    &:hover {
+      @include colors-white-hover;
+    }
+
+    &:disabled {
+      @include colors-white-disabled;
+    }
+    // }
+
+    &.black {
+      &:hover {
+        @include colors-black-hover;
+      }
+
+      &:disabled {
+        @include colors-black-disabled;
       }
     }
   }

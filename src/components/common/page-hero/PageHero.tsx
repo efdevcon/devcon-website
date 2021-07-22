@@ -97,7 +97,7 @@ export const PageHero = (props: PageHeroProps) => {
     style.backgroundSize = 'cover'
   }
 
-  let className = css['hero']
+  let className = `${css['hero']} margin-bottom`
 
   if (props.background) className += ` ${css['custom-background']}`
   if (isScrolled) className += ` ${css['scrolled']}`

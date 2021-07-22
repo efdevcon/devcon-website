@@ -48,10 +48,10 @@ export const VideoCard = (props: Props) => {
           />
 
           <div className={`${css['labels']}`}>
-            <div className={`label sm white inverted`}>Devcon {props.video.edition}</div>
-            <div className={`label sm white inverted`}>{props.video.type}</div>
+            <div className={`label sm black`}>Devcon {props.video.edition}</div>
+            <div className={`label sm black`}>{props.video.type}</div>
             {props.video.duration && (
-              <div className={`${css['duration']} label sm white inverted`}>
+              <div className={`${css['duration']} label sm black`}>
                 {moment
                   .utc(props.video.duration * 1000)
                   .format('H:mm:ss')

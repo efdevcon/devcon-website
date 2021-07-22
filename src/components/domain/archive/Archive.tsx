@@ -49,8 +49,10 @@ export const Archive = (props: ArchiveProps) => {
               alt: 'Staff pick',
             },
             callToAction: () => {
+              const slug = `${video.slug}?playlist=${encodeURIComponent(staffpicks.title)}`
+
               return (
-                <Link to={video.slug} className={`button red ${css['call-to-action']}`}>
+                <Link to={slug} className={`button red ${css['call-to-action']}`}>
                   <span className={css['watch-now']}>Watch Now</span>
                   <WatchIcon className={`icon ${css['watch-now-icon']}`} />
                 </Link>
@@ -85,24 +87,13 @@ export const Archive = (props: ArchiveProps) => {
       <div className={css['content']}>
         <Interests />
 
-        <div className={`section ${css['editions']}`}>
-          <div className="content">
-            <Editions />
-          </div>
-        </div>
-        <div className={css['staff-picks']}>
-          <StaffPicks />
-        </div>
-        <div className={`section ${css['curated-playlists']}`}>
-          <div className="content">
-            <CuratedPlaylists title="Curated Playlists" items={curated} viewMore />
-          </div>
-        </div>
-        <div className={`section ${css['playlists']}`}>
-          <div className="content">
-            <Playlists />
-          </div>
-        </div>
+        <Editions />
+
+        <StaffPicks />
+
+        <CuratedPlaylists title="Curated Playlists" items={curated} viewMore />
+
+        <Playlists />
         <Footer />
       </div>
     </div>

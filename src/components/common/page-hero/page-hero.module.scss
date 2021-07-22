@@ -8,7 +8,7 @@
   overflow: hidden;
   width: 100%;
   // padding-top: $gaps-gap-4;
-  margin-bottom: $gaps-gap-10;
+  // margin-bottom: $gaps-gap-10;
   // background-repeat: no-repeat;
   // background-position: center right;
   // background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
@@ -45,7 +45,7 @@
   }
 
   @media (max-width: $breakpoints-lg) {
-    margin-bottom: $gaps-gap-6;
+    // margin-bottom: $gaps-gap-6;
   }
 
   &.as-background {
@@ -82,7 +82,7 @@
   }
 
   &:not(.with-navigation) {
-    margin-bottom: $gaps-gap-4;
+    // margin-bottom: $gaps-gap-4;
   }
 
   // Strip is always present on mobile (but not on desktop) - we have to account for that:
