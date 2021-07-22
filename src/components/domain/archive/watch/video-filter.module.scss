@@ -67,7 +67,7 @@
   }
 
   .clear {
-    opacity: 0;
+    display: none;
     cursor: pointer;
     padding: $gaps-gap-4;
     padding-left: 0px;
@@ -77,7 +77,7 @@
     }
 
     &.open {
-      opacity: 1;
+      display: block;
     }
   }
 }

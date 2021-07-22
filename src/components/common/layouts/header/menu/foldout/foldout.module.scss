@@ -1,14 +1,19 @@
 @use 'src/assets/css/partials/index' as *;
 
-.toggle {
-  @include fonts-xl;
+.toggle-container {
   display: none !important;
-  margin-left: $gaps-gap-5;
+  align-items: center;
+  justify-content: flex-end;
   cursor: pointer;
+  height: 100%;
 
   @media (max-width: $breakpoints-lg) {
-    display: inline-block !important;
+    display: flex !important;
   }
+}
+
+.toggle {
+  @include fonts-xl;
 }
 
 .foldout {

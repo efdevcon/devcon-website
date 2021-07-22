@@ -3,6 +3,23 @@
 .form {
   display: flex;
 
+  &.transparent {
+    .container {
+      border-bottom: 1px solid $colors-monochrome-5;
+    }
+
+    input {
+      border: none;
+      background: transparent;
+      padding-left: $gaps-gap-8;
+    }
+
+    .icon {
+      left: 0px;
+      font-size: 1.3em;
+    }
+  }
+
   .container {
     width: 100%;
     cursor: pointer;

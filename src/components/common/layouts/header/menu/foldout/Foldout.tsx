@@ -51,16 +51,18 @@ const FoldoutContent = (props: any) => {
 }
 
 const Foldout = (props: any) => {
-  const iconProps = {
-    id: 'hamburger-toggle',
-    className: `icon ${css['toggle']}`,
-    onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
-    role: 'button',
-  }
+  // const iconProps = {
+  //   id: 'hamburger-toggle',
+  //   className: `icon ${css['toggle']}`,
+  //   onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
+  //   role: 'button',
+  // }
 
   return (
     <>
-      {props.foldoutOpen ? <IconCross {...iconProps} style={{ width: '0.8em' }} /> : <IconMenu {...iconProps} />}
+      {/* <div className={css['toggle-container']}>
+        {props.foldoutOpen ? <IconCross {...iconProps} style={{ width: '0.8em' }} /> : <IconMenu {...iconProps} />}
+      </div> */}
 
       <FoldoutContent foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
         {props.children}

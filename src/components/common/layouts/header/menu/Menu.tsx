@@ -6,8 +6,12 @@ import { Navigation } from './navigation'
 import { usePageContext } from 'src/context/page-context'
 import { Link as LinkType } from 'src/types/Link'
 import { Foldout } from './foldout'
+import IconMenu from 'src/assets/icons/menu.svg'
+import IconCross from 'src/assets/icons/cross.svg'
 import AccountIcon from 'src/assets/icons/account.svg'
+import SearchIcon from 'src/assets/icons/search.svg'
 import { LanguageToggle } from 'src/components/common/layouts/header/strip/language-toggle'
+
 /*
   Menu structure overview:
 
@@ -31,6 +35,16 @@ import { LanguageToggle } from 'src/components/common/layouts/header/strip/langu
       </HAMBURGER>
     <HEADER>
 */
+
+type ButtonProps = {
+  buttons: {
+    key: string
+    icon: React.ReactNode
+    url?: string
+    className?: string
+    onClick?: any
+  }[]
+}
 
 export const Account = (props: any) => {
   return (
@@ -61,8 +75,57 @@ export const Left = (props: any) => {
   )
 }
 
+const Buttons = (props: ButtonProps) => {
+  return (
+    <div className={css['buttons']}>
+      {props.buttons.map(button => {
+        let className = css['button']
+
+        if (button.url) {
+          return (
+            <Link to={button.url} className={className}>
+              {button.icon}
+            </Link>
+          )
+        }
+
+        return (
+          <button key={button.key} className={`${className} plain ${button.className}`} onClick={button.onClick}>
+            {button.icon}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 export const Menu = (props: any) => {
-  const { navigation } = usePageContext()
+  const { navigation, location } = usePageContext()
+
+  let buttons: ButtonProps['buttons'] = [
+    {
+      key: 'account',
+      icon: <AccountIcon />,
+      url: '/app/profile',
+    },
+    {
+      key: 'mobile-menu-toggle',
+      icon: props.foldoutOpen ? <IconCross style={{ width: '0.8em' }} /> : <IconMenu />,
+      onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
+      className: css['mobile-only'],
+    },
+  ]
+
+  if (location.pathname.startsWith('/archive')) {
+    buttons = [
+      {
+        key: 'search',
+        icon: <SearchIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
+        onClick: () => props.setSearchOpen(!props.searchOpen),
+      },
+      ...buttons,
+    ]
+  }
 
   return (
     <div className={css['menu']}>
@@ -72,8 +135,13 @@ export const Menu = (props: any) => {
         <Navigation navigationData={navigation} />
       </div>
 
-      <Account />
+      <Buttons buttons={buttons} />
 
+      {/* <Account /> */}
+      {/* <Search open={props.setSearchOpen} /> */}
+      {/* </Buttons> */}
+
+      {/* Mobile */}
       <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
         <div className={css['foldout-top']}>
           <Left navigationData={navigation} />

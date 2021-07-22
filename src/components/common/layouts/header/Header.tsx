@@ -4,6 +4,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { Menu } from './menu'
 import { Strip } from './strip'
 import { useLocation } from '@reach/router'
+import { Search } from './search'
 import css from './header.module.scss'
 import useIsScrolled from 'src/hooks/useIsScrolled'
 import HeaderLogo from './HeaderLogo'
@@ -19,7 +20,10 @@ export function Header({ withStrip, withHero }: HeaderProps) {
   const intl = useIntl()
   const isScrolled = useIsScrolled()
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
+  const [searchOpen, setSearchOpen] = React.useState(false)
   const location = useLocation()
+
+  const searchActive = searchOpen && !foldoutOpen
 
   // Prevent page scroll when menu is open
   useEffect(() => {
@@ -34,6 +38,7 @@ export function Header({ withStrip, withHero }: HeaderProps) {
     }
   }, [foldoutOpen])
 
+  let headerContainerClass = `${css['header-container']}`
   let headerClass = `${css['header']}`
 
   if (foldoutOpen) headerClass += ` ${css['foldout-open']}`
@@ -41,17 +46,24 @@ export function Header({ withStrip, withHero }: HeaderProps) {
   const isArchive = location.pathname.startsWith('/archive')
 
   const body = (
-    <div className={css['header-container']}>
+    <header className={headerContainerClass}>
       {withStrip && <Strip withHero={withHero} />}
-      <header id="header" className={headerClass}>
+      <div id="header" className={headerClass}>
         <div className={css['menu-container']}>
           <Link to={isArchive ? '/archive' : `/${intl.locale}/`}>
             {isArchive ? <HeaderLogoArchive /> : <HeaderLogo />}
           </Link>
-          <Menu foldoutOpen={foldoutOpen} setFoldoutOpen={setFoldoutOpen} />
+          <Menu
+            searchOpen={searchOpen}
+            setSearchOpen={setSearchOpen}
+            foldoutOpen={foldoutOpen}
+            setFoldoutOpen={setFoldoutOpen}
+          />
         </div>
-      </header>
-    </div>
+      </div>
+
+      <Search open={searchActive} />
+    </header>
   )
 
   if (withHero) {

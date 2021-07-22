@@ -17,13 +17,13 @@
 
 .menu {
   display: flex;
-  align-items: center;
   flex-grow: 1;
+  align-self: stretch;
   min-width: 0;
-  height: 100%;
 
   .left {
     display: none;
+    align-items: center;
 
     @media (min-width: $breakpoints-lg + 1) {
       display: flex;
@@ -38,6 +38,49 @@
     align-items: center;
     flex-direction: row;
     justify-content: flex-end;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: $breakpoints-lg) {
+    position: relative;
+    right: -$gaps-gap-2;
+  }
+
+  .button {
+    height: 100%;
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // When menu is transparent we don't want borders - "--button-border" is set to none in that case.
+    border-right: var(--button-border, 1px solid $colors-monochrome-5);
+    cursor: pointer;
+    background: transparent;
+
+    @media (max-width: $breakpoints-lg) {
+      border: none !important;
+      width: 40px;
+    }
+
+    > svg {
+      @include fonts-xl;
+    }
+
+    &:first-child {
+      border-left: var(--button-border, 1px solid $colors-monochrome-5);
+    }
+
+    &.mobile-only {
+      display: none;
+
+      @media (max-width: $breakpoints-lg) {
+        display: flex;
+      }
+    }
   }
 }
 

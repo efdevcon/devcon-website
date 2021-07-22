@@ -4,6 +4,7 @@ import css from './input-form.module.scss'
 interface InputFormProps {
   label?: string
   placeholder: string
+  transparentMode?: boolean
   timeout?: number
   icon?: React.ComponentType<any>
   defaultValue?: string
@@ -15,6 +16,7 @@ interface InputFormProps {
 export function InputForm(props: InputFormProps) {
   let className = css['form']
   if (props.className) className = `${props.className} ${className}`
+  if (props.transparentMode) className += ` ${css['transparent']}`
   const [value, setValue] = useState(props.defaultValue || '')
 
   useEffect(() => {
@@ -50,6 +52,7 @@ export function InputForm(props: InputFormProps) {
   }
 
   const id = `input-form_${props.placeholder}_${props.label}`
+
   return (
     <form className={className} onSubmit={handleSubmit}>
       <div className={css['container']}>
