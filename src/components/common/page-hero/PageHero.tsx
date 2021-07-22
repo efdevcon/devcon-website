@@ -87,10 +87,14 @@ export const PageHero = (props: PageHeroProps) => {
   const isScrolled = useIsScrolled()
   const [currentScene, setCurrentScene] = React.useState(0)
 
+  console.log(pageHeroHeight, pageHeaderHeight, headerHeight, 'pagehero/pageheader/header')
+
   let style: any = {
     '--negative-offset': negativeOffset,
     '--strip-height': `${stripHeight}px`,
   }
+
+  console.log(headerHeight, 'header height')
 
   if (props.background) {
     style.backgroundImage = `url(${props.background})`

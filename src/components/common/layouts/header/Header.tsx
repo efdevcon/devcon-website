@@ -60,9 +60,8 @@ export function Header({ withStrip, withHero }: HeaderProps) {
             setFoldoutOpen={setFoldoutOpen}
           />
         </div>
+        <Search open={searchActive} />
       </div>
-
-      <Search open={searchActive} />
     </header>
   )
 

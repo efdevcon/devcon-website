@@ -21,9 +21,9 @@
     @include fill-header;
   }
 
-  // @media (min-width: $breakpoints-lg + 1) {
-  //   display: contents;
-  // }
+  @media (min-width: $breakpoints-lg + 1) {
+    display: contents;
+  }
 }
 
 .header-fixed-container {
