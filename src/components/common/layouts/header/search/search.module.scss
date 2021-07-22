@@ -1,7 +1,6 @@
 @use 'src/assets/css/partials/index' as *;
 
 .search-foldout {
-  @include layout-content;
   position: absolute;
   transition: opacity 0.5s;
   top: 100%;
@@ -10,6 +9,7 @@
   background: $colors-monochrome-2;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   max-height: 80vh;
   overflow-y: auto;
@@ -22,8 +22,9 @@
   }
 
   .content {
+    @include layout-content;
     padding-top: $gaps-gap-2;
-    padding-bottom: $gaps-gap-6;
+    padding-bottom: $gaps-gap-4;
     width: 100%;
 
     .input {
