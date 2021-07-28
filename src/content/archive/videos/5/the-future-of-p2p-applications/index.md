@@ -7,8 +7,8 @@ ipfsHash: "QmYeMnnC7qNpKAmBYwrhGCTWTw2euYmWzUTaSdJe4Wn6fq"
 duration: 1259
 expertise: "Beginner"
 type: "Talk"
-track: "Medium as Message"
+track: "Society and Systems"
 keywords: ['p2p','general']
-tags: ['Medium as Message']
+tags: ['Society and Systems']
 speakers: ['Rich Burdon']
 ---

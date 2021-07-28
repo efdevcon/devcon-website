@@ -13,8 +13,8 @@ ipfsHash: "QmUNKF1aDJDASEhcsSBemrqPtWcjYj2XjmUNDnTmU97we7"
 duration: 1082
 expertise: "Beginner"
 type: "Talk"
-track: "Medium as Message"
+track: "Society and Systems"
 keywords: ['videogames','video','games','general']
-tags: ['Medium as Message']
+tags: ['Society and Systems']
 speakers: ['Christopher Robison']
 ---
