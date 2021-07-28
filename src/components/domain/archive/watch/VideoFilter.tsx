@@ -38,36 +38,18 @@ export const useVideoFilter = () => {
     return queryStringToFilterState(location.search)
   }, [])
 
+  const nrOfEditions = 5
+  const editionFilters = Array.from(Array(nrOfEditions + 1).keys()).sort((a, b) => b - a)
   const [_, editionFilterState] = useFilter({
     tags: true,
     multiSelect: true,
     initialFilter: initialFilters.edition,
-    filters: [
-      {
-        text: '0',
-        value: '0',
-      },
-      {
-        text: '1',
-        value: '1',
-      },
-      {
-        text: '2',
-        value: '2',
-      },
-      {
-        text: '3',
-        value: '3',
-      },
-      {
-        text: '4',
-        value: '4',
-      },
-      {
-        text: '5',
-        value: '5',
-      },
-    ],
+    filters: editionFilters.map(i => {
+      return {
+        text: i.toString(),
+        value: i.toString(),
+      }
+    }),
     filterFunction: () => [],
   })
 

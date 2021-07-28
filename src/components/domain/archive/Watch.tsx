@@ -59,7 +59,8 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
         sort: SortVariation.date,
       },
     ],
-    false
+    false,
+    'desc'
   )
 
   const qs = useQueryStringer(

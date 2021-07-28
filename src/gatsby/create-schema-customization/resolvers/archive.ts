@@ -142,7 +142,7 @@ export const distinctVideoTagsResolver = {
           });
         });
 
-        return Object.keys(tags);
+        return Object.keys(tags).sort()
       })
   },
   args: {},

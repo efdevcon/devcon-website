@@ -69,9 +69,9 @@ export const presetSortingMethods = {
 }
 
 // useSort contains reusable sorting logic to provide rendering flexiblity (e.g. archive sorting is very different from table sorting)
-export const useSort = (data: any[], fields: Field[], resetOnThirdClick = true): SortState => {
+export const useSort = (data: any[], fields: Field[], resetOnThirdClick = true, defaultDirection: 'asc' | 'desc' = 'asc',): SortState => {
   const [sortBy, setSortBy] = React.useState<number>(0)
-  const [sortDirection, setSortDirection] = React.useState<any>('asc')
+  const [sortDirection, setSortDirection] = React.useState<any>(defaultDirection)
 
   const setSort = (nextsortBy: number) => {
     const alreadySortedByField = sortBy === nextsortBy
