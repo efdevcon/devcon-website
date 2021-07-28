@@ -23,7 +23,7 @@ export const usePagedSearch = <T>(uri: string): FetchedResult<T> => {
 
   return {
     isLoading: !error && !data,
-    isError: error,
+    isError: !!error,
     data: data,
   }
 }
