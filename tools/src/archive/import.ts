@@ -40,10 +40,18 @@ async function ImportArchiveVideos() {
 
       // remove async/duration call for profile generation
       results.forEach(async (result: any, index: number) => {
+        if (!result['Video URL']) return
+        
         let duration = 0
         if (result['Video URL']) {
-          const id = getVideoId(result['Video URL'])
-          duration = await getVideoDuration(id)
+          try { 
+            const id = getVideoId(result['Video URL'])
+            duration = await getVideoDuration(id)
+          }
+          catch (ex) {
+            console.log('Unable to fetch video duration', result['Video URL'])
+            return
+          }
         }
 
         const tags = result['Tags'] ? result['Tags'].split(',') : []

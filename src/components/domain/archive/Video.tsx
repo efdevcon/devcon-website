@@ -191,13 +191,10 @@ export const Video = (props: VideoProps) => {
                   <Labels tags={video.tags} playlists={props.playlists} />
 
                   <div className={css['speakers']}>
-                    {/* <p className="text-uppercase font-sm">About the speakers</p> */}
                     {video.profiles.map((i: UserProfile) => {
                       return (
                         <div key={i.name} className={css['speaker']}>
                           <Avatar profile={i} className={css['thumbnail']} />
-                          {/* <img className={css['thumbnail']} src="https://i3.ytimg.com/vi/66SaEDzlmP4/maxresdefault.jpg" /> */}
-
                           <div className={css['text']}>
                             <div className={css['title']}>
                               <p className="bold">{i.name}</p>

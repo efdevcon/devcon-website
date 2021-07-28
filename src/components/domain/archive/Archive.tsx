@@ -44,7 +44,7 @@ export const Archive = (props: ArchiveProps) => {
       <PageHero
         scenes={staffpicks.videos.map(video => {
           return {
-            image: `https://i3.ytimg.com/vi/${video.youtubeUrl.split('/').pop()}/maxresdefault.jpg`,
+            image: `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`,
             imageProps: {
               alt: 'Staff pick',
             },

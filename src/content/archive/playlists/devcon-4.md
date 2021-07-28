@@ -106,7 +106,6 @@ videos:
   - 4/reversing-ethereum-smart-contracts-to-find-out-whats-behind-evm-bytecode/index
   - 4/s-gram-statistical-linter-for-incomplete-solidity-smart-contracts/index
   - 4/smart-contracts-approach-with-caution/index
-  - 4/solidity-compiler-audit-post-mortem/index
   - 4/state-channels-on-ethereum-with-counterfactual/index
   - 4/the-entire-history-of-you-is-being-sold/index
   - 4/the-social-and-economic-fabric-of-decentralized-space-development/index

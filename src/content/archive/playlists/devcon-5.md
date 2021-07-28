@@ -55,7 +55,6 @@ videos:
   - 5/kicking-our-infura-addiction-a-quick-launch-client/index
   - 5/the-future-of-p2p-applications/index
   - 5/eth-20-on-a-pi/index
-  - 5/the-surprising-things-we-can-do-with-decompiled-smart-contracts/index
   - 5/whats-next-for-defi/index
   - 5/eth-20-tldr/index
   - 5/eth2-phase-0-technical-deep-dive/index
