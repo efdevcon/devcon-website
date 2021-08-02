@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
+import { navigate } from "gatsby"
 import { InputForm } from 'src/components/common/input-form'
 import IconSearch from 'src/assets/icons/search.svg'
 import css from './search.module.scss'
 import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { useArchiveSearch } from 'src/hooks/useArchiveSearch'
 import { Link } from 'src/components/common/link'
-import { queryStringToFilterState } from 'src/components/domain/archive/watch/VideoFilter'
 
 export const Search = (props: any) => {
   let className = css['search-foldout']
@@ -18,6 +18,10 @@ export const Search = (props: any) => {
   const qs = useQueryStringer({}, false)
   const { data, isLoading, isError } = useArchiveSearch(qs, { q: searchQuery, from: 0, size: defaultPageSize }, false)
   
+  function onSearch() { 
+    navigate(`/archive/watch?q=${searchQuery}`)
+  }
+  
   return (
     <div className={className}>
       <div className={`${css['content']}`}>
@@ -27,6 +31,7 @@ export const Search = (props: any) => {
           className={css['search-input']}
           timeout={300}
           onChange={(e) => setSearchQuery(e)}
+          onSubmit={onSearch}
           transparentMode
         />
 

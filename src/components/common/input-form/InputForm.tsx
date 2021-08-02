@@ -20,10 +20,10 @@ export function InputForm(props: InputFormProps) {
   const [value, setValue] = useState(props.defaultValue || '')
 
   useEffect(() => {
-    if (props.defaultValue) {
+    if (props.defaultValue !== undefined) {
       setValue(props.defaultValue)
     }
-  }, [])
+  }, [props.defaultValue])
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
