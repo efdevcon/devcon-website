@@ -2,9 +2,7 @@
 title: top-archive
 links:
   - type: link
-    slug: devcon
-  - type: link
     slug: forum
-  - type: page
+  - type: link
     slug: blog
 ---

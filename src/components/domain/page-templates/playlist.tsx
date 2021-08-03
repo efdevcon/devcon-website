@@ -17,7 +17,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
   return (
     <div className={css['container']}>
       <SEO />
-      <Header withStrip />
+      <Header withStrip={false} />
 
       <PageHero path={[{ text: 'playlists', url: '/archive/playlists' }, { text: playlist.title }]}>
         <PlaylistHeader playlist={playlist} />

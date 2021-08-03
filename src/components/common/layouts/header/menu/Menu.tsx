@@ -46,21 +46,6 @@ type ButtonProps = {
   }[]
 }
 
-export const Account = (props: any) => {
-  return (
-    <div className={css['account']}>
-      <Link to={'/app/profile'}>
-        <button className={`${css['desktop']} ${css['account-button']} white`}>
-          <AccountIcon />
-          <p>Account</p>
-        </button>
-
-        <AccountIcon className={`icon ${css['account-icon']} ${css['mobile']}`} />
-      </Link>
-    </div>
-  )
-}
-
 export const Left = (props: any) => {
   return (
     <div className={css['left']}>
@@ -103,11 +88,11 @@ export const Menu = (props: any) => {
   const { navigation, location } = usePageContext()
 
   let buttons: ButtonProps['buttons'] = [
-    {
-      key: 'account',
-      icon: <AccountIcon />,
-      url: '/app/profile',
-    },
+    // {
+    //   key: 'account',
+    //   icon: <AccountIcon />,
+    //   url: '/app/profile',
+    // },
     {
       key: 'mobile-menu-toggle',
       icon: props.foldoutOpen ? <IconCross style={{ width: '0.8em' }} /> : <IconMenu />,

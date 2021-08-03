@@ -94,8 +94,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   return (
     <div className={css['container']}>
       <SEO />
-      <Header withStrip />
-
+      <Header withStrip={false} />
       <PageHero
         title="Watch"
         titleSubtext="Devcon"

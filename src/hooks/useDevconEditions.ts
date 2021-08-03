@@ -34,17 +34,24 @@ export const useDevconEditions = (): Array<DevconEdition> => {
 }
 
 function mapToDevconEdition(source: any): DevconEdition {
-  return {
+  const event = {
     id: source.id,
     number: source.frontmatter.number,
     title: source.frontmatter.title,
     description: source.frontmatter.description,
     location: source.frontmatter.location,
-    startDate: new Date(source.frontmatter.startDate),
-    endDate: new Date(source.frontmatter.endDate),
     imageUrl: source.frontmatter.imageUrl,
     links: source.frontmatter.urls ? source.frontmatter.urls.map((i: any) => {
       return { title: i.title, url: i.url }
     }) : []
+  } as DevconEdition
+
+  if (source.frontmatter.startDate) {
+    event.startDate = new Date(source.frontmatter.startDate)
   }
+  if (source.frontmatter.endDate) {
+    event.endDate = new Date(source.frontmatter.endDate)
+  }
+
+  return event
 }

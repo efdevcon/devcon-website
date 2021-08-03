@@ -16,7 +16,7 @@ export const Playlists = () => {
   return (
     <div className={css['container']}>
       <SEO />
-      <Header withStrip />
+      <Header withStrip={false} />
 
       <PageHero
         title="Playlists"

@@ -43,10 +43,12 @@ export const Editions = (props: Props) => {
             <div className={css['title']}>
               <p className="title">{selectedEdition.title}</p>
               <p className="subtitle">{selectedEdition.location}</p>
-              <p>
-                {moment(selectedEdition.startDate).format('MMM DD')} -{' '}
-                {moment(selectedEdition.endDate).format('MMM DD')} {moment(selectedEdition.endDate).format('YYYY')}
-              </p>
+              {selectedEdition.startDate && selectedEdition.endDate && 
+                <p>
+                  {moment(selectedEdition.startDate).format('MMM DD')} -{' '}
+                  {moment(selectedEdition.endDate).format('MMM DD')} {moment(selectedEdition.endDate).format('YYYY')}
+                </p>
+              }
             </div>
             <div className={css['description']}>
               <p>{selectedEdition.description}</p>
