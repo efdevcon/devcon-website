@@ -56,15 +56,13 @@ export function SEO(props: SEOProps) {
   const siteUrl = location.origin
   const url = `${siteUrl}${location.pathname || '/'}`.replace(/\/$/, '')
 
-  console.log('TITLE', title)
-  console.log('TITLE TEMPLATE', titleTemplate)
-  console.log('DESCRIPTION', description)
   return (
     <>
       <Helmet title={title} titleTemplate={titleTemplate} htmlAttributes={{ lang: lang }}>
         <meta name="description" content={description} />
         <meta name="image" content={image} />
 
+        <meta property="og:site_name" content={globalTitle} />
         {url && <meta property="og:url" content={url} />}
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
