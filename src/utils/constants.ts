@@ -2,6 +2,10 @@
 
 export const TITLE = 'Road to Devcon: The Ethereum developer conference'
 
+export const ARCHIVE_TITLE = 'Devcon Archive: Ethereum Developer Conference'
+export const ARCHIVE_DESCRIPTION = 'Archived content to learn from the leading minds in the Ethereum eco-system.'
+export const ARCHIVE_IMAGE_URL = 'https://www.devcon.org/assets/images/archive-social.png'
+
 export const EMAIL_DEVCON = 'devcon@ethereum.org'
 export const EMAIL_SPONSORSHIP = 'sponsorships@ethereum.org'
 

@@ -9,6 +9,7 @@ import { usePageContext } from 'src/context/page-context'
 interface SEOProps {
   title?: string
   description?: string
+  imageUrl?: string
   lang?: string
   canonicalUrl?: string
 }
@@ -46,7 +47,10 @@ export function SEO(props: SEOProps) {
   const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${TITLE}` : TITLE
   const canonical = props.canonicalUrl || ''
 
-  const image = 'https://www.devcon.org/assets/images/rtd-social.png'
+  let image = 'https://www.devcon.org/assets/images/rtd-social.png'
+  if (props.imageUrl) {
+    image = props.imageUrl
+  }
 
   const siteUrl = location.origin
   const url = `${siteUrl}${location.pathname || '/'}`.replace(/\/$/, '')

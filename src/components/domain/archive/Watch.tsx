@@ -16,6 +16,7 @@ import { Pagination } from 'src/components/common/pagination'
 import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { useLocation } from '@reach/router'
 import IconFilter from 'src/assets/icons/filter.svg'
+import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 
 type WatchProps = {}
 
@@ -93,7 +94,10 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   }
   return (
     <div className={css['container']}>
-      <SEO />
+      <SEO 
+        title={ARCHIVE_TITLE}
+        description={ARCHIVE_DESCRIPTION} 
+        imageUrl={ARCHIVE_IMAGE_URL} />
       <Header withStrip={false} />
       <PageHero
         title="Watch"
