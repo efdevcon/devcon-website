@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { useLocation } from '@reach/router'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Twitter } from './Twitter'
-import { TITLE } from 'src/utils/constants'
+import { ARCHIVE_TITLE, TITLE } from 'src/utils/constants'
 import { usePageContext } from 'src/context/page-context'
 
 interface SEOProps {
@@ -18,9 +18,9 @@ export function SEO(props: SEOProps) {
   const intl = useIntl()
   const location = useLocation()
   const pageContext = usePageContext()
+  const isArchive = location.pathname.startsWith('/archive')
 
-  // props > pageContext > default values
-  let title = TITLE
+  let title = isArchive ? ARCHIVE_TITLE : TITLE
   if (pageContext?.current?.title) {
     title = pageContext?.current.title
   }
@@ -44,7 +44,8 @@ export function SEO(props: SEOProps) {
     lang = props.lang
   }
 
-  const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${TITLE}` : TITLE
+  const globalTitle = isArchive ? ARCHIVE_TITLE : TITLE
+  const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${globalTitle}` : globalTitle
   const canonical = props.canonicalUrl || ''
 
   let image = 'https://www.devcon.org/assets/images/rtd-social.png'
@@ -55,6 +56,9 @@ export function SEO(props: SEOProps) {
   const siteUrl = location.origin
   const url = `${siteUrl}${location.pathname || '/'}`.replace(/\/$/, '')
 
+  console.log('TITLE', title)
+  console.log('TITLE TEMPLATE', titleTemplate)
+  console.log('DESCRIPTION', description)
   return (
     <>
       <Helmet title={title} titleTemplate={titleTemplate} htmlAttributes={{ lang: lang }}>

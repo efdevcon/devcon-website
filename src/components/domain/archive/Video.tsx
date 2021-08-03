@@ -141,7 +141,7 @@ export const Video = (props: VideoProps) => {
   return (
     <div className={archiveCss['container']}>
       <SEO 
-        title={`Devcon Archive: ${props.video.title}`}
+        title={props.video.title}
         description={props.video.description} 
         imageUrl={imageUrl} />
       <Header withStrip />

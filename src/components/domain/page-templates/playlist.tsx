@@ -17,7 +17,7 @@ export default pageHOC(function PlaylistTemplate(data: any) {
   return (
     <div className={css['container']}>
       <SEO 
-        title={`Devcon Archive: ${playlist.title}`}
+        title={playlist.title}
         description={playlist.description} 
         imageUrl={playlist.imageUrl} />
       <Header withStrip={false} />
