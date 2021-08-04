@@ -76,7 +76,7 @@ export function InputForm(props: InputFormProps) {
           placeholder={props.placeholder}
           onChange={handleChange}
         />
-        {props.icon && <props.icon className={`${css['icon']} icon`} />}
+        {props.icon && <props.icon onClick={handleSubmit} className={`${css['icon']} icon`} />}
         {/* </div> */}
       </div>
     </form>

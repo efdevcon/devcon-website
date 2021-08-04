@@ -116,6 +116,17 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
             </div>
             <div className={`${css['sort']}`}>
               <Sort {...sortState} />
+
+              <div className={css['view-toggle']}>
+                <IconGrid
+                  onClick={() => setGridViewEnabled(true)}
+                  className={`${gridViewEnabled ? '' : css['faded']} icon`}
+                />
+                <IconListView
+                  onClick={() => setGridViewEnabled(false)}
+                  className={`${gridViewEnabled ? css['faded'] : ''} icon`}
+                />
+              </div>
             </div>
           </div>
 
@@ -130,21 +141,6 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
               <VideoFilter {...filterState} />
             </div>
             <div className={css['videos']}>
-              <div className={css['video-header']}>
-                <h4 className="title">Videos</h4>
-
-                <div className={css['view-toggle']}>
-                  <IconGrid
-                    onClick={() => setGridViewEnabled(true)}
-                    className={`${gridViewEnabled ? '' : css['faded']} icon`}
-                  />
-                  <IconListView
-                    onClick={() => setGridViewEnabled(false)}
-                    className={`${gridViewEnabled ? css['faded'] : ''} icon`}
-                  />
-                </div>
-              </div>
-
               {isLoading && <div>Loading results..</div>}
               {isError && <div>Unable to fetch videos..</div>}
 
