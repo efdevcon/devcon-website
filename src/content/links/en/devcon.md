@@ -1,4 +1,4 @@
 ---
 title: Devcon
-url: /
+url: https://www.devcon.org/
 ---

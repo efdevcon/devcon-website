@@ -63,7 +63,7 @@ export function InputForm(props: InputFormProps) {
   const id = `input-form_${props.placeholder}_${props.label}`
 
   return (
-    <form className={className} onSubmit={handleSubmit}>
+    <form className={className} onSubmit={handleSubmit} role={props.type ?? 'form'}>
       <div className={css['container']}>
         {props.label && <label htmlFor={id}>{props.label}</label>}
         {/* <div className={css['input']}> */}
