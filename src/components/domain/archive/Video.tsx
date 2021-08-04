@@ -143,7 +143,12 @@ export const Video = (props: VideoProps) => {
       <SEO 
         title={props.video.title}
         description={props.video.description} 
-        imageUrl={imageUrl} />
+        imageUrl={imageUrl}
+        type='video.movie'
+        author={{
+          name: `Devcon ${video.edition}`,
+          url: `/archive/watch?edition=${video.edition}`
+        }} />
       <Header withStrip />
 
       <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>

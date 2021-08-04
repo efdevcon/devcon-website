@@ -12,6 +12,11 @@ interface SEOProps {
   imageUrl?: string
   lang?: string
   canonicalUrl?: string
+  type?: string
+  author?: { 
+    name?: string
+    url?: string
+  }
 }
 
 export function SEO(props: SEOProps) {
@@ -62,12 +67,22 @@ export function SEO(props: SEOProps) {
         <meta name="description" content={description} />
         <meta name="image" content={image} />
 
-        <meta property="og:site_name" content={globalTitle} />
+        {globalTitle !== title && <meta property="og:site_name" content={globalTitle} />}
+        <meta property="og:type" content={props.type ?? 'website'} />
         {url && <meta property="og:url" content={url} />}
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
         {image && <meta property="og:image" content={image} />}
         {canonical && <link rel="canonical" href={canonical} />}
+        {props.author?.name && <link itemProp="name" href={props.author?.name} />}
+        {props.author?.url && <link itemProp="url" href={props.author.url} />}          
+
+        {props.author?.name || props.author?.url && 
+        <span itemProp="author" itemScope itemType="http://schema.org/Person">
+          {props.author?.name && <link itemProp="name" href={props.author?.name} />}
+          {props.author?.url && <link itemProp="url" href={props.author.url} />}          
+        </span>
+        }
       </Helmet>
 
       <Twitter title={title} description={description} image={image} />
