@@ -12,7 +12,7 @@ export const Search = (props: any) => {
   if (props.open) {
     className += ` ${css['open']}`
   }
-  
+
   const [searchQuery, setSearchQuery] = useState('')
   const defaultPageSize = 6
   const qs = useQueryStringer({}, false)
@@ -26,6 +26,7 @@ export const Search = (props: any) => {
     <div className={className}>
       <div className={`${css['content']}`}>
         <InputForm
+          type='search'
           placeholder="Search for videos.."
           icon={IconSearch}
           className={css['search-input']}
@@ -33,6 +34,7 @@ export const Search = (props: any) => {
           onChange={(e) => setSearchQuery(e)}
           onSubmit={onSearch}
           transparentMode
+          autoFocus={props.open}
         />
 
         <div className={css['results']}>

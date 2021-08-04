@@ -1,7 +1,8 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react'
+import React, { ChangeEvent, createRef, FormEvent, useEffect, useState } from 'react'
 import css from './input-form.module.scss'
 
 interface InputFormProps {
+  type?: string
   label?: string
   placeholder: string
   transparentMode?: boolean
@@ -9,11 +10,13 @@ interface InputFormProps {
   icon?: React.ComponentType<any>
   defaultValue?: string
   className?: string
+  autoFocus?: boolean
   onChange?: (value: string) => void
   onSubmit?: (value: string) => void
 }
 
 export function InputForm(props: InputFormProps) {
+  const ref = createRef<HTMLInputElement>()
   let className = css['form']
   if (props.className) className = `${props.className} ${className}`
   if (props.transparentMode) className += ` ${css['transparent']}`
@@ -34,6 +37,12 @@ export function InputForm(props: InputFormProps) {
 
     return () => clearTimeout(delayDebounceFn)
   }, [value])
+
+  useEffect(() => {
+    if (props.autoFocus && ref.current) { 
+      ref.current.focus()
+    }
+  }, [props.autoFocus])
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setValue(event.target.value)
@@ -59,8 +68,9 @@ export function InputForm(props: InputFormProps) {
         {props.label && <label htmlFor={id}>{props.label}</label>}
         {/* <div className={css['input']}> */}
         <input
+          ref={ref}
           className="font-md-fixed"
-          type="text"
+          type={props.type ?? "text"}
           id={id}
           value={value}
           placeholder={props.placeholder}
