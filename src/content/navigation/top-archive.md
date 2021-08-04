@@ -5,6 +5,6 @@ links:
     slug: devcon
   - type: link
     slug: forum
-  - type: page
+  - type: link
     slug: blog
 ---

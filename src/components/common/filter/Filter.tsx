@@ -27,7 +27,7 @@ type FilterState = {
 }
 
 export const useFilter = (options: FilterOptions | undefined) => {
-  const defaultValue = options?.filters[0].value
+  const defaultValue = options?.filters[0]?.value ?? ''
   const [activeFilter, setActiveFilter] = React.useState(options?.initialFilter || defaultValue)
   // Some filters use multiselect
   const [activeFilterMulti, setActiveFilterMulti] = React.useState(

@@ -16,6 +16,7 @@ import { Link } from 'src/components/common/link'
 import WatchIcon from 'src/assets/icons/local_play.svg'
 import OnDemandVideoIcon from 'src/assets/icons/on_demand_video.svg';
 import { videoResolver } from 'src/gatsby/create-schema-customization/resolvers/archive'
+import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 
 type ArchiveProps = {}
 
@@ -40,8 +41,11 @@ export const Archive = (props: ArchiveProps) => {
 
   return (
     <div className={css['container']}>
-      <SEO />
-      <Header withStrip />
+      <SEO 
+        title={ARCHIVE_TITLE}
+        description={ARCHIVE_DESCRIPTION} 
+        imageUrl={ARCHIVE_IMAGE_URL} />
+      <Header withStrip={false} />
       <PageHero
         scenes={staffpicks.videos.map(video => {
           return {

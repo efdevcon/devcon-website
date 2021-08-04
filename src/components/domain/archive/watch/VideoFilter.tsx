@@ -7,7 +7,8 @@ import css from './video-filter.module.scss'
 import { useLocation } from '@reach/router'
 import queryString from 'query-string'
 import { usePageContext } from 'src/context/page-context'
-import { distinctVideoTagsResolver } from 'src/gatsby/create-schema-customization/resolvers/archive'
+import IconSearch from 'src/assets/icons/search.svg'
+import { InputForm } from 'src/components/common/input-form'
 
 const queryStringToFilterState = (qs: string) => {
   // Extract params from query string
@@ -87,6 +88,14 @@ export const useVideoFilter = () => {
     filterFunction: () => [],
   })
 
+  const [____, searchFilterState] = useFilter({
+    tags: false,
+    multiSelect: false,
+    initialFilter: initialFilters.q,
+    filters: [],
+    filterFunction: () => [],
+  })
+
   const editionFilter = editionFilterState && Object.keys(editionFilterState.activeFilter)
   const expertiseFilter = expertiseFilterState && Object.keys(expertiseFilterState.activeFilter)
   const tagsFilter = tagsFilterState && Object.keys(tagsFilterState.activeFilter)
@@ -95,22 +104,49 @@ export const useVideoFilter = () => {
     editionFilterState?.clearFilter()
     expertiseFilterState?.clearFilter()
     tagsFilterState?.clearFilter()
+    searchFilterState?.clearFilter()
   }
 
   const combinedFilter = (() => {
     // Finish this one later - the combined filter will change depending on the filtering solution (e.g. inline JS vs query a search service)
     // For now just doing a boolean to test the clear all functionality
-    return [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0)
-  })()
+    const filtersActive = [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0) 
+    const searchActive = !!searchFilterState?.activeFilter
 
-  return { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState }
+    return filtersActive || searchActive
+  })()
+  
+  return { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState }
 }
 
 const Filters = (props: any) => {
-  const { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState } = props
+  const { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState } = props
+  const initialSearchFilter = (): string => {
+    if (typeof searchFilterState.activeFilter === 'string') {
+      return searchFilterState.activeFilter
+    }
+    
+    if (typeof searchFilterState.activeFilter === 'object') {
+      const keys = Object.keys(searchFilterState.activeFilter)      
+      return keys[0]
+    }
+
+    return ''
+  }
 
   return (
     <>
+      <div className={css['search']}>
+        <InputForm
+          className={css['input-form']}
+          placeholder="Search"
+          icon={IconSearch}
+          defaultValue={initialSearchFilter()}
+          onChange={(value) => searchFilterState.setActiveFilter(value)}
+          timeout={300}
+        />
+      </div>
+
       <div className={css['devcon']}>
         <p className="bold font-xs text-uppercase">Devcon:</p>
         <Filter {...editionFilterState} />
@@ -132,12 +168,14 @@ const Filters = (props: any) => {
             </button>
           )}
 
+        {combinedFilter && (
           <p
-            className={`${combinedFilter ? css['open'] : ''} ${css['clear']} bold text-underline`}
+            className={`${css['open']} ${css['clear']} bold text-underline`}
             onClick={clearFilters}
           >
             Clear All
           </p>
+        )}
         </div>
       </div>
     </>
@@ -147,13 +185,6 @@ const Filters = (props: any) => {
 export const VideoFilter = (props: any) => {
   return (
     <div className={css['filter']}>
-      <div className={css['header']}>
-        <h4 className="title">Filter</h4>
-        <button className="white">
-          <IconFilter />
-        </button>
-      </div>
-
       <Filters {...props} />
     </div>
   )
@@ -168,7 +199,7 @@ export const VideoFilterMobile = (props: any) => {
 
   return (
     <div className={className}>
-      <div className="content">
+      <div>
         <div className={css['header']}>
           <h4 className="title">Filter</h4>
           <button className="white" onClick={() => setOpen(!open)}>

@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import { Header } from 'src/components/common/layouts/header'
 import { Footer } from 'src/components/common/layouts/footer'
 import { SEO } from 'src/components/domain/seo'
-import IconSearch from 'src/assets/icons/search.svg'
 import css from './watch.module.scss'
 import { PageHero } from 'src/components/common/page-hero'
 import { VideoCard } from './playlists'
-import { InputForm } from 'src/components/common/input-form'
 import { useSort, SortVariation, Sort } from 'src/components/common/sort'
 import IconGrid from 'src/assets/icons/grid.svg'
 import IconListView from 'src/assets/icons/list-view.svg'
@@ -17,6 +15,8 @@ import { useArchiveSearch } from 'src/hooks/useArchiveSearch'
 import { Pagination } from 'src/components/common/pagination'
 import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { useLocation } from '@reach/router'
+import IconFilter from 'src/assets/icons/filter.svg'
+import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 
 type WatchProps = {}
 
@@ -37,7 +37,6 @@ const resetOnPageNavigationHOC = (WatchComponent: React.ComponentType<WatchProps
 export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   const [gridViewEnabled, setGridViewEnabled] = React.useState(true)
   const [from, setFrom] = useState(0)
-  const [searchQuery, setSearchQuery] = useState('')
   const defaultPageSize = 12
   const filterState = useVideoFilter()
   const sortState = useSort(
@@ -70,11 +69,12 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
       expertise: filterState.expertiseFilterState?.activeFilter,
       sort: sortState.fields[sortState.sortBy].key,
       order: sortState.sortDirection,
+      q: filterState.searchFilterState?.activeFilter,
     },
     true
   )
 
-  const { data, isLoading, isError } = useArchiveSearch(qs, { q: searchQuery, from: from, size: defaultPageSize })
+  const { data, isLoading, isError } = useArchiveSearch(qs, { from: from, size: defaultPageSize })
 
   // Reset pagination on filter change
   useEffect(() => {
@@ -83,6 +83,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
     filterState.editionFilterState?.activeFilter,
     filterState.tagsFilterState?.activeFilter,
     filterState.expertiseFilterState?.activeFilter,
+    filterState.searchFilterState?.activeFilter,
     sortState.fields[sortState.sortBy].key,
     sortState.sortDirection,
   ])
@@ -91,16 +92,13 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
     const from = (nr - 1) * defaultPageSize
     setFrom(from)
   }
-
-  function onSearch(value: string) {
-    setSearchQuery(value)
-  }
-
   return (
     <div className={css['container']}>
-      <SEO />
-      <Header withStrip />
-
+      <SEO 
+        title={ARCHIVE_TITLE}
+        description={ARCHIVE_DESCRIPTION} 
+        imageUrl={ARCHIVE_IMAGE_URL} />
+      <Header withStrip={false} />
       <PageHero
         title="Watch"
         titleSubtext="Devcon"
@@ -108,49 +106,41 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
       />
 
       <div className="section">
-        <div className="content">
-          <div className={css['search-sort']}>
-            <InputForm
-              className={css['search']}
-              placeholder="Search"
-              icon={IconSearch}
-              onChange={onSearch}
-              timeout={300}
-            />
-            <div className={css['sort']}>
+        <div className='content'>
+
+          {/* Hide header div on Mobile */}
+          <div className={`${css['header']}`}>
+            <div className={`${css['filter']}`}>
+              <h4 className="title">Filter</h4>
+              <IconFilter />
+            </div>
+            <div className={`${css['sort']}`}>
               <Sort {...sortState} />
+
+              <div className={css['view-toggle']}>
+                <IconGrid
+                  onClick={() => setGridViewEnabled(true)}
+                  className={`${gridViewEnabled ? '' : css['faded']} icon`}
+                />
+                <IconListView
+                  onClick={() => setGridViewEnabled(false)}
+                  className={`${gridViewEnabled ? css['faded'] : ''} icon`}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <VideoFilterMobile {...filterState} />
+          <VideoFilterMobile {...filterState} />
 
-      <div className="section">
-        <div className="content">
-          <div className={`${css['content']}`}>
-            <VideoFilter {...filterState} />
+          <div className={`${css['sort']} ${css['mobile']}`}>
+            <Sort {...sortState} />
+          </div>
 
-            <div className={`${css['sort']} ${css['mobile']}`}>
-              <Sort {...sortState} />
+          <div className={`${css['view']}`}>
+            <div className={`${css['filter']}`}>
+              <VideoFilter {...filterState} />
             </div>
-
             <div className={css['videos']}>
-              <div className={css['header']}>
-                <h4 className="title">Videos</h4>
-
-                <div className={css['view-toggle']}>
-                  <IconGrid
-                    onClick={() => setGridViewEnabled(true)}
-                    className={`${gridViewEnabled ? '' : css['faded']} icon`}
-                  />
-                  <IconListView
-                    onClick={() => setGridViewEnabled(false)}
-                    className={`${gridViewEnabled ? css['faded'] : ''} icon`}
-                  />
-                </div>
-              </div>
-
               {isLoading && <div>Loading results..</div>}
               {isError && <div>Unable to fetch videos..</div>}
 

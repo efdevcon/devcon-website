@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'src/components/common/link'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Menu } from './menu'
@@ -9,6 +9,7 @@ import css from './header.module.scss'
 import useIsScrolled from 'src/hooks/useIsScrolled'
 import HeaderLogo from './HeaderLogo'
 import HeaderLogoArchive from './HeaderLogoArchive'
+import { useOnOutsideClick } from 'src/hooks/useOnOutsideClick'
 
 type HeaderProps = {
   withStrip?: boolean
@@ -17,11 +18,13 @@ type HeaderProps = {
 }
 
 export function Header({ withStrip, withHero }: HeaderProps) {
+  const ref = useRef(null)
   const intl = useIntl()
   const isScrolled = useIsScrolled()
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
   const [searchOpen, setSearchOpen] = React.useState(false)
   const location = useLocation()
+  useOnOutsideClick(ref, () => setSearchOpen(false))
 
   const searchActive = searchOpen && !foldoutOpen
 
@@ -48,7 +51,7 @@ export function Header({ withStrip, withHero }: HeaderProps) {
   const body = (
     <header className={headerContainerClass}>
       {withStrip && <Strip withHero={withHero} />}
-      <div id="header" className={headerClass}>
+      <div id="header" className={headerClass} ref={ref}>
         <div className={css['menu-container']}>
           <Link to={isArchive ? '/archive' : `/${intl.locale}/`}>
             {isArchive ? <HeaderLogoArchive /> : <HeaderLogo />}

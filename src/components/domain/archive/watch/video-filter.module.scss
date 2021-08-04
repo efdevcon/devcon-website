@@ -1,16 +1,5 @@
 @use 'src/assets/css/partials/index' as *;
 
-.filter {
-  padding-top: $gaps-gap-8;
-  flex-basis: 30%;
-  margin-right: $gaps-gap-8;
-  flex-shrink: 0;
-
-  @media (max-width: $breakpoints-lg) {
-    display: none;
-  }
-}
-
 .mobile-filter {
   display: none;
 
@@ -87,9 +76,11 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: $gaps-gap-10;
+  border-top: 1px solid $colors-monochrome-5;
   border-bottom: 1px solid $colors-monochrome-5;
 }
 
+.search,
 .devcon,
 .expertise,
 .tags {
@@ -103,6 +94,10 @@
   > p {
     padding-bottom: $gaps-gap-5;
   }
+}
+
+.input-form {
+  padding-bottom: $gaps-gap-10;
 }
 
 .devcon {

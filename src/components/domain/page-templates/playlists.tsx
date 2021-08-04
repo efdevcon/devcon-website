@@ -8,6 +8,7 @@ import { PageHero } from 'src/components/common/page-hero'
 import { InputForm } from 'src/components/common/input-form'
 import { usePlaylists } from 'src/hooks/usePlaylists'
 import { CuratedPlaylists } from '../archive/playlists'
+import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 
 export const Playlists = () => {
   const playlists = usePlaylists()
@@ -15,8 +16,11 @@ export const Playlists = () => {
 
   return (
     <div className={css['container']}>
-      <SEO />
-      <Header withStrip />
+      <SEO 
+        title={ARCHIVE_TITLE}
+        description={ARCHIVE_DESCRIPTION} 
+        imageUrl={ARCHIVE_IMAGE_URL} />
+      <Header withStrip={false} />
 
       <PageHero
         title="Playlists"

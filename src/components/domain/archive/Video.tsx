@@ -136,10 +136,19 @@ const Labels = ({ tags, playlists }: any) => {
 
 export const Video = (props: VideoProps) => {
   const video = props.video
+  const imageUrl = `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`
 
   return (
     <div className={archiveCss['container']}>
-      <SEO />
+      <SEO 
+        title={props.video.title}
+        description={props.video.description} 
+        imageUrl={imageUrl}
+        type='video.movie'
+        author={{
+          name: `Devcon ${video.edition}`,
+          url: `/archive/watch?edition=${video.edition}`
+        }} />
       <Header withStrip />
 
       <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>

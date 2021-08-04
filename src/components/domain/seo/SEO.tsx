@@ -3,23 +3,29 @@ import { Helmet } from 'react-helmet'
 import { useLocation } from '@reach/router'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Twitter } from './Twitter'
-import { TITLE } from 'src/utils/constants'
+import { ARCHIVE_TITLE, TITLE } from 'src/utils/constants'
 import { usePageContext } from 'src/context/page-context'
 
 interface SEOProps {
   title?: string
   description?: string
+  imageUrl?: string
   lang?: string
   canonicalUrl?: string
+  type?: string
+  author?: { 
+    name?: string
+    url?: string
+  }
 }
 
 export function SEO(props: SEOProps) {
   const intl = useIntl()
   const location = useLocation()
   const pageContext = usePageContext()
+  const isArchive = location.pathname.startsWith('/archive')
 
-  // props > pageContext > default values
-  let title = TITLE
+  let title = isArchive ? ARCHIVE_TITLE : TITLE
   if (pageContext?.current?.title) {
     title = pageContext?.current.title
   }
@@ -43,10 +49,14 @@ export function SEO(props: SEOProps) {
     lang = props.lang
   }
 
-  const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${TITLE}` : TITLE
+  const globalTitle = isArchive ? ARCHIVE_TITLE : TITLE
+  const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${globalTitle}` : globalTitle
   const canonical = props.canonicalUrl || ''
 
-  const image = 'https://www.devcon.org/assets/images/rtd-social.png'
+  let image = 'https://www.devcon.org/assets/images/rtd-social.png'
+  if (props.imageUrl) {
+    image = props.imageUrl
+  }
 
   const siteUrl = location.origin
   const url = `${siteUrl}${location.pathname || '/'}`.replace(/\/$/, '')
@@ -57,11 +67,22 @@ export function SEO(props: SEOProps) {
         <meta name="description" content={description} />
         <meta name="image" content={image} />
 
+        {globalTitle !== title && <meta property="og:site_name" content={globalTitle} />}
+        <meta property="og:type" content={props.type ?? 'website'} />
         {url && <meta property="og:url" content={url} />}
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
         {image && <meta property="og:image" content={image} />}
         {canonical && <link rel="canonical" href={canonical} />}
+        {props.author?.name && <link itemProp="name" href={props.author?.name} />}
+        {props.author?.url && <link itemProp="url" href={props.author.url} />}          
+
+        {props.author?.name || props.author?.url && 
+        <span itemProp="author" itemScope itemType="http://schema.org/Person">
+          {props.author?.name && <link itemProp="name" href={props.author?.name} />}
+          {props.author?.url && <link itemProp="url" href={props.author.url} />}          
+        </span>
+        }
       </Helmet>
 
       <Twitter title={title} description={description} image={image} />
