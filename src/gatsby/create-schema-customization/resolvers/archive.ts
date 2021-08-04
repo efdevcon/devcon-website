@@ -1,4 +1,3 @@
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
 import { ArchiveVideo, mapToArchiveVideo } from 'src/types/ArchiveVideo'
 
 const getRandomSubset = (arr: any[], n: number) => {
