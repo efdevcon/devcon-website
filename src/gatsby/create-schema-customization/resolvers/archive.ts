@@ -1,17 +1,17 @@
-import { ArchiveVideo, mapToArchiveVideo } from "src/types/ArchiveVideo"
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+import { ArchiveVideo, mapToArchiveVideo } from 'src/types/ArchiveVideo'
 
 const getRandomSubset = (arr: any[], n: number) => {
   var result = new Array(n),
-      len = arr.length,
-      taken = new Array(len);
-  if (n > len)
-      throw new RangeError("getRandom: more elements taken than available");
+    len = arr.length,
+    taken = new Array(len)
+  if (n > len) throw new RangeError('getRandom: more elements taken than available')
   while (n--) {
-      var x = Math.floor(Math.random() * len);
-      result[n] = arr[x in taken ? taken[x] : x];
-      taken[x] = --len in taken ? taken[len] : len;
+    var x = Math.floor(Math.random() * len)
+    result[n] = arr[x in taken ? taken[x] : x]
+    taken[x] = --len in taken ? taken[len] : len
   }
-  return result;
+  return result
 }
 
 export const videoResolver = {
@@ -47,6 +47,8 @@ export const videoResolver = {
             title: source.frontmatter.title,
             description: source.frontmatter.description,
             youtubeUrl: source.frontmatter.youtubeUrl,
+            // image: source.frontmatter.image,
+            imageUrl: source.frontmatter.imageUrl,
             ipfsHash: source.frontmatter.ipfsHash,
             duration: source.frontmatter.duration,
             expertise: source.frontmatter.expertise,
@@ -54,7 +56,7 @@ export const videoResolver = {
             track: source.frontmatter.track,
             tags: source.frontmatter.tags,
             speakers: source.frontmatter.speakers,
-            profiles: source.frontmatter.profiles
+            profiles: source.frontmatter.profiles,
           } as ArchiveVideo
         })
       })
@@ -62,54 +64,55 @@ export const videoResolver = {
   args: {},
 }
 
-export const relatedVideosResolver = {
-  type: '[ArchiveVideo]',
-  resolve: (source: any, args: any, context: any) => {
-    const filter: any = {
-      fields: {
-        collection: {
-          eq: 'videos',
-        },
-      },
-      frontmatter: {
-        tags: {
-          in: source.tags,
-        },
-      }
-    }
+// export const relatedVideosResolver = {
+//   type: '[ArchiveVideo]',
+//   resolve: (source: any, args: any, context: any) => {
+//     const filter: any = {
+//       fields: {
+//         collection: {
+//           eq: 'videos',
+//         },
+//       },
+//       frontmatter: {
+//         tags: {
+//           in: source.tags,
+//         },
+//       }
+//     }
 
-    return context.nodeModel
-      .runQuery({
-        query: {
-          filter,
-        },
-        type: 'MarkdownRemark',
-      })
-      .then((videos: any) => {
-        const subset = getRandomSubset(videos, Math.min(videos.length, 10));
+//     return context.nodeModel
+//       .runQuery({
+//         query: {
+//           filter,
+//         },
+//         type: 'MarkdownRemark',
+//       })
+//       .then((videos: any) => {
+//         const subset = getRandomSubset(videos, Math.min(videos.length, 10));
 
-        return subset.map((source: any) => {
-          return {
-            id: source.id,
-            slug: source.fields.slug,
-            edition: source.frontmatter.edition,
-            title: source.frontmatter.title,
-            description: source.frontmatter.description,
-            youtubeUrl: source.frontmatter.youtubeUrl,
-            ipfsHash: source.frontmatter.ipfsHash,
-            duration: source.frontmatter.duration,
-            expertise: source.frontmatter.expertise,
-            type: source.frontmatter.type,
-            track: source.frontmatter.track,
-            tags: source.frontmatter.tags,
-            speakers: source.frontmatter.speakers,
-            profiles: source.frontmatter.profiles
-          } as ArchiveVideo
-        })
-      })
-  },
-  args: {},
-}
+//         return subset.map((source: any) => {
+//           return {
+//             id: source.id,
+//             slug: source.fields.slug,
+//             edition: source.frontmatter.edition,
+//             title: source.frontmatter.title,
+//             description: source.frontmatter.description,
+//             youtubeUrl: source.frontmatter.youtubeUrl,
+//             image: source.frontmatter.image,
+//             ipfsHash: source.frontmatter.ipfsHash,
+//             duration: source.frontmatter.duration,
+//             expertise: source.frontmatter.expertise,
+//             type: source.frontmatter.type,
+//             track: source.frontmatter.track,
+//             tags: source.frontmatter.tags,
+//             speakers: source.frontmatter.speakers,
+//             profiles: source.frontmatter.profiles
+//           } as ArchiveVideo
+//         })
+//       })
+//   },
+//   args: {},
+// }
 
 export const distinctVideoTagsResolver = {
   type: '[String]',
@@ -118,7 +121,7 @@ export const distinctVideoTagsResolver = {
       fields: {
         collection: {
           eq: 'videos',
-        }
+        },
       },
     }
 
@@ -133,14 +136,14 @@ export const distinctVideoTagsResolver = {
         const tags = {} as { [key: string]: boolean }
 
         videos.forEach((video: any) => {
-          if (!video.frontmatter.tags) return;
+          if (!video.frontmatter.tags) return
 
           video.frontmatter.tags.forEach((tag: any) => {
-            if (tags[tag.trim()]) return;
+            if (tags[tag.trim()]) return
 
-            tags[tag.trim()] = true;
-          });
-        });
+            tags[tag.trim()] = true
+          })
+        })
 
         return Object.keys(tags).sort()
       })

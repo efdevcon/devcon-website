@@ -194,10 +194,28 @@
 }
 
 .foldout-link {
-  position: relative;
-  cursor: pointer;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  &:not(.highlight) {
+    position: relative;
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &.highlight {
+    height: 100%;
+    padding-left: $gaps-gap-4;
+    padding-right: $gaps-gap-4;
+    border-left: 1px solid $colors-monochrome-5;
+    border-right: 1px solid $colors-monochrome-5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $colors-monochrome-2;
+
+    > svg {
+      margin-left: $gaps-gap-2;
+    }
+  }
 
   &:hover {
     text-decoration: underline;

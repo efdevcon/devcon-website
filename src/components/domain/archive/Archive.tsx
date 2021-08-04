@@ -14,6 +14,7 @@ import { useStaffPicks } from 'src/hooks/useStaffPicks'
 import { Interests } from './interests'
 import { Link } from 'src/components/common/link'
 import WatchIcon from 'src/assets/icons/local_play.svg'
+import OnDemandVideoIcon from 'src/assets/icons/on_demand_video.svg';
 import { videoResolver } from 'src/gatsby/create-schema-customization/resolvers/archive'
 
 type ArchiveProps = {}
@@ -44,7 +45,7 @@ export const Archive = (props: ArchiveProps) => {
       <PageHero
         scenes={staffpicks.videos.map(video => {
           return {
-            image: `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`,
+            image: video.imageUrl || `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`,
             imageProps: {
               alt: 'Staff pick',
             },
@@ -54,7 +55,8 @@ export const Archive = (props: ArchiveProps) => {
               return (
                 <Link to={slug} className={`button red ${css['call-to-action']}`}>
                   <span className={css['watch-now']}>Watch Now</span>
-                  <WatchIcon className={`icon ${css['watch-now-icon']}`} />
+                  
+                  <OnDemandVideoIcon className={`icon ${css['watch-now-icon']}`} />
                 </Link>
               )
             },

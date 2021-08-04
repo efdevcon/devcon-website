@@ -75,8 +75,14 @@
     margin-right: $gaps-gap-2;
     margin-bottom: $gaps-gap-1;
 
-    svg {
-      font-size: 0.9em;
+    .icons {
+      width: 0.9em;
+      display: flex;
+      justify-content: center;
+
+      svg {
+        font-size: 0.9em;
+      }
     }
 
     > span {
@@ -93,6 +99,7 @@
 
     .icon-plus {
       display: block;
+      font-size: 0.8em !important;
     }
 
     &.active {

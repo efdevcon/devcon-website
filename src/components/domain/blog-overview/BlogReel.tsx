@@ -14,22 +14,20 @@ export function BlogReel() {
     speed: 500,
     slidesToShow: 3,
     arrows: false,
-    slidesToScroll: 3,
     touchThreshold: 100,
+    swipeToSlide: true,
     mobileFirst: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2.1,
-          slidesToScroll: 2,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1.1,
-          slidesToScroll: 1,
         },
       },
     ],

@@ -83,7 +83,7 @@ const Buttons = (props: ButtonProps) => {
 
         if (button.url) {
           return (
-            <Link to={button.url} className={className}>
+            <Link key={button.key} to={button.url} className={className}>
               {button.icon}
             </Link>
           )

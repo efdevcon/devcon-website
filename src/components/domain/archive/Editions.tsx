@@ -4,6 +4,7 @@ import moment from 'moment'
 import css from './editions.module.scss'
 import { DevconEdition } from 'src/types/DevconEdition'
 import { LinkButton } from 'src/components/common/link-button'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 interface Props {
   className?: string
@@ -37,7 +38,9 @@ export const Editions = (props: Props) => {
             })}
           </div>
           <div className={css['image']}>
-            <img src={selectedEdition.imageUrl} alt={selectedEdition.title} />
+            {/* <img src={selectedEdition.imageUrl} alt={selectedEdition.title} /> */}
+
+            <GatsbyImage image={getImage(selectedEdition.image)} alt={selectedEdition.title} />
           </div>
           <div className={css['info']}>
             <div className={css['title']}>
@@ -54,7 +57,7 @@ export const Editions = (props: Props) => {
             <div className={css['buttons']}>
               {selectedEdition.links.map(i => {
                 return (
-                  <LinkButton key={i.title} to={i.url} className={css['button']}>
+                  <LinkButton key={i.title} to={i.url} className={`${css['button']} white`}>
                     {i.title}
                   </LinkButton>
                 )

@@ -1,7 +1,7 @@
 ---
 title: Popular
 description: These are the most popular videos
-imageUrl: /assets/uploads/playlists/default.png
+image: ../../../../static/assets/uploads/playlists/default.png
 categories:
   - Topics
 curators:

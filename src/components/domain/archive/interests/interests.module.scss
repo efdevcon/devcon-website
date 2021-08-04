@@ -48,6 +48,10 @@
   display: flex;
   flex-direction: column;
 
+  > p {
+    margin-bottom: $gaps-gap-1;
+  }
+
   .tags {
     display: flex;
     flex-direction: row;
@@ -59,10 +63,6 @@
       margin-right: $gaps-gap-2;
       margin-bottom: $gaps-gap-1;
 
-      svg {
-        font-size: 0.9em;
-      }
-
       > span {
         margin-left: $gaps-gap-2;
       }
@@ -71,12 +71,23 @@
         cursor: pointer;
       }
 
+      .icons {
+        width: 0.9em;
+        display: flex;
+        justify-content: center;
+
+        svg {
+          font-size: 0.9em;
+        }
+      }
+
       .icon-check {
         display: none;
       }
 
       .icon-plus {
         display: block;
+        font-size: 0.8em !important;
       }
 
       &.selected {
@@ -94,11 +105,11 @@
   .clear {
     display: flex;
     align-items: center;
-    padding-top: $gaps-gap-6;
+    padding-top: $gaps-gap-1;
 
-    @media (max-width: $breakpoints-lg) {
-      padding-top: $gaps-gap-3;
-    }
+    // @media (max-width: $breakpoints-lg) {
+    //   padding-top: $gaps-gap-3;
+    // }
 
     svg {
       font-size: 0.8em;

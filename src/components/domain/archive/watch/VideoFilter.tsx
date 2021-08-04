@@ -149,7 +149,7 @@ export const VideoFilter = (props: any) => {
     <div className={css['filter']}>
       <div className={css['header']}>
         <h4 className="title">Filter</h4>
-        <button>
+        <button className="white">
           <IconFilter />
         </button>
       </div>
@@ -171,7 +171,7 @@ export const VideoFilterMobile = (props: any) => {
       <div className="content">
         <div className={css['header']}>
           <h4 className="title">Filter</h4>
-          <button onClick={() => setOpen(!open)}>
+          <button className="white" onClick={() => setOpen(!open)}>
             <IconFilter className={`icon ${css['icon-open']}`} />
             <IconClose className={`icon ${css['icon-close']}`} />
           </button>

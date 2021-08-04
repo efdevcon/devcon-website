@@ -1,13 +1,13 @@
 @use 'src/assets/css/partials/index' as *;
 @use 'global/general';
-@use 'global/colors';
+@use 'global/buttons';
+@use 'global/labels';
 @use 'global/gaps';
 @use 'global/fonts';
 @use 'global/markdown';
-@use 'global/buttons';
-@use 'global/labels';
 @use 'global/icons';
 @use 'global/layout';
+@use 'global/colors';
 @use 'vendor/react-slick.scss';
 
 * {

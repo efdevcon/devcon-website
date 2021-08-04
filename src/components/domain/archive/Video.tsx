@@ -190,22 +190,25 @@ export const Video = (props: VideoProps) => {
 
                   <Labels tags={video.tags} playlists={props.playlists} />
 
-                  <div className={css['speakers']}>
-                    {video.profiles.map((i: UserProfile) => {
-                      return (
-                        <div key={i.name} className={css['speaker']}>
-                          <Avatar profile={i} className={css['thumbnail']} />
-                          <div className={css['text']}>
-                            <div className={css['title']}>
-                              <p className="bold">{i.name}</p>
-                              <p className="font-xs"> {i.role}</p>
+                  {video.profiles.length > 0 &&
+                    <div className={css['speakers']}>
+                      <span className={`${css['title']} font-sm bold text-uppercase`}>About the speakers</span>
+                      {video.profiles.map((i: UserProfile) => {
+                        return (
+                          <div key={i.name} className={css['speaker']}>
+                            <Avatar profile={i} className={css['thumbnail']} />
+                            <div className={css['text']}>
+                              <div className={css['title']}>
+                                <p className="bold">{i.name}</p>
+                                <p className="font-xs"> {i.role}</p>
+                              </div>
+                              <p className="font-sm">{i.description}</p>
                             </div>
-                            <p className="font-sm">{i.description}</p>
                           </div>
-                        </div>
-                      )
-                    })}
-                  </div>
+                        )
+                      })}
+                    </div>
+                  }
                 </Tab>
 
                 {video.resources && <Tab title="Resources">Resources</Tab>}

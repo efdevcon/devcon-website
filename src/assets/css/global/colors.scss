@@ -10,49 +10,40 @@
   --color-text: $colors-main-light !important;
 }
 
-// Label/button colors
-.white {
+// Button/Label colors
+.white { 
   @include colors-white;
 
   &.ghost {
     @include colors-white-ghost;
   }
 
-  // &:hover {
-  //   @include c
-  //   background: #f2f2f2;
-
-  //   // For use by Button component (animates colors when hovering)
-  //   --button-color-background: #{$colors-main};
-  //   --button-color-background-hover: #{darken($colors-main, 15%)};
-  // }
-
-  // &.ghost {
-  //   background: none;
-  //   color: $colors-monochrome-1;
-  //   --color-icon: #{$colors-monochrome-1};
-  //   border-color: $colors-monochrome-1;
-  // }
-
-  // &.inverted {
-  //   background: $colors-main;
-  //   --color-icon: #{$colors-monochrome-1};
-  //   color: $colors-monochrome-1;
-  //   border-color: $colors-main;
-
-  //   &:disabled {
-  //     background: $colors-monochrome-7;
-  //     border-color: $colors-monochrome-7;
-  //   }
-  // }
+  &.disabled {
+    @include colors-white-disabled;
+  }
 }
 
-// Specificity trick to avoid !important hell
-.black.black {
+.black { 
   @include colors-black;
 
   &.ghost {
     @include colors-black-ghost;
+  }
+
+  &.disabled {
+    @include colors-black-disabled;
+  }
+}
+
+.red { 
+  @include colors-red;
+
+  &.ghost {
+    @include colors-red-ghost;
+  }
+
+  &.disabled {
+    @include colors-red-disabled;
   }
 }
 
@@ -103,29 +94,36 @@
   }
 }
 
-.red {
-  background: $colors-track-red !important;
-  color: $colors-monochrome-1 !important;
-  --color-icon: #{$colors-monochrome-1} !important;
-  border-color: $colors-track-red !important;
+// .red {
+//   background: $colors-track-red !important;
+//   color: $colors-monochrome-1 !important;
+//   --color-icon: #{$colors-monochrome-1} !important;
+//   border-color: $colors-track-red !important;
 
-  &.ghost {
-    background: none !important;
-    color: $colors-track-red !important;
-    --color-icon: #{$colors-track-red} !important;
-    border-color: $colors-track-red !important;
-  }
+//   &.ghost {
+//     background: none !important;
+//     color: $colors-track-red !important;
+//     --color-icon: #{$colors-track-red} !important;
+//     border-color: $colors-track-red !important;
+//   }
 
-  &.inverted {
-    background: $colors-monochrome-1 !important;
-    color: $colors-track-red !important;
-    --color-icon: #{$colors-track-red} !important;
-  }
+//   &.inverted {
+//     background: $colors-monochrome-1 !important;
+//     color: $colors-track-red !important;
+//     --color-icon: #{$colors-track-red} !important;
+//   }
 
-  &:disabled {
-    background: $colors-ef-pink !important;
-    color: $colors-track-red !important;
-    --color-icon: #{$colors-track-red} !important;
-    border: none;
-  }
-}
+//   &:disabled {
+//     background: $colors-ef-pink !important;
+//     color: $colors-track-red !important;
+//     --color-icon: #{$colors-track-red} !important;
+//     border: none;
+//   }
+// }
+// .red.disabled {
+//   background: $colors-ef-pink !important;
+//   color: $colors-track-red !important;
+//   --color-icon: #{$colors-track-red} !important;
+//   border: none;
+//   pointer-events: none;
+// }

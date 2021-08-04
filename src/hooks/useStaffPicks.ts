@@ -5,14 +5,19 @@ import { mapToPlaylist } from './usePlaylists'
 export const useStaffPicks = (): Playlist => {
   const data = useStaticQuery(graphql`
     query {
-      playlist: markdownRemark(fields: {slug: {eq: "/archive/playlists/staff-picks/"}}) {
+      playlist: markdownRemark(fields: { slug: { eq: "/archive/playlists/staff-picks/" } }) {
         id
         frontmatter {
           title
           description
           imageUrl
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
           categories
-          curators          
+          curators
           profiles {
             id
             name
@@ -30,6 +35,12 @@ export const useStaffPicks = (): Playlist => {
             description
             edition
             youtubeUrl
+            imageUrl
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              }
+            }
             ipfsHash
             duration
             expertise

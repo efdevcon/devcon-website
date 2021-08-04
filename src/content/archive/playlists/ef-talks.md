@@ -1,7 +1,7 @@
 ---
 title: EF Talks
 description: Talks from the Ethereum Foundation
-imageUrl: /assets/uploads/playlists/buidl.png
+image: ../../../../static/assets/uploads/playlists/buidl.png
 categories: []
 curators:
   - Devcon Team

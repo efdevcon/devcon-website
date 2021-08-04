@@ -1,5 +1,5 @@
 import { ArchiveVideo } from './ArchiveVideo'
-import { UserProfile } from './UserProfile';
+import { UserProfile } from './UserProfile'
 
 export interface Playlist {
   id: string
@@ -7,6 +7,7 @@ export interface Playlist {
   title: string
   description: string
   imageUrl?: string
+  image?: any
   categories: Array<string>
   curators: Array<string>
   profiles: Array<UserProfile>

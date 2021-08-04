@@ -281,8 +281,10 @@
 
     .arrows {
       > * {
+        border: none;
+
         &:first-child {
-          margin-right: $gaps-gap-1;
+          margin-right: 1px;
         }
       }
     }

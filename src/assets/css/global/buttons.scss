@@ -5,7 +5,7 @@ button {
   // Sometimes the button element can be useful for semantic reasons, add "plain" class to remove default styles
   &:not(.plain) {
     @include fonts-md;
-    @include colors-white;
+    // @include colors-white;
     font-family: $fonts-primary;
     padding: $gaps-gap-2 $gaps-gap-4;
     display: inline-flex;
@@ -58,15 +58,15 @@ button {
       }
     }
 
-    // &.white {
-    &:hover {
-      @include colors-white-hover;
-    }
+    &.white {
+      &:hover {
+        @include colors-white-hover;
+      }
 
-    &:disabled {
-      @include colors-white-disabled;
+      &:disabled {
+        @include colors-white-disabled;
+      }
     }
-    // }
 
     &.black {
       &:hover {
@@ -77,5 +77,19 @@ button {
         @include colors-black-disabled;
       }
     }
+
+    &.red {
+      &:hover {
+        @include colors-red-hover;
+      }
+
+      &:disabled {
+        @include colors-red-disabled;
+      }  
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
   }
 }

@@ -19,7 +19,7 @@ const settings = {
   arrows: false,
   speed: 500,
   slidesToShow: 2.1,
-  slidesToScroll: 2,
+  swipeToSlide: true,
   touchThreshold: 100,
   mobileFirst: true,
   responsive: [
@@ -27,7 +27,6 @@ const settings = {
       breakpoint: 600,
       settings: {
         slidesToShow: 1.1,
-        slidesToScroll: 1,
       },
     },
   ],

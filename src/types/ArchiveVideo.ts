@@ -1,4 +1,4 @@
-import { UserProfile } from "./UserProfile";
+import { UserProfile } from './UserProfile'
 
 export interface ArchiveVideo {
   id: string
@@ -8,6 +8,8 @@ export interface ArchiveVideo {
   relatedVideos: [ArchiveVideo]
   description: string
   youtubeUrl: string
+  // image?: string
+  imageUrl?: string
   ipfsHash: string
   duration: number
   expertise: string
@@ -19,7 +21,7 @@ export interface ArchiveVideo {
   profiles: Array<UserProfile>
 }
 
-export function mapToArchiveVideo(source: any) { 
+export function mapToArchiveVideo(source: any) {
   return {
     id: source.id,
     slug: source.fields.slug,
@@ -27,6 +29,8 @@ export function mapToArchiveVideo(source: any) {
     title: source.frontmatter.title,
     description: source.frontmatter.description,
     youtubeUrl: source.frontmatter.youtubeUrl,
+    // image: source.frontmatter.image,
+    imageUrl: source.frontmatter.imageUrl,
     ipfsHash: source.frontmatter.ipfsHash,
     duration: source.frontmatter.duration,
     expertise: source.frontmatter.expertise,
@@ -34,6 +38,6 @@ export function mapToArchiveVideo(source: any) {
     track: source.frontmatter.track,
     tags: source.frontmatter.tags,
     speakers: source.frontmatter.speakers,
-    profiles: source.frontmatter.profiles
+    profiles: source.frontmatter.profiles,
   }
 }

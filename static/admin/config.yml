@@ -362,7 +362,7 @@ collections:
       - { name: 'location', label: 'Location', widget: 'string' }
       - { name: 'startDate', label: 'Start Date', widget: 'date', format: 'YYYY-MM-DD' }
       - { name: 'endDate', label: 'End Date', widget: 'date', format: 'YYYY-MM-DD' }
-      - { name: 'imageUrl', label: 'Image URL', widget: 'string' }
+      - { name: 'image', label: 'Image', widget: 'string' }
 
   - name: 'playlists'
     label: 'Playlists'
@@ -373,7 +373,7 @@ collections:
     fields:
       - { name: 'title', label: 'Title', widget: 'string' }
       - { name: 'description', label: 'Description', widget: 'text' }
-      - { name: 'imageUrl', label: 'Image URL', widget: 'string' }
+      - { name: 'image', label: 'Image', widget: 'string' }
       - { name: 'categories', label: 'Categories', widget: 'list' }
       - { name: 'curators', label: 'Curators', widget: 'list' }
       - name: videos
@@ -406,6 +406,7 @@ collections:
       - { name: 'title', label: 'Title', widget: 'string' }
       - { name: 'description', label: 'Description', widget: 'text' }
       - { name: 'youtubeUrl', label: 'Youtube URL', widget: 'string' }
+      - { name: 'image', label: 'Image', widget: 'string', required: false }
       - { name: 'ipfsHash', label: 'IPFS hash', widget: 'string' }
       - { name: 'duration', label: 'Duration', widget: 'number' }
       - { name: 'expertise', label: 'Expertise level', widget: 'string' }

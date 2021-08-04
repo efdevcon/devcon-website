@@ -84,8 +84,10 @@ export const Filter = (props: FilterState) => {
 
           return (
             <button key={filter.value} onClick={() => props.setActiveFilter(filter.value)} className={className}>
-              <IconCheck className={`icon ${css['icon-check']}`} />
-              <IconPlus className={`icon ${css['icon-plus']}`} />
+              <div className={css['icons']}>
+                <IconCheck className={`icon ${css['icon-check']}`} />
+                <IconPlus className={`icon ${css['icon-plus']}`} />
+              </div>
               <span>{filter.text}</span>
             </button>
           )

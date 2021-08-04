@@ -5,12 +5,16 @@ import { mapToPlaylist } from './usePlaylists'
 export const useEfTalks = (): Playlist => {
   const data = useStaticQuery(graphql`
     query {
-      playlist: markdownRemark(fields: {slug: {eq: "/archive/playlists/ef-talks/"}}) {
+      playlist: markdownRemark(fields: { slug: { eq: "/archive/playlists/ef-talks/" } }) {
         id
         frontmatter {
           title
           description
-          imageUrl
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
           categories
           curators
           profiles {

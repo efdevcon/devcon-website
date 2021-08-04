@@ -7,6 +7,7 @@ export interface DevconEdition {
   startDate: Date
   endDate: Date
   imageUrl: string
+  image: any
   links: Array<{
     title: string
     url: string

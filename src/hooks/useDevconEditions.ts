@@ -14,7 +14,11 @@ export const useDevconEditions = (): Array<DevconEdition> => {
             location
             startDate
             endDate
-            imageUrl
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              }
+            }
             urls {
               title
               url
@@ -43,8 +47,11 @@ function mapToDevconEdition(source: any): DevconEdition {
     startDate: new Date(source.frontmatter.startDate),
     endDate: new Date(source.frontmatter.endDate),
     imageUrl: source.frontmatter.imageUrl,
-    links: source.frontmatter.urls ? source.frontmatter.urls.map((i: any) => {
-      return { title: i.title, url: i.url }
-    }) : []
+    image: source.frontmatter.image,
+    links: source.frontmatter.urls
+      ? source.frontmatter.urls.map((i: any) => {
+          return { title: i.title, url: i.url }
+        })
+      : [],
   }
 }

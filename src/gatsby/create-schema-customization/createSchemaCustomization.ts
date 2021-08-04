@@ -31,6 +31,8 @@ const baseTypes = `
     title: String,
     description: String,
     youtubeUrl: String,
+    image: File,
+    imageUrl: String,
     ipfsHash: String,
     duration: Int,
     expertise: String,
@@ -66,8 +68,8 @@ export const createSchemaCustomization = ({ actions, schema }: CreateSchemaCusto
         tagCount: tagCountResolver,
         archiveVideos: videoResolver,
         distinctVideoTags: distinctVideoTagsResolver,
-        relatedVideos: relatedVideosResolver,
-        profiles: profileResolver
+        // relatedVideos: relatedVideosResolver,
+        profiles: profileResolver,
       },
     }),
   ]

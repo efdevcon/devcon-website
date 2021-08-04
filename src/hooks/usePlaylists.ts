@@ -11,7 +11,11 @@ export const usePlaylists = (): Array<Playlist> => {
           frontmatter {
             title
             description
-            imageUrl
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              }
+            }
             categories
             curators
             profiles {
@@ -31,6 +35,11 @@ export const usePlaylists = (): Array<Playlist> => {
               description
               edition
               youtubeUrl
+              image {
+                childImageSharp {
+                  gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+                }
+              }
               ipfsHash
               duration
               expertise
@@ -59,11 +68,11 @@ export function mapToPlaylist(source: any): Playlist {
     slug: source.fields.slug,
     title: source.frontmatter.title,
     description: source.frontmatter.description,
-    imageUrl: source.frontmatter.imageUrl,
+    image: source.frontmatter.image,
     curators: source.frontmatter.curators,
     profiles: source.frontmatter.profiles,
     categories: source.frontmatter.categories,
     videoCount: source.frontmatter.archiveVideos.length,
-    videos: source.frontmatter.archiveVideos
+    videos: source.frontmatter.archiveVideos,
   }
 }

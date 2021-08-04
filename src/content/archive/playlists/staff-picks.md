@@ -1,7 +1,7 @@
 ---
 title: Staff Picks
 description: Hand-picked videos from the Devcon team
-imageUrl: /assets/uploads/playlists/buidl.png
+image: ../../../../static/assets/uploads/playlists/buidl.png
 categories: []
 curators:
   - Devcon Team

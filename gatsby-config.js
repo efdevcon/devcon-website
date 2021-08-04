@@ -135,6 +135,13 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    // CMS upload folder
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/assets/uploads`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

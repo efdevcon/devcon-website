@@ -198,10 +198,10 @@ export const PageHero = (props: PageHeroProps) => {
                 {props.scenes[currentScene].callToAction()}
 
                 <div className={css['arrows']}>
-                  <button className={`${css['arrow']} red squared`} onClick={() => setNextScene(-1)}>
+                  <button className={`${css['arrow']} white squared`} onClick={() => setNextScene(-1)}>
                     <ChevronLeft />
                   </button>
-                  <button className={`${css['arrow']} red squared`} onClick={() => setNextScene(1)}>
+                  <button className={`${css['arrow']} white squared`} onClick={() => setNextScene(1)}>
                     <ChevronRight />
                   </button>
                 </div>

@@ -5,12 +5,16 @@ import { mapToPlaylist } from './usePlaylists'
 export const useLatest = (): Playlist => {
   const data = useStaticQuery(graphql`
     query {
-      playlist: markdownRemark(fields: {slug: {eq: "/archive/playlists/devcon-5/"}}) {
+      playlist: markdownRemark(fields: { slug: { eq: "/archive/playlists/devcon-5/" } }) {
         id
         frontmatter {
           title
           description
-          imageUrl
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
           categories
           curators
           profiles {

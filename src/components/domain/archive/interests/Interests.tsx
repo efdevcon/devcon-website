@@ -14,6 +14,8 @@ export const Interests = (props: any) => {
   const tagRows = chunkArray(tags, 1 /*2*/) // Accounts currently missing, so we'll wait with chunking the array to take up more horizontal space in the meantime
   const queryString = useQueryStringer({ tags: selectedTags }, false)
 
+  const hasSelectedTags = Object.keys(selectedTags).length > 0;
+
   return (
     <div className="section">
       <div className={`${css['container']} content padding-bottom`}>
@@ -26,6 +28,7 @@ export const Interests = (props: any) => {
         </div>
 
         <div className={css['tags-container']}>
+          <p className="bold font-sm">Filter by Category</p>
           {tagRows.map((tagRow, index) => {
             return (
               <div key={index} className={css['tags']}>
@@ -52,8 +55,10 @@ export const Interests = (props: any) => {
                         setSelectedTags(nextTags)
                       }}
                     >
-                      <IconCheck className={`icon ${css['icon-check']}`} />
-                      <IconPlus className={`icon ${css['icon-plus']}`} />
+                      <div className={css['icons']}>
+                        <IconCheck className={`icon ${css['icon-check']}`} />
+                        <IconPlus className={`icon ${css['icon-plus']}`} />
+                      </div>
                       <span>{tag}</span>
                     </button>
                   )
@@ -63,13 +68,15 @@ export const Interests = (props: any) => {
           })}
 
           <div className={css['clear']}>
-            <Link className={`${css['continue']} font-sm button red`} to={`/archive/watch${queryString}`}>
-              <span>Get Started</span> <IconArrowRight />
+            <Link className={`${!hasSelectedTags ? 'disabled ' : ''}${css['continue']} font-sm button red`} to={`/archive/watch${queryString}`}>
+              <span>View talks</span> <IconArrowRight />
             </Link>
 
-            <p className={`${css['clear']} bold text-underline`} onClick={() => setSelectedTags({})}>
-              Clear All
-            </p>
+            {hasSelectedTags && 
+              <p className={`${css['clear']} bold text-underline`} onClick={() => setSelectedTags({})}>
+                Clear All
+              </p>
+            }
           </div>
         </div>
       </div>

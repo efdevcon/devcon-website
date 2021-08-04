@@ -5,12 +5,16 @@ import { mapToPlaylist } from './usePlaylists'
 export const useMostPopular = (): Playlist => {
   const data = useStaticQuery(graphql`
     query {
-      playlist: markdownRemark(fields: {slug: {eq: "/archive/playlists/most-popular/"}}) {
+      playlist: markdownRemark(fields: { slug: { eq: "/archive/playlists/most-popular/" } }) {
         id
         frontmatter {
           title
           description
-          imageUrl
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+            }
+          }
           categories
           curators
           profiles {

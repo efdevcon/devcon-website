@@ -5,6 +5,7 @@ import css from './navigation.module.scss'
 import { Link as LinkType } from 'src/types/Link'
 import ArrowCollapse from 'src/assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
+import OnDemandVideoIcon from 'src/assets/icons/on_demand_video.svg';
 
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
@@ -82,11 +83,25 @@ export const Navigation = (props: any) => {
           const primaryKey = `site-nav-1_${index}`
           const hasChildren = i.links && i.links.length > 0
 
-          const link = (
-            <Link className={`${css['foldout-link']} plain bold`} to={i.url}>
-              {i.title}
-            </Link>
-          )
+          const link = (() => {
+            let className = `${css['foldout-link']} bold`;
+
+            const isWatch = i.title === 'Watch';
+
+            // Just keeping it simple since this is possibly a one-off thing - can generalize later if needed
+            if (isWatch) {
+              className += ` ${css['highlight']}`
+            } else {
+              className += ` plain`;
+            }
+          
+            return (
+              <Link className={className} to={i.url}>
+                {i.title}
+                {isWatch && <OnDemandVideoIcon /> }
+              </Link>
+            );
+          })();
 
           return (
             <li className="plain bold" key={primaryKey}>
