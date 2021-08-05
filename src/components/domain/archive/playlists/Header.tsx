@@ -1,9 +1,9 @@
-import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import IconWatch from 'src/assets/icons/watch.svg'
 import { Playlist } from 'src/types/Playlist'
 import css from './header.module.scss'
 import { Link } from 'src/components/common/link'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type Props = {
   playlist: Playlist
@@ -47,7 +47,8 @@ export function PlaylistHeader(props: Props) {
       </div>
 
       <div className={css['image-section']}>
-        <img src={props.playlist.imageUrl} alt={`${props.playlist.title} Devcon playlist`} placeholder="blurred" />
+        {/* <img src={props.playlist.imageUrl} alt={`${props.playlist.title} Devcon playlist`} placeholder="blurred" /> */}
+        <GatsbyImage image={getImage(props.playlist.image)} alt={`${props.playlist.title} Devcon playlist`} />
       </div>
     </div>
   )

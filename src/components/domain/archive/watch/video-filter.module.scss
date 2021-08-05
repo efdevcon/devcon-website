@@ -2,12 +2,17 @@
 
 .mobile-filter {
   display: none;
+  background: $colors-monochrome-2;
+
+  /* Trick to get the background color to extend "outside" the container (fill all the way to the edge of the screen) */
+  width: calc(100% + 32px);
+  left: -16px;
+  padding: 0px 16px;
+  position: relative;
 
   @media (max-width: $breakpoints-lg) {
     display: block;
   }
-
-  background: $colors-monochrome-2;
 
   .icon-close,
   .icon-open {
@@ -26,7 +31,8 @@
     }
 
     .filter-container {
-      max-height: 600px !important;
+      display: block;
+      // max-height: 600px !important;
     }
   }
 
@@ -36,7 +42,8 @@
   }
 
   .filter-container {
-    max-height: 0px;
+    // max-height: 0px;
+    display: none;
     overflow: hidden;
     transition: all 0.6s;
   }
@@ -98,6 +105,10 @@
 
 .input-form {
   padding-bottom: $gaps-gap-10;
+
+  @media (max-width: $breakpoints-lg) {
+    padding-bottom: $gaps-gap-5 !important;
+  }
 }
 
 .devcon {

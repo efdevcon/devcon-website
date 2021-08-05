@@ -28,24 +28,24 @@ export const Playlists = () => {
         description="Devcon collections to help you dive deep into specific topic areas."
       />
 
-      <div className="section">
+      {/* <div className="section">
         <div className="content">
           <div className={css['search-sort']}>
             <InputForm className={css['search']} placeholder="Search" icon={IconSearch} />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {categories.map((category, i) => {
         const first = i === 0
 
         let className = 'padding-bottom'
 
-        if (first) className = 'padding-bottom margin-top'
+        if (first) className = 'padding-bottom'
 
         return (
           <div key={category} className={className}>
-            <CuratedPlaylists title={category} items={playlists.filter(i => i.categories.includes(category))} />
+            <CuratedPlaylists borderless={first} title={category} items={playlists.filter(i => i.categories.includes(category))} />
           </div>
         )
       })}

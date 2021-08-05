@@ -52,6 +52,11 @@ export const query = graphql`
         title
         description
         imageUrl
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 90)
+          }
+        }
         categories
         curators
         profiles {

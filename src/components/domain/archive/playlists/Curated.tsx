@@ -11,6 +11,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type PlaylistProps = {
   title: string
+  borderless?: boolean
   viewMore?: boolean
   items: Array<Playlist>
 }
@@ -76,10 +77,11 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
   return (
     <div className="section">
       <div className="content">
-        <div className={`${css['curated-playlists']} border-top`}>
+        <div className={`${css['curated-playlists']} ${props.borderless ? '' : 'border-top'}`}>
           <Slider
             sliderProps={sliderProps}
-            className={css['slider']}
+            className={css['slider']} 
+            style={props.borderless ? { marginTop: '0px'} : undefined}
             title={props.title}
             // custom={
             //   props.viewMore
