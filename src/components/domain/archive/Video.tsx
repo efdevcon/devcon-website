@@ -149,7 +149,7 @@ export const Video = (props: VideoProps) => {
           name: `Devcon ${video.edition}`,
           url: `/archive/watch?edition=${video.edition}`
         }} />
-      <Header withStrip />
+      <Header withStrip={false} />
 
       <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>
         <div className={css['container']}>

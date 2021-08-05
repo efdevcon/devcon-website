@@ -14,16 +14,16 @@ const spanish = require(`../content/i18n/es.json`)
 export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesArgs) => {
   console.log('createPages', languages, 'default', defaultLang)
 
-  await createContentPages(args)
-  await createBlogPages(args)
-  await createNewsPages(args)
-  await createDipPages(args)
+  // await createContentPages(args)
+  // await createBlogPages(args)
+  // await createNewsPages(args)
+  // await createDipPages(args)
   await createPlaylistPages(args)
   await createVideoPages(args)
   // await createTagPages(args)
-  await createSearchPage(args)
+  // await createSearchPage(args)
 
-  await indexArchive(args)
+  // await indexArchive(args)
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
