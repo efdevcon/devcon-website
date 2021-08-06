@@ -97,14 +97,14 @@
     grid-auto-flow: column;
 
     .col-1 {
-      grid-column: 1 / 7;
+      grid-column: 2 / 7;
       grid-row-start: 2;
     }
 
-    .col-2 {
-      grid-column: 1 / 7;
-      grid-row-start: 1;
-    }
+    // .col-2 {
+    //   grid-column: 1 / 7;
+    //   grid-row-start: 1;
+    // }
 
     .col-3 {
       grid-column: 5 / 7;
@@ -160,9 +160,11 @@
 
     .content {
       @include layout-content;
-      @include top-grid;
-      flex-grow: 1;
+      // @include top-grid;
+      display: flex;
+      flex-wrap: wrap;
       position: relative;
+      justify-content: space-between;
 
       padding: 64px;
       padding-top: 32px;
@@ -175,7 +177,41 @@
         background-position: center left;
       }
 
+      .col-1,
+      .col-2,
+      .col-3,
+      .col-4 {
+        flex-basis: 24%;
+
+        @media (max-width: $breakpoints-lg) {
+          flex-basis: 50%;
+        }
+
+        @media (max-width: $breakpoints-tiny) {
+          flex-basis: 100%;
+        }
+      }
+
+      .col-3,
+      .col-4 {
+        @media (max-width: $breakpoints-lg) {
+          margin-top: $gaps-gap-6;
+        }
+      }
+
+      .col-2,
+      .col-3,
+      .col-4 {
+        @media (max-width: $breakpoints-lg) {
+          margin-top: $gaps-gap-4;
+        }
+      }
+
+      // Logo & social
       .col-1 {
+        @include fonts-sm;
+        padding-right: $gaps-gap-16;
+
         a {
           img {
             max-width: 100%;
@@ -183,41 +219,33 @@
         }
       }
 
+      // About Devcon
       .col-2 {
-        display: flex;
-        flex-direction: column;
+        padding-right: $gaps-gap-16;
 
-        > h2 {
-          @include fonts-bold;
-
-          &:last-of-type {
-            margin-bottom: 32px;
-          }
+        p {
+          @include fonts-sm;
+          margin-bottom: $sizes-size-8;
         }
       }
 
-      .col-5 {
+      // Links
+      .col-3 {
+      }
+
+      // Contact
+      .col-4 {
         @include fonts-sm;
-        @media (max-width: $breakpoints-md) {
-          display: flex;
-          align-items: flex-end;
-        }
 
         .contact {
-          .email-1,
-          .email-2 {
+          .email-1 {
             margin-bottom: $sizes-size-16;
-          }
-
-          .email-2 {
-            @media (max-width: $breakpoints-md) {
-              margin-bottom: 0px;
-            }
           }
         }
       }
 
-      .col-6 {
+      // Scroll up
+      .col-5 {
         .scroll-up {
           display: flex;
           justify-content: flex-end;
@@ -228,11 +256,6 @@
           }
         }
       }
-
-      .col-7 {
-        @include fonts-sm;
-        // position: relative;
-      }
     }
   }
 
@@ -242,8 +265,10 @@
 
     .content {
       @include layout-content;
-      @include bottom-grid;
-      flex-grow: 1;
+      // @include bottom-grid;
+      // flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
       padding: 64px;
       padding-top: 20px;
       padding-bottom: 20px;
@@ -255,45 +280,51 @@
         background-position: center left;
       }
 
+      @media (max-width: $breakpoints-tiny) {
+        flex-wrap: wrap;
+      }
+
       > .col-1 {
         @include fonts-xs;
         display: flex;
         align-items: center;
 
         @media (max-width: $breakpoints-tiny) {
+          order: 2;
           justify-content: center;
         }
       }
 
-      > .col-2 {
-        @include fonts-xs;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      // > .col-2 {
+      //   @include fonts-xs;
+      //   display: flex;
+      //   flex-direction: row;
+      //   align-items: center;
 
-        @media (max-width: $breakpoints-md) {
-          margin-bottom: 8px;
-        }
+      //   @media (max-width: $breakpoints-md) {
+      //     margin-bottom: 8px;
+      //   }
 
-        @media (max-width: $breakpoints-tiny) {
-          justify-content: center;
-          flex-wrap: wrap;
-        }
+      //   @media (max-width: $breakpoints-tiny) {
+      //     justify-content: center;
+      //     flex-wrap: wrap;
+      //   }
 
-        > p {
-          margin-right: $sizes-size-14;
+      //   > p {
+      //     margin-right: $sizes-size-14;
 
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-      }
+      //     &:last-child {
+      //       margin-right: 0;
+      //     }
+      //   }
+      // }
 
       > .col-3 {
         display: flex;
         justify-content: flex-end;
 
         @media (max-width: $breakpoints-tiny) {
+          order: 1;
           margin-bottom: 8px;
           justify-content: center;
         }
@@ -322,9 +353,11 @@
 }
 
 .social-media {
+  margin-top: $sizes-size-12;
+  font-size: 1.5em;
+
   > * {
     margin-right: $sizes-size-9;
-    font-size: 1.5em;
 
     &:last-child {
       margin-right: 0;
