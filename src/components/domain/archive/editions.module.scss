@@ -55,7 +55,8 @@
       .conference { 
         display: flex;
         flex: 0 1 auto;
-        writing-mode: vertical-rl;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
         text-transform: uppercase;
         font-size: $sizes-size-4;
         padding: $gaps-gap-4 0;
