@@ -5,7 +5,7 @@ import css from './navigation.module.scss'
 import { Link as LinkType } from 'src/types/Link'
 import ArrowCollapse from 'src/assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
-import OnDemandVideoIcon from 'src/assets/icons/on_demand_video.svg';
+import OnDemandVideoIcon from 'src/assets/icons/on_demand_video.svg'
 
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
@@ -32,8 +32,16 @@ const Mobile = (props: any) => {
                 </div>
               ) : (
                 <div className={`${css['accordion-toggle']} ${css['no-children']}`}>
-                  <Link className="plain hover-underline" to={i.url}>
+                  <Link
+                    className={`plain hover-underline`}
+                    style={i.title === 'Watch' ? { display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' } : undefined}
+                    to={i.url}
+                    onClick={props.closeFoldout}
+                  >
                     {i.title}
+                    {i.title === 'Watch' && (
+                      <OnDemandVideoIcon style={{ fontSize: '1em' }} />
+                    )}
                   </Link>
                 </div>
               )}
@@ -52,7 +60,7 @@ const Mobile = (props: any) => {
                         return (
                           <ul key={child.title} className={css['category-items']}>
                             <li key={child.title}>
-                              <Link className="plain hover-underline" to={child.url}>
+                              <Link className="plain hover-underline" to={child.url} onClick={props.closeFoldout}>
                                 {child.title}
                               </Link>
                             </li>
@@ -72,8 +80,12 @@ const Mobile = (props: any) => {
 }
 
 export const Navigation = (props: any) => {
+  const closeFoldout = () => {
+    props.setFoldoutOpen(false)
+  }
+
   if (props.mobile) {
-    return <Mobile {...props} />
+    return <Mobile {...props} closeFoldout={closeFoldout} />
   }
 
   return (
@@ -84,24 +96,24 @@ export const Navigation = (props: any) => {
           const hasChildren = i.links && i.links.length > 0
 
           const link = (() => {
-            let className = `${css['foldout-link']} bold`;
+            let className = `${css['foldout-link']} bold`
 
-            const isWatch = i.title === 'Watch';
+            const isWatch = i.title === 'Watch'
 
             // Just keeping it simple since this is possibly a one-off thing - can generalize later if needed
             if (isWatch) {
               className += ` ${css['highlight']}`
             } else {
-              className += ` plain`;
+              className += ` plain`
             }
-          
+
             return (
-              <Link className={className} to={i.url}>
+              <Link className={className} to={i.url} onClick={closeFoldout}>
                 {i.title}
-                {isWatch && <OnDemandVideoIcon /> }
+                {isWatch && <OnDemandVideoIcon />}
               </Link>
-            );
-          })();
+            )
+          })()
 
           return (
             <li className="plain bold" key={primaryKey}>
@@ -129,7 +141,7 @@ export const Navigation = (props: any) => {
 
                           return (
                             <li key={subKey}>
-                              <Link className={`${css['foldout-link']} plain`} to={c.url}>
+                              <Link className={`${css['foldout-link']} plain`} to={c.url} onClick={closeFoldout}>
                                 {c.title}
                               </Link>
                             </li>

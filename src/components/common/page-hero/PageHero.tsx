@@ -123,15 +123,15 @@ export const PageHero = (props: PageHeroProps) => {
     [currentScene, setCurrentScene, props.scenes]
   )
 
-  React.useEffect(() => {
-    if (props.scenes) {
-      const timeout = setTimeout(() => {
-        setNextScene(1)
-      }, 1000 * 5)
+  // React.useEffect(() => {
+  //   if (props.scenes) {
+  //     const timeout = setTimeout(() => {
+  //       setNextScene(1)
+  //     }, 1000 * 8)
 
-      return () => clearTimeout(timeout)
-    }
-  }, [setNextScene])
+  //     return () => clearTimeout(timeout)
+  //   }
+  // }, [setNextScene])
 
   return (
     <div id="page-hero" className={className} style={style}>

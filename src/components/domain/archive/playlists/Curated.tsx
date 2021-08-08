@@ -106,9 +106,11 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
             })}
           </Slider>
 
-          <LinkButton to={'/archive/playlists'} className={`${css['button']} white sm`}>
-            View more <ArrowRight />
-          </LinkButton>
+          {props.viewMore &&
+            <LinkButton to={'/archive/playlists'} className={`${css['button']} white sm`}>
+              View more <ArrowRight />
+            </LinkButton>
+          }
         </div>
       </div>
     </div>

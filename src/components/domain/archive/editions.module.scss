@@ -7,59 +7,67 @@
     flex-direction: column;
   }
 
-  .numbers { 
+  .numbers {
     display: flex;
     flex-direction: column;
 
     @media (max-width: $breakpoints-md) {
       order: 3;
       flex-direction: row;
-      align-items: center; 
+      align-items: center;
       justify-content: center;
       margin-top: $gaps-gap-4;
     }
 
-    .edition { 
+    .edition {
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      align-items: center; 
+      align-items: center;
       justify-content: center;
 
-      .number { 
+      .number {
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
         font-size: $sizes-size-7;
         padding: 0 $gaps-gap-4;
+
+        @media (max-width: $breakpoints-lg) {
+          @include fonts-lg-fixed;
+        }
       }
 
-      .conference { 
+      .conference {
         display: none;
       }
     }
 
-    .selected { 
+    .selected {
       @extend .edition;
       cursor: auto;
 
-      .number { 
+      .number {
         @extend .number;
         background: $colors-monochrome-3;
         border-radius: 50%;
         height: 48px;
         width: 48px;
         font-size: $sizes-size-10;
+
+        @media (max-width: $breakpoints-lg) {
+          @include fonts-xl-fixed;
+        }
       }
 
-      .conference { 
+      .conference {
         display: flex;
         flex: 0 1 auto;
         writing-mode: vertical-rl;
         text-transform: uppercase;
         font-size: $sizes-size-4;
         padding: $gaps-gap-4 0;
-        color: #BCBFCA;
+        color: #bcbfca;
 
         @media (max-width: $breakpoints-md) {
           display: none;
@@ -71,7 +79,7 @@
   .image {
     flex: 0 1 45%;
     padding: 0 $gaps-gap-8;
-    
+
     @media (max-width: $breakpoints-md) {
       flex: 0 1 auto;
       padding: 0;

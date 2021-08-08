@@ -132,7 +132,7 @@ export const Menu = (props: any) => {
           <Left navigationData={navigation} />
           <LanguageToggle />
         </div>
-        <Navigation navigationData={navigation} mobile={true} />
+        <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={navigation} mobile={true} />
       </Foldout>
     </div>
   )
