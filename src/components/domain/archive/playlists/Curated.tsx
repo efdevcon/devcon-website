@@ -2,9 +2,8 @@ import React from 'react'
 // import Slider from 'react-slick'
 import css from './curated.module.scss'
 import { BasicCard } from 'src/components/common/card'
-import { LinkButton } from 'src/components/common/link-button'
+import { Button } from 'src/components/common/button'
 import { Playlist } from 'src/types/Playlist'
-import { Link } from 'src/components/common/link'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Slider, useSlider } from 'src/components/common/slider'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -88,9 +87,9 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
             //     ? () => {
             //         return (
             //           <div className={css['view-more']}>
-            //             <LinkButton to={'/archive/playlists'} className={`${css['button']} sm`}>
+            //             <Button to={'/archive/playlists'} className={`${css['button']} sm`}>
             //               View more <ArrowRight />
-            //             </LinkButton>
+            //             </Button>
 
             //             <Link to="/archive/playlists" className={css['view-more-mobile']}>
             //               View More
@@ -107,9 +106,9 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
           </Slider>
 
           {props.viewMore &&
-            <LinkButton to={'/archive/playlists'} className={`${css['button']} white sm`}>
+            <Button to={'/archive/playlists'} className={`${css['button']} white sm`}>
               View more <ArrowRight />
-            </LinkButton>
+            </Button>
           }
         </div>
       </div>

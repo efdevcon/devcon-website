@@ -11,7 +11,7 @@ type LinkProps = {
   [key: string]: any
 }
 
-export const Link = ({ children, indicateExternal, external, allowDrag, to, ...rest }: LinkProps) => {
+export const Link = React.forwardRef(({ children, indicateExternal, external, allowDrag, to, ...rest }: LinkProps, ref: any) => {
   const isMailTo = to.startsWith('mailto:')
   const dragging = React.useRef(false)
 
@@ -40,7 +40,7 @@ export const Link = ({ children, indicateExternal, external, allowDrag, to, ...r
 
   if (isMailTo) {
     return (
-      <a href={to} {...linkAttributes}>
+      <a href={to} ref={ref} {...linkAttributes}>
         {children}
       </a>
     )
@@ -54,15 +54,15 @@ export const Link = ({ children, indicateExternal, external, allowDrag, to, ...r
   // GatsbyLink is only used for internal links, as per the gatsby documentation
   if (isExternal) {
     return (
-      <a href={to} {...linkAttributes} target="_blank" rel="noopener noreferrer">
+      <a href={to} ref={ref} {...linkAttributes} target="_blank" rel="noopener noreferrer">
         {children} {indicateExternal && <NorthEast style={{ fontSize: '0.5rem' }} />}
       </a>
     )
   }
 
   return (
-    <GatsbyLink to={to} {...linkAttributes}>
+    <GatsbyLink to={to} ref={ref} {...linkAttributes}>
       {children}
     </GatsbyLink>
   )
-}
+});

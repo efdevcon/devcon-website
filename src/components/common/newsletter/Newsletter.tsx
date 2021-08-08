@@ -4,6 +4,7 @@ import { useFormField } from 'src/hooks/useFormField'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './newsletter.module.scss'
 import { Alert } from '../alert'
+import { Button } from 'src/components/common/button';
 
 export interface Result {
   result: 'success' | 'error'
@@ -61,9 +62,9 @@ export const Newsletter = () => {
                   placeholder={intl.formatMessage({ id: 'newsletter_enter' })}
                   {...emailField}
                 />
-                <button className={`white ${css['button']}`} type="submit">
+                <Button className={`white ${css['button']}`} type="submit">
                   {intl.formatMessage({ id: 'newsletter_subscribe' })}
-                </button>
+                </Button>
               </div>
             </>
           )}

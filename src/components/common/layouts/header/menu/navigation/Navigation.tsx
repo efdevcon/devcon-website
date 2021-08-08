@@ -10,6 +10,11 @@ import OnDemandVideoIcon from 'src/assets/icons/on_demand_video.svg'
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
 
+  const closeFoldout = () => {
+    props.setFoldoutOpen(false)
+  }
+
+
   return (
     <div className={css['mobile-navigation']}>
       <ul className={css['accordion']}>
@@ -36,7 +41,7 @@ const Mobile = (props: any) => {
                     className={`plain hover-underline`}
                     style={i.title === 'Watch' ? { display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' } : undefined}
                     to={i.url}
-                    onClick={props.closeFoldout}
+                    onClick={closeFoldout}
                   >
                     {i.title}
                     {i.title === 'Watch' && (
@@ -60,7 +65,7 @@ const Mobile = (props: any) => {
                         return (
                           <ul key={child.title} className={css['category-items']}>
                             <li key={child.title}>
-                              <Link className="plain hover-underline" to={child.url} onClick={props.closeFoldout}>
+                              <Link className="plain hover-underline" to={child.url} onClick={closeFoldout}>
                                 {child.title}
                               </Link>
                             </li>
@@ -80,12 +85,8 @@ const Mobile = (props: any) => {
 }
 
 export const Navigation = (props: any) => {
-  const closeFoldout = () => {
-    props.setFoldoutOpen(false)
-  }
-
   if (props.mobile) {
-    return <Mobile {...props} closeFoldout={closeFoldout} />
+    return <Mobile {...props} />;
   }
 
   return (
@@ -108,7 +109,7 @@ export const Navigation = (props: any) => {
             }
 
             return (
-              <Link className={className} to={i.url} onClick={closeFoldout}>
+              <Link className={className} to={i.url}>
                 {i.title}
                 {isWatch && <OnDemandVideoIcon />}
               </Link>
@@ -141,7 +142,7 @@ export const Navigation = (props: any) => {
 
                           return (
                             <li key={subKey}>
-                              <Link className={`${css['foldout-link']} plain`} to={c.url} onClick={closeFoldout}>
+                              <Link className={`${css['foldout-link']} plain`} to={c.url}>
                                 {c.title}
                               </Link>
                             </li>

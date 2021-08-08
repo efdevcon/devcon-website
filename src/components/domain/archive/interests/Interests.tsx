@@ -4,7 +4,7 @@ import IconPlus from 'src/assets/icons/plus.svg'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import css from './interests.module.scss'
 import { chunkArray } from 'src/utils/chunk-array'
-import { Link } from 'src/components/common/link'
+import { Button } from 'src/components/common/button';
 import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { usePageContext } from 'src/context/page-context'
 
@@ -68,9 +68,9 @@ export const Interests = (props: any) => {
           })}
 
           <div className={css['clear']}>
-            <Link className={`${!hasSelectedTags ? 'disabled ' : ''}${css['continue']} font-sm button red`} to={`/archive/watch${queryString}`}>
-              <span>View talks</span> <IconArrowRight />
-            </Link>
+            <Button disabled={!hasSelectedTags} className={`${css['continue']} font-sm red`} to={`/archive/watch${queryString}`}>
+              <span className={css['text']}>View talks</span> <IconArrowRight className={`icon ${css['text-icon']}`} />
+            </Button>
 
             {hasSelectedTags && 
               <p className={`${css['clear']} bold text-underline`} onClick={() => setSelectedTags({})}>

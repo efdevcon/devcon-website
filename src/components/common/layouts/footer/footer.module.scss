@@ -135,6 +135,18 @@
 .container {
   border-top: 1px solid #e0e0e0;
 
+  &.archive {
+    .col-2 {
+      @media (max-width: $breakpoints-lg) {
+        margin-top: 0px !important;
+      }
+
+      @media (max-width: $breakpoints-tiny) {
+        margin-top: $gaps-gap-4 !important;
+      }
+    }
+  }
+
   .top-section {
     @include layout-section;
     position: relative;
@@ -354,7 +366,7 @@
 
 .social-media {
   margin-top: $sizes-size-12;
-  font-size: 1.5em;
+  @include fonts-lg-fixed;
 
   > * {
     margin-right: $sizes-size-9;

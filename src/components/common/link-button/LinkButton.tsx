@@ -1,6 +1,5 @@
 import React from 'react'
 import css from './link-button.module.scss'
-import { Link } from '../link'
 import { Button } from '../button'
 
 export const LinkButton = (props: any) => {
@@ -8,11 +7,9 @@ export const LinkButton = (props: any) => {
     if (props.className) className += ` ${props.className}`
 
   return (
-    <Link className={className} {...props}>
-        <Button className={className} {...props}>
-            {props.children}
-        </Button>
-    </Link>
+    <Button className={className} {...props}>
+        {props.children}
+    </Button>
   )
 }
 

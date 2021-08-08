@@ -15,6 +15,7 @@ import { Interests } from './interests'
 import { Link } from 'src/components/common/link'
 import WatchIcon from 'src/assets/icons/local_play.svg'
 import OnDemandVideoIcon from 'src/assets/icons/on_demand_video.svg';
+import { Button } from 'src/components/common/button'
 import { videoResolver } from 'src/gatsby/create-schema-customization/resolvers/archive'
 import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 
@@ -57,11 +58,11 @@ export const Archive = (props: ArchiveProps) => {
               const slug = `${video.slug}?playlist=${encodeURIComponent(staffpicks.title)}`
 
               return (
-                <Link to={slug} className={`button red ${css['call-to-action']}`}>
+                <Button to={slug} className={`red ${css['call-to-action']}`}>
                   <span className={css['watch-now']}>Watch Now</span>
                   
                   <OnDemandVideoIcon className={`icon ${css['watch-now-icon']}`} />
-                </Link>
+                </Button>
               )
             },
             content: () => {

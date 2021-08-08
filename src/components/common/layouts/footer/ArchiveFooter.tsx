@@ -51,12 +51,12 @@ export const ArchiveFooter = () => {
   }
 
   return (
-    <footer className={`footer ${css['container']}`}>
+    <footer className={`footer ${css['container']} ${css['archive']}`}>
       <div className={css['top-section']}>
         <div className={css['content']}>
           
           <div className={css['col-1']}>
-            <Link to={`/${lang}/`}>
+            <Link to={`/${lang}/`} style={{ maxWidth: '200px', minWidth: '130px', display: 'block' }}>
               <HeaderLogoArchive />
             </Link>
 

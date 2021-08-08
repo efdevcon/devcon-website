@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'src/components/common/link'
 import css from './button.module.scss'
 
 export const Button = (props: any) => {
@@ -18,7 +19,7 @@ export const Button = (props: any) => {
   }
 
   let style = props.style
-  let className = css['button']
+  let className = `${css['button']} animated`;
 
   if (props.className) {
     className = `${className} ${props.className}`
@@ -32,20 +33,45 @@ export const Button = (props: any) => {
     }
   }
 
-  return (
-    <button
-      ref={buttonRef}
-      {...props}
-      className={className}
-      onMouseMove={onMouseMove}
-      onMouseLeave={() => {
-        setX(0)
-        setY(0)
-      }}
-      style={style}
-    >
+  const formattedProps = {
+    ref: buttonRef,
+    ...props,
+    className: className,
+    onMouseMove: onMouseMove,
+    onMouseLeave: () =>{ 
+      setX(0)
+      setY(0)
+    },
+    style
+  }
+
+  const children = (
+    <>
       <span className={css['background']}></span>
       <span className={css['text']}>{props.children}</span>
+    </>
+  );
+
+  if (props.to) {
+    let linkClassName = `${formattedProps.className} button`;
+
+    if (props.disabled) linkClassName += ` disabled`;
+
+    return (
+      <Link
+        {...formattedProps}
+        className={linkClassName}
+      >
+        {children}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      {...formattedProps}
+    >
+      {children}
     </button>
   )
 }
