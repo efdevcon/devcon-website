@@ -13,6 +13,7 @@ import { Newsletter } from 'src/components/common/newsletter'
 import { usePageContext } from 'src/context/page-context'
 import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
+import { ArchiveFooter } from './ArchiveFooter'
 
 type SocialMedia = {
   onShare: () => void
@@ -48,7 +49,7 @@ export const Footer = () => {
   const lang = intl.locale
 
   // Temporary for demo purposes
-  if (context?.location.pathname.startsWith('/archive')) return null
+  if (context?.location.pathname.startsWith('/archive')) return <ArchiveFooter />
 
   return (
     <footer className={`footer ${css['container']}`}>
