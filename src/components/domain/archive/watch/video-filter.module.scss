@@ -31,7 +31,11 @@
     }
 
     .filter-container {
-      display: block;
+      // display: block;
+
+      > * {
+        display: block !important;
+      }
       // max-height: 600px !important;
     }
   }
@@ -43,9 +47,14 @@
 
   .filter-container {
     // max-height: 0px;
-    display: none;
-    overflow: hidden;
-    transition: all 0.6s;
+    // display: none;
+    // overflow: hidden;
+    // transition: all 0.6s;
+
+    > :not(.search) {
+      display: none;
+      overflow: hidden;
+    }
   }
 }
 
@@ -54,18 +63,22 @@
   align-items: center;
   margin-top: $gaps-gap-4;
 
-  button {
+  .continue-button {
     margin-right: $gaps-gap-3;
 
-    > span {
-      margin-right: $gaps-gap-4;
+    .text {
+      margin-right: $gaps-gap-2;
+    }
+
+    .text-icon {
+      position: relative;
     }
   }
 
   .clear {
     display: none;
     cursor: pointer;
-    padding: $gaps-gap-4;
+    padding: 10px;
     padding-left: 0px;
 
     @media (max-width: $breakpoints-lg) {
@@ -107,7 +120,7 @@
   padding-bottom: $gaps-gap-10;
 
   @media (max-width: $breakpoints-lg) {
-    padding-bottom: $gaps-gap-5 !important;
+    padding-bottom: 0px !important;
   }
 }
 
@@ -120,7 +133,7 @@
 }
 
 .tags {
-  padding-bottom: $gaps-gap-10 + $gaps-gap-10;
+  padding-bottom: $gaps-gap-10;
   border-bottom: none !important;
 
   @media (max-width: $breakpoints-lg) {

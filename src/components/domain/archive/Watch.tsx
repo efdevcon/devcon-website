@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { RefObject, useState } from 'react'
 import { Header } from 'src/components/common/layouts/header'
 import { Footer } from 'src/components/common/layouts/footer'
 import { SEO } from 'src/components/domain/seo'
@@ -17,6 +17,7 @@ import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { useLocation } from '@reach/router'
 import IconFilter from 'src/assets/icons/filter.svg'
 import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
+import { Loader } from 'src/components/common/loader'
 
 type WatchProps = {}
 
@@ -36,6 +37,7 @@ const resetOnPageNavigationHOC = (WatchComponent: React.ComponentType<WatchProps
 
 export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   const [gridViewEnabled, setGridViewEnabled] = React.useState(true)
+  const videoContainerElement = React.useRef<any>()
   const [from, setFrom] = useState(0)
   const defaultPageSize = 12
   const filterState = useVideoFilter()
@@ -76,6 +78,10 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
 
   const { data, isLoading, isError } = useArchiveSearch(qs, { from: from, size: defaultPageSize })
 
+  useEffect(() => {
+    console.log('Watch mounted')
+  }, [])
+
   // Reset pagination on filter change
   useEffect(() => {
     setFrom(0)
@@ -94,10 +100,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   }
   return (
     <div className={css['container']}>
-      <SEO 
-        title={ARCHIVE_TITLE}
-        description={ARCHIVE_DESCRIPTION} 
-        imageUrl={ARCHIVE_IMAGE_URL} />
+      <SEO title={ARCHIVE_TITLE} description={ARCHIVE_DESCRIPTION} imageUrl={ARCHIVE_IMAGE_URL} />
       <Header withStrip={false} />
       <PageHero
         title="Watch"
@@ -106,8 +109,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
       />
 
       <div className="section">
-        <div className='content'>
-
+        <div className="content">
           {/* Hide header div on Mobile */}
           <div className={`${css['header']}`}>
             <div className={`${css['filter']}`}>
@@ -140,9 +142,25 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
             <div className={`${css['filter']}`}>
               <VideoFilter {...filterState} />
             </div>
-            <div className={css['videos']}>
-              {isLoading && <div>Loading results..</div>}
-              {isError && <div>Unable to fetch videos..</div>}
+            <div className={css['videos']} ref={videoContainerElement}>
+              <Loader
+                // asOverlay
+                // relativeTo={videoContainerElement}
+                loading={isLoading}
+                error={isError}
+                noResults={data && data.items && data.items.length === 0}
+                messages={{
+                  error: {
+                    message: 'Could not fetch results - try again later.',
+                  },
+                  loading: {
+                    message: 'Applying filter...',
+                  },
+                  noResults: {
+                    message: 'No results matching this filter - try another',
+                  },
+                }}
+              />
 
               {data && data.items && (
                 <>

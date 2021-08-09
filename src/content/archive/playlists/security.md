@@ -1,7 +1,7 @@
 ---
 title: Security
 description: Security videos
-image: ../../../../static/assets/uploads/playlists/default.png
+image: ../../../../static/assets/uploads/playlists/security.png
 categories:
   - Topics
 curators:

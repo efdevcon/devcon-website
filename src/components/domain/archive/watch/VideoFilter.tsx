@@ -9,6 +9,7 @@ import queryString from 'query-string'
 import { usePageContext } from 'src/context/page-context'
 import IconSearch from 'src/assets/icons/search.svg'
 import { InputForm } from 'src/components/common/input-form'
+import { Button } from 'src/components/common/button';
 
 const queryStringToFilterState = (qs: string) => {
   // Extract params from query string
@@ -163,9 +164,9 @@ const Filters = (props: any) => {
 
         <div className={css['clear-container']}>
           {props.mobile && (
-            <button className="red bold" onClick={() => props.setOpen(false)}>
-              <span>Continue</span> <IconArrowRight />
-            </button>
+            <Button disabled={!combinedFilter} className={`${css['continue-button']} red bold`} onClick={() => props.setOpen(false)}>
+              <span className={css['text']}>Continue</span> <IconArrowRight className={`icon ${css['text-icon']}`} />
+            </Button>
           )}
 
         {combinedFilter && (

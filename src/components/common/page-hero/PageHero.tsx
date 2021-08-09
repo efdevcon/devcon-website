@@ -7,6 +7,7 @@ import useIsScrolled from 'src/hooks/useIsScrolled'
 import { usePageContext } from 'src/context/page-context'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
+import { Button } from 'src/components/common/button'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type NavigationLink = {

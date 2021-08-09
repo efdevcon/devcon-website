@@ -1,6 +1,7 @@
 import React from 'react'
 import SlickSlider from 'react-slick'
 import css from './slider.module.scss'
+import { Button } from 'src/components/common/button';
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
 
@@ -73,23 +74,23 @@ const Arrows = (props: any) => {
 
   return (
     <div className={css['arrows']}>
-      <button
+      <Button
         disabled={!canBack}
         className={className}
         aria-label="Slide left"
         onClick={() => props.sliderRef.current?.slickPrev()}
       >
         <ChevronLeft />
-      </button>
+      </Button>
 
-      <button
+      <Button
         disabled={!canNext}
         className={className}
         aria-label="Slide right"
         onClick={() => props.sliderRef.current?.slickNext()}
       >
         <ChevronRight />
-      </button>
+      </Button>
     </div>
   )
 }

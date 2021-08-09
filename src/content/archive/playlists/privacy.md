@@ -1,7 +1,7 @@
 ---
 title: Privacy
 description: Privacy videos
-image: ../../../../static/assets/uploads/playlists/default.png
+image: ../../../../static/assets/uploads/playlists/privacy.png
 categories:
   - Topics
 curators:
