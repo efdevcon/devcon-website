@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: 'Ethereum Foundation Values'
-description: 'N/A'
+description: 'Aya Miyaguchi, Executive Director of the Ethereum Foundation, discusses the values, philosophy, structure & purpose of the EF, as well as her history & thoughts on decentralization, and urges us to remember why we continue to build Ethereum.'
 youtubeUrl: 'https://youtu.be/R7FjX0GEiAM'
 ipfsHash: 'QmRVkynx93Hxyyp8FxzN5gzp3RoL7AmVkfEkzE1PF7nky1'
 imageUrl: /assets/uploads/videos/aya-miyaguchi.png
