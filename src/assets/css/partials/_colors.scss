@@ -74,7 +74,7 @@ $state-neutral-light: $monochrome-1;
   // For use by Button component (animates colors when hovering)
   --button-color: #{$main};
   --button-color-background: #{$monochrome-1};
-  --button-color-background-hover: #{darken($monochrome-1, 15%)};
+  --button-color-background-hover: #{darken($monochrome-1, 12%)};
 
   &.ghost {
     @include white;

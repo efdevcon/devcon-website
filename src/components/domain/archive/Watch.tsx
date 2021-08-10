@@ -130,7 +130,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
 
           <VideoFilterMobile {...filterState} />
 
-          <div className={`${css['sort']} ${css['mobile']}`}>
+          <div id="filter-sort" className={`${css['sort']} ${css['mobile']}`}>
             <Sort {...sortState} />
           </div>
 

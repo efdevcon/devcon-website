@@ -36,8 +36,10 @@ export const useFilter = (options: FilterOptions | undefined) => {
 
   if (!options) return [[], null] as [any[], null]
 
-  const wrappedSetActiveFilter = (value: string) => {
+  const wrappedSetActiveFilter = (value: string | any, setExact?: false) => {
     if (options.multiSelect) {
+      if (setExact) return setActiveFilterMulti(value)
+
       const nextActiveFilter = {
         ...activeFilterMulti,
         [value]: true,
