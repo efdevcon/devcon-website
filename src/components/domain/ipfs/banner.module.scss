@@ -17,7 +17,8 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
+    flex-shrink: 0;
 
     svg {
       padding-top: 2px;
@@ -34,29 +35,37 @@
     flex-wrap: nowrap;
     align-items: center;
     
-    .icon {
-      flex-shrink: 0;
+    > p {
+      svg { 
+        fill: $colors-main;
+        stroke: white;
+        margin-top: $gaps-gap-1;
+      }
     }
 
-    .hash { 
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .truncated,
+    .hash {
+      margin: 0 $gaps-gap-2;
     }
 
-    svg { 
-      fill: inherit;
-      stroke: white;
+    .hash {
+      display: flex;
+
+      @media (max-width: $breakpoints-sm) {
+        display: none;
+      }
     }
 
-    a {
-      flex-wrap: nowrap;
-      margin-left: $gaps-gap-2;
+    .truncated {
+      display: none;
+
+      @media (max-width: $breakpoints-sm) {
+        display: flex;
+      }
     }
 
-    a svg {
-      flex-wrap: nowrap;
-      margin-left: $gaps-gap-2;
+    .copy-icon {
+      cursor: pointer;
     }
   }
 
