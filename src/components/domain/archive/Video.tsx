@@ -19,6 +19,7 @@ import queryString from 'query-string'
 import moment from 'moment'
 import { UserProfile } from 'src/types/UserProfile'
 import { Avatar } from './Avatar'
+import { Banner } from '../ipfs'
 
 type VideoProps = {
   video: ArchiveVideo
@@ -170,6 +171,9 @@ export const Video = (props: VideoProps) => {
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>
+
+                    <Banner className={css['ipfs-banner']} cta='Watch on IPFS' hash={props.video.ipfsHash} learnMore />
+
                     <h1 className="font-xxl title">{video.title}</h1>
 
                     <div className={css['descriptors']}>
@@ -196,7 +200,7 @@ export const Video = (props: VideoProps) => {
                       <div className={css['text']}>{video.description}</div>
                     </div>
                   </div>
-
+                  
                   <Labels tags={video.tags} playlists={props.playlists} />
 
                   {video.profiles.length > 0 &&

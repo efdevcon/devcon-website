@@ -1,0 +1,114 @@
+@use 'src/assets/css/partials/index' as *;
+
+.container {
+  margin: 0;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #DDDDDD;
+  }
+
+  .cta {
+    @include fonts-semi-bold;
+    background: #F7E7E6;
+    color: #E55066;
+    padding: $gaps-gap-4;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;  
+
+    svg {
+      padding-top: 2px;
+    }
+
+    svg path {
+      fill: #E55066;
+    }
+  }
+
+  .link {
+    padding: $gaps-gap-4;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+    .icon {
+      flex-shrink: 0;
+    }
+
+    .hash { 
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    svg { 
+      fill: inherit;
+      stroke: white;
+    }
+
+    a {
+      flex-wrap: nowrap;
+      margin-left: $gaps-gap-2;
+    }
+
+    a svg {
+      flex-wrap: nowrap;
+      margin-left: $gaps-gap-2;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: $gaps-gap-1 $gaps-gap-4;
+    background: #F8F8F8;
+    border: 1px solid #DDDDDD;
+    border-top: 0;
+  }
+}
+
+.learn-more { 
+  cursor: pointer;
+  color: #E55066;
+  padding-left: $gaps-gap-2;
+}
+
+.modal-container {
+  > h4 {
+    @include fonts-xl;
+    font-family: $fonts-primary;
+    text-transform: uppercase;
+    margin-bottom: $gaps-gap-4;
+    padding-bottom: $gaps-gap-4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  > div {
+    max-width: 750px;
+    padding-right: $gaps-gap-8;
+
+    @media (max-width: $breakpoints-sm) {
+      padding-right: 0px;
+    }
+  }
+}
+
+.modal-content {
+  @include fonts-lg;
+
+  .lead {
+    @include fonts-xl;
+  }
+
+  > p {
+    margin-bottom: $gaps-gap-4;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
