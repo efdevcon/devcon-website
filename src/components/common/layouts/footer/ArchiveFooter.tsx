@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './footer.module.scss'
 import IconArrowUpward from 'src/assets/icons/arrow_upward.svg'
-import smallLogo from 'src/assets/images/footer-logo.svg'
+import smallLogo from 'src/assets/images/ef-logo.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
@@ -24,29 +24,29 @@ export const ArchiveFooter = () => {
         {
           title: 'Watch',
           url: '/archive/watch/',
-          type: 'link'
+          type: 'link',
         },
         {
           title: 'Playlists',
           url: '/archive/playlists/',
-          type: 'link'
+          type: 'link',
         },
         {
           title: 'Road to Devcon',
           url: 'https://www.devcon.org/',
-          type: 'link'
+          type: 'link',
         },
         {
           title: 'Forum',
           url: 'https://forum.devcon.org/',
-          type: 'link'
+          type: 'link',
         },
         {
           title: 'Blog',
           url: 'https://blog.ethereum.org/category/devcon/',
-          type: 'link'
-        }
-      ]
+          type: 'link',
+        },
+      ],
     }
   }
 
@@ -54,7 +54,6 @@ export const ArchiveFooter = () => {
     <footer className={`footer ${css['container']} ${css['archive']}`}>
       <div className={css['top-section']}>
         <div className={css['content']}>
-          
           <div className={css['col-1']}>
             <Link to={`/${lang}/`} style={{ maxWidth: '200px', minWidth: '130px', display: 'block' }}>
               <HeaderLogoArchive />
@@ -66,11 +65,10 @@ export const ArchiveFooter = () => {
           <div className={css['col-2']}>
             <div>
               <p className="semi-bold">About Devcon —</p>
+              <p>Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.</p>
               <p>
-                Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.
-              </p>
-              <p>
-                An intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.
+                An intensive introduction for new Ethereum explorers, a global family reunion for those already a part
+                of our ecosystem, and a source of energy and creativity for all.
               </p>
             </div>
           </div>
@@ -108,7 +106,6 @@ export const ArchiveFooter = () => {
               />
             </div>
           </div>
-
         </div>
       </div>
 

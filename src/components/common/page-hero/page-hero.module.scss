@@ -1,10 +1,7 @@
 @use 'src/assets/css/partials/index' as *;
 
 .hero {
-  position: sticky;
-  // "Pulls up" the entire section except for the page menu, effectively making it look like just the page menu is sticky
-  top: var(--negative-offset, -1000px);
-  z-index: 10;
+  position: relative;
   overflow: hidden;
   width: 100%;
   // padding-top: $gaps-gap-4;
@@ -89,17 +86,21 @@
 
   &.with-navigation {
     box-shadow: var(--header-shadow, 0px 4px 2px rgba(0, 0, 0, 0.15));
+    position: sticky;
+    // "Pulls up" the entire section except for the page menu, effectively making it look like just the page menu is sticky
+    top: var(--negative-offset, -1000px);
+    z-index: 10;
+
+    // Strip is always present on mobile (but not on desktop) - we have to account for that:
+    &.scrolled {
+      @media (max-width: $breakpoints-lg) {
+        top: calc(var(--negative-offset) + var(--strip-height));
+      }
+    }
   }
 
   &:not(.with-navigation) {
     // margin-bottom: $gaps-gap-4;
-  }
-
-  // Strip is always present on mobile (but not on desktop) - we have to account for that:
-  &.scrolled {
-    @media (max-width: $breakpoints-lg) {
-      top: calc(var(--negative-offset) + var(--strip-height));
-    }
   }
 
   &.custom-background {

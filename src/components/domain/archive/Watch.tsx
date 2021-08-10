@@ -78,10 +78,6 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
 
   const { data, isLoading, isError } = useArchiveSearch(qs, { from: from, size: defaultPageSize })
 
-  useEffect(() => {
-    console.log('Watch mounted')
-  }, [])
-
   // Reset pagination on filter change
   useEffect(() => {
     setFrom(0)
@@ -144,8 +140,6 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
             </div>
             <div className={css['videos']} ref={videoContainerElement}>
               <Loader
-                // asOverlay
-                // relativeTo={videoContainerElement}
                 loading={isLoading}
                 error={isError}
                 noResults={data && data.items && data.items.length === 0}

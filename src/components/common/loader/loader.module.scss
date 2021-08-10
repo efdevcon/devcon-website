@@ -8,12 +8,7 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
-  //   background: rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  //   transition: opacity 0.2s linear;
-  //   display: none;
-  //   justify-content: center;
-  //   align-items: center;
+  display: none;
 
   &.as-overlay {
     position: fixed;
@@ -22,8 +17,7 @@
   &.loading,
   &.no-results,
   &.error {
-    opacity: 1;
-    // display: flex;
+    display: block;
 
     .message {
       display: flex;
@@ -47,8 +41,9 @@
   }
 
   .message {
-    z-index: 1;
+    z-index: 10000;
     position: sticky;
+    top: var(--headerHeight, 54px);
     padding: $gaps-gap-2;
     background: $colors-main;
     color: white;
@@ -61,16 +56,16 @@
     align-items: center;
     justify-content: center;
     align-self: flex-start;
-    top: 54px;
 
     .text {
       margin-right: $gaps-gap-3;
     }
 
     @media (max-width: $breakpoints-lg) {
+      @include fonts-sm-fixed;
       position: fixed;
-      bottom: 0px;
-      top: auto;
+      // bottom: 0px;
+      // top: auto;
       left: 0px;
       right: 0px;
       z-index: 100;
