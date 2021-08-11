@@ -193,6 +193,13 @@
     width: calc(100% - #{$gap-6});
   }
 
+  // Fix weird issue with image not being flush with sides
+  &.no-quests {
+    :global(.gatsby-image-wrapper) {
+      width: 101% !important;
+    }
+  }
+
   &.past {
     filter: grayscale(0.8);
   }

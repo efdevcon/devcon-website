@@ -202,7 +202,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
                   imageUrl={data.allFile.nodes[0].childImageSharp.fluid}
                   description={intl.formatMessage({ id: 'rtd_quests_no_upcoming_description' })}
                   customReadMore={intl.formatMessage({ id: 'rtd_quests_create' })}
-                  className={`${css['card']}`}
+                  className={`${css['card']} ${css['no-quests']}`}
                 />
               </div>
             ) : (
