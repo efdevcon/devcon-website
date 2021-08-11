@@ -164,6 +164,10 @@
         padding-right: 0px;
       }
 
+      :global(.title) {
+        margin-top: $gaps-gap-2;
+      }
+
       .icons {
         display: flex;
         margin-top: $gaps-gap-4;

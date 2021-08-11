@@ -16,10 +16,7 @@ export const Playlists = () => {
 
   return (
     <div className={css['container']}>
-      <SEO 
-        title={ARCHIVE_TITLE}
-        description={ARCHIVE_DESCRIPTION} 
-        imageUrl={ARCHIVE_IMAGE_URL} />
+      <SEO title={ARCHIVE_TITLE} description={ARCHIVE_DESCRIPTION} imageUrl={ARCHIVE_IMAGE_URL} />
       <Header withStrip={false} />
 
       <PageHero
@@ -43,9 +40,15 @@ export const Playlists = () => {
 
         if (first) className = 'padding-bottom'
 
+        let playlist = playlists.filter(i => i.categories.includes(category))
+
+        if (category === 'Devcon') {
+          playlist.sort((a, b) => (a.title > b.title ? -1 : 1))
+        }
+
         return (
           <div key={category} className={className}>
-            <CuratedPlaylists borderless={first} title={category} items={playlists.filter(i => i.categories.includes(category))} />
+            <CuratedPlaylists borderless={first} title={category} items={playlist} />
           </div>
         )
       })}

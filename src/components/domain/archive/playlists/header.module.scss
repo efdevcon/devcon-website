@@ -29,6 +29,10 @@
       margin-bottom: $gaps-gap-6;
     }
 
+    :global(.title) {
+      margin-top: $gaps-gap-2;
+    }
+
     .controls {
       display: inline-flex;
       line-height: 100%;

@@ -66,7 +66,7 @@ const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
               <div className="label">{playlist.videos.length} talks</div>
               <h2 className="title">{playlist.title}</h2>
               {playlist.curators && playlist.curators.length > 0 && (
-                <p className="text-uppercase">
+                <p className="text-uppercase font-sm">
                   By <span className="bold">{playlist.curators.join(', ')}</span>
                 </p>
               )}
@@ -141,15 +141,16 @@ export const Video = (props: VideoProps) => {
 
   return (
     <div className={archiveCss['container']}>
-      <SEO 
+      <SEO
         title={props.video.title}
-        description={props.video.description} 
+        description={props.video.description}
         imageUrl={imageUrl}
-        type='video.movie'
+        type="video.movie"
         author={{
           name: `Devcon ${video.edition}`,
-          url: `/archive/watch?edition=${video.edition}`
-        }} />
+          url: `/archive/watch?edition=${video.edition}`,
+        }}
+      />
       <Header withStrip={false} />
 
       <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>
@@ -171,8 +172,7 @@ export const Video = (props: VideoProps) => {
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>
-
-                    <Banner className={css['ipfs-banner']} cta='Watch on IPFS' hash={props.video.ipfsHash} learnMore />
+                    <Banner className={css['ipfs-banner']} cta="Watch on IPFS" hash={props.video.ipfsHash} learnMore />
 
                     <h1 className="font-xxl title">{video.title}</h1>
 
@@ -200,10 +200,10 @@ export const Video = (props: VideoProps) => {
                       <div className={css['text']}>{video.description}</div>
                     </div>
                   </div>
-                  
+
                   <Labels tags={video.tags} playlists={props.playlists} />
 
-                  {video.profiles.length > 0 &&
+                  {video.profiles.length > 0 && (
                     <div className={css['speakers']}>
                       <span className={`${css['title']} font-sm bold text-uppercase`}>About the speakers</span>
                       {video.profiles.map((i: UserProfile) => {
@@ -221,7 +221,7 @@ export const Video = (props: VideoProps) => {
                         )
                       })}
                     </div>
-                  }
+                  )}
                 </Tab>
 
                 {video.resources && <Tab title="Resources">Resources</Tab>}
