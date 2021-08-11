@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import IpfsIcon from 'src/assets/icons/ipfs.svg'
-import IconInfo from 'src/assets/icons/info.svg'
+import InfoIcon from 'src/assets/icons/info.svg'
+import CopyIcon from 'src/assets/icons/copy.svg'
 import { Link } from 'src/components/common/link'
 import { Modal } from 'src/components/common/modal'
 import css from './banner.module.scss'
+import { Tooltip } from 'src/components/common/tooltip'
+import { TruncateMiddle } from 'src/utils/formatting'
 
 interface Props {
   hash: string
@@ -13,8 +16,8 @@ interface Props {
 }
 
 export const Banner = (props: Props) => {
+    const [copied, setCopied] = useState(false)
     const [ipfsModal, setIpfsModal] = useState(false)
-    const [pinModal, setPinModal] = useState(false)
 
     let className = css['container']
     if (props.className) className += ` ${props.className}`
@@ -27,17 +30,38 @@ export const Banner = (props: Props) => {
                         {props.cta ?? 'IPFS'}
                     </Link>
                     <span className={css['learn-more']} role='button' onClick={() => setIpfsModal(true)}>
-                        <IconInfo />
+                        <InfoIcon />
                     </span>
                 </div>
                 <div className={css['link']}>
-                    <p className={css['icon']}>
+                    <p>
                         <IpfsIcon />
                     </p>
+                    <p className={css['truncated']}>
+                        {TruncateMiddle(props.hash)}
+                    </p>
                     <p className={css['hash']}>
-                        <Link to={`https://ipfs.io/ipfs/${props.hash}`} indicateExternal>
-                            {props.hash}
-                        </Link>
+                        {props.hash}
+                    </p>
+                    <p>
+                        <Tooltip arrow={true} visible={copied} content={<p>Copied hash to clipboard</p>}>
+                            <span 
+                                className={css['copy-icon']}
+                                role='button'
+                                onClick={() => {
+                                if (window?.navigator?.clipboard) {
+                                    navigator.clipboard.writeText(props.hash)
+                                    setCopied(true)
+                    
+                                    setTimeout(() => {
+                                    setCopied(false)
+                                    }, 800)
+                                }
+                                }}
+                            >
+                                <CopyIcon />
+                            </span>
+                        </Tooltip>
                     </p>
                 </div>
 
@@ -47,8 +71,9 @@ export const Banner = (props: Props) => {
                         <div className={css['modal-content']}>
                             <p>Let's just start with a one-line definition of IPFS:</p>
                             <p className={css['lead']}>IPFS is a distributed system for storing and accessing files, websites, applications, and data.</p>
-
-                            <p>Learn more about <Link to='https://docs.ipfs.io/' indicateExternal>IPFS</Link>.</p>
+                            <p className='semi-bold'>Why Distribute Content?</p>
+                            <p>Help make devcon content less reliant on centralized platforms that may not be accessible by users around the world. Utilizing decentralized systems we can ensure that devcon content is always available to those interested in learning more about Ethereum regardless of intermediaries.</p>
+                            <p><Link to='https://docs.ipfs.io/' indicateExternal>Learn more about IPFS</Link></p>
                         </div>
                     </div>
                 </Modal>
@@ -57,22 +82,11 @@ export const Banner = (props: Props) => {
             <div className={css['bottom']}>
                 <p>
                     Help decentralize Devcon content by pinning this video on IPFS.
-                    <span className={css['learn-more']} role='button' onClick={() => setPinModal(true)}>
+                    <span className={css['learn-more']} role='button' onClick={() => setIpfsModal(true)}>
                         Learn More
                     </span>
                 </p>
-                <Modal open={pinModal} close={() => setPinModal(false)}>
-                    <div className={css['modal-container']}>
-                        <h4>Pin content to IPFS — </h4>
-                        <div className={css['modal-content']}>
-                            <p className={css['lead']}>Pinning is a very important concept in IPFS.</p>
-                            <p>IPFS nodes treat the data they store like a cache, meaning that there is no guarantee that the data will continue to be stored. Pinning a CID (hash) tells an IPFS node that the data is important and mustn’t be thrown away. You should pin any content you consider important, to ensure that content is retained long-term. Since data important to someone else may not be important to you, pinning lets you have control over the disk space and data retention you need.</p>
-                            <p>Learn more about <Link to='https://dweb-primer.ipfs.io/files-on-ipfs/pin-files' indicateExternal>pinning content on IPFS</Link>.</p>
-                        </div>
-                    </div>
-                </Modal>
             </div>
-
             )}
         </div>
     )

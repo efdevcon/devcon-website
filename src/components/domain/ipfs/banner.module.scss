@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid #DDDDDD;
+    
+    @media (max-width: $breakpoints-sm) {
+      justify-content: flex-start;
+    }
   }
 
   .cta {
@@ -17,7 +21,8 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
+    flex-shrink: 0;
 
     svg {
       padding-top: 2px;
@@ -33,30 +38,49 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+
+    @media (max-width: $breakpoints-sm) {
+      flex-grow: 1;
+    }
     
-    .icon {
-      flex-shrink: 0;
+    > p {
+      &:last-of-type {
+        @media (max-width: $breakpoints-sm) {
+          margin-left: auto;
+        }
+      }
+
+      svg { 
+        fill: $colors-main;
+        stroke: white;
+        margin-top: $gaps-gap-1;
+      }
     }
 
-    .hash { 
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .truncated,
+    .hash {
+      margin: 0 $gaps-gap-2;
     }
 
-    svg { 
-      fill: inherit;
-      stroke: white;
+    .hash {
+      display: flex;
+
+      @media (max-width: $breakpoints-sm) {
+        display: none;
+      }
     }
 
-    a {
-      flex-wrap: nowrap;
-      margin-left: $gaps-gap-2;
+    .truncated {
+      display: none;
+
+      @media (max-width: $breakpoints-sm) {
+        @include fonts-semi-bold;
+        display: flex;
+      }
     }
 
-    a svg {
-      flex-wrap: nowrap;
-      margin-left: $gaps-gap-2;
+    .copy-icon {
+      cursor: pointer;
     }
   }
 
