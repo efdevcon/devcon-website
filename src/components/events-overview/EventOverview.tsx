@@ -14,7 +14,7 @@ export function EventOverview(props: EventOverviewProps) {
     const start = moment.utc(event.startDate)
     const end = moment.utc(event.endDate)
 
-    if (start.day() === end.day()) {
+    if (start.day() === end.day() && start.month() === end.month()) {
       return start.format('MMM DD YYYY')
     }
     if (start.month() === end.month()) {
