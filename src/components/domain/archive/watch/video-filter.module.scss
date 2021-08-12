@@ -103,7 +103,7 @@
 .search,
 .devcon,
 .expertise,
-.tags {
+.categories {
   padding-top: $gaps-gap-5;
   border-bottom: 1px solid $colors-monochrome-5;
 
@@ -128,11 +128,11 @@
   padding-bottom: $gaps-gap-10;
 }
 
-.expertise {
+.categories {
   padding-bottom: $gaps-gap-10;
 }
 
-.tags {
+.expertise {
   padding-bottom: $gaps-gap-10;
   border-bottom: none !important;
 

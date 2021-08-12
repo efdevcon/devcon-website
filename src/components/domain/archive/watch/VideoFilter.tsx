@@ -152,6 +152,11 @@ const Filters = (props: any) => {
         />
       </div>
 
+      <div className={css['categories']}>
+        <p className="bold font-xs text-uppercase">Categories:</p>
+        <Filter {...tagsFilterState} />
+      </div>
+
       <div className={css['devcon']}>
         <p className="bold font-xs text-uppercase">Devcon:</p>
         <Filter {...editionFilterState} />
@@ -160,11 +165,6 @@ const Filters = (props: any) => {
       <div className={css['expertise']}>
         <p className="bold font-xs text-uppercase">Expertise:</p>
         <Filter {...expertiseFilterState} />
-      </div>
-
-      <div className={css['tags']}>
-        <p className="bold font-xs text-uppercase">Categories:</p>
-        <Filter {...tagsFilterState} />
 
         <div className={css['clear-container']}>
           {props.mobile && (
