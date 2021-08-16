@@ -1,4 +1,4 @@
-import React, { RefObject, useState } from 'react'
+import React, { useState } from 'react'
 import { Header } from 'src/components/common/layouts/header'
 import { Footer } from 'src/components/common/layouts/footer'
 import { SEO } from 'src/components/domain/seo'

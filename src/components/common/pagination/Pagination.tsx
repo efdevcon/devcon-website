@@ -30,7 +30,7 @@ export const Pagination = (props: Props) => {
     }
 
     for (let i = 1; i <= totalPages; i++) {
-      if (i == 1 || i == totalPages || (i >= left && i < right)) {
+      if (i === 1 || i === totalPages || (i >= left && i < right)) {
         pages.push(i)
       }
     }

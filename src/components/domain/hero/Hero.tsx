@@ -9,7 +9,6 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { TITLE } from 'src/utils/constants'
 import { Link } from 'src/components/common/link'
 import { CallToAction } from './call-to-action'
-import { Button } from 'src/components/common/button'
 
 const parallax = (intersectionRatio: any) => {
   return {

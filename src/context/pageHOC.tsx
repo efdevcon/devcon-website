@@ -1,5 +1,5 @@
 import React from 'react'
-import { ToNavigationData, ToNotification, ToPage, ToTags } from 'src/context/query-mapper'
+import { ToNavigationData, ToNotification, ToPage } from 'src/context/query-mapper'
 import { PageContext } from './page-context'
 
 type pageProps = {

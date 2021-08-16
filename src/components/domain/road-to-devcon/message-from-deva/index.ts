@@ -1,1 +1,0 @@
-export { MessageFromDeva } from './MessageFromDeva'

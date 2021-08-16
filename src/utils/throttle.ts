@@ -1,4 +1,4 @@
-export default (func: Function, limit: number): Function => {
+export const Throttle = (func: Function, limit: number): Function => {
   let inThrottle: boolean
 
   return function (this: any): any {

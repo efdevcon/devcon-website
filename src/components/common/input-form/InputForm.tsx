@@ -36,13 +36,13 @@ export function InputForm(props: InputFormProps) {
     }, props.timeout)
 
     return () => clearTimeout(delayDebounceFn)
-  }, [value])
+  }, [props, value])
 
   useEffect(() => {
     if (props.autoFocus && ref.current) {
       ref.current.focus()
     }
-  }, [props.autoFocus])
+  }, [ref, props.autoFocus])
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setValue(event.target.value)

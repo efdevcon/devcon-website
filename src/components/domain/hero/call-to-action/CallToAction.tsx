@@ -67,7 +67,7 @@ export const CallToAction = (props: CTAProps) => {
       <div className={css['container']}>
         <div className={css['content']}>
           <div className={css['icon']}>
-            <img src={ctaSrc} />
+            <img src={ctaSrc} alt='Call to action icon' />
           </div>
 
           <div className={css['slider']}>

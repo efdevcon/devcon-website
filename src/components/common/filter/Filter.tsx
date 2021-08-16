@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React from 'react'
 import css from './filter.module.scss'
 import { Dropdown } from 'src/components/common/dropdown'
 import IconCheck from 'src/assets/icons/check_circle.svg'

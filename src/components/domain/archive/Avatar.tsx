@@ -16,7 +16,7 @@ export const Avatar = (props: Props) => {
 
   return (
     <div className={className}>
-      {props.profile.imageUrl && <img src={props.profile.imageUrl} />}
+      {props.profile.imageUrl && <img src={props.profile.imageUrl} alt={props.profile.name} />}
       {!props.profile.imageUrl && <p>{initials}</p>}
     </div>
   )

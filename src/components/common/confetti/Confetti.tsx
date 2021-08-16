@@ -1,4 +1,4 @@
-import React, { useRef, useImperativeHandle, useEffect } from 'react'
+import React, { useRef, useImperativeHandle } from 'react'
 import confetti from 'canvas-confetti'
 import css from './confetti.module.scss'
 
