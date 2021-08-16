@@ -12,7 +12,7 @@ export const useOnOutsideClick = <T extends HTMLElement = HTMLElement>(
       if (!el || el.contains(event.target as Node)) {
         return
       }
-      
+
       handler(event)
     }
 

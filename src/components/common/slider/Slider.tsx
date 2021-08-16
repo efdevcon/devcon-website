@@ -1,7 +1,7 @@
 import React from 'react'
 import SlickSlider from 'react-slick'
 import css from './slider.module.scss'
-import { Button } from 'src/components/common/button';
+import { Button } from 'src/components/common/button'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
 

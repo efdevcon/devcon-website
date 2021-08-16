@@ -39,7 +39,7 @@ export function InputForm(props: InputFormProps) {
   }, [value])
 
   useEffect(() => {
-    if (props.autoFocus && ref.current) { 
+    if (props.autoFocus && ref.current) {
       ref.current.focus()
     }
   }, [props.autoFocus])
@@ -70,7 +70,7 @@ export function InputForm(props: InputFormProps) {
         <input
           ref={ref}
           className="font-md-fixed"
-          type={props.type ?? "text"}
+          type={props.type ?? 'text'}
           id={id}
           value={value}
           placeholder={props.placeholder}

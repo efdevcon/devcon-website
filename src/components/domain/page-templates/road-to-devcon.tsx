@@ -134,7 +134,7 @@ export const query = graphql`
     ...EventsData
     ...MeetupData
     ...DipsData
-    
+
     ...Categories
     ...FAQs
   }

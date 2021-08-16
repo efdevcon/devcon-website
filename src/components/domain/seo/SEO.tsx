@@ -13,7 +13,7 @@ interface SEOProps {
   lang?: string
   canonicalUrl?: string
   type?: string
-  author?: { 
+  author?: {
     name?: string
     url?: string
   }
@@ -75,14 +75,15 @@ export function SEO(props: SEOProps) {
         {image && <meta property="og:image" content={image} />}
         {canonical && <link rel="canonical" href={canonical} />}
         {props.author?.name && <link itemProp="name" href={props.author?.name} />}
-        {props.author?.url && <link itemProp="url" href={props.author.url} />}          
+        {props.author?.url && <link itemProp="url" href={props.author.url} />}
 
-        {props.author?.name || props.author?.url && 
-        <span itemProp="author" itemScope itemType="http://schema.org/Person">
-          {props.author?.name && <link itemProp="name" href={props.author?.name} />}
-          {props.author?.url && <link itemProp="url" href={props.author.url} />}          
-        </span>
-        }
+        {props.author?.name ||
+          (props.author?.url && (
+            <span itemProp="author" itemScope itemType="http://schema.org/Person">
+              {props.author?.name && <link itemProp="name" href={props.author?.name} />}
+              {props.author?.url && <link itemProp="url" href={props.author.url} />}
+            </span>
+          ))}
       </Helmet>
 
       <Twitter title={title} description={description} image={image} />

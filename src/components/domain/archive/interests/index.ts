@@ -1,1 +1,1 @@
-export { Interests } from './Interests';
+export { Interests } from './Interests'

@@ -82,7 +82,7 @@ export function mapToDIP(source: any): DIP {
 }
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...DipsData
     ...Notification

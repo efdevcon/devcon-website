@@ -8,21 +8,16 @@ type Props = {
 }
 
 export const Avatar = (props: Props) => {
-    let className = css['avatar']
-    if (props.className) className += ` ${props.className}`
+  let className = css['avatar']
+  if (props.className) className += ` ${props.className}`
 
-    const split = props.profile.name.trim().split(" ")
-    const initials = split.map(i => i.charAt(0).toUpperCase())
+  const split = props.profile.name.trim().split(' ')
+  const initials = split.map(i => i.charAt(0).toUpperCase())
 
-    return (
-        <div className={className}>
-            {props.profile.imageUrl && 
-                <img src={props.profile.imageUrl} />
-            }
-            {!props.profile.imageUrl && 
-                <p>{initials}</p>
-            }
-        </div>
-        
-    )
+  return (
+    <div className={className}>
+      {props.profile.imageUrl && <img src={props.profile.imageUrl} />}
+      {!props.profile.imageUrl && <p>{initials}</p>}
+    </div>
+  )
 }

@@ -19,7 +19,7 @@ export const Button = (props: any) => {
   }
 
   let style = props.style
-  let className = `${css['button']} animated`;
+  let className = `${css['button']} animated`
 
   if (props.className) {
     className = `${className} ${props.className}`
@@ -38,11 +38,11 @@ export const Button = (props: any) => {
     ...props,
     className: className,
     onMouseMove: onMouseMove,
-    onMouseLeave: () =>{ 
+    onMouseLeave: () => {
       setX(0)
       setY(0)
     },
-    style
+    style,
   }
 
   const children = (
@@ -50,28 +50,19 @@ export const Button = (props: any) => {
       <span className={css['background']}></span>
       <span className={css['text']}>{props.children}</span>
     </>
-  );
+  )
 
   if (props.to) {
-    let linkClassName = `${formattedProps.className} button`;
+    let linkClassName = `${formattedProps.className} button`
 
-    if (props.disabled) linkClassName += ` disabled`;
+    if (props.disabled) linkClassName += ` disabled`
 
     return (
-      <Link
-        {...formattedProps}
-        className={linkClassName}
-      >
+      <Link {...formattedProps} className={linkClassName}>
         {children}
       </Link>
-    );
+    )
   }
 
-  return (
-    <button
-      {...formattedProps}
-    >
-      {children}
-    </button>
-  )
+  return <button {...formattedProps}>{children}</button>
 }
