@@ -26,9 +26,9 @@ afterEach(async () => {
   await page.close()
 })
 
-it('should work', async () => {
-  await page.goto('http://localhost:8000/en')
-  await page.waitForSelector('[data-jest="hero"]')
-  await page.screenshot({ path: `screenshots/localhost.png` })
-  expect(await page.title()).toBe('Road to Devcon: The Ethereum developer conference')
-})
+// it('should work', async () => {
+//   await page.goto('http://localhost:8000/en')
+//   await page.waitForSelector('[data-jest="hero"]')
+//   await page.screenshot({ path: `screenshots/localhost.png` })
+//   expect(await page.title()).toBe('Road to Devcon: The Ethereum developer conference')
+// })
