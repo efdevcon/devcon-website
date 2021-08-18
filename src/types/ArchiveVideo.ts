@@ -8,7 +8,7 @@ export interface ArchiveVideo {
   relatedVideos: [ArchiveVideo]
   description: string
   youtubeUrl: string
-  // image?: string
+  image?: any
   imageUrl?: string
   ipfsHash: string
   duration: number
@@ -22,6 +22,8 @@ export interface ArchiveVideo {
 }
 
 export function mapToArchiveVideo(source: any) {
+  console.log(source, 'source lol')
+
   return {
     id: source.id,
     slug: source.fields.slug,
@@ -29,7 +31,7 @@ export function mapToArchiveVideo(source: any) {
     title: source.frontmatter.title,
     description: source.frontmatter.description,
     youtubeUrl: source.frontmatter.youtubeUrl,
-    // image: source.frontmatter.image,
+    image: source.frontmatter.image,
     imageUrl: source.frontmatter.imageUrl,
     ipfsHash: source.frontmatter.ipfsHash,
     duration: source.frontmatter.duration,

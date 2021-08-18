@@ -45,7 +45,8 @@ button {
     &.animated {
       &:not(.disabled),
       &:not(:disabled) {
-        &:hover {
+        &:hover,
+        &.hover {
           padding: calc(var(--padding-top-bottom) + 2px) calc(var(--padding-left-right) + 2px);
           border: none !important;
         }
@@ -80,6 +81,7 @@ button {
     }
 
     &.white {
+      &.hover,
       &:hover {
         @include colors-white-hover;
       }
@@ -90,6 +92,7 @@ button {
     }
 
     &.black {
+      &.hover,
       &:hover {
         @include colors-black-hover;
       }
@@ -100,6 +103,7 @@ button {
     }
 
     &.red {
+      &.hover,
       &:hover {
         @include colors-red-hover;
       }

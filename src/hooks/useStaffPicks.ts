@@ -38,6 +38,7 @@ export const useStaffPicks = (): Playlist => {
             imageUrl
             image {
               childImageSharp {
+                id
                 gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
               }
             }

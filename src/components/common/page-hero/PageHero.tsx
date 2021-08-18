@@ -124,6 +124,7 @@ export const PageHero = (props: PageHeroProps) => {
     [currentScene, setCurrentScene, props.scenes]
   )
 
+  // Auto scroll through images
   React.useEffect(() => {
     if (props.scenes) {
       const timeout = setTimeout(() => {
@@ -239,11 +240,15 @@ export const PageHero = (props: PageHeroProps) => {
 
         if (selected) className += ` ${css['active']}`
 
+        const optimizedImage = getImage(scene.image)
+
         return (
           <div key={i} className={className}>
-            <img src={scene.image} {...scene.imageProps} />
-            {/* Use optimized images asap */}
-            {/* <GatsbyImage image={getImage(scene.image)} {...scene.imageProps} placeholder="blurred" layout="fullWidth" /> */}
+            {optimizedImage ? (
+              <GatsbyImage image={optimizedImage} alt={scene.imageProps.alt} {...scene.imageProps} />
+            ) : (
+              <img src={scene.image} alt={scene.imageProps.alt} {...scene.imageProps} />
+            )}
           </div>
         )
       })}

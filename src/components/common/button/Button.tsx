@@ -19,13 +19,13 @@ export const Button = (props: any) => {
   }
 
   let style = props.style
-  let className = `${css['button']} animated`;
+  let className = `${css['button']} animated`
 
   if (props.className) {
     className = `${className} ${props.className}`
   }
 
-  if (x || y) {
+  if (x | y) {
     style = {
       ...props.style,
       '--mouse-x': x,
@@ -38,40 +38,63 @@ export const Button = (props: any) => {
     ...props,
     className: className,
     onMouseMove: onMouseMove,
-    onMouseLeave: () =>{ 
+    onMouseLeave: () => {
       setX(0)
       setY(0)
     },
-    style
+    style,
   }
+
+  // Some fun project when time allows: make buttons optionally flicker to bring attention to themselves :-)
+  // React.useEffect(() => {
+  //   if (props.flicker && x === 0) {
+  //     let frame: number
+  //     let timeout: NodeJS.Timeout
+
+  //     const step = () => {
+  //       setXFlicker(prev => {
+  //         const next = prev + 2
+
+  //         if (next < 100) {
+  //           frame = requestAnimationFrame(step)
+  //         } else {
+  //           timeout = setTimeout(() => {
+  //             setXFlicker(0)
+  //             frame = requestAnimationFrame(step)
+  //           }, 2000)
+  //         }
+
+  //         return next
+  //       })
+  //     }
+
+  //     frame = requestAnimationFrame(step)
+
+  //     return () => {
+  //       typeof frame !== undefined && cancelAnimationFrame(frame)
+  //       clearTimeout(timeout)
+  //     }
+  //   }
+  // }, [props.flicker, x])
 
   const children = (
     <>
       <span className={css['background']}></span>
       <span className={css['text']}>{props.children}</span>
     </>
-  );
+  )
 
   if (props.to) {
-    let linkClassName = `${formattedProps.className} button`;
+    let linkClassName = `${formattedProps.className} button`
 
-    if (props.disabled) linkClassName += ` disabled`;
+    if (props.disabled) linkClassName += ` disabled`
 
     return (
-      <Link
-        {...formattedProps}
-        className={linkClassName}
-      >
+      <Link {...formattedProps} className={linkClassName}>
         {children}
       </Link>
-    );
+    )
   }
 
-  return (
-    <button
-      {...formattedProps}
-    >
-      {children}
-    </button>
-  )
+  return <button {...formattedProps}>{children}</button>
 }
