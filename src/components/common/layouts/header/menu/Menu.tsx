@@ -49,7 +49,7 @@ const Buttons = (props: ButtonProps) => {
         }
 
         return (
-          <button key={button.key} className={`${className} plain ${button.className}`} onClick={button.onClick}>
+          <button key={button.key} aria-label={button.key} className={`${className} plain ${button.className}`} onClick={button.onClick}>
             {button.icon}
           </button>
         )

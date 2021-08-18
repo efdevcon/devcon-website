@@ -49,11 +49,11 @@ export const Search = (props: any) => {
           {!showSuggested &&
             data?.items?.length > 0 &&
             data.items.map(i => {
-              return <SearchResult slug={i.slug} title={i.title} />
+              return <SearchResult key={i.slug} slug={i.slug} title={i.title} />
             })}
           {showSuggested &&
             staffPicks.videos.map(i => {
-              return <SearchResult slug={i.slug} title={i.title} />
+              return <SearchResult key={i.slug} slug={i.slug} title={i.title} />
             })}
 
           <Link to={`/archive/watch?q=${searchQuery}`} className={`${css['result']} bold text-underline"`}>
