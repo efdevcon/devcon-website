@@ -169,11 +169,62 @@ export const Video = (props: VideoProps) => {
             </div>
 
             <div className={css['tabs-video']}>
+              {/* Only banner */}
+              <Banner className={css['ipfs-banner']} cta="Watch on IPFS" hash={props.video.ipfsHash} learnMore />
+
+              <div className={css['content']}>
+                    <h1 className="font-xxl title">{video.title}</h1>
+
+                    <div className={css['descriptors']}>
+                      {video.duration && (
+                        <p className={css['descriptor']}>
+                          <span>Duration:</span> {moment.utc(video.duration * 1000).format('HH:mm:ss')}
+                        </p>
+                      )}
+                      <p className={css['descriptor']}>
+                        <span>Speaker:</span> {video.speakers.join(', ')}
+                      </p>
+                      <p className={css['descriptor']}>
+                        <span>Type:</span> {video.type}
+                      </p>
+                      <p className={css['descriptor']}>
+                        <span>Expertise:</span> {video.expertise}
+                      </p>
+                      <p className={css['descriptor']}>
+                        <span>Event:</span> Devcon {video.edition}
+                      </p>
+                    </div>
+
+                    <div className={css['description']}>
+                      <div className={css['text']}>{video.description}</div>
+                    </div>
+                  </div>
+
+                  <Labels tags={video.tags} playlists={props.playlists} />
+
+                  {video.profiles.length > 0 && (
+                    <div className={css['speakers']}>
+                      <span className={`${css['title']} font-sm bold text-uppercase`}>About the speakers</span>
+                      {video.profiles.map((i: UserProfile) => {
+                        return (
+                          <div key={i.name} className={css['speaker']}>
+                            <Avatar profile={i} className={css['thumbnail']} />
+                            <div className={css['text']}>
+                              <div className={css['title']}>
+                                <p className="bold">{i.name}</p>
+                                <p className="font-xs"> {i.role}</p>
+                              </div>
+                              <p className="font-sm">{i.description}</p>
+                            </div>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  )}
+{/* 
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>
-                    <Banner className={css['ipfs-banner']} cta="Watch on IPFS" hash={props.video.ipfsHash} learnMore />
-
                     <h1 className="font-xxl title">{video.title}</h1>
 
                     <div className={css['descriptors']}>
@@ -225,7 +276,7 @@ export const Video = (props: VideoProps) => {
                 </Tab>
 
                 {video.resources && <Tab title="Resources">Resources</Tab>}
-              </Tabs>
+              </Tabs> */}
             </div>
           </div>
 

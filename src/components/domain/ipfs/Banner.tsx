@@ -22,6 +22,8 @@ export const Banner = (props: Props) => {
   let className = css['container']
   if (props.className) className += ` ${props.className}`
 
+  if (!props.hash) return null
+  
   return (
     <div className={className}>
       <div className={css['top']}>
