@@ -14,10 +14,10 @@ type Props = {
 
 export const Pagination = (props: Props) => {
   const totalPages = Math.ceil(props.totalItems / props.itemsPerPage)
-  
+
   let className = css['container']
   if (props.className) className += ` ${props.className}`
-    
+
   function pagesToShow() {
     const offset = 2
     const left = props.selectedPage - offset
@@ -30,8 +30,8 @@ export const Pagination = (props: Props) => {
     }
 
     for (let i = 1; i <= totalPages; i++) {
-      if (i == 1 || i == totalPages || i >= left && i < right) {
-        pages.push(i);
+      if (i === 1 || i === totalPages || (i >= left && i < right)) {
+        pages.push(i)
       }
     }
 
@@ -39,49 +39,49 @@ export const Pagination = (props: Props) => {
     for (let i of pages) {
       if (l) {
         if (i - l === 2) {
-          truncatedPages.push(l + 1);
+          truncatedPages.push(l + 1)
         } else if (i - l !== 1) {
-          truncatedPages.push('...');
+          truncatedPages.push('...')
         }
       }
 
-      truncatedPages.push(i);
-      l = i;
+      truncatedPages.push(i)
+      l = i
     }
 
-    return truncatedPages;
+    return truncatedPages
   }
 
   return (
     <div className={className}>
       <ul className={css['pages']}>
         <li>
-          <span
-            role='button'
-            onClick={() => props.onSelectPage(props.selectedPage === 1 ? 1 : props.selectedPage - 1)}>
-              <ChevronLeft />
+          <span role="button" onClick={() => props.onSelectPage(props.selectedPage === 1 ? 1 : props.selectedPage - 1)}>
+            <ChevronLeft />
           </span>
         </li>
         {pagesToShow().map((i, index) => {
           return (
             <li key={`pagination_${className}_${index}`}>
               {typeof i === 'string' && <span className={css['truncated']}>...</span>}
-              {typeof i === 'number' && 
+              {typeof i === 'number' && (
                 <span
                   className={props.selectedPage === i ? css['selected'] : ''}
-                  role='button'
-                  onClick={() => props.onSelectPage(i)}>
-                    {i}
+                  role="button"
+                  onClick={() => props.onSelectPage(i)}
+                >
+                  {i}
                 </span>
-              }
+              )}
             </li>
           )
         })}
         <li>
-          <span 
-            role='button'
-            onClick={() => props.onSelectPage(props.selectedPage === totalPages ? totalPages : props.selectedPage + 1)}>
-              <ChevronRight />
+          <span
+            role="button"
+            onClick={() => props.onSelectPage(props.selectedPage === totalPages ? totalPages : props.selectedPage + 1)}
+          >
+            <ChevronRight />
           </span>
         </li>
       </ul>

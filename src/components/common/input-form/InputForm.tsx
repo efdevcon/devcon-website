@@ -36,13 +36,13 @@ export function InputForm(props: InputFormProps) {
     }, props.timeout)
 
     return () => clearTimeout(delayDebounceFn)
-  }, [value])
+  }, [props, value])
 
   useEffect(() => {
-    if (props.autoFocus && ref.current) { 
+    if (props.autoFocus && ref.current) {
       ref.current.focus()
     }
-  }, [props.autoFocus])
+  }, [ref, props.autoFocus])
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setValue(event.target.value)
@@ -70,7 +70,7 @@ export function InputForm(props: InputFormProps) {
         <input
           ref={ref}
           className="font-md-fixed"
-          type={props.type ?? "text"}
+          type={props.type ?? 'text'}
           id={id}
           value={value}
           placeholder={props.placeholder}

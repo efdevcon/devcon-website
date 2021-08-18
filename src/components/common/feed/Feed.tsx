@@ -9,17 +9,6 @@ import { FilterOptions } from 'src/components/common/filter/Filter'
 import { DropdownProps } from 'src/components/common/dropdown/Dropdown'
 import { useIntl } from 'gatsby-plugin-intl'
 import moment from 'moment'
-import { isFrontmatterMarkdownFileNode } from 'gatsby-transformer-remark-frontmatter'
-
-// Pagination <-- TODO
-// const itemsPerPage = 5
-// const [page] = React.useState(0)
-// const offset = page * itemsPerPage
-// const itemsInView = items.slice(offset, offset + itemsPerPage)
-//  <div className={css['load-more']}>
-//   <p>Load More</p>
-//   <IconArrowDownward />
-// </div>
 
 type FeedItem = {
   id?: string

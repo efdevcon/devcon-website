@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useIntl } from 'gatsby-plugin-intl'
 import css from './pwa.module.scss'
 import { Modal } from 'src/components/common/modal'
 import IconPlus from 'src/assets/icons/plus.svg'
@@ -12,7 +11,6 @@ const getIsPWAPossible = () => {
 
 export const PWAPrompt = (props: any) => {
   const [open, setOpen] = React.useState(false)
-  const intl = useIntl()
 
   const data = useStaticQuery(graphql`
     query {

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { pageHOC } from 'src/context/pageHOC'
 import themes from './themes.module.scss'
@@ -35,7 +34,7 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
   React.useEffect(() => {
     const items = search.search(searchQuery) as Array<SearchItem>
     setResults(items)
-  }, [searchQuery])
+  }, [search, searchQuery])
 
   function getUrl(i: any) {
     if (i.type === 'pages') {

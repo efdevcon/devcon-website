@@ -1,6 +1,5 @@
 import React from 'react'
 import { LanguageToggle } from './language-toggle'
-import IconVirus from 'src/assets/icons/virus.svg'
 import { Label } from 'src/components/common/label'
 import { usePageContext } from 'src/context/page-context'
 import css from './strip.module.scss'

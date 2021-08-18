@@ -4,7 +4,7 @@ import IconPlus from 'src/assets/icons/plus.svg'
 import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import css from './interests.module.scss'
 import { chunkArray } from 'src/utils/chunk-array'
-import { Button } from 'src/components/common/button';
+import { Button } from 'src/components/common/button'
 import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { usePageContext } from 'src/context/page-context'
 
@@ -14,7 +14,7 @@ export const Interests = (props: any) => {
   const tagRows = chunkArray(tags, 1 /*2*/) // Accounts currently missing, so we'll wait with chunking the array to take up more horizontal space in the meantime
   const queryString = useQueryStringer({ tags: selectedTags }, false)
 
-  const hasSelectedTags = Object.keys(selectedTags).length > 0;
+  const hasSelectedTags = Object.keys(selectedTags).length > 0
 
   return (
     <div className="section">
@@ -68,15 +68,19 @@ export const Interests = (props: any) => {
           })}
 
           <div className={css['clear']}>
-            <Button disabled={!hasSelectedTags} className={`${css['continue']} font-sm red`} to={`/archive/watch${queryString}`}>
+            <Button
+              disabled={!hasSelectedTags}
+              className={`${css['continue']} font-sm red`}
+              to={`/archive/watch${queryString}`}
+            >
               <span className={css['text']}>View talks</span> <IconArrowRight className={`icon ${css['text-icon']}`} />
             </Button>
 
-            {hasSelectedTags && 
+            {hasSelectedTags && (
               <p className={`${css['clear']} bold text-underline`} onClick={() => setSelectedTags({})}>
                 Clear All
               </p>
-            }
+            )}
           </div>
         </div>
       </div>

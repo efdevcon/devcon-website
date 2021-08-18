@@ -88,56 +88,6 @@ export const videoResolver = (dependencies: any) => ({
   args: {},
 })
 
-// export const relatedVideosResolver = {
-//   type: '[ArchiveVideo]',
-//   resolve: (source: any, args: any, context: any) => {
-//     const filter: any = {
-//       fields: {
-//         collection: {
-//           eq: 'videos',
-//         },
-//       },
-//       frontmatter: {
-//         tags: {
-//           in: source.tags,
-//         },
-//       }
-//     }
-
-//     return context.nodeModel
-//       .runQuery({
-//         query: {
-//           filter,
-//         },
-//         type: 'MarkdownRemark',
-//       })
-//       .then((videos: any) => {
-//         const subset = getRandomSubset(videos, Math.min(videos.length, 10));
-
-//         return subset.map((source: any) => {
-//           return {
-//             id: source.id,
-//             slug: source.fields.slug,
-//             edition: source.frontmatter.edition,
-//             title: source.frontmatter.title,
-//             description: source.frontmatter.description,
-//             youtubeUrl: source.frontmatter.youtubeUrl,
-//             image: source.frontmatter.image,
-//             ipfsHash: source.frontmatter.ipfsHash,
-//             duration: source.frontmatter.duration,
-//             expertise: source.frontmatter.expertise,
-//             type: source.frontmatter.type,
-//             track: source.frontmatter.track,
-//             tags: source.frontmatter.tags,
-//             speakers: source.frontmatter.speakers,
-//             profiles: source.frontmatter.profiles
-//           } as ArchiveVideo
-//         })
-//       })
-//   },
-//   args: {},
-// }
-
 export const distinctVideoTagsResolver = {
   type: '[String]',
   resolve: (source: any, args: any, context: any) => {

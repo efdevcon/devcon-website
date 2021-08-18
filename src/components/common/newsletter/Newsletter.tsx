@@ -4,7 +4,7 @@ import { useFormField } from 'src/hooks/useFormField'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './newsletter.module.scss'
 import { Alert } from '../alert'
-import { Button } from 'src/components/common/button';
+import { Button } from 'src/components/common/button'
 
 export interface Result {
   result: 'success' | 'error'

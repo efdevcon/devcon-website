@@ -14,7 +14,6 @@ const Mobile = (props: any) => {
     props.setFoldoutOpen(false)
   }
 
-
   return (
     <div className={css['mobile-navigation']}>
       <ul className={css['accordion']}>
@@ -39,14 +38,16 @@ const Mobile = (props: any) => {
                 <div className={`${css['accordion-toggle']} ${css['no-children']}`}>
                   <Link
                     className={`plain hover-underline`}
-                    style={i.title === 'Watch' ? { display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' } : undefined}
+                    style={
+                      i.title === 'Watch'
+                        ? { display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }
+                        : undefined
+                    }
                     to={i.url}
                     onClick={closeFoldout}
                   >
                     {i.title}
-                    {i.title === 'Watch' && (
-                      <OnDemandVideoIcon style={{ fontSize: '1em' }} />
-                    )}
+                    {i.title === 'Watch' && <OnDemandVideoIcon style={{ fontSize: '1em' }} />}
                   </Link>
                 </div>
               )}
@@ -86,7 +87,7 @@ const Mobile = (props: any) => {
 
 export const Navigation = (props: any) => {
   if (props.mobile) {
-    return <Mobile {...props} />;
+    return <Mobile {...props} />
   }
 
   return (

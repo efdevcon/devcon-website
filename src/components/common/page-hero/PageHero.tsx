@@ -2,13 +2,13 @@ import React from 'react'
 import css from './page-hero.module.scss'
 import { Link } from 'src/components/common/link'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
-import usePagePath from './usePageCategory'
-import useIsScrolled from 'src/hooks/useIsScrolled'
+import { usePageCategory } from './usePageCategory'
+import { useIsScrolled } from 'src/hooks/useIsScrolled'
 import { usePageContext } from 'src/context/page-context'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
-import { Button } from 'src/components/common/button'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Button } from 'src/components/common/button'
 
 type NavigationLink = {
   to: string
@@ -49,7 +49,7 @@ type PageHeroProps = {
 }
 
 const PathNavigation = (props: PageHeroProps) => {
-  const pagePath = usePagePath()
+  const pagePath = usePageCategory()
 
   let path
 
@@ -133,7 +133,7 @@ export const PageHero = (props: PageHeroProps) => {
 
       return () => clearTimeout(timeout)
     }
-  }, [setNextScene])
+  }, [props.scenes, setNextScene])
 
   return (
     <div id="page-hero" className={className} style={style}>
@@ -245,9 +245,9 @@ export const PageHero = (props: PageHeroProps) => {
         return (
           <div key={i} className={className}>
             {optimizedImage ? (
-              <GatsbyImage image={optimizedImage} alt={scene.imageProps.alt} {...scene.imageProps} />
+              <GatsbyImage image={optimizedImage} alt={scene.imageProps.alt || `Scene ${i}`} {...scene.imageProps} />
             ) : (
-              <img src={scene.image} alt={scene.imageProps.alt} {...scene.imageProps} />
+              <img src={scene.image} alt={scene.imageProps.alt || `Scene ${i}`} {...scene.imageProps} />
             )}
           </div>
         )

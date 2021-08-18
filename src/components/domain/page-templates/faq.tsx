@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/domain/seo'
 import { FAQ } from 'src/components/domain/faq'
 import { PageHero } from 'src/components/common/page-hero'
 import { ToFaqData } from 'src/components/domain/faq/queryMapper'
@@ -52,7 +51,7 @@ export default pageHOC(function FaqTemplate({ data, location }: any) {
 })
 
 export const query = graphql`
-  query($slug: String!, $language: String!) {
+  query ($slug: String!, $language: String!) {
     ...Page
     ...NavigationData
     ...Notification

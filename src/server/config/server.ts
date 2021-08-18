@@ -8,5 +8,5 @@ export const SERVER_CONFIG = {
   SESSION_SECRET: process.env.SESSION_SECRET,
   INFURA_ID: process.env.INFURA_ID || '',
   DB_CONNECTION_STRING: process.env.DB_CONNECTION_STRING || '',
-  ELASTIC_ENDPOINT: process.env.ELASTIC_ENDPOINT || ''
+  ELASTIC_ENDPOINT: process.env.ELASTIC_ENDPOINT || '',
 }

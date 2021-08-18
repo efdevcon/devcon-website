@@ -24,7 +24,7 @@ export default function ConfirmEmail() {
         return
       }
 
-      if (account.email != accountContext.account?.email) {
+      if (account.email !== accountContext.account?.email) {
         await accountContext.updateAccount(account._id, account)
       }
 

@@ -15,7 +15,7 @@ type PlaylistProps = {
   items: Array<Playlist>
 }
 
-export const PlaylistCard = (props: { playlist: Playlist, canSlide: boolean, small?: boolean }) => {
+export const PlaylistCard = (props: { playlist: Playlist; canSlide: boolean; small?: boolean }) => {
   let className = `${css['video-card']} ${css['big']}`
 
   if (props.canSlide) className += ` ${css['slide']}`
@@ -29,7 +29,11 @@ export const PlaylistCard = (props: { playlist: Playlist, canSlide: boolean, sma
           placeholder="blurred"
           className={css['image']}
         /> */}
-        <GatsbyImage image={getImage(props.playlist.image)} alt={`${props.playlist.title} Devcon playlist`} className={css['image']} />
+        <GatsbyImage
+          image={getImage(props.playlist.image)}
+          alt={`${props.playlist.title} Devcon playlist`}
+          className={css['image']}
+        />
       </div>
       <div className={css['body']}>
         <div className="label">{props.playlist.videoCount ?? 0} talks</div>
@@ -79,8 +83,8 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
         <div className={`${css['curated-playlists']} ${props.borderless ? '' : 'border-top'}`}>
           <Slider
             sliderProps={sliderProps}
-            className={css['slider']} 
-            style={props.borderless ? { marginTop: '0px'} : undefined}
+            className={css['slider']}
+            style={props.borderless ? { marginTop: '0px' } : undefined}
             title={props.title}
             // custom={
             //   props.viewMore
@@ -105,11 +109,11 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
             })}
           </Slider>
 
-          {props.viewMore &&
+          {props.viewMore && (
             <Button to={'/archive/playlists'} className={`${css['button']} white sm`}>
               View more <ArrowRight />
             </Button>
-          }
+          )}
         </div>
       </div>
     </div>

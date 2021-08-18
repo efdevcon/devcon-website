@@ -33,9 +33,6 @@ typings/
 .cache/
 public
 
-# storybook
-storybook-static 
-
 # Mac files
 .DS_Store
 

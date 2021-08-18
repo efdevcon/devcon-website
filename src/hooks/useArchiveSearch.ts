@@ -12,6 +12,6 @@ export const useArchiveSearch = (qs: string, params?: SearchParams): FetchedResu
   if (params?.size) uri += `&size=${params.size}`
   if (params?.sort) uri += `&sort=${params.sort}`
   if (params?.order) uri += `&order=${params.order}`
-  
+
   return usePagedSearch(uri)
 }

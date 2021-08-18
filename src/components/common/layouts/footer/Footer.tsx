@@ -15,13 +15,13 @@ import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
 import { ArchiveFooter } from './ArchiveFooter'
 
-type SocialMedia = {
+type SocialMediaProps = {
   onShare: () => void
   url?: string
   className?: string
 }
 
-export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialMedia) => {
+export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialMediaProps) => {
   let className = css['social-media']
 
   if (extraClassName) className += ` ${extraClassName}`
@@ -72,7 +72,7 @@ export const Footer = () => {
               )
             })}
 
-            <SocialMedia />
+            <SocialMedia onShare={() => { return } } />
           </div>
 
           <div className={css['col-3']}>
