@@ -93,7 +93,7 @@ export const ArchiveFooter = () => {
               <p className={css['email-1']}>{EMAIL_DEVCON}</p>
 
               <div className={css['newsletter']}>
-                <Newsletter />
+                <Newsletter id='footer_newsletter_email' />
               </div>
             </div>
           </div>

@@ -148,7 +148,7 @@ const Foldout = ({ pageProps, hover, pages, setHover, pageInView, links, goToSli
       <div className={css['nav-footer']}>
         <div>
           <SocialMedia onShare={() => goToSlide(pages.length - 1)} />
-          <Newsletter />
+          <Newsletter id='navigation_newsletter_email' />
           <Copyright />
         </div>
       </div>

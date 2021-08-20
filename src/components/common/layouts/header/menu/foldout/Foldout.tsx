@@ -35,7 +35,7 @@ const FoldoutContent = (props: any) => {
           </div>
 
           <div className={css['newsletter']}>
-            <Newsletter />
+            <Newsletter id='foldout_newsletter_email' />
           </div>
 
           <div className={css['copyright']}>
