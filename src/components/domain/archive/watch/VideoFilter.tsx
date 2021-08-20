@@ -143,6 +143,7 @@ const Filters = (props: any) => {
     <>
       <div className={css['search']}>
         <InputForm
+          id='input-form_search_filter'
           className={css['input-form']}
           placeholder="Search"
           icon={IconSearch}

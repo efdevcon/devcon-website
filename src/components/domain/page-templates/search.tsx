@@ -55,7 +55,7 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
       <PageHero />
 
       <PageContentSection>
-        <InputForm label={'Search'} onChange={onChange} placeholder="Search..." defaultValue={searchQuery} />
+        <InputForm id='input-form_search_page' label={'Search'} onChange={onChange} placeholder="Search..." defaultValue={searchQuery} />
 
         <h2>Search Results</h2>
         {searchQuery}

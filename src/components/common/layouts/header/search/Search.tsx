@@ -29,6 +29,7 @@ export const Search = (props: any) => {
     <div className={className}>
       <div className={`${css['content']}`}>
         <InputForm
+          id='input-form_search_header'
           type="search"
           placeholder="Search for videos.."
           icon={IconSearch}

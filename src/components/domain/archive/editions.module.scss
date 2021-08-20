@@ -65,10 +65,12 @@
         flex: 0 1 auto;
         writing-mode: tb-rl;
         transform: rotate(-180deg);
-        text-transform: uppercase;
-        font-size: $sizes-size-4;
         padding: $gaps-gap-4 0;
-        color: $colors-monochrome-6;
+
+        @include fonts-xs;
+        text-transform: uppercase;
+        color: $colors-monochrome-7;
+        font-weight: 500;
 
         @media (max-width: $breakpoints-md) {
           display: none;
