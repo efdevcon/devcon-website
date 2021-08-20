@@ -113,7 +113,7 @@ export const Footer = () => {
 
               {/* Visible on some breakpoints, but not all - moves to col-7 on mobile */}
               <div className={css['newsletter']}>
-                <Newsletter />
+                <Newsletter id='footer_newsletter_email' />
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ export const Footer = () => {
 
           {/* Only visible on mobile */}
           <div className={css['col-7']}>
-            <Newsletter />
+            <Newsletter id='footer_newsletter_email_mobile' />
           </div>
         </div>
       </div>

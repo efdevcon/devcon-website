@@ -112,7 +112,7 @@ export const Slider = (props: SliderProps) => {
   return (
     <div className={css['container']} style={props.style}>
       <div className={css['top-section']}>
-        <h2 className="title">{props.title}</h2>
+        <h3 className="title">{props.title}</h3>
 
         <Arrows {...sliderState} />
 

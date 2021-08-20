@@ -11,7 +11,11 @@ export interface Result {
   msg: string
 }
 
-export const Newsletter = () => {
+interface Props {
+  id?: string
+}
+
+export const Newsletter = (props: Props) => {
   const intl = useIntl()
   const emailField = useFormField()
   const [result, setResult] = React.useState<Result | undefined>(undefined)
@@ -58,7 +62,7 @@ export const Newsletter = () => {
                 <input
                   className={css['input']}
                   type="email"
-                  id="newsletter_email"
+                  id={props.id ?? 'newsletter_email'}
                   placeholder={intl.formatMessage({ id: 'newsletter_enter' })}
                   {...emailField}
                 />

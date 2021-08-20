@@ -207,7 +207,7 @@ export const VideoFilterMobile = (props: any) => {
     <div className={className}>
       <div>
         <div className={css['header']}>
-          <h4 className="title">Filter</h4>
+          <p className="title">Filter</p>
           <button className="white" onClick={() => setOpen(!open)}>
             <IconFilter className={`icon ${css['icon-open']}`} />
             <IconClose className={`icon ${css['icon-close']}`} />
