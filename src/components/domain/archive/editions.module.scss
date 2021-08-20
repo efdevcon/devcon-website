@@ -68,7 +68,7 @@
         text-transform: uppercase;
         font-size: $sizes-size-4;
         padding: $gaps-gap-4 0;
-        color: #bcbfca;
+        color: $colors-monochrome-6;
 
         @media (max-width: $breakpoints-md) {
           display: none;

@@ -58,7 +58,7 @@ export const Newsletter = () => {
                 <input
                   className={css['input']}
                   type="email"
-                  id="email"
+                  id="newsletter_email"
                   placeholder={intl.formatMessage({ id: 'newsletter_enter' })}
                   {...emailField}
                 />
