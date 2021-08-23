@@ -69,7 +69,7 @@ $state-neutral-light: $monochrome-1;
   border-color: $monochrome-1;
 }
 @mixin white-hover {
-  // background: darken($monochrome-1, 5%);
+  background: $monochrome-4;
 
   // For use by Button component (animates colors when hovering)
   --button-color: #{$main};
@@ -101,7 +101,7 @@ $state-neutral-light: $monochrome-1;
   border-color: $main;
 }
 @mixin black-hover {
-  // background: lighten($main, 15%);
+  background: lighten($main, 15%);
 
   // For use by Button component (animates colors when hovering)
   --button-color: #{$monochrome-1};

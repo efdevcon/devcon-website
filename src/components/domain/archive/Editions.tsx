@@ -12,11 +12,13 @@ interface Props {
 
 export const Editions = (props: Props) => {
   const editions = useDevconEditions()
-  const [selectedEdition, setSelectedEdition] = useState(editions[0])
+  const [selectedEditionIndex, setSelectedEditionIndex] = useState(0)
   let className = `padding-top padding-bottom border-top ${css['container']}`
   if (props.className) {
     className += ` ${props.className}`
   }
+
+  const selectedEdition = editions[selectedEditionIndex]
 
   return (
     <div className="section">
@@ -29,7 +31,7 @@ export const Editions = (props: Props) => {
 
               return (
                 <div key={i.number} className={className}>
-                  <p className={css['number']} onClick={() => setSelectedEdition(editions[index])}>
+                  <p className={css['number']} onClick={() => setSelectedEditionIndex(index)}>
                     {i.number}
                   </p>
                   <p className={css['conference']}>Ethereum developer conference</p>
@@ -37,11 +39,21 @@ export const Editions = (props: Props) => {
               )
             })}
           </div>
-          <div className={css['image']}>
-            {/* <img src={selectedEdition.imageUrl} alt={selectedEdition.title} /> */}
 
-            <GatsbyImage image={getImage(selectedEdition.image)} alt={selectedEdition.title} />
+          <div className={css['images']}>
+            {editions.map((i: DevconEdition, index: number) => {
+              let className = css['image']
+
+              if (index === selectedEditionIndex) className += ` ${css['selected']}`
+
+              return (
+                <div className={className} key={index}>
+                  <GatsbyImage image={getImage(i.image)} objectFit="contain" alt={i.title} />
+                </div>
+              )
+            })}
           </div>
+
           <div className={css['info']}>
             <div className={css['title']}>
               <p className="title">{selectedEdition.title}</p>

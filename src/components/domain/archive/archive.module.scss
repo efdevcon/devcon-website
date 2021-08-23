@@ -50,12 +50,20 @@
       -webkit-box-orient: vertical;
       display: -webkit-box;
       -webkit-line-clamp: 3;
+
+      @media (max-width: $breakpoints-lg) {
+        display: none;
+      }
     }
   }
 
   .metadata {
     margin-top: $gaps-gap-4;
     display: flex;
+
+    @media (max-width: $breakpoints-lg) {
+      margin-top: $gaps-gap-1;
+    }
 
     > * {
       margin-left: $gaps-gap-4;

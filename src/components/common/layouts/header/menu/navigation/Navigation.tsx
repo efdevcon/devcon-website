@@ -24,6 +24,11 @@ const Mobile = (props: any) => {
 
           return (
             <li key={i.title} className={open && hasChildren ? css['open'] : ''}>
+              {i.logo && (
+                <div className={css['foldout-background']}>
+                  <img src={i.logo} alt={`${i.title}: background logo`} />
+                </div>
+              )}
               {hasChildren ? (
                 <div
                   className={css['accordion-toggle']}
@@ -124,6 +129,11 @@ export const Navigation = (props: any) => {
                   {i.title}
                   <IconArrowDown style={{ width: '10px', height: '5px', margin: '8px' }} />
                   <div className={css['foldout']}>
+                    {i.logo && (
+                      <div className={css['foldout-background']}>
+                        <img src={i.logo} alt={`${i.title}: background logo`} />
+                      </div>
+                    )}
                     {i.links && i.links.length > 0 && (
                       <ul>
                         {i.links?.map((c: LinkType, subIndex: number) => {

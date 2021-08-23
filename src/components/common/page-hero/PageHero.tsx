@@ -107,6 +107,7 @@ export const PageHero = (props: PageHeroProps) => {
   if (props.background) className += ` ${css['custom-background']}`
   if (isScrolled) className += ` ${css['scrolled']}`
   if (props.navigation) className += ` ${css['with-navigation']}`
+  if (props.scenes) className += ` ${css['with-scenes']}`
   if (props.children) className += ` ${css['as-background']}`
 
   const setNextScene = React.useMemo(

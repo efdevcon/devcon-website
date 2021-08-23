@@ -39,7 +39,7 @@ export const useStaffPicks = (): Playlist => {
             image {
               childImageSharp {
                 id
-                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
               }
             }
             ipfsHash
