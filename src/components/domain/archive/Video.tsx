@@ -169,11 +169,10 @@ export const Video = (props: VideoProps) => {
             </div>
 
             <div className={css['tabs-video']}>
+              <Banner className={css['ipfs-banner']} cta="Watch on IPFS" hash={props.video.ipfsHash} learnMore />
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>
-                    <Banner className={css['ipfs-banner']} cta="Watch on IPFS" hash={props.video.ipfsHash} learnMore />
-
                     <h1 className="font-xxl title">{video.title}</h1>
 
                     <div className={css['descriptors']}>

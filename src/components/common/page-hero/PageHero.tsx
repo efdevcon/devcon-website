@@ -201,10 +201,10 @@ export const PageHero = (props: PageHeroProps) => {
                 {props.scenes[currentScene].callToAction()}
 
                 <div className={css['arrows']}>
-                  <Button className={`${css['arrow']} white squared`} onClick={() => setNextScene(-1)}>
+                  <Button className={`${css['arrow']} white squared`} aria-label="View previous slide" onClick={() => setNextScene(-1)}>
                     <ChevronLeft />
                   </Button>
-                  <Button className={`${css['arrow']} white squared`} onClick={() => setNextScene(1)}>
+                  <Button className={`${css['arrow']} white squared`} aria-label="View next slide" onClick={() => setNextScene(1)}>
                     <ChevronRight />
                   </Button>
                 </div>

@@ -48,6 +48,9 @@ export function SEO(props: SEOProps) {
   if (props.lang) {
     lang = props.lang
   }
+  if (isArchive) {
+    lang ='en'
+  }
 
   const globalTitle = isArchive ? ARCHIVE_TITLE : TITLE
   const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${globalTitle}` : globalTitle

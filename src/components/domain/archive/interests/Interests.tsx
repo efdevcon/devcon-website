@@ -20,7 +20,7 @@ export const Interests = (props: any) => {
     <div className="section">
       <div className={`${css['container']} content padding-bottom`}>
         <div className={css['header']}>
-          <h4 className={`bold font-xl font-primary ${css['title']}`}>Explore Devcon Archive —</h4>
+          <h2 className={`bold font-xl font-primary ${css['title']}`}>Explore Devcon Archive —</h2>
           <p className="font-sm">
             Dive into the immersive world of Devcon content by selecting topics most relevant to your interest.
           </p>

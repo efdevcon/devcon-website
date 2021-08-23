@@ -23,14 +23,6 @@ export const Playlists = () => {
         description="Devcon collections to help you dive deep into specific topic areas."
       />
 
-      {/* <div className="section">
-        <div className="content">
-          <div className={css['search-sort']}>
-            <InputForm className={css['search']} placeholder="Search" icon={IconSearch} />
-          </div>
-        </div>
-      </div> */}
-
       {categories.map((category, i) => {
         const first = i === 0
 

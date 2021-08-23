@@ -35,12 +35,15 @@ export const Banner = (props: Props) => {
   let className = css['container']
   if (props.className) className += ` ${props.className}`
 
+  if (!props.hash) return null
+  
   return (
     <div className={className}>
       <div className={css['top']}>
         <div className={css['cta']}>
           <Link to={`https://ipfs.io/ipfs/${props.hash}`}>{props.cta ?? 'IPFS'}</Link>
-          <span className={css['learn-more']} role="button" onClick={() => setIpfsModal(true)}>
+          <span className={css['learn-more']} role="button"
+            aria-label='Learn more about IPFS' onClick={() => setIpfsModal(true)}>
             <InfoIcon />
           </span>
         </div>
@@ -55,6 +58,7 @@ export const Banner = (props: Props) => {
               <span
                 className={css['copy-icon']}
                 role="button"
+                aria-label='Copy hash to clipboard'
                 onClick={() => {
                   if (window?.navigator?.clipboard) {
                     navigator.clipboard.writeText(props.hash)

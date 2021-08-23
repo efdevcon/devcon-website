@@ -45,7 +45,6 @@ h3,
   @include fonts-bold;
   font-size: $sizes-size-12;
   line-height: 120%;
-  text-transform: uppercase;
 
   &.spaced {
     @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);

@@ -56,7 +56,7 @@ export const Pagination = (props: Props) => {
     <div className={className}>
       <ul className={css['pages']}>
         <li>
-          <span role="button" onClick={() => props.onSelectPage(props.selectedPage === 1 ? 1 : props.selectedPage - 1)}>
+          <span role="button" aria-label='Go to previous page' onClick={() => props.onSelectPage(props.selectedPage === 1 ? 1 : props.selectedPage - 1)}>
             <ChevronLeft />
           </span>
         </li>
@@ -68,6 +68,7 @@ export const Pagination = (props: Props) => {
                 <span
                   className={props.selectedPage === i ? css['selected'] : ''}
                   role="button"
+                  aria-label={`Go to page ${i}`}
                   onClick={() => props.onSelectPage(i)}
                 >
                   {i}
@@ -79,6 +80,7 @@ export const Pagination = (props: Props) => {
         <li>
           <span
             role="button"
+            aria-label='Go to next page' 
             onClick={() => props.onSelectPage(props.selectedPage === totalPages ? totalPages : props.selectedPage + 1)}
           >
             <ChevronRight />

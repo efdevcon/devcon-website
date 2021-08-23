@@ -49,10 +49,12 @@
         display: none;
         writing-mode: tb-rl;
         transform: rotate(-180deg);
-        text-transform: uppercase;
-        font-size: $sizes-size-4;
         padding: $gaps-gap-4 0;
         color: #bcbfca;
+        @include fonts-xs;
+        text-transform: uppercase;
+        color: $colors-monochrome-7;
+        font-weight: 500;
       }
 
       &.selected {

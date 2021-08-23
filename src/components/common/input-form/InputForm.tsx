@@ -2,6 +2,7 @@ import React, { ChangeEvent, createRef, FormEvent, useEffect, useState } from 'r
 import css from './input-form.module.scss'
 
 interface InputFormProps {
+  id?: string
   type?: string
   label?: string
   placeholder: string
@@ -60,7 +61,7 @@ export function InputForm(props: InputFormProps) {
     }
   }
 
-  const id = `input-form_${props.placeholder}_${props.label}`
+  const id = props.id ?? `input-form_${props.type}`
 
   return (
     <form className={className} onSubmit={handleSubmit} role={props.type ?? 'form'}>

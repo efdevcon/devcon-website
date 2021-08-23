@@ -109,7 +109,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
           {/* Hide header div on Mobile */}
           <div className={`${css['header']}`}>
             <div className={`${css['filter']}`}>
-              <h4 className="title">Filter</h4>
+              <p className="title">Filter</p>
               <IconFilter />
             </div>
             <div className={`${css['sort']}`}>
