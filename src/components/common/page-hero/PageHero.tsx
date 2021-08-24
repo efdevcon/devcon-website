@@ -38,6 +38,7 @@ type PathSegment = {
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
+  titleClassName?: string
   path?: string | PathSegment[]
   description?: string
   scenes?: Scene[]
@@ -143,7 +144,11 @@ export const PageHero = (props: PageHeroProps) => {
           <PathNavigation {...props} />
 
           <div className={css['title-block']}>
-            <h1 className={`${props.titleSubtext ? css['subtext'] : ''} font-massive-2`}>
+            <h1
+              className={`font-massive-2 ${props.titleSubtext ? css['subtext'] : ''} ${
+                props.titleClassName ? props.titleClassName : ''
+              }`}
+            >
               {props.title ?? pageContext?.current?.title}
               {props.titleSubtext && <span>{props.titleSubtext}</span>}
             </h1>
@@ -201,10 +206,18 @@ export const PageHero = (props: PageHeroProps) => {
                 {props.scenes[currentScene].callToAction()}
 
                 <div className={css['arrows']}>
-                  <Button className={`${css['arrow']} white squared`} aria-label="View previous slide" onClick={() => setNextScene(-1)}>
+                  <Button
+                    className={`${css['arrow']} white squared`}
+                    aria-label="View previous slide"
+                    onClick={() => setNextScene(-1)}
+                  >
                     <ChevronLeft />
                   </Button>
-                  <Button className={`${css['arrow']} white squared`} aria-label="View next slide" onClick={() => setNextScene(1)}>
+                  <Button
+                    className={`${css['arrow']} white squared`}
+                    aria-label="View next slide"
+                    onClick={() => setNextScene(1)}
+                  >
                     <ChevronRight />
                   </Button>
                 </div>

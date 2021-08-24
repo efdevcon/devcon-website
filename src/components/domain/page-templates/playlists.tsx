@@ -19,7 +19,7 @@ export const Playlists = () => {
 
       <PageHero
         title="Playlists"
-        titleSubtext="Devcon"
+        // titleSubtext="Devcon"
         description="Devcon collections to help you dive deep into specific topic areas."
       />
 

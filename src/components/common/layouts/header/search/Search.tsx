@@ -68,7 +68,7 @@ export const Search = (props: any) => {
 
 const SearchResult = (props: any) => {
   return (
-    <Link to={props.slug} className={css['result']}>
+    <Link to={props.slug} className={`${css['result']} hover-underline`}>
       <IconSearch />
       <p>{props.title}</p>
     </Link>

@@ -100,7 +100,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
       <Header withStrip={false} />
       <PageHero
         title="Watch"
-        titleSubtext="Devcon"
+        // titleSubtext="Devcon"
         description="Devcon content curated and organized for your discovery and learning."
       />
 

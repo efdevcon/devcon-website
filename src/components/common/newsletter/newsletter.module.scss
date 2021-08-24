@@ -15,7 +15,7 @@
 }
 
 .input {
-  @include fonts-sm;
+  @include fonts-md-fixed;
 
   flex-grow: 1;
   color: $colors-monochrome-10;

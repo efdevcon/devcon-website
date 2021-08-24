@@ -68,7 +68,8 @@ export const Archive = (props: ArchiveProps) => {
           }
         })}
         title="Archive"
-        titleSubtext="Devcon"
+        titleClassName={css['white-title']}
+        // titleSubtext="Devcon"
       />
 
       <div className={css['content']}>

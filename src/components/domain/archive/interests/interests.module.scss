@@ -65,7 +65,7 @@
       margin-bottom: $gaps-gap-1;
 
       > span {
-        margin-left: $gaps-gap-2;
+        // margin-left: $gaps-gap-2;
       }
 
       &:hover {
@@ -82,24 +82,24 @@
         }
       }
 
-      .icon-check {
-        display: none;
-      }
+      // .icon-check {
+      //   display: none;
+      // }
 
-      .icon-plus {
-        display: block;
-        font-size: 0.8em !important;
-      }
+      // .icon-plus {
+      //   display: block;
+      //   font-size: 0.8em !important;
+      // }
 
-      &.selected {
-        .icon-plus {
-          display: none;
-        }
+      // &.selected {
+      //   .icon-plus {
+      //     display: none;
+      //   }
 
-        .icon-check {
-          display: block;
-        }
-      }
+      //   .icon-check {
+      //     display: block;
+      //   }
+      // }
     }
   }
 
