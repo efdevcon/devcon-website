@@ -101,10 +101,10 @@ export const Intro = React.forwardRef((props: any, ref) => {
             </div>
           </Modal>
 
-          <Link
-            to="https://esp.ethereum.foundation/en/devcon-grants/"
+          <button
+            // to="https://esp.ethereum.foundation/en/devcon-grants/"
             className={`${css['anchor-as-button']} button lg white`}
-            // onClick={() => setSubscribeModalOpen(true)}
+            onClick={() => setSubscribeModalOpen(true)}
             onMouseOver={() => {
               setShowDoge(true)
             }}
@@ -112,9 +112,9 @@ export const Intro = React.forwardRef((props: any, ref) => {
               setShowDoge(false)
             }}
           >
-            {intl.formatMessage({ id: 'rtd_grants_apply' })}
+            {intl.formatMessage({ id: 'newsletter_title' })}
             <IconMedal />
-          </Link>
+          </button>
 
           <Modal
             open={subscribeModalOpen}
