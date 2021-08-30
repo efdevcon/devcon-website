@@ -15,8 +15,8 @@ const writeToDisk = true
 const generatePlaylist = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const sheetName = 'Devcon 2' // 
-const edition = 2 // 
+const sheetName = 'Devcon 1' // 
+const edition = 1 // 
 console.log('Importing archive edition', edition, 'from', sheetName, 'to', archiveDir)
 
 ImportArchiveVideos() 
