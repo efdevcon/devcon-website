@@ -157,19 +157,33 @@ export const Video = (props: VideoProps) => {
         <div className={css['container']}>
           <div className={css['video']}>
             <div className={css['player']}>
-              <div className="aspect">
-                <iframe
-                  src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
+              <Tabs>
+                <Tab title="YouTube">
+                  <div className="aspect">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </Tab>
+
+                {props.video.ipfsHash && (
+                  <Tab title="IPFS">
+                    <div className="aspect">
+                      <video controls autoPlay={false}>
+                        <source src={`https://ipfs.io/ipfs/${props.video.ipfsHash}`} />
+                      </video>
+                    </div>
+                  </Tab>
+                )}
+              </Tabs>
             </div>
 
             <div className={css['tabs-video']}>
-              <Banner className={css['ipfs-banner']} cta="Watch on IPFS" hash={props.video.ipfsHash} learnMore />
+              <Banner className={css['ipfs-banner']} cta="Access on IPFS" hash={props.video.ipfsHash} learnMore />
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>
