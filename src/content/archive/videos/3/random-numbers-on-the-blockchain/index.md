@@ -1,0 +1,14 @@
+---
+edition: 3
+title: "Random numbers on the blockchain"
+description: "Random numbers on the blockchain: How to guarantee randomness between multiple parties not trusting each other I will discuss the different techniques used to get random number on the blockchain. The talk will cover the security of the methods from technical and game-theoretical point of views. The first 4 techniques will be literature review. While the “Sequential proof of work” will also cover my own research."
+youtubeUrl: "https://youtu.be/GvXwD7SY7dw"
+ipfsHash: "QmcbZtfUuuVqMPeR2Tt9KFQqnAt2TmgotCRvenGiSk8N6n"
+duration: 946
+expertise: "Advanced"
+type: "Talk"
+track: "Cryptography"
+keywords: []
+tags: ['Cryptography']
+speakers: ['Clément Lesaege']
+---
