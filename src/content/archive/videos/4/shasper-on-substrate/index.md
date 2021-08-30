@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "Shasper on Substrate"
-description: "N/A"
+description: "Robert Habermeier gives an overview of Parity Technology's work on Serenity."
 youtubeUrl: "https://youtu.be/YDJCezRzaXg"
 ipfsHash: "QmYYciMnamnfxZUGxuVy1MaKAeyX6y3vxszFeJEfKWzofg"
 duration: 1421

@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "Dark Crystal Secure Scuttlebutt"
-description: "N/A"
+description: "Peg talks about the Dark Crystal project."
 youtubeUrl: "https://youtu.be/pOloj658DtQ"
 ipfsHash: "Qmd411h4edhKhFeW8egBijVGFv3TH45fh1smvV3mgh3hNC"
 duration: 536

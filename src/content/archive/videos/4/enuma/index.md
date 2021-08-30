@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "Enuma"
-description: "N/A"
+description: "Antoine Cote & Philippe Camacho from Enuma present their progress after receiving a Grant."
 youtubeUrl: "https://youtu.be/0xfUQw3MPbc"
 ipfsHash: "QmSagh159M2hYCwqDkTMTTMRSnGrAnViXAHRgbyaqnZQTw"
 duration: 586

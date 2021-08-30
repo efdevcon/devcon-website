@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "Latest on Ethereum"
-description: "N/A"
+description: "Vitalik gives an update on Ethereum's progress and roadmap."
 youtubeUrl: "https://youtu.be/kCVpDrlVesA"
 ipfsHash: "QmcmNjJdSCVNcL1axDET9SKFDPPimMLMmeDV6sSijgk4JM"
 duration: 1798
