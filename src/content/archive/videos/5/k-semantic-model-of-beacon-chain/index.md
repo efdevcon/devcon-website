@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "K Semantic Model of Beacon Chain"
-description: "N/A"
+description: "Daejun Park gives an overview of the K-Semantic Model of the Beacon Chain."
 youtubeUrl: "https://youtu.be/nYCKOK79ogs"
 ipfsHash: "QmPwLrmbgvBCS8t5EFT12JPttTutdRcaJLhNLfgoyLv7uM"
 duration: 715

@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Will Design Ethics Save Software?"
-description: "N/A"
+description: "Cade Diehm presents his talk on Design Ethics & Software."
 youtubeUrl: "https://youtu.be/Bk-NSADkdrs"
 ipfsHash: "Qma3zdq2ndPqGhQEWJ4daax2avBAiFNRRmthsVq6YctRkK"
 duration: 1304

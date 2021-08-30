@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Eth2.0 Client Panel"
-description: "N/A"
+description: "Panel discussing the short-term future for Eth 2.0 clients."
 youtubeUrl: "https://youtu.be/XJRmdiK-eto"
 ipfsHash: "QmPhjPYXsHHvqSUtcxQXpLvGZyJMQ1v7exb6YTA235NUHH"
 duration: 2160
@@ -10,5 +10,5 @@ type: "Panel"
 track: "Eth 2.0"
 keywords: ['eth2','technical']
 tags: ['Eth 2.0']
-speakers: ['N/A']
+speakers: ['Various']
 ---

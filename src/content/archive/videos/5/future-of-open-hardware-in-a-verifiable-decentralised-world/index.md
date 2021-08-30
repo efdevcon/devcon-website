@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Future of Open Hardware in a (Verifiable) Decentralised World"
-description: "N/A"
+description: "Matthias Tarasiewicz present his talk on the Future of Open Hardware in a (Verifiable) Decentralised World."
 youtubeUrl: "https://youtu.be/bAkYIyMJVaY"
 ipfsHash: "QmTJfxpbh1wGtNxvWo6iHQAtu3fZdfGKG7hnKbBB5zGwjT"
 duration: 1338

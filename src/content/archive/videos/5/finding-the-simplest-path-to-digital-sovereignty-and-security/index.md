@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Finding the Simplest Path to Digital Sovereignty & Security"
-description: "N/A"
+description: "Paul Gardnerstephen presents his talk on Finding the Simplest Path to Digital Sovereignty & Security."
 youtubeUrl: "https://youtu.be/jKzSSdqNy04"
 ipfsHash: "QmRNCsF3FnjucsVsCoKqrFAkaS1vW5cqegWY2FQSdysLzG"
 duration: 1250

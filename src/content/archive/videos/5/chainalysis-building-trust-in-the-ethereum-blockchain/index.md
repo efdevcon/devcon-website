@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Chainalysis: Building Trust in the Ethereum Blockchain"
-description: "N/A"
+description: "Mikkel Jensen & Surya Rastogi give their talk on Chainalysis & Building Trust in the Ethereum Blockchain"
 youtubeUrl: "https://youtu.be/lDWS_NLvwoA"
 ipfsHash: "QmZhnEsY2ZM6X4wVkY5GSWToMNoqMQBoPN9Ng1GNNHWDte"
 duration: 955

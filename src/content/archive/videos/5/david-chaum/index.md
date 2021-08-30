@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "David Chaum"
-description: "N/A"
+description: "David Chaum gives a brief history of his experience in Cryptography, and presents Elixxir and Praxxis."
 youtubeUrl: "https://youtu.be/hvdxT_uO0dc"
 ipfsHash: "QmbPVEgDSeCdDFWMLA43L2toW5xLz85WnCx4T8ekSFzBJ3"
 duration: 1251

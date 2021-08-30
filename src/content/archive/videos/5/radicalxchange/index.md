@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "RadicalXChange"
-description: "N/A"
+description: "Audrey Tang, Taiwan's first Digital Minister for Social Innovation, presents the RadicalXChange."
 youtubeUrl: "https://youtu.be/9FbXNDBdSr0"
 ipfsHash: "QmYP7pmdAYKCRC9wJG9dpA3sGJMJwVHp5sJDykotcTw8K4"
 duration: 7650

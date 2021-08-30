@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "The Future of Value"
-description: "N/A"
+description: "Sep Kamvar speaks about the Future of Value."
 youtubeUrl: "https://youtu.be/tX5ep1JzY6k"
 ipfsHash: "QmWCYAFbykCcDtUgZnTVd2GUQtpnCzU3EzSJDid531eXuN"
 duration: 1088

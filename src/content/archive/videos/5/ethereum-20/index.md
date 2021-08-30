@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Ethereum 2.0"
-description: "N/A"
+description: "The Ethereum Magicians discuss Ethereum 2.0"
 youtubeUrl: "https://youtu.be/fXoSiHurJBg"
 ipfsHash: "QmQAG1pzsxzvwca1wkCFAfbxqNDVR5hQhR4r9BeKANgdDL"
 duration: 2822

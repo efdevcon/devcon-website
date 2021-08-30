@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "We Come In Peace"
-description: "N/A"
+description: "Jehan Chu speaks about VCs in the ecosystem."
 youtubeUrl: "https://youtu.be/Ex78bKxHYbM"
 ipfsHash: "QmUAuZs7e9MNjwQSk6RNtpris9giuDpWTxAp6AhsrXJWGZ"
 duration: 1319

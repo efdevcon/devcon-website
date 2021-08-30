@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Weak Subjectivity and Eth 2.0 Sync"
-description: "N/A"
+description: "Hsiu-Ping Lin speaks on Weak Subjectivity and Eth 2.0."
 youtubeUrl: "https://youtu.be/rxqVvu4trX4"
 ipfsHash: "QmRegNZE3zdNXN12pxNncVodUHCmTT5rhVMj22U5RZTWwS"
 duration: 702

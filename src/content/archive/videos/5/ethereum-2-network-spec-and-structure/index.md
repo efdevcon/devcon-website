@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Ethereum 2 Network Spec and Structure"
-description: "N/A"
+description: "Zahary Karadjov speaks about the Eth 2 network spec & structure."
 youtubeUrl: "https://youtu.be/srAUIsEmqMA"
 ipfsHash: "QmT4UcQoeiNCtK3wKS317foECzxNgaEUsqKLVAaidHgKg2"
 duration: 853

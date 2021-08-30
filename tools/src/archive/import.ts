@@ -15,9 +15,9 @@ const writeToDisk = true
 const generatePlaylist = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const sheetNr = 0 // 
-const edition = 4 // 
-console.log('Importing archive edition', edition, 'from', sheetNr, 'to', archiveDir)
+const sheetName = 'Devcon 5' // 
+const edition = 5 // 
+console.log('Importing archive edition', edition, 'from', sheetName, 'to', archiveDir)
 
 ImportArchiveVideos() 
 
@@ -32,8 +32,9 @@ async function ImportArchiveVideos() {
 
   await GSheetReader(
     {
+      apiKey: process.env.YOUTUBE_API_KEY,
       sheetId: sheet,
-      sheetNumber: sheetNr,
+      sheetName: sheetName,
     },
     (results: any) => {
       console.log('Archive video records found', results.length)
