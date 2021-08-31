@@ -8,7 +8,7 @@ duration: 1185
 expertise: "Advanced"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['formal',' verification',' casper',' pos',' scaling',' commitment',' adoption',' reliability',' compositionality',' monad',' metering','Society and Systems']
+keywords: ['formal','verification','casper','pos','scaling','commitment','adoption','reliability','compositionality','monad','metering']
+tags: ['Society and Systems']
 speakers: ['Lucius Greg Meredith']
 ---

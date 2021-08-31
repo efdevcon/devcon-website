@@ -8,7 +8,7 @@ duration: 989
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['vm',' portability',' standardize',' toolchain',' compatibility',' architecture',' hardware',' design',' gas',' hypervisor',' risc',' wasm',' ast',' isa','Developer Experience']
+keywords: ['vm','portability','standardize','toolchain','compatibility','architecture','hardware','design','gas','hypervisor','risc','wasm','ast','isa']
+tags: ['Developer Experience']
 speakers: ['Martin Becze']
 ---

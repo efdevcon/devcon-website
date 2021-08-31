@@ -8,7 +8,7 @@ duration: 1313
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['nodes',' casper',' pos',' crash',' fault',' tolerance',' byzantine',' security',' censorship',' sybil',' attack',' rational',' adversary',' fork',' bribe','Society and Systems']
+keywords: ['nodes','casper','pos','crash','fault','tolerance','byzantine','security','censorship','sybil','attack','rational','adversary','fork','bribe']
+tags: ['Society and Systems']
 speakers: ['Vlad Zamfir']
 ---

@@ -8,7 +8,7 @@ duration: 954
 expertise: "Advanced"
 type: "Talk"
 track: "Cryptography"
-keywords: []
-tags: ['proof',' existence',' ads',' root',' hash',' tick',' signature',' state',' channels',' time','Cryptography']
+keywords: ['proof','existence','ads','root','hash','tick','signature','state','channels','time']
+tags: ['Cryptography']
 speakers: ['Jeff Coleman']
 ---

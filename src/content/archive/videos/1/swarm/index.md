@@ -8,7 +8,7 @@ duration: 1711
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['incentives',' file',' storage',' content',' distribution',' redundancy',' integrity',' chunk',' devp2p',' bzz',' insurance',' layers',' dapp',' structure',' updates',' demo','Developer Experience']
+keywords: ['incentives','file','storage','content','distribution','redundancy','integrity','chunk','devp2p','bzz','insurance','layers','dapp','structure','updates','demo']
+tags: ['Developer Experience']
 speakers: ['Daniel Nagy','Viktor Tron']
 ---

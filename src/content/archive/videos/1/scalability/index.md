@@ -8,7 +8,7 @@ duration: 3449
 expertise: "Advanced"
 type: "Panel"
 track: "Scalability"
-keywords: []
-tags: ['casper',' evidence',' scaling',' solution',' electricity',' economics',' pebble',' state',' validation',' storage',' javascript',' security',' existence','Scalability']
+keywords: ['casper','evidence','scaling','solution','electricity','economics','pebble','state','validation','storage','javascript','security','existence']
+tags: ['Scalability']
 speakers: ['Gavin Wood','Vitalik Buterin','Martin Becze','Dominic Williams','Vlad Zamfir']
 ---

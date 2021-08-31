@@ -8,7 +8,7 @@ duration: 1252
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['assets',' proof',' dapps',' bridge',' trustless',' autonomous',' spv',' verification',' incentives',' dapp',' merkle','Developer Experience']
+keywords: ['assets','proof','dapps','bridge','trustless','autonomous','spv','verification','incentives','dapp','merkle']
+tags: ['Developer Experience']
 speakers: ['Joseph Chow']
 ---

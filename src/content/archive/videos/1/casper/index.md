@@ -8,7 +8,7 @@ duration: 1236
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['design',' consensus',' byzantine',' faults',' light',' client',' latency',' ghost',' security',' work',' stake',' attack',' finality','Developer Experience']
+keywords: ['design','consensus','byzantine','faults','light','client','latency','ghost','security','work','stake','attack','finality']
+tags: ['Developer Experience']
 speakers: ['Vlad Zamfir']
 ---
