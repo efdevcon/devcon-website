@@ -22,8 +22,6 @@ export interface ArchiveVideo {
 }
 
 export function mapToArchiveVideo(source: any) {
-  console.log(source, 'source lol')
-
   return {
     id: source.id,
     slug: source.fields.slug,

@@ -15,8 +15,8 @@ const writeToDisk = true
 const generatePlaylist = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const sheetName = 'Devcon 1' // 
 const edition = 1 // 
+const sheetName = 'Devcon ' + edition // 
 console.log('Importing archive edition', edition, 'from', sheetName, 'to', archiveDir)
 
 ImportArchiveVideos() 
@@ -55,7 +55,7 @@ async function ImportArchiveVideos() {
           }
         }
 
-        const tags = result['Tags'] ? result['Tags'].split(',') : []
+        const tags = result['Tags'] ? result['Tags'].split(',').map((i: string) => i.trim()) : []
         tags.push(result['Track'])
 
         let ipfsHash = result['IPFS Hash'] ?? '' as string
