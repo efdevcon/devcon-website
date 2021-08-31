@@ -8,7 +8,7 @@ duration: 891
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['acronis',' cloud',' storage',' sync',' share',' notary',' data',' certificate',' authority',' pow',' architecture',' banks',' healthcare',' advertising',' trust',' consultants','Developer Experience']
+keywords: ['acronis','cloud','storage','sync','share','notary','data','certificate','authority','pow','architecture','banks','healthcare','advertising','trust','consultants']
+tags: ['Developer Experience']
 speakers: ['Victor Lysenko']
 ---

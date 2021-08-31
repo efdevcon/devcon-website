@@ -8,7 +8,7 @@ duration: 848
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['ethcore',' get',' parity',' ecosystem',' ui',' adoption',' community',' tools',' security',' client',' mist',' demo',' signer',' updates',' dapps','Developer Experience']
+keywords: ['ethcore','get','parity','ecosystem','ui','adoption','community','tools','security','client','mist','demo','signer','updates','dapps']
+tags: ['Developer Experience']
 speakers: ['TJ Saw']
 ---

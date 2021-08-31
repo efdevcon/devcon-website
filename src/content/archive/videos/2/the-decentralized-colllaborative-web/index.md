@@ -8,7 +8,7 @@ duration: 641
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['collaboration',' curation',' insurance',' p2p',' investment',' governance',' reputation',' network',' scalability',' subjective',' backfeed',' systems','Developer Experience']
+keywords: ['collaboration','curation','insurance','p2p','investment','governance','reputation','network','scalability','subjective','backfeed','systems']
+tags: ['Developer Experience']
 speakers: ['Matan Field']
 ---

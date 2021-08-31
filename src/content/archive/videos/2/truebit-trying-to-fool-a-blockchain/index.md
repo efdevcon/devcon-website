@@ -8,7 +8,7 @@ duration: 635
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['turing',' solidity',' privacy',' zksnark',' off-chain',' verification',' incentivization',' trust',' scalability',' rust',' swarm','Developer Experience']
+keywords: ['turing','solidity','privacy','zksnark','off-chain','verification','incentivization','trust','scalability','rust','swarm']
+tags: ['Developer Experience']
 speakers: ['Christian Reitwiessner']
 ---

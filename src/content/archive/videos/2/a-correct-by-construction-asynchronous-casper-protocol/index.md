@@ -8,7 +8,7 @@ duration: 1280
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['technical',' casper',' byzantine',' nodes',' binary',' decision',' construction',' consensus',' fault',' tolerance',' finality',' estimate',' justification',' sender',' bet',' protocol',' equivocation',' validators','Developer Experience']
+keywords: ['technical','casper','byzantine','nodes','binary','decision','construction','consensus','fault','tolerance','finality','estimate','justification','sender','bet','protocol','equivocation','validators']
+tags: ['Developer Experience']
 speakers: ['Vlad Zamfir']
 ---

@@ -8,7 +8,7 @@ duration: 660
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['swarm',' ipfs',' authority',' implementation',' resolution',' registry',' resolvers',' node',' namehash',' governance',' auction','Developer Experience']
+keywords: ['swarm','ipfs','authority','implementation','resolution','registry','resolvers','node','namehash','governance','auction']
+tags: ['Developer Experience']
 speakers: ['Nick Johnson']
 ---

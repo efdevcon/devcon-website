@@ -8,7 +8,7 @@ duration: 1517
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['explanation',' summary',' origin',' timeline',' bitcoin',' namecoin',' mastercoin',' solidity',' contract',' state',' code',' storage',' balances',' nonces',' history',' receipts',' stack',' merkle','Society and Systems']
+keywords: ['explanation','summary','origin','timeline','bitcoin','namecoin','mastercoin','solidity','contract','state','code','storage','balances','nonces','history','receipts','stack','merkle']
+tags: ['Society and Systems']
 speakers: ['Vitalik Buterin']
 ---

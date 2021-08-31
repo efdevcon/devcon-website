@@ -8,7 +8,7 @@ duration: 1126
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: []
-tags: ['patterns',' solidity',' architecture',' readability',' audits',' attack',' vectors',' ics',' storage',' access',' directory','Security']
+keywords: ['patterns','solidity','architecture','readability','audits','attack','vectors','ics','storage','access','directory']
+tags: ['Security']
 speakers: ['Anthony Eufemio','Chris Hitchcott']
 ---

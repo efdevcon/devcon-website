@@ -8,7 +8,7 @@ duration: 1399
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['coincenter',' education',' policy',' legal',' securities',' assets',' tokens',' regulations','Society and Systems']
+keywords: ['coincenter','education','policy','legal','securities','assets','tokens','regulations']
+tags: ['Society and Systems']
 speakers: ['Ming Chan','Peter Van Valkenburgh']
 ---

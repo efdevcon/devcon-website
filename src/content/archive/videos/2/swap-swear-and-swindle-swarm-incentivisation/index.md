@@ -8,7 +8,7 @@ duration: 1205
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['demo',' incentive',' content',' delivery',' storage',' rooting',' node',' payment',' channels',' swap',' escrow',' litigation',' insured','Developer Experience']
+keywords: ['demo','incentive','content','delivery','storage','rooting','node','payment','channels','swap','escrow','litigation','insured']
+tags: ['Developer Experience']
 speakers: ['Viktor Trón','Aron Fischer']
 ---

@@ -8,7 +8,7 @@ duration: 638
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['solidity',' eris',' package',' contracts',' tooling',' developers',' wizard',' permission',' pos',' directory',' key',' IPFS',' evm',' testnet',' mainnet',' consensus',' reuse',' economics',' gas',' query',' storage',' swarm',' dependency','Developer Experience']
+keywords: ['solidity','eris','package','contracts','tooling','developers','wizard','permission','pos','directory','key','IPFS','evm','testnet','mainnet','consensus','reuse','economics','gas','query','storage','swarm','dependency']
+tags: ['Developer Experience']
 speakers: ['RJ Catalano','Zach Ramsey']
 ---

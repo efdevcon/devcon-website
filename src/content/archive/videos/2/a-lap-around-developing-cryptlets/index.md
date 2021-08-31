@@ -8,7 +8,7 @@ duration: 1386
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['frontier',' baas',' microsoft',' node',' network',' enterprise',' consortium',' attestation',' language',' evm',' scalability',' enclaves',' flexibility',' cloud',' java',' bletchly',' azure',' formal',' verification',' fstar',' sdk','Developer Experience']
+keywords: ['frontier','baas','microsoft','node','network','enterprise','consortium','attestation','language','evm','scalability','enclaves','flexibility','cloud','java','bletchly','azure','formal','verification','fstar','sdk']
+tags: ['Developer Experience']
 speakers: ['Marley Gray']
 ---

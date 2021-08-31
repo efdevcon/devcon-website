@@ -8,7 +8,7 @@ duration: 1129
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['updates',' roadmap',' wearables',' iot',' mobile',' resource',' constraint',' devices',' security',' java',' c++',' raiden',' raspberry',' pi',' light',' client','Society and Systems']
+keywords: ['updates','roadmap','wearables','iot','mobile','resource','constraint','devices','security','java','c++','raiden','raspberry','pi','light','client']
+tags: ['Society and Systems']
 speakers: ['Bob Summerwill']
 ---

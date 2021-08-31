@@ -8,7 +8,7 @@ duration: 711
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['web3',' p2p',' uport',' sign',' verification',' evm',' merkle',' crdt',' data',' database',' browser',' permissions','Developer Experience']
+keywords: ['web3','p2p','uport','sign','verification','evm','merkle','crdt','data','database','browser','permissions']
+tags: ['Developer Experience']
 speakers: ['Samuli Poyhtari']
 ---

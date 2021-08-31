@@ -8,7 +8,7 @@ duration: 1601
 expertise: "Intermediate"
 type: "Talk"
 track: "Scalability"
-keywords: []
-tags: ['sharding',' casper',' pos',' zcash',' scalability',' cost',' latency',' pos',' mining',' pow',' validators',' miners',' casper',' epoch',' node',' incentives',' proofs',' bittorrent','Scalability']
+keywords: ['sharding','casper','pos','zcash','scalability','cost','latency','pos','mining','pow','validators','miners','casper','epoch','node','incentives','proofs','bittorrent']
+tags: ['Scalability']
 speakers: ['Vitalik Buterin']
 ---

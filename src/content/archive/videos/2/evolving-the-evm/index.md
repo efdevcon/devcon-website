@@ -8,7 +8,7 @@ duration: 1251
 expertise: "Advanced"
 type: "Panel"
 track: "Developer Experience"
-keywords: []
-tags: ['ewasm',' solidity',' updates',' bytecode',' languages',' timeline',' webassembly',' metering',' runtime','Developer Experience']
+keywords: ['ewasm','solidity','updates','bytecode','languages','timeline','webassembly','metering','runtime']
+tags: ['Developer Experience']
 speakers: ['Greg Colvin','Martin Becze','Paweł Bylica','Christian Reitwiessner','Alex Beregszaszi']
 ---

@@ -8,7 +8,7 @@ duration: 955
 expertise: "Advanced"
 type: "Talk"
 track: "Security"
-keywords: []
-tags: ['hack',' attack',' prevention',' safety',' community',' prep',' rollout',' trust',' calls','Security']
+keywords: ['hack','attack','prevention','safety','community','prep','rollout','trust','calls']
+tags: ['Security']
 speakers: ['Joseph Chow']
 ---

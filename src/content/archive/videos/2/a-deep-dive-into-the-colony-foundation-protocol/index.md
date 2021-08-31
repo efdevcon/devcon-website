@@ -8,7 +8,7 @@ duration: 869
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['governance',' collaboration',' developers',' vote',' voting',' reputation',' sybil',' token',' weighted',' locking',' liquidity',' incentive',' polls',' bandwagon',' scalability',' secret',' vault',' accounts',' validity','Developer Experience']
+keywords: ['governance','collaboration','developers','vote','voting','reputation','sybil','token','weighted','locking','liquidity','incentive','polls','bandwagon','scalability','secret','vault','accounts','validity']
+tags: ['Developer Experience']
 speakers: ['Aron Fischer','Elena Dimitrova']
 ---

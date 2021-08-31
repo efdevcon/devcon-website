@@ -8,7 +8,7 @@ duration: 969
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['updates',' security',' types',' strings',' slice',' ast',' debug',' safety',' mist',' swarm',' abi',' templates','Developer Experience']
+keywords: ['updates','security','types','strings','slice','ast','debug','safety','mist','swarm','abi','templates']
+tags: ['Developer Experience']
 speakers: ['Christian Reitwiessner']
 ---

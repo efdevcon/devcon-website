@@ -8,7 +8,7 @@ duration: 613
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['society',' phi',' banking',' stable',' coin',' commercial',' loans',' interest',' judgment',' fiat',' collateral','Developer Experience']
+keywords: ['society','phi','banking','stable','coin','commercial','loans','interest','judgment','fiat','collateral']
+tags: ['Developer Experience']
 speakers: ['Dominic Williams']
 ---

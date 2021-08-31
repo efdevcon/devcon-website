@@ -8,7 +8,7 @@ duration: 1259
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['technical',' client',' ecosystem',' browser',' abi',' dapps',' node',' account',' state',' keys',' solidity',' protocol',' mobile',' library','Developer Experience']
+keywords: ['technical','client','ecosystem','browser','abi','dapps','node','account','state','keys','solidity','protocol','mobile','library']
+tags: ['Developer Experience']
 speakers: ['Péter Szilágyi']
 ---

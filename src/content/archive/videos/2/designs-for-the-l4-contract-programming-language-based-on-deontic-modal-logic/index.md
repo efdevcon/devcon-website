@@ -8,7 +8,7 @@ duration: 1130
 expertise: "Advanced"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['legalese',' lawyers',' dapps',' solidity',' sql',' language',' code',' syntax',' semantics',' trace',' sequence','Society and Systems']
+keywords: ['legalese','lawyers','dapps','solidity','sql','language','code','syntax','semantics','trace','sequence']
+tags: ['Society and Systems']
 speakers: ['Dr. Virgil Griffith & Vikram Verma']
 ---

@@ -8,7 +8,7 @@ duration: 692
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['EVM',' tools',' forks',' package',' dependencies',' formal',' verification',' link',' solidity',' test',' chainfork',' scripting',' deploy',' sharding',' nexus','Developer Experience']
+keywords: ['EVM','tools','forks','package','dependencies','formal','verification','link','solidity','test','chainfork','scripting','deploy','sharding','nexus']
+tags: ['Developer Experience']
 speakers: ['Nikolai Mushegian']
 ---

@@ -8,7 +8,7 @@ duration: 741
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['operations',' tests',' structure',' gas',' memory',' computation',' threading',' opcode',' interpreter',' constant',' gmp',' boost',' arithmetic','Developer Experience']
+keywords: ['operations','tests','structure','gas','memory','computation','threading','opcode','interpreter','constant','gmp','boost','arithmetic']
+tags: ['Developer Experience']
 speakers: ['Greg Colvin']
 ---

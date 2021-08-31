@@ -8,7 +8,7 @@ duration: 446
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['contract',' update',' keys',' vote',' call',' logic',' functions',' callcode',' ABI',' whitelist',' parameters',' updates',' serpent',' solidity',' formal',' verification',' assertions',' rust',' ada',' webassembly','Developer Experience']
+keywords: ['contract','update','keys','vote','call','logic','functions','callcode','ABI','whitelist','parameters','updates','serpent','solidity','formal','verification','assertions','rust','ada','webassembly']
+tags: ['Developer Experience']
 speakers: ['Joey Krug']
 ---

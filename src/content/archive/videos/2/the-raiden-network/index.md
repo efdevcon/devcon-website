@@ -1,14 +1,14 @@
 ---
 edition: 2
 title: "The Raiden Network"
-description: "Presentation of the Raiden Network, Implementation, Use Cases, API, Examples"
-youtubeUrl: "https://youtu.be/4igFqFqQga4"
-ipfsHash: "QmcKtPv1HZfrmMn6bR2S93gTJAqNHqopu6aYy81UAeFnVF"
-duration: 989
+description: "Lefteris Karapetsas gives his talk on the Raiden Network."
+youtubeUrl: "https://youtu.be/JuVP4iDVkoQ"
+ipfsHash: "QmSh39ACQYLABXp47zfzEjPhzmGasvktutzWAEhH3gFi9r"
+duration: 544
 expertise: "Advanced"
-type: "Talk"
+type: "Other"
 track: "Developer Experience"
-keywords: []
-tags: ['state',' channel',' dapps',' throughput',' finality',' confidentiality',' privacy',' cost',' consensus',' scalability',' demo',' python',' dex',' trust','Developer Experience']
-speakers: ['Heiko Hees']
+keywords: ['scalability','finality','privacy','off-chain','distributed','asset','transfer','erc20','micropayments','channels','dex','hashlock']
+tags: ['Developer Experience']
+speakers: ['Lefteris Karapetsas']
 ---

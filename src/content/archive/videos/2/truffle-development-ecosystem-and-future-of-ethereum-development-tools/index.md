@@ -8,7 +8,7 @@ duration: 569
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['updates',' client',' mining',' account',' wallet',' deterministic',' programmable',' fork',' solidity',' tests',' npm',' buildpack',' events','Developer Experience']
+keywords: ['updates','client','mining','account','wallet','deterministic','programmable','fork','solidity','tests','npm','buildpack','events']
+tags: ['Developer Experience']
 speakers: ['Tim Coulter']
 ---

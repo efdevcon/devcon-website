@@ -8,7 +8,7 @@ duration: 1125
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: []
-tags: ['risk',' loss',' likelihood',' impact',' wallets',' dapps',' developers',' network',' isolation',' tamper',' hsm',' vault',' verified',' randomness',' audit',' vm','Security']
+keywords: ['risk','loss','likelihood','impact','wallets','dapps','developers','network','isolation','tamper','hsm','vault','verified','randomness','audit','vm']
+tags: ['Security']
 speakers: ['Martin Swende']
 ---

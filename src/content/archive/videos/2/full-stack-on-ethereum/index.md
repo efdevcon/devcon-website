@@ -8,7 +8,7 @@ duration: 1220
 expertise: "Intermediate"
 type: "Talk"
 track: "Community"
-keywords: []
-tags: ['ecosystem',' developers',' test',' integration',' tools',' projects',' launch',' dapps',' mainnet','Community']
+keywords: ['ecosystem','developers','test','integration','tools','projects','launch','dapps','mainnet']
+tags: ['Community']
 speakers: ['Roman Mandeleil']
 ---

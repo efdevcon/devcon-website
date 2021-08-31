@@ -8,7 +8,7 @@ duration: 706
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['progress',' security',' vulnerability',' bugs',' challenges',' contributions',' dependency','Developer Experience']
+keywords: ['progress','security','vulnerability','bugs','challenges','contributions','dependency']
+tags: ['Developer Experience']
 speakers: ['Loi Luu']
 ---

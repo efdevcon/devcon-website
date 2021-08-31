@@ -8,7 +8,7 @@ duration: 895
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['architecture',' dapps',' trust',' scaling',' trustless',' ipfs',' whisper',' api',' legal',' finance',' hypertext',' multimedia',' identity','Developer Experience']
+keywords: ['architecture','dapps','trust','scaling','trustless','ipfs','whisper','api','legal','finance','hypertext','multimedia','identity']
+tags: ['Developer Experience']
 speakers: ['Daniel Nagy']
 ---

@@ -8,7 +8,7 @@ duration: 560
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['digital',' identity',' confirmation',' proof',' kyc',' api',' ecosystem',' community','Developer Experience']
+keywords: ['digital','identity','confirmation','proof','kyc','api','ecosystem','community']
+tags: ['Developer Experience']
 speakers: ['Igor Lillic']
 ---

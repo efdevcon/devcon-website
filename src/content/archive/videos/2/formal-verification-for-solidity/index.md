@@ -8,7 +8,7 @@ duration: 1169
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['code',' testing',' balances',' call',' compiler',' gui',' why3',' evm','Developer Experience']
+keywords: ['code','testing','balances','call','compiler','gui','why3','evm']
+tags: ['Developer Experience']
 speakers: ['Christian Reitwiessner','Yoichi Hirai']
 ---

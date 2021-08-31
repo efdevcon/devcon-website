@@ -8,7 +8,7 @@ duration: 712
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['sikorka',' solidity',' contracts',' royalty',' scalability',' security',' api',' presence',' real-world',' interactive',' light client',' app',' maps','Developer Experience']
+keywords: ['sikorka','solidity','contracts','royalty','scalability','security','api','presence','real-world','interactive','light client','app','maps']
+tags: ['Developer Experience']
 speakers: ['Lefteris Karapetsas']
 ---

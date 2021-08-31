@@ -8,7 +8,7 @@ duration: 1913
 expertise: "Beginner"
 type: "Panel"
 track: "Society and Systems"
-keywords: []
-tags: ['public',' private',' network',' consortium',' society',' systems',' interoperability',' scalability',' banks',' adoption',' infrastructure',' cloud',' regulation','Society and Systems']
+keywords: ['public','private','network','consortium','society','systems','interoperability','scalability','banks','adoption','infrastructure','cloud','regulation']
+tags: ['Society and Systems']
 speakers: ['Matthew Spoke','Marley Gray','Roman Mandeleil','Victor Wong','Henning Diedrich','Alex Liu']
 ---

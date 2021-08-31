@@ -8,7 +8,7 @@ duration: 820
 expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['education',' adoption',' onboarding',' training',' growth',' industry',' enterprise',' scalability',' fintech',' privacy',' security',' data','Society and Systems']
+keywords: ['education','adoption','onboarding','training','growth','industry','enterprise','scalability','fintech','privacy','security','data']
+tags: ['Society and Systems']
 speakers: ['Taylor Gerring']
 ---

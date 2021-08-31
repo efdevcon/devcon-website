@@ -8,7 +8,7 @@ duration: 1192
 expertise: "Advanced"
 type: "Panel"
 track: "Security"
-keywords: []
-tags: ['formal',' verification',' developers',' tools',' ux',' mist',' reputation',' evm',' abstraction',' languages','Security']
+keywords: ['formal','verification','developers','tools','ux','mist','reputation','evm','abstraction','languages']
+tags: ['Security']
 speakers: ['Martin Swende','Vitalik Buterin','Christian Reitwiessner','Raine Revere','Philip Daian']
 ---

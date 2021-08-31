@@ -8,7 +8,7 @@ duration: 934
 expertise: "Advanced"
 type: "Other"
 track: "Developer Experience"
-keywords: []
-tags: ['proofs',' history',' rules',' smuggling',' tonk',' solidity',' evm',' languages',' spec',' checker','Developer Experience']
+keywords: ['proofs','history','rules','smuggling','tonk','solidity','evm','languages','spec','checker']
+tags: ['Developer Experience']
 speakers: ['Yoichi Hirai']
 ---

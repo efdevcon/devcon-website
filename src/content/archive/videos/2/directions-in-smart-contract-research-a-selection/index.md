@@ -8,7 +8,7 @@ duration: 972
 expertise: "Advanced"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['academia',' industry',' ic3',' correctness',' security',' formal',' verification',' escape',' hatches',' bug',' bounties',' semantics',' evm',' trustless','Society and Systems']
+keywords: ['academia','industry','ic3','correctness','security','formal','verification','escape','hatches','bug','bounties','semantics','evm','trustless']
+tags: ['Society and Systems']
 speakers: ['Philip Daian']
 ---

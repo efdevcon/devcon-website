@@ -8,7 +8,7 @@ duration: 909
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['china',' ethfans',' community',' dapps',' language',' testing',' deployment',' contracts',' tests',' solidity',' contracts',' deploy',' debugging',' rust',' devp2p','Developer Experience']
+keywords: ['china','ethfans','community','dapps','language','testing','deployment','contracts','tests','solidity','contracts','deploy','debugging','rust','devp2p']
+tags: ['Developer Experience']
 speakers: ['Jan Xie']
 ---

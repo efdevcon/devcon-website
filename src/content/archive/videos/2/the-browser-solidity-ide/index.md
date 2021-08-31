@@ -8,7 +8,7 @@ duration: 765
 expertise: "Advanced"
 type: "Other"
 track: "Developer Experience"
-keywords: []
-tags: ['tools',' code',' compiler',' gas',' functions',' workshop',' formal',' verification',' testing','Developer Experience']
+keywords: ['tools','code','compiler','gas','functions','workshop','formal','verification','testing']
+tags: ['Developer Experience']
 speakers: ['Christian Reitwiessner']
 ---

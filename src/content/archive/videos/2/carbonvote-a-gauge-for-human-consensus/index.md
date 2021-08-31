@@ -8,7 +8,7 @@ duration: 528
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['governance',' carbon',' developers',' machine',' layer',' pow',' pos',' fork',' voting',' community',' etc','Society and Systems']
+keywords: ['governance','carbon','developers','machine','layer','pow','pos','fork','voting','community','etc']
+tags: ['Society and Systems']
 speakers: ['Bin Lu']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmaRzG7ymEKXLPPHHmoQVhkrEcmEjvjkWHqFYUi7s2zkeB"
 duration: 1093
 expertise: "Beginner"
 type: "Panel"
-track: "Devcon/About"
-keywords: []
-tags: ['EVM',' ewasm',' light client',' swarm',' ecosystem',' goethereum',' ENS',' agenda',' remix',' solidity',' research',' sharding',' pos',' privacy','Devcon/About']
+track: "Devcon"
+keywords: ['EVM','ewasm','light client','swarm','ecosystem','goethereum','ENS','agenda','remix','solidity','research','sharding','pos','privacy']
+tags: ['Devcon']
 speakers: ['Ming Chan','Martin Becze','Péter Szilágyi','Dr. Christian Reitwiessner','Alex Van de Sande','Viktor Trón','Vitalik Buterin']
 ---

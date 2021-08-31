@@ -8,7 +8,7 @@ duration: 599
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['DAI',' stablecoin',' capital',' mkr',' risk',' dapple',' dapsys',' tools',' dex',' incentive',' amm',' offchain',' simplecoin',' finance','Developer Experience']
+keywords: ['DAI','stablecoin','capital','mkr','risk','dapple','dapsys','tools','dex','incentive','amm','offchain','simplecoin','finance']
+tags: ['Developer Experience']
 speakers: ['Andy Milenius']
 ---

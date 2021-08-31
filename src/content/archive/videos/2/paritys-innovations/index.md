@@ -8,7 +8,7 @@ duration: 758
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['client',' node',' mining',' api',' rust',' library',' api',' latency',' dapp',' security',' rpc',' keys',' pruning',' tracing',' sync',' poa','Developer Experience']
+keywords: ['client','node','mining','api','rust','library','api','latency','dapp','security','rpc','keys','pruning','tracing','sync','poa']
+tags: ['Developer Experience']
 speakers: ['Arkadiy Paronyan']
 ---

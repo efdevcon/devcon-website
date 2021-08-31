@@ -8,7 +8,7 @@ duration: 842
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['sync',' resource',' rpc',' servers',' scalability',' flexibility',' nodes','Developer Experience']
+keywords: ['sync','resource','rpc','servers','scalability','flexibility','nodes']
+tags: ['Developer Experience']
 speakers: ['Zsolt Zsolt Felfoldi']
 ---

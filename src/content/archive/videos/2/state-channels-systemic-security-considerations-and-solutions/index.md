@@ -8,7 +8,7 @@ duration: 895
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
-keywords: []
-tags: ['validator',' state',' contract',' fidelity',' incentives',' risks',' modularity',' solutions','Security']
+keywords: ['validator','state','contract','fidelity','incentives','risks','modularity','solutions']
+tags: ['Security']
 speakers: ['Joseph Poon']
 ---

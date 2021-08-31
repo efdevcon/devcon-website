@@ -8,7 +8,7 @@ duration: 706
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['react',' boilerplate',' scaffold',' solidity',' javascript',' wallet',' identity',' faucet',' blockapps',' infura',' dapps',' css',' redux',' scalability',' deployment',' xss',' unix','Developer Experience']
+keywords: ['react','boilerplate','scaffold','solidity','javascript','wallet','identity','faucet','blockapps','infura','dapps','css','redux','scalability','deployment','xss','unix']
+tags: ['Developer Experience']
 speakers: ['Nick Dodson']
 ---

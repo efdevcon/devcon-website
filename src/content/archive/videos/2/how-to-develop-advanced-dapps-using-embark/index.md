@@ -8,7 +8,7 @@ duration: 905
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['demo',' javascript',' pipeline',' test',' DAO',' contracts',' deploy',' code',' features',' communication',' whisper',' storage',' dapp',' swarm',' ipfs','Developer Experience']
+keywords: ['demo','javascript','pipeline','test','DAO','contracts','deploy','code','features','communication','whisper','storage','dapp','swarm','ipfs']
+tags: ['Developer Experience']
 speakers: ['Iuri Matias']
 ---

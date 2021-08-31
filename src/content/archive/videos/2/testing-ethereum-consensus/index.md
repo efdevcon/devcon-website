@@ -8,7 +8,7 @@ duration: 557
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['state',' test',' client',' json',' homestead',' vmtest',' security',' testing','Developer Experience']
+keywords: ['state','test','client','json','homestead','vmtest','security','testing']
+tags: ['Developer Experience']
 speakers: ['Dimitry Khoklov']
 ---

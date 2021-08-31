@@ -8,7 +8,7 @@ duration: 752
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['ledger',' execution',' scalability',' progress',' systems',' availability',' language',' resilience',' init','Developer Experience']
+keywords: ['ledger','execution','scalability','progress','systems','availability','language','resilience','init']
+tags: ['Developer Experience']
 speakers: ['Henning Diedrich']
 ---

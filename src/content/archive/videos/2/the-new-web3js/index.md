@@ -8,7 +8,7 @@ duration: 769
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['json',' rpc',' translate',' code',' abi',' javascript',' socket',' filter',' subscriptions',' calling','Developer Experience']
+keywords: ['json','rpc','translate','code','abi','javascript','socket','filter','subscriptions','calling']
+tags: ['Developer Experience']
 speakers: ['Fabian Vogelsteller']
 ---

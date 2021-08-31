@@ -8,7 +8,7 @@ duration: 1258
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: []
-tags: ['immutability',' encryption',' communication',' selective',' dicslosure',' human rights',' society',' fungibility',' data',' security',' bitcoin',' zksnarks',' zkproofs',' validators',' programmability',' alchemy',' btcrelay','Privacy']
+keywords: ['immutability','encryption','communication','selective','dicslosure','human rights','society','fungibility','data','security','bitcoin','zksnarks','zkproofs','validators','programmability','alchemy','btcrelay']
+tags: ['Privacy']
 speakers: ['Zooko Wilcox']
 ---

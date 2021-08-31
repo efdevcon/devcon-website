@@ -8,7 +8,7 @@ duration: 867
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['adoption',' demo',' scalability',' update',' browser',' extension',' id',' rpc',' keys',' lessons',' society','Developer Experience']
+keywords: ['adoption','demo','scalability','update','browser','extension','id','rpc','keys','lessons','society']
+tags: ['Developer Experience']
 speakers: ['Aaron Davis']
 ---

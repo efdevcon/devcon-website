@@ -8,7 +8,7 @@ duration: 939
 expertise: "Advanced"
 type: "Other"
 track: "Developer Experience"
-keywords: []
-tags: ['javascript',' tools',' api',' abi',' communication',' demo',' code',' error',' documentation',' android',' jvm',' adoption',' enterprise',' dapps','Developer Experience']
+keywords: ['javascript','tools','api','abi','communication','demo','code','error','documentation','android','jvm','adoption','enterprise','dapps']
+tags: ['Developer Experience']
 speakers: ['David Roon']
 ---

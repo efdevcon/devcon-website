@@ -8,7 +8,7 @@ duration: 767
 expertise: "Advanced"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['fully',' distributed',' cloud',' blockchain',' infrastructure',' dapps',' security',' resilience',' miners',' computing',' power',' iexec',' offchain',' cpu',' servers',' HEP',' scheduling',' resource',' management',' autonomous',' sidechain',' energy','Society and Systems']
+keywords: ['fully','distributed','cloud','blockchain','infrastructure','dapps','security','resilience','miners','computing','power','iexec','offchain','cpu','servers','HEP','scheduling','resource','management','autonomous','sidechain','energy']
+tags: ['Society and Systems']
 speakers: ['Gilles Fedak']
 ---

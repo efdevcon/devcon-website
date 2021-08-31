@@ -8,7 +8,7 @@ duration: 1237
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['internet',' clients',' server',' funding',' ecosystem',' distributed',' society',' swarm',' ENS',' wallet',' interface',' light client',' api',' geth',' parity','Developer Experience']
+keywords: ['internet','clients','server','funding','ecosystem','distributed','society','swarm','ENS','wallet','interface','light client','api','geth','parity']
+tags: ['Developer Experience']
 speakers: ['Alex Van de Sande']
 ---

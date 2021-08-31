@@ -8,7 +8,7 @@ duration: 649
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['market',' computing',' power',' blender',' buy',' sell',' microsoft',' hardware',' standard',' registry',' reward','Developer Experience']
+keywords: ['market','computing','power','blender','buy','sell','microsoft','hardware','standard','registry','reward']
+tags: ['Developer Experience']
 speakers: ['Julian Zawistowski']
 ---

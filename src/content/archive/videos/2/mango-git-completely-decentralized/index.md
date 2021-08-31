@@ -8,7 +8,7 @@ duration: 887
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['swarm',' ipfs',' trust',' repo',' data',' existence',' storage',' security',' object',' tree',' snapshot',' admin',' tools','Developer Experience']
+keywords: ['swarm','ipfs','trust','repo','data','existence','storage','security','object','tree','snapshot','admin','tools']
+tags: ['Developer Experience']
 speakers: ['Alex Beregszaszi']
 ---

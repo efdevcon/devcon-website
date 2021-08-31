@@ -8,7 +8,7 @@ duration: 894
 expertise: "Intermediate"
 type: "Talk"
 track: "Society and Systems"
-keywords: []
-tags: ['enterprise',' adoption',' consensus',' scalability',' cloud',' latency',' performance','Society and Systems']
+keywords: ['enterprise','adoption','consensus','scalability','cloud','latency','performance']
+tags: ['Society and Systems']
 speakers: ['Matthew Spoke']
 ---

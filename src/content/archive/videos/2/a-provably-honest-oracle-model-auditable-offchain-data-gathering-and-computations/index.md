@@ -8,7 +8,7 @@ duration: 620
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['oracle',' solution',' APIs',' external',' data',' attestation',' oraclize',' authenticity',' verification',' tlsnotary',' AWS',' pagesigner',' server',' qsee',' android safetynet',' android',' intel',' sgx',' sandbox',' google',' trust',' offchain',' evm',' proof','Developer Experience']
+keywords: ['oracle','solution','APIs','external','data','attestation','oraclize','authenticity','verification','tlsnotary','AWS','pagesigner','server','qsee','android safetynet','android','intel','sgx','sandbox','google','trust','offchain','evm','proof']
+tags: ['Developer Experience']
 speakers: ['Thomas Bertani']
 ---

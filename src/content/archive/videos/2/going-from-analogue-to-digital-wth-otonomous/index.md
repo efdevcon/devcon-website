@@ -8,7 +8,7 @@ duration: 694
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['automation',' law',' corporate',' legal',' governance',' company',' organization',' design',' autonomous',' history',' nature',' business',' regulations',' compliance',' DAO',' ID',' identity',' persona',' verification',' encryption',' key',' management',' privacy',' recovery',' compromise','Developer Experience']
+keywords: ['automation','law','corporate','legal','governance','company','organization','design','autonomous','history','nature','business','regulations','compliance','DAO','ID','identity','persona','verification','encryption','key','management','privacy','recovery','compromise']
+tags: ['Developer Experience']
 speakers: ['Mano Thanabalan']
 ---

@@ -8,7 +8,7 @@ duration: 670
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['consensys',' identity',' key',' management',' ux',' dapps',' mobile',' data',' ownership',' attestation',' recovery',' gnosis',' identifier',' infura',' libraries',' open',' source',' scalability',' onboarding','Developer Experience']
+keywords: ['consensys','identity','key','management','ux','dapps','mobile','data','ownership','attestation','recovery','gnosis','identifier','infura','libraries','open','source','scalability','onboarding']
+tags: ['Developer Experience']
 speakers: ['Rouven Heck','Christian Lundkvist']
 ---

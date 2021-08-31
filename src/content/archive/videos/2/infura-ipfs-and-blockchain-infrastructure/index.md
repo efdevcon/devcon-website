@@ -8,7 +8,7 @@ duration: 452
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['dapps',' node',' client',' scalability',' load',' balancing',' cache',' servers',' frontend',' roadmap',' fork',' state',' channel','Developer Experience']
+keywords: ['dapps','node','client','scalability','load','balancing','cache','servers','frontend','roadmap','fork','state','channel']
+tags: ['Developer Experience']
 speakers: ['Herman Junge']
 ---

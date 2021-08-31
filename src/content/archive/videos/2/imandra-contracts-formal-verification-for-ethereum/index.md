@@ -8,7 +8,7 @@ duration: 927
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['cloud',' evm',' tools',' proof',' demo',' finance',' risk',' audit',' bugs',' interoperability','Developer Experience']
+keywords: ['cloud','evm','tools','proof','demo','finance','risk','audit','bugs','interoperability']
+tags: ['Developer Experience']
 speakers: ['Grant Passmore','Evgeny Gokhberg']
 ---

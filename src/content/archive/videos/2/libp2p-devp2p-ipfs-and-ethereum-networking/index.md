@@ -8,7 +8,7 @@ duration: 651
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Experience"
-keywords: []
-tags: ['ipfs',' libp2p',' devp2p',' firewall',' bandwidth',' nat',' reliability',' dapps',' censorship',' offline',' authentication',' encryption',' bluetooth',' upgrades',' browser',' tcp',' http',' nodes',' evm',' goethereum',' ewasm',' node.js',' websockets',' spdy',' webrtc',' browser','Developer Experience']
+keywords: ['ipfs','libp2p','devp2p','firewall','bandwidth','nat','reliability','dapps','censorship','offline','authentication','encryption','bluetooth','upgrades','browser','tcp','http','nodes','evm','goethereum','ewasm','node.js','websockets','spdy','webrtc','browser']
+tags: ['Developer Experience']
 speakers: ['David Dias','Juan Benet']
 ---
