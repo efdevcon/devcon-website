@@ -7,8 +7,8 @@ ipfsHash: "QmaWA2tE3J5DtzvfCTxtw84SEpXoiEhARYxppjHHMWUgJZ"
 duration: 1679
 expertise: "Beginner"
 type: "Talk"
-track: "Devcon/About"
+track: "Devcon"
 keywords: []
-tags: ['Devcon/About']
+tags: ['Devcon']
 speakers: ['Ming Chan','Vitalik Buterin','Dr. Christian Reitwiessner','Peter Szilagyi','Fabian Vogelsteller','Viktor Tron']
 ---
