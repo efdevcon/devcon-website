@@ -7,8 +7,8 @@ ipfsHash: "QmNnzMS8YciybE92BE45X7kSdj6VDUSXtZ9PPkyRQTXUrb"
 duration: 1246
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['eth2','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Carl Beekhuizen','Dankrad Feist']
 ---

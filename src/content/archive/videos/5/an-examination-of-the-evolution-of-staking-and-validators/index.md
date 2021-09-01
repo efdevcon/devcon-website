@@ -7,8 +7,8 @@ ipfsHash: "QmTGaZrv8NSaVLCB8UCXK8AXkDuzCYcBhWmGnfmqCvyVck"
 duration: 1046
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['staking','eth2','general']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Jun Soo JK Kim']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmUnnCNF9FUYQ1ATkRejEDtmasy4TzDA2RXECkwMUaEfj4"
 duration: 860
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['interchain','interblockchain','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Christopher Goes']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmQ5CZj8FDoqU97Q5N8wj6cHCHG5WHUW2TzcREK58QJaiA"
 duration: 2268
 expertise: "Intermediate"
 type: "Panel"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['eth2','developers','devex','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Ethereum Magicians']
 ---

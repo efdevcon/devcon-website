@@ -7,8 +7,8 @@ ipfsHash: "QmPhjPYXsHHvqSUtcxQXpLvGZyJMQ1v7exb6YTA235NUHH"
 duration: 2160
 expertise: "Advanced"
 type: "Panel"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['eth2','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Various']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmdKCNFWeyddX5T4gt9RLr4hpZ4oiXBDq9dVp57JMeukX9"
 duration: 1901
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['satoshi','Byzantine','incentives','pow','pos','snark','zksnark','general']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Vitalik Buterin']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmScrkbpimHJkPM77yWtNMyBhvymXm7ugCSmzuPvABmXo6"
 duration: 1135
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: []
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Dr. Greg Colvin']
 ---

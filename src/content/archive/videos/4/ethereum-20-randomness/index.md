@@ -7,8 +7,8 @@ ipfsHash: "QmbmrGzw2TXJdtVMUCJhh7vqaz3sTK1WovUvUgsG993JcF"
 duration: 2034
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['eth2','updates','sharding']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Justin Drake']
 ---

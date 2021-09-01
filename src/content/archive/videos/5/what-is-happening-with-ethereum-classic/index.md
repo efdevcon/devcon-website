@@ -7,8 +7,8 @@ ipfsHash: "QmUcitys6SX4U5G3UHeE4Vpdg2gtAwm4Z78bjVSiWgsS2d"
 duration: 1360
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['ETC','classic','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Bob Summerwill']
 ---

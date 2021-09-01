@@ -7,8 +7,8 @@ ipfsHash: "QmNbJJgLDsuVYyk9kmxHm9DML6yfHPAkHJ3YFGzc7WWEGN"
 duration: 1833
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: []
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Vitalik Buterin']
 ---

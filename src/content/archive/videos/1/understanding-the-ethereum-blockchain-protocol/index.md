@@ -7,8 +7,8 @@ ipfsHash: "QmQJFGQaaYY5qHZL1nmVQCyiR7hKoK27wcXu9LqupLkwBC"
 duration: 2298
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: []
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Vitalik Buterin']
 ---

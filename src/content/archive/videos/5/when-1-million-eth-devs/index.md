@@ -9,8 +9,8 @@ ipfsHash: "QmPVYdWiFD59RJqsxqWCfXVeTnje1z7zYJ4eFJeimUabZv"
 duration: 1550
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['million','devs','developers','general']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Joseph Lubin']
 ---

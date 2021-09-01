@@ -7,8 +7,8 @@ ipfsHash: "QmRJLnr6JAaC5RM1BXRj4ksyFHzCvikapG9QNW1LcZ43tZ"
 duration: 1016
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: []
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Andrei Maiboroda']
 ---

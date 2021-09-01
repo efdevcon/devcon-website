@@ -7,8 +7,8 @@ ipfsHash: "QmPMQtToRHvoNSm34u3YpUTe9NpedN7JC5GKKu3p9v3mFA"
 duration: 1270
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: []
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Eric Munsing']
 ---

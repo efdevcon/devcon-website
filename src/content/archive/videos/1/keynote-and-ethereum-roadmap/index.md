@@ -7,8 +7,8 @@ ipfsHash: "QmPHHhsBadvDsJ3rd7zyG7oshUfxe1hyRJa8W5ATTku5bL"
 duration: 2765
 expertise: "Intermediate"
 type: "Panel"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['history','updates','mist','casper','pos','adoption','zksnark','privacy','scalability','zkproofs','evm','geth','whisper','swarm','dapps','client','browser']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Vitalik Buterin','Jeffrey Wilcke','Alex van de Sande','Gavin Wood']
 ---

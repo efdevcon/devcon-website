@@ -8,8 +8,8 @@ ipfsHash: "QmbSNzRnEaiKR5PDDAdkZPjkgPththyh3EoMjy4tENXgnL"
 duration: 421
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['LayerX','ESP','grants','zerochain','cbc','verification','R&D','Japan','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Ryuya Nakamura']
 ---

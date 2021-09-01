@@ -7,8 +7,8 @@ ipfsHash: "QmUNmFioKVghQ2N6esNMEegPDMaUg8SGzpjp9HjqEaHBfj"
 duration: 731
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['eth2','developers','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Gregory Markou']
 ---

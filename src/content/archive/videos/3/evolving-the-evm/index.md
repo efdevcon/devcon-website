@@ -7,8 +7,8 @@ ipfsHash: "QmZJEdD2WYN5xqPfn8t8uvKWKSBN1588Q1xn3JcmVYBLDN"
 duration: 1494
 expertise: "Advanced"
 type: "Panel"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: []
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Martin Becze','Alex Beregszaszi','Pawel Bylica','Dr. Greg Colvin','Dr. Christian Reitwiessner','Casey Detrio']
 ---

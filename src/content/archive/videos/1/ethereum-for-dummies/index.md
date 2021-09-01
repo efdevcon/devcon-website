@@ -7,8 +7,8 @@ ipfsHash: "QmbohvDpm4QwzTf44Uy9EJa2aEVRxZGjjDL1gX6nocZfLJ"
 duration: 1432
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: []
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Gavin Wood']
 ---

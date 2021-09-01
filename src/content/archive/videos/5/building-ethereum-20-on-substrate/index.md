@@ -7,8 +7,8 @@ ipfsHash: "QmbXaPT89XMwhNssoiGGX9JFqAQHTSdQkEfRjiZdV75dhm"
 duration: 785
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['substrate','eth2','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Wei Tang']
 ---
