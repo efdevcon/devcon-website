@@ -7,8 +7,8 @@ ipfsHash: "QmUfmGdrvofu6xrP9mVhwyXq4Dp57E74mAfwVQYYqGk9Ep"
 duration: 1176
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Yoichi Hirai']
 ---

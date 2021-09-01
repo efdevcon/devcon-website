@@ -7,8 +7,8 @@ ipfsHash: "QmWpCp242nd86Yw2DEr8LYKZ2QVYivg1wAhmPDVF94FQXT"
 duration: 569
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['updates','client','mining','account','wallet','deterministic','programmable','fork','solidity','tests','npm','buildpack','events']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Tim Coulter']
 ---

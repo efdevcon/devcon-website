@@ -7,8 +7,8 @@ ipfsHash: "QmT4RDkP1t2jy8Cf7f6nRTVxreiYvVFevxu3my9EU5UbWm"
 duration: 1224
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Yaron Velner']
 ---

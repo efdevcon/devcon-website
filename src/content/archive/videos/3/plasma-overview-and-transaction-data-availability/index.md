@@ -7,8 +7,8 @@ ipfsHash: "QmQkuGKiuVuyqY35AXqa5KvJSca4btmt2DzLBTCAY7Y3C1"
 duration: 1098
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Joseph Poon']
 ---

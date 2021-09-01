@@ -7,8 +7,8 @@ ipfsHash: "Qmd7ZT3W98DwpsZT2TZWLpcjSmvur7vbp5rdqtgtsN7Ri3"
 duration: 1045
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['phase 0','testnet','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Preston Van Loon']
 ---

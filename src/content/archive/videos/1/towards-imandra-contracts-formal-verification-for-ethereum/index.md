@@ -7,8 +7,8 @@ ipfsHash: "QmakJ296d58rELuSsujPsrrJiss2jHzLioQTj117dQXjKH"
 duration: 1210
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Grant Passmore']
 ---

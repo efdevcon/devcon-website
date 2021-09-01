@@ -7,8 +7,8 @@ ipfsHash: "QmX84xKz8N5j8DDJkYGspgo77Ft7Cfc58TtE6NqgXoJFRq"
 duration: 1984
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['solidity','updates']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Erik Kundt']
 ---

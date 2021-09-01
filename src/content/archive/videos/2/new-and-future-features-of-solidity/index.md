@@ -7,8 +7,8 @@ ipfsHash: "Qma9VUQXiAuwVJLrUn948GknREymHWZZ9MGQjbWxKNtLbX"
 duration: 969
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['updates','security','types','strings','slice','ast','debug','safety','mist','swarm','abi','templates']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Christian Reitwiessner']
 ---

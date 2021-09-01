@@ -7,8 +7,8 @@ ipfsHash: "QmPvCct3bBBr9Xqqg4BWvDbCTPxYPsMks3JTGk6g9sF6NN"
 duration: 891
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['acronis','cloud','storage','sync','share','notary','data','certificate','authority','pow','architecture','banks','healthcare','advertising','trust','consultants']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Victor Lysenko']
 ---

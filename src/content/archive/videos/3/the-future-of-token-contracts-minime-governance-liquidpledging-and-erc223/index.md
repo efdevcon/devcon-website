@@ -7,8 +7,8 @@ ipfsHash: "QmdEA8dHMkE7MiRGhcPM4xcf4sxq3CQA1P1sBLv9imkbFE"
 duration: 1045
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jordi Baylina']
 ---

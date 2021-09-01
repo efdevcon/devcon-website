@@ -7,8 +7,8 @@ ipfsHash: "QmPnwKmFn52Lcu8TGktaoZhuvuYF811ookm7YQDyuqZ5An"
 duration: 1037
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Michael Thuy','Stefaan Ponnet']
 ---

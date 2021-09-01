@@ -13,8 +13,8 @@ ipfsHash: "QmUVC9LoBQVVXtKE4wx5yPujgehPXVG1UtJDg9727dYJGf"
 duration: 1941
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['scaling','updates','EVM','bridging','sidechains']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Björn Wagner']
 ---

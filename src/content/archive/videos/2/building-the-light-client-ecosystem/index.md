@@ -7,8 +7,8 @@ ipfsHash: "QmRq3MLFgT9n75EZ7WDFxT62Tj3HFbjbk138yqXfCdYgCR"
 duration: 842
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['sync','resource','rpc','servers','scalability','flexibility','nodes']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Zsolt Zsolt Felfoldi']
 ---

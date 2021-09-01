@@ -7,8 +7,8 @@ ipfsHash: "QmXfssw26Xe6K9MZF4sgQfazycwtrzQhVZje1JKsgKSb6k"
 duration: 670
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['consensys','identity','key','management','ux','dapps','mobile','data','ownership','attestation','recovery','gnosis','identifier','infura','libraries','open','source','scalability','onboarding']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Rouven Heck','Christian Lundkvist']
 ---

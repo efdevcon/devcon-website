@@ -7,8 +7,8 @@ ipfsHash: "QmSuQX3SnFcUx9BToWqcYPVMbdAaejrVpYQfiB123scBuV"
 duration: 706
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['progress','security','vulnerability','bugs','challenges','contributions','dependency']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Loi Luu']
 ---

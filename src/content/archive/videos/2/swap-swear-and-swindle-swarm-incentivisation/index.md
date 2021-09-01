@@ -7,8 +7,8 @@ ipfsHash: "QmSt3Gd6vrYpSqFddjbTJDVtkaBx764qq2GvWhWgAGC9r3"
 duration: 1205
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['demo','incentive','content','delivery','storage','rooting','node','payment','channels','swap','escrow','litigation','insured']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Viktor Trón','Aron Fischer']
 ---

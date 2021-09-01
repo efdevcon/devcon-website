@@ -7,8 +7,8 @@ ipfsHash: "QmR6r7aBwQEw26a7pgQeh6dk2GebVi9jZ3w15Greeeg2Kr"
 duration: 1237
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['internet','clients','server','funding','ecosystem','distributed','society','swarm','ENS','wallet','interface','light client','api','geth','parity']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Alex Van de Sande']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmPwGuwL5SiLg1grahDcMV2u1PTd3B8o8LVqu1zhf8wrLt"
 duration: 750
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jarrad Hope']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmbrkdDQMq3Nq8GhqxwziRwLvw2wWj34dssc4nZGU63MCa"
 duration: 866
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['coding','accessibility','API','open-source','building','POC','infura']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jose Luu']
 ---

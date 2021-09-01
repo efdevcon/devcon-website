@@ -7,8 +7,8 @@ ipfsHash: ""
 duration: 2520
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['solidity','language','formal proofing','contracts','documentation','storage','variadic','natspec','compiler','optimizer']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Gavin Wood','Christian Reitwiessner']
 ---

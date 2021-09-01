@@ -7,8 +7,8 @@ ipfsHash: "QmS7TwoeeNMNRPnXmRJdcz3Su4wGUAU3PQVr8Qi2YJ4afe"
 duration: 997
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Tyrone Lobban','Yu-Te Lin']
 ---

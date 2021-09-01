@@ -7,8 +7,8 @@ ipfsHash: "QmVzoVuo47YHGDwXJp9jfmbyTCThCMfXSCG7Ya3YX8mk8T"
 duration: 651
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ipfs','libp2p','devp2p','firewall','bandwidth','nat','reliability','dapps','censorship','offline','authentication','encryption','bluetooth','upgrades','browser','tcp','http','nodes','evm','goethereum','ewasm','node.js','websockets','spdy','webrtc','browser']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['David Dias','Juan Benet']
 ---

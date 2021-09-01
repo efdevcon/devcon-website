@@ -7,8 +7,8 @@ ipfsHash: "QmYTQKFnqHhs8fKqguoAWkEzq9P51yr9ihbjMeQ2qEC9mu"
 duration: 758
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['client','node','mining','api','rust','library','api','latency','dapp','security','rpc','keys','pruning','tracing','sync','poa']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Arkadiy Paronyan']
 ---

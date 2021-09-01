@@ -7,8 +7,8 @@ ipfsHash: "QmU1MN2qdaxmRPk7cU8CahAb3HMDWpzZBsXVT1ZvbUszwP"
 duration: 1084
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Virgil Griffith']
 ---

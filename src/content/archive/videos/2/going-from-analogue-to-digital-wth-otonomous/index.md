@@ -7,8 +7,8 @@ ipfsHash: "QmRhPJnehTKdSyQJPGXC6eoa6Heri5TZBRhkZ5FwytsxiM"
 duration: 694
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['automation','law','corporate','legal','governance','company','organization','design','autonomous','history','nature','business','regulations','compliance','DAO','ID','identity','persona','verification','encryption','key','management','privacy','recovery','compromise']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Mano Thanabalan']
 ---

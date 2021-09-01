@@ -7,8 +7,8 @@ ipfsHash: "Qmf8bGC1aF2ScQjAx1mK1vCFT8jEhu9PmyDXc9skGKnbNj"
 duration: 1245
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Raine Revere']
 ---

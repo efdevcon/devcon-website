@@ -7,8 +7,8 @@ ipfsHash: "Qmd9oWiC6aqdcr44bknC9V2RC8vvoCCsbEs4Pcq34hfRpR"
 duration: 921
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Fabian Vogelsteller']
 ---

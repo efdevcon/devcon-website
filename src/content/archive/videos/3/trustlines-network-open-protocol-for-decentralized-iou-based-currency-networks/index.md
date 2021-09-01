@@ -7,8 +7,8 @@ ipfsHash: "QmXs9yFCVnvx6cZf2nHMJ9dzGtrNHpaUnVS8fmGuBqTkGr"
 duration: 1098
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Bernd Bohmeier','Kristoffer Nærland']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmUtjxVZCC3uGGh1vnKyR1AjDDFnL83up2fTW8EuTKABCz"
 duration: 598
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jack Pettersson','Robert Edström']
 ---

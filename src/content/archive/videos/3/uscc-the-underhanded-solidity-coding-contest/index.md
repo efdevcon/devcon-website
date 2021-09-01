@@ -7,8 +7,8 @@ ipfsHash: "QmYAqsivev1cbJhvxRiGK7KhKZ3T8UoRaLdMhx5XgUVzxq"
 duration: 1549
 expertise: "Advanced"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['João Gabriel Carvalho','Richard Moore','Martin Swende','Nick Johnson']
 ---

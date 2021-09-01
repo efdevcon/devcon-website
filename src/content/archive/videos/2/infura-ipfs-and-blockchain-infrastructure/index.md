@@ -7,8 +7,8 @@ ipfsHash: "QmQX5L75gyX1yyVKatCCDE5EYtQ6PmPdfAZ3uVwCxAdkHL"
 duration: 452
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['dapps','node','client','scalability','load','balancing','cache','servers','frontend','roadmap','fork','state','channel']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Herman Junge']
 ---

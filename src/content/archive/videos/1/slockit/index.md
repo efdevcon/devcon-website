@@ -7,8 +7,8 @@ ipfsHash: "QmTFYj6kPoMbb1YNvQyJw4PhsBxF3La5M3atdcmL7KVRMd"
 duration: 1415
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Christoph Jentzsch']
 ---

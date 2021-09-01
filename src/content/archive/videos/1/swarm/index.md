@@ -7,8 +7,8 @@ ipfsHash: "QmQjgP9GvcjqMhP7yUtVX1edG5MJYAPtAaVQUhzgmNAvRJ"
 duration: 1711
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['incentives','file','storage','content','distribution','redundancy','integrity','chunk','devp2p','bzz','insurance','layers','dapp','structure','updates','demo']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Daniel Nagy','Viktor Tron']
 ---

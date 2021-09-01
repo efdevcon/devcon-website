@@ -7,8 +7,8 @@ ipfsHash: "QmYgwo9YAoTuxykwDMCUgu7nGRVXVoEZCFWudx9Ym9cBva"
 duration: 1224
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Michael Sena','Rouven Heck','Pelle Braendgaard']
 ---

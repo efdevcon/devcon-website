@@ -7,8 +7,8 @@ ipfsHash: "Qmb6aKq5q8i8R9jm8vyMZMi1w5nmRQkSFAXn3tNSE3P2Kp"
 duration: 1751
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Andrew Miller']
 ---

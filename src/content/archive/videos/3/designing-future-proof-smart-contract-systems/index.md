@@ -7,8 +7,8 @@ ipfsHash: "QmQpYwTDod5sfb8vg7XZytrjofA2otZC7iWG72s2Fzb2Cd"
 duration: 964
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jorge Izquierdo']
 ---

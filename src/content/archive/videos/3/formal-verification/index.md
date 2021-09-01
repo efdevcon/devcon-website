@@ -7,8 +7,8 @@ ipfsHash: "QmbredHumjDLKuBnk9CheUyr2d2q8eVqFd2PeNSDEzv7ot"
 duration: 1550
 expertise: "Advanced"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Phil Daian','Everett Hildenbrandt','Yoichi Hirai','Loi Luu','Reto Trinkler']
 ---

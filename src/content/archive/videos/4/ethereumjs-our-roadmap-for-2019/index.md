@@ -7,8 +7,8 @@ ipfsHash: "QmQkfRoZJSP6LQmM13jL3GPg4SoiBjPWqLcPGzRhWFmfR1"
 duration: 1212
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ethereumjs','roadmap']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Holger Drewes','Jared Wasinger','Casey Detrio','Vinay Pulim','Alex Beregszaszi']
 ---

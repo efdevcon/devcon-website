@@ -7,8 +7,8 @@ ipfsHash: "QmZ34gEQB4XTCAyLvKGTNfrE2PzvDH8fk9BxkEjWFxEvCb"
 duration: 848
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ethcore','get','parity','ecosystem','ui','adoption','community','tools','security','client','mist','demo','signer','updates','dapps']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['TJ Saw']
 ---

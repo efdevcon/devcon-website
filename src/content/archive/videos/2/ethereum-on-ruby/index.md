@@ -7,8 +7,8 @@ ipfsHash: "QmQhq2zSwL85AgFDLGNF8kSZFn9yRe6C2bymK2HGCKbqEh"
 duration: 909
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['china','ethfans','community','dapps','language','testing','deployment','contracts','tests','solidity','contracts','deploy','debugging','rust','devp2p']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jan Xie']
 ---

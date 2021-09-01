@@ -7,8 +7,8 @@ ipfsHash: "QmRRx7mRy3QfQLis8pSBSjSQDXEMXRAi88ZkB6eWdQ8eYF"
 duration: 907
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jeff Scott Ward','Christian Lundkvist']
 ---

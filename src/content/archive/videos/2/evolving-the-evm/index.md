@@ -7,8 +7,8 @@ ipfsHash: "Qmbx9F3oBiaAnCAZTUZwx9zK7crQwFBU438QPgouGfnK1x"
 duration: 1251
 expertise: "Advanced"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ewasm','solidity','updates','bytecode','languages','timeline','webassembly','metering','runtime']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Greg Colvin','Martin Becze','Paweł Bylica','Christian Reitwiessner','Alex Beregszaszi']
 ---

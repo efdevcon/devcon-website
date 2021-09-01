@@ -7,8 +7,8 @@ ipfsHash: "QmNUsmnBLK397jZL6GoThJqyFfE22YTx13EJ8wF2xbHC5c"
 duration: 729
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Dimitry Khokhlov']
 ---

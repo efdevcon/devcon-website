@@ -7,8 +7,8 @@ ipfsHash: "Qmcm2JczEeQnviD2bJghVYRxcwvx3tfMAdyxxDhMoz6NMK"
 duration: 1147
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Quentin Hibon']
 ---

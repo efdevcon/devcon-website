@@ -7,8 +7,8 @@ ipfsHash: "Qmc73hXeAAGEuzppap4cmnpX1d9MUMXucxdt5Eh2oBbtXJ"
 duration: 869
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['governance','collaboration','developers','vote','voting','reputation','sybil','token','weighted','locking','liquidity','incentive','polls','bandwagon','scalability','secret','vault','accounts','validity']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Aron Fischer','Elena Dimitrova']
 ---

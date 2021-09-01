@@ -7,8 +7,8 @@ ipfsHash: "QmY77bXw86NM9mH6kxJSgfqRzD3t7Nce24s2NCEAoTAP1k"
 duration: 1188
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Guy Zyskind']
 ---

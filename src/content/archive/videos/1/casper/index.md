@@ -7,8 +7,8 @@ ipfsHash: "QmR6TkFKSJ3uiNKZHaTwZnWfnfsSRetSiyDo3khuwWmBjG"
 duration: 1236
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['design','consensus','byzantine','faults','light','client','latency','ghost','security','work','stake','attack','finality']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Vlad Zamfir']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmPt8ySr6icczCa9QfQSRdqHLfg3GWG3nb9oX1btJyKgmT"
 duration: 1375
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Robert Habermeier']
 ---

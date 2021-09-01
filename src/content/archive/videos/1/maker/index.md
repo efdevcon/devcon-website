@@ -7,8 +7,8 @@ ipfsHash: "QmNTBeqWj91LfPV8xacEKuk6tbokgjU8GrcXzEcFvV3HAz"
 duration: 652
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nikolai Mushegian']
 ---

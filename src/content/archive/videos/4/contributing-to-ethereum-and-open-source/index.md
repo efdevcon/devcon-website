@@ -7,8 +7,8 @@ ipfsHash: "QmXoy4AfqDFihS8BwB6jLkRHCTL1SPqkLASHjB8fnbKaSw"
 duration: 1695
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ecosystem','onboarding','participating']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Danny Ryan']
 ---

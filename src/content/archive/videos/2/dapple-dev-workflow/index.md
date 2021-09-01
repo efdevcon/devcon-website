@@ -7,8 +7,8 @@ ipfsHash: "QmdrPUJ3dZsdGawbgD3djHEciDkK32jT9MXSQJFBjugnqd"
 duration: 692
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['EVM','tools','forks','package','dependencies','formal','verification','link','solidity','test','chainfork','scripting','deploy','sharding','nexus']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nikolai Mushegian']
 ---

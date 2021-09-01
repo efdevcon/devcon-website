@@ -7,8 +7,8 @@ ipfsHash: "QmTYEP6qJYNqdv5Nz6b5HCbE4WepreGNPjukByFfikcsBg"
 duration: 943
 expertise: "Advanced"
 type: "Talk"
-track: "Cryptography"
+track: "Privacy"
 keywords: []
-tags: ['Cryptography']
+tags: ['Privacy']
 speakers: ['Patrick McCorry']
 ---

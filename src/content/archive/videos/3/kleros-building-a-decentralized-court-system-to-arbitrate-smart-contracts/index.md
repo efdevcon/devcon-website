@@ -7,8 +7,8 @@ ipfsHash: "QmRAUD4L4sGzFoHhKeNnC8sqe5ZJeQJChsAhc4ZWXtrehT"
 duration: 1123
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Clément Lesaege']
 ---

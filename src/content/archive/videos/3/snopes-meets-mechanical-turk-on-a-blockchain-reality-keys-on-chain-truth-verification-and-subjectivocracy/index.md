@@ -7,8 +7,8 @@ ipfsHash: "QmT2yHi8EobHxhNwiUXhAd485gJ28hvKVi5GjQjArUD7Zb"
 duration: 1191
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Edmund Edgar']
 ---

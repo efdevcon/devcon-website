@@ -7,8 +7,8 @@ ipfsHash: "QmS6vqNGZX9eRDauaPaZNN2L69xAvLmhKhs6X9UYHB9hWA"
 duration: 1007
 expertise: "Intermediate"
 type: "Talk"
-track: "Standards"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Standards']
+tags: ['Developer Infrastructure']
 speakers: ['Simon de la Rouviere']
 ---

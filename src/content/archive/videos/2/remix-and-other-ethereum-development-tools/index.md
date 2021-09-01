@@ -7,8 +7,8 @@ ipfsHash: "QmRjrMSVYrGq4SHk4FXUpPWifWSzbiEsL2wc2GPr9JcMGG"
 duration: 1022
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['debug','compiler','editor','integrated','vm','solidity','javascript','npm','node','community','tracker','test','mist']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Yann Levreau']
 ---

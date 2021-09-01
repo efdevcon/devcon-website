@@ -7,8 +7,8 @@ ipfsHash: "QmXKAkSBFCzFdoahpSvCRGZyY7pu624Qs67NdhVRDEwkyP"
 duration: 1167
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Yann Levreau','Rob Stupay']
 ---

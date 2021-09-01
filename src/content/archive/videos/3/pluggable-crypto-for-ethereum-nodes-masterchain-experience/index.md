@@ -7,8 +7,8 @@ ipfsHash: "QmPECn1181eafp3bSriKaoHX2DLevEieBDfVHYJiY5BHAG"
 duration: 908
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Alexey Troshichev','Dmitry Bozhko']
 ---

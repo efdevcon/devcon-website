@@ -7,8 +7,8 @@ ipfsHash: "QmX442HXCunWBoM9x68L42GEFtF18bwJgqALSSMBE7VWta"
 duration: 641
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['collaboration','curation','insurance','p2p','investment','governance','reputation','network','scalability','subjective','backfeed','systems']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Matan Field']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmWvXT8BnTCx66LMwcXhcjDXkibq5CuWtwbFZr7XxD55r9"
 duration: 1295
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Everett Hildenbrandt']
 ---

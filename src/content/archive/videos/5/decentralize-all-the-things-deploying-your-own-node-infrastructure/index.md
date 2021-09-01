@@ -7,8 +7,8 @@ ipfsHash: "QmSxx2796D8bpbm8qvitgRYYBbqxc2bj2rS7Sz11hZ4qmu"
 duration: 1036
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['node','deploying','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Carl Youngblood']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmeQdr7Y4A6nQ5x9M8stMMgg8FmNGyfJnKrXM6XnaLvid6"
 duration: 1176
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Tim Nugent','Sam Chadwick']
 ---

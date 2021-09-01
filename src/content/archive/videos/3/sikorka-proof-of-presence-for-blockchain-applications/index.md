@@ -7,8 +7,8 @@ ipfsHash: "QmaF6My17nJrukwr6wkhbSfPKYt451aqbzy1X7ZhNfLrDn"
 duration: 832
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Lefteris Karapetsas']
 ---

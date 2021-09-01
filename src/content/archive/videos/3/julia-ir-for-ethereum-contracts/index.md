@@ -7,8 +7,8 @@ ipfsHash: "QmP18bA6QyZruJrij1uo5Xx8bVzzDXHCjzP1CfnCx4cXw3"
 duration: 1105
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Alex Beregszaszi']
 ---

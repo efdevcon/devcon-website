@@ -9,8 +9,8 @@ ipfsHash: "QmNdYkjrya3DWTGxoyyeB751phmfkESyMRnoQZHezbZktm"
 duration: 3034
 expertise: "Intermediate"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['society']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Stewart Brand']
 ---

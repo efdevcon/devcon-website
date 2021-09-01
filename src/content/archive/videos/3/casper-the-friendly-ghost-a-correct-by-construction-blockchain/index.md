@@ -7,8 +7,8 @@ ipfsHash: "QmVo6CNkWryKrNmuyYf8G6xUyeA3KjHhPS5LYNMRzc3i2x"
 duration: 1601
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Vlad Zamfir']
 ---

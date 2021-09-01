@@ -7,8 +7,8 @@ ipfsHash: "QmXtPiiSrPoGFzUt4NvwXnAmcD5dKHEHZnzXPXmQyiYXJF"
 duration: 1389
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['zkproofs','privacy','trust','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Benedikt Bunz']
 ---

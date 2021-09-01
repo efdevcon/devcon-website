@@ -7,8 +7,8 @@ ipfsHash: "QmQYhjQFt5g1ZLfQvRoNnoe2WjG2wP83EM14F5DVgPEqqL"
 duration: 1081
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Gilles Fedak']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmZ46rD8ESbfdYUCiEJC1KPYuHRBHstP8YXi6eVKfjtYcq"
 duration: 722
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Piper Merriam']
 ---

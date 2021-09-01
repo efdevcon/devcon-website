@@ -7,8 +7,8 @@ ipfsHash: "QmZcvUHQ6bML8gERrVRzobKTH8x3S6MNF9S5Phu2HMc65Q"
 duration: 1181
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Mihai Alisie','Marius Darila']
 ---

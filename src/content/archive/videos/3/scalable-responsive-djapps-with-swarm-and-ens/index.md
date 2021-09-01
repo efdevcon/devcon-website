@@ -7,8 +7,8 @@ ipfsHash: "QmQt82ncnNDBuxxwTWhSjrcxXH972YYRW7xuPp9G4zRhwN"
 duration: 1608
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Daniel Nagy']
 ---

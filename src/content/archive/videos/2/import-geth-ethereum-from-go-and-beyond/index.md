@@ -7,8 +7,8 @@ ipfsHash: "QmQRuKPKWWJAamrMqAp9rytX6Q4NvcXUKkhvu3kuREKqXR"
 duration: 1259
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['technical','client','ecosystem','browser','abi','dapps','node','account','state','keys','solidity','protocol','mobile','library']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Péter Szilágyi']
 ---

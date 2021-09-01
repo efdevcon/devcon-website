@@ -7,8 +7,8 @@ ipfsHash: "QmehaapQ9M6EuDmo2eke3td8aRiMMxoVgWeCzM1twG4jgp"
 duration: 1079
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Julien Bouteloup']
 ---

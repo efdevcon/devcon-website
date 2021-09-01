@@ -7,8 +7,8 @@ ipfsHash: "QmNr2BwkMwcDyFScuRVsrcjChmzSK6JrE5EWkWED476QFV"
 duration: 1036
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['James Pitts']
 ---

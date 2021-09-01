@@ -7,8 +7,8 @@ ipfsHash: "QmT1rmXpPQS9Uf78NSEPLAW1nQNP75NoqTco8NXvxkmCGH"
 duration: 557
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['state','test','client','json','homestead','vmtest','security','testing']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Dimitry Khoklov']
 ---

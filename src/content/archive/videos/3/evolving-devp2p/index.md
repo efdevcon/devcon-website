@@ -7,8 +7,8 @@ ipfsHash: "QmdfZq4qttMAMy4f59bZ51KGpu4rtRcb5mfJhKvD6jDUyR"
 duration: 944
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Felix Lange']
 ---

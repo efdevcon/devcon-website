@@ -7,8 +7,8 @@ ipfsHash: "QmdXv4JqPed5agrFAfSgDvDHbNk1ZctFwdHg7KuFkGV688"
 duration: 1466
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Chang-Wu Chen']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmeQCAZnbdS3AjvCxWQMJLBQLpGzKtTNioZ2ZtSy719gn3"
 duration: 879
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Tim Coulter']
 ---

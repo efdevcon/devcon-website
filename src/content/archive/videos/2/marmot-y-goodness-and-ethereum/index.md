@@ -7,8 +7,8 @@ ipfsHash: "QmXWJCYBKw4r9NLRZcijJQHyqPp7QVLvJyZ4uUXf4919Ph"
 duration: 638
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['solidity','eris','package','contracts','tooling','developers','wizard','permission','pos','directory','key','IPFS','evm','testnet','mainnet','consensus','reuse','economics','gas','query','storage','swarm','dependency']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['RJ Catalano','Zach Ramsey']
 ---

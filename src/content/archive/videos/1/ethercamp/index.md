@@ -7,8 +7,8 @@ ipfsHash: "QmW7mHbw7bvpuht2NGeFYRJG6doTxgrJXT2zWxfJkbfxqR"
 duration: 1278
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Roman Mandeleil']
 ---

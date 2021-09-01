@@ -7,8 +7,8 @@ ipfsHash: "QmRMfaFmfycTxfRTq3HQ1mWr8duzS2v1CEQa8ndmHvYv2K"
 duration: 2141
 expertise: "Advanced"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Victor Wong','Kieren James Lubin','Jim Hormuzdiar']
 ---

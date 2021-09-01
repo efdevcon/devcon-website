@@ -7,8 +7,8 @@ ipfsHash: "QmVE96KqSzP5Bd8cFWTvVK6mFJMtK3qUwrcqXPj6uYR8vL"
 duration: 1892
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Lucius Meredith']
 ---

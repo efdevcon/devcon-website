@@ -7,8 +7,8 @@ ipfsHash: "QmZcLGZ4VzkReBjq2A14V7G6ZrmaiYexKkkT8ovnsQruhm"
 duration: 1617
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Gavin Wood']
 ---

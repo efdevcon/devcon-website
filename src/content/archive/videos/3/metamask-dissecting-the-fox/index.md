@@ -7,8 +7,8 @@ ipfsHash: "QmUT7kjQ7kEZVZALaBZTSQLgnVhbvRA8eW5cqkYBCD7men"
 duration: 1112
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Aaron Davis','Frankie Pangilinan']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmWPK9rKzAjwkqPVh3gScJMY7nVJ2HuFNYoB2KSB7Rik8c"
 duration: 1026
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Arkadiy Paronyan']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmQrxwM2SR3ZCjmzAV3S6nuDWk7E3ggJdDQtbY6ijqq6i5"
 duration: 446
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['contract','update','keys','vote','call','logic','functions','callcode','ABI','whitelist','parameters','updates','serpent','solidity','formal','verification','assertions','rust','ada','webassembly']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Joey Krug']
 ---

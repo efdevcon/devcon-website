@@ -7,8 +7,8 @@ ipfsHash: "QmXguBXN3ZBy1zsqJxZZREhDF8zRkerL2cW6RtRv8JcdvQ"
 duration: 711
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['web3','p2p','uport','sign','verification','evm','merkle','crdt','data','database','browser','permissions']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Samuli Poyhtari']
 ---

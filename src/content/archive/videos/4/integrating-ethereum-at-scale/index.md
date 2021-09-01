@@ -7,8 +7,8 @@ ipfsHash: "Qmd5FJ6D48cDJ4A87EVovBoCBHByPuWfnoFwpwZQ9bqCYg"
 duration: 3602
 expertise: "Intermediate"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['growth','scaling','privacy','keys','forks']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Eric Scrivner','Jake Craige','Pete Kim']
 ---

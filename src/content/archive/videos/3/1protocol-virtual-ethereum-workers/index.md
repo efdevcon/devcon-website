@@ -7,8 +7,8 @@ ipfsHash: "QmXGbNY6eRjxDcbF7Q44j1z3ASkWb1iKrij717uDH9C8aJ"
 duration: 1094
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Axel Ericsson','Zack Lawrence']
 ---

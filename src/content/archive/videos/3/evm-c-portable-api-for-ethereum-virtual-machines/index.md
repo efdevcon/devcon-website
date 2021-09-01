@@ -7,8 +7,8 @@ ipfsHash: "Qmdb4qPqRXidc8VTMjDi2taxCTTMuWByUqa2hESsd6BiHt"
 duration: 1022
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Pawel Bylica']
 ---

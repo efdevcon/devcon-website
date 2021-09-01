@@ -7,8 +7,8 @@ ipfsHash: "QmYdChVBNNyAzPpbSYx5AWmZq9DnTshBF7AfFLkZtvZPm9"
 duration: 1252
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['assets','proof','dapps','bridge','trustless','autonomous','spv','verification','incentives','dapp','merkle']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Joseph Chow']
 ---

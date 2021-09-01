@@ -7,8 +7,8 @@ ipfsHash: "QmT4uxt25xtGVsPZpXJTX1yHRTZ1CPHcnafsnAtjrkqzwJ"
 duration: 2602
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Elaine Shi']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmSTmsK2KLe3Quwk3TCjAkyQXcc9UAQHwyk8RKZcfuvWyg"
 duration: 578
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Niran Babalola']
 ---

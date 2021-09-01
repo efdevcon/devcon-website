@@ -7,8 +7,8 @@ ipfsHash: "Qmd7BqMGS9JiL9rcJbAxCnTcjo9H4cp2aksHroUrQYJsDJ"
 duration: 290
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Thomas Bertani']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmRyQLUxfNq2LWPHVNRDL5jCD4VE84yCbC2LqXh4gbRkho"
 duration: 765
 expertise: "Advanced"
 type: "Other"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['tools','code','compiler','gas','functions','workshop','formal','verification','testing']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Christian Reitwiessner']
 ---

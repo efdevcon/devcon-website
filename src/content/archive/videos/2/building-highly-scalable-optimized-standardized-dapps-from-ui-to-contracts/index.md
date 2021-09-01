@@ -7,8 +7,8 @@ ipfsHash: "QmdtUpQULURAnGQCmxqa8eRVtUQHfBLhxjr7x7YN4GfXB7"
 duration: 706
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['react','boilerplate','scaffold','solidity','javascript','wallet','identity','faucet','blockapps','infura','dapps','css','redux','scalability','deployment','xss','unix']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nick Dodson']
 ---

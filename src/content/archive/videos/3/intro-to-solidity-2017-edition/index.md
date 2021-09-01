@@ -7,8 +7,8 @@ ipfsHash: "Qmb6TLteq6sGxr3BWRDFZz8zyyUsqwQJFPJ268J7VKdzaH"
 duration: 972
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Hudson Jameson']
 ---

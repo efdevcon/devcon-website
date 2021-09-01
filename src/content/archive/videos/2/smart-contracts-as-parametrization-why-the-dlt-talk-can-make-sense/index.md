@@ -7,8 +7,8 @@ ipfsHash: "QmZpZrkVd2FNZy8p6Dvap5q12jhKiCTXt4ZCyGXagsqecv"
 duration: 752
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ledger','execution','scalability','progress','systems','availability','language','resilience','init']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Henning Diedrich']
 ---

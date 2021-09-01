@@ -7,8 +7,8 @@ ipfsHash: "QmbUvtSkaWkujVTMfJ2FP7JRA8ZufK8LQYPZKxjtqAoFMc"
 duration: 933
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Marcus Ligi']
 ---

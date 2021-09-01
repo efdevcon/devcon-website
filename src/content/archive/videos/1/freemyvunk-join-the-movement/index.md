@@ -7,8 +7,8 @@ ipfsHash: "QmbLGBjwF9QvxafQgRgnvsBb9C2RQoHfnT4e9cUroe8wCZ"
 duration: 845
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['R. Tyler Smith']
 ---

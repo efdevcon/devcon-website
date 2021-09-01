@@ -7,8 +7,8 @@ ipfsHash: "QmP2trrkn7hgNsrn6amS816vobgNUDeMXNdZNyXiQ4um8Q"
 duration: 627
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Ryan Casey']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmSagh159M2hYCwqDkTMTTMRSnGrAnViXAHRgbyaqnZQTw"
 duration: 586
 expertise: "Expert"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['Payment','dex','dexes','state channels']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Antoine Cote','Philippe Camacho']
 ---

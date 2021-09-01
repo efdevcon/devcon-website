@@ -7,8 +7,8 @@ ipfsHash: "QmfRTep7HKwFtXvqZcJnqa4fK53L6QJxPqwoW32BFpap75"
 duration: 1017
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Marley Gray']
 ---

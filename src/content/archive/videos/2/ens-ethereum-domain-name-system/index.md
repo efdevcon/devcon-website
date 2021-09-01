@@ -7,8 +7,8 @@ ipfsHash: "QmbwqgNsJtPVWNtMf8QCcSWSPRZX3TTftv4xLZEwzBadVc"
 duration: 660
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['swarm','ipfs','authority','implementation','resolution','registry','resolvers','node','namehash','governance','auction']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nick Johnson']
 ---

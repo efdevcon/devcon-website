@@ -7,8 +7,8 @@ ipfsHash: "QmeM3v56ExuoQ1J4m6nw1rFWFykwg8LJGYsSARQkWFQ4vJ"
 duration: 927
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['cloud','evm','tools','proof','demo','finance','risk','audit','bugs','interoperability']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Grant Passmore','Evgeny Gokhberg']
 ---

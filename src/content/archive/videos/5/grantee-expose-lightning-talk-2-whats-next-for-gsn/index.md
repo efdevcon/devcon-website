@@ -7,8 +7,8 @@ ipfsHash: "QmTWMhgZDUA3XKMTSiBWAyiRgPW7db2LiTnzyVv4fEhpJs"
 duration: 724
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['Gas','gas station network','mass adoption','adoption','defi','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Liraz Siri']
 ---

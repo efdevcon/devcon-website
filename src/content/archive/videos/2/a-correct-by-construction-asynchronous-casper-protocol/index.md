@@ -7,8 +7,8 @@ ipfsHash: "QmYSXtbUFug3yEh1YfM6ZdQ8uUdx1xMyDMgK2S9qqJCQH9"
 duration: 1280
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['technical','casper','byzantine','nodes','binary','decision','construction','consensus','fault','tolerance','finality','estimate','justification','sender','bet','protocol','equivocation','validators']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Vlad Zamfir']
 ---

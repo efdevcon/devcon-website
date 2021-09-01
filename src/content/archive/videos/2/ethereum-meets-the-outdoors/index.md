@@ -7,8 +7,8 @@ ipfsHash: "QmTeTjQxqYzgy8mo4UzeGEzoHupivrpL3SgDTMm4N4gv3s"
 duration: 712
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['sikorka','solidity','contracts','royalty','scalability','security','api','presence','real-world','interactive','light client','app','maps']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Lefteris Karapetsas']
 ---

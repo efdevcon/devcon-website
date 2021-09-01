@@ -7,8 +7,8 @@ ipfsHash: "QmWFRzGA9hoVeh7uFr2VXyin9YRrN4WwkaLhN5KqJyhUnK"
 duration: 1029
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nick Dodson']
 ---

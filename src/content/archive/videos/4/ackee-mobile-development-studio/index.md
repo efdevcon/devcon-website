@@ -7,8 +7,8 @@ ipfsHash: "QmdYLFS3GtZX6n4oNsfcpTAXrStkbRJ3N2tuGv2TPrjcwE"
 duration: 309
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ackee','dev','tools','kit']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Josef Gattermayer']
 ---

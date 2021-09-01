@@ -7,8 +7,8 @@ ipfsHash: "QmXEGq8uWNuDdaTiz3Yedyu2K2hqrKQ1dD1zM8bmt8KMHg"
 duration: 1122
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nick Johnson']
 ---

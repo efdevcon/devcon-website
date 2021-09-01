@@ -7,8 +7,8 @@ ipfsHash: "QmZzBU8zsqDzHrZHxMSkv4VwdN8Ufh21ibW2aZtCexjHPh"
 duration: 635
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['turing','solidity','privacy','zksnark','off-chain','verification','incentivization','trust','scalability','rust','swarm']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Christian Reitwiessner']
 ---

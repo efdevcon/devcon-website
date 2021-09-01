@@ -7,8 +7,8 @@ ipfsHash: "QmRiDaubEGMdW85k3eE59s8WuM2Ky7K2WrNtWZLHS3rFnF"
 duration: 989
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['vm','portability','standardize','toolchain','compatibility','architecture','hardware','design','gas','hypervisor','risc','wasm','ast','isa']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Martin Becze']
 ---

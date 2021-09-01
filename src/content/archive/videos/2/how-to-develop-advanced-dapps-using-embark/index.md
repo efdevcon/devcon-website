@@ -7,8 +7,8 @@ ipfsHash: "QmRssXiT9QB8V1TJK1HMKYtB3ajqwUwfXecgNjpZoNr4CJ"
 duration: 905
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['demo','javascript','pipeline','test','DAO','contracts','deploy','code','features','communication','whisper','storage','dapp','swarm','ipfs']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Iuri Matias']
 ---

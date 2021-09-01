@@ -7,8 +7,8 @@ ipfsHash: "QmRte4DBUxRomhWSWus3wREfDp6QU92unaV9hhDZAW9civ"
 duration: 941
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Zsolt Felföldi']
 ---

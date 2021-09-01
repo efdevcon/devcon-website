@@ -7,8 +7,8 @@ ipfsHash: "QmSh39ACQYLABXp47zfzEjPhzmGasvktutzWAEhH3gFi9r"
 duration: 544
 expertise: "Advanced"
 type: "Other"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['scalability','finality','privacy','off-chain','distributed','asset','transfer','erc20','micropayments','channels','dex','hashlock']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Lefteris Karapetsas']
 ---

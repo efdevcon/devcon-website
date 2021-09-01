@@ -7,8 +7,8 @@ ipfsHash: "QmRxeqEWFBFVsreca5vU4w7HwHuVPGESDDwGrWuGteL7oA"
 duration: 620
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['oracle','solution','APIs','external','data','attestation','oraclize','authenticity','verification','tlsnotary','AWS','pagesigner','server','qsee','android safetynet','android','intel','sgx','sandbox','google','trust','offchain','evm','proof']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Thomas Bertani']
 ---

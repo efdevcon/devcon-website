@@ -7,8 +7,8 @@ ipfsHash: "QmfSoTjRmak91bUQSzL9VXYkurhUNfkcpVPozR9NPYb7Gt"
 duration: 483
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['proxy','EIP']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Santiago Palladino']
 ---

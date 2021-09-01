@@ -7,8 +7,8 @@ ipfsHash: "QmR6o8oe1SCfF4YikDcrn6X6ikTKLwtEjm9D4ZwLh45UeE"
 duration: 386
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['POA','search']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Andrew Cravenho']
 ---

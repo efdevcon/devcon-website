@@ -7,8 +7,8 @@ ipfsHash: "QmXYsXfyTqTyJnpGJYhBeqrbBUiia7pvZe51UEdDZCuHgc"
 duration: 1943
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Juan Batiz-Benet']
 ---

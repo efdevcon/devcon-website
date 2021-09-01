@@ -7,8 +7,8 @@ ipfsHash: "QmcbZtfUuuVqMPeR2Tt9KFQqnAt2TmgotCRvenGiSk8N6n"
 duration: 946
 expertise: "Advanced"
 type: "Talk"
-track: "Cryptography"
+track: "Security"
 keywords: []
-tags: ['Cryptography']
+tags: ['Security']
 speakers: ['Clément Lesaege']
 ---

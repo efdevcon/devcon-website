@@ -7,8 +7,8 @@ ipfsHash: "QmfZT5KAmFepGHz4syhGknPZgTNQ666rt2Erjy93HQejxa"
 duration: 276
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['DAOs','incentives','games','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Tom Nash']
 ---

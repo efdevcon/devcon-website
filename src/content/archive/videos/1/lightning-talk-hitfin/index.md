@@ -7,8 +7,8 @@ ipfsHash: "QmR5sM6WcpuuhFNXzZJwq5VausBQELWZGmM3GrQnm2t1bK"
 duration: 299
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Patrick Salami']
 ---

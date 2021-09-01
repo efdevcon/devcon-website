@@ -7,8 +7,8 @@ ipfsHash: "QmcL7KaEKspwKPy2ZM5TReifs9QWBhUG8S3eSsqSTYkK3r"
 duration: 2230
 expertise: "Advanced"
 type: "Panel"
-track: "Standards"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Standards']
+tags: ['Developer Infrastructure']
 speakers: ['Vitalik Buterin','Dr. Gavin Wood','Fabian Vogelsteller','Nikolai Mushegian','Christian Lundkvist']
 ---

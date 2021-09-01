@@ -7,8 +7,8 @@ ipfsHash: "QmZWADdDhs7ZXNm7iLHdNMVgChXxHL4pMcRVyUJCFYdB4r"
 duration: 1065
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Heiko Hees']
 ---

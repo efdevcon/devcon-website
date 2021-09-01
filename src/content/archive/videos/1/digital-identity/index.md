@@ -7,8 +7,8 @@ ipfsHash: "Qmc5kCKvDJrf5WtvSe32CJFGpwtuzokVssLuiZ76hVxnEn"
 duration: 1040
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Christian Lundkvist']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmcvUypmnMxxDCNdPGpfzXsrBK9KhVcD6Vnh1YiWeYgPBK"
 duration: 1170
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jason Teutsch']
 ---

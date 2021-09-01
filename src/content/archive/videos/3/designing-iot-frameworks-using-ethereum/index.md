@@ -7,8 +7,8 @@ ipfsHash: "QmTRFou3iENqx5961eWupzU3tkP1asxxC17UTr4F16i8TB"
 duration: 1197
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Shuang Liang','John Gerryts']
 ---

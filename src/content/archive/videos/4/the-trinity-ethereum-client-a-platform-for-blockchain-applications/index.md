@@ -7,8 +7,8 @@ ipfsHash: "QmUjUBgyMPVtrpLDkUkUwdKV3sDspEi12hTWdKRYDEJs3Z"
 duration: 596
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['trinity','client']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Piper Merriam']
 ---

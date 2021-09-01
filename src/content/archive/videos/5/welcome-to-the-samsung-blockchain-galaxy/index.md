@@ -7,8 +7,8 @@ ipfsHash: "QmQApenbE6ZfZXPVf7c2LGU3BE3wr3hPYqJR9qAaf8dzjo"
 duration: 773
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['samsung','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Wook Lim','Minji Chae']
 ---

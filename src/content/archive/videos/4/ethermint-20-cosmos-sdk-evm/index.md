@@ -7,8 +7,8 @@ ipfsHash: "QmReYVuaUKyCXXQcoEt47peR7PA3ARJHCTKSMuWDbYGwbM"
 duration: 1625
 expertise: "Expert"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['tendermint','dapps','architecture']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Chris Goes']
 ---

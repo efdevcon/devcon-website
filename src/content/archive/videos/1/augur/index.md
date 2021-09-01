@@ -7,8 +7,8 @@ ipfsHash: "QmUwdGFmvAzY71Twyt2UHnUghb5o86Yaf89iev6wcVV1F8"
 duration: 924
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jack Peterson']
 ---

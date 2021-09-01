@@ -7,8 +7,8 @@ ipfsHash: "QmcGjifvJB8C7G82k1TobZ9UfDyExE95QnGAsXSFJeqrGQ"
 duration: 741
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['operations','tests','structure','gas','memory','computation','threading','opcode','interpreter','constant','gmp','boost','arithmetic']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Greg Colvin']
 ---

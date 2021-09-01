@@ -7,8 +7,8 @@ ipfsHash: "QmRSpUthQg6me9863is5Ck6jNokEDT94zaGFqufYL2vRra"
 duration: 939
 expertise: "Advanced"
 type: "Other"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['javascript','tools','api','abi','communication','demo','code','error','documentation','android','jvm','adoption','enterprise','dapps']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['David Roon']
 ---

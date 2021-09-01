@@ -7,8 +7,8 @@ ipfsHash: "QmbEJG1Usgae6RrjLnqcPpSzvB7eoaUQWPb3y4Mkgec2jK"
 duration: 923
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Mike Alonso','Matt Swezey']
 ---

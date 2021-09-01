@@ -7,8 +7,8 @@ ipfsHash: "QmVr6BAX4n1M6BfU5Qa58cCYu7cLLVpVJvumdZA6SFbVNe"
 duration: 538
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Aeron Davis']
 ---

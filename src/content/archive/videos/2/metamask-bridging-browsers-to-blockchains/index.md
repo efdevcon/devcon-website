@@ -7,8 +7,8 @@ ipfsHash: "QmYzYJxu9DabFM6meph8zreLNewnfTX66N6VZ82aZek7F3"
 duration: 867
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['adoption','demo','scalability','update','browser','extension','id','rpc','keys','lessons','society']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Aaron Davis']
 ---

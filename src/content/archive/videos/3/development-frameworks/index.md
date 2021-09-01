@@ -7,8 +7,8 @@ ipfsHash: "QmWMchpB6dNon3nPzMNozzZU9bWfD7U2SPidumFRozgkFR"
 duration: 2156
 expertise: "Intermediate"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Andy Milenius','Conor Svensson','Yann Levreau','Jack Peterson','Piper Merriam','Nick Dodson','Iuri Matias']
 ---

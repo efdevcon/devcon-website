@@ -7,8 +7,8 @@ ipfsHash: "QmYgSgEupJbFcEX7HphY6DrG5VD7c1jtPMrEN9cq7pbmhQ"
 duration: 2240
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Emin Gün Sirer']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmU6nMKP8F2ZqUzhsiPnm46zdHcKLssZRKhJkSoN82zqZr"
 duration: 1083
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Dr. Christian Reitwiessner']
 ---

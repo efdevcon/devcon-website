@@ -7,8 +7,8 @@ ipfsHash: "QmTAY5dTar2HadkjvS22gnKfpTC4cBFZYR8dhXMbTFDy3X"
 duration: 1199
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Andy Milenius']
 ---

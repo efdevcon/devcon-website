@@ -7,8 +7,8 @@ ipfsHash: "QmNWDSjk6Ueo1RcMKDNVmocNANWhW2HjpZVayndThRzczV"
 duration: 649
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['market','computing','power','blender','buy','sell','microsoft','hardware','standard','registry','reward']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Julian Zawistowski']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmY4rNvjaLiTW2RHnfRZTzyBMKToCECo4Sr2C7UcM6NXi1"
 duration: 1386
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['frontier','baas','microsoft','node','network','enterprise','consortium','attestation','language','evm','scalability','enclaves','flexibility','cloud','java','bletchly','azure','formal','verification','fstar','sdk']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Marley Gray']
 ---

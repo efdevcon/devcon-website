@@ -7,8 +7,8 @@ ipfsHash: "Qme5zogJdrNReP4q62tcdo752zTFRJ3pKtUi1AxTJztafJ"
 duration: 3136
 expertise: "Intermediate"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['EVM']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Alex Beregszaszi','Casey Detrio','Lane Rettig','Gregory Colvin','Danny Ryan','Paweł Bylica']
 ---

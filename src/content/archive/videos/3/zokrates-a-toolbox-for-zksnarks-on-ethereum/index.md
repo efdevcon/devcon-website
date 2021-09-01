@@ -7,8 +7,8 @@ ipfsHash: "QmVsYC3bMktfFMLEhJDNmDqfCtkH5pgtvrs8VyY1zpdt8g"
 duration: 1015
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Jacob Eberhardt']
 ---

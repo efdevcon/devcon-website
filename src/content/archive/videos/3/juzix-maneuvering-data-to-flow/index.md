@@ -7,8 +7,8 @@ ipfsHash: "QmPMFHMCGg1iwhT5TBeL7gUr73BEAqFhuWpwx4wNtzMXtn"
 duration: 942
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Lilin Sun']
 ---

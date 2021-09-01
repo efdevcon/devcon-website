@@ -7,8 +7,8 @@ ipfsHash: "QmaMGLu7kpXvRxZH414sS76AjityjmgwzvQYR1MNHXGwtd"
 duration: 937
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Anton Galenovich','Sergei Lonshakov']
 ---

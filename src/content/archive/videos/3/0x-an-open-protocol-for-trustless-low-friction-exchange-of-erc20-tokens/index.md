@@ -7,8 +7,8 @@ ipfsHash: "QmXEBrkxniSbPQjuzWrbX13WvJXquJ55PTZXGtrFbe7V5p"
 duration: 1261
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Will Warren']
 ---

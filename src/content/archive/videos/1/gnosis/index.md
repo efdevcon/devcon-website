@@ -7,8 +7,8 @@ ipfsHash: "QmWiZyiYm8G8E8ErHG2NGvuuUZ1vsSQ6wvGQKFWWKKK5HN"
 duration: 944
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Martin Koppelmann']
 ---

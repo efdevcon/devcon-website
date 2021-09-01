@@ -7,8 +7,8 @@ ipfsHash: "QmTwvMEiXUXURd1V5U7wYgfjKoLFW6RaXUQNX8VCbPn9yZ"
 duration: 1380
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Sergio Lerner']
 ---

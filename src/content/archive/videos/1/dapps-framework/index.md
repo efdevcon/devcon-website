@@ -7,8 +7,8 @@ ipfsHash: "QmYWDAGyERcsqDjvpUHuvYWXURuWZ6DMYsrK9YLBHosuyx"
 duration: 564
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Konstantin Kudryavtsev']
 ---

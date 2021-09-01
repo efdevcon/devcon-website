@@ -7,8 +7,8 @@ ipfsHash: "QmRsb8L1UpujjUADB3oQZPWiMcbSFupMVMGg4wExVF1M7r"
 duration: 1322
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Dominic Tarr']
 ---

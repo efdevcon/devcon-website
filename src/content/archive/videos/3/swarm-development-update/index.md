@@ -7,8 +7,8 @@ ipfsHash: "QmdXu1Vs2Gan9uLAFBgMnwqBGtRB1gMX4TPH1gss5A9GRD"
 duration: 2076
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Viktor Trón','Daniel Nagy','Aron Fischer','Louis Holbrook']
 ---

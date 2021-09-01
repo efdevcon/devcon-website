@@ -7,8 +7,8 @@ ipfsHash: "QmZq2dCxGFcK8SMj9i141TznW3MRSZ72z5QUbyUHxRJFVY"
 duration: 1127
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['build','dapp','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Thibaut Sardan']
 ---

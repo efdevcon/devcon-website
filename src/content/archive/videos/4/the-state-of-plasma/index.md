@@ -7,8 +7,8 @@ ipfsHash: "QmNtrjgbo1y871X8QZgGdUTHuJ3gtZ3NFZf648r3DoHnnJ"
 duration: 1709
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['scaling','mvp','zk','zero knowledge']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['David Knott','Kelvin Fitcher']
 ---
