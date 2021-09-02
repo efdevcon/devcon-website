@@ -11,12 +11,14 @@ require('dotenv').config()
 
 // for profile generation - need to update the async/duration call
 const fetchProfiles = false
-const writeToDisk = true
+const writeToDisk = false
 const generatePlaylist = false
+const generateYoutubeTemplates = true
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const edition = 1 // 
+const edition = 0 // 
 const sheetName = 'Devcon ' + edition // 
+const baseArchiveUrl = 'https://www.devcon.org/archive/watch/'
 console.log('Importing archive edition', edition, 'from', sheetName, 'to', archiveDir)
 
 ImportArchiveVideos() 
@@ -83,6 +85,38 @@ async function ImportArchiveVideos() {
           writeToFile(video)
         }
       })
+
+      if (generateYoutubeTemplates) {
+        // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists
+        const editionDir = archiveDir + '/' + edition
+        const content = videos.map(video => {
+          const videoUrl = baseArchiveUrl + edition + '/' + slugify(video.title.toLowerCase(), { strict: true })
+          const template = `=== ${video.title}
+
+Visit the https://archive.devcon.org/ to gain access to the entire library of Devcon talks with the ease of filtering, playlists, personalized suggestions, decentralized access on IPFS and more.
+${videoUrl}
+
+${video.description}
+
+Speaker(s): ${video.speakers.join(', ')}
+Skill level: ${video.expertise}
+Track: ${video.track}
+Keywords: ${video.keywords.join(', ')}
+
+Follow us: https://twitter.com/efdevcon, https://twitter.com/ethereum
+Learn more about devcon: https://www.devcon.org/
+Learn more about ethereum: https://ethereum.org/ 
+
+Devcon is the Ethereum conference for developers, researchers, thinkers, and makers. 
+Devcon ${edition} was held in [location] on [dates].
+Devcon is organized and presented by the Ethereum Foundation, with the support of our sponsors. To find out more, please visit https://ethereum.foundation/
+
+\n`
+          return template
+        })
+        
+        fs.writeFileSync(editionDir + '/youtube.md', content.join(''));
+      }
 
       if (generatePlaylist) {
         // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists
