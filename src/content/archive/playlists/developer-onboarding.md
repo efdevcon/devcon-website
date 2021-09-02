@@ -1,5 +1,5 @@
 ---
-title: Dev Onboarding
+title: Developer Onboarding
 description: Getting started in the Web3 ecosystem can be intimidating and it's not always clear where to begin. Everything is growing and changing so much. This playlist will help you get started and cover some of the fundamental concepts, tools, frameworks and best practices to help get started building on Ethereum.
 image: ../../../../static/assets/uploads/playlists/buidl.png
 categories:
@@ -17,4 +17,8 @@ videos:
   - 2/solidity-for-dummies/index
   - 1/ipfs/index
   - 4/ethersjs-a-complete-and-compact-ethereum-library/index
+  - 2/complex-dapps-and-updating-them/index
+  - 5/how-ens-is-taking-ethereum-to-the-rest-of-the-internet/index
+  - 3/real-world-smart-contract-development-lessons/index
+  - 4/reversing-ethereum-smart-contracts-to-find-out-whats-behind-evm-bytecode/index
 ---
