@@ -7,8 +7,8 @@ ipfsHash: "QmXAwKPrL5WSbqYjCe3iH9iRbcd7wEWeJnuoUv88vzwyJ5"
 duration: 838
 expertise: "Intermediate"
 type: "Talk"
-track: "Community"
+track: "Society and Systems"
 keywords: []
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Ashley Taylor']
 ---

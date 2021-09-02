@@ -7,8 +7,8 @@ ipfsHash: "QmNcNUwcTWGNsw9ceXHbkDy1XJKe1WTAkZ3HX6Jy9tWaex"
 duration: 938
 expertise: "Intermediate"
 type: "Talk"
-track: "Community"
+track: "Society and Systems"
 keywords: []
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Everett Hildenbrandt','Phil Daian','Loi Luu','Nate Rush','Haseeb Qureshi']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmYVjwTXbNV6EQFtkacK9ofkWgpUexk3Ra3us1Q1zQh3vR"
 duration: 661
 expertise: "Intermediate"
 type: "Talk"
-track: "Community"
+track: "Society and Systems"
 keywords: ['developers','devs','grants','ESP','devrel','technical']
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Andreas Wallendahl']
 ---

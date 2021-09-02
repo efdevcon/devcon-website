@@ -7,8 +7,8 @@ ipfsHash: "QmSwpYvh4BqCaKs9BQQwJBUYLcUSH6VS1VvNZnstpg3Vd7"
 duration: 0
 expertise: "Beginner"
 type: "Talk"
-track: "Community"
+track: "Society and Systems"
 keywords: []
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Hudson Jameson']
 ---

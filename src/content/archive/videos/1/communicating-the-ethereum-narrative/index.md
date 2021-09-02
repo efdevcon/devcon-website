@@ -7,8 +7,8 @@ ipfsHash: "QmVwn6rigS1Sq5ghkM72PtQrEwSBZ9ZHtUc89KiYncFHBQ"
 duration: 1357
 expertise: "Intermediate"
 type: "Talk"
-track: "Community"
+track: "Society and Systems"
 keywords: []
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['William Mougayar']
 ---

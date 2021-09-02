@@ -7,8 +7,8 @@ ipfsHash: "QmNVcv4JakbS9FhC1GQU3sNwrS8cbM1ca4bREQ9Qzwjz6i"
 duration: 1220
 expertise: "Intermediate"
 type: "Talk"
-track: "Community"
+track: "Society and Systems"
 keywords: ['ecosystem','developers','test','integration','tools','projects','launch','dapps','mainnet']
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Roman Mandeleil']
 ---

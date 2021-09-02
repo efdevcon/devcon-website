@@ -7,8 +7,8 @@ ipfsHash: "QmQErCzzBdwTi1qpARmnWyZWN86rn8PveVCByR2dyW4Bhn"
 duration: 231
 expertise: "Beginner"
 type: "Other"
-track: "Community"
+track: "Society and Systems"
 keywords: []
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Wendell Davis']
 ---
