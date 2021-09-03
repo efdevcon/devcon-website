@@ -16,9 +16,28 @@ const generatePlaylist = false
 const generateYoutubeTemplates = true
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const edition = 0 // 
+const edition: number = 0 // 
 const sheetName = 'Devcon ' + edition // 
 const baseArchiveUrl = 'https://www.devcon.org/archive/watch/'
+const devconLocation = () => {
+  if (edition === 0)
+    return `Devcon ${edition} was held in Berlin, Germany on Nov 24 - 28, 2014.`
+
+  if (edition === 1) 
+    return `Devcon ${edition} was held in London, United Kingdom on Nov 9 - 13, 2015.`
+
+  if (edition === 2)
+    return `Devcon ${edition} was held in Shanghai, China on Sep 19 - 21, 2016.`
+
+  if (edition === 3)
+    return `Devcon ${edition} was held in Cancún, Mexico on Nov 1 - 4, 2017`
+
+  if (edition === 4)
+    return `Devcon ${edition} was held in Prague, Czech Republic on Oct 30 - Nov 2, 2018.`
+
+  if (edition === 5)
+    return `Devcon ${edition} was held in Osaka, Japan on Oct 8 - 11, 2019.`
+}
 console.log('Importing archive edition', edition, 'from', sheetName, 'to', archiveDir)
 
 ImportArchiveVideos() 
@@ -87,8 +106,6 @@ async function ImportArchiveVideos() {
       })
 
       if (generateYoutubeTemplates) {
-        // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists
-        const editionDir = archiveDir + '/' + edition
         const content = videos.map(video => {
           const videoUrl = baseArchiveUrl + edition + '/' + slugify(video.title.toLowerCase(), { strict: true })
           const template = `=== ${video.title}
@@ -108,14 +125,14 @@ Learn more about devcon: https://www.devcon.org/
 Learn more about ethereum: https://ethereum.org/ 
 
 Devcon is the Ethereum conference for developers, researchers, thinkers, and makers. 
-Devcon ${edition} was held in [location] on [dates].
+${devconLocation()}
 Devcon is organized and presented by the Ethereum Foundation, with the support of our sponsors. To find out more, please visit https://ethereum.foundation/
 
 \n`
           return template
         })
         
-        fs.writeFileSync(editionDir + '/youtube.md', content.join(''));
+        fs.writeFileSync(archiveDir + '/youtube-' + edition + '.txt', content.join(''));
       }
 
       if (generatePlaylist) {
