@@ -7,8 +7,8 @@ ipfsHash: "QmeMGJT762sg2gMXvq3Y8fu4hm8C2WZoTzyLuq9R1UgfSv"
 duration: 1298
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['eth2','general']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Justin Drake']
 ---

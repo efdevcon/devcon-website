@@ -7,8 +7,8 @@ ipfsHash: "QmQ5AYQGgq5ULZ2SdkC5jM7KEP6CTAXmLWFv2WNksoRzFW"
 duration: 1252
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['dapps']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Iuri Matias']
 ---

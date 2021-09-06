@@ -15,26 +15,29 @@
 
   .cta {
     @include fonts-semi-bold;
-    background: #f7e7e6;
-    color: #e55066;
-    padding: $gaps-gap-4;
+    background: #f8f8f8;
+    padding: $gaps-gap-1 $gaps-gap-4;
+    border-right: 1px solid #dddddd;
+    padding-bottom: 2px;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     flex-shrink: 0;
+    
 
     svg {
       padding-top: 2px;
     }
 
-    svg path {
-      fill: #e55066;
-    }
+    // svg path {
+    //   fill: #e55066;
+    // }
   }
 
   .link {
-    padding: $gaps-gap-4;
+    padding: $gaps-gap-1 $gaps-gap-4;
+    padding-bottom: 2px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;

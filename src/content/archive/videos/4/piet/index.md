@@ -10,8 +10,8 @@ ipfsHash: "Qma5bYybDPxNjs9VEF1bKFk9zW9qxQFHLnd811fLZr5rf4"
 duration: 226
 expertise: "Intermediate"
 type: "Workshop"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['graphical','architecture']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Heiko Burkhardt']
 ---

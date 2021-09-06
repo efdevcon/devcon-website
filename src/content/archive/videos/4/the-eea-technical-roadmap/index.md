@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "The EEA Technical Roadmap"
-description: "N/A"
+description: "Ron Resnick and Conor Svensson from the EEA present their technical Roadmap."
 youtubeUrl: "https://youtu.be/KhkaVqg4HGU"
 ipfsHash: "QmSRnHdq9ShdywuqMN5R1i4hjKw7ytGdiV52jsU5MUWpn7"
 duration: 1485

@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "PoS Security and Ethylene"
-description: "N/A"
+description: "Emin Gün Sirer gives his talk on PoS Security & Ethylene."
 youtubeUrl: "https://youtu.be/_WxpSuZ1qg0"
 ipfsHash: "QmQLy6f1Jv9VovHyuaxHrn7yTTmti1QWzAEtHXSTxaVbLg"
 duration: 1819

@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "Crypto for Activism"
-description: "N/A"
+description: "Micah White and Amir Taaki give their talk on Crypto for Activism."
 youtubeUrl: "https://youtu.be/78XNSvXlk8U"
 ipfsHash: "QmX92kdDaivGUFaX1tVCYvsq8yvZU4h8RPkEshpND6mk1d"
 duration: 2478

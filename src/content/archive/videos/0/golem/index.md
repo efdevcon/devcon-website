@@ -7,8 +7,8 @@ ipfsHash: ""
 duration: 1109
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['turing','consensus','supercomputer','prosumer','computational','power','distributed','share','rendering','p2p','saas']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Piotr Janiuk']
 ---

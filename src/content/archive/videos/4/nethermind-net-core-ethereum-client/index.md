@@ -7,8 +7,8 @@ ipfsHash: "QmP9JndY1cN6bvRrQiVptZjErbXrWP4Twi1zjbDjpTSeAA"
 duration: 370
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['Devp2p','evm']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Tomasz Kajetan Stanczak']
 ---

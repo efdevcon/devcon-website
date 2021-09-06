@@ -7,8 +7,8 @@ ipfsHash: "QmdYDufSX3MAEy51FoH5spoArWY65tNyMxFzqNAewv2wnZ"
 duration: 993
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['finance','accountability','network','dapps','developers','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Patrick McCorry']
 ---

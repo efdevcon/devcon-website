@@ -7,8 +7,8 @@ ipfsHash: "QmZjtfm7XWzSqKzs1LtBCN2aPb8bEiBbYucRsmRCrQLDgQ"
 duration: 582
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['yul','language']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Alex Beregszaszi']
 ---

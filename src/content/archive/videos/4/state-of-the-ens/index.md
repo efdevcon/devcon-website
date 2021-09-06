@@ -7,8 +7,8 @@ ipfsHash: "Qmcyw3RWhFGK4zUSS8gLC8VyjtJjJgFms8H1m3fF9j78Qq"
 duration: 1203
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['ens','updates']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nick Johnson & Jeff Lau']
 ---

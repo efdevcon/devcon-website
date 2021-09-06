@@ -17,8 +17,8 @@ ipfsHash: "QmTtKoFX9WcQJC41qdjptSCxN2DuZP6RbKqSu5rT82Rkof"
 duration: 729
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['sidechain','trustless','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Matt Luongo']
 ---

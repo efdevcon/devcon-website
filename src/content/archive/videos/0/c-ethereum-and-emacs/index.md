@@ -7,8 +7,8 @@ ipfsHash: ""
 duration: 814
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['cpp','emacs','VIM','developers','el-get','packages','malinka','rtags','clang','syntax','flycheck','projectile','solidity']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Lefteris Karapetsas']
 ---

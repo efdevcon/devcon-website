@@ -116,6 +116,9 @@ async function createPlaylistPages({ actions, graphql, reporter }: CreatePagesAr
             collection
             slug
           }
+          frontmatter {
+            tags
+          }
         }
       }
     }
@@ -127,7 +130,7 @@ async function createPlaylistPages({ actions, graphql, reporter }: CreatePagesAr
   }
 
   result.data.playlists.nodes.forEach((node: any) => {
-    createDynamicPage(actions, node.fields.slug, 'playlist', 'en')
+    createDynamicPage(actions, node.fields.slug, 'playlist', 'en', '', node.frontmatter.tags)
   })
 }
 
