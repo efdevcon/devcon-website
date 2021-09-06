@@ -143,7 +143,7 @@ const Filters = (props: any) => {
     <>
       <div className={css['search']}>
         <InputForm
-          id='input-form_search_filter'
+          id="input-form_search_filter"
           className={css['input-form']}
           placeholder="Search"
           icon={IconSearch}
@@ -209,7 +209,7 @@ export const VideoFilterMobile = (props: any) => {
       <div>
         <div className={css['header']}>
           <p className="title">Filter</p>
-          <button className="white" onClick={() => setOpen(!open)}>
+          <button className="white ghost" onClick={() => setOpen(!open)}>
             <IconFilter className={`icon ${css['icon-open']}`} />
             <IconClose className={`icon ${css['icon-close']}`} />
           </button>

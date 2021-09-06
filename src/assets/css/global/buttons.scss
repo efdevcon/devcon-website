@@ -14,8 +14,25 @@ button {
     align-items: center;
     cursor: pointer;
     touch-action: manipulation;
-    border-width: 2px;
-    border-style: solid;
+    position: relative;
+
+    // Using pseudo element for borders so we can overlay an animating background without stripping the border away (which would also resize the button)
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      border-width: 2px;
+      border-color: var(--border-color);
+      border-style: solid;
+
+      &:hover {
+        display: none;
+      }
+    }
 
     // &:hover {
     //   @include colors-white-hover;
@@ -42,22 +59,22 @@ button {
     }
 
     // When buttons are animated we remove their border and compensate the size loss by adding equivalent padding
-    &.animated {
-      &:not(.disabled),
-      &:not(:disabled) {
-        &:hover,
-        &.hover {
-          padding: calc(var(--padding-top-bottom) + 2px) calc(var(--padding-left-right) + 2px);
-          border: none !important;
-        }
-      }
-    }
+    // &.animated {
+    //   &:not(.disabled),
+    //   &:not(:disabled) {
+    //     &:hover,
+    //     &.hover {
+    //       padding: calc(var(--padding-top-bottom) + 2px) calc(var(--padding-left-right) + 2px);
+    //       border: none !important;
+    //     }
+    //   }
+    // }
 
     // Sizes
     &.sm {
       @include fonts-xs;
-      --padding-top-bottom: #{$gaps-gap-2};
-      --padding-left-right: #{$gaps-gap-3};
+      --padding-top-bottom: 8px;
+      --padding-left-right: 15px;
 
       &.squared {
         width: 36px;

@@ -110,7 +110,7 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
           </Slider>
 
           {props.viewMore && (
-            <Button to={'/archive/playlists'} className={`${css['button']} white sm`}>
+            <Button to={'/archive/playlists'} className={`${css['button']} white ghost sm`}>
               View more <ArrowRight />
             </Button>
           )}

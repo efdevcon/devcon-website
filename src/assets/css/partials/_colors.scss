@@ -58,15 +58,15 @@ $state-neutral-light: $monochrome-1;
 // WHITE
 @mixin white {
   background: $monochrome-1;
-  --color-icon: #{$main};
   color: $main;
-  border-color: $main;
+  --color-icon: #{$main};
+  --border-color: #{$monochrome-1};
 }
 @mixin white-ghost {
   background: none;
-  color: $monochrome-1;
-  --color-icon: #{$monochrome-1};
-  border-color: $monochrome-1;
+  color: $main;
+  --color-icon: #{$main};
+  --border-color: #{$main};
 }
 @mixin white-hover {
   background: $monochrome-4;
@@ -92,13 +92,13 @@ $state-neutral-light: $monochrome-1;
   background: $main;
   --color-icon: #{$monochrome-1};
   color: $monochrome-1;
-  border-color: $main;
+  --border-color: #{$main};
 }
 @mixin black-ghost {
   background: none;
   color: $main;
   --color-icon: #{$main};
-  border-color: $main;
+  --border-color: #{$main};
 }
 @mixin black-hover {
   background: lighten($main, 15%);
@@ -114,7 +114,7 @@ $state-neutral-light: $monochrome-1;
 }
 @mixin black-disabled {
   background: $monochrome-7;
-  border-color: $monochrome-7;
+  --border-color: #{$monochrome-7};
   --color-icon: #{$monochrome-1};
   color: $monochrome-1;
 }
@@ -124,16 +124,16 @@ $state-neutral-light: $monochrome-1;
   background: $track-red;
   --color-icon: #{$monochrome-1};
   color: $monochrome-1;
-  border-color: $track-red;
+  --border-color: #{$track-red};
 }
 @mixin red-ghost {
   background: none;
   color: $track-red;
   --color-icon: #{$track-red};
-  border-color: $track-red;
+  --border-color: #{#{$track-red}};
 }
 @mixin red-hover {
-  // background: lighten($track-red, 15%);
+  background: $track-red-hover;
 
   // For use by Button component (animates colors when hovering)
   --button-color: #{$monochrome-1};
@@ -146,7 +146,7 @@ $state-neutral-light: $monochrome-1;
 }
 @mixin red-disabled {
   background: #ddcccf !important;
-  border-color: #d6b1b6 !important;
+  --border-color: #{#d6b1b6 !important};
   --color-icon: #{$monochrome-1} !important;
   color: $monochrome-1 !important;
 }

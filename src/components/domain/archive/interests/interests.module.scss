@@ -31,11 +31,12 @@
       margin-bottom: $gaps-gap-2;
     }
 
-    .rabbit {
+    .unicorn {
       @include fonts-xl;
       display: flex;
       flex-grow: 1;
       align-items: flex-end;
+      margin-top: $gaps-gap-2;
 
       @media (max-width: $breakpoints-lg) {
         display: none;
@@ -62,7 +63,7 @@
       display: flex;
       flex-shrink: 0;
       margin-right: $gaps-gap-2;
-      margin-bottom: $gaps-gap-1;
+      margin-bottom: $gaps-gap-2;
 
       > span {
         // margin-left: $gaps-gap-2;

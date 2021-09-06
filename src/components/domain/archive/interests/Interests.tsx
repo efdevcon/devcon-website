@@ -26,11 +26,11 @@ export const Interests = (props: any) => {
           <p className="font-sm">
             Dive into the immersive world of Devcon content by selecting topics most relevant to your interest.
           </p>
-          <p className={css['rabbit']}>✨🦄</p>
+          <p className={css['unicorn']}>✨🦄</p>
         </div>
 
         <div className={css['tags-container']}>
-          <p className="bold font-sm">Filter by Category</p>
+          <p className="bold font-sm">Choose Category</p>
           {tagRows.map((tagRow, index) => {
             return (
               <div key={index} className={css['tags']}>

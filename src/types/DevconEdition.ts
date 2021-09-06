@@ -7,7 +7,10 @@ export interface DevconEdition {
   startDate?: Date
   endDate?: Date
   imageUrl: string
-  image: any
+  image1: any
+  image2: any
+  image3: any
+  imageTitle: any
   links: Array<{
     title: string
     url: string

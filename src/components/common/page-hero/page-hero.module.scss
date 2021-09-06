@@ -283,7 +283,7 @@
     grid-row: 1 / 1;
     opacity: 0;
     transform: translateX(-100px);
-    transition: all 0.5s;
+    transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1);
 
     @media (max-width: $breakpoints-lg) {
       grid-column: 1 / 4;
@@ -377,7 +377,7 @@
 
   opacity: 0;
   transform: translateX(100px);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1);
 
   &.active {
     transform: translateX(0px);

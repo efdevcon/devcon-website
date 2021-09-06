@@ -16,7 +16,27 @@ export const useDevconEditions = (): Array<DevconEdition> => {
             endDate
             image {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
+            image_1 {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
+            image_2 {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
+            image_3 {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
+            image_title {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             urls {
@@ -46,6 +66,10 @@ function mapToDevconEdition(source: any): DevconEdition {
     location: source.frontmatter.location,
     imageUrl: source.frontmatter.imageUrl,
     image: source.frontmatter.image,
+    image1: source.frontmatter.image_1,
+    image2: source.frontmatter.image_2,
+    image3:source.frontmatter.image_3,
+    imageTitle: source.frontmatter.image_title,
     links: source.frontmatter.urls
       ? source.frontmatter.urls.map((i: any) => {
           return { title: i.title, url: i.url }
