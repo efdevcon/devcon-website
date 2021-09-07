@@ -13,146 +13,34 @@ interface Props {
   className?: string
 }
 
-export const SlideGrid = (props: any) => {
-  const [next, setNext] = React.useState(0)
-  const [animatingOut, setAnimatingOut] = React.useState<any>(undefined)
-
-  const setNextWrapper = (fn: () => number) => {
-    if (animatingOut) return
-
-    setAnimatingOut({ onDone: () => setNext(fn) })
-  }
+const Clock = (props: any) => {
+  const animationEl = React.useRef()
 
   React.useEffect(() => {
-    if (animatingOut) {
-      let timeout = setTimeout(() => {
-        animatingOut.onDone()
-        setAnimatingOut(undefined)
-      }, 800)
-
-      return () => clearTimeout(timeout)
+    const handler = () => {
+      props.next()
     }
-  }, [animatingOut])
+
+    animationEl.current.addEventListener('animationend', handler)
+
+    return () => {
+      animationEl.current.removeEventListener('animationend', handler)
+    }
+  }, [props.next])
 
   return (
-    <div className={`${css['grid']} ${css[`constellation-${next}`]} ${animatingOut ? css['animating-out'] : ''}`}>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="right"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="right"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="right"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="right"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="right"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
-      <div>
-        <GatsbyImage image={getImage(props.images[next])} objectFit="cover" />
-        <div
-          data-direction="right"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-      </div>
+    <div className={`${css['circle-wrap']}`}>
+      <div className={`${css['circle']}`}>
+        <div className={`${css['mask']} ${css['full']}`}>
+          <div ref={animationEl} className={`${css['fill']}`}></div>
+        </div>
+        <div className={`${css['mask']} ${css['half']}`}>
+          <div className={`${css['fill']}`}></div>
+        </div>
 
-      <div className={css['nav-prev']} onClick={() => setNextWrapper(next => next - 1)}>
-        <div
-          data-direction="left"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-        prev
-      </div>
-      <div className={css['nav-next']} onClick={() => setNextWrapper(next => next + 1)}>
-        <div
-          data-direction="right"
-          className={`${css['revealer']} ${animatingOut ? css['revealer-hide-x'] : css['revealer-show-x']}`}
-        ></div>
-        next
-      </div>
-    </div>
-  )
-}
-
-export const Editionss = () => {
-  const editions = useDevconEditions()
-
-  return (
-    <div className="section padding-bottom">
-      <div className="content">
-        <SlideGrid images={editions.map(edition => edition.image)} />
+        <div className={`${css['inside-circle']}`}>
+          <div>{props.children}</div>
+        </div>
       </div>
     </div>
   )
@@ -175,15 +63,26 @@ export const Editions = (props: Props) => {
           <HorizontalScroller>
             <div className={css['numbers']}>
               {editions.map((i: DevconEdition, index: number) => {
+                const selected = i.number === selectedEdition.number
                 let className = css['edition']
-                if (i.number === selectedEdition.number) className += ` ${css['selected']}`
+
+                if (selected) className += ` ${css['selected']}`
 
                 return (
                   <div key={i.number} className={className}>
                     <p className={css['conference']}>Devcon Editions</p>
-                    <p className={css['number']} onClick={() => setSelectedEditionIndex(index)}>
-                      {i.number}
-                    </p>
+
+                    {selected ? (
+                      <Clock
+                        next={() => setSelectedEditionIndex(curr => (curr === editions.length - 1 ? 0 : curr + 1))}
+                      >
+                        {i.number}
+                      </Clock>
+                    ) : (
+                      <button className={`${css['number']} plain`} onClick={() => setSelectedEditionIndex(index)}>
+                        {i.number}
+                      </button>
+                    )}
                   </div>
                 )
               })}
@@ -240,9 +139,15 @@ export const Editions = (props: Props) => {
             </div>
             <div className={css['buttons-container']}>
               <div className={css['buttons']}>
-                <Button to="/archive/watch?edition=5" className={`${css['button']} red ghost sm`}>
-                  Watch <OnDemandVideoIcon />
-                </Button>
+                {/* Only show watch now button after the event has happened */}
+                {moment().unix() > moment(selectedEdition.endDate).unix() && (
+                  <Button
+                    to={`/archive/watch?edition=${selectedEdition.number}`}
+                    className={`${css['button']} red ghost sm`}
+                  >
+                    Watch <OnDemandVideoIcon />
+                  </Button>
+                )}
 
                 {selectedEdition.links.map(i => {
                   return (
@@ -255,6 +160,11 @@ export const Editions = (props: Props) => {
                   )
                 })}
               </div>
+            </div>
+            <div className={css['background-text']}>
+              <p>Ethereum</p>
+              <p>Developer</p>
+              <p>Conference</p>
             </div>
           </div>
         </div>
