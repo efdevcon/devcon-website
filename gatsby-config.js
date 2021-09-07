@@ -6,6 +6,7 @@ const {
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === 'production'
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+const domain = siteUrl.replace('https://', '').replace('http://', '')
 
 const title = 'Devcon'
 const defaultLanguage = 'en'
@@ -52,7 +53,7 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            host: siteUrl,
+            host: domain,
             sitemap: siteUrl + '/sitemap.xml',
             policy: [{ userAgent: '*' }],
           },
