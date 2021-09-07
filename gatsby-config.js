@@ -53,7 +53,7 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            host: domain,
+            // host: domain,
             sitemap: siteUrl + '/sitemap.xml',
             policy: [{ userAgent: '*' }],
           },
