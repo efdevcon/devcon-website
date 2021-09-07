@@ -32,7 +32,7 @@ export const MessageFromDeva = React.forwardRef((props: any, ref) => {
 
           <ScrollGradient height="30px">
             <div className={css['message']}>
-              <h1>{intl.formatMessage({ id: 'rtd_embarking' })}</h1>
+              <h2>{intl.formatMessage({ id: 'rtd_embarking' })}</h2>
 
               <p className="bold">Devcon {intl.formatMessage({ id: 'rtd_bogota' })}</p>
 
