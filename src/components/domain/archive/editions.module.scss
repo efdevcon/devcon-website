@@ -307,6 +307,9 @@
     .description {
       // margin: $gaps-gap-8 0;
       margin-top: $gaps-gap-4;
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
 
       @media (max-width: $breakpoints-md) {
         height: 12em;
@@ -318,10 +321,10 @@
     }
 
     .buttons-container {
-      flex-grow: 1;
+      // flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      // justify-content: flex-end;
       padding-top: $gaps-gap-4;
       padding-bottom: $gaps-gap-4;
 
