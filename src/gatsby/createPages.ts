@@ -1,5 +1,7 @@
 import { GatsbyNode, CreatePagesArgs, Actions } from 'gatsby'
 import path from 'path'
+import { SearchIndexClient } from '../server/services/search-client'
+import { mapToArchiveVideo } from '../types/ArchiveVideo'
 
 const languages = ['en', 'es']
 const defaultLang = 'en'
@@ -344,102 +346,102 @@ async function createVideoPages({ actions, graphql, reporter }: CreatePagesArgs)
 //   })
 // }
 
-// async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
-//   // search: title, description, speaker name
-//   // filter: edition, expertise, tags
+async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
+  // search: title, description, speaker name
+  // filter: edition, expertise, tags
 
-//   const result: any = await graphql(`
-//     query {
-//       items: allMarkdownRemark(filter: { fields: { collection: { eq: "videos" } } }) {
-//         nodes {
-//           id
-//           fields {
-//             slug
-//             path
-//           }
-//           frontmatter {
-//             title
-//             edition
-//             description
-//             youtubeUrl
-//             ipfsHash
-//             duration
-//             expertise
-//             type
-//             track
-//             tags
-//             speakers
-//             profiles {
-//               id
-//               name
-//               lang
-//               description
-//               imageUrl
-//               role
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
+  const result: any = await graphql(`
+    query {
+      items: allMarkdownRemark(filter: { fields: { collection: { eq: "videos" } } }) {
+        nodes {
+          id
+          fields {
+            slug
+            path
+          }
+          frontmatter {
+            title
+            edition
+            description
+            youtubeUrl
+            ipfsHash
+            duration
+            expertise
+            type
+            track
+            tags
+            speakers
+            profiles {
+              id
+              name
+              lang
+              description
+              imageUrl
+              role
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
 
-//   if (result.errors) {
-//     reporter.panicOnBuild(`Error while running search query.`)
-//     return
-//   }
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running search query.`)
+    return
+  }
 
-//   console.log('ElasticSearch client..')
-//   const elastic = new SearchIndexClient()
-//   const indexName = 'archive'
-//   await elastic.deleteIndex(indexName)
-//   await elastic.createIndex(indexName)
-//   await elastic.updateMapping(indexName, {
-//     properties: {
-//       title: {
-//         type: 'text',
-//         fielddata: true,
-//         fields: {
-//           raw: {
-//             type: 'keyword',
-//           },
-//         },
-//       },
-//     },
-//   })
-//   await elastic.updateMapping(indexName, {
-//     properties: {
-//       description: {
-//         type: 'text',
-//         fielddata: true,
-//         fields: {
-//           raw: {
-//             type: 'keyword',
-//           },
-//         },
-//       },
-//     },
-//   })
-//   await elastic.updateMapping(indexName, {
-//     properties: {
-//       speakers: {
-//         type: 'text',
-//         fielddata: true,
-//         fields: {
-//           raw: {
-//             type: 'keyword',
-//           },
-//         },
-//       },
-//     },
-//   })
+  console.log('ElasticSearch client..')
+  const elastic = new SearchIndexClient()
+  const indexName = 'archive'
+  await elastic.deleteIndex(indexName)
+  await elastic.createIndex(indexName)
+  await elastic.updateMapping(indexName, {
+    properties: {
+      title: {
+        type: 'text',
+        fielddata: true,
+        fields: {
+          raw: {
+            type: 'keyword',
+          },
+        },
+      },
+    },
+  })
+  await elastic.updateMapping(indexName, {
+    properties: {
+      description: {
+        type: 'text',
+        fielddata: true,
+        fields: {
+          raw: {
+            type: 'keyword',
+          },
+        },
+      },
+    },
+  })
+  await elastic.updateMapping(indexName, {
+    properties: {
+      speakers: {
+        type: 'text',
+        fielddata: true,
+        fields: {
+          raw: {
+            type: 'keyword',
+          },
+        },
+      },
+    },
+  })
 
-//   console.log(`Adding ${result.data.items.nodes.length} archive videos to Elastic index..`)
-//   result.data?.items.nodes.forEach(async (source: any) => {
-//     const video = mapToArchiveVideo(source)
-//     await elastic.addToIndex(indexName, video)
-//   })
-// }
+  console.log(`Adding ${result.data.items.nodes.length} archive videos to Elastic index..`)
+  result.data?.items.nodes.forEach(async (source: any) => {
+    const video = mapToArchiveVideo(source)
+    await elastic.addToIndex(indexName, video)
+  })
+}
 
 function createDynamicPage(
   actions: Actions,
