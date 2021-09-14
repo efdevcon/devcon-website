@@ -9,6 +9,14 @@ const userAccountSchema: Schema = new Schema(
     email: { type: String, match: /.+\@.+\..+/ },
     addresses: { type: [String] },
     disabled: { type: Boolean, required: false, default: false },
+    push_subscription: {
+      endpoint: String,
+      expirationTime: Date,
+      options: {
+        userVisibleOnly: Boolean,
+        applicationServerKey: String
+      }
+    }
   },
   { timestamps: true }
 )

@@ -1,9 +1,11 @@
 import express, { json, Request, Response, urlencoded } from 'express'
 import passport from 'passport'
+import cors from 'cors';
 import serverless from 'serverless-http'
 import mongoose from 'mongoose'
 import * as userAccountRoutes from '../routes/account'
 import * as twitterRoutes from '../routes/twitter'
+import * as notificationRoutes from '../routes/notification'
 import * as archiveRoutes from '../routes/archive'
 import session from 'express-session'
 import { web3Strategy, serializeUser, deserializeUser } from '../strategies/web3'
@@ -14,6 +16,7 @@ const server = express()
 const router = express.Router()
 server.use(json())
 server.use(urlencoded())
+server.use(cors());
 
 // Connect db
 mongoose.connect(SERVER_CONFIG.DB_CONNECTION_STRING, {
@@ -37,6 +40,7 @@ router.get('/', (req: Request, res: Response) => {
 // userAccountRoutes.register(router)
 twitterRoutes.register(router)
 archiveRoutes.register(router)
+notificationRoutes.register(router)
 
 // Express-sessions
 if (!SERVER_CONFIG.SESSION_SECRET) throw new Error('Required SESSION_SECRET not found.')

@@ -2,7 +2,7 @@ import { IRepository } from './interfaces/IRepository'
 import { model } from 'mongoose'
 
 export abstract class BaseRepository<T> implements IRepository<T> {
-  protected _model: any
+  public _model: any
 
   constructor(modelName: string) {
     this._model = model(modelName)

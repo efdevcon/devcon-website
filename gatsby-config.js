@@ -16,7 +16,7 @@ const supportedLanguages = [defaultLanguage, secondaryLanguage]
 const matomoSiteId = '8'
 const matomoUrl = 'https://matomo.ethereum.org'
 
-const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
+const offlinePages = ['/en', '/es', '/en/contact', '/es/contact', '/pwa/*']
 
 module.exports = {
   siteMetadata: {
@@ -106,14 +106,18 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-remove-serviceworker',
+    // 'gatsby-plugin-remove-serviceworker',
     //  NOTE: For the web app manifest to be cached, 'gatsby-plugin-manifest' needs to be before 'gatsby-plugin-offline'
-    // {
-    //   resolve: 'gatsby-plugin-offline',
-    //   options: {
-    //     precachePages: offlinePages,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: offlinePages,
+        appendScript: `${__dirname}/src/sw/sw-custom.js`,
+        // workboxConfig: {
+        //   swDest: `${__dirname}/public/pwa/sw.js`,
+        // },
+      },
+    },
     {
       resolve: 'gatsby-plugin-matomo',
       options: {
@@ -362,3 +366,38 @@ module.exports = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 

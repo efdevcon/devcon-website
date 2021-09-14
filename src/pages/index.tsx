@@ -6,6 +6,7 @@ import { BlogReel } from 'src/components/domain/blog-overview'
 import { graphql } from 'gatsby'
 import { News } from 'src/components/domain/news'
 import { pageHOC } from 'src/context/pageHOC'
+import { Notifications } from 'src/components/domain/pwa/notifications'
 
 export default pageHOC(function Index({ data }: any) {
   return (
@@ -14,6 +15,7 @@ export default pageHOC(function Index({ data }: any) {
       {/* <PWAPrompt /> */}
       <News data={data.newsDataInline} />
       <BlogReel />
+      <Notifications />
     </Default>
   )
 })

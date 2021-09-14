@@ -23,7 +23,7 @@ export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesAr
   // await createTagPages(args)
   await createSearchPage(args)
 
-  await indexArchive(args)
+  // await indexArchive(args)
 }
 
 async function createContentPages({ actions, graphql, reporter }: CreatePagesArgs) {
