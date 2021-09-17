@@ -14,7 +14,8 @@ self.addEventListener('push', function (event) {
   //   tag: 'alert',
   // }
 
-  // event.waitUntil(self.registration.showNotification(title, options))
+  // This is not guaranteed to show up. It depends on OS level settings as well.
+  event.waitUntil(self.registration.showNotification('Push notification!', { body: event.data.text() }))
 })
 
 self.addEventListener('notificationclick', function (event) {

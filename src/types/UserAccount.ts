@@ -4,6 +4,7 @@ export interface UserAccount {
   email?: string
   addresses: Array<string>
   disabled: boolean
+  pushSubscription: any,
   createdAt: Date
   updatedAt: Date
 }

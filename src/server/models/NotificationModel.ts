@@ -9,7 +9,9 @@ const userAccountSchema: Schema = new Schema(
       title: String,
       message: String
     },
-    global: { type: Boolean, index: true },
+    // Whether or not the notification has been pushed to the service worker (or service workers, if it's a global message)
+    pushed: { type: Boolean, default: false },
+    // A lack of recipient implies it should be sent to everyone (query by missing field)
     recipient: { type: Schema.Types.ObjectId, ref: 'UserAccount', index: true },
   },
   { timestamps: true }
