@@ -7,8 +7,8 @@ ipfsHash: "QmNnpwbMsKURMMGDUvP47LWDpXUxrS6M21FZU3K9jwbV3E"
 duration: 1214
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['classic','etc','general']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Terry Culver']
 ---

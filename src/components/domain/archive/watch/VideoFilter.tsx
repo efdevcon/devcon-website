@@ -9,6 +9,7 @@ import queryString from 'query-string'
 import { usePageContext } from 'src/context/page-context'
 import IconSearch from 'src/assets/icons/search.svg'
 import { InputForm } from 'src/components/common/input-form'
+import { Button } from 'src/components/common/button'
 
 const queryStringToFilterState = (qs: string) => {
   // Extract params from query string
@@ -35,16 +36,12 @@ const queryStringToFilterState = (qs: string) => {
 export const useVideoFilter = () => {
   const location = useLocation()
   const pageContext = usePageContext()
-  const initialFilters = React.useMemo((): any => {
-    return queryStringToFilterState(location.search)
-  }, [])
 
   const nrOfEditions = 5
   const editionFilters = Array.from(Array(nrOfEditions + 1).keys()).sort((a, b) => b - a)
   const [_, editionFilterState] = useFilter({
     tags: true,
     multiSelect: true,
-    initialFilter: initialFilters.edition,
     filters: editionFilters.map(i => {
       return {
         text: i.toString(),
@@ -57,7 +54,6 @@ export const useVideoFilter = () => {
   const [__, expertiseFilterState] = useFilter({
     tags: true,
     multiSelect: true,
-    initialFilter: initialFilters.expertise,
     filters: [
       {
         text: 'Beginner',
@@ -78,7 +74,6 @@ export const useVideoFilter = () => {
   const [___, tagsFilterState] = useFilter({
     tags: true,
     multiSelect: true,
-    initialFilter: initialFilters.tags,
     filters: pageContext.data.distinctVideoTags.map(tag => {
       return {
         text: tag,
@@ -91,10 +86,19 @@ export const useVideoFilter = () => {
   const [____, searchFilterState] = useFilter({
     tags: false,
     multiSelect: false,
-    initialFilter: initialFilters.q,
     filters: [],
     filterFunction: () => [],
   })
+
+  // Sync filters with query string on mount
+  React.useEffect(() => {
+    const initialFilters = queryStringToFilterState(location.search)
+
+    if (initialFilters.edition) editionFilterState?.setActiveFilter(initialFilters.edition, true)
+    if (initialFilters.q) searchFilterState?.setActiveFilter(initialFilters.q, true)
+    if (initialFilters.tags) tagsFilterState?.setActiveFilter(initialFilters.tags, true)
+    if (initialFilters.expertise) expertiseFilterState?.setActiveFilter(initialFilters.expertise, true)
+  }, [])
 
   const editionFilter = editionFilterState && Object.keys(editionFilterState.activeFilter)
   const expertiseFilter = expertiseFilterState && Object.keys(expertiseFilterState.activeFilter)
@@ -110,24 +114,25 @@ export const useVideoFilter = () => {
   const combinedFilter = (() => {
     // Finish this one later - the combined filter will change depending on the filtering solution (e.g. inline JS vs query a search service)
     // For now just doing a boolean to test the clear all functionality
-    const filtersActive = [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0) 
+    const filtersActive = [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0)
     const searchActive = !!searchFilterState?.activeFilter
 
     return filtersActive || searchActive
   })()
-  
+
   return { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState }
 }
 
 const Filters = (props: any) => {
-  const { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState } = props
+  const { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState } =
+    props
   const initialSearchFilter = (): string => {
     if (typeof searchFilterState.activeFilter === 'string') {
       return searchFilterState.activeFilter
     }
-    
+
     if (typeof searchFilterState.activeFilter === 'object') {
-      const keys = Object.keys(searchFilterState.activeFilter)      
+      const keys = Object.keys(searchFilterState.activeFilter)
       return keys[0]
     }
 
@@ -138,13 +143,19 @@ const Filters = (props: any) => {
     <>
       <div className={css['search']}>
         <InputForm
+          id="input-form_search_filter"
           className={css['input-form']}
           placeholder="Search"
           icon={IconSearch}
           defaultValue={initialSearchFilter()}
-          onChange={(value) => searchFilterState.setActiveFilter(value)}
+          onChange={value => searchFilterState.setActiveFilter(value)}
           timeout={300}
         />
+      </div>
+
+      <div className={css['categories']}>
+        <p className="bold font-xs text-uppercase">Categories:</p>
+        <Filter {...tagsFilterState} />
       </div>
 
       <div className={css['devcon']}>
@@ -155,27 +166,23 @@ const Filters = (props: any) => {
       <div className={css['expertise']}>
         <p className="bold font-xs text-uppercase">Expertise:</p>
         <Filter {...expertiseFilterState} />
-      </div>
-
-      <div className={css['tags']}>
-        <p className="bold font-xs text-uppercase">Categories:</p>
-        <Filter {...tagsFilterState} />
 
         <div className={css['clear-container']}>
           {props.mobile && (
-            <button className="red bold" onClick={() => props.setOpen(false)}>
-              <span>Continue</span> <IconArrowRight />
-            </button>
+            <Button
+              disabled={!combinedFilter}
+              className={`${css['continue-button']} red bold`}
+              onClick={() => document.getElementById('filter-sort')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <span className={css['text']}>Continue</span> <IconArrowRight className={`icon ${css['text-icon']}`} />
+            </Button>
           )}
 
-        {combinedFilter && (
-          <p
-            className={`${css['open']} ${css['clear']} bold text-underline`}
-            onClick={clearFilters}
-          >
-            Clear All
-          </p>
-        )}
+          {combinedFilter && (
+            <p className={`${css['open']} ${css['clear']} bold text-underline`} onClick={clearFilters}>
+              Clear All
+            </p>
+          )}
         </div>
       </div>
     </>
@@ -201,8 +208,8 @@ export const VideoFilterMobile = (props: any) => {
     <div className={className}>
       <div>
         <div className={css['header']}>
-          <h4 className="title">Filter</h4>
-          <button className="white" onClick={() => setOpen(!open)}>
+          <p className="title">Filter</p>
+          <button className="white ghost" onClick={() => setOpen(!open)}>
             <IconFilter className={`icon ${css['icon-open']}`} />
             <IconClose className={`icon ${css['icon-close']}`} />
           </button>

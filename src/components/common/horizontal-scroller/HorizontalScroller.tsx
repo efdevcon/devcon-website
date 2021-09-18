@@ -2,7 +2,6 @@ import React from 'react'
 import { useCallback } from 'react'
 import { useGesture } from 'react-use-gesture'
 import css from './horizontal-scroller.module.scss'
-import useIsTouchDevice from 'src/hooks/useIsTouchDevice'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 
@@ -53,7 +52,6 @@ export const HorizontalScroller = (props: any) => {
   const scrolledBy = React.useRef(0)
   const [indicatorVisibleLeft, setIndicatorVisibleLeft] = React.useState(false)
   const [indicatorVisibleRight, setIndicatorVisibleRight] = React.useState(false)
-  const isTouchDevice = useIsTouchDevice()
 
   usePreventClickWhileDragging(elementRef)
 
@@ -137,7 +135,7 @@ export const HorizontalScroller = (props: any) => {
         observer.unobserve(el)
       }
     }
-  }, [])
+  }, [syncIndicators])
 
   const goToEnd = () => {
     const nextX = scrollWidth.current - elementWidth.current

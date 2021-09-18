@@ -1,6 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby'
 import { Playlist } from 'src/types/Playlist'
-import { UserProfile } from 'src/types/UserProfile'
 
 export const usePlaylists = (): Array<Playlist> => {
   const data = useStaticQuery(graphql`

@@ -1,12 +1,14 @@
 import React from 'react'
-import IconCheck from 'src/assets/icons/check_circle.svg'
-import IconPlus from 'src/assets/icons/plus.svg'
-import IconArrowRight from 'src/assets/icons/arrow_right.svg'
+// import IconCheck from 'src/assets/icons/check_circle.svg'
+// import IconPlus from 'src/assets/icons/plus.svg'
+// import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import css from './interests.module.scss'
 import { chunkArray } from 'src/utils/chunk-array'
-import { Link } from 'src/components/common/link'
+// import { Button } from 'src/components/common/button'
 import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { usePageContext } from 'src/context/page-context'
+import { Link } from 'src/components/common/link'
+// import NorthEast from 'src/assets/icons/north_east.svg'
 
 export const Interests = (props: any) => {
   const [selectedTags, setSelectedTags] = React.useState({} as { [key: string]: any })
@@ -14,70 +16,75 @@ export const Interests = (props: any) => {
   const tagRows = chunkArray(tags, 1 /*2*/) // Accounts currently missing, so we'll wait with chunking the array to take up more horizontal space in the meantime
   const queryString = useQueryStringer({ tags: selectedTags }, false)
 
-  const hasSelectedTags = Object.keys(selectedTags).length > 0;
+  // const hasSelectedTags = Object.keys(selectedTags).length > 0
 
   return (
     <div className="section">
       <div className={`${css['container']} content padding-bottom`}>
         <div className={css['header']}>
-          <h4 className={`bold font-xl font-primary ${css['title']}`}>Explore Devcon Archive —</h4>
-          <p className="font-xs">
+          <h2 className={`bold font-xl font-primary ${css['title']}`}>Explore Devcon Archive —</h2>
+          <p className="font-sm">
             Dive into the immersive world of Devcon content by selecting topics most relevant to your interest.
           </p>
-          <p className={css['rabbit']}>✨🦄</p>
+          <p className={css['unicorn']}>✨🦄</p>
         </div>
 
         <div className={css['tags-container']}>
-          <p className="bold font-sm">Filter by Category</p>
+          <p className="bold font-sm">Choose Category</p>
           {tagRows.map((tagRow, index) => {
             return (
               <div key={index} className={css['tags']}>
                 {tagRow.map(tag => {
                   let className = `${css['tag']} label label-hover plain white`
-                  const selected = selectedTags[tag]
+                  // const selected = selectedTags[tag]
 
-                  if (selected) className += ` ${css['selected']} black`
+                  // if (selected) className += ` ${css['selected']} black`
 
                   return (
-                    <button
+                    <Link
                       className={className}
                       key={tag}
-                      onClick={() => {
-                        const nextTags = {
-                          ...selectedTags,
-                          [tag]: true,
-                        } as any
+                      to={`/archive/watch?tags=${encodeURIComponent(tag)}`}
+                      // onClick={() => {
+                      //   const nextTags = {
+                      //     ...selectedTags,
+                      //     [tag]: true,
+                      //   } as any
 
-                        const selected = selectedTags[tag]
+                      //   const selected = selectedTags[tag]
 
-                        if (selected) delete nextTags[tag]
+                      //   if (selected) delete nextTags[tag]
 
-                        setSelectedTags(nextTags)
-                      }}
+                      //   setSelectedTags(nextTags)
+                      // }}
                     >
-                      <div className={css['icons']}>
+                      {/* <div className={css['icons']}>
                         <IconCheck className={`icon ${css['icon-check']}`} />
                         <IconPlus className={`icon ${css['icon-plus']}`} />
-                      </div>
+                      </div> */}
                       <span>{tag}</span>
-                    </button>
+                    </Link>
                   )
                 })}
               </div>
             )
           })}
 
-          <div className={css['clear']}>
-            <Link className={`${!hasSelectedTags ? 'disabled ' : ''}${css['continue']} font-sm button red`} to={`/archive/watch${queryString}`}>
-              <span>View talks</span> <IconArrowRight />
-            </Link>
+          {/* <div className={css['clear']}>
+            <Button
+              disabled={!hasSelectedTags}
+              className={`${css['continue']} font-sm red`}
+              to={`/archive/watch${queryString}`}
+            >
+              <span className={css['text']}>View talks</span> <IconArrowRight className={`icon ${css['text-icon']}`} />
+            </Button>
 
-            {hasSelectedTags && 
+            {hasSelectedTags && (
               <p className={`${css['clear']} bold text-underline`} onClick={() => setSelectedTags({})}>
                 Clear All
               </p>
-            }
-          </div>
+            )}
+          </div> */}
         </div>
       </div>
     </div>

@@ -1,19 +1,39 @@
 @use 'src/assets/css/partials/index' as *;
 
-@mixin foldout-background {
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    background-image: url('src/assets/images/menu/foldout-backdrop.svg');
-    background-repeat: no-repeat;
-    background-position-x: calc(100% + 50px);
-    background-position-y: center;
-    pointer-events: none;
+// @mixin foldout-background {
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0.1;
+//     background-image: url('src/assets/images/menu/foldout-backdrop.svg');
+//     background-repeat: no-repeat;
+//     background-position-x: calc(100% + 50px);
+//     background-position-y: center;
+//     pointer-events: none;
+//   }
+// }
+
+.foldout-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.1;
+  object-position: calc(100% + 50px);
+  pointer-events: none;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  > img {
+    height: 300px;
+    margin-top: min(#{$gaps-gap-8}, 5%);
+    margin-right: min(#{$gaps-gap-8}, 5%);
   }
 }
 
@@ -81,7 +101,7 @@
         }
       }
 
-      @include foldout-background;
+      // @include foldout-background;
     }
   }
 }
@@ -122,12 +142,20 @@
         background: rgba(0, 0, 0, 0.1);
       }
 
+      .foldout-background {
+        display: none;
+      }
+
       &.open {
+        .foldout-background {
+          display: flex;
+        }
+
         background-color: $colors-monochrome-2;
         // padding-bottom: $gaps-gap-4;
         padding-bottom: 0px;
 
-        @include foldout-background;
+        // @include foldout-background;
       }
 
       .accordion-toggle {

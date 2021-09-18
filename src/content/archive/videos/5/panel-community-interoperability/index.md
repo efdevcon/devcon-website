@@ -1,7 +1,7 @@
 ---
 edition: 5
 title: "PANEL: Community Interoperability"
-description: "N/A"
+description: "Vitalik Buterin, Terry Culver, Josh Swihart & Jae Kwon discuss Community Interoperability."
 youtubeUrl: "https://youtu.be/11VO61097A4"
 ipfsHash: "QmQdwDvAmxbajsKN2rgUV5icNUA2PCGL3XW1hJ92wYAGm1"
 duration: 2552

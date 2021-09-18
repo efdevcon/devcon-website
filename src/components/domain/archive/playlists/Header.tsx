@@ -1,9 +1,9 @@
-import { StaticImage } from 'gatsby-plugin-image'
 import React from 'react'
 import IconWatch from 'src/assets/icons/watch.svg'
 import { Playlist } from 'src/types/Playlist'
 import css from './header.module.scss'
 import { Link } from 'src/components/common/link'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type Props = {
   playlist: Playlist
@@ -26,14 +26,14 @@ export function PlaylistHeader(props: Props) {
         </div>
 
         <div>
-          {firstVideo?.slug && 
+          {firstVideo?.slug && (
             <Link
               className={css['controls']}
               to={`${firstVideo.slug}?playlist=${encodeURIComponent(props.playlist.title)}`}
             >
               <IconWatch /> <span className="bold font-xs">WATCH PLAYLIST</span>
             </Link>
-          }
+          )}
 
           {props.playlist.curators && props.playlist.curators.length > 0 && (
             <>
@@ -47,7 +47,8 @@ export function PlaylistHeader(props: Props) {
       </div>
 
       <div className={css['image-section']}>
-        <img src={props.playlist.imageUrl} alt={`${props.playlist.title} Devcon playlist`} placeholder="blurred" />
+        {/* <img src={props.playlist.imageUrl} alt={`${props.playlist.title} Devcon playlist`} placeholder="blurred" /> */}
+        <GatsbyImage image={getImage(props.playlist.image)} alt={`${props.playlist.title} Devcon playlist`} />
       </div>
     </div>
   )

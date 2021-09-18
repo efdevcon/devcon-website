@@ -7,8 +7,8 @@ ipfsHash: "MISSING"
 duration: 1333
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['Layer 2','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Dmitry Kurinskiy']
 ---

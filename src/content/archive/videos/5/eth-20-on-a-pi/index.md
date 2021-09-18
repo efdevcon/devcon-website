@@ -7,8 +7,8 @@ ipfsHash: "QmU5CrDSsDUa1Pxs2S5xWT1ayxmeFD1KLjknNmZ9qVDLPA"
 duration: 1064
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['raspberry','eth2','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Mamy Ratsimbazafy']
 ---

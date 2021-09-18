@@ -7,8 +7,8 @@ ipfsHash: "QmVDNdth25EgNqsWAByFH5D7nZVY1TYYeBxC8TXHrg89MH"
 duration: 1216
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['sharding','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Hsiao-Wei Wang']
 ---

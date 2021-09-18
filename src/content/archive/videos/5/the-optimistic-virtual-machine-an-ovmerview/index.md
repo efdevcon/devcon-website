@@ -7,8 +7,8 @@ ipfsHash: "QmSJMCFR5QXP2ddKaz3kvtRjHgJRAh24RZjPoGBeCPWjvL"
 duration: 1418
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['OVM','optimism','academic']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Karl Floersch']
 ---

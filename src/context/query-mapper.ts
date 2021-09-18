@@ -16,14 +16,19 @@ export function ToNavigationData(nodes: any, videoTags?: any[], type?: 'default'
 export function ToArchiveNavigation(videoTags?: any[]): Array<Link> {
   const links = new Array<Link>()
   links.push({ title: 'Watch', url: '/archive/watch', type: 'page' })
-  const eventLinks = [5,4,3,2,1,0].map(event => ({
-    title: `Devcon ${event}`, 
-    url: `/archive/watch?edition=${event}`,
-    type: 'page'
-  }) as Link);
-  const tagLinks = videoTags?.map(i => { return { title: i, url: `/archive/watch?tags=${encodeURIComponent(i)}`, type: 'page' } as Link })
-  links.push({ title: 'Event', url: '', type: 'links', links: eventLinks})
-  links.push({ title: 'Categories', url: '', type: 'links', links: tagLinks})
+  const eventLinks = [5, 4, 3, 2, 1, 0].map(
+    event =>
+      ({
+        title: `Devcon ${event}`,
+        url: `/archive/watch?edition=${event}`,
+        type: 'page',
+      } as Link)
+  )
+  const tagLinks = videoTags?.map(i => {
+    return { title: i, url: `/archive/watch?tags=${encodeURIComponent(i)}`, type: 'page' } as Link
+  })
+  links.push({ title: 'Event', url: '', type: 'links', logo: '/assets/images/menu/bogota.svg', links: eventLinks })
+  links.push({ title: 'Categories', url: '', type: 'links', logo: '/assets/images/menu/program.svg', links: tagLinks })
   links.push({ title: 'Playlists', url: '/archive/playlists', type: 'page' })
 
   return links
@@ -34,7 +39,7 @@ export function ToNotification(data: any): Notification {
     title: data.rawMarkdownBody,
     url: data.frontmatter.url,
     label: data.frontmatter.label,
-    labelType: data.frontmatter.labelType
+    labelType: data.frontmatter.labelType,
   }
 }
 

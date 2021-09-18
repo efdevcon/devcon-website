@@ -2,11 +2,9 @@ import { graphql } from 'gatsby'
 
 export const query = graphql`
   fragment VideoData on Query {
-    video: allMarkdownRemark(
-      filter: { fields: { slug: { eq: $slug }, collection: { eq: "videos" } } }
-    ) {
+    video: allMarkdownRemark(filter: { fields: { slug: { eq: $slug }, collection: { eq: "videos" } } }) {
       nodes {
-        fields { 
+        fields {
           id
           slug
         }
@@ -38,10 +36,7 @@ export const query = graphql`
 
   fragment RelatedVideos on Query {
     relatedVideos: allMarkdownRemark(
-      filter: { 
-        fields: { slug: { ne: $slug }, collection: { eq: "videos" } }
-        frontmatter: { tags: { regex: $tags } }
-      }
+      filter: { fields: { slug: { ne: $slug }, collection: { eq: "videos" } }, frontmatter: { tags: { regex: $tags } } }
     ) {
       nodes {
         fields {
@@ -63,12 +58,10 @@ export const query = graphql`
         }
       }
     }
-  } 
+  }
 
   fragment VideoPlaylists on Query {
-    playlists: allMarkdownRemark(
-      filter: {frontmatter: {archiveVideos: {elemMatch: {slug: {eq: $slug }}}}}
-    ) {
+    playlists: allMarkdownRemark(filter: { frontmatter: { archiveVideos: { elemMatch: { slug: { eq: $slug } } } } }) {
       nodes {
         id
         fields {
@@ -114,8 +107,10 @@ export const query = graphql`
   fragment NavigationArchiveEvents on Query {
     distinctVideoTags
     navigationArchiveEvents: allMarkdownRemark(
-      filter: {frontmatter: {title: {in: ["Devcon 0", "Devcon 1", "Devcon 2", "Devcon 3", "Devcon 4", "Devcon 5"]}}}
-      sort: {fields: frontmatter___title}
+      filter: {
+        frontmatter: { title: { in: ["Devcon 0", "Devcon 1", "Devcon 2", "Devcon 3", "Devcon 4", "Devcon 5"] } }
+      }
+      sort: { fields: frontmatter___title }
     ) {
       nodes {
         id

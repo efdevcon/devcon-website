@@ -1,3 +1,3 @@
 export { Archive } from './Archive'
-export { Watch } from './Watch';
-export { Video } from './Video';
+export { Watch } from './Watch'
+export { Video } from './Video'

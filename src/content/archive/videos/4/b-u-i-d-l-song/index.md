@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "B-U-I-D-L Song"
-description: "N/A"
+description: "Jonathan Mann's famous B-U-I-D-L song!"
 youtubeUrl: "https://youtu.be/PluyYPXA4Zc"
 ipfsHash: "QmYoj9NncuqeC5hoRBeXi5g3aBTNUpNZAf4RzCMMpY23hE"
 duration: 443

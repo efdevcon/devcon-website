@@ -1,14 +1,14 @@
 ---
 edition: 5
 title: "Building Mainstream-Ready dApps"
-description: "N/A"
+description: "Matt Slipper speaks about building mainstream-ready dApps."
 youtubeUrl: "https://youtu.be/06_dtE1dcbI"
 ipfsHash: "QmejPvwNw8RwybJ44fo2JKJtPXjBDm3WCNpX6B6DuPaHhA"
 duration: 1128
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['dapps','mainstream','adoption','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Matt Slipper']
 ---

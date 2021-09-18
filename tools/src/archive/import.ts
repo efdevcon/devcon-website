@@ -11,13 +11,34 @@ require('dotenv').config()
 
 // for profile generation - need to update the async/duration call
 const fetchProfiles = false
-const writeToDisk = true
+const writeToDisk = false
 const generatePlaylist = false
+const generateYoutubeTemplates = true
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const sheetNr = 0 // 
-const edition = 4 // 
-console.log('Importing archive edition', edition, 'from', sheetNr, 'to', archiveDir)
+const edition: number = 0 // 
+const sheetName = 'Devcon ' + edition // 
+const baseArchiveUrl = 'https://www.devcon.org/archive/watch/'
+const devconLocation = () => {
+  if (edition === 0)
+    return `Devcon ${edition} was held in Berlin, Germany on Nov 24 - 28, 2014.`
+
+  if (edition === 1) 
+    return `Devcon ${edition} was held in London, United Kingdom on Nov 9 - 13, 2015.`
+
+  if (edition === 2)
+    return `Devcon ${edition} was held in Shanghai, China on Sep 19 - 21, 2016.`
+
+  if (edition === 3)
+    return `Devcon ${edition} was held in Cancún, Mexico on Nov 1 - 4, 2017`
+
+  if (edition === 4)
+    return `Devcon ${edition} was held in Prague, Czech Republic on Oct 30 - Nov 2, 2018.`
+
+  if (edition === 5)
+    return `Devcon ${edition} was held in Osaka, Japan on Oct 8 - 11, 2019.`
+}
+console.log('Importing archive edition', edition, 'from', sheetName, 'to', archiveDir)
 
 ImportArchiveVideos() 
 
@@ -32,8 +53,9 @@ async function ImportArchiveVideos() {
 
   await GSheetReader(
     {
+      apiKey: process.env.YOUTUBE_API_KEY,
       sheetId: sheet,
-      sheetNumber: sheetNr,
+      sheetName: sheetName,
     },
     (results: any) => {
       console.log('Archive video records found', results.length)
@@ -54,7 +76,7 @@ async function ImportArchiveVideos() {
           }
         }
 
-        const tags = result['Tags'] ? result['Tags'].split(',') : []
+        const tags = result['Tags'] ? result['Tags'].split(',').map((i: string) => i.trim()) : []
         tags.push(result['Track'])
 
         let ipfsHash = result['IPFS Hash'] ?? '' as string
@@ -82,6 +104,36 @@ async function ImportArchiveVideos() {
           writeToFile(video)
         }
       })
+
+      if (generateYoutubeTemplates) {
+        const content = videos.map(video => {
+          const videoUrl = baseArchiveUrl + edition + '/' + slugify(video.title.toLowerCase(), { strict: true })
+          const template = `=== ${video.title}
+
+Visit the https://archive.devcon.org/ to gain access to the entire library of Devcon talks with the ease of filtering, playlists, personalized suggestions, decentralized access on IPFS and more.
+${videoUrl}
+
+${video.description}
+
+Speaker(s): ${video.speakers.join(', ')}
+Skill level: ${video.expertise}
+Track: ${video.track}
+Keywords: ${video.keywords.join(', ')}
+
+Follow us: https://twitter.com/efdevcon, https://twitter.com/ethereum
+Learn more about devcon: https://www.devcon.org/
+Learn more about ethereum: https://ethereum.org/ 
+
+Devcon is the Ethereum conference for developers, researchers, thinkers, and makers. 
+${devconLocation()}
+Devcon is organized and presented by the Ethereum Foundation, with the support of our sponsors. To find out more, please visit https://ethereum.foundation/
+
+\n`
+          return template
+        })
+        
+        fs.writeFileSync(archiveDir + '/youtube-' + edition + '.txt', content.join(''));
+      }
 
       if (generatePlaylist) {
         // Writing playlist file to edition directory. Still need to process (copy/paste) to any playlists

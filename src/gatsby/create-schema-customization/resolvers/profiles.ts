@@ -4,8 +4,8 @@ export const profileResolver = {
     let profiles = []
     if (source['curators']) profiles = source['curators']
     if (source['speakers']) profiles = source['speakers']
-    
-    let lang = 'en' 
+
+    let lang = 'en'
     if (language) lang = language
 
     const filter: any = {
@@ -49,7 +49,6 @@ export const profileResolver = {
       })
   },
   args: {
-    language: 'String'
+    language: 'String',
   },
 }
-

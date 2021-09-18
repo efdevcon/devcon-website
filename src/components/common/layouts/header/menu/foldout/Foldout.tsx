@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-import IconMenu from 'src/assets/icons/menu.svg'
-import IconCross from 'src/assets/icons/cross.svg'
 import css from './foldout.module.scss'
 import { Newsletter } from 'src/components/common/newsletter'
 import { SocialMedia } from 'src/components/common/layouts/footer'
@@ -37,7 +35,7 @@ const FoldoutContent = (props: any) => {
           </div>
 
           <div className={css['newsletter']}>
-            <Newsletter />
+            <Newsletter id='foldout_newsletter_email' />
           </div>
 
           <div className={css['copyright']}>

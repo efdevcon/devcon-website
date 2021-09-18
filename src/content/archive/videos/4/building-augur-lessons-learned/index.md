@@ -1,14 +1,14 @@
 ---
 edition: 4
 title: "Building Augur - Lessons Learned"
-description: "N/A"
+description: "Scott Bigelow discusses the experience building Augur, and the lessons they've learned."
 youtubeUrl: "https://youtu.be/ahS6nCgtLU0"
 ipfsHash: "QmVrVrc6xqQVRpVdLx5yLtvJrq3fLMTyK5GHtddJZ96y3w"
 duration: 1695
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['architecure','testnet','integration','0x','json-rpc','json','rpc']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Scott Bigelow']
 ---

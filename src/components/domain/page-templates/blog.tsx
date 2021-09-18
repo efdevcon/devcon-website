@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { SEO } from 'src/components/domain/seo'
 import Content from 'src/components/common/layouts/content'
 import { pageHOC } from 'src/context/pageHOC'
 import themes from './themes.module.scss'
@@ -22,7 +21,7 @@ export default pageHOC(function BlogTemplate({ data }: any) {
 })
 
 export const query = graphql`
-  query($language: String!) {
+  query ($language: String!) {
     ...Notification
     ...NavigationData
   }

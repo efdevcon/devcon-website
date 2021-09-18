@@ -111,11 +111,11 @@ export class UserController {
         return res.status(400).send({ code: 400, message: 'User account not provided.' })
       }
 
-      if (paramId != userId) {
+      if (paramId !== userId) {
         return res.status(405).send({ code: 405, message: 'Not allowed to update user account.' })
       }
 
-      if (paramId == userId) {
+      if (paramId === userId) {
         const updated = await this._repository.update(paramId, account)
         if (updated) {
           return res.status(204).send({ code: 204, message: 'OK' })
@@ -135,11 +135,11 @@ export class UserController {
       const paramId = req.params.id
       const userId = req.user._id
 
-      if (paramId != userId) {
+      if (paramId !== userId) {
         return res.status(405).send({ code: 405, message: 'Not allowed to delete user account.' })
       }
 
-      if (paramId == userId) {
+      if (paramId === userId) {
         const deleted = await this._repository.delete(req.params.id)
         if (deleted) {
           req.logout()

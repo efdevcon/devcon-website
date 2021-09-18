@@ -8,8 +8,8 @@ ipfsHash: "QmTKxgBaWVQFUcyYbS4FhKFnihhz5ZXSKicU2sL7qyHUZa"
 duration: 1278
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['Infura','mainnet','launch time','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Jason Carver']
 ---

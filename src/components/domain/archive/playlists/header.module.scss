@@ -29,6 +29,10 @@
       margin-bottom: $gaps-gap-6;
     }
 
+    :global(.title) {
+      margin-top: $gaps-gap-2;
+    }
+
     .controls {
       display: inline-flex;
       line-height: 100%;
@@ -54,14 +58,20 @@
   .image-section {
     flex-basis: 50%;
     flex-shrink: 0;
+    position: relative;
 
-    img {
-      object-fit: cover;
-      float: right;
-      max-width: 100%;
-      height: 100%;
+    > * {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      // float: right;
+      // max-width: 100%;
+      // height: 100%;
 
       @media (max-width: $breakpoints-md) {
+        position: relative;
         width: 100%;
         float: none;
       }
@@ -70,6 +80,8 @@
 }
 
 span.opaque {
-  color: $colors-main-light;
-  font-weight: 400;
+  @include fonts-xs;
+  text-transform: uppercase;
+  color: $colors-monochrome-7;
+  font-weight: 500;
 }

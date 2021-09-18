@@ -1,7 +1,7 @@
 ---
 title: UX & Design
 description: UX & Design videos
-image: ../../../../static/assets/uploads/playlists/default.png
+image: ../../../../static/assets/uploads/playlists/ux-design.png
 categories:
   - Topics
 curators:

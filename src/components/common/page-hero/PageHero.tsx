@@ -2,12 +2,13 @@ import React from 'react'
 import css from './page-hero.module.scss'
 import { Link } from 'src/components/common/link'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
-import usePagePath from './usePageCategory'
-import useIsScrolled from 'src/hooks/useIsScrolled'
+import { usePageCategory } from './usePageCategory'
+import { useIsScrolled } from 'src/hooks/useIsScrolled'
 import { usePageContext } from 'src/context/page-context'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Button } from 'src/components/common/button'
 
 type NavigationLink = {
   to: string
@@ -37,6 +38,7 @@ type PathSegment = {
 type PageHeroProps = {
   title?: string
   titleSubtext?: string
+  titleClassName?: string
   path?: string | PathSegment[]
   description?: string
   scenes?: Scene[]
@@ -48,7 +50,7 @@ type PageHeroProps = {
 }
 
 const PathNavigation = (props: PageHeroProps) => {
-  const pagePath = usePagePath()
+  const pagePath = usePageCategory()
 
   let path
 
@@ -106,6 +108,7 @@ export const PageHero = (props: PageHeroProps) => {
   if (props.background) className += ` ${css['custom-background']}`
   if (isScrolled) className += ` ${css['scrolled']}`
   if (props.navigation) className += ` ${css['with-navigation']}`
+  if (props.scenes) className += ` ${css['with-scenes']}`
   if (props.children) className += ` ${css['as-background']}`
 
   const setNextScene = React.useMemo(
@@ -123,15 +126,16 @@ export const PageHero = (props: PageHeroProps) => {
     [currentScene, setCurrentScene, props.scenes]
   )
 
+  // Auto scroll through images
   React.useEffect(() => {
     if (props.scenes) {
       const timeout = setTimeout(() => {
         setNextScene(1)
-      }, 1000 * 5)
+      }, 1000 * 8)
 
       return () => clearTimeout(timeout)
     }
-  }, [setNextScene])
+  }, [props.scenes, setNextScene])
 
   return (
     <div id="page-hero" className={className} style={style}>
@@ -140,7 +144,11 @@ export const PageHero = (props: PageHeroProps) => {
           <PathNavigation {...props} />
 
           <div className={css['title-block']}>
-            <h1 className={`${props.titleSubtext ? css['subtext'] : ''} font-massive-2`}>
+            <h1
+              className={`font-massive-2 ${props.titleSubtext ? css['subtext'] : ''} ${
+                props.titleClassName ? props.titleClassName : ''
+              }`}
+            >
               {props.title ?? pageContext?.current?.title}
               {props.titleSubtext && <span>{props.titleSubtext}</span>}
             </h1>
@@ -198,12 +206,20 @@ export const PageHero = (props: PageHeroProps) => {
                 {props.scenes[currentScene].callToAction()}
 
                 <div className={css['arrows']}>
-                  <button className={`${css['arrow']} white squared`} onClick={() => setNextScene(-1)}>
+                  <Button
+                    className={`${css['arrow']} white squared`}
+                    aria-label="View previous slide"
+                    onClick={() => setNextScene(-1)}
+                  >
                     <ChevronLeft />
-                  </button>
-                  <button className={`${css['arrow']} white squared`} onClick={() => setNextScene(1)}>
+                  </Button>
+                  <Button
+                    className={`${css['arrow']} white squared`}
+                    aria-label="View next slide"
+                    onClick={() => setNextScene(1)}
+                  >
                     <ChevronRight />
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -238,11 +254,15 @@ export const PageHero = (props: PageHeroProps) => {
 
         if (selected) className += ` ${css['active']}`
 
+        const optimizedImage = getImage(scene.image)
+
         return (
           <div key={i} className={className}>
-            <img src={scene.image} {...scene.imageProps} />
-            {/* Use optimized images asap */}
-            {/* <GatsbyImage image={getImage(scene.image)} {...scene.imageProps} placeholder="blurred" layout="fullWidth" /> */}
+            {optimizedImage ? (
+              <GatsbyImage image={optimizedImage} alt={scene.imageProps.alt || `Scene ${i}`} {...scene.imageProps} />
+            ) : (
+              <img src={scene.image} alt={scene.imageProps.alt || `Scene ${i}`} {...scene.imageProps} />
+            )}
           </div>
         )
       })}

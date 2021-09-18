@@ -35,26 +35,18 @@ function getSliderSettings(nItems: number) {
   }
 }
 
-
 function limit15(entries: any[], playlist: Playlist, canSlide: boolean) {
   if (entries.length > 15) {
     return [
       ...entries.slice(0, 15),
       {
         playlist: true,
-        render: () => (
-          <PlaylistCard
-            key="plist"
-            small
-            playlist={playlist}
-            canSlide={canSlide}
-          />
-        )
-      }
-    ];
+        render: () => <PlaylistCard key="plist" small playlist={playlist} canSlide={canSlide} />,
+      },
+    ]
   }
 
-  return entries;
+  return entries
 }
 
 export const Playlists = () => {
@@ -62,9 +54,9 @@ export const Playlists = () => {
   const latest = useLatest()
   const efTalks = useEfTalks()
 
-  const sliderPropsMostPopular = useSlider(getSliderSettings(mostPopular.videoCount));
-  const sliderPropsLatest = useSlider(getSliderSettings(latest.videoCount));
-  const sliderPropsEFTalks = useSlider(getSliderSettings(efTalks.videoCount));
+  const sliderPropsMostPopular = useSlider(getSliderSettings(mostPopular.videoCount))
+  const sliderPropsLatest = useSlider(getSliderSettings(latest.videoCount))
+  const sliderPropsEFTalks = useSlider(getSliderSettings(efTalks.videoCount))
 
   return (
     <div className="section">
@@ -72,31 +64,33 @@ export const Playlists = () => {
         <div className={css['playlists']}>
           <div className="margin-top border-top padding-bottom">
             <Slider className={css['slider']} sliderProps={sliderPropsMostPopular} title="Most Popular">
-              {limit15(mostPopular.videos, mostPopular, sliderPropsMostPopular[1].canSlide).map((item: any, i: number) => {
-                if (item.playlist) return item.render();
+              {limit15(mostPopular.videos, mostPopular, sliderPropsMostPopular[1].canSlide).map(
+                (item: any, i: number) => {
+                  if (item.playlist) return item.render()
 
-                const first = i === 0
-                let className = first ? css['first'] : ''
+                  const first = i === 0
+                  let className = first ? css['first'] : ''
 
-                return (
-                  <VideoCard
-                    slide
-                    playlist={mostPopular}
-                    canSlide={sliderPropsMostPopular[1].canSlide}
-                    key={i}
-                    className={className}
-                    video={item}
-                  />
-                )
-              })}
+                  return (
+                    <VideoCard
+                      slide
+                      playlist={mostPopular}
+                      canSlide={sliderPropsMostPopular[1].canSlide}
+                      key={i}
+                      className={className}
+                      video={item}
+                    />
+                  )
+                }
+              )}
             </Slider>
           </div>
 
           <div className="border-top padding-bottom">
             <Slider className={css['slider']} sliderProps={sliderPropsLatest} title="Devcon 5">
               {limit15(latest.videos, latest, sliderPropsLatest[1].canSlide).map((item: any, i: number) => {
-                if (item.playlist) return item.render();
-                
+                if (item.playlist) return item.render()
+
                 const first = i === 0
                 let className = first ? css['first'] : ''
 
@@ -117,7 +111,7 @@ export const Playlists = () => {
           <div className="border-top padding-bottom">
             <Slider className={css['slider']} sliderProps={sliderPropsEFTalks} title="EF Talks">
               {limit15(efTalks.videos, efTalks, sliderPropsEFTalks[1].canSlide).map((item: any, i: number) => {
-                if (item.playlist) return item.render();
+                if (item.playlist) return item.render()
 
                 const first = i === 0
                 let className = first ? css['first'] : ''

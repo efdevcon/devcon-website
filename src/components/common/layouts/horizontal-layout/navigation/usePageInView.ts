@@ -39,7 +39,7 @@ const usePageInView = (pageRefs: any) => {
     return () => {
       unobserve.forEach(f => f())
     }
-  }, [pageRefs])
+  }, [intl, pageRefs])
 
   return pageInView
 }

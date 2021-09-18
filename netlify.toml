@@ -10,25 +10,11 @@
   package = "@netlify/plugin-lighthouse"
 
   [plugins.inputs.thresholds]
-    performance = 0.3
+    performance = 0.2
     accessibility = 0.6
     best-practices = 0.6
     seo = 0.6
     pwa = 0.6
-
-[context.storybook]
-  command = "yarn build-storybook"
-  publish = "storybook-static"
-
-[[context.storybook.plugins]]
-  package = "@netlify/plugin-lighthouse"
-
-  [context.storybook.plugins.inputs.thresholds]
-    performance = 0
-    accessibility = 0
-    best-practices = 0
-    seo = 0
-    pwa = 0
 
 [[context.web3-login.plugins]]
   package = "@netlify/plugin-lighthouse"
@@ -52,7 +38,7 @@
 
 [[redirects]]
   from = "/"
-  to = "/en/"
+  to = "/archive/"
   status = 302
   force = true
 

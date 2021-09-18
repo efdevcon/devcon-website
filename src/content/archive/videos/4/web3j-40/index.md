@@ -8,8 +8,8 @@ ipfsHash: "Qmf6YCT1rCrQkVridaaypMWNF2cSAtFuLBAbMqXwYntPYd"
 duration: 271
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['java','android','library','updates']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Conor Svensson','Ivaylo Kirilov']
 ---

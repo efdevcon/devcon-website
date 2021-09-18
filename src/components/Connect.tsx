@@ -101,9 +101,6 @@ export default function Connect() {
               with web3 modal support.
             </small>
           </p>
-          <p>
-            <a href="#">Learn more</a>
-          </p>
         </div>
       )}
 

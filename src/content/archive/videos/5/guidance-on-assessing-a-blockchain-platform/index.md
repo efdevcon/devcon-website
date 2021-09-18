@@ -7,8 +7,8 @@ ipfsHash: "QmWG3ayrFzXqS2VNDwVg6bHzZCkHHBYfGDFGMVCYKM5Jw6"
 duration: 1333
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['assessing','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Homan Farahmand']
 ---

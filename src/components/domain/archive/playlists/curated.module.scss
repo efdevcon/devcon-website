@@ -69,6 +69,7 @@
 
   .image {
     object-fit: cover;
+    background-color: #f1f1f1;
   }
 
   .body {
@@ -98,7 +99,7 @@
 
   &.big {
     .body {
-      padding-left: $gaps-gap-8;
+      padding-left: $gaps-gap-4;
       padding-top: $gaps-gap-4;
 
       .title {
@@ -115,8 +116,10 @@
       }
 
       span.opaque {
-        color: $colors-main-light;
-        font-weight: 400;
+        @include fonts-xs;
+        text-transform: uppercase;
+        color: $colors-monochrome-7;
+        font-weight: 500;
       }
     }
   }

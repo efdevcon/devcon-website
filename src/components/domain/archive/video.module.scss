@@ -124,6 +124,11 @@
 
         .text {
           color: $colors-monochrome-7;
+
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
         }
       }
     }
@@ -162,6 +167,10 @@
         border-bottom: none;
         padding-left: 0px;
         padding-right: 0px;
+      }
+
+      :global(.title) {
+        margin-top: $gaps-gap-2;
       }
 
       .icons {
@@ -237,4 +246,8 @@
 
 .tab-content {
   overflow-y: visible !important;
+}
+
+.ipfs-banner {
+  padding-bottom: $gaps-gap-4;
 }
