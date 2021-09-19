@@ -38,7 +38,7 @@
 
 [[redirects]]
   from = "/"
-  to = "/archive/"
+  to = "/en/"
   status = 302
   force = true
 

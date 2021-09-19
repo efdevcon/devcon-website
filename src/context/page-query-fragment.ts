@@ -7,7 +7,6 @@ export const query = graphql`
         title
         description
         template
-        translationVerified
         tags
         tagItems(language: $language) {
           id

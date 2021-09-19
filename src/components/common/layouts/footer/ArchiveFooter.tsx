@@ -1,5 +1,5 @@
 import React from 'react'
-import css from './footer.module.scss'
+import css from './archive-footer.module.scss'
 import IconArrowUpward from 'src/assets/icons/arrow_upward.svg'
 import smallLogo from 'src/assets/images/ef-logo.svg'
 import { useIntl } from 'gatsby-plugin-intl'
@@ -93,7 +93,7 @@ export const ArchiveFooter = () => {
               <p className={css['email-1']}>{EMAIL_DEVCON}</p>
 
               <div className={css['newsletter']}>
-                <Newsletter id='footer_newsletter_email' />
+                <Newsletter id="footer_newsletter_email" />
               </div>
             </div>
           </div>
