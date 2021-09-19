@@ -5,7 +5,7 @@ import IconGithub from 'src/assets/icons/github.svg'
 import IconTwitter from 'src/assets/icons/twitter.svg'
 import IconYoutube from 'src/assets/icons/youtube.svg'
 import logo from 'src/assets/images/test-asset.svg'
-import smallLogo from 'src/assets/images/footer-logo.svg'
+import smallLogo from 'src/assets/images/ef-logo.svg'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Link } from 'src/components/common/link'
 import { Link as LinkType } from 'src/types/Link'
@@ -13,14 +13,15 @@ import { Newsletter } from 'src/components/common/newsletter'
 import { usePageContext } from 'src/context/page-context'
 import { Share } from 'src/components/common/share'
 import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'src/utils/constants'
+import { ArchiveFooter } from './ArchiveFooter'
 
-type SocialMedia = {
+type SocialMediaProps = {
   onShare: () => void
   url?: string
   className?: string
 }
 
-export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialMedia) => {
+export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialMediaProps) => {
   let className = css['social-media']
 
   if (extraClassName) className += ` ${extraClassName}`
@@ -48,7 +49,7 @@ export const Footer = () => {
   const lang = intl.locale
 
   // Temporary for demo purposes
-  if (context?.location.pathname.startsWith('/archive')) return null
+  if (context?.location.pathname.startsWith('/archive')) return <ArchiveFooter />
 
   return (
     <footer className={`footer ${css['container']}`}>
@@ -71,7 +72,7 @@ export const Footer = () => {
               )
             })}
 
-            <SocialMedia />
+            <SocialMedia onShare={() => { return } } />
           </div>
 
           <div className={css['col-3']}>
@@ -112,7 +113,7 @@ export const Footer = () => {
 
               {/* Visible on some breakpoints, but not all - moves to col-7 on mobile */}
               <div className={css['newsletter']}>
-                <Newsletter />
+                <Newsletter id='footer_newsletter_email' />
               </div>
             </div>
           </div>
@@ -128,7 +129,7 @@ export const Footer = () => {
 
           {/* Only visible on mobile */}
           <div className={css['col-7']}>
-            <Newsletter />
+            <Newsletter id='footer_newsletter_email_mobile' />
           </div>
         </div>
       </div>

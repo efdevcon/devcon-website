@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "Pili-Pala Consensus"
-description: "N/A"
+description: "Elaine Shi speaks about the Pala Consensus protocol."
 youtubeUrl: "https://youtu.be/JAHfui4GS44"
 ipfsHash: "QmURpBmHuRfQKzaN1uSmhjDko8LkijDkBkHPKZN8yGVSwJ"
 duration: 1584

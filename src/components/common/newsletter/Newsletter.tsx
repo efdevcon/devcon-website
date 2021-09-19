@@ -4,13 +4,18 @@ import { useFormField } from 'src/hooks/useFormField'
 import { useIntl } from 'gatsby-plugin-intl'
 import css from './newsletter.module.scss'
 import { Alert } from '../alert'
+import { Button } from 'src/components/common/button'
 
 export interface Result {
   result: 'success' | 'error'
   msg: string
 }
 
-export const Newsletter = () => {
+interface Props {
+  id?: string
+}
+
+export const Newsletter = (props: Props) => {
   const intl = useIntl()
   const emailField = useFormField()
   const [result, setResult] = React.useState<Result | undefined>(undefined)
@@ -57,13 +62,13 @@ export const Newsletter = () => {
                 <input
                   className={css['input']}
                   type="email"
-                  id="email"
+                  id={props.id ?? 'newsletter_email'}
                   placeholder={intl.formatMessage({ id: 'newsletter_enter' })}
                   {...emailField}
                 />
-                <button className={`white ${css['button']}`} type="submit">
+                <Button className={`white ${css['button']}`} type="submit">
                   {intl.formatMessage({ id: 'newsletter_subscribe' })}
-                </button>
+                </Button>
               </div>
             </>
           )}

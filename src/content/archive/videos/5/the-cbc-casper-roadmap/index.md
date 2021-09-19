@@ -7,8 +7,8 @@ ipfsHash: "QmTrKqHtpKEhERjoSSMrmHL3zHKkhpEB1QF34tMuyn77GD"
 duration: 1836
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['vlad','casper','CBC','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Vlad Zamfir']
 ---

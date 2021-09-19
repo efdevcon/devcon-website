@@ -8,8 +8,8 @@ ipfsHash: "Qmeyx9wzQfuUrVtsSbpT62TWPNfoUofJDyqd2ibAGkWRL5"
 duration: 6925
 expertise: "Intermediate"
 type: "Panel"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['EEA','EIP','improvement','proposal']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Boris Mann','Nick Johnson','Conor Svensson','Bob Summerwill','Jamie Pitts','Charles Nevile','Alessandro Voto']
 ---

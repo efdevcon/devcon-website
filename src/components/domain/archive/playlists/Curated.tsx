@@ -2,20 +2,20 @@ import React from 'react'
 // import Slider from 'react-slick'
 import css from './curated.module.scss'
 import { BasicCard } from 'src/components/common/card'
-import { LinkButton } from 'src/components/common/link-button'
+import { Button } from 'src/components/common/button'
 import { Playlist } from 'src/types/Playlist'
-import { Link } from 'src/components/common/link'
 import ArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Slider, useSlider } from 'src/components/common/slider'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 type PlaylistProps = {
   title: string
+  borderless?: boolean
   viewMore?: boolean
   items: Array<Playlist>
 }
 
-export const PlaylistCard = (props: { playlist: Playlist, canSlide: boolean, small?: boolean }) => {
+export const PlaylistCard = (props: { playlist: Playlist; canSlide: boolean; small?: boolean }) => {
   let className = `${css['video-card']} ${css['big']}`
 
   if (props.canSlide) className += ` ${css['slide']}`
@@ -29,7 +29,11 @@ export const PlaylistCard = (props: { playlist: Playlist, canSlide: boolean, sma
           placeholder="blurred"
           className={css['image']}
         /> */}
-        <GatsbyImage image={getImage(props.playlist.image)} alt={`${props.playlist.title} Devcon playlist`} className={css['image']} />
+        <GatsbyImage
+          image={getImage(props.playlist.image)}
+          alt={`${props.playlist.title} Devcon playlist`}
+          className={css['image']}
+        />
       </div>
       <div className={css['body']}>
         <div className="label">{props.playlist.videoCount ?? 0} talks</div>
@@ -76,19 +80,20 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
   return (
     <div className="section">
       <div className="content">
-        <div className={`${css['curated-playlists']} border-top`}>
+        <div className={`${css['curated-playlists']} ${props.borderless ? '' : 'border-top'}`}>
           <Slider
             sliderProps={sliderProps}
             className={css['slider']}
+            style={props.borderless ? { marginTop: '0px' } : undefined}
             title={props.title}
             // custom={
             //   props.viewMore
             //     ? () => {
             //         return (
             //           <div className={css['view-more']}>
-            //             <LinkButton to={'/archive/playlists'} className={`${css['button']} sm`}>
+            //             <Button to={'/archive/playlists'} className={`${css['button']} sm`}>
             //               View more <ArrowRight />
-            //             </LinkButton>
+            //             </Button>
 
             //             <Link to="/archive/playlists" className={css['view-more-mobile']}>
             //               View More
@@ -104,9 +109,11 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
             })}
           </Slider>
 
-          <LinkButton to={'/archive/playlists'} className={`${css['button']} white sm`}>
-            View more <ArrowRight />
-          </LinkButton>
+          {props.viewMore && (
+            <Button to={'/archive/playlists'} className={`${css['button']} white ghost sm`}>
+              View more <ArrowRight />
+            </Button>
+          )}
         </div>
       </div>
     </div>

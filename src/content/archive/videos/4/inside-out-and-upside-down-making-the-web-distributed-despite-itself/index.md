@@ -7,8 +7,8 @@ ipfsHash: "QmUzzxE9HkxznKNAzoPFWcSZuaWCJrLWYsaVt9NQ3U7JTe"
 duration: 1727
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['Mozilla']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Dietrich Ayala']
 ---

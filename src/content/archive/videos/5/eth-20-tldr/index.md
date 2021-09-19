@@ -7,8 +7,8 @@ ipfsHash: "QmRbUGCi52nYdxTJLpVNKVkj5oXCPF7BCnFkYB4GL2tgUF"
 duration: 1194
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['eth2','updates','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Danny Ryan']
 ---

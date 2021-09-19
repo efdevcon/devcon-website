@@ -26,7 +26,7 @@ const resolvePageCategory = (pathname: string, link: LinkType, parent?: string):
   }
 }
 
-export default () => {
+export const usePageCategory = () => {
   const pageContext = usePageContext()
 
   const links = React.useMemo(() => {

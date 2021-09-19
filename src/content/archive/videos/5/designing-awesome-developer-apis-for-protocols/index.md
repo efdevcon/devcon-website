@@ -7,8 +7,8 @@ ipfsHash: "QmWYLkKoorVyNjpuaY89fpRZEwYKAqnq2WoomAgDWRo7p9"
 duration: 1237
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['APIs','protocols','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Nikil Viswanathan']
 ---

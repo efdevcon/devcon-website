@@ -7,8 +7,8 @@ ipfsHash: "QmQkfRoZJSP6LQmM13jL3GPg4SoiBjPWqLcPGzRhWFmfR1"
 duration: 2528
 expertise: "Expert"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['eth2','eth 2.0','updates']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Alex Beregszaszi','Guillaume Ballet','Paweł Bylica','Hugo De La Cruz','Casey Detrio','Paul Dworzanski','Jake Lang','Lane Rettig','Jared Wasinger']
 ---

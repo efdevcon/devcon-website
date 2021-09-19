@@ -1,5 +1,4 @@
 import React, { useEffect, useImperativeHandle } from 'react'
-import { useIntl } from 'gatsby-plugin-intl'
 import css from './navigation.module.scss'
 import IconMenu from 'src/assets/icons/menu.svg'
 import IconClose from 'src/assets/icons/cross.svg'
@@ -8,7 +7,7 @@ import IconChevronRight from 'src/assets/icons/chevron_right.svg'
 import IconChevronLeft from 'src/assets/icons/chevron_left.svg'
 // import IconRoad from 'src/assets/icons/road.svg'
 import ethLogo from 'src/assets/images/eth.svg'
-import leftPad from 'src/utils/left-pad'
+import { leftPad } from 'src/utils/left-pad'
 import HeaderLogo from '../../header/HeaderLogo'
 import { Newsletter } from 'src/components/common/newsletter'
 import { SocialMedia } from 'src/components/common/layouts/footer'
@@ -53,8 +52,6 @@ const LanguageToggle = () => {
 }
 
 const Foldout = ({ pageProps, hover, pages, setHover, pageInView, links, goToSlide }: any) => {
-  const intl = useIntl()
-
   useEffect(() => {
     var _overlay = document.getElementById('overlay')
     var _clientY = null // remember Y position on touch start
@@ -151,7 +148,7 @@ const Foldout = ({ pageProps, hover, pages, setHover, pageInView, links, goToSli
       <div className={css['nav-footer']}>
         <div>
           <SocialMedia onShare={() => goToSlide(pages.length - 1)} />
-          <Newsletter />
+          <Newsletter id='navigation_newsletter_email' />
           <Copyright />
         </div>
       </div>

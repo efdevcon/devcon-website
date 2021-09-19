@@ -10,7 +10,7 @@ export class ArchiveController {
 
   public async Search(req: Request, res: Response) {
     try {
-      const query = new Array<string>();
+      const query = new Array<string>()
       const input = req.query
 
       let params: SearchParams = {}
@@ -26,7 +26,7 @@ export class ArchiveController {
         if (Array.isArray(input[i])) {
           const asArray = input[i] as string[]
           const arrayFilter = asArray.map(value => i + ':' + value)
-          
+
           query.push('(' + arrayFilter.join(' OR ') + ')')
         }
 
@@ -38,11 +38,10 @@ export class ArchiveController {
       if (req.query['q']) {
         const searchQuery = req.query['q'] as string
         query.push(`(title:*${searchQuery}* OR speakers:*${searchQuery}* OR description:*${searchQuery}*)`)
-
       }
-      const queryString = query.length ? query.join(' AND ') : "*"
+      const queryString = query.length ? query.join(' AND ') : '*'
       const results = await this._client.searchIndex('archive', queryString, params)
-      
+
       res.status(200).send({ code: 200, data: results })
     } catch (e) {
       console.error(e)

@@ -6,7 +6,8 @@ type Props = {
 
 export default React.memo((props: Props) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.3 38">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.3 38" aria-labelledby="Devcon Archive logo">
+      <title>Devcon Archive logo</title>
       <g>
         <path
           fill="#2F354B"

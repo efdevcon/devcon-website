@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "Current State of Security"
-description: "N/A"
+description: "Matthew Di Ferrante, Martin Swende, J. Maurelian, Dan Guido, Phil Daian, and Kevin Seagraves have a conversation on the Current State of Security in Ethereum."
 youtubeUrl: "https://youtu.be/xYhf3jrQg00"
 ipfsHash: "QmXZBcfTsvxefscAVtxz4q2D7cY4NKhn17L7upRoN4BTPe"
 duration: 1866

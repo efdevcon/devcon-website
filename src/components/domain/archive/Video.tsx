@@ -19,6 +19,7 @@ import queryString from 'query-string'
 import moment from 'moment'
 import { UserProfile } from 'src/types/UserProfile'
 import { Avatar } from './Avatar'
+import { Banner } from '../ipfs'
 
 type VideoProps = {
   video: ArchiveVideo
@@ -65,7 +66,7 @@ const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
               <div className="label">{playlist.videos.length} talks</div>
               <h2 className="title">{playlist.title}</h2>
               {playlist.curators && playlist.curators.length > 0 && (
-                <p className="text-uppercase">
+                <p className="text-uppercase font-sm">
                   By <span className="bold">{playlist.curators.join(', ')}</span>
                 </p>
               )}
@@ -140,33 +141,49 @@ export const Video = (props: VideoProps) => {
 
   return (
     <div className={archiveCss['container']}>
-      <SEO 
+      <SEO
         title={props.video.title}
-        description={props.video.description} 
+        description={props.video.description}
         imageUrl={imageUrl}
-        type='video.movie'
+        type="video.movie"
         author={{
           name: `Devcon ${video.edition}`,
-          url: `/archive/watch?edition=${video.edition}`
-        }} />
-      <Header withStrip />
+          url: `/archive/watch?edition=${video.edition}`,
+        }}
+      />
+      <Header withStrip={false} />
 
       <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>
         <div className={css['container']}>
           <div className={css['video']}>
             <div className={css['player']}>
-              <div className="aspect">
-                <iframe
-                  src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
+              <Tabs>
+                <Tab title="YouTube">
+                  <div className="aspect">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                </Tab>
+
+                {props.video.ipfsHash && (
+                  <Tab title="IPFS">
+                    <div className="aspect">
+                      <video controls autoPlay={false}>
+                        <source src={`https://ipfs.io/ipfs/${props.video.ipfsHash}`} />
+                      </video>
+                    </div>
+                  </Tab>
+                )}
+              </Tabs>
             </div>
 
             <div className={css['tabs-video']}>
+              <Banner className={css['ipfs-banner']} cta="Access on IPFS" hash={props.video.ipfsHash} learnMore />
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>
@@ -199,7 +216,7 @@ export const Video = (props: VideoProps) => {
 
                   <Labels tags={video.tags} playlists={props.playlists} />
 
-                  {video.profiles.length > 0 &&
+                  {video.profiles.length > 0 && (
                     <div className={css['speakers']}>
                       <span className={`${css['title']} font-sm bold text-uppercase`}>About the speakers</span>
                       {video.profiles.map((i: UserProfile) => {
@@ -217,7 +234,7 @@ export const Video = (props: VideoProps) => {
                         )
                       })}
                     </div>
-                  }
+                  )}
                 </Tab>
 
                 {video.resources && <Tab title="Resources">Resources</Tab>}

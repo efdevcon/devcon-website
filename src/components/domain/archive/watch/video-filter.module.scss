@@ -2,12 +2,17 @@
 
 .mobile-filter {
   display: none;
+  background: $colors-monochrome-2;
+
+  /* Trick to get the background color to extend "outside" the container (fill all the way to the edge of the screen) */
+  width: calc(100% + 32px);
+  left: -16px;
+  padding: 0px 16px;
+  position: relative;
 
   @media (max-width: $breakpoints-lg) {
     display: block;
   }
-
-  background: $colors-monochrome-2;
 
   .icon-close,
   .icon-open {
@@ -26,7 +31,12 @@
     }
 
     .filter-container {
-      max-height: 600px !important;
+      // display: block;
+
+      > * {
+        display: block !important;
+      }
+      // max-height: 600px !important;
     }
   }
 
@@ -36,9 +46,15 @@
   }
 
   .filter-container {
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.6s;
+    // max-height: 0px;
+    // display: none;
+    // overflow: hidden;
+    // transition: all 0.6s;
+
+    > :not(.search) {
+      display: none;
+      overflow: hidden;
+    }
   }
 }
 
@@ -47,18 +63,22 @@
   align-items: center;
   margin-top: $gaps-gap-4;
 
-  button {
+  .continue-button {
     margin-right: $gaps-gap-3;
 
-    > span {
-      margin-right: $gaps-gap-4;
+    .text {
+      margin-right: $gaps-gap-2;
+    }
+
+    .text-icon {
+      position: relative;
     }
   }
 
   .clear {
     display: none;
     cursor: pointer;
-    padding: $gaps-gap-4;
+    padding: 10px;
     padding-left: 0px;
 
     @media (max-width: $breakpoints-lg) {
@@ -83,7 +103,7 @@
 .search,
 .devcon,
 .expertise,
-.tags {
+.categories {
   padding-top: $gaps-gap-5;
   border-bottom: 1px solid $colors-monochrome-5;
 
@@ -98,18 +118,22 @@
 
 .input-form {
   padding-bottom: $gaps-gap-10;
+
+  @media (max-width: $breakpoints-lg) {
+    padding-bottom: 0px !important;
+  }
 }
 
 .devcon {
   padding-bottom: $gaps-gap-10;
 }
 
-.expertise {
+.categories {
   padding-bottom: $gaps-gap-10;
 }
 
-.tags {
-  padding-bottom: $gaps-gap-10 + $gaps-gap-10;
+.expertise {
+  padding-bottom: $gaps-gap-10;
   border-bottom: none !important;
 
   @media (max-width: $breakpoints-lg) {

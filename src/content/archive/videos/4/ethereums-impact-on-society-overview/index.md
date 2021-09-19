@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "Ethereum’s Impact on Society Overview"
-description: "N/A"
+description: "Rhys Lindmark takes a closer look at Ethereum's impact on society."
 youtubeUrl: "https://youtu.be/aCrpt3t7MxU"
 ipfsHash: "QmWYFU1Fu5Tva2VgCHuchgwJEzWcMuBQNEjdpauDBAvKFY"
 duration: 1112

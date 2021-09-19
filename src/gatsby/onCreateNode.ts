@@ -65,7 +65,7 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
     }
     if (collection === 'playlists') {
       formattedSlug = '/archive/playlists' + slug
-      
+
       const paths = slug.split('/').filter(String)
       createNodeField({
         node,
@@ -74,9 +74,9 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
       })
     }
     if (collection === 'videos') {
-      formattedSlug = '/archive/watch' + slug;
+      formattedSlug = '/archive/watch' + slug
 
-      const videoPath = slug.slice(1,-1) + '/index'
+      const videoPath = slug.slice(1, -1) + '/index'
 
       createNodeField({
         node,

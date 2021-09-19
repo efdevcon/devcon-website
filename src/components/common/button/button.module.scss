@@ -2,13 +2,15 @@
   position: relative;
   overflow: hidden;
 
-  &:hover {
-    background: var(--button-color-background);
-    color: var(--button-color);
-    --color-icon: var(--button-color);
+  &:not(:global(.disabled), :disabled) {
+    &:hover {
+      background: var(--button-color-background);
+      color: var(--button-color);
+      --color-icon: var(--button-color);
 
-    .background {
-      opacity: 1;
+      .background {
+        opacity: 1;
+      }
     }
   }
 

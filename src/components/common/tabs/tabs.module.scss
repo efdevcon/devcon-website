@@ -7,7 +7,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   li {
-    cursor: pointer;
     padding: $gaps-gap-6;
     padding-bottom: $gaps-gap-5; // off-set border
     color: $colors-main;
@@ -21,19 +20,22 @@
       // background: none !important;
     }
 
-    &:hover {
-      background: rgba(133, 142, 169, 0.15);
+    &.active {
+      opacity: 1;
+      background: $colors-monochrome-2;
+
+      -webkit-box-shadow: inset 0px -2px 0px 0px $colors-main;
+      -moz-box-shadow: inset 0px -2px 0px 0px $colors-main;
+      box-shadow: inset 0px -2px 0px 0px $colors-main;
     }
-  }
 
-  .active {
-    @extend li;
-    opacity: 1;
-    background: $colors-monochrome-2;
+    &:not(:only-child) {
+      cursor: pointer;
 
-    -webkit-box-shadow: inset 0px -2px 0px 0px $colors-main;
-    -moz-box-shadow: inset 0px -2px 0px 0px $colors-main;
-    box-shadow: inset 0px -2px 0px 0px $colors-main;
+      &:hover {
+        background: rgba(133, 142, 169, 0.15);
+      }
+    }
   }
 }
 

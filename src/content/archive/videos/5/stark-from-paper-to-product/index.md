@@ -7,8 +7,8 @@ ipfsHash: "QmXfouuXFdrtKN1XDVbSVyP9YvQyWgLNyXKihKHKk7sMjH"
 duration: 1815
 expertise: "Beginner"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['stark','general']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Oren Katz','Daniel Yanev']
 ---

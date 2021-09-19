@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'src/components/common/link'
 import css from './button.module.scss'
 
 export const Button = (props: any) => {
@@ -18,13 +19,13 @@ export const Button = (props: any) => {
   }
 
   let style = props.style
-  let className = css['button']
+  let className = `${css['button']} animated`
 
   if (props.className) {
     className = `${className} ${props.className}`
   }
 
-  if (x || y) {
+  if (x | y) {
     style = {
       ...props.style,
       '--mouse-x': x,
@@ -32,20 +33,68 @@ export const Button = (props: any) => {
     }
   }
 
-  return (
-    <button
-      ref={buttonRef}
-      {...props}
-      className={className}
-      onMouseMove={onMouseMove}
-      onMouseLeave={() => {
-        setX(0)
-        setY(0)
-      }}
-      style={style}
-    >
+  const formattedProps = {
+    ref: buttonRef,
+    ...props,
+    className: className,
+    onMouseMove: onMouseMove,
+    onMouseLeave: () => {
+      setX(0)
+      setY(0)
+    },
+    style,
+  }
+
+  // Some fun project when time allows: make buttons optionally flicker to bring attention to themselves :-)
+  // React.useEffect(() => {
+  //   if (props.flicker && x === 0) {
+  //     let frame: number
+  //     let timeout: NodeJS.Timeout
+
+  //     const step = () => {
+  //       setXFlicker(prev => {
+  //         const next = prev + 2
+
+  //         if (next < 100) {
+  //           frame = requestAnimationFrame(step)
+  //         } else {
+  //           timeout = setTimeout(() => {
+  //             setXFlicker(0)
+  //             frame = requestAnimationFrame(step)
+  //           }, 2000)
+  //         }
+
+  //         return next
+  //       })
+  //     }
+
+  //     frame = requestAnimationFrame(step)
+
+  //     return () => {
+  //       typeof frame !== undefined && cancelAnimationFrame(frame)
+  //       clearTimeout(timeout)
+  //     }
+  //   }
+  // }, [props.flicker, x])
+
+  const children = (
+    <>
       <span className={css['background']}></span>
       <span className={css['text']}>{props.children}</span>
-    </button>
+    </>
   )
+
+  if (props.to) {
+    let linkClassName = `${formattedProps.className} button`
+
+    if (props.disabled) linkClassName += ` disabled`
+
+    return (
+      <Link {...formattedProps} className={linkClassName}>
+        {children}
+      </Link>
+    )
+  }
+
+  return <button {...formattedProps}>{children}</button>
 }

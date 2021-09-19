@@ -7,8 +7,8 @@ ipfsHash: "QmatudQ8SSPKsxErmwMPtBghhenfZ6T9BnzfDZ7SJpqq3K"
 duration: 622
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['tools','developers','devs','funded']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Josef Gattermayer','Jan Mísař']
 ---

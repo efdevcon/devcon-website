@@ -7,8 +7,8 @@ ipfsHash: "QmbseLcGtGQZ5LFq3PKesp3JQTwLRm3BZ9svHm1Uq2mUQE"
 duration: 1075
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 1.x"
+track: "Execution layer"
 keywords: ['upgrades','hard fork','technical']
-tags: ['Eth 1.x']
+tags: ['Execution layer']
 speakers: ['Wei Tang']
 ---

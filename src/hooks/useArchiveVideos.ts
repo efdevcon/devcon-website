@@ -58,6 +58,6 @@ export function mapToArchiveVideo(source: any): ArchiveVideo {
     keywords: source.frontmatter.keywords,
     tags: source.frontmatter.tags,
     speakers: source.frontmatter.speakers,
-    profiles: source.frontmatter.profiles
+    profiles: source.frontmatter.profiles,
   }
 }

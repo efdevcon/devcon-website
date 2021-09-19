@@ -7,8 +7,8 @@ ipfsHash: "QmNtDWGZLGJCbWyGGcepWFaXvMaRcyH8aqa5eKcwGtiJ4s"
 duration: 1321
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['liquidity','DeFi','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Loi Luu']
 ---

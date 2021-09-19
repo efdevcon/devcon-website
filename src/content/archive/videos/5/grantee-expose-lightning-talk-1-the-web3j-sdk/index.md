@@ -7,8 +7,8 @@ ipfsHash: "QmajaS1sHG82BKyjrycWcFQZ9ee3A3VE8LcFvYXAZsXsyk"
 duration: 616
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['Web3j','Jim','safety','java','account','transaction','Quorum','CLI','devex','EVM','viper','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Conor Svensson','Ivaylo Kirilov']
 ---

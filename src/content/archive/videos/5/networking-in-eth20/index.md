@@ -11,8 +11,8 @@ ipfsHash: "QmQGQPyaBKLpQuDxF6wiLLAiWNvy1Az8irphMTwFh51Nad"
 duration: 1308
 expertise: "Advanced"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['networking','eth2','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Antoine Toulme','Rene Lubov']
 ---

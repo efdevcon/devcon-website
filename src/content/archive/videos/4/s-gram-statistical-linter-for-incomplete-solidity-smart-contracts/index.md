@@ -7,8 +7,8 @@ ipfsHash: "QmXr16iMqccQuSioj81jRT3fwyR4zndaBbXdeCCtWEcbsy"
 duration: 415
 expertise: "Expert"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['linting','QA','testing']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Han Liu']
 ---

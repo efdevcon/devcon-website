@@ -7,8 +7,8 @@ ipfsHash: "QmdNTt6KUyyMvgfzm4HEgUm9CdL65BPAzSnfHSmU1xuATB"
 duration: 791
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['developer','dapps','sharding','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Dieter Shirley']
 ---

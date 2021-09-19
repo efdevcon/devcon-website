@@ -1,6 +1,5 @@
 import React from 'react'
 import css from './menu.module.scss'
-import { Link as RouterLink } from '@reach/router'
 import { Link } from 'src/components/common/link'
 import { Navigation } from './navigation'
 import { usePageContext } from 'src/context/page-context'
@@ -8,33 +7,8 @@ import { Link as LinkType } from 'src/types/Link'
 import { Foldout } from './foldout'
 import IconMenu from 'src/assets/icons/menu.svg'
 import IconCross from 'src/assets/icons/cross.svg'
-import AccountIcon from 'src/assets/icons/account.svg'
 import SearchIcon from 'src/assets/icons/search.svg'
 import { LanguageToggle } from 'src/components/common/layouts/header/strip/language-toggle'
-
-/*
-  Menu structure overview:
-
-    <STRIP> 
-      <NOTIFICATION> 
-      <LANGUAGE-TOGGLE> 
-    </STRIP>
-
-    <HEADER> 
-      <DEVCON-LOGO> 
-      <LEFT-NAV>
-      <RIGHT-NAV> 
-      <ACCOUNT> 
-      <HAMBURGER> 
-        <FOLDOUT>
-          <LEFT-NAV>
-          <LANGUAGE-TOGGLE>
-          <RIGHT-NAV-AS-ACCORDION>
-          <SOCIAL-MEDIA> 
-        </FOLDOUT>
-      </HAMBURGER>
-    <HEADER>
-*/
 
 type ButtonProps = {
   buttons: {
@@ -75,7 +49,7 @@ const Buttons = (props: ButtonProps) => {
         }
 
         return (
-          <button key={button.key} className={`${className} plain ${button.className}`} onClick={button.onClick}>
+          <button key={button.key} aria-label={button.key} className={`${className} plain ${button.className}`} onClick={button.onClick}>
             {button.icon}
           </button>
         )
@@ -132,7 +106,7 @@ export const Menu = (props: any) => {
           <Left navigationData={navigation} />
           <LanguageToggle />
         </div>
-        <Navigation navigationData={navigation} mobile={true} />
+        <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={navigation} mobile={true} />
       </Foldout>
     </div>
   )

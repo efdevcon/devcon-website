@@ -7,8 +7,8 @@ ipfsHash: "QmUGvyskbkHf25qRJgKHEHZtAaRNBS67ALmUDzWV8Jf5UF"
 duration: 924
 expertise: "Intermediate"
 type: "Talk"
-track: "Eth 2.0"
+track: "Consensus layer"
 keywords: ['polkadot','dot','technical']
-tags: ['Eth 2.0']
+tags: ['Consensus layer']
 speakers: ['Alistair Stewart']
 ---

@@ -10,8 +10,8 @@ ipfsHash: "QmU1yjTKfRotn5uFULghTQoVw7gbmU1H5JceedUrmkoHRU"
 duration: 357
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['compiler','language']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Athanasios (Thanasis) Konstantinidis']
 ---

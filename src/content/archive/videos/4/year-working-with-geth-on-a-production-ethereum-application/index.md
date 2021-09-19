@@ -7,8 +7,8 @@ ipfsHash: "QmPKWauCMfzBQcUWhFsKYykV8ejVECp4SUd7ADb1Q7WSak"
 duration: 1261
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['airswap','trading','geth','infura','infrastructure']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Adam Link','Don Mosites']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmZF3KF3JNrGib2o4FtqvMErZrJXCYYtp1zyTVDJP8sisZ"
 duration: 605
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['library','javascript']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Richard Moore']
 ---

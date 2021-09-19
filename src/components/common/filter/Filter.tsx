@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React from 'react'
 import css from './filter.module.scss'
 import { Dropdown } from 'src/components/common/dropdown'
 import IconCheck from 'src/assets/icons/check_circle.svg'
@@ -36,8 +36,10 @@ export const useFilter = (options: FilterOptions | undefined) => {
 
   if (!options) return [[], null] as [any[], null]
 
-  const wrappedSetActiveFilter = (value: string) => {
+  const wrappedSetActiveFilter = (value: string | any, setExact?: false) => {
     if (options.multiSelect) {
+      if (setExact) return setActiveFilterMulti(value)
+
       const nextActiveFilter = {
         ...activeFilterMulti,
         [value]: true,

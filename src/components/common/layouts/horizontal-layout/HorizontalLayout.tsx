@@ -1,7 +1,7 @@
 import React, { Ref } from 'react'
 import css from './horizontal-layout.module.scss'
 import { Navigation } from './navigation'
-import leftPad from 'src/utils/left-pad'
+import { leftPad } from 'src/utils/left-pad'
 import { Link } from 'src/components/common/link'
 import IconGithub from 'src/assets/icons/github.svg'
 import IconLearn from 'src/assets/icons/learn.svg'

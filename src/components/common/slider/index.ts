@@ -1,1 +1,1 @@
-export { Slider, useSlider } from './Slider';
+export { Slider, useSlider } from './Slider'

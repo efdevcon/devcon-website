@@ -7,8 +7,8 @@ ipfsHash: "QmZZUhE9CNqq7FyhbrMYTXuxDCY7pfsKvufHoLbzwhsYNP"
 duration: 1223
 expertise: "Intermediate"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['UX','DevEx']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Brooklyn Zelenka']
 ---

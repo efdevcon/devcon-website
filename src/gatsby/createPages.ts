@@ -2,14 +2,11 @@ import { GatsbyNode, CreatePagesArgs, Actions } from 'gatsby'
 import path from 'path'
 import { SearchIndexClient } from '../server/services/search-client'
 import { mapToArchiveVideo } from '../types/ArchiveVideo'
-import { SearchItem } from 'src/types/SearchItem'
-import { Tag } from 'src/types/Tag'
 
 const languages = ['en', 'es']
 const defaultLang = 'en'
 const english = require(`../content/i18n/en.json`)
 const spanish = require(`../content/i18n/es.json`)
-
 
 export const createPages: GatsbyNode['createPages'] = async (args: CreatePagesArgs) => {
   console.log('createPages', languages, 'default', defaultLang)
@@ -58,9 +55,9 @@ async function createContentPages({ actions, graphql, reporter }: CreatePagesArg
     //     const result = await graphql(`
     //         {
     //           allNews: allMarkdownRemark(
-    //             filter: { 
-    //               fields: { lang: { in: ["${node.fields.lang}", "tweets", "blog-posts"] }, collection: { eq: "news" } } 
-    //             }, 
+    //             filter: {
+    //               fields: { lang: { in: ["${node.fields.lang}", "tweets", "blog-posts"] }, collection: { eq: "news" } }
+    //             },
     //             sort: { fields: [frontmatter___date], order: DESC }
     //           ) {
     //             nodes {
@@ -82,7 +79,7 @@ async function createContentPages({ actions, graphql, reporter }: CreatePagesArg
     // } else {
     createDynamicPage(actions, node.fields.slug, node.frontmatter.template, node.fields.lang)
     // }
-  });
+  })
 }
 
 async function createNewsPages({ actions, graphql, reporter }: CreatePagesArgs) {
@@ -105,9 +102,9 @@ async function createNewsPages({ actions, graphql, reporter }: CreatePagesArgs) 
   }
 
   result.data.news.nodes.forEach((node: any) => {
-    // No need to generate pages for tweets or blog posts 
-    if (node.fields.lang === 'tweets' || node.fields.lang === 'blog-posts') return;
-    
+    // No need to generate pages for tweets or blog posts
+    if (node.fields.lang === 'tweets' || node.fields.lang === 'blog-posts') return
+
     createDynamicPage(actions, node.fields.slug, 'news-item', node.fields.lang)
   })
 }
@@ -121,6 +118,9 @@ async function createPlaylistPages({ actions, graphql, reporter }: CreatePagesAr
             collection
             slug
           }
+          frontmatter {
+            tags
+          }
         }
       }
     }
@@ -132,7 +132,7 @@ async function createPlaylistPages({ actions, graphql, reporter }: CreatePagesAr
   }
 
   result.data.playlists.nodes.forEach((node: any) => {
-    createDynamicPage(actions, node.fields.slug, 'playlist', 'en')
+    createDynamicPage(actions, node.fields.slug, 'playlist', 'en', '', node.frontmatter.tags)
   })
 }
 
@@ -296,7 +296,7 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
   }
 
   const { createPage } = actions
-  
+
   const blogs: Array<SearchItem> = result.data?.blogs?.nodes?.map((i: any) => {
     return {
       id: i.id,
@@ -306,7 +306,7 @@ async function createSearchPage({ actions, graphql, reporter }: CreatePagesArgs)
       title: i.title,
       description: i.description,
       body: i.content.encoded,
-      tags: []
+      tags: [],
     } as SearchItem
   })
 
@@ -352,7 +352,7 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
 
   const result: any = await graphql(`
     query {
-      items: allMarkdownRemark(filter: {fields: {collection: {eq: "videos"}}}) {
+      items: allMarkdownRemark(filter: { fields: { collection: { eq: "videos" } } }) {
         nodes {
           id
           fields {
@@ -403,11 +403,11 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
         fielddata: true,
         fields: {
           raw: {
-            type: 'keyword'
-          } 
-        }
-      }
-    }
+            type: 'keyword',
+          },
+        },
+      },
+    },
   })
   await elastic.updateMapping(indexName, {
     properties: {
@@ -416,11 +416,11 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
         fielddata: true,
         fields: {
           raw: {
-            type: 'keyword'
-          } 
-        }
-      }
-    }
+            type: 'keyword',
+          },
+        },
+      },
+    },
   })
   await elastic.updateMapping(indexName, {
     properties: {
@@ -429,11 +429,11 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
         fielddata: true,
         fields: {
           raw: {
-            type: 'keyword'
-          } 
-        }
-      }
-    }
+            type: 'keyword',
+          },
+        },
+      },
+    },
   })
 
   console.log(`Adding ${result.data.items.nodes.length} archive videos to Elastic index..`)
@@ -443,27 +443,33 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
   })
 }
 
-function createDynamicPage(actions: Actions, slug: string, template: string, lang: string, tag: string = '', tags: string[]): void {
+function createDynamicPage(
+  actions: Actions,
+  slug: string,
+  template: string,
+  lang: string,
+  tag: string = '',
+  tags?: string[]
+): void {
   if (template === 'none') return
 
   // console.log("Creating page", slug, 'with template:', template, lang);
   const { createPage } = actions
 
   const tagsRegex = (() => {
-
     if (tags) {
       const asString = tags.reduce((acc, tag) => {
-        if (acc === '') return `${tag}`;
+        if (acc === '') return `${tag}`
 
-        return `${acc}|${tag}`;
-      }, '');
+        return `${acc}|${tag}`
+      }, '')
 
       // Just returning a regex that won't match anything since an empty regex matches everything with the graphql regex operator
-      if (asString === '') return '/^abc12345/';
+      if (asString === '') return '/^abc12345/'
 
-      return `/${asString}/`;
-    } 
-  })();
+      return `/${asString}/`
+    }
+  })()
 
   createPage({
     path: slug,
@@ -485,30 +491,37 @@ function createDynamicPage(actions: Actions, slug: string, template: string, lan
   })
 }
 
-async function createPaginatedPage(actions: Actions, lang: string, slug: string, template: string, itemsPerPage = 10, getAllItems: any): Promise<void> {
-  const items = await getAllItems();
-  const numPages = Math.ceil(items.length / itemsPerPage)
+// async function createPaginatedPage(
+//   actions: Actions,
+//   lang: string,
+//   slug: string,
+//   template: string,
+//   itemsPerPage = 10,
+//   getAllItems: any
+// ): Promise<void> {
+//   const items = await getAllItems()
+//   const numPages = Math.ceil(items.length / itemsPerPage)
 
-  Array.from({ length: numPages }).forEach((_, i) => {
-    actions.createPage({
-      path: i === 0 ? `${slug}` : `${slug}${i + 1}`,
-      component: path.resolve(`./src/components/domain/page-templates/${template}.tsx`),
-      context: {
-        slug,
-        lang,
-        language: lang,
-        limit: itemsPerPage,
-        skip: i * itemsPerPage,
-        numPages,
-        currentPage: i + 1,
-        intl: {
-          language: lang,
-          languages: languages,
-          messages: require(`../content/i18n/${lang}.json`),
-          routed: true,
-          redirect: false,
-        },
-      },
-    })
-  })
-}
+//   Array.from({ length: numPages }).forEach((_, i) => {
+//     actions.createPage({
+//       path: i === 0 ? `${slug}` : `${slug}${i + 1}`,
+//       component: path.resolve(`./src/components/domain/page-templates/${template}.tsx`),
+//       context: {
+//         slug,
+//         lang,
+//         language: lang,
+//         limit: itemsPerPage,
+//         skip: i * itemsPerPage,
+//         numPages,
+//         currentPage: i + 1,
+//         intl: {
+//           language: lang,
+//           languages: languages,
+//           messages: require(`../content/i18n/${lang}.json`),
+//           routed: true,
+//           redirect: false,
+//         },
+//       },
+//     })
+//   })
+// }

@@ -17,6 +17,7 @@ import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import { useLocation } from '@reach/router'
 import IconFilter from 'src/assets/icons/filter.svg'
 import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
+import { Loader } from 'src/components/common/loader'
 
 type WatchProps = {}
 
@@ -36,6 +37,7 @@ const resetOnPageNavigationHOC = (WatchComponent: React.ComponentType<WatchProps
 
 export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   const [gridViewEnabled, setGridViewEnabled] = React.useState(true)
+  const videoContainerElement = React.useRef<any>()
   const [from, setFrom] = useState(0)
   const defaultPageSize = 12
   const filterState = useVideoFilter()
@@ -94,24 +96,20 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
   }
   return (
     <div className={css['container']}>
-      <SEO 
-        title={ARCHIVE_TITLE}
-        description={ARCHIVE_DESCRIPTION} 
-        imageUrl={ARCHIVE_IMAGE_URL} />
+      <SEO title={ARCHIVE_TITLE} description={ARCHIVE_DESCRIPTION} imageUrl={ARCHIVE_IMAGE_URL} />
       <Header withStrip={false} />
       <PageHero
         title="Watch"
-        titleSubtext="Devcon"
+        // titleSubtext="Devcon"
         description="Devcon content curated and organized for your discovery and learning."
       />
 
       <div className="section">
-        <div className='content'>
-
+        <div className="content">
           {/* Hide header div on Mobile */}
           <div className={`${css['header']}`}>
             <div className={`${css['filter']}`}>
-              <h4 className="title">Filter</h4>
+              <p className="title">Filter</p>
               <IconFilter />
             </div>
             <div className={`${css['sort']}`}>
@@ -132,7 +130,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
 
           <VideoFilterMobile {...filterState} />
 
-          <div className={`${css['sort']} ${css['mobile']}`}>
+          <div id="filter-sort" className={`${css['sort']} ${css['mobile']}`}>
             <Sort {...sortState} />
           </div>
 
@@ -140,9 +138,23 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
             <div className={`${css['filter']}`}>
               <VideoFilter {...filterState} />
             </div>
-            <div className={css['videos']}>
-              {isLoading && <div>Loading results..</div>}
-              {isError && <div>Unable to fetch videos..</div>}
+            <div className={css['videos']} ref={videoContainerElement}>
+              <Loader
+                loading={isLoading}
+                error={isError}
+                noResults={data && data.items && data.items.length === 0}
+                messages={{
+                  error: {
+                    message: 'Could not fetch results - try again later.',
+                  },
+                  loading: {
+                    message: 'Applying filter...',
+                  },
+                  noResults: {
+                    message: 'No results matching this filter - try another',
+                  },
+                }}
+              />
 
               {data && data.items && (
                 <>

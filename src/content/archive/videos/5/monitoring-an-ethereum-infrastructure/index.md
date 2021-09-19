@@ -7,8 +7,8 @@ ipfsHash: "QmWsEgHBVTwYFcuXHwscrwR1DK1YFJL14SrgW24PmjtpqF"
 duration: 1302
 expertise: "Beginner"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['infrastructure','technical']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Péter Szilágyi']
 ---

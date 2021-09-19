@@ -7,8 +7,8 @@ ipfsHash: ""
 duration: 2553
 expertise: "Advanced"
 type: "Talk"
-track: "Developer Experience"
+track: "Developer Infrastructure"
 keywords: ['integrated','development','environment','dapps','whisper','swarm','debug','tests','documentation','code','compiler','state','github']
-tags: ['Developer Experience']
+tags: ['Developer Infrastructure']
 speakers: ['Gavin Wood']
 ---
