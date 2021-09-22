@@ -3,6 +3,9 @@
 .button,
 button {
   // Sometimes the button element can be useful for semantic reasons, add "plain" class to remove default styles
+  cursor: pointer;
+  touch-action: manipulation;
+
   &:not(.plain) {
     @include fonts-md;
     // @include colors-white;
@@ -12,8 +15,6 @@ button {
     padding: var(--padding-top-bottom) var(--padding-left-right);
     display: inline-flex;
     align-items: center;
-    cursor: pointer;
-    touch-action: manipulation;
     position: relative;
 
     // Using pseudo element for borders so we can overlay an animating background without stripping the border away (which would also resize the button)
@@ -57,18 +58,6 @@ button {
       justify-content: center;
       align-items: center;
     }
-
-    // When buttons are animated we remove their border and compensate the size loss by adding equivalent padding
-    // &.animated {
-    //   &:not(.disabled),
-    //   &:not(:disabled) {
-    //     &:hover,
-    //     &.hover {
-    //       padding: calc(var(--padding-top-bottom) + 2px) calc(var(--padding-left-right) + 2px);
-    //       border: none !important;
-    //     }
-    //   }
-    // }
 
     // Sizes
     &.sm {

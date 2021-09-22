@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   touch-action: none;
-  cursor: pointer;
+
   width: 100%;
 
   &.indicator-left {
@@ -23,6 +23,7 @@
   .right {
     display: none;
     align-items: center;
+    cursor: pointer;
     z-index: 1;
     position: absolute;
     top: 0px;

@@ -3,11 +3,13 @@ import css from './dropdown.module.scss'
 // import IconArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
 import ChevronDown from 'src/assets/icons/arrow_desc.svg'
 import ChevronUp from 'src/assets/icons/arrow_asc.svg'
+import { trigger } from 'swr'
 
 export interface DropdownProps {
   value: any
   className?: string
   customIcon?: React.ElementType<SVGAElement>
+  renderCustomTrigger?: (foldout: any, defaultTriggerProps: any) => React.ReactElement
   onChange: (value: any) => void
   options: {
     [key: string]: any
@@ -49,31 +51,51 @@ export function Dropdown(props: DropdownProps) {
     }
   })()
 
-  return (
-    <div role="button" onClick={() => setOpen(!open)} aria-label="Toggle dropdown" className={className} ref={ref}>
-      {currentSelection && currentSelection.text}
-      {/* <span className={css['icon']}> */}
-      <Icon />
-      {/* </span> */}
+  const triggerProps = {
+    role: 'button',
+    onClick: () => setOpen(!open),
+    'aria-label': 'Toggle dropdown',
+    className,
+    ref,
+  }
 
-      <ul className={foldoutClassName} ref={foldoutRef} onClick={e => e.stopPropagation()}>
-        {props.options.map(({ text, value }) => {
-          const selected = value === props.value
+  const foldoutContent = (
+    <ul className={foldoutClassName} ref={foldoutRef} onClick={e => e.stopPropagation()}>
+      {props.options.map(({ text, value, onClick }) => {
+        const selected = value === props.value
 
-          return (
-            <li
-              key={value}
-              onClick={() => {
+        return (
+          <li
+            key={value}
+            onClick={() => {
+              const closeDropdown = () => setOpen(false)
+
+              if (onClick) {
+                onClick(closeDropdown)
+              } else {
                 props.onChange(value)
 
-                setOpen(false)
-              }}
-            >
-              <span className={selected ? css['active-filter'] : undefined}>{text}</span>
-            </li>
-          )
-        })}
-      </ul>
+                closeDropdown()
+              }
+            }}
+          >
+            <span className={selected ? css['active-filter'] : undefined}>{text}</span>
+          </li>
+        )
+      })}
+    </ul>
+  )
+
+  if (props.renderCustomTrigger) {
+    return props.renderCustomTrigger(triggerProps, foldoutContent)
+  }
+
+  return (
+    <div {...triggerProps}>
+      {currentSelection && currentSelection.text}
+      <Icon />
+
+      {foldoutContent}
     </div>
   )
 }

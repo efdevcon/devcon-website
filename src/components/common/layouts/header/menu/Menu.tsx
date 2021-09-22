@@ -6,8 +6,10 @@ import { usePageContext } from 'src/context/page-context'
 import { Link as LinkType } from 'src/types/Link'
 import { Foldout } from './foldout'
 import IconMenu from 'src/assets/icons/menu.svg'
+import AccountIcon from 'src/assets/icons/account.svg'
 import IconCross from 'src/assets/icons/cross.svg'
 import SearchIcon from 'src/assets/icons/search.svg'
+import BellIcon from 'src/assets/icons/bell.svg'
 import { LanguageToggle } from 'src/components/common/layouts/header/strip/language-toggle'
 
 type ButtonProps = {
@@ -49,7 +51,12 @@ const Buttons = (props: ButtonProps) => {
         }
 
         return (
-          <button key={button.key} aria-label={button.key} className={`${className} plain ${button.className}`} onClick={button.onClick}>
+          <button
+            key={button.key}
+            aria-label={button.key}
+            className={`${className} plain ${button.className}`}
+            onClick={button.onClick}
+          >
             {button.icon}
           </button>
         )
@@ -62,11 +69,11 @@ export const Menu = (props: any) => {
   const { navigation, location } = usePageContext()
 
   let buttons: ButtonProps['buttons'] = [
-    // {
-    //   key: 'account',
-    //   icon: <AccountIcon />,
-    //   url: '/app/profile',
-    // },
+    {
+      key: 'account',
+      icon: <AccountIcon />,
+      url: '/app',
+    },
     {
       key: 'mobile-menu-toggle',
       icon: props.foldoutOpen ? <IconCross style={{ width: '0.8em' }} /> : <IconMenu />,
@@ -83,6 +90,18 @@ export const Menu = (props: any) => {
         onClick: () => props.setSearchOpen(!props.searchOpen),
       },
       ...buttons,
+    ]
+  }
+
+  if (location.pathname.startsWith('/app')) {
+    buttons = [
+      ...buttons.slice(0, 1),
+      {
+        key: 'notifications',
+        icon: <BellIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
+        onClick: () => alert('Not done'),
+      },
+      ...buttons.slice(1),
     ]
   }
 

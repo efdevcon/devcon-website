@@ -142,6 +142,15 @@ const linkResolver = async (linkData: UnresolvedLink, language: string, context:
           }
         })
     }
+
+    case 'app': {
+      return {
+        type: linkData.type,
+        title: 'App',
+        url: `/${linkData.slug}`,
+        links: [],
+      } 
+    }
   }
 
   return Promise.resolve(null)

@@ -5,7 +5,7 @@ import serverless from 'serverless-http'
 import mongoose from 'mongoose'
 import * as userAccountRoutes from '../routes/account'
 import * as twitterRoutes from '../routes/twitter'
-import * as notificationRoutes from '../routes/notification'
+// import * as notificationRoutes from '../routes/notification'
 import * as archiveRoutes from '../routes/archive'
 
 // Basic Express configuration
@@ -37,7 +37,7 @@ router.get('/', (req: Request, res: Response) => {
 // userAccountRoutes.register(router)
 // twitterRoutes.register(router)
 archiveRoutes.register(router)
-notificationRoutes.register(router)
+// notificationRoutes.register(router)
 
 // Express-sessions
 // if (!SERVER_CONFIG.SESSION_SECRET) throw new Error('Required SESSION_SECRET not found.')

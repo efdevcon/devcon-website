@@ -1,6 +1,8 @@
 ---
 title: site
 links:
+  - type: app
+    slug: app
   - type: page
     slug: news
   - type: links

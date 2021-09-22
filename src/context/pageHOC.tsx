@@ -11,7 +11,10 @@ type pageProps = {
 export const pageHOC =
   (PageTemplate: React.ComponentType<pageProps>, mapDataToContext?: (props: pageProps) => { [key: string]: any }) =>
   (props: pageProps) => {
-    const pageType = props.location?.pathname?.startsWith('/archive') ? 'archive' : 'default'
+    let pageType = 'default'
+
+    if (props.location?.pathname?.startsWith('/archive')) pageType = 'archive'
+    if (props.location?.pathname?.startsWith('/app')) pageType = 'app'
 
     const context = {
       data: props.data,

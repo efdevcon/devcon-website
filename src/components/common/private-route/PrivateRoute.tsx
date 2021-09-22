@@ -3,13 +3,16 @@ import { navigate, RouteComponentProps, RouterProps } from '@reach/router'
 import { useAccountContext } from 'src/context/account-context'
 
 interface PrivateRouteProps extends RouteComponentProps<RouterProps> {
-  component: any
+  component?: any
+  children?: React.ReactChild
 }
 
-export const PrivateRoute = ({ component: Component, location, ...rest }: PrivateRouteProps) => {
+export const PrivateRoute = ({ component: Component, location, children, ...rest }: PrivateRouteProps) => {
   const accountContext = useAccountContext()
 
-  if (!accountContext.account && accountContext.loading) {
+  const loggedIn = accountContext.account || true /* Forcing logged in for dev purposes, remove later */
+
+  if (!loggedIn && accountContext.loading) {
     return (
       <div>
         <p>Loading...</p>
@@ -17,10 +20,10 @@ export const PrivateRoute = ({ component: Component, location, ...rest }: Privat
     )
   }
 
-  if (!accountContext.account && location?.pathname !== `/app/login`) {
+  if (!loggedIn && location?.pathname !== `/app/login`) {
     navigate('/app/login' + location?.search)
     return null
   }
 
-  return <Component {...rest} />
+  return children || <Component {...rest} />
 }

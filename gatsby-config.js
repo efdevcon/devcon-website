@@ -16,7 +16,7 @@ const supportedLanguages = [defaultLanguage, secondaryLanguage]
 const matomoSiteId = '8'
 const matomoUrl = 'https://matomo.ethereum.org'
 
-const offlinePages = ['/en', '/es', '/en/contact', '/es/contact', '/pwa/*']
+const offlinePages = ['/en', '/es', '/en/contact', '/es/contact', '/app/*']
 
 module.exports = {
   siteMetadata: {
@@ -362,56 +362,3 @@ module.exports = {
     },
   ],
 }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 

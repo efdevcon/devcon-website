@@ -97,7 +97,9 @@ const Arrows = (props: any) => {
 
 type SliderProps = {
   sliderProps: any
+  onlySlider?: boolean
   className?: string
+  containerClassName?: string
   children?: React.ReactNode
   style?: {
     [key: string]: any
@@ -110,17 +112,19 @@ export const Slider = (props: SliderProps) => {
   const [settings, sliderState] = props.sliderProps
 
   return (
-    <div className={css['container']} style={props.style}>
-      <div className={css['top-section']}>
-        <h3 className="title">{props.title}</h3>
+    <div className={`${props.containerClassName} ${css['container']}`} style={props.style}>
+      {!props.onlySlider && (
+        <div className={css['top-section']}>
+          <h3 className="title">{props.title}</h3>
 
-        <Arrows {...sliderState} />
+          <Arrows {...sliderState} />
 
-        {/* <div className={css['controls']}>
+          {/* <div className={css['controls']}>
           {props.custom && props.custom()}
           <Arrows {...sliderState} />
         </div> */}
-      </div>
+        </div>
+      )}
 
       <div className={`${props.className} ${css['children']}`}>
         <SlickSlider ref={sliderState.sliderRef} {...settings}>

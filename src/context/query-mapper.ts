@@ -5,10 +5,10 @@ import { FooterData } from 'src/types/FooterData'
 import { Tag } from 'src/types/Tag'
 import { Page } from 'src/types/Page'
 
-export function ToNavigationData(nodes: any, videoTags?: any[], type?: 'default' | 'archive'): NavigationData {
+export function ToNavigationData(nodes: any, videoTags?: any[], type?: 'default' | 'archive' | 'app'): NavigationData {
   return {
-    top: type === 'archive' ? ToLinks(nodes, 'top-archive') : ToLinks(nodes, 'top'),
-    site: type === 'archive' ? ToArchiveNavigation(videoTags) : ToLinks(nodes, 'site'),
+    top: type === 'app' ? [] : (type === 'archive' ? ToLinks(nodes, 'top-archive') : ToLinks(nodes, 'top')),
+    site: type === 'app' ? [] : (type === 'archive' ? ToArchiveNavigation(videoTags) : ToLinks(nodes, 'site')),
     footer: ToFooterData(nodes),
   }
 }

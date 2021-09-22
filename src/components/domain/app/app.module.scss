@@ -1,18 +1,22 @@
 @use 'src/assets/css/partials/index' as *;
 
 .app {
+  overflow-x: hidden;
+  padding-bottom: calc(65px + #{$gaps-gap-4}); // Adjusting for fixed bottom nav overlaying content
 
-  h3, button, ul { 
+  > h3,
+  > button,
+  > ul {
     margin-bottom: 20px;
   }
-  
-  label { 
+
+  > label {
     display: inline-block;
     width: 100px;
     margin-bottom: 10px;
   }
 
-  input {
+  > input {
     @include fonts-sm;
     color: $colors-monochrome-10;
     border: 1px solid $colors-monochrome-10;
@@ -25,11 +29,11 @@
     }
   }
 
-  a { 
+  > a {
     text-decoration: underline;
   }
 
-  button:hover {
+  > button:hover {
     background: $colors-monochrome-3;
   }
 }

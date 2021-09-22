@@ -46,9 +46,14 @@ $padding: 4px 10px 4px 20px;
   li {
     @include fonts-normal;
     white-space: nowrap;
+    user-select: none;
     padding: $padding;
     text-align: right;
     border-top: 1px solid $colors-monochrome-3;
+
+    &:first-child {
+      border-top: none;
+    }
 
     &:hover {
       background: $colors-monochrome-3;
