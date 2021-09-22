@@ -1,0 +1,27 @@
+@use 'src/assets/css/partials/index' as *;
+
+.hero {
+  background: rgba(255, 244, 240, 1);
+}
+
+.info {
+  display: flex;
+  flex-direction: space-between;
+  border-top: 1px solid $colors-standard-border-color;
+  border-bottom: 1px solid $colors-standard-border-color;
+  padding-top: $gaps-gap-4;
+  padding-bottom: $gaps-gap-4;
+
+  .swirl-icon {
+    position: relative;
+    top: 2px;
+    --color-icon: #{$colors-track-red};
+    font-size: 1.1em;
+  }
+}
+
+.trust-model {
+  border-bottom: 1px solid $colors-standard-border-color;
+  padding-top: $gaps-gap-4;
+  padding-bottom: $gaps-gap-4;
+}

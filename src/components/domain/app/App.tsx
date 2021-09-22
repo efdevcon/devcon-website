@@ -11,6 +11,7 @@ import css from './app.module.scss'
 import { Header } from 'src/components/common/layouts/header'
 import { Home } from 'src/components/domain/app/home'
 import { useAccountContext } from 'src/context/account-context'
+import LoginStyled from './account/LoginStyled'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -43,6 +44,9 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
           <Router basepath="/app">
             <Login path="/login" default />
+
+            {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts */}
+            <LoginStyled path="/conference" />
 
             <Home path="/" />
 

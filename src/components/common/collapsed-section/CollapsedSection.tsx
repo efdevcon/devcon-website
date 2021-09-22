@@ -78,7 +78,8 @@ export function CollapsedSection(props: SectionProps) {
   return (
     <div className={css['container']}>
       {React.Children.map(props.children, child => {
-        if (child && child.type.name === 'CollapsedSectionHeader') return React.cloneElement(child, { open, setOpen })
+        console.log(child.type, 'type')
+        if (child && child.type === CollapsedSectionHeader) return React.cloneElement(child, { open, setOpen })
 
         return React.cloneElement(child, { open })
       })}
