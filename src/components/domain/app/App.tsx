@@ -42,7 +42,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
         <div className={css['app']}>
           {loggedIn && <InlineNav location={location} />}
 
-          <Router basepath="/app">
+          <Router basepath="/app" style={{ minHeight: 'inherit' }}>
             <Login path="/login" default />
 
             {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts */}

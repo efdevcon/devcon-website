@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import css from './collapsed.module.scss'
 import ChevronDown from 'src/assets/icons/chevron-down.svg'
 import ChevronUp from 'src/assets/icons/chevron-up.svg'
@@ -8,7 +8,7 @@ interface SectionProps {
   children?: any
 }
 
-export const CollapsedSectionHeader = (props: any) => {
+const CollapsedSectionHeader = (props: any) => {
   return (
     <div className={css['header']} onClick={() => props.setOpen(!props.open)}>
       {props.children}
@@ -18,27 +18,37 @@ export const CollapsedSectionHeader = (props: any) => {
   )
 }
 
+CollapsedSectionHeader.displayName = 'CollapsedSectionHeader'
+
+export { CollapsedSectionHeader }
+
 export const CollapsedSectionContent = (props: any) => {
+  const [contentHeight, setContentHeight] = React.useState('0px')
   const ref = React.useRef<any>()
   const locked = React.useRef<any>()
-
-  // Set the size to 0px immediately (it's closed to begin with)
-  React.useLayoutEffect(() => {
-    ref.current.style.setProperty('--contentHeight', `0px`)
-  }, [])
+  const mounting = React.useRef<any>(true)
 
   React.useEffect(() => {
+    // Ignoring the initial mount to ensure our 0px default doesn't get overridden
+    if (mounting.current) {
+      mounting.current = false
+
+      return
+    }
+
     if (props.open) {
-      ref.current.style.setProperty('--contentHeight', `${ref.current.scrollHeight}px`)
+      setContentHeight(`${ref.current.scrollHeight}px`)
+      // ref.current.style.setProperty('--contentHeight', `${ref.current.scrollHeight}px`)
     } else {
       locked.current = true
 
       // Can't animate from auto to 0px:
       // Have to stagger the content height changes to move element height from "auto" => natural size (in exact px) => 0px
       // Have to "lock" so the transition event handler doesn't re-trigger while this occurs
-      ref.current.style.setProperty('--contentHeight', `${ref.current.scrollHeight}px`)
+      setContentHeight(`${ref.current.scrollHeight}px`)
 
       setTimeout(() => {
+        setContentHeight(`0px`)
         ref.current.style.setProperty('--contentHeight', `0px`)
 
         locked.current = false
@@ -48,11 +58,11 @@ export const CollapsedSectionContent = (props: any) => {
 
   React.useEffect(() => {
     if (props.open) {
-      // Set height to auto when the transition completes - this allows the content to change size after it becomes visible (just to prevent some edge cases)
+      // Set height to auto when the transition completes - this allows the content to change size after it becomes visible
       const handler = () => {
         if (locked.current) return
 
-        ref.current.style.setProperty('--contentHeight', `auto`)
+        setContentHeight('auto')
       }
 
       const el = ref.current
@@ -66,7 +76,7 @@ export const CollapsedSectionContent = (props: any) => {
   }, [props.open])
 
   return (
-    <div ref={ref} className={css['content']}>
+    <div ref={ref} className={css['content']} style={{ '--contentHeight': contentHeight }}>
       {props.children}
     </div>
   )
@@ -78,8 +88,8 @@ export function CollapsedSection(props: SectionProps) {
   return (
     <div className={css['container']}>
       {React.Children.map(props.children, child => {
-        console.log(child.type, 'type')
-        if (child && child.type === CollapsedSectionHeader) return React.cloneElement(child, { open, setOpen })
+        if (child && child.type.displayName === 'CollapsedSectionHeader')
+          return React.cloneElement(child, { open, setOpen })
 
         return React.cloneElement(child, { open })
       })}

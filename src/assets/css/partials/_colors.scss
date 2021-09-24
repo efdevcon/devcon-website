@@ -152,3 +152,35 @@ $standard-border-color: $monochrome-5;
   --color-icon: #{$monochrome-1} !important;
   color: $monochrome-1 !important;
 }
+
+// // GREY
+// @mixin grey {
+//   background: $track-grey;
+//   --color-icon: #{$monochrome-1};
+//   color: $monochrome-1;
+//   --border-color: #{$track-grey};
+// }
+// @mixin grey-ghost {
+//   background: none;
+//   color: $track-grey;
+//   --color-icon: #{$track-grey};
+//   --border-color: #{#{$track-grey}};
+// }
+// @mixin grey-hover {
+//   background: $track-grey-hover;
+
+//   // For use by Button component (animates colors when hovering)
+//   --button-color: #{$monochrome-1};
+//   --button-color-background: #{$track-grey};
+//   --button-color-background-hover: #{$track-grey-hover};
+
+//   &.ghost {
+//     @include grey;
+//   }
+// }
+// @mixin grey-disabled {
+//   background: #ddcccf !important;
+//   --border-color: #{#d6b1b6 !important};
+//   --color-icon: #{$monochrome-1} !important;
+//   color: $monochrome-1 !important;
+// }

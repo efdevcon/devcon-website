@@ -2,7 +2,8 @@
 
 .app {
   overflow-x: hidden;
-  padding-bottom: calc(65px + #{$gaps-gap-4}); // Adjusting for fixed bottom nav overlaying content
+  min-height: calc(var(--viewport-height) - 65px - 54px - 54px);
+  padding-bottom: 64px; // Adjusting for fixed bottom nav overlaying content
 
   > h3,
   > button,
