@@ -12,6 +12,7 @@ import { Header } from 'src/components/common/layouts/header'
 import { Home } from 'src/components/domain/app/home'
 import { useAccountContext } from 'src/context/account-context'
 import LoginStyled from './account/LoginStyled'
+import { useSyncSchedule } from './programming/useSyncSchedule'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -25,6 +26,10 @@ export const App = accountContextHOC(({ data, location }: any) => {
   const isBrowser = typeof window !== 'undefined'
   const accountContext = useAccountContext()
   const loggedIn = accountContext.account || true /* Forcing logged in for dev purposes */
+
+  const schedule = useSyncSchedule()
+
+  console.log(schedule, 'schedule in app')
 
   return (
     <>

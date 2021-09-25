@@ -104,6 +104,7 @@ module.exports = {
               'La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.',
           },
         ],
+        cache_busting_mode: 'none',
       },
     },
     // 'gatsby-plugin-remove-serviceworker',
@@ -362,3 +363,9 @@ module.exports = {
     },
   ],
 }
+// 
+// 
+// 
+// 
+// 
+// 

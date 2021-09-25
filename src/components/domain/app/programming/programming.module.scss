@@ -1,0 +1,14 @@
+@use 'src/assets/css/partials/index' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+
+  .item {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid black;
+  }
+}

@@ -1,3 +1,11 @@
+workbox.routing.registerRoute(
+  ({ request }) => request.url.includes('api/events/democon/talks'),
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: 'schedule',
+    plugins: [new workbox.broadcastUpdate.BroadcastCacheUpdate()],
+  })
+)
+
 // if you send a push notification from server, it might be instant or delay up 10 minutes
 // https://developer.mozilla.org/en-US/docs/Web/API/PushEvent
 self.addEventListener('push', function (event) {
