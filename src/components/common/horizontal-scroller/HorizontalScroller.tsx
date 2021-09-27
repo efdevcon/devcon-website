@@ -3,6 +3,7 @@ import { useCallback } from 'react'
 import { useGesture } from 'react-use-gesture'
 import css from './horizontal-scroller.module.scss'
 import ChevronRight from 'src/assets/icons/chevron_right.svg'
+import useIsTouchDevice from 'src/hooks/useIsTouchDevice'
 import ChevronLeft from 'src/assets/icons/chevron_left.svg'
 
 // Dragging shouldn't lead to a click
@@ -50,6 +51,7 @@ export const HorizontalScroller = (props: any) => {
   const elementWidth = React.useRef(0)
   const scrollWidth = React.useRef(0)
   const scrolledBy = React.useRef(0)
+  const isTouchDevice = useIsTouchDevice()
   const [indicatorVisibleLeft, setIndicatorVisibleLeft] = React.useState(false)
   const [indicatorVisibleRight, setIndicatorVisibleRight] = React.useState(false)
 
@@ -77,7 +79,7 @@ export const HorizontalScroller = (props: any) => {
       setIndicatorVisibleRight(false)
       setIndicatorVisibleLeft(false)
     }
-  }, [])
+  }, [isTouchDevice])
 
   const bind = useGesture(
     {
@@ -91,6 +93,9 @@ export const HorizontalScroller = (props: any) => {
         elementRef.current.style.cursor = 'grab'
         elementRef.current.style.transition = 'none'
         // elementRef.current.style['touch-action'] = 'none'
+      },
+      onScroll: state => {
+        scrolledBy.current = state.values[0]
 
         syncIndicators()
       },
@@ -138,19 +143,27 @@ export const HorizontalScroller = (props: any) => {
   }, [syncIndicators])
 
   const goToEnd = () => {
-    const nextX = scrollWidth.current - elementWidth.current
+    if (isTouchDevice) {
+      elementRef.current.scroll(scrollWidth.current, 0)
+    } else {
+      const nextX = scrollWidth.current - elementWidth.current
 
-    scrolledBy.current = nextX
+      scrolledBy.current = nextX
 
-    elementRef.current.style.transform = `translateX(-${nextX}px)`
+      elementRef.current.style.transform = `translateX(-${nextX}px)`
+    }
 
     syncIndicators()
   }
 
   const goToStart = () => {
-    scrolledBy.current = 0
+    if (isTouchDevice) {
+      elementRef.current.scroll(0, 0)
+    } else {
+      scrolledBy.current = 0
 
-    elementRef.current.style.transform = `translateX(0px)`
+      elementRef.current.style.transform = `translateX(0px)`
+    }
 
     syncIndicators()
   }
@@ -158,10 +171,9 @@ export const HorizontalScroller = (props: any) => {
   let className = css['horizontal-scroller']
   let indicatorsClassName = css['indicators']
 
-  if (typeof window !== 'undefined' && !window.ResizeObserver /* || isTouchDevice*/)
-    className += ` ${css['native-drag']}`
-  if (indicatorVisibleRight /* && !isTouchDevice*/) indicatorsClassName += ` ${css['indicator-right']}`
-  if (indicatorVisibleLeft /* && !isTouchDevice*/) indicatorsClassName += ` ${css['indicator-left']}`
+  if ((typeof window !== 'undefined' && !window.ResizeObserver) || isTouchDevice) className += ` ${css['native-drag']}`
+  if (indicatorVisibleRight) indicatorsClassName += ` ${css['indicator-right']}`
+  if (indicatorVisibleLeft) indicatorsClassName += ` ${css['indicator-left']}`
 
   return (
     <div className={indicatorsClassName}>

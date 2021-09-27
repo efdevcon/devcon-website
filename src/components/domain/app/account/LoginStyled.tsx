@@ -65,20 +65,22 @@ export default function LoginPage(props: RouteComponentProps) {
       <div className={css['footer']}>
         <div className="section">
           <div className="content">
-            <p className={css['description']}>
-              Devcon facilitates complete ownership over your data, while allowing you to access web3 interactivity
-              through our application if you choose to.
-            </p>
+            <div className={css['text']}>
+              <p className={css['description']}>
+                Devcon facilitates complete ownership over your data, while allowing you to access web3 interactivity
+                through our application if you choose to.
+              </p>
 
-            <Link className={css['link']} to="https://google.com">
-              Learn more
-            </Link>
-            <Link className={css['link']} to="https://google.com">
-              Terms & Conditions
-            </Link>
+              <Link className={css['link']} to="https://google.com">
+                Learn more
+              </Link>
+              <Link className={css['link']} to="https://google.com">
+                Terms & Conditions
+              </Link>
+            </div>
+            <img className={css['img']} src={footerRoad} alt="Man and dog on road" />
           </div>
         </div>
-        <img className={css['img']} src={footerRoad} alt="Man and dog on road" />
       </div>
     </div>
   )

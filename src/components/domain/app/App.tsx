@@ -12,7 +12,8 @@ import { Header } from 'src/components/common/layouts/header'
 import { Home } from 'src/components/domain/app/home'
 import { useAccountContext } from 'src/context/account-context'
 import LoginStyled from './account/LoginStyled'
-import { useSyncSchedule } from './programming/useSyncSchedule'
+import { Schedule, useSyncSchedule } from './schedule'
+import { Venue } from './venue'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -29,8 +30,6 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
   const schedule = useSyncSchedule()
 
-  console.log(schedule, 'schedule in app')
-
   return (
     <>
       <Helmet>
@@ -43,6 +42,8 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
       <Header withStrip={false} withHero={false} />
 
+      {/* {schedule} */}
+
       {isBrowser && (
         <div className={css['app']}>
           {loggedIn && <InlineNav location={location} />}
@@ -52,6 +53,9 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
             {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts */}
             <LoginStyled path="/conference" />
+
+            <Venue path="/venue" />
+            <Schedule path="/schedule" />
 
             <Home path="/" />
 

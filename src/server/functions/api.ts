@@ -56,6 +56,12 @@ archiveRoutes.register(router)
 // passport.serializeUser(serializeUser)
 // passport.deserializeUser(deserializeUser)
 
+server.get('/api/cache-test', (req, res) => {
+  setTimeout(() => {
+    res.json(Math.random() * 100);
+  }, 2000);
+});
+
 server.use('/api', router)
 
 export const handler = serverless(server)

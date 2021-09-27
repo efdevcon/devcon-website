@@ -1,1 +1,0 @@
-export { Programming } from './Programming'

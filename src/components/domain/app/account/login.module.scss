@@ -108,10 +108,23 @@
   align-items: flex-end;
   padding-bottom: $gaps-gap-4;
 
-  .description {
-    opacity: 0.7;
-    margin-bottom: $gaps-gap-4;
-    max-width: 75%;
+  &:global(.section) {
+    width: 100%;
+  }
+
+  .text {
+    width: 75%;
+
+    .description {
+      opacity: 0.7;
+      margin-bottom: $gaps-gap-4;
+    }
+
+    .link {
+      @include fonts-bold;
+      margin-right: $gaps-gap-8;
+      text-decoration: underline;
+    }
   }
 
   .img {
@@ -120,11 +133,5 @@
     bottom: 0px;
     max-height: 100%;
     z-index: -1;
-  }
-
-  .link {
-    @include fonts-bold;
-    margin-right: $gaps-gap-8;
-    text-decoration: underline;
   }
 }
