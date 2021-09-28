@@ -23,7 +23,7 @@ import IconRoad from 'src/assets/icons/road.svg'
 
 export default function Index({ data }: any) {
   const intl = useIntl()
-  const events = useMemo(() => ToEventData(data), [data])
+  const events = ToEventData(data)
   const meetups = useMemo(() => ToMeetupData(data), [data])
   const quests = useMemo(() => toQuestData(data), [data])
   const dips = useMemo(() => ToDIPData(data), [data])
