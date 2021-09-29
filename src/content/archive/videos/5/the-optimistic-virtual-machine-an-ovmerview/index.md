@@ -10,5 +10,5 @@ type: "Talk"
 track: "Execution layer"
 keywords: ['OVM','optimism','academic']
 tags: ['Execution layer']
-speakers: ['Karl Floersch']
+speakers: ['Karl Floersch','Ben Jones']
 ---

@@ -15,6 +15,6 @@ expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
 keywords: ['videogames','video','games','general']
-tags: ['Society and Systems']
+tags: ['Medium as Message','Society and Systems']
 speakers: ['Christopher Robison']
 ---

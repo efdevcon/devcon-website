@@ -9,6 +9,6 @@ expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
 keywords: ['storage','wallets','general']
-tags: ['Society and Systems']
+tags: ['Medium as Message','Society and Systems']
 speakers: ['Cameron Robertson']
 ---
