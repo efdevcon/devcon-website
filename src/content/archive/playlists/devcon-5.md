@@ -56,7 +56,7 @@ videos:
   - 5/money-at-the-edge-how-people-stay-afloat-in-venezuela/index
   - 5/satoshi-has-no-clothes-what-about-szabo-smart-contracts-privacy-and-practicality/index
   - 5/polkadots-data-availability-and-validity-scheme/index
-  - 5/jehan-chu/index
+  - 5/we-come-in-peace-why-vc-matters-to-ethereum/index
   - 5/grantee-expose-lightning-talk-3-academic-research-on-casper/index
   - 5/ethereum-20/index
   - 5/cryptoeconomics-in-30-minutes/index
