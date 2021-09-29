@@ -12,11 +12,11 @@ require('dotenv').config()
 // for profile generation - need to update the async/duration call
 const fetchProfiles = false
 const writeToDisk = false
-const generatePlaylist = false
+const generatePlaylist = true
 const generateYoutubeTemplates = true
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const edition: number = 0 // 
+const edition: number = 5 // 
 const sheetName = 'Devcon ' + edition // 
 const baseArchiveUrl = 'https://www.devcon.org/archive/watch/'
 const devconLocation = () => {
@@ -93,9 +93,9 @@ async function ImportArchiveVideos() {
           expertise: result['Skill Level'],
           type: result['Type (Talk, Panel, Workshop, Other)'],
           track: result['Track'],
-          keywords: result['Keywords'] ? result['Keywords'].split(',').map((i: string) => i.trim()) : undefined,
+          keywords: result['Keywords'] ? result['Keywords'].split(',').map((i: string) => i.trim()) : [],
           tags: tags,
-          speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',').map((i: string) => i.trim()) : undefined
+          speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',').map((i: string) => i.trim()) : []
         } as ArchiveVideo
 
         videos.push(video)
