@@ -12,5 +12,5 @@ type: "Breakout"
 track: "Developer Infrastructure"
 keywords: []
 tags: ['Developer Infrastructure']
-speakers: ['Harry Altman','G. Nicholas D'Andrea']
+speakers: ["Harry Altman", "G. Nicholas D'Andrea"]
 ---
