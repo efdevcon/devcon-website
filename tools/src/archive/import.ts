@@ -11,9 +11,9 @@ require('dotenv').config()
 
 // for profile generation - need to update the async/duration call
 const fetchProfiles = false
-const writeToDisk = false
-const generatePlaylist = true
-const generateYoutubeTemplates = true
+const writeToDisk = true
+const generatePlaylist = false
+const generateYoutubeTemplates = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
 const edition: number = 5 // 
@@ -93,9 +93,9 @@ async function ImportArchiveVideos() {
           expertise: result['Skill Level'],
           type: result['Type (Talk, Panel, Workshop, Other)'],
           track: result['Track'],
-          keywords: result['Keywords'] ? result['Keywords'].split(',').map((i: string) => i.trim()) : [],
+          keywords: result['Keywords'] ? result['Keywords'].split(',').map((i: string) => i.trim()) : undefined,
           tags: tags,
-          speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',').map((i: string) => i.trim()) : []
+          speakers: result['Talk Speaker(s)'] ? result['Talk Speaker(s)'].split(',').map((i: string) => i.trim()) : undefined
         } as ArchiveVideo
 
         videos.push(video)
@@ -187,6 +187,7 @@ function writeToFile(video: ArchiveVideo) {
 
     const attributes = Object.entries(video)
     const markdown = `---${attributes.reduce((acc, [key, value], index) => {
+        if (typeof value === 'undefined' && key === 'speakers') return acc += `\n${key}: []`
         if (typeof value === 'undefined' && key === 'keywords') return acc += `\n${key}: []`
         if (typeof value === 'undefined' && key === 'tags') return acc += `\n${key}: []`
         if (typeof value === 'undefined') return acc += `\n${key}: ''`

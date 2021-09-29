@@ -11,5 +11,5 @@ type: "Breakout"
 track: "Society and Systems"
 keywords: []
 tags: ['Society and Systems']
-speakers: ''
+speakers: ['Kei Kreutler','Yalda Mousavinia']
 ---
