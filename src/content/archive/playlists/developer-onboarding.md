@@ -21,4 +21,9 @@ videos:
   - 5/how-ens-is-taking-ethereum-to-the-rest-of-the-internet/index
   - 3/real-world-smart-contract-development-lessons/index
   - 4/reversing-ethereum-smart-contracts-to-find-out-whats-behind-evm-bytecode/index
+  - 5/practical-design-patterns-for-dapp-developers/index
+  - 5/overcoming-the-smart-contract-size-limit/index
+  - 3/ethereum-for-python-developers/index
+  - 5/demystifying-libp2p-gossipsub-a-scalable-and-extensible-p2p-gossip-protocol/index
+  - 5/towards-eth2-developer-tooling/index
 ---
