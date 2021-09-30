@@ -72,6 +72,16 @@ $left-column-width: 30%;
       margin-left: $gaps-gap-8;
       margin-bottom: $gaps-gap-10;
 
+      &.no-results {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .blur {
+          backdrop-filter: none !important;
+        }
+      }
+
       @media (max-width: $breakpoints-lg) {
         padding-top: $gaps-gap-4;
         border-top: 1px solid $colors-monochrome-5;
@@ -145,5 +155,16 @@ $left-column-width: 30%;
     @media (max-width: $breakpoints-lg) {
       display: block !important;
     }
+  }
+}
+
+.no-results-container {
+  width: min(100%, 500px);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  .no-results-image-container {
+    width: 100%;
   }
 }

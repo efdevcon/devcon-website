@@ -26,6 +26,7 @@
     position: relative;
     overflow: auto;
     cursor: auto;
+    height: min(100%, 600px);
     display: flex;
 
     @media (max-width: $breakpoints-lg) {
@@ -116,6 +117,7 @@
             transition: opacity 0.5s ease-in-out;
             &.selected {
               display: block;
+              z-index: 1;
               opacity: 1;
             }
           }
@@ -124,6 +126,7 @@
         .controls {
           display: flex;
           justify-content: space-between;
+          padding-top: $gaps-gap-4;
 
           .dots {
             position: relative;

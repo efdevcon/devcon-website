@@ -10,6 +10,11 @@ import { usePageContext } from 'src/context/page-context'
 import IconSearch from 'src/assets/icons/search.svg'
 import { InputForm } from 'src/components/common/input-form'
 import { Button } from 'src/components/common/button'
+import {
+  CollapsedSection,
+  CollapsedSectionContent,
+  CollapsedSectionHeader,
+} from 'src/components/common/collapsed-section'
 
 const queryStringToFilterState = (qs: string) => {
   // Extract params from query string
@@ -139,6 +144,21 @@ const Filters = (props: any) => {
     return ''
   }
 
+  const MobileWrapper = ({ openInitially, children }: any) => {
+    const [open, setOpen] = React.useState(openInitially)
+
+    if (props.mobile) {
+      return (
+        <CollapsedSection className={css['collapsible-header']} open={open} setOpen={() => setOpen(!open)}>
+          <CollapsedSectionHeader>{children[0]}</CollapsedSectionHeader>
+          <CollapsedSectionContent>{children[1]}</CollapsedSectionContent>
+        </CollapsedSection>
+      )
+    }
+
+    return children
+  }
+
   return (
     <>
       <div className={css['search']}>
@@ -154,21 +174,29 @@ const Filters = (props: any) => {
       </div>
 
       <div className={css['categories']}>
-        <p className="bold font-xs text-uppercase">Categories:</p>
-        <Filter {...tagsFilterState} />
+        <MobileWrapper openInitially={tagsFilterState && Object.keys(tagsFilterState.activeFilter).length > 0}>
+          <p className="bold font-xs text-uppercase">Categories:</p>
+          <Filter {...tagsFilterState} />
+        </MobileWrapper>
       </div>
 
       <div className={css['devcon']}>
-        <p className="bold font-xs text-uppercase">Devcon:</p>
-        <Filter {...editionFilterState} />
+        <MobileWrapper openInitially={editionFilterState && Object.keys(editionFilterState.activeFilter).length > 0}>
+          <p className="bold font-xs text-uppercase">Devcon:</p>
+          <Filter {...editionFilterState} />
+        </MobileWrapper>
       </div>
 
       <div className={css['expertise']}>
-        <p className="bold font-xs text-uppercase">Expertise:</p>
-        <Filter {...expertiseFilterState} />
+        <MobileWrapper
+          openInitially={expertiseFilterState && Object.keys(expertiseFilterState.activeFilter).length > 0}
+        >
+          <p className="bold font-xs text-uppercase">Expertise:</p>
+          <Filter {...expertiseFilterState} />
+        </MobileWrapper>
 
         <div className={css['clear-container']}>
-          {props.mobile && (
+          {/* {props.mobile && (
             <Button
               disabled={!combinedFilter}
               className={`${css['continue-button']} red bold`}
@@ -176,11 +204,11 @@ const Filters = (props: any) => {
             >
               <span className={css['text']}>Continue</span> <IconArrowRight className={`icon ${css['text-icon']}`} />
             </Button>
-          )}
+          )} */}
 
           {combinedFilter && (
             <p className={`${css['open']} ${css['clear']} bold text-underline`} onClick={clearFilters}>
-              Clear All
+              Clear all
             </p>
           )}
         </div>
@@ -202,17 +230,14 @@ export const VideoFilterMobile = (props: any) => {
 
   let className = `${css['mobile-filter']} section`
 
-  if (open) className += ` ${css['open']}`
+  if (open || true) className += ` ${css['open']}`
 
   return (
     <div className={className}>
       <div>
         <div className={css['header']}>
           <p className="title">Filter</p>
-          <button className="white ghost" onClick={() => setOpen(!open)}>
-            <IconFilter className={`icon ${css['icon-open']}`} />
-            <IconClose className={`icon ${css['icon-close']}`} />
-          </button>
+          <IconFilter className={`icon`} style={{ fontSize: '1.2em' }} />
         </div>
 
         <div className={css['filter-container']}>
