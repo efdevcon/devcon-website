@@ -45,7 +45,6 @@ export default pageHOC(function Index(props) {
 export const query = graphql`
   query ($language: String!) {
     ...NavigationData
-    ...NewsDataInline
     ...Notification
     files: allFile(filter: { relativePath: { in: ["404.png"] } }) {
       nodes {
