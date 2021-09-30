@@ -9,6 +9,6 @@ expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
 keywords: ['open internet','future','general']
-tags: ['Society and Systems']
+tags: ['Medium as Message','Society and Systems']
 speakers: ['Kevin Owocki']
 ---

@@ -1,7 +1,8 @@
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useState, useEffect } from 'react'
 import css from './tabs.module.scss'
 
 interface TabsProps {
+  defaultTab?: string
   children: any
   tabContentClassName?: string
 }
@@ -13,8 +14,14 @@ const findFirstValidTab = (children: React.ReactChildren): any => {
 
 export function Tabs(props: TabsProps) {
   const defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
-  const [activeTab, setActiveTab] = useState(defaultTab)
-
+  const [activeTab, setActiveTab] = useState(props.defaultTab || defaultTab)
+  
+  useEffect(() => {
+    if (props.defaultTab && props.defaultTab !== activeTab) {
+      setActiveTab(props.defaultTab)
+    }
+  }, [props.defaultTab])
+  
   let tabContentClassName = css['tab-content']
 
   if (props.tabContentClassName) tabContentClassName += ` ${props.tabContentClassName}`

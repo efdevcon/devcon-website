@@ -18,7 +18,7 @@ duration: 729
 expertise: "Intermediate"
 type: "Talk"
 track: "Execution layer"
-keywords: ['sidechain','trustless','technical']
+keywords: ['technical']
 tags: ['Execution layer']
 speakers: ['Matt Luongo']
 ---

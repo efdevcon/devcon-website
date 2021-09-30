@@ -10,5 +10,5 @@ type: "Talk"
 track: "Society and Systems"
 keywords: ['EEA','enterprise','alliance','general']
 tags: ['Society and Systems']
-speakers: ['Paul	DiMarzio','Ronald Resnick']
+speakers: ['Paul DiMarzio','Ronald Resnick']
 ---
