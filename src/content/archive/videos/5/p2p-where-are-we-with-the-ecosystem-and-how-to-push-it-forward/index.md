@@ -9,8 +9,8 @@ ipfsHash: "QmTeu1XcHwjCajVkudSpE6fWiGRgvMmgxbRyJZUiyVKUwe"
 duration: 13982
 expertise: "Advanced"
 type: "Breakout"
-track: "Consensus Layer"
+track: "Consensus layer"
 keywords: []
-tags: ['Consensus Layer']
+tags: ['Consensus layer']
 speakers: ['Chris Waclawek']
 ---

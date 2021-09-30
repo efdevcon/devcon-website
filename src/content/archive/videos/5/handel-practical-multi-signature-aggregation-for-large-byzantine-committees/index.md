@@ -7,8 +7,8 @@ ipfsHash: "QmS3pVenjNg8U71EPL9A8gcfhtygjVjucCywhB7LipSoYU"
 duration: 1730
 expertise: "Intermediate"
 type: "Breakout"
-track: "Consensus Layer"
+track: "Consensus layer"
 keywords: ['technical']
-tags: ['Consensus Layer']
+tags: ['Consensus layer']
 speakers: ['Olivier Bégassat','Nicolas Gailly','Blazej Kolad','Nicolas Liochon']
 ---

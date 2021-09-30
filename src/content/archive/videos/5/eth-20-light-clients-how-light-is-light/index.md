@@ -7,8 +7,8 @@ ipfsHash: "QmSUei7ck6zxzHeJfreq1Kj2DgZtKto4qHDfCLJujrnoab"
 duration: 1308
 expertise: "intermediate"
 type: "Breakout"
-track: "Consensus Layer"
+track: "Consensus layer"
 keywords: ['technical']
-tags: ['Consensus Layer']
+tags: ['Consensus layer']
 speakers: ['Greg Markou','Cayman Nava']
 ---

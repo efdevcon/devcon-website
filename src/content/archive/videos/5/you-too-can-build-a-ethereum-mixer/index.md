@@ -7,8 +7,8 @@ ipfsHash: "QmfNG4FCuREvxqkyLwy8b6k3rExxXwfQ2SybTnNBwv1FSg"
 duration: 280
 expertise: "Intermediate"
 type: "Breakout"
-track: "Cryptography"
+track: "Privacy"
 keywords: ['technical']
-tags: ['Cryptography']
+tags: ['Privacy']
 speakers: ['Kendrick Tan']
 ---

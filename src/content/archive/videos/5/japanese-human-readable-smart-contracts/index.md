@@ -22,8 +22,8 @@ ipfsHash: "QmXeCbxdqSP4dbcUV8Bxqpq31AFV4GE4aXe8p2fdnQyDJJ"
 duration: 3081
 expertise: "Beginner"
 type: "Breakout"
-track: "Community"
+track: "Society and Systems"
 keywords: []
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Henning Diedrich']
 ---

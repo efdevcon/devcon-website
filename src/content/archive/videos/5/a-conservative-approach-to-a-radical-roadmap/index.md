@@ -14,8 +14,8 @@ ipfsHash: "QmdUXfzHVB7VsNBLP9CHjz1MT7TCaXT97E87RjAEXBXXBx"
 duration: 1341
 expertise: "Beginner"
 type: "Breakout"
-track: "Consensus Layer"
+track: "Consensus layer"
 keywords: []
-tags: ['Consensus Layer']
+tags: ['Consensus layer']
 speakers: ['Sunny Aggarwal']
 ---

@@ -9,8 +9,8 @@ ipfsHash: "QmNui91GKMaZKEoETAaNAZwaWzjyH4HgXXeKtbJUQHJnGj"
 duration: 3977
 expertise: "Advanced"
 type: "Breakout"
-track: "Consensus Layer"
+track: "Consensus layer"
 keywords: []
-tags: ['Consensus Layer']
+tags: ['Consensus layer']
 speakers: ['Alex Beregszaszi','Casey Detrio']
 ---

@@ -9,6 +9,6 @@ expertise: "Beginner"
 type: "Talk"
 track: "Society and Systems"
 keywords: ['p2p','general']
-tags: ['Medium as Message','Society and Systems']
+tags: ['Society and Systems']
 speakers: ['Rich Burdon','Chris Waclawek']
 ---

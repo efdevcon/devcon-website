@@ -11,8 +11,8 @@ ipfsHash: "QmXjJYa9UkCv9keC1p689ypxTW9GARKqHeNhBWGWMEJ3vW"
 duration: 307
 expertise: "Beginner"
 type: "Talk"
-track: "Community"
+track: "Society and Systems"
 keywords: []
-tags: ['Community']
+tags: ['Society and Systems']
 speakers: ['Brian Cheong','Tiger Kim','Wanseob Lim']
 ---

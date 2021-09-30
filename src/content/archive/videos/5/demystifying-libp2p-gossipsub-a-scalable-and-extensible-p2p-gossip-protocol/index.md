@@ -10,8 +10,8 @@ ipfsHash: "QmW573KHSccTou96QAtPwJSEhfVgC1hzkPog8jnFLcTuD9"
 duration: 1527
 expertise: "intermediate"
 type: "Breakout"
-track: "Consensus Layer"
+track: "Consensus layer"
 keywords: ['technical']
-tags: ['Consensus Layer']
+tags: ['Consensus layer']
 speakers: ['Raúl Kripalani']
 ---
