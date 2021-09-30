@@ -9,8 +9,8 @@ ipfsHash: "QmQMrqVA5F7k7xnXYChMkcyqULr42rMG35b8vCHz3hzhmb"
 duration: 1378
 expertise: "Advanced"
 type: "Breakout"
-track: "Execution Layer"
+track: "Execution layer"
 keywords: ['technical']
-tags: ['Execution Layer']
+tags: ['Execution layer']
 speakers: ['Paweł Bylica']
 ---

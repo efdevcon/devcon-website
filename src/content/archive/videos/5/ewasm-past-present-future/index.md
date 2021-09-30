@@ -13,8 +13,8 @@ ipfsHash: "QmWxfDqxjjwM146jboxL7t2TS8uGuzgeyMf8X6QUkrEuYD"
 duration: 7030
 expertise: "intermediate"
 type: "Breakout"
-track: "Execution Layer"
+track: "Execution layer"
 keywords: []
-tags: ['Execution Layer']
+tags: ['Execution layer']
 speakers: ['Guillaume Ballet','Alex Beregszaszi','Casey Detrio','Paul Dworzanski']
 ---

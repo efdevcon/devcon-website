@@ -8,8 +8,8 @@ ipfsHash: "QmYLRh3Bv8VR5cYAt2cZLNGSnFfz3ZtX4VxzFRwGiz7Wi1"
 duration: 7370
 expertise: "Advanced"
 type: "Breakout"
-track: "Execution Layer"
+track: "Execution layer"
 keywords: []
-tags: ['Execution Layer']
+tags: ['Execution layer']
 speakers: ['Alex Beregszaszi','Paweł Bylica','Casey Detrio','Nick Johnson','Jacques Wagener']
 ---

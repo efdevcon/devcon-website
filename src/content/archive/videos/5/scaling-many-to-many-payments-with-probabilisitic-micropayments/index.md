@@ -7,8 +7,8 @@ ipfsHash: "QmUVvbfZkcRjtoLtYgk2VL7rShvXGwpaxvPMn29r4NWHtU"
 duration: 1325
 expertise: "intermediate"
 type: "Breakout"
-track: "Execution Layer"
+track: "Execution layer"
 keywords: ['technical']
-tags: ['Execution Layer']
+tags: ['Execution layer']
 speakers: ['Yondon Fu','Doug Petkanics']
 ---
