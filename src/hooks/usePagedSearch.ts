@@ -23,6 +23,7 @@ export const usePagedSearch = <T>(uri: string): FetchedResult<T> => {
     onError: () => {
       setData(undefined)
     },
+    revalidateOnFocus: false
   })
 
   // if (error) {
