@@ -7,8 +7,8 @@ ipfsHash: "QmRaV5wJ9UoTFLHZqaxjizepwkqEtyodAargqDjDzmQQg2"
 duration: 1225
 expertise: "Intermediate"
 type: "Breakout"
-track: "Execution Layer"
+track: "Execution layer"
 keywords: ['technical']
-tags: ['Execution Layer']
+tags: ['Execution layer']
 speakers: ['Mudit Gupta']
 ---

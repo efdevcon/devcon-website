@@ -14,8 +14,8 @@ ipfsHash: "QmZqBh286sXqBA99M1kXWXwPksfXMVtfSzg888TZNs8PTA"
 duration: 1240
 expertise: "Beginner"
 type: "Breakout"
-track: "Execution Layer"
+track: "Execution layer"
 keywords: ['technical']
-tags: ['Execution Layer']
+tags: ['Execution layer']
 speakers: ['Zsolt Felföldi']
 ---

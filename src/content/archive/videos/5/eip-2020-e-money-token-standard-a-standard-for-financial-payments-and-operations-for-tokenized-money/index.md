@@ -11,8 +11,8 @@ ipfsHash: "QmdJEPb2YWq9sKgKcTYEtchyEmfxHpxciR2mPmeDoVEqVw"
 duration: 364
 expertise: "Intermediate"
 type: "Breakout"
-track: "Standards"
+track: "Developer Infrastructure"
 keywords: ['technical']
-tags: ['Standards']
+tags: ['Developer Infrastructure']
 speakers: ['Daniel Lehrner','Fernando Paris']
 ---

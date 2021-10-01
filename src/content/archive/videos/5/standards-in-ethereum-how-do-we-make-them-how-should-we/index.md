@@ -8,8 +8,8 @@ ipfsHash: "QmNtiYNdte85MhBhqv5hfWWXdP2Ksqc3GwmzpomEq5FzxC"
 duration: 7013
 expertise: "Beginner"
 type: "Breakout"
-track: "Standards"
+track: "Developer Infrastructure"
 keywords: []
-tags: ['Standards']
+tags: ['Developer Infrastructure']
 speakers: ['Daniel Burnett','Jory Burson','Nick Johnson','Chaals Neville','Charles St.Louis']
 ---
