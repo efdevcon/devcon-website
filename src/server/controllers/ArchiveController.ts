@@ -25,14 +25,14 @@ export class ArchiveController {
 
         if (Array.isArray(input[i])) {
           const asArray = input[i] as string[]
-          const arrayFilter = asArray.map(value => `${i}:'${value.split(' ')[0]}'`)
+          const arrayFilter = asArray.map(value => `${i}:${value.split(' ')[0]}`)
 
           query.push(`(${arrayFilter.join(' OR ')})`)
         }
 
         if (typeof input[i] === 'string') {
           const value = (input[i] as string).split(' ')[0]
-          query.push(`(${i}:'${value}')`)
+          query.push(`(${i}:${value})`)
         }
       })
 
