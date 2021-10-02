@@ -1,14 +1,48 @@
 import { GatsbyNode } from 'gatsby'
 import { createFilePath } from 'gatsby-source-filesystem'
+import { createFileNodeFromBuffer } from 'gatsby-source-filesystem'
+import fs from 'fs'
+import path from 'path'
+
+const fileCache = {} as any
+
+// This is normally done by transformer-sharp, but transformer-sharp doesn't work with custom resolvers - loading the images and creating file nodes manually instead:
+const resolveImage = async (dependencies: any, node: any) => {
+  if (typeof node.frontmatter.image !== 'string') return null
+
+  const imagePath = path.resolve(node.fileAbsolutePath, '..', node.frontmatter.image)
+
+  if (fileCache[imagePath]) return fileCache[imagePath]
+
+  let buffer
+
+  try {
+    buffer = await fs.promises.readFile(imagePath)
+  } catch (e) {
+    return null
+  }
+
+  if (!buffer) return null
+
+  const imageName = node.frontmatter.image.split('/').pop().split('.')[0]
+
+  fileCache[imagePath] = createFileNodeFromBuffer({
+    buffer: buffer,
+    name: imageName,
+    ...dependencies,
+  })
+
+  return fileCache[imagePath]
+}
 
 interface NodeFrontmatter {
   title: string
   parent: string
 }
 
-export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  // console.log('onCreateNode')
+export const onCreateNode: GatsbyNode['onCreateNode'] = async (args) => {
+  const { node, getNode, actions } = args;
+  const { createNodeField, createNode } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const frontmatter = node.frontmatter as NodeFrontmatter
@@ -77,6 +111,16 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, getNode, action
       formattedSlug = '/archive/watch' + slug
 
       const videoPath = slug.slice(1, -1) + '/index'
+
+      const imageFileNode = await resolveImage({ createNode, ...args }, node)
+
+      if (imageFileNode) {
+        createNodeField({
+          node,
+          name: 'image',
+          value: imageFileNode
+        })
+      }
 
       createNodeField({
         node,
