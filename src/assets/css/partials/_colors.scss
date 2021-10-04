@@ -24,7 +24,7 @@ $ef-green-2: #e3f5eb; // _DS
 $ef-blue: #cdeaef;
 $ef-beige: #f8e2b8;
 $ef-cream: #fff3dd;
-$ef-pink: #eddfde;
+$ef-pink: #f6e7e6;
 
 $system-success: #0b7602;
 $system-error: #cb2e44;
@@ -53,6 +53,8 @@ $state-info: $track-blue;
 $state-info-light: $ef-blue;
 $state-neutral: $monochrome-10;
 $state-neutral-light: $monochrome-1;
+
+$standard-border-color: $monochrome-5;
 
 // Label and button color mixins
 // WHITE
@@ -150,3 +152,35 @@ $state-neutral-light: $monochrome-1;
   --color-icon: #{$monochrome-1} !important;
   color: $monochrome-1 !important;
 }
+
+// // GREY
+// @mixin grey {
+//   background: $track-grey;
+//   --color-icon: #{$monochrome-1};
+//   color: $monochrome-1;
+//   --border-color: #{$track-grey};
+// }
+// @mixin grey-ghost {
+//   background: none;
+//   color: $track-grey;
+//   --color-icon: #{$track-grey};
+//   --border-color: #{#{$track-grey}};
+// }
+// @mixin grey-hover {
+//   background: $track-grey-hover;
+
+//   // For use by Button component (animates colors when hovering)
+//   --button-color: #{$monochrome-1};
+//   --button-color-background: #{$track-grey};
+//   --button-color-background-hover: #{$track-grey-hover};
+
+//   &.ghost {
+//     @include grey;
+//   }
+// }
+// @mixin grey-disabled {
+//   background: #ddcccf !important;
+//   --border-color: #{#d6b1b6 !important};
+//   --color-icon: #{$monochrome-1} !important;
+//   color: $monochrome-1 !important;
+// }

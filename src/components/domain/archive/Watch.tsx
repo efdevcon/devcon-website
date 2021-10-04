@@ -18,6 +18,8 @@ import { useLocation } from '@reach/router'
 import IconFilter from 'src/assets/icons/filter.svg'
 import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 import { Loader } from 'src/components/common/loader'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 type WatchProps = {}
 
@@ -94,6 +96,23 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
     const from = (nr - 1) * defaultPageSize
     setFrom(from)
   }
+
+  const imageData = useStaticQuery(graphql`
+    query {
+      files: allFile(filter: { relativePath: { in: ["no-results.png"] } }) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 1200, quality: 80) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const noResults = data && data.items && data.items.length === 0
+
   return (
     <div className={css['container']}>
       <SEO title={ARCHIVE_TITLE} description={ARCHIVE_DESCRIPTION} imageUrl={ARCHIVE_IMAGE_URL} />
@@ -138,7 +157,18 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
             <div className={`${css['filter']}`}>
               <VideoFilter {...filterState} />
             </div>
-            <div className={css['videos']} ref={videoContainerElement}>
+            <div className={`${css['videos']} ${noResults ? css['no-results'] : ''}`} ref={videoContainerElement}>
+              {noResults && (
+                <div className={css['no-results-container']}>
+                  <div className={css['no-results-image-container']}>
+                    <Img alt="" className={css['image']} fluid={imageData.files.nodes[0].childImageSharp.fluid} />
+
+                    <p className="font-xxl bold">Sorry No Results Found</p>
+                    <p>Please try another search string</p>
+                  </div>
+                </div>
+              )}
+
               <Loader
                 loading={isLoading}
                 error={isError}

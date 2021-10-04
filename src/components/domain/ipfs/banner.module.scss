@@ -24,7 +24,6 @@
     align-items: center;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    
 
     svg {
       padding-top: 2px;
@@ -132,11 +131,11 @@
 
   > p {
     &:not(:last-child) {
-      margin-bottom: $gaps-gap-4;
+      margin-bottom: $gaps-gap-6;
     }
   }
 
-  a {
+  .learn-more-link {
     text-decoration: underline;
   }
 }

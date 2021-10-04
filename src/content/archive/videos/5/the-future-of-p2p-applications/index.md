@@ -10,5 +10,5 @@ type: "Talk"
 track: "Society and Systems"
 keywords: ['p2p','general']
 tags: ['Society and Systems']
-speakers: ['Rich Burdon']
+speakers: ['Rich Burdon','Chris Waclawek']
 ---

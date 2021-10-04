@@ -14,5 +14,5 @@ type: "Talk"
 track: "Consensus layer"
 keywords: ['networking','eth2','technical']
 tags: ['Consensus layer']
-speakers: ['Antoine Toulme','Rene Lubov']
+speakers: ['Antoine Toulme','Rene Nayman']
 ---

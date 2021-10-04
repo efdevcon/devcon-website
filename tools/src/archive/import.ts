@@ -11,12 +11,12 @@ require('dotenv').config()
 
 // for profile generation - need to update the async/duration call
 const fetchProfiles = false
-const writeToDisk = false
+const writeToDisk = true
 const generatePlaylist = false
-const generateYoutubeTemplates = true
+const generateYoutubeTemplates = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const edition: number = 0 // 
+const edition: number = 5 // 
 const sheetName = 'Devcon ' + edition // 
 const baseArchiveUrl = 'https://www.devcon.org/archive/watch/'
 const devconLocation = () => {
@@ -187,6 +187,7 @@ function writeToFile(video: ArchiveVideo) {
 
     const attributes = Object.entries(video)
     const markdown = `---${attributes.reduce((acc, [key, value], index) => {
+        if (typeof value === 'undefined' && key === 'speakers') return acc += `\n${key}: []`
         if (typeof value === 'undefined' && key === 'keywords') return acc += `\n${key}: []`
         if (typeof value === 'undefined' && key === 'tags') return acc += `\n${key}: []`
         if (typeof value === 'undefined') return acc += `\n${key}: ''`

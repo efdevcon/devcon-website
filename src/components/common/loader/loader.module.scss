@@ -34,6 +34,12 @@
     backdrop-filter: blur(5px);
   }
 
+  &.no-results {
+    .blur {
+      backdrop-filter: none !important;
+    }
+  }
+
   &.error {
     .message {
       background: $colors-system-error;
