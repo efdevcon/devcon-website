@@ -6,9 +6,16 @@ categories: []
 curators:
   - Devcon Team
 videos:
-  - 5/ethereum-roadmap-2020-say-hello-and-opening-ceremony/index
-  - 5/the-darktech-renaissance/index
-  - 5/future-of-open-hardware-in-a-verifiable-decentralised-world/index
-  - 5/welcome-ceremony/index
-  - 5/panel-community-interoperability/index
+  - 5/cryptoeconomics-in-30-minutes/index
+  - 5/growing-the-way-we-support/index
+  - 5/eth-20-tldr/index
+  - 4/contributing-to-ethereum-and-open-source/index 
+  - 4/ethereum-20-randomness/index
+  - 3/ethereum-for-python-developers/index
+  - 3/ethereum-in-25-minutes-version-mmxvii/index
+  - 3/welcome-and-team-introduction/index
+  - 3/flexibility-in-solidity/index
+  - 2/ethereum-in-25-minutes/index
+  - 2/solidity-for-dummies/index
+  - 1/understanding-the-ethereum-blockchain-protocol/index
 ---

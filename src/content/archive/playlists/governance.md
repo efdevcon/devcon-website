@@ -5,12 +5,17 @@ image: ../../../../static/assets/uploads/playlists/governance.png
 categories:
   - Community Curated
 curators:
-  - Hudson Jameson
-  - Griff Green
+  - Devcon
 videos:
-  - 5/we-come-in-peace/index
-  - 5/supersonic-transparent-snarks-from-dark-compilers/index
-  - 5/mapping-finite-state-machines-to-zksnarks/index
-  - 5/ethereum-20/index
-  - 5/cryptoeconomics-in-30-minutes/index
+  - 5/state-of-blockchain-governance-breakout/index
+  - 5/beyond-daos-evolving-human-organization/index
+  - 5/realigning-incentives-for-nonprofits-with-ethereum/index
+  - 5/using-daos-to-make-decentralized-protocols-actually-decentralized/index
+  - 5/dao-design-canvas/index
+  - 5/taxonomy-of-daos/index
+  - 4/ethereum-governance-showcase-and-tools/index
+  - 4/building-self-sustaining-ecosystems-through-governance/index
+  - 4/how-to-magician-improving-technological-governance/index
+  - 4/post-nation-state-governance/index
+  - 2/the-decentralized-colllaborative-web//index
 ---

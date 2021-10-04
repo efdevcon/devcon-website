@@ -63,7 +63,7 @@ const ModalContent = (props: ModalProps) => {
   const isSlider =
     childrenAsArray.length > 0 &&
     childrenAsArray.every((element: any) => {
-      return element.type === ModalSlide
+      return element.type.displayName === 'ModalSlide'
     })
 
   const activeProps = isSlider && currentSlide ? currentSlide.props : props
@@ -132,9 +132,13 @@ const ModalContent = (props: ModalProps) => {
   )
 }
 
-export const ModalSlide = (props: ModalProps) => {
+const ModalSlide = (props: any) => {
   return <div>{props.children}</div>
 }
+
+ModalSlide.displayName = 'ModalSlide'
+
+export { ModalSlide }
 
 export const Modal = (props: ModalProps) => {
   if (!props.open) return null

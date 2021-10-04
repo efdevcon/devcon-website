@@ -11,5 +11,5 @@ type: "Talk"
 track: "Society and Systems"
 keywords: ['sovereignty','dignity','general']
 tags: ['Society and Systems']
-speakers: ['Graham de Barra']
+speakers: ['Martin Diaz']
 ---

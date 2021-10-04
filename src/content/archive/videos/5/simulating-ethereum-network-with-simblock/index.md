@@ -10,5 +10,5 @@ type: "Talk"
 track: "Execution layer"
 keywords: ['simulator','technical']
 tags: ['Execution layer']
-speakers: ['Ryunosuke Nagayama']
+speakers: ['Ryunosuke Nagayama','Kazuyuki Shudo']
 ---

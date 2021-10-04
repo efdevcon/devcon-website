@@ -136,6 +136,9 @@ const Labels = ({ tags, playlists }: any) => {
 }
 
 export const Video = (props: VideoProps) => {
+  const isBrowser = typeof window !== "undefined"
+  const hash = isBrowser && window.location.hash ? window.location.hash.substring(1) : ''
+
   const video = props.video
   const imageUrl = `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`
 
@@ -157,7 +160,7 @@ export const Video = (props: VideoProps) => {
         <div className={css['container']}>
           <div className={css['video']}>
             <div className={css['player']}>
-              <Tabs>
+              <Tabs defaultTab={hash}>
                 <Tab title="YouTube">
                   <div className="aspect">
                     <iframe

@@ -76,7 +76,7 @@ export const useFilter = (options: FilterOptions | undefined) => {
 export const Filter = (props: FilterState) => {
   if (props.options.tags) {
     return (
-      <div className={css['tags']}>
+      <div className={css['tags']} data-type="filter">
         {props.options.filters.map(filter => {
           let className = `${css['tag']} label label-hover white plain`
 
@@ -104,7 +104,7 @@ export const Filter = (props: FilterState) => {
   if (props.options.multiSelect) className += ` ${css['never-collapse']}`
 
   return (
-    <div className={className}>
+    <div className={className} data-type="filter">
       <Dropdown
         className={css['dropdown']}
         customIcon={IconFilter}

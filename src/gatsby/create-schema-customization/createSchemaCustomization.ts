@@ -66,7 +66,7 @@ export const createSchemaCustomization = ({ actions, schema, ...rest }: CreateSc
         prev_dip: dipResolver('prev'),
         tagItems: tagsResolver,
         tagCount: tagCountResolver,
-        archiveVideos: videoResolver({ ...rest, createNode }),
+        archiveVideos: videoResolver,
         distinctVideoTags: distinctVideoTagsResolver,
         // relatedVideos: relatedVideosResolver,
         profiles: profileResolver,
