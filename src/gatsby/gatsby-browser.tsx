@@ -17,16 +17,21 @@ if (typeof window !== 'undefined') {
 }
 
 if (typeof window !== 'undefined') {
+  console.log('undefined window')
   if (navigator.serviceWorker) {
+    console.log('adding event listener')
     navigator.serviceWorker.addEventListener('message', async event => {
       console.log('message')
     })
   }
 }
-// import 'src/assets/css/main.scss'
 
 export const onServiceWorkerActive = async (...args) => {
   console.log('SERVICE WORKER ACTIVE')
+
+  navigator.serviceWorker.addEventListener('message', async event => {
+    console.log('message 2')
+  })
 }
 
 export const onServiceWorkerUpdateReady = () => {

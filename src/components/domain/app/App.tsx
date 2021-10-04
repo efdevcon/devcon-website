@@ -42,7 +42,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
       <Header withStrip={false} withHero={false} />
 
-      {/* {schedule} */}
+      {schedule}
 
       {isBrowser && (
         <div className={css['app']}>

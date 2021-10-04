@@ -2,7 +2,7 @@ workbox.routing.registerRoute(
   ({ request }) => request.url.includes('api/events/democon/talks') || request.url.includes('/cache-test'),
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'schedule',
-    plugins: [new workbox.broadcastUpdate.Plugin()],
+    plugins: [new workbox.broadcastUpdate.Plugin({ channelName: 'schedule-updates' })],
   })
 )
 

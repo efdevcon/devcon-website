@@ -6,6 +6,9 @@ import ChevronUp from 'src/assets/icons/chevron-up.svg'
 interface SectionProps {
   title?: string
   children?: any
+  className?: string
+  open?: boolean
+  setOpen?: (open: boolean) => void
 }
 
 const CollapsedSectionHeader = (props: any) => {
@@ -23,7 +26,7 @@ CollapsedSectionHeader.displayName = 'CollapsedSectionHeader'
 export { CollapsedSectionHeader }
 
 export const CollapsedSectionContent = (props: any) => {
-  const [contentHeight, setContentHeight] = React.useState('0px')
+  const [contentHeight, setContentHeight] = React.useState(props.open ? 'auto' : '0px')
   const ref = React.useRef<any>()
   const locked = React.useRef<any>()
   const mounting = React.useRef<any>(true)
@@ -83,15 +86,22 @@ export const CollapsedSectionContent = (props: any) => {
 }
 
 export function CollapsedSection(props: SectionProps) {
-  const [open, setOpen] = React.useState(false)
+  const isControlled = !!props.setOpen
+  const [open, setOpen] = React.useState(isControlled ? props.open : false)
+  let className = css['container']
+
+  if (props.className) className += ` ${props.className}`
 
   return (
-    <div className={css['container']}>
+    <div className={className}>
       {React.Children.map(props.children, child => {
         if (child && child.type.displayName === 'CollapsedSectionHeader')
-          return React.cloneElement(child, { open, setOpen })
+          return React.cloneElement(child, {
+            open: isControlled ? props.open : open,
+            setOpen: isControlled ? props.setOpen : setOpen,
+          })
 
-        return React.cloneElement(child, { open })
+        return React.cloneElement(child, { open: isControlled ? props.open : open })
       })}
     </div>
   )
