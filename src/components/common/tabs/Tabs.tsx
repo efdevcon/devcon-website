@@ -9,24 +9,28 @@ interface TabsProps {
   tabContentClassName?: string
 }
 
+const isValidTab = (children: React.ReactChildren, tab: string) => {
+  return React.Children.toArray(children).some(child => child?.props?.title === tab)
+}
+
 const findFirstValidTab = (children: React.ReactChildren): any => {
   // Children can be invalid (happens when a child is rendered conditionally), so we'll loop until we find the first valid child
   return React.Children.toArray(children).find(child => !!child)
 }
 
 export function Tabs(props: TabsProps) {
-  const tab = new URLSearchParams(useLocation().search).get('tab') ?? ''
-  let defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
-  if (props.useQuerystring) {
-    const child = React.Children.toArray(props.children).find(i => !!i && i.props?.title === tab)
+  const tabFromQueryString = new URLSearchParams(useLocation().search).get('tab')
+  const defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
+  const [activeTab, setActiveTab] = useState(defaultTab)
 
-    if (child) {
-      defaultTab = child.props?.title
+  // Sync active tab on mount if query string is defined
+  React.useLayoutEffect(() => {
+    if (tabFromQueryString && props.children && isValidTab(props.children, tabFromQueryString)) {
+      setActiveTab(tabFromQueryString)
     }
-  }
-  
-  const [activeTab, setActiveTab] = useState(defaultTab)  
-  if (props.useQuerystring) useQueryStringer({ tab: activeTab }, true)
+  }, [])
+
+  if (props.useQuerystring) useQueryStringer({ tab: activeTab }, true, true)
 
   let tabContentClassName = css['tab-content']
   if (props.tabContentClassName) tabContentClassName += ` ${props.tabContentClassName}`
@@ -41,7 +45,6 @@ export function Tabs(props: TabsProps) {
             const childProps = child.props
             const className = childProps.title === activeTab ? 'active' : ''
 
-            console.log('Render tab headers', childProps.title, className)
             return (
               <li key={childProps.title} className={css[className]} onClick={() => setActiveTab(childProps.title)}>
                 {childProps.title}
