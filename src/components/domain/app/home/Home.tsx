@@ -14,7 +14,7 @@ import {
 import { Dropdown } from 'src/components/common/dropdown'
 import css from './home.module.scss'
 import ticket from './ticket.png'
-import thumbnailPlaceholder from './thumbnail-placeholder.png'
+import thumbnailPlaceholder from 'src/assets/images/thumbnail-placeholder.png'
 
 export const Home = (props: any) => {
   const settings = {
@@ -116,7 +116,7 @@ export const Home = (props: any) => {
         </CollapsedSection>
 
         <div className={css['slider-container']}>
-          <p className="bold">Devcon</p>
+          <p className="font-lg bold">Devcon</p>
 
           <Slider containerClassName={css['slider']} sliderProps={sliderProps} title={props.title} onlySlider>
             <BasicCard
@@ -163,9 +163,7 @@ export const Home = (props: any) => {
         </div>
 
         <CollapsedSection>
-          <CollapsedSectionHeader>
-            <p className="bold">Updates</p>
-          </CollapsedSectionHeader>
+          <CollapsedSectionHeader title="Updates" />
 
           <CollapsedSectionContent>
             <div>Here's some hidden content</div>
@@ -173,9 +171,7 @@ export const Home = (props: any) => {
         </CollapsedSection>
 
         <CollapsedSection>
-          <CollapsedSectionHeader>
-            <p className="bold">Ticket Attestation</p>
-          </CollapsedSectionHeader>
+          <CollapsedSectionHeader title="Ticket Attestation" />
 
           <CollapsedSectionContent>
             <div className={css['ticket-container']}>
@@ -204,9 +200,7 @@ export const Home = (props: any) => {
         </CollapsedSection>
 
         <CollapsedSection>
-          <CollapsedSectionHeader>
-            <p className="bold">Collection</p>
-          </CollapsedSectionHeader>
+          <CollapsedSectionHeader title="Collection" />
 
           <CollapsedSectionContent>
             <div>Collection</div>

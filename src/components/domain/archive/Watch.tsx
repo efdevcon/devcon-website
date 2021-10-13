@@ -18,8 +18,9 @@ import { useLocation } from '@reach/router'
 import IconFilter from 'src/assets/icons/filter.svg'
 import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 import { Loader } from 'src/components/common/loader'
+import { NoResults } from 'src/components/common/filter'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
 type WatchProps = {}
 
@@ -97,19 +98,19 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
     setFrom(from)
   }
 
-  const imageData = useStaticQuery(graphql`
-    query {
-      files: allFile(filter: { relativePath: { in: ["no-results.png"] } }) {
-        nodes {
-          childImageSharp {
-            fluid(maxWidth: 1200, quality: 80) {
-              ...GatsbyImageSharpFluid_noBase64
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const imageData = useStaticQuery(graphql`
+  //   query {
+  //     files: allFile(filter: { relativePath: { in: ["no-results.png"] } }) {
+  //       nodes {
+  //         childImageSharp {
+  //           fluid(maxWidth: 1200, quality: 80) {
+  //             ...GatsbyImageSharpFluid_noBase64
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   const noResults = data && data.items && data.items.length === 0
 
@@ -159,14 +160,15 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
             </div>
             <div className={`${css['videos']} ${noResults ? css['no-results'] : ''}`} ref={videoContainerElement}>
               {noResults && (
-                <div className={css['no-results-container']}>
-                  <div className={css['no-results-image-container']}>
-                    <Img alt="" className={css['image']} fluid={imageData.files.nodes[0].childImageSharp.fluid} />
+                <NoResults />
+                // <div className={css['no-results-container']}>
+                //   <div className={css['no-results-image-container']}>
+                //     <Img alt="" className={css['image']} fluid={imageData.files.nodes[0].childImageSharp.fluid} />
 
-                    <p className="font-xxl bold">Sorry No Results Found</p>
-                    <p>Please try another search string</p>
-                  </div>
-                </div>
+                //     <p className="font-xxl bold">Sorry No Results Found</p>
+                //     <p>Please try another search string</p>
+                //   </div>
+                // </div>
               )}
 
               <Loader

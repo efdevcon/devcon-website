@@ -14,6 +14,9 @@ import { useAccountContext } from 'src/context/account-context'
 import LoginStyled from './account/LoginStyled'
 import { Schedule, useSyncSchedule } from './schedule'
 import { Venue } from './venue'
+import { Speakers, SpeakerDetails } from './speakers'
+
+console.log(SpeakerDetails, 'speaker details')
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -28,7 +31,9 @@ export const App = accountContextHOC(({ data, location }: any) => {
   const accountContext = useAccountContext()
   const loggedIn = accountContext.account || true /* Forcing logged in for dev purposes */
 
-  const schedule = useSyncSchedule()
+  // const schedule = useSyncSchedule()
+
+  // console.log(schedule, 'schedule')
 
   return (
     <>
@@ -42,7 +47,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
       <Header withStrip={false} withHero={false} />
 
-      {schedule}
+      {/* {schedule} */}
 
       {isBrowser && (
         <div className={css['app']}>
@@ -56,6 +61,8 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
             <Venue path="/venue" />
             <Schedule path="/schedule" />
+            <Speakers path="/speakers" />
+            <SpeakerDetails path="/speakers/:speaker" />
 
             <Home path="/" />
 
@@ -63,7 +70,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
             <PrivateRoute path="/attest" component={Attest} />
           </Router>
 
-          {loggedIn && <BottomNav />}
+          {loggedIn && <BottomNav location={location} />}
         </div>
       )}
     </>

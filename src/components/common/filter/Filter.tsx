@@ -3,7 +3,9 @@ import css from './filter.module.scss'
 import { Dropdown } from 'src/components/common/dropdown'
 import IconCheck from 'src/assets/icons/check_circle.svg'
 import IconPlus from 'src/assets/icons/plus.svg'
+import IconClose from 'src/assets/icons/cross.svg'
 import IconFilter from 'src/assets/icons/filter.svg'
+import { Button } from 'src/components/common/button'
 
 export type FilterOptions = {
   tags?: boolean
@@ -71,6 +73,55 @@ export const useFilter = (options: FilterOptions | undefined) => {
   const filteredData = options.filterFunction(filterState.activeFilter)
 
   return [filteredData, filterState] as [any[], FilterState]
+}
+
+export const FilterFoldout = (props: any) => {
+  const [open, setOpen] = React.useState(false)
+  const ref = React.createRef<HTMLDivElement>()
+  const buttonRef = React.createRef<HTMLDivElement>()
+
+  React.useEffect(() => {
+    const handleClickOutside = (e: any) => {
+      const isButtonClick = buttonRef.current && buttonRef.current.contains(e.target)
+
+      if (!isButtonClick && ref.current && !ref.current.contains(e.target)) {
+        setOpen(false)
+      }
+    }
+
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside)
+
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }
+  }, [ref, buttonRef, open])
+
+  let className = css['filter-foldout']
+
+  if (open) className += ` ${css['open']}`
+
+  return (
+    <div className={`${className}`}>
+      <Button
+        ref={buttonRef}
+        className={`${open ? 'red' : 'black ghost'} squared sm`}
+        onClick={(e: any) => {
+          setOpen(!open)
+        }}
+      >
+        {open ? <IconClose /> : <IconFilter />}
+      </Button>
+
+      <div className={css['foldout']}>
+        <div className={css['content']} ref={ref}>
+          <p className={css['header']}>Filter</p>
+          {props.children}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export const Filter = (props: FilterState) => {

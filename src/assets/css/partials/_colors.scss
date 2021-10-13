@@ -97,7 +97,7 @@ $standard-border-color: $monochrome-5;
   --border-color: #{$main};
 }
 @mixin black-ghost {
-  background: none;
+  background: $monochrome-1;
   color: $main;
   --color-icon: #{$main};
   --border-color: #{$main};

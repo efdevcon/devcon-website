@@ -1,13 +1,46 @@
 import React from 'react'
+import { getEvent, getTalks, getSpeakers } from './pretalx-api';
 
-const endpoint = 'http://localhost:9000/api/cache-test'; // 'https://pretalx.com/api/events/democon/talks/';
+// const endpoint = 'http://localhost:9000/api/cache-test';
+const endpoint = 'https://pretalx.com/api/events/democon/talks/';
 
 const fetchSchedule = () => {
   return fetch(endpoint);
 }
 
+const formatScheduleData = (results: any) => {
+  return results;
+  // const scheduleData = {
+  //   speakers: {
+  //     order: [],
+  //     dict: {}
+  //   },
+  //   talks: {
+  //     order: [],
+  //     orderByDay: [],
+  //     dict: {}
+  //   },
+  //   tracks: {
+  //     order: [],
+  //     dict: {}
+  //   }
+  // };
+
+  // results.map(result => {
+  //   result.speakers.forEach(speaker => {
+  //     scheduleData.speakers[speaker.code] = speaker
+  //   });
+    
+    
+  // });
+
+}
+
 const parseResponse = (response: Response) => {
-  return response.json();
+  return response
+    .json()
+    .then(responseAsJson => responseAsJson.results)
+    .then(formatScheduleData)
 }
 
 export const useSyncSchedule = () => {
@@ -27,12 +60,8 @@ export const useSyncSchedule = () => {
           if (cacheName === 'schedule') {
             const cache = await caches.open(cacheName);
             const updatedResponse = await cache.match(updatedURL) as Response;
-            
-            // const updatedSchedule = await parseResponse(updatedResponse);
 
             console.log(updatedResponse, 'updated response');
-
-            // console.log(updatedSchedule, 'CACHE UPDATE')
 
             parseResponse(updatedResponse).then(setData).catch(console.error);
           }
@@ -55,7 +84,7 @@ export const useSyncSchedule = () => {
   }, []);
 
   React.useEffect(() => {
-    fetchSchedule().then(parseResponse).then(setData).catch(console.error);
+    getTalks().then(setData).catch(console.error);
   }, []);
 
   console.log(data, 'schedule data');

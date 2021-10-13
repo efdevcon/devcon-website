@@ -11,11 +11,19 @@ interface SectionProps {
   setOpen?: (open: boolean) => void
 }
 
-const CollapsedSectionHeader = (props: any) => {
+interface CollapsedSectionHeaderProps {
+  title?: string
+  children?: any
+  open?: boolean
+  setOpen?: (open: boolean) => void
+}
+
+const CollapsedSectionHeader = (props: CollapsedSectionHeaderProps) => {
   return (
     <div className={css['header']} onClick={() => props.setOpen(!props.open)}>
+      {/* Optional default title to help with consistency */}
+      {props.title && <p className={css['title']}>{props.title}</p>}
       {props.children}
-
       <div className={css['icon']}>{props.open ? <ChevronUp /> : <ChevronDown />}</div>
     </div>
   )
@@ -39,6 +47,8 @@ export const CollapsedSectionContent = (props: any) => {
       return
     }
 
+    if (!ref.current) return
+
     if (props.open) {
       setContentHeight(`${ref.current.scrollHeight}px`)
       // ref.current.style.setProperty('--contentHeight', `${ref.current.scrollHeight}px`)
@@ -60,7 +70,7 @@ export const CollapsedSectionContent = (props: any) => {
   }, [props.open])
 
   React.useEffect(() => {
-    if (props.open) {
+    if (props.open && ref.current) {
       // Set height to auto when the transition completes - this allows the content to change size after it becomes visible
       const handler = () => {
         if (locked.current) return
@@ -78,8 +88,17 @@ export const CollapsedSectionContent = (props: any) => {
     }
   }, [props.open])
 
+  // Have some issues with overflow: hidden when using the animation wrapper; adding an opt-out for that case
+  if (props.dontAnimate) {
+    if (props.open) return props.children
+
+    return null
+  }
+
+  let className = css['content']
+
   return (
-    <div ref={ref} className={css['content']} style={{ '--contentHeight': contentHeight }}>
+    <div ref={ref} className={className} style={{ '--contentHeight': contentHeight }}>
       {props.children}
     </div>
   )

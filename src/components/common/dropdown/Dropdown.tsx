@@ -23,15 +23,18 @@ export function Dropdown(props: DropdownProps) {
   const currentSelection = props.options.find(option => option.value === props.value)
 
   useEffect(() => {
-    function handleClickOutside(e: any) {
+    const handleClickOutside = (e: any) => {
       if (ref.current && !ref.current.contains(e.target)) {
         setOpen(false)
       }
     }
+
     if (open) {
       document.addEventListener('mousedown', handleClickOutside)
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside)
+
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
     }
   }, [ref, open])
 

@@ -5,8 +5,12 @@
   flex-direction: column;
   border-bottom: 1px solid $colors-standard-border-color;
 
-  padding-left: $gaps-gap-2;
-  padding-right: $gaps-gap-2;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  // padding-left: $gaps-gap-2;
+  // padding-right: $gaps-gap-2;
 
   .header {
     user-select: none;
@@ -14,8 +18,13 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding-bottom: $gaps-gap-2;
-    padding-top: $gaps-gap-2;
+    padding-bottom: $gaps-gap-4;
+    padding-top: $gaps-gap-4;
+
+    .title {
+      @include fonts-bold;
+      @include fonts-lg;
+    }
 
     &:hover {
       cursor: pointer;
@@ -23,9 +32,10 @@
     }
   }
 
+
   .content {
     transition: all 0.2s linear;
-    overflow: hidden;
     height: var(--contentHeight);
+    overflow: hidden;
   }
 }
