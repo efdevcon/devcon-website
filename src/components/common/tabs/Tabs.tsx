@@ -30,7 +30,7 @@ export function Tabs(props: TabsProps) {
     }
   }, [])
 
-  if (props.useQuerystring) useQueryStringer({ tab: activeTab }, true, true)
+  useQueryStringer(props.useQuerystring ? { tab: activeTab } : {}, props.useQuerystring, true)
 
   let tabContentClassName = css['tab-content']
   if (props.tabContentClassName) tabContentClassName += ` ${props.tabContentClassName}`
