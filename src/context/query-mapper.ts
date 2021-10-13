@@ -5,7 +5,15 @@ import { FooterData } from 'src/types/FooterData'
 import { Tag } from 'src/types/Tag'
 import { Page } from 'src/types/Page'
 
-export function ToNavigationData(nodes: any, videoTags?: any[], type?: 'default' | 'archive'): NavigationData {
+export function ToNavigationData(nodes: any, videoTags?: any[], type?: 'default' | 'archive' | '404'): NavigationData {
+  if (type === '404') {
+    return {
+      top: ToLinks(nodes, 'top-archive'),
+      site: [],
+      footer: ToFooterData(nodes),
+    }
+  }
+
   return {
     top: type === 'archive' ? ToLinks(nodes, 'top-archive') : ToLinks(nodes, 'top'),
     site: type === 'archive' ? ToArchiveNavigation(videoTags) : ToLinks(nodes, 'site'),

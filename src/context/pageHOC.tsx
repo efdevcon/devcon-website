@@ -11,7 +11,8 @@ type pageProps = {
 export const pageHOC =
   (PageTemplate: React.ComponentType<pageProps>, mapDataToContext?: (props: pageProps) => { [key: string]: any }) =>
   (props: pageProps) => {
-    const pageType = props.location?.pathname?.startsWith('/archive') ? 'archive' : 'default'
+    const notFound = props.data?.files?.nodes[0]?.childImageSharp?.fluid?.src?.endsWith('404.png') ?? false
+    const pageType = notFound ? '404' : props.location?.pathname?.startsWith('/archive') ? 'archive' : 'default'
 
     const context = {
       data: props.data,
