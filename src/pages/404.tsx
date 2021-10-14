@@ -8,6 +8,7 @@ export default function Index() {
     <div>
       <h1>{intl.formatMessage({ id: 'notfound_title' })}</h1>
       <p>{intl.formatMessage({ id: 'notfound_description' })}</p>
+      <p><a href="https://www.devcon.org/">Back to website</a></p>
     </div>
   )
 }
