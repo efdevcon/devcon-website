@@ -34,7 +34,6 @@
 
 .description {
   .body {
-
   }
 }
 
@@ -49,6 +48,14 @@
 
   .video {
     margin-bottom: $gaps-gap-4;
+
+    [data-type='video-card-title'] {
+      @include fonts-md;
+    }
+
+    [data-type='video-card-description'] {
+      @include fonts-sm;
+    }
   }
 }
 

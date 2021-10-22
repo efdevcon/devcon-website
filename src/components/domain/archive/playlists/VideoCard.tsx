@@ -64,8 +64,12 @@ export const VideoCard = (props: Props) => {
 
       <div className={css['body']}>
         <div className={css['top']}>
-          <p className={css['title']}>{props.video.title}</p>
-          <p className={css['description']}>{props.video.description}</p>
+          <p data-type="video-card-title" className={css['title']}>
+            {props.video.title}
+          </p>
+          <p data-type="video-card-description" className={css['description']}>
+            {props.video.description}
+          </p>
           {/* {props.showDescription && <p className={css['description']}>{props.video.description}</p>} */}
         </div>
 

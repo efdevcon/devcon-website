@@ -47,7 +47,10 @@ const SpeakerCard = ({ speaker }: CardProps) => {
 
   const iconProps = {
     className: css['favorite'],
-    onClick: () => setFavorited(!favorited),
+    onClick: (e: React.SyntheticEvent) => {
+      e.preventDefault();
+      setFavorited(!favorited)
+    },
   }
 
   return (
@@ -319,7 +322,7 @@ export const Speakers = () => {
 
                       {filterIsSelected && (
                         <div className={css['filter-actions']}>
-                          <button className={`plain ${css['clear']}`} onClick={clearFilters}>
+                          <button className={`plain ${css['clear']} hover-underline`} onClick={clearFilters}>
                             Clear all
                           </button>
 
