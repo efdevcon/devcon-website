@@ -75,7 +75,11 @@ export const useFilter = (options: FilterOptions | undefined) => {
   return [filteredData, filterState] as [any[], FilterState]
 }
 
-export const FilterFoldout = (props: any) => {
+type FilterFoldoutProps = {
+  children: (open: boolean, setOpen: (isOpen: boolean) => void) => React.ReactElement
+}
+
+export const FilterFoldout = (props: FilterFoldoutProps) => {
   const [open, setOpen] = React.useState(false)
   const ref = React.createRef<HTMLDivElement>()
   const buttonRef = React.createRef<HTMLDivElement>()
@@ -117,7 +121,7 @@ export const FilterFoldout = (props: any) => {
       <div className={css['foldout']}>
         <div className={css['content']} ref={ref}>
           <p className={css['header']}>Filter</p>
-          {props.children}
+          {props.children(open, setOpen)}
         </div>
       </div>
     </div>

@@ -14,6 +14,7 @@ import { Speaker as SpeakerType } from 'src/types/Speaker'
 import { useSort, SortVariation, Sort } from 'src/components/common/sort'
 import { InputForm } from 'src/components/common/input-form'
 import { Filter, FilterFoldout, NoResults, useFilter } from 'src/components/common/filter'
+import { Button } from 'src/components/common/button'
 
 const dummySpeakers = [
   {
@@ -248,12 +249,13 @@ export const Speakers = () => {
   )
 
   const sortedBy = sortState.fields[sortState.sortBy]
-
-  // console.log(sortedBy)
-  // console.log(filterState, 'fitler state')
-  // console.log(speakers, 'speakers')
-
   const noResults = speakers.length === 0
+  const clearFilters = () => {
+    filterState?.clearFilter()
+  }
+  const filterIsSelected = (() => {
+    return Object.keys(filterState.activeFilter).length > 0
+  })()
 
   return (
     <div>
@@ -265,24 +267,48 @@ export const Speakers = () => {
               <Sort {...sortState} />
 
               <FilterFoldout>
-                <CollapsedSection>
-                  <CollapsedSectionHeader title="Tracks" />
-                  <CollapsedSectionContent>
-                    <Filter {...filterState} />
-                  </CollapsedSectionContent>
-                </CollapsedSection>
-                <CollapsedSection>
-                  <CollapsedSectionHeader title="Tracks" />
-                  <CollapsedSectionContent>
-                    <Filter {...filterState} />
-                  </CollapsedSectionContent>
-                </CollapsedSection>
-                <CollapsedSection>
-                  <CollapsedSectionHeader title="Tracks" />
-                  <CollapsedSectionContent>
-                    <Filter {...filterState} />
-                  </CollapsedSectionContent>
-                </CollapsedSection>
+                {(_, setOpen) => {
+                  return (
+                    <>
+                      <CollapsedSection>
+                        <CollapsedSectionHeader title="Tracks" />
+                        <CollapsedSectionContent>
+                          <div className={css['filter-container']}>
+                            <Filter {...filterState} />
+                          </div>
+                        </CollapsedSectionContent>
+                      </CollapsedSection>
+                      <CollapsedSection>
+                        <CollapsedSectionHeader title="Tracks" />
+                        <CollapsedSectionContent>
+                          <div className={css['filter-container']}>
+                            <Filter {...filterState} />
+                          </div>
+                        </CollapsedSectionContent>
+                      </CollapsedSection>
+                      <CollapsedSection>
+                        <CollapsedSectionHeader title="Tracks" />
+                        <CollapsedSectionContent>
+                          <div className={css['filter-container']}>
+                            <Filter {...filterState} />
+                          </div>
+                        </CollapsedSectionContent>
+                      </CollapsedSection>
+
+                      {filterIsSelected && (
+                        <div className={css['filter-actions']}>
+                          <button className={`plain ${css['clear']}`} onClick={clearFilters}>
+                            Clear all
+                          </button>
+
+                          <Button className="red" onClick={() => setOpen(false)}>
+                            Confirm
+                          </Button>
+                        </div>
+                      )}
+                    </>
+                  )
+                }}
               </FilterFoldout>
             </div>
           </div>
