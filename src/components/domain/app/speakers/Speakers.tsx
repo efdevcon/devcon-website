@@ -253,8 +253,12 @@ export const Speakers = () => {
   const clearFilters = () => {
     filterState?.clearFilter()
   }
+
+  const nFiltersSelected = filterState ? Object.keys(filterState.activeFilter).length : 0
+
+  // TO-DO: add remaining filters
   const filterIsSelected = (() => {
-    return Object.keys(filterState.activeFilter).length > 0
+    return nFiltersSelected > 0
   })()
 
   return (
@@ -271,7 +275,13 @@ export const Speakers = () => {
                   return (
                     <>
                       <CollapsedSection>
-                        <CollapsedSectionHeader title="Tracks" />
+                        <CollapsedSectionHeader title="Tracks">
+                          {nFiltersSelected > 0 && (
+                            <div className={css['n-filters-indicator']}>
+                              <div className="label sm error">{nFiltersSelected}</div>
+                            </div>
+                          )}
+                        </CollapsedSectionHeader>
                         <CollapsedSectionContent>
                           <div className={css['filter-container']}>
                             <Filter {...filterState} />
@@ -279,7 +289,13 @@ export const Speakers = () => {
                         </CollapsedSectionContent>
                       </CollapsedSection>
                       <CollapsedSection>
-                        <CollapsedSectionHeader title="Tracks" />
+                        <CollapsedSectionHeader title="Tracks">
+                          {nFiltersSelected > 0 && (
+                            <div className={css['n-filters-indicator']}>
+                              <div className="label sm error">{nFiltersSelected}</div>
+                            </div>
+                          )}
+                        </CollapsedSectionHeader>
                         <CollapsedSectionContent>
                           <div className={css['filter-container']}>
                             <Filter {...filterState} />
@@ -287,7 +303,13 @@ export const Speakers = () => {
                         </CollapsedSectionContent>
                       </CollapsedSection>
                       <CollapsedSection>
-                        <CollapsedSectionHeader title="Tracks" />
+                        <CollapsedSectionHeader title="Tracks">
+                          {nFiltersSelected > 0 && (
+                            <div className={css['n-filters-indicator']}>
+                              <div className="label sm error">{nFiltersSelected}</div>
+                            </div>
+                          )}
+                        </CollapsedSectionHeader>
                         <CollapsedSectionContent>
                           <div className={css['filter-container']}>
                             <Filter {...filterState} />

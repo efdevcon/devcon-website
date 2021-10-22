@@ -66,6 +66,18 @@
     margin-bottom: $gaps-gap-3;
   }
 
+  .n-filters-indicator {
+    flex-grow: 1;
+    margin-left: $gaps-gap-2;
+    position: relative;
+    align-self: stretch;
+
+    // Absolute positioning to prevent expanding size of container
+    > * {
+      position: absolute;
+    }
+  }
+
   .filter-actions {
     display: flex;
     align-items: center;
