@@ -24,11 +24,13 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: 100%;
     width: 100%;
     max-width: 700px;
 
     .nav-item {
       display: flex;
+      height: 100%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -36,11 +38,14 @@
       padding: $gaps-gap-2;
 
       &.selected {
-        color: $colors-track-red;
-        
-        svg {
-          --color-icon: #{$colors-track-red};
-        }
+        // color: $colors-track-red;
+        background: $colors-track-red;
+        color: $colors-monochrome-1;
+
+        // svg {
+        //   --color-icon: #{$colors-monochrome-1};
+        //   // --color-icon: #{$colors-track-red};
+        // }
       }
 
       svg {
