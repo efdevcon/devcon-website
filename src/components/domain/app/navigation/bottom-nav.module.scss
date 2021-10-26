@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 65px;
+  // height: 65px;
   z-index: 100;
   background: $colors-monochrome-9;
   color: white;
@@ -36,16 +36,11 @@
       justify-content: center;
       flex: 1;
       padding: $gaps-gap-2;
+      padding-top: $gaps-gap-3;
 
       &.selected {
-        // color: $colors-track-red;
         background: $colors-track-red;
         color: $colors-monochrome-1;
-
-        // svg {
-        //   --color-icon: #{$colors-monochrome-1};
-        //   // --color-icon: #{$colors-track-red};
-        // }
       }
 
       svg {

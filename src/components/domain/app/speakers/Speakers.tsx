@@ -16,6 +16,8 @@ import { InputForm } from 'src/components/common/input-form'
 import { Filter, FilterFoldout, NoResults, useFilter } from 'src/components/common/filter'
 import { Button } from 'src/components/common/button'
 
+console.log(css, 'css lol', css['speaker-card'])
+
 const dummySpeakers = [
   {
     name: 'Laqeel Jacobsen',
@@ -41,14 +43,14 @@ type CardProps = {
   speaker: SpeakerType
 }
 
-const SpeakerCard = ({ speaker }: CardProps) => {
+export const SpeakerCard = ({ speaker }: CardProps) => {
   // Comes from props later
   const [favorited, setFavorited] = React.useState(false)
 
   const iconProps = {
     className: css['favorite'],
     onClick: (e: React.SyntheticEvent) => {
-      e.preventDefault();
+      e.preventDefault()
       setFavorited(!favorited)
     },
   }

@@ -55,6 +55,10 @@ export const SessionCard = (props: any) => {
             <IconCalendar />
             <p>Luke Jacobsen, Lily Jacobsen, Luna Jacobsen</p>
           </div>
+          <div className={css['n-seats']}>
+            <IconCalendar />
+            <p>600</p>
+          </div>
         </div>
       </div>
     </div>

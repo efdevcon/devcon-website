@@ -15,8 +15,9 @@ import LoginStyled from './account/LoginStyled'
 import { Schedule, useSyncSchedule } from './schedule'
 import { Venue } from './venue'
 import { Speakers, SpeakerDetails } from './speakers'
+import { Session } from 'src/components/domain/app/session'
 
-console.log(SpeakerDetails, 'speaker details')
+// console.log(SpeakerDetails, 'speaker details')
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -61,6 +62,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
             <Venue path="/venue" />
             <Schedule path="/schedule" />
+            <Session path="/schedule/:session" />
             <Speakers path="/speakers" />
             <SpeakerDetails path="/speakers/:speaker" />
 
