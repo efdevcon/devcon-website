@@ -11,7 +11,7 @@ type LinkProps = {
   [key: string]: any
 }
 
-export const Link = React.forwardRef(
+const Link = React.forwardRef(
   ({ children, indicateExternal, external, allowDrag, to, ...rest }: LinkProps, ref: any) => {
     const isMailTo = to.startsWith('mailto:')
     const dragging = React.useRef(false)
@@ -68,3 +68,7 @@ export const Link = React.forwardRef(
     )
   }
 )
+
+Link.displayName = 'LinkComponent'
+
+export { Link }

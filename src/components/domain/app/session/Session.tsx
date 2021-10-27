@@ -1,9 +1,12 @@
 import React from 'react'
 import IconCalendar from 'src/assets/icons/schedule-plus.svg'
 import iconSecurity from 'src/assets/images/tracks/security.svg'
+import { LinkList, Link } from 'src/components/common/link'
 import { SpeakerCard } from 'src/components/domain/app/speakers'
 import { SessionCard } from './SessionCard'
 import css from './session.module.scss'
+import { Tabs } from 'src/components/common/tabs'
+import { Tab } from 'src/components/common/tabs/Tabs'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -67,16 +70,16 @@ export const Session = (props: any) => {
         <div className="content">
           <div className={css['actions']}>
             <div>
-              Mark as interesting <IconCalendar />
+              <p>Mark as interesting</p> <IconCalendar />
             </div>
             <div>
-              Mark as interesting <IconCalendar />
+              <p>Mark as interesting</p> <IconCalendar />
             </div>
             <div>
-              Mark as interesting <IconCalendar />
+              <p>Mark as interesting</p> <IconCalendar />
             </div>
             <div>
-              Mark as interesting <IconCalendar />
+              <p>Mark as interesting</p> <IconCalendar />
             </div>
           </div>
 
@@ -110,18 +113,40 @@ export const Session = (props: any) => {
             </p>
           </div>
 
-          <div className={css['']}>
+          <div className={css['resources']}>
             <h3 className={css['title']}>Resources</h3>
-            <h4 className={css['subtitle']}>Presentation Slides</h4>
-            <h4 className={css['subtitle']}>Suggested reading</h4>
+
+            <div className={css['slides']}>
+              <h4 className={css['subtitle']}>Presentation Slides</h4>
+              <LinkList className={css['link-list']}>
+                <Link to="https://drive.google.com">
+                  <p>Access presentation Slides.</p>
+                  <p className="bold">drive.google.com/file/d/1rGuCVLyMV-2T...</p>
+                </Link>
+              </LinkList>
+            </div>
+
+            <div className={css['suggested-reading']}>
+              <h4 className={css['subtitle']}>Suggested Reading</h4>
+              <LinkList className={css['link-list']}>
+                <Link to="https://devcon.org">EF Ecosystem Support Program </Link>
+                <Link to="https://devcon.org">Grantee Roundup: August 2021</Link>
+                <Link to="https://devcon.org">Grantee Roundup: July 2021</Link>
+              </LinkList>
+            </div>
           </div>
 
-          <div className={css['']}>
-            <h3 className={css['title']}>Livestream</h3>
-            <SessionCard />
+          <div className={css['livestream']}>
+            <div>
+              <h3 className={css['title']}>Livestream</h3>
+              <Tabs>
+                <Tab title="LivePeer">Livepeer</Tab>
+                <Tab title="YouTube">YouTube</Tab>
+              </Tabs>
+            </div>
           </div>
 
-          <div className={css['']}>
+          <div className={css['related-sessions']}>
             <h3 className={css['title']}>Related Sessions</h3>
             <SessionCard />
             <SessionCard />
