@@ -10,3 +10,9 @@
   to = "/en/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/archive"
+  to = "https://archive.devcon.org/"
+  status = 302
+  force = true
