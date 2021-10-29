@@ -87,9 +87,16 @@
         flex-grow: 1;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        margin-top: 0px;
         width: 80%;
         padding-left: $gaps-gap-2;
         max-width: 200px;
+
+        a {
+          display: flex;
+        }
       }
     }
 

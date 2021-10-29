@@ -85,12 +85,7 @@ export const Banner = (props: Props) => {
           <p> Testing </p>
         </Modal> */}
 
-        <Modal
-          image={data.allFile.nodes[0]}
-          open={ipfsModal}
-          close={() => setIpfsModal(false)}
-          title="Pinning content on IPFS"
-        >
+        <Modal image={data.allFile.nodes[0]} open={ipfsModal} close={() => setIpfsModal(false)} title="What is IPFS">
           <div className={css['modal-content']}>
             <p>Let's just start with a one-line definition of IPFS:</p>
             <p className={css['lead']}>

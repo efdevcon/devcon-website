@@ -80,6 +80,7 @@
       display: none;
 
       @media (max-width: $breakpoints-lg) {
+        touch-action: none;
         display: flex;
       }
     }
