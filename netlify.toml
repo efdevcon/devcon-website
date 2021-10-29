@@ -41,3 +41,76 @@
   to = "/archive/"
   status = 302
   force = true
+
+# Archive
+[[redirects]]
+  from = "/devcon-5/details"
+  to = "/archive/playlists/devcon-5"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-5/videos/*"
+  to = "/archive/watch?edition=5"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-4/details"
+  to = "/archive/playlists/devcon-4"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-4/videos/*"
+  to = "/archive/watch?edition=4"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-3/details"
+  to = "/archive/playlists/devcon-3"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-3/videos/*"
+  to = "/archive/watch?edition=3"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-2/details"
+  to = "/archive/playlists/devcon-2"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-2/videos/*"
+  to = "/archive/watch?edition=2"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-1/details"
+  to = "/archive/playlists/devcon-1"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-1/videos/*"
+  to = "/archive/watch?edition=1"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-0/details"
+  to = "/archive/playlists/devcon-0"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/devcon-0/videos/*"
+  to = "/archive/watch?edition=0"
+  status = 302
+  force = true
