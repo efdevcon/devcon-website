@@ -16,6 +16,7 @@ export const query = graphql`
           startDate
           endDate
           description
+          customReadMore
           image {
             childImageSharp {
               fluid(maxHeight: 1024, quality: 80) {

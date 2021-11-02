@@ -6,5 +6,6 @@ export interface Quest {
   url: string
   urlInfo?: string
   image: string
+  customReadMore?: string
   description: string
 }

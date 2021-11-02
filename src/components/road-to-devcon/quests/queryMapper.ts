@@ -11,6 +11,7 @@ export const toQuestData = (data: any): Quest[] => {
       url: quest.frontmatter.url,
       urlInfo: quest.frontmatter.urlInfo,
       description: quest.frontmatter.description,
+      customReadMore: quest.frontmatter.customReadMore,
       image: quest.frontmatter.image.childImageSharp.fluid
     }
   })

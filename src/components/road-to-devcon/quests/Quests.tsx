@@ -47,8 +47,6 @@ export const Quests = React.forwardRef((props: any, ref) => {
   })
   const slideState = useSlideState(filteredQuests)
 
-  console.log(filteredQuests, quests, 'quests filtered wtf')
-
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { in: ["quests.png", "no-quests-hearts.png"] } }) {
@@ -216,7 +214,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
                     title={quest.title}
                     imageUrl={quest.image}
                     className={`${css['card']} ${activeFilter === 'past' && css['past']}`}
-                    customReadMore={intl.formatMessage({ id: 'rtd_quests_learn_more' })}
+                    customReadMore={quest.customReadMore || intl.formatMessage({ id: 'rtd_quests_learn_more' })}
                     metadata={[quest.endDate ? `${quest.startDate} - ${quest.endDate}` : quest.startDate, quest.issuer]}
                     linkUrl={quest.url}
                     disabled={activeFilter === 'past'}
