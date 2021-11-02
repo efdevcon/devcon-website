@@ -6,7 +6,7 @@ export const toQuestData = (data: any): Quest[] => {
     return {
       title: quest.frontmatter.title,
       startDate: moment.utc(quest.frontmatter.startDate).format('MMM D, YYYY'),
-      endDate: moment.utc(quest.frontmatter.endDate).format('MMM D, YYYY'),
+      endDate: quest.frontmatter.endDate ? moment.utc(quest.frontmatter.endDate).format('MMM D, YYYY') : null,
       issuer: quest.frontmatter.issuer,
       url: quest.frontmatter.url,
       urlInfo: quest.frontmatter.urlInfo,

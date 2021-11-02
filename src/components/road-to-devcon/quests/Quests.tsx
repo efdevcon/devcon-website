@@ -37,14 +37,17 @@ export const Quests = React.forwardRef((props: any, ref) => {
   const filteredQuests = quests.filter(quest => {
     const now = new Date()
     const questBegin = moment(quest.startDate, 'MMM D, YYYY').toDate()
+    const questEnd = quest.endDate ? moment(quest.endDate, 'MMM D, YYYY').toDate() : questBegin
 
     if (activeFilter === 'upcoming') {
-      return now < questBegin
+      return now < questEnd
     } else {
-      return questBegin < now
+      return questEnd < now
     }
   })
   const slideState = useSlideState(filteredQuests)
+
+  console.log(filteredQuests, quests, 'quests filtered wtf')
 
   const data = useStaticQuery(graphql`
     query {
@@ -214,7 +217,7 @@ export const Quests = React.forwardRef((props: any, ref) => {
                     imageUrl={quest.image}
                     className={`${css['card']} ${activeFilter === 'past' && css['past']}`}
                     customReadMore={intl.formatMessage({ id: 'rtd_quests_learn_more' })}
-                    metadata={[quest.startDate, quest.issuer]}
+                    metadata={[quest.endDate ? `${quest.startDate} - ${quest.endDate}` : quest.startDate, quest.issuer]}
                     linkUrl={quest.url}
                     disabled={activeFilter === 'past'}
                     description={quest.description}

@@ -194,10 +194,8 @@
   }
 
   // Fix weird issue with image not being flush with sides
-  &.no-quests {
-    :global(.gatsby-image-wrapper) {
-      width: 101% !important;
-    }
+  :global(.gatsby-image-wrapper) {
+    width: 101% !important;
   }
 
   &.past {
