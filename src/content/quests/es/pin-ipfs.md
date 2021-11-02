@@ -1,6 +1,5 @@
 ---
-title: 
-Fijar el archivo en IPFS
+title: Fijar el archivo en IPFS
 startDate: 2021-11-05
 endDate: 2021-12-05
 issuer: Devcon
