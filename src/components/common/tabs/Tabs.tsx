@@ -1,5 +1,5 @@
 import { useLocation } from '@reach/router'
-import React, { ReactNode, useState, useEffect } from 'react'
+import React, { ReactNode, useState, useEffect, useImperativeHandle } from 'react'
 import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import css from './tabs.module.scss'
 
@@ -18,7 +18,7 @@ const findFirstValidTab = (children: React.ReactChildren): any => {
   return React.Children.toArray(children).find(child => !!child)
 }
 
-export function Tabs(props: TabsProps) {
+export const Tabs = React.forwardRef((props: TabsProps, ref: any) => {
   const tabFromQueryString = new URLSearchParams(useLocation().search).get('tab')
   const defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
   const [activeTab, setActiveTab] = useState(defaultTab)
@@ -29,6 +29,10 @@ export function Tabs(props: TabsProps) {
       setActiveTab(tabFromQueryString)
     }
   }, [])
+
+  useImperativeHandle(ref, () => ({
+    setActiveTab,
+  }))
 
   useQueryStringer(props.useQuerystring ? { tab: activeTab } : {}, props.useQuerystring, true)
 
@@ -63,7 +67,7 @@ export function Tabs(props: TabsProps) {
       </div>
     </>
   )
-}
+})
 
 interface TabProps {
   title: string
