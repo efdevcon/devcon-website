@@ -16,3 +16,9 @@
   to = "https://archive.devcon.org/"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/grants"
+  to = "https://esp.ethereum.foundation/en/devcon-grants/"
+  status = 302
+  force = true
