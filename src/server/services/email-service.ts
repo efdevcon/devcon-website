@@ -1,6 +1,6 @@
 import nodemailer, { Transporter } from 'nodemailer'
 import { SERVER_CONFIG } from '../config/server'
-import addEmailTemplate from '../../templates/email.html'
+import addEmailTemplate from '../../templates/add-email.html'
 
 require('dotenv').config()
 
