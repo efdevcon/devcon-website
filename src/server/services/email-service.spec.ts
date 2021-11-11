@@ -1,5 +1,10 @@
 import { EmailService } from './email-service'
 
+// Test credentials
+// Name	Niko Dooley
+// Username	uem5bkcwoy4nfeov@ethereal.email (also works as a real inbound email address)
+// Password	eP8ytB79mBpfGaCtmh
+
 test('Init search index client', () => {
   const client = new EmailService()
 
