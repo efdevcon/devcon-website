@@ -17,7 +17,7 @@ test('Send blank test email', async () => {
   await client.sendMail('uem5bkcwoy4nfeov@ethereal.email', 'add-email', {
     TITLE: 'Confirm email address',
     DESCRIPTION: 'Use the link below to confirm your email address and link it to your devcon.org user account.',
-    CALL_TO_ACTION: 'Confirm Email',
+    CALL_TO_ACTION: 'Confirm',
     URL: 'https://www.devcon.org/'
   })
 })
