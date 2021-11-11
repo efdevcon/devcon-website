@@ -26,12 +26,15 @@
       @include fonts-lg;
     }
 
+    .icon {
+      margin-right: $gaps-gap-2;
+    }
+
     &:hover {
       cursor: pointer;
       // background: $colors-monochrome-2;
     }
   }
-
 
   .content {
     transition: all 0.2s linear;

@@ -1,9 +1,13 @@
 @use 'src/assets/css/partials/index' as *;
 
+.header {
+  position: relative;
+}
+
 .app {
   overflow-x: hidden;
   min-height: calc(var(--viewport-height) - 65px - 54px - 54px);
-  // padding-bottom: 64px; // Adjustin½g for fixed bottom nav overlaying content
+  padding-bottom: 64px; // Adjustin½g for fixed bottom nav overlaying content
 
   > h3,
   > button,
@@ -36,5 +40,33 @@
 
   > button:hover {
     background: $colors-monochrome-3;
+  }
+}
+
+.header-hider {
+  position: sticky;
+  background: $colors-monochrome-1;
+  border-bottom: 1px solid $colors-standard-border-color;
+  top: var(--header-height);
+  z-index: 20;
+
+  header,
+  :global(#header) {
+    position: relative;
+
+    :global(#header) {
+      transition: opacity 0.3s linear;
+    }
+  }
+
+  &.hide {
+    :global(#header) {
+      box-shadow: none;
+    }
+  }
+
+  :global(#inline-nav) {
+    position: sticky;
+    top: var(--header-height);
   }
 }

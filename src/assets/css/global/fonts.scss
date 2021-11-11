@@ -87,6 +87,14 @@ h6,
   }
 }
 
+.app-header {
+  @include fonts-app-section-header;
+}
+
+.app-header-sm {
+  @include fonts-app-section-header-sm;
+}
+
 // Titles
 .title {
   @include fonts-title;

@@ -16,8 +16,11 @@ import { Schedule, useSyncSchedule } from './schedule'
 import { Venue } from './venue'
 import { Speakers, SpeakerDetails } from './speakers'
 import { Session } from 'src/components/domain/app/session'
-
-// console.log(SpeakerDetails, 'speaker details')
+import useGetElementHeight from 'src/hooks/useGetElementHeight'
+import { useDidScrollDown, useIsScrolled, useScrollY } from 'src/hooks/useIsScrolled'
+import { Notifications } from './notifications'
+import { Info } from './info'
+import { SideEvents } from './side-events'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -32,10 +35,6 @@ export const App = accountContextHOC(({ data, location }: any) => {
   const accountContext = useAccountContext()
   const loggedIn = accountContext.account || true /* Forcing logged in for dev purposes */
 
-  // const schedule = useSyncSchedule()
-
-  // console.log(schedule, 'schedule')
-
   return (
     <>
       <Helmet>
@@ -46,14 +45,11 @@ export const App = accountContextHOC(({ data, location }: any) => {
         <script type="text/javascript" src="https://unpkg.com/@toruslabs/torus-embed" />
       </Helmet>
 
-      <Header withStrip={false} withHero={false} />
-
-      {/* {schedule} */}
+      <Header className={css['header']} withStrip={false} withHero={false} />
+      {loggedIn && <InlineNav location={location} />}
 
       {isBrowser && (
         <div className={css['app']}>
-          {loggedIn && <InlineNav location={location} />}
-
           <Router basepath="/app" style={{ minHeight: 'inherit' }}>
             <Login path="/login" default />
 
@@ -65,6 +61,9 @@ export const App = accountContextHOC(({ data, location }: any) => {
             <Session path="/schedule/:session" />
             <Speakers path="/speakers" />
             <SpeakerDetails path="/speakers/:speaker" />
+            <Notifications path="/notifications" />
+            <Info path="/info" />
+            <SideEvents path="/side-events" />
 
             <Home path="/" />
 

@@ -1,5 +1,8 @@
 import React from 'react'
 import { PushNotification } from 'src/types/PushNotification'
+import { ThumbnailBlock } from 'src/components/common/thumbnail-block'
+import IconCalendar from 'src/assets/icons/schedule-plus.svg'
+import IconCheck from 'src/assets/icons/check_circle.svg'
 import css from './notifications.module.scss'
 
 // Copied from the web-push documentation
@@ -183,7 +186,7 @@ const useGetNotifications = () => {
   }
 }
 
-export const Notifications = () => {
+export const Notifications_test = () => {
   const [serviceWorkerActive, notificationsEnabled, requestPermission, revokePermission] = useNotifications()
   const { notifications, createNotifications } = useGetNotifications()
 
@@ -220,6 +223,107 @@ export const Notifications = () => {
             </div>
           )
         })}
+      </div>
+    </div>
+  )
+}
+
+const filters = [
+  {
+    value: 'inbox',
+    text: 'Inbox',
+  },
+  {
+    value: 'health-safety',
+    text: 'Health & Safety',
+  },
+  {
+    value: 'all',
+    text: 'All',
+  },
+  {
+    value: 'archived',
+    text: 'Archived',
+  },
+]
+
+export const Notifications = (props: any) => {
+  const [currentFilter, setCurrentFilter] = React.useState('inbox')
+
+  return (
+    <div className="section">
+      <div className="content">
+        <div className={css['filter']}>
+          {filters.map(filter => {
+            const selected = currentFilter === filter.value
+
+            let className = 'plain'
+
+            if (selected) className += ` ${css['selected']}`
+
+            return (
+              <button onClick={() => setCurrentFilter(filter.value)} key={filter.value} className={className}>
+                <p className="hover-underline">{filter.text}</p>
+                {selected && <div className="label sm error">4</div>}
+              </button>
+            )
+          })}
+        </div>
+
+        <ThumbnailBlock className={css['notification-block']}>
+          <div className={css['top']}>
+            <div className={css['time']}>
+              <p>05/12/2022</p>
+              <p>8:50 AM</p>
+            </div>
+
+            {true ? <IconCheck /> : <IconCalendar />}
+          </div>
+          <div className={css['details']}>
+            <p className={`bold ${css['title']}`}> Keynote Delayed</p>
+            <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
+          </div>
+          <div className={css['labels']}>
+            <div className="label sm error">Devcon</div>
+            <div className="label sm error">Travel</div>
+          </div>
+        </ThumbnailBlock>
+        <ThumbnailBlock className={css['notification-block']}>
+          <div className={css['top']}>
+            <div className={css['time']}>
+              <p>05/12/2022</p>
+              <p>8:50 AM</p>
+            </div>
+
+            {true ? <IconCheck /> : <IconCalendar />}
+          </div>
+          <div className={css['details']}>
+            <p className={`bold ${css['title']}`}> Keynote Delayed</p>
+            <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
+          </div>
+          <div className={css['labels']}>
+            <div className="label sm error">Devcon</div>
+            <div className="label sm error">Travel</div>
+          </div>
+        </ThumbnailBlock>
+        <ThumbnailBlock className={css['notification-block']}>
+          <div className={css['top']}>
+            <div className={css['time']}>
+              <p>05/12/2022</p>
+              <p>8:50 AM</p>
+            </div>
+
+            {true ? <IconCheck /> : <IconCalendar />}
+          </div>
+          <div className={css['details']}>
+            <p className={`bold ${css['title']}`}> Keynote Delayed</p>
+            <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
+          </div>
+          <div className={css['labels']}>
+            <div className="label sm error">Devcon</div>
+            <div className="label sm error">Travel</div>
+          </div>
+        </ThumbnailBlock>
       </div>
     </div>
   )

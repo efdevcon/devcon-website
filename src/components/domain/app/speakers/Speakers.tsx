@@ -15,8 +15,7 @@ import { useSort, SortVariation, Sort } from 'src/components/common/sort'
 import { InputForm } from 'src/components/common/input-form'
 import { Filter, FilterFoldout, NoResults, useFilter } from 'src/components/common/filter'
 import { Button } from 'src/components/common/button'
-
-console.log(css, 'css lol', css['speaker-card'])
+import { AppSearch } from 'src/components/domain/app/app-search'
 
 const dummySpeakers = [
   {
@@ -212,6 +211,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
 
 export const Speakers = () => {
   const trackFilters = ['One', 'Two', 'Three']
+  const [search, setSearch] = React.useState('')
   const [speakers, filterState] = useFilter({
     tags: true,
     multiSelect: true,
@@ -255,90 +255,23 @@ export const Speakers = () => {
 
   const sortedBy = sortState.fields[sortState.sortBy]
   const noResults = speakers.length === 0
-  const clearFilters = () => {
-    filterState?.clearFilter()
-  }
-
-  const nFiltersSelected = filterState ? Object.keys(filterState.activeFilter).length : 0
-
-  // TO-DO: add remaining filters
-  const filterIsSelected = (() => {
-    return nFiltersSelected > 0
-  })()
 
   return (
     <div>
       <div className="section">
         <div className="content">
-          <div className={css['filter']}>
-            <InputForm className={css['search']} placeholder="Search speakers..." icon={IconSearch} />
-            <div style={{ position: 'relative' }}>
-              <Sort {...sortState} />
-
-              <FilterFoldout>
-                {(_, setOpen) => {
-                  return (
-                    <>
-                      <CollapsedSection>
-                        <CollapsedSectionHeader title="Tracks">
-                          {nFiltersSelected > 0 && (
-                            <div className={css['n-filters-indicator']}>
-                              <div className="label sm error">{nFiltersSelected}</div>
-                            </div>
-                          )}
-                        </CollapsedSectionHeader>
-                        <CollapsedSectionContent>
-                          <div className={css['filter-container']}>
-                            <Filter {...filterState} />
-                          </div>
-                        </CollapsedSectionContent>
-                      </CollapsedSection>
-                      <CollapsedSection>
-                        <CollapsedSectionHeader title="Tracks">
-                          {nFiltersSelected > 0 && (
-                            <div className={css['n-filters-indicator']}>
-                              <div className="label sm error">{nFiltersSelected}</div>
-                            </div>
-                          )}
-                        </CollapsedSectionHeader>
-                        <CollapsedSectionContent>
-                          <div className={css['filter-container']}>
-                            <Filter {...filterState} />
-                          </div>
-                        </CollapsedSectionContent>
-                      </CollapsedSection>
-                      <CollapsedSection>
-                        <CollapsedSectionHeader title="Tracks">
-                          {nFiltersSelected > 0 && (
-                            <div className={css['n-filters-indicator']}>
-                              <div className="label sm error">{nFiltersSelected}</div>
-                            </div>
-                          )}
-                        </CollapsedSectionHeader>
-                        <CollapsedSectionContent>
-                          <div className={css['filter-container']}>
-                            <Filter {...filterState} />
-                          </div>
-                        </CollapsedSectionContent>
-                      </CollapsedSection>
-
-                      {filterIsSelected && (
-                        <div className={css['filter-actions']}>
-                          <button className={`plain ${css['clear']} hover-underline`} onClick={clearFilters}>
-                            Clear all
-                          </button>
-
-                          <Button className="red" onClick={() => setOpen(false)}>
-                            Confirm
-                          </Button>
-                        </div>
-                      )}
-                    </>
-                  )
-                }}
-              </FilterFoldout>
-            </div>
-          </div>
+          <AppSearch
+            search={{
+              placeholder: 'Search speakers...',
+              onChange: setSearch,
+            }}
+            sortState={sortState}
+            filterStates={[
+              { title: 'Track', filterState },
+              { title: 'Track', filterState },
+              { title: 'Track', filterState },
+            ]}
+          />
 
           {noResults ? (
             <NoResults />

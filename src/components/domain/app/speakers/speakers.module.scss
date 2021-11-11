@@ -53,44 +53,6 @@
   }
 }
 
-.filter {
-  background: $colors-monochrome-2;
-
-  /* Trick to get the background color to extend "outside" the container (fill all the way to the edge of the screen) */
-  width: calc(100% + 32px);
-  left: -16px;
-  padding: 0px 16px;
-  position: relative;
-
-  .filter-container {
-    margin-bottom: $gaps-gap-3;
-  }
-
-  .n-filters-indicator {
-    flex-grow: 1;
-    margin-left: $gaps-gap-2;
-    position: relative;
-    align-self: stretch;
-
-    // Absolute positioning to prevent expanding size of container
-    > * {
-      position: absolute;
-    }
-  }
-
-  .filter-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: $gaps-gap-3;
-
-    .clear {
-      padding: $gaps-gap-3;
-      margin-right: $gaps-gap-2;
-    }
-  }
-}
-
 .list-container {
   margin-top: $gaps-gap-2;
 
@@ -141,8 +103,4 @@
       @include fonts-bold;
     }
   }
-}
-
-.search {
-  margin-top: $gaps-gap-4;
 }

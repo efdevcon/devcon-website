@@ -95,6 +95,18 @@ $secondary: 'Space Mono', monospace;
   line-height: 150%;
 }
 
+@mixin app-section-header {
+  @include primary;
+  @include bold;
+  @include lg;
+}
+
+@mixin app-section-header-sm {
+  @include primary;
+  @include bold;
+  @include sm;
+}
+
 @mixin section-link {
   @include bold;
   font-size: sizes.$size-9;

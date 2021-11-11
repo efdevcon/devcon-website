@@ -3,10 +3,26 @@ import IconStar from 'src/assets/icons/star.svg'
 import css from './speaker-details.module.scss'
 import { VideoCard } from 'src/components/domain/archive/playlists'
 import { SessionCard } from '../session'
+import { useStaticQuery, graphql } from 'gatsby'
 
 export const SpeakerDetails = () => {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allFile(filter: { relativePath: { in: ["pwa_prompt.png"] } }) {
+  //       nodes {
+  //         childImageSharp {
+  //           fluid(maxWidth: 600, quality: 80) {
+  //             ...GatsbyImageSharpFluid_withWebp_noBase64
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+
   return (
     <>
+      {/* {JSON.stringify(data)} */}
       <div className="aspect">
         <img
           src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"

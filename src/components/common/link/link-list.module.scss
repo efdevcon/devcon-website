@@ -7,6 +7,10 @@
   &:first-child {
     border-top: 1px solid $colors-standard-border-color;
   }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .link {

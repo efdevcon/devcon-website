@@ -99,7 +99,8 @@ export const Menu = (props: any) => {
       {
         key: 'notifications',
         icon: <BellIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
-        onClick: () => alert('Not done'),
+        url: '/app/notifications',
+        // onClick: () => alert('Not done'),
       },
       ...buttons.slice(1),
     ]

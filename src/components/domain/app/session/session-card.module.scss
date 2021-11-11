@@ -1,77 +1,65 @@
 @use 'src/assets/css/partials/index' as *;
 
-.container {
-  display: flex;
+.thumbnail-container {
   position: relative;
   border: 1px solid $colors-standard-border-color;
-  margin-bottom: $gaps-gap-4;
 
-  .thumbnail-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    flex-shrink: 0;
-
-    &.ux-design {
+  &.ux-design {
+    [data-type='thumbnail-block-image'] {
       background: $colors-ef-pink;
-    }
-
-    &.security {
-      background: $colors-ef-blue;
-    }
-
-    img {
-      width: 80%;
     }
   }
 
-  .details {
-    padding: $gaps-gap-2;
-    flex-grow: 1;
+  &.security {
+    [data-type='thumbnail-block-image'] {
+      background: $colors-ef-blue;
+    }
+  }
+}
 
-    .top {
-      padding-bottom: $gaps-gap-2;
-      border-bottom: 1px solid $colors-standard-border-color;
+.details {
+  padding: $gaps-gap-2;
 
-      .title {
-        @include fonts-bold;
-        @include fonts-sm;
-        margin-bottom: $gaps-gap-2;
-        padding-right: $gaps-gap-8;
-      }
-      
-      .save-session {
-        font-size: 20px;
-        cursor: pointer;
-        user-select: none;
-        position: absolute;
-        right: $gaps-gap-2;
-        top: $gaps-gap-2;
-  
-        &.saved {
-          --color-icon: #{$colors-track-red};
-        }
-      }
+  .top {
+    padding-bottom: $gaps-gap-2;
+    border-bottom: 1px solid $colors-standard-border-color;
+
+    .title {
+      @include fonts-bold;
+      @include fonts-sm;
+      margin-bottom: $gaps-gap-2;
+      padding-right: $gaps-gap-8;
     }
 
-    .bottom {
-      padding-top: $gaps-gap-2;
+    .save-session {
+      font-size: 20px;
+      cursor: pointer;
+      user-select: none;
+      position: absolute;
+      right: $gaps-gap-2;
+      top: $gaps-gap-2;
 
-      p {
-        @include fonts-bold;
-        @include fonts-sm;
-        margin-left: $gaps-gap-2;
+      &.saved {
+        --color-icon: #{$colors-track-red};
       }
+    }
+  }
 
-      > div {
-        display: flex;
-        align-items: center;
+  .bottom {
+    padding-top: $gaps-gap-2;
 
-              
-        :global(.icon) {
-          flex-shrink: 0;
-        }
+    p {
+      @include fonts-bold;
+      @include fonts-sm;
+      margin-left: $gaps-gap-2;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      :global(.icon) {
+        flex-shrink: 0;
       }
     }
   }

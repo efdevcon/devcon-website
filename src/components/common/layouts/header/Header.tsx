@@ -17,13 +17,45 @@ type HeaderProps = {
   className?: string
 }
 
-export function Header({ withStrip, withHero }: HeaderProps) {
+// const useIsScrolledDown = () => {
+//   const [didScrollDown, setDidScrolledDown] = React.useState(false)
+//   const lastScrollDistance = React.useRef(0)
+
+//   React.useEffect(() => {
+//     const handleScroll = () => {
+//       const currentScrollDistance = window.scrollY
+
+//       const scrolledDown = currentScrollDistance > lastScrollDistance.current && currentScrollDistance > 0
+
+//       if (scrolledDown) {
+//         if (!didScrollDown) {
+//           setDidScrolledDown(true)
+//         }
+//       } else {
+//         if (didScrollDown) {
+//           setDidScrolledDown(false)
+//         }
+//       }
+
+//       lastScrollDistance.current = currentScrollDistance
+//     }
+
+//     window.addEventListener('scroll', handleScroll)
+
+//     return () => window.removeEventListener('scroll', handleScroll)
+//   }, [didScrollDown])
+
+//   return didScrollDown
+// }
+
+export const Header = React.memo(({ withStrip, withHero, className }: HeaderProps) => {
   const ref = useRef(null)
   const intl = useIntl()
   const isScrolled = useIsScrolled()
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
   const [searchOpen, setSearchOpen] = React.useState(false)
   const location = useLocation()
+  const isArchive = location.pathname.startsWith('/archive')
   useOnOutsideClick(ref, () => setSearchOpen(false))
 
   const searchActive = searchOpen && !foldoutOpen
@@ -45,11 +77,11 @@ export function Header({ withStrip, withHero }: HeaderProps) {
   let headerClass = `${css['header']}`
 
   if (foldoutOpen) headerClass += ` ${css['foldout-open']}`
-
-  const isArchive = location.pathname.startsWith('/archive')
+  if (className) headerContainerClass += ` ${className}`
+  // if (isApp && isScrolled) headerClass += ` ${css['hide']}`
 
   const body = (
-    <header className={headerContainerClass}>
+    <header id="header-container" className={headerContainerClass}>
       {withStrip && <Strip withHero={withHero} />}
       <div id="header" className={headerClass} ref={ref}>
         <div className={css['menu-container']}>
@@ -83,4 +115,4 @@ export function Header({ withStrip, withHero }: HeaderProps) {
   }
 
   return body
-}
+})
