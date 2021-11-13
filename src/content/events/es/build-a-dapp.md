@@ -1,5 +1,5 @@
 ---
-title: Build a dApp Workshop
+title: Construye un taller de dApp
 startDate: 2021-07-08
 endDate: 2021-07-08
 imageUrl: /assets/uploads/events/build-a-dapp.jpg
