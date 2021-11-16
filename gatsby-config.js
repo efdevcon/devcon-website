@@ -1,7 +1,7 @@
 const { createProxyMiddleware } = require('http-proxy-middleware')
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'https://devcon.org',
+  URL: NETLIFY_SITE_URL = 'https://archive.devcon.org',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
@@ -13,7 +13,7 @@ const defaultLanguage = 'en'
 const secondaryLanguage = 'es'
 const supportedLanguages = [defaultLanguage, secondaryLanguage]
 
-const matomoSiteId = '8'
+const matomoSiteId = '24' // '8'
 const matomoUrl = 'https://matomo.ethereum.org'
 
 const offlinePages = ['/en', '/es', '/en/contact', '/es/contact', '/app/*']
@@ -363,4 +363,3 @@ module.exports = {
     },
   ],
 }
-// 

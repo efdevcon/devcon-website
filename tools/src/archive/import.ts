@@ -115,10 +115,10 @@ ${videoUrl}
 
 ${video.description}
 
-Speaker(s): ${video.speakers.join(', ')}
+${video.speakers ? `Speaker(s): ${video.speakers.join(', ')}` : ''}
 Skill level: ${video.expertise}
 Track: ${video.track}
-Keywords: ${video.keywords.join(', ')}
+${video.keywords ? `Keywords: ${video.keywords.join(', ')}` : ''}
 
 Follow us: https://twitter.com/efdevcon, https://twitter.com/ethereum
 Learn more about devcon: https://www.devcon.org/

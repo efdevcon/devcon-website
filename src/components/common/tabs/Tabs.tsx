@@ -1,10 +1,16 @@
-import React, { ReactNode, useState, useEffect } from 'react'
+import { useLocation } from '@reach/router'
+import React, { ReactNode, useState, useEffect, useImperativeHandle } from 'react'
+import { useQueryStringer } from 'src/hooks/useQueryStringer'
 import css from './tabs.module.scss'
 
 interface TabsProps {
-  defaultTab?: string
   children: any
+  useQuerystring?: boolean
   tabContentClassName?: string
+}
+
+const isValidTab = (children: React.ReactChildren, tab: string) => {
+  return React.Children.toArray(children).some(child => child?.props?.title === tab)
 }
 
 const findFirstValidTab = (children: React.ReactChildren): any => {
@@ -12,18 +18,25 @@ const findFirstValidTab = (children: React.ReactChildren): any => {
   return React.Children.toArray(children).find(child => !!child)
 }
 
-export function Tabs(props: TabsProps) {
+export const Tabs = React.forwardRef((props: TabsProps, ref: any) => {
+  const tabFromQueryString = new URLSearchParams(useLocation().search).get('tab')
   const defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
-  const [activeTab, setActiveTab] = useState(props.defaultTab || defaultTab)
-  
-  useEffect(() => {
-    if (props.defaultTab && props.defaultTab !== activeTab) {
-      setActiveTab(props.defaultTab)
-    }
-  }, [props.defaultTab])
-  
-  let tabContentClassName = css['tab-content']
+  const [activeTab, setActiveTab] = useState(defaultTab)
 
+  // Sync active tab on mount if query string is defined
+  React.useLayoutEffect(() => {
+    if (tabFromQueryString && props.children && isValidTab(props.children, tabFromQueryString)) {
+      setActiveTab(tabFromQueryString)
+    }
+  }, [])
+
+  useImperativeHandle(ref, () => ({
+    setActiveTab,
+  }))
+
+  useQueryStringer(props.useQuerystring ? { tab: activeTab } : {}, props.useQuerystring, true)
+
+  let tabContentClassName = css['tab-content']
   if (props.tabContentClassName) tabContentClassName += ` ${props.tabContentClassName}`
 
   return (
@@ -54,7 +67,7 @@ export function Tabs(props: TabsProps) {
       </div>
     </>
   )
-}
+})
 
 interface TabProps {
   title: string

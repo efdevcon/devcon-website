@@ -27,7 +27,7 @@ export const Loader = (props: LoaderProps) => {
   if (props.asOverlay) className += ` ${css['as-overlay']}`
   if (props.loading) className += ` ${css['loading']}`
   if (props.noResults) className += ` ${css['no-results']}`
-  if (props.error) className = `${css['loading-overlay']} ${css['error']}`
+  if (props.error) className = `${css['loading-overlay']} ${css['error']} ${css['no-results']}`
 
   const currentState = (() => {
     if (props.error) return props.messages.error?.message || 'Error :-('
