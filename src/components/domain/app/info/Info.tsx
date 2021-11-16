@@ -6,30 +6,45 @@ import {
   CollapsedSectionHeader,
 } from 'src/components/common/collapsed-section'
 import { InputForm } from 'src/components/common/input-form'
+import { Form, FormTextArea, FormInput, FormDropdown } from 'src/components/common/form'
 import { Dropdown } from 'src/components/common/dropdown'
+import { Button } from 'src/components/common/button'
 import css from './info.module.scss'
 
 const ProvideFeedbackForm = () => {
-  const [feedbackCategory, setFeedbackCategory] = React.useState('general-feedback')
-
   return (
-    <div>
-      <p>Subject</p>
-      <Dropdown
-        value={feedbackCategory}
-        onChange={setFeedbackCategory}
+    <Form
+      className={css['feedback-form']}
+      onSubmit={console.log}
+      defaultValues={{ feedbackCategory: 'general-feedback', name: 'John Doe' }}
+    >
+      <FormDropdown
+        fieldKey="feedbackCategory"
+        defaultValue="general-feedback"
         options={[
           {
             text: 'General Feedback',
             value: 'general-feedback',
           },
+          {
+            text: 'Specific Backfeed',
+            value: 'specific-backfeed',
+          },
+          {
+            text: 'Something Else',
+            value: 'something-else',
+          },
         ]}
       />
 
-      <InputForm id="input-form_search_header" type="search" />
-      <InputForm id="input-form_search_header" type="search" />
-      <InputForm id="input-form_search_header" type="search" />
-    </div>
+      <FormInput fieldKey="name" placeholder="Name" fieldOptions={{ required: true }} />
+
+      <FormInput fieldKey="email" placeholder="Email" fieldOptions={{ required: true }} />
+
+      <FormTextArea fieldKey="message" placeholder="Message" fieldOptions={{ required: true }} />
+
+      <Button className="red">Submit Feedback</Button>
+    </Form>
   )
 }
 
@@ -40,7 +55,44 @@ export const Info = (props: any) => {
         <CollapsedSection>
           <CollapsedSectionHeader title="FAQ" />
           <CollapsedSectionContent>
-            <p>Nothing here</p>
+            <InputForm id="input-form_search_header" placeholder="Filter by Keywords" type="search" />
+
+            <div className={css['faq']}>
+              <h4 className="app-header">General</h4>
+              <CollapsedSection>
+                <CollapsedSectionHeader
+                  className={css['subheader']}
+                  title="What time will the conference start and end?"
+                />
+                <CollapsedSectionContent>
+                  <p>What time will the conference start and end?</p>
+                  <p>What time will the conference start and end?</p>
+                  <p>What time will the conference start and end?</p>
+                </CollapsedSectionContent>
+              </CollapsedSection>
+              <CollapsedSection>
+                <CollapsedSectionHeader
+                  className={css['subheader']}
+                  title="What time will the conference start and end?"
+                />
+                <CollapsedSectionContent>
+                  <p>What time will the conference start and end?</p>
+                  <p>What time will the conference start and end?</p>
+                  <p>What time will the conference start and end?</p>
+                </CollapsedSectionContent>
+              </CollapsedSection>
+              <CollapsedSection>
+                <CollapsedSectionHeader
+                  className={css['subheader']}
+                  title="What time will the conference start and end?"
+                />
+                <CollapsedSectionContent>
+                  <p>What time will the conference start and end?</p>
+                  <p>What time will the conference start and end?</p>
+                  <p>What time will the conference start and end?</p>
+                </CollapsedSectionContent>
+              </CollapsedSection>
+            </div>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>

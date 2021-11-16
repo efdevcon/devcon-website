@@ -114,21 +114,21 @@
   }
 }
 
-
 .filter-foldout {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  z-index: 1;
+  // position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+  // width: 100%;
+  // z-index: 1;
+  position: relative;
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
-  pointer-events: none;
+  // flex-direction: row-reverse;
+  // pointer-events: none;
 
   > button {
     pointer-events: auto;
-    margin-left: $gaps-gap-2;
+    // margin-left: $gaps-gap-2;
   }
 
   &.open {
@@ -144,11 +144,14 @@
     position: relative;
     flex-grow: 1;
     transition: opacity 0.4s;
+    z-index: 15;
 
     .content {
-      position: absolute; 
-      top: 0px;
-      width: 100%;
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      // transform: translateX(-100%);
+      // width: 100%;
       background: white;
       padding: $gaps-gap-4;
       // padding-top: 0px;

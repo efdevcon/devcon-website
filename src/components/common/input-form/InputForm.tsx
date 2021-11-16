@@ -16,6 +16,52 @@ interface InputFormProps {
   onSubmit?: (value: string) => void
 }
 
+interface InputProps {
+  fieldKey?: string
+  icon?: any
+}
+
+export const Input = React.forwardRef((props: any, ref: any) => {
+  const id = props.fieldKey || props.name
+  const { fieldKey, icon, ...rest } = props
+
+  let className = 'font-md-fixed'
+
+  if (props.error) className += ` ${css['error']}`
+  if (props.className) className += ` ${props.className}`
+
+  return (
+    <div className={css['container']}>
+      {props.label && <label htmlFor={id}>{props.label}</label>}
+
+      <input ref={ref} className={className} id={id} {...rest} />
+
+      {props.icon && <props.icon className={`${css['icon']} icon`} />}
+    </div>
+  )
+})
+
+export const TextArea = React.forwardRef((props: any, ref: any) => {
+  const id = props.fieldKey || props.name
+  const { fieldKey, icon, ...rest } = props
+
+  let className = 'font-md-fixed'
+
+  if (props.error) className += ` ${css['error']}`
+  if (props.className) className += ` ${props.className}`
+
+  return (
+    <div className={css['container']}>
+      {props.label && <label htmlFor={id}>{props.label}</label>}
+
+      <textarea ref={ref} style={{ resize: 'none' }} className={className} id={id} {...rest} />
+
+      {props.icon && <props.icon className={`${css['icon']} icon`} />}
+    </div>
+  )
+})
+
+// Legacy warning: Use the "Form" component instead. TO-DO: Deprecate InputForm
 export function InputForm(props: InputFormProps) {
   const ref = createRef<HTMLInputElement>()
   let className = css['form']

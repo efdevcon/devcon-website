@@ -136,9 +136,10 @@ export const SideEvents = (props: any) => {
             { title: 'Test', filterState },
             { title: 'Test', filterState },
           ]}
+          className={css['search-section']}
         />
 
-        <h4 className={`app-header ${css['header']}`}>Side Events</h4>
+        {/* <h4 className={`app-header ${css['header']}`}>Side Events</h4> */}
 
         {sessions.map(session => {
           return <SessionCard key={session.id} />

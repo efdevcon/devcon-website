@@ -14,13 +14,18 @@ interface SectionProps {
 interface CollapsedSectionHeaderProps {
   title?: string
   children?: any
+  className?: string
   open?: boolean
   setOpen?: (open: boolean) => void
 }
 
 const CollapsedSectionHeader = (props: CollapsedSectionHeaderProps) => {
+  let className = css['header']
+
+  if (props.className) className += ` ${props.className}`
+
   return (
-    <div className={css['header']} onClick={() => props.setOpen(!props.open)}>
+    <div className={className} onClick={() => props.setOpen(!props.open)}>
       {/* Optional default title to help with consistency */}
       {props.title && <p className={css['title']}>{props.title}</p>}
       {props.children}
@@ -96,6 +101,8 @@ export const CollapsedSectionContent = (props: any) => {
   }
 
   let className = css['content']
+
+  // if (props.className) className += ` ${props.className}`
 
   return (
     <div ref={ref} className={className} style={{ '--contentHeight': contentHeight }}>

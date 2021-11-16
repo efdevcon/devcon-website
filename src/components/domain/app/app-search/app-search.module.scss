@@ -10,6 +10,20 @@
   padding-top: $gaps-gap-4;
   position: relative;
 
+  .search-filter-container {
+    display: flex;
+    align-items: center;
+
+    form {
+      flex-grow: 1;
+      margin-right: $gaps-gap-2;
+
+      input {
+        height: 36px;
+      }
+    }
+  }
+
   .filter-container {
     margin-bottom: $gaps-gap-3;
   }

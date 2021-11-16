@@ -19,20 +19,24 @@ type AppSearchProps = {
   sortState: any
   filterStates: any[]
   noResults?: boolean
+  className?: string
 }
 
 export const AppSearch = (props: AppSearchProps) => {
+  let className = css['filter']
+
+  if (props.className) className += ` ${props.className}`
+
   return (
     <>
-      <div className={css['filter']}>
-        <InputForm
-          className={css['search']}
-          placeholder={props.search.placeholder}
-          onChange={props.search.onChange}
-          icon={IconSearch}
-        />
-        <div style={{ position: 'relative' }}>
-          <Sort {...props.sortState} />
+      <div className={className}>
+        <div className={css['search-filter-container']}>
+          <InputForm
+            className={css['search']}
+            placeholder={props.search.placeholder}
+            onChange={props.search.onChange}
+            icon={IconSearch}
+          />
 
           <FilterFoldout>
             {(_, setOpen) => {
@@ -84,6 +88,10 @@ export const AppSearch = (props: AppSearchProps) => {
               )
             }}
           </FilterFoldout>
+        </div>
+
+        <div style={{ position: 'relative' }}>
+          <Sort {...props.sortState} />
         </div>
       </div>
 

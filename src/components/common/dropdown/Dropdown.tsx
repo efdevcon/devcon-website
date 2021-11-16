@@ -16,7 +16,7 @@ export interface DropdownProps {
   }[]
 }
 
-export function Dropdown(props: DropdownProps) {
+export const Dropdown = React.forwardRef((props: DropdownProps, externalRef: any) => {
   const [open, setOpen] = useState(false)
   const ref = createRef<HTMLDivElement>()
   const foldoutRef = createRef<HTMLUListElement>()
@@ -59,7 +59,11 @@ export function Dropdown(props: DropdownProps) {
     onClick: () => setOpen(!open),
     'aria-label': 'Toggle dropdown',
     className,
-    ref,
+    ref: (el: any) => {
+      ref.current = el
+
+      if (externalRef) externalRef.current = el
+    },
   }
 
   const foldoutContent = (
@@ -101,4 +105,4 @@ export function Dropdown(props: DropdownProps) {
       {foldoutContent}
     </div>
   )
-}
+})

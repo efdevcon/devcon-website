@@ -6,27 +6,29 @@
   &.transparent {
     .container {
       border-bottom: 1px solid $colors-monochrome-5;
-    }
+      input,
+      textarea {
+        border: none;
+        background: transparent;
+        padding-left: $gaps-gap-8;
+      }
 
-    input {
-      border: none;
-      background: transparent;
-      padding-left: $gaps-gap-8;
-    }
-
-    .icon {
-      left: 0px;
-      font-size: 1.3em;
+      .icon {
+        left: 0px;
+        font-size: 1.3em;
+      }
     }
   }
+}
 
-  .container {
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-  }
+.container {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
 
-  input {
+  input,
+  textarea {
+    @include fonts-primary;
     @include fonts-md-fixed;
     width: 100%;
     padding-left: $gaps-gap-2;
@@ -40,6 +42,10 @@
     &:active,
     &:focus {
       outline: none;
+    }
+
+    &.error {
+      border-color: $colors-state-error;
     }
   }
 
