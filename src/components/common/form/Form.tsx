@@ -7,6 +7,9 @@ import css from './form.module.scss'
 
 type FormFieldProps = {
   fieldKey: string
+  fieldOptions?: {
+    [key: string]: any
+  }
   [any: string]: any
 }
 
@@ -20,7 +23,7 @@ const StandardError = (props: any) => {
   return <Alert type="error" message={message} />
 }
 
-export const FormDropdown = React.forwardRef(({ control, ...props }: FormFieldProps, ref: any) => {
+export const FormDropdown = React.forwardRef(({ control, fieldOptions, ...props }: FormFieldProps, ref: any) => {
   return (
     <Controller
       name={props.fieldKey}
@@ -33,11 +36,11 @@ export const FormDropdown = React.forwardRef(({ control, ...props }: FormFieldPr
 
 FormDropdown.displayName = 'FormDropDown'
 
-export const FormInput = React.forwardRef((props: FormFieldProps, ref: any) => {
+export const FormInput = React.forwardRef(({ fieldOptions, ...props }: FormFieldProps, ref: any) => {
   return <Input {...props} ref={ref} />
 })
 
-export const FormTextArea = React.forwardRef((props: FormFieldProps, ref: any) => {
+export const FormTextArea = React.forwardRef(({ fieldOptions, ...props }: FormFieldProps, ref: any) => {
   return <TextArea {...props} ref={ref} />
 })
 
