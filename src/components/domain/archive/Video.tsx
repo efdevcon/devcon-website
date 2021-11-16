@@ -45,21 +45,27 @@ const List = ({ video, playlist, videos }: { video: ArchiveVideo; playlist?: Pla
 
 const Suggested = ({ video, relatedVideos, playlists }: VideoProps) => {
   const location = useLocation()
-  const playlist = (() => {
+  const [playlist, setPlaylist] = React.useState<null | Playlist>(null)
+  const tabsRef = React.useRef()
+
+  React.useEffect(() => {
     const queryParams = queryString.parse(location.search)
 
     if (queryParams && queryParams.playlist) {
-      return playlists.find(pl => queryParams.playlist === pl.title)
-    } else {
-      return null
+      const activePlaylist = playlists.find(pl => queryParams.playlist === pl.title)
+
+      if (activePlaylist) {
+        setPlaylist(activePlaylist)
+        tabsRef.current.setActiveTab('Playlist')
+      }
     }
-  })()
+  }, [])
 
   if (!playlist && relatedVideos.length === 0) return null
 
   return (
     <div className={css['suggested']}>
-      <Tabs tabContentClassName={css['tab-content']}>
+      <Tabs ref={tabsRef} tabContentClassName={css['tab-content']}>
         {playlist && playlist.videos.length > 0 && (
           <Tab title="Playlist">
             <div className={css['description']}>
@@ -136,9 +142,6 @@ const Labels = ({ tags, playlists }: any) => {
 }
 
 export const Video = (props: VideoProps) => {
-  const isBrowser = typeof window !== "undefined"
-  const hash = isBrowser && window.location.hash ? window.location.hash.substring(1) : ''
-
   const video = props.video
   const imageUrl = `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`
 
@@ -160,7 +163,7 @@ export const Video = (props: VideoProps) => {
         <div className={css['container']}>
           <div className={css['video']}>
             <div className={css['player']}>
-              <Tabs defaultTab={hash}>
+              <Tabs useQuerystring>
                 <Tab title="YouTube">
                   <div className="aspect">
                     <iframe

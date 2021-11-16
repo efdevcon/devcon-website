@@ -3,7 +3,7 @@ edition: 0
 title: "Golem"
 description: "Piotr Janiuk presents on Golem, a P2P distributed computation network running on top of Ethereum."
 youtubeUrl: "https://youtu.be/JA-UkjnapAU"
-ipfsHash: ""
+ipfsHash: "QmRWxDv74fag6TzTUfNvoJ9EYrekPuxUA5e38PpEQnwavb"
 duration: 1109
 expertise: "Advanced"
 type: "Talk"

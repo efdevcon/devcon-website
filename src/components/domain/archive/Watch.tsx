@@ -157,14 +157,23 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
             <div className={`${css['filter']}`}>
               <VideoFilter {...filterState} />
             </div>
-            <div className={`${css['videos']} ${noResults ? css['no-results'] : ''}`} ref={videoContainerElement}>
-              {noResults && (
+            <div
+              className={`${css['videos']} ${noResults || isError ? css['no-results'] : ''}`}
+              ref={videoContainerElement}
+            >
+              {(noResults || isError) && (
                 <div className={css['no-results-container']}>
                   <div className={css['no-results-image-container']}>
                     <Img alt="" className={css['image']} fluid={imageData.files.nodes[0].childImageSharp.fluid} />
 
-                    <p className="font-xxl bold">Sorry No Results Found</p>
-                    <p>Please try another search string</p>
+                    {isError ? (
+                      <p className="font-xxl bold">Error - come back later</p>
+                    ) : (
+                      <>
+                        <p className="font-xxl bold">Sorry No Results Found</p>
+                        <p>Please try another search string</p>
+                      </>
+                    )}
                   </div>
                 </div>
               )}
