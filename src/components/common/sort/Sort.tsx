@@ -162,7 +162,7 @@ export const Sort = (props: SortState) => {
   return (
     <HorizontalScroller>
       <div className={css['sort-container']}>
-        <p className={`font-lg bold ${css['sort-button']} ${css['text']}`}>Sort:</p>
+        {/* <p className={`font-lg bold ${css['sort-button']} ${css['text']}`}>Sort:</p> */}
         {props.fields.map((field: any, index: number) => {
           return <SortButton sortState={props} key={field.key} field={field} index={index} />
         })}

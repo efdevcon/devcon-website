@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react'
-import { Slider, useSlider } from 'src/components/common/slider'
-import VerticalDotsIcon from 'src/assets/icons/vertical-dots.svg'
-import { BasicCard } from 'src/components/common/card'
+import React from 'react'
+import { SliderStickyNotes } from 'src/components/common/slider/SliderVariations'
 import { Link } from 'src/components/common/link'
-import ShareIcon from 'src/assets/icons/share.svg'
+import { DropdownVariationDots } from 'src/components/common/dropdown/Dropdown'
 import { Share } from 'src/components/common/share'
 import QRCode from 'qrcode.react'
 import {
@@ -11,38 +9,11 @@ import {
   CollapsedSectionHeader,
   CollapsedSectionContent,
 } from 'src/components/common/collapsed-section'
-import { Dropdown } from 'src/components/common/dropdown'
 import css from './home.module.scss'
 import ticket from './ticket.png'
 import thumbnailPlaceholder from 'src/assets/images/thumbnail-placeholder.png'
 
 export const Home = (props: any) => {
-  const settings = {
-    infinite: false,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 4,
-    swipeToSlide: true,
-    touchThreshold: 100,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 3.2,
-        },
-      },
-      {
-        breakpoint: 350,
-        settings: {
-          slidesToShow: 2.1,
-        },
-      },
-    ],
-  }
-
-  const sliderProps = useSlider(settings)
-
   return (
     <div className="section">
       <div className="content">
@@ -58,43 +29,34 @@ export const Home = (props: any) => {
             <button className="label error plain">MANAGE EMAILS</button>
           </div>
 
-          {/* <div className={css['dropdown']}>
-            <VerticalDotsIcon />
-          </div> */}
-          <Dropdown
-            value="Another thing2"
-            renderCustomTrigger={(triggerProps, foldoutContent) => {
-              return (
-                <div {...triggerProps} className={css['dropdown']}>
-                  <VerticalDotsIcon className={`${css['trigger']} icon`} />
-                  {foldoutContent}
-                </div>
-              )
-            }}
-            onChange={() => console.log('hello')}
-            options={[
-              {
-                text: 'Menu Item 1',
-                value: 'Another thing2',
-                onClick: () => alert('Clicked'),
-              },
-              {
-                text: 'Menu Item 2',
-                value: 'Another thing3',
-                onClick: () => alert('Clicked'),
-              },
-              {
-                text: 'Menu Item 3',
-                value: 'Another thing4',
-                onClick: () => alert('Clicked'),
-              },
-              {
-                text: 'Menu Item 4',
-                value: 'Another thing5',
-                onClick: () => alert('Clicked'),
-              },
-            ]}
-          />
+          <div className={css['dropdown']}>
+            <DropdownVariationDots
+              value="Another thing2"
+              onChange={() => {}}
+              options={[
+                {
+                  text: 'Menu Item 1',
+                  value: 'Another thing2',
+                  onClick: () => alert('Clicked'),
+                },
+                {
+                  text: 'Menu Item 2',
+                  value: 'Another thing3',
+                  onClick: () => alert('Clicked'),
+                },
+                {
+                  text: 'Menu Item 3',
+                  value: 'Another thing4',
+                  onClick: () => alert('Clicked'),
+                },
+                {
+                  text: 'Menu Item 4',
+                  value: 'Another thing5',
+                  onClick: () => alert('Clicked'),
+                },
+              ]}
+            />
+          </div>
         </div>
 
         <CollapsedSection>
@@ -118,48 +80,30 @@ export const Home = (props: any) => {
         <div className={css['slider-container']}>
           <p className="font-lg bold">Devcon</p>
 
-          <Slider containerClassName={css['slider']} sliderProps={sliderProps} title={props.title} onlySlider>
-            <BasicCard
-              className={`${css['card']} ${css['pink']}`}
-              slide={sliderProps[1].canSlide}
-              expandLink
-              linkUrl="/app/schedule"
-              allowDrag
-            >
-              <p className={css['title']}>Schedule</p>
-              <p className={css['description']}>View & manage your devcon schedule.</p>
-            </BasicCard>
-            <BasicCard
-              className={`${css['card']} ${css['yellow']}`}
-              slide={sliderProps[1].canSlide}
-              expandLink
-              linkUrl="/app/schedule"
-              allowDrag
-            >
-              <p className={css['title']}>Guides</p>
-              <p className={css['description']}>Access Devcon Bogota local guides.</p>
-            </BasicCard>
-            <BasicCard
-              className={`${css['card']} ${css['green']}`}
-              slide={sliderProps[1].canSlide}
-              expandLink
-              linkUrl="/app/schedule"
-              allowDrag
-            >
-              <p className={css['title']}>Venue Map</p>
-              <p className={css['description']}>Find your way around the Conference</p>
-            </BasicCard>
-            <BasicCard
-              className={`${css['card']} ${css['blue']}`}
-              slide={sliderProps[1].canSlide}
-              expandLink
-              linkUrl="/app/schedule"
-              allowDrag
-            >
-              <p className={css['title']}>Speakers</p>
-              <p className={css['description']}>View speakers presenting at Devcon.</p>
-            </BasicCard>
-          </Slider>
+          <SliderStickyNotes
+            cards={[
+              {
+                title: 'Schedule',
+                description: 'View & manage your devcon schedule.',
+                color: 'pink',
+              },
+              {
+                title: 'Guides',
+                description: 'Access Devcon Bogota local guides.',
+                color: 'yellow',
+              },
+              {
+                title: 'Venue Map',
+                description: 'Find your way around the Conference.',
+                color: 'green',
+              },
+              {
+                title: 'Speakers',
+                description: 'View speakers presenting at Devcon.',
+                color: 'blue',
+              },
+            ]}
+          />
         </div>
 
         <CollapsedSection>

@@ -29,7 +29,9 @@ export const FormDropdown = React.forwardRef(({ control, fieldOptions, ...props 
       name={props.fieldKey}
       control={control}
       rules={{ required: true }}
-      render={({ field }) => <Dropdown {...props} {...field} ref={ref} options={props.options} />}
+      render={({ field }) => (
+        <Dropdown className={css['form-dropdown']} {...props} {...field} ref={ref} options={props.options} />
+      )}
     />
   )
 })
@@ -58,8 +60,6 @@ export const Form = (props: any) => {
   let className = css['form']
 
   if (props.className) className += ` ${props.className}`
-
-  console.log(errors, 'errors')
 
   return (
     <form className={className} onSubmit={handleSubmit(props.onSubmit)}>

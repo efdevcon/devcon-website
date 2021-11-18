@@ -10,7 +10,7 @@ export const LinkList = (props: any) => {
     <div className={props.className}>
       {React.Children.map(props.children, child => {
         return React.cloneElement(child, {
-          className: css['link-in-list'],
+          className: 'list-item',
           children: (() => {
             const isGoogleDrive = child.props.to.includes('drive.google.com')
 

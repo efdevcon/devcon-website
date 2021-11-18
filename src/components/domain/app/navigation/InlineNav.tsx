@@ -69,10 +69,17 @@ export const InlineNav = React.memo((props: any) => {
             path="*"
             links={[
               {
-                title: 'Connect',
+                title: 'Home',
                 to: '/app',
                 useIsActive: () => {
                   return useMatch('/app')
+                },
+              },
+              {
+                title: 'Dashboard',
+                to: '/app/dashboard',
+                useIsActive: () => {
+                  return useMatch('/app/dashboard')
                 },
               },
               {
@@ -140,6 +147,16 @@ export const InlineNav = React.memo((props: any) => {
               },
             ]}
             {...props}
+          />
+
+          <Links
+            nested
+            path="/dashboard"
+            links={[
+              {
+                title: 'Dashboard',
+              },
+            ]}
           />
 
           <Links

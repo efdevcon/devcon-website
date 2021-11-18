@@ -247,6 +247,29 @@ const filters = [
   },
 ]
 
+export const Notification = (props: any) => {
+  return (
+    <ThumbnailBlock className={css['notification-block']}>
+      <div className={css['top']}>
+        <div className={css['time']}>
+          <p>05/12/2022</p>
+          <p>8:50 AM</p>
+        </div>
+
+        {true ? <IconCheck /> : <IconCalendar />}
+      </div>
+      <div className={css['details']}>
+        <p className={`bold ${css['title']}`}> Keynote Delayed</p>
+        <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
+      </div>
+      <div className={css['labels']}>
+        <div className="label sm error">Devcon</div>
+        <div className="label sm error">Travel</div>
+      </div>
+    </ThumbnailBlock>
+  )
+}
+
 export const Notifications = (props: any) => {
   const [currentFilter, setCurrentFilter] = React.useState('inbox')
 
@@ -270,60 +293,9 @@ export const Notifications = (props: any) => {
           })}
         </div>
 
-        <ThumbnailBlock className={css['notification-block']}>
-          <div className={css['top']}>
-            <div className={css['time']}>
-              <p>05/12/2022</p>
-              <p>8:50 AM</p>
-            </div>
-
-            {true ? <IconCheck /> : <IconCalendar />}
-          </div>
-          <div className={css['details']}>
-            <p className={`bold ${css['title']}`}> Keynote Delayed</p>
-            <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
-          </div>
-          <div className={css['labels']}>
-            <div className="label sm error">Devcon</div>
-            <div className="label sm error">Travel</div>
-          </div>
-        </ThumbnailBlock>
-        <ThumbnailBlock className={css['notification-block']}>
-          <div className={css['top']}>
-            <div className={css['time']}>
-              <p>05/12/2022</p>
-              <p>8:50 AM</p>
-            </div>
-
-            {true ? <IconCheck /> : <IconCalendar />}
-          </div>
-          <div className={css['details']}>
-            <p className={`bold ${css['title']}`}> Keynote Delayed</p>
-            <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
-          </div>
-          <div className={css['labels']}>
-            <div className="label sm error">Devcon</div>
-            <div className="label sm error">Travel</div>
-          </div>
-        </ThumbnailBlock>
-        <ThumbnailBlock className={css['notification-block']}>
-          <div className={css['top']}>
-            <div className={css['time']}>
-              <p>05/12/2022</p>
-              <p>8:50 AM</p>
-            </div>
-
-            {true ? <IconCheck /> : <IconCalendar />}
-          </div>
-          <div className={css['details']}>
-            <p className={`bold ${css['title']}`}> Keynote Delayed</p>
-            <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
-          </div>
-          <div className={css['labels']}>
-            <div className="label sm error">Devcon</div>
-            <div className="label sm error">Travel</div>
-          </div>
-        </ThumbnailBlock>
+        <Notification />
+        <Notification />
+        <Notification />
       </div>
     </div>
   )

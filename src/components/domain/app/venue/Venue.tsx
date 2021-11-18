@@ -15,6 +15,12 @@ const dummySessions = [
   { id: '3', title: 'Test session 3' },
 ]
 
+const floors = [
+  { id: '1', rooms: ['Room one', 'Room two', 'Room three'], name: 'Floor 1' },
+  { id: '2', rooms: ['Room one', 'Room two', 'Room three'], name: 'Floor 2' },
+  { id: '3', rooms: ['Room one', 'Room two', 'Room three'], name: 'Floor 3' },
+]
+
 export const Venue = () => {
   const [search, setSearch] = React.useState('')
   const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
@@ -29,8 +35,6 @@ export const Venue = () => {
     }),
     filterFunction: (activeFilter: any) => {
       if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
-
-      console.log(activeFilter, 'active filter')
 
       return dummySessions.filter(speaker => activeFilter[speaker.title])
     },
@@ -78,7 +82,29 @@ export const Venue = () => {
           />
         </div>
       </div>
+
       <CSS3D />
+
+      <div className="section">
+        <div className="content">
+          {floors.map((floor: any) => {
+            const { rooms, name } = floor
+
+            return (
+              <React.Fragment key={name}>
+                <div className="list-item padded bold">{name}</div>
+                {rooms.map((room: any) => {
+                  return (
+                    <div key={room} className="list-item padded">
+                      {room}
+                    </div>
+                  )
+                })}
+              </React.Fragment>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }

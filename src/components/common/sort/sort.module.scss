@@ -2,7 +2,9 @@
 
 .sort-container {
   display: flex;
+  // justify-content: center;
   flex-direction: row;
+  transform: translateX(-$gaps-gap-2);
 }
 
 .sort-button {
@@ -15,6 +17,7 @@
 
   &:first-child {
     margin-left: 0px;
+    // left: -$gaps-gap-4;
   }
 
   @media (max-width: $breakpoints-lg) {

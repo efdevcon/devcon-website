@@ -1,6 +1,7 @@
 import React, { createRef, useEffect, useState } from 'react'
 import css from './dropdown.module.scss'
 // import IconArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
+import VerticalDotsIcon from 'src/assets/icons/vertical-dots.svg'
 import ChevronDown from 'src/assets/icons/arrow_desc.svg'
 import ChevronUp from 'src/assets/icons/arrow_asc.svg'
 import { trigger } from 'swr'
@@ -14,6 +15,22 @@ export interface DropdownProps {
   options: {
     [key: string]: any
   }[]
+}
+
+export const DropdownVariationDots = (props: DropdownProps) => {
+  return (
+    <Dropdown
+      renderCustomTrigger={(triggerProps, foldoutContent) => {
+        return (
+          <div {...triggerProps} className={css['dropdown-variation-dots']}>
+            <VerticalDotsIcon className={`${css['trigger']} icon`} />
+            {foldoutContent}
+          </div>
+        )
+      }}
+      {...props}
+    />
+  )
 }
 
 export const Dropdown = React.forwardRef((props: DropdownProps, externalRef: any) => {

@@ -120,11 +120,12 @@
   // transform: translateY(-50%);
   // width: 100%;
   // z-index: 1;
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: space-between;
   // flex-direction: row-reverse;
-  // pointer-events: none;
+
+  pointer-events: none;
 
   > button {
     pointer-events: auto;
@@ -141,15 +142,18 @@
 
   .foldout {
     opacity: 0;
-    position: relative;
+    // position: relative;
     flex-grow: 1;
     transition: opacity 0.4s;
-    z-index: 15;
+    z-index: 18;
 
     .content {
       position: absolute;
-      top: 100%;
+      top: calc(100% + #{$gaps-gap-2});
+      width: 100%;
       right: 0px;
+      max-height: 60vh;
+      overflow-y: auto;
       // transform: translateX(-100%);
       // width: 100%;
       background: white;

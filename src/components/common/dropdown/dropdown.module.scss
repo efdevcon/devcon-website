@@ -60,3 +60,19 @@ $padding: 4px 10px 4px 20px;
     }
   }
 }
+
+.dropdown-variation-dots {
+  cursor: pointer;
+  padding: $gaps-gap-2;
+  z-index: 1;
+  // transform: translateX(8px);
+
+  .trigger {
+    font-size: 16px;
+  }
+
+  > ul {
+    top: 0px;
+    right: 90%;
+  }
+}

@@ -65,9 +65,11 @@ export const Info = (props: any) => {
                   title="What time will the conference start and end?"
                 />
                 <CollapsedSectionContent>
-                  <p>What time will the conference start and end?</p>
-                  <p>What time will the conference start and end?</p>
-                  <p>What time will the conference start and end?</p>
+                  <div className={css['subheader-content']}>
+                    <p>What time will the conference start and end?</p>
+                    <p>What time will the conference start and end?</p>
+                    <p>What time will the conference start and end?</p>
+                  </div>
                 </CollapsedSectionContent>
               </CollapsedSection>
               <CollapsedSection>
@@ -76,9 +78,11 @@ export const Info = (props: any) => {
                   title="What time will the conference start and end?"
                 />
                 <CollapsedSectionContent>
-                  <p>What time will the conference start and end?</p>
-                  <p>What time will the conference start and end?</p>
-                  <p>What time will the conference start and end?</p>
+                  <div className={css['subheader-content']}>
+                    <p>What time will the conference start and end?</p>
+                    <p>What time will the conference start and end?</p>
+                    <p>What time will the conference start and end?</p>
+                  </div>
                 </CollapsedSectionContent>
               </CollapsedSection>
               <CollapsedSection>
@@ -87,9 +91,11 @@ export const Info = (props: any) => {
                   title="What time will the conference start and end?"
                 />
                 <CollapsedSectionContent>
-                  <p>What time will the conference start and end?</p>
-                  <p>What time will the conference start and end?</p>
-                  <p>What time will the conference start and end?</p>
+                  <div className={css['subheader-content']}>
+                    <p>What time will the conference start and end?</p>
+                    <p>What time will the conference start and end?</p>
+                    <p>What time will the conference start and end?</p>
+                  </div>
                 </CollapsedSectionContent>
               </CollapsedSection>
             </div>
@@ -105,12 +111,14 @@ export const Info = (props: any) => {
               user privacy.
             </p>
 
-            <p className="bold margin-top">Additional Links</p>
-            <LinkList className="margin-bottom">
-              <Link to="https://devcon.org">EF Ecosystem Support Program</Link>
-              <Link to="https://devcon.org">Grantee Roundup August 2021</Link>
-              <Link to="https://devcon.org">Grantee Roundup July 2021</Link>
-            </LinkList>
+            <div className={css['links']}>
+              <p className="bold">Additional Links</p>
+              <LinkList>
+                <Link to="https://devcon.org">EF Ecosystem Support Program</Link>
+                <Link to="https://devcon.org">Grantee Roundup August 2021</Link>
+                <Link to="https://devcon.org">Grantee Roundup July 2021</Link>
+              </LinkList>
+            </div>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>

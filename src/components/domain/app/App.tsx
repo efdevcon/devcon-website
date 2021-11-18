@@ -11,6 +11,7 @@ import css from './app.module.scss'
 import { Header } from 'src/components/common/layouts/header'
 import { Home } from 'src/components/domain/app/home'
 import { useAccountContext } from 'src/context/account-context'
+import { Dashboard } from 'src/components/domain/app/dashboard'
 import LoginStyled from './account/LoginStyled'
 import { Schedule, useSyncSchedule } from './schedule'
 import { Venue } from './venue'
@@ -57,6 +58,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
             <LoginStyled path="/conference" />
 
             <Venue path="/venue" />
+            <Dashboard path="/dashboard" />
             <Schedule path="/schedule" />
             <Session path="/schedule/:session" />
             <Speakers path="/speakers" />

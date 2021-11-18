@@ -1,0 +1,24 @@
+@use 'src/assets/css/partials/index' as *;
+
+.hero {
+  margin-top: $gaps-gap-4;
+}
+
+.quicklinks {
+  padding-top: $gaps-gap-4;
+  padding-bottom: $gaps-gap-4;
+  border-bottom: 1px solid $colors-standard-border-color;
+
+  .title-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .dropdown {
+      top: -$gaps-gap-2;
+      right: -2px;
+      z-index: 1;
+      position: absolute;
+    }
+  }
+}
