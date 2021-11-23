@@ -26,7 +26,7 @@ export class UserController {
   public async LoginWeb3(req: Request, res: Response, next: NextFunction) {
     passport.authenticate('web3', (error, user, info) => {
       if (error || !user) {
-        res.status(400).send({ code: 400, message: info.message ?? `Bad request` })
+        return res.status(400).send({ code: 400, message: info.message || `Bad request` })        
       } else {
         req.logIn(user, function (err) {
           if (err) {
@@ -71,9 +71,8 @@ export class UserController {
       }
     } catch (e) {
       console.error(e)
+      res.status(500).send({ code: 500, message: `Couldn't update profile` })
     }
-
-    res.status(500).send({ code: 500, message: `Couldn't update profile` })
   }
 
   public async VerifyEmail(req: Request, res: Response) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SliderStickyNotes } from 'src/components/common/slider/SliderVariations'
 import { Link } from 'src/components/common/link'
 import { DropdownVariationDots } from 'src/components/common/dropdown/Dropdown'
@@ -12,8 +12,17 @@ import {
 import css from './home.module.scss'
 import ticket from './ticket.png'
 import thumbnailPlaceholder from 'src/assets/images/thumbnail-placeholder.png'
+import { useAccountContext } from 'src/context/account-context'
+import { navigate } from '@reach/router'
 
 export const Home = (props: any) => {
+  const accountContext = useAccountContext()
+
+  const disconnect = async () => {
+    accountContext.logout(accountContext.account?._id)
+    navigate('/app/login')
+  }
+
   return (
     <div className="section">
       <div className="content">
@@ -24,9 +33,9 @@ export const Home = (props: any) => {
             </h2>
           </div>
           <div className={css['profile-actions']}>
-            <button className="label error plain">SETTINGS</button>
-            <button className="label error plain">MANAGE WALLETS</button>
-            <button className="label error plain">MANAGE EMAILS</button>
+            <button className="label error plain" onClick={() => navigate('/app/settings')}>SETTINGS</button>
+            <button className="label error plain" onClick={() => navigate('/app/settings')}>MANAGE WALLETS</button>
+            <button className="label error plain" onClick={() => navigate('/app/settings')}>MANAGE EMAILS</button>
           </div>
 
           <div className={css['dropdown']}>
@@ -35,25 +44,20 @@ export const Home = (props: any) => {
               onChange={() => {}}
               options={[
                 {
-                  text: 'Menu Item 1',
-                  value: 'Another thing2',
-                  onClick: () => alert('Clicked'),
+                  text: 'Settings',
+                  value: 'Settings',
+                  onClick: () => { navigate('/app/settings')},
                 },
                 {
-                  text: 'Menu Item 2',
-                  value: 'Another thing3',
-                  onClick: () => alert('Clicked'),
+                  text: 'View on Etherscan',
+                  value: 'Etherscan',
+                  onClick: () => { navigate('https://etherscan.io/address/' + accountContext.account?.addresses[0])},
                 },
                 {
-                  text: 'Menu Item 3',
-                  value: 'Another thing4',
-                  onClick: () => alert('Clicked'),
-                },
-                {
-                  text: 'Menu Item 4',
-                  value: 'Another thing5',
-                  onClick: () => alert('Clicked'),
-                },
+                  text: 'Logout',
+                  value: 'Logout',
+                  onClick: disconnect,
+                }
               ]}
             />
           </div>

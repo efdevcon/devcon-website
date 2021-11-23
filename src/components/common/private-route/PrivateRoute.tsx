@@ -9,8 +9,7 @@ interface PrivateRouteProps extends RouteComponentProps<RouterProps> {
 
 export const PrivateRoute = ({ component: Component, location, children, ...rest }: PrivateRouteProps) => {
   const accountContext = useAccountContext()
-
-  const loggedIn = accountContext.account || true /* Forcing logged in for dev purposes, remove later */
+  const loggedIn = !!accountContext.account
 
   if (!loggedIn && accountContext.loading) {
     return (

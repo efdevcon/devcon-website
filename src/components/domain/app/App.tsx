@@ -3,7 +3,6 @@ import { Router } from '@reach/router'
 import { AccountContextProvider } from 'src/context/account-context-provider'
 import { PrivateRoute } from 'src/components/common/private-route'
 import { BottomNav, InlineNav } from 'src/components/domain/app/navigation'
-import Login from './account/login'
 import Profile from './account/profile'
 import Attest from './account/attest'
 import { Helmet } from 'react-helmet'
@@ -34,7 +33,7 @@ const accountContextHOC = (Component: React.ComponentType<any>) => {
 export const App = accountContextHOC(({ data, location }: any) => {
   const isBrowser = typeof window !== 'undefined'
   const accountContext = useAccountContext()
-  const loggedIn = accountContext.account || true /* Forcing logged in for dev purposes */
+  const loggedIn = !!accountContext.account
 
   return (
     <>
@@ -52,11 +51,10 @@ export const App = accountContextHOC(({ data, location }: any) => {
       {isBrowser && (
         <div className={css['app']}>
           <Router basepath="/app" style={{ minHeight: 'inherit' }}>
-            <Login path="/login" default />
+            <Home path="/" default />
 
-            {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts */}
-            <LoginStyled path="/conference" />
-
+            {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts
+            <LoginStyled path="/conference" /> */}
             <Venue path="/venue" />
             <Dashboard path="/dashboard" />
             <Schedule path="/schedule" />
@@ -67,8 +65,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
             <Info path="/info" />
             <SideEvents path="/side-events" />
 
-            <Home path="/" />
-
+            <LoginStyled path="/login" />
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute path="/attest" component={Attest} />
           </Router>
