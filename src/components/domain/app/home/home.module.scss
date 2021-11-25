@@ -65,6 +65,12 @@
   }
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .slider-container {
   padding-bottom: $gaps-gap-4;
   padding-top: $gaps-gap-4;

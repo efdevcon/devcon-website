@@ -12,15 +12,14 @@ import { Home } from 'src/components/domain/app/home'
 import { useAccountContext } from 'src/context/account-context'
 import { Dashboard } from 'src/components/domain/app/dashboard'
 import LoginStyled from './account/LoginStyled'
-import { Schedule, useSyncSchedule } from './schedule'
+import { Schedule } from './schedule'
 import { Venue } from './venue'
 import { Speakers, SpeakerDetails } from './speakers'
 import { Session } from 'src/components/domain/app/session'
-import useGetElementHeight from 'src/hooks/useGetElementHeight'
-import { useDidScrollDown, useIsScrolled, useScrollY } from 'src/hooks/useIsScrolled'
 import { Notifications } from './notifications'
 import { Info } from './info'
 import { SideEvents } from './side-events'
+import Settings from './account/Settings'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -46,7 +45,8 @@ export const App = accountContextHOC(({ data, location }: any) => {
       </Helmet>
 
       <Header className={css['header']} withStrip={false} withHero={false} />
-      {loggedIn && <InlineNav location={location} />}
+      
+      <InlineNav location={location} />
 
       {isBrowser && (
         <div className={css['app']}>
@@ -66,6 +66,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
             <SideEvents path="/side-events" />
 
             <LoginStyled path="/login" />
+            <PrivateRoute path="/settings" component={Settings} />
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute path="/attest" component={Attest} />
           </Router>
