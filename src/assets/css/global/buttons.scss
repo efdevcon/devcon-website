@@ -7,6 +7,12 @@ button {
   touch-action: manipulation;
   background: transparent;
 
+  --border-width: 2px;
+
+  &.thin-borders {
+    --border-width: 1px;
+  }
+
   &:not(.plain) {
     @include fonts-md;
     // @include colors-white;
@@ -27,7 +33,7 @@ button {
       left: 0px;
       bottom: 0px;
       right: 0px;
-      border-width: 2px;
+      border-width: var(--border-width);
       border-color: var(--border-color);
       border-style: solid;
 
@@ -117,6 +123,17 @@ button {
 
       &:disabled {
         @include colors-red-disabled;
+      }
+    }
+
+    &.app {
+      &.hover,
+      &:hover {
+        @include colors-app-hover;
+      }
+
+      &:disabled {
+        @include colors-app-disabled;
       }
     }
   }

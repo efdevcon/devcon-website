@@ -10,6 +10,20 @@
   padding-top: $gaps-gap-4;
   position: relative;
 
+  button {
+    margin-left: $gaps-gap-2;
+  }
+
+  &.no-sort {
+    padding-bottom: $gaps-gap-4;
+  }
+
+  // &.no-filter {
+  //   form {
+  //     margin-right: 0px !important;
+  //   }
+  // }
+
   .search-filter-container {
     position: relative;
     display: flex;
@@ -17,7 +31,7 @@
 
     form {
       flex-grow: 1;
-      margin-right: $gaps-gap-2;
+      // margin-right: $gaps-gap-2;
 
       input {
         height: 36px;

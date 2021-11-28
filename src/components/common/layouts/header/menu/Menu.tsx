@@ -9,7 +9,8 @@ import IconMenu from 'src/assets/icons/menu.svg'
 import AccountIcon from 'src/assets/icons/account.svg'
 import IconCross from 'src/assets/icons/cross.svg'
 import SearchIcon from 'src/assets/icons/search.svg'
-import BellIcon from 'src/assets/icons/bell.svg'
+// import BellIcon from 'src/assets/icons/bell.svg'
+import BellIcon from 'src/assets/icons/bell-simple.svg'
 import { LanguageToggle } from 'src/components/common/layouts/header/strip/language-toggle'
 
 type ButtonProps = {
@@ -98,7 +99,12 @@ export const Menu = (props: any) => {
       ...buttons.slice(0, 1),
       {
         key: 'notifications',
-        icon: <BellIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
+        icon: (
+          <div className={css['app-notifications']}>
+            <BellIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />
+            <div className={css['counter']}>3</div>
+          </div>
+        ),
         url: '/app/notifications',
         // onClick: () => alert('Not done'),
       },

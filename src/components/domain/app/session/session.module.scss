@@ -132,8 +132,28 @@
 
 .livestream {
   //   padding-top: $gaps-gap-4;
-  //   border-top: 1px solid $colors-standard-border-color;
+  border-top: 1px solid $colors-standard-border-color;
   margin-top: $gaps-gap-4;
+
+  .banner {
+    margin-top: $gaps-gap-2;
+    border: 1px solid $colors-standard-border-color;
+
+    [data-type='thumbnail-block-image'] {
+      background: $colors-monochrome-2;
+    }
+
+    .content {
+      padding: $gaps-gap-3;
+      padding-left: $gaps-gap-5;
+
+      .powered-by {
+        margin-top: $gaps-gap-3;
+        @include fonts-xs;
+        @include fonts-bold;
+      }
+    }
+  }
 }
 
 .link-list {

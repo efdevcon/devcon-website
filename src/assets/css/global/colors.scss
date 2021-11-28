@@ -11,7 +11,7 @@
 }
 
 // Button/Label colors
-.white { 
+.white {
   @include colors-white;
 
   &.ghost {
@@ -23,7 +23,7 @@
   }
 }
 
-.black { 
+.black {
   @include colors-black;
 
   &.ghost {
@@ -35,7 +35,7 @@
   }
 }
 
-.red { 
+.red {
   @include colors-red;
 
   &.ghost {
@@ -44,6 +44,18 @@
 
   &.disabled {
     @include colors-red-disabled;
+  }
+}
+
+.app {
+  @include colors-app;
+
+  &.ghost {
+    @include colors-app-ghost;
+  }
+
+  &.disabled {
+    @include colors-app-disabled;
   }
 }
 

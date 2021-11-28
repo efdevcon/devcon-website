@@ -151,6 +151,16 @@ export const InlineNav = React.memo((props: any) => {
 
           <Links
             nested
+            path="/notifications"
+            links={[
+              {
+                title: 'Notifications',
+              },
+            ]}
+          />
+
+          <Links
+            nested
             path="/dashboard"
             links={[
               {
@@ -205,6 +215,16 @@ export const InlineNav = React.memo((props: any) => {
             links={[
               {
                 title: 'Venue',
+              },
+            ]}
+          />
+
+          <Links
+            nested
+            path="/venue/:room"
+            links={[
+              {
+                title: 'Room',
               },
             ]}
           />

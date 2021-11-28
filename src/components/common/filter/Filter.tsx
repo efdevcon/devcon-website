@@ -108,15 +108,15 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
 
   return (
     <div className={`${className}`}>
-      <Button
+      <button
         ref={buttonRef}
-        className={`${open ? 'red' : 'black ghost'} squared sm`}
+        className={`${open ? 'app hover' : 'app'} squared sm thin-borders`}
         onClick={(e: any) => {
           setOpen(!open)
         }}
       >
         {open ? <IconClose /> : <IconFilter />}
-      </Button>
+      </button>
 
       <div className={css['foldout']}>
         <div className={css['content']} ref={ref}>

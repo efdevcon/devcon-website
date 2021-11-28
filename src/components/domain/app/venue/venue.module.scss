@@ -1,0 +1,19 @@
+@use 'src/assets/css/partials/index' as *;
+
+// .list {
+//   display: flex;
+//   flex-direction: column;
+
+//   padding: 10px;
+
+//   .item {
+//     margin-top: 5px;
+//     padding: 5px;
+//     border: 1px solid black;
+//   }
+// }
+
+.title {
+  border-bottom: none;
+  border-top: 1px solid $colors-standard-border-color;
+}

@@ -2,6 +2,30 @@
 
 .hero {
   margin-top: $gaps-gap-4;
+  padding-bottom: $gaps-gap-4;
+  max-width: 800px;
+
+  .image-container {
+  }
+
+  .text {
+    padding: $gaps-gap-4;
+    border: 1px solid $colors-standard-border-color;
+    border-top: none;
+
+    .title {
+      @include fonts-bold;
+      margin-bottom: $gaps-gap-3;
+    }
+
+    .description {
+      color: $colors-monochrome-6;
+    }
+  }
+}
+
+.latest-notification {
+  border-top: 1px solid $colors-standard-border-color;
 }
 
 .quicklinks {

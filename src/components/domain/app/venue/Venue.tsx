@@ -1,13 +1,13 @@
 import React from 'react'
 import { CSS3D } from './css-3d'
-import {
-  CollapsedSection,
-  CollapsedSectionContent,
-  CollapsedSectionHeader,
-} from 'src/components/common/collapsed-section'
 import { AppSearch } from 'src/components/domain/app/app-search'
 import { useSort, SortVariation, Sort } from 'src/components/common/sort'
+import { LinkList, Link } from 'src/components/common/link'
 import { useFilter } from 'src/components/common/filter'
+import css from './venue.module.scss'
+import { Button } from 'src/components/common/button'
+import ListIcon from 'src/assets/icons/list.svg'
+import LayersIcon from 'src/assets/icons/layers.svg'
 
 const dummySessions = [
   { id: '1', title: 'Test session' },
@@ -16,12 +16,37 @@ const dummySessions = [
 ]
 
 const floors = [
-  { id: '1', rooms: ['Room one', 'Room two', 'Room three'], name: 'Floor 1' },
-  { id: '2', rooms: ['Room one', 'Room two', 'Room three'], name: 'Floor 2' },
-  { id: '3', rooms: ['Room one', 'Room two', 'Room three'], name: 'Floor 3' },
+  {
+    id: '1',
+    rooms: [
+      { text: 'Room one', id: 'room-one' },
+      { text: 'Room two', id: 'room-two' },
+      { text: 'Room three', id: 'room-three' },
+    ],
+    name: 'F1',
+  },
+  {
+    id: '2',
+    rooms: [
+      { text: 'Room one', id: 'room-one' },
+      { text: 'Room two', id: 'room-two' },
+      { text: 'Room three', id: 'room-three' },
+    ],
+    name: 'F2',
+  },
+  {
+    id: '3',
+    rooms: [
+      { text: 'Room one', id: 'room-one' },
+      { text: 'Room two', id: 'room-two' },
+      { text: 'Room three', id: 'room-three' },
+    ],
+    name: 'F3',
+  },
 ]
 
 export const Venue = () => {
+  const [listView, setListView] = React.useState()
   const [search, setSearch] = React.useState('')
   const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
   const [sessions, filterState] = useFilter({
@@ -73,12 +98,18 @@ export const Venue = () => {
               placeholder: 'Search venue...',
               onChange: setSearch,
             }}
-            sortState={sortState}
-            filterStates={[
-              { title: 'Test', filterState },
-              { title: 'Test', filterState },
-              { title: 'Test', filterState },
-            ]}
+            actions={
+              <>
+                <button className={`app squared sm thin-borders`} onClick={console.log}>
+                  {/* {open ? <IconClose /> : <IconFilter />} */}
+                  <ListIcon />
+                </button>
+                <button className={`app squared sm thin-borders`} onClick={console.log}>
+                  {/* {open ? <IconClose /> : <IconFilter />} */}
+                  <LayersIcon />
+                </button>
+              </>
+            }
           />
         </div>
       </div>
@@ -92,14 +123,18 @@ export const Venue = () => {
 
             return (
               <React.Fragment key={name}>
-                <div className="list-item padded bold">{name}</div>
-                {rooms.map((room: any) => {
-                  return (
-                    <div key={room} className="list-item padded">
-                      {room}
-                    </div>
-                  )
-                })}
+                <div className={`list-item padded bold ${css['title']}`}>{name}</div>
+                <LinkList noIndicator>
+                  {rooms.map((room: any) => {
+                    const { text, id } = room
+
+                    return (
+                      <Link key={id} to={`/app/venue/${id}`}>
+                        {text}
+                      </Link>
+                    )
+                  })}
+                </LinkList>
               </React.Fragment>
             )
           })}

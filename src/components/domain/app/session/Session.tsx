@@ -7,6 +7,8 @@ import { SessionCard } from './SessionCard'
 import css from './session.module.scss'
 import { Tabs } from 'src/components/common/tabs'
 import { Tab } from 'src/components/common/tabs/Tabs'
+import { AppTabsSection } from 'src/components/domain/app/app-tabs-section'
+import { ThumbnailBlock } from 'src/components/common/thumbnail-block'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -137,13 +139,34 @@ export const Session = (props: any) => {
           </div>
 
           <div className={css['livestream']}>
-            <div>
+            <AppTabsSection
+              title="Livestream"
+              tabs={[
+                {
+                  title: 'Livepeer',
+                  content: (
+                    <ThumbnailBlock className={css['banner']}>
+                      <div className={css['content']}>
+                        <p className="font-xs-fixed">Waiting for scheduled livestream to begin.</p>
+                        <p className="bold font-xs-fixed">Streaming in 24:20:12</p>
+                        <p className={css['powered-by']}>Powered by Livepeer</p>
+                      </div>
+                    </ThumbnailBlock>
+                  ),
+                },
+                {
+                  title: 'Youtube',
+                  content: <p>Youtube</p>,
+                },
+              ]}
+            />
+            {/* <div>
               <h3 className={css['title']}>Livestream</h3>
               <Tabs>
                 <Tab title="LivePeer">Livepeer</Tab>
                 <Tab title="YouTube">YouTube</Tab>
               </Tabs>
-            </div>
+            </div> */}
           </div>
 
           <div className={css['related-sessions']}>

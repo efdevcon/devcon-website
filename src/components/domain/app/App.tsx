@@ -14,7 +14,7 @@ import { useAccountContext } from 'src/context/account-context'
 import { Dashboard } from 'src/components/domain/app/dashboard'
 import LoginStyled from './account/LoginStyled'
 import { Schedule, useSyncSchedule } from './schedule'
-import { Venue } from './venue'
+import { Venue, Room } from './venue'
 import { Speakers, SpeakerDetails } from './speakers'
 import { Session } from 'src/components/domain/app/session'
 import useGetElementHeight from 'src/hooks/useGetElementHeight'
@@ -58,6 +58,7 @@ export const App = accountContextHOC(({ data, location }: any) => {
             <LoginStyled path="/conference" />
 
             <Venue path="/venue" />
+            <Room path="/venue/:floor" />
             <Dashboard path="/dashboard" />
             <Schedule path="/schedule" />
             <Session path="/schedule/:session" />

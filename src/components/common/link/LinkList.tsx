@@ -13,6 +13,7 @@ export const LinkList = (props: any) => {
           className: 'list-item',
           children: (() => {
             const isGoogleDrive = child.props.to.includes('drive.google.com')
+            const isExternal = child.props.to.match(/^([a-z0-9]*:|.{0})\/\/.*$/)
 
             let className = css['link']
 
@@ -20,11 +21,18 @@ export const LinkList = (props: any) => {
               className += ` ${css['with-thumbnail']}`
             }
 
+            const icon = (() => {
+              if (props.noIndicator) return null
+              if (isExternal) return <IconExternalLink />
+
+              return <IconLink />
+            })()
+
             return (
               <div className={className}>
                 {isGoogleDrive && <img src={googleDriveImage} className={css['thumbnail']} alt="Google drive" />}
                 <div className={css['link-text']}>{child.props.children}</div>
-                {isGoogleDrive ? <IconExternalLink /> : <IconLink />}
+                {icon}
               </div>
             )
           })(),

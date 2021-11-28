@@ -11,14 +11,37 @@ import { Notification } from '../notifications'
 import { Session, SessionCard } from '../session'
 import { SliderStickyNotes } from 'src/components/common/slider/SliderVariations'
 import { DropdownVariationDots } from 'src/components/common/dropdown/Dropdown'
+import { Gallery } from 'src/components/common/gallery'
+
+const galleryEvents = [
+  {
+    title: 'Continuous Devcon',
+    description:
+      'Be sure to visit the Cyber Basement to experience the truly immersive co-working space. Kept open late into the night to accomodate your needs.',
+  },
+  {
+    title: 'Continuous Devcon 2',
+    description: 'Kept open late into the night to accomodate your needs.',
+  },
+  {
+    title: 'Continuous Devcon 3',
+    description:
+      'Be sure to visit the Cyber Basement to experience the truly immersive co-working space. Kept open late into the night to accomodate your needs.',
+  },
+  {
+    title: 'Continuous Devcon 4',
+    description: 'Kept open late into the night to accomodate your needs.',
+  },
+]
 
 export const Dashboard = (props: any) => {
   const [openNotifications, setOpenNotifications] = React.useState(true)
   const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(true)
+  const [currentSlide, setCurrentSlide] = React.useState(0)
 
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativePath: { in: ["neo-matrix.png"] } }) {
+      allFile(filter: { relativePath: { in: ["neo-matrix.png", "ask-deva.png", "pwa_prompt.png"] } }) {
         nodes {
           childImageSharp {
             fluid(maxWidth: 800, quality: 80) {
@@ -34,10 +57,26 @@ export const Dashboard = (props: any) => {
     <div className="section">
       <div className="content">
         <div className={css['hero']}>
-          <Image fluid={data.allFile.nodes[0].childImageSharp.fluid} objectFit="cover" />
+          <div className={css['image-container']}>
+            <Gallery onChange={setCurrentSlide}>
+              <Image fluid={data.allFile.nodes[1].childImageSharp.fluid} objectFit="cover" />
+              <Image fluid={data.allFile.nodes[2].childImageSharp.fluid} objectFit="cover" />
+              <Image fluid={data.allFile.nodes[0].childImageSharp.fluid} objectFit="cover" />
+              <Image fluid={data.allFile.nodes[1].childImageSharp.fluid} objectFit="cover" />
+            </Gallery>
+          </div>
+
+          <div className={css['text']}>
+            <p className={css['title']}>{galleryEvents[currentSlide].title}</p>
+            <p className={css['description']}>{galleryEvents[currentSlide].description}</p>
+          </div>
         </div>
 
-        <CollapsedSection open={openNotifications} setOpen={() => setOpenNotifications(!openNotifications)}>
+        <CollapsedSection
+          className={css['latest-notification']}
+          open={openNotifications}
+          setOpen={() => setOpenNotifications(!openNotifications)}
+        >
           <CollapsedSectionHeader title="Latest Notification" />
           <CollapsedSectionContent>
             <Notification />
