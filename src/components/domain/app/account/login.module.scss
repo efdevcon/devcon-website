@@ -66,6 +66,10 @@
   }
 }
 
+.alert {
+  margin-top: $gaps-gap-4;
+}
+
 .trust-model {
   @include fonts-lg;
   border-bottom: 1px solid $colors-standard-border-color;

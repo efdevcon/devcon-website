@@ -3,7 +3,6 @@ import { Router } from '@reach/router'
 import { AccountContextProvider } from 'src/context/account-context-provider'
 import { PrivateRoute } from 'src/components/common/private-route'
 import { BottomNav, InlineNav } from 'src/components/domain/app/navigation'
-import Login from './account/login'
 import Profile from './account/profile'
 import Attest from './account/attest'
 import { Helmet } from 'react-helmet'
@@ -13,15 +12,14 @@ import { Home } from 'src/components/domain/app/home'
 import { useAccountContext } from 'src/context/account-context'
 import { Dashboard } from 'src/components/domain/app/dashboard'
 import LoginStyled from './account/LoginStyled'
-import { Schedule, useSyncSchedule } from './schedule'
 import { Venue, Room } from './venue'
+import { Schedule } from './schedule'
 import { Speakers, SpeakerDetails } from './speakers'
 import { Session } from 'src/components/domain/app/session'
-import useGetElementHeight from 'src/hooks/useGetElementHeight'
-import { useDidScrollDown, useIsScrolled, useScrollY } from 'src/hooks/useIsScrolled'
 import { Notifications } from './notifications'
 import { Info } from './info'
 import { SideEvents } from './side-events'
+import Settings from './account/Settings'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -34,7 +32,7 @@ const accountContextHOC = (Component: React.ComponentType<any>) => {
 export const App = accountContextHOC(({ data, location }: any) => {
   const isBrowser = typeof window !== 'undefined'
   const accountContext = useAccountContext()
-  const loggedIn = accountContext.account || true /* Forcing logged in for dev purposes */
+  const loggedIn = !!accountContext.account
 
   return (
     <>
@@ -47,16 +45,16 @@ export const App = accountContextHOC(({ data, location }: any) => {
       </Helmet>
 
       <Header className={css['header']} withStrip={false} withHero={false} />
-      {loggedIn && <InlineNav location={location} />}
+
+      <InlineNav location={location} />
 
       {isBrowser && (
         <div className={css['app']}>
           <Router basepath="/app" style={{ minHeight: 'inherit' }}>
-            <Login path="/login" default />
+            <Home path="/" default />
 
-            {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts */}
-            <LoginStyled path="/conference" />
-
+            {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts
+            <LoginStyled path="/conference" /> */}
             <Venue path="/venue" />
             <Room path="/venue/:floor" />
             <Dashboard path="/dashboard" />
@@ -68,8 +66,8 @@ export const App = accountContextHOC(({ data, location }: any) => {
             <Info path="/info" />
             <SideEvents path="/side-events" />
 
-            <Home path="/" />
-
+            <LoginStyled path="/login" />
+            <PrivateRoute path="/settings" component={Settings} />
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute path="/attest" component={Attest} />
           </Router>

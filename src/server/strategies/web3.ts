@@ -4,6 +4,7 @@ import UserAccountModel from '../models/UserAccountModel'
 import { UserAccountRepository } from '../repositories/UserAccountRepository'
 
 const onAuth = async (address: string, done: any) => {
+  console.log('PASSPORT', 'onAuth')
   const repo = new UserAccountRepository()
   try {
     const userAccount = await repo.findUserAccountByAddress(address)
