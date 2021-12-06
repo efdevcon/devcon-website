@@ -1,5 +1,5 @@
 import React from 'react'
-import { getEvent, getTalks, getSpeakers } from './pretalx-api';
+// import { getEvent, getTalks, getSpeakers } from './pretalx-api';
 
 // const endpoint = 'http://localhost:9000/api/cache-test';
 const endpoint = 'https://pretalx.com/api/events/democon/talks/';

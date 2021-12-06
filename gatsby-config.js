@@ -276,6 +276,27 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'rooms',
+        path: `${__dirname}/src/content/event/rooms`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'speakers',
+        path: `${__dirname}/src/content/event/speakers`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'sessions',
+        path: `${__dirname}/src/content/event/sessions`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'devcon',
         path: `${__dirname}/src/content/devcon`,
       },

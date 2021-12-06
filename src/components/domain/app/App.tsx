@@ -34,6 +34,14 @@ export const App = accountContextHOC(({ data, location }: any) => {
   const accountContext = useAccountContext()
   const loggedIn = !!accountContext.account
 
+  // const { rooms, sessions, speakers } = data
+  // const notifications = useNotifications(rooms, sessions, speakers);
+  const eventData = {
+    rooms: data.rooms.nodes,
+    sessions: data.sessions.nodes,
+    speakers: data.speakers.nodes,
+  }
+
   return (
     <>
       <Helmet>
@@ -55,16 +63,16 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
             {/* Just styling, not connected to functionality - saving that for later to avoid some conflicts
             <LoginStyled path="/conference" /> */}
-            <Venue path="/venue" />
-            <Room path="/venue/:floor" />
-            <Dashboard path="/dashboard" />
-            <Schedule path="/schedule" />
-            <Session path="/schedule/:session" />
-            <Speakers path="/speakers" />
-            <SpeakerDetails path="/speakers/:speaker" />
-            <Notifications path="/notifications" />
-            <Info path="/info" />
-            <SideEvents path="/side-events" />
+            <Venue {...eventData} path="/venue" />
+            <Room {...eventData} path="/venue/:floor" />
+            <Dashboard {...eventData} path="/dashboard" />
+            <Schedule {...eventData} path="/schedule" />
+            <Session {...eventData} path="/schedule/:session" />
+            <Speakers {...eventData} path="/speakers" />
+            <SpeakerDetails {...eventData} path="/speakers/:speaker" />
+            <Notifications {...eventData} path="/notifications" />
+            <Info {...eventData} path="/info" />
+            <SideEvents {...eventData} path="/side-events" />
 
             <LoginStyled path="/login" />
             <PrivateRoute path="/settings" component={Settings} />

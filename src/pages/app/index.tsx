@@ -11,5 +11,6 @@ export const query = graphql`
   query ($language: String!) {
     ...NavigationData
     ...Notification
+    ...EventData
   }
 `
