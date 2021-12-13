@@ -14,12 +14,17 @@ export function EventOverview(props: EventOverviewProps) {
     const start = moment.utc(event.startDate)
     const end = moment.utc(event.endDate)
 
+    if (start._f === 'YYYY-MM' && end._f === 'YYYY-MM') {
+      return `${start.format('YYYY MMM')} - ${end.format('YYYY MMM')}`
+    }
+
     if (start.day() === end.day() && start.month() === end.month()) {
       return start.format('MMM DD YYYY')
     }
     if (start.month() === end.month()) {
       return `${start.format('MMM')} ${start.format('DD')}-${end.format('DD')} ${start.format('YYYY')}`
     }
+
     return `${start.format('MMM DD')}-${end.format('MMM DD')} ${end.format('YYYY')}`
   }
 
@@ -55,12 +60,17 @@ END:VCALENDAR`
     <div className={css['events']}>
       {props.data.map((event: EventType) => {
         const isPastEvent = moment.utc(event.endDate).isBefore(moment.utc())
+        const onlyMonthSpecified = moment.utc(event.endDate)._f === 'YYYY-MM'
 
         return (
           <div key={event.id} className={isPastEvent ? css['past-event'] : css['event']}>
             <div className={css['date-column']}>
               <a href={event.url} target="_blank" rel="oopener noreferrer">
-                <span className={css['day']}>{moment.utc(event.startDate).format('DD')}</span>
+                {!onlyMonthSpecified ? (
+                  <span className={css['day']}>{moment.utc(event.startDate).format('DD')}</span>
+                ) : (
+                  'N/A'
+                )}
                 <span className={css['month']}>{moment.utc(event.startDate).format('MMM')}</span>
               </a>
               {!isPastEvent && (
