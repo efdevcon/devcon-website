@@ -60,6 +60,8 @@ passport.serializeUser(serializeUser)
 passport.deserializeUser(deserializeUser)
 
 server.get('/api/cache-test', (req, res) => {
+  console.log(req.user, 'req user');
+
   setTimeout(() => {
     res.json(Math.random() * 100);
   }, 2000);

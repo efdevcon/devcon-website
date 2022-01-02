@@ -6,6 +6,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           id
+          name
         }
       }
     }
@@ -13,6 +14,17 @@ export const query = graphql`
       nodes {
         frontmatter {
           id
+          speakers
+          title
+          track
+          duration
+          start
+          end
+          room
+          type
+          description
+          abstract
+          tags
         }
       }
     }

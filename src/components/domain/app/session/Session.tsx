@@ -9,6 +9,8 @@ import { Tabs } from 'src/components/common/tabs'
 import { Tab } from 'src/components/common/tabs/Tabs'
 import { AppTabsSection } from 'src/components/domain/app/app-tabs-section'
 import { ThumbnailBlock } from 'src/components/common/thumbnail-block'
+import { Session as SessionType } from 'src/types/Session'
+import { Speaker } from 'src/types/Speaker'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -27,7 +29,12 @@ const Hero = (props: any) => {
   )
 }
 
-export const Session = (props: any) => {
+type SessionProps = {
+  sessions: SessionType[]
+  speakers: Speaker[]
+}
+
+export const Session = (props: SessionProps) => {
   return (
     <div>
       <Hero icon={iconSecurity} className={css['session-hero']}>
@@ -171,8 +178,9 @@ export const Session = (props: any) => {
 
           <div className={css['related-sessions']}>
             <h3 className={css['title']}>Related Sessions</h3>
-            <SessionCard />
-            <SessionCard />
+            {props.sessions.map(session => {
+              return <SessionCard session={session} speakers={props.speakers} key={session.id} />
+            })}
           </div>
         </div>
       </div>

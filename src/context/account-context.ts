@@ -2,6 +2,7 @@ import { createContext, useContext } from 'react'
 import { providers } from 'ethers'
 import { UserAccount } from 'src/types/UserAccount'
 import { SignedMessage } from 'src/types/SignedMessage'
+import { Session } from 'src/types/Session'
 
 export interface AccountContextType {
   loading: boolean
@@ -15,7 +16,9 @@ export interface AccountContextType {
   logout: (id: string) => Promise<boolean>
   getAccount: () => Promise<UserAccount | undefined>
   updateAccount: (id: string, account: UserAccount) => Promise<boolean>
-  deleteAccount: (id: string) => Promise<boolean>
+  deleteAccount: (id: string) => Promise<boolean>,
+  setSpeakerFavorite: (speakerId: string, remove: boolean) => void,
+  setSessionBookmark: (session: Session, interestLevel: 'attending' | 'interested', remove: boolean) => void, 
 }
 
 export const useAccountContext = () => useContext<AccountContextType>(AccountContext)
@@ -32,4 +35,6 @@ export const AccountContext = createContext<AccountContextType>({
   getAccount: async () => undefined,
   updateAccount: async () => false,
   deleteAccount: async () => false,
+  setSpeakerFavorite: () => {},
+  setSessionBookmark: () => {},
 })

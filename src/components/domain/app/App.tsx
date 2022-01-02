@@ -20,6 +20,8 @@ import { Notifications } from './notifications'
 import { Info } from './info'
 import { SideEvents } from './side-events'
 import Settings from './account/Settings'
+import { Session as SessionType } from 'src/types/Session'
+import { Speaker } from 'src/types/Speaker'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -27,6 +29,35 @@ const accountContextHOC = (Component: React.ComponentType<any>) => {
       <Component {...props} />
     </AccountContextProvider>
   )
+}
+
+/*
+  id: string
+  speakers: string[]
+  title: string
+  track: string
+  duration: string
+  start: Date
+  end: Date
+  room: string
+  type?: string
+  description?: string
+  abstract?: string
+  image?: string
+  resources?: string[]
+  tags?: string[]
+*/
+
+const formatSessionData = (sessions: any): SessionType[] => {
+  return sessions.map((session: any) => {
+    return session.frontmatter
+  })
+}
+
+const formatSpeakerData = (speakers: any): Speaker[] => {
+  return speakers.map((speaker: any) => {
+    return speaker.frontmatter
+  })
 }
 
 export const App = accountContextHOC(({ data, location }: any) => {
@@ -38,8 +69,8 @@ export const App = accountContextHOC(({ data, location }: any) => {
   // const notifications = useNotifications(rooms, sessions, speakers);
   const eventData = {
     rooms: data.rooms.nodes,
-    sessions: data.sessions.nodes,
-    speakers: data.speakers.nodes,
+    sessions: formatSessionData(data.sessions.nodes),
+    speakers: formatSpeakerData(data.speakers.nodes),
   }
 
   return (

@@ -1,4 +1,5 @@
 import { UserAccount } from 'src/types/UserAccount'
+import { UserAppState } from 'src/types/UserAppState'
 import { BaseRepository } from './BaseRepository'
 import { IUserAccountRepository } from './interfaces/IUserAccountRepository'
 
@@ -19,6 +20,15 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
   public async findUserAccountByAddress(address: string): Promise<UserAccount | undefined> {
     try {
       return await this._model.findOne({ addresses: address })
+    } catch (e) {
+      console.log("Couldn't find user account by address", address)
+      console.error(e)
+    }
+  }
+
+  public async saveAppState(address: string, state: UserAppState): Promise<void>  {
+    try {
+      return await this._model.saveClientState({ addresses: address })
     } catch (e) {
       console.log("Couldn't find user account by address", address)
       console.error(e)

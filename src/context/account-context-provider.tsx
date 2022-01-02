@@ -5,6 +5,7 @@ import { AccountContext, AccountContextType } from './account-context'
 import { getWeb3Modal } from 'src/utils/web3'
 import { SignedMessage } from 'src/types/SignedMessage'
 import { navigate } from '@reach/router'
+import { Session } from 'src/types/Session'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -24,6 +25,71 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     getAccount,
     updateAccount,
     deleteAccount,
+    setSpeakerFavorite: (speakerId: string, remove: boolean): void => {
+      if (!context.account) return
+
+      let nextSpeakerFavorites = {
+        ...context.account?.appState?.favoritedSpeakers,
+      }
+
+      if (remove) {
+        delete nextSpeakerFavorites[speakerId]
+      } else {
+        nextSpeakerFavorites = {
+          ...nextSpeakerFavorites,
+          [speakerId]: true,
+        }
+      }
+
+      const nextAccountState = {
+        ...context.account,
+        appState: {
+          ...context.account.appState,
+          updatedAt: new Date(),
+          favoritedSpeakers: nextSpeakerFavorites,
+        },
+      }
+
+      setContext({
+        ...context,
+        account: nextAccountState,
+      })
+    },
+    setSessionBookmark: (session: Session, interestLevel: 'interested' | 'attending', remove?: boolean): void => {
+      if (!context.account) return
+
+      let nextBookmarkedSessions = {
+        ...context.account?.appState?.bookmarkedSessions,
+      }
+
+      if (remove) {
+        delete nextBookmarkedSessions[session.id]
+      } else {
+        nextBookmarkedSessions = {
+          ...nextBookmarkedSessions,
+          [session.id]: {
+            interestLevel,
+            // Start and end time need to be saved at time of bookmarking - allows us to create "session changed" notifications client side by diffing the schedule with the bookmarked snapshots
+            start: session.start,
+            end: session.end,
+          },
+        }
+      }
+
+      const nextAccountState = {
+        ...context.account,
+        appState: {
+          ...context.account?.appState,
+          updatedAt: new Date(),
+          bookmarkedSessions: nextBookmarkedSessions,
+        },
+      }
+
+      setContext({
+        ...context,
+        account: nextAccountState,
+      })
+    },
   })
 
   React.useEffect(() => {

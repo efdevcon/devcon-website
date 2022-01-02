@@ -1,3 +1,5 @@
+import { UserAppState } from "./UserAppState";
+
 export interface UserAccount {
   _id: any
   username?: string
@@ -7,4 +9,5 @@ export interface UserAccount {
   pushSubscription: any,
   createdAt: Date
   updatedAt: Date
+  appState?: UserAppState
 }
