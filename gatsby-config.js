@@ -8,6 +8,9 @@ const {
 const isNetlifyProduction = NETLIFY_ENV === 'production'
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
+console.log('Gatsby config', 'NODE_ENV', NODE_ENV, 'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 
+  'URL', URL, 'isNetlifyProduction', isNetlifyProduction, 'siteUrl', siteUrl)
+
 const title = 'Devcon'
 const defaultLanguage = 'en'
 const secondaryLanguage = 'es'
