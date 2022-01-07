@@ -6,8 +6,12 @@ const {
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === 'production'
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+let siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
+if (NODE_ENV === 'production' && NETLIFY_ENV === 'branch-deploy' && siteUrl === 'https://archive--efdevcon.netlify.app') {
+  console.log('Override siteUrl in Gatsby config for archive branch-deploy..')
+  siteUrl = 'https://archive.devcon.org'
+}
 console.log('Gatsby config', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 
   'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 'isNetlifyProduction', isNetlifyProduction, 'siteUrl', siteUrl)
 
@@ -60,12 +64,11 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         resolveEnv: () => {
-          console.log('Resolving gatsby-plugin-robots-txt')
-          console.log('VARS', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'siteUrl', siteUrl)
-          if (siteUrl === 'https://archive--efdevcon.netlify.app') {
+          console.log('resolveEnv for gatsby-plugin-robots-txt')
+          if (siteUrl === 'https://archive.devcon.org') {
+            console.log("Return 'branch-deploy' archive as production")
             return 'production'
           }
-
           return NETLIFY_ENV
         },
         env: {
