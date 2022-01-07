@@ -8,8 +8,8 @@ const {
 const isNetlifyProduction = NETLIFY_ENV === 'production'
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
-console.log('Gatsby config', 'NODE_ENV', NODE_ENV, 'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 
-  'URL', URL, 'isNetlifyProduction', isNetlifyProduction, 'siteUrl', siteUrl)
+console.log('Gatsby config', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 
+  'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 'isNetlifyProduction', isNetlifyProduction, 'siteUrl', siteUrl)
 
 const title = 'Devcon'
 const defaultLanguage = 'en'
@@ -59,7 +59,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        resolveEnv: () => NETLIFY_ENV,
+        resolveEnv: () => {
+          console.log('Resolving gatsby-plugin-robots-txt')
+          console.log('VARS', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'siteUrl', siteUrl)
+          if (siteUrl === 'https://archive--efdevcon.netlify.app') {
+            return 'production'
+          }
+
+          return NETLIFY_ENV
+        },
         env: {
           production: {
             host: siteUrl,
