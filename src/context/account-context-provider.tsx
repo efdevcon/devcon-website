@@ -6,6 +6,7 @@ import { getWeb3Modal } from 'src/utils/web3'
 import { SignedMessage } from 'src/types/SignedMessage'
 import { navigate } from '@reach/router'
 import { Session } from 'src/types/Session'
+import { Web3Provider } from '@ethersproject/providers'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -16,6 +17,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     loading: true,
     provider: undefined,
     account: undefined,
+    connectWeb3,
     signMessage,
     getNonce,
     loginWeb3,
@@ -119,23 +121,23 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     }
   }
 
-  async function signMessage(message: string): Promise<SignedMessage | undefined> {
-    let provider = context.provider
-    if (!provider) {
-      provider = await connectWeb3()
+  async function signMessage(message: string, provider?: Web3Provider): Promise<SignedMessage | undefined> {
+    let web3Provider = provider ?? context.provider
+    if (!web3Provider) {
+      web3Provider = await connectWeb3()
     }
-    if (!provider) {
+    if (!web3Provider) {
       console.error('Unable to initialize Web3Provider')
       return
     }
 
     try {
-      const signer = provider.getSigner()
+      const signer = web3Provider.getSigner()
       const address = await signer.getAddress()
       let signature = ''
 
-      if (provider.provider?.wc) {
-        signature = await provider.send('personal_sign', [
+      if (web3Provider.provider?.wc) {
+        signature = await web3Provider.send('personal_sign', [
           utils.hexlify(utils.toUtf8Bytes(message)),
           address.toLowerCase(),
         ])
@@ -185,13 +187,25 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     // else: set error/message
   }
 
-  async function loginEmail(email: string, nonce: number): Promise<UserAccount | undefined> {
+  async function loginEmail(email: string): Promise<boolean> {
     const response = await fetch('/api/account/login/email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: email.toLowerCase(),
-        nonce: nonce,
+      }),
+    })
+
+    return response.status === 200
+  }
+
+  async function verifyEmail(email: string, code: string): Promise<UserAccount | undefined> {
+    const response = await fetch('/api/account/login/email/verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: email.toLowerCase(),
+        code: Number(code),
       }),
     })
 
@@ -202,23 +216,6 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     }
 
     // else: set error/message
-  }
-
-  async function verifyEmail(email: string): Promise<boolean> {
-    const response = await fetch('/api/account/login/email/verify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: email.toLowerCase(),
-      }),
-    })
-
-    if (response.status === 200) {
-      return true
-    }
-
-    // else: set error/message
-    return false
   }
 
   async function logout(): Promise<boolean> {

@@ -1,14 +1,13 @@
 import nodemailer, { Transporter } from 'nodemailer'
 import { SERVER_CONFIG } from '../config/server'
-import addEmailTemplate from '../../templates/add-email.html'
-import addEmailTextTemplate from '../../templates/add-email.txt'
+import emailTemplates from './email-templates.json'
 
 require('dotenv').config()
 
-type EmailTemplates = 'add-email'
+type EmailTemplates = 'default-email' | 'email-cta'
 
 export interface EmailServiceInterface {
-  sendMail(to: string, template: EmailTemplates, properties: { [key: string]: any }): void
+  sendMail(to: string, template: EmailTemplates, subject: string, properties: { [key: string]: any }): void
 }
 
 export class EmailService implements EmailServiceInterface {
@@ -26,12 +25,15 @@ export class EmailService implements EmailServiceInterface {
     })
   }
 
-  async sendMail(to: string, template: EmailTemplates, properties: { [key: string]: string }) {
+  async sendMail(to: string, template: EmailTemplates, subject: string, properties: { [key: string]: string }) {
     const from = `"${SERVER_CONFIG.SMTP_DEFAULT_FROM_NAME}" <${SERVER_CONFIG.SMTP_DEFAULT_FROM}>`
-    const subject = template === 'add-email' ? 'Add your email to Devcon.org' : ''
-    const text = template === 'add-email' ? replace(addEmailTextTemplate, properties) : ''
-    const html = template === 'add-email' ? replace(addEmailTemplate, properties) : ''
-    if (!subject || !html || !text) return
+    let text = replace(emailTemplates.defaultEmail.text.join('\n'), properties)
+    let html = replace(emailTemplates.defaultEmail.html, properties).replace(/(?:\r\n|\r|\n)/g, '<br>')
+
+    if (template === 'email-cta') {
+      text = replace(emailTemplates.ctaEmail.text.join('\n'), properties)
+      html = replace(emailTemplates.ctaEmail.html, properties).replace(/(?:\r\n|\r|\n)/g, '<br>')
+    }
     
     const response = await this.transporter.sendMail({
       from: from,
@@ -47,5 +49,5 @@ export class EmailService implements EmailServiceInterface {
 
 function replace(template: string, data: any) {
   const pattern = /{%\s*(\w+?)\s*%}/g; // {%property%}
-  return template.replace(pattern, (_, token) => data[token] || '');
+  return template.replace(pattern, (_, token) => data[token] || '')
 }

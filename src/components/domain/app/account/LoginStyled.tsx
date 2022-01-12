@@ -12,20 +12,35 @@ import { Tooltip } from 'src/components/common/tooltip'
 import { isEmail } from 'src/utils/validators'
 import { useAccountContext } from 'src/context/account-context'
 import { Alert } from 'src/components/common/alert'
+import { getSiweMessage } from 'src/utils/web3'
 
 export default function LoginPage(props: RouteComponentProps) {
   const [tooltipVisible, setTooltipVisible] = React.useState(false)
   const accountContext = useAccountContext()
+  const [emailSent, setEmailSent] = useState(false)
   const [error, setError] = useState('')
   const [email, setEmail] = useState('')
+  const [code, setCode] = useState('')
 
   const connectWeb3AndLogin = async () => {
-    const nonce = await accountContext.getNonce()
-    const message = `Sign this message to prove you have access to this wallet. This won't cost you anything.\n\nNonce: ${nonce} *\n * You don't need to remember this.`
-    const signedMessage = await accountContext.signMessage(message)
+    const provider = await accountContext.connectWeb3()
+    if (!provider) { 
+      setError('Unable to connect to Web3 provider')
+      return
+    }
 
+    const signer = provider.getSigner()
+    const address = await signer.getAddress()
+    const nonce = await accountContext.getNonce()
+    if (!nonce) { 
+      setError('Unable to create security nonce')
+      return
+    }
+
+    const message = getSiweMessage(address, nonce)
+    const signedMessage = await accountContext.signMessage(message, provider)
     if (!signedMessage) {
-      setError('Unable to connect to web3')
+      setError('Unable to sign message')
       return
     }
 
@@ -51,12 +66,24 @@ export default function LoginPage(props: RouteComponentProps) {
       setError('')
     }
 
-    const userAccount = await accountContext.loginEmail(email, 123456) // TODO: Email nonce
+    const emailSent = await accountContext.loginEmail(email)
+    if (emailSent) {
+      setEmailSent(true)
+    }
+    else { 
+      setEmailSent(false)
+      const msg = 'Unable to login with email.'
+      setError(msg)
+    }
+  }
+
+  const verifyEmail = async () => {
+    const userAccount = await accountContext.verifyEmail(email, code)
     if (userAccount) {
       navigate('/app')
     }
     if (!userAccount) {
-      const msg = 'Unable to login with email.'
+      const msg = 'Unable to verify your email address.'
       setError(msg)
     }
   }
@@ -94,30 +121,48 @@ export default function LoginPage(props: RouteComponentProps) {
               {error && <Alert type="info" message={error} />}
             </div>
 
-            <div className={css['trust-model']}>
-              <p>Choose your Trust model.</p>
-              <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x)/ 0=('_'Q)</p>}>
-                <span onClick={() => setTooltipVisible(!tooltipVisible)}>
-                  <IconHelp className={`icon ${css['icon-help']}`} />
-                </span>
-              </Tooltip>
-            </div>
+            {emailSent && 
+              <div className={css['email']}>
+                <p className="bold">Email — Confirm your email address</p>
+                <p>
+                  We've sent a verification code to your email address. Please enter this code on below.
+                </p>
+                <InputForm 
+                  className={css['input']} 
+                  placeholder="Verification code"
+                  defaultValue={code} 
+                  onChange={(value) => setCode(value)} 
+                  onSubmit={verifyEmail} />
+                <Button className={`black`} onClick={verifyEmail}>Verify your email</Button>
+              </div>
+            }
 
-            <div className={css['email']}>
-              <p className="bold">Email — Not interested in Web 3 usage</p>
-              <InputForm 
-                className={css['input']} 
-                placeholder="Email"
-                defaultValue={email} 
-                onChange={(value) => setEmail(value)} 
-                onSubmit={connectEmail} />
-              <Button className={`black`} onClick={connectEmail}>Connect with Email</Button>
-            </div>
-            
-            <div className={css['wallet']}>
-              <p className="bold">Wallet — For Experienced Web 3 Users</p>
-              <Button className={`red ${css['button']}`} onClick={connectWeb3AndLogin}>Connect with Ethereum</Button>
-            </div>
+            {!emailSent && <>
+              <div className={css['trust-model']}>
+                <p>Choose your Trust model.</p>
+                <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x)/ 0=('_'Q)</p>}>
+                  <span onClick={() => setTooltipVisible(!tooltipVisible)}>
+                    <IconHelp className={`icon ${css['icon-help']}`} />
+                  </span>
+                </Tooltip>
+              </div>
+
+              <div className={css['email']}>
+                <p className="bold">Email — Not interested in Web 3 usage</p>
+                <InputForm 
+                  className={css['input']} 
+                  placeholder="Email"
+                  defaultValue={email} 
+                  onChange={(value) => setEmail(value)} 
+                  onSubmit={connectEmail} />
+                <Button className={`black`} onClick={connectEmail}>Connect with Email</Button>
+              </div>
+              
+              <div className={css['wallet']}>
+                <p className="bold">Wallet — For Experienced Web 3 Users</p>
+                <Button className={`red ${css['button']}`} onClick={connectWeb3AndLogin}>Sign-in with Ethereum</Button>
+              </div>
+            </>}
           </div>
         </div>
       </div>

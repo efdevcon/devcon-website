@@ -8,11 +8,12 @@ export interface AccountContextType {
   loading: boolean
   provider: providers.Web3Provider | undefined
   account: UserAccount | undefined
-  signMessage: (message: string) => Promise<SignedMessage | undefined>
+  connectWeb3: () => Promise<providers.Web3Provider | undefined>
+  signMessage: (message: string, provider?: providers.Web3Provider) => Promise<SignedMessage | undefined>
   getNonce: () => Promise<number | undefined>
   loginWeb3: (address: string, message: string, signature: string) => Promise<UserAccount | undefined>
-  loginEmail: (email: string, nonce: number) => Promise<UserAccount | undefined>
-  verifyEmail: (email: string) => Promise<boolean>
+  loginEmail: (email: string) => Promise<UserAccount | undefined>
+  verifyEmail: (email: string, code: string) => Promise<boolean>
   logout: (id: string) => Promise<boolean>
   getAccount: () => Promise<UserAccount | undefined>
   updateAccount: (id: string, account: UserAccount) => Promise<boolean>
@@ -26,6 +27,7 @@ export const AccountContext = createContext<AccountContextType>({
   loading: false,
   provider: undefined,
   account: undefined,
+  connectWeb3: async () => undefined,
   signMessage: async () => undefined,
   getNonce: async () => undefined,
   loginWeb3: async () => undefined,
