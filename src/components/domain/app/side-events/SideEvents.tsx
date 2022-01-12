@@ -21,6 +21,7 @@ const dummySessions = [
 ]
 
 export const SideEvents = (props: any) => {
+  console.log(props.sessions, 'sessions')
   const [search, setSearch] = React.useState('')
   const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
   const [sessions, filterState] = useFilter({
@@ -34,8 +35,6 @@ export const SideEvents = (props: any) => {
     }),
     filterFunction: (activeFilter: any) => {
       if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
-
-      console.log(activeFilter, 'active filter')
 
       return dummySessions.filter(speaker => activeFilter[speaker.title])
     },
@@ -142,7 +141,7 @@ export const SideEvents = (props: any) => {
         {/* <h4 className={`app-header ${css['header']}`}>Side Events</h4> */}
 
         {sessions.map(session => {
-          return <SessionCard key={session.id} />
+          return <SessionCard session={props.sessions[0]} speakers={props.speakers} key={session.id} />
         })}
       </div>
     </div>

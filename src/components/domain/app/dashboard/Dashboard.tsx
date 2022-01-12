@@ -86,7 +86,10 @@ export const Dashboard = (props: any) => {
         <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
           <CollapsedSectionHeader title="Upcoming Sessions" />
           <CollapsedSectionContent>
-            <SessionCard />
+            <SessionCard 
+              session={props.sessions[0]}
+              speakers={props.speakers}
+            />
           </CollapsedSectionContent>
         </CollapsedSection>
 

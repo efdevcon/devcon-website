@@ -4,8 +4,9 @@ import css from './speaker-details.module.scss'
 import { VideoCard } from 'src/components/domain/archive/playlists'
 import { SessionCard } from '../session'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Proposals } from '../../dips/overview/proposals'
 
-export const SpeakerDetails = () => {
+export const SpeakerDetails = (props: any) => {
   // const data = useStaticQuery(graphql`
   //   query {
   //     allFile(filter: { relativePath: { in: ["pwa_prompt.png"] } }) {
@@ -62,8 +63,8 @@ export const SpeakerDetails = () => {
           <div className={css['sessions']}>
             <p className={css['header']}>Sessions</p>
 
-            <SessionCard />
-            <SessionCard />
+            <SessionCard session={props.sessions[0]} speakers={props.speakers} />
+            <SessionCard session={props.sessions[0]} speakers={props.speakers} />
           </div>
 
           <div className={css['videos']}>
