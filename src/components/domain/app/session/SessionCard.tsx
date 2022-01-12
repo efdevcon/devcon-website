@@ -42,9 +42,6 @@ export const SessionCard = (props: CardProps) => {
       thumbnailClassName += ` ${css['ux-design']}`
   }
 
-  console.log(props.session, 'session from props')
-  console.log(props.speakers, 'speakers')
-
   return (
     <ThumbnailBlock className={thumbnailClassName}>
       <div className={css['details']}>
