@@ -15,7 +15,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   const [context, setContext] = useState<AccountContextType>({
     loading: true,
     provider: undefined,
-    account: undefined,
+    account: {}, //undefined, // Temporarily defining a default value to test bookmarks and favorites
     signMessage,
     getNonce,
     loginWeb3,
@@ -284,6 +284,8 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     // else: set error/message
     return false
   }
+
+  console.log(context, 'account context')
 
   return <AccountContext.Provider value={context}>{children}</AccountContext.Provider>
 }

@@ -16,6 +16,7 @@ import { InputForm } from 'src/components/common/input-form'
 import { Filter, FilterFoldout, NoResults, useFilter } from 'src/components/common/filter'
 import { Button } from 'src/components/common/button'
 import { AppSearch } from 'src/components/domain/app/app-search'
+import { useAccountContext } from 'src/context/account-context'
 
 const dummySpeakers = [
   {
@@ -43,14 +44,15 @@ type CardProps = {
 }
 
 export const SpeakerCard = ({ speaker }: CardProps) => {
-  // Comes from props later
-  const [favorited, setFavorited] = React.useState(false)
+  const { account, setSpeakerFavorite } = useAccountContext()
+  const favoritedSpeakers = account?.appState?.favoritedSpeakers
+  const isSpeakerFavorited = favoritedSpeakers?.[speaker.id]
 
   const iconProps = {
     className: css['favorite'],
     onClick: (e: React.SyntheticEvent) => {
       e.preventDefault()
-      setFavorited(!favorited)
+      setSpeakerFavorite(speaker.id, !!isSpeakerFavorited)
     },
   }
 
@@ -65,7 +67,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
         <p className={css['company']}>{speaker.company}</p>
       </div>
 
-      {favorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
+      {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
     </Link>
   )
 }
@@ -180,7 +182,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
           {props.speakers.map(speaker => {
             return <SpeakerCard key={speaker.name} speaker={speaker} />
           })}
-          {props.speakers.map(speaker => {
+          {/* {props.speakers.map(speaker => {
             return <SpeakerCard key={speaker.name} speaker={speaker} />
           })}
           {props.speakers.map(speaker => {
@@ -188,7 +190,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
           })}
           {props.speakers.map(speaker => {
             return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
+          })} */}
         </div>
 
         <div className={css['letters']}>
@@ -209,7 +211,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
   )
 }
 
-export const Speakers = () => {
+export const Speakers = (props: any) => {
   const trackFilters = ['One', 'Two', 'Three']
   const [search, setSearch] = React.useState('')
   const [speakers, filterState] = useFilter({
@@ -277,9 +279,9 @@ export const Speakers = () => {
             <NoResults />
           ) : (
             <>
-              {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={speakers} />}
-              {sortedBy.key === 'tracks' && <ListTrackSort speakers={speakers} />}
-              {sortedBy.key === 'days' && <ListDaySort speakers={speakers} />}
+              {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={props.speakers} />}
+              {sortedBy.key === 'tracks' && <ListTrackSort speakers={props.speakers} />}
+              {sortedBy.key === 'days' && <ListDaySort speakers={props.speakers} />}
             </>
           )}
         </div>

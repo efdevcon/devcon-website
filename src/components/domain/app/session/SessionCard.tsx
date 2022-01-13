@@ -14,18 +14,16 @@ type CardProps = {
 }
 
 export const SessionCard = (props: CardProps) => {
-  const { account } = useAccountContext()
+  const { account, setSessionBookmark } = useAccountContext()
   const bookmarkedSessions = account?.appState?.bookmarkedSessions
-  const speakers = props.speakers
-
-  const [saved, setSaved] = React.useState(false) // comes from props later
+  const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
 
   const iconProps = {
     className: `${css['save-session']} icon`,
-    onClick: () => setSaved(!saved),
+    onClick: () => setSessionBookmark(props.session, 'attending', !!sessionIsBookmarked),
   }
 
-  if (saved) {
+  if (sessionIsBookmarked) {
     iconProps.className += ` ${css['saved']}`
   }
 
@@ -49,7 +47,7 @@ export const SessionCard = (props: CardProps) => {
           {/* <p className={css['title']}>Water We Doing: The Changing Tides of the Ethereum Foundation Grants Program</p> */}
           <p className={css['title']}>{props.session.title}</p>
 
-          {saved ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
+          {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
 
           <div className="label sm">
             {props.session.track} {/*UX & Design*/}
