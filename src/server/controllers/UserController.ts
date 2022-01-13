@@ -1,8 +1,11 @@
 import { Request, Response, NextFunction } from 'express'
+import moment from 'moment'
 import passport from 'passport'
 import { UserAccount } from 'src/types/UserAccount'
 import UserAccountModel from '../models/UserAccountModel'
 import { IUserAccountRepository } from '../repositories/interfaces/IUserAccountRepository'
+import { EmailService } from '../services/email-service'
+import emailTemplates from '../services/email-templates.json'
 
 export class UserController {
   private _repository: IUserAccountRepository
@@ -41,33 +44,42 @@ export class UserController {
   public async LoginEmail(req: Request, res: Response, next: NextFunction) {
     try {
       const email = req.body?.email
-      const nonce = req.body?.nonce
-
-      if (!email || !nonce) {
+      if (!email) {
         return res.status(400).send({ code: 400, message: 'Email login input not provided.' })
       }
 
       if (email) {
-        // TODO: & nonce
-        let userAccount = await this._repository.findUserAccountByEmail(email)
+        const nonce = Math.floor(Math.random() * (999999 - 100000)) + 100000
+        const expirationDate = moment(Date.now()).add(20, 'minutes').toDate()
 
+        let userAccount = await this._repository.findUserAccountByEmail(email)
+        if (userAccount) {
+          userAccount.nonce = nonce
+          userAccount.expires = expirationDate
+          await this._repository.update(userAccount._id, userAccount)
+        }
         if (!userAccount) {
           const model = new UserAccountModel()
           model.email = email
+          model.nonce = nonce
+          model.expires = expirationDate
           userAccount = await this._repository.create(model)
         }
-
         if (!userAccount) {
-          return res.status(404).send({ code: 404, message: 'Unable to login by email.' })
+          return res.status(404).send({ code: 404, message: 'Unable to access email account.' })
         }
 
-        req.logIn(userAccount, function (err) {
-          if (err) {
-            return next(err)
-          }
+        const emailService = new EmailService()      
+        await emailService.sendMail(email, 'default-email', `${nonce} is your Devcon verification code`, {
+          TITLE: 'Confirm your email address',
+          DESCRIPTION: `Please enter this verification code on Devcon.org\n
 
-          return res.status(200).send({ code: 200, message: '', data: userAccount })
+          ${nonce}\n
+           
+          This verification codes expires in 20 minutes.`
         })
+
+        return res.status(200).send({ code: 200, message: 'Verification email sent.' })
       }
     } catch (e) {
       console.error(e)
@@ -75,8 +87,26 @@ export class UserController {
     }
   }
 
-  public async VerifyEmail(req: Request, res: Response) {
-    res.status(200).send({ code: 200, message: '', data: 'Email verified' })
+  public async VerifyEmail(req: Request, res: Response, next: NextFunction) {
+    const email = req.body?.email
+    const code = req.body?.code
+    
+    if (!email || !code) {
+      return res.status(400).send({ code: 400, message: 'Email or verification code is incorrect.' })
+    }
+
+    const userAccount = await this._repository.findUserAccountByEmail(email)
+    if (!userAccount || userAccount.nonce !== code || userAccount.expires < new Date()) {
+      return res.status(400).send({ code: 400, message: 'Unable to verify your email address.' })
+    }
+
+    req.logIn(userAccount, function (err) {
+      if (err) {
+        return next(err)
+      }
+
+      return res.status(200).send({ code: 200, message: 'Email verified', data: userAccount })
+    })
   }
 
   public async Logout(req: Request, res: Response) {
