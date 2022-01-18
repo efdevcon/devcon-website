@@ -36,8 +36,8 @@ export const Home = (props: any) => {
             </div>
             <div className={css['profile-actions']}>
               <button className="label error plain" onClick={() => navigate('/app/settings')}>SETTINGS</button>
-              <button className="label error plain" onClick={() => navigate('/app/settings')}>MANAGE WALLETS</button>
-              <button className="label error plain" onClick={() => navigate('/app/settings')}>MANAGE EMAILS</button>
+              <button className="label error plain" onClick={() => navigate('/app/settings/wallets')}>MANAGE WALLETS</button>
+              <button className="label error plain" onClick={() => navigate('/app/settings/email')}>MANAGE EMAILS</button>
             </div>
 
             <div className={css['dropdown']}>

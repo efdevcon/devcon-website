@@ -13,6 +13,7 @@ import { isEmail } from 'src/utils/validators'
 import { useAccountContext } from 'src/context/account-context'
 import { Alert } from 'src/components/common/alert'
 import { getSiweMessage } from 'src/utils/web3'
+import AccountFooter from './AccountFooter'
 
 export default function LoginPage(props: RouteComponentProps) {
   const [tooltipVisible, setTooltipVisible] = React.useState(false)
@@ -20,7 +21,7 @@ export default function LoginPage(props: RouteComponentProps) {
   const [emailSent, setEmailSent] = useState(false)
   const [error, setError] = useState('')
   const [email, setEmail] = useState('')
-  const [code, setCode] = useState('')
+  const [nonce, setNonce] = useState('')
 
   const connectWeb3AndLogin = async () => {
     const provider = await accountContext.connectWeb3()
@@ -31,13 +32,13 @@ export default function LoginPage(props: RouteComponentProps) {
 
     const signer = provider.getSigner()
     const address = await signer.getAddress()
-    const nonce = await accountContext.getNonce()
-    if (!nonce) { 
-      setError('Unable to create security nonce')
+    const token = await accountContext.getToken(address.toLowerCase())
+    if (!token) { 
+      setError('Unable to create verification token')
       return
     }
 
-    const message = getSiweMessage(address, nonce)
+    const message = getSiweMessage(address, token)
     const signedMessage = await accountContext.signMessage(message, provider)
     if (!signedMessage) {
       setError('Unable to sign message')
@@ -45,7 +46,8 @@ export default function LoginPage(props: RouteComponentProps) {
     }
 
     const userAccount = await accountContext.loginWeb3(
-      signedMessage.address,
+      signedMessage.address.toLowerCase(),
+      token.nonce,
       signedMessage.message,
       signedMessage.signature
     )
@@ -59,32 +61,36 @@ export default function LoginPage(props: RouteComponentProps) {
 
   const connectEmail = async () => {
     if (!isEmail(email)) {
-      setError('No valid email address provided.')
+      setError('Please provide a valid email address.')
       return
     }
     else { 
       setError('')
     }
 
-    const emailSent = await accountContext.loginEmail(email)
-    if (emailSent) {
+    const token = await accountContext.getToken(email)
+    if (token) {
       setEmailSent(true)
     }
     else { 
       setEmailSent(false)
-      const msg = 'Unable to login with email.'
-      setError(msg)
+      setError('Unable to create verification token')
     }
   }
 
   const verifyEmail = async () => {
-    const userAccount = await accountContext.verifyEmail(email, code)
+    const nonceNr = Number(nonce)
+    if (isNaN(nonceNr)) {
+      setError('Please provide a valid verification code.')
+      return
+    }
+
+    const userAccount = await accountContext.loginEmail(email, nonceNr)
     if (userAccount) {
       navigate('/app')
     }
     if (!userAccount) {
-      const msg = 'Unable to verify your email address.'
-      setError(msg)
+      setError('Unable to verify your email address.')
     }
   }
 
@@ -130,8 +136,8 @@ export default function LoginPage(props: RouteComponentProps) {
                 <InputForm 
                   className={css['input']} 
                   placeholder="Verification code"
-                  defaultValue={code} 
-                  onChange={(value) => setCode(value)} 
+                  defaultValue={nonce} 
+                  onChange={(value) => setNonce(value)} 
                   onSubmit={verifyEmail} />
                 <Button className={`black`} onClick={verifyEmail}>Verify your email</Button>
               </div>
@@ -167,26 +173,7 @@ export default function LoginPage(props: RouteComponentProps) {
         </div>
       </div>
 
-      <div className={css['footer']}>
-        <div className="section">
-          <div className="content">
-            <div className={css['text']}>
-              <p className={css['description']}>
-                Devcon facilitates complete ownership over your data, while allowing you to access web3 interactivity
-                through our application if you choose to.
-              </p>
-
-              <Link className={css['link']} to="https://google.com">
-                Learn more
-              </Link>
-              <Link className={css['link']} to="https://google.com">
-                Terms & Conditions
-              </Link>
-            </div>
-            <img className={css['img']} src={footerRoad} alt="Man and dog on road" />
-          </div>
-        </div>
-      </div>
+      <AccountFooter />
     </div>
   )
 }

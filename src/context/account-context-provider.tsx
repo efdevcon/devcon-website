@@ -7,6 +7,7 @@ import { SignedMessage } from 'src/types/SignedMessage'
 import { navigate } from '@reach/router'
 import { Session } from 'src/types/Session'
 import { Web3Provider } from '@ethersproject/providers'
+import { VerificationToken } from 'src/types/VerificationToken'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -19,10 +20,9 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     account: undefined,
     connectWeb3,
     signMessage,
-    getNonce,
+    getToken,
     loginWeb3,
     loginEmail,
-    verifyEmail,
     logout,
     getAccount,
     updateAccount,
@@ -156,9 +156,13 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     }
   }
 
-  async function getNonce(): Promise<number | undefined> {
-    const response = await fetch('/api/account/nonce', {
-      method: 'GET',
+  async function getToken(identifier: string): Promise<VerificationToken | undefined> {
+    const response = await fetch('/api/account/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        identifier: identifier,
+      }),
     })
 
     if (response.status === 200) {
@@ -167,12 +171,13 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     }
   }
 
-  async function loginWeb3(address: string, message: string, signature: string): Promise<UserAccount | undefined> {
+  async function loginWeb3(address: string, nonce: number, message: string, signature: string): Promise<UserAccount | undefined> {
     const response = await fetch('/api/account/login/web3', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        address: address.toLowerCase(),
+        address: address,
+        nonce: nonce,
         msg: message,
         signed: signature,
       }),
@@ -187,35 +192,21 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     // else: set error/message
   }
 
-  async function loginEmail(email: string): Promise<boolean> {
+  async function loginEmail(email: string, nonce: number): Promise<UserAccount | undefined> {
     const response = await fetch('/api/account/login/email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        email: email.toLowerCase(),
+        address: email,
+        nonce: nonce,
       }),
     })
 
-    return response.status === 200
-  }
-
-  async function verifyEmail(email: string, code: string): Promise<UserAccount | undefined> {
-    const response = await fetch('/api/account/login/email/verify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: email.toLowerCase(),
-        code: Number(code),
-      }),
-    })
-
+    const body = await response.json()
     if (response.status === 200) {
-      const body = await response.json()
       setContext({ ...context, account: body.data })
       return body.data
     }
-
-    // else: set error/message
   }
 
   async function logout(): Promise<boolean> {
@@ -269,20 +260,19 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   }
 
   async function deleteAccount(id: string): Promise<boolean> {
-    const response = await fetch('/api/account/delete/' + id, {
+    const response = await fetch('/api/account/' + id, {
       method: 'DELETE',
     })
 
     if (response.status === 200) {
-      // TODO: delete & logout
+      setContext({ ...context, provider: undefined, account: undefined, loading: true })
+      navigate('/app/login')
       return true
     }
 
     // else: set error/message
     return false
   }
-
-  console.log(context, 'account context')
 
   return <AccountContext.Provider value={context}>{children}</AccountContext.Provider>
 }

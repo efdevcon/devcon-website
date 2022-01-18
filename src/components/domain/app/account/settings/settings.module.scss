@@ -1,0 +1,24 @@
+@use 'src/assets/css/partials/index' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: inherit;
+}
+
+.alert {
+  margin-top: $gaps-gap-4;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: $gaps-gap-4;
+  padding-bottom: $gaps-gap-4;
+
+  .input {
+    margin-top: $gaps-gap-4;
+    margin-bottom: $gaps-gap-2;
+  }
+}

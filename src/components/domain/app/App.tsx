@@ -3,8 +3,6 @@ import { Router } from '@reach/router'
 import { AccountContextProvider } from 'src/context/account-context-provider'
 import { PrivateRoute } from 'src/components/common/private-route'
 import { BottomNav, InlineNav } from 'src/components/domain/app/navigation'
-import Profile from './account/profile'
-import Attest from './account/attest'
 import { Helmet } from 'react-helmet'
 import css from './app.module.scss'
 import { Header } from 'src/components/common/layouts/header'
@@ -20,6 +18,9 @@ import { Notifications } from './notifications'
 import { Info } from './info'
 import { SideEvents } from './side-events'
 import Settings from './account/Settings'
+import EmailSettings from './account/settings/Email'
+import UsernameSettings from './account/settings/Username'
+import WalletSettings from './account/settings/Wallet'
 import { Session as SessionType } from 'src/types/Session'
 import { Speaker } from 'src/types/Speaker'
 
@@ -107,8 +108,9 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
             <LoginStyled path="/login" />
             <PrivateRoute path="/settings" component={Settings} />
-            <PrivateRoute path="/profile" component={Profile} />
-            <PrivateRoute path="/attest" component={Attest} />
+            <PrivateRoute path="/settings/username" component={UsernameSettings} />
+            <PrivateRoute path="/settings/email" component={EmailSettings} />
+            <PrivateRoute path="/settings/wallets" component={WalletSettings} />
           </Router>
 
           {loggedIn && <BottomNav location={location} />}

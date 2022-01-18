@@ -21,7 +21,7 @@ server.use(cors())
 // Connect db
 mongoose.connect(SERVER_CONFIG.DB_CONNECTION_STRING, {
   useNewUrlParser: true,
-  useFindAndModify: true,
+  useFindAndModify: false,
   useUnifiedTopology: true,
   useCreateIndex: true,
 })

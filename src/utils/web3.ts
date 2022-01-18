@@ -1,4 +1,4 @@
-import moment from 'moment'
+import { VerificationToken } from 'src/types/VerificationToken'
 import Web3Modal from 'web3modal'
 import { APP_CONFIG } from './config'
 
@@ -44,10 +44,7 @@ export function getWeb3Modal(): Web3Modal | undefined {
   }
 }
 
-export function getSiweMessage(address: string, nonce: number): string {
-  const currentDate = new Date()
-  const expiration = moment(currentDate).add(20, 'minute')
-  
+export function getSiweMessage(address: string, token: VerificationToken): string {
   return `devcon.org wants you to sign in with your Ethereum account:
     ${address}
     
@@ -55,8 +52,8 @@ export function getSiweMessage(address: string, nonce: number): string {
     
     URI: https://devcon.org/
     Version: 1
-    Nonce: ${nonce}
-    Issued At: ${currentDate.toISOString()}
-    Expiration Time: ${expiration.toISOString()}
+    Nonce: ${token.nonce}
+    Issued At: ${token.issued}
+    Expiration Time: ${token.expires}
     Chain ID: 1`
 }

@@ -32,14 +32,14 @@ export abstract class BaseRepository<T> implements IRepository<T> {
 
   public async findOne(id: string): Promise<T | undefined> {
     try {
-      return await this._model.findOne({ _id: id })
+      return await this._model.findOne({ _id: id }).lean()
     } catch (e) {
       console.log("Couldn't find item", id)
       console.error(e)
     }
   }
 
-  public async update(id: string, item: T): Promise<boolean> {
+  public async update(id: string, item: T): Promise<T | undefined> {
     try {
       const result = await this._model.findByIdAndUpdate(id, item, {
         new: true,
@@ -50,8 +50,6 @@ export abstract class BaseRepository<T> implements IRepository<T> {
     } catch (e) {
       console.log("Couldn't update item", id)
       console.error(e)
-
-      return false
     }
   }
 

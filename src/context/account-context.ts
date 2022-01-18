@@ -3,6 +3,7 @@ import { providers } from 'ethers'
 import { UserAccount } from 'src/types/UserAccount'
 import { SignedMessage } from 'src/types/SignedMessage'
 import { Session } from 'src/types/Session'
+import { VerificationToken } from 'src/types/VerificationToken'
 
 export interface AccountContextType {
   loading: boolean
@@ -10,10 +11,9 @@ export interface AccountContextType {
   account: UserAccount | undefined
   connectWeb3: () => Promise<providers.Web3Provider | undefined>
   signMessage: (message: string, provider?: providers.Web3Provider) => Promise<SignedMessage | undefined>
-  getNonce: () => Promise<number | undefined>
-  loginWeb3: (address: string, message: string, signature: string) => Promise<UserAccount | undefined>
-  loginEmail: (email: string) => Promise<UserAccount | undefined>
-  verifyEmail: (email: string, code: string) => Promise<boolean>
+  getToken: (identifier: string) => Promise<VerificationToken | undefined>
+  loginWeb3: (address: string, nonce: number, message: string, signature: string) => Promise<UserAccount | undefined>
+  loginEmail: (email: string, nonce: number) => Promise<UserAccount | undefined>
   logout: (id: string) => Promise<boolean>
   getAccount: () => Promise<UserAccount | undefined>
   updateAccount: (id: string, account: UserAccount) => Promise<boolean>
@@ -29,10 +29,9 @@ export const AccountContext = createContext<AccountContextType>({
   account: undefined,
   connectWeb3: async () => undefined,
   signMessage: async () => undefined,
-  getNonce: async () => undefined,
+  getToken: async () => undefined,
   loginWeb3: async () => undefined,
   loginEmail: async () => undefined,
-  verifyEmail: async () => false,
   logout: async () => false,
   getAccount: async () => undefined,
   updateAccount: async () => false,

@@ -9,7 +9,5 @@ export interface UserAccount {
   pushSubscription: any,
   createdAt: Date
   updatedAt: Date
-  nonce: number
-  expires: Date
   appState?: UserAppState
 }
