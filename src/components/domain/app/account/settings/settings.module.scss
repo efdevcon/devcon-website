@@ -7,6 +7,19 @@
   min-height: inherit;
 }
 
+.content { 
+  margin-top: $gaps-gap-4;
+}
+
+.title { 
+  padding-bottom: $gaps-gap-2;
+  border-bottom: 1px solid $colors-standard-border-color;
+}
+
+.not-found { 
+  margin-top: $gaps-gap-4;
+}
+
 .alert {
   margin-top: $gaps-gap-4;
 }
@@ -20,5 +33,18 @@
   .input {
     margin-top: $gaps-gap-4;
     margin-bottom: $gaps-gap-2;
+  }
+}
+
+.items { 
+  list-style-type: none;
+  margin-top: $gaps-gap-4;
+  margin-bottom: $gaps-gap-2;
+
+  li {
+    border-bottom: 1px solid $colors-standard-border-color;
+    padding-top: $gaps-gap-2;
+    padding-bottom: $gaps-gap-2;
+    padding-right: $gaps-gap-2;
   }
 }

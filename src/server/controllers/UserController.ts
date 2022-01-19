@@ -7,6 +7,7 @@ import UserAccountModel from '../models/UserAccountModel'
 import { IVerificationTokenRepository } from '../repositories/interfaces/IVerificationTokenRepository'
 import { IUserAccountRepository } from '../repositories/interfaces/IUserAccountRepository'
 import { EmailService } from '../services/email-service'
+import { isValidSignature } from '../strategies/web3'
 
 export class UserController {
   private _repository: IUserAccountRepository
@@ -18,7 +19,6 @@ export class UserController {
   }
 
   public async GetToken(req: Request, res: Response) {
-    console.log('REQUEST AUTH TOKEN', req.session)
     const identifier: string = req.body?.identifier
     if (!identifier) {
       return res.status(400).send({ code: 400, message: 'Identifier not provided.' })
@@ -50,7 +50,6 @@ export class UserController {
         data.nonce = -1 // only share nonce via email
       }
       
-      console.log('TOKEN CREATED', data)
       req.session.tokenId = data?._id
       res.status(200).send({ code: 200, message: '', data: data })
     } catch (e) {
@@ -67,7 +66,9 @@ export class UserController {
     
     const address: string = req.body.address
     const nonce: number = req.body.nonce
-    if (!address || !nonce) {
+    const msg: string = req.body.msg
+    const signed: string = req.body.signed
+    if (!address || !nonce || !msg || !signed) {
       return res.status(400).send({ code: 400, message: 'Invalid input.' })
     }
 
@@ -76,7 +77,32 @@ export class UserController {
       return res.status(400).send({ code: 400, message: 'No valid verification token found.' })
     }
 
-    console.log('AUTH WEB3', address)
+    const userId = req.session.userId
+    if (userId) {
+      let userAccount = await this._repository.findUserAccountByAddress(address)
+      if (userAccount) {
+        return res.status(400).send({ code: 400, message: 'Unable to add wallet address.' }) // TODO: wallet address already exists
+      }
+
+      userAccount = await this._repository.findOne(userId)
+      if (!userAccount) {
+        return res.status(400).send({ code: 400, message: 'Invalid session.' })
+      }
+
+      const validSignature = isValidSignature(address, msg, signed)
+      if (!validSignature) {
+        return res.status(400).send({ code: 400, message: 'Invalid signature.' })
+      }
+
+      userAccount = {...userAccount, addresses: [...userAccount.addresses, address] }
+      const updated = await this._repository.update(userId, userAccount)
+      if (updated) {
+        return res.status(200).send({ code: 204, message: '', data: userAccount })
+      }
+      
+      return res.status(500).send({ code: 500, message: 'Unable to add email address.' })
+    }
+
     passport.authenticate('web3', (error, user, info) => {
       if (error || !user) {
         return res.status(400).send({ code: 400, message: info.message || `Bad request` })        
@@ -86,7 +112,6 @@ export class UserController {
             return next(err)
           }
 
-          console.log('WEB3 SUCCESS', user._id)
           req.session.userId = user._id
           return res.status(200).send({ code: 200, message: '', data: user })
         })
@@ -102,7 +127,6 @@ export class UserController {
 
     const address: string = req.body.address
     const nonce: number = req.body.nonce
-    console.log('EMAIL FLOW: CHECKING INPUTS', address, nonce)
     if (!address || !nonce) {
       return res.status(400).send({ code: 400, message: 'Invalid input.' })
     }
@@ -113,12 +137,10 @@ export class UserController {
     }
 
     const userId = req.session.userId
-    console.log('AUTH EMAIL FLOW')
     if (userId) {
-      console.log('ACTIVE SESSION', userId)
       let userAccount = await this._repository.findUserAccountByEmail(address)
       if (userAccount) {
-        return res.status(400).send({ code: 400, message: 'Unable to add email address.' })
+        return res.status(400).send({ code: 400, message: 'Unable to add email address.' }) // TODO: email address already exists
       }
 
       userAccount = await this._repository.findOne(userId)
@@ -126,37 +148,30 @@ export class UserController {
         return res.status(400).send({ code: 400, message: 'Invalid session.' })
       }
 
-      console.log('CURRENT USER ID', userId, userAccount._id)
       userAccount = {...userAccount, email: address }
-      console.log('UPDATING CURRENT ACCOUNT', userId, userAccount)
       const updated = await this._repository.update(userId, userAccount)
       if (updated) {
-        console.log('ACCOUNT UPDATED', updated)
         return res.status(200).send({ code: 204, message: '', data: userAccount })
       }
       
       return res.status(500).send({ code: 500, message: 'Unable to add email address.' })
     }
 
-    console.log('CREATING NEW SESSION')
     let userAccount = await this._repository.findUserAccountByEmail(address)
     if (!userAccount) {
       const model = new UserAccountModel()
       model.email = address
-      console.log('CREATING NEW USER ACCOUNT', model)
       userAccount = await this._repository.create(model)
     }
     if (!userAccount) {
       return res.status(500).send({ code: 500, message: 'Unable to login with email account.' })
     }
 
-    console.log('AUTH EMAIL')
     req.logIn(userAccount, function (err) {
       if (err) {
         return next(err)
       }
       
-      console.log('EMAIL SUCCESS', userAccount?._id)
       req.session.userId = userAccount?._id
       return res.status(200).send({ code: 200, message: '', data: userAccount })
     })
@@ -196,7 +211,6 @@ export class UserController {
       const userId: string = JSON.stringify(req.user._id)
       const account = req.body?.account as UserAccount
 
-      console.log('UPDATING ACCOUNT', paramId, userId, account)
       if (!account) {
         return res.status(400).send({ code: 400, message: 'User account not provided.' })
       }

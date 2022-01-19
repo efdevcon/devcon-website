@@ -38,7 +38,7 @@ export default function UsernameSettings() {
             </div>
 
             <div className={css['form']}>
-              <p className={'title'}>Edit Username</p>
+              <p className={`${css['title']} title`}>Edit Username</p>
 
               <InputForm 
                 className={css['input']} 

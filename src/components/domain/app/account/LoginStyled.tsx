@@ -22,6 +22,13 @@ export default function LoginPage(props: RouteComponentProps) {
   const [error, setError] = useState('')
   const [email, setEmail] = useState('')
   const [nonce, setNonce] = useState('')
+  const loggedIn = !!accountContext.account
+
+  console.log('ARE WE LOGGED IN?!', loggedIn, accountContext.loading)
+  if (loggedIn) {
+    navigate('/app' + location?.search)
+    return null
+  }
 
   const connectWeb3AndLogin = async () => {
     const provider = await accountContext.connectWeb3()

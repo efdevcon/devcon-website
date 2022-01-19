@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import Web3Strategy from 'passport-web3'
 import UserAccountModel from '../models/UserAccountModel'
 import { UserAccountRepository } from '../repositories/UserAccountRepository'
+import sigUtil from 'eth-sig-util'
 
 const onAuth = async (address: string, done: any) => {
   const repo = new UserAccountRepository()
@@ -47,4 +48,18 @@ export const isAuthenticated = (req: Request, res: Response, next: NextFunction)
   } else {
     res.status(401).send({ code: 401, message: `Not authorized.` })
   }
+}
+
+export const isValidSignature = (address: string, message: string, signature: string): boolean => {
+  const params = {
+    data: message,
+    sig: signature
+  }
+
+  const recovered = sigUtil.recoverPersonalSignature(params)
+  if (!recovered || recovered !== address) {
+    return false
+  }
+  
+  return true
 }

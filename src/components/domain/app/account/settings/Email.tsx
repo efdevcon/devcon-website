@@ -7,6 +7,7 @@ import { Button } from 'src/components/common/button'
 import { InputForm } from 'src/components/common/input-form'
 import { isEmail } from 'src/utils/validators'
 import { navigate } from '@reach/router'
+import NotFound from './NotFound'
 
 export default function EmailSettings() {
   const accountContext = useAccountContext()
@@ -49,7 +50,6 @@ export default function EmailSettings() {
     }
 
     const userAccount = await accountContext.loginEmail(email, nonceNr)
-    console.log('EMAIL VERIFIED', userAccount)
     if (userAccount) {
       navigate('/app')
     }
@@ -69,10 +69,16 @@ export default function EmailSettings() {
             </div>
 
             <div className={css['form']}>
-              <p className={'title'}>Manage Email</p>
+              <p className={`${css['title']} title`}>Manage Email</p>
+
+              {!accountContext.account.email && 
+                <div className={css['not-found']}>
+                  <NotFound type='email' />
+                </div>
+              }
 
               {emailSent && <>
-                <p>
+                <p className={css['content']}>
                   We've sent a verification code to your email address. Please enter this code on below.
                 </p>
                 <InputForm 
