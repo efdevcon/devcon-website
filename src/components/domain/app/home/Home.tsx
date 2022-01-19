@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SliderStickyNotes } from 'src/components/common/slider/SliderVariations'
 import { Link } from 'src/components/common/link'
 import { DropdownVariationDots } from 'src/components/common/dropdown/Dropdown'
@@ -11,12 +11,15 @@ import {
 } from 'src/components/common/collapsed-section'
 import css from './home.module.scss'
 import ticket from './ticket.png'
-import thumbnailPlaceholder from 'src/assets/images/thumbnail-placeholder.png'
 import { useAccountContext } from 'src/context/account-context'
 import { navigate } from '@reach/router'
+import { useActiveAddress } from "src/hooks/useActiveAddress"
+import { useAvatar } from 'src/hooks/useAvatar'
 
 export const Home = (props: any) => {
   const accountContext = useAccountContext()
+  const activeAddress = useActiveAddress()
+  const avatar = useAvatar()
   const loggedIn = !!accountContext.account
 
   const disconnect = async () => {
@@ -31,11 +34,15 @@ export const Home = (props: any) => {
           <div className={`${css['account']} border-bottom`}>
             <div className="font-xxl font-primary">
               <h2 className="font-primary">
-                Welcome, <br /> Larry -_-
+                Welcome{accountContext.account?.username && <>
+                ,<br/>{accountContext.account?.username}
+                </>}
+                {!accountContext.account?.username && <> 👋</>}
               </h2>
             </div>
             <div className={css['profile-actions']}>
               <button className="label error plain" onClick={() => navigate('/app/settings')}>SETTINGS</button>
+              {!accountContext.account?.username && <button className="label error plain" onClick={() => navigate('/app/settings/username')}>ADD USERNAME</button>}
               <button className="label error plain" onClick={() => navigate('/app/settings/wallets')}>MANAGE WALLETS</button>
               <button className="label error plain" onClick={() => navigate('/app/settings/email')}>MANAGE EMAILS</button>
             </div>
@@ -66,15 +73,15 @@ export const Home = (props: any) => {
           </div>
         }
 
-        {loggedIn && 
+        {loggedIn && activeAddress && 
           <CollapsedSection>
             <CollapsedSectionHeader>
               <div className={css['wallet']}>
-                <img src={thumbnailPlaceholder} className={css['circle']} />
+                <img src={avatar.url} className={css['circle']} />
 
                 <div className={css['details']}>
-                  <p className={css['network']}>ETHEREUM MAINNET</p>
-                  <p className={css['wallet-address']}>larry.devcon.eth</p>
+                  <p className={css['network']}>ETHEREUM</p>
+                  <p className={css['wallet-address']}>{avatar.name}</p>
                   <p className={css['connection']}>Connected</p>
                 </div>
               </div>

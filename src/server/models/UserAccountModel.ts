@@ -1,4 +1,4 @@
-import { Document, model, Schema, Mixed } from 'mongoose'
+import { Document, model, Schema } from 'mongoose'
 import { UserAccount } from 'src/types/UserAccount'
 
 interface UserAccountModel extends UserAccount, Document {}

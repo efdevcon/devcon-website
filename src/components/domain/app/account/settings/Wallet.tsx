@@ -7,6 +7,7 @@ import NotFound from './NotFound'
 import { Button } from 'src/components/common/button'
 import { getSiweMessage } from 'src/utils/web3'
 import { navigate } from '@reach/router'
+import { Link } from 'src/components/common/link'
 
 export default function WalletSettings() {
   const accountContext = useAccountContext()
@@ -65,20 +66,20 @@ export default function WalletSettings() {
             <div className={css['form']}>
               <p className={`${css['title']} title`}>Manage Wallets</p>
 
-              {accountContext.account.addresses.length === 0 && 
-                <div className={css['not-found']}>
+              {accountContext.account.addresses?.length === 0 && 
+                <div className={css['wallet-not-found']}>
                   <NotFound type='wallet' />
                 </div>
               }
 
-              {accountContext.account.addresses.length > 0 && 
+              {accountContext.account.addresses?.length > 0 && 
                 <ul className={css['items']}>
                   {accountContext.account.addresses.map(i => {
-                    return <li key={i}>{i}</li>
+                    return <li key={i}><Link to={`https://etherscan.io/address/${i}`}>{i}</Link></li>
                   })}
                 </ul>
               }
-              
+                            
               <Button className={`red`} onClick={addWallet}>Add Ethereum Wallet</Button>
             </div>
           </div>

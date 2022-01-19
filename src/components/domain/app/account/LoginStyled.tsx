@@ -24,7 +24,6 @@ export default function LoginPage(props: RouteComponentProps) {
   const [nonce, setNonce] = useState('')
   const loggedIn = !!accountContext.account
 
-  console.log('ARE WE LOGGED IN?!', loggedIn, accountContext.loading)
   if (loggedIn) {
     navigate('/app' + location?.search)
     return null
