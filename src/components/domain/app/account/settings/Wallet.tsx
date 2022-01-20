@@ -23,7 +23,7 @@ export default function WalletSettings() {
     return null
   }
 
-  const canDelete = (accountContext.account.addresses && accountContext.account.addresses.length > 1) && !!accountContext.account.email
+  const canDelete = (accountContext.account.addresses && accountContext.account.addresses.length > 0) || !!accountContext.account.email
 
   const addWallet = async () => {
     const provider = await accountContext.connectWeb3()

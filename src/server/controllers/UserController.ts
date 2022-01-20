@@ -248,6 +248,13 @@ export class UserController {
       if (paramId === userId) {
         const deleted = await this._repository.delete(req.params.id)
         if (deleted) {
+          if (req.session) {
+            req.session.destroy(err => {
+              if (err) {
+                console.error('Unable to destroy session', err)
+              }
+            })
+          }
           req.logout()
           return res.status(200).send({ code: 200, message: 'OK' })
         }
