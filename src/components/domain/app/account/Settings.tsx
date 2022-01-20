@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RouteComponentProps } from '@reach/router'
+import { navigate, RouteComponentProps } from '@reach/router'
 import css from './login.module.scss'
 import { Link, LinkList } from 'src/components/common/link'
 import { Button } from 'src/components/common/button'
@@ -7,9 +7,13 @@ import { useAccountContext } from 'src/context/account-context'
 import { Alert } from 'src/components/common/alert'
 import { CollapsedSection, CollapsedSectionHeader, CollapsedSectionContent } from 'src/components/common/collapsed-section'
 import AccountFooter from './AccountFooter'
+import { useAvatar } from 'src/hooks/useAvatar'
+import { isEmail } from 'src/utils/validators'
+import { TruncateMiddle } from 'src/utils/formatting'
 
 export default function SettingsPage(props: RouteComponentProps) {
   const accountContext = useAccountContext()
+  const avatar = useAvatar()
   const [areYouSure, setAreYouSure] = useState(false)
   const [error, setError] = useState('')
 
@@ -22,6 +26,11 @@ export default function SettingsPage(props: RouteComponentProps) {
     await accountContext.deleteAccount(accountContext.account?._id)
   }
 
+  const disconnect = async () => {
+    accountContext.logout(accountContext.account?._id)
+    navigate('/app/login')
+  }
+
   return (
     <div className={css['container']}>
       <div>
@@ -30,6 +39,12 @@ export default function SettingsPage(props: RouteComponentProps) {
 
             <div className={css['alert']}>
               {error && <Alert type="info" message={error} />}
+            </div>
+
+            <div className={css['profile']}>
+              <img className={css['avatar']} src={avatar.url} />
+              <p className={`${css['name']} title`}>{isEmail(avatar.name) ? avatar.name : TruncateMiddle(avatar.name, 8)}</p>
+              <span className={css['signout']} role='button' onClick={disconnect}>Sign out</span>
             </div>
 
             <CollapsedSection>

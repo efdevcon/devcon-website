@@ -95,6 +95,46 @@
   }
 }
 
+.profile { 
+  display: flex;
+  align-items: center;
+  padding-bottom: $gaps-gap-4;
+  border-bottom: 1px solid $colors-standard-border-color;
+
+  @media (max-width: $breakpoints-sm) {
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .avatar {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    margin-right: $gaps-gap-4;
+
+    @media (max-width: $breakpoints-sm) {
+      margin-right: 0;
+    }
+  }
+
+  .name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+    @media (max-width: $breakpoints-sm) {
+      margin-top: $gaps-gap-4;
+    }
+  }
+
+  .signout {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: smaller;
+    margin-left: auto
+  }
+}
+
 .wallet {
   padding-top: $gaps-gap-4;
   padding-bottom: $gaps-gap-4;

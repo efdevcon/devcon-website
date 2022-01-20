@@ -63,8 +63,8 @@ export const Home = (props: any) => {
                     onClick: () => { navigate('https://etherscan.io/address/' + accountContext.account?.addresses[0])},
                   },
                   {
-                    text: 'Logout',
-                    value: 'Logout',
+                    text: 'Sign out',
+                    value: 'Signout',
                     onClick: disconnect,
                   }
                 ]}

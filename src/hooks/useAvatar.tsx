@@ -52,21 +52,12 @@ export function useAvatar() {
 
             const resolver = await provider.getResolver(name)
             const ensAvatar = await resolver?.getAvatar()
-            if (ensAvatar?.url) {
-                setAvatar({
-                    type: 'ETHEREUM',
-                    name: name,
-                    url: ensAvatar.url,
-                    status: 'Connected'
-                })
-            } else {
-                setAvatar({
-                    type: 'ETHEREUM',
-                    name: activeAddress,
-                    url: makeBlockie(activeAddress),
-                    status: 'Connected'
-                })
-            }
+            setAvatar({
+                type: 'ETHEREUM',
+                name: name,
+                url: ensAvatar?.url ?? makeBlockie(activeAddress),
+                status: 'Connected'
+            })
         }
 
         getAvatar()
