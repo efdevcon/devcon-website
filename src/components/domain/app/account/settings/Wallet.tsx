@@ -4,20 +4,26 @@ import { useAccountContext } from 'src/context/account-context'
 import { Alert } from 'src/components/common/alert'
 import AccountFooter from '../AccountFooter'
 import NotFound from './NotFound'
+import IconCross from 'src/assets/icons/cross.svg'
 import { Button } from 'src/components/common/button'
 import { getSiweMessage } from 'src/utils/web3'
 import { navigate } from '@reach/router'
 import { Link } from 'src/components/common/link'
 import { useActiveAddress } from 'src/hooks/useActiveAddress'
+import { Tooltip } from 'src/components/common/tooltip'
 
 export default function WalletSettings() {
   const accountContext = useAccountContext()
   const activeAddress = useActiveAddress()
   const [error, setError] = useState('')
+  const [promptRemove, setPromptRemove] = useState('')
+  const [tooltipVisible, setTooltipVisible] = useState(false)
 
   if (!accountContext.account) {
     return null
   }
+
+  const canDelete = (accountContext.account.addresses && accountContext.account.addresses.length > 1) && !!accountContext.account.email
 
   const addWallet = async () => {
     const provider = await accountContext.connectWeb3()
@@ -48,11 +54,20 @@ export default function WalletSettings() {
       signedMessage.signature
     )
     if (userAccount) {
-      navigate('/app')
+      // navigate('/app')
     }
     if (!userAccount) {
       setError('Unable to login with web3')
     }
+  }
+
+  const removeWallet = async () => {
+    if (!accountContext.account) return 
+
+    await accountContext.updateAccount(accountContext.account._id, 
+      {...accountContext.account, addresses: accountContext.account.addresses.filter(i => i !== promptRemove)})
+    
+    setPromptRemove('')
   }
 
   return (
@@ -79,15 +94,35 @@ export default function WalletSettings() {
                   {accountContext.account.addresses.map(i => {
                     const isActive = activeAddress === i.toLowerCase()
 
-                    return <li key={i}><Link to={`https://etherscan.io/address/${i}`}>
+                    return <li key={i}>
+                      <Link to={`https://etherscan.io/address/${i}`}>
                         <span className={isActive ? 'semi-bold' : ''}>{i}</span>
                         {isActive && <> (active)</>}
-                      </Link></li>
+                      </Link>
+
+                      {canDelete && 
+                        <span role='button' className={css['delete']} onClick={() => setPromptRemove(i)}><IconCross /></span>
+                      }
+
+                      {!canDelete && 
+                        <Tooltip arrow={false} visible={tooltipVisible} content={<p>Can't delete this address. You need at least 1 wallet or your email address connected.</p>}>
+                          <span role='button' className={css['disabled']} onClick={() => setTooltipVisible(!tooltipVisible)}>
+                            <IconCross />
+                          </span>
+                        </Tooltip>
+                      }
+                    </li>
                   })}
                 </ul>
               }
-                            
-              <Button className={`red`} onClick={addWallet}>Add Ethereum Wallet</Button>
+              
+              {promptRemove && <>
+                <p>Are you sure you want to remove <strong>{promptRemove}</strong> from your account?</p>
+                <Button className={`black ${css['button']}`} onClick={() => setPromptRemove('')}>No, keep address</Button>
+                <Button className={`red ${css['button']}`} onClick={removeWallet}>Yes, delete address</Button>
+              </>}
+
+              {!promptRemove && <Button className={`red`} onClick={addWallet}>Add Ethereum Wallet</Button>}
             </div>
           </div>
         </div>

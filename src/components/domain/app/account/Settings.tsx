@@ -75,7 +75,7 @@ export default function SettingsPage(props: RouteComponentProps) {
               <CollapsedSectionContent>
                 <div className={css['wallet']}>
                   <p>Once you delete your Devcon account, there is no going back. Tread lightly.</p>
-                  {!areYouSure && <Button className={`black ${css['button']}`} onClick={() => setAreYouSure(true)}>Delete Devcon account</Button>}
+                  {!areYouSure && <Button className={`red ${css['button']}`} onClick={() => setAreYouSure(true)}>Delete Devcon account</Button>}
 
                   {areYouSure && <>
                     <Button className={`black ${css['button']}`} onClick={() => setAreYouSure(false)}>No, keep my account</Button>

@@ -59,8 +59,19 @@
     }
 
     .connection {
-      color: $colors-track-green;
       @include fonts-sm;
+    }
+
+    .loading {
+      color: $colors-track-light-blue;
+    }
+
+    .connected {
+      color: $colors-track-green;
+    }
+
+    .disconnected {
+      color: $colors-track-red;
     }
   }
 }

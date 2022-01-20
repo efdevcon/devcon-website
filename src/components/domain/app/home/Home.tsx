@@ -79,11 +79,11 @@ export const Home = (props: any) => {
               <div className={css['wallet']}>
                 <img src={avatar.url} className={css['circle']} />
 
-                {avatar.name && <div className={css['details']}>
-                  <p className={css['network']}>ETHEREUM</p>
-                  <p className={css['wallet-address']}>{avatar.name}</p>
-                  <p className={css['connection']}>Connected</p>
-                </div>}
+                <div className={css['details']}>
+                  {avatar.type && <p className={css['network']}>{avatar.type}</p>}
+                  {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
+                  {avatar.status && <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>}
+                </div>
               </div>
             </CollapsedSectionHeader>
 

@@ -5,8 +5,9 @@ import { getDefaultProvider } from "src/utils/web3"
 import { useActiveAddress } from "./useActiveAddress"
 import defaultImage from 'src/assets/images/account_circle.png'
 import { useSessionStorage } from "./useSessionStorage"
+import { isEmail } from "src/utils/validators"
 
-const defaultValue = { name: '', url: defaultImage }
+const defaultValue = { type: '', name: '', url: defaultImage, status: 'Loading' }
 
 export function useAvatar() {
     const context = useAccountContext()
@@ -15,17 +16,36 @@ export function useAvatar() {
 
     useEffect(() => {
         async function getAvatar() {
-            if (!context.account) {
-                setAvatar(defaultValue)
+            if (!activeAddress) {
+                setAvatar({...defaultValue, status: 'Loading'})
+                return
+            }
+            
+            const item = window.sessionStorage.getItem(activeAddress)
+            if (item) { 
+                const avatar = JSON.parse(item)
+                setAvatar(avatar)
                 return
             }
 
+            if (isEmail(activeAddress)) {
+                setAvatar({
+                    type: 'EMAIL',
+                    name: activeAddress,
+                    url: makeBlockie(activeAddress),
+                    status: 'Connected'
+                })
+                return
+            }
+            
             const provider = context.provider ?? getDefaultProvider()
             const name = await provider.lookupAddress(activeAddress)
             if (!name) {
                 setAvatar({
+                    type: 'ETHEREUM',
                     name: activeAddress,
-                    url: makeBlockie(activeAddress)
+                    url: makeBlockie(activeAddress),
+                    status: 'Connected'
                 })
                 return
             }
@@ -34,13 +54,17 @@ export function useAvatar() {
             const ensAvatar = await resolver?.getAvatar()
             if (ensAvatar?.url) {
                 setAvatar({
+                    type: 'ETHEREUM',
                     name: name,
-                    url: ensAvatar.url
+                    url: ensAvatar.url,
+                    status: 'Connected'
                 })
             } else {
                 setAvatar({
+                    type: 'ETHEREUM',
                     name: activeAddress,
-                    url: makeBlockie(activeAddress)
+                    url: makeBlockie(activeAddress),
+                    status: 'Connected'
                 })
             }
         }

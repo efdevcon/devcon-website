@@ -16,11 +16,13 @@ export default function EmailSettings() {
   const [error, setError] = useState('')
   const [emailSent, setEmailSent] = useState(false)
   const [nonce, setNonce] = useState('')
+  const [areYouSure, setAreYouSure] = useState(false)
 
   if (!accountContext.account) {
     return <></>
   }
 
+  const canDelete = (accountContext.account.addresses && accountContext.account.addresses.length > 1) && !!accountContext.account.email
   const buttonText = accountContext.account.email ? 'Update Email' : 'Add Email'
 
   const connectEmail = async () => {
@@ -56,6 +58,16 @@ export default function EmailSettings() {
     if (!userAccount) {
       setError('Unable to verify your email address.')
     }
+  }
+
+  const removeEmail = async () => {
+    if (!accountContext.account) return 
+
+    await accountContext.updateAccount(accountContext.account._id, 
+      {...accountContext.account, email: undefined })
+    
+    setAreYouSure(false)
+    setEmail('')
   }
 
   return (
@@ -99,9 +111,17 @@ export default function EmailSettings() {
                   onChange={(value) => setEmail(value)} 
                   onSubmit={connectEmail} />
                   
-                <Button className={`red`} onClick={connectEmail}>{buttonText}</Button>
+                {!areYouSure && <Button className={`black`} onClick={connectEmail}>{buttonText}</Button>}
                 </>
               }
+
+              {!areYouSure && !emailSent && canDelete && <Button className={`red ${css['button']}`} onClick={() => setAreYouSure(true)}>Delete Email</Button>}
+
+              {areYouSure && <>
+                <p>Are you sure you want to remove your associated email address?</p>
+                <Button className={`black ${css['button']}`} onClick={() => setAreYouSure(false)}>No, keep my email</Button>
+                <Button className={`red ${css['button']}`} onClick={removeEmail}>Yes, delete my email</Button>
+              </>}
             </div>
             
           </div>
