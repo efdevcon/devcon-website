@@ -73,17 +73,17 @@ export const Home = (props: any) => {
           </div>
         }
 
-        {loggedIn && activeAddress && 
+        {loggedIn && !!activeAddress && 
           <CollapsedSection>
             <CollapsedSectionHeader>
               <div className={css['wallet']}>
                 <img src={avatar.url} className={css['circle']} />
 
-                <div className={css['details']}>
+                {avatar.name && <div className={css['details']}>
                   <p className={css['network']}>ETHEREUM</p>
                   <p className={css['wallet-address']}>{avatar.name}</p>
                   <p className={css['connection']}>Connected</p>
-                </div>
+                </div>}
               </div>
             </CollapsedSectionHeader>
 

@@ -113,7 +113,9 @@ export class UserController {
           }
 
           req.session.userId = user._id
-          return res.status(200).send({ code: 200, message: '', data: { ...user, activeAddress: address }})
+          let returnObj = JSON.parse(JSON.stringify(user)) as UserAccount
+          returnObj.activeAddress = address
+          return res.status(200).send({ code: 200, message: '', data: returnObj })
         })
       }
     })(req, res, next)

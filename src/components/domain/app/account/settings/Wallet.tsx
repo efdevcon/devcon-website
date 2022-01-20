@@ -8,9 +8,11 @@ import { Button } from 'src/components/common/button'
 import { getSiweMessage } from 'src/utils/web3'
 import { navigate } from '@reach/router'
 import { Link } from 'src/components/common/link'
+import { useActiveAddress } from 'src/hooks/useActiveAddress'
 
 export default function WalletSettings() {
   const accountContext = useAccountContext()
+  const activeAddress = useActiveAddress()
   const [error, setError] = useState('')
 
   if (!accountContext.account) {
@@ -75,7 +77,12 @@ export default function WalletSettings() {
               {accountContext.account.addresses?.length > 0 && 
                 <ul className={css['items']}>
                   {accountContext.account.addresses.map(i => {
-                    return <li key={i}><Link to={`https://etherscan.io/address/${i}`}>{i}</Link></li>
+                    const isActive = activeAddress === i.toLowerCase()
+
+                    return <li key={i}><Link to={`https://etherscan.io/address/${i}`}>
+                        <span className={isActive ? 'semi-bold' : ''}>{i}</span>
+                        {isActive && <> (active)</>}
+                      </Link></li>
                   })}
                 </ul>
               }

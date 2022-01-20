@@ -239,8 +239,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       return body.data
     }
 
-    setContext({ ...context, loading: false })
-    // else: set error/message
+    setContext({ ...context, account: undefined, loading: false })
   }
 
   async function updateAccount(id: string, account: UserAccount): Promise<boolean> {

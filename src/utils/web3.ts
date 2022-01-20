@@ -1,3 +1,4 @@
+import { ethers } from 'ethers'
 import { VerificationToken } from 'src/types/VerificationToken'
 import Web3Modal from 'web3modal'
 import { APP_CONFIG } from './config'
@@ -15,7 +16,7 @@ export function getWeb3ProviderOptions() {
     providerOptions.walletconnect = {
       package: window.WalletConnectProvider.default,
       options: {
-        infuraId: APP_CONFIG.INFURA_ID,
+        infuraId: APP_CONFIG.INFURA_APIKEY,
       },
     }
   }
@@ -42,6 +43,15 @@ export function getWeb3Modal(): Web3Modal | undefined {
       providerOptions,
     })
   }
+}
+
+export function getDefaultProvider(): ethers.providers.BaseProvider {
+  return ethers.getDefaultProvider(undefined, {
+    etherscan: APP_CONFIG.ETHERSCAN_APIKEY,
+    infura: APP_CONFIG.INFURA_APIKEY,
+    alchemy: APP_CONFIG.ALCHEMY_APIKEY,
+    // pocket: YOUR_POCKET_APPLICATION_KEY
+  })
 }
 
 export function getSiweMessage(address: string, token: VerificationToken): string {
