@@ -19,6 +19,17 @@ export abstract class BaseRepository<T> implements IRepository<T> {
     }
   }
 
+  public async find(conditions: object): Promise<Array<T>> {
+    try {
+      return await this._model.find(conditions).lean()
+    } catch (e) {
+      console.log("Couldn't find items", conditions)
+      console.error(e)
+    }
+
+    return []
+  }
+
   public async findAll(): Promise<Array<T>> {
     try {
       return await this._model.find({})
@@ -60,6 +71,19 @@ export abstract class BaseRepository<T> implements IRepository<T> {
       return result
     } catch (e) {
       console.log("Couldn't update item", id)
+      console.error(e)
+
+      return false
+    }
+  }
+
+  public async deleteMany(conditions: object): Promise<boolean> {
+    try {
+      const result = await this._model.deleteMany(conditions)
+
+      return !!result
+    } catch (e) {
+      console.log("Couldn't update items", conditions)
       console.error(e)
 
       return false
