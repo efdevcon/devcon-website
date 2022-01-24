@@ -5,12 +5,14 @@ import { Alert } from 'src/components/common/alert'
 import AccountFooter from '../AccountFooter'
 import { Button } from 'src/components/common/button'
 import { InputForm } from 'src/components/common/input-form'
+import { useAvatar } from 'src/hooks/useAvatar'
 
 export default function UsernameSettings() {
   const accountContext = useAccountContext()
   const currentAccount = accountContext.account
+  const avatar = useAvatar()
   const [error, setError] = useState('')
-  const [username, setUsername] = useState(currentAccount?.username ?? '')
+  const [username, setUsername] = useState(currentAccount?.username ?? avatar.ens ? avatar.name : '')
 
   if (!accountContext.account) {
     return <></>
@@ -39,6 +41,9 @@ export default function UsernameSettings() {
 
             <div className={css['form']}>
               <p className={`${css['title']} title`}>Edit Username</p>
+              {avatar.ens && !currentAccount?.username && 
+                <p className={css['content']}>You're using your ENS username. Updating your username on Devcon.org doesn't update your ENS name.</p>
+              }
 
               <InputForm 
                 className={css['input']} 

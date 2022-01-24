@@ -80,7 +80,7 @@ export const Home = (props: any) => {
                 <img src={avatar.url} className={css['circle']} />
 
                 <div className={css['details']}>
-                  {avatar.type && <p className={css['network']}>{avatar.type}</p>}
+                  {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
                   {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
                   {avatar.status && <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>}
                 </div>

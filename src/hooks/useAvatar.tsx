@@ -7,7 +7,7 @@ import defaultImage from 'src/assets/images/account_circle.png'
 import { useSessionStorage } from "./useSessionStorage"
 import { isEmail } from "src/utils/validators"
 
-const defaultValue = { type: '', name: '', url: defaultImage, status: 'Loading' }
+const defaultValue = { connection: '', name: '', url: defaultImage, ens: false, status: 'Loading' }
 
 export function useAvatar() {
     const context = useAccountContext()
@@ -30,9 +30,10 @@ export function useAvatar() {
 
             if (isEmail(activeAddress)) {
                 setAvatar({
-                    type: 'EMAIL',
+                    connection: 'EMAIL',
                     name: activeAddress,
                     url: makeBlockie(activeAddress),
+                    ens: false,
                     status: 'Connected'
                 })
                 return
@@ -42,9 +43,10 @@ export function useAvatar() {
             const name = await provider.lookupAddress(activeAddress)
             if (!name) {
                 setAvatar({
-                    type: 'ETHEREUM',
+                    connection: 'ETHEREUM',
                     name: activeAddress,
                     url: makeBlockie(activeAddress),
+                    ens: false,
                     status: 'Connected'
                 })
                 return
@@ -53,9 +55,10 @@ export function useAvatar() {
             const resolver = await provider.getResolver(name)
             const ensAvatar = await resolver?.getAvatar()
             setAvatar({
-                type: 'ETHEREUM',
+                connection: 'ETHEREUM',
                 name: name,
                 url: ensAvatar?.url ?? makeBlockie(activeAddress),
+                ens: true,
                 status: 'Connected'
             })
         }
