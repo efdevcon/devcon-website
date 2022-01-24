@@ -14,7 +14,7 @@ import { Playlist } from 'src/types/Playlist'
 // import PlaylistIcon from 'src/assets/icons/playlist.svg'
 import { Link } from 'src/components/common/link'
 import { useLocation } from '@reach/router'
-import { getVideoId } from 'src/utils/video'
+import { getDevconDate, getVideoId } from 'src/utils/video'
 import queryString from 'query-string'
 import moment from 'moment'
 import { UserProfile } from 'src/types/UserProfile'
@@ -212,6 +212,9 @@ export const Video = (props: VideoProps) => {
                       </p>
                       <p className={css['descriptor']}>
                         <span>Event:</span> Devcon {video.edition}
+                      </p>
+                      <p className={css['descriptor']}>
+                        <span>Date:</span> {getDevconDate(video.edition)}
                       </p>
                     </div>
 

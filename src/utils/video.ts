@@ -9,3 +9,24 @@ export function getVideoId(youtubeUrl: string): string {
 
   return videoId
 }
+
+export function getDevconDate(edition: number): string {
+  switch (edition) {
+    case 6:
+      return 'Oct 2022'
+    case 5:
+      return 'Oct 2019'
+    case 4:
+      return 'Oct 2018'
+    case 3:
+      return 'Nov 2017'
+    case 2:
+      return 'Sep 2016'
+    case 1:
+      return 'Nov 2015'
+    case 0:
+      return 'Nov 2014'
+  }
+
+  return ''
+}
