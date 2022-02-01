@@ -1,0 +1,106 @@
+@use 'assets/css/partials/index' as *;
+
+.speaker-card {
+  position: relative;
+  display: flex;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  margin-bottom: $gaps-gap-4;
+
+  .thumbnail {
+    padding: $gaps-gap-2;
+    background: #f5f6f6;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 64px;
+      height: 64px;
+
+      @media (max-width: 400px) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    padding: $gaps-gap-4;
+
+    .name {
+      @include fonts-bold;
+      @include fonts-sm-fixed;
+      margin-bottom: $gaps-gap-1;
+    }
+
+    .role {
+      @include fonts-xs-fixed;
+      line-height: 1.1em;
+    }
+
+    .company {
+      @include fonts-xs-fixed;
+      line-height: 1.1em;
+    }
+  }
+
+  .favorite {
+    cursor: pointer;
+    position: absolute;
+    top: $gaps-gap-2;
+    right: $gaps-gap-2;
+  }
+}
+
+.list-container {
+  margin-top: $gaps-gap-2;
+
+  &.alphabet-sort {
+    .speakers-letters {
+      margin-top: $gaps-gap-2;
+      display: flex;
+      flex-direction: row;
+
+      .speakers {
+        flex-grow: 1;
+      }
+
+      .letters {
+        flex-grow: 0;
+        flex-shrink: 0;
+        top: 0px;
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+
+        button {
+          position: relative;
+          @include fonts-bold;
+          @include fonts-sm-fixed;
+          padding-left: $gaps-gap-3;
+          padding-right: $gaps-gap-2;
+          color: #bcbfca;
+          height: 20px;
+          background: transparent;
+
+          &.selected {
+            color: $colors-main;
+          }
+        }
+      }
+    }
+  }
+
+  &.day-sort {
+    .day-header {
+      @include fonts-bold;
+    }
+  }
+
+  &.track-sort {
+    .track-header {
+      @include fonts-bold;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+import React, { useState } from 'react'
+import { useDevconEditions } from 'hooks/useDevconEditions'
+import moment from 'moment'
+import css from './editions.module.scss'
+import { DevconEdition } from 'types/DevconEdition'
+import { Button } from 'components/common/button'
+import OnDemandVideoIcon from 'assets/icons/on_demand_video.svg'
+import PlaylistIcon from 'assets/icons/playlist.svg'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { HorizontalScroller } from 'components/common/horizontal-scroller'
+
+interface Props {
+  className?: string
+}
+
+const Clock = (props: any) => {
+  const animationEl = React.useRef()
+
+  React.useEffect(() => {
+    const handler = () => {
+      props.next()
+    }
+
+    animationEl.current.addEventListener('animationend', handler)
+
+    return () => {
+      animationEl.current.removeEventListener('animationend', handler)
+    }
+  }, [props.next])
+
+  return (
+    <div className={`${css['circle-wrap']}`}>
+      <div className={`${css['circle']}`}>
+        <div className={`${css['mask']} ${css['full']}`}>
+          <div ref={animationEl} className={`${css['fill']}`}></div>
+        </div>
+        <div className={`${css['mask']} ${css['half']}`}>
+          <div className={`${css['fill']}`}></div>
+        </div>
+
+        <div className={`${css['inside-circle']}`}>
+          <div>{props.children}</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export const Editions = (props: Props) => {
+  const editions = useDevconEditions()
+  const [selectedEditionIndex, setSelectedEditionIndex] = useState(0)
+  let className = `padding-top padding-bottom border-top ${css['container']}`
+  if (props.className) {
+    className += ` ${props.className}`
+  }
+
+  const selectedEdition = editions[selectedEditionIndex]
+
+  return (
+    <div className="section">
+      <div className="content">
+        <div className={className}>
+          <HorizontalScroller>
+            <div className={css['numbers']}>
+              {editions.map((i: DevconEdition, index: number) => {
+                const selected = i.number === selectedEdition.number
+                let className = css['edition']
+
+                if (selected) className += ` ${css['selected']}`
+
+                return (
+                  <div key={i.number} className={className}>
+                    <p className={css['conference']}>Devcon Editions</p>
+
+                    {selected ? (
+                      <Clock
+                        next={() => setSelectedEditionIndex(curr => (curr === editions.length - 1 ? 0 : curr + 1))}
+                      >
+                        {i.number}
+                      </Clock>
+                    ) : (
+                      <button className={`${css['number']} plain`} onClick={() => setSelectedEditionIndex(index)}>
+                        {i.number}
+                      </button>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          </HorizontalScroller>
+
+          <div className={css['image-container']}>
+            <div className="aspect square">
+              {editions.map((i: DevconEdition, index: number) => {
+                const nConstellations = 3
+                const gridConstellation = (index % nConstellations) + 1
+                let className = `${css['constellation-' + gridConstellation]} ${css['images']}`
+
+                if (index === selectedEditionIndex) className += ` ${css['selected']}`
+
+                return (
+                  <div className={className} key={index}>
+                    <div className={css['image-wrapper']}>
+                      <GatsbyImage image={getImage(i.image1)} objectFit="cover" placeholder="black" alt={i.title} />
+                    </div>
+
+                    <div className={css['image-wrapper']}>
+                      <GatsbyImage image={getImage(i.image2)} objectFit="cover" placeholder="black" alt={i.title} />
+                    </div>
+
+                    <div className={css['image-wrapper']}>
+                      <GatsbyImage image={getImage(i.image3)} objectFit="cover" placeholder="black" alt={i.title} />
+                    </div>
+
+                    <div className={`${css['image-wrapper']} ${css['title']}`}>
+                      <GatsbyImage image={getImage(i.imageTitle)} objectFit="contain" alt={i.title} />
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+          <div className={css['info']} key={selectedEdition.title}>
+            <div className={css['title']}>
+              <p className="title">{selectedEdition.title}</p>
+              <p className="subtitle">{selectedEdition.location}</p>
+              {selectedEdition.startDate && selectedEdition.endDate ? (
+                <p>
+                  {moment(selectedEdition.startDate).format('MMM DD')} -{' '}
+                  {moment(selectedEdition.endDate).format('MMM DD')} {moment(selectedEdition.endDate).format('YYYY')}
+                </p>
+              ) : (
+                <p>Date: TBD</p>
+              )}
+            </div>
+            <div className={css['description']}>
+              <p>{selectedEdition.description}</p>
+            </div>
+            <div className={css['buttons-container']}>
+              <div className={css['buttons']}>
+                {/* Only show watch now button after the event has happened */}
+                {moment().unix() > moment(selectedEdition.endDate).unix() && (
+                  <Button
+                    to={`/archive/watch?edition=${selectedEdition.number}`}
+                    className={`${css['button']} red ghost sm`}
+                  >
+                    Watch <OnDemandVideoIcon />
+                  </Button>
+                )}
+
+                {selectedEdition.links.map(i => {
+                  return (
+                    <Button key={i.title} to={i.url} className={`${css['button']} white ghost sm`}>
+                      {i.title}
+                      {i.title.toLowerCase() === 'playlist' && (
+                        <PlaylistIcon style={{ fontSize: '0.9em', marginTop: '2px' }} />
+                      )}
+                    </Button>
+                  )
+                })}
+              </div>
+            </div>
+            <div className={css['background-text']}>
+              <p>Ethereum</p>
+              <p>Developer</p>
+              <p>Conference</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

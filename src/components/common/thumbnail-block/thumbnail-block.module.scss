@@ -1,0 +1,24 @@
+@use 'assets/css/partials/index' as *;
+
+.container {
+  display: flex;
+  position: relative;
+  margin-bottom: $gaps-gap-4;
+
+  .thumbnail-container {
+    padding: $gaps-gap-4 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    flex-shrink: 0;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .children {
+    flex-grow: 1;
+  }
+}
