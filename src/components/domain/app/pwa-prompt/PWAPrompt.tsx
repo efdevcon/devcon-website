@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import Img from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
+import Image from 'next/image'
 import css from './pwa.module.scss'
 import { Modal } from 'components/common/modal'
 import IconPlus from 'assets/icons/plus.svg'
+import imagePWA from 'assets/images/pwa_prompt.png'
 
 const getIsPWAPossible = () => {
   return true
@@ -12,27 +12,13 @@ const getIsPWAPossible = () => {
 export const PWAPrompt = (props: any) => {
   const [open, setOpen] = React.useState(false)
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativePath: { in: ["pwa_prompt.png"] } }) {
-        nodes {
-          childImageSharp {
-            fluid(maxWidth: 600, quality: 80) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
-    }
-  `)
-
   useEffect(() => {
     setOpen(getIsPWAPossible())
   }, [])
 
   return (
     <Modal open={open} close={() => setOpen(!open)} className={css['container']}>
-      <Img alt="Devcon wizard" className={css['background']} fluid={data.allFile.nodes[0].childImageSharp.fluid} />
+      <Image alt="Devcon wizard" className={css['background']} src={imagePWA} />
       <div className={css['content']}>
         <div className={css['tag']}>
           <p className="font-xs bold">DEVCON WEB APP</p>

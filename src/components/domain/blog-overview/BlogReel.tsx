@@ -1,14 +1,15 @@
 import React from 'react'
-import { useBlogs } from 'hooks/useBlogs'
 import moment from 'moment'
 import css from './blog-reel.module.scss'
 import { Card } from '../../common/card'
 import { BlogPost } from 'types/BlogPost'
 import { Slider, useSlider } from 'components/common/slider'
 
-export function BlogReel() {
-  const blogs = useBlogs()
+interface Props {
+  blogs: Array<BlogPost>
+}
 
+export function BlogReel(props: Props) {
   const settings = {
     infinite: false,
     speed: 500,
@@ -40,10 +41,10 @@ export function BlogReel() {
       <div className="content margin-top">
         <div className={`${css['cards']} border-top`}>
           <Slider sliderProps={sliderProps} title="Blog">
-            {blogs.map((blog: BlogPost, i: number) => {
+            {props.blogs.map((blog: BlogPost, i: number) => {
               let className = css['card']
 
-              if (i === blogs.length - 1) className += ` ${css['last']}`
+              if (i === props.blogs.length - 1) className += ` ${css['last']}`
 
               return (
                 <Card

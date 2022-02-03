@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './archive-footer.module.scss'
 import IconArrowUpward from 'assets/icons/arrow_upward.svg'
-import smallLogo from 'assets/images/ef-logo.svg'
+import ImageLogo from 'assets/images/ef-logo.svg'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/router'
 import { Link } from 'components/common/link'
@@ -119,7 +119,7 @@ export const ArchiveFooter = () => {
 
           <div className={css['col-3']}>
             <Link external className={css['small-logo']} to={LINK_ETHEREUM_FOUNDATION}>
-              <img src={smallLogo} alt={TITLE} />
+              <ImageLogo />
             </Link>
           </div>
         </div>

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import css from './alert.module.scss'
 import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/router'
-
 import IconCircleCheck from 'assets/icons/circle_check.svg'
 import IconCircleExclamation from 'assets/icons/circle_exclamation.svg'
 import IconTriangleExclamation from 'assets/icons/triangle_exclamation.svg'

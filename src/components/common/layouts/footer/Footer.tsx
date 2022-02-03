@@ -4,8 +4,8 @@ import IconArrowUpward from 'assets/icons/arrow_upward.svg'
 import IconGithub from 'assets/icons/github.svg'
 import IconTwitter from 'assets/icons/twitter.svg'
 import IconYoutube from 'assets/icons/youtube.svg'
-import logo from 'assets/images/test-asset.svg'
-import smallLogo from 'assets/images/ef-logo.svg'
+import ImageLogo from 'assets/images/test-asset.svg'
+import ImageEF from 'assets/images/ef-logo.svg'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/router'
 import { Link } from 'components/common/link'
@@ -59,7 +59,7 @@ export const Footer = () => {
         <div className={css['content']}>
           <div className={css['col-1']}>
             <Link to={`/${lang}/`}>
-              <img src={logo} alt={TITLE} />
+              <ImageLogo />
             </Link>
           </div>
 
@@ -154,7 +154,7 @@ export const Footer = () => {
 
           <div className={css['col-3']}>
             <Link external className={css['small-logo']} to={LINK_ETHEREUM_FOUNDATION}>
-              <img src={smallLogo} alt={TITLE} />
+              <ImageEF />
             </Link>
           </div>
         </div>

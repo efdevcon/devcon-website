@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'components/common/link'
 import Slider from 'react-slick'
 import css from './cta.module.scss'
-import ctaSrc from 'assets/images/cta.svg'
+import CtaSrc from 'assets/images/cta.svg'
 
 type CTAProps = {
   mobile?: boolean
@@ -67,7 +67,7 @@ export const CallToAction = (props: CTAProps) => {
       <div className={css['container']}>
         <div className={css['content']}>
           <div className={css['icon']}>
-            <img src={ctaSrc} alt='Call to action icon' />
+            <CtaSrc />
           </div>
 
           <div className={css['slider']}>

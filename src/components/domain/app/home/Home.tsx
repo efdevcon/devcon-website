@@ -3,6 +3,7 @@ import { SliderStickyNotes } from 'components/common/slider/SliderVariations'
 import { Link } from 'components/common/link'
 import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
 import { Share } from 'components/common/share'
+import { useRouter } from 'next/router'
 import QRCode from 'qrcode.react'
 import {
   CollapsedSection,
@@ -12,11 +13,11 @@ import {
 import css from './home.module.scss'
 import ticket from './ticket.png'
 import { useAccountContext } from 'context/account-context'
-import { navigate } from '@reach/router'
-import { useActiveAddress } from "src/hooks/useActiveAddress"
+import { useActiveAddress } from "hooks/useActiveAddress"
 import { useAvatar } from 'hooks/useAvatar'
 
 export const Home = (props: any) => {
+  const router = useRouter()
   const accountContext = useAccountContext()
   const activeAddress = useActiveAddress()
   const avatar = useAvatar()
@@ -24,7 +25,7 @@ export const Home = (props: any) => {
 
   const disconnect = async () => {
     accountContext.logout(accountContext.account?._id)
-    navigate('/app/login')
+    router.push('/app/login')
   }
 
   return (
@@ -41,10 +42,10 @@ export const Home = (props: any) => {
               </h2>
             </div>
             <div className={css['profile-actions']}>
-              <button className="label error plain" onClick={() => navigate('/app/settings')}>SETTINGS</button>
-              {!accountContext.account?.username && <button className="label error plain" onClick={() => navigate('/app/settings/username')}>ADD USERNAME</button>}
-              <button className="label error plain" onClick={() => navigate('/app/settings/wallets')}>MANAGE WALLETS</button>
-              <button className="label error plain" onClick={() => navigate('/app/settings/email')}>MANAGE EMAILS</button>
+              <button className="label error plain" onClick={() => router.push('/app/settings')}>SETTINGS</button>
+              {!accountContext.account?.username && <button className="label error plain" onClick={() => router.push('/app/settings/username')}>ADD USERNAME</button>}
+              <button className="label error plain" onClick={() => router.push('/app/settings/wallets')}>MANAGE WALLETS</button>
+              <button className="label error plain" onClick={() => router.push('/app/settings/email')}>MANAGE EMAILS</button>
             </div>
 
             <div className={css['dropdown']}>
@@ -55,12 +56,12 @@ export const Home = (props: any) => {
                   {
                     text: 'Settings',
                     value: 'Settings',
-                    onClick: () => { navigate('/app/settings')},
+                    onClick: () => { router.push('/app/settings')},
                   },
                   {
                     text: 'View on Etherscan',
                     value: 'Etherscan',
-                    onClick: () => { navigate('https://etherscan.io/address/' + accountContext.account?.addresses[0])},
+                    onClick: () => { router.push('https://etherscan.io/address/' + accountContext.account?.addresses[0])},
                   },
                   {
                     text: 'Sign out',
@@ -98,7 +99,7 @@ export const Home = (props: any) => {
             Devcon
 
             {!loggedIn &&
-              <button className="label plain" onClick={() => navigate('/app/login')}>LOGIN</button>
+              <button className="label plain" onClick={() => router.push('/app/login')}>LOGIN</button>
             }
           </p>
 

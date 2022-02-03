@@ -34,7 +34,7 @@ export const pageHOC =
         },
         notification: {
           title: 'Test notification',
-          url: 'www.google.com',
+          url: 'https://www.google.com',
           label: 'Notif Label',
           labelType: 'type',
         },

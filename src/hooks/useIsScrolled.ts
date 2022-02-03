@@ -1,9 +1,12 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
+
+const isBrowser = typeof window !== 'undefined'
+const useIsomorphicLayoutEffect = isBrowser ? useLayoutEffect : useEffect
 
 export const useIsScrolled = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 0 // Reading scrollY causes repaint; keep an eye out for perf issues
 
@@ -22,7 +25,7 @@ export const useIsScrolled = () => {
 export const useScrollY = () => {
   const [y, setY] = useState(false)
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const handleScroll = () => {
       setY(window.scrollY);
     }
@@ -39,7 +42,7 @@ export const useDidScrollDown = () => {
   const [didScrollDown, setDidScrolledDown] = React.useState(false)
   const lastScrollDistance = React.useRef(0)
 
-  React.useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const handleScroll = () => {
       const currentScrollDistance = window.scrollY
 

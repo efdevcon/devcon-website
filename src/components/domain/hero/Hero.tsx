@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import css from './hero.module.scss'
-import logo from 'assets/images/devcon-logo.svg'
+import Logo from 'assets/images/devcon-logo.svg'
 import Rays from './svgs/Rays'
 import IconEventNote from 'assets/icons/event_note.svg'
 import { useTranslations } from 'next-intl'
@@ -17,13 +17,16 @@ const parallax = (intersectionRatio: any) => {
   }
 }
 
+const isBrowser = typeof window !== 'undefined'
+const useIsomorphicLayoutEffect = isBrowser ? useLayoutEffect : useEffect
+
 // TO-DO: requestAnimationFrame (+ debounce?)
 export const Hero = () => {
   const intl = useTranslations()
   const heroEl = React.useRef(null)
   const [intersectionRatio, setIntersectionRatio] = React.useState(0)
 
-  React.useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     let options = {
       threshold: new Array(101).fill(0).map((v, i) => i * 0.01),
     }
@@ -50,19 +53,17 @@ export const Hero = () => {
       <div ref={heroEl} data-jest="hero" className={`${css['hero']}`}>
         <Rays className={css['rays']} />
 
-        <div className={css['mountain-container']}>
+        <div className={css['mountain-container']} style={parallax(intersectionRatio)}>
           <Image
-            alt=""
-            style={parallax(intersectionRatio)}
+            alt="Devcon mountains"
             className={css['mountains']}
             src={imageMountains}
           />
         </div>
 
-        <div className={css['cloud-container']}>
+        <div className={css['cloud-container']} style={parallax(intersectionRatio)}>
           <Image
-            alt=""
-            style={parallax(intersectionRatio)}
+            alt="Devcon clouds"
             className={css['clouds']}
             src={imageClouds}
           />
@@ -76,7 +77,7 @@ export const Hero = () => {
         </div>
 
         <div className={css['logo-container']}>
-          <img alt={TITLE} className={css['logo']} src={logo} />
+          <Logo alt={TITLE} className={css['logo']} />
         </div>
 
         <div className={css['date']}>

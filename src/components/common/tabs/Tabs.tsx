@@ -1,5 +1,5 @@
 import { useLocation } from '@reach/router'
-import React, { ReactNode, useState, useEffect, useImperativeHandle } from 'react'
+import React, { ReactNode, useState, useEffect, useImperativeHandle, useLayoutEffect } from 'react'
 import { useQueryStringer } from 'hooks/useQueryStringer'
 import css from './tabs.module.scss'
 
@@ -19,12 +19,15 @@ const findFirstValidTab = (children: React.ReactChildren): any => {
 }
 
 export const Tabs = React.forwardRef((props: TabsProps, ref: any) => {
+  const isBrowser = typeof window !== 'undefined'
+  const useIsomorphicLayoutEffect = isBrowser ? useLayoutEffect : useEffect
+  
   const tabFromQueryString = new URLSearchParams(useLocation().search).get('tab')
   const defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
   const [activeTab, setActiveTab] = useState(defaultTab)
 
   // Sync active tab on mount if query string is defined
-  React.useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (tabFromQueryString && props.children && isValidTab(props.children, tabFromQueryString)) {
       setActiveTab(tabFromQueryString)
     }

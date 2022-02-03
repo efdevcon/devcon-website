@@ -1,5 +1,7 @@
-import { useState, useLayoutEffect } from 'react'
-// import throttle from 'utils/throttle';
+import { useState, useLayoutEffect, useEffect } from 'react'
+
+const isBrowser = typeof window !== 'undefined'
+const useIsomorphicLayoutEffect = isBrowser ? useLayoutEffect : useEffect
 
 const getElementHeight = (elementID: string) => {
   const element = document.getElementById(elementID)
@@ -12,7 +14,7 @@ const getElementHeight = (elementID: string) => {
 const useGetElementHeight = (elementID: string) => {
   const [elementHeight, setElementHeight] = useState(0)
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (window.ResizeObserver) {
       const el = document.getElementById(elementID)
 
