@@ -1,54 +1,25 @@
-import React from 'react'
-import { ToNavigationData, ToNotification, ToPage } from 'context/query-mapper'
+import React, { ComponentType } from 'react'
+import { NavigationData } from 'types/NavigationData'
+import { Notification } from 'types/Notification'
+import { Page } from 'types/Page'
 import { PageContext } from './page-context'
 
-type pageProps = {
+type Props = {
   data: any
-  pageContext: any
-  location: any
+  navigationData: NavigationData
+  notification: Notification
+  page: Page
 }
 
 export const pageHOC =
-  (PageTemplate: React.ComponentType<pageProps>, mapDataToContext?: (props: pageProps) => { [key: string]: any }) =>
-    (props: pageProps) => {
-      // const notFound = props.data?.files?.nodes[0]?.childImageSharp?.fluid?.src?.endsWith('404.png') ?? false
-      // const pageType = notFound ? '404' : props.location?.pathname?.startsWith('/archive') ? 'archive' : 'default'
-      if (typeof window !== 'undefined') {
-        const hostname = window.location.hostname;
-        console.log('HOSTNAME', hostname)
-     }
-      console.log('PROPS', props.location)
+  (PageTemplate: ComponentType<Props>, mapDataToContext?: (props: Props) => { [key: string]: any }) =>
+    (props: Props) => {
       const context = {
         data: props.data,
-        location: 'http://localhost:3000/',
-        pageContext: props.pageContext,
-        navigation: {
-          top: [],
-          site: [],
-          footer: {
-            bottom: [],
-            highlights: [],
-            left: [],
-            right: [],
-          },
-        },
-        notification: {
-          title: 'Test notification',
-          url: 'https://www.google.com',
-          label: 'Notif Label',
-          labelType: 'type',
-        },
+        navigation: props.navigationData,
+        notification: props.notification,
         ...(mapDataToContext && mapDataToContext(props)),
-        current: {
-          title: 'Page title',
-          description: 'description',
-          body: 'source.html',
-          template: 'content',
-          tags: [],
-          lang: 'en',
-          id: 'page',
-          slug: 'en',
-        }
+        current: props.page
       }
 
       return (

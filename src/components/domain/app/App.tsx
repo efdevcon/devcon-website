@@ -1,9 +1,8 @@
 import React from 'react'
-import { Router } from '@reach/router'
+import { Router } from 'next/router'
 import { AccountContextProvider } from 'context/account-context-provider'
 import { PrivateRoute } from 'components/common/private-route'
 import { BottomNav, InlineNav } from 'components/domain/app/navigation'
-import { Helmet } from 'react-helmet'
 import css from './app.module.scss'
 import { Header } from 'components/common/layouts/header'
 import { Home } from 'components/domain/app/home'
@@ -23,6 +22,7 @@ import UsernameSettings from './account/settings/Username'
 import WalletSettings from './account/settings/Wallet'
 import { Session as SessionType } from 'types/Session'
 import { Speaker } from 'types/Speaker'
+import Head from 'next/head'
 
 const accountContextHOC = (Component: React.ComponentType<any>) => {
   return (props: any) => (
@@ -76,13 +76,13 @@ export const App = accountContextHOC(({ data, location }: any) => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <script
           type="text/javascript"
           src="https://unpkg.com/@walletconnect/web3-provider@1.4.1/dist/umd/index.min.js"
         />
         <script type="text/javascript" src="https://unpkg.com/@toruslabs/torus-embed" />
-      </Helmet>
+      </Head>
 
       <Header className={css['header']} withStrip={false} withHero={false} />
 

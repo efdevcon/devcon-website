@@ -51,8 +51,10 @@ const Mobile = (props: any) => {
                     to={i.url}
                     onClick={closeFoldout}
                   >
-                    {i.title}
-                    {i.title === 'Watch' && <OnDemandVideoIcon style={{ fontSize: '1em' }} />}
+                    <>
+                      {i.title}
+                      {i.title === 'Watch' && <OnDemandVideoIcon style={{ fontSize: '1em' }} />}
+                    </>
                   </Link>
                 </div>
               )}
@@ -116,8 +118,10 @@ export const Navigation = (props: any) => {
 
             return (
               <Link className={className} to={i.url}>
-                {i.title}
-                {isWatch && <OnDemandVideoIcon />}
+                <>
+                  {i.title}
+                  {isWatch && <OnDemandVideoIcon />}
+                </>
               </Link>
             )
           })()

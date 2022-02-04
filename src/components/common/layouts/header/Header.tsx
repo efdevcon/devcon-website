@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/router'
 import { Link } from 'components/common/link'
 import { Menu } from './menu'
@@ -19,7 +18,6 @@ type HeaderProps = {
 
 export const Header = React.memo(({ withStrip, withHero, className }: HeaderProps) => {
   const ref = useRef(null)
-  const intl = useTranslations()
   const router = useRouter()
   const isScrolled = useIsScrolled()
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)

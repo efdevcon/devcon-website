@@ -6,7 +6,6 @@ import { Page } from 'types/Page'
 export interface PageContextType {
   navigation: NavigationData
   notification: Notification
-  location: any
   current: Page | undefined
   data: any
 }
