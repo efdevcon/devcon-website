@@ -1,28 +1,24 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
 import { FAQ } from 'components/domain/faq'
 import { PageHero } from 'components/common/page-hero'
-import { ToFaqData } from 'components/domain/faq/queryMapper'
 import { Category } from 'types/Category'
 import { Search } from 'components/domain/faq/search'
 import Content from 'components/common/layouts/content'
-import css from './templates.module.scss'
-import themes from './themes.module.scss'
-
+import css from '../templates.module.scss'
+import themes from '../themes.module.scss'
 import AskDeva from 'assets/images/ask-deva.png'
 import { pageHOC } from 'context/pageHOC'
 import { PageContentSection } from './page-content-section'
 import { usePageContext } from 'context/page-context'
 
-export default pageHOC(function FaqTemplate({ data, location }: any) {
+export default pageHOC(function FaqTemplate(props: any) {
   const pageContext = usePageContext()
-  const faq = ToFaqData(data)
   const [searchFilter, setSearchFilter] = useState('')
 
   return (
     <Content theme={themes['green']}>
       <PageHero
-        navigation={faq.map((category: Category) => {
+        navigation={props.faq.map((category: Category) => {
           return { title: category.title, to: `#${category.id}` }
         })}
       />
@@ -44,18 +40,8 @@ export default pageHOC(function FaqTemplate({ data, location }: any) {
           </div>
         </section>
 
-        <FAQ data={faq} filter={searchFilter} />
+        <FAQ data={props.faq} filter={searchFilter} />
       </PageContentSection>
     </Content>
   )
 })
-
-export const query = graphql`
-  query ($slug: String!, $language: String!) {
-    ...Page
-    ...NavigationData
-    ...Notification
-    ...Categories
-    ...FAQs
-  }
-`

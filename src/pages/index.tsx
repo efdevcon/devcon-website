@@ -9,6 +9,8 @@ import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
 import { Notifications } from 'components/domain/app/notifications'
 import { TITLE } from 'utils/constants'
+import { GetPages } from 'services/page'
+import { GetStaticPaths } from 'next'
 
 export default pageHOC(function Index(props: any) {
   return (
@@ -42,5 +44,5 @@ export async function getStaticProps(context: any) {
         slug: 'index'
       }
     }
-  };
+  }
 }

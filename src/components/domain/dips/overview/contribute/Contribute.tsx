@@ -2,9 +2,9 @@ import React from 'react'
 import Github from 'assets/icons/github.svg'
 import css from './contribute.module.scss'
 import { Link } from 'components/common/link'
-import { Contributor } from 'types/dip'
+import { Contributor } from 'types/DIP'
 import { Tooltip } from 'components/common/tooltip'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useTranslations } from 'next-intl'
 import { chunkArray } from 'utils/chunk-array'
 
 type ContributeProps = {
@@ -121,11 +121,11 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
 }
 
 export const Contribute = (props: ContributeProps) => {
-  const intl = useIntl()
+  const intl = useTranslations()
 
   return (
     <section id="contribute" className={css['section']}>
-      <h3 className="spaced">{intl.formatMessage({ id: 'dips_contribute' })}</h3>
+      <h3 className="spaced">{intl('dips_contribute')}</h3>
 
       <div className={css['container']}>
         <div className={css['left-section']}>
@@ -135,17 +135,17 @@ export const Contribute = (props: ContributeProps) => {
           />
           <div className={css['links']}>
             <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
-              {intl.formatMessage({ id: 'dips_visit_forum' })}
+              {intl('dips_visit_forum')}
             </Link>
             <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
-              {intl.formatMessage({ id: 'dips_create_proposal' })}
+              {intl('dips_create_proposal')}
             </Link>
           </div>
         </div>
         <div className={css['contributors']}>
           <AutoScroller contributors={props.contributors} />
           <div className={css['info']}>
-            <p>* {intl.formatMessage({ id: 'dips_contributors' })}</p> <Github />
+            <p>* {intl('dips_contributors')}</p> <Github />
           </div>
         </div>
       </div>

@@ -1,16 +1,12 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Content from 'components/common/layouts/content'
 import { pageHOC } from 'context/pageHOC'
-import themes from './themes.module.scss'
+import themes from '../themes.module.scss'
 
-export default pageHOC(function BlogTemplate({ data }: any) {
-  const blog = data.markdownRemark
-
-  if (!blog || !blog.frontmatter) return <></>
-
+export default pageHOC(function BlogTemplate(props: any) {
   return (
     <Content theme={themes['blue']}>
+      Blog
       {/* <SEO title={blog.frontmatter.Title} canonicalUrl={blog.frontmatter.permaLink} />
 
       <h2>{blog.frontmatter.title}</h2>
@@ -19,10 +15,3 @@ export default pageHOC(function BlogTemplate({ data }: any) {
     </Content>
   )
 })
-
-export const query = graphql`
-  query ($language: String!) {
-    ...Notification
-    ...NavigationData
-  }
-`

@@ -5,12 +5,12 @@ import { Link } from 'components/common/link'
 import { leftPad } from 'utils/left-pad'
 import { Table, TableColumn } from 'components/common/table'
 import {  SortVariation } from 'components/common/sort'
-import { DIP } from 'types/dip'
+import { DIP } from 'types/DIP'
 import GithubIcon from 'assets/icons/github.svg'
 import TooltipIcon from 'assets/icons/tooltip.svg'
 import { Share } from 'components/common/share'
 import ArrowRight from 'assets/icons/arrow_right.svg'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useTranslations } from 'next-intl'
 import { Filter, useFilter } from 'components/common/filter'
 
 export const Links = ({ dip }: { dip: DIP }) => {
@@ -182,7 +182,7 @@ type ProposalsProps = {
 }
 
 export const Proposals = (props: ProposalsProps) => {
-  const intl = useIntl()
+  const intl = useTranslations()
 
   // Pushing an extra column into the table to make room for a link back to the page
   const dipsWithLink = React.useMemo(() => {
@@ -227,7 +227,7 @@ export const Proposals = (props: ProposalsProps) => {
   return (
     <section id="proposals" className={css['container']}>
       <div className={css['top-container']}>
-        <h3 className="spaced">{intl.formatMessage({ id: 'dips_proposals' })}</h3>
+        <h3 className="spaced">{intl('dips_proposals')}</h3>
 
         <Filter {...filterState} />
       </div>

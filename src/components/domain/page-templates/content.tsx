@@ -1,11 +1,10 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Content from 'components/common/layouts/content'
 import { pageHOC } from 'context/pageHOC'
 import { PageContentSection } from './page-content-section'
 import { PageHero } from 'components/common/page-hero'
 import { usePageContext } from 'context/page-context'
-import themes from './themes.module.scss'
+import themes from '../themes.module.scss'
 
 export default pageHOC(function ContentTemplate() {
   const pageContext = usePageContext()
@@ -22,10 +21,10 @@ export default pageHOC(function ContentTemplate() {
   )
 })
 
-export const query = graphql`
-  query ($slug: String!, $language: String!) {
-    ...Page
-    ...Notification
-    ...NavigationData
-  }
-`
+// export const query = graphql`
+//   query ($slug: String!, $language: String!) {
+//     ...Page
+//     ...Notification
+//     ...NavigationData
+//   }
+// `

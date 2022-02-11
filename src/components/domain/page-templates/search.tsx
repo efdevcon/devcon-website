@@ -1,20 +1,19 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Content from 'components/common/layouts/content'
 import { pageHOC } from 'context/pageHOC'
-import themes from './themes.module.scss'
+import themes from '../themes.module.scss'
 import { PageContentSection } from './page-content-section'
 import { PageHero } from 'components/common/page-hero'
 import { Link } from 'components/common/link'
 import * as JsSearch from 'js-search'
-import { useLocation } from '@reach/router'
 import { InputForm } from 'components/common/input-form'
 import { SearchItem } from 'types/SearchItem'
+import { useRouter } from 'next/router'
 
 export default pageHOC(function SearchTemplate({ pageContext }: any) {
   const data = pageContext
-  const searchParams = new URLSearchParams(useLocation().search)
-  const [searchQuery, setSearchQuery] = React.useState(searchParams.get('q') || '')
+  const router = useRouter()
+  const [searchQuery, setSearchQuery] = React.useState(router.query['q'] as string || '')
   const [results, setResults] = React.useState<Array<SearchItem>>([])
 
   const id = 'slug'
@@ -77,11 +76,3 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
     </Content>
   )
 })
-
-export const query = graphql`
-  query ($slug: String!, $language: String!) {
-    ...Page
-    ...NavigationData
-    ...Notification
-  }
-`

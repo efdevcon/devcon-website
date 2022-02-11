@@ -1,5 +1,5 @@
 import React from 'react'
-import { useIntl } from 'react-intl'
+import { useTranslations } from 'next-intl'
 import ArrowAsc from 'assets/icons/arrow_asc.svg'
 import ArrowDesc from 'assets/icons/arrow_desc.svg'
 import css from './sort.module.scss'
@@ -132,7 +132,7 @@ export const useSort = (
 }
 
 export const SortButton = (props: { index: number; field: Field; sortState: SortState }) => {
-  const intl = useIntl()
+  const intl = useTranslations()
   const { field, index, sortState } = props
   const { sortDirection, setSortBy, sortBy } = sortState
 
@@ -147,7 +147,7 @@ export const SortButton = (props: { index: number; field: Field; sortState: Sort
 
   return (
     <div key={field.key} className={className} onClick={e => setSortBy(index)}>
-      <p className="font-lg">{field.intl ? intl.formatMessage({ id: field.intl }) : field.title}</p>
+      <p className="font-lg">{field.intl ? intl(field.intl) : field.title}</p>
 
       <div className={css['sort-arrows']}>
         {shouldRenderAsc && <ArrowAsc />}

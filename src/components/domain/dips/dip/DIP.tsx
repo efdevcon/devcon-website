@@ -6,12 +6,10 @@ import { PageHero } from 'components/common/page-hero'
 import { Link } from 'components/common/link'
 import { Label } from 'components/common/label'
 import { Table } from 'components/common/table'
-import { mapToDIP } from 'hooks/useDIPs'
 import { leftPad } from 'utils/left-pad'
 import { DIP as DIPType } from 'types/DIP'
 import ArrowLeft from 'assets/icons/arrow_left.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
-import { useIntl } from 'gatsby-plugin-intl'
 
 const tableColumns = [
   {
@@ -73,10 +71,7 @@ const tableColumns = [
 ]
 
 export function DIP(props: { dip: DIPType }) {
-  const intl = useIntl()
-  const formattedDIP = React.useMemo(() => {
-    return mapToDIP(props.dip)
-  }, [props.dip])
+  const dip = props.dip
 
   return (
     <div className={css['dip-container']}>
@@ -84,13 +79,12 @@ export function DIP(props: { dip: DIPType }) {
         renderCustom={() => {
           return (
             <div className={css['nav']}>
-              <Link to={formattedDIP.prev_dip} className={css['prev']}>
+              <Link to={dip.prev_dip} className={css['prev']}>
                 <ArrowLeft style={{ fontSize: '0.8em' }} />
               </Link>
 
-              {formattedDIP.next_dip && (
-                <Link to={formattedDIP.next_dip} className={css['next']}>
-                  <p className="bold">{intl.formatMessage({ id: 'dips_next_dip' })}</p>
+              {dip.next_dip && (
+                <Link to={dip.next_dip} className={css['next']}>
                   <ArrowRight style={{ fontSize: '0.8em' }} />
                 </Link>
               )}
@@ -103,15 +97,15 @@ export function DIP(props: { dip: DIPType }) {
           <div className={css['header']}>
             <div className={css['dip-number']}>
               <p className="h3 bold">DIP</p>
-              <p className="h2 bold">{leftPad(formattedDIP.number + '')}</p>
+              <p className="h2 bold">{leftPad(dip.number + '')}</p>
             </div>
 
-            <h1 className={css['title']}>{formattedDIP.title}</h1>
+            <h1 className={css['title']}>{dip.title}</h1>
 
-            <Links dip={formattedDIP} />
+            <Links dip={dip} />
           </div>
-          <Table itemKey="number" items={[formattedDIP]} columns={tableColumns} />
-          <div dangerouslySetInnerHTML={{ __html: props.dip.html }} className="markdown" />
+          <Table itemKey="number" items={[dip]} columns={tableColumns} />
+          {dip.body && <div dangerouslySetInnerHTML={{ __html: dip.body ?? '' }} className="markdown" />}
         </div>
       </div>
     </div>

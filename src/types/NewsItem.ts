@@ -1,6 +1,6 @@
 export interface NewsItem {
   id?: string
-  date: Date
+  date: number
   author?: string
   url?: string
   tweetID?: string

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { AccordionItem } from './AccordionItem'
 import css from './accordion.module.scss'
-
 import IconMinus from 'assets/icons/minus.svg'
 import IconPlus from 'assets/icons/plus.svg'
 import IconArrowCollapse from 'assets/icons/arrow_collapse.svg'

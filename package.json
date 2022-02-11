@@ -19,6 +19,7 @@
     "ethereum-blockies-base64": "^1.0.2",
     "ethers": "^5.5.4",
     "gray-matter": "^4.0.3",
+    "js-search": "^2.0.0",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
     "mongodb-client-encryption": "^1.2.7",
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
+    "@types/js-search": "^1.4.0",
     "@types/mongoose": "^5.11.97",
     "@types/node": "17.0.14",
     "@types/nodemailer": "^6.4.4",
