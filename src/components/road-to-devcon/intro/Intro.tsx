@@ -63,6 +63,13 @@ export const Intro = React.forwardRef((props: any, ref) => {
                 {intl.formatMessage({ id: 'rtd_intro_no_date_learn_more' })}.
               </Link>
             </p>
+            <br />
+            <p className={`no-select ${css['no-announcement-date']}`}>
+              {intl.formatMessage({ id: 'rtd_intro_devconnect' })}{' '}
+              <Link className="bold hover-underline" to="https://devconnect.org/">
+                {intl.formatMessage({ id: 'rtd_intro_no_date_learn_more' })}.
+              </Link>
+            </p>
           </div>
 
           <button
