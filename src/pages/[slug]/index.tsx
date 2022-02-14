@@ -23,9 +23,10 @@ export async function getStaticPaths() {
     const pages = GetPages()
 
     return {
-        paths: pages.map(i => {
-            return { params: { slug: i.slug } }
-        }),
+        paths: [
+            pages.map(i => { return { params: { slug: i.slug }, locale: 'en' } }),
+            pages.map(i => { return { params: { slug: i.slug }, locale: 'es' } }),
+        ].flat(),
         fallback: false
     }
 }

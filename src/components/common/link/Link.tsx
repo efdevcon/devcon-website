@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { default as NextLink } from 'next/link'
 import NorthEast from 'assets/icons/north_east.svg'
+import { Proposals } from 'components/domain/dips/overview/proposals'
 
 type LinkProps = {
   children: ReactNode
@@ -11,7 +12,7 @@ type LinkProps = {
 }
 
 const Link = React.forwardRef(
-  ({ children, indicateExternal, external, allowDrag, to, ...rest }: LinkProps, ref: any) => {
+  ({ children, indicateExternal, external, allowDrag, to, locale, ...rest }: LinkProps, ref: any) => {
     const isMailTo = to.startsWith('mailto:')
     const dragging = React.useRef(false)
 
@@ -60,7 +61,7 @@ const Link = React.forwardRef(
     }
 
     return (
-      <NextLink href={to} {...linkAttributes}>
+      <NextLink href={to} {...linkAttributes} locale={locale}>
         {children}
       </NextLink>
     )

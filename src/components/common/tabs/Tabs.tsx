@@ -1,7 +1,7 @@
-import { useLocation } from '@reach/router'
 import React, { ReactNode, useState, useEffect, useImperativeHandle, useLayoutEffect } from 'react'
 import { useQueryStringer } from 'hooks/useQueryStringer'
 import css from './tabs.module.scss'
+import { useRouter } from 'next/router'
 
 interface TabsProps {
   children: any
@@ -20,9 +20,10 @@ const findFirstValidTab = (children: React.ReactChildren): any => {
 
 export const Tabs = React.forwardRef((props: TabsProps, ref: any) => {
   const isBrowser = typeof window !== 'undefined'
+  const router = useRouter()
   const useIsomorphicLayoutEffect = isBrowser ? useLayoutEffect : useEffect
   
-  const tabFromQueryString = new URLSearchParams(useLocation().search).get('tab')
+  const tabFromQueryString = router.query['tab'] as string
   const defaultTab = props.children ? findFirstValidTab(props.children)?.props?.title : ''
   const [activeTab, setActiveTab] = useState(defaultTab)
 

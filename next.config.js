@@ -2,9 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ['en', 'es'],
-    defaultLocale: 'en',
+    locales: ['default', 'en', 'es'],
+    defaultLocale: 'default',
+    localeDetection: false,
   },
+  trailingSlash: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
