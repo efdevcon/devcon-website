@@ -1,5 +1,5 @@
 import nodemailer, { Transporter } from 'nodemailer'
-import { SERVER_CONFIG } from '../config/server'
+import { SERVER_CONFIG } from 'utils/server'
 import emailTemplates from './email-templates.json'
 
 require('dotenv').config()

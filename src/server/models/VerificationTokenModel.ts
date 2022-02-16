@@ -13,4 +13,11 @@ const schema: Schema = new Schema(
   { timestamps: false }
 )
 
-export default model<VerificationTokenModel>('VerificationToken', schema)
+let mongooseModel
+try {
+  mongooseModel = model<VerificationTokenModel>('VerificationToken')
+} catch (e) {
+  mongooseModel = model<VerificationTokenModel>('VerificationToken', schema)
+}
+
+export default mongooseModel

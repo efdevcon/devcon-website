@@ -4,6 +4,9 @@ import { IVerificationTokenRepository } from './interfaces/IVerificationTokenRep
 
 const defaultDeletionDate = new Date(new Date().setDate(new Date().getDate() - 30))
 
+console.log('registering data models')
+require('server/models/VerificationTokenModel')
+
 export class VerificationTokenRepository extends BaseRepository<VerificationToken> implements IVerificationTokenRepository {
   constructor() {
     super('VerificationToken')

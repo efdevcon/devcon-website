@@ -1,4 +1,5 @@
-import { App } from 'components/domain/app'
+import LoginStyled from 'components/domain/app/account/LoginStyled'
+import { AccountContextProvider } from 'context/account-context-provider'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetBlogs } from 'services/blogs'
@@ -7,11 +8,12 @@ import { GetLatestNotification } from 'services/notifications'
 import { TITLE } from 'utils/constants'
 
 export default pageHOC((props: any) => {
-  return <App {...props} />
+  return <AccountContextProvider>
+    <LoginStyled {...props} />
+  </AccountContextProvider>
 })
 
 export async function getStaticProps(context: any) {
-  // Get News
   const intl = (await import(`../../../content/i18n/${context.locale}.json`)).default
 
   return {

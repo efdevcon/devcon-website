@@ -3,7 +3,7 @@ import { PushNotification } from 'types/PushNotification'
 
 interface NotificationModel extends PushNotification, Document {}
 
-const userAccountSchema: Schema = new Schema(
+const schema: Schema = new Schema(
   {
     content: {
       title: String,
@@ -17,4 +17,11 @@ const userAccountSchema: Schema = new Schema(
   { timestamps: true }
 )
 
-export default model<NotificationModel>('Notification', userAccountSchema)
+let mongooseModel
+try {
+  mongooseModel = model<NotificationModel>('Notification')
+} catch (e) {
+  mongooseModel = model<NotificationModel>('Notification', schema)
+}
+
+export default mongooseModel

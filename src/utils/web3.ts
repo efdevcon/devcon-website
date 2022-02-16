@@ -2,6 +2,7 @@ import { ethers } from 'ethers'
 import { VerificationToken } from 'types/VerificationToken'
 import Web3Modal from 'web3modal'
 import { APP_CONFIG } from './config'
+const sigUtil = require('eth-sig-util')
 
 declare var window: any
 const isBrowser = typeof window !== 'undefined'
@@ -66,4 +67,23 @@ export function getSiweMessage(address: string, token: VerificationToken): strin
     Issued At: ${token.issued}
     Expiration Time: ${token.expires}
     Chain ID: 1`
+}
+
+export const isValidSignature = (address: string, message: string, signature: string): boolean => {
+  const params = {
+    data: message,
+    sig: signature
+  }
+  
+  try {
+    const recovered = sigUtil.recoverPersonalSignature(params)
+    if (!recovered || recovered !== address) {
+      return false
+    }
+
+    return true
+  }
+  catch (e) {
+    return false
+  }
 }

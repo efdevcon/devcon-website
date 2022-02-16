@@ -3,7 +3,7 @@ import { UserAccount } from 'types/UserAccount'
 
 interface UserAccountModel extends UserAccount, Document {}
 
-const userAccountSchema: Schema = new Schema(
+const schema: Schema = new Schema(
   {
     username: { type: String },
     email: { type: String, match: /.+@.+\..+/ },
@@ -14,4 +14,11 @@ const userAccountSchema: Schema = new Schema(
   { timestamps: true }
 )
 
-export default model<UserAccountModel>('UserAccount', userAccountSchema)
+let mongooseModel
+try {
+  mongooseModel = model<UserAccountModel>('UserAccount')
+} catch (e) {
+  mongooseModel = model<UserAccountModel>('UserAccount', schema)
+}
+
+export default mongooseModel

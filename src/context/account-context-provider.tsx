@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import { utils, providers } from 'ethers'
 import { UserAccount } from 'types/UserAccount'
 import { AccountContext, AccountContextType } from './account-context'
@@ -95,7 +95,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     },
   })
 
-  React.useEffect(() => {
+  useEffect(() => {
     async function asyncEffect() {
       await getAccount()
     }
@@ -250,7 +250,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       body: JSON.stringify({ account }),
     })
 
-    if (response.status === 204) {
+    if (response.status === 200) {
       setContext({ ...context, account: account })
       return true
     }

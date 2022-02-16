@@ -19,6 +19,7 @@
     "ethereum-blockies-base64": "^1.0.2",
     "ethers": "^5.5.4",
     "gray-matter": "^4.0.3",
+    "iron-session": "^6.0.5",
     "js-search": "^2.0.0",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
