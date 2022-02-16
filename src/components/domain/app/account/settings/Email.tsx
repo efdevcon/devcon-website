@@ -6,10 +6,11 @@ import AccountFooter from '../AccountFooter'
 import { Button } from 'components/common/button'
 import { InputForm } from 'components/common/input-form'
 import { isEmail } from 'utils/validators'
-import { navigate } from '@reach/router'
 import NotFound from './NotFound'
+import { useRouter } from 'next/router'
 
 export default function EmailSettings() {
+  const router = useRouter()
   const accountContext = useAccountContext()
   const currentAccount = accountContext.account
   const [email, setEmail] = useState(currentAccount?.email ?? '')
@@ -53,7 +54,7 @@ export default function EmailSettings() {
 
     const userAccount = await accountContext.loginEmail(email, nonceNr)
     if (userAccount) {
-      navigate('/app')
+      router.push('/app')
     }
     if (!userAccount) {
       setError('Unable to verify your email address.')

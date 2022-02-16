@@ -1,13 +1,11 @@
 import React from 'react'
 import css from './bottom-nav.module.scss'
-import IconSwirl from 'assets/icons/swirl.svg'
 import IconPin from 'assets/icons/pin.svg'
 import IconSpeakers from 'assets/icons/speakers.svg'
 import IconHome from 'assets/icons/home.svg'
 import IconInfo from 'assets/icons/info-filled.svg'
 import IconSchedule from 'assets/icons/schedule.svg'
 import { Link } from 'components/common/link'
-import { useMatch } from '@reach/router'
 
 const navItems = [
   {
@@ -15,7 +13,7 @@ const navItems = [
     icon: IconHome,
     to: '/app',
     useIsActive: () => {
-      return useMatch('/app')
+      return false
     },
   },
   {
@@ -23,7 +21,7 @@ const navItems = [
     icon: IconSchedule,
     to: '/app/schedule',
     useIsActive: () => {
-      return useMatch('/app/schedule/*')
+      return false
     },
   },
   {
@@ -31,7 +29,7 @@ const navItems = [
     icon: IconSpeakers,
     to: '/app/speakers',
     useIsActive: () => {
-      return useMatch('/app/speakers/*')
+      return false
     },
   },
   {
@@ -39,7 +37,7 @@ const navItems = [
     icon: IconPin,
     to: '/app/venue',
     useIsActive: () => {
-      return useMatch('/app/venue/*')
+      return false
     },
   },
   {
@@ -47,7 +45,8 @@ const navItems = [
     icon: IconInfo,
     to: '/app/info',
     useIsActive: () => {
-      return useMatch('/app/info/*')
+      return false
+      // return useMatch('/app/info/*')
     },
   },
 ]
@@ -109,8 +108,10 @@ export const BottomNav = (props: any) => {
 
           return (
             <Link className={className} key={navItem.to} to={navItem.to}>
-              <navItem.icon />
-              <span className={css['title']}>{navItem.title}</span>
+              <>
+                <navItem.icon />
+                <span className={css['title']}>{navItem.title}</span>
+              </>
             </Link>
           )
         })}

@@ -1,6 +1,6 @@
 // Only use constants for values that don't require translations
-
 export const TITLE = 'Road to Devcon: The Ethereum developer conference'
+export const DESCRIPTION = 'The annual conference for all Ethereum developers, researchers, thinkers, and makers.'
 
 export const ARCHIVE_TITLE = 'Devcon Archive: Ethereum Developer Conference'
 export const ARCHIVE_DESCRIPTION = 'Archived content to learn from the leading minds in the Ethereum eco-system.'
@@ -15,3 +15,13 @@ export const LINK_SUBMIT_EVENT = 'https://forms.gle/W2yiyNXcEU6fZ4rN8'
 export const COPYRIGHT_NOTICE = '© 2021 — Ethereum Foundation. All Rights Reserved.'
 
 export const BASE_CONTENT_FOLDER = 'content'
+
+export const DEFAULT_APP_PAGE = {
+    title: TITLE,
+    description: DESCRIPTION,
+    template: 'index',
+    tags: [],
+    lang: 'en',
+    id: 'index',
+    slug: 'index'
+}

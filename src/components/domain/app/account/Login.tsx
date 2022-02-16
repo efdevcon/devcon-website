@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { navigate, RouteComponentProps, useLocation } from '@reach/router'
 import IconSwirl from 'assets/icons/swirl.svg'
 import css from './login.module.scss'
 import pwaIcon from './pwa-icon.png'
@@ -14,9 +13,11 @@ import { useAccountContext } from 'context/account-context'
 import { Alert } from 'components/common/alert'
 import { getSiweMessage } from 'utils/web3'
 import AccountFooter from './AccountFooter'
+import { useRouter } from 'next/router'
 
-export default function LoginPage(props: RouteComponentProps) {
-  const [tooltipVisible, setTooltipVisible] = React.useState(false)
+export default function LoginPage() {
+  const router = useRouter()
+  const [tooltipVisible, setTooltipVisible] = useState(false)
   const accountContext = useAccountContext()
   const [emailSent, setEmailSent] = useState(false)
   const [error, setError] = useState('')
@@ -25,7 +26,7 @@ export default function LoginPage(props: RouteComponentProps) {
   const loggedIn = !!accountContext.account
 
   if (loggedIn) {
-    navigate('/app' + location?.search)
+    router.push('/app' + location?.search)
     return null
   }
 
@@ -58,7 +59,7 @@ export default function LoginPage(props: RouteComponentProps) {
       signedMessage.signature
     )
     if (userAccount) {
-      navigate('/app')
+      router.push('/app')
     }
     if (!userAccount) {
       setError('Unable to login with web3')
@@ -93,7 +94,7 @@ export default function LoginPage(props: RouteComponentProps) {
 
     const userAccount = await accountContext.loginEmail(email, nonceNr)
     if (userAccount) {
-      navigate('/app')
+      router.push('/app')
     }
     if (!userAccount) {
       setError('Unable to verify your email address.')

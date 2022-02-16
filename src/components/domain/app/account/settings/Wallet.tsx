@@ -7,12 +7,13 @@ import NotFound from './NotFound'
 import IconCross from 'assets/icons/cross.svg'
 import { Button } from 'components/common/button'
 import { getSiweMessage } from 'utils/web3'
-import { navigate } from '@reach/router'
 import { Link } from 'components/common/link'
 import { useActiveAddress } from 'hooks/useActiveAddress'
 import { Tooltip } from 'components/common/tooltip'
+import { useRouter } from 'next/router'
 
 export default function WalletSettings() {
+  const router = useRouter()
   const accountContext = useAccountContext()
   const activeAddress = useActiveAddress()
   const [error, setError] = useState('')
@@ -27,7 +28,7 @@ export default function WalletSettings() {
 
   const addWallet = async () => {
     const provider = await accountContext.connectWeb3()
-    if (!provider) { 
+    if (!provider) {
       setError('Unable to connect to Web3 provider')
       return
     }
@@ -35,7 +36,7 @@ export default function WalletSettings() {
     const signer = provider.getSigner()
     const address = await signer.getAddress()
     const token = await accountContext.getToken(address.toLowerCase())
-    if (!token) { 
+    if (!token) {
       setError('Unable to create verification token')
       return
     }
@@ -54,7 +55,7 @@ export default function WalletSettings() {
       signedMessage.signature
     )
     if (userAccount) {
-      // navigate('/app')
+      router.push('/app')
     }
     if (!userAccount) {
       setError('Unable to login with web3')
@@ -62,11 +63,11 @@ export default function WalletSettings() {
   }
 
   const removeWallet = async () => {
-    if (!accountContext.account) return 
+    if (!accountContext.account) return
 
-    await accountContext.updateAccount(accountContext.account._id, 
-      {...accountContext.account, addresses: accountContext.account.addresses.filter(i => i !== promptRemove)})
-    
+    await accountContext.updateAccount(accountContext.account._id,
+      { ...accountContext.account, addresses: accountContext.account.addresses.filter(i => i !== promptRemove) })
+
     setPromptRemove('')
   }
 
@@ -83,28 +84,30 @@ export default function WalletSettings() {
             <div className={css['form']}>
               <p className={`${css['title']} title`}>Manage Wallets</p>
 
-              {accountContext.account.addresses?.length === 0 && 
+              {accountContext.account.addresses?.length === 0 &&
                 <div className={css['wallet-not-found']}>
                   <NotFound type='wallet' />
                 </div>
               }
 
-              {accountContext.account.addresses?.length > 0 && 
+              {accountContext.account.addresses?.length > 0 &&
                 <ul className={css['items']}>
                   {accountContext.account.addresses.map(i => {
                     const isActive = activeAddress === i.toLowerCase()
 
                     return <li key={i}>
                       <Link to={`https://etherscan.io/address/${i}`}>
-                        <span className={isActive ? 'semi-bold' : ''}>{i}</span>
-                        {isActive && <> (active)</>}
+                        <>
+                          <span className={isActive ? 'semi-bold' : ''}>{i}</span>
+                          {isActive && <> (active)</>}
+                        </>
                       </Link>
 
-                      {canDelete && 
+                      {canDelete &&
                         <span role='button' className={css['delete']} onClick={() => setPromptRemove(i)}><IconCross /></span>
                       }
 
-                      {!canDelete && 
+                      {!canDelete &&
                         <Tooltip arrow={false} visible={tooltipVisible} content={<p>Can't delete this address. You need at least 1 wallet or your email address connected.</p>}>
                           <span role='button' className={css['disabled']} onClick={() => setTooltipVisible(!tooltipVisible)}>
                             <IconCross />
@@ -115,7 +118,7 @@ export default function WalletSettings() {
                   })}
                 </ul>
               }
-              
+
               {promptRemove && <>
                 <p>Are you sure you want to remove <strong>{promptRemove}</strong> from your account?</p>
                 <Button className={`black ${css['button']}`} onClick={() => setPromptRemove('')}>No, keep address</Button>

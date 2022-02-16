@@ -50,8 +50,10 @@ export const SliderStickyNotes = (props: SliderStickyNotesProps) => {
             linkUrl="/app/schedule"
             allowDrag
           >
-            <p className={css['title']}>{title}</p>
-            <p className={css['description']}>{description}</p>
+            <>
+              <p className={css['title']}>{title}</p>
+              <p className={css['description']}>{description}</p>
+            </>
           </BasicCard>
         )
       })}

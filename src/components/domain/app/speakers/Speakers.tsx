@@ -58,16 +58,18 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
 
   return (
     <Link to="/app/speakers/test" className={css['speaker-card']}>
-      <div className={css['thumbnail']}>
-        <img alt="profile" src={thumbnailPlaceholder} />
-      </div>
-      <div className={css['details']}>
-        <p className={css['name']}>{speaker.name}</p>
-        <p className={css['role']}>{speaker.role}</p>
-        <p className={css['company']}>{speaker.company}</p>
-      </div>
+      <>
+        <div className={css['thumbnail']}>
+          <img alt="profile" src={thumbnailPlaceholder} />
+        </div>
+        <div className={css['details']}>
+          <p className={css['name']}>{speaker.name}</p>
+          <p className={css['role']}>{speaker.role}</p>
+          <p className={css['company']}>{speaker.company}</p>
+        </div>
 
-      {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
+        {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
+      </>
     </Link>
   )
 }

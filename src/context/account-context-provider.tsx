@@ -236,6 +236,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       const body = await response.json()
+      console.log('BODY', body)
       setContext({ ...context, account: body.data, loading: false })
       return body.data
     }

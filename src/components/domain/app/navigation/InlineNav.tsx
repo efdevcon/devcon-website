@@ -4,10 +4,11 @@ import IconBack from 'assets/icons/arrow_left.svg'
 import { HorizontalScroller } from 'components/common/horizontal-scroller'
 import { Link } from 'components/common/link'
 import IconSwirl from 'assets/icons/swirl.svg'
-import { Router, navigate, useMatch, useLocation } from '@reach/router'
+import { useRouter } from 'next/router'
 
 const Links = (props: any) => {
-  const pathname = props.location.pathname
+  const router = useRouter()
+  const pathname = router.pathname
   const normalizedPathname = pathname[pathname.length - 1] === '/' ? pathname.slice(0, pathname.length - 1) : pathname
   const toRemove = normalizedPathname.split('/').pop()
   const nextPathname = normalizedPathname.replace(toRemove, '')
@@ -64,7 +65,7 @@ export const InlineNav = React.memo((props: any) => {
   return (
     <div id="inline-nav" className={`${css['container']} section`}>
       <div className="content">
-        <Router basepath="/app" primary={false}>
+        
           <Links
             path="*"
             links={[
@@ -72,77 +73,78 @@ export const InlineNav = React.memo((props: any) => {
                 title: 'Home',
                 to: '/app',
                 useIsActive: () => {
-                  return useMatch('/app')
+                  return false
                 },
               },
               {
                 title: 'Dashboard',
                 to: '/app/dashboard',
                 useIsActive: () => {
-                  return useMatch('/app/dashboard')
+                  return false
                 },
               },
               {
                 title: 'Conference',
                 to: '/app/conference',
                 useIsActive: () => {
-                  return useMatch('/app/conference')
+                  return false
                 },
               },
               {
                 title: 'Schedule',
                 to: '/app/schedule',
                 useIsActive: () => {
-                  return useMatch('/app/schedule/*')
+                  return false
                 },
               },
               {
                 title: 'Updates',
                 to: '/app/updates',
                 useIsActive: () => {
-                  return useMatch('/app/updates/*')
+                  return false
                 },
               },
               {
                 title: 'Speakers',
                 to: '/app/speakers',
                 useIsActive: () => {
-                  return useMatch('/app/speakers/*')
+                  return false
                 },
               },
               {
                 title: 'Venue',
                 to: '/app/venue',
                 useIsActive: () => {
-                  return useMatch('/app/venue/*')
+                  return false
                 },
               },
               {
                 title: 'Side Events',
                 to: '/app/side-events',
                 useIsActive: () => {
-                  return useMatch('/app/side-events/*')
+                  return false
                 },
               },
               {
                 title: 'Quests',
                 to: '/app/quests',
                 useIsActive: () => {
-                  return useMatch('/app/quests/*')
+                  return false
                 },
               },
               {
                 title: 'Livestreaming',
                 to: '/app/livestreaming',
                 useIsActive: () => {
-                  return useMatch('/app/livestreaming/*')
+                  return false
                 },
               },
               {
                 title: 'Archive',
                 to: '/app/archive',
                 useIsActive: () => {
-                  return useMatch('/app/archive/*')
+                  return false
+                  // return useMatch('/app/archive/*')
                 },
               },
             ]}
@@ -265,16 +267,15 @@ export const InlineNav = React.memo((props: any) => {
             links={[
               {
                 Title: () => {
-                  const match = useMatch('/app/schedule/:session')
+                  const match = false // useMatch('/app/schedule/:session')
 
-                  const session = useSession(match ? match.session : null)
+                  const session = useSession(null) // match ? match.session : null)
 
                   return session ? session.title : 'Session'
                 },
               },
             ]}
           />
-        </Router>
       </div>
     </div>
   )

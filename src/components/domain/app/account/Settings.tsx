@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { navigate, RouteComponentProps } from '@reach/router'
 import css from './login.module.scss'
 import { Link, LinkList } from 'components/common/link'
 import { Button } from 'components/common/button'
@@ -10,8 +9,10 @@ import AccountFooter from './AccountFooter'
 import { useAvatar } from 'hooks/useAvatar'
 import { isEmail } from 'utils/validators'
 import { TruncateMiddle } from 'utils/formatting'
+import { useRouter } from 'next/router'
 
-export default function SettingsPage(props: RouteComponentProps) {
+export default function SettingsPage() {
+  const router = useRouter()
   const accountContext = useAccountContext()
   const avatar = useAvatar()
   const [areYouSure, setAreYouSure] = useState(false)
@@ -28,7 +29,7 @@ export default function SettingsPage(props: RouteComponentProps) {
 
   const disconnect = async () => {
     accountContext.logout(accountContext.account?._id)
-    navigate('/app/login')
+    router.push('/app/login')
   }
 
   return (

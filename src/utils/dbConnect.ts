@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { SERVER_CONFIG } from 'server/config/server';
+import { SERVER_CONFIG } from 'utils/server'
 
 // Global is used here to maintain a cached connection and prevents connections growing exponentially
 let cached = global.mongoose

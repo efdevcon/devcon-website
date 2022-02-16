@@ -4,6 +4,7 @@ import { VerificationTokenRepository } from "server/repositories/VerificationTok
 import { withSessionRoute } from "server/withIronSession"
 import { EmailService } from "server/services/email-service"
 import dbConnect from "utils/dbConnect"
+import VerificationTokenModel from "server/models/VerificationTokenModel";
 
 const tokenRepo = new VerificationTokenRepository()
 

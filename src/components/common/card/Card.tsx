@@ -73,8 +73,10 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
       </div>
     ) : (
       <Link to={props.linkUrl} className={css['read-more']}>
-        {intl('readmore')}
-        <IconArrowRight />
+        <>
+          {intl('readmore')}
+          <IconArrowRight />
+        </>
       </Link>
     )
 
