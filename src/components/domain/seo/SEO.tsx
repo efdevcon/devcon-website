@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/router'
 import { Twitter } from './Twitter'
-import { ARCHIVE_TITLE, TITLE } from 'utils/constants'
+import { ARCHIVE_TITLE, SITE_URL, TITLE } from 'utils/constants'
 import { usePageContext } from 'context/page-context'
 
 interface SEOProps {
@@ -61,7 +61,7 @@ export function SEO(props: SEOProps) {
     image = props.imageUrl
   }
 
-  const siteUrl = 'https://www.devcon.org' // TODO: Get location.origin in a better way
+  const siteUrl = SITE_URL
   const url = `${siteUrl}${router.pathname || '/'}`.replace(/\/$/, '')
 
   return (

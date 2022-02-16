@@ -11,22 +11,29 @@ import { Category } from 'types/Category'
 import { FAQ } from 'types/FAQ'
 
 export function GetPage(slug: string, lang: string = 'en'): Page | undefined {
-    const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'pages', lang, slug + '.md')
-    const content = fs.readFileSync(filePath, 'utf8')
+    try {
+        const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'pages', lang, slug + '.md')
+        const content = fs.readFileSync(filePath, 'utf8')
 
-    if (!content) {
-        console.log('File has no content..', filePath)
-        return undefined
+        if (!content) {
+            console.log('File has no content..', filePath)
+            return undefined
+        }
+
+        const doc = matter(content)
+        const allTags = GetTags(lang)
+        const tags: Array<string> = doc.data.tags ?? []
+        return {
+            ...doc.data,
+            lang: lang,
+            id: slug,
+            slug: slug,
+            tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
+        } as Page
     }
-
-    const doc = matter(content)
-    return {
-        ...doc.data,
-        lang: lang,
-        id: slug,
-        slug: slug,
-        tags: new Array<Tag>() // TODO
-    } as Page
+    catch (e) {
+        // page not found
+    }
 }
 
 export function GetPages(lang: string = 'en'): Array<Page> {
@@ -39,12 +46,14 @@ export function GetPages(lang: string = 'en'): Array<Page> {
         }
 
         const doc = matter(content)
+        const allTags = GetTags(lang)
+        const tags: Array<string> = doc.data.tags ?? []
         return {
             ...doc.data,
             lang: lang,
             id: i.replace('.md', '').toLowerCase(),
             slug: i.replace('.md', '').toLowerCase(),
-            tags: new Array<Tag>() // TODO
+            tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
         } as Page
     }).filter(i => !!i) as Array<Page>
 }
@@ -98,11 +107,14 @@ export function GetNews(lang: string = 'en'): Array<NewsItem> {
         }
 
         const doc = matter(content)
+        const allTags = GetTags(lang)
+        const tags: Array<string> = doc.data.tags ?? []
         return {
             ...doc.data,
             id: i.replace('.md', '').toLowerCase(),
+            title: doc.data.title,
             date: new Date(doc.data.date).getTime(),
-            tags: doc.data.tags ?? [], // TODO
+            tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
         } as NewsItem
     }).filter(i => !!i) as Array<NewsItem>
 }
@@ -149,4 +161,25 @@ export function GetFAQ(lang: string = 'en'): Array<FAQ> {
 
         return singleFaq
     }).filter(i => !!i) as Array<FAQ>
+}
+
+export function GetTags(lang: string = 'en'): Array<Tag> {
+    const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'tags', lang)
+
+    return fs.readdirSync(dir).map(i => {
+        const content = fs.readFileSync(join(dir, i), 'utf8')
+        if (!content) {
+            console.log('File has no content..', i)
+            return undefined
+        }
+
+        const doc = matter(content)
+        return {
+            ...doc.data,
+            id: i.replace('.md', '').toLowerCase(),
+            slug: i.replace('.md', '').toLowerCase(),
+            title: doc.data.title,
+            lang: lang
+        } as Tag
+    }).filter(i => !!i) as Array<Tag>
 }

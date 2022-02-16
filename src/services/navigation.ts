@@ -5,6 +5,7 @@ import { join } from "path"
 import { Link } from 'types/Link'
 import { NavigationData } from "types/NavigationData"
 import { BASE_CONTENT_FOLDER } from 'utils/constants'
+import { GetPage } from './page'
 
 export async function GetNavigationData(lang: string = 'en'): Promise<NavigationData> {
     return {
@@ -41,11 +42,13 @@ export function GetNavigation(slug: string, lang: string = 'en'): Array<Link> {
 function parseLinks(links: any[], lang: string): Array<Link> {
     return links.map((i: any) => {
         if (i.type === 'page' || i.type === 'app') {
-            // TODO: Get page info from /pages/${slug}.md
-            return {
-                title: i.slug,
-                url: i.slug,
-                type: i.type
+            const page = GetPage(i.slug, lang)
+            if (page) {
+                return {
+                    title: page.title,
+                    url: page.slug,
+                    type: i.type
+                }
             }
         }
 
@@ -72,7 +75,7 @@ function parseLinks(links: any[], lang: string): Array<Link> {
                 type: i.type
             }
         }
-        
+
         if (i.type === 'links') {
             return {
                 title: i.slug,

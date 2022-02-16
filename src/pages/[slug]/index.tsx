@@ -4,6 +4,7 @@ import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
 import { GetCategories, GetDIPs, GetFAQ, GetNews, GetPage, GetPages } from 'services/page'
 import { lazy, Suspense } from 'react'
+import { getMessages } from 'utils/intl'
 
 export default pageHOC(function Index(props: any) {
     const isBrowser = typeof window !== 'undefined'
@@ -34,10 +35,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: any) {
     const page = GetPage(context.params.slug, context.locale)
-    const dips = GetDIPs(context.locale)
-    const news = GetNews(context.locale)
-    const faq = GetCategories(context.locale)
-
     if (!page) {
         return {
             props: null,
@@ -45,7 +42,10 @@ export async function getStaticProps(context: any) {
         }
     }
 
-    const intl = (await import(`../../../content/i18n/${context.locale}.json`)).default
+    const dips = GetDIPs(context.locale)
+    const news = GetNews(context.locale)
+    const faq = GetCategories(context.locale)
+    const intl = await getMessages(context.locale)
     return {
         props: {
             messages: intl,

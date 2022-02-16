@@ -1,3 +1,5 @@
+import { Tag } from "./Tag";
+
 export interface NewsItem {
   id?: string
   date: number
@@ -6,5 +8,5 @@ export interface NewsItem {
   tweetID?: string
   title: string
   description?: string
-  tags?: string[]
+  tags?: Tag[]
 }

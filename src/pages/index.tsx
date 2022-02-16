@@ -11,6 +11,7 @@ import { Notifications } from 'components/domain/app/notifications'
 import { TITLE } from 'utils/constants'
 import { GetPages } from 'services/page'
 import { GetStaticPaths } from 'next'
+import { getMessages } from 'utils/intl'
 
 export default pageHOC(function Index(props: any) {
   return (
@@ -26,7 +27,7 @@ export default pageHOC(function Index(props: any) {
 
 export async function getStaticProps(context: any) {
   // Get News
-  const intl = (await import(`../../content/i18n/${context.locale}.json`)).default
+    const intl = await getMessages(context.locale)
 
   return {
     props: {
