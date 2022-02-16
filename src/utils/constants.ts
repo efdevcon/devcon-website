@@ -1,6 +1,7 @@
 // Only use constants for values that don't require translations
 export const TITLE = 'Road to Devcon: The Ethereum developer conference'
 export const DESCRIPTION = 'The annual conference for all Ethereum developers, researchers, thinkers, and makers.'
+export const SITE_URL = 'https://devcon.org/'
 
 export const ARCHIVE_TITLE = 'Devcon Archive: Ethereum Developer Conference'
 export const ARCHIVE_DESCRIPTION = 'Archived content to learn from the leading minds in the Ethereum eco-system.'
