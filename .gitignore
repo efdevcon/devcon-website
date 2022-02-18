@@ -12,9 +12,18 @@ __snapshots__
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build
 
+# next.js
+/.next/
+/out/
+
+# vercel
+.vercel
+
 # Dependency directories
 node_modules/
 jspm_packages/
+/.pnp
+.pnp.js
 
 # Typescript v1 declaration files
 typings/
