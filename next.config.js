@@ -2,31 +2,87 @@
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ['default', 'en', 'es'],
-    defaultLocale: 'default',
+    locales: ["default", "en", "es"],
+    defaultLocale: "default",
     localeDetection: false,
   },
   trailingSlash: true,
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"]
-    });
-
-    return config;
+  webpack: (config) => {
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: [
+          {
+            test: /\.svg$/,
+            include: /images/,
+            issuer: { not: /\.(css|scss|sass)$/ },
+            use: [
+              {
+                loader: "@svgr/webpack",
+                options: {
+                  svgoConfig: {
+                    plugins: [
+                      {
+                        name: "preset-default",
+                        params: {
+                          overrides: {
+                            removeViewBox: false,
+                          },
+                        },
+                      },
+                    ],
+                  },
+                },
+              },
+            ],
+          },
+          // Separate config for icon loading
+          {
+            test: /\.svg$/,
+            include: /icons/,
+            issuer: { not: /\.(css|scss|sass)$/ },
+            use: [
+              {
+                loader: "@svgr/webpack",
+                options: {
+                  icon: true,
+                  svgProps: {
+                    className: "icon",
+                  },
+                  svgoConfig: {
+                    plugins: [
+                      {
+                        name: "preset-default",
+                        params: {
+                          overrides: {
+                            removeViewBox: false,
+                          },
+                        },
+                      },
+                    ],
+                  },
+                },
+              },
+            ],
+          },
+          ...config.module.rules,
+        ],
+      },
+    };
   },
   async rewrites() {
     return [
       {
-        source: '/robots.txt',
-        destination: '/api/robots'
+        source: "/robots.txt",
+        destination: "/api/robots",
       },
       {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap'
-      }
-    ]
-  }
-}
+        source: "/sitemap.xml",
+        destination: "/api/sitemap",
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

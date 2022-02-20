@@ -40,6 +40,7 @@
     "slick-carousel": "^1.8.1",
     "slugify": "^1.6.5",
     "swr": "^1.2.0",
+    "url-loader": "^4.1.1",
     "web3modal": "^1.9.5"
   },
   "devDependencies": {

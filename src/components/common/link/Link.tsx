@@ -1,42 +1,52 @@
-import React, { ReactNode } from 'react'
-import { default as NextLink } from 'next/link'
-import NorthEast from 'assets/icons/north_east.svg'
-import { Proposals } from 'components/domain/dips/overview/proposals'
+import React, { ReactNode } from "react";
+import { default as NextLink } from "next/link";
+import NorthEast from "assets/icons/north_east.svg";
 
 type LinkProps = {
-  children: ReactNode
-  indicateExternal?: boolean // Whether or not to add an external link indicator (if the url is a FQDN)
-  allowDrag?: boolean
-  to: string
-  [key: string]: any
-}
+  children: ReactNode;
+  indicateExternal?: boolean; // Whether or not to add an external link indicator (if the url is a FQDN)
+  allowDrag?: boolean;
+  to: string;
+  [key: string]: any;
+};
 
 const Link = React.forwardRef(
-  ({ children, indicateExternal, external, allowDrag, to, locale, ...rest }: LinkProps, ref: any) => {
-    const isMailTo = to.startsWith('mailto:')
-    const dragging = React.useRef(false)
+  (
+    {
+      children,
+      indicateExternal,
+      external,
+      allowDrag,
+      to,
+      locale,
+      ...rest
+    }: LinkProps,
+    ref: any
+  ) => {
+    const isMailTo = to.startsWith("mailto:");
+    const dragging = React.useRef(false);
 
     const linkAttributes = {
       ...rest,
-    }
+    };
 
     // Links can exist within a draggable context; we don't want drag events to be mistaken for clicks, so we preventDefault if the mouse is moving
     if (allowDrag) {
       linkAttributes.onMouseDown = () => {
-        dragging.current = false
-      }
+        dragging.current = false;
+      };
 
       linkAttributes.onMouseMove = () => {
-        dragging.current = true
-      }
+        dragging.current = true;
+      };
 
       linkAttributes.onClick = (e: React.SyntheticEvent) => {
         if (dragging.current) {
-          e.preventDefault()
+          e.preventDefault();
         }
-      }
+      };
 
-      linkAttributes.draggable = false
+      linkAttributes.draggable = false;
     }
 
     if (isMailTo) {
@@ -44,32 +54,37 @@ const Link = React.forwardRef(
         <a href={to} ref={ref} {...linkAttributes}>
           {children}
         </a>
-      )
+      );
     }
 
     // Detects fully qualified domain name
     // One caveat to this approach is that you could link to a devcon.org page via a FQDN, and it would be detected as external.
     // Possible solutions: 1) Make sure to always use relative links for internal navigation 2) Add an escape hatch if "devcon.org" is in the url
-    const isExternal = to.match(/^([a-z0-9]*:|.{0})\/\/.*$/)
+    const isExternal = to.match(/^([a-z0-9]*:|.{0})\/\/.*$/);
 
     if (isExternal) {
       return (
-        <a href={to} ref={ref} {...linkAttributes} target="_blank" rel="noopener noreferrer">
-          {children} {indicateExternal && <NorthEast style={{ fontSize: '0.5rem' }} />}
+        <a
+          href={to}
+          ref={ref}
+          {...linkAttributes}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}{" "}
+          {indicateExternal && <NorthEast style={{ fontSize: "0.5rem" }} />}
         </a>
-      )
+      );
     }
 
     return (
-      <NextLink href={to} {...linkAttributes} locale={locale}>
-        <>
-          {children}
-        </>
+      <NextLink href={to} locale={locale}>
+        <a {...linkAttributes}>{children}</a>
       </NextLink>
-    )
+    );
   }
-)
+);
 
-Link.displayName = 'LinkComponent'
+Link.displayName = "LinkComponent";
 
-export { Link }
+export { Link };

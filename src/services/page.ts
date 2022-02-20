@@ -25,9 +25,10 @@ export function GetPage(slug: string, lang: string = 'en'): Page | undefined {
         const tags: Array<string> = doc.data.tags ?? []
         return {
             ...doc.data,
+            body: doc.content,
             lang: lang,
             id: slug,
-            slug: slug,
+            slug: slug, 
             tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
         } as Page
     }

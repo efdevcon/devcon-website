@@ -1,4 +1,4 @@
-@use 'assets/css/partials/index' as *;
+@use "assets/css/partials/index" as *;
 
 // Split out the positioning to make it easier to reason about
 @mixin top-grid {
@@ -140,14 +140,14 @@
     position: relative;
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       opacity: 0.05;
-      // background: url('assets/images/logo-wireframe.svg'); // TODO
+      background: url("../../../../assets/images/logo-wireframe.svg"); // TODO
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center 10%;
