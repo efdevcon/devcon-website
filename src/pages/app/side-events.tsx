@@ -1,5 +1,5 @@
 import { AppLayout } from 'components/domain/app/Layout'
-import { Venue } from 'components/domain/app/venue'
+import { SideEvents } from 'components/domain/app/side-events'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetNavigationData } from 'services/navigation'
@@ -10,7 +10,7 @@ import { getMessages } from 'utils/intl'
 
 export default pageHOC((props: any) => {
     return <AppLayout>
-        <Venue {...props} />
+        <SideEvents {...props} />
     </AppLayout>
 })
 

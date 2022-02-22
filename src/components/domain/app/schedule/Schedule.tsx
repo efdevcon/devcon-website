@@ -3,8 +3,6 @@ import { Link } from 'components/common/link'
 import css from './schedule.module.scss'
 
 export const Schedule = ({ sessions }: any) => {
-  console.log(sessions, 'sessions')
-
   return (
     <div>
       <Link to="/app/schedule/test">Test session</Link>

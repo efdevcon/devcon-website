@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
 import css from './side-events.module.scss'
 import { Link, LinkList } from 'components/common/link'
 import {
@@ -9,10 +7,12 @@ import {
   CollapsedSectionHeader,
 } from 'components/common/collapsed-section'
 import { AppSearch } from 'components/domain/app/app-search'
-import { useSort, SortVariation, Sort } from 'components/common/sort'
-import { Filter, FilterFoldout, NoResults, useFilter } from 'components/common/filter'
+import { useSort, SortVariation } from 'components/common/sort'
+import { useFilter } from 'components/common/filter'
 import { SessionCard } from 'components/domain/app/session'
 import logo from 'assets/images/test-asset.svg'
+import Image from 'next/image'
+import imageBogota from 'assets/images/bogota-city.png'
 
 const dummySessions = [
   { id: '1', title: 'Test session' },
@@ -63,27 +63,13 @@ export const SideEvents = (props: any) => {
     'desc'
   )
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativePath: { in: ["bogota-city.png"] } }) {
-        nodes {
-          childImageSharp {
-            fluid(maxWidth: 800, quality: 80) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div className="section">
       <div className="content">
         <div className={`${css['hero']}`}>
           <div className={`${css['hero-content']}`}>
             <div className={css['image-container']}>
-              <Image fluid={data.allFile.nodes[0].childImageSharp.fluid} objectFit="cover" />
+              <Image src={imageBogota} objectFit='cover' />
             </div>
 
             <div className={`${css['details']}`}>

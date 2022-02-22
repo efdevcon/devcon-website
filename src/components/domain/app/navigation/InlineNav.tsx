@@ -68,6 +68,11 @@ const useSession = (id: string | null) => {
 };
 
 export const InlineNav = React.memo((props: any) => {
+  const router = useRouter()
+  function isMatch(path: string) {
+    return path === router.route
+  }
+
   return (
     <div id="inline-nav" className={`${css["container"]} section`}>
       <div className="content">
@@ -78,84 +83,83 @@ export const InlineNav = React.memo((props: any) => {
               title: "Home",
               to: "/app",
               useIsActive: () => {
-                return false;
+                return isMatch('/app')
               },
             },
             {
               title: "Dashboard",
               to: "/app/dashboard",
               useIsActive: () => {
-                return false;
+                return isMatch('/app/dashboard')
               },
             },
-            {
-              title: "Conference",
-              to: "/app/conference",
-              useIsActive: () => {
-                return false;
-              },
-            },
+            // {
+            //   title: "Conference",
+            //   to: "/app/conference",
+            //   useIsActive: () => {
+            //     return isMatch('/app/conference')
+            //   },
+            // },
             {
               title: "Schedule",
               to: "/app/schedule",
               useIsActive: () => {
-                return false;
+                return isMatch('/app/schedule')
               },
             },
-            {
-              title: "Updates",
-              to: "/app/updates",
-              useIsActive: () => {
-                return false;
-              },
-            },
+            // {
+            //   title: "Updates",
+            //   to: "/app/updates",
+            //   useIsActive: () => {
+            //     return isMatch('/app/updates')
+            //   },
+            // },
             {
               title: "Speakers",
               to: "/app/speakers",
               useIsActive: () => {
-                return false;
+                return isMatch('/app/speakers')
               },
             },
             {
               title: "Venue",
               to: "/app/venue",
               useIsActive: () => {
-                return false;
+                return isMatch('/app/venue')
               },
             },
             {
               title: "Side Events",
               to: "/app/side-events",
               useIsActive: () => {
-                return false;
+                return isMatch('/app/side-events')
               },
             },
-            {
-              title: "Quests",
-              to: "/app/quests",
-              useIsActive: () => {
-                return false;
-              },
-            },
-            {
-              title: "Livestreaming",
-              to: "/app/livestreaming",
-              useIsActive: () => {
-                return false;
-              },
-            },
-            {
-              title: "Archive",
-              to: "/app/archive",
-              useIsActive: () => {
-                return false;
-                // return useMatch('/app/archive/*')
-              },
-            },
+            // {
+            //   title: "Quests",
+            //   to: "/app/quests",
+            //   useIsActive: () => {
+            //     return isMatch('/app/quests')
+            //   },
+            // },
+            // {
+            //   title: "Livestreaming",
+            //   to: "/app/livestreaming",
+            //   useIsActive: () => {
+            //     return isMatch('/app/livestreaming')
+            //   },
+            // },
+            // {
+            //   title: "Archive",
+            //   to: "/app/archive",
+            //   useIsActive: () => {
+            //     return isMatch('/app/archive')
+            //   },
+            // },
           ]}
           {...props}
         />
-
+{/* TODO: Fix subnavs
         <Links
           nested
           path="/settings"
@@ -272,7 +276,7 @@ export const InlineNav = React.memo((props: any) => {
           links={[
             {
               Title: () => {
-                const match = false; // useMatch('/app/schedule/:session')
+                const match = isMatch('/app/schedule/:session')
 
                 const session = useSession(null); // match ? match.session : null)
 
@@ -280,7 +284,7 @@ export const InlineNav = React.memo((props: any) => {
               },
             },
           ]}
-        />
+        /> */}
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
 import React from 'react'
 import css from './dashboard.module.scss'
-import Image from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
 import {
   CollapsedSection,
   CollapsedSectionContent,
@@ -39,30 +37,17 @@ export const Dashboard = (props: any) => {
   const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(true)
   const [currentSlide, setCurrentSlide] = React.useState(0)
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativePath: { in: ["neo-matrix.png", "ask-deva.png", "pwa_prompt.png"] } }) {
-        nodes {
-          childImageSharp {
-            fluid(maxWidth: 800, quality: 80) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div className="section">
       <div className="content">
         <div className={css['hero']}>
           <div className={css['image-container']}>
             <Gallery onChange={setCurrentSlide}>
+              {/* TODO: Fix images
               <Image fluid={data.allFile.nodes[1].childImageSharp.fluid} objectFit="cover" />
               <Image fluid={data.allFile.nodes[2].childImageSharp.fluid} objectFit="cover" />
               <Image fluid={data.allFile.nodes[0].childImageSharp.fluid} objectFit="cover" />
-              <Image fluid={data.allFile.nodes[1].childImageSharp.fluid} objectFit="cover" />
+              <Image fluid={data.allFile.nodes[1].childImageSharp.fluid} objectFit="cover" /> */}
             </Gallery>
           </div>
 
@@ -86,10 +71,7 @@ export const Dashboard = (props: any) => {
         <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
           <CollapsedSectionHeader title="Upcoming Sessions" />
           <CollapsedSectionContent>
-            <SessionCard 
-              session={props.sessions[0]}
-              speakers={props.speakers}
-            />
+            <SessionCard session={props.sessions[0]} />
           </CollapsedSectionContent>
         </CollapsedSection>
 

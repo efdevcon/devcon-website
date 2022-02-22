@@ -2,15 +2,13 @@ import React from 'react'
 import css from './session-card.module.scss'
 import IconCalendar from 'assets/icons/schedule-plus.svg'
 import IconCheck from 'assets/icons/check_circle.svg'
-import trackIcon from './track-icon.png'
 import { ThumbnailBlock } from 'components/common/thumbnail-block'
 import { Session } from 'types/Session'
 import { useAccountContext } from 'context/account-context'
-import { Speaker } from 'types/Speaker'
+import moment from 'moment'
 
 type CardProps = {
   session: Session
-  speakers: Speaker[]
 }
 
 export const SessionCard = (props: CardProps) => {
@@ -44,20 +42,19 @@ export const SessionCard = (props: CardProps) => {
     <ThumbnailBlock className={thumbnailClassName}>
       <div className={css['details']}>
         <div className={css['top']}>
-          {/* <p className={css['title']}>Water We Doing: The Changing Tides of the Ethereum Foundation Grants Program</p> */}
           <p className={css['title']}>{props.session.title}</p>
 
           {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
 
           <div className="label sm">
-            {props.session.track} {/*UX & Design*/}
+            {props.session.track}
           </div>
         </div>
         <div className={css['bottom']}>
           <div className={css['time']}>
             <IconCalendar />
             <p>
-              {props.session.start} {/*Oct 22nd — 10:00 AM*/}
+              {moment.utc(props.session.start).format('MMM DD - HH:mm a')} {/*Oct 22nd — 10:00 AM*/}
             </p>
           </div>
           <div className={css['room']}>
@@ -67,52 +64,17 @@ export const SessionCard = (props: CardProps) => {
           <div className={css['authors']}>
             <IconCalendar />
             <p>
-              {props.session.speakers.map(sessionSpeaker => {
-                return props.speakers.find((speaker: Speaker) => speaker.id === sessionSpeaker)?.name
+              {props.session.speakers.map(i => {
+                return i.name
               })}
             </p>
           </div>
           <div className={css['n-seats']}>
             <IconCalendar />
-            <p>600</p>
+            <p>600 (TODO)</p>
           </div>
         </div>
       </div>
     </ThumbnailBlock>
   )
 }
-
-/*
-    <div className={css['container']}>
-      <div className={thumbnailClassName}>
-        <img src={trackIcon} alt="track" />
-      </div>
-      <div className={css['details']}>
-        <div className={css['top']}>
-          <p className={css['title']}>Water We Doing: The Changing Tides of the Ethereum Foundation Grants Program</p>
-
-          {saved ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
-
-          <div className="label sm">UX & Design</div>
-        </div>
-        <div className={css['bottom']}>
-          <div className={css['time']}>
-            <IconCalendar />
-            <p>Oct 22nd — 10:00 AM</p>
-          </div>
-          <div className={css['room']}>
-            <IconCalendar />
-            <p>Cloud Room — L1</p>
-          </div>
-          <div className={css['authors']}>
-            <IconCalendar />
-            <p>Luke Jacobsen, Lily Jacobsen, Luna Jacobsen</p>
-          </div>
-          <div className={css['n-seats']}>
-            <IconCalendar />
-            <p>600</p>
-          </div>
-        </div>
-      </div>
-    </div>
-*/

@@ -1,29 +1,12 @@
 import React from 'react'
 import IconStar from 'assets/icons/star.svg'
 import css from './speaker-details.module.scss'
-import { VideoCard } from 'components/domain/archive/playlists'
 import { SessionCard } from '../session'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Proposals } from '../../dips/overview/proposals'
 
 export const SpeakerDetails = (props: any) => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     allFile(filter: { relativePath: { in: ["pwa_prompt.png"] } }) {
-  //       nodes {
-  //         childImageSharp {
-  //           fluid(maxWidth: 600, quality: 80) {
-  //             ...GatsbyImageSharpFluid_withWebp_noBase64
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
-      {/* {JSON.stringify(data)} */}
       <div className="aspect">
         <img
           src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
@@ -60,14 +43,14 @@ export const SpeakerDetails = (props: any) => {
             </p>
           </div>
 
-          <div className={css['sessions']}>
+          {/* <div className={css['sessions']}>
             <p className={css['header']}>Sessions</p>
 
-            <SessionCard session={props.sessions[0]} speakers={props.speakers} />
-            <SessionCard session={props.sessions[0]} speakers={props.speakers} />
-          </div>
+            <SessionCard session={props.sessions[0]} />
+            <SessionCard session={props.sessions[0]} />
+          </div> */}
 
-          <div className={css['videos']}>
+          {/* <div className={css['videos']}>
             <p className={css['header']}>Archive</p>
 
             <VideoCard
@@ -109,7 +92,7 @@ export const SpeakerDetails = (props: any) => {
                 speakers: ['Bill Marino'],
               }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

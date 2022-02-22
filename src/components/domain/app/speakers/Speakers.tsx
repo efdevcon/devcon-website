@@ -57,7 +57,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
   }
 
   return (
-    <Link to="/app/speakers/test" className={css['speaker-card']}>
+    <Link to={`/app/speakers/${speaker.id}`} className={css['speaker-card']}>
       <>
         <div className={css['thumbnail']}>
           <img alt="profile" src={thumbnailPlaceholder} />
