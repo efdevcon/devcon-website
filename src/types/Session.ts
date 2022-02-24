@@ -1,3 +1,4 @@
+import { Room } from "./Room";
 import { Speaker } from "./Speaker";
 
 export interface Session {
@@ -8,7 +9,7 @@ export interface Session {
   duration: number
   start: number
   end: number
-  room: string
+  room?: Room
   type?: string
   description?: string
   abstract?: string

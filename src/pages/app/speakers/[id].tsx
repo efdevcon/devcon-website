@@ -1,12 +1,10 @@
-import { Info } from 'components/domain/app/info'
 import { AppLayout } from 'components/domain/app/Layout'
-import { Session } from 'components/domain/app/session'
 import { SpeakerDetails } from 'components/domain/app/speakers'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
-import { GetSessions, GetSpeakers } from 'services/programming'
+import { GetSessionsBySpeaker, GetSpeakers, GetTracks } from 'services/programming'
 import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { getMessages } from 'utils/intl'
 
@@ -40,13 +38,15 @@ export async function getStaticProps(context: any) {
     }
   }
 
+  const sessions = await GetSessionsBySpeaker(speaker.id)
   return {
     props: {
       messages: intl,
       navigationData: await GetNavigationData(context.locale),
       notification: GetLatestNotification(context.locale),
       page: DEFAULT_APP_PAGE,
-      speaker
+      speaker,
+      sessions,
     }
   }
 }

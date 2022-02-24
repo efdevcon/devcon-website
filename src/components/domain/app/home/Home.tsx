@@ -108,21 +108,25 @@ export const Home = (props: any) => {
               {
                 title: 'Schedule',
                 description: 'View & manage your devcon schedule.',
+                url: '/app/schedule',
                 color: 'pink',
               },
               {
                 title: 'Guides',
                 description: 'Access Devcon Bogota local guides.',
+                url: '/app/guides',
                 color: 'yellow',
               },
               {
                 title: 'Venue Map',
                 description: 'Find your way around the Conference.',
+                url: '/app/venue',
                 color: 'green',
               },
               {
                 title: 'Speakers',
                 description: 'View speakers presenting at Devcon.',
+                url: '/app/speakers',
                 color: 'blue',
               },
             ]}

@@ -1,30 +1,34 @@
 import React from 'react'
 import IconStar from 'assets/icons/star.svg'
 import css from './speaker-details.module.scss'
+import Image from 'next/image'
+import makeBlockie from 'ethereum-blockies-base64'
 import { SessionCard } from '../session'
-import { Proposals } from '../../dips/overview/proposals'
+import { Session } from 'types/Session'
 
 export const SpeakerDetails = (props: any) => {
+  const splitName = props.speaker.name.split(' ') as string[]
+  const firstName = splitName.shift()
+  const lastName = splitName.join(' ')
+
   return (
     <>
       <div className="aspect">
-        <img
-          src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          className={css['image']}
-        />
+        <Image src={props.speaker.avatar ?? makeBlockie(props.speaker.name)} alt={props.speaker.name}
+          objectFit='contain' layout='fill' />
       </div>
 
       <div className="section">
         <div className="content">
           <h1 className={css['header']}>
-            Luke
-            <br /> Jacobsen
+            {firstName}
+            <br /> {lastName}
           </h1>
 
           <div className={css['meta']}>
             <div className={css['details']}>
-              <p className={css['role']}>Researcher</p>
-              <p className={css['company']}>Ethereum Foundation</p>
+              <p className={css['role']}>Researcher (TODO)</p>
+              <p className={css['company']}>Ethereum Foundation (TODO)</p>
             </div>
             <div className={css['socials']}>
               <IconStar />
@@ -36,19 +40,18 @@ export const SpeakerDetails = (props: any) => {
           <div className={css['description']}>
             <p className={css['header']}>Profile</p>
             <p className={css['body']}>
-              Machine learning is being adopted more and more broadly in technology. Such success is largely due to a
-              combination of algorithmic breakthroughs, computation resource improvements, and the access to a large
-              amount of diverse training data. The collection of data can raise concerns about siloing, security, and
-              user privacy.
+              {props.speaker.description}
             </p>
           </div>
 
-          {/* <div className={css['sessions']}>
-            <p className={css['header']}>Sessions</p>
-
-            <SessionCard session={props.sessions[0]} />
-            <SessionCard session={props.sessions[0]} />
-          </div> */}
+          {props.sessions.length > 0 &&
+            <div className={css['sessions']}>
+              <p className={css['header']}>Sessions</p>
+              {props.sessions.map((i: Session) => {
+                return <SessionCard session={i} />
+              })}
+            </div>
+          }
 
           {/* <div className={css['videos']}>
             <p className={css['header']}>Archive</p>

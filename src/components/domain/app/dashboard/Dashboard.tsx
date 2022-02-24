@@ -10,6 +10,9 @@ import { Session, SessionCard } from '../session'
 import { SliderStickyNotes } from 'components/common/slider/SliderVariations'
 import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
 import { Gallery } from 'components/common/gallery'
+import Image from 'next/image'
+import image1 from 'assets/images/side-events-hero.png'
+import image2 from 'assets/images/neo-matrix.png'
 
 const galleryEvents = [
   {
@@ -43,11 +46,10 @@ export const Dashboard = (props: any) => {
         <div className={css['hero']}>
           <div className={css['image-container']}>
             <Gallery onChange={setCurrentSlide}>
-              {/* TODO: Fix images
-              <Image fluid={data.allFile.nodes[1].childImageSharp.fluid} objectFit="cover" />
-              <Image fluid={data.allFile.nodes[2].childImageSharp.fluid} objectFit="cover" />
-              <Image fluid={data.allFile.nodes[0].childImageSharp.fluid} objectFit="cover" />
-              <Image fluid={data.allFile.nodes[1].childImageSharp.fluid} objectFit="cover" /> */}
+              <Image src={image1} objectFit='cover' layout='fill' />
+              <Image src={image2} objectFit='cover' layout='fill' />
+              <Image src={image1} objectFit='cover' layout='fill' />
+              <Image src={image2} objectFit='cover' layout='fill' />
             </Gallery>
           </div>
 
@@ -122,26 +124,31 @@ export const Dashboard = (props: any) => {
               />
             </div>
           </div>
+
           <SliderStickyNotes
             cards={[
               {
-                title: 'Food & Drink Menu',
-                description: 'View event menu items and dietary information.',
+                title: 'Schedule',
+                description: 'View & manage your devcon schedule.',
+                url: '/app/schedule',
                 color: 'pink',
               },
               {
-                title: 'Local City Guide',
+                title: 'Guides',
                 description: 'Access Devcon Bogota local guides.',
+                url: '/app/guides',
                 color: 'yellow',
               },
               {
-                title: 'Side Events',
-                description: 'Access all the other events happening around devcon.',
+                title: 'Venue Map',
+                description: 'Find your way around the Conference.',
+                url: '/app/venue',
                 color: 'green',
               },
               {
                 title: 'Speakers',
                 description: 'View speakers presenting at Devcon.',
+                url: '/app/speakers',
                 color: 'blue',
               },
             ]}

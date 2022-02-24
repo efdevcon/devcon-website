@@ -53,14 +53,18 @@ export const Session = (props: SessionProps) => {
                   {moment.utc(props.session.start).format('HH:mm')} - {moment.utc(props.session.end).format('HH:mm')} <span style={{ marginLeft: '12px' }}> Mins</span>
                 </p>
               </div>
-              <div className={css['info-line']}>
-                <IconCalendar />
-                <p>{props.session.room}</p>
-              </div>
-              <div className={css['info-line']}>
-                <IconCalendar />
-                <p>150 (TODO)</p>
-              </div>
+              {props.session.room &&
+                <div className={css['info-line']}>
+                  <IconCalendar />
+                  <p>{props.session.room.name}</p>
+                </div>
+              }
+              {props.session.room?.capacity &&
+                <div className={css['info-line']}>
+                  <IconCalendar />
+                  <p>{props.session.room.capacity}</p>
+                </div>
+              }
 
               <h2 className={css['title']}>
                 {props.session.title}
@@ -97,12 +101,14 @@ export const Session = (props: SessionProps) => {
             </div>
           </div>
 
-          <div className={css['speakers']}>
-            <h3 className={css['title']}>Speakers</h3>
-            {props.session.speakers.map(i => {
-              return <SpeakerCard key={i.id} speaker={i} />
-            })}
-          </div>
+          {props.session.speakers.length > 0 &&
+            <div className={css['speakers']}>
+              <h3 className={css['title']}>Speakers</h3>
+              {props.session.speakers.map(i => {
+                return <SpeakerCard key={i.id} speaker={i} />
+              })}
+            </div>
+          }
 
           <div className={css['description']}>
             <h3 className={css['title']}>Description</h3>

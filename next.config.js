@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ['speak.devcon.org']
+  },
   i18n: {
     locales: ["default", "en", "es"],
     defaultLocale: "default",

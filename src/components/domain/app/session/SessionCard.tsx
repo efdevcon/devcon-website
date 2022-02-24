@@ -57,22 +57,28 @@ export const SessionCard = (props: CardProps) => {
               {moment.utc(props.session.start).format('MMM DD - HH:mm a')} {/*Oct 22nd — 10:00 AM*/}
             </p>
           </div>
-          <div className={css['room']}>
-            <IconCalendar />
-            <p>{props.session.room}</p>
-          </div>
-          <div className={css['authors']}>
-            <IconCalendar />
-            <p>
-              {props.session.speakers.map(i => {
-                return i.name
-              })}
-            </p>
-          </div>
-          <div className={css['n-seats']}>
-            <IconCalendar />
-            <p>600 (TODO)</p>
-          </div>
+          {props.session.room && (
+            <div className={css['room']}>
+              <IconCalendar />
+              <p>{props.session.room.name}</p>
+            </div>
+          )}
+          {props.session.speakers.length > 0 &&
+            <div className={css['authors']}>
+              <IconCalendar />
+              <p>
+                {props.session.speakers.map(i => {
+                  return i.name
+                })}
+              </p>
+            </div>
+          }
+          {props.session.room && props.session.room.capacity && (
+            <div className={css['n-seats']}>
+              <IconCalendar />
+              <p>{props.session.room.capacity}</p>
+            </div>
+          )}
         </div>
       </div>
     </ThumbnailBlock>
