@@ -46,10 +46,10 @@ export const Dashboard = (props: any) => {
         <div className={css['hero']}>
           <div className={css['image-container']}>
             <Gallery onChange={setCurrentSlide}>
-              <Image src={image1} objectFit='cover' layout='fill' />
-              <Image src={image2} objectFit='cover' layout='fill' />
-              <Image src={image1} objectFit='cover' layout='fill' />
-              <Image src={image2} objectFit='cover' layout='fill' />
+              <Image src={image1} objectFit='cover' layout='fill' alt={galleryEvents[currentSlide].title} />
+              <Image src={image2} objectFit='cover' layout='fill' alt={galleryEvents[currentSlide].title} />
+              <Image src={image1} objectFit='cover' layout='fill' alt={galleryEvents[currentSlide].title} />
+              <Image src={image2} objectFit='cover' layout='fill' alt={galleryEvents[currentSlide].title} />
             </Gallery>
           </div>
 

@@ -81,7 +81,7 @@ export const HorizontalScroller = (props: any) => {
       setIndicatorVisibleRight(false);
       setIndicatorVisibleLeft(false);
     }
-  }, [isTouchDevice]);
+  }, []);
 
   const bind = useGesture(
     {

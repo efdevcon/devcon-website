@@ -7,10 +7,10 @@ export const Button = React.forwardRef((props: any, ref: any) => {
   const [x, setX] = React.useState(0)
   const [y, setY] = React.useState(0)
 
-  const onMouseMove = (e: React.SyntheticEvent) => {
+  const onMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     if (buttonRef.current === undefined) return
 
-    var rect = e.target.getBoundingClientRect()
+    var rect = e.currentTarget.getBoundingClientRect()
     var x = e.clientX - rect.left // x position within the element.
     var y = e.clientY - rect.top // y position within the element.
 

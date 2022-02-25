@@ -10,6 +10,7 @@ import { useAvatar } from 'hooks/useAvatar'
 import { isEmail } from 'utils/validators'
 import { TruncateMiddle } from 'utils/formatting'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 export default function SettingsPage() {
   const router = useRouter()
@@ -43,7 +44,7 @@ export default function SettingsPage() {
             </div>
 
             <div className={css['profile']}>
-              <img className={css['avatar']} src={avatar.url} />
+              <Image className={css['avatar']} src={avatar.url} alt={avatar.name} />
               <p className={`${css['name']} title`}>{isEmail(avatar.name) ? avatar.name : TruncateMiddle(avatar.name, 8)}</p>
               <span className={css['signout']} role='button' onClick={disconnect}>Sign out</span>
             </div>

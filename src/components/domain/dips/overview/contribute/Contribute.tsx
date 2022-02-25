@@ -6,6 +6,7 @@ import { Contributor } from "types/DIP";
 import { Tooltip } from "components/common/tooltip";
 import { useTranslations } from "next-intl";
 import { chunkArray } from "utils/chunk-array";
+import Image from "next/image";
 
 type ContributeProps = {
   contributors: Array<Contributor>;
@@ -19,7 +20,7 @@ type ThumbnailProps = {
 const Thumbnail = ({ contributor }: ThumbnailProps) => {
   return (
     <Tooltip content={contributor.name}>
-      <img
+      <Image
         key={contributor.name}
         className={css["thumbnail"]}
         alt={`Contributor: ${contributor.name}`}

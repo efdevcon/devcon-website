@@ -4,6 +4,7 @@ import IconCalendar from 'assets/icons/schedule-plus.svg'
 import IconLink from 'assets/icons/link-chain.svg'
 import IconExternalLink from 'assets/icons/external-link.svg'
 import googleDriveImage from './google-drive.png'
+import Image from 'next/image'
 
 export const LinkList = (props: any) => {
   return (
@@ -30,7 +31,7 @@ export const LinkList = (props: any) => {
 
             return (
               <div className={className}>
-                {isGoogleDrive && <img src={googleDriveImage} className={css['thumbnail']} alt="Google drive" />}
+                {isGoogleDrive && <Image src={googleDriveImage} className={css['thumbnail']} alt="Google drive" />}
                 <div className={css['link-text']}>{child.props.children}</div>
                 {icon}
               </div>

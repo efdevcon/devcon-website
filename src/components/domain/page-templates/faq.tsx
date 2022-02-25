@@ -10,6 +10,7 @@ import AskDeva from 'assets/images/ask-deva.png'
 import { pageHOC } from 'context/pageHOC'
 import { PageContentSection } from './page-content-section'
 import { usePageContext } from 'context/page-context'
+import Image from 'next/image'
 
 export default pageHOC(function FaqTemplate(props: any) {
   const pageContext = usePageContext()
@@ -35,7 +36,7 @@ export default pageHOC(function FaqTemplate(props: any) {
               <Search onSearch={e => setSearchFilter(e)} />
             </div>
             <div className={css['right-deva']}>
-              <img src={AskDeva} alt="Ask Deva" />
+              <Image src={AskDeva} alt="Ask Deva" />
             </div>
           </div>
         </section>

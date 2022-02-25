@@ -15,6 +15,7 @@ import ticket from './ticket.png'
 import { useAccountContext } from 'context/account-context'
 import { useActiveAddress } from "hooks/useActiveAddress"
 import { useAvatar } from 'hooks/useAvatar'
+import Image from 'next/image'
 
 export const Home = (props: any) => {
   const router = useRouter()
@@ -78,7 +79,7 @@ export const Home = (props: any) => {
           <CollapsedSection>
             <CollapsedSectionHeader>
               <div className={css['wallet']}>
-                <img src={avatar.url} className={css['circle']} />
+                <Image src={avatar.url} className={css['circle']} alt={avatar.name} />
 
                 <div className={css['details']}>
                   {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
@@ -89,7 +90,7 @@ export const Home = (props: any) => {
             </CollapsedSectionHeader>
 
             <CollapsedSectionContent>
-              <div> Here's some hidden content </div>
+              <div> Hidden content </div>
             </CollapsedSectionContent>
           </CollapsedSection>
         }
@@ -137,7 +138,7 @@ export const Home = (props: any) => {
           <CollapsedSectionHeader title="Updates" />
 
           <CollapsedSectionContent>
-            <div>Here's some hidden content</div>
+            <div>Hidden content</div>
           </CollapsedSectionContent>
         </CollapsedSection>
 
@@ -148,7 +149,7 @@ export const Home = (props: any) => {
             <CollapsedSectionContent>
               <div className={css['ticket-container']}>
                 <div className={css['ticket']}>
-                  <img src={ticket} />
+                  <Image src={ticket} alt='Your Devcon Ticket' />
 
                   <p className={css['ticket-type']}>Builder Ticket</p>
                   <p className={css['ticket-id']}>No 1561854</p>

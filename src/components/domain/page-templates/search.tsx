@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Content from 'components/common/layouts/content'
 import { pageHOC } from 'context/pageHOC'
 import themes from '../themes.module.scss'
@@ -17,11 +17,14 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
   const [results, setResults] = React.useState<Array<SearchItem>>([])
 
   const id = 'slug'
-  const search = new JsSearch.Search(id)
-  search.tokenizer = new JsSearch.StopWordsTokenizer(new JsSearch.SimpleTokenizer())
-  search.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
-  search.sanitizer = new JsSearch.LowerCaseSanitizer()
-  search.searchIndex = new JsSearch.TfIdfSearchIndex(id)
+  const search = useMemo(() => {
+    const search = new JsSearch.Search(id)
+    search.tokenizer = new JsSearch.StopWordsTokenizer(new JsSearch.SimpleTokenizer())
+    search.indexStrategy = new JsSearch.AllSubstringsIndexStrategy()
+    search.sanitizer = new JsSearch.LowerCaseSanitizer()
+    search.searchIndex = new JsSearch.TfIdfSearchIndex(id)
+    return search
+  }, [])
 
   search.addIndex('id')
   search.addIndex('title')

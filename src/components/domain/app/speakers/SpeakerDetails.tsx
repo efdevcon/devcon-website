@@ -48,7 +48,7 @@ export const SpeakerDetails = (props: any) => {
             <div className={css['sessions']}>
               <p className={css['header']}>Sessions</p>
               {props.sessions.map((i: Session) => {
-                return <SessionCard session={i} />
+                return <SessionCard key={i.id} session={i} />
               })}
             </div>
           }

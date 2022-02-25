@@ -7,7 +7,6 @@ import { Modal, ModalSlide } from 'components/common/modal'
 import css from './banner.module.scss'
 import { Tooltip } from 'components/common/tooltip'
 import { TruncateMiddle } from 'utils/formatting'
-import { useStaticQuery, graphql } from 'gatsby'
 
 interface Props {
   hash: string
@@ -81,13 +80,9 @@ export const Banner = (props: Props) => {
           </p>
         </div>
 
-        {/* <Modal image={data.allFile.nodes[0]} open close={() => setIpfsModal(false)} title="Fallback">
-          <p> Testing </p>
-        </Modal> */}
-
         <Modal image={data.allFile.nodes[0]} open={ipfsModal} close={() => setIpfsModal(false)} title="What is IPFS">
           <div className={css['modal-content']}>
-            <p>Let's just start with a one-line definition of IPFS:</p>
+            <p>Let&apos;s just start with a one-line definition of IPFS:</p>
             <p className={css['lead']}>
               IPFS is a distributed system for storing and accessing files, websites, applications, and data.
             </p>

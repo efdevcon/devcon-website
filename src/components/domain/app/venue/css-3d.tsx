@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import css from './css-3d.module.scss'
 import floorplan from './mall-floor-plan.png'
@@ -5,7 +6,7 @@ import floorplan from './mall-floor-plan.png'
 const Layer = (props: any) => {
   return (
     <div {...props}>
-      <img src={floorplan} alt="floorplan" />
+      <Image src={floorplan} alt="floorplan" />
       <p className={css['label']}>L{props['data-floor']}</p>
       <div className={css['pin-container']} style={{ '--x': '100%', '--y': '100%' }}>
         <div className={css['pin']}>PIN</div>

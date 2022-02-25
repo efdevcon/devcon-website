@@ -107,7 +107,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
       )
     }
 
-    return <div className={css['item']}>{body}</div>
+    return <div key={item.id} className={css['item']}>{body}</div>
   })
 
   const noResults = formattedItems.length === 0

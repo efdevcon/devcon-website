@@ -69,12 +69,12 @@ export const SideEvents = (props: any) => {
         <div className={`${css['hero']}`}>
           <div className={`${css['hero-content']}`}>
             <div className={css['image-container']}>
-              <Image src={imageBogota} objectFit='cover' />
+              <Image src={imageBogota} objectFit='cover' alt={'Devcon Side event'} />
             </div>
 
             <div className={`${css['details']}`}>
               <div>
-                <img src={logo} alt="Title" />
+                <Image src={logo} alt="Title" />
 
                 <div className={css['title']}>
                   <h2 className="bold font-primary font-xxl">Devcon Bogota</h2>

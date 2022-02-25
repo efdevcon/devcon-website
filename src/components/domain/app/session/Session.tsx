@@ -12,6 +12,7 @@ import { ThumbnailBlock } from 'components/common/thumbnail-block'
 import { Session as SessionType } from 'types/Session'
 import moment from 'moment'
 import { GetDevconDay } from 'utils/formatting'
+import Image from 'next/image'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -22,7 +23,7 @@ const Hero = (props: any) => {
     <div className={className}>
       {props.icon && (
         <div className={css['background-icon']}>
-          <img src={props.icon} alt="track" />
+          <Image src={props.icon} alt="track" />
         </div>
       )}
       {props.children}
