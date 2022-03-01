@@ -81,7 +81,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
         <div className={css['text']}>
           <Title item={item} />
 
-          <p className={css['description']} dangerouslySetInnerHTML={{ __html: item.description }} />
+          <p className={css['description']} dangerouslySetInnerHTML={{ __html: item.description ?? '' }} />
 
           {item.tags && item.tags.length > 0 && (
             <div className={css['tags']}>

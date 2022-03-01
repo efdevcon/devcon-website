@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['speak.devcon.org']
+    domains: [
+      'speak.devcon.org',
+      'storage.googleapis.com'
+    ]
   },
   i18n: {
     locales: ["default", "en", "es"],

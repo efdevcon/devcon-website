@@ -42,7 +42,7 @@ export const useFilter = (options: FilterOptions | undefined) => {
     if (options.multiSelect) {
       if (setExact) return setActiveFilterMulti(value)
 
-      const nextActiveFilter = {
+      const nextActiveFilter: any = {
         ...activeFilterMulti,
         [value]: true,
       }
@@ -82,7 +82,7 @@ type FilterFoldoutProps = {
 export const FilterFoldout = (props: FilterFoldoutProps) => {
   const [open, setOpen] = React.useState(false)
   const ref = React.createRef<HTMLDivElement>()
-  const buttonRef = React.createRef<HTMLDivElement>()
+  const buttonRef = React.createRef<HTMLButtonElement>()
 
   React.useEffect(() => {
     const handleClickOutside = (e: any) => {

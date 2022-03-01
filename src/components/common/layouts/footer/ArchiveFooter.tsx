@@ -61,7 +61,7 @@ export const ArchiveFooter = () => {
               <HeaderLogoArchive />
             </Link>
 
-            <SocialMedia />
+            <SocialMedia onShare={() => {}} />
           </div>
 
           <div className={css['col-2']}>

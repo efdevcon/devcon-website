@@ -36,7 +36,7 @@ export const Loader = (props: LoaderProps) => {
   })()
 
   return (
-    <div className={className} style={{ '--headerHeight': `${headerHeight}px` }}>
+    <div className={className} style={{ '--headerHeight': `${headerHeight}px` } as any}>
       <div className={css['message']}>
         <span className={css['text']}>{currentState}</span>
         {props.loading && !props.error && <div className="spinner"></div>}

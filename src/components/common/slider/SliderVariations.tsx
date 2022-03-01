@@ -40,7 +40,7 @@ export const SliderStickyNotes = (props: SliderStickyNotesProps) => {
   const sliderProps = useSlider(settings)
 
   return (
-    <Slider containerClassName={css['slider']} sliderProps={sliderProps} title={props.title} onlySlider>
+    <Slider containerClassName={css['slider']} sliderProps={sliderProps} title='' onlySlider>
       {props.cards.map(({ title, description, url, color }) => {
         return (
           <BasicCard

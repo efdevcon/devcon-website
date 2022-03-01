@@ -69,7 +69,7 @@ const Buttons = (props: ButtonProps) => {
 
 export const Menu = (props: any) => {
   const router = useRouter()
-  const { navigation } = usePageContext()
+  const context = usePageContext()
 
   let buttons: ButtonProps['buttons'] = [
     {
@@ -116,10 +116,10 @@ export const Menu = (props: any) => {
 
   return (
     <div className={css['menu']}>
-      <Left navigationData={navigation} />
+      <Left navigationData={context?.navigation} />
 
       <div className={css['right']}>
-        <Navigation navigationData={navigation} />
+        <Navigation navigationData={context?.navigation} />
       </div>
 
       <Buttons buttons={buttons} />
@@ -131,10 +131,10 @@ export const Menu = (props: any) => {
       {/* Mobile */}
       <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
         <div className={css['foldout-top']}>
-          <Left navigationData={navigation} />
+          <Left navigationData={context?.navigation} />
           <LanguageToggle />
         </div>
-        <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={navigation} mobile={true} />
+        <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
       </Foldout>
     </div>
   )

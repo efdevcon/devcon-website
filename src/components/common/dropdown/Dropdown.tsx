@@ -4,7 +4,6 @@ import css from './dropdown.module.scss'
 import VerticalDotsIcon from 'assets/icons/vertical-dots.svg'
 import ChevronDown from 'assets/icons/arrow_desc.svg'
 import ChevronUp from 'assets/icons/arrow_asc.svg'
-import { trigger } from 'swr'
 
 export interface DropdownProps {
   value: any
