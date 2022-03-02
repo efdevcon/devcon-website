@@ -45,7 +45,7 @@ export const useFilter = (options: FilterOptions | undefined) => {
       const nextActiveFilter = {
         ...activeFilterMulti,
         [value]: true,
-      }
+      } as { [key: string]: any }
 
       const selected = activeFilterMulti[value]
 
@@ -81,8 +81,8 @@ type FilterFoldoutProps = {
 
 export const FilterFoldout = (props: FilterFoldoutProps) => {
   const [open, setOpen] = React.useState(false)
-  const ref = React.createRef<HTMLDivElement>()
-  const buttonRef = React.createRef<HTMLDivElement>()
+  const ref = React.createRef<HTMLDivElement | any>()
+  const buttonRef = React.createRef<HTMLDivElement | any>()
 
   React.useEffect(() => {
     const handleClickOutside = (e: any) => {
@@ -160,13 +160,13 @@ export const Filter = (props: FilterState) => {
 
   return (
     <div className={className} data-type="filter">
-      <Dropdown
+      {/* <Dropdown
         className={css['dropdown']}
         customIcon={IconFilter}
         options={props.options.filters}
         value={props.activeFilter}
         onChange={nextValue => props.setActiveFilter(nextValue)}
-      />
+      /> */}
 
       <div className={css['inline']}>
         {props.options.filters.map(filter => {

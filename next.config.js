@@ -2,12 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ["default", "en", "es"],
-    defaultLocale: "default",
+    locales: ['default', 'en', 'es'],
+    defaultLocale: 'default',
     localeDetection: false,
   },
   trailingSlash: true,
-  webpack: (config) => {
+  webpack: config => {
     return {
       ...config,
       module: {
@@ -19,12 +19,12 @@ const nextConfig = {
             issuer: { not: /\.(css|scss|sass)$/ },
             use: [
               {
-                loader: "@svgr/webpack",
+                loader: '@svgr/webpack',
                 options: {
                   svgoConfig: {
                     plugins: [
                       {
-                        name: "preset-default",
+                        name: 'preset-default',
                         params: {
                           overrides: {
                             removeViewBox: false,
@@ -44,16 +44,16 @@ const nextConfig = {
             issuer: { not: /\.(css|scss|sass)$/ },
             use: [
               {
-                loader: "@svgr/webpack",
+                loader: '@svgr/webpack',
                 options: {
                   icon: true,
                   svgProps: {
-                    className: "icon",
+                    className: 'icon',
                   },
                   svgoConfig: {
                     plugins: [
                       {
-                        name: "preset-default",
+                        name: 'preset-default',
                         params: {
                           overrides: {
                             removeViewBox: false,
@@ -69,20 +69,20 @@ const nextConfig = {
           ...config.module.rules,
         ],
       },
-    };
+    }
   },
   async rewrites() {
     return [
       {
-        source: "/robots.txt",
-        destination: "/api/robots",
+        source: '/robots.txt',
+        destination: '/api/robots',
       },
       {
-        source: "/sitemap.xml",
-        destination: "/api/sitemap",
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
       },
-    ];
+    ]
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

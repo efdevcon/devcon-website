@@ -158,7 +158,7 @@ export const PageHero = (props: PageHeroProps) => {
               <div className={css['buttons']}>
                 {props.cta.map((link: CTALink) => {
                   return (
-                    <Link key={link.to + link.title} className="button white lg" to={link.to}>
+                    <Link key={link.to + link.title} className="button black ghost lg" to={link.to}>
                       {link.icon}
                       <span>{link.title}</span>
                     </Link>

@@ -3,5 +3,6 @@ export interface Link {
   url: string
   type: string
   logo?: string
+  noLocale?: boolean
   links?: Link[]
 }

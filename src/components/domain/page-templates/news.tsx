@@ -7,7 +7,6 @@ import { PageContentSection } from './page-content-section'
 import { NewsOverview } from 'components/domain/news/overview'
 
 export default pageHOC(function NewsTemplate(props: any) {
-  
   return (
     <Content theme={themes['news']}>
       <PageHero />

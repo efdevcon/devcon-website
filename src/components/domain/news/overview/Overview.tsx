@@ -84,25 +84,6 @@ export const NewsOverview = (props: NewsOverviewProps) => {
         }}
         filterOptions={{
           filters: filterItems,
-          // filters: [{ text: 'All', value: 'all' }].concat(newsItems.map(item => ({ text: '', value: item.tags. })),
-          //  [
-          //   {
-          //     text: 'All',
-          //     value: 'all',
-          //   },
-          //   {
-          //     text: 'Tickets',
-          //     value: 'tickets',
-          //   },
-          //   {
-          //     text: 'Corona',
-          //     value: 'corona',
-          //   },
-          //   {
-          //     text: 'Event Date',
-          //     value: 'event date',
-          //   },
-          // ],
           filterFunction: activeFilter => {
             return !activeFilter || activeFilter === 'all'
               ? newsItems

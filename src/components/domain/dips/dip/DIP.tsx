@@ -10,6 +10,7 @@ import { leftPad } from 'utils/left-pad'
 import { DIP as DIPType } from 'types/DIP'
 import ArrowLeft from 'assets/icons/arrow_left.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
+// import { MDXRemote } from 'next-mdx-remote'
 
 const tableColumns = [
   {
@@ -76,6 +77,8 @@ export function DIP(props: { dip: DIPType }) {
   return (
     <div className={css['dip-container']}>
       <PageHero
+        title=""
+        path={[{ text: 'dips', url: '/dips' }, { text: dip.title }]}
         renderCustom={() => {
           return (
             <div className={css['nav']}>

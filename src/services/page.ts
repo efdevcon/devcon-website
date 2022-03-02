@@ -9,6 +9,11 @@ import { DIP } from 'types/DIP'
 import { NewsItem } from 'types/NewsItem'
 import { Category } from 'types/Category'
 import { FAQ } from 'types/FAQ'
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeStringify from 'rehype-stringify'
 
 export function GetPage(slug: string, lang: string = 'en'): Page | undefined {
     try {
@@ -28,7 +33,7 @@ export function GetPage(slug: string, lang: string = 'en'): Page | undefined {
             body: doc.content,
             lang: lang,
             id: slug,
-            slug: slug, 
+            slug: `/${slug}`, 
             tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
         } as Page
     }
@@ -53,20 +58,20 @@ export function GetPages(lang: string = 'en'): Array<Page> {
             ...doc.data,
             lang: lang,
             id: i.replace('.md', '').toLowerCase(),
-            slug: i.replace('.md', '').toLowerCase(),
+            slug: `/${i.replace('.md', '').toLowerCase()}`,
             tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
         } as Page
     }).filter(i => !!i) as Array<Page>
 }
 
-export function GetDIPs(lang: string = 'en'): Array<DIP> {
+export async function GetDIPs(lang: string = 'en'): Promise<Array<DIP>> {
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'dips', lang)
     const allDips = fs.readdirSync(dir, { withFileTypes: true })
         .filter(i => i.isFile() && i.name.endsWith('.md'))
         .map(i => Number(i.name.replace('.md', '').replace('DIP-', '')))
         .sort((a, b) => a - b)
 
-    return fs.readdirSync(dir).map(i => {
+    const dips = fs.readdirSync(dir).map(i => {
         const content = fs.readFileSync(join(dir, i), 'utf8')
         if (!content) {
             console.log('File has no content..', i)
@@ -74,10 +79,13 @@ export function GetDIPs(lang: string = 'en'): Array<DIP> {
         }
 
         const currentIndex = allDips.indexOf(Number(i.replace('.md', '').replace('DIP-', '')))
-        const prevDip = currentIndex > 0 ? `/${lang}/dips/${allDips[currentIndex - 1]}` : `/${lang}/dips/`
-        const nextDip = currentIndex < allDips.length ? `/${lang}/dips/${allDips[currentIndex + 1]}` : `/${lang}/dips/`
+        const prevDip = currentIndex > 0 ? `/${lang}/dips/dip-${allDips[currentIndex - 1]}` : `/${lang}/dips/`
+        const nextDip = currentIndex < allDips.length ? `/${lang}/dips/dip-${allDips[currentIndex + 1]}` : `/${lang}/dips/`
 
         const doc = matter(content)
+
+        // const htmlFormattedMarkdown = serialize(doc.content);
+
         return {
             number: doc.data.DIP,
             title: doc.data.Title,
@@ -96,6 +104,37 @@ export function GetDIPs(lang: string = 'en'): Array<DIP> {
             prev_dip: prevDip
         } as DIP
     }).filter(i => !!i) as Array<DIP>
+
+    // Parse markdown into html
+    await Promise.all(dips.map(async dip => {
+        if (dip.body) {
+            const markdownAsHtml = await unified()
+                .use(remarkParse)
+                .use(remarkRehype)
+                .use(rehypeSanitize)
+                .use(rehypeStringify)
+                .process(dip.body)
+
+            dip.body = String(markdownAsHtml);
+        }
+
+        if (dip.summary) {
+            let summary = dip.summary; 
+
+            if (summary.length > 255) summary = `${summary.slice(0, 255)}...`
+
+            const markdownAsHtml = await unified()
+                .use(remarkParse)
+                .use(remarkRehype)
+                .use(rehypeSanitize)
+                .use(rehypeStringify)
+                .process(summary)
+
+            dip.summary = String(markdownAsHtml);
+        }
+    }))
+
+    return dips;
 }
 
 export function GetNews(lang: string = 'en'): Array<NewsItem> {

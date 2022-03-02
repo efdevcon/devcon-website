@@ -3,19 +3,19 @@
 
 @keyframes sway {
   0% {
-    transform: translateX(0px);
+    transform: translateY(25%) translateX(0%);
   }
 
   25% {
-    transform: translateX(-50px);
+    transform: translateY(25%) translateX(-3.75%);
   }
 
   75% {
-    transform: translateX(50px);
+    transform: translateY(25%) translateX(3.75%);
   }
 
   100% {
-    transform: translateX(0px);
+    transform: translateY(25%) translateX(0%);
   }
 }
 
@@ -70,67 +70,26 @@ $logo-offset: 50px;
     justify-content: center;
     align-items: flex-end;
 
-    .mountains {
+    > * {
+      display: block !important;
+      width: 60% !important;
       transform: translateY(var(--translateY));
-      width: 42%;
-
-      @media (max-width: $breakpoints-xl) {
-        width: 60%;
-      }
-
-      @media (max-width: $breakpoints-lg) {
-        width: 65%;
-      }
-
-      @media (max-width: $breakpoints-md) {
-        width: 75%;
-      }
-
-      @media (max-width: $breakpoints-sm) {
-        width: 100%;
-      }
-
-      @media (max-width: $breakpoints-tiny) {
-        width: 100%;
-      }
-
-      @media (orientation: landscape) {
-        width: 40%;
-      }
     }
   }
 
   .cloud-container {
     position: absolute;
-    width: 100%;
+    width: 115%;
+    left: -7.5%;
     bottom: 0px;
+    transform: translateY(var(--translateY, 0px));
 
-    .clouds {
-      margin-bottom: -7%;
-      margin-left: -7.5%;
-      width: 115%;
-      transform: translateY(var(--translateY));
-      // animation: sway linear 13s infinite;
+    > * {
+      display: block !important;
 
-      @media (max-width: $breakpoints-md) {
-        transform: scale(1.5) translateY(var(--translateY));
-        margin-bottom: -3%;
-        margin-left: 0%;
-        width: 100%;
-      }
-
-      @media (max-width: $breakpoints-sm) {
-        transform: scale(2.5) translateY(var(--translateY));
-        margin-bottom: -3%;
-        margin-left: 0%;
-        width: 100%;
-      }
-
-      @media (orientation: landscape) {
-        transform: scale(1.1) translateY(var(--translateY));
-        width: 100%;
-        margin-left: 0%;
-        margin-bottom: -10%;
+      img {
+        animation: sway linear 20s infinite;
+        transform: translateY(25%);
       }
     }
   }
@@ -141,7 +100,6 @@ $logo-offset: 50px;
     height: 100%;
     width: 100%;
     top: -$logo-offset;
-    transform: scale(2);
 
     @media (max-width: $breakpoints-tiny) {
       top: -(math.div($logo-offset, 2));

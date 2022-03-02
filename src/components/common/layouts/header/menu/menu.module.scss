@@ -59,7 +59,8 @@
     justify-content: center;
     // When menu is transparent we don't want borders - "--button-border" is set to none in that case.
     border-right: var(--button-border, 1px solid $colors-monochrome-5);
-    background: $colors-monochrome-2;
+    // background: $colors-monochrome-2;
+    background: var(--header-background-color, $colors-monochrome-2);
     cursor: pointer;
     // background: transparent;
 

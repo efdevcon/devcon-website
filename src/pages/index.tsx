@@ -9,7 +9,7 @@ import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
 import { Notifications } from 'components/domain/app/notifications'
 import { TITLE } from 'utils/constants'
-import { GetPages } from 'services/page'
+import { GetPages, GetNews } from 'services/page'
 import { GetStaticPaths } from 'next'
 import { getMessages } from 'utils/intl'
 
@@ -18,16 +18,16 @@ export default pageHOC(function Index(props: any) {
     <Default>
       <SEO />
       {/* <PWAPrompt /> */}
-      {/* <News data={data.newsDataInline} /> */}
+      {/* <News data={props.newsItems} /> */}
       <BlogReel blogs={props.blogs} />
-      <Notifications />
+      {/* <Notifications /> */}
     </Default>
   )
 })
 
 export async function getStaticProps(context: any) {
   // Get News
-    const intl = await getMessages(context.locale)
+  const intl = await getMessages(context.locale)
 
   return {
     props: {
@@ -35,6 +35,7 @@ export async function getStaticProps(context: any) {
       blogs: await GetBlogs(),
       navigationData: await GetNavigationData(context.locale),
       notification: GetLatestNotification(context.locale),
+      news: GetNews(context.locale),
       page: {
         title: TITLE,
         description: intl.description,
@@ -42,8 +43,8 @@ export async function getStaticProps(context: any) {
         tags: [],
         lang: context.locale,
         id: 'index',
-        slug: 'index'
-      }
-    }
+        slug: 'index',
+      },
+    },
   }
 }

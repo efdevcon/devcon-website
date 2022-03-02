@@ -10,6 +10,7 @@ import { CallToAction } from './call-to-action'
 import Image from 'next/image'
 import imageClouds from 'assets/images/clouds.png'
 import imageMountains from 'assets/images/mountains.png'
+import { Button } from 'components/common/button'
 
 const parallax = (intersectionRatio: any) => {
   return {
@@ -54,18 +55,15 @@ export const Hero = () => {
         <Rays className={css['rays']} />
 
         <div className={css['mountain-container']} style={parallax(intersectionRatio)}>
-          <Image
-            alt="Devcon mountains"
-            className={css['mountains']}
-            src={imageMountains}
-          />
+          <Image alt="Devcon mountains" src={imageMountains} />
         </div>
 
         <div className={css['cloud-container']} style={parallax(intersectionRatio)}>
           <Image
             alt="Devcon clouds"
-            className={css['clouds']}
-            src={imageClouds}
+            /*className={css['clouds']}*/ src={imageClouds}
+            objectFit="cover"
+            objectPosition="bottom"
           />
         </div>
 
@@ -88,14 +86,14 @@ export const Hero = () => {
           </p>
         </div>
 
-        <CallToAction />
+        {/* <CallToAction /> */}
 
         <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>
           <p>{intl('description')}</p>
-          <button className="lg white ghost">
+          <Button className="lg black">
             <IconEventNote className={`icon ${css['icon']}`} />
             <p>{intl('addtocalendar')}</p>
-          </button>
+          </Button>
         </Link>
       </div>
       <CallToAction mobile />

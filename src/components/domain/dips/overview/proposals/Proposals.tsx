@@ -4,7 +4,7 @@ import { Label } from 'components/common/label'
 import { Link } from 'components/common/link'
 import { leftPad } from 'utils/left-pad'
 import { Table, TableColumn } from 'components/common/table'
-import {  SortVariation } from 'components/common/sort'
+import { SortVariation } from 'components/common/sort'
 import { DIP } from 'types/DIP'
 import GithubIcon from 'assets/icons/github.svg'
 import TooltipIcon from 'assets/icons/tooltip.svg'
@@ -37,7 +37,7 @@ const tableColumns: Array<TableColumn> = [
     key: 'number',
     className: css['index-column'],
     sort: SortVariation.basic,
-    render: item => {
+    render: (item: DIP) => {
       return (
         <p className={`${css['index']} h3`}>
           <Link to={item.github} /*commented out until DIP page is deployed: to={item.slug}*/>
@@ -52,7 +52,7 @@ const tableColumns: Array<TableColumn> = [
     key: 'title',
     className: css['name-column'],
     sort: SortVariation.basic,
-    render: item => {
+    render: (item: DIP) => {
       return <Link to={item.github} /*commented out until DIP page is deployed: to={item.slug}*/>{item.title}</Link>
     },
   },
@@ -60,13 +60,18 @@ const tableColumns: Array<TableColumn> = [
     intl: 'dips_summary',
     className: css['summary-column'],
     key: 'summary',
+    render: (item: DIP) => {
+      if (item.summary) {
+        return <div dangerouslySetInnerHTML={{ __html: item.summary ?? '' }} className="markdown" />
+      }
+    },
   },
   {
     intl: 'dips_status',
     key: 'status',
     className: css['status-column'],
     sort: SortVariation.basic,
-    render: item => {
+    render: (item: DIP) => {
       let labelType = 'neutral'
 
       switch (item.status.toLowerCase()) {
@@ -97,7 +102,7 @@ const tableColumns: Array<TableColumn> = [
     key: 'themes',
     className: css['themes-column'],
     sort: SortVariation.basic,
-    render: item => {
+    render: (item: DIP) => {
       return item.themes ? item.themes.join(', ') : null
     },
   },
@@ -105,7 +110,7 @@ const tableColumns: Array<TableColumn> = [
     intl: 'dips_tags',
     key: 'tags',
     className: css['tag-column'],
-    sort: (item1, item2) => {
+    sort: (item1: DIP, item2: DIP) => {
       const a = item1.tags
         .map(item => item.trim().toLowerCase())
         .sort()
@@ -117,7 +122,7 @@ const tableColumns: Array<TableColumn> = [
 
       return a.localeCompare(b)
     },
-    render: item => {
+    render: (item: DIP) => {
       return item.tags
         ? item.tags.map(tag => (
             <Label key={tag} type="neutral" className={css['tag']}>
@@ -132,7 +137,7 @@ const tableColumns: Array<TableColumn> = [
     className: css['authors-column'],
     key: 'authors',
     // Authors have no standard format so this is a tricky one
-    // render: item => {
+    // render: (item: DIP) => {
     //   console.log(item.authors, 'authors')
 
     //   if (!item.authors) return null
@@ -157,7 +162,7 @@ const tableColumns: Array<TableColumn> = [
     intl: 'dips_links',
     key: 'links',
     className: css['links-column'],
-    render: item => {
+    render: (item: DIP) => {
       return <Links dip={item} />
     },
   },
@@ -166,9 +171,9 @@ const tableColumns: Array<TableColumn> = [
     intl: 'dips_expand',
     key: 'link',
     className: css['expand-column'],
-    render: item => {
+    render: (item: DIP) => {
       return (
-        <Link to={item.slug}>
+        <Link to={`/dips/dip-${item.number}`}>
           <ArrowRight />
         </Link>
       )

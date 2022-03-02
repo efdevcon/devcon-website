@@ -41,8 +41,9 @@ export function GetNavigation(slug: string, lang: string = 'en'): Array<Link> {
 
 function parseLinks(links: any[], lang: string): Array<Link> {
     return links.map((i: any) => {
-        if (i.type === 'page' || i.type === 'app') {
+        if (i.type === 'page') {
             const page = GetPage(i.slug, lang)
+
             if (page) {
                 return {
                     title: page.title,
@@ -64,24 +65,33 @@ function parseLinks(links: any[], lang: string): Array<Link> {
             }
         }
 
-        if (i.type === 'header') {
+        if (['header', 'links', 'app'].includes(i.type)) {
             const headerFilePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'headers', lang, i.slug + '.md')
             const headerContent = fs.readFileSync(headerFilePath, 'utf8')
             const headerDoc = matter(headerContent)
+
+            if (i.type === 'links') {
+                return {
+                    title: headerDoc.data.title,
+                    url: '#',
+                    type: i.type,
+                    links: parseLinks(i.links, lang)
+                }
+            }
+
+            if (i.type === 'app') {
+                return {
+                    title: headerDoc.data.title,
+                    url: `/${i.slug}`,
+                    noLocale: true,
+                    type: i.type
+                }
+            }
 
             return {
                 title: headerDoc.data.title,
                 url: '#',
                 type: i.type
-            }
-        }
-
-        if (i.type === 'links') {
-            return {
-                title: i.slug,
-                url: '#',
-                type: i.type,
-                links: parseLinks(i.links, lang)
             }
         }
 
