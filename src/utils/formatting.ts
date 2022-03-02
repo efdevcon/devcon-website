@@ -1,4 +1,5 @@
 import moment from "moment"
+import slugify from "slugify"
 import { EVENT_DAYS } from "./constants"
 
 export function GetExcerpt(text: string, length: number = 250) {
@@ -25,4 +26,8 @@ export function GetDevconDay(timestamp: number): string {
   const day = moment.utc(timestamp).day()
   const index = EVENT_DAYS.indexOf(day)
   return index > -1 ? `Day ${index + 1}` : ''
+}
+
+export function defaultSlugify(text: string): string {
+  return slugify(text, { lower: true, strict: true, trim: true })
 }

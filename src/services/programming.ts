@@ -1,6 +1,7 @@
 import { Speaker } from 'types/Speaker'
 import { Room } from 'types/Room'
 import { Session as SessionType } from 'types/Session'
+import { defaultSlugify } from 'utils/formatting'
 require('dotenv').config()
 
 const cache = new Map()
@@ -53,9 +54,10 @@ export async function GetRooms(): Promise<Array<Room>> {
     const rooms = await exhaustResource(`/events/${eventName}/rooms`);
     return rooms.map((i: any) => {
         return {
-            i: String(i.id),
+            id: i.name?.en ? defaultSlugify(i.name?.en) : String(i.id),
             name: i.name?.en ?? '',
             description: i.description?.en ?? '',
+            info: i.speaker_info?.en ?? null,
             capacity: i.capacity
         }
     })

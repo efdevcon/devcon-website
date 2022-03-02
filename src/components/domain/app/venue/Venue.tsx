@@ -5,47 +5,16 @@ import { useSort, SortVariation, Sort } from 'components/common/sort'
 import { LinkList, Link } from 'components/common/link'
 import { useFilter } from 'components/common/filter'
 import css from './venue.module.scss'
-import { Button } from 'components/common/button'
 import ListIcon from 'assets/icons/list.svg'
 import LayersIcon from 'assets/icons/layers.svg'
+import { Room } from 'types/Room'
 
-const dummySessions = [
-  { id: '1', title: 'Test session' },
-  { id: '2', title: 'Test session 2' },
-  { id: '3', title: 'Test session 3' },
-]
+interface Props {
+  rooms: Array<Room>
+  floors: Array<string>
+}
 
-const floors = [
-  {
-    id: '1',
-    rooms: [
-      { text: 'Room one', id: 'room-one' },
-      { text: 'Room two', id: 'room-two' },
-      { text: 'Room three', id: 'room-three' },
-    ],
-    name: 'F1',
-  },
-  {
-    id: '2',
-    rooms: [
-      { text: 'Room one', id: 'room-one' },
-      { text: 'Room two', id: 'room-two' },
-      { text: 'Room three', id: 'room-three' },
-    ],
-    name: 'F2',
-  },
-  {
-    id: '3',
-    rooms: [
-      { text: 'Room one', id: 'room-one' },
-      { text: 'Room two', id: 'room-two' },
-      { text: 'Room three', id: 'room-three' },
-    ],
-    name: 'F3',
-  },
-]
-
-export const Venue = () => {
+export const Venue = (props: Props) => {
   const [listView, setListView] = React.useState()
   const [search, setSearch] = React.useState('')
   const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
@@ -59,9 +28,10 @@ export const Venue = () => {
       }
     }),
     filterFunction: (activeFilter: any) => {
-      if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
+      // if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
 
-      return dummySessions.filter(speaker => activeFilter[speaker.title])
+      // dummySessions.filter(speaker => activeFilter[speaker.title])
+      return []
     },
   })
 
@@ -118,19 +88,17 @@ export const Venue = () => {
 
       <div className="section">
         <div className="content">
-          {floors.map((floor: any) => {
-            const { rooms, name } = floor
+          {props.floors.map((floor) => {
+            const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
             return (
-              <React.Fragment key={name}>
-                <div className={`list-item padded bold ${css['title']}`}>{name}</div>
+              <React.Fragment key={floor}>
+                <div className={`list-item padded bold ${css['title']}`}>{floor}</div>
                 <LinkList noIndicator>
-                  {rooms.map((room: any) => {
-                    const { text, id } = room
-
+                  {roomsByFloor.map((room: Room) => {
                     return (
-                      <Link key={id} to={`/app/venue/${id}`}>
-                        {text}
+                      <Link key={room.id} to={`/app/venue/${room.id}`}>
+                        {room.name}
                       </Link>
                     )
                   })}
