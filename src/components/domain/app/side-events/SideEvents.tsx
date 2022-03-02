@@ -127,7 +127,7 @@ export const SideEvents = (props: any) => {
         {/* <h4 className={`app-header ${css['header']}`}>Side Events</h4> */}
 
         {sessions.map(session => {
-          return <SessionCard session={props.sessions[0]} speakers={props.speakers} key={session.id} />
+          return <SessionCard key={session.id} session={props.sessions[0]} />
         })}
       </div>
     </div>

@@ -10,7 +10,7 @@ interface TabsProps {
 }
 
 const isValidTab = (children: React.ReactChildren, tab: string) => {
-  return React.Children.toArray(children).some(child => child?.props?.title === tab)
+  return React.Children.toArray(children).some((child: any) => child?.props?.title === tab)
 }
 
 const findFirstValidTab = (children: React.ReactChildren): any => {

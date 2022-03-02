@@ -95,7 +95,7 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
       className={containerClass}
       style={{
         "--container-size": `${containerSize}px`,
-      }}
+      } as any}
     >
       {chunkedContributors.map((contributors, index) => {
         const isOdd = index % 2 !== 0;

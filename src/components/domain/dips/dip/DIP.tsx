@@ -11,7 +11,7 @@ import { DIP as DIPType } from 'types/DIP'
 import ArrowLeft from 'assets/icons/arrow_left.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 
-const tableColumns = [
+const tableColumns: any = [
   {
     intl: 'dips_status',
     key: 'status',

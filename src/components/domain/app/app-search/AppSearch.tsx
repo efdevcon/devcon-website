@@ -1,8 +1,8 @@
 import React from 'react'
 import IconSearch from 'assets/icons/search.svg'
-import { useSort, SortVariation, Sort } from 'components/common/sort'
+import { Sort } from 'components/common/sort'
 import { InputForm } from 'components/common/input-form'
-import { Filter, FilterFoldout, NoResults, useFilter } from 'components/common/filter'
+import { Filter, FilterFoldout, NoResults } from 'components/common/filter'
 import {
   CollapsedSection,
   CollapsedSectionHeader,
@@ -50,18 +50,18 @@ export const AppSearch = (props: AppSearchProps) => {
             <FilterFoldout>
               {(_, setOpen) => {
                 const clearFilters = () => {
-                  props.filterStates.forEach(({ filterState }: any) => {
+                  props.filterStates?.forEach(({ filterState }: any) => {
                     filterState?.clearFilter()
                   })
                 }
 
-                const filterIsSelected = props.filterStates.some(({ filterState }: any) => {
+                const filterIsSelected = props.filterStates?.some(({ filterState }: any) => {
                   return filterState ? Object.keys(filterState.activeFilter).length : 0
                 })
 
                 return (
                   <>
-                    {props.filterStates.map(({ filterState, title }: any, index: any) => {
+                    {props.filterStates?.map(({ filterState, title }: any, index: any) => {
                       const nFiltersSelected = filterState ? Object.keys(filterState.activeFilter).length : 0
 
                       return (

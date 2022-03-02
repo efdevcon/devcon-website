@@ -201,7 +201,7 @@ export const Speakers = (props: any) => {
       if (!activeFilter || Object.keys(activeFilter).length === 0) return props.speakers
 
       return props.speakers.filter(
-        i => i.tracks && i.tracks.some(x => activeFilter && activeFilter[x])
+        (i: any) => i.tracks && i.tracks.some((x: any) => activeFilter && activeFilter[x])
       )
     },
   })

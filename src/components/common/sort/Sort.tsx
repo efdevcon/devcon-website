@@ -57,7 +57,7 @@ type Field = {
 }
 
 // Generic sorting methods
-export const presetSortingMethods = {
+export const presetSortingMethods: any = {
   number: (fieldKey: string) => (a: any, b: any) => a[fieldKey] - b[fieldKey],
   date: (fieldKey: string) => (a: any, b: any) => {
     const dateA = new Date(a[fieldKey])
@@ -104,7 +104,7 @@ export const useSort = (
       const shouldSort = typeof sortBy === 'number'
 
       if (shouldSort) {
-        const field = fields[sortBy]
+        const field = fields[sortBy] as any
 
         if (typeof field.sort === 'function') {
           return data.slice().sort(field.sort)

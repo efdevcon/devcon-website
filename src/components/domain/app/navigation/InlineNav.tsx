@@ -14,7 +14,7 @@ const Links = (props: any) => {
       ? pathname.slice(0, pathname.length - 1)
       : pathname;
   const toRemove = normalizedPathname.split("/").pop();
-  const nextPathname = normalizedPathname.replace(toRemove, "");
+  const nextPathname = normalizedPathname.replace(toRemove ?? '', '');
 
   return (
     <HorizontalScroller>
