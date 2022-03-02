@@ -1,7 +1,8 @@
 import React from 'react'
 import { Category } from 'types/Category'
 import { FAQ as FaqType } from 'types/FAQ'
-import { Accordion, AccordionItem } from '../../common/accordion'
+import { Accordion } from '../../common/accordion/Accordion'
+import { AccordionItem } from '../../common/accordion/AccordionItem'
 import css from './faq.module.scss'
 
 interface FaqProps {

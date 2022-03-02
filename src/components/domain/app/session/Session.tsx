@@ -10,7 +10,9 @@ import { Tab } from 'components/common/tabs/Tabs'
 import { AppTabsSection } from 'components/domain/app/app-tabs-section'
 import { ThumbnailBlock } from 'components/common/thumbnail-block'
 import { Session as SessionType } from 'types/Session'
-import { Speaker } from 'types/Speaker'
+import moment from 'moment'
+import { GetDevconDay } from 'utils/formatting'
+import Image from 'next/image'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -21,7 +23,7 @@ const Hero = (props: any) => {
     <div className={className}>
       {props.icon && (
         <div className={css['background-icon']}>
-          <img src={props.icon} alt="track" />
+          <Image src={props.icon} alt="track" />
         </div>
       )}
       {props.children}
@@ -30,11 +32,15 @@ const Hero = (props: any) => {
 }
 
 type SessionProps = {
-  sessions: SessionType[]
-  speakers: Speaker[]
+  session: SessionType
+  relatedSessions?: SessionType[]
 }
 
 export const Session = (props: SessionProps) => {
+
+  const duration = moment.duration(moment(props.session.end).diff(props.session.start))
+  const mins = duration.asMinutes()
+
   return (
     <div>
       <Hero icon={iconSecurity} className={css['session-hero']}>
@@ -44,26 +50,30 @@ export const Session = (props: SessionProps) => {
               <div className={css['info-line']}>
                 <IconCalendar />
                 <p>
-                  Day 2 — Oct 22nd <br />
-                  10:00-10:30 AM <span style={{ marginLeft: '12px' }}>30 Mins</span>
+                  {GetDevconDay(props.session.start)} - {moment.utc(props.session.start).format('MMM DD')} <br />
+                  {moment.utc(props.session.start).format('HH:mm')} - {moment.utc(props.session.end).format('HH:mm')} <span style={{ marginLeft: '12px' }}> Mins</span>
                 </p>
               </div>
-              <div className={css['info-line']}>
-                <IconCalendar />
-                <p>Flower Room </p>
-              </div>
-              <div className={css['info-line']}>
-                <IconCalendar />
-                <p>150</p>
-              </div>
+              {props.session.room &&
+                <div className={css['info-line']}>
+                  <IconCalendar />
+                  <p>{props.session.room.name}</p>
+                </div>
+              }
+              {props.session.room?.capacity &&
+                <div className={css['info-line']}>
+                  <IconCalendar />
+                  <p>{props.session.room.capacity}</p>
+                </div>
+              }
 
               <h2 className={css['title']}>
-                Water We Doing: The Changing Tides of the Ethereum Foundation Grants Program
+                {props.session.title}
               </h2>
 
               <div className={css['meta']}>
-                <div className="label white bold">SECURITY</div>
-                <p className="bold text-uppercase">BEGINNER</p>
+                <div className="label white bold">{props.session.track}</div>
+                <p className="bold text-uppercase">BEGINNER (TODO)</p>
               </div>
 
               {/* Update className - not sure what it does yet */}
@@ -92,37 +102,21 @@ export const Session = (props: SessionProps) => {
             </div>
           </div>
 
-          <div className={css['speakers']}>
-            <h3 className={css['title']}>Speakers</h3>
-            <SpeakerCard
-              speaker={{
-                name: 'Vitalik Buterin',
-                role: 'Researcher',
-                company: 'Ethereum Foundation',
-                tracks: ['One'],
-              }}
-            />
-            <SpeakerCard
-              speaker={{
-                name: 'Vitalik Buterin',
-                role: 'Researcher',
-                company: 'Ethereum Foundation',
-                tracks: ['One'],
-              }}
-            />
-          </div>
+          {props.session.speakers.length > 0 &&
+            <div className={css['speakers']}>
+              <h3 className={css['title']}>Speakers</h3>
+              {props.session.speakers.map(i => {
+                return <SpeakerCard key={i.id} speaker={i} />
+              })}
+            </div>
+          }
 
           <div className={css['description']}>
             <h3 className={css['title']}>Description</h3>
-            <p>
-              Machine learning is being adopted more and more broadly in technology. Such success is largely due to a
-              combination of algorithmic breakthroughs, computation resource improvements, and the access to a large
-              amount of diverse training data. The collection of data can raise concerns about siloing, security, and
-              user privacy.
-            </p>
+            <p>{props.session.description}</p>
           </div>
 
-          <div className={css['resources']}>
+          {/* <div className={css['resources']}>
             <h3 className={css['title']}>Resources</h3>
 
             <div className={css['slides']}>
@@ -143,9 +137,9 @@ export const Session = (props: SessionProps) => {
                 <Link to="https://devcon.org">Grantee Roundup: July 2021</Link>
               </LinkList>
             </div>
-          </div>
+          </div> */}
 
-          <div className={css['livestream']}>
+          {/* <div className={css['livestream']}>
             <AppTabsSection
               title="Livestream"
               tabs={[
@@ -167,21 +161,23 @@ export const Session = (props: SessionProps) => {
                 },
               ]}
             />
-            {/* <div>
+            <div>
               <h3 className={css['title']}>Livestream</h3>
               <Tabs>
                 <Tab title="LivePeer">Livepeer</Tab>
                 <Tab title="YouTube">YouTube</Tab>
               </Tabs>
-            </div> */}
-          </div>
+            </div>
+          </div> */}
 
-          <div className={css['related-sessions']}>
-            <h3 className={css['title']}>Related Sessions</h3>
-            {props.sessions.map(session => {
-              return <SessionCard session={session} speakers={props.speakers} key={session.id} />
-            })}
-          </div>
+          {props.relatedSessions && props.relatedSessions.length > 0 && (
+            <div className={css['related-sessions']}>
+              <h3 className={css['title']}>Related Sessions</h3>
+              {props.relatedSessions.map(session => {
+                return <SessionCard session={session} key={session.id} />
+              })}
+            </div>
+          )}
         </div>
       </div>
     </div>

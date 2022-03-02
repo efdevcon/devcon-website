@@ -24,14 +24,14 @@ const FoldoutContent = (props: any) => {
 
   // Moving the foldout content to the root so we have better control over z-index in relation to the header
   return createPortal(
-    <div className={foldoutClassName} style={{ '--headerHeight': `${fullHeaderHeight}px` }}>
+    <div className={foldoutClassName} style={{ '--headerHeight': `${fullHeaderHeight}px` } as any}>
       <div>
         <div className={css['top']}>{props.children}</div>
 
         <div className={css['bottom']}>
           <div className={css['social-media']}>
             <p>Social</p>
-            <SocialMedia url="devcon.org" className={css['social-media-extension']} />
+            <SocialMedia url="devcon.org" className={css['social-media-extension']} onShare={() => {}} />
           </div>
 
           <div className={css['newsletter']}>

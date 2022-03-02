@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: [
+      'speak.devcon.org',
+      'storage.googleapis.com',
+      'avatars.githubusercontent.com',
+      'camo.githubusercontent.com',
+    ],
+  },
   i18n: {
     locales: ['default', 'en', 'es'],
     defaultLocale: 'default',

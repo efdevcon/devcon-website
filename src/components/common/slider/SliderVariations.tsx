@@ -7,6 +7,7 @@ type SliderStickyNotesProps = {
   cards: {
     title: string
     description: string
+    url: string,
     color: 'pink' | 'yellow' | 'green' | 'blue'
   }[]
 }
@@ -39,15 +40,15 @@ export const SliderStickyNotes = (props: SliderStickyNotesProps) => {
   const sliderProps = useSlider(settings)
 
   return (
-    <Slider containerClassName={css['slider']} sliderProps={sliderProps} title={props.title} onlySlider>
-      {props.cards.map(({ title, description, color }) => {
+    <Slider containerClassName={css['slider']} sliderProps={sliderProps} title='' onlySlider>
+      {props.cards.map(({ title, description, url, color }) => {
         return (
           <BasicCard
             key={title}
             className={`${css['card']} ${css[color]}`}
             slide={sliderProps[1].canSlide}
             expandLink
-            linkUrl="/app/schedule"
+            linkUrl={url}
             allowDrag
           >
             <>

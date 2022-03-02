@@ -1,166 +1,158 @@
-import React from "react";
-import Github from "assets/icons/github.svg";
-import css from "./contribute.module.scss";
-import { Link } from "components/common/link";
-import { Contributor } from "types/DIP";
-import { Tooltip } from "components/common/tooltip";
-import { useTranslations } from "next-intl";
-import { chunkArray } from "utils/chunk-array";
+import React from 'react'
+import Github from 'assets/icons/github.svg'
+import css from './contribute.module.scss'
+import { Link } from 'components/common/link'
+import { Contributor } from 'types/DIP'
+import { Tooltip } from 'components/common/tooltip'
+import { useTranslations } from 'next-intl'
+import { chunkArray } from 'utils/chunk-array'
+import Image from 'next/image'
 
 type ContributeProps = {
-  contributors: Array<Contributor>;
-  dipDescription: any;
-};
+  contributors: Array<Contributor>
+  dipDescription: any
+}
 
 type ThumbnailProps = {
-  contributor: Contributor;
-};
+  contributor: Contributor
+}
 
 const Thumbnail = ({ contributor }: ThumbnailProps) => {
   return (
     <Tooltip content={contributor.name}>
-      <img
+      <Image
         key={contributor.name}
-        className={css["thumbnail"]}
+        className={css['thumbnail']}
         alt={`Contributor: ${contributor.name}`}
         src={contributor.avatarUrl}
+        layout="fill"
       />
     </Tooltip>
-  );
-};
+  )
+}
 
 /*
   TO FIX: on safari the animated tracks "flash" when they reset their animation (happens every 50 seconds so not that significant)
 */
 const AutoScroller = (props: { contributors: Array<Contributor> }) => {
-  const [containerSize, setContainerSize] = React.useState(0);
-  const cleanupRef = React.useRef<any>();
+  const [containerSize, setContainerSize] = React.useState(0)
+  const cleanupRef = React.useRef<any>()
 
-  const setRef = React.useCallback((node) => {
-    if (cleanupRef.current) cleanupRef.current();
-    if (!node) return;
+  const setRef = React.useCallback(node => {
+    if (cleanupRef.current) cleanupRef.current()
+    if (!node) return
 
-    const el = node;
+    const el = node
 
     if (window.ResizeObserver) {
-      const observer = new window.ResizeObserver((entries) => {
-        const entry = entries[0];
+      const observer = new window.ResizeObserver(entries => {
+        const entry = entries[0]
 
-        let size;
+        let size
 
         if (entry.contentBoxSize) {
-          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize;
-          size = borderBoxSize.inlineSize;
+          const borderBoxSize = entry.borderBoxSize[0] || entry.borderBoxSize
+          size = borderBoxSize.inlineSize
         } else {
-          size = entry.contentRect.width;
+          size = entry.contentRect.width
         }
 
-        setContainerSize(size);
-      });
+        setContainerSize(size)
+      })
 
-      observer.observe(el);
+      observer.observe(el)
 
       cleanupRef.current = () => {
-        observer.unobserve(el);
-      };
+        observer.unobserve(el)
+      }
     } else {
       const syncTrackSize = () => {
-        const { width } = el.getBoundingClientRect();
+        const { width } = el.getBoundingClientRect()
 
-        setContainerSize(width);
-      };
+        setContainerSize(width)
+      }
 
-      syncTrackSize();
+      syncTrackSize()
 
-      window.addEventListener("resize", syncTrackSize);
+      window.addEventListener('resize', syncTrackSize)
 
       cleanupRef.current = () => {
-        window.removeEventListener("resize", syncTrackSize);
-      };
+        window.removeEventListener('resize', syncTrackSize)
+      }
     }
-  }, []);
+  }, [])
 
-  const maxThumbnailsInView = 6;
-  const nRows = 3;
+  const maxThumbnailsInView = 6
+  const nRows = 3
 
-  let containerClass = css["scroll-container"];
+  let containerClass = css['scroll-container']
 
-  const chunkedContributors = chunkArray(props.contributors, nRows);
+  const chunkedContributors = chunkArray(props.contributors, nRows)
 
   return (
     <div
-      key={containerSize === 0 ? "loading" : containerSize} // Remounting the element when containerSize changes solves a lot of safari edge cases by resetting the CSS animations
+      key={containerSize === 0 ? 'loading' : containerSize} // Remounting the element when containerSize changes solves a lot of safari edge cases by resetting the CSS animations
       ref={setRef}
       className={containerClass}
-      style={{
-        "--container-size": `${containerSize}px`,
-      }}
+      style={
+        {
+          '--container-size': `${containerSize}px`,
+        } as any
+      }
     >
       {chunkedContributors.map((contributors, index) => {
-        const isOdd = index % 2 !== 0;
+        const isOdd = index % 2 !== 0
 
-        let className = css["track"];
+        let className = css['track']
 
-        if (containerSize) className += ` ${css["animate"]}`; // Have to wait with animating until containerSize is determined - bugs out in Safari otherwise
-        if (isOdd) className += ` ${css["odd"]} ${css["reverse"]}`;
+        if (containerSize) className += ` ${css['animate']}` // Have to wait with animating until containerSize is determined - bugs out in Safari otherwise
+        if (isOdd) className += ` ${css['odd']} ${css['reverse']}`
 
         return (
           <div key={index} className={className}>
-            {contributors.map((contributor) => {
-              return (
-                <Thumbnail key={contributor.name} contributor={contributor} />
-              );
+            {contributors.map(contributor => {
+              return <Thumbnail key={contributor.name} contributor={contributor} />
             })}
             {/* Have to repeat some thumbnails to give the illusion of infinite loop */}
-            {contributors.slice(0, maxThumbnailsInView).map((contributor) => {
-              return (
-                <Thumbnail key={contributor.name} contributor={contributor} />
-              );
+            {contributors.slice(0, maxThumbnailsInView).map(contributor => {
+              return <Thumbnail key={contributor.name} contributor={contributor} />
             })}
           </div>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
 export const Contribute = (props: ContributeProps) => {
-  const intl = useTranslations();
+  const intl = useTranslations()
 
   return (
-    <section id="contribute" className={css["section"]}>
-      <h3 className="spaced">{intl("dips_contribute")}</h3>
+    <section id="contribute" className={css['section']}>
+      <h3 className="spaced">{intl('dips_contribute')}</h3>
 
-      <div className={css["container"]}>
-        <div className={css["left-section"]}>
+      <div className={css['container']}>
+        <div className={css['left-section']}>
           <div
             dangerouslySetInnerHTML={{ __html: props.dipDescription }}
-            className={`${css["dip-description"]} markdown`}
+            className={`${css['dip-description']} markdown`}
           />
-          <div className={css["links"]}>
-            <Link
-              to="https://forum.devcon.org"
-              indicateExternal
-              className="text-uppercase font-lg bold font-secondary"
-            >
-              {intl("dips_visit_forum")}
+          <div className={css['links']}>
+            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
+              {intl('dips_visit_forum')}
             </Link>
-            <Link
-              to="https://forum.devcon.org"
-              indicateExternal
-              className="text-uppercase font-lg bold font-secondary"
-            >
-              {intl("dips_create_proposal")}
+            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
+              {intl('dips_create_proposal')}
             </Link>
           </div>
         </div>
-        <div className={css["contributors"]}>
+        <div className={css['contributors']}>
           <AutoScroller contributors={props.contributors} />
-          <div className={css["info"]}>
-            <p>* {intl("dips_contributors")}</p> <Github />
+          <div className={css['info']}>
+            <p>* {intl('dips_contributors')}</p> <Github />
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

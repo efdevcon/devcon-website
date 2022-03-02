@@ -2,20 +2,21 @@ import React from 'react'
 import { AppTabsSection } from '../app-tabs-section'
 import { SessionCard } from '../session'
 import { AppSearch } from '../app-search'
-import { useSort, SortVariation, Sort } from 'components/common/sort'
-import { Filter, FilterFoldout, NoResults, useFilter } from 'components/common/filter'
+import { useSort, SortVariation } from 'components/common/sort'
+import { useFilter } from 'components/common/filter'
 import css from './room.module.scss'
 import { Gallery } from 'components/common/gallery'
 import CapacityIcon from 'assets/icons/capacity.svg'
 import InfoIcon from 'assets/icons/info.svg'
+import { Session as SessionType } from 'types/Session'
+import { Room as RoomType } from 'types/Room'
 
-const dummySessions = [
-  { id: '1', title: 'Test session' },
-  { id: '2', title: 'Test session 2' },
-  { id: '3', title: 'Test session 3' },
-]
+interface Props {
+  room: RoomType
+  upcomingSessions: Array<SessionType>
+}
 
-export const Room = (props: any) => {
+export const Room = (props: Props) => {
   const [search, setSearch] = React.useState('')
   const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
   const [sessions, filterState] = useFilter({
@@ -28,11 +29,12 @@ export const Room = (props: any) => {
       }
     }),
     filterFunction: (activeFilter: any) => {
-      if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
+      // if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
 
-      console.log(activeFilter, 'active filter')
+      // console.log(activeFilter, 'active filter')
 
-      return dummySessions.filter(speaker => activeFilter[speaker.title])
+      // return dummySessions.filter(speaker => activeFilter[speaker.title])
+      return props.upcomingSessions
     },
   })
 
@@ -78,18 +80,20 @@ export const Room = (props: any) => {
         />
 
         <Gallery className={css['gallery']}>
-          <h1>Room</h1>
-          <h1>Room</h1>
+          <h1>{props.room.name}</h1>
+          <h1>{props.room.name}</h1>
         </Gallery>
 
         <div className={css['room-info']}>
-          <p className="bold">Floor.Room</p>
-          <p className="h2">Flower Power</p>
-          <div className="label">
-            <CapacityIcon className={`icon ${css['capacity-icon']}`} />
-            <p>Capacity - 150 </p>
-            <InfoIcon />
-          </div>
+          <p className="bold">{props.room.description}</p>
+          <p className="h2">{props.room.name}</p>
+          {props.room.capacity &&
+            <div className="label">
+              <CapacityIcon className={`icon ${css['capacity-icon']}`} />
+              <p>Capacity - {props.room.capacity} </p>
+              <InfoIcon />
+            </div>
+          }
         </div>
 
         <AppTabsSection
@@ -100,9 +104,9 @@ export const Room = (props: any) => {
               title: 'Past',
               content: (
                 <div>
-                  <SessionCard />
-                  <SessionCard />
-                  <SessionCard />
+                  {props.upcomingSessions.map((i) => {
+                    return <SessionCard key={i.id} session={i} />
+                  })}
                 </div>
               ),
             },
@@ -110,8 +114,9 @@ export const Room = (props: any) => {
               title: 'Attending',
               content: (
                 <div>
-                  <SessionCard />
-                  <SessionCard />
+                  {props.upcomingSessions.map((i) => {
+                    return <SessionCard key={i.id} session={i} />
+                  })}
                 </div>
               ),
             },
@@ -119,7 +124,9 @@ export const Room = (props: any) => {
               title: 'Upcoming',
               content: (
                 <div>
-                  <SessionCard />
+                  {props.upcomingSessions.map((i) => {
+                    return <SessionCard key={i.id} session={i} />
+                  })}
                 </div>
               ),
             },

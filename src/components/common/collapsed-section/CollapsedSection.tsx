@@ -25,7 +25,7 @@ const CollapsedSectionHeader = (props: CollapsedSectionHeaderProps) => {
   if (props.className) className += ` ${props.className}`
 
   return (
-    <div className={className} onClick={() => props.setOpen(!props.open)}>
+    <div className={className} onClick={() => props.setOpen ? props.setOpen(!props.open) : ''}>
       {/* Optional default title to help with consistency */}
       {props.title && <p className={css['title']}>{props.title}</p>}
       {props.children}
@@ -105,7 +105,7 @@ export const CollapsedSectionContent = (props: any) => {
   // if (props.className) className += ` ${props.className}`
 
   return (
-    <div ref={ref} className={className} style={{ '--contentHeight': contentHeight }}>
+    <div ref={ref} className={className} style={{ '--contentHeight': contentHeight } as any}> 
       {props.children}
     </div>
   )

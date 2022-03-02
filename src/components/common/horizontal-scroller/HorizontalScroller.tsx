@@ -14,12 +14,12 @@ const usePreventClickWhileDragging = (elementRef: any, threshold = 10) => {
 
   // Have to add events directly to the DOM node itself
   React.useEffect(() => {
-    const handleDown = (e: Event) => {
+    const handleDown = (e: MouseEvent) => {
       preventClick.current = false;
 
       initialX.current = e.clientX;
     };
-    const handleMove = (e: Event) => {
+    const handleMove = (e: MouseEvent) => {
       preventClick.current = true;
 
       deltaX.current = Math.abs(initialX.current - e.clientX);
@@ -81,7 +81,7 @@ export const HorizontalScroller = (props: any) => {
       setIndicatorVisibleRight(false);
       setIndicatorVisibleLeft(false);
     }
-  }, [isTouchDevice]);
+  }, []);
 
   const bind = useGesture(
     {
@@ -116,8 +116,7 @@ export const HorizontalScroller = (props: any) => {
   React.useEffect(() => {
     if (window.ResizeObserver) {
       const el = elementRef.current;
-
-      if (!el) return;
+      if (!el) return
 
       const observer = new window.ResizeObserver((entries) => {
         const entry = entries[0];
@@ -133,10 +132,7 @@ export const HorizontalScroller = (props: any) => {
         }
 
         scrolledBy.current = 0;
-
-        console.log(elementRef, "ele ref");
-
-        elementRef.current.style.transform = `translateX(0px)`;
+        el.style.transform = `translateX(0px)`;
 
         syncIndicators();
       });

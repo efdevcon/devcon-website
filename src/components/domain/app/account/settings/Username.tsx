@@ -42,7 +42,7 @@ export default function UsernameSettings() {
             <div className={css['form']}>
               <p className={`${css['title']} title`}>Edit Username</p>
               {avatar.ens && !currentAccount?.username && 
-                <p className={css['content']}>You're using your ENS username. Updating your username on Devcon.org doesn't update your ENS name.</p>
+                <p className={css['content']}>You&apos;re using your ENS username. Updating your username on Devcon.org doesn&apos;t update your ENS name.</p>
               }
 
               <InputForm 

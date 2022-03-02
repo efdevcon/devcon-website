@@ -14,6 +14,7 @@ export function Carousel() {
       <h3>Bogota Colombia</h3>
 
       <div className={css['images']}>
+        {/* TODO: Next Images
         <img src={Image1} alt="Bogota" />
         <img src={Image2} alt="Bogota" />
         <img src={Image3} alt="Bogota" />
@@ -25,7 +26,7 @@ export function Carousel() {
         <img src={Image3} alt="Bogota" />
         <img src={Image4} alt="Bogota" />
         <img src={Image5} alt="Bogota" />
-        <img src={Image6} alt="Bogota" />
+        <img src={Image6} alt="Bogota" /> */}
       </div>
     </div>
   )

@@ -92,7 +92,7 @@ export default function EmailSettings() {
 
               {emailSent && <>
                 <p className={css['content']}>
-                  We've sent a verification code to your email address. Please enter this code on below.
+                  We&apos;ve sent a verification code to your email address. Please enter this code on below.
                 </p>
                 <InputForm 
                   className={css['input']} 

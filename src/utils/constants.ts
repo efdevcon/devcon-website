@@ -17,6 +17,10 @@ export const COPYRIGHT_NOTICE = '© 2021 — Ethereum Foundation. All Rights Res
 
 export const BASE_CONTENT_FOLDER = 'content'
 
+export const EVENT_DAYS = [11, 12, 13, 14]
+
+export const DEFAULT_REVALIDATE_PERIOD = 3600
+
 export const DEFAULT_APP_PAGE = {
     title: TITLE,
     description: DESCRIPTION,

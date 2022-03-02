@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
 import css from './side-events.module.scss'
 import { Link, LinkList } from 'components/common/link'
 import {
@@ -9,10 +7,12 @@ import {
   CollapsedSectionHeader,
 } from 'components/common/collapsed-section'
 import { AppSearch } from 'components/domain/app/app-search'
-import { useSort, SortVariation, Sort } from 'components/common/sort'
-import { Filter, FilterFoldout, NoResults, useFilter } from 'components/common/filter'
+import { useSort, SortVariation } from 'components/common/sort'
+import { useFilter } from 'components/common/filter'
 import { SessionCard } from 'components/domain/app/session'
 import logo from 'assets/images/test-asset.svg'
+import Image from 'next/image'
+import imageBogota from 'assets/images/bogota-city.png'
 
 const dummySessions = [
   { id: '1', title: 'Test session' },
@@ -63,32 +63,18 @@ export const SideEvents = (props: any) => {
     'desc'
   )
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativePath: { in: ["bogota-city.png"] } }) {
-        nodes {
-          childImageSharp {
-            fluid(maxWidth: 800, quality: 80) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div className="section">
       <div className="content">
         <div className={`${css['hero']}`}>
           <div className={`${css['hero-content']}`}>
             <div className={css['image-container']}>
-              <Image fluid={data.allFile.nodes[0].childImageSharp.fluid} objectFit="cover" />
+              <Image src={imageBogota} objectFit='cover' alt={'Devcon Side event'} />
             </div>
 
             <div className={`${css['details']}`}>
               <div>
-                <img src={logo} alt="Title" />
+                <Image src={logo} alt="Title" />
 
                 <div className={css['title']}>
                   <h2 className="bold font-primary font-xxl">Devcon Bogota</h2>
@@ -141,7 +127,7 @@ export const SideEvents = (props: any) => {
         {/* <h4 className={`app-header ${css['header']}`}>Side Events</h4> */}
 
         {sessions.map(session => {
-          return <SessionCard session={props.sessions[0]} speakers={props.speakers} key={session.id} />
+          return <SessionCard key={session.id} session={props.sessions[0]} />
         })}
       </div>
     </div>

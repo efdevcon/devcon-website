@@ -7,19 +7,24 @@
   margin-bottom: $gaps-gap-4;
 
   .thumbnail {
-    padding: $gaps-gap-2;
     background: #f5f6f6;
     display: flex;
     align-items: center;
+    padding: $gaps-gap-4;
 
-    img {
+    .wrapper {
+      position: relative;
       width: 64px;
       height: 64px;
-
+      
       @media (max-width: 400px) {
         width: 48px;
         height: 48px;
       }
+
+      img {
+        border-radius: 50%;
+      } 
     }
   }
 

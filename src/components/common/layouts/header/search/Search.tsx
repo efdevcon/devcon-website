@@ -18,7 +18,7 @@ export const Search = (props: any) => {
   const [searchQuery, setSearchQuery] = useState('')
   const defaultPageSize = 6
   const qs = useQueryStringer({}, false)
-  const { data, isLoading, isError } = useArchiveSearch(qs, { q: searchQuery, from: 0, size: defaultPageSize }, false)
+  const { data, isLoading, isError } = useArchiveSearch(qs, { q: searchQuery, from: 0, size: defaultPageSize })
   const staffPicks = useStaffPicks()
   const showSuggested = !searchQuery
 

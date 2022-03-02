@@ -6,6 +6,7 @@ import { Link as LinkType } from 'types/Link'
 import ArrowCollapse from 'assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'assets/icons/arrow_drop_down.svg'
 import OnDemandVideoIcon from 'assets/icons/on_demand_video.svg'
+import Image from 'next/image'
 
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
@@ -26,7 +27,7 @@ const Mobile = (props: any) => {
             <li key={i.title} className={open && hasChildren ? css['open'] : ''}>
               {i.logo && (
                 <div className={css['foldout-background']}>
-                  <img src={i.logo} alt={`${i.title}: background logo`} />
+                  <Image src={i.logo} alt={`${i.title}: background logo`} />
                 </div>
               )}
               {hasChildren ? (
@@ -135,7 +136,7 @@ export const Navigation = (props: any) => {
                   <div className={css['foldout']}>
                     {i.logo && (
                       <div className={css['foldout-background']}>
-                        <img src={i.logo} alt={`${i.title}: background logo`} />
+                        <Image src={i.logo} alt={`${i.title}: background logo`} />
                       </div>
                     )}
                     {i.links && i.links.length > 0 && (

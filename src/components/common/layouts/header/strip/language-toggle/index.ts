@@ -1,1 +1,1 @@
-export { LanguageToggle, useLanguageToggle } from './LanguageToggle'
+export { LanguageToggle } from './LanguageToggle'

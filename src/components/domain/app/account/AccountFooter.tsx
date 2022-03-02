@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'components/common/link'
 import footerRoad from './footer-road.png'
 import css from './login.module.scss'
+import Image from 'next/image'
 
 export default function AccountFooter() {
     return <div className={css['footer']}>
@@ -20,7 +21,7 @@ export default function AccountFooter() {
               Terms & Conditions
             </Link>
           </div>
-          <img className={css['img']} src={footerRoad} alt="Man and dog on road" />
+          <Image className={css['img']} src={footerRoad} alt="Man and dog on road" />
         </div>
       </div>
     </div>

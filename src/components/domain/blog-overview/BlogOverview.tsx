@@ -18,10 +18,9 @@ export const BlogOverview = (props: Props) => {
     <div className={className}>
       {props.blogs.map((blog: BlogPost) => {
         return (
-          <div className={css['outer']} id={blog.id}>
+          <div className={css['outer']} id={blog.id} key={blog.slug}>
             <Card
               className={css['card']}
-              key={blog.slug}
               title={blog.title}
               description={blog.description}
               imageUrl={blog.imageUrl}

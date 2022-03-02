@@ -14,6 +14,7 @@ import { Alert } from 'components/common/alert'
 import { getSiweMessage } from 'utils/web3'
 import AccountFooter from './AccountFooter'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -113,7 +114,7 @@ export default function LoginPage() {
                 <p className={css['connect']}>Connect —</p>
                 <p className={css['description']}>Your personalized passport to the Devcon experience.</p>
 
-                <img className={css['logo']} src={pwaIcon} alt="App logo" />
+                <Image className={css['logo']} src={pwaIcon} alt="App logo" />
               </div>
             </div>
           </div>
@@ -125,7 +126,7 @@ export default function LoginPage() {
                 <IconSwirl className={`${css['swirl-icon']} icon`} />
               </div>
               <p>
-                If this is the first time you're logging in, <b>Connect</b> will automatically create a new account on
+                If this is the first time you&apos;re logging in, <b>Connect</b> will automatically create a new account on
                 your behalf.
               </p>
             </div>
@@ -138,7 +139,7 @@ export default function LoginPage() {
               <div className={css['email']}>
                 <p className="bold">Email — Confirm your email address</p>
                 <p>
-                  We've sent a verification code to your email address. Please enter this code on below.
+                  We&apos;ve sent a verification code to your email address. Please enter this code on below.
                 </p>
                 <InputForm 
                   className={css['input']} 
@@ -153,7 +154,7 @@ export default function LoginPage() {
             {!emailSent && <>
               <div className={css['trust-model']}>
                 <p>Choose your Trust model.</p>
-                <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x)/ 0=('_'Q)</p>}>
+                <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
                   <span onClick={() => setTooltipVisible(!tooltipVisible)}>
                     <IconHelp className={`icon ${css['icon-help']}`} />
                   </span>

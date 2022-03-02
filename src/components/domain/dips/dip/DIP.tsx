@@ -12,7 +12,7 @@ import ArrowLeft from 'assets/icons/arrow_left.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 // import { MDXRemote } from 'next-mdx-remote'
 
-const tableColumns = [
+const tableColumns: any = [
   {
     intl: 'dips_status',
     key: 'status',

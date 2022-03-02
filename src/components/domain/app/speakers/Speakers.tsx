@@ -12,32 +12,11 @@ import {
 } from 'components/common/collapsed-section'
 import { Speaker as SpeakerType } from 'types/Speaker'
 import { useSort, SortVariation, Sort } from 'components/common/sort'
-import { InputForm } from 'components/common/input-form'
-import { Filter, FilterFoldout, NoResults, useFilter } from 'components/common/filter'
-import { Button } from 'components/common/button'
+import { NoResults, useFilter } from 'components/common/filter'
 import { AppSearch } from 'components/domain/app/app-search'
 import { useAccountContext } from 'context/account-context'
-
-const dummySpeakers = [
-  {
-    name: 'Laqeel Jacobsen',
-    role: 'Researcher',
-    company: 'Ethereum Foundation',
-    tracks: ['Three'],
-  },
-  {
-    name: 'Lesley Jacobsen',
-    role: 'Researcher',
-    company: 'Ethereum Foundation',
-    tracks: ['Two'],
-  },
-  {
-    name: 'Lasse Jacobsen',
-    role: 'Researcher',
-    company: 'Ethereum Foundation',
-    tracks: ['One'],
-  },
-] as [SpeakerType, SpeakerType, SpeakerType]
+import Image from 'next/image'
+import makeBlockie from 'ethereum-blockies-base64'
 
 type CardProps = {
   speaker: SpeakerType
@@ -57,10 +36,12 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
   }
 
   return (
-    <Link to="/app/speakers/test" className={css['speaker-card']}>
+    <Link to={`/app/speakers/${speaker.id}`} className={css['speaker-card']}>
       <>
         <div className={css['thumbnail']}>
-          <img alt="profile" src={thumbnailPlaceholder} />
+          <div className={css['wrapper']}>
+            <Image src={speaker.avatar ?? makeBlockie(speaker.name)} alt={speaker.name} objectFit='contain' layout='fill' />
+          </div>
         </div>
         <div className={css['details']}>
           <p className={css['name']}>{speaker.name}</p>
@@ -184,15 +165,6 @@ const ListAlphabeticalSort = (props: ListProps) => {
           {props.speakers.map(speaker => {
             return <SpeakerCard key={speaker.name} speaker={speaker} />
           })}
-          {/* {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })} */}
         </div>
 
         <div className={css['letters']}>
@@ -226,10 +198,10 @@ export const Speakers = (props: any) => {
       }
     }),
     filterFunction: (activeFilter: any) => {
-      if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySpeakers
+      if (!activeFilter || Object.keys(activeFilter).length === 0) return props.speakers
 
-      return dummySpeakers.filter(
-        speaker => speaker.tracks && speaker.tracks.some(track => activeFilter && activeFilter[track])
+      return props.speakers.filter(
+        (i: any) => i.tracks && i.tracks.some((x: any) => activeFilter && activeFilter[x])
       )
     },
   })

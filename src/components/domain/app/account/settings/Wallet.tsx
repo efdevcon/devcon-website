@@ -108,7 +108,7 @@ export default function WalletSettings() {
                       }
 
                       {!canDelete &&
-                        <Tooltip arrow={false} visible={tooltipVisible} content={<p>Can't delete this address. You need at least 1 wallet or your email address connected.</p>}>
+                        <Tooltip arrow={false} visible={tooltipVisible} content={<p>Can&apos;`t delete this address. You need at least 1 wallet or your email address connected.</p>}>
                           <span role='button' className={css['disabled']} onClick={() => setTooltipVisible(!tooltipVisible)}>
                             <IconCross />
                           </span>

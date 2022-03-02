@@ -68,7 +68,7 @@ const PathNavigation = (props: PageHeroProps) => {
         acc.push(<span key={`${text} ${index}`}>{text}</span>)
       }
 
-      if (index !== props.path.length - 1) {
+      if (index !== (props.path?.length ? props.path.length - 1 : false)) {
         acc.push(<span key={index}>&nbsp;/&nbsp;</span>)
       }
 
@@ -114,7 +114,8 @@ export const PageHero = (props: PageHeroProps) => {
   const setNextScene = React.useMemo(
     () => (increment: number) => {
       const nextScene = currentScene + increment
-
+      if (!props.scenes) return 
+      
       if (nextScene >= props.scenes.length) {
         setCurrentScene(0)
       } else if (nextScene < 0) {

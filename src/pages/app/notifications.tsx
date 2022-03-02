@@ -1,23 +1,21 @@
 import { AppLayout } from 'components/domain/app/Layout'
-import { Venue } from 'components/domain/app/venue'
+import { Notifications } from 'components/domain/app/notifications'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
-import { GetRooms } from 'services/programming'
+import { GetSessions, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getMessages } from 'utils/intl'
 
 export default pageHOC((props: any) => {
     return <AppLayout>
-        <Venue {...props} />
+        <Notifications {...props} />
     </AppLayout>
 })
 
 export async function getStaticProps(context: any) {
     const intl = await getMessages(context.locale)
-    const rooms = await GetRooms()
-    const floors = [...new Set(rooms.map(i => i.info).filter(i => !!i))]
 
     return {
         props: {
@@ -25,8 +23,8 @@ export async function getStaticProps(context: any) {
             navigationData: await GetNavigationData(context.locale),
             notification: GetLatestNotification(context.locale),
             page: DEFAULT_APP_PAGE,
-            rooms,
-            floors
+            sessions: await GetSessions(),
+            speakers: await GetSpeakers()
         }
     }
 }
