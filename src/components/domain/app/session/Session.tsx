@@ -1,6 +1,9 @@
 import React from 'react'
+import IconClock from 'assets/icons/icon_clock.svg'
 import IconCalendar from 'assets/icons/schedule-plus.svg'
-import iconSecurity from 'assets/images/tracks/security.svg'
+import IconMarker from 'assets/icons/icon_marker.svg'
+import IconPeople from 'assets/icons/icon_people.svg'
+import IconSecurity from 'assets/images/tracks/security.svg'
 import { LinkList, Link } from 'components/common/link'
 import { SpeakerCard } from 'components/domain/app/speakers'
 import { SessionCard } from './SessionCard'
@@ -23,7 +26,7 @@ const Hero = (props: any) => {
     <div className={className}>
       {props.icon && (
         <div className={css['background-icon']}>
-          <Image src={props.icon} alt="track" />
+          <IconSecurity />
         </div>
       )}
       {props.children}
@@ -37,32 +40,31 @@ type SessionProps = {
 }
 
 export const Session = (props: SessionProps) => {
-
   const duration = moment.duration(moment(props.session.end).diff(props.session.start))
   const mins = duration.asMinutes()
 
   return (
     <div>
-      <Hero icon={iconSecurity} className={css['session-hero']}>
+      <Hero icon={IconSecurity} className={css['session-hero']}>
         <div className="section">
           <div className="content">
             <div className={css['container']}>
               <div className={css['info-line']}>
-                <IconCalendar />
+                <IconClock />
                 <p>
                   {GetDevconDay(props.session.start)} - {moment.utc(props.session.start).format('MMM DD')} <br />
-                  {moment.utc(props.session.start).format('HH:mm')} - {moment.utc(props.session.end).format('HH:mm')} <span style={{ marginLeft: '12px' }}> Mins</span>
+                  {moment.utc(props.session.start).format('HH:mm')} - {moment.utc(props.session.end).format('HH:mm')} <span style={{ marginLeft: '12px' }}> {mins} Mins</span>
                 </p>
               </div>
               {props.session.room &&
                 <div className={css['info-line']}>
-                  <IconCalendar />
+                  <IconMarker />
                   <p>{props.session.room.name}</p>
                 </div>
               }
               {props.session.room?.capacity &&
                 <div className={css['info-line']}>
-                  <IconCalendar />
+                  <IconPeople />
                   <p>{props.session.room.capacity}</p>
                 </div>
               }

@@ -40,7 +40,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
       <>
         <div className={css['thumbnail']}>
           <div className={css['wrapper']}>
-            <Image src={speaker.avatar ?? makeBlockie(speaker.name)} alt={speaker.name} objectFit='contain' layout='fill' />
+            <Image src={speaker.avatar || makeBlockie(speaker.name)} alt={speaker.name} objectFit='contain' layout='fill' />
           </div>
         </div>
         <div className={css['details']}>
