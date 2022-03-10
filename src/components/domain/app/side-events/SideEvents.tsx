@@ -21,7 +21,6 @@ const dummySessions = [
 ]
 
 export const SideEvents = (props: any) => {
-  console.log(props.sessions, 'sessions')
   const [search, setSearch] = React.useState('')
   const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
   const [sessions, filterState] = useFilter({

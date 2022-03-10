@@ -8,6 +8,8 @@ import { BASE_CONTENT_FOLDER } from 'utils/constants'
 import { GetPage } from './page'
 
 export async function GetNavigationData(lang: string = 'en'): Promise<NavigationData> {
+    if (lang !== 'es') lang = 'en'
+
     return {
         top: GetNavigation('top', lang),
         site: GetNavigation('site', lang),
@@ -21,6 +23,8 @@ export async function GetNavigationData(lang: string = 'en'): Promise<Navigation
 }
 
 export function GetNavigation(slug: string, lang: string = 'en'): Array<Link> {
+    if (lang !== 'es') lang = 'en'
+    
     const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'navigation', slug + '.md')
     let content
     try {

@@ -45,8 +45,8 @@ export const NewsOverview = (props: NewsOverviewProps) => {
       newsItem?.tags?.forEach(tag => {
         if (!tags[tag.id])
           tags[tag.id] = {
-            text: tag,
-            value: tag,
+            text: tag.title,
+            value: tag.id,
           }
       })
     })
@@ -88,7 +88,7 @@ export const NewsOverview = (props: NewsOverviewProps) => {
             return !activeFilter || activeFilter === 'all'
               ? newsItems
               : newsItems.filter(newsItem => {
-                  return newsItem?.tags?.some(tag => tag.title.toLowerCase() === activeFilter.toLowerCase())
+                  return newsItem?.tags?.some(tag => tag.id.toLowerCase() === activeFilter.toLowerCase())
                 })
           },
         }}
