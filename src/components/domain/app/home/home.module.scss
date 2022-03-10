@@ -27,16 +27,26 @@
   }
 }
 
+.connection-info {
+  border-bottom: 1px solid $colors-standard-border-color;
+  margin-top: $gaps-gap-4;
+  padding-bottom: $gaps-gap-4;
+}
+
 .wallet {
   display: flex;
   // margin-top: $gaps-gap-4;
   // margin-bottom: $gaps-gap-4;
 
   .circle {
-    border-radius: 50px;
+    position: relative;
     height: 50px;
     width: 50px;
     margin-right: $gaps-gap-4;
+    
+    img {
+      border-radius: 50px;
+    }
   }
 
   .avatar {

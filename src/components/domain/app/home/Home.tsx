@@ -17,7 +17,7 @@ import { useActiveAddress } from "hooks/useActiveAddress"
 import { useAvatar } from 'hooks/useAvatar'
 import Image from 'next/image'
 
-export const Home = (props: any) => {
+export const Home = () => {
   const router = useRouter()
   const accountContext = useAccountContext()
   const activeAddress = useActiveAddress()
@@ -32,12 +32,12 @@ export const Home = (props: any) => {
   return (
     <div className="section">
       <div className="content">
-        {loggedIn && 
+        {loggedIn &&
           <div className={`${css['account']} border-bottom`}>
             <div className="font-xxl font-primary">
               <h2 className="font-primary">
                 Welcome{accountContext.account?.username && <>
-                ,<br/>{accountContext.account?.username}
+                  ,<br />{accountContext.account?.username}
                 </>}
                 {!accountContext.account?.username && <> 👋</>}
               </h2>
@@ -52,17 +52,17 @@ export const Home = (props: any) => {
             <div className={css['dropdown']}>
               <DropdownVariationDots
                 value="Another thing2"
-                onChange={() => {}}
+                onChange={() => { }}
                 options={[
                   {
                     text: 'Settings',
                     value: 'Settings',
-                    onClick: () => { router.push('/app/settings')},
+                    onClick: () => { router.push('/app/settings') },
                   },
                   {
                     text: 'View on Etherscan',
                     value: 'Etherscan',
-                    onClick: () => { router.push('https://etherscan.io/address/' + accountContext.account?.addresses[0])},
+                    onClick: () => { router.push('https://etherscan.io/address/' + accountContext.account?.addresses[0]) },
                   },
                   {
                     text: 'Sign out',
@@ -75,24 +75,40 @@ export const Home = (props: any) => {
           </div>
         }
 
-        {loggedIn && !!activeAddress && 
-          <CollapsedSection>
-            <CollapsedSectionHeader>
-              <div className={css['wallet']}>
-                <Image src={avatar.url} className={css['circle']} alt={avatar.name} />
-
-                <div className={css['details']}>
-                  {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
-                  {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
-                  {avatar.status && <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>}
-                </div>
+        {loggedIn && !!activeAddress &&
+          <div className={css['connection-info']}>
+            <div className={css['wallet']}>
+              <div className={css['circle']}>
+                <Image src={avatar.url} alt={avatar.name} layout='fill' />
               </div>
-            </CollapsedSectionHeader>
 
-            <CollapsedSectionContent>
-              <div> Hidden content </div>
-            </CollapsedSectionContent>
-          </CollapsedSection>
+              <div className={css['details']}>
+                {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
+                {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
+                {avatar.status && <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>}
+              </div>
+            </div>
+          </div>
+
+          // <CollapsedSection>
+          //   <CollapsedSectionHeader>
+          //     <div className={css['wallet']}>
+          //       <div className={css['circle']}>
+          //         <Image src={avatar.url} alt={avatar.name} layout='fill' />
+          //       </div>
+
+          //       <div className={css['details']}>
+          //         {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
+          //         {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
+          //         {avatar.status && <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>}
+          //       </div>
+          //     </div>
+          //   </CollapsedSectionHeader>
+
+          //   <CollapsedSectionContent>
+          //     <div> Hidden content </div>
+          //   </CollapsedSectionContent>
+          // </CollapsedSection>
         }
 
         <div className={css['slider-container']}>
@@ -115,7 +131,7 @@ export const Home = (props: any) => {
               {
                 title: 'Guides',
                 description: 'Access Devcon Bogota local guides.',
-                url: '/app/guides',
+                url: '/bogota',
                 color: 'yellow',
               },
               {
@@ -134,15 +150,15 @@ export const Home = (props: any) => {
           />
         </div>
 
-        <CollapsedSection>
+        {/* <CollapsedSection>
           <CollapsedSectionHeader title="Updates" />
 
           <CollapsedSectionContent>
             <div>Hidden content</div>
           </CollapsedSectionContent>
-        </CollapsedSection>
+        </CollapsedSection> */}
 
-        {loggedIn && 
+        {/* {loggedIn &&
           <CollapsedSection>
             <CollapsedSectionHeader title="Ticket Attestation" />
 
@@ -171,15 +187,16 @@ export const Home = (props: any) => {
               </div>
             </CollapsedSectionContent>
           </CollapsedSection>
-        }
+        } */}
 
+        {/* 
         <CollapsedSection>
           <CollapsedSectionHeader title="Collection" />
 
           <CollapsedSectionContent>
             <div>Collection</div>
           </CollapsedSectionContent>
-        </CollapsedSection>
+        </CollapsedSection> */}
       </div>
     </div>
   )

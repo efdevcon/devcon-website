@@ -107,13 +107,17 @@
   }
   
   .avatar {
-    border-radius: 50px;
+    position: relative;
     height: 50px;
     width: 50px;
     margin-right: $gaps-gap-4;
 
     @media (max-width: $breakpoints-sm) {
       margin-right: 0;
+    }
+
+    img { 
+      border-radius: 50px;
     }
   }
 
