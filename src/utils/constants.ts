@@ -15,7 +15,7 @@ export const LINK_SUBMIT_EVENT = 'https://forms.gle/W2yiyNXcEU6fZ4rN8'
 
 export const COPYRIGHT_NOTICE = '© 2021 — Ethereum Foundation. All Rights Reserved.'
 
-export const BASE_CONTENT_FOLDER = 'content'
+export const BASE_CONTENT_FOLDER = 'src/content'
 
 export const EVENT_DAYS = [11, 12, 13, 14]
 
