@@ -87,7 +87,6 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
           {item.tags && item.tags.length > 0 && (
             <div className={css['tags']}>
               {item.tags.map(tag => {
-                console.log('RENDER TAG', tag)
                 return (
                   <div key={tag.id} className="label bold">
                     {tag.title}
