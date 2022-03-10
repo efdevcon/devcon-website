@@ -1,6 +1,6 @@
 ---
 title: Devcon 2
-description: "The start of Devcon 2 came alongside one of the most (in)famous moments in Ethereum's early history as a set of Denial of Service attacks were launched against the network just hours before the event was set to begin. With many of the most formidable builders in the ecosystem gathered together in Shanghai, China in September of 2016, they planned emergency upgrades backstage to restore full functionality to the network, before stepping forward only minutes and hours later to speak to the future of the network on stage."
+description: "Devcon 2 came alongside one of the most (in)famous moments in Ethereum's early history, as a set of Denial of Service attacks were launched against the network just hours before the event was set to begin. With many of the most formidable builders in the ecosystem gathered together in Shanghai, they helped to coordinate emergency upgrades backstage to restore full functionality to the network, moments before stepping forward to speak to the future of the network on stage."
 image: ../../../../static/assets/uploads/editions/devcon2.png
 categories:
   - Devcon
