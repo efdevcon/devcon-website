@@ -3,7 +3,7 @@ import css from './proposals.module.scss'
 import { Label } from 'components/common/label'
 import { Link } from 'components/common/link'
 import { leftPad } from 'utils/left-pad'
-import { Table, TableColumn } from 'components/common/table'
+import { Table, TableColumn } from 'components/common/table/Table'
 import { SortVariation } from 'components/common/sort'
 import { DIP } from 'types/DIP'
 import GithubIcon from 'assets/icons/github.svg'
@@ -41,7 +41,7 @@ const tableColumns: Array<TableColumn> = [
       return (
         <p className={`${css['index']} h3`}>
           <Link to={item.github} /*commented out until DIP page is deployed: to={item.slug}*/>
-            {leftPad(item.number)}
+            {leftPad(String(item.number))}
           </Link>
         </p>
       )
@@ -112,11 +112,11 @@ const tableColumns: Array<TableColumn> = [
     className: css['tag-column'],
     sort: (item1: DIP, item2: DIP) => {
       const a = item1.tags
-        .map(item => item.trim().toLowerCase())
+        .map(item => item.toString().trim().toLowerCase())
         .sort()
         .join('')
       const b = item2.tags
-        .map(item => item.trim().toLowerCase())
+        .map(item => item.toString().trim().toLowerCase())
         .sort()
         .join('')
 
@@ -234,7 +234,8 @@ export const Proposals = (props: ProposalsProps) => {
       <div className={css['top-container']}>
         <h3 className="spaced">{intl('dips_proposals')}</h3>
 
-        <Filter {...filterState} />
+        {/* TODO: build error
+        <Filter {...filterState} /> */}
       </div>
 
       <Table itemKey="number" items={filteredDips} columns={tableColumns} />

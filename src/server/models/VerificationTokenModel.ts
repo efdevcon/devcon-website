@@ -13,7 +13,7 @@ const schema: Schema = new Schema(
   { timestamps: false }
 )
 
-let mongooseModel
+let mongooseModel: any
 try {
   mongooseModel = model<VerificationTokenModel>('VerificationToken')
 } catch (e) {

@@ -4,7 +4,7 @@ import { Card } from 'components/common/card'
 import { Feed } from 'components/common/feed'
 import css from './news.module.scss'
 import { useTranslations } from 'next-intl'
-import { formatNewsData } from '../formatNewsData'
+
 import { NewsItem } from 'types/NewsItem'
 import moment from 'moment'
 import { Slider, useSlider } from 'components/common/slider'
@@ -35,6 +35,7 @@ const settings = {
 const formatNewsForCard = (intl: any, item: NewsItem) => {
   let formattedItem = {
     ...item,
+    date: new Date (item.date),
     linkUrl: item.url,
   }
 
@@ -48,8 +49,8 @@ const formatNewsForCard = (intl: any, item: NewsItem) => {
   return formattedItem
 }
 
-export const News = ({ data: rawData }: NewsProps) => {
-  const newsItems = formatNewsData(rawData.nodes)
+export const News = (props: NewsProps) => {
+  const newsItems = props.data
   const intl = useTranslations()
   const sliderProps = useSlider(settings)
 
@@ -61,7 +62,7 @@ export const News = ({ data: rawData }: NewsProps) => {
         {/* Only visible on mobile */}
         <div className={css['slider-container']}>
           <Slider className={css['slider']} sliderProps={sliderProps} title={intl('news')}>
-            {newsItems.map((item: NewsItem, index) => {
+            {newsItems.map((item: NewsItem, index: any) => {
               const formattedItem = formatNewsForCard(intl, item)
 
               return (
@@ -81,7 +82,7 @@ export const News = ({ data: rawData }: NewsProps) => {
 
         <div className={css['body']}>
           <div className={css['cards']}>
-            {newsItems.slice(0, 2).map((item: NewsItem, index) => {
+            {newsItems.slice(0, 2).map((item: NewsItem, index: any) => {
               const formattedItem = formatNewsForCard(intl, item)
 
               return (

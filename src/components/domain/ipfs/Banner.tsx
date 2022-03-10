@@ -7,6 +7,7 @@ import { Modal, ModalSlide } from 'components/common/modal'
 import css from './banner.module.scss'
 import { Tooltip } from 'components/common/tooltip'
 import { TruncateMiddle } from 'utils/formatting'
+import ipfsImage from 'assets/images/ipfs_illustration.png'
 
 interface Props {
   hash: string
@@ -19,18 +20,6 @@ export const Banner = (props: Props) => {
   const [copied, setCopied] = useState(false)
   const [ipfsModal, setIpfsModal] = useState(false)
   const [ipfsPinModal, setIpfsPinModal] = useState(false)
-
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { relativePath: { in: ["ipfs_illustration.png"] } }) {
-        nodes {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
-          }
-        }
-      }
-    }
-  `)
 
   let className = css['container']
   if (props.className) className += ` ${props.className}`
@@ -80,7 +69,7 @@ export const Banner = (props: Props) => {
           </p>
         </div>
 
-        <Modal image={data.allFile.nodes[0]} open={ipfsModal} close={() => setIpfsModal(false)} title="What is IPFS">
+        <Modal image={ipfsImage} open={ipfsModal} close={() => setIpfsModal(false)} title="What is IPFS">
           <div className={css['modal-content']}>
             <p>Let&apos;s just start with a one-line definition of IPFS:</p>
             <p className={css['lead']}>
@@ -101,7 +90,7 @@ export const Banner = (props: Props) => {
         </Modal>
 
         <Modal
-          image={data.allFile.nodes[0]}
+          image={ipfsImage}
           open={ipfsPinModal}
           close={() => setIpfsPinModal(false)}
           title="Pinning content on IPFS"

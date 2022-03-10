@@ -54,11 +54,11 @@ export const Hero = () => {
       <div ref={heroEl} data-jest="hero" className={`${css['hero']}`}>
         <Rays className={css['rays']} />
 
-        <div className={css['mountain-container']} style={parallax(intersectionRatio)}>
+        <div className={css['mountain-container']} style={parallax(intersectionRatio) as any}>
           <Image alt="Devcon mountains" src={imageMountains} />
         </div>
 
-        <div className={css['cloud-container']} style={parallax(intersectionRatio)}>
+        <div className={css['cloud-container']} style={parallax(intersectionRatio) as any}>
           <Image
             alt="Devcon clouds"
             /*className={css['clouds']}*/ src={imageClouds}

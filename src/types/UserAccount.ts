@@ -1,7 +1,7 @@
 import { UserAppState } from "./UserAppState";
 
 export interface UserAccount {
-  _id: any
+  _id?: any
   username?: string
   email?: string
   activeAddress?: string

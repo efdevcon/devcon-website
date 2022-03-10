@@ -27,7 +27,7 @@ export const useScrollY = () => {
 
   useIsomorphicLayoutEffect(() => {
     const handleScroll = () => {
-      setY(window.scrollY);
+      setY(window.scrollY > 0);
     }
 
     window.addEventListener('scroll', handleScroll)

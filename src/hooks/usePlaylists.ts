@@ -1,4 +1,3 @@
-import { useStaticQuery, graphql } from 'gatsby'
 import { Playlist } from 'types/Playlist'
 
 export const usePlaylists = (): Array<Playlist> => {

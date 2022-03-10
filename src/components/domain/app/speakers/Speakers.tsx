@@ -23,15 +23,15 @@ type CardProps = {
 }
 
 export const SpeakerCard = ({ speaker }: CardProps) => {
-  const { account, setSpeakerFavorite } = useAccountContext()
-  const favoritedSpeakers = account?.appState?.favoritedSpeakers
-  const isSpeakerFavorited = favoritedSpeakers?.[speaker.id]
+  // const { account, setSpeakerFavorite } = useAccountContext()
+  // const favoritedSpeakers = account?.appState?.favoritedSpeakers
+  // const isSpeakerFavorited = favoritedSpeakers?.[speaker.id]
 
   const iconProps = {
     className: css['favorite'],
     onClick: (e: React.SyntheticEvent) => {
       e.preventDefault()
-      setSpeakerFavorite(speaker.id, !!isSpeakerFavorited)
+      // setSpeakerFavorite(speaker.id, !!isSpeakerFavorited)
     },
   }
 
@@ -49,7 +49,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
           <p className={css['company']}>{speaker.company}</p>
         </div>
 
-        {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
+        {false ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
       </>
     </Link>
   )

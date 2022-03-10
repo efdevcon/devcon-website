@@ -18,8 +18,8 @@ export interface AccountContextType {
   getAccount: () => Promise<UserAccount | undefined>
   updateAccount: (id: string, account: UserAccount) => Promise<boolean>
   deleteAccount: (id: string) => Promise<boolean>,
-  setSpeakerFavorite: (speakerId: string, remove: boolean) => void,
-  setSessionBookmark: (session: Session, interestLevel: 'attending' | 'interested', remove: boolean) => void,
+  // setSpeakerFavorite: (speakerId: string, remove: boolean) => void,
+  // setSessionBookmark: (session: Session, interestLevel: 'attending' | 'interested', remove: boolean) => void,
 }
 
 export const useAccountContext = () => useContext<AccountContextType>(AccountContext)
@@ -36,6 +36,6 @@ export const AccountContext = createContext<AccountContextType>({
   getAccount: async () => undefined,
   updateAccount: async () => false,
   deleteAccount: async () => false,
-  setSpeakerFavorite: () => {},
-  setSessionBookmark: () => {},
+  // setSpeakerFavorite: () => {},
+  // setSessionBookmark: () => {},
 })

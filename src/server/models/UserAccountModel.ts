@@ -14,7 +14,7 @@ const schema: Schema = new Schema(
   { timestamps: true }
 )
 
-let mongooseModel
+let mongooseModel: any
 try {
   mongooseModel = model<UserAccountModel>('UserAccount')
 } catch (e) {

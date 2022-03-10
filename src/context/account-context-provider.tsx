@@ -28,71 +28,71 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     getAccount,
     updateAccount,
     deleteAccount,
-    setSpeakerFavorite: (speakerId: string, remove: boolean): void => {
-      if (!context.account) return
+    // setSpeakerFavorite: (speakerId: string, remove: boolean): void => {
+    //   if (!context.account) return
 
-      let nextSpeakerFavorites = {
-        ...context.account?.appState?.favoritedSpeakers,
-      }
+    //   let nextSpeakerFavorites = {
+    //     ...context.account?.appState?.favoritedSpeakers,
+    //   }
 
-      if (remove) {
-        delete nextSpeakerFavorites[speakerId]
-      } else {
-        nextSpeakerFavorites = {
-          ...nextSpeakerFavorites,
-          [speakerId]: true,
-        }
-      }
+    //   if (remove) {
+    //     delete nextSpeakerFavorites[speakerId]
+    //   } else {
+    //     nextSpeakerFavorites = {
+    //       ...nextSpeakerFavorites,
+    //       [speakerId]: true,
+    //     }
+    //   }
 
-      const nextAccountState = {
-        ...context.account,
-        appState: {
-          ...context.account.appState,
-          updatedAt: new Date(),
-          favoritedSpeakers: nextSpeakerFavorites,
-        },
-      }
+    //   const nextAccountState = {
+    //     ...context.account,
+    //     appState: {
+    //       ...context.account.appState,
+    //       updatedAt: new Date(),
+    //       favoritedSpeakers: nextSpeakerFavorites,
+    //     },
+    //   }
 
-      setContext({
-        ...context,
-        account: nextAccountState,
-      })
-    },
-    setSessionBookmark: (session: Session, interestLevel: 'interested' | 'attending', remove?: boolean): void => {
-      if (!context.account) return
+    //   setContext({
+    //     ...context,
+    //     account: nextAccountState,
+    //   })
+    // },
+    // setSessionBookmark: (session: Session, interestLevel: 'interested' | 'attending', remove?: boolean): void => {
+    //   if (!context.account) return
 
-      let nextBookmarkedSessions = {
-        ...context.account?.appState?.bookmarkedSessions,
-      }
+    //   let nextBookmarkedSessions = {
+    //     ...context.account?.appState?.bookmarkedSessions,
+    //   }
 
-      if (remove) {
-        delete nextBookmarkedSessions[session.id]
-      } else {
-        nextBookmarkedSessions = {
-          ...nextBookmarkedSessions,
-          [session.id]: {
-            interestLevel,
-            // Start and end time need to be saved at time of bookmarking - allows us to create "session changed" notifications client side by diffing the schedule with the bookmarked snapshots
-            start: session.start,
-            end: session.end,
-          },
-        }
-      }
+    //   if (remove) {
+    //     delete nextBookmarkedSessions[session.id]
+    //   } else {
+    //     nextBookmarkedSessions = {
+    //       ...nextBookmarkedSessions,
+    //       [session.id]: {
+    //         interestLevel,
+    //         // Start and end time need to be saved at time of bookmarking - allows us to create "session changed" notifications client side by diffing the schedule with the bookmarked snapshots
+    //         start: session.start,
+    //         end: session.end,
+    //       },
+    //     }
+    //   }
 
-      const nextAccountState = {
-        ...context.account,
-        appState: {
-          ...context.account?.appState,
-          updatedAt: new Date(),
-          bookmarkedSessions: nextBookmarkedSessions,
-        },
-      }
+    //   const nextAccountState = {
+    //     ...context.account,
+    //     appState: {
+    //       ...context.account?.appState,
+    //       updatedAt: new Date(),
+    //       bookmarkedSessions: nextBookmarkedSessions,
+    //     },
+    //   }
 
-      setContext({
-        ...context,
-        account: nextAccountState,
-      })
-    },
+    //   setContext({
+    //     ...context,
+    //     account: nextAccountState,
+    //   })
+    // },
   })
 
   useEffect(() => {
@@ -137,7 +137,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       const address = await signer.getAddress()
       let signature = ''
 
-      if (web3Provider.provider?.wc) {
+      if ((web3Provider.provider as any).wc) {
         signature = await web3Provider.send('personal_sign', [
           utils.hexlify(utils.toUtf8Bytes(message)),
           address.toLowerCase(),

@@ -16,18 +16,21 @@ type CardProps = {
 }
 
 export const SessionCard = (props: CardProps) => {
-  const { account, setSessionBookmark } = useAccountContext()
-  const bookmarkedSessions = account?.appState?.bookmarkedSessions
-  const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
+  // TODO: personalization/bookmarks
+  // const { account, setSessionBookmark } = useAccountContext()
+  // const bookmarkedSessions = account?.appState?.bookmarkedSessions
+  // const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
 
   const iconProps = {
     className: `${css['save-session']} icon`,
-    onClick: () => setSessionBookmark(props.session, 'attending', !!sessionIsBookmarked),
+    onClick: () => {
+      // setSessionBookmark(props.session, 'attending', !!sessionIsBookmarked),
+    },
   }
 
-  if (sessionIsBookmarked) {
-    iconProps.className += ` ${css['saved']}`
-  }
+  // if (sessionIsBookmarked) {
+  //   iconProps.className += ` ${css['saved']}`
+  // }
 
   let thumbnailClassName = css['thumbnail-container']
 
@@ -48,7 +51,7 @@ export const SessionCard = (props: CardProps) => {
         <div className={css['top']}>
           <p className={css['title']}>{props.session.title}</p>
 
-          {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
+          {false ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
 
           <div className="label sm">
             {props.session.track}
