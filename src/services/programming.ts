@@ -9,36 +9,39 @@ const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'pwa-data'
 const defaultLimit = 25
+const test = false
+const nrOfTestSpeakers = 100
 
 export async function GetSessions(): Promise<Array<SessionType>> {
-    return await generateTestSessions()
-    // const talks = await exhaustResource(`/events/${eventName}/talks`)
-    // const rooms = await GetRooms()
+    if (test) return await generateSessions()
 
-    // return talks.map((i: any) => {
-    //     return {
-    //         id: i.code,
-    //         speakers: i.speakers.map((x: any) => {
-    //             return {
-    //                 id: x.code,
-    //                 name: x.name,
-    //                 description: x.biography
-    //             }
-    //         }),
-    //         title: i.title,
-    //         track: i.track?.en ?? '',
-    //         duration: i.duration,
-    //         start: new Date(i.slot.start).getTime(),
-    //         end: new Date(i.slot.end).getTime(),
-    //         room: rooms.find(x => x.name === i.slot?.room?.en) || null,
-    //         type: i.submission_type,
-    //         description: i.description,
-    //         abstract: i.abstract,
-    //         // image?: string
-    //         // resources?: string[]
-    //         tags: [],
-    //     }
-    // })
+    const talks = await exhaustResource(`/events/${eventName}/talks`)
+    const rooms = await GetRooms()
+
+    return talks.map((i: any) => {
+        return {
+            id: i.code,
+            speakers: i.speakers.map((x: any) => {
+                return {
+                    id: x.code,
+                    name: x.name,
+                    description: x.biography
+                }
+            }),
+            title: i.title,
+            track: i.track?.en ?? '',
+            duration: i.duration,
+            start: new Date(i.slot.start).getTime(),
+            end: new Date(i.slot.end).getTime(),
+            room: rooms.find(x => x.name === i.slot?.room?.en) || null,
+            type: i.submission_type,
+            description: i.description,
+            abstract: i.abstract,
+            // image?: string
+            // resources?: string[]
+            tags: [],
+        }
+    })
 }
 
 export async function GetSessionsByTrack(id: string): Promise<Array<SessionType>> {
@@ -57,13 +60,24 @@ export async function GetSessionsBySpeaker(id: string): Promise<Array<SessionTyp
 }
 
 export async function GetTracks(): Promise<Array<string>> {
-    return ['Consensus Layer', 'Execution Layer', 'UX & Design', 'Security', 'Opportunity & Impact']
-    // // no endpoint exists, so fetches and filters all sessions recursively
-    // const tracks = (await GetSessions()).map(i => i.track)
-    // return [...new Set(tracks)]
+    if (test) return generateTracks()
+
+    // no endpoint exists, so fetches and filters all sessions recursively
+    const tracks = (await GetSessions()).map(i => i.track)
+    return [...new Set(tracks)].sort()
+}
+
+export async function GetEventDays(): Promise<Array<number>> {
+    if (test) return generateEventDays()
+
+    // no endpoint exists, so fetches and filters all sessions recursively
+    const days = (await GetSessions()).map(i => moment.utc(i.start).startOf('day').valueOf())
+    return [...new Set(days)].sort()
 }
 
 export async function GetRooms(): Promise<Array<Room>> {
+    if (test) return generateRooms()
+
     const rooms = await exhaustResource(`/events/${eventName}/rooms`);
     return rooms.map((i: any) => {
         return {
@@ -82,20 +96,23 @@ export async function GetFloors(): Promise<Array<string>> {
 }
 
 export async function GetSpeakers(): Promise<Array<Speaker>> {
-    return await generateTestSpeakers()
+    if (test) return await generateSpeakers()
 
-    // const speakers = await exhaustResource(`/events/${eventName}/speakers`)
-    // return speakers.map((i: any) => {
-    //     return {
-    //         id: i.code,
-    //         name: i.name,
-    //         // role?: string,
-    //         // company?: string
-    //         avatar: i.avatar,
-    //         description: i.biography
-    //         // tracks?: string[]
-    //     }
-    // })
+    const sessions = await GetSessions()
+    const speakers = await exhaustResource(`/events/${eventName}/speakers`)
+    return speakers.map((i: any) => {
+        const speakerSessions = sessions.filter((s: SessionType) => i.submissions.find((x: string) => x === s.id))
+        return {
+            id: i.code,
+            name: i.name,
+            // role?: string,
+            // company?: string
+            avatar: i.avatar,
+            description: i.biography,
+            tracks: [...new Set(speakerSessions.map(i => i.track))],
+            eventDays: [...new Set(speakerSessions.map(i => moment.utc(i.start).startOf('day').valueOf()))]
+        }
+    })
 }
 
 async function exhaustResource(slug: string, limit = defaultLimit, offset = 0, results = [] as any): Promise<any> {
@@ -125,14 +142,15 @@ async function get(slug: string) {
     return data
 }
 
-export async function generateTestSessions(): Promise<Array<SessionType>> {
+// TEST DATA 
+export async function generateSessions(): Promise<Array<SessionType>> {
     const key = 'TEST:sessions'
     if (cache.has(key)) return cache.get(key)
 
     const tracks = await GetTracks()
     const rooms = await GetRooms()
-    const types = ['Keynote', 'Workshop', 'Talk', 'Panel', 'Lightning Talk', 'Roundtable']
-    const speakers = await generateTestSpeakers()
+    const types = await GetTracks()
+    const speakers = await GetSpeakers()
 
     const sessions: Array<SessionType> = []
     for (let d = 11; d < 15; d++) {
@@ -167,21 +185,81 @@ export async function generateTestSessions(): Promise<Array<SessionType>> {
     return sessions
 }
 
-export async function generateTestSpeakers(): Promise<Array<Speaker>> {
+export async function generateSpeakers(): Promise<Array<Speaker>> {
     const key = 'TEST:speakers'
     if (cache.has(key)) return cache.get(key)
 
-    const names = await fetch('https://www.randomlists.com/data/names-female.json')
-    const data = (await names.json()).data
-    const speakers = data.map((i: string) => {
-        return {
-            id: i,
-            name: i,
-            avatar: '',
-            description: `Biography for ${i}`
-        }
-    })
+    const tracks = await GetTracks()
+    const eventDays = await GetEventDays()
 
-    cache.set(key, speakers.slice(0, 250))
+    const namesResponse = await fetch('https://www.randomlists.com/data/names-female.json')
+    const names = (await namesResponse.json()).data
+    const surNamesResponse = await fetch('https://www.randomlists.com/data/names-surnames.json')
+    const surNames = (await surNamesResponse.json()).data
+
+    const speakers = names.map((i: string, index: number) => {
+        return {
+            id: defaultSlugify(i),
+            name: `${i} ${surNames[index]}`,
+            avatar: '',
+            description: `Biography for ${i}`,
+            tracks: [tracks[Math.floor(Math.random() * tracks.length)]],
+            eventDays: [eventDays[Math.floor(Math.random() * eventDays.length)]]
+        } as Speaker
+    }).sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name)).slice(0, nrOfTestSpeakers)
+
+    cache.set(key, speakers)
     return speakers
+
+}
+
+export async function generateTracks(): Promise<Array<string>> {
+    return [
+        'Developer Infrastructure',
+        'Privacy', 
+        'Consensus & Coordination',
+        'Scaling & Interoperability',
+        'Consensus Layer',
+        'Execution Layer',
+        'UX & Design',
+        'Security',
+        'Opportunity & Impact'
+    ].sort()
+}
+
+export async function generateEventDays(): Promise<Array<number>> {
+    return [
+        new Date(2022, 10, 11).valueOf(),
+        new Date(2022, 10, 12).valueOf(),
+        new Date(2022, 10, 13).valueOf(),
+        new Date(2022, 10, 14).valueOf()
+    ]
+}
+
+export async function generateRooms(): Promise<Array<Room>> {
+    return [{
+        id: 'main',
+        name: 'Main',
+        description: 'Main stage',
+        info: 'F0',
+        capacity: 1000
+    }, {
+        id: '2',
+        name: 'Stage #2',
+        description: 'Stage Two description',
+        info: 'F1',
+        capacity: 200
+    }, {
+        id: '3',
+        name: 'Stage #3',
+        description: 'Stage Three description',
+        info: 'F1',
+        capacity: 300
+    }, {
+        id: 'hacker-basement',
+        name: 'Hacker Basement',
+        description: '',
+        info: '-1',
+        capacity: 500
+    }]
 }

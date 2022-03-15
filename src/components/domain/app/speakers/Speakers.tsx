@@ -17,6 +17,7 @@ import { AppSearch } from 'components/domain/app/app-search'
 import { useAccountContext } from 'context/account-context'
 import Image from 'next/image'
 import makeBlockie from 'ethereum-blockies-base64'
+import moment from 'moment'
 
 type CardProps = {
   speaker: SpeakerType
@@ -57,103 +58,60 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
 
 type ListProps = {
   speakers: [SpeakerType]
+  tracks?: string[]
+  days?: number[]
 }
 
 const ListTrackSort = (props: ListProps) => {
-  const [sectionOpen, setSectionOpen] = React.useState({
-    0: true,
-    1: true,
-    2: true,
-  })
+  const [activeTrack, setActiveTrack] = React.useState(props.tracks && props.tracks.length > 0 ? props.tracks[0] : '')
 
   return (
     <div className={`${css['list-container']} ${css['track-sort']}`}>
-      <CollapsedSection
-        open={sectionOpen[0]}
-        setOpen={() => setSectionOpen(current => ({ ...current, 0: !sectionOpen[0] }))}
-      >
-        <CollapsedSectionHeader title="Security" />
-        <CollapsedSectionContent dontAnimate>
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-        </CollapsedSectionContent>
-      </CollapsedSection>
-      <CollapsedSection
-        open={sectionOpen[1]}
-        setOpen={() => setSectionOpen(current => ({ ...current, 1: !sectionOpen[1] }))}
-      >
-        <CollapsedSectionHeader title="Society & Systems" />
-        <CollapsedSectionContent dontAnimate>
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-        </CollapsedSectionContent>
-      </CollapsedSection>
-      <CollapsedSection
-        open={sectionOpen[2]}
-        setOpen={() => setSectionOpen(current => ({ ...current, 2: !sectionOpen[2] }))}
-      >
-        <CollapsedSectionHeader title="UX & Design" />
-        <CollapsedSectionContent dontAnimate>
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-        </CollapsedSectionContent>
-      </CollapsedSection>
+      {props.tracks && props.tracks.map((track) => {
+
+        return (
+          <CollapsedSection
+            open={track === activeTrack}
+            setOpen={() => track === activeTrack ? setActiveTrack('') : setActiveTrack(track)}>
+            <CollapsedSectionHeader title={track} />
+            <CollapsedSectionContent dontAnimate>
+              {props.speakers.filter(i => i.tracks?.some(t => t === track)).map(speaker => {
+                return <SpeakerCard key={speaker.name} speaker={speaker} />
+              })}
+            </CollapsedSectionContent>
+          </CollapsedSection>
+        )
+      })}
     </div>
   )
 }
 
 const ListDaySort = (props: ListProps) => {
-  const [sectionOpen, setSectionOpen] = React.useState({
-    0: true,
-    1: true,
-    2: true,
-  })
+  const [activeDay, setActiveDay] = React.useState(props.days && props.days.length > 0 ? props.days[0] : 0)
 
   return (
     <div className={`${css['list-container']} ${css['day-sort']}`}>
-      <CollapsedSection
-        open={sectionOpen[0]}
-        setOpen={() => setSectionOpen(current => ({ ...current, 0: !sectionOpen[0] }))}
-      >
-        <CollapsedSectionHeader title="October 22nd, 2022 - Day 01" />
-        <CollapsedSectionContent dontAnimate>
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-        </CollapsedSectionContent>
-      </CollapsedSection>
-      <CollapsedSection
-        open={sectionOpen[1]}
-        setOpen={() => setSectionOpen(current => ({ ...current, 1: !sectionOpen[1] }))}
-      >
-        <CollapsedSectionHeader title="October 23rd, 2022 - Day 02" />
-        <CollapsedSectionContent dontAnimate>
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-        </CollapsedSectionContent>
-      </CollapsedSection>
-      <CollapsedSection
-        open={sectionOpen[2]}
-        setOpen={() => setSectionOpen(current => ({ ...current, 2: !sectionOpen[2] }))}
-      >
-        <CollapsedSectionHeader title="October 24th, 2022 - Day 03" />
-        <CollapsedSectionContent dontAnimate>
-          {props.speakers.map(speaker => {
-            return <SpeakerCard key={speaker.name} speaker={speaker} />
-          })}
-        </CollapsedSectionContent>
-      </CollapsedSection>
+      {props.days && props.days.map((day, index) => {
+        return (
+          <CollapsedSection
+            open={day === activeDay}
+            setOpen={() => day === activeDay ? setActiveDay(0) : setActiveDay(day)}>
+            <CollapsedSectionHeader title={`${moment(day).format('MMMM DD, YYYY')} - Day ${index + 1}`} />
+            <CollapsedSectionContent dontAnimate>
+              {props.speakers.filter(i => i.eventDays?.some(d => d === day)).map(speaker => {
+                return <SpeakerCard key={speaker.name} speaker={speaker} />
+              })}
+            </CollapsedSectionContent>
+          </CollapsedSection>
+        )
+      })}
     </div>
   )
 }
 
-const alpha = Array.from(Array(26)).map((e, i) => i + 65)
-const alphabet = alpha.map(x => String.fromCharCode(x))
 const ListAlphabeticalSort = (props: ListProps) => {
+  const alpha = Array.from(Array(26)).map((e, i) => i + 65)
+  const alphabet = alpha.map(x => String.fromCharCode(x))
   const [selectedLetter, setSelectedLetter] = React.useState(alphabet[0])
 
   return (
@@ -186,23 +144,22 @@ const ListAlphabeticalSort = (props: ListProps) => {
 }
 
 export const Speakers = (props: any) => {
-  const trackFilters = ['One', 'Two', 'Three']
+  const trackFilters = props.tracks
   const [search, setSearch] = React.useState('')
   const [speakers, filterState] = useFilter({
     tags: true,
     multiSelect: true,
-    filters: trackFilters.map(i => {
+    filters: trackFilters.map((i: string) => {
       return {
-        text: i.toString(),
-        value: i.toString(),
+        text: i,
+        value: i,
       }
     }),
     filterFunction: (activeFilter: any) => {
       if (!activeFilter || Object.keys(activeFilter).length === 0) return props.speakers
 
-      return props.speakers.filter(
-        (i: any) => i.tracks && i.tracks.some((x: any) => activeFilter && activeFilter[x])
-      )
+      const filters = Object.keys(activeFilter)
+      return props.speakers.filter((i: any) => i.tracks?.some((x: any) => filters.some(y => x === y) && activeFilter[x]))
     },
   })
 
@@ -244,8 +201,6 @@ export const Speakers = (props: any) => {
             sortState={sortState}
             filterStates={[
               { title: 'Track', filterState },
-              { title: 'Track', filterState },
-              { title: 'Track', filterState },
             ]}
           />
 
@@ -253,9 +208,9 @@ export const Speakers = (props: any) => {
             <NoResults />
           ) : (
             <>
-              {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={props.speakers} />}
-              {sortedBy.key === 'tracks' && <ListTrackSort speakers={props.speakers} />}
-              {sortedBy.key === 'days' && <ListDaySort speakers={props.speakers} />}
+              {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={speakers as [SpeakerType]} />}
+              {sortedBy.key === 'tracks' && <ListTrackSort speakers={speakers as [SpeakerType]} tracks={props.tracks} />}
+              {sortedBy.key === 'days' && <ListDaySort speakers={speakers as [SpeakerType]} days={props.eventDays} />}
             </>
           )}
         </div>

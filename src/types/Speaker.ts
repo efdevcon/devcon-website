@@ -6,4 +6,5 @@ export interface Speaker {
   avatar?: string
   description?: string
   tracks?: string[]
+  eventDays?: number[]
 }
