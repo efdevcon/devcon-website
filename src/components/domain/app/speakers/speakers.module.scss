@@ -50,6 +50,10 @@
     }
   }
 
+  .icon {
+    @include fonts-xl-fixed;
+  }
+
   .favorite {
     cursor: pointer;
     position: absolute;
@@ -60,6 +64,13 @@
 
 .list-container {
   margin-top: $gaps-gap-2;
+
+  .past {
+    margin-bottom: 20px;
+    @include fonts-bold;
+    @include fonts-sm-fixed;
+    color: #bcbfca;
+  }
 
   &.alphabet-sort {
     .speakers-letters {
@@ -79,7 +90,8 @@
         display: flex;
         flex-direction: column;
 
-        button {
+        a,
+        .disabled-letter {
           position: relative;
           @include fonts-bold;
           @include fonts-sm-fixed;
