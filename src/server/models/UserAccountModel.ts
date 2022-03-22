@@ -9,6 +9,7 @@ const schema: Schema = new Schema(
     email: { type: String, match: /.+@.+\..+/ },
     addresses: { type: [String] },
     disabled: { type: Boolean, required: false, default: false },
+    rawAppState: { type: String, required: false },
     pushSubscription: 'Mixed'
   },
   { timestamps: true }

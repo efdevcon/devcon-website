@@ -11,4 +11,5 @@ export interface UserAccount {
   createdAt: Date
   updatedAt: Date
   appState?: UserAppState
+  rawAppState?: string
 }

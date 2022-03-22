@@ -267,6 +267,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       },
     }
 
+    await updateAccount(account._id, nextAccountState)
     setContext({
       ...context,
       account: nextAccountState,
