@@ -24,15 +24,17 @@ type CardProps = {
 }
 
 export const SpeakerCard = ({ speaker }: CardProps) => {
-  const [speakerFavorites, setSpeakerFavorites] = useState<any>()
+  const { account, setSpeakerFavorite } = useAccountContext()
+  const favoritedSpeakers = account?.appState?.favoritedSpeakers
+  const isSpeakerFavorited = favoritedSpeakers?.[speaker.id]
+
   const iconProps = {
     className: css['favorite'],
     onClick: (e: React.SyntheticEvent) => {
       e.preventDefault()
-      setSpeakerFavorites({
-        ...speakerFavorites, [speaker.id]:
-          speakerFavorites?.[speaker.id] === true ? false : true
-      })
+      if (account) {
+        setSpeakerFavorite(account, speaker.id, !!isSpeakerFavorited)
+      }
     },
   }
 
@@ -51,9 +53,11 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
           <p className={css['company']}>{speaker.company}</p>
         </div>
 
-        <div className={css['icon']}>
-          {speakerFavorites?.[speaker.id] ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
-        </div>
+        {account &&
+          <div className={css['icon']}>
+            {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
+          </div>
+        }
       </>
     </Link>
   )
@@ -129,7 +133,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
         <div className={css['speakers']}>
           {alphabet.map((letter) => {
             const speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
-            if (speakersByLetter.length === 0) return <></>
+            if (speakersByLetter.length === 0) return undefined
 
             return (
               <div key={letter} id={`speakers-${letter}`}>

@@ -10,7 +10,9 @@ const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'pwa-data'
 const defaultLimit = 25
 const test = false
-const nrOfTestSpeakers = 100
+const nrOfTestSpeakers = 50
+const organizationQuestionId = 23
+const roleQuestionId = 24
 
 export async function GetSessions(): Promise<Array<SessionType>> {
     if (test) return await generateSessions()
@@ -102,11 +104,14 @@ export async function GetSpeakers(): Promise<Array<Speaker>> {
     const speakers = await exhaustResource(`/events/${eventName}/speakers`)
     return speakers.map((i: any) => {
         const speakerSessions = sessions.filter((s: SessionType) => i.submissions.find((x: string) => x === s.id))
+        const organization = i.answers.find((i: any) => i.question.id === organizationQuestionId)?.answer
+        const role = i.answers.find((i: any) => i.question.id === roleQuestionId)?.answer
+
         return {
             id: i.code,
             name: i.name,
-            // role?: string,
-            // company?: string
+            role: role ?? null,
+            company: organization ?? null,
             avatar: i.avatar,
             description: i.biography,
             tracks: [...new Set(speakerSessions.map(i => i.track))],
@@ -201,7 +206,6 @@ export async function generateSpeakers(): Promise<Array<Speaker>> {
         return {
             id: defaultSlugify(i),
             name: `${i} ${surNames[index]}`,
-            avatar: '',
             description: `Biography for ${i}`,
             tracks: [tracks[Math.floor(Math.random() * tracks.length)]],
             eventDays: [eventDays[Math.floor(Math.random() * eventDays.length)]]
@@ -216,7 +220,7 @@ export async function generateSpeakers(): Promise<Array<Speaker>> {
 export async function generateTracks(): Promise<Array<string>> {
     return [
         'Developer Infrastructure',
-        'Privacy', 
+        'Privacy',
         'Consensus & Coordination',
         'Scaling & Interoperability',
         'Consensus Layer',

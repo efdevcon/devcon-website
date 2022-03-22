@@ -15,11 +15,9 @@ export default pageHOC((props: any) => {
 })
 
 export async function getStaticProps(context: any) {
-    const intl = await getMessages(context.locale)
-
     return {
         props: {
-            messages: intl,
+            messages: await getMessages(context.locale),
             navigationData: await GetNavigationData(context.locale),
             notification: GetLatestNotification(context.locale),
             page: DEFAULT_APP_PAGE,

@@ -5,7 +5,6 @@ import { AccountContext, AccountContextType } from './account-context'
 import { getWeb3Modal } from 'utils/web3'
 import { SignedMessage } from 'types/SignedMessage'
 import { useRouter } from 'next/router'
-import { Session } from 'types/Session'
 import { Web3Provider } from '@ethersproject/providers'
 import { VerificationToken } from 'types/VerificationToken'
 
@@ -28,36 +27,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     getAccount,
     updateAccount,
     deleteAccount,
-    // setSpeakerFavorite: (speakerId: string, remove: boolean): void => {
-    //   if (!context.account) return
-
-    //   let nextSpeakerFavorites = {
-    //     ...context.account?.appState?.favoritedSpeakers,
-    //   }
-
-    //   if (remove) {
-    //     delete nextSpeakerFavorites[speakerId]
-    //   } else {
-    //     nextSpeakerFavorites = {
-    //       ...nextSpeakerFavorites,
-    //       [speakerId]: true,
-    //     }
-    //   }
-
-    //   const nextAccountState = {
-    //     ...context.account,
-    //     appState: {
-    //       ...context.account.appState,
-    //       updatedAt: new Date(),
-    //       favoritedSpeakers: nextSpeakerFavorites,
-    //     },
-    //   }
-
-    //   setContext({
-    //     ...context,
-    //     account: nextAccountState,
-    //   })
-    // },
+    setSpeakerFavorite,
     // setSessionBookmark: (session: Session, interestLevel: 'interested' | 'attending', remove?: boolean): void => {
     //   if (!context.account) return
 
@@ -272,6 +242,35 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     // else: set error/message
     return false
+  }
+
+  async function setSpeakerFavorite(account: UserAccount, speakerId: string, remove: boolean) {
+    let nextSpeakerFavorites = {
+      ...account?.appState?.favoritedSpeakers,
+    }
+
+    if (remove) {
+      delete nextSpeakerFavorites[speakerId]
+    } else {
+      nextSpeakerFavorites = {
+        ...nextSpeakerFavorites,
+        [speakerId]: true,
+      }
+    }
+
+    const nextAccountState = {
+      ...account,
+      appState: {
+        ...account.appState,
+        updatedAt: new Date(),
+        favoritedSpeakers: nextSpeakerFavorites,
+      },
+    }
+
+    setContext({
+      ...context,
+      account: nextAccountState,
+    })
   }
 
   return <AccountContext.Provider value={context}>{children}</AccountContext.Provider>
