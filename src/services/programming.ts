@@ -13,6 +13,9 @@ const test = false
 const nrOfTestSpeakers = 50
 const organizationQuestionId = 23
 const roleQuestionId = 24
+const websiteQuestionId = 25
+const twitterQuestionId = 26
+const githubQuestionId = 27
 
 export async function GetSessions(): Promise<Array<SessionType>> {
     if (test) return await generateSessions()
@@ -106,12 +109,18 @@ export async function GetSpeakers(): Promise<Array<Speaker>> {
         const speakerSessions = sessions.filter((s: SessionType) => i.submissions.find((x: string) => x === s.id))
         const organization = i.answers.find((i: any) => i.question.id === organizationQuestionId)?.answer
         const role = i.answers.find((i: any) => i.question.id === roleQuestionId)?.answer
+        const website = i.answers.find((i: any) => i.question.id === websiteQuestionId)?.answer
+        const twitter = i.answers.find((i: any) => i.question.id === twitterQuestionId)?.answer
+        const github = i.answers.find((i: any) => i.question.id === githubQuestionId)?.answer
 
         return {
             id: i.code,
             name: i.name,
             role: role ?? null,
             company: organization ?? null,
+            website: website ?? null,
+            twitter: twitter ?? null,
+            github: github ?? null,
             avatar: i.avatar,
             description: i.biography,
             tracks: [...new Set(speakerSessions.map(i => i.track))],
