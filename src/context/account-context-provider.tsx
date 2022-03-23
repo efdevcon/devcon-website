@@ -7,6 +7,7 @@ import { SignedMessage } from 'types/SignedMessage'
 import { useRouter } from 'next/router'
 import { Web3Provider } from '@ethersproject/providers'
 import { VerificationToken } from 'types/VerificationToken'
+import { Session } from 'types/Session'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -28,41 +29,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     updateAccount,
     deleteAccount,
     setSpeakerFavorite,
-    // setSessionBookmark: (session: Session, interestLevel: 'interested' | 'attending', remove?: boolean): void => {
-    //   if (!context.account) return
-
-    //   let nextBookmarkedSessions = {
-    //     ...context.account?.appState?.bookmarkedSessions,
-    //   }
-
-    //   if (remove) {
-    //     delete nextBookmarkedSessions[session.id]
-    //   } else {
-    //     nextBookmarkedSessions = {
-    //       ...nextBookmarkedSessions,
-    //       [session.id]: {
-    //         interestLevel,
-    //         // Start and end time need to be saved at time of bookmarking - allows us to create "session changed" notifications client side by diffing the schedule with the bookmarked snapshots
-    //         start: session.start,
-    //         end: session.end,
-    //       },
-    //     }
-    //   }
-
-    //   const nextAccountState = {
-    //     ...context.account,
-    //     appState: {
-    //       ...context.account?.appState,
-    //       updatedAt: new Date(),
-    //       bookmarkedSessions: nextBookmarkedSessions,
-    //     },
-    //   }
-
-    //   setContext({
-    //     ...context,
-    //     account: nextAccountState,
-    //   })
-    // },
+    setSessionBookmark
   })
 
   useEffect(() => {
@@ -245,32 +212,55 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   }
 
   async function setSpeakerFavorite(account: UserAccount, speakerId: string, remove: boolean) {
-    let nextSpeakerFavorites = {
-      ...account?.appState?.favoritedSpeakers,
-    }
+    let favorites = account.appState?.speakers ?? []
 
     if (remove) {
-      delete nextSpeakerFavorites[speakerId]
+      favorites = favorites.filter(i => i !== speakerId)
     } else {
-      nextSpeakerFavorites = {
-        ...nextSpeakerFavorites,
-        [speakerId]: true,
-      }
+      favorites.push(speakerId)
     }
 
-    const nextAccountState = {
+    const newAccountState = {
       ...account,
       appState: {
         ...account.appState,
-        updatedAt: new Date(),
-        favoritedSpeakers: nextSpeakerFavorites,
+        speakers: favorites
       },
     }
 
-    await updateAccount(account._id, nextAccountState)
+    await updateAccount(account._id, newAccountState)
     setContext({
       ...context,
-      account: nextAccountState,
+      account: newAccountState,
+    })
+  }
+
+  async function setSessionBookmark(account: UserAccount, session: Session, level: 'interested' | 'attending', remove: boolean) {
+    let sessions = account.appState?.sessions ?? []
+
+    if (remove) {
+      sessions = sessions.filter(i => i.id !== session.id)
+    } else {
+      sessions.push({
+        id: session.id,
+        level: level,
+        start: new Date(session.start),
+        end: new Date(session.end)
+      })
+    }
+
+    const newAccountState = {
+      ...account,
+      appState: {
+        ...account.appState,
+        sessions: sessions
+      },
+    }
+
+    await updateAccount(account._id, newAccountState)
+    setContext({
+      ...context,
+      account: newAccountState,
     })
   }
 

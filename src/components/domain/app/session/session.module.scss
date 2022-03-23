@@ -95,6 +95,13 @@
       --color-icon: #{$colors-monochrome-5};
     }
   }
+
+  .active {
+    > svg {
+      font-size: 32px;
+      --color-icon: #{$colors-main};
+    }
+  }
 }
 
 .speakers {

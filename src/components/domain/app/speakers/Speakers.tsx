@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import css from './speakers.module.scss'
 import IconStar from 'assets/icons/star.svg'
 import IconStarFill from 'assets/icons/star-fill.svg'
-import IconSearch from 'assets/icons/search.svg'
-import thumbnailPlaceholder from 'assets/images/thumbnail-placeholder.png'
 import { Link } from 'components/common/link'
 import {
   CollapsedSection,
@@ -25,8 +23,7 @@ type CardProps = {
 
 export const SpeakerCard = ({ speaker }: CardProps) => {
   const { account, setSpeakerFavorite } = useAccountContext()
-  const favoritedSpeakers = account?.appState?.favoritedSpeakers
-  const isSpeakerFavorited = favoritedSpeakers?.[speaker.id]
+  const isSpeakerFavorited = account?.appState?.speakers?.some(i => i === speaker.id)
 
   const iconProps = {
     className: css['favorite'],

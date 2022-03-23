@@ -1,7 +1,29 @@
 import { Document, model, Schema } from 'mongoose'
 import { UserAccount } from 'types/UserAccount'
 
-interface UserAccountModel extends UserAccount, Document {}
+interface UserAccountModel extends UserAccount, Document { }
+
+const sessionSchema: Schema = new Schema(
+  {
+    id: { type: String },
+    level: { type: String, enum: ['interested', 'attending'] },
+    start: { type: Date },
+    end: { type: Date },
+  }, {
+  _id: false,
+  timestamps: false
+}
+)
+const appStateSchema: Schema = new Schema(
+  {
+    speakers: { type: [String] },
+    sessions: [sessionSchema],
+  },
+  {
+    _id: false,
+    timestamps: true
+  }
+)
 
 const schema: Schema = new Schema(
   {
@@ -9,7 +31,7 @@ const schema: Schema = new Schema(
     email: { type: String, match: /.+@.+\..+/ },
     addresses: { type: [String] },
     disabled: { type: Boolean, required: false, default: false },
-    rawAppState: { type: String, required: false },
+    appState: appStateSchema,
     pushSubscription: 'Mixed'
   },
   { timestamps: true }

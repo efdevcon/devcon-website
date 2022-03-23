@@ -1,4 +1,3 @@
-import { UserAppState } from "./UserAppState";
 
 export interface UserAccount {
   _id?: any
@@ -8,8 +7,19 @@ export interface UserAccount {
   addresses: Array<string>
   disabled: boolean
   pushSubscription: any,
+  appState: AppState
   createdAt: Date
   updatedAt: Date
-  appState?: UserAppState
-  rawAppState?: string
+}
+
+export interface AppState {
+  createdAt: Date
+  updatedAt: Date
+  speakers: Array<string>
+  sessions: Array<{
+    id: string
+    level: 'interested' | 'attending',
+    start: Date
+    end: Date
+  }>
 }

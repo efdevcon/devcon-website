@@ -1,5 +1,7 @@
 import React from 'react'
 import IconClock from 'assets/icons/icon_clock.svg'
+import IconStar from 'assets/icons/star.svg'
+import IconStarFill from 'assets/icons/star-fill.svg'
 import IconCalendar from 'assets/icons/schedule-plus.svg'
 import IconMarker from 'assets/icons/icon_marker.svg'
 import IconPeople from 'assets/icons/icon_people.svg'
@@ -16,6 +18,7 @@ import { Session as SessionType } from 'types/Session'
 import moment from 'moment'
 import { GetDevconDay } from 'utils/formatting'
 import Image from 'next/image'
+import { useAccountContext } from 'context/account-context'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -40,8 +43,20 @@ type SessionProps = {
 }
 
 export const Session = (props: SessionProps) => {
+  const { account, setSessionBookmark } = useAccountContext()
   const duration = moment.duration(moment(props.session.end).diff(props.session.start))
   const mins = duration.asMinutes()
+  const interested = account?.appState?.sessions?.some(i => i.level === 'interested' && i.id === props.session.id)
+  const attending = account?.appState?.sessions?.some(i => i.level === 'attending' && i.id === props.session.id)
+
+  async function bookmakSession(level: 'interested' | 'attending') {
+    if (account && level === 'interested') {
+      setSessionBookmark(account, props.session, level, !!interested)
+    }
+    if (account && level === 'attending') {
+      setSessionBookmark(account, props.session, level, !!attending)
+    }
+  }
 
   return (
     <div>
@@ -73,10 +88,12 @@ export const Session = (props: SessionProps) => {
                 {props.session.title}
               </h2>
 
-              <div className={css['meta']}>
-                <div className="label white bold">{props.session.track}</div>
-                <p className="bold text-uppercase">BEGINNER (TODO)</p>
-              </div>
+              {props.session.expertise &&
+                <div className={css['meta']}>
+                  <div className="label white bold">{props.session.track}</div>
+                  <p className="bold text-uppercase">{props.session.expertise}</p>
+                </div>
+              }
 
               {/* Update className - not sure what it does yet */}
               <div className={css['calendar-icon-in-circle']}>
@@ -90,18 +107,18 @@ export const Session = (props: SessionProps) => {
       <div className="section">
         <div className="content">
           <div className={css['actions']}>
-            <div>
+            <div onClick={() => bookmakSession('interested')} className={css[interested ? 'active' : '']}>
+              <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
+            </div>
+            <div onClick={() => bookmakSession('attending')} className={css[attending ? 'active' : '']}>
+              <p>Attend Session</p> <IconCalendar />
+            </div>
+            {/* <div>
               <p>Mark as interesting</p> <IconCalendar />
             </div>
             <div>
               <p>Mark as interesting</p> <IconCalendar />
-            </div>
-            <div>
-              <p>Mark as interesting</p> <IconCalendar />
-            </div>
-            <div>
-              <p>Mark as interesting</p> <IconCalendar />
-            </div>
+            </div> */}
           </div>
 
           {props.session.speakers.length > 0 &&

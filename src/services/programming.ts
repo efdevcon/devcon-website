@@ -16,6 +16,7 @@ const roleQuestionId = 24
 const websiteQuestionId = 25
 const twitterQuestionId = 26
 const githubQuestionId = 27
+const expertiseQuestionId = 28
 
 export async function GetSessions(): Promise<Array<SessionType>> {
     if (test) return await generateSessions()
@@ -24,13 +25,15 @@ export async function GetSessions(): Promise<Array<SessionType>> {
     const rooms = await GetRooms()
 
     return talks.map((i: any) => {
+        const expertise = i.answers.find((i: any) => i.question.id === expertiseQuestionId)?.answer
         return {
             id: i.code,
             speakers: i.speakers.map((x: any) => {
                 return {
                     id: x.code,
                     name: x.name,
-                    description: x.biography
+                    description: x.biography,
+                    avatar: x.avatar
                 }
             }),
             title: i.title,
@@ -42,6 +45,7 @@ export async function GetSessions(): Promise<Array<SessionType>> {
             type: i.submission_type,
             description: i.description,
             abstract: i.abstract,
+            expertise: expertise ?? null,
             // image?: string
             // resources?: string[]
             tags: [],
@@ -62,6 +66,11 @@ export async function GetSessionsByDay(date: Date): Promise<Array<SessionType>> 
 export async function GetSessionsBySpeaker(id: string): Promise<Array<SessionType>> {
     // no endpoint exists, so fetches and filters all sessions recursively
     return (await GetSessions()).filter(i => i.speakers.some(x => x.id === id))
+}
+
+export async function GetSessionsByRoom(id: string): Promise<Array<SessionType>> {
+    // no endpoint exists, so fetches and filters all sessions recursively
+    return (await GetSessions()).filter(i => i.room?.id === id)
 }
 
 export async function GetTracks(): Promise<Array<string>> {

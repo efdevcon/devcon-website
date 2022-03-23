@@ -1,11 +1,10 @@
 import { AppLayout } from 'components/domain/app/Layout'
 import { Room } from 'components/domain/app/venue'
 import { pageHOC } from 'context/pageHOC'
-import moment from 'moment'
 import React from 'react'
 import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
-import { GetRooms, GetSessions, GetSpeakers } from 'services/programming'
+import { GetRooms, GetSessionsByRoom } from 'services/programming'
 import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { getMessages } from 'utils/intl'
 
@@ -31,8 +30,6 @@ export async function getStaticProps(context: any) {
   const id = context.params.id
   const intl = await getMessages(context.locale)
   const room = (await GetRooms()).find(i => i.id === id)
-  const upcomingSessions = (await GetSessions()).filter(i => i.room?.id === id && moment(i.start) >= moment.utc())
-
   if (!room) {
     return {
       props: null,
@@ -48,7 +45,7 @@ export async function getStaticProps(context: any) {
       notification: GetLatestNotification(context.locale),
       page: DEFAULT_APP_PAGE,
       room,
-      upcomingSessions
+      sessions: await GetSessionsByRoom(id)
     }
   }
 }
