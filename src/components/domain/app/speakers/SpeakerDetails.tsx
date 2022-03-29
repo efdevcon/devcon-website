@@ -1,10 +1,13 @@
 import React from 'react'
-import IconStar from 'assets/icons/star.svg'
+import IconGithub from 'assets/icons/github.svg'
+import IconGlobe from 'assets/icons/globe.svg'
+import IconTwitter from 'assets/icons/twitter.svg'
 import css from './speaker-details.module.scss'
 import Image from 'next/image'
 import makeBlockie from 'ethereum-blockies-base64'
 import { SessionCard } from '../session'
 import { Session } from 'types/Session'
+import { Link } from 'components/common/link'
 
 export const SpeakerDetails = (props: any) => {
   const splitName = props.speaker.name.split(' ') as string[]
@@ -27,13 +30,13 @@ export const SpeakerDetails = (props: any) => {
 
           <div className={css['meta']}>
             <div className={css['details']}>
-              <p className={css['role']}>Researcher (TODO)</p>
-              <p className={css['company']}>Ethereum Foundation (TODO)</p>
+              {props.speaker.role && <p className={css['role']}>{props.speaker.role}</p>}
+              {props.speaker.company && <p className={css['company']}>{props.speaker.company}</p>}
             </div>
             <div className={css['socials']}>
-              <IconStar />
-              <IconStar />
-              <IconStar />
+              {props.speaker.website && <Link to={props.speaker.website}><IconGlobe /></Link>}
+              {props.speaker.twitter && <Link to={props.speaker.twitter}><IconTwitter /></Link>}
+              {props.speaker.github && <Link to={props.speaker.github}><IconGithub /></Link>}
             </div>
           </div>
 

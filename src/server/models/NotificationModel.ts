@@ -17,7 +17,7 @@ const schema: Schema = new Schema(
   { timestamps: true }
 )
 
-let mongooseModel
+let mongooseModel: any
 try {
   mongooseModel = model<NotificationModel>('Notification')
 } catch (e) {

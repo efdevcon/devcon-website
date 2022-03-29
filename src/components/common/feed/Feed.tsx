@@ -9,6 +9,7 @@ import { FilterOptions } from 'components/common/filter/Filter'
 import { DropdownProps } from 'components/common/dropdown/Dropdown'
 import { useTranslations } from 'next-intl'
 import moment from 'moment'
+import { Tag } from 'types/Tag'
 
 type FeedItem = {
   id?: string
@@ -17,7 +18,7 @@ type FeedItem = {
   url?: string
   title: string
   description?: string
-  tags?: string[]
+  tags?: Tag[]
 }
 
 type Props = {
@@ -87,8 +88,8 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
             <div className={css['tags']}>
               {item.tags.map(tag => {
                 return (
-                  <div key={tag} className="label bold">
-                    {tag}
+                  <div key={tag.id} className="label bold">
+                    {tag.title}
                   </div>
                 )
               })}

@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^8.1.0",
     "@tippyjs/react": "^4.2.6",
     "carousel": "^0.0.3",
     "dotenv": "^15.0.0",

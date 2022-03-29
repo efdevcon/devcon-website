@@ -10,15 +10,20 @@ import CapacityIcon from 'assets/icons/capacity.svg'
 import InfoIcon from 'assets/icons/info.svg'
 import { Session as SessionType } from 'types/Session'
 import { Room as RoomType } from 'types/Room'
+import moment from 'moment'
 
 interface Props {
   room: RoomType
-  upcomingSessions: Array<SessionType>
+  sessions: Array<SessionType>
 }
 
 export const Room = (props: Props) => {
+  const pastSessions = props.sessions.filter(i => moment(i.start) <= moment.utc())
+  const upcomingSessions = props.sessions.filter(i => moment(i.start) >= moment.utc())
+  const attendingSessions = props.sessions.slice(0, 1)
+
   const [search, setSearch] = React.useState('')
-  const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
+  const trackFilters = ['']
   const [sessions, filterState] = useFilter({
     tags: true,
     multiSelect: true,
@@ -29,12 +34,9 @@ export const Room = (props: Props) => {
       }
     }),
     filterFunction: (activeFilter: any) => {
-      // if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
+      if (!activeFilter || Object.keys(activeFilter).length === 0) return props.sessions
 
-      // console.log(activeFilter, 'active filter')
-
-      // return dummySessions.filter(speaker => activeFilter[speaker.title])
-      return props.upcomingSessions
+      return props.sessions.filter(speaker => activeFilter[speaker.title])
     },
   })
 
@@ -70,12 +72,8 @@ export const Room = (props: Props) => {
             placeholder: 'Search room sessions...',
             onChange: setSearch,
           }}
-          // sortState={sortState}
-          // filterStates={[
-          //   { title: 'Test', filterState },
-          //   { title: 'Test', filterState },
-          //   { title: 'Test', filterState },
-          // ]}
+          sortState={sortState}
+          filterStates={[]}
           className={css['search-section']}
         />
 
@@ -104,9 +102,10 @@ export const Room = (props: Props) => {
               title: 'Past',
               content: (
                 <div>
-                  {props.upcomingSessions.map((i) => {
+                  {pastSessions.length > 0 && pastSessions.map((i) => {
                     return <SessionCard key={i.id} session={i} />
                   })}
+                  {pastSessions.length === 0 && <p>No sessions found</p>}
                 </div>
               ),
             },
@@ -114,9 +113,10 @@ export const Room = (props: Props) => {
               title: 'Attending',
               content: (
                 <div>
-                  {props.upcomingSessions.map((i) => {
+                  {attendingSessions.map((i) => {
                     return <SessionCard key={i.id} session={i} />
                   })}
+                  {attendingSessions.length === 0 && <p>No sessions found</p>}
                 </div>
               ),
             },
@@ -124,9 +124,10 @@ export const Room = (props: Props) => {
               title: 'Upcoming',
               content: (
                 <div>
-                  {props.upcomingSessions.map((i) => {
+                  {upcomingSessions.map((i) => {
                     return <SessionCard key={i.id} session={i} />
                   })}
+                  {upcomingSessions.length === 0 && <p>No sessions found</p>}
                 </div>
               ),
             },

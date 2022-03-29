@@ -16,12 +16,12 @@ type RowProps = {
   itemKey: string
   items: any[]
 }
-type TableColumn = {
+export type TableColumn = {
   title?: string
   intl?: string
   key: string
   className?: string
-  render?(args: any): Element
+  render?(args: any): any
   sort?: SortVariation | Function
 }
 type TableProps = {
@@ -31,7 +31,7 @@ type TableProps = {
   [key: string]: any
 }
 
-const TableHeader = (props: HeaderProps) => {
+export const TableHeader = (props: HeaderProps) => {
   const intl = useTranslations()
 
   return (
@@ -76,26 +76,32 @@ const TableHeader = (props: HeaderProps) => {
   )
 }
 
-const TableRows = (props: RowProps) => {
-  return props.items.map(item => {
-    return (
-      <div key={item[props.itemKey]} className={css['row']}>
-        {props.columns.map(column => {
-          const value = item[column.key]
+export const TableRows = (props: RowProps) => {
+  return <>
+    {props.items.map(item => {
+      return (
+        <div key={item[props.itemKey]} className={css['row']}>
+          {props.columns.map(column => {
+            const value = item[column.key]
 
-          let className = css['cell']
+            let className = css['cell']
 
-          if (column.className) className = `${column.className} ${className}`
+            if (column.className) className = `${column.className} ${className}`
 
-          return (
-            <div key={column.key} className={className}>
-              {column.render ? column.render(item, column) : <p>{value}</p>}
-            </div>
-          )
-        })}
-      </div>
-    )
-  })
+            return (
+              <div key={column.key} className={className}>
+                {column.render ? column.render(item) : <p>{value}</p>}
+                {/* 
+              TODO: build error
+              {column.render ? column.render(item, column) : <p>{value}</p>} */}
+              </div>
+            )
+          })}
+        </div>
+      )
+    })
+    }
+  </>
 }
 
 export const Table = (props: TableProps) => {
@@ -108,5 +114,3 @@ export const Table = (props: TableProps) => {
     </div>
   )
 }
-
-export { TableColumn }

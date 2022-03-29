@@ -13,6 +13,8 @@ import markdownUtils from 'utils/markdown'
 import dips from 'components/domain/page-templates/dips'
 
 export async function GetPage(slug: string, lang: string = 'en'): Promise<Page | undefined> {
+    if (lang !== 'es') lang = 'en'
+    
     try {
         const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'pages', lang, slug + '.md')
         const content = await fs.promises.readFile(filePath, 'utf8')
@@ -45,6 +47,8 @@ export async function GetPage(slug: string, lang: string = 'en'): Promise<Page |
 }
 
 export function GetPages(lang: string = 'en'): Array<Page> {
+    if (lang !== 'es') lang = 'en'
+
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'pages', lang)
     return fs.readdirSync(dir).map(i => {
         const content = fs.readFileSync(join(dir, i), 'utf8')
@@ -67,6 +71,8 @@ export function GetPages(lang: string = 'en'): Array<Page> {
 }
 
 export async function GetDIPs(lang: string = 'en'): Promise<Array<DIP>> {
+    if (lang !== 'es') lang = 'en'
+
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'dips', lang)
     const allDips = fs.readdirSync(dir, { withFileTypes: true })
         .filter(i => i.isFile() && i.name.endsWith('.md'))
@@ -128,6 +134,8 @@ export async function GetDIPs(lang: string = 'en'): Promise<Array<DIP>> {
 }
 
 export function GetNews(lang: string = 'en'): Array<NewsItem> {
+    if (lang !== 'es') lang = 'en'
+
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'news', lang)
     return fs.readdirSync(dir).map(i => {
         const content = fs.readFileSync(join(dir, i), 'utf8')
@@ -150,6 +158,8 @@ export function GetNews(lang: string = 'en'): Array<NewsItem> {
 }
 
 export function GetCategories(lang: string = 'en'): Array<Category> {
+    if (lang !== 'es') lang = 'en'
+    
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'categories', lang)
     const faqs = GetFAQ(lang)
     return fs.readdirSync(dir).map(i => {
@@ -176,6 +186,8 @@ export function GetCategories(lang: string = 'en'): Array<Category> {
 // }
 
 export function GetFAQ(lang: string = 'en'): Array<FAQ> {
+    if (lang !== 'es') lang = 'en'
+
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'faq', lang)
 
     return fs.readdirSync(dir).map(i => {
@@ -200,6 +212,8 @@ export function GetFAQ(lang: string = 'en'): Array<FAQ> {
 }
 
 export function GetTags(lang: string = 'en'): Array<Tag> {
+    if (lang !== 'es') lang = 'en'
+    
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'tags', lang)
 
     return fs.readdirSync(dir).map(i => {

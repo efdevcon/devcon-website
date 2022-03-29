@@ -48,7 +48,6 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
             data.nonce = -1 // only share nonce via email
         }
 
-        console.log('SAVING TOKEN ID to SESSION', data?._id)
         req.session.tokenId = data?._id
         await req.session.save()
         return res.status(200).send({ code: 200, message: '', data: data })

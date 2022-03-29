@@ -43,10 +43,10 @@ export const NewsOverview = (props: NewsOverviewProps) => {
 
     newsItems.forEach(newsItem => {
       newsItem?.tags?.forEach(tag => {
-        if (!tags[tag])
-          tags[tag] = {
-            text: tag,
-            value: tag,
+        if (!tags[tag.id])
+          tags[tag.id] = {
+            text: tag.title,
+            value: tag.id,
           }
       })
     })
@@ -58,7 +58,7 @@ export const NewsOverview = (props: NewsOverviewProps) => {
     <>
       <Feed
         title="Devcon updates"
-        items={newsItems}
+        items={newsItems as any[]}
         sortOptions={{
           options: [
             {
@@ -88,7 +88,7 @@ export const NewsOverview = (props: NewsOverviewProps) => {
             return !activeFilter || activeFilter === 'all'
               ? newsItems
               : newsItems.filter(newsItem => {
-                  return newsItem?.tags?.some(tag => tag.toLowerCase() === activeFilter.toLowerCase())
+                  return newsItem?.tags?.some(tag => tag.id.toLowerCase() === activeFilter.toLowerCase())
                 })
           },
         }}

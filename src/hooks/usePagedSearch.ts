@@ -34,6 +34,6 @@ export const usePagedSearch = <T>(uri: string): FetchedResult<T> => {
   return {
     isLoading: !error && isValidating,
     isError: !!error,
-    data,
+    data: data as any,
   }
 }

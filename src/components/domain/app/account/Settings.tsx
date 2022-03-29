@@ -44,7 +44,9 @@ export default function SettingsPage() {
             </div>
 
             <div className={css['profile']}>
-              <Image className={css['avatar']} src={avatar.url} alt={avatar.name} />
+              <div className={css['avatar']}>
+                <Image src={avatar.url} alt={avatar.name} layout='fill' />
+              </div>
               <p className={`${css['name']} title`}>{isEmail(avatar.name) ? avatar.name : TruncateMiddle(avatar.name, 8)}</p>
               <span className={css['signout']} role='button' onClick={disconnect}>Sign out</span>
             </div>

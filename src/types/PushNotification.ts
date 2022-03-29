@@ -1,5 +1,5 @@
 export interface PushNotification {
-  _id?: string
+  _id?: any
   content: {
     title: string
     message: string

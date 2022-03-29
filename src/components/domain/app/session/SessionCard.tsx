@@ -1,6 +1,10 @@
 import React from 'react'
 import css from './session-card.module.scss'
+import IconClock from 'assets/icons/icon_clock.svg'
 import IconCalendar from 'assets/icons/schedule-plus.svg'
+import IconMarker from 'assets/icons/icon_marker.svg'
+import IconPeople from 'assets/icons/icon_people.svg'
+import IconSpeaker from 'assets/icons/icon_speaker.svg'
 import IconCheck from 'assets/icons/check_circle.svg'
 import { ThumbnailBlock } from 'components/common/thumbnail-block'
 import { Session } from 'types/Session'
@@ -12,18 +16,21 @@ type CardProps = {
 }
 
 export const SessionCard = (props: CardProps) => {
-  const { account, setSessionBookmark } = useAccountContext()
-  const bookmarkedSessions = account?.appState?.bookmarkedSessions
-  const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
+  // TODO: personalization/bookmarks
+  // const { account, setSessionBookmark } = useAccountContext()
+  // const bookmarkedSessions = account?.appState?.bookmarkedSessions
+  // const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
 
   const iconProps = {
     className: `${css['save-session']} icon`,
-    onClick: () => setSessionBookmark(props.session, 'attending', !!sessionIsBookmarked),
+    onClick: () => {
+      // setSessionBookmark(props.session, 'attending', !!sessionIsBookmarked),
+    },
   }
 
-  if (sessionIsBookmarked) {
-    iconProps.className += ` ${css['saved']}`
-  }
+  // if (sessionIsBookmarked) {
+  //   iconProps.className += ` ${css['saved']}`
+  // }
 
   let thumbnailClassName = css['thumbnail-container']
 
@@ -44,7 +51,7 @@ export const SessionCard = (props: CardProps) => {
         <div className={css['top']}>
           <p className={css['title']}>{props.session.title}</p>
 
-          {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
+          {false ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
 
           <div className="label sm">
             {props.session.track}
@@ -52,20 +59,20 @@ export const SessionCard = (props: CardProps) => {
         </div>
         <div className={css['bottom']}>
           <div className={css['time']}>
-            <IconCalendar />
+            <IconClock />
             <p>
               {moment.utc(props.session.start).format('MMM DD - HH:mm a')} {/*Oct 22nd — 10:00 AM*/}
             </p>
           </div>
           {props.session.room && (
             <div className={css['room']}>
-              <IconCalendar />
+              <IconMarker />
               <p>{props.session.room.name}</p>
             </div>
           )}
           {props.session.speakers.length > 0 &&
             <div className={css['authors']}>
-              <IconCalendar />
+              <IconSpeaker />
               <p>
                 {props.session.speakers.map(i => {
                   return i.name
@@ -75,7 +82,7 @@ export const SessionCard = (props: CardProps) => {
           }
           {props.session.room && props.session.room.capacity && (
             <div className={css['n-seats']}>
-              <IconCalendar />
+              <IconPeople />
               <p>{props.session.room.capacity}</p>
             </div>
           )}

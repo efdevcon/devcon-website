@@ -10,7 +10,7 @@ import { AppSearch } from 'components/domain/app/app-search'
 import { useSort, SortVariation } from 'components/common/sort'
 import { useFilter } from 'components/common/filter'
 import { SessionCard } from 'components/domain/app/session'
-import logo from 'assets/images/test-asset.svg'
+import LogoImage from 'assets/images/test-asset.svg'
 import Image from 'next/image'
 import imageBogota from 'assets/images/bogota-city.png'
 
@@ -21,7 +21,6 @@ const dummySessions = [
 ]
 
 export const SideEvents = (props: any) => {
-  console.log(props.sessions, 'sessions')
   const [search, setSearch] = React.useState('')
   const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
   const [sessions, filterState] = useFilter({
@@ -69,12 +68,12 @@ export const SideEvents = (props: any) => {
         <div className={`${css['hero']}`}>
           <div className={`${css['hero-content']}`}>
             <div className={css['image-container']}>
-              <Image src={imageBogota} objectFit='cover' alt={'Devcon Side event'} />
+              <Image src={imageBogota} objectFit='cover' alt={'Devcon Side event'} layout='fill' />
             </div>
 
             <div className={`${css['details']}`}>
               <div>
-                <Image src={logo} alt="Title" />
+                <LogoImage />
 
                 <div className={css['title']}>
                   <h2 className="bold font-primary font-xxl">Devcon Bogota</h2>

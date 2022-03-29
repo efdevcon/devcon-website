@@ -1,4 +1,3 @@
-import { useStaticQuery, graphql } from 'gatsby'
 import { Playlist } from 'types/Playlist'
 import { mapToPlaylist } from './usePlaylists'
 

@@ -73,7 +73,7 @@ export const CallToAction = (props: CTAProps) => {
           <div className={css['slider']}>
             <Slider
               ref={el => {
-                sliderRef.current = el
+                if (el) sliderRef.current = el
               }}
               {...settings}
             >

@@ -23,7 +23,7 @@ export function TruncateMiddle(text: string, length: number = 5) {
 }
 
 export function GetDevconDay(timestamp: number): string {
-  const day = moment.utc(timestamp).day()
+  const day = moment.utc(timestamp).date()
   const index = EVENT_DAYS.indexOf(day)
   return index > -1 ? `Day ${index + 1}` : ''
 }

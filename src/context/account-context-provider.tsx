@@ -5,9 +5,9 @@ import { AccountContext, AccountContextType } from './account-context'
 import { getWeb3Modal } from 'utils/web3'
 import { SignedMessage } from 'types/SignedMessage'
 import { useRouter } from 'next/router'
-import { Session } from 'types/Session'
 import { Web3Provider } from '@ethersproject/providers'
 import { VerificationToken } from 'types/VerificationToken'
+import { Session } from 'types/Session'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -28,71 +28,8 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     getAccount,
     updateAccount,
     deleteAccount,
-    setSpeakerFavorite: (speakerId: string, remove: boolean): void => {
-      if (!context.account) return
-
-      let nextSpeakerFavorites = {
-        ...context.account?.appState?.favoritedSpeakers,
-      }
-
-      if (remove) {
-        delete nextSpeakerFavorites[speakerId]
-      } else {
-        nextSpeakerFavorites = {
-          ...nextSpeakerFavorites,
-          [speakerId]: true,
-        }
-      }
-
-      const nextAccountState = {
-        ...context.account,
-        appState: {
-          ...context.account.appState,
-          updatedAt: new Date(),
-          favoritedSpeakers: nextSpeakerFavorites,
-        },
-      }
-
-      setContext({
-        ...context,
-        account: nextAccountState,
-      })
-    },
-    setSessionBookmark: (session: Session, interestLevel: 'interested' | 'attending', remove?: boolean): void => {
-      if (!context.account) return
-
-      let nextBookmarkedSessions = {
-        ...context.account?.appState?.bookmarkedSessions,
-      }
-
-      if (remove) {
-        delete nextBookmarkedSessions[session.id]
-      } else {
-        nextBookmarkedSessions = {
-          ...nextBookmarkedSessions,
-          [session.id]: {
-            interestLevel,
-            // Start and end time need to be saved at time of bookmarking - allows us to create "session changed" notifications client side by diffing the schedule with the bookmarked snapshots
-            start: session.start,
-            end: session.end,
-          },
-        }
-      }
-
-      const nextAccountState = {
-        ...context.account,
-        appState: {
-          ...context.account?.appState,
-          updatedAt: new Date(),
-          bookmarkedSessions: nextBookmarkedSessions,
-        },
-      }
-
-      setContext({
-        ...context,
-        account: nextAccountState,
-      })
-    },
+    setSpeakerFavorite,
+    setSessionBookmark
   })
 
   useEffect(() => {
@@ -137,7 +74,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       const address = await signer.getAddress()
       let signature = ''
 
-      if (web3Provider.provider?.wc) {
+      if ((web3Provider.provider as any).wc) {
         signature = await web3Provider.send('personal_sign', [
           utils.hexlify(utils.toUtf8Bytes(message)),
           address.toLowerCase(),
@@ -272,6 +209,59 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     // else: set error/message
     return false
+  }
+
+  async function setSpeakerFavorite(account: UserAccount, speakerId: string, remove: boolean) {
+    let favorites = account.appState?.speakers ?? []
+
+    if (remove) {
+      favorites = favorites.filter(i => i !== speakerId)
+    } else {
+      favorites.push(speakerId)
+    }
+
+    const newAccountState = {
+      ...account,
+      appState: {
+        ...account.appState,
+        speakers: favorites
+      },
+    }
+
+    await updateAccount(account._id, newAccountState)
+    setContext({
+      ...context,
+      account: newAccountState,
+    })
+  }
+
+  async function setSessionBookmark(account: UserAccount, session: Session, level: 'interested' | 'attending', remove: boolean) {
+    let sessions = account.appState?.sessions ?? []
+
+    if (remove) {
+      sessions = sessions.filter(i => i.id !== session.id)
+    } else {
+      sessions.push({
+        id: session.id,
+        level: level,
+        start: new Date(session.start),
+        end: new Date(session.end)
+      })
+    }
+
+    const newAccountState = {
+      ...account,
+      appState: {
+        ...account.appState,
+        sessions: sessions
+      },
+    }
+
+    await updateAccount(account._id, newAccountState)
+    setContext({
+      ...context,
+      account: newAccountState,
+    })
   }
 
   return <AccountContext.Provider value={context}>{children}</AccountContext.Provider>

@@ -8,7 +8,7 @@ const Layer = (props: any) => {
     <div {...props}>
       <Image src={floorplan} alt="floorplan" />
       <p className={css['label']}>L{props['data-floor']}</p>
-      <div className={css['pin-container']} style={{ '--x': '100%', '--y': '100%' }}>
+      <div className={css['pin-container']} style={{ '--x': '100%', '--y': '100%' } as any}>
         <div className={css['pin']}>PIN</div>
       </div>
     </div>
@@ -36,18 +36,18 @@ export const CSS3D = () => {
 
   const style = {}
 
-  if (translateX !== '') style['--translate-x'] = `${translateX}%`
-  if (translateY !== '') style['--translate-y'] = `${translateY}%`
-  if (rotateX !== '') style['--rotate-x'] = `${rotateX}deg`
-  if (rotateZ !== '') style['--rotate-z'] = `${rotateZ}deg`
-  if (rotateY !== '') style['--rotate-y'] = `${rotateY}deg`
+  // if (translateX !== '') style['--translate-x'] = `${translateX}%`
+  // if (translateY !== '') style['--translate-y'] = `${translateY}%`
+  // if (rotateX !== '') style['--rotate-x'] = `${rotateX}deg`
+  // if (rotateZ !== '') style['--rotate-z'] = `${rotateZ}deg`
+  // if (rotateY !== '') style['--rotate-y'] = `${rotateY}deg`
 
   return (
     <div className={css['container']}>
       <div
         className={(() => {
           let className = css['scene']
-          const selectionActive = !isNaN(currentFloor)
+          const selectionActive = false // !isNaN(currentFloor)
 
           if (selectionActive) className += ` ${css['selection-active']}`
 
@@ -55,20 +55,20 @@ export const CSS3D = () => {
         })()}
       >
         {floors.map((floor, index) => {
-          const selected = index === currentFloor
+          const selected = false // index === currentFloor
 
           return (
             <Layer
               key={index}
               style={style}
               data-floor={index}
-              onClick={() => setCurrentFloor(selected ? undefined : index)}
-              onMouseEnter={() => {
-                setHoveredFloor(index)
-              }}
-              onMouseLeave={() => {
-                setHoveredFloor(undefined)
-              }}
+              // onClick={() => setCurrentFloor(selected ? undefined : index)}
+              // onMouseEnter={() => {
+              //   setHoveredFloor(index)
+              // }}
+              // onMouseLeave={() => {
+              //   setHoveredFloor(undefined)
+              // }}
               className={(() => {
                 let className = `${css['layer']} ${css[`floor-${index}`]}`
 

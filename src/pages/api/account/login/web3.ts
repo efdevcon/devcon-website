@@ -3,7 +3,6 @@ import UserAccountModel from "server/models/UserAccountModel"
 import { UserAccountRepository } from "server/repositories/UserAccountRepository"
 import { VerificationTokenRepository } from "server/repositories/VerificationTokenRepository"
 import { withSessionRoute } from "server/withIronSession"
-import { UserAccount } from 'types/UserAccount'
 import { isValidSignature } from "utils/web3"
 
 const repo = new UserAccountRepository()
@@ -29,7 +28,6 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
         return res.status(400).send({ code: 400, message: 'Invalid input.' })
     }
 
-    console.log('WEB3 LOGIN === 1')
     const validSignature = isValidSignature(address, msg, signed)
     if (!validSignature) {
         return res.status(400).send({ code: 400, message: 'Invalid signature.' })
@@ -39,7 +37,7 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
     if (!data) {
         return res.status(400).send({ code: 400, message: 'No valid verification token found.' })
     }
-    console.log('WEB3 LOGIN === 2')
+
     const userId = req.session.userId
     // if a session exists => add address to existing account
     if (userId) {
@@ -62,7 +60,7 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
 
         return res.status(500).send({ code: 500, message: 'Unable to login with Web3.' })
     }
-    console.log('WEB3 LOGIN === 3')
+
     // else; start new session
     let userAccount = await repo.findUserAccountByAddress(address)
     if (userAccount) {
@@ -71,7 +69,7 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
         await req.session.save()
         return res.status(200).send({ code: 200, message: '', data: userAccount })
     }
-    
+
     const model = new UserAccountModel()
     model.addresses.push(address)
     userAccount = await repo.create(model)

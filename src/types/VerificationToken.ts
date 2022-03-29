@@ -1,6 +1,6 @@
 
 export interface VerificationToken {
-  _id: any
+  _id?: any
   identifier: string
   nonce: number
   issued: Date

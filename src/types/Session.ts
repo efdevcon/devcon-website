@@ -13,6 +13,7 @@ export interface Session {
   type?: string
   description?: string
   abstract?: string
+  expertise?: string
   image?: string
   resources?: string[]
   tags?: string[]

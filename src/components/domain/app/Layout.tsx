@@ -15,7 +15,7 @@ export const AppLayout = (props: any) => {
       <InlineNav />
       
       <div className={css['app']}>
-      {props.children}
+        {props.children}
       </div>
 
       {loggedIn && <BottomNav location={location} />}

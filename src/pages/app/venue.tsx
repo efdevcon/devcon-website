@@ -4,7 +4,7 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
-import { GetRooms } from 'services/programming'
+import { GetFloors, GetRooms } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getMessages } from 'utils/intl'
 
@@ -17,7 +17,7 @@ export default pageHOC((props: any) => {
 export async function getStaticProps(context: any) {
     const intl = await getMessages(context.locale)
     const rooms = await GetRooms()
-    const floors = [...new Set(rooms.map(i => i.info).filter(i => !!i))]
+    const floors = await GetFloors()
 
     return {
         props: {

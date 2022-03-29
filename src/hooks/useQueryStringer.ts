@@ -21,7 +21,7 @@ export const useQueryStringer = (object: { [key: string]: any }, replaceState?: 
   // This is highly contextual so it's off by default
   if (preserveUnmanagedKeys) {
     const managedKeys = Object.keys(object);
-    const currentQueryString = queryString.parse(router.query);
+    const currentQueryString = queryString.parse(router.query as any);
     const unmanagedKeys = Object.entries(currentQueryString).reduce((acc, [key, val]) => {
       if (managedKeys.includes(key)) return acc;
 

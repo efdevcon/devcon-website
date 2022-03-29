@@ -4,7 +4,7 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
-import { GetSessions, GetSpeakers } from 'services/programming'
+import { GetEventDays, GetSpeakers, GetTracks } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getMessages } from 'utils/intl'
 
@@ -15,16 +15,15 @@ export default pageHOC((props: any) => {
 })
 
 export async function getStaticProps(context: any) {
-    const intl = await getMessages(context.locale)
-
     return {
         props: {
-            messages: intl,
+            messages: await getMessages(context.locale),
             navigationData: await GetNavigationData(context.locale),
             notification: GetLatestNotification(context.locale),
             page: DEFAULT_APP_PAGE,
-            sessions: await GetSessions(),
-            speakers: await GetSpeakers()
+            speakers: await GetSpeakers(),
+            tracks: await GetTracks(),
+            eventDays: await GetEventDays()
         }
     }
 }

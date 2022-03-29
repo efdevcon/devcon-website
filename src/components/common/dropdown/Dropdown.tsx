@@ -76,7 +76,7 @@ export const Dropdown = React.forwardRef((props: DropdownProps, externalRef: any
     'aria-label': 'Toggle dropdown',
     className,
     ref: (el: any) => {
-      ref.current = el
+      // ref.current = el // TODO: build error
 
       if (externalRef) externalRef.current = el
     },
