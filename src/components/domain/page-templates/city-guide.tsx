@@ -30,9 +30,12 @@ export default pageHOC(function CityGuideTemplate(props: any) {
   //   right: data.why.nodes[0].fields.frontmattermd.right.html,
   // }
 
+  // console.log(props.sections.todo.left, 'let')
+
   return (
     <Content theme={themes['purple']}>
       <PageHero
+        path={[{ text: 'Bogota' }, { text: 'City Guide' }]}
         navigation={[
           {
             title: intl('location_title'),
@@ -54,20 +57,20 @@ export default pageHOC(function CityGuideTemplate(props: any) {
       />
 
       <PageContentSection>
-        <TwoColumns
-          id="about"
-          title={intl('location_title')}
-          left={'pageContext?.current?.body'}
-          right={<Snapshot />}
-        />
+        <TwoColumns id="about" title={intl('location_title')} left={pageContext?.current?.body} right={<Snapshot />} />
 
         <section id="carousel" className={css['section']}>
           <Carousel />
         </section>
 
-        <TwoColumns id="things-todo" left={'todo.left'} right={'todo.right'} />
+        <TwoColumns id="things-todo" left={props.sections.todo.left} right={props.sections.todo.right} />
 
-        <TwoColumns id="why-bogota" title={'why.title'} left={'why.left'} right={'why.right'} />
+        <TwoColumns
+          id="why-bogota"
+          title={props.sections.why.title}
+          left={props.sections.why.left}
+          right={props.sections.why.right}
+        />
 
         <section id="FAQ" className={css['section']}>
           <FAQ data={[]} customCategoryTitle="Frequently Asked Questions" />

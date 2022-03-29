@@ -9,16 +9,13 @@ import { DIP } from 'types/DIP'
 import { NewsItem } from 'types/NewsItem'
 import { Category } from 'types/Category'
 import { FAQ } from 'types/FAQ'
-import {unified} from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeSanitize from 'rehype-sanitize'
-import rehypeStringify from 'rehype-stringify'
+import markdownUtils from 'utils/markdown'
+import dips from 'components/domain/page-templates/dips'
 
-export function GetPage(slug: string, lang: string = 'en'): Page | undefined {
+export async function GetPage(slug: string, lang: string = 'en'): Promise<Page | undefined> {
     try {
         const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'pages', lang, slug + '.md')
-        const content = fs.readFileSync(filePath, 'utf8')
+        const content = await fs.promises.readFile(filePath, 'utf8')
 
         if (!content) {
             console.log('File has no content..', filePath)
@@ -28,7 +25,8 @@ export function GetPage(slug: string, lang: string = 'en'): Page | undefined {
         const doc = matter(content)
         const allTags = GetTags(lang)
         const tags: Array<string> = doc.data.tags ?? []
-        return {
+
+        const page =  {
             ...doc.data,
             body: doc.content,
             lang: lang,
@@ -36,6 +34,10 @@ export function GetPage(slug: string, lang: string = 'en'): Page | undefined {
             slug: `/${slug}`, 
             tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
         } as Page
+
+        if (page.body) page.body = await markdownUtils.toHtml(page.body);
+
+        return page;
     }
     catch (e) {
         // page not found
@@ -71,7 +73,9 @@ export async function GetDIPs(lang: string = 'en'): Promise<Array<DIP>> {
         .map(i => Number(i.name.replace('.md', '').replace('DIP-', '')))
         .sort((a, b) => a - b)
 
-    const dips = fs.readdirSync(dir).map(i => {
+    const dipsDir = await fs.promises.readdir(dir)
+    
+    let dips = await Promise.all(dipsDir.map(async (i) => {
         const content = fs.readFileSync(join(dir, i), 'utf8')
         if (!content) {
             console.log('File has no content..', i)
@@ -83,8 +87,6 @@ export async function GetDIPs(lang: string = 'en'): Promise<Array<DIP>> {
         const nextDip = currentIndex < allDips.length ? `/${lang}/dips/dip-${allDips[currentIndex + 1]}` : `/${lang}/dips/`
 
         const doc = matter(content)
-
-        // const htmlFormattedMarkdown = serialize(doc.content);
 
         return {
             number: doc.data.DIP,
@@ -98,39 +100,27 @@ export async function GetDIPs(lang: string = 'en'): Promise<Array<DIP>> {
             resources: doc.data['Resources Required'] ?? '',
             discussion: doc.data.Discussion,
             created: doc.data.Created ? new Date(doc.data.Created).getTime() : 0,
-            body: doc.content,
+            body: await markdownUtils.toHtml(doc.content), //doc.content,
             slug: i.replace('.md', '').toLowerCase(),
             next_dip: nextDip,
             prev_dip: prevDip
         } as DIP
-    }).filter(i => !!i) as Array<DIP>
+    })) as Array<DIP>
+    
+    dips = dips.filter(i => !!i);
 
     // Parse markdown into html
     await Promise.all(dips.map(async dip => {
         if (dip.body) {
-            const markdownAsHtml = await unified()
-                .use(remarkParse)
-                .use(remarkRehype)
-                .use(rehypeSanitize)
-                .use(rehypeStringify)
-                .process(dip.body)
+            const bodyHtml = await markdownUtils.toHtml(dip.body)
 
-            dip.body = String(markdownAsHtml);
+            dip.body = bodyHtml;
         }
 
         if (dip.summary) {
-            let summary = dip.summary; 
+            const summaryHtml = await markdownUtils.toHtml(dip.summary, 255);
 
-            if (summary.length > 255) summary = `${summary.slice(0, 255)}...`
-
-            const markdownAsHtml = await unified()
-                .use(remarkParse)
-                .use(remarkRehype)
-                .use(rehypeSanitize)
-                .use(rehypeStringify)
-                .process(summary)
-
-            dip.summary = String(markdownAsHtml);
+            dip.summary = summaryHtml;
         }
     }))
 
@@ -179,6 +169,12 @@ export function GetCategories(lang: string = 'en'): Array<Category> {
     }).filter(i => !!i) as Array<Category>
 }
 
+// export function GetCityGuide(lang: string = 'en'): Array<Category> {
+//     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'bogota', lang)
+
+
+// }
+
 export function GetFAQ(lang: string = 'en'): Array<FAQ> {
     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'faq', lang)
 
@@ -222,4 +218,26 @@ export function GetTags(lang: string = 'en'): Array<Tag> {
             lang: lang
         } as Tag
     }).filter(i => !!i) as Array<Tag>
+}
+
+export async function GetContentSection(slug: string, lang: string = 'en'): Promise<any> {
+    const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'sections', lang, slug + '.md')
+
+    let content
+
+    try {
+        content = await fs.promises.readFile(filePath, 'utf8')
+    }
+    catch (e) {
+        // file not found.. ignore
+    }
+
+    if (!content) {
+        console.log('File not found..', filePath)
+        return []
+    }
+
+    const doc = matter(content)
+
+    return doc;
 }

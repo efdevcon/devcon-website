@@ -36,7 +36,7 @@ type PathSegment = {
 }
 
 type PageHeroProps = {
-  title?: string
+  title?: string | false
   titleSubtext?: string
   titleClassName?: string
   path?: string | PathSegment[]
@@ -114,8 +114,8 @@ export const PageHero = (props: PageHeroProps) => {
   const setNextScene = React.useMemo(
     () => (increment: number) => {
       const nextScene = currentScene + increment
-      if (!props.scenes) return 
-      
+      if (!props.scenes) return
+
       if (nextScene >= props.scenes.length) {
         setCurrentScene(0)
       } else if (nextScene < 0) {
@@ -138,36 +138,40 @@ export const PageHero = (props: PageHeroProps) => {
     }
   }, [props.scenes, setNextScene])
 
+  const title = props.title ?? pageContext?.current?.title
+
   return (
     <div id="page-hero" className={className} style={style}>
       <div className="section">
         <div className={css['info']}>
           <PathNavigation {...props} />
 
-          <div className={css['title-block']}>
-            <h1
-              className={`font-massive-2 ${props.titleSubtext ? css['subtext'] : ''} ${
-                props.titleClassName ? props.titleClassName : ''
-              }`}
-            >
-              {props.title ?? pageContext?.current?.title}
-              {props.titleSubtext && <span>{props.titleSubtext}</span>}
-            </h1>
-            {props.description && <span className={css['description']}>{props.description}</span>}
+          {title && (
+            <div className={css['title-block']}>
+              <h1
+                className={`font-massive-2 ${props.titleSubtext ? css['subtext'] : ''} ${
+                  props.titleClassName ? props.titleClassName : ''
+                }`}
+              >
+                {title}
+                {props.titleSubtext && <span>{props.titleSubtext}</span>}
+              </h1>
+              {props.description && <span className={css['description']}>{props.description}</span>}
 
-            {props.cta && (
-              <div className={css['buttons']}>
-                {props.cta.map((link: CTALink) => {
-                  return (
-                    <Link key={link.to + link.title} className="button black ghost lg" to={link.to}>
-                      {link.icon}
-                      <span>{link.title}</span>
-                    </Link>
-                  )
-                })}
-              </div>
-            )}
-          </div>
+              {props.cta && (
+                <div className={css['buttons']}>
+                  {props.cta.map((link: CTALink) => {
+                    return (
+                      <Link key={link.to + link.title} className="button black ghost lg" to={link.to}>
+                        {link.icon}
+                        <span>{link.title}</span>
+                      </Link>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+          )}
 
           {props.children}
 

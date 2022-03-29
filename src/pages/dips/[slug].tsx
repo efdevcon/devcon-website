@@ -5,8 +5,7 @@ import { DIP } from 'components/domain/dips/dip'
 import themes from 'components/domain/themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
 import { GetDIPs } from 'services/page'
-import { GetNavigationData } from 'services/navigation'
-import { GetLatestNotification } from 'services/notifications'
+import { getGlobalData } from 'services/global'
 
 export default pageHOC(function DIPTemplate(props: any) {
   return (
@@ -45,13 +44,11 @@ export async function getStaticProps(context: any) {
     }
   }
 
-  const intl = (await import(`../../../content/i18n/${context.locale}.json`)).default
+  const globalData = await getGlobalData(context)
 
   return {
     props: {
-      messages: intl,
-      navigationData: await GetNavigationData(context.locale),
-      notification: GetLatestNotification(context.locale),
+      ...globalData,
       page: {
         lang: context.locale,
         id: dip.slug,

@@ -77,7 +77,7 @@ export function DIP(props: { dip: DIPType }) {
   return (
     <div className={css['dip-container']}>
       <PageHero
-        title=""
+        title={false}
         path={[{ text: 'dips', url: '/dips' }, { text: dip.title }]}
         renderCustom={() => {
           return (

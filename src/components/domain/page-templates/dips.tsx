@@ -15,7 +15,6 @@ import { Contributor } from 'types/DIP'
 
 export default pageHOC(function DIPsTemplate(props: any) {
   const intl = useTranslations()
-  const pageContext = usePageContext()
   const contributors = AllContributorsJson as Contributor[]
 
   return (
@@ -54,7 +53,7 @@ export default pageHOC(function DIPsTemplate(props: any) {
       />
 
       <PageContentSection>
-        <Contribute dipDescription={pageContext?.current?.body} contributors={contributors} />
+        <Contribute dipDescription={props.page.body} contributors={contributors} />
         <Proposals dips={props.dips} />
       </PageContentSection>
     </Content>

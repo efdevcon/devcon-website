@@ -23,7 +23,9 @@ export function FAQ(props: FaqProps) {
       return { id: i.id, title: i.title, body: i.body }
     })
   }
-  
+
+  // console.log(props.items, 'hello')
+
   return (
     <div className={css['container']}>
       {props.data.map((category: Category) => {

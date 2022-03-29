@@ -9,22 +9,22 @@ import { GetPage } from './page'
 
 export async function GetNavigationData(lang: string = 'en'): Promise<NavigationData> {
     return {
-        top: GetNavigation('top', lang),
-        site: GetNavigation('site', lang),
+        top: await GetNavigation('top', lang),
+        site: await GetNavigation('site', lang),
         footer: {
-            bottom: GetNavigation('footer-bottom', lang),
-            highlights: GetNavigation('footer-highlights', lang),
-            left: GetNavigation('footer-left', lang),
-            right: GetNavigation('footer-right', lang),
+            bottom: await GetNavigation('footer-bottom', lang),
+            highlights: await GetNavigation('footer-highlights', lang),
+            left: await GetNavigation('footer-left', lang),
+            right: await GetNavigation('footer-right', lang),
         },
     }
 }
 
-export function GetNavigation(slug: string, lang: string = 'en'): Array<Link> {
+export async function GetNavigation(slug: string, lang: string = 'en'): Promise<Array<Link>> {
     const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'navigation', slug + '.md')
     let content
     try {
-        content = fs.readFileSync(filePath, 'utf8')
+        content = await fs.promises.readFile(filePath, 'utf8')
     }
     catch (e) {
         // file not found.. ignore
@@ -36,13 +36,16 @@ export function GetNavigation(slug: string, lang: string = 'en'): Array<Link> {
     }
 
     const doc = matter(content)
-    return parseLinks(doc.data.links, lang)
+
+    const links = await parseLinks(doc.data.links, lang)
+
+    return links;
 }
 
-function parseLinks(links: any[], lang: string): Array<Link> {
-    return links.map((i: any) => {
+async function parseLinks(links: any[], lang: string): Promise<Array<Link>> {
+    const parsedLinks = await Promise.all(links.map(async (i: any) => {
         if (i.type === 'page') {
-            const page = GetPage(i.slug, lang)
+            const page = await GetPage(i.slug, lang)
 
             if (page) {
                 return {
@@ -55,7 +58,7 @@ function parseLinks(links: any[], lang: string): Array<Link> {
 
         if (i.type === 'link') {
             const linkFilePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'links', lang, i.slug + '.md')
-            const linkContent = fs.readFileSync(linkFilePath, 'utf8')
+            const linkContent = await fs.promises.readFile(linkFilePath, 'utf8')
             const linkDoc = matter(linkContent)
 
             return {
@@ -67,7 +70,7 @@ function parseLinks(links: any[], lang: string): Array<Link> {
 
         if (['header', 'links', 'app'].includes(i.type)) {
             const headerFilePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'headers', lang, i.slug + '.md')
-            const headerContent = fs.readFileSync(headerFilePath, 'utf8')
+            const headerContent = await fs.promises.readFile(headerFilePath, 'utf8') 
             const headerDoc = matter(headerContent)
 
             if (i.type === 'links') {
@@ -75,7 +78,7 @@ function parseLinks(links: any[], lang: string): Array<Link> {
                     title: headerDoc.data.title,
                     url: '#',
                     type: i.type,
-                    links: parseLinks(i.links, lang)
+                    links: await parseLinks(i.links, lang)
                 }
             }
 
@@ -100,5 +103,7 @@ function parseLinks(links: any[], lang: string): Array<Link> {
             url: i.slug,
             type: i.type
         }
-    })
+    }))
+
+    return parsedLinks;
 }

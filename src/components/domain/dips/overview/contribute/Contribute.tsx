@@ -20,13 +20,24 @@ type ThumbnailProps = {
 const Thumbnail = ({ contributor }: ThumbnailProps) => {
   return (
     <Tooltip content={contributor.name}>
-      <Image
+      <img
         key={contributor.name}
         className={css['thumbnail']}
         alt={`Contributor: ${contributor.name}`}
         src={contributor.avatarUrl}
-        layout="fill"
+        width="100%"
+        height="100%"
       />
+      {/* <div className={css['thumbnail']}>
+        <Image
+          key={contributor.name}
+          className={css['thumbnail']}
+          alt={`Contributor: ${contributor.name}`}
+          src={contributor.avatarUrl}
+          width="100%"
+          height="100%"
+        />
+      </div> */}
     </Tooltip>
   )
 }

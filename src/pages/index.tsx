@@ -1,17 +1,13 @@
 import Default from 'components/common/layouts/default'
-import { PWAPrompt } from 'components/domain/app/pwa-prompt'
 import { BlogReel } from 'components/domain/blog-overview'
-import { News } from 'components/domain/news'
 import { SEO } from 'components/domain/seo'
 import { pageHOC } from 'context/pageHOC'
 import { GetBlogs } from 'services/blogs'
-import { GetNavigationData } from 'services/navigation'
-import { GetLatestNotification } from 'services/notifications'
-import { Notifications } from 'components/domain/app/notifications'
 import { TITLE } from 'utils/constants'
-import { GetPages, GetNews } from 'services/page'
-import { GetStaticPaths } from 'next'
-import { getMessages } from 'utils/intl'
+import { GetNews } from 'services/page'
+import { getGlobalData } from 'services/global'
+import { PWAPrompt } from 'components/domain/app/pwa-prompt'
+import { News } from 'components/domain/news'
 
 export default pageHOC(function Index(props: any) {
   return (
@@ -26,25 +22,22 @@ export default pageHOC(function Index(props: any) {
 })
 
 export async function getStaticProps(context: any) {
-  // Get News
-  const intl = await getMessages(context.locale)
+  const globalData = await getGlobalData(context)
 
   return {
     props: {
-      messages: intl,
-      blogs: await GetBlogs(),
-      navigationData: await GetNavigationData(context.locale),
-      notification: GetLatestNotification(context.locale),
-      news: GetNews(context.locale),
+      ...globalData,
       page: {
         title: TITLE,
-        description: intl.description,
+        description: globalData.messages.description,
         template: 'index',
         tags: [],
         lang: context.locale,
         id: 'index',
-        slug: 'index',
+        slug: `/${context.locale}/`,
       },
+      news: GetNews(context.locale),
+      blogs: await GetBlogs(),
     },
   }
 }

@@ -37,6 +37,21 @@
   white-space: nowrap;
   animation: slide 120s linear infinite;
 
+  // > * {
+  //   // flex-shrink: 0;
+  //   height: 38rem !important;
+  //   height: 100% !important;
+  //   position: relative;
+  //   display: inline !important;
+  //   // height: 38rem !important;
+  //   // width: auto !important;
+  // }
+
+  // > * {
+  //   margin-right: 38rem;
+  //   // display: block;
+  // }
+
   img {
     height: 38rem;
     margin-right: $gaps-gap-8;
