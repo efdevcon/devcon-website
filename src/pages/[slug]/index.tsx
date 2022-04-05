@@ -52,7 +52,6 @@ const Page = (props: any) => {
 export default Page
 
 export async function getStaticPaths({ locales }: any) {
-  console.log(locales, 'locales')
   const pages = GetPages()
 
   return {
