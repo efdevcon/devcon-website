@@ -15,22 +15,7 @@ import { useTranslations } from 'next-intl'
 export default pageHOC(function CityGuideTemplate(props: any) {
   const intl = useTranslations()
   const pageContext = usePageContext()
-  // const faqs = ToFaqData(data)
-  // const faq = faqs.filter(i => i.id === 'location')
-  // const todo = {
-  //   title: data.todo.nodes[0].frontmatter.title,
-  //   showTitle: data.todo.nodes[0].frontmatter.showTitle,
-  //   left: data.todo.nodes[0].fields.frontmattermd.left.html,
-  //   right: data.todo.nodes[0].fields.frontmattermd.right.html,
-  // }
-  // const why = {
-  //   title: data.why.nodes[0].frontmatter.title,
-  //   showTitle: data.why.nodes[0].frontmatter.showTitle,
-  //   left: data.why.nodes[0].fields.frontmattermd.left.html,
-  //   right: data.why.nodes[0].fields.frontmattermd.right.html,
-  // }
-
-  // console.log(props.sections.todo.left, 'let')
+  const faqs = props.faq.filter((faq: any) => faq.category.id === 'location')
 
   return (
     <Content theme={themes['purple']}>
@@ -73,65 +58,12 @@ export default pageHOC(function CityGuideTemplate(props: any) {
         />
 
         <section id="FAQ" className={css['section']}>
-          <FAQ data={[]} customCategoryTitle="Frequently Asked Questions" />
+          <FAQ
+            data={[{ id: 'something', title: 'Frequently Asked Questions', questions: faqs }]}
+            customCategoryTitle="Frequently Asked Questions"
+          />
         </section>
       </PageContentSection>
     </Content>
   )
 })
-
-// export const query = graphql`
-//   query ($slug: String!, $language: String!) {
-//     ...Page
-//     ...NavigationData
-//     ...Notification
-//     ...Categories
-//     ...FAQs
-//     todo: allMarkdownRemark(
-//       filter: {
-//         fields: { lang: { eq: $language }, collection: { eq: "sections" }, id: { eq: "things-to-do" } }
-//         frontmatter: { title: { ne: "" } }
-//       }
-//     ) {
-//       nodes {
-//         frontmatter {
-//           title
-//         }
-//         fields {
-//           id
-//           frontmattermd {
-//             left {
-//               html
-//             }
-//             right {
-//               html
-//             }
-//           }
-//         }
-//       }
-//     }
-//     why: allMarkdownRemark(
-//       filter: {
-//         fields: { lang: { eq: $language }, collection: { eq: "sections" }, id: { eq: "why-devcon-in-bogota" } }
-//         frontmatter: { title: { ne: "" } }
-//       }
-//     ) {
-//       nodes {
-//         frontmatter {
-//           title
-//         }
-//         fields {
-//           id
-//           frontmattermd {
-//             left {
-//               html
-//             }
-//             right {
-//               html
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

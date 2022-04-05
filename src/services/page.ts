@@ -133,30 +133,6 @@ export async function GetDIPs(lang: string = 'en'): Promise<Array<DIP>> {
     return dips;
 }
 
-export function GetNews(lang: string = 'en'): Array<NewsItem> {
-    if (lang !== 'es') lang = 'en'
-
-    const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'news', lang)
-    return fs.readdirSync(dir).map(i => {
-        const content = fs.readFileSync(join(dir, i), 'utf8')
-        if (!content) {
-            console.log('File has no content..', i)
-            return undefined
-        }
-
-        const doc = matter(content)
-        const allTags = GetTags(lang)
-        const tags: Array<string> = doc.data.tags ?? []
-        return {
-            ...doc.data,
-            id: i.replace('.md', '').toLowerCase(),
-            title: doc.data.title,
-            date: new Date(doc.data.date).getTime(),
-            tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
-        } as NewsItem
-    }).filter(i => !!i) as Array<NewsItem>
-}
-
 export function GetCategories(lang: string = 'en'): Array<Category> {
     if (lang !== 'es') lang = 'en'
     
@@ -178,12 +154,6 @@ export function GetCategories(lang: string = 'en'): Array<Category> {
         } as Category
     }).filter(i => !!i) as Array<Category>
 }
-
-// export function GetCityGuide(lang: string = 'en'): Array<Category> {
-//     const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'bogota', lang)
-
-
-// }
 
 export function GetFAQ(lang: string = 'en'): Array<FAQ> {
     if (lang !== 'es') lang = 'en'

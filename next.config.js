@@ -7,6 +7,7 @@ const nextConfig = {
       'storage.googleapis.com',
       'avatars.githubusercontent.com',
       'camo.githubusercontent.com',
+      'blog.ethereum.org',
     ],
   },
   i18n: {

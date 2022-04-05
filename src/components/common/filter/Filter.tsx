@@ -160,13 +160,13 @@ export const Filter = (props: FilterState) => {
 
   return (
     <div className={className} data-type="filter">
-      {/* <Dropdown
+      <Dropdown
         className={css['dropdown']}
         customIcon={IconFilter}
         options={props.options.filters}
         value={props.activeFilter}
         onChange={nextValue => props.setActiveFilter(nextValue)}
-      /> */}
+      />
 
       <div className={css['inline']}>
         {props.options.filters.map(filter => {

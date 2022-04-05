@@ -35,14 +35,14 @@ const settings = {
 const formatNewsForCard = (intl: any, item: NewsItem) => {
   let formattedItem = {
     ...item,
-    date: new Date (item.date),
+    date: new Date(item.date),
     linkUrl: item.url,
   }
 
   if (item.url?.includes('twitter')) {
     formattedItem = {
       ...formattedItem,
-      title: intl.formatMessage({ id: 'news_tweet' }),
+      title: intl('news_tweet'),
     }
   }
 
@@ -55,50 +55,48 @@ export const News = (props: NewsProps) => {
   const sliderProps = useSlider(settings)
 
   return (
-    <div className="section">
-      <div className={css['news-container']}>
-        <h2 className="title spaced">{intl('news')}</h2>
+    <div className={`section clear-top ${css['news-container']}`}>
+      <h2 className="title spaced">{intl('news')}</h2>
 
-        {/* Only visible on mobile */}
-        <div className={css['slider-container']}>
-          <Slider className={css['slider']} sliderProps={sliderProps} title={intl('news')}>
-            {newsItems.map((item: NewsItem, index: any) => {
-              const formattedItem = formatNewsForCard(intl, item)
+      {/* Only visible on mobile */}
+      <div className={css['slider-container']}>
+        <Slider className={css['slider']} sliderProps={sliderProps} title={intl('news')}>
+          {newsItems.map((item: NewsItem, index: any) => {
+            const formattedItem = formatNewsForCard(intl, item)
 
-              return (
-                <Card
-                  expandLink
-                  slide={sliderProps[1].canSlide}
-                  className={`${css['card']} ${css['slider']}`}
-                  key={index}
-                  metadata={[moment.utc(formattedItem.date).format('MMM D, YYYY')]}
-                  {...formattedItem}
-                  allowDrag
-                />
-              )
-            })}
-          </Slider>
+            return (
+              <Card
+                expandLink
+                slide={sliderProps[1].canSlide}
+                className={`${css['card']} ${css['slider']}`}
+                key={index}
+                metadata={[moment.utc(formattedItem.date).format('MMM D, YYYY')]}
+                {...formattedItem}
+                allowDrag
+              />
+            )
+          })}
+        </Slider>
+      </div>
+
+      <div className={css['body']}>
+        <div className={css['cards']}>
+          {newsItems.slice(0, 2).map((item: NewsItem, index: any) => {
+            const formattedItem = formatNewsForCard(intl, item)
+
+            return (
+              <Card
+                expandLink
+                className={css['card']}
+                metadata={[moment.utc(item.date).format('MMM D, YYYY')]}
+                key={index}
+                {...formattedItem}
+              />
+            )
+          })}
         </div>
-
-        <div className={css['body']}>
-          <div className={css['cards']}>
-            {newsItems.slice(0, 2).map((item: NewsItem, index: any) => {
-              const formattedItem = formatNewsForCard(intl, item)
-
-              return (
-                <Card
-                  expandLink
-                  className={css['card']}
-                  metadata={[moment.utc(item.date).format('MMM D, YYYY')]}
-                  key={index}
-                  {...formattedItem}
-                />
-              )
-            })}
-          </div>
-          <div className={css['feed']}>
-            <Feed inline title={intl('news_feed')} items={newsItems.slice(2)} />
-          </div>
+        <div className={css['feed']}>
+          <Feed inline title={intl('news_feed')} items={newsItems.slice(2)} />
         </div>
       </div>
     </div>

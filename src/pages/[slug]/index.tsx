@@ -1,7 +1,8 @@
-import { GetCategories, GetDIPs, GetFAQ, GetNews, GetPage, GetPages, GetContentSection } from 'services/page'
+import { GetCategories, GetDIPs, GetFAQ, GetPage, GetPages, GetContentSection } from 'services/page'
 import { getGlobalData } from 'services/global'
 import markdownUtils from 'utils/markdown'
 import dynamic from 'next/dynamic'
+import getNews from 'services/news'
 import { GetBlogs } from 'services/blogs'
 const Blog = dynamic(() => import('components/domain/page-templates/blog'))
 const Blogs = dynamic(() => import('components/domain/page-templates/blogs'))
@@ -91,7 +92,7 @@ export const getPageSpecificData = async (context: any) => {
       return {
         contextData: {
           page,
-          blogs: await GetBlogs(context.locale),
+          blogs: await GetBlogs(),
         },
         revalidate: 1 * 60 * 30,
       }
@@ -128,9 +129,9 @@ export const getPageSpecificData = async (context: any) => {
       return {
         contextData: {
           page,
-          news: GetNews(context.locale),
+          news: await getNews(context.locale),
         },
-        revalidate: 1 * 60 * 30,
+        revalidate: 1 * 60 * 60,
       }
     }
 

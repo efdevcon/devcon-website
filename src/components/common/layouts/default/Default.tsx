@@ -18,7 +18,7 @@ export default function Default({ children }: LayoutProps) {
       <Header withStrip={true} withHero={true} />
       <Hero />
 
-      <div className="content">{children}</div>
+      {children}
 
       <Footer />
       {/* </PageContextProvider> */}

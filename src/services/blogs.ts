@@ -2,7 +2,7 @@ import Parser from "rss-parser"
 import slugify from "slugify"
 import { BlogPost } from "types/BlogPost"
 
-const defaultMaxItems = 5
+const defaultMaxItems = 6
 
 export async function GetBlogs(maxItems: number = defaultMaxItems): Promise<Array<BlogPost>> {
     const parser: Parser = new Parser({

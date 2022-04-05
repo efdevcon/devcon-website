@@ -6,13 +6,13 @@ import { pageHOC } from 'context/pageHOC'
 import { BlogOverview } from '../blog-overview'
 import { PageContentSection } from './page-content-section'
 
-export default pageHOC(function BlogsTemplate() {
+export default pageHOC(function BlogsTemplate(props: any) {
   return (
     <Content theme={themes['blue']}>
       <PageHero />
 
       <PageContentSection>
-        <BlogOverview maxItems={10} blogs={[]} />
+        <BlogOverview maxItems={10} blogs={props.blogs} />
       </PageContentSection>
     </Content>
   )

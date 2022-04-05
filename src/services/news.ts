@@ -1,105 +1,14 @@
 import { NewsItem } from 'types/NewsItem';
 import { BASE_CONTENT_FOLDER } from 'utils/constants'
+import nodeFetch from 'node-fetch';
+import matter from 'gray-matter';
+import { GetTags } from 'services/page';
+import moment from 'moment';
 require('dotenv').config()
-const nodeFetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const RSSParser = require('rss-parser');
 const rssParser = new RSSParser();
-
-const newsDirectory = path.resolve(BASE_CONTENT_FOLDER, 'news-external'); // path.resolve(__dirname, '../../../src/content/news-external');
-
-const files = (() => {
-  const _interface = {
-    readFile: (filepath: string): Promise<File> => {
-      return new Promise((resolve, reject) => {
-        fs.readFile(filepath, (err: any, file: any) => {
-          if (err) {
-            reject(err) 
-          } else {
-            resolve(file);
-          }
-        });
-      })
-    },
-    getFilenamesByDirectory: (directory: string): Promise<string[]> => {
-      return new Promise((resolve, reject) => {
-        fs.readdir(directory, (err: any, files: string[]) => {
-          if (err) {
-            reject(err) 
-          } else {
-            resolve(files);
-          }
-        });
-      })
-    },
-    writeFile: async (filepath: string, contents: string): Promise<boolean> => {
-      // If file with given path already exists we don't want to override it - that allows us to change them using the CMS
-      const exists = await _interface.checkFileExists(filepath);
-
-      return new Promise((resolve, reject) => {
-        if (exists) {
-          resolve(true);
-
-          return;
-        }
-
-        fs.writeFile(filepath, contents, (err: any) => {
-          if (err) {
-            reject(err) 
-          } else {
-            resolve(true);
-          }
-        });
-      });
-    },
-    ensureDirectory: (directory: string) => {
-      if (!fs.existsSync(directory)){
-          fs.mkdirSync(directory);
-      }
-    },
-    checkFileExists: (filepath: string) => {
-      return new Promise((resolve, reject) => {
-        fs.access(filepath, (err: any, exists: any) => {
-          if (err) {
-            resolve(false);
-          } else {
-            resolve(true);
-          }
-        })
-      });
-    },
-    createSafeFilename: (filename: string) => {
-      return filename.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-    }
-  }
-
-  return _interface;
-})();
-
-const markdown = (() => {
-  const _interface = {
-    newsItemToMarkdown: (newsItem: NewsItem) => {
-      // return matter.stringify(newsItem.description || '', newsItem);
-      const attributes = Object.entries(newsItem);
-
-      const markdown = `---${attributes.reduce((acc, [key, value], index) => {
-        if (typeof value === 'undefined' || key === 'description') return acc;
-
-          return acc += `\n${key}: '${value.trim()}'`;
-        }, '')}\n---\n${newsItem.description?.trim()}`;
-
-      return markdown;
-    },
-    write: (directory: string, computeFileName: (newsItem: NewsItem) => string) => (newsItems: NewsItem[]) => {
-      return Promise.all(newsItems.map(newsItem => {
-        return files.writeFile(path.resolve(directory, computeFileName(newsItem)), _interface.newsItemToMarkdown(newsItem));
-      }));
-    }
-  }
-
-  return _interface;
-})();
 
 const formatting = (() => {
   const _interface = {
@@ -107,7 +16,7 @@ const formatting = (() => {
       return {
         title: post.title,
         url: post.link,     
-        date: post.isoDate,
+        date: moment(post.isoDate).valueOf(),
         author: post.author || 'Devcon Team',
         description: post.content,
      }
@@ -116,7 +25,7 @@ const formatting = (() => {
       return {
         title: tweet.id,
         url: `https://twitter.com/EFDevcon/status/${tweet.id}`,
-        date: tweet.created_at,
+        date: moment(tweet.created_at).valueOf(),
         author: '@EFDevcon',
         tweetID: tweet.id,
         description: tweet.text
@@ -128,7 +37,7 @@ const formatting = (() => {
 })();
 
 const twitter = (() => {
-  const twitterDir = path.resolve(newsDirectory, 'tweets');
+  // const twitterDir = path.resolve(newsDirectory, 'tweets');
   // We only include tweets which include a specific hashtag
   const curationHashtag = 'Devcon'; 
   const host = 'https://api.twitter.com/2';
@@ -150,10 +59,6 @@ const twitter = (() => {
   }
 
   const _interface = {
-    twitterDir,
-    ensureDirectory: async () => {
-      files.ensureDirectory(twitterDir);
-    },
     getTweets: async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
       const queryParams = {
         exclude: 'retweets,replies',
@@ -184,37 +89,13 @@ const twitter = (() => {
 
       return result;
     },
-    /* 
-      Collected tweets are named by IDs (which are sequential) - we can retrieve the latest fetched tweet ID by finding the highest number among the saved tweets, which is useful for
-      only requesting tweets that happened after that tweet
-    */
-    getLatestTweetID: async () => {
-      const filenames = await files.getFilenamesByDirectory(path.resolve(__dirname, twitterDir));
-      let latestRecordedTweet: number = 1379132185274384384;
-  
-      filenames.forEach(filename => {
-        const timestamp = parseInt(filename);
-  
-        if (timestamp > latestRecordedTweet) {
-          latestRecordedTweet = timestamp;
-        }
-      })
-  
-      return latestRecordedTweet;
-    } 
   }
 
   return _interface;
 })();
 
 const blog = (() => {
-  const blogDir = path.resolve(newsDirectory, 'blog-posts');
-
   const _interface = {
-    blogDir,
-    ensureDirectory: async () => {
-      files.ensureDirectory(blogDir);
-    },
     getPosts: async () => {
       const feed = await rssParser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml');
   
@@ -225,23 +106,50 @@ const blog = (() => {
   return _interface;
 })();
 
-files.ensureDirectory(newsDirectory);
+const getNewsItems = async (lang: string) => {
+  if (lang !== 'es') lang = 'en'
 
-twitter
-  .ensureDirectory()
-  .then(twitter.getLatestTweetID)
-  .then(twitter.getTweets)
-  .then((tweets: any) => tweets.map(formatting.formatTweet))
-  .then(markdown.write(twitter.twitterDir, (newsItem) => `${newsItem.tweetID}.md`))
-  .catch(e => {
-    console.error('Twitter failed: ', e)
-  })
+  const tweets = await twitter.getTweets(1379132185274384384);
+  const tweetsFormatted = tweets.map(formatting.formatTweet);
+  const blogs = await blog.getPosts();
+  const blogsFormatted = blogs.map(formatting.formatBlogPost);
 
-blog
-  .ensureDirectory()
-  .then(blog.getPosts)
-  .then(posts => posts.map(formatting.formatBlogPost))
-  .then(markdown.write(blog.blogDir, (newsItem) => `${files.createSafeFilename(newsItem.title)}.md`))
-  .catch(e => {
-    console.error('Blog failed: ', e)
-  })
+  const cmsPath = path.join(process.cwd(), BASE_CONTENT_FOLDER, 'news', lang)
+
+  const newsFromCMS = fs.readdirSync(cmsPath).map((file: any)  => {
+      const content = fs.readFileSync(path.join(cmsPath, file), 'utf8')
+
+      if (!content) {
+          console.log('File has no content..', file)
+          return undefined
+      }
+
+      const doc = matter(content)
+      const allTags = GetTags(lang)
+      const tags: Array<string> = doc.data.tags ?? []
+
+      return {
+          ...doc.data,
+          id: file.replace('.md', '').toLowerCase(),
+          title: doc.data.title,
+          date: moment(doc.data.date).valueOf(), //new Date(doc.data.date).getTime(),
+          tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
+      } as NewsItem
+  }).filter((i: any) => !!i) as Array<NewsItem>
+
+  return [
+    ...newsFromCMS,
+    ...blogsFormatted,
+    ...tweetsFormatted
+  ].sort((a, b) => {
+      if (a.date < b.date) {
+        return 1
+      } else if (a.date === b.date) {
+        return 0
+      } else {
+        return -1
+      }
+  });
+}
+
+export default getNewsItems;
