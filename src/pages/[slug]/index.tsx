@@ -52,10 +52,12 @@ const Page = (props: any) => {
 export default Page
 
 export async function getStaticPaths({ locales }: any) {
+  console.log(locales, 'locales')
   const pages = GetPages()
 
   return {
     paths: locales
+      .filter((locale: string) => locale !== 'default')
       .map((locale: string) => {
         return pages.map(i => {
           return { params: { slug: i.slug.slice(1) /* Remove leading slash */ }, locale }

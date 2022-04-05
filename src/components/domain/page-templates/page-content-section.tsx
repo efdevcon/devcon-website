@@ -12,13 +12,11 @@ export function PageContentSection(props: Props) {
 
   return (
     <div className="section">
-      <div className="content">
-        {props.children}
+      {props.children}
 
-        {props.hideTags !== true && pageContext?.current?.tags && (
-          <Tags items={pageContext?.current.tags} viewOnly={false} />
-        )}
-      </div>
+      {props.hideTags !== true && pageContext?.current?.tags && (
+        <Tags items={pageContext?.current.tags} viewOnly={false} />
+      )}
     </div>
   )
 }
