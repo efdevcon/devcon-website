@@ -205,6 +205,8 @@ export function GetTags(lang: string = 'en'): Array<Tag> {
 }
 
 export async function GetContentSection(slug: string, lang: string = 'en'): Promise<any> {
+    if (lang !== 'es') lang = 'en'
+    
     const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'sections', lang, slug + '.md')
 
     let content
