@@ -56,7 +56,7 @@ export async function getStaticPaths({ locales }: any) {
 
   return {
     paths: locales
-      .filter((locale: string) => locale !== 'default')
+      // .filter((locale: string) => locale !== 'default')
       .map((locale: string) => {
         return pages.map(i => {
           return { params: { slug: i.slug.slice(1) /* Remove leading slash */ }, locale }

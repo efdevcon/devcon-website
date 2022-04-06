@@ -19,10 +19,9 @@ export default pageHOC(function DIPTemplate(props: any) {
 
 export async function getStaticPaths(context: any) {
   const dips = await GetDIPs()
-  const locales = context.locales.slice(1) // Removing the "default" locale, only interested in explicit locales ("en", "es", etc.)
 
   return {
-    paths: locales
+    paths: context.locales
       .map((locale: string) => {
         return dips.map(i => {
           return { params: { slug: i.slug }, locale }
