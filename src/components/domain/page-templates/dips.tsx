@@ -10,7 +10,7 @@ import BulletList from 'assets/icons/bullet_list.svg'
 import { PageContentSection } from './page-content-section'
 import { Contribute } from '../dips/overview/contribute'
 import { Proposals } from '../dips/overview/proposals'
-import AllContributorsJson from '../../../../content/dips/contributors.json'
+import AllContributorsJson from '../../../content/dips/contributors.json'
 import { Contributor } from 'types/DIP'
 
 export default pageHOC(function DIPsTemplate(props: any) {
