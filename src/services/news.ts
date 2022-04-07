@@ -114,7 +114,7 @@ const getNewsItems = async (lang: string) => {
   const blogs = await blog.getPosts();
   const blogsFormatted = blogs.map(formatting.formatBlogPost);
 
-  const cmsPath = path.join(process.cwd(), BASE_CONTENT_FOLDER, 'news', lang)
+  const cmsPath = path.resolve('../content/news', lang)
 
   const newsFromCMS = fs.readdirSync(cmsPath).map((file: any)  => {
       const content = fs.readFileSync(path.join(cmsPath, file), 'utf8')
