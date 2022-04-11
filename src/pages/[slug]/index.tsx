@@ -1,17 +1,34 @@
 import { GetCategories, GetDIPs, GetFAQ, GetPage, GetPages, GetContentSection } from 'services/page'
 import { getGlobalData } from 'services/global'
 import markdownUtils from 'utils/markdown'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import getNews from 'services/news'
 import { GetBlogs } from 'services/blogs'
-const Blog = dynamic(() => import('components/domain/page-templates/blog'))
-const Blogs = dynamic(() => import('components/domain/page-templates/blogs'))
-const CityGuide = dynamic(() => import('components/domain/page-templates/city-guide'))
-const Content = dynamic(() => import('components/domain/page-templates/content'))
-const DIPs = dynamic(() => import('components/domain/page-templates/dips'))
-const FAQ = dynamic(() => import('components/domain/page-templates/faq'))
-const News = dynamic(() => import('components/domain/page-templates/news'))
-const Search = dynamic(() => import('components/domain/page-templates/search'))
+
+// Not using dynamically imported components results in them sharing a bundle (e.g. News component will have Blog code in its bundle and vice verca)
+// Unfortunately nextjs dynamic imports and css modules don't work together:
+// https://github.com/vercel/next.js/issues/17464
+// When navigating between pages nextjs cleans up localized css created by css modules - because of this, when components are shared by the originating page and the destination page,
+// the destination page will not have the needed styles
+// Note: It only happens in production, not in dev. It is not critical *yet* since our bundle size is still small even when importing all components.
+// TO-DO: keep an eye out for fixes / find a solution (spent an ungodly amount of time on this already)
+
+// const Blog = dynamic(() => import('../../components/domain/page-templates/blog'))
+// const Blogs = dynamic(() => import('../../components/domain/page-templates/blogs'))
+// const CityGuide = dynamic(() => import('../../components/domain/page-templates/city-guide'))
+// const Content = dynamic(() => import('../../components/domain/page-templates/content'))
+// const DIPs = dynamic(() => import('../../components/domain/page-templates/dips'))
+// const FAQ = dynamic(() => import('../../components/domain/page-templates/faq'))
+// const News = dynamic(() => import('../../components/domain/page-templates/news'))
+// const Search = dynamic(() => import('../../components/domain/page-templates/search'))
+import Blog from '../../components/domain/page-templates/blog'
+import Blogs from '../../components/domain/page-templates/blogs'
+import CityGuide from '../../components/domain/page-templates/city-guide'
+import Content from '../../components/domain/page-templates/content'
+import DIPs from '../../components/domain/page-templates/dips'
+import FAQ from '../../components/domain/page-templates/faq'
+import News from '../../components/domain/page-templates/news'
+import Search from '../../components/domain/page-templates/search'
 
 const Page = (props: any) => {
   switch (props.page.template) {
@@ -56,7 +73,7 @@ export async function getStaticPaths({ locales }: any) {
 
   return {
     paths: locales
-      // .filter((locale: string) => locale !== 'default')
+      .filter((locale: string) => locale !== 'default')
       .map((locale: string) => {
         return pages.map(i => {
           return { params: { slug: i.slug.slice(1) /* Remove leading slash */ }, locale }

@@ -3,11 +3,10 @@ import { useRouter } from 'next/router'
 import { Link } from 'components/common/link'
 import { Menu } from './menu'
 import { Strip } from './strip'
-import { Search } from './search'
+// import { Search } from './search'
 import css from './header.module.scss'
 import { useIsScrolled } from 'hooks/useIsScrolled'
 import HeaderLogo from './HeaderLogo'
-import HeaderLogoArchive from './HeaderLogoArchive'
 import { useOnOutsideClick } from 'hooks/useOnOutsideClick'
 
 type HeaderProps = {
@@ -22,7 +21,6 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
   const isScrolled = useIsScrolled()
   const [foldoutOpen, setFoldoutOpen] = React.useState(false)
   const [searchOpen, setSearchOpen] = React.useState(false)
-  const isArchive = router.pathname.startsWith('/archive')
   useOnOutsideClick(ref, () => setSearchOpen(false))
 
   const searchActive = searchOpen && !foldoutOpen
@@ -46,15 +44,13 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
   if (foldoutOpen) headerClass += ` ${css['foldout-open']}`
   if (className) headerContainerClass += ` ${className}`
 
-  // console.log(router.locale, 'locale')
-
   const body = (
     <header id="header-container" className={headerContainerClass}>
       {withStrip && <Strip withHero={withHero} />}
       <div id="header" className={headerClass} ref={ref}>
         <div className={css['menu-container']}>
-          <Link to={isArchive ? '/archive' : `${router.locale}`}>
-            {isArchive ? <HeaderLogoArchive /> : <HeaderLogo />}
+          <Link to={`/${router.locale}`}>
+            <HeaderLogo />
           </Link>
 
           <Menu
@@ -64,7 +60,7 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
             setFoldoutOpen={setFoldoutOpen}
           />
         </div>
-        {isArchive && <Search open={searchActive} />}
+        {/* {isArchive && <Search open={searchActive} />} */}
       </div>
     </header>
   )

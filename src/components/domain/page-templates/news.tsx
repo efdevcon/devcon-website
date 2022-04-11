@@ -10,7 +10,6 @@ export default pageHOC(function NewsTemplate(props: any) {
   return (
     <Content theme={themes['news']}>
       <PageHero />
-
       <PageContentSection>
         <NewsOverview newsItems={props.news} />
       </PageContentSection>

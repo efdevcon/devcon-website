@@ -22,6 +22,7 @@ export async function getStaticPaths(context: any) {
 
   return {
     paths: context.locales
+      .filter((locale: string) => locale !== 'default')
       .map((locale: string) => {
         return dips.map(i => {
           return { params: { slug: i.slug }, locale }
