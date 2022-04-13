@@ -7,7 +7,7 @@ import IconArrowRight from 'assets/icons/arrow_right.svg'
 import { useTranslations } from 'next-intl'
 
 interface CardProps {
-  title: string
+  title: string | React.ReactElement
   description?: string
   imageUrl?: any
   linkUrl?: string
@@ -98,7 +98,13 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
     return (
       <div className="aspect">
         <div className={css['img-wrapper']}>
-          <Image alt={props.title} className={`${css['img']} ${css['not-gatsby']}`} src={props.imageUrl} objectFit='cover' layout='fill' />
+          <Image
+            alt={props.title}
+            className={`${css['img']} ${css['not-gatsby']}`}
+            src={props.imageUrl}
+            objectFit="cover"
+            layout="fill"
+          />
         </div>
       </div>
     )

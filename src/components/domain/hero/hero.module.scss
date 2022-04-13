@@ -31,13 +31,17 @@
 $logo-offset: 50px;
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 32px;
   color: white;
   --color-icon: white;
   overflow: hidden;
   flex-grow: 1;
   position: relative;
   top: 32px;
-  height: 100vh;
+  height: calc(100vh - 32px);
   width: 100%;
   background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #d529c6, #f25c37);
   background-size: 600% 100%;
@@ -72,8 +76,8 @@ $logo-offset: 50px;
 
     > * {
       display: block !important;
-      width: 60% !important;
-      transform: translateY(var(--translateY));
+      width: 55% !important;
+      // transform: translateY(var(--translateY));
     }
   }
 
@@ -82,13 +86,13 @@ $logo-offset: 50px;
     width: 115%;
     left: -7.5%;
     bottom: 0px;
-    transform: translateY(var(--translateY, 0px));
+    // transform: translateY(var(--translateY, 0px));
 
     > * {
       display: block !important;
 
       img {
-        animation: sway linear 20s infinite;
+        // animation: sway linear 20s infinite;
         transform: translateY(25%);
       }
     }
@@ -200,34 +204,52 @@ $logo-offset: 50px;
     }
   }
 
+}
+
+
+.date-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 32px;
+
+  @media (max-width: $breakpoints-lg) {
+    align-items: center;
+  }
+
   .date {
-    position: absolute;
-    top: 20%;
-    left: 70%;
+    margin-bottom: 32px;
+    @include fonts-bold;
+
+    @media (max-width: $breakpoints-lg) {
+      margin-bottom: 8px;
+    }
+    // position: absolute;
+    // top: 20%;
+    // left: 70%;
 
     p {
       line-height: 100%;
     }
 
-    @media (max-width: $breakpoints-lg) {
-      @include gaps-lg(true);
-      display: flex;
-      left: unset;
-      width: 100%;
-      top: 15%;
-      justify-content: flex-end;
-    }
 
-    @media (orientation: landscape) {
-      top: 25%;
-    }
+
+    // @media (max-width: $breakpoints-lg) {
+    //   @include gaps-lg(true);
+    //   display: flex;
+    //   left: unset;
+    //   width: 100%;
+    //   justify-content: flex-end;
+    // }
+
   }
 
   .calendar {
-    position: absolute;
-    left: 70%;
-    bottom: 20%;
-    max-width: 350px;
+    align-self: flex-end;
+    // position: absolute;
+    // left: 70%;
+    // bottom: 20%;
+
 
     @media (max-width: $breakpoints-lg) {
       @include gaps-lg(true);
@@ -244,6 +266,7 @@ $logo-offset: 50px;
     }
 
     > p {
+      max-width: 350px;
       font-family: $fonts-secondary;
 
       @media (max-width: $breakpoints-lg) {
@@ -254,6 +277,8 @@ $logo-offset: 50px;
     button {
       @include fonts-xl;
       @include fonts-bold;
+      display: inline-flex;
+      justify-content: center;
       // cursor: pointer;
       width: 100%;
       margin-top: $gaps-gap-4;
@@ -273,7 +298,7 @@ $logo-offset: 50px;
       @media (max-width: $breakpoints-lg) {
         @include fonts-xxl;
         width: 70%;
-        max-width: 300px;
+        // max-width: 300px;
       }
 
       @media (max-width: $breakpoints-sm) {

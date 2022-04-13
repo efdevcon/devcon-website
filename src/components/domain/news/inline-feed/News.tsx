@@ -4,7 +4,7 @@ import { Card } from 'components/common/card'
 import { Feed } from 'components/common/feed'
 import css from './news.module.scss'
 import { useTranslations } from 'next-intl'
-
+import IconTwitter from 'assets/icons/twitter.svg'
 import { NewsItem } from 'types/NewsItem'
 import moment from 'moment'
 import { Slider, useSlider } from 'components/common/slider'
@@ -37,12 +37,13 @@ const formatNewsForCard = (intl: any, item: NewsItem) => {
     ...item,
     date: new Date(item.date),
     linkUrl: item.url,
+    title: item.title as any,
   }
 
   if (item.url?.includes('twitter')) {
     formattedItem = {
       ...formattedItem,
-      title: intl('news_tweet'),
+      title: <IconTwitter className={`icon font-xl`} style={{ '--color-icon': '#1DA1F2' }} />,
     }
   }
 
@@ -61,7 +62,7 @@ export const News = (props: NewsProps) => {
       {/* Only visible on mobile */}
       <div className={css['slider-container']}>
         <Slider className={css['slider']} sliderProps={sliderProps} title={intl('news')}>
-          {newsItems.map((item: NewsItem, index: any) => {
+          {newsItems.slice(0, 10).map((item: NewsItem, index: any) => {
             const formattedItem = formatNewsForCard(intl, item)
 
             return (

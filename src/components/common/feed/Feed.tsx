@@ -36,7 +36,7 @@ const Icon = ({ item }: { item: FeedItem }) => {
   if (item?.url?.includes('twitter')) {
     return (
       <div className={css['icon-container']}>
-        <IconTwitter />
+        <IconTwitter style={{ '--color-icon': '#1DA1F2' }} />
       </div>
     )
   }
@@ -108,7 +108,11 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
       )
     }
 
-    return <div key={item.id} className={css['item']}>{body}</div>
+    return (
+      <div key={item.id} className={css['item']}>
+        {body}
+      </div>
+    )
   })
 
   const noResults = formattedItems.length === 0
@@ -116,7 +120,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
   return (
     <div className={`${css['feed']} ${inline ? css['inline'] : ''}`}>
       <div className={css['header']}>
-        <h3 className={css['header']}>{title}</h3>
+        <span className={css['header']}>{title}</span>
         <div className={css['right']}>
           {filterState && <Filter collapsed {...filterState} />}
 

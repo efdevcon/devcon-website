@@ -133,11 +133,33 @@
 }
 
 .container {
-  border-top: 1px solid #e0e0e0;
-
+  
   .top-section {
-    @include layout-section;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
     position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        opacity: 0.2;
+        z-index: -2;
+        // background-image: linear-gradient(90deg,#edeccd 0%,#f1c4bb 50%,#d7cdd3);
+        background-image: linear-gradient(90deg, #ffdc8b 0%, #fff4f2 50%, #ffb8e3);
+      }
+
+      // &:before {
+      //   background: url("../../../../assets/images/logo-wireframe.svg"); !important;
+      //   background-size: 70%;
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      //   opacity: 1;
+      //   z-index: -1;
+      // }
+  
 
     &:before {
       content: "";
@@ -146,30 +168,29 @@
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.05;
-      background: url("../../../../assets/images/logo-wireframe.svg"); // TODO
+      opacity: 0.03;
+      background: url("../../../../assets/images/logo-wireframe.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center 10%;
 
-      @media (max-width: $breakpoints-md) {
-        background-size: 250%;
-        background-position: 20% center;
-      }
+      // @media (max-width: $breakpoints-md) {
+      //   background-size: 250%;
+      //   background-position: 20% center;
+      // }
     }
 
     .content {
-      @include layout-content;
       @include top-grid;
       flex-grow: 1;
       position: relative;
 
-      padding: 64px;
+      // padding: 64px;
       padding-top: 32px;
       padding-bottom: 32px;
 
       @media (max-width: $breakpoints-md) {
-        padding: 16px;
+        // padding: 16px;
         padding-top: 16px;
         padding-bottom: 16px;
         background-position: center left;
@@ -237,19 +258,13 @@
   }
 
   .bottom-section {
-    @include layout-section;
-    border-top: 1px solid rgba(34, 68, 144, 0.25);
-
     .content {
-      @include layout-content;
       @include bottom-grid;
       flex-grow: 1;
-      padding: 64px;
       padding-top: 20px;
       padding-bottom: 20px;
 
       @media (max-width: $breakpoints-md) {
-        padding: 16px;
         padding-top: 16px;
         padding-bottom: 16px;
         background-position: center left;
@@ -298,8 +313,9 @@
           justify-content: center;
         }
 
-        img {
+        svg {
           width: 125px;
+          height: 50px;
           max-width: 100%;
         }
       }

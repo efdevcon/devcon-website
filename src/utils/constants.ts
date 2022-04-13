@@ -13,7 +13,7 @@ export const EMAIL_SPONSORSHIP = 'sponsorships@ethereum.org'
 export const LINK_ETHEREUM_FOUNDATION = 'https://ethereum.foundation'
 export const LINK_SUBMIT_EVENT = 'https://forms.gle/W2yiyNXcEU6fZ4rN8'
 
-export const COPYRIGHT_NOTICE = '© 2021 — Ethereum Foundation. All Rights Reserved.'
+export const COPYRIGHT_NOTICE = '© 2022 — Ethereum Foundation. All Rights Reserved.'
 
 export const BASE_CONTENT_FOLDER = 'src/content'
 

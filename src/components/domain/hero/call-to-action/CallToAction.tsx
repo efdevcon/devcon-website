@@ -11,30 +11,26 @@ type CTAProps = {
 export const CallToAction = (props: CTAProps) => {
   const sliderRef = React.useRef<Slider>()
 
-  let className = css['positional-wrapper']
+  let className = `${css['positional-wrapper']}`
 
   if (props.mobile) className += ` ${css['mobile']}`
 
   const callsToAction = [
     <Link key="1" to="https://google.com" allowDrag className={`no-select ${css['item']}`}>
-      <p className="bold">Call to Action 01 —</p>
-      <p className="font-sm">subheader</p>
+      <p className="bold">Tickets —</p>
+      <p className="font-sm">Get yo tickets now fool!</p>
     </Link>,
     <div key="2" className={`no-select ${css['item']}`}>
-      <p className="bold">Call to Action 02 —</p>
-      <p className="font-sm">subheader</p>
+      <p className="bold">Devcon Improvement Proposals —</p>
+      <p className="font-sm">Help improve Devcon</p>
     </div>,
     <div key="3" className={`no-select ${css['item']}`}>
-      <p className="bold">Call to Action 03 —</p>
-      <p className="font-sm">subheader</p>
+      <p className="bold">Archive —</p>
+      <p className="font-sm">Check out the Devcon archive!</p>
     </div>,
     <div key="4" className={`no-select ${css['item']}`}>
-      <p className="bold">Call to Action 04 —</p>
-      <p className="font-sm">subheader</p>
-    </div>,
-    <div key="5" className={`no-select ${css['item']}`}>
-      <p className="bold">Call to Action 05 —</p>
-      <p className="font-sm">subheader</p>
+      <p className="bold">City Guide —</p>
+      <p className="font-sm">Find your way around Bogota</p>
     </div>,
   ]
 
@@ -64,22 +60,20 @@ export const CallToAction = (props: CTAProps) => {
 
   return (
     <div className={className}>
-      <div className={css['container']}>
-        <div className={css['content']}>
-          <div className={css['icon']}>
-            <CtaSrc />
-          </div>
+      <div className={css['content']}>
+        <div className={css['icon']}>
+          <CtaSrc />
+        </div>
 
-          <div className={css['slider']}>
-            <Slider
-              ref={el => {
-                if (el) sliderRef.current = el
-              }}
-              {...settings}
-            >
-              {callsToAction}
-            </Slider>
-          </div>
+        <div className={css['slider']}>
+          <Slider
+            ref={el => {
+              if (el) sliderRef.current = el
+            }}
+            {...settings}
+          >
+            {callsToAction}
+          </Slider>
         </div>
       </div>
     </div>
