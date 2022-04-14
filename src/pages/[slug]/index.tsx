@@ -23,7 +23,8 @@ import { GetBlogs } from 'services/blogs'
 // const Search = dynamic(() => import('../../components/domain/page-templates/search'))
 import Blog from '../../components/domain/page-templates/blog'
 import Blogs from '../../components/domain/page-templates/blogs'
-import CityGuide from '../../components/domain/page-templates/city-guide'
+// import CityGuide from '../../components/domain/page-templates/city-guide'
+import CityGuide from '../../components/domain/city-guide'
 import Content from '../../components/domain/page-templates/content'
 import DIPs from '../../components/domain/page-templates/dips'
 import FAQ from '../../components/domain/page-templates/faq'
@@ -134,7 +135,7 @@ export const getPageSpecificData = async (context: any) => {
       return {
         contextData: {
           page,
-          faq: GetFAQ(context.locale),
+          faq: await GetFAQ(context.locale),
           sections: {
             todo,
             why,
@@ -157,7 +158,7 @@ export const getPageSpecificData = async (context: any) => {
       return {
         contextData: {
           page,
-          faq: GetCategories(context.locale),
+          faq: await GetCategories(context.locale),
         },
       }
     }

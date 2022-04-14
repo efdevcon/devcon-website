@@ -2,13 +2,14 @@ import React from 'react'
 import { PageHero } from 'components/common/page-hero'
 import { FAQ } from 'components/domain/faq'
 import Content from 'components/common/layouts/content'
-import css from '../templates.module.scss'
+// import css from '../templates.module.scss'
+import css from './city-guide.module.scss'
 import themes from '../themes.module.scss'
 import { Carousel } from 'components/common/carousel'
 import { Snapshot } from 'components/common/snapshot'
 import { TwoColumns } from 'components/common/sections/2column'
 import { pageHOC } from 'context/pageHOC'
-import { PageContentSection } from './page-content-section'
+import { PageContentSection } from '../page-templates/page-content-section'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
 
@@ -42,9 +43,9 @@ export default pageHOC(function CityGuideTemplate(props: any) {
       />
 
       <PageContentSection>
-        <div className="two-columns">
-          <div className="left">
-            <h2 className="spaced">{intl('location_title')}</h2>
+        <h2 className="spaced">{intl('location_title')}</h2>
+        <div className={`two-columns clear-bottom ${css['location']}`}>
+          <div className={css['left']}>
             <div dangerouslySetInnerHTML={{ __html: props.sections.todo.left }} />
           </div>
           <div className="right">

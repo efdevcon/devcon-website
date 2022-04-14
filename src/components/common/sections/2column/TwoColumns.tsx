@@ -15,10 +15,10 @@ export const TwoColumns = (props: TwoColumnsProps) => {
   const sectionClassName = props.id === 'about' ? 'section-about' : 'section'
 
   return (
-    <section id={props.id} className={`${css[sectionClassName]} markdown`}>
-      {props.title && <h3 className="subsection-header">{props.title}</h3>}
+    <section id={props.id} className={`${css[sectionClassName]}`}>
+      {props.title && <h2>{props.title}</h2>}
 
-      <div className={css['container']}>
+      <div className={`markdown css['container']}`}>
         <div className={css[leftClassName]}>
           {typeof props.left === 'string' && <div dangerouslySetInnerHTML={{ __html: props.left }} />}
           {typeof props.left === 'object' && props.left}

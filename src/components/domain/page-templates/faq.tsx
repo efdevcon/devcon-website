@@ -26,7 +26,7 @@ export default pageHOC(function FaqTemplate(props: any) {
 
       <PageContentSection>
         <section id="contribute" className={css['section']}>
-          <h3 className="spaced">{pageContext?.current?.title}</h3>
+          <h2 className="spaced">{pageContext?.current?.title}</h2>
           <div className={css['container']}>
             <div className={css['left-70']}>
               <div className={css['description']}>

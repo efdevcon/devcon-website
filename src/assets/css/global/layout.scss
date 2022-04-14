@@ -26,12 +26,31 @@
   &-bottom {
     padding-bottom: 32px;
   }
+
+  &-left {
+    padding-left: 32px;
+  }
+
+  &-right {
+    padding-right: 32px;
+  }
 }
 
-// .section {
-//   @include layout-section;
+.two-columns {
+  display: flex;
+  justify-content: space-between;
 
-//   .content {
-//     @include layout-content;
-//   }
-// }
+  @media (max-width: $breakpoints-md) {
+    flex-direction: column;
+
+    > * {
+      flex-basis: auto !important;
+    }
+  }
+
+  > * {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+}

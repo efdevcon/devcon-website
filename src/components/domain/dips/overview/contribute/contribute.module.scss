@@ -44,11 +44,15 @@
       flex-direction: column;
       justify-content: space-between;
 
+      @media (max-width: $breakpoints-lg) {
+        flex-basis: auto;
+      }
+
       .dip-description {
         flex-shrink: 0;
 
         @media (max-width: $breakpoints-lg) {
-          flex-basis: 100%;
+          // flex-basis: 100%;
         }
       }
 
@@ -73,7 +77,7 @@
 
       @media (max-width: $breakpoints-lg) {
         margin-top: $gaps-gap-10;
-        flex-basis: 100%;
+        flex-basis: auto;
       }
 
       .scroll-container {

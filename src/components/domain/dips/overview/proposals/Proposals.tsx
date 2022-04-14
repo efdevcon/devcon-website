@@ -232,10 +232,9 @@ export const Proposals = (props: ProposalsProps) => {
   return (
     <section id="proposals" className={css['container']}>
       <div className={css['top-container']}>
-        <h3 className="spaced">{intl('dips_proposals')}</h3>
+        <p className="h3">{intl('dips_proposals')}</p>
 
-        {/* TODO: build error
-        <Filter {...filterState} /> */}
+        {/* <Filter {...filterState} /> */}
       </div>
 
       <Table itemKey="number" items={filteredDips} columns={tableColumns} />

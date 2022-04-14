@@ -64,7 +64,11 @@ export const Footer = () => {
             <div className={css['col-2']}>
               {footerData?.highlights.map((link: LinkType, index: number) => {
                 return (
-                  <Link key={index} to={link.url} className="plain hover-underline font-xl bold spaced">
+                  <Link
+                    key={index}
+                    to={link.url}
+                    className={`${css['big-link']} plain hover-underline font-xl bold spaced`}
+                  >
                     {link.title}
                   </Link>
                 )

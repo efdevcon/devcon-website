@@ -140,7 +140,7 @@ export const Contribute = (props: ContributeProps) => {
 
   return (
     <section id="contribute" className={css['section']}>
-      <h3 className="spaced">{intl('dips_contribute')}</h3>
+      <p className="h3 spaced">{intl('dips_contribute')}</p>
 
       <div className={css['container']}>
         <div className={css['left-section']}>

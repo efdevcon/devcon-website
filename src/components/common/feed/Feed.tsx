@@ -59,7 +59,15 @@ export const Title = ({ item }: { item: FeedItem }) => {
   return (
     <p
       className={`${css['title']} fonts-xxl bold`}
-      dangerouslySetInnerHTML={{ __html: isTweet ? intl('news_tweet') : item.title }}
+      dangerouslySetInnerHTML={{
+        __html: isTweet
+          ? item.description
+            ? item.description.length >= 50
+              ? `${item.description.slice(0, 50)}...`
+              : item.description
+            : intl('news_tweet')
+          : item.title,
+      }}
     />
   )
 }
@@ -120,7 +128,7 @@ export const Feed = ({ inline, title, items, filterOptions, sortOptions }: Props
   return (
     <div className={`${css['feed']} ${inline ? css['inline'] : ''}`}>
       <div className={css['header']}>
-        <span className={css['header']}>{title}</span>
+        <h2>{title}</h2>
         <div className={css['right']}>
           {filterState && <Filter collapsed {...filterState} />}
 

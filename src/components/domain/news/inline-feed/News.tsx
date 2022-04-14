@@ -37,13 +37,13 @@ const formatNewsForCard = (intl: any, item: NewsItem) => {
     ...item,
     date: new Date(item.date),
     linkUrl: item.url,
-    title: item.title as any,
-  }
+    title: item.title,
+  } as any
 
   if (item.url?.includes('twitter')) {
     formattedItem = {
       ...formattedItem,
-      title: <IconTwitter className={`icon font-xl`} style={{ '--color-icon': '#1DA1F2' }} />,
+      titleAsIcon: <IconTwitter className={`icon font-xl`} style={{ '--color-icon': '#1DA1F2' }} />,
     }
   }
 

@@ -1,0 +1,14 @@
+@use 'assets/css/partials/index' as *;
+
+.location {
+  .left {
+    padding-right: 32px;
+
+    @media (max-width: $breakpoints-md) {
+      padding-right: 0px;
+    }
+  }
+
+  .right {
+  }
+}

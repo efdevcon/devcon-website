@@ -7,7 +7,8 @@ import IconArrowRight from 'assets/icons/arrow_right.svg'
 import { useTranslations } from 'next-intl'
 
 interface CardProps {
-  title: string | React.ReactElement
+  title: string
+  titleAsIcon?: React.ReactElement
   description?: string
   imageUrl?: any
   linkUrl?: string
@@ -58,10 +59,10 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
 
   const link =
     props.expandLink || !props.linkUrl ? (
-      props.title
+      props.titleAsIcon || props.title
     ) : (
       <Link className="hover-underline" to={props.linkUrl}>
-        {props.title}
+        {props.titleAsIcon || props.title}
       </Link>
     )
 

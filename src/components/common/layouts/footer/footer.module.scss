@@ -1,4 +1,4 @@
-@use "assets/css/partials/index" as *;
+@use 'assets/css/partials/index' as *;
 
 // Split out the positioning to make it easier to reason about
 @mixin top-grid {
@@ -34,9 +34,9 @@
     display: none;
   }
 
-  @media (max-width: $breakpoints-md) {
+  @media (max-width: $breakpoints-lg) {
     @include grids-grid-6;
-    row-gap: 40px;
+    row-gap: 20px;
 
     .col-1 {
       grid-column: 1 / 4;
@@ -71,6 +71,10 @@
 
     .col-7 {
       display: block;
+      padding: 16px 0px;
+
+      border-top: 1px solid $colors-standard-border-color;
+      border-bottom: 1px solid $colors-standard-border-color;
       grid-column: 1 / 7;
       grid-row: 2;
     }
@@ -92,7 +96,7 @@
     grid-column: 11 / 13;
   }
 
-  @media (max-width: $breakpoints-md) {
+  @media (max-width: $breakpoints-lg) {
     @include grids-grid-6;
     grid-auto-flow: column;
 
@@ -133,48 +137,52 @@
 }
 
 .container {
-  
   .top-section {
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
     position: relative;
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        right: 0px;
-        left: 0px;
-        opacity: 0.2;
-        z-index: -2;
-        // background-image: linear-gradient(90deg,#edeccd 0%,#f1c4bb 50%,#d7cdd3);
-        background-image: linear-gradient(90deg, #ffdc8b 0%, #fff4f2 50%, #ffb8e3);
-      }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      opacity: 0.2;
+      z-index: -2;
+      // background-image: linear-gradient(90deg,#edeccd 0%,#f1c4bb 50%,#d7cdd3);
+      background-image: linear-gradient(90deg, #ffdc8b 0%, #fff4f2 50%, #ffb8e3);
+    }
 
-      // &:before {
-      //   background: url("../../../../assets/images/logo-wireframe.svg"); !important;
-      //   background-size: 70%;
-      //   background-repeat: no-repeat;
-      //   background-position: center;
-      //   opacity: 1;
-      //   z-index: -1;
-      // }
-  
+    // &:before {
+    //   background: url("../../../../assets/images/logo-wireframe.svg"); !important;
+    //   background-size: 70%;
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   opacity: 1;
+    //   z-index: -1;
+    // }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       opacity: 0.03;
-      background: url("../../../../assets/images/logo-wireframe.svg");
+      background: url('../../../../assets/images/logo-wireframe.svg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center 10%;
 
-      // @media (max-width: $breakpoints-md) {
+      @media (max-width: $breakpoints-lg) {
+        display: none;
+        // background-size: 250%;
+        // background-position: 20% center;
+      }
+
+      // @media (max-width: $breakpoints-lg) {
       //   background-size: 250%;
       //   background-position: 20% center;
       // }
@@ -189,7 +197,7 @@
       padding-top: 32px;
       padding-bottom: 32px;
 
-      @media (max-width: $breakpoints-md) {
+      @media (max-width: $breakpoints-lg) {
         // padding: 16px;
         padding-top: 16px;
         padding-bottom: 16px;
@@ -208,8 +216,8 @@
         display: flex;
         flex-direction: column;
 
-        > h2 {
-          @include fonts-bold;
+        .big-link {
+          margin-bottom: 16px;
 
           &:last-of-type {
             margin-bottom: 32px;
@@ -219,7 +227,7 @@
 
       .col-5 {
         @include fonts-sm;
-        @media (max-width: $breakpoints-md) {
+        @media (max-width: $breakpoints-lg) {
           display: flex;
           align-items: flex-end;
         }
@@ -231,7 +239,7 @@
           }
 
           .email-2 {
-            @media (max-width: $breakpoints-md) {
+            @media (max-width: $breakpoints-lg) {
               margin-bottom: 0px;
             }
           }
@@ -244,7 +252,7 @@
           justify-content: flex-end;
           font-size: $sizes-size-14;
 
-          @media (max-width: $breakpoints-md) {
+          @media (max-width: $breakpoints-lg) {
             display: none;
           }
         }
@@ -264,7 +272,7 @@
       padding-top: 20px;
       padding-bottom: 20px;
 
-      @media (max-width: $breakpoints-md) {
+      @media (max-width: $breakpoints-lg) {
         padding-top: 16px;
         padding-bottom: 16px;
         background-position: center left;
@@ -286,7 +294,7 @@
         flex-direction: row;
         align-items: center;
 
-        @media (max-width: $breakpoints-md) {
+        @media (max-width: $breakpoints-lg) {
           margin-bottom: 8px;
         }
 

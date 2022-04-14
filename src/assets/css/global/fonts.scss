@@ -30,13 +30,21 @@ h1,
 h2,
 .h2 {
   // @include fonts-secondary;
-  @include fonts-normal;
-  font-size: $sizes-size-16 + $sizes-size-2;
+  @include fonts-bold;
+  font-size: $sizes-size-12;
   line-height: 120%;
 
   &.spaced {
     @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
   }
+  // // @include fonts-secondary;
+  // @include fonts-normal;
+  // font-size: $sizes-size-16 + $sizes-size-2;
+  // line-height: 120%;
+
+  // &.spaced {
+  //   @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+  // }
 }
 
 h3,

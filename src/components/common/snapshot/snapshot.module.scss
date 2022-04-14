@@ -2,6 +2,7 @@
 
 .container {
   width: 100%;
+  margin-top: -12px;
 }
 
 .list {
@@ -13,7 +14,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: $gaps-gap-4 $gaps-gap-2;
+  padding: 12px 8px;
   border-bottom: 1px solid $colors-monochrome-10;
 
   svg {
@@ -40,11 +41,11 @@
     text-transform: uppercase;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    background: #f8f8f8;
-  }
+  // &:hover,
+  // &:focus,
+  // &:active {
+  //   background: #f8f8f8;
+  // }
 }
 
 .primary {
