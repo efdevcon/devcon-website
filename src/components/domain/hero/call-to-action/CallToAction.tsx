@@ -21,7 +21,7 @@ export const CallToAction = (props: CTAProps) => {
       <p className="font-sm">Get yo tickets now fool!</p>
     </Link>,
     <div key="2" className={`no-select ${css['item']}`}>
-      <p className="bold">Devcon Improvement Proposals —</p>
+      <p className="bold">DIPs —</p>
       <p className="font-sm">Help improve Devcon</p>
     </div>,
     <div key="3" className={`no-select ${css['item']}`}>

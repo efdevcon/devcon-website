@@ -4,12 +4,13 @@ import { Tag } from 'types/Tag'
 import { Link } from '../link'
 
 interface Props {
-  items: Tag[]
+  items?: Tag[]
   viewOnly?: boolean
   className?: string
 }
 
 export function Tags(props: Props) {
+  if (!props.items) return null
   let className = css['tags']
   if (props.className) className += ` ${props.className}`
 

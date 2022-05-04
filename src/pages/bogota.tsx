@@ -2,16 +2,19 @@ import React from 'react'
 import { PageHero } from 'components/common/page-hero'
 import { FAQ } from 'components/domain/faq'
 import Content from 'components/common/layouts/content'
-// import css from '../templates.module.scss'
-import css from './city-guide.module.scss'
-import themes from '../themes.module.scss'
+import css from './templates.module.scss'
+import themes from './themes.module.scss'
 import { Carousel } from 'components/common/carousel'
 import { Snapshot } from 'components/common/snapshot'
 import { TwoColumns } from 'components/common/sections/2column'
 import { pageHOC } from 'context/pageHOC'
-import { PageContentSection } from '../page-templates/page-content-section'
+import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
+import { GetCategories, GetDIPs, GetFAQ, GetPage, GetPages, GetContentSection } from 'services/page'
+import { getGlobalData } from 'services/global'
+import markdownUtils from 'utils/markdown'
+import { Tags } from 'components/common/tags'
 
 export default pageHOC(function CityGuideTemplate(props: any) {
   const intl = useTranslations()
@@ -42,10 +45,10 @@ export default pageHOC(function CityGuideTemplate(props: any) {
         ]}
       />
 
-      <PageContentSection>
-        <h2 className="spaced">{intl('location_title')}</h2>
-        <div className={`two-columns clear-bottom ${css['location']}`}>
-          <div className={css['left']}>
+      <div className="section">
+        <div className="two-columns">
+          <div className="left">
+            <h2 className="spaced">{intl('location_title')}</h2>
             <div dangerouslySetInnerHTML={{ __html: props.sections.todo.left }} />
           </div>
           <div className="right">
@@ -79,7 +82,39 @@ export default pageHOC(function CityGuideTemplate(props: any) {
             customCategoryTitle="Frequently Asked Questions"
           />
         </section>
-      </PageContentSection>
+
+        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+      </div>
     </Content>
   )
 })
+
+export async function getStaticProps(context: any) {
+  const globalData = await getGlobalData(context)
+  const page = await GetPage('/bogota', context.locale)
+  const todoData = await GetContentSection('things-to-do', context.locale)
+  const whyData = await GetContentSection('why-devcon-in-bogota', context.locale)
+
+  const todo = {
+    left: await markdownUtils.toHtml(todoData.data.left),
+    right: await markdownUtils.toHtml(todoData.data.right),
+  }
+
+  const why = {
+    title: whyData.data.title,
+    left: await markdownUtils.toHtml(whyData.data.left),
+    right: await markdownUtils.toHtml(whyData.data.right),
+  }
+
+  return {
+    props: {
+      ...globalData,
+      page,
+      faq: await GetFAQ(context.locale),
+      sections: {
+        todo,
+        why,
+      },
+    },
+  }
+}

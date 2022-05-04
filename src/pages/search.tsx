@@ -1,19 +1,21 @@
 import React, { useMemo } from 'react'
 import Content from 'components/common/layouts/content'
 import { pageHOC } from 'context/pageHOC'
-import themes from '../themes.module.scss'
-import { PageContentSection } from './page-content-section'
+import themes from './themes.module.scss'
+import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { PageHero } from 'components/common/page-hero'
 import { Link } from 'components/common/link'
 import * as JsSearch from 'js-search'
 import { InputForm } from 'components/common/input-form'
 import { SearchItem } from 'types/SearchItem'
 import { useRouter } from 'next/router'
+import { getGlobalData } from 'services/global'
+import { GetPage } from 'services/page'
 
 export default pageHOC(function SearchTemplate({ pageContext }: any) {
   const data = pageContext
   const router = useRouter()
-  const [searchQuery, setSearchQuery] = React.useState(router.query['q'] as string || '')
+  const [searchQuery, setSearchQuery] = React.useState((router.query['q'] as string) || '')
   const [results, setResults] = React.useState<Array<SearchItem>>([])
 
   const id = 'slug'
@@ -57,7 +59,13 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
       <PageHero />
 
       <PageContentSection>
-        <InputForm id='input-form_search_page' label={'Search'} onChange={onChange} placeholder="Search..." defaultValue={searchQuery} />
+        <InputForm
+          id="input-form_search_page"
+          label={'Search'}
+          onChange={onChange}
+          placeholder="Search..."
+          defaultValue={searchQuery}
+        />
 
         <h2>Search Results</h2>
         {searchQuery}
@@ -79,3 +87,15 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
     </Content>
   )
 })
+
+export async function getStaticProps(context: any) {
+  const globalData = await getGlobalData(context)
+  const page = await GetPage('/search', context.locale)
+
+  return {
+    props: {
+      ...globalData,
+      page,
+    },
+  }
+}

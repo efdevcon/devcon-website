@@ -4,13 +4,15 @@ import { PageHero } from 'components/common/page-hero'
 import { Category } from 'types/Category'
 import { Search } from 'components/domain/faq/search'
 import Content from 'components/common/layouts/content'
-import css from '../templates.module.scss'
-import themes from '../themes.module.scss'
+import css from './templates.module.scss'
+import themes from './themes.module.scss'
 import AskDeva from 'assets/images/ask-deva.png'
 import { pageHOC } from 'context/pageHOC'
-import { PageContentSection } from './page-content-section'
 import { usePageContext } from 'context/page-context'
 import Image from 'next/image'
+import { getGlobalData } from 'services/global'
+import { GetPage, GetCategories } from 'services/page'
+import { Tags } from 'components/common/tags'
 
 export default pageHOC(function FaqTemplate(props: any) {
   const pageContext = usePageContext()
@@ -24,8 +26,8 @@ export default pageHOC(function FaqTemplate(props: any) {
         })}
       />
 
-      <PageContentSection>
-        <section id="contribute" className={css['section']}>
+      <div className="section">
+        <div id="contribute" className={css['section']}>
           <h2 className="spaced">{pageContext?.current?.title}</h2>
           <div className={css['container']}>
             <div className={css['left-70']}>
@@ -39,10 +41,24 @@ export default pageHOC(function FaqTemplate(props: any) {
               <Image src={AskDeva} alt="Ask Deva" />
             </div>
           </div>
-        </section>
+        </div>
 
         <FAQ data={props.faq} filter={searchFilter} />
-      </PageContentSection>
+        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+      </div>
     </Content>
   )
 })
+
+export async function getStaticProps(context: any) {
+  const globalData = await getGlobalData(context)
+  const page = await GetPage('/faq', context.locale)
+
+  return {
+    props: {
+      ...globalData,
+      page,
+      faq: await GetCategories(context.locale),
+    },
+  }
+}

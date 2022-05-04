@@ -12,10 +12,10 @@ import getNews from 'services/news'
 export default pageHOC(function Index(props: any) {
   return (
     <Default>
-      <SEO />
       {/* <PWAPrompt /> */}
       <News data={props.news} />
       <BlogReel blogs={props.blogs} />
+      <div className="clear-bottom"></div>
       {/* <Notifications /> */}
     </Default>
   )

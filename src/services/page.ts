@@ -9,7 +9,6 @@ import { NewsItem } from 'types/NewsItem'
 import { Category } from 'types/Category'
 import { FAQ } from 'types/FAQ'
 import markdownUtils from 'utils/markdown'
-import dips from 'components/domain/page-templates/dips'
 
 export async function GetPage(slug: string, lang: string = 'en'): Promise<Page | undefined> {
   if (lang !== 'es') lang = 'en'

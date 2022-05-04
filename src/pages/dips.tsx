@@ -1,19 +1,23 @@
 import React from 'react'
 import Content from 'components/common/layouts/content'
-import themes from '../themes.module.scss'
+import themes from './themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
 import { PageHero } from 'components/common/page-hero'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
 import Pencil from 'assets/icons/pencil.svg'
 import BulletList from 'assets/icons/bullet_list.svg'
-import { PageContentSection } from './page-content-section'
-import { Contribute } from '../dips/overview/contribute'
-import { Proposals } from '../dips/overview/proposals'
-import AllContributorsJson from '../../../content/dips/contributors.json'
+import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
+import { Contribute } from 'components/domain/dips/overview/contribute'
+import { Proposals } from 'components/domain/dips/overview/proposals'
+import AllContributorsJson from 'content/dips/contributors.json'
 import { Contributor } from 'types/DIP'
+import { getGlobalData } from 'services/global'
+import { GetPage, GetDIPs } from 'services/page'
+import { Tags } from 'components/common/tags'
 
 export default pageHOC(function DIPsTemplate(props: any) {
+  const pageContext = usePageContext()
   const intl = useTranslations()
   const contributors = AllContributorsJson as Contributor[]
 
@@ -52,10 +56,25 @@ export default pageHOC(function DIPsTemplate(props: any) {
         ]}
       />
 
-      <PageContentSection>
+      <div className="section">
         <Contribute dipDescription={props.page.body} contributors={contributors} />
         <Proposals dips={props.dips} />
-      </PageContentSection>
+
+        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+      </div>
     </Content>
   )
 })
+
+export async function getStaticProps(context: any) {
+  const globalData = await getGlobalData(context)
+  const page = await GetPage('/dips', context.locale)
+
+  return {
+    props: {
+      ...globalData,
+      dips: await GetDIPs(context.locale),
+      page,
+    },
+  }
+}

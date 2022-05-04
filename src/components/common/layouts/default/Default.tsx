@@ -6,22 +6,17 @@ import css from './default.module.scss'
 
 type LayoutProps = {
   children: ReactNode
-  // navigationData: any
-  // latestNewsItem: NewsItem
-  // location: any
 }
 
 export default function Default({ children }: LayoutProps) {
   return (
     <div className={css['layout-default']}>
-      {/* <PageContextProvider navigationData={navigationData} latestNewsItem={latestNewsItem} location={location}> */}
-      <Header withStrip={true} withHero={true} />
+      <Header withStrip withHero />
       <Hero />
 
       {children}
 
       <Footer />
-      {/* </PageContextProvider> */}
     </div>
   )
 }
