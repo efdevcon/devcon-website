@@ -13,6 +13,7 @@ import SearchIcon from 'assets/icons/search.svg'
 // import BellIcon from 'assets/icons/bell.svg'
 import BellIcon from 'assets/icons/bell-simple.svg'
 import { LanguageToggle } from 'components/common/layouts/header/strip/language-toggle'
+import navigationData from '../navigationData'
 
 type ButtonProps = {
   buttons: {
@@ -27,9 +28,15 @@ type ButtonProps = {
 export const Left = (props: any) => {
   return (
     <div className={css['left']}>
-      {props.navigationData.top.map((i: LinkType) => {
+      {navigationData.top.map((i: LinkType) => {
         return (
-          <Link key={`top-${i.url}`} external to={i.url} className={`hover-underline ${css['highlighted-link']}`}>
+          <Link
+            indicateExternal
+            key={`top-${i.url}`}
+            external
+            to={i.url}
+            className={`hover-underline ${css['highlighted-link']}`}
+          >
             {i.title}
           </Link>
         )
@@ -72,11 +79,11 @@ export const Menu = (props: any) => {
   const context = usePageContext()
 
   let buttons: ButtonProps['buttons'] = [
-    {
-      key: 'account',
-      icon: <AccountIcon />,
-      url: '/app',
-    },
+    // {
+    //   key: 'account',
+    //   icon: <AccountIcon />,
+    //   url: '/app',
+    // },
     {
       key: 'mobile-menu-toggle',
       icon: props.foldoutOpen ? <IconCross style={{ width: '0.8em' }} /> : <IconMenu />,
@@ -85,16 +92,16 @@ export const Menu = (props: any) => {
     },
   ]
 
-  if (router.pathname.startsWith('/archive')) {
-    buttons = [
-      {
-        key: 'search',
-        icon: <SearchIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
-        onClick: () => props.setSearchOpen(!props.searchOpen),
-      },
-      ...buttons,
-    ]
-  }
+  // if (router.pathname.startsWith('/archive')) {
+  //   buttons = [
+  //     {
+  //       key: 'search',
+  //       icon: <SearchIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
+  //       onClick: () => props.setSearchOpen(!props.searchOpen),
+  //     },
+  //     ...buttons,
+  //   ]
+  // }
 
   if (router.pathname.startsWith('/app')) {
     buttons = [

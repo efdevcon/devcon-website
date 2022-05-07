@@ -66,7 +66,7 @@
   }
 
   .menu-container {
-    @include layout-content;
+    // @include layout-content;
 
     display: flex;
     flex-direction: row;
@@ -79,7 +79,7 @@
       padding-bottom: 8px;
       align-items: center;
 
-      > svg {
+      svg {
         height: 38px;
         fill: var(--logo-color, $colors-main);
         padding-right: 42px;

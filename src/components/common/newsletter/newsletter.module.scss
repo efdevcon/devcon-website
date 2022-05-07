@@ -35,18 +35,19 @@
 }
 
 .button {
-  display: inline-block;
-  border: 2px solid $colors-monochrome-10;
-  color: $colors-monochrome-10;
-  padding: $gaps-gap-2 $gaps-gap-3;
+  flex-shrink: 0;
+  // display: inline-block;
+  // border: 2px solid $colors-monochrome-10;
+  // color: $colors-monochrome-10;
+  // padding: $gaps-gap-2 $gaps-gap-3;
 
   &:focus,
   &:active,
   &:hover {
     outline: none;
     background: #fff;
-    border: 2px solid $colors-monochrome-10;
-    color: $colors-monochrome-10;
+    // border: 2px solid $colors-monochrome-10;
+    // color: $colors-monochrome-10;
   }
 
   @media (min-width: $breakpoints-md) and (max-width: $breakpoints-xl) {

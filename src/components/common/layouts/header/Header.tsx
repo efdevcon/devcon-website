@@ -23,7 +23,7 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
   const [searchOpen, setSearchOpen] = React.useState(false)
   useOnOutsideClick(ref, () => setSearchOpen(false))
 
-  const searchActive = searchOpen && !foldoutOpen
+  // const searchActive = searchOpen && !foldoutOpen
 
   // Prevent page scroll when menu is open
   useEffect(() => {
@@ -48,19 +48,21 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
     <header id="header-container" className={headerContainerClass}>
       {withStrip && <Strip withHero={withHero} />}
       <div id="header" className={headerClass} ref={ref}>
-        <div className={css['menu-container']}>
-          <Link to={`/${router.locale}`}>
-            <HeaderLogo />
-          </Link>
+        <div className="section">
+          <div className={`${css['menu-container']}`}>
+            <Link to={`/${router.locale}`}>
+              <HeaderLogo />
+            </Link>
 
-          <Menu
-            searchOpen={searchOpen}
-            setSearchOpen={setSearchOpen}
-            foldoutOpen={foldoutOpen}
-            setFoldoutOpen={setFoldoutOpen}
-          />
+            <Menu
+              searchOpen={searchOpen}
+              setSearchOpen={setSearchOpen}
+              foldoutOpen={foldoutOpen}
+              setFoldoutOpen={setFoldoutOpen}
+            />
+          </div>
+          {/* {isArchive && <Search open={searchActive} />} */}
         </div>
-        {/* {isArchive && <Search open={searchActive} />} */}
       </div>
     </header>
   )

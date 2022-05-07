@@ -37,7 +37,7 @@ export function BlogReel(props: Props) {
   const sliderProps = useSlider(settings)
 
   return (
-    <div className="section">
+    <div className="section no-overflow">
       <div className="content margin-top">
         <div className={`${css['cards']} border-top`}>
           <Slider sliderProps={sliderProps} title="Blog">

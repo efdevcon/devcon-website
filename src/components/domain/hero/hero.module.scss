@@ -171,7 +171,7 @@ $logo-offset: 50px;
     .logo {
       display: flex;
       position: relative;
-      width: 25%;
+      width: min(325px, 25%);
       height: auto;
       justify-content: center;
       align-items: center;

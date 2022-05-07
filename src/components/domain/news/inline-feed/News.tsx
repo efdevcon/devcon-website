@@ -56,7 +56,7 @@ export const News = (props: NewsProps) => {
   const sliderProps = useSlider(settings)
 
   return (
-    <div className={`section clear-top ${css['news-container']}`}>
+    <div className={`section no-overflow clear-top ${css['news-container']}`}>
       <h2 className="title spaced">{intl('news')}</h2>
 
       {/* Only visible on mobile */}

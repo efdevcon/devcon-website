@@ -3,16 +3,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  // RTD: remove margin-bottom
-  // margin-bottom: $gaps-gap-10;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px;
 
   .top-container {
     @include gaps-responsive-gap($attribute: padding, $top: $gaps-gap-10, $bottom: $gaps-gap-10, $min-gap: $gaps-gap-4);
-    // padding-top: $gap-10;
-    // padding-bottom: $gap-10;
-    border-top: 1px solid #30354b;
+    border-top: 1px solid $colors-standard-border-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -158,14 +154,10 @@
 }
 
 .links {
-  // RTD: smaller font-size
-  // font-size: 1.5rem;
   font-size: 1rem;
 
   > * {
     cursor: pointer;
-    // RTD: smaller gaps
-    // @include gaps.responsive-gap($attribute: margin, $right: $gaps-gap-4, $min-gap: $gaps-gap-2);
     @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-2, $min-gap: $gaps-gap-1);
 
     &:last-child {

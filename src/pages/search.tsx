@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
-import Content from 'components/common/layouts/content'
+import Page from 'components/common/layouts/page'
 import { pageHOC } from 'context/pageHOC'
 import themes from './themes.module.scss'
-import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
+// import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { PageHero } from 'components/common/page-hero'
 import { Link } from 'components/common/link'
 import * as JsSearch from 'js-search'
@@ -55,10 +55,10 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
   }
 
   return (
-    <Content theme={themes['light-blue']}>
+    <Page theme={themes['light-blue']}>
       <PageHero />
 
-      <PageContentSection>
+      <div className="section">
         <InputForm
           id="input-form_search_page"
           label={'Search'}
@@ -83,8 +83,8 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
             })}
           </ul>
         )}
-      </PageContentSection>
-    </Content>
+      </div>
+    </Page>
   )
 })
 

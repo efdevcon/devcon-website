@@ -1,14 +1,14 @@
 import React from 'react'
 import { PageHero } from 'components/common/page-hero'
 import { FAQ } from 'components/domain/faq'
-import Content from 'components/common/layouts/content'
+import Page from 'components/common/layouts/page'
 import css from './templates.module.scss'
 import themes from './themes.module.scss'
 import { Carousel } from 'components/common/carousel'
 import { Snapshot } from 'components/common/snapshot'
 import { TwoColumns } from 'components/common/sections/2column'
 import { pageHOC } from 'context/pageHOC'
-import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
+// import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
 import { GetCategories, GetDIPs, GetFAQ, GetPage, GetPages, GetContentSection } from 'services/page'
@@ -22,7 +22,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
   const faqs = props.faq.filter((faq: any) => faq.category.id === 'location')
 
   return (
-    <Content theme={themes['purple']}>
+    <Page theme={themes['purple']}>
       <PageHero
         path={[{ text: 'Bogota' }, { text: 'City Guide' }]}
         navigation={[
@@ -85,7 +85,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
         <Tags items={pageContext?.current?.tags} viewOnly={false} />
       </div>
-    </Content>
+    </Page>
   )
 })
 

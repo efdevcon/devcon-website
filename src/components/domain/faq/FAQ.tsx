@@ -1,9 +1,11 @@
 import React from 'react'
 import { Category } from 'types/Category'
 import { FAQ as FaqType } from 'types/FAQ'
-import { Accordion } from '../../common/accordion/Accordion'
-import { AccordionItem } from '../../common/accordion/AccordionItem'
 import css from './faq.module.scss'
+import Accordion from 'components/common/accordion'
+import { AccordionItem } from 'components/common/accordion/types'
+import { Input } from 'components/common/input-form'
+import SearchIcon from 'assets/icons/search.svg'
 
 interface FaqProps {
   data: Array<Category>
@@ -12,30 +14,46 @@ interface FaqProps {
 }
 
 export function FAQ(props: FaqProps) {
-  function filter(questions: Array<FaqType>): Array<AccordionItem> {
-    if (!props.filter) return questions
+  const [searchFilter, setSearchFilter] = React.useState('')
 
-    const filter = props.filter.toLowerCase()
+  const filterQuestions = (questions: Array<FaqType>) => {
+    if (!searchFilter) return questions
+
+    const filter = searchFilter.toLowerCase()
     const filtered = questions.filter(
-      i => i.title.toLowerCase().includes(filter) || i.body.toLowerCase().includes(filter)
+      question => question.title.toLowerCase().includes(filter) || question.body.toLowerCase().includes(filter)
     )
-    return filtered.map(i => {
-      return { id: i.id, title: i.title, body: i.body }
+
+    return filtered
+  }
+
+  const formatQuestions = (items: Array<FaqType>): Array<AccordionItem> => {
+    return items.map(item => {
+      return { title: item.title, body: <div dangerouslySetInnerHTML={{ __html: item.body }} /> }
     })
   }
 
-  // console.log(props.items, 'hello')
-
   return (
     <div className={css['container']}>
+      <div className={css['search']}>
+        <Input
+          placeholder="Search FAQ"
+          onChange={(e: any) => setSearchFilter(e.target.value)}
+          value={searchFilter}
+          icon={SearchIcon}
+        />
+      </div>
+
       {props.data.map((category: Category) => {
+        const items = formatQuestions(filterQuestions(category.questions))
+
+        if (items.length === 0) return null
+
         return (
-          <Accordion
-            key={category.id}
-            open={false}
-            title={props.customCategoryTitle || category.title}
-            items={filter(category.questions)}
-          />
+          <div id={category.id} className={css['accordion-container']} key={category.id}>
+            <h2 className="h5 bold">{props.customCategoryTitle || category.title}</h2>
+            <Accordion items={formatQuestions(filterQuestions(category.questions))} />
+          </div>
         )
       })}
     </div>

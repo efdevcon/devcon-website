@@ -1,1 +1,1 @@
-export { Footer, SocialMedia } from './Footer'
+export { Footer, SocialMedia } from './Footer';

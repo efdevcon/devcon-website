@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react'
 import { Header } from 'components/common/layouts/header'
 import { Footer } from 'components/common/layouts/footer'
 import css from './page.module.scss'
-import { SEO } from 'components/domain/seo'
 
 type LayoutProps = {
   children: ReactNode
@@ -12,7 +11,7 @@ type LayoutProps = {
   }
 }
 
-export default function Page({ children, theme, style }: LayoutProps) {
+export default function PageLayout({ children, theme, style }: LayoutProps) {
   let className = 'layout'
 
   if (theme) className += ` ${theme}`

@@ -16,6 +16,10 @@
   > .expand {
     grid-column: 1 / 4;
   }
+
+  &.no-overflow {
+    overflow-x: hidden;
+  }
 }
 
 .clear {

@@ -1,5 +1,5 @@
 import React from 'react'
-import PageLayout from 'components/common/layouts/page'
+import Page from 'components/common/layouts/page'
 import { PageHero } from 'components/common/page-hero'
 import themes from './themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
@@ -14,7 +14,7 @@ export default pageHOC(function NewsTemplate(props: any) {
   const pageContext = usePageContext()
 
   return (
-    <PageLayout theme={themes['news']}>
+    <Page theme={themes['news']}>
       <PageHero />
 
       <div className="section">
@@ -22,7 +22,7 @@ export default pageHOC(function NewsTemplate(props: any) {
 
         <Tags items={pageContext?.current?.tags} viewOnly={false} />
       </div>
-    </PageLayout>
+    </Page>
   )
 })
 

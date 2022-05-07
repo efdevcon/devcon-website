@@ -132,32 +132,32 @@ const tableColumns: Array<TableColumn> = [
         : null
     },
   },
-  {
-    intl: 'dips_authors',
-    className: css['authors-column'],
-    key: 'authors',
-    // Authors have no standard format so this is a tricky one
-    // render: (item: DIP) => {
-    //   console.log(item.authors, 'authors')
+  // {
+  //   intl: 'dips_authors',
+  //   className: css['authors-column'],
+  //   key: 'authors',
+  //   // Authors have no standard format so this is a tricky one
+  //   // render: (item: DIP) => {
+  //   //   console.log(item.authors, 'authors')
 
-    //   if (!item.authors) return null
+  //   //   if (!item.authors) return null
 
-    //   return (
-    //     <li>
-    //       {item.authors.map(
-    //         author =>
-    //           console.log(author, 'author') || (
-    //             <li key={author} className="font-xs bold text-uppercase">
-    //               {author}
-    //             </li>
-    //           )
-    //       )}
-    //     </li>
-    //   )
+  //   //   return (
+  //   //     <li>
+  //   //       {item.authors.map(
+  //   //         author =>
+  //   //           console.log(author, 'author') || (
+  //   //             <li key={author} className="font-xs bold text-uppercase">
+  //   //               {author}
+  //   //             </li>
+  //   //           )
+  //   //       )}
+  //   //     </li>
+  //   //   )
 
-    //   return item.authors ? item.authors.map(author => <p className="font-xs bold text-uppercase">{author}</p>) : null
-    // },
-  },
+  //   //   return item.authors ? item.authors.map(author => <p className="font-xs bold text-uppercase">{author}</p>) : null
+  //   // },
+  // },
   {
     intl: 'dips_links',
     key: 'links',
@@ -238,6 +238,7 @@ export const Proposals = (props: ProposalsProps) => {
       </div>
 
       <Table itemKey="number" items={filteredDips} columns={tableColumns} />
+      <div className="clear-bottom"></div>
     </section>
   )
 }

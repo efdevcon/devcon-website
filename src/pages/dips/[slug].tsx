@@ -1,6 +1,6 @@
 import React from 'react'
 import { SEO } from 'components/domain/seo'
-import Content from 'components/common/layouts/content'
+import Content from 'components/common/layouts/page'
 import { DIP } from 'components/domain/dips/dip'
 import themes from 'pages/themes.module.scss'
 import { pageHOC } from 'context/pageHOC'

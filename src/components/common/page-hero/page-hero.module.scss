@@ -232,11 +232,11 @@
       > a {
         margin-right: $gaps-gap-3;
 
-        > svg {
+        svg {
           @include fonts-xs;
         }
 
-        > span {
+        span {
           margin-left: $gaps-gap-2;
         }
       }

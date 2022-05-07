@@ -1,14 +1,15 @@
 @use 'assets/css/partials/index' as *;
 
 .container {
-  margin-bottom: $gaps-gap-10;
+  .search {
+    margin-bottom: 20px;
+  }
 
   a {
-    // color: #88c43f;
     text-decoration: underline;
   }
 
-  svg {
-    fill: $colors-monochrome-10;
+  .accordion-container {
+    margin-bottom: 32px;
   }
 }

@@ -1,20 +1,21 @@
 import React from 'react'
 import css from './footer.module.scss'
 import IconArrowUpward from 'assets/icons/arrow_upward.svg'
-import IconGithub from 'assets/icons/github.svg'
-import IconTwitter from 'assets/icons/twitter.svg'
-import IconYoutube from 'assets/icons/youtube.svg'
-import ImageLogo from 'assets/images/test-asset.svg'
 import ImageEF from 'assets/images/ef-logo.svg'
-import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/router'
 import { Link } from 'components/common/link'
 import { Link as LinkType } from 'types/Link'
 import { Newsletter } from 'components/common/newsletter'
 import { usePageContext } from 'context/page-context'
-import { Share } from 'components/common/share'
+import { EMAIL_DEVCON, LINK_ETHEREUM_FOUNDATION, TITLE } from 'utils/constants'
+import HeaderLogoArchive from '../header/HeaderLogo'
 import { Copyright } from '../Copyright'
-import { COPYRIGHT_NOTICE, EMAIL_DEVCON, EMAIL_SPONSORSHIP, LINK_ETHEREUM_FOUNDATION, TITLE } from 'utils/constants'
+import { useRouter } from 'next/router'
+import { useTranslations } from 'next-intl'
+import navigationData from 'components/common/layouts/header/navigationData'
+import { Share } from 'components/common/share'
+import IconGithub from 'assets/icons/github.svg'
+import IconTwitter from 'assets/icons/twitter.svg'
+import IconYoutube from 'assets/icons/youtube.svg'
 
 type SocialMediaProps = {
   onShare: () => void
@@ -45,57 +46,69 @@ export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialM
 
 export const Footer = () => {
   const context = usePageContext()
-  const footerData = context?.navigation.footer
-  const router = useRouter()
   const intl = useTranslations()
+  const router = useRouter()
   const lang = router.locale
+  let footerData = navigationData.footer
+
+  // if (footerData) {
+  //   footerData = {
+  //     ...footerData,
+  //     right: [
+  //       {
+  //         title: 'Watch',
+  //         url: '/archive/watch/',
+  //         type: 'link',
+  //       },
+  //       {
+  //         title: 'Playlists',
+  //         url: '/archive/playlists/',
+  //         type: 'link',
+  //       },
+  //       {
+  //         title: 'Road to Devcon',
+  //         url: 'https://www.devcon.org/',
+  //         type: 'link',
+  //       },
+  //       {
+  //         title: 'Forum',
+  //         url: 'https://forum.devcon.org/',
+  //         type: 'link',
+  //       },
+  //       {
+  //         title: 'Blog',
+  //         url: 'https://blog.ethereum.org/category/devcon/',
+  //         type: 'link',
+  //       },
+  //     ],
+  //   }
+  // }
 
   return (
-    <footer className={`footer ${css['container']}`}>
+    <footer className={`footer ${css['container']} ${css['archive']}`}>
       <div className={css['top-section']}>
         <div className="section">
           <div className={css['content']}>
             <div className={css['col-1']}>
-              <Link to={`/${lang}/`}>
-                <ImageLogo />
+              <Link to={`/${lang}/`} style={{ maxWidth: '200px', minWidth: '130px', display: 'block' }}>
+                <HeaderLogoArchive />
               </Link>
+
+              <SocialMedia />
             </div>
 
             <div className={css['col-2']}>
-              {footerData?.highlights.map((link: LinkType, index: number) => {
-                return (
-                  <Link
-                    key={index}
-                    to={link.url}
-                    className={`${css['big-link']} plain hover-underline font-xl bold spaced`}
-                  >
-                    {link.title}
-                  </Link>
-                )
-              })}
-
-              <SocialMedia
-                onShare={() => {
-                  return
-                }}
-              />
+              <div>
+                <p className="semi-bold">About Devcon —</p>
+                <p>Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.</p>
+                <p>
+                  An intensive introduction for new Ethereum explorers, a global family reunion for those already a part
+                  of our ecosystem, and a source of energy and creativity for all.
+                </p>
+              </div>
             </div>
 
             <div className={css['col-3']}>
-              <ul className={css['list']}>
-                {footerData?.left.map((link: LinkType, index: number) => {
-                  return (
-                    <li className="semi-bold" key={index}>
-                      <Link to={link.url} className="plain hover-underline">
-                        {link.title}
-                      </Link>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-
-            <div className={css['col-4']}>
               <ul className={css['list']}>
                 {footerData?.right.map((link: LinkType, index: number) => {
                   return (
@@ -109,33 +122,24 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className={css['col-5']}>
+            <div className={css['col-4']}>
               <div className={css['contact']}>
                 <p className="semi-bold">{intl('getintouch')}</p>
                 <p className={css['email-1']}>{EMAIL_DEVCON}</p>
 
-                <p className="semi-bold">{intl('partnerwithus')}</p>
-                <p className={css['email-2']}>{EMAIL_SPONSORSHIP}</p>
-
-                {/* Visible on some breakpoints, but not all - moves to col-7 on mobile */}
                 <div className={css['newsletter']}>
                   <Newsletter id="footer_newsletter_email" />
                 </div>
               </div>
             </div>
 
-            <div className={css['col-6']}>
+            <div className={css['col-5']}>
               <div className={css['scroll-up']}>
                 <IconArrowUpward
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   style={{ cursor: 'pointer' }}
                 />
               </div>
-            </div>
-
-            {/* Only visible on mobile */}
-            <div className={css['col-7']}>
-              <Newsletter id="footer_newsletter_email_mobile" />
             </div>
           </div>
         </div>
@@ -145,26 +149,33 @@ export const Footer = () => {
         <div className="section">
           <div className={css['content']}>
             <div className={css['col-1']}>
-              <Copyright />
-            </div>
-
-            <div className={css['col-2']}>
-              {footerData?.bottom.map((link: LinkType, index: number) => {
-                return (
-                  <p className="semi-bold" key={index}>
-                    <Link to={link.url} external={link.type === 'url'} className="plain hover-underline">
-                      {link.title}
-                    </Link>
-                  </p>
-                )
-              })}
-            </div>
-
-            <div className={css['col-3']}>
               <Link external className={css['small-logo']} to={LINK_ETHEREUM_FOUNDATION}>
                 <ImageEF />
               </Link>
+
+              <Copyright />
             </div>
+
+            <div className={css['col-3']}>
+              <Link
+                className="bold font-xs text-uppercase hover-underline"
+                to="https://ethereum.org/en/privacy-policy/"
+              >
+                Privacy policy
+              </Link>
+              <Link className="bold font-xs text-uppercase hover-underline" to="https://ethereum.org/en/terms-of-use/">
+                Terms of use
+              </Link>
+              <Link className="bold font-xs text-uppercase hover-underline" to="https://ethereum.org/en/cookie-policy/">
+                Cookie policy
+              </Link>
+            </div>
+
+            {/* <div className={css['col-3']}>
+              <Link external className={css['small-logo']} to={LINK_ETHEREUM_FOUNDATION}>
+                <ImageEF />
+              </Link>
+            </div> */}
           </div>
         </div>
       </div>

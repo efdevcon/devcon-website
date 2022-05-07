@@ -72,8 +72,6 @@ export const Hero = () => {
   const heroEl = React.useRef(null)
   const parallaxMultiplier = useParallax(heroEl)
 
-  console.log(parallax(parallaxMultiplier))
-
   return (
     <>
       <div ref={heroEl} data-jest="hero" className={`${css['hero']}`}>
@@ -123,7 +121,7 @@ export const Hero = () => {
               </Button>
             </Link>
           </div>
-          <CallToAction />
+          {/* <CallToAction /> */}
         </div>
       </div>
       <div className="section">

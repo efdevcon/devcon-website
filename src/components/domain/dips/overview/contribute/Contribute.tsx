@@ -149,10 +149,10 @@ export const Contribute = (props: ContributeProps) => {
             className={`${css['dip-description']} markdown`}
           />
           <div className={css['links']}>
-            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
+            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold">
               {intl('dips_visit_forum')}
             </Link>
-            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold font-secondary">
+            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold">
               {intl('dips_create_proposal')}
             </Link>
           </div>

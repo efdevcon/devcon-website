@@ -1,13 +1,13 @@
 import React from 'react'
-import Content from 'components/common/layouts/content'
-import themes from './themes.module.scss'
+import Page from 'components/common/layouts/page'
+import themes from '../themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
 import { PageHero } from 'components/common/page-hero'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
 import Pencil from 'assets/icons/pencil.svg'
 import BulletList from 'assets/icons/bullet_list.svg'
-import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
+// import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { Contribute } from 'components/domain/dips/overview/contribute'
 import { Proposals } from 'components/domain/dips/overview/proposals'
 import AllContributorsJson from 'content/dips/contributors.json'
@@ -22,7 +22,7 @@ export default pageHOC(function DIPsTemplate(props: any) {
   const contributors = AllContributorsJson as Contributor[]
 
   return (
-    <Content theme={themes['teal']}>
+    <Page theme={themes['teal']}>
       <PageHero
         cta={[
           {
@@ -62,7 +62,7 @@ export default pageHOC(function DIPsTemplate(props: any) {
 
         <Tags items={pageContext?.current?.tags} viewOnly={false} />
       </div>
-    </Content>
+    </Page>
   )
 })
 

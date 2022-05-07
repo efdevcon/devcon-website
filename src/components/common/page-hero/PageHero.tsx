@@ -89,14 +89,10 @@ export const PageHero = (props: PageHeroProps) => {
   const isScrolled = useIsScrolled()
   const [currentScene, setCurrentScene] = React.useState(0)
 
-  // console.log(pageHeroHeight, pageHeaderHeight, headerHeight, 'pagehero/pageheader/header')
-
   let style: any = {
     '--negative-offset': negativeOffset,
     '--strip-height': `${stripHeight}px`,
   }
-
-  // console.log(headerHeight, 'header height')
 
   if (props.background) {
     style.backgroundImage = `url(${props.background})`
@@ -162,7 +158,7 @@ export const PageHero = (props: PageHeroProps) => {
                 <div className={css['buttons']}>
                   {props.cta.map((link: CTALink) => {
                     return (
-                      <Link key={link.to + link.title} className="button black ghost lg" to={link.to}>
+                      <Link key={link.to + link.title} className="button black ghost lg thin-borders" to={link.to}>
                         {link.icon}
                         <span>{link.title}</span>
                       </Link>

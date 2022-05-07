@@ -7,6 +7,7 @@ import ArrowCollapse from 'assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'assets/icons/arrow_drop_down.svg'
 import OnDemandVideoIcon from 'assets/icons/on_demand_video.svg'
 import Image from 'next/image'
+import navigationData from '../../navigationData'
 
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
@@ -18,7 +19,7 @@ const Mobile = (props: any) => {
   return (
     <div className={css['mobile-navigation']}>
       <ul className={css['accordion']}>
-        {props.navigationData.site.map((i: LinkType, index: number) => {
+        {navigationData.site.map((i: LinkType, index: number) => {
           const children = i.links
           const hasChildren = children && children.length > 0
           const open = openItem === i.title
@@ -101,7 +102,7 @@ export const Navigation = (props: any) => {
   return (
     <>
       <ul className={css['navigation']}>
-        {props.navigationData.site.map((i: LinkType, index: number) => {
+        {navigationData.site.map((i: LinkType, index: number) => {
           const primaryKey = `site-nav-1_${index}`
           const hasChildren = i.links && i.links.length > 0
 

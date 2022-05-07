@@ -66,7 +66,7 @@ export const Newsletter = (props: Props) => {
                   placeholder={intl('newsletter_enter')}
                   {...emailField}
                 />
-                <Button className={`white ${css['button']}`} type="submit">
+                <Button className={`black ghost ${css['button']} thin-borders`} type="submit">
                   {intl('newsletter_subscribe')}
                 </Button>
               </div>

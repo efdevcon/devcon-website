@@ -1,5 +1,5 @@
 import React from 'react'
-import Content from 'components/common/layouts/content'
+import Page from 'components/common/layouts/page'
 import { PageHero } from 'components/common/page-hero'
 import themes from './themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
@@ -14,14 +14,14 @@ export default pageHOC(function BlogsTemplate(props: any) {
   const pageContext = usePageContext()
 
   return (
-    <Content theme={themes['blue']}>
+    <Page theme={themes['blue']}>
       <PageHero />
 
       <div className="section">
         <BlogOverview maxItems={10} blogs={props.blogs} />
         <Tags items={pageContext?.current?.tags} viewOnly={false} />
       </div>
-    </Content>
+    </Page>
   )
 })
 
