@@ -18,7 +18,7 @@ import IconTwitter from 'assets/icons/twitter.svg'
 import IconYoutube from 'assets/icons/youtube.svg'
 
 type SocialMediaProps = {
-  onShare: () => void
+  onShare?: () => void
   url?: string
   className?: string
 }
@@ -39,7 +39,7 @@ export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialM
       <Link to="https://www.youtube.com/c/EthereumFoundation/search?query=devcon">
         <IconYoutube style={{ cursor: 'pointer' }} />
       </Link>
-      <Share url={url} onShare={onShare} />
+      {/* <Share url={url} onShare={onShare} /> */}
     </div>
   )
 }
