@@ -72,7 +72,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.sections.todo.left }} />
           </div>
           <div className="right">
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.sections.todo.right }} />
+            <div dangerouslySetInnerHTML={{ __html: props.sections.todo.right }} />
           </div>
         </div>
 
