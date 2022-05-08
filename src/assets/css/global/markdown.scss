@@ -4,10 +4,17 @@
   // Create line breaks
   > * {
     margin-bottom: var(--markdown-spacing, 1em);
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
 
   > ul {
-    overflow: auto;
+    // overflow: auto;
+    > li {
+      margin-left: 1em;
+    }
   }
 
   /*
@@ -29,7 +36,11 @@
   }
 
   p {
-    @include fonts-md;
+    // @include fonts-md;
+  }
+
+  a {
+    @include fonts-generic-link;
   }
 }
 

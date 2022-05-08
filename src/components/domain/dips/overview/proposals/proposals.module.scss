@@ -5,6 +5,7 @@
   flex-direction: column;
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px;
+  @include fonts-sm;
 
   .top-container {
     @include gaps-responsive-gap($attribute: padding, $top: $gaps-gap-10, $bottom: $gaps-gap-10, $min-gap: $gaps-gap-4);
@@ -56,6 +57,7 @@
 .index-column {
   flex-grow: 0 !important;
   flex-basis: 50px !important;
+
   > * {
     word-break: normal !important;
   }

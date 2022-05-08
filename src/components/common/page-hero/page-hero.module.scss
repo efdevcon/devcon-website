@@ -21,7 +21,7 @@
     left: 0px;
   }
 
-  // Gradient
+  // Image
   &:before {
     background-repeat: no-repeat;
     background-position: center right;
@@ -31,9 +31,7 @@
 
     @media (max-width: $breakpoints-lg) {
       mask-image: none;
-    }
-
-    @media (max-width: $breakpoints-lg) {
+      opacity: 0.6;
       background-size: 70%;
     }
 
@@ -44,7 +42,7 @@
     }
   }
 
-  // Image
+  // Gradient
   &:after {
     background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
     background-image: var(--theme-gradient);
@@ -242,7 +240,12 @@
       }
     }
   }
+}
 
+.page-navigation-container {
+  overflow-x: auto;
+  z-index: 1;
+  
   .page-navigation {
     position: relative;
     // top: var(--header-height);
@@ -250,10 +253,12 @@
     display: flex;
     padding-top: $gaps-gap-4;
     padding-bottom: $gaps-gap-4;
-
+    // overflow-x: auto;
+  
     > * {
-      margin-left: $gaps-gap-6;
-
+      padding-right: $gaps-gap-6;
+      flex-shrink: 0;
+  
       &:first-child {
         margin-left: 0px;
       }

@@ -49,11 +49,15 @@
 
     > * {
       flex-basis: auto !important;
+
+      &:first-child {
+        margin-bottom: 1em;
+      }
     }
   }
 
   > * {
-    flex-basis: 50%;
+    flex-basis: calc(50% - 8px); // effectively 16px margin 
     flex-shrink: 0;
     flex-grow: 0;
   }

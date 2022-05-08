@@ -10,6 +10,7 @@ import SearchIcon from 'assets/icons/search.svg'
 interface FaqProps {
   data: Array<Category>
   filter?: string
+  noSearch?: boolean
   customCategoryTitle?: string // ideally used with a single FAQ category
 }
 
@@ -29,20 +30,22 @@ export function FAQ(props: FaqProps) {
 
   const formatQuestions = (items: Array<FaqType>): Array<AccordionItem> => {
     return items.map(item => {
-      return { title: item.title, body: <div dangerouslySetInnerHTML={{ __html: item.body }} /> }
+      return { title: item.title, body: <div className="markdown" dangerouslySetInnerHTML={{ __html: item.body }} /> }
     })
   }
 
   return (
     <div className={css['container']}>
-      <div className={css['search']}>
-        <Input
-          placeholder="Search FAQ"
-          onChange={(e: any) => setSearchFilter(e.target.value)}
-          value={searchFilter}
-          icon={SearchIcon}
-        />
-      </div>
+      {!props.noSearch && (
+        <div className={css['search']}>
+          <Input
+            placeholder="Search FAQ"
+            onChange={(e: any) => setSearchFilter(e.target.value)}
+            value={searchFilter}
+            icon={SearchIcon}
+          />
+        </div>
+      )}
 
       {props.data.map((category: Category) => {
         const items = formatQuestions(filterQuestions(category.questions))

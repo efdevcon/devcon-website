@@ -3,6 +3,7 @@
 .container {
   width: 100%;
   margin-top: -12px;
+  @include fonts-sm;
 }
 
 .list {
@@ -17,12 +18,12 @@
   padding: 12px 8px;
   border-bottom: 1px solid $colors-monochrome-10;
 
-  svg {
+  > svg {
     margin-right: $gaps-gap-2;
   }
 
   a {
-    @include fonts-xs;
+    @include fonts-generic-link;
     text-transform: uppercase;
   }
 

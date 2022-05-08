@@ -115,6 +115,12 @@ $secondary: 'Space Mono', monospace;
   text-transform: uppercase;
 }
 
+@mixin generic-link {
+  color: colors.$link;
+  font-weight: bold; 
+  --color-icon: #{colors.$link};
+}
+
 // Font-family
 @mixin primary {
   font-family: $primary;

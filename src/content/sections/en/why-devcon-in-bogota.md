@@ -6,9 +6,6 @@ left: >-
   could help grow. From builders, to educational entities, local business and
   industry leaders and more, we’re excited to meet and to work with those making
   real-world use of Ethereum’s technology locally, and to further those efforts
-
-
-  [Devcon Archive](https://archive.devcon.org/)
 right: >-
   In addition to the potential to grow a community, the venue is located just
   minutes from hotels, and from both Bogota’s El Dorado International Airport,

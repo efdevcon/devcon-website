@@ -16,7 +16,6 @@ import { Tags } from 'components/common/tags'
 
 export default pageHOC(function FaqTemplate(props: any) {
   const pageContext = usePageContext()
-  const [searchFilter, setSearchFilter] = useState('')
 
   return (
     <Page theme={themes['green']}>
@@ -43,7 +42,7 @@ export default pageHOC(function FaqTemplate(props: any) {
           </div>
         </div> */}
 
-        <FAQ data={props.faq} filter={searchFilter} />
+        <FAQ data={props.faq} />
         <Tags items={pageContext?.current?.tags} viewOnly={false} />
       </div>
     </Page>

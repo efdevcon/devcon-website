@@ -37,6 +37,7 @@
     display: none;
     padding: 15px;
     padding-top: 0px;
+    @include fonts-sm;
     // color: #dadada;
   }
 

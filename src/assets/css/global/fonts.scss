@@ -240,6 +240,10 @@ h6,
 a {
   color: inherit;
   text-decoration: none;
+
+  &.generic {
+    @include fonts-generic-link;
+  }
 }
 
 // For cases where we don't want default link styling

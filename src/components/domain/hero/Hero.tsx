@@ -106,11 +106,8 @@ export const Hero = () => {
         <div className="section">
           <div className={css['date-calendar']}>
             <div className={css['date']}>
-              <p className="font-xxl">
-                Aug 2021
-                <br />
-                10 → 13
-              </p>
+              Bogota, Colombia
+              <p className="font-xxl">October 10 - 13, 2022</p>
             </div>
 
             <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>

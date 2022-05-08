@@ -13,6 +13,7 @@ import { getGlobalData } from 'services/global'
 import { GetPage } from 'services/page'
 
 export default pageHOC(function SearchTemplate({ pageContext }: any) {
+  return <div>Search</div>
   const data = pageContext
   const router = useRouter()
   const [searchQuery, setSearchQuery] = React.useState((router.query['q'] as string) || '')
@@ -90,12 +91,12 @@ export default pageHOC(function SearchTemplate({ pageContext }: any) {
 
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
-  const page = await GetPage('/search', context.locale)
+  // const page = await GetPage('/search', context.locale)
 
   return {
     props: {
       ...globalData,
-      page,
+      // page,
     },
   }
 }

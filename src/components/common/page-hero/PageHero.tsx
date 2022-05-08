@@ -227,26 +227,27 @@ export const PageHero = (props: PageHeroProps) => {
           )}
 
           {props.renderCustom && props.renderCustom()}
-
-          {props.navigation && (
-            <div id="page-navigation" className={css['page-navigation']}>
-              {props.navigation &&
-                props.navigation.map(link => {
-                  return (
-                    <Link
-                      key={link.to + link.title}
-                      to={link.to}
-                      indicateExternal
-                      className="font-xs bold text-uppercase"
-                    >
-                      {link.title}
-                    </Link>
-                  )
-                })}
-            </div>
-          )}
         </div>
       </div>
+      {props.navigation && (
+        <div className={`${css['page-navigation-container']} section`}>
+          <div id="page-navigation" className={`${css['page-navigation']}`}>
+            {props.navigation &&
+              props.navigation.map(link => {
+                return (
+                  <Link
+                    key={link.to + link.title}
+                    to={link.to}
+                    indicateExternal
+                    className="font-xs bold text-uppercase"
+                  >
+                    {link.title}
+                  </Link>
+                )
+              })}
+          </div>
+        </div>
+      )}
 
       {props.scenes?.map((scene, i: number) => {
         const selected = i === currentScene

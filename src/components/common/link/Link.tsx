@@ -83,20 +83,6 @@ const Link = React.forwardRef(
         <a {...linkAttributes}>{children}</a>
       </NextLink>
     )
-
-    if (isExternal) {
-      return (
-        <a href={to} ref={ref} {...linkAttributes} target="_blank" rel="noopener noreferrer">
-          {children} {indicateExternal && <NorthEast style={{ fontSize: '0.5rem' }} />}
-        </a>
-      )
-    }
-
-    return (
-      <NextLink href={to} locale={locale} /*locale={ignoreLocale ? false : locale}*/>
-        <a {...linkAttributes}>{children}</a>
-      </NextLink>
-    )
   }
 )
 
