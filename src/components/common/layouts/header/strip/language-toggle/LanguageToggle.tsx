@@ -6,16 +6,15 @@ import css from './language-toggle.module.scss'
 
 export function LanguageToggle() {
   const router = useRouter()
-  if (router.asPath.startsWith('/archive')) return null
 
   return (
     <div id="language-toggle" className={css['language-toggle']}>
       <IconLanguage style={{ fontSize: '14px' }} />
-      <Link to={`/en${router.asPath}`} locale="en">
+      <Link to={`${router.asPath}`} locale="en">
         EN
       </Link>
       <span className={`${css['split']} bold`}>|</span>
-      <Link to={`/es${router.asPath}`} locale="es">
+      <Link to={`${router.asPath}`} locale="es">
         ES
       </Link>
     </div>

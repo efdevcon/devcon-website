@@ -11,7 +11,7 @@ type HeaderProps = {
 
 export const Strip = ({ withHero }: HeaderProps) => {
   const context = usePageContext()
-  let className = css['strip']
+  let className = `section ${css['strip']}`
 
   if (withHero) className += ` ${css['hero']}`
 

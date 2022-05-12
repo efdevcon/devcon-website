@@ -12,25 +12,29 @@ import getNews from 'services/news'
 import { Button } from 'components/common/button'
 import ChevronLeft from 'assets/icons/chevron_left.svg'
 import ChevronRight from 'assets/icons/chevron_right.svg'
-import { useRouter } from 'next/router'
 import css from './news.module.scss'
+import { Link } from 'components/common/link'
 
 const limit = 10
 
+const ConditionalLink = ({ disabled, ...props }: any) => {
+  if (!disabled) {
+    return <Link {...props}>{props.children}</Link>
+  }
+
+  return props.children
+}
+
 export default pageHOC(function NewsTemplate(props: any) {
   const pageContext = usePageContext()
-  const router = useRouter()
 
   let className = `squared sm black ghost`
 
-  const canNext = props.pagination.currentPage < props.pagination.totalPages
   const canBack = props.pagination.currentPage > 0
-  const baseUrl = router.pathname
+  const canNext = props.pagination.currentPage + 1 < props.pagination.totalPages
 
-  console.log(baseUrl, pageContext, props)
-
-  const prevPage = props.pagination.currentPage === 1 ? '/' : `/${props.pagination.currentPage - 1}`
-  const nextPage = `/${props.pagination.currentPage + 1}`
+  const prevPage = props.pagination.currentPage === 1 ? `/news` : `/news/${props.pagination.currentPage - 1}`
+  const nextPage = `/news/${props.pagination.currentPage + 1}`
 
   return (
     <Page theme={themes['news']}>
@@ -40,24 +44,18 @@ export default pageHOC(function NewsTemplate(props: any) {
         <h1>{props.pagination.totalPages}</h1>
         <NewsOverview newsItems={props.news} />
 
-        <div className={css['pagination']}>
-          <Button
-            disabled={!canBack}
-            className={className}
-            aria-label="Previous page"
-            onClick={() => router.push(prevPage)}
-          >
-            <ChevronLeft />
-          </Button>
+        <div className={`${css['pagination']} clear-bottom`}>
+          <ConditionalLink disabled={!canBack} to={prevPage}>
+            <Button disabled={!canBack} className={className} aria-label="Previous page">
+              <ChevronLeft />
+            </Button>
+          </ConditionalLink>
 
-          <Button
-            disabled={!canNext}
-            className={className}
-            aria-label="Next page"
-            onClick={() => router.push(nextPage)}
-          >
-            <ChevronRight />
-          </Button>
+          <ConditionalLink disabled={!canNext} to={nextPage}>
+            <Button disabled={!canNext} className={className} aria-label="Next page">
+              <ChevronRight />
+            </Button>
+          </ConditionalLink>
         </div>
 
         <Tags items={pageContext?.current?.tags} viewOnly={false} />

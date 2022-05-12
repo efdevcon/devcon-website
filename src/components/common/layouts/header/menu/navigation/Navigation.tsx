@@ -119,7 +119,7 @@ export const Navigation = (props: any) => {
             }
 
             return (
-              <Link className={className} to={i.url} ignoreLocale={i.noLocale}>
+              <Link className={className} to={i.url}>
                 <>
                   {i.title}
                   {isWatch && <OnDemandVideoIcon />}
