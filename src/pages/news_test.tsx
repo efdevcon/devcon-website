@@ -36,5 +36,6 @@ export async function getStaticProps(context: any) {
       page,
       news: await getNews(context.locale),
     },
+    revalidate: 1 * 60 * 30,
   }
 }
