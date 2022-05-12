@@ -10,9 +10,15 @@
     }
   }
 
-  > ul {
+  pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  ul, ol {
     // overflow: auto;
-    > li {
+    li {
       margin-left: 1em;
     }
   }

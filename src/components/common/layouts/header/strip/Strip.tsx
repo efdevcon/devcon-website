@@ -17,19 +17,23 @@ export const Strip = ({ withHero }: HeaderProps) => {
 
   if (context?.notification === undefined) return null
 
+  // const title = context?.notification.title
+
+  const title = 'Wow check out devcon its a pretty cool event!'
+
   return (
     <div className={className} id="strip">
       <div className={css['body']}>
         <div className={css['notification']}>
           {/* <IconVirus /> */}
-          {context?.notification.label && <Label type={context?.notification.labelType || 'notification'}>{context?.notification.label}</Label>}
+          {/* {context?.notification.label && <Label type={context?.notification.labelType || 'notification'}>{context?.notification.label}</Label>} */}
 
           {context?.notification.url ? (
             <Link to={context?.notification.url} indicateExternal className="hover-underline">
-              {context?.notification.title}
+              {title}
             </Link>
           ) : (
-            <p>{context?.notification.title}</p>
+            <p>{title}</p>
           )}
         </div>
 

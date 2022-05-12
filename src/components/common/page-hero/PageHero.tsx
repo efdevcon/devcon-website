@@ -143,7 +143,7 @@ export const PageHero = (props: PageHeroProps) => {
           <PathNavigation {...props} />
 
           {title && (
-            <div className={css['title-block']}>
+            <div className={css['title-block']} data-type="page-hero-title-block">
               <h1
                 className={`font-massive-2 ${props.titleSubtext ? css['subtext'] : ''} ${
                   props.titleClassName ? props.titleClassName : ''
@@ -158,7 +158,7 @@ export const PageHero = (props: PageHeroProps) => {
                 <div className={css['buttons']}>
                   {props.cta.map((link: CTALink) => {
                     return (
-                      <Link key={link.to + link.title} className="button black ghost lg thin-borders" to={link.to}>
+                      <Link key={link.to + link.title} className="button black ghost lg bold" to={link.to}>
                         {link.icon}
                         <span>{link.title}</span>
                       </Link>

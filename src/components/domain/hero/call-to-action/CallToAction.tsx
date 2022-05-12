@@ -13,7 +13,7 @@ export const CallToAction = (props: CTAProps) => {
 
   let className = `${css['positional-wrapper']}`
 
-  if (props.mobile) className += ` ${css['mobile']}`
+  // if (props.mobile) className += ` ${css['mobile']}`
 
   const callsToAction = [
     <Link key="1" to="https://google.com" allowDrag className={`no-select ${css['item']}`}>

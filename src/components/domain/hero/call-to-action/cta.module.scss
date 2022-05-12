@@ -1,46 +1,26 @@
 @use 'assets/css/partials/index' as *;
 
 .positional-wrapper {
-  display: none;
   justify-content: center;
   width: 100%;
-  bottom: 48px;
   z-index: 1;
+  margin-top: $gaps-gap-8;
+  // padding-top: $gaps-gap-8;
 
-  &:not(.mobile) {
-    @media (min-width: $breakpoints-lg + 1) {
-      display: flex;
-    }
-  }
-
-  &.mobile {
-    margin-top: $gaps-gap-8;
-    border-bottom: 1px solid $colors-standard-border-color;
-    padding-bottom: 32px;
-    position: absolute;
-
-    @media (max-width: $breakpoints-lg) {
-      position: relative;
-      display: flex;
-      padding-top: $gaps-gap-8;
-      bottom: 0px;
-    }
-
-    // .content {
-    //   border: 1px solid $colors-monochrome-1;
-    //   box-shadow: none;
-    // }
+  @media (max-width: $breakpoints-lg) {
+    position: relative;
+    display: flex;
+    bottom: 0px;
   }
 
   .content {
     overflow: hidden;
-    border: 1px solid $colors-main;
+    border: 1px solid $colors-standard-border-color;
     display: flex;
     flex-direction: row;
     background: white;
     color: black;
     width: 100%;
-    // box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
     .icon {
       display: flex;

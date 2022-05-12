@@ -57,7 +57,7 @@ const useParallax = (elementRef: any) => {
 
 const parallax = (parallaxMultiplier: any) => {
   const baselineTranslateY = 0 // Upper limit translate Y
-  const targetTransLateY = -20 // Lower limit translate Y
+  const targetTransLateY = -30 // Lower limit translate Y
   const range = baselineTranslateY - targetTransLateY
   const translateYPercentage = baselineTranslateY - parallaxMultiplier * range
 
@@ -75,28 +75,30 @@ export const Hero = () => {
   return (
     <>
       <div ref={heroEl} data-jest="hero" className={`${css['hero']}`}>
-        <Rays className={css['rays']} />
+        <div className={css['rays-container']}>
+          <Rays className={css['rays']} />
+        </div>
 
         <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
           <Image alt="Devcon mountains" src={imageMountains} />
         </div>
 
-        <div className={css['cloud-container']} style={parallax(parallaxMultiplier) as any}>
-          <HorizontalLooper>
-            <Image
-              alt="Devcon clouds"
-              /*className={css['clouds']}*/ src={imageClouds}
-              objectFit="contain"
-              objectPosition="bottom"
-            />
-          </HorizontalLooper>
+        <div className={css['cloud-container']} /*style={parallax(parallaxMultiplier) as any}*/>
+          {/* <HorizontalLooper> */}
+          <Image
+            alt="Devcon clouds"
+            /*className={css['clouds']}*/ src={imageClouds}
+            objectFit="contain"
+            objectPosition="bottom"
+          />
+          {/* </HorizontalLooper> */}
         </div>
 
         <div className={css['left-rotated']}>
-          <p className={css['text-uppercase']}>{intl('subtitle')}</p>
+          <p className={'text-uppercase'}>{intl('subtitle')}</p>
         </div>
         <div className={css['right-rotated']}>
-          <p className={css['text-uppercase']}>{intl('journey')}</p>
+          <p className={'text-uppercase'}>{intl('journey')}</p>
         </div>
 
         <div className={css['logo-container']}>
@@ -105,10 +107,10 @@ export const Hero = () => {
 
         <div className="section">
           <div className={css['date-calendar']}>
-            <div className={css['date']}>
+            {/* <div className={css['date']}>
               Bogota, Colombia
               <p className="font-xxl">October 10 - 13, 2022</p>
-            </div>
+            </div> */}
 
             <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>
               <p>{intl('description')}</p>
@@ -116,13 +118,23 @@ export const Hero = () => {
                 <IconEventNote className={`icon ${css['icon']}`} />
                 <p>{intl('addtocalendar')}</p>
               </Button>
+              <Button className="lg black ghost thin-borders">
+                <IconEventNote className={`icon ${css['icon']}`} />
+                <p>{intl('tickets')}</p>
+              </Button>
+              {/* <Button className="lg black ghost thin-borders">
+                <IconEventNote className={`icon ${css['icon']}`} />
+                <p>{intl('schedule')}</p>
+              </Button> */}
             </Link>
           </div>
           {/* <CallToAction /> */}
         </div>
       </div>
       <div className="section">
-        <CallToAction mobile />
+        <div className="border-bottom clear-bottom">
+          <CallToAction mobile />
+        </div>
       </div>
     </>
   )
