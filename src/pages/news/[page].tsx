@@ -41,7 +41,6 @@ export default pageHOC(function NewsTemplate(props: any) {
       <PageHero />
 
       <div className="section">
-        <h1>{props.pagination.totalPages}</h1>
         <NewsOverview newsItems={props.news} />
 
         <div className={`${css['pagination']} clear-bottom`}>
