@@ -39,6 +39,10 @@
     margin-right: 24px;
     position: relative;
 
+    &:last-child {
+      margin-right: 0px;
+    }
+
     &:hover {
       .foldout {
         display: block;

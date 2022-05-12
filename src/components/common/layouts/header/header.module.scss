@@ -28,20 +28,32 @@
 
 .header-fixed-container {
   position: fixed;
+  // transition: background-color 2s;
   width: 100%;
   z-index: 20;
   --color-icon: white;
   --logo-color: var(--color-icon);
-  --header-background-color: none;
+  --header-background-color: #ffffff00;
   --header-shadow: none;
   --button-border: none;
 
   &.scrolled {
     @include fill-header;
+    transition: all 0.4s ease-out;
+    transform: translateY(-32px);
     --button-border: 1px solid #{$colors-monochrome-5};
 
     @media (min-width: $breakpoints-lg + 1) {
-      --display-strip: none;
+
+      :global(#strip) {
+        // transition: background-color 2s;
+        background: white;
+        color: black;
+        --color-icon: black;
+        border-bottom: 1px solid $colors-standard-border-color;
+      }
+      // top: -10px;
+      // --display-strip: none;
     }
   }
 }

@@ -37,11 +37,11 @@ const navigationData = {
           url: '#',
           type: 'header',
         },
-        // {
-        //   title: 'About Devcon',
-        //   url: '/about',
-        //   type: 'page',
-        // },
+        {
+          title: 'About Devcon',
+          url: '/about',
+          type: 'page',
+        },
         {
           title: 'FAQ',
           url: '/faq',

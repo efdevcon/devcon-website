@@ -156,11 +156,12 @@
 }
 
 .links {
-  font-size: 1rem;
+  font-size: 1.2rem;
 
   > * {
     cursor: pointer;
-    @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-2, $min-gap: $gaps-gap-1);
+
+    margin-right: 16px;
 
     &:last-child {
       margin-right: 0px;

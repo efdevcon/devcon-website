@@ -11,11 +11,11 @@ export function LanguageToggle() {
   return (
     <div id="language-toggle" className={css['language-toggle']}>
       <IconLanguage style={{ fontSize: '14px' }} />
-      <Link to={`/en${router.asPath}`} className="bold" locale="en">
+      <Link to={`/en${router.asPath}`} locale="en">
         EN
       </Link>
       <span className={`${css['split']} bold`}>|</span>
-      <Link to={`/es${router.asPath}`} className="bold" locale="es">
+      <Link to={`/es${router.asPath}`} locale="es">
         ES
       </Link>
     </div>

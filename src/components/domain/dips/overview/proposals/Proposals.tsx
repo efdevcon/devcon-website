@@ -15,7 +15,7 @@ import { Filter, useFilter } from 'components/common/filter'
 
 export const Links = ({ dip }: { dip: DIP }) => {
   return (
-    <div className={css['links']}>
+    <div className={css['links']} data-type="links">
       {dip.discussion && (
         <Link to={dip.discussion}>
           <TooltipIcon />
