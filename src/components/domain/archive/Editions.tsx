@@ -49,7 +49,7 @@ const Clock = (props: any) => {
 export const Editions = (props: Props) => {
   const editions = useDevconEditions()
   const [selectedEditionIndex, setSelectedEditionIndex] = useState(0)
-  let className = `padding-top padding-bottom border-top ${css['container']}`
+  let className = `padding-bottom ${css['container']}`
   if (props.className) {
     className += ` ${props.className}`
   }
@@ -59,6 +59,9 @@ export const Editions = (props: Props) => {
   return (
     <div className="section">
       <div className="content">
+        <h2 className={`bold font-xl font-primary padding-top border-top padding-bottom ${css['title']}`}>
+          Past Devcons
+        </h2>
         <div className={className}>
           <HorizontalScroller>
             <div className={css['numbers']}>
@@ -127,12 +130,14 @@ export const Editions = (props: Props) => {
               <p className="subtitle">{selectedEdition.location}</p>
               {selectedEdition.startDate && selectedEdition.endDate ? (
                 <p>
-                  {moment(selectedEdition.startDate).format('MMM DD')} -{' '}
-                  {moment(selectedEdition.endDate).format('MMM DD')} {moment(selectedEdition.endDate).format('YYYY')}
+                  {moment.utc(selectedEdition.startDate).format('MMM DD')} -{' '}
+                  {moment.utc(selectedEdition.endDate).format('MMM DD')},{' '}
+                  {moment.utc(selectedEdition.endDate).format('YYYY')}
                 </p>
               ) : (
-                <p>Date: TBD</p>
+                <p>2022 </p>
               )}
+              {selectedEdition.title === 'Devcon VI' && <p>(Devcon Week: Oct 7 - Oct 16, 2022)</p>}
             </div>
             <div className={css['description']}>
               <p>{selectedEdition.description}</p>
