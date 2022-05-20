@@ -259,6 +259,12 @@
 
       // Links
       .col-3 {
+        @media (max-width: $breakpoints-tiny) {
+          padding-top: 16px;
+          padding-bottom: 16px;
+          border-top: 1px solid $colors-standard-border-color;
+          border-bottom: 1px solid $colors-standard-border-color;
+        }
       }
 
       // Contact
@@ -283,7 +289,7 @@
             --color-icon: #{$colors-monochrome-6};
           }
 
-          @media (max-width: $breakpoints-md) {
+          @media (max-width: $breakpoints-lg) {
             display: none;
           }
         }

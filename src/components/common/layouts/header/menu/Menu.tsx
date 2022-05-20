@@ -13,7 +13,7 @@ import SearchIcon from 'assets/icons/search.svg'
 // import BellIcon from 'assets/icons/bell.svg'
 import BellIcon from 'assets/icons/bell-simple.svg'
 import { LanguageToggle } from 'components/common/layouts/header/strip/language-toggle'
-import navigationData from '../navigationData'
+import useNavigationData from '../useNavigationData'
 
 type ButtonProps = {
   buttons: {
@@ -26,6 +26,8 @@ type ButtonProps = {
 }
 
 export const Left = (props: any) => {
+  const navigationData = useNavigationData()
+
   return (
     <div className={css['left']}>
       {navigationData.top.map((i: LinkType) => {

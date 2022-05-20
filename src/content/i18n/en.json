@@ -1,7 +1,7 @@
 {
   "subtitle": "Ethereum developer conference",
   "description": "The annual conference for all Ethereum developers, researchers, thinkers, and makers.",
-  "journey": "Journey to Bogota 2021+",
+  "journey": "Journey to Bogota 2022",
   "getintouch": "Get in touch",
   "partnerwithus": "Partner with us",
   "readmore": "Read more",
@@ -103,5 +103,31 @@
   "feed_no_results": "No results",
   "tickets": "Tickets",
   "previous": "Previous",
-  "next": "Next"
+  "next": "Next",
+  "devcon_updates": "Devcon Updates",
+  "all": "All",
+  "privacy_policy": "Privacy policy",
+  "cookie_policy": "Cookie policy",
+  "terms_of_use": "Terms of use",
+  "recent": "Recent",
+  "oldest": "Oldest",
+  "navigation": {
+    "archive": "Archive",
+    "forum": "Forum",
+    "blog": "Blog",
+    "news": "News",
+    "about": "About",
+    "about_devcon": "About Devcon",
+    "faq": "FAQ",
+    "get_involved": "Get Involved",
+    "city_guide": "City Guide",
+    "community": "Community",
+    "contribute": "Contribute",
+    "tickets": "Tickets"
+  },
+  "footer": {
+    "about_devcon_1": "About Devcon —",
+    "about_devcon_2": "Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.",
+    "about_devcon_3": "An intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all."
+  }
 }

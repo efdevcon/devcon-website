@@ -1,7 +1,7 @@
 {
   "subtitle": "Conferencia de desarrolladores de Ethereum",
   "description": "La conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.",
-  "journey": "Diario a Bogota 2021+",
+  "journey": "Diario a Bogota 2022",
   "getintouch": "Ponte en contacto",
   "partnerwithus": "Asociarse con nosotros",
   "readmore": "Leer más",
@@ -103,5 +103,31 @@
   "feed_no_results": "No results",
   "tickets": "Entradas",
   "previous": "Previous",
-  "next": "Next"
+  "next": "Next",
+  "devcon_updates": "Actualizaciones de Devcon",
+  "all": "Todos",
+  "privacy_policy": "Política de privacidad",
+  "cookie_policy": "Política de cookies",
+  "terms_of_use": "Términos de Uso",
+  "recent": "Reciente",
+  "oldest": "Más antiguo",
+  "navigation": {
+    "archive": "Archivo",
+    "forum": "Foro",
+    "blog": "Blog",
+    "news": "Noticias",
+    "about": "Acerca de",
+    "about_devcon": "Acerca de Devcon",
+    "faq": "FAQ",
+    "get_involved": "Involucrarse",
+    "city_guide": "Guía de la ciudad",
+    "community": "Comunidad",
+    "contribute": "Contribuir",
+    "tickets": "Entradas"
+  },
+  "footer": {
+    "about_devcon_1": "Acerca de Devcon —",
+    "about_devcon_2": "Devcon es la conferencia de Ethereum para desarrolladores, investigadores, pensadores y creadores.",
+    "about_devcon_3": "Una introducción intensiva para los nuevos exploradores de Ethereum, una reunión familiar global para aquellos que ya forman parte de nuestro ecosistema y una fuente de energía y creatividad para todos."
+  }
 }

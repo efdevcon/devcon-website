@@ -15,7 +15,7 @@
   }
 
   @media (max-width: $breakpoints-lg) {
-    background: $colors-ef-pink;
+    // background: $colors-ef-pink;
     color: #{$colors-monochrome-10};
     --color-icon: #{$colors-system-error};
   }

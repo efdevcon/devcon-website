@@ -7,10 +7,11 @@ import ArrowCollapse from 'assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'assets/icons/arrow_drop_down.svg'
 import OnDemandVideoIcon from 'assets/icons/on_demand_video.svg'
 import Image from 'next/image'
-import navigationData from '../../navigationData'
+import useNavigationData from '../../useNavigationData'
 
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
+  const navigationData = useNavigationData()
 
   const closeFoldout = () => {
     props.setFoldoutOpen(false)
@@ -98,6 +99,8 @@ export const Navigation = (props: any) => {
   if (props.mobile) {
     return <Mobile {...props} />
   }
+
+  const navigationData = useNavigationData()
 
   return (
     <>

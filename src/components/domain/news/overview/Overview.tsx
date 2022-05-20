@@ -1,6 +1,7 @@
 import React from 'react'
 import { Feed } from 'components/common/feed'
 import { NewsItem } from 'types/NewsItem'
+import { useTranslations } from 'next-intl'
 import moment from 'moment'
 // import css from './overview.module.scss'
 // import { usePageContext } from 'context/page-context'
@@ -37,6 +38,7 @@ type NewsOverviewProps = {
 // }
 
 export const NewsOverview = (props: NewsOverviewProps) => {
+  const intl = useTranslations()
   const { newsItems } = props
 
   const filterItems = React.useMemo(() => {
@@ -52,22 +54,22 @@ export const NewsOverview = (props: NewsOverviewProps) => {
       })
     })
 
-    return [{ text: 'All', value: 'all' }].concat(Object.values(tags))
+    return [{ text: intl('all'), value: 'all' }].concat(Object.values(tags))
   }, [newsItems])
 
   return (
     <>
       <Feed
-        title="Devcon updates"
+        title={intl('devcon_updates')}
         items={newsItems as any[]}
         sortOptions={{
           options: [
             {
-              text: 'RECENT',
+              text: intl('recent'),
               value: 'recent',
             },
             {
-              text: 'OLDEST',
+              text: intl('oldest'),
               value: 'oldest',
             },
           ],

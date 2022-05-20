@@ -11,7 +11,7 @@ import HeaderLogoArchive from '../header/HeaderLogo'
 import { Copyright } from '../Copyright'
 import { useRouter } from 'next/router'
 import { useTranslations } from 'next-intl'
-import navigationData from 'components/common/layouts/header/navigationData'
+import useNavigationData from 'components/common/layouts/header/useNavigationData'
 import { Share } from 'components/common/share'
 import IconGithub from 'assets/icons/github.svg'
 import IconTwitter from 'assets/icons/twitter.svg'
@@ -49,6 +49,7 @@ export const Footer = () => {
   const intl = useTranslations()
   const router = useRouter()
   const lang = router.locale
+  const navigationData = useNavigationData()
   let footerData = navigationData.footer
 
   // if (footerData) {
@@ -99,12 +100,9 @@ export const Footer = () => {
 
             <div className={css['col-2']}>
               <div>
-                <p className="semi-bold">About Devcon —</p>
-                <p>Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.</p>
-                <p>
-                  An intensive introduction for new Ethereum explorers, a global family reunion for those already a part
-                  of our ecosystem, and a source of energy and creativity for all.
-                </p>
+                <p className="semi-bold">{intl('footer_about_devcon_1')}</p>
+                <p>{intl('footer_about_devcon_2')}</p>
+                <p>{intl('footer_about_devcon_3')}</p>
               </div>
             </div>
 
@@ -161,13 +159,13 @@ export const Footer = () => {
                 className="bold font-xs text-uppercase hover-underline"
                 to="https://ethereum.org/en/privacy-policy/"
               >
-                Privacy policy
+                {intl('privacy_policy')}
               </Link>
               <Link className="bold font-xs text-uppercase hover-underline" to="https://ethereum.org/en/terms-of-use/">
-                Terms of use
+                {intl('terms_of_use')}
               </Link>
               <Link className="bold font-xs text-uppercase hover-underline" to="https://ethereum.org/en/cookie-policy/">
-                Cookie policy
+                {intl('cookie_policy')}
               </Link>
             </div>
 
