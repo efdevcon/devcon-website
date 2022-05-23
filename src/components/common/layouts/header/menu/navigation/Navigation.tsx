@@ -96,11 +96,11 @@ const Mobile = (props: any) => {
 }
 
 export const Navigation = (props: any) => {
+  const navigationData = useNavigationData()
+
   if (props.mobile) {
     return <Mobile {...props} />
   }
-
-  const navigationData = useNavigationData()
 
   return (
     <>
