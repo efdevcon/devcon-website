@@ -27,23 +27,23 @@ export default pageHOC(function CityGuideTemplate(props: any) {
         path={[{ text: 'Bogota' }, { text: 'City Guide' }]}
         navigation={[
           {
-            title: intl('location_title'),
+            title: intl('city_guide_title'),
             to: '#location',
           },
           {
-            title: intl('location_things_todo'),
+            title: intl('city_guide_things_todo'),
             to: '#things-to-do',
           },
           {
-            title: intl('location_why_bogota'),
+            title: intl('city_guide_why_bogota'),
             to: '#why-bogota',
           },
           {
-            title: 'Frequently Asked Questions',
+            title: intl('city_guide_faq'),
             to: '#FAQ',
           },
           {
-            title: 'Venue Map',
+            title: intl('city_guide_map'),
             to: '#map',
           },
         ]}
@@ -52,7 +52,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
       <div className="section">
         <div className="two-columns clear-bottom" id="location">
           <div className="left">
-            <h2 className="spaced">{intl('location_title')}</h2>
+            <h2 className="spaced">{intl('city_guide_title')}</h2>
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
           <div className="right">

@@ -38,9 +38,6 @@
   "snapshot_water": "Water",
   "snapshot_tap_water": "Tap water is safe to drink in Bogota",
   "snapshot_FAQs": "FAQs",
-  "location_title": "Location",
-  "location_things_todo": "Things to do",
-  "location_why_bogota": "Why Bogota?",
   "dips_contribute": "Contribute",
   "dips_review_dips": "Review DIPs",
   "dips_create_proposal": "Create proposal",
@@ -111,6 +108,13 @@
   "terms_of_use": "Terms of use",
   "recent": "Recent",
   "oldest": "Oldest",
+  "city_guide": {
+    "title": "Location",
+    "things_todo": "Things to do",
+    "why_bogota": "Why Bogota?",
+    "faq": "Frequently Asked Questions",
+    "map": "Venue Map"
+  },
   "navigation": {
     "archive": "Archive",
     "forum": "Forum",

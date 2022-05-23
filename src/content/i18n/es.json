@@ -38,9 +38,6 @@
   "snapshot_water": "Agua",
   "snapshot_tap_water": "El agua del grifo es segura para beber en Bogota",
   "snapshot_FAQs": "FAQs",
-  "location_title": "Ubicación",
-  "location_things_todo": "Cosas que hacer",
-  "location_why_bogota": "¿Por qué Bogotá?",
   "dips_contribute": "Contribuir",
   "dips_review_dips": "Revisar datos",
   "dips_create_proposal": "Crear propuesta",
@@ -111,6 +108,13 @@
   "terms_of_use": "Términos de Uso",
   "recent": "Reciente",
   "oldest": "Más antiguo",
+  "city_guide": {
+    "title": "Ubicación",
+    "things_todo": "Cosas que hacer",
+    "why_bogota": "¿Por qué Bogotá?",
+    "faq": "Frequently Asked Questions",
+    "map": "Venue Map"
+  },
   "navigation": {
     "archive": "Archivo",
     "forum": "Foro",

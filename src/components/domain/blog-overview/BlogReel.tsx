@@ -12,11 +12,11 @@ interface Props {
 export function BlogReel(props: Props) {
   const settings = {
     infinite: false,
+    touchThreshold: 100,
     speed: 500,
     slidesToShow: 3,
     arrows: false,
-    touchThreshold: 100,
-    swipeToSlide: true,
+    slidesToScroll: 3,
     mobileFirst: true,
     responsive: [
       {
@@ -37,7 +37,7 @@ export function BlogReel(props: Props) {
   const sliderProps = useSlider(settings)
 
   return (
-    <div className="section no-overflow">
+    <div className="section">
       <div className="content margin-top">
         <div className={`${css['cards']} border-top`}>
           <Slider sliderProps={sliderProps} title="Blog">
@@ -52,6 +52,7 @@ export function BlogReel(props: Props) {
                   slide={sliderProps[1].canSlide}
                   key={blog.slug}
                   title={blog.title}
+                  description={blog.description}
                   imageUrl={blog.imageUrl}
                   expandLink
                   linkUrl={blog.permaLink} // Linking to blog domain temporarily until blog page is done (static-phase)

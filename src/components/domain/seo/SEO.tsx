@@ -51,7 +51,7 @@ export function SEO(props: SEOProps) {
   const globalTitle = TITLE
   const canonical = props.canonicalUrl || ''
 
-  let image = 'https://www.devcon.org/assets/images/rtd-social.png'
+  let image = 'https://www.devcon.org/assets/images/og-image-devcon.png'
   if (props.imageUrl) {
     image = props.imageUrl
   }
