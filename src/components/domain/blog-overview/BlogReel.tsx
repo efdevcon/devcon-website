@@ -16,7 +16,8 @@ export function BlogReel(props: Props) {
     speed: 500,
     slidesToShow: 3,
     arrows: false,
-    slidesToScroll: 3,
+    // slidesToScroll: 3,
+    swipeToSlide: true,
     mobileFirst: true,
     responsive: [
       {
@@ -37,7 +38,7 @@ export function BlogReel(props: Props) {
   const sliderProps = useSlider(settings)
 
   return (
-    <div className="section">
+    <div className="section no-overflow">
       <div className="content margin-top">
         <div className={`${css['cards']} border-top`}>
           <Slider sliderProps={sliderProps} title="Blog">
