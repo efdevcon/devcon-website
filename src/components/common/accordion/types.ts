@@ -1,6 +1,7 @@
 import React from "react"
 
 export interface AccordionItem {
-  title: string
+  id: number | string
+  title: string | React.ReactChild
   body: string | React.ReactChild
 }

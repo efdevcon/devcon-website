@@ -1,5 +1,4 @@
 import React from 'react'
-// import Slider from 'react-slick'
 import { Card } from 'components/common/card'
 import { Feed } from 'components/common/feed'
 import css from './news.module.scss'

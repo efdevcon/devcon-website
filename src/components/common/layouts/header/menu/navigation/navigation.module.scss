@@ -13,7 +13,7 @@
   justify-content: flex-end;
   overflow: hidden;
 
-  > img {
+  >img {
     height: 300px;
     margin-top: min(#{$gaps-gap-8}, 5%);
     margin-right: min(#{$gaps-gap-8}, 5%);
@@ -32,7 +32,7 @@
     display: flex;
   }
 
-  > li {
+  >li {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@
     position: relative;
 
     &:last-child {
-      margin-right: 0px;
+      // margin-right: 0px;
     }
 
     &:hover {
@@ -74,9 +74,10 @@
         text-transform: uppercase;
       }
 
-      > ul {
+      >ul {
         list-style-type: none;
-        > li {
+
+        >li {
           &:not(.header) {
             &:not(:last-child) {
               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -101,8 +102,8 @@
     list-style-type: none;
   }
 
-  > ul {
-    > li {
+  >ul {
+    >li {
       position: relative;
       width: calc(100% + #{$gaps-gap-32});
       left: -$gaps-gap-16;
@@ -159,7 +160,7 @@
           padding-bottom: 0px;
           padding-top: 0px;
 
-          > a {
+          >a {
             padding-top: $gaps-gap-4;
             padding-bottom: $gaps-gap-4;
             display: block;
@@ -183,16 +184,16 @@
           @include fonts-lg;
 
           &:last-child {
-            > li {
+            >li {
               border-bottom: none;
             }
           }
 
-          > li {
+          >li {
             position: relative;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-            > a {
+            >a {
               display: block;
               padding-top: $gaps-gap-4;
               padding-bottom: $gaps-gap-4;
@@ -227,7 +228,7 @@
     justify-content: center;
     background: $colors-monochrome-2;
 
-    > svg {
+    >svg {
       margin-left: $gaps-gap-2;
     }
   }

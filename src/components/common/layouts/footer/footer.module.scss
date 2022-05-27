@@ -139,6 +139,8 @@
   .top-section {
     // @include layout-section;
     position: relative;
+    background: white;
+    z-index: 2;
 
     .col-2 {
       @media (max-width: $breakpoints-lg) {

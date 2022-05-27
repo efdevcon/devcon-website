@@ -30,7 +30,11 @@ export function FAQ(props: FaqProps) {
 
   const formatQuestions = (items: Array<FaqType>): Array<AccordionItem> => {
     return items.map(item => {
-      return { title: item.title, body: <div className="markdown" dangerouslySetInnerHTML={{ __html: item.body }} /> }
+      return {
+        id: item.title,
+        title: item.title,
+        body: <div className="markdown" dangerouslySetInnerHTML={{ __html: item.body }} />,
+      }
     })
   }
 

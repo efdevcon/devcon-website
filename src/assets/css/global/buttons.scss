@@ -80,8 +80,8 @@ button {
 
     &.lg {
       @include fonts-lg;
-      --padding-top-bottom: #{$gaps-gap-4};
-      --padding-left-right: #{$gaps-gap-5};
+      --padding-top-bottom: 12px;
+      --padding-left-right: 20px;;
 
       @media (max-width: $breakpoints-md) {
         @include fonts-md;

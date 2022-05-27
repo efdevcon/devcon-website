@@ -37,7 +37,9 @@ export const Strip = ({ withHero }: HeaderProps) => {
           )}
         </div>
 
-        <LanguageToggle />
+        <p>Dismiss Strip</p>
+
+        {/* <LanguageToggle /> */}
       </div>
     </div>
   )

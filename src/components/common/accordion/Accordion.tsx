@@ -1,32 +1,37 @@
 import React from 'react'
-import IconMinus from 'assets/icons/minus.svg'
-import IconPlus from 'assets/icons/plus.svg'
+import IconMinus from 'assets/icons/chevron-up.svg'
+import IconPlus from 'assets/icons/chevron-down.svg'
 import css from './accordion.module.scss'
 import { AccordionItem } from './types'
 
 interface AccordionProps {
   items: AccordionItem[]
+  dense?: boolean
 }
 
 const Accordion = (props: AccordionProps) => {
   const [open, setOpen] = React.useState<{ [key: string]: boolean }>({})
 
+  let className = css['accordion']
+
+  if (props.dense) className += ` ${css['dense']}`
+
   return (
-    <ul className={css['accordion']}>
+    <ul className={className}>
       {props.items.map((item: AccordionItem) => {
         let className = css['accordion-item']
 
-        const selected = open[item.title]
+        const selected = open[item.id]
 
         if (selected) className += ` ${css['open']}`
 
         return (
           <li
-            key={item.title}
+            key={item.id}
             onClick={() => {
               const nextOpenState = {
                 ...open,
-                [item.title]: !selected,
+                [item.id]: !selected,
               }
 
               setOpen(nextOpenState)
@@ -34,7 +39,7 @@ const Accordion = (props: AccordionProps) => {
             className={className}
           >
             <div className={css['header']}>
-              <p className={css['title']}>{item.title}</p>
+              <span className={css['title']}>{item.title}</span>
               {selected ? <IconMinus /> : <IconPlus />}
             </div>
             <div className={css['content']}>{item.body}</div>

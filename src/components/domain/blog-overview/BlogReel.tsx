@@ -40,8 +40,8 @@ export function BlogReel(props: Props) {
   return (
     <div className="section no-overflow">
       <div className="content margin-top">
-        <div className={`${css['cards']} border-top`}>
-          <Slider sliderProps={sliderProps} title="Blog">
+        <div className={`${css['cards']}`}>
+          <Slider sliderProps={sliderProps} title="Devcon Blog">
             {props.blogs.map((blog: BlogPost, i: number) => {
               let className = css['card']
 

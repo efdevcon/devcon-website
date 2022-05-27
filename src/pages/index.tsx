@@ -3,13 +3,18 @@ import { pageHOC } from 'context/pageHOC'
 import { GetBlogs } from 'services/blogs'
 import { TITLE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
-import { PWAPrompt } from 'components/domain/app/pwa-prompt'
+// import { PWAPrompt } from 'components/domain/app/pwa-prompt'
 import { News } from 'components/domain/news'
 import getNews from 'services/news'
 import { Header } from 'components/common/layouts/header'
 import { Footer } from 'components/common/layouts/footer'
 import { Hero } from 'components/domain/hero'
 import css from './index.module.scss'
+import TrackList from 'components/domain/index/track-list'
+import About from 'components/domain/index/about'
+import CallsToAction from 'components/domain/index/ctas'
+import Image from 'next/image'
+import CircleBackground from 'assets/images/background-circles.png'
 
 export default pageHOC(function Index(props: any) {
   return (
@@ -17,13 +22,25 @@ export default pageHOC(function Index(props: any) {
       <Header withStrip withHero />
       <Hero />
 
-      {/* <PWAPrompt /> */}
+      <About />
+
+      <CallsToAction />
 
       <News data={props.news} />
-      <BlogReel blogs={props.blogs} />
-      <div className="clear-bottom"></div>
 
-      {/* <Notifications /> */}
+      <div className="clear-bottom border-bottom"></div>
+
+      <div className={`${css['news-container']} section`}>
+        <div className={`${css['circle-background']} expand`}>
+          <Image src={CircleBackground} alt="Triangles" />
+        </div>
+      </div>
+
+      <TrackList />
+
+      <BlogReel blogs={props.blogs} />
+
+      <div className="clear-bottom"></div>
 
       <Footer />
     </div>

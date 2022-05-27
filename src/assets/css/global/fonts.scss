@@ -1,6 +1,4 @@
 @use 'assets/css/partials/index' as *;
-// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 p {
   @include fonts-primary;
@@ -28,15 +26,17 @@ h1,
 }
 
 h2,
-.h2 {
+.h2,
+.title {
   // @include fonts-secondary;
   @include fonts-bold;
-  font-size: $sizes-size-12;
+  font-size: 24px;
   line-height: 120%;
 
   &.spaced {
     @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
   }
+
   // // @include fonts-secondary;
   // @include fonts-normal;
   // font-size: $sizes-size-16 + $sizes-size-2;
@@ -101,15 +101,6 @@ h6,
 
 .app-header-sm {
   @include fonts-app-section-header-sm;
-}
-
-// Titles
-.title {
-  @include fonts-title;
-
-  &.spaced {
-    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
-  }
 }
 
 .subtitle {

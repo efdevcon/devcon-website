@@ -1,5 +1,14 @@
 @use 'assets/css/partials/index' as *;
 
+.accordion {
+  &.dense {
+    .accordion-item {
+      margin-top: 0px;
+      border: none;
+      border-bottom: 1px solid $colors-standard-border-color;
+    }
+  }
+}
 
 .accordion-item {
   list-style-type: none;

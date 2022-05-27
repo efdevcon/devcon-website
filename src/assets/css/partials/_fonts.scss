@@ -150,7 +150,7 @@ $secondary: 'Space Mono', monospace;
 @mixin title {
   @include primary;
   @include bold;
-  font-size: sizes.$size-fixed-11;
+  font-size: 32px;
   line-height: 150%;
 }
 

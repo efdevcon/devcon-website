@@ -2,6 +2,7 @@
 
 .layout-default {
   min-height: 100vh;
+  overflow-y: hidden;
   position: relative;
   display: flex;
   align-items: center;
@@ -14,5 +15,18 @@
   > :global(.footer) {
     width: 100%;
     flex-shrink: 0;
+  }
+}
+
+.news-container {
+  position: relative;
+
+  .circle-background {
+    z-index: -2;
+    width: 500px;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
   }
 }

@@ -12,7 +12,7 @@ export default class AppDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Space+Mono&display=swap"
             rel="stylesheet"
           />
 

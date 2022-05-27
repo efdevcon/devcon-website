@@ -10,13 +10,17 @@ export function LanguageToggle() {
   return (
     <div id="language-toggle" className={css['language-toggle']}>
       <IconLanguage style={{ fontSize: '14px' }} />
-      <Link to={`${router.asPath}`} locale="en">
-        EN
-      </Link>
-      <span className={`${css['split']} bold`}>|</span>
-      <Link to={`${router.asPath}`} locale="es">
+      <p>
+        <Link to={`${router.asPath}`} locale="en">
+          EN
+        </Link>
+        &nbsp;
+        |
+        &nbsp;
+        <Link to={`${router.asPath}`} locale="es">
         ES
       </Link>
+      </p>
     </div>
   )
 }

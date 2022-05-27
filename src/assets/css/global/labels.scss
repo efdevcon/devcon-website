@@ -38,6 +38,12 @@
     background: $colors-state-error-light;
   }
 
+  &.red {
+    background: white;
+    border-color: $colors-track-red;;
+    color: $colors-track-red;
+  }
+
   &.success {
     color: $colors-state-success;
     border: none;

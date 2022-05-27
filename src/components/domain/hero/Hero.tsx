@@ -105,13 +105,8 @@ export const Hero = () => {
           <Logo alt={TITLE} className={css['logo']} />
         </div>
 
-        <div className="section">
+        {/* <div className="section">
           <div className={css['date-calendar']}>
-            {/* <div className={css['date']}>
-              Bogota, Colombia
-              <p className="font-xxl">October 10 - 13, 2022</p>
-            </div> */}
-
             <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>
               <p>{intl('description')}</p>
               <Button className="lg black ghost thin-borders">
@@ -122,14 +117,9 @@ export const Hero = () => {
                 <IconEventNote className={`icon ${css['icon']}`} />
                 <p>{intl('tickets')}</p>
               </Button>
-              {/* <Button className="lg black ghost thin-borders">
-                <IconEventNote className={`icon ${css['icon']}`} />
-                <p>{intl('schedule')}</p>
-              </Button> */}
             </Link>
           </div>
-          {/* <CallToAction /> */}
-        </div>
+        </div> */}
       </div>
       <div className="section">
         <div className="border-bottom clear-bottom">

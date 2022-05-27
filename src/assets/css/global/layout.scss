@@ -9,34 +9,16 @@
     grid-template-columns: minmax(16px, 1fr) minmax(auto, 1680px) minmax(16px, 1fr);
   }
 
-  > * {
+  >* {
     grid-column: 2 / 3;
   }
 
-  > .expand {
+  >.expand {
     grid-column: 1 / 4;
   }
 
   &.no-overflow {
     overflow: hidden;
-  }
-}
-
-.clear {
-  &-top {
-    padding-top: 32px;
-  }
-
-  &-bottom {
-    padding-bottom: 32px;
-  }
-
-  &-left {
-    padding-left: 32px;
-  }
-
-  &-right {
-    padding-right: 32px;
   }
 }
 
@@ -47,7 +29,7 @@
   @media (max-width: $breakpoints-md) {
     flex-direction: column;
 
-    > * {
+    >* {
       flex-basis: auto !important;
 
       &:first-child {
@@ -56,7 +38,7 @@
     }
   }
 
-  > * {
+  >* {
     flex-basis: calc(50% - 8px); // effectively 16px margin 
     flex-shrink: 0;
     flex-grow: 0;

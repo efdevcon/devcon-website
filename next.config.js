@@ -49,7 +49,7 @@ const nextConfig = {
           // Separate config for icon loading
           {
             test: /\.svg$/,
-            include: /icons/,
+            include: /assets.icons/,
             issuer: { not: /\.(css|scss|sass)$/ },
             use: [
               {

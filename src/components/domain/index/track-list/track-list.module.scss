@@ -1,0 +1,29 @@
+@use 'assets/css/partials/index' as *;
+
+.container {
+  position: relative;
+}
+
+.background {
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.track-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fonts-xl;
+
+  .icon-container {
+    width: 32px;
+    height: 32px;
+    margin-right: 48px;
+  }
+}
+
+.track-body {
+  margin-left: 80px; 
+}
