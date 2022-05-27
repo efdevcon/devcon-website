@@ -30,6 +30,8 @@
 
   .message-card {
     display: flex;
+    overflow: hidden;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     padding: 32px 24px;
@@ -37,11 +39,30 @@
     border: 1px solid #E55066;
     box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
 
+    &.orange {
+      background: #FFFBF4;
+      border: 1px solid #F69022;
+
+      .background {
+        svg {
+          fill:  #F69022;
+        }
+      }
+    }
+
     .background {
       position: absolute;
-      right: 0px;
+      opacity: 0.1;
       bottom: 0px;
-      width: 20%;
+      right: 0px;
+      height: 100%;
+
+      svg {
+        transform: translateY(-25%);
+        width: 100%;
+        height: 150%;
+        fill: #E55066;
+      }
     }
   
     .header, .footer {

@@ -2,9 +2,7 @@ import React from 'react'
 import css from './calls-to-action.module.scss'
 import { Button } from 'components/common/button'
 import TicketBackground from 'assets/images/pages/tickets.svg'
-import Image from 'next/image'
-
-const MessageCard = () => {}
+import GetInvolvedBackground from 'assets/images/pages/get-involved.svg'
 
 const CallsToAction = () => {
   return (
@@ -12,7 +10,7 @@ const CallsToAction = () => {
       <div className={`${css['container']} border-bottom clear-bottom`}>
         <div className={css['message-card']}>
           <div className={css['background']}>
-            <img src={TicketBackground} alt="Background tickets" />
+            <TicketBackground />
           </div>
 
           <div className={css['header']}>
@@ -22,8 +20,8 @@ const CallsToAction = () => {
 
           <p>
             We are holding an experimental pre-sale Auction and Raffle for 100 tickets to Devcon 6. With a hybrid
-            mechanism, we get the best of both worlds. 20 tickets will serve the demand of those who just can't miss
-            Devcon at any price, while 80 tickets are given out in a provably fair fashion, at face value.
+            mechanism, we get the best of both worlds. 20 tickets will serve the demand of those who just can&apos;t
+            miss Devcon at any price, while 80 tickets are given out in a provably fair fashion, at face value.
           </p>
 
           <div className={css['footer']}>
@@ -32,7 +30,11 @@ const CallsToAction = () => {
           </div>
         </div>
 
-        <div className={css['message-card']}>
+        <div className={`${css['message-card']} ${css['orange']}`}>
+          <div className={css['background']}>
+            <GetInvolvedBackground />
+          </div>
+
           <div>
             <div className={css['header']}>
               <p className="h3">Speaker Applications</p>
