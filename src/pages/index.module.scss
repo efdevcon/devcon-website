@@ -2,7 +2,7 @@
 
 .layout-default {
   min-height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
   }
 }
 
-.news-container {
+.background-container {
   position: relative;
 
   .circle-background {

@@ -8,7 +8,8 @@ import { TITLE } from 'utils/constants'
 import { Link } from 'components/common/link'
 import { CallToAction } from './call-to-action'
 import Image from 'next/image'
-import imageClouds from 'assets/images/clouds.png'
+// import imageClouds from 'assets/images/clouds.png'
+import imageClouds from './svgs/clouds.png'
 import imageMountains from 'assets/images/mountains.png'
 import HorizontalLooper from 'components/common/horizontal-looper'
 import { Button } from 'components/common/button'
@@ -30,17 +31,21 @@ const useParallax = (elementRef: any) => {
 
       const scrolledBeyond = boundingClientRect.y < 0
 
-      const maxMagnitude = 200
+      setParallaxMultiplier(intersectionRatio)
 
-      if (scrolledBeyond) {
-        const magnitude = 100 + (100 - intersectionRatio * 100)
+      // console.log(intersectionRatio, 'intersection ratio')
 
-        setParallaxMultiplier(magnitude / maxMagnitude)
-      } else {
-        const magnitude = intersectionRatio * 100
+      // const maxMagnitude = 200
 
-        setParallaxMultiplier(magnitude / maxMagnitude)
-      }
+      // if (scrolledBeyond) {
+      //   const magnitude = 100 + (100 - intersectionRatio * 100)
+
+      //   setParallaxMultiplier(magnitude / maxMagnitude)
+      // } else {
+      //   const magnitude = intersectionRatio * 100
+
+      //   setParallaxMultiplier(magnitude / maxMagnitude)
+      // }
     }
 
     const observer = new IntersectionObserver(callback, options)
@@ -55,14 +60,15 @@ const useParallax = (elementRef: any) => {
   return parallaxMultiplier
 }
 
-const parallax = (parallaxMultiplier: any) => {
-  const baselineTranslateY = 0 // Upper limit translate Y
-  const targetTransLateY = -30 // Lower limit translate Y
-  const range = baselineTranslateY - targetTransLateY
-  const translateYPercentage = baselineTranslateY - parallaxMultiplier * range
+const parallax = (parallaxMultiplier: any, initial = 15, range = 15) => {
+  console.log(parallaxMultiplier, 'parallax multi')
+
+  const translateY = initial - parallaxMultiplier * range
+
+  console.log(translateY, 'trans y')
 
   return {
-    transform: `translateY(${Math.min(translateYPercentage * -1)}%)`,
+    transform: `translateY(${translateY}%)`,
   }
 }
 
@@ -83,14 +89,17 @@ export const Hero = () => {
           <Image alt="Devcon mountains" src={imageMountains} />
         </div>
 
-        <div className={css['cloud-container']} /*style={parallax(parallaxMultiplier) as any}*/>
+        <div className={css['clouds']} style={parallax(parallaxMultiplier, 7.5, 7.5) as any}></div>
+
+        <div className={css['cloud-container']} style={parallax(parallaxMultiplier) as any}>
           {/* <HorizontalLooper> */}
-          <Image
+          {/* <Image
             alt="Devcon clouds"
-            /*className={css['clouds']}*/ src={imageClouds}
+            src={imageClouds}
+            height="50px"
             objectFit="contain"
             objectPosition="bottom"
-          />
+          /> */}
           {/* </HorizontalLooper> */}
         </div>
 
@@ -121,8 +130,9 @@ export const Hero = () => {
           </div>
         </div> */}
       </div>
-      <div className="section">
-        <div className="border-bottom clear-bottom">
+      <div className="section" style={{ position: 'relative' }}>
+        <div className={`expand ${css['gradient']}`}></div>
+        <div className={`border-bottom clear-bottom`}>
           <CallToAction mobile />
         </div>
       </div>

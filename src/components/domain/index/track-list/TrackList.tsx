@@ -25,7 +25,12 @@ const tracks = [
         Layer 1 Protocol
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        Ethereum Roadmap, core protocol upgrades and improvements, design decisions and tradeoffs, impact of MEV, core
+        protocol values and their importance.
+      </div>
+    ),
   },
   {
     id: '2',
@@ -37,7 +42,13 @@ const tracks = [
         Layer 2s
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        Pushing Ethereum&apos;s boundaries: more throughput, a farther reach, and more functionality. What are ways to
+        enable Ethereum to scale, handle transactions faster, and for building bridges with other technologies? Anything
+        rollup-related, wallets and other L2-enabling technologies, applications that take advantage of them, etc.
+      </div>
+    ),
   },
   {
     id: '3',
@@ -49,7 +60,12 @@ const tracks = [
         Developer Infrastructure
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        Tooling and other efforts to make it easier, more fun, and more appealing to build on Ethereum. Languages,
+        libraries, frameworks, dev tooling, best practices, etc.
+      </div>
+    ),
   },
   {
     id: '4',
@@ -61,7 +77,12 @@ const tracks = [
         Governance & Coordination
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        How can we empower people to coordinate, manage common resources and make positive-sum decisions together? DAOs,
+        decentralized governance, etc.
+      </div>
+    ),
   },
   {
     id: '5',
@@ -73,7 +94,12 @@ const tracks = [
         UX & Design
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        Let&apos;s create a more intuitive, safe and delightful experience for users of Ethereum and its applications!
+        Design, UI, product-market fit, marketing, etc.
+      </div>
+    ),
   },
   {
     id: '6',
@@ -85,7 +111,12 @@ const tracks = [
         Staking & Validator Experience
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        Home staking, distributed validator technology, pooling, decentralization improvements, protocol design, and
+        everything in between.
+      </div>
+    ),
   },
   {
     id: '7',
@@ -97,7 +128,12 @@ const tracks = [
         Security
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        Making Ethereum easy, safe, and more secure for end-users. DApp security, data privacy, identity, key
+        management, etc.
+      </div>
+    ),
   },
   {
     id: '8',
@@ -109,7 +145,12 @@ const tracks = [
         ZKPs and Privacy
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        The potential of zero-knowledge cryptography and the importance of privacy, along with its applications and
+        impact.
+      </div>
+    ),
   },
   {
     id: '9',
@@ -121,7 +162,13 @@ const tracks = [
         Opportunity & Global Impact
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        How can Ethereum change the world for the better? Public goods, sustainability, politics, P2P finance,
+        micro-lending, financial systems, identity, emerging markets, environment, communication and censorship, access,
+        etc.
+      </div>
+    ),
   },
   {
     id: '10',
@@ -133,7 +180,11 @@ const tracks = [
         Cryptoeconomics
       </div>
     ),
-    body: <div className={css['track-body']}>Nothing</div>,
+    body: (
+      <div className={css['track-body']}>
+        Research in game theory, mechanism design, and tokenomics for protocols and applications.
+      </div>
+    ),
   },
 ]
 

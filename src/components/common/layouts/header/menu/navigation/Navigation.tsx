@@ -76,7 +76,7 @@ const Mobile = (props: any) => {
                         return (
                           <ul key={child.title} className={css['category-items']}>
                             <li key={child.title}>
-                              <Link className="plain hover-underline" to={child.url} onClick={closeFoldout}>
+                              <Link className="plain hover-underline" indicateExternal to={child.url} onClick={closeFoldout}>
                                 {child.title}
                               </Link>
                             </li>
@@ -122,7 +122,7 @@ export const Navigation = (props: any) => {
             }
 
             return (
-              <Link className={className} to={i.url}>
+              <Link className={className} to={i.url} indicateExternal>
                 <>
                   {i.title}
                   {isWatch && <OnDemandVideoIcon />}
@@ -162,7 +162,7 @@ export const Navigation = (props: any) => {
 
                           return (
                             <li key={subKey}>
-                              <Link className={`${css['foldout-link']} plain`} to={c.url}>
+                              <Link indicateExternal className={`${css['foldout-link']} plain`} to={c.url}>
                                 {c.title}
                               </Link>
                             </li>

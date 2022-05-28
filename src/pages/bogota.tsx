@@ -62,7 +62,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
         {/* <TwoColumns id="about" title={intl('location_title')} left={pageContext?.current?.body} right={<Snapshot />} /> */}
 
-        <section id="carousel" className="clear-bottom">
+        <section id="carousel" className="expand clear-bottom">
           <Carousel />
         </section>
 

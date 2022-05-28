@@ -2,7 +2,7 @@ import React from 'react'
 import css from './calls-to-action.module.scss'
 import { Button } from 'components/common/button'
 import TicketBackground from 'assets/images/pages/tickets.svg'
-import GetInvolvedBackground from 'assets/images/pages/get-involved.svg'
+import GetInvolvedBackground from 'assets/images/pages/speakers.svg'
 
 const CallsToAction = () => {
   return (

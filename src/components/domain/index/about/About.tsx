@@ -32,13 +32,7 @@ const About = () => {
         </div>
         <div className={css['right']}>
           <div className={css['image-container']}>
-            <Image
-              src={TriangleWithImages}
-              objectFit="contain"
-              layout="fill"
-              objectPosition="right"
-              alt="Devcon images"
-            />
+            <Image src={TriangleWithImages} objectFit="cover" layout="fill" objectPosition="left" alt="Devcon images" />
           </div>
         </div>
       </div>

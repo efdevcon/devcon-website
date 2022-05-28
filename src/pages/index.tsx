@@ -30,7 +30,7 @@ export default pageHOC(function Index(props: any) {
 
       <div className="clear-bottom border-bottom"></div>
 
-      <div className={`${css['news-container']} section`}>
+      <div className={`${css['background-container']} section`}>
         <div className={`${css['circle-background']} expand`}>
           <Image src={CircleBackground} alt="Triangles" />
         </div>
