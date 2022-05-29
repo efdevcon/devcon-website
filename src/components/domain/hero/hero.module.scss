@@ -1,6 +1,18 @@
 @use 'assets/css/partials/index' as *;
 @use 'sass:math';
 
+@keyframes in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 @keyframes sway {
   0% {
     transform: translateY(25%) translateX(0%);
@@ -86,8 +98,10 @@ $logo-offset: 50px;
     align-items: flex-end;
 
     >* {
-      display: block !important;
-      width: 40% !important;
+      // transform: scale(1.2);
+      // display: block !important;
+      // height: 100% !important;
+      // width: 100% !important;
       // transform: translateY(var(--translateY));
     }
   }
@@ -201,13 +215,20 @@ $logo-offset: 50px;
   }
 }
 
+.parallax-container {
+  animation: in-up 1s ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .clouds {
   position: relative;
   background-image: url('./svgs/clouds.png');
   background-size: min(1100px, 40%);
   background-position: center bottom;
   background-repeat: repeat-x;
-  // height: 10%;
+  opacity: 0.9;
   bottom: 0px;
   height: 100%;
   width: 100%;

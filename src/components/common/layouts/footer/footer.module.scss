@@ -163,7 +163,7 @@
       left: 0px;
       opacity: 0.2;
       z-index: -2;
-      background-image: var(--theme-gradient);
+      background-image: var(--theme-gradient-footer, var(--theme-gradient));
     }
 
     &:before {

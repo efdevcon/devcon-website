@@ -31,7 +31,7 @@ type Scene = {
 }
 
 type PathSegment = {
-  text: string
+  text: string | React.ReactElement
   url?: string
 }
 
@@ -39,7 +39,7 @@ type PageHeroProps = {
   title?: string | false
   titleSubtext?: string
   titleClassName?: string
-  path?: string | PathSegment[]
+  path?: string | PathSegment[] | React.ReactElement
   description?: string
   scenes?: Scene[]
   background?: string

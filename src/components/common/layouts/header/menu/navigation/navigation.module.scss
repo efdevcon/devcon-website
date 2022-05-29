@@ -6,17 +6,17 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  opacity: 0.1;
-  object-position: calc(100% + 50px);
+  opacity: 0.05;
   pointer-events: none;
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
 
-  >img {
-    height: 300px;
-    margin-top: min(#{$gaps-gap-8}, 5%);
-    margin-right: min(#{$gaps-gap-8}, 5%);
+  > * {
+    transform: scale(1.2);
+    fill: black;
+    height: max(100%, 140px);
+    width: auto;
   }
 }
 
@@ -72,6 +72,8 @@
 
       .foldout-link {
         text-transform: uppercase;
+        width: 100%;
+        display: inline-block;
       }
 
       >ul {

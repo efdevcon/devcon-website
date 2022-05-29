@@ -47,6 +47,13 @@
     rgba(140, 255, 0, 0.4) 58.33%,
     rgba(136, 196, 63, 0) 100%
   );
+  --theme-gradient-footer: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #88c43f 0%,
+    #50d100 0.01%,
+    rgba(140, 255, 0, 0.4) 58.33%,
+    rgba(136, 196, 63, 0) 100%
+  );
 }
 
 .yellow {
@@ -95,6 +102,12 @@
     rgba(255, 183, 0, 0.4) 58.33%,
     rgba(255, 184, 0, 0.1) 100%
   );
+  --theme-gradient-footer: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #e55066 0%,
+    rgba(255, 183, 0, 0.4) 58.33%,
+    rgba(255, 184, 0, 0.1) 100%
+  );
 }
 
 .purple {
@@ -108,4 +121,12 @@
     rgba(189, 0, 255, 0.4) 58.33%,
     rgba(251, 111, 228, 0) 100%
   );
+}
+
+.schedule {
+  --theme-color: #{$colors-track-purple};
+  --theme-color-hover: #{$colors-track-purple-hover};
+  --theme-logo: url('../assets/images/pages/schedule.svg');
+  --theme-gradient: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #7958A5 0%, #7000FF 0.01%, rgba(206, 66, 255, 0.2) 100%);
+  --theme-gradient-footer: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #7958A5 0%, #7000FF 0.01%, rgba(206, 66, 255, 0.2) 100%);
 }

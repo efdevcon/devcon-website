@@ -29,7 +29,8 @@ const Mobile = (props: any) => {
             <li key={i.title} className={open && hasChildren ? css['open'] : ''}>
               {i.logo && (
                 <div className={css['foldout-background']}>
-                  <Image src={i.logo} alt={`${i.title}: background logo`} />
+                  <i.logo />
+                  {/* <Image src={i.logo} alt={`${i.title}: background logo`} layout="fill" /> */}
                 </div>
               )}
               {hasChildren ? (
@@ -76,7 +77,12 @@ const Mobile = (props: any) => {
                         return (
                           <ul key={child.title} className={css['category-items']}>
                             <li key={child.title}>
-                              <Link className="plain hover-underline" indicateExternal to={child.url} onClick={closeFoldout}>
+                              <Link
+                                className="plain hover-underline"
+                                indicateExternal
+                                to={child.url}
+                                onClick={closeFoldout}
+                              >
                                 {child.title}
                               </Link>
                             </li>
@@ -140,7 +146,8 @@ export const Navigation = (props: any) => {
                   <div className={css['foldout']}>
                     {i.logo && (
                       <div className={css['foldout-background']}>
-                        <Image src={i.logo} alt={`${i.title}: background logo`} />
+                        <i.logo />
+                        {/* <Image src={i.logo} alt={`${i.title}: background logo`} layout="fill" /> */}
                       </div>
                     )}
                     {i.links && i.links.length > 0 && (

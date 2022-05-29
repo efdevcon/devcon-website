@@ -24,7 +24,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
   return (
     <Page theme={themes['purple']}>
       <PageHero
-        path={[{ text: 'Bogota' }, { text: 'City Guide' }]}
+        path={[{ text: <span className="bold">Bogota</span> }, { text: 'City Guide' }]}
         navigation={[
           {
             title: intl('city_guide_title'),

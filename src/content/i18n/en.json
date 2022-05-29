@@ -127,7 +127,14 @@
     "city_guide": "City Guide",
     "community": "Community",
     "contribute": "Contribute",
-    "tickets": "Tickets"
+    "tickets": "Tickets",
+    "program": "Program",
+    "program_overview": "Overview"
+  },
+  "program": {
+    "overview_about": "About",
+    "overview_values": "Values",
+    "overview_tracks": "Tracks"
   },
   "footer": {
     "about_devcon_1": "About Devcon —",

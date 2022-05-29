@@ -1,5 +1,5 @@
 ---
-title: Schedule
+title: Overview
 template: content
 ---
 

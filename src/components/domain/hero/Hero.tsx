@@ -1,18 +1,17 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React from 'react'
 import css from './hero.module.scss'
 import Logo from 'assets/images/devcon-logo.svg'
 import Rays from './svgs/Rays'
-import IconEventNote from 'assets/icons/event_note.svg'
 import { useTranslations } from 'next-intl'
 import { TITLE } from 'utils/constants'
-import { Link } from 'components/common/link'
 import { CallToAction } from './call-to-action'
 import Image from 'next/image'
-// import imageClouds from 'assets/images/clouds.png'
 import imageClouds from './svgs/clouds.png'
 import imageMountains from 'assets/images/mountains.png'
-import HorizontalLooper from 'components/common/horizontal-looper'
-import { Button } from 'components/common/button'
+import mountainsLayer1 from './svgs/mtn-1.png'
+import mountainsLayer2 from './svgs/mtn-2.png'
+import mountainsLayer3 from './svgs/mtn-3.png'
+import mountainsLayer4 from './svgs/mtn-4.png'
 
 const useParallax = (elementRef: any) => {
   const [parallaxMultiplier, setParallaxMultiplier] = React.useState(0)
@@ -29,23 +28,7 @@ const useParallax = (elementRef: any) => {
     const callback = (entries: any) => {
       const { intersectionRatio, boundingClientRect } = entries[0]
 
-      const scrolledBeyond = boundingClientRect.y < 0
-
       setParallaxMultiplier(intersectionRatio)
-
-      // console.log(intersectionRatio, 'intersection ratio')
-
-      // const maxMagnitude = 200
-
-      // if (scrolledBeyond) {
-      //   const magnitude = 100 + (100 - intersectionRatio * 100)
-
-      //   setParallaxMultiplier(magnitude / maxMagnitude)
-      // } else {
-      //   const magnitude = intersectionRatio * 100
-
-      //   setParallaxMultiplier(magnitude / maxMagnitude)
-      // }
     }
 
     const observer = new IntersectionObserver(callback, options)
@@ -60,15 +43,11 @@ const useParallax = (elementRef: any) => {
   return parallaxMultiplier
 }
 
-const parallax = (parallaxMultiplier: any, initial = 15, range = 15) => {
-  console.log(parallaxMultiplier, 'parallax multi')
-
+const parallax = (parallaxMultiplier: any, initial = 15, range = 15, min = 10000) => {
   const translateY = initial - parallaxMultiplier * range
 
-  console.log(translateY, 'trans y')
-
   return {
-    transform: `translateY(${translateY}%)`,
+    transform: `translateY(${Math.min(min, translateY)}%)`,
   }
 }
 
@@ -85,22 +64,21 @@ export const Hero = () => {
           <Rays className={css['rays']} />
         </div>
 
-        <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
-          <Image alt="Devcon mountains" src={imageMountains} />
-        </div>
+        <div className={css['parallax-container']}>
+          <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
+            <Image alt="Devcon mountains" src={mountainsLayer4} objectFit="contain" />
+          </div>
+          <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
+            <Image alt="Devcon mountains" src={mountainsLayer3} objectFit="contain" />
+          </div>
+          <div className={css['mountain-container']} style={parallax(parallaxMultiplier, 20, 20) as any}>
+            <Image alt="Devcon mountains" src={mountainsLayer1} objectFit="contain" />
+          </div>
+          <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
+            <Image alt="Devcon mountains" src={mountainsLayer2} objectFit="contain" />
+          </div>
 
-        <div className={css['clouds']} style={parallax(parallaxMultiplier, 7.5, 7.5) as any}></div>
-
-        <div className={css['cloud-container']} style={parallax(parallaxMultiplier) as any}>
-          {/* <HorizontalLooper> */}
-          {/* <Image
-            alt="Devcon clouds"
-            src={imageClouds}
-            height="50px"
-            objectFit="contain"
-            objectPosition="bottom"
-          /> */}
-          {/* </HorizontalLooper> */}
+          <div className={css['clouds']} style={parallax(parallaxMultiplier, 7.5, 7.5, 5) as any}></div>
         </div>
 
         <div className={css['left-rotated']}>

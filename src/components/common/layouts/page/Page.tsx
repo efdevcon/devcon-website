@@ -12,7 +12,7 @@ type LayoutProps = {
 }
 
 export default function PageLayout({ children, theme, style }: LayoutProps) {
-  let className = 'layout'
+  let className = ''
 
   if (theme) className += ` ${theme}`
   if (!theme) className += ` ${css['theme']}`

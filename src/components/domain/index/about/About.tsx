@@ -9,7 +9,7 @@ import { Link } from 'components/common/link'
 const About = () => {
   return (
     <div className={`section ${css['container']}`}>
-      <div className={`${css['body']} clear-top clear-bottom border-bottom margin-bottom expand`}>
+      <div className={`${css['body']} clear-top  expand`}>
         <div className={css['left']}>
           <DevconLogo />
 
@@ -36,6 +36,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="clear-bottom margin-bottom border-bottom"></div>
     </div>
   )
 }

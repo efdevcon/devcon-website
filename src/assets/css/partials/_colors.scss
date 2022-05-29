@@ -157,7 +157,39 @@ $link: #488def;
   color: $monochrome-1 !important;
 }
 
-// RED
+// Purple
+@mixin purple {
+  background: $track-purple;
+  --color-icon: #{$monochrome-1};
+  color: $monochrome-1;
+  --border-color: #{$track-purple};
+}
+@mixin purple-ghost {
+  background: none;
+  color: $track-purple;
+  --color-icon: #{$track-purple};
+  --border-color: #{#{$track-purple}};
+}
+@mixin purple-hover {
+  background: $track-purple-hover;
+
+  // For use by Button component (animates colors when hovering)
+  --button-color: #{$monochrome-1};
+  --button-color-background: #{$track-purple};
+  --button-color-background-hover: #{$track-purple-hover};
+
+  &.ghost {
+    @include purple;
+  }
+}
+
+@mixin purple-disabled {
+  background: #ddcccf !important;
+  --border-color: #{#d6b1b6 !important};
+  --color-icon: #{$monochrome-1} !important;
+  color: $monochrome-1 !important;
+}
+
 @mixin app {
   background: $monochrome-1;
   color: $main;

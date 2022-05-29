@@ -127,7 +127,9 @@
     "city_guide": "Guía de la ciudad",
     "community": "Comunidad",
     "contribute": "Contribuir",
-    "tickets": "Entradas"
+    "tickets": "Entradas",
+    "program": "Program",
+    "program_overview": "Overview"
   },
   "footer": {
     "about_devcon_1": "Acerca de Devcon —",

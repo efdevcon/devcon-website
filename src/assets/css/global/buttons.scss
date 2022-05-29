@@ -126,6 +126,17 @@ button {
       }
     }
 
+    &.purple {
+      &.hover,
+      &:hover {
+        @include colors-purple-hover;
+      }
+
+      &:disabled {
+        @include colors-purple-disabled;
+      }
+    }
+
     &.app {
       &.hover,
       &:hover {

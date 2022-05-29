@@ -47,6 +47,18 @@
   }
 }
 
+.purple {
+  @include colors-purple;
+
+  &.ghost {
+    @include colors-purple-ghost;
+  }
+
+  &.disabled {
+    @include colors-purple-disabled;
+  }
+}
+
 .app {
   @include colors-app;
 

@@ -190,7 +190,7 @@ const tracks = [
 
 const Tracks = () => {
   return (
-    <div className={`section ${css['container']}`}>
+    <div className={`section ${css['container']}`} id="tracks">
       <div className={`${css['background']} expand`}>
         <Image src={TriangleBackground} alt="Triangles" />
       </div>
