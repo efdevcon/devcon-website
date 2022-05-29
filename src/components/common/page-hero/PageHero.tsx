@@ -39,7 +39,7 @@ type PageHeroProps = {
   title?: string | false
   titleSubtext?: string
   titleClassName?: string
-  path?: string | PathSegment[] | React.ReactElement
+  path?: string | PathSegment[]
   description?: string
   scenes?: Scene[]
   background?: string
