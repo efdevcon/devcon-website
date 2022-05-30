@@ -8,10 +8,10 @@ import { CallToAction } from './call-to-action'
 import Image from 'next/image'
 import imageClouds from './svgs/clouds.png'
 import imageMountains from 'assets/images/mountains.png'
-import mountainsLayer1 from './svgs/mtn-1.png'
-import mountainsLayer2 from './svgs/mtn-2.png'
-import mountainsLayer3 from './svgs/mtn-3.png'
-import mountainsLayer4 from './svgs/mtn-4.png'
+import MountainsLayer1 from 'assets/images//mtn-1.svg'
+import MountainsLayer2 from 'assets/images//mtn-2.svg'
+import MountainsLayer3 from 'assets/images//mtn-3.svg'
+import MountainsLayer4 from 'assets/images//mtn-4.svg'
 
 const useParallax = (elementRef: any) => {
   const [parallaxMultiplier, setParallaxMultiplier] = React.useState(0)
@@ -66,18 +66,24 @@ export const Hero = () => {
 
         <div className={css['parallax-container']}>
           <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
-            <Image alt="Devcon mountains" src={mountainsLayer4} objectFit="contain" />
+            <MountainsLayer1 />
+            {/* <Image alt="Devcon mountains" src={mountainsLayer4} objectFit="contain" /> */}
           </div>
           <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
-            <Image alt="Devcon mountains" src={mountainsLayer3} objectFit="contain" />
+            <MountainsLayer2 />
+            {/* <Image alt="Devcon mountains" src={mountainsLayer3} objectFit="contain" /> */}
           </div>
           <div className={css['mountain-container']} style={parallax(parallaxMultiplier, 20, 20) as any}>
-            <Image alt="Devcon mountains" src={mountainsLayer1} objectFit="contain" />
+            <MountainsLayer3 />
+            {/* <Image alt="Devcon mountains" src={mountainsLayer1} objectFit="contain" /> */}
           </div>
           <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
-            <Image alt="Devcon mountains" src={mountainsLayer2} objectFit="contain" />
+            <MountainsLayer4 />
+            {/* <Image alt="Devcon mountains" src={mountainsLayer2} objectFit="contain" /> */}
           </div>
+        </div>
 
+        <div className={css['parallax-container-2']}>
           <div className={css['clouds']} style={parallax(parallaxMultiplier, 7.5, 7.5, 5) as any}></div>
         </div>
 

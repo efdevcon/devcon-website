@@ -2,19 +2,24 @@ import React from 'react'
 import { PageHero } from 'components/common/page-hero'
 import { FAQ } from 'components/domain/faq'
 import Page from 'components/common/layouts/page'
-import css from './templates.module.scss'
+// import css from './templates.module.scss'
 import themes from './themes.module.scss'
 import { Carousel } from 'components/common/carousel'
 import { Snapshot } from 'components/common/snapshot'
-import { TwoColumns } from 'components/common/sections/2column'
 import { pageHOC } from 'context/pageHOC'
-// import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
-import { GetCategories, GetDIPs, GetFAQ, GetPage, GetPages, GetContentSection } from 'services/page'
+import { GetFAQ, GetPage, GetContentSection } from 'services/page'
 import { getGlobalData } from 'services/global'
 import markdownUtils from 'utils/markdown'
 import { Tags } from 'components/common/tags'
+import moment from 'moment-timezone'
+import IconClock from 'assets/icons/icon_clock.svg'
+import { Link } from 'components/common/link'
+import IconCurrency from 'assets/icons/icon_currency.svg'
+import IconGlobe from 'assets/icons/icon_globe.svg'
+import IconSun from 'assets/icons/icon_sun.svg'
+import IconWater from 'assets/icons/icon_water.svg'
 
 export default pageHOC(function CityGuideTemplate(props: any) {
   const intl = useTranslations()
@@ -56,7 +61,62 @@ export default pageHOC(function CityGuideTemplate(props: any) {
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
           <div className="right">
-            <Snapshot />
+            <Snapshot
+              items={[
+                {
+                  Icon: IconClock,
+                  title: intl('snapshot_timezone'),
+                  left: 'GMT -5',
+                  right: moment().tz('America/Bogota').format('hh:mm A'),
+                },
+                {
+                  Icon: IconCurrency,
+                  title: intl('snapshot_currency'),
+                  left: intl('snapshot_colombian_peso'),
+                  right: (
+                    <Link indicateExternal to="https://www.xe.com/currency/cop-colombian-peso">
+                      {intl('snapshot_exchange_rate')}
+                    </Link>
+                  ),
+                },
+                {
+                  Icon: IconGlobe,
+                  title: intl('snapshot_language'),
+                  left: intl('snapshot_spanish'),
+                  right: (
+                    <Link
+                      indicateExternal
+                      to="https://www.worldtravelguide.net/guides/south-america/colombia/history-language-culture/"
+                    >
+                      {intl('snapshot_language_guide')}
+                    </Link>
+                  ),
+                },
+                {
+                  Icon: IconSun,
+                  title: intl('snapshot_temperature'),
+                  left: '8 TO 20 °C / 46.4 to 68.0 °F',
+                  right: (
+                    <Link
+                      indicateExternal
+                      to="https://www.worldtravelguide.net/guides/south-america/colombia/travel-by/"
+                    >
+                      {intl('snapshot_packing_tips')}
+                    </Link>
+                  ),
+                },
+                {
+                  Icon: IconWater,
+                  title: intl('snapshot_water'),
+                  left: intl('snapshot_tap_water'),
+                  right: (
+                    <Link indicateExternal to="#FAQ">
+                      {intl('snapshot_FAQs')}
+                    </Link>
+                  ),
+                },
+              ]}
+            />
           </div>
         </div>
 
@@ -92,7 +152,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
         <section id="FAQ" className="clear-top">
           <FAQ
             data={[{ id: 'something', title: 'Frequently Asked Questions', questions: faqs }]}
-            customCategoryTitle="Frequently Asked Questions"
+            customCategoryTitle="FAQ"
             noSearch
           />
         </section>

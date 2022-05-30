@@ -4,7 +4,7 @@
 @keyframes in-up {
   0% {
     opacity: 0;
-    transform: translateY(10%);
+    transform: translateY(15%);
   }
 
   100% {
@@ -13,21 +13,51 @@
   }
 }
 
-@keyframes sway {
+@keyframes enter {
   0% {
-    transform: translateY(25%) translateX(0%);
-  }
-
-  25% {
-    transform: translateY(25%) translateX(-3.75%);
-  }
-
-  75% {
-    transform: translateY(25%) translateX(3.75%);
+    opacity: 0;
+    transform: scale(0.3);
   }
 
   100% {
-    transform: translateY(25%) translateX(0%);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes in-up-logo {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    // transform: translateY(30%);
+  }
+
+  // 50% {
+  //   opacity: 0.8;
+  // }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    // transform: translateY(0%);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-3.75%);
+  }
+
+  75% {
+    transform: translateX(3.75%);
+  }
+
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -73,13 +103,13 @@ $logo-offset: 50px;
 
   // Using 100vh on mobile devices often doesn't account for the navigation bar at the bottom, so this is a decent compromise - if it's important to fill the entire
   // screen we can fall back to a JS solution - pending feedback
-  @media (max-width: $breakpoints-lg) {
-    height: 90vh;
-  }
+  // @media (max-width: $breakpoints-lg) {
+  //   height: 90vh;
+  // }
 
-  @media (max-width: $breakpoints-md) {
-    height: 85vh;
-  }
+  // @media (max-width: $breakpoints-md) {
+  //   height: 85vh;
+  // }
 
   .shading {
     position: absolute;
@@ -132,8 +162,11 @@ $logo-offset: 50px;
     height: 100%;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: enter 4.5s ease-out forwards;
 
     .rays {
+
       // position: absolute;
       animation: rotate 240s linear infinite;
       width: 100%;
@@ -203,11 +236,14 @@ $logo-offset: 50px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    opacity: 0;
+    transform: scale(1);
+    animation: in-up-logo 4s 2s ease forwards;
 
     .logo {
       display: flex;
       position: relative;
-      width: max(300px, 20%);
+      width: max(275px, 20%);
       height: auto;
       justify-content: center;
       align-items: center;
@@ -216,19 +252,39 @@ $logo-offset: 50px;
 }
 
 .parallax-container {
-  animation: in-up 1s ease-out;
+  display: none;
+
+  @media (min-width: $breakpoints-lg) {
+    display: block;
+  }
+}
+
+.parallax-container {
+  opacity: 0;
+  animation: in-up 1.5s 1s ease-out forwards;
   position: absolute;
   width: 100%;
+  height: 100%;
+}
+
+.parallax-container-2 {
+  opacity: 0;
+  // animation: sway 60s linear infinite;
+  animation: in-up 2.5s ease-out forwards, sway 90s 2.5s linear infinite;
+  position: absolute;
+  width: 108%;
+  left: -4%;
   height: 100%;
 }
 
 .clouds {
   position: relative;
   background-image: url('./svgs/clouds.png');
-  background-size: min(1100px, 40%);
+  background-size: auto max(100px, 11%);
+  // background-size: cover;
   background-position: center bottom;
   background-repeat: repeat-x;
-  opacity: 0.9;
+  // opacity: 0.9;
   bottom: 0px;
   height: 100%;
   width: 100%;

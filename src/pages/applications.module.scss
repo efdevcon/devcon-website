@@ -1,10 +1,5 @@
 @use 'assets/css/partials/index' as *;
 
-.layout {
-  min-height: 100vh;
-  overflow: hidden;
-}
-
 .about {
   position: relative;
   display: flex;
@@ -27,20 +22,13 @@
       margin-right: 32px;
     }
 
-    p, button {
+    p,
+    button {
       margin-top: 1em;
     }
 
     .links {
       display: flex;
-
-      > * {
-        margin-right: 48px;
-
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
     }
   }
 
@@ -58,34 +46,22 @@
   }
 }
 
-.meta {
+.guidelines {
+  // grid-column: 2 / 4;
+}
+
+.cards {
   display: flex;
-  flex-direction: column;
+  position: relative;
+  pointer-events: none;
 
-  @media (min-width: $breakpoints-xl) {
-    flex-direction: row;
-  }
-
-  .left {
-    flex-basis: auto;
+  .card {
     flex-shrink: 0;
-
-    @media (min-width: $breakpoints-xl) {
-      flex-basis: 50%;
-      margin-right: 32px;
-    }
-  }
-
-  .right {
     flex-basis: auto;
-    margin-top: 32px;
-    // display: none;
-
-    @media (min-width: $breakpoints-xl) {
-      display: block;
-      flex-basis: auto;
-      flex-grow: 1;
-      margin-top: 0px;
-    }
+    position: relative;
+    flex-basis: 28%;
+height: 441px;
+    // flex-basis: max(25%, 400px);
+    // height: 441px;
   }
 }

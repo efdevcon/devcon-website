@@ -105,7 +105,7 @@ export const Menu = (props: any) => {
   //   ]
   // }
 
-  if (router.pathname.startsWith('/app')) {
+  if (router.pathname.startsWith('/app/')) {
     buttons = [
       ...buttons.slice(0, 1),
       {

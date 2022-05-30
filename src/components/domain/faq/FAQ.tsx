@@ -58,7 +58,7 @@ export function FAQ(props: FaqProps) {
 
         return (
           <div id={category.id} className={css['accordion-container']} key={category.id}>
-            <h2 className="h5 bold">{props.customCategoryTitle || category.title}</h2>
+            <h2 className="spaced">{props.customCategoryTitle || category.title}</h2>
             <Accordion items={formatQuestions(filterQuestions(category.questions))} />
           </div>
         )

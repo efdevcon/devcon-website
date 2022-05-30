@@ -94,6 +94,11 @@ const useNavigationData = () => {
           url: '/schedule',
           type: 'page',
         },
+        {
+          title: intl('navigation_program_apply_to_speak'),
+          url: '/applications',
+          type: 'page',
+        },
       ],
     },
     {

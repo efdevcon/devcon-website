@@ -6,18 +6,21 @@ import { pageHOC } from 'context/pageHOC'
 import { usePageContext } from 'context/page-context'
 import { Tags } from 'components/common/tags'
 import { getGlobalData } from 'services/global'
-import { GetPage } from 'services/page'
+import { FAQ } from 'components/domain/faq'
+import { GetPage, GetFAQ } from 'services/page'
 import TrackList from 'components/domain/index/track-list'
 import css from './schedule.module.scss'
 import CallToAction from 'components/common/card/CallToActionCard'
 import ScheduleBackground from 'assets/images/pages/schedule.svg'
 import { useTranslations } from 'next-intl'
 import { Link } from 'components/common/link'
-import ArrowRight from 'assets/icons/arrow_right.svg'
+import List from 'components/common/list'
+import { Button } from 'components/common/button'
 
-export default pageHOC(function NewsTemplate(props: any) {
+export default pageHOC(function Schedule(props: any) {
   const intl = useTranslations()
   const pageContext = usePageContext()
+  const faqs = props.faq.filter((faq: any) => faq.category.id === 'programming')
 
   return (
     <Page theme={themes['schedule']}>
@@ -36,6 +39,10 @@ export default pageHOC(function NewsTemplate(props: any) {
             title: intl('program_overview_tracks'),
             to: '#tracks',
           },
+          {
+            title: intl('program_overview_faq'),
+            to: '#faq',
+          },
         ]}
       />
 
@@ -52,13 +59,13 @@ export default pageHOC(function NewsTemplate(props: any) {
               </div>
 
               <div className={css['links']}>
-                <Link to="/tickets" className="bold text-uppercase">
+                <Link to="/tickets" className="text-uppercase font-lg bold">
                   Tickets
-                  <ArrowRight />
+                  {/* <ArrowRight /> */}
                 </Link>
-                <Link to="/faq" className="bold text-uppercase">
+                <Link to="/faq" className="text-uppercase hover-underline font-lg bold">
                   Frequently Asked Questions
-                  <ArrowRight />
+                  {/* <ArrowRight /> */}
                 </Link>
               </div>
             </div>
@@ -69,8 +76,8 @@ export default pageHOC(function NewsTemplate(props: any) {
                 title="Speaker Applications"
                 tag="OPEN"
                 BackgroundSvg={ScheduleBackground}
-                link="/schedule"
-                linkText="Apply to Speak"
+                link="/applications"
+                linkText="Applications"
                 meta="Application Deadline: June 29th"
               >
                 This year&apos;s Devcon will be similar to those before it - expect to see amazing talks, panels, and
@@ -80,14 +87,75 @@ export default pageHOC(function NewsTemplate(props: any) {
             </div>
           </div>
 
-          <div className={`${css['about']} clear-bottom`} id="values">
-            <h2>Devcon Programming Values</h2>
+          <div className={`${css['values']} clear-bottom`} id="values">
+            <h2 className="clear-bottom">Devcon Programming Values</h2>
+
+            <List
+              items={[
+                {
+                  id: 'collab',
+                  title: 'Collaboration',
+                  body: 'Devcon is a place to foster collaboration via technical discussions, debates, knowledge sharing, and innovation.',
+                },
+                {
+                  id: 'teaching',
+                  title: 'Teaching, communicating and generating new ideas',
+                  body: 'Devcon is an opportunity to learn (and teach!) by attending talks, workshops, panels, and lightning talks.',
+                },
+                {
+                  id: 'updating-community',
+                  title:
+                    "Updating the community on the Ethereum Foundation's key messages, updates, and calls to action",
+                  body: 'Devcon is an opportunity to share the Ethereum Foundations vision and values with the world.',
+                },
+                {
+                  id: 'bridging',
+                  title: 'Building bridges with other communities',
+                  body: 'There are many communities adjacent to Ethereum that are value-aligned - Devcon is a chance to come together.',
+                },
+                {
+                  id: 'community-heard',
+                  title: 'Ensuring our community is heard',
+                  body: 'Devcon is a conference for the Ethereum community, and is an opportunity for the community to share important updates.',
+                },
+              ]}
+            />
           </div>
         </div>
 
         <TrackList />
-
         <div className="clear-bottom"></div>
+
+        <div id="faq" className="section">
+          <FAQ
+            data={[{ id: 'something', title: 'Frequently Asked Questions', questions: faqs }]}
+            customCategoryTitle="FAQ"
+            noSearch
+          />
+        </div>
+
+        <div className="section">
+          <div className={`${css['meta']} border-top clear-top clear-bottom`}>
+            <div className={css['left']}>
+              <h2>Eco-system Supporters</h2>
+              <p className="clear-bottom clear-top">
+                We host Devcon to educate and empower the community to build and use decentralized systems. And it is a
+                conference for builders of all kinds: developers, designers, researchers, client implementers, test
+                engineers, infrastructure operators, community organizers, social economists, artists, and more
+              </p>
+              <Button className="purple lg">Support Now</Button>
+            </div>
+            <div className={css['right']}>
+              <h2>Volunteers</h2>
+              <p className="clear-bottom clear-top">
+                We host Devcon to educate and empower the community to build and use decentralized systems. And it is a
+                conference for builders of all kinds: developers, designers, researchers, client implementers, test
+                engineers, infrastructure operators, community organizers, social economists, artists, and more
+              </p>
+              <Button className="purple lg">Volunteer</Button>
+            </div>
+          </div>
+        </div>
 
         <div className="section">
           <Tags items={pageContext?.current?.tags} viewOnly={false} />
@@ -104,6 +172,7 @@ export async function getStaticProps(context: any) {
   return {
     props: {
       ...globalData,
+      faq: await GetFAQ(context.locale),
       page,
     },
   }

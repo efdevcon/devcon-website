@@ -13,7 +13,7 @@ const About = () => {
         <div className={css['left']}>
           <DevconLogo />
 
-          <p className={`${css['highlighted']} h2`}>
+          <p className="h2 highlighted">
             Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a
             part of our ecosystem, and a source of energy and creativity for all.
           </p>
