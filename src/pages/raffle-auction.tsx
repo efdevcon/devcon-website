@@ -46,9 +46,9 @@ export default pageHOC(function RaffleAuction(props: any) {
               </p>
               <p>
                 Therefore, we will only accept crypto as a method of payment. We advise bridging funds to Arbitrum ahead
-                of time if you wish to participate in the Auction/Raffle. Everybody who participates in the Raffle &
-                Auction will get a POAP NFT to indicate participation. The site for the Raffle & Auction can be found
-                [here].
+                of time if you wish to participate in the Auction/Raffle. Everybody who participates in the Raffle &amp;
+                Auction will get a POAP NFT to indicate participation. The site for the Raffle &amp; Auction can be
+                found here.
               </p>
             </div>
           </div>
@@ -98,8 +98,9 @@ export default pageHOC(function RaffleAuction(props: any) {
         <div className="clear-top clear-bottom border-bottom">
           <h2 className="spaced">Will I get my money back if I do not win the Auction or win the Raffle?</h2>
           <p>
-            Yes, you will be able to withdraw your funds if you do not win either the Auction or Raffle (minus a 2%
-            fee). Raffle winners will also be able to withdraw all funds above the Reserve price (minus a 2% fee).
+            Yes, you will be able to withdraw your funds if you do not win either the Auction or Raffle &#40;minus a 2%
+            fee&#41;. Raffle winners will also be able to withdraw all funds above the Reserve price &#40;minus a 2%
+            fee&#41;.
           </p>
         </div>
 
@@ -122,19 +123,19 @@ export default pageHOC(function RaffleAuction(props: any) {
             and FOSS software. Traditionally, we sell tickets in waves at several different days and times.
           </p>
 
-          <h3 className="highlighted clear-bottom clear-top">Provably fair &amps; Provably efficient</h3>
+          <h3 className="highlighted clear-bottom clear-top">Provably fair &amp; Provably efficient</h3>
           <p>
             One neat aspect of this mechanism is that one can tune how efficient vs. how fair one wants the distribution
             to be. With auctions being the most efficient form of scarce resource allocation, and Raffles being the most
-            fair form. Twenty tickets allocated to the Auction and 80 tickets allocated to the Raffle (100 tickets in
-            total) means the distribution is 20% efficient, 80% fair.
+            fair form. Twenty tickets allocated to the Auction and 80 tickets allocated to the Raffle &#40;100 tickets
+            in total&#41; means the distribution is 20% efficient, 80% fair.
           </p>
 
           <h3 className="highlighted clear-bottom clear-top">Alternate distribution mechanism</h3>
           <p>
             This however inevitably ends up favoring some time zones more than others. In general, we think there must
-            be better ways (or at least ways with different tradeoffs) to distribute tickets without asking people to
-            wait and refresh a website at a certain time.
+            be better ways &#40;or at least ways with different tradeoffs&#41; to distribute tickets without asking
+            people to wait and refresh a website at a certain time.
           </p>
         </div>
       </div>

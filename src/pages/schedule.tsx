@@ -139,18 +139,19 @@ export default pageHOC(function Schedule(props: any) {
             <div className={css['left']}>
               <h2>Eco-system Supporters</h2>
               <p className="clear-bottom clear-top">
-                We host Devcon to educate and empower the community to build and use decentralized systems. And it is a
-                conference for builders of all kinds: developers, designers, researchers, client implementers, test
-                engineers, infrastructure operators, community organizers, social economists, artists, and more
+                This year, aligned teams will have the opportunity to contribute toward Ethereum-related public goods in
+                a Devcon-specific effort to grow the Ethereum ecosystem, and further technologies that help us move
+                forward together. In lieu of a traditional sponsorship program, team-based ticket allocations will be
+                distributed to participating groups as a thank you to those who give back to the Ethereum community.
               </p>
               <Button className="purple lg">Support Now</Button>
             </div>
             <div className={css['right']}>
               <h2>Volunteers</h2>
               <p className="clear-bottom clear-top">
-                We host Devcon to educate and empower the community to build and use decentralized systems. And it is a
-                conference for builders of all kinds: developers, designers, researchers, client implementers, test
-                engineers, infrastructure operators, community organizers, social economists, artists, and more
+                Devcon could not happen without a group of dedicated, passionate volunteers helping run the show! Join
+                the volunteer team alongside 100+ other fun, dedicated, passionate members of the community to help put
+                on the best Devcon yet! Fill out the form to apply.
               </p>
               <Button className="purple lg">Volunteer</Button>
             </div>

@@ -15,9 +15,44 @@ import AuctionIcon from 'assets/icons/auction.svg'
 import NoteIcon from 'assets/icons/note.svg'
 import css from './tickets.module.scss'
 import List from 'components/common/list'
+import DevconLogo from 'assets/images/devcon-6-logo.png'
+import Image from 'next/image'
 
-const Ticket = (props: any) => {
-  return <div className={css['ticket']}>Ticket lol</div>
+type TicketProps = {
+  title: string
+  price: string
+  tag: string
+  description: React.ReactElement
+  number: string
+}
+
+const Ticket = (props: TicketProps) => {
+  return (
+    <div className={css['ticket']}>
+      <div className={css['background-logo']}></div>
+      <div className={css['left']}>
+        <div className={css['background-number']}>
+          <span>{props.number}</span>
+        </div>
+        <Image src={DevconLogo} alt="Devcon logo" />
+
+        <p className="h3">{props.title}</p>
+        <p className={css['price']}>
+          {props.price === 'FREE' ? (
+            <span className={css['free']}>{props.price}</span>
+          ) : (
+            <>
+              {props.price} <span className={css['currency']}>USD/DAI</span>
+            </>
+          )}
+        </p>
+      </div>
+      <div className={css['right']}>
+        <p className="font-sm">{props.description}</p>
+        <span className={`${css['tag']} label bold`}>{props.tag}</span>
+      </div>
+    </div>
+  )
 }
 
 export default pageHOC(function Tickets(props: any) {
@@ -223,17 +258,67 @@ export default pageHOC(function Tickets(props: any) {
         </div>
 
         <div className="border-bottom clear-bottom margin-bottom">
-          <h2 className="spaced">Ticket Types & Pricing</h2>
+          <h2 className="spaced">Ticket Types &amp; Pricing</h2>
           <p className="clear-bottom">
-            Payment will be accepted in ETH or DAI on Ethereum Mainnet, Arbitrum + Optimism, OR Fiat/Card via Stripe
-            integration. Prices will be displayed in $USD.
+            Payment will be accepted in <b>ETH</b> or <b>DAI</b> on Ethereum Mainnet, Arbitrum + Optimism, OR Fiat/Card
+            via Stripe integration. Prices will be displayed in <b>$USD</b>.
           </p>
 
-          <div className="clear-bottom">A BUNCH OF IMAGES GO HERE</div>
+          <div className={`clear-bottom ${css['tickets']}`}>
+            <Ticket
+              title="General Admission"
+              price="$599"
+              number="01"
+              description={<div>The Original ticket to Devcon. No ID Required.</div>}
+              tag="Waves coming soon"
+            />
+            <Ticket
+              title="Builder Ticket"
+              price="$299"
+              number="02"
+              description={
+                <div>
+                  For those who actively volunteer their time to the growth, research and development of the ecosystem.*
+                </div>
+              }
+              tag="Apply now"
+            />
+            <Ticket
+              title="Student Ticket"
+              price="$149"
+              number="03"
+              description={
+                <div>
+                  For students &amp; educators alike. If you&apos;d like to apply for a Student discount.
+                  <br /> <br />
+                  <span className="font-xs">
+                    <span className="bold">*Note:</span> School/University ID required at check-in to prevent resale.
+                    Secondary/high school, College, or University.
+                  </span>
+                </div>
+              }
+              tag="Apply now"
+            />
+            <Ticket
+              title="Volunteer"
+              price="FREE"
+              number="04"
+              description={<div>If you are interested in Volunteering at Devcon.*</div>}
+              tag="Apply now"
+            />
+            <Ticket
+              title="Press Pass"
+              price="FREE"
+              number="05"
+              description={<div>Gain access to Devcon as a Press Staff.* </div>}
+              tag="Apply now"
+            />
+          </div>
 
-          <p className="font-xs">
-            *Note: ID Required at check-in to prevent resale.
-            <br />+ Additional discount available for Builders and Students from Latin America
+          <p className="font-xs italic">
+            <span className="bold">*Note:</span> ID Required at check-in to prevent resale.
+            <br />
+            Additional discount available for Builders and Students from Latin America
           </p>
         </div>
       </div>

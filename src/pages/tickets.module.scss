@@ -63,3 +63,120 @@
     display: flex;
   }
 }
+
+.ticket {
+  padding: 10px 24px;
+  padding-left: 30px;
+  border: 1px solid $colors-standard-border-color;
+  display: flex;
+  position: relative;
+  // Doesn't work in firefox, get back here later when time
+  overflow: clip;
+  overflow-clip-margin: 1px;
+
+  @media (min-width: $breakpoints-md) {
+    padding: 20px 50px;
+  }
+
+  .background-logo {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.05;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: right;
+    background-image: url('../assets/images/pages/tickets.svg');
+  }
+  
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: -19px;
+    top: 50%;
+    margin-top: -19px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+    height: 38px;
+    width: 38px;
+    background: white;
+    border: 2px solid $colors-standard-border-color;
+    border-radius: 1000px;
+  }
+
+  &:after {
+    left: auto;
+    right: -19px;
+  }
+
+  .left, .right {
+    flex-shrink: 0;
+  }
+
+  .left {
+    position: relative;
+    flex-basis: 45%;
+
+    padding-right: 0px;
+
+    @media (min-width: $breakpoints-md) {
+      flex-basis: 50%;
+      padding-right: 24px;
+    }
+
+    .background-number {
+      display: none; 
+
+      @media (min-width: $breakpoints-md) {
+        display: block;
+      }
+
+      position: absolute;
+      top: 8px;
+      right: 24px;
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.1);
+    }
+
+    .price {
+      font-weight: 700;
+
+      .free {
+        color: $colors-monochrome-6;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-basis: 60%;
+    padding-left: 0px;
+    
+    @media (min-width: $breakpoints-md) {
+      padding-left: 24px;
+      flex-basis: 50%;
+      border-left: 1px solid $colors-standard-border-color;
+    }
+
+    .tag {
+      margin-top: 16px;
+      background: white;
+    }
+  }
+}
+
+.tickets {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $breakpoints-lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
