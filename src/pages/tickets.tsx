@@ -24,11 +24,16 @@ type TicketProps = {
   tag: string
   description: React.ReactElement
   number: string
+  color?: 'grey' | 'blue'
 }
 
 const Ticket = (props: TicketProps) => {
+  let className = css['ticket']
+
+  if (props.color) className += ` ${css[props.color]}`
+
   return (
-    <div className={css['ticket']}>
+    <div className={className}>
       <div className={css['background-logo']}></div>
       <div className={css['left']}>
         <div className={css['background-number']}>
@@ -285,6 +290,7 @@ export default pageHOC(function Tickets(props: any) {
             <Ticket
               title="Builder Ticket"
               price="$299"
+              color="grey"
               number="02"
               description={
                 <div>
@@ -296,6 +302,7 @@ export default pageHOC(function Tickets(props: any) {
             <Ticket
               title="Student Ticket"
               price="$149"
+              color="grey"
               number="03"
               description={
                 <div>
@@ -312,6 +319,7 @@ export default pageHOC(function Tickets(props: any) {
             <Ticket
               title="Volunteer"
               price="FREE"
+              color="blue"
               number="04"
               description={<div>If you are interested in Volunteering at Devcon.*</div>}
               tag="Apply now"
@@ -319,6 +327,7 @@ export default pageHOC(function Tickets(props: any) {
             <Ticket
               title="Press Pass"
               price="FREE"
+              color="blue"
               number="05"
               description={<div>Gain access to Devcon as a Press Staff.* </div>}
               tag="Apply now"

@@ -18,7 +18,7 @@ export default pageHOC(function FaqTemplate(props: any) {
   const pageContext = usePageContext()
 
   return (
-    <Page theme={themes['green']}>
+    <Page theme={themes['about']}>
       <PageHero
         navigation={props.faq.map((category: Category) => {
           return { title: category.title, to: `#${category.id}` }

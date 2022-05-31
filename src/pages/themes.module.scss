@@ -18,7 +18,25 @@
   );
 }
 
-.tickets, .blue {
+.blog {
+  --theme-color: #{$colors-track-yellow};
+  --theme-color-hover: #{$colors-track-yellow-hover};
+  --theme-logo: url('../assets/images/pages/blog.svg');
+  --theme-gradient: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #fee506 0%,
+    rgba(247, 232, 104, 0.4) 58.33%,
+    rgba(242, 238, 166, 0) 100%
+  );
+  --theme-gradient-footer: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #fee506 0%,
+    rgba(247, 232, 104, 0.4) 58.33%,
+    rgba(242, 238, 166, 0) 100%
+  );
+}
+
+.tickets {
   --theme-color: #{$colors-track-blue};
   --theme-color-hover: #{$colors-track-blue-hover};
   --theme-logo: url('../assets/images/pages/tickets-stroked.svg');
@@ -39,7 +57,7 @@
 .teal {
   --theme-color: #{$colors-track-teal};
   --theme-color-hover: #{$colors-track-teal-hover};
-  --theme-logo: url('../assets/images/pages/get-involved.svg');
+  --theme-logo: url('../assets/images/pages/get-involved-stroked.svg');
   --theme-gradient: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #00b3a4 0%,
@@ -54,10 +72,10 @@
   );
 }
 
-.green {
+.about {
   --theme-color: #{$colors-track-green};
   --theme-color-hover: #{$colors-track-green-hover};
-  --theme-logo: url('../assets/images/theme/info.svg');
+  --theme-logo: url('../assets/images/pages/about-stroked.svg');
   --theme-gradient: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #88c43f 0%,
@@ -131,7 +149,7 @@
 .news {
   --theme-color: #{$colors-track-red};
   --theme-color-hover: #{$colors-track-red-hover};
-  --theme-logo: url('../assets/images/pages/blog.svg');
+  --theme-logo: url('../assets/images/pages/blog-stroked.svg');
   --theme-gradient: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #e55066 0%,
@@ -146,10 +164,10 @@
   );
 }
 
-.purple {
+.bogota {
   --theme-color: #{$colors-track-purple};
   --theme-color-hover: #{$colors-track-purple-hover};
-  --theme-logo: url('../assets/images/pages/bogota.svg');
+  --theme-logo: url('../assets/images/pages/bogota-stroked.svg');
   --theme-gradient: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #7958a5 0%,
@@ -166,10 +184,10 @@
   );
 }
 
-.schedule {
+.program {
   --theme-color: #{$colors-track-purple};
   --theme-color-hover: #{$colors-track-purple-hover};
-  --theme-logo: url('../assets/images/pages/schedule.svg');
+  --theme-logo: url('../assets/images/pages/program-stroked.svg');
   --theme-gradient: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #7958A5 0%, #7000FF 0.01%, rgba(206, 66, 255, 0.2) 100%);
   --theme-gradient-footer: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #7958A5 0%, #7000FF 0.01%, rgba(206, 66, 255, 0.2) 100%);
 }

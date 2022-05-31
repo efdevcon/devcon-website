@@ -12,7 +12,7 @@ export default pageHOC(function NewsTemplate(props: any) {
   const pageContext = usePageContext()
 
   return (
-    <Page theme={themes['news']}>
+    <Page theme={themes['about']}>
       <PageHero />
 
       <div className="section">

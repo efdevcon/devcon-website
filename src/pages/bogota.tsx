@@ -27,7 +27,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
   const faqs = props.faq.filter((faq: any) => faq.category.id === 'location')
 
   return (
-    <Page theme={themes['purple']}>
+    <Page theme={themes['bogota']}>
       <PageHero
         path={[{ text: <span className="bold">Bogota</span> }, { text: 'City Guide' }]}
         navigation={[

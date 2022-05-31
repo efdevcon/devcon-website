@@ -52,7 +52,7 @@ export default pageHOC(function Applications(props: any) {
   const pageContext = usePageContext()
 
   return (
-    <Page theme={themes['schedule']}>
+    <Page theme={themes['program']}>
       <PageHero
         path={[{ text: <span className="bold">Program</span> }, { text: 'Applications' }]}
         navigation={[
