@@ -157,31 +157,20 @@ export default pageHOC(function Tickets(props: any) {
                 id: 'collab',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
+                    <div className={css['left']}>Discount Ticket Applications open</div>
+                    <div className={`${css['right']} bold`}>June 1</div>
                   </div>
                 ),
                 indent: false,
-                active: true,
+                active: true, // AUTOMATE DATE CHECKING
                 body: '',
               },
               {
                 id: 'collab',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
-                  </div>
-                ),
-                indent: false,
-                body: '',
-              },
-              {
-                id: 'collab',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
+                    <div className={css['left']}>Discount Ticket Applications close</div>
+                    <div className={`${css['right']} bold`}>June 30</div>
                   </div>
                 ),
                 indent: false,
@@ -191,8 +180,8 @@ export default pageHOC(function Tickets(props: any) {
                 id: 'collab',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
+                    <div className={css['left']}>Discount Ticket Responses sent on a rolling basis</div>
+                    <div className={`${css['right']} bold`}>Review Process</div>
                   </div>
                 ),
                 indent: false,
@@ -212,31 +201,24 @@ export default pageHOC(function Tickets(props: any) {
                 id: 'collab',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
+                    <div className={css['left']}>Wave 01</div>
+                    <div className={`${css['right']} bold`}>
+                      July 18 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    </div>
                   </div>
                 ),
                 indent: false,
-                active: true,
+                // active: true,
                 body: '',
               },
               {
                 id: 'collab',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
-                  </div>
-                ),
-                indent: false,
-                body: '',
-              },
-              {
-                id: 'collab',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
+                    <div className={css['left']}>Wave 02</div>
+                    <div className={`${css['right']} bold`}>
+                      July 18 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    </div>
                   </div>
                 ),
                 indent: false,
@@ -246,8 +228,36 @@ export default pageHOC(function Tickets(props: any) {
                 id: 'collab',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins?</div>
-                    <div className={`${css['right']} bold`}>June 13</div>
+                    <div className={css['left']}>Wave 03</div>
+                    <div className={`${css['right']} bold`}>
+                      July 18 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    </div>
+                  </div>
+                ),
+                indent: false,
+                body: '',
+              },
+              {
+                id: 'collab',
+                title: (
+                  <div className={css['timeline-item']}>
+                    <div className={css['left']}>Wave 04</div>
+                    <div className={`${css['right']} bold`}>
+                      July 18 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    </div>
+                  </div>
+                ),
+                indent: false,
+                body: '',
+              },
+              {
+                id: 'collab',
+                title: (
+                  <div className={css['timeline-item']}>
+                    <div className={css['left']}>Wave 05</div>
+                    <div className={`${css['right']} bold`}>
+                      July 18 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    </div>
                   </div>
                 ),
                 indent: false,

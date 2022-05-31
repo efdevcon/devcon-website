@@ -61,6 +61,16 @@
   .right {
     flex-grow: 1;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (min-width: $breakpoints-lg) {
+      justify-content: unset;
+    }
+
+    .when {
+      color: $colors-monochrome-6;
+    }
   }
 }
 
