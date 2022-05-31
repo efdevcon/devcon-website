@@ -67,13 +67,13 @@ const useNavigationData = () => {
           type: 'header',
         },
         {
-          title: intl('navigation_about_devcon'),
-          url: '/about',
+          title: intl('navigation_get_tickets'),
+          url: '/tickets',
           type: 'page',
         },
         {
-          title: intl('navigation_faq'),
-          url: '/faq',
+          title: intl('navigation_tickets_raffle'),
+          url: '/raffle-auction',
           type: 'page',
         },
       ],

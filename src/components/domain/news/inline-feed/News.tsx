@@ -7,6 +7,7 @@ import IconTwitter from 'assets/icons/twitter.svg'
 import { NewsItem } from 'types/NewsItem'
 import moment from 'moment'
 import { Slider, useSlider } from 'components/common/slider'
+import { Link } from 'components/common/link'
 
 type NewsProps = {
   data?: any
@@ -56,7 +57,12 @@ export const News = (props: NewsProps) => {
 
   return (
     <div className={`section no-overflow ${css['news-container']}`}>
-      <h2 className="title spaced">{intl('news')}</h2>
+      <div className="split">
+        <h2 className="title spaced">{intl('news')}</h2>
+        <Link to="news" className="font-sm hover-underline bold text-uppercase">
+          View more
+        </Link>
+      </div>
 
       {/* Only visible on mobile */}
       <div className={css['slider-container']}>

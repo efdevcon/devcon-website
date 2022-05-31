@@ -18,14 +18,18 @@ import CalendarIcon from 'assets/icons/calendar.svg'
 import SelectionIcon from 'assets/icons/selection.svg'
 import Image from 'next/image'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
-import Process1 from 'assets/images/application-process-1.png'
-import Process2 from 'assets/images/application-process-2.png'
-import Process3 from 'assets/images/application-process-3.png'
+import Process from 'assets/images/application-process.png'
+// import Process1 from 'assets/images/application-process-1.png'
+// import Process2 from 'assets/images/application-process-2.png'
+// import Process3 from 'assets/images/application-process-3.png'
 
 const ProcessOverview = () => {
   return (
     <SwipeToScroll>
-      <div className={css['cards']}>
+      <div className={css['process-container']}>
+        <Image src={Process} layout="fill" />
+      </div>
+      {/* <div className={css['cards']}>
         <div className={css['card']}>
           <Image src={Process1} objectFit="cover" layout="fill" />
         </div>
@@ -38,7 +42,7 @@ const ProcessOverview = () => {
         <div className={css['card']}>
           <Image src={Process1} objectFit="cover" layout="fill" />
         </div>
-      </div>
+      </div> */}
     </SwipeToScroll>
   )
 }
@@ -111,14 +115,20 @@ export default pageHOC(function Applications(props: any) {
             </div>
           </div>
 
-          <div className={`${css['guidelines']} clear-bottom `} id="process">
-            <h2 className="spaced clear-top">Process Overview</h2>
+          <div className={`${css['guidelines']} clear-bottom expand`} id="process">
+            <div className="section">
+              <div className="split">
+                <h2 className="spaced clear-top">Process Overview</h2>
 
-            <ProcessOverview />
+                <span className="font-sm bold">DRAG FOR MORE →</span>
+              </div>
+
+              <ProcessOverview />
+            </div>
           </div>
 
           <div className={`${css['guidelines']} clear-bottom clear-top border-top`} id="guidelines">
-            <h2 className="spaced">Application Guidelines</h2>
+            <h2 className="clear-bottom">Application Guidelines</h2>
 
             <List
               withSeparators
@@ -149,13 +159,79 @@ export default pageHOC(function Applications(props: any) {
                 },
                 {
                   id: 'bridging',
-                  title: 'Building bridges with other communities',
-                  body: 'There are many communities adjacent to Ethereum that are value-aligned - Devcon is a chance to come together.',
+                  title: 'Timeline',
+                  body: (
+                    <div>
+                      <ul>
+                        <li>Applications open June 1</li>
+                        <li>Deadline to Apply June 30</li>
+                        <li>All decisions will be sent before the end of July, and as quickly as possible</li>
+                        <li>
+                          NOTE: We want everyone to be able to plan affordable travel if they want to attend Devcon.
+                          Opening applications early in the summer allows applicants ample time to prepare their
+                          applications, reviewers time to carefully review each application, and applicants to know many
+                          months in advance whether or not their application has been accepted.
+                        </li>
+                      </ul>
+                    </div>
+                  ),
                 },
                 {
                   id: 'community-heard',
-                  title: 'Ensuring our community is heard',
-                  body: 'Devcon is a conference for the Ethereum community, and is an opportunity for the community to share important updates.',
+                  title: 'Review Process',
+                  body: (
+                    <div>
+                      <ul>
+                        <li>Applications open June 1</li>
+                        <li>Deadline to Apply June 30</li>
+                        <li>All decisions will be sent before the end of July, and as quickly as possible</li>
+                        <li>
+                          NOTE: We want everyone to be able to plan affordable travel if they want to attend Devcon.
+                          Opening applications early in the summer allows applicants ample time to prepare their
+                          applications, reviewers time to carefully review each application, and applicants to know many
+                          months in advance whether or not their application has been accepted.
+                        </li>
+                      </ul>
+                    </div>
+                  ),
+                },
+                {
+                  id: 'community-heard',
+                  title: 'Decision',
+                  body: (
+                    <div>
+                      <ul>
+                        <li>Applications open June 1</li>
+                        <li>Deadline to Apply June 30</li>
+                        <li>All decisions will be sent before the end of July, and as quickly as possible</li>
+                        <li>
+                          NOTE: We want everyone to be able to plan affordable travel if they want to attend Devcon.
+                          Opening applications early in the summer allows applicants ample time to prepare their
+                          applications, reviewers time to carefully review each application, and applicants to know many
+                          months in advance whether or not their application has been accepted.
+                        </li>
+                      </ul>
+                    </div>
+                  ),
+                },
+                {
+                  id: 'community-heard',
+                  title: 'Other ways to contribute',
+                  body: (
+                    <div>
+                      <ul>
+                        <li>Applications open June 1</li>
+                        <li>Deadline to Apply June 30</li>
+                        <li>All decisions will be sent before the end of July, and as quickly as possible</li>
+                        <li>
+                          NOTE: We want everyone to be able to plan affordable travel if they want to attend Devcon.
+                          Opening applications early in the summer allows applicants ample time to prepare their
+                          applications, reviewers time to carefully review each application, and applicants to know many
+                          months in advance whether or not their application has been accepted.
+                        </li>
+                      </ul>
+                    </div>
+                  ),
                 },
               ]}
             />

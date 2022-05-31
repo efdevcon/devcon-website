@@ -12,6 +12,7 @@ import TrackList from 'components/domain/index/track-list'
 import css from './schedule.module.scss'
 import CallToAction from 'components/common/card/CallToActionCard'
 import ScheduleBackground from 'assets/images/pages/schedule.svg'
+import ArrowRight from 'assets/icons/arrow_right.svg'
 import { useTranslations } from 'next-intl'
 import { Link } from 'components/common/link'
 import List from 'components/common/list'
@@ -20,7 +21,6 @@ import { Button } from 'components/common/button'
 export default pageHOC(function Schedule(props: any) {
   const intl = useTranslations()
   const pageContext = usePageContext()
-  const faqs = props.faq.filter((faq: any) => faq.category.id === 'programming')
 
   return (
     <Page theme={themes['schedule']}>
@@ -59,13 +59,13 @@ export default pageHOC(function Schedule(props: any) {
               </div>
 
               <div className={css['links']}>
-                <Link to="/tickets" className="text-uppercase font-lg bold">
+                <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
                   Tickets
-                  {/* <ArrowRight /> */}
+                  <ArrowRight />
                 </Link>
                 <Link to="/faq" className="text-uppercase hover-underline font-lg bold">
                   Frequently Asked Questions
-                  {/* <ArrowRight /> */}
+                  <ArrowRight />
                 </Link>
               </div>
             </div>
@@ -128,7 +128,7 @@ export default pageHOC(function Schedule(props: any) {
 
         <div id="faq" className="section">
           <FAQ
-            data={[{ id: 'something', title: 'Frequently Asked Questions', questions: faqs }]}
+            data={[{ id: 'something', title: 'Frequently Asked Questions', questions: props.faq }]}
             customCategoryTitle="FAQ"
             noSearch
           />
@@ -168,11 +168,12 @@ export default pageHOC(function Schedule(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/schedule', context.locale)
+  const faq = await GetFAQ(context.locale)
 
   return {
     props: {
       ...globalData,
-      faq: await GetFAQ(context.locale),
+      faq: faq.filter((faq: any) => faq.category.id === 'programming'),
       page,
     },
   }

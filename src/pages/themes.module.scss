@@ -10,13 +10,25 @@
     rgba(0, 149, 255, 0.4) 58.33%,
     rgba(13, 174, 208, 0) 100%
   );
+  --theme-gradient-footer: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #0fadcf 0%,
+    rgba(0, 149, 255, 0.4) 58.33%,
+    rgba(13, 174, 208, 0) 100%
+  );
 }
 
-.blue {
+.tickets, .blue {
   --theme-color: #{$colors-track-blue};
   --theme-color-hover: #{$colors-track-blue-hover};
   --theme-logo: url('../assets/images/theme/info.svg');
   --theme-gradient: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #064ae1 0%,
+    rgba(0, 149, 255, 0.4) 58.33%,
+    rgba(13, 174, 208, 0) 100%
+  );
+  --theme-gradient-footer: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #064ae1 0%,
     rgba(0, 149, 255, 0.4) 58.33%,
@@ -29,6 +41,12 @@
   --theme-color-hover: #{$colors-track-teal-hover};
   --theme-logo: url('../assets/images/pages/get-involved.svg');
   --theme-gradient: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #00b3a4 0%,
+    rgba(0, 255, 117, 0.4) 58.33%,
+    rgba(203, 227, 214, 0) 100%
+  );
+  --theme-gradient-footer: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #00b3a4 0%,
     rgba(0, 255, 117, 0.4) 58.33%,
@@ -66,6 +84,12 @@
     rgba(247, 232, 104, 0.4) 58.33%,
     rgba(242, 238, 166, 0) 100%
   );
+  --theme-gradient-footer: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #fee506 0%,
+    rgba(247, 232, 104, 0.4) 58.33%,
+    rgba(242, 238, 166, 0) 100%
+  );
 }
 
 .orange {
@@ -78,6 +102,12 @@
     rgba(255, 183, 0, 0.4) 58.33%,
     rgba(255, 184, 0, 0) 100%
   );
+  --theme-gradient-footer: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #e55066 0%,
+    rgba(255, 183, 0, 0.4) 58.33%,
+    rgba(255, 184, 0, 0) 100%
+  );
 }
 
 .red {
@@ -85,6 +115,12 @@
   --theme-color-hover: #{$colors-track-red-hover};
   --theme-logo: url('../assets/images/pages/blog.svg');
   --theme-gradient: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #e92639 0%,
+    rgba(232, 123, 104, 0.4) 58.33%,
+    rgba(232, 125, 104, 0) 100%
+  );
+  --theme-gradient-footer: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #e92639 0%,
     rgba(232, 123, 104, 0.4) 58.33%,
@@ -115,6 +151,13 @@
   --theme-color-hover: #{$colors-track-purple-hover};
   --theme-logo: url('../assets/images/pages/bogota.svg');
   --theme-gradient: radial-gradient(
+    73.15% 179.46% at 90.19% 25.94%,
+    #7958a5 0%,
+    #7000ff 0.01%,
+    rgba(189, 0, 255, 0.4) 58.33%,
+    rgba(251, 111, 228, 0) 100%
+  );
+  --theme-gradient-footer: radial-gradient(
     73.15% 179.46% at 90.19% 25.94%,
     #7958a5 0%,
     #7000ff 0.01%,

@@ -91,7 +91,7 @@ $secondary: 'Space Mono', monospace;
 @mixin massive {
   @include secondary;
   @include normal;
-  font-size: sizes.$size-16 + sizes.$size-16 + sizes.$size-8;
+  font-size: sizes.$size-16 + sizes.$size-16;
   line-height: 150%;
 }
 

@@ -45,32 +45,3 @@
     }
   }
 }
-
-.guidelines {
-  // grid-column: 2 / 4;
-}
-
-.cards {
-  display: flex;
-  position: relative;
-  pointer-events: none;
-
-  .card {
-    flex-shrink: 0;
-    flex-basis: auto;
-    position: relative;
-    flex-basis: 28%;
-    height: 441px;
-    // flex-basis: max(25%, 400px);
-    // height: 441px;
-  }
-}
-
-.process-container {
-  display: flex;
-  flex-wrap: nowrap;
-  position: relative;
-  width: 2628px;
-  height: 441px;
-  pointer-events: none;
-}

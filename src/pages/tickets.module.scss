@@ -1,10 +1,5 @@
 @use 'assets/css/partials/index' as *;
 
-.layout {
-  min-height: 100vh;
-  overflow: hidden;
-}
-
 .about {
   position: relative;
   display: flex;
@@ -27,28 +22,13 @@
       margin-right: 120px;
     }
 
-    p, button {
+    p,
+    button {
       margin-top: 1em;
     }
 
     .links {
       display: flex;
-      margin-top: 32px;
-
-      > * {
-        display: flex;
-        align-items: center;
-        margin-right: 48px;
-
-        svg {
-          font-size: 1em;
-          margin-left: 8px;
-        }
-
-        &:last-child {
-          margin-right: 0px;
-        }
-      }
     }
   }
 
@@ -66,34 +46,20 @@
   }
 }
 
-.meta {
+.timeline-item {
   display: flex;
-  flex-direction: column;
-
-  @media (min-width: $breakpoints-xl) {
-    flex-direction: row;
-  }
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-between;
+  @include fonts-md;
 
   .left {
-    flex-basis: auto;
+    flex-basis: 40%;
     flex-shrink: 0;
-
-    @media (min-width: $breakpoints-xl) {
-      flex-basis: 50%;
-      margin-right: 32px;
-    }
   }
 
   .right {
-    flex-basis: auto;
-    margin-top: 32px;
-    // display: none;
-
-    @media (min-width: $breakpoints-xl) {
-      display: block;
-      flex-basis: auto;
-      flex-grow: 1;
-      margin-top: 0px;
-    }
+    flex-grow: 1;
+    display: flex;
   }
 }
