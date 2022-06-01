@@ -3,8 +3,17 @@
 
 @keyframes in-up {
   0% {
-    // opacity: 0;
-    // display: block;
+    transform: translateY(15%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes in-up-opacity {
+  0% {
+    opacity: 0;
     transform: translateY(15%);
   }
 
@@ -249,17 +258,8 @@ $logo-offset: 50px;
 }
 
 .parallax-container {
-  // display: none;
-
-  @media (min-width: $breakpoints-lg) {
-    display: block;
-  }
-}
-
-.parallax-container {
-  // opacity: 0;
-  // display: none;
-  animation: in-up 2s ease-out forwards;
+  opacity: 0;
+  animation: in-up-opacity 2.5s ease-out forwards;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -270,17 +270,11 @@ $logo-offset: 50px;
       width: 450px;
       max-width: 80vw;
     }
-    // @media (max-width: 1000px) {
-    //   width: 200px;
-    //   height: 30%;
-    // }
   }
 }
 
 .parallax-container-2 {
-  // opacity: 0;
-  // animation: sway 60s linear infinite;
-  animation: in-up 2s ease-out forwards, sway 90s 2.5s linear infinite;
+  animation: in-up 2.5s ease-out forwards, sway 90s 2.5s linear infinite;
   position: absolute;
   width: 108%;
   left: -4%;
@@ -291,10 +285,8 @@ $logo-offset: 50px;
   position: relative;
   background-image: url('./images/clouds.png');
   background-size: auto max(100px, 11%);
-  // background-size: cover;
   background-position: center bottom;
   background-repeat: repeat-x;
-  // opacity: 0.9;
   bottom: 0px;
   height: 100%;
   width: 100%;
