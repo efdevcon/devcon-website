@@ -1,17 +1,16 @@
 import React from 'react'
 import css from './hero.module.scss'
-import Logo from 'assets/images/devcon-logo.svg'
-import Rays from './svgs/Rays'
+import Logo from 'assets/images/hero/hero-logo-mobile.svg'
+// import Logo from 'assets/images/devcon-logo.svg'
+import Rays from './images/Rays'
 import { useTranslations } from 'next-intl'
 import { TITLE } from 'utils/constants'
 import { CallToAction } from './call-to-action'
-import Image from 'next/image'
-import imageClouds from './svgs/clouds.png'
-import imageMountains from 'assets/images/mountains.png'
-import MountainsLayer1 from 'assets/images//mtn-1.svg'
-import MountainsLayer2 from 'assets/images//mtn-2.svg'
-import MountainsLayer3 from 'assets/images//mtn-3.svg'
-import MountainsLayer4 from 'assets/images//mtn-4.svg'
+import MountainsLayer1 from 'assets/images/mtn-1.svg'
+import MountainsLayer2 from 'assets/images/mtn-2.svg'
+import MountainsLayer3 from 'assets/images/mtn-3.svg'
+import MountainsLayer4 from 'assets/images/mtn-4.svg'
+import Mountains from 'assets/images/mtn-all-layers.svg'
 
 const useParallax = (elementRef: any) => {
   const [parallaxMultiplier, setParallaxMultiplier] = React.useState(0)
@@ -26,9 +25,9 @@ const useParallax = (elementRef: any) => {
     }
 
     const callback = (entries: any) => {
-      const { intersectionRatio, boundingClientRect } = entries[0]
+      const { intersectionRatio } = entries[0]
 
-      setParallaxMultiplier(intersectionRatio)
+      setParallaxMultiplier(1 - intersectionRatio)
     }
 
     const observer = new IntersectionObserver(callback, options)
@@ -43,11 +42,11 @@ const useParallax = (elementRef: any) => {
   return parallaxMultiplier
 }
 
-const parallax = (parallaxMultiplier: any, initial = 15, range = 15, min = 10000) => {
+const parallax = (parallaxMultiplier: any, initial = -15, range = 15) => {
   const translateY = initial - parallaxMultiplier * range
 
   return {
-    transform: `translateY(${Math.min(min, translateY)}%)`,
+    transform: `translateY(${translateY}%)`,
   }
 }
 
@@ -65,26 +64,25 @@ export const Hero = () => {
         </div>
 
         <div className={css['parallax-container']}>
-          <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
+          <div className={css['mountain-container']}>
+            <Mountains />
+          </div>
+          {/* <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
             <MountainsLayer1 />
-            {/* <Image alt="Devcon mountains" src={mountainsLayer4} objectFit="contain" /> */}
           </div>
           <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
             <MountainsLayer2 />
-            {/* <Image alt="Devcon mountains" src={mountainsLayer3} objectFit="contain" /> */}
           </div>
-          <div className={css['mountain-container']} style={parallax(parallaxMultiplier, 20, 20) as any}>
+          <div className={css['mountain-container']} style={parallax(parallaxMultiplier, 7.5, 7.5, 5) as any}>
             <MountainsLayer3 />
-            {/* <Image alt="Devcon mountains" src={mountainsLayer1} objectFit="contain" /> */}
           </div>
           <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
             <MountainsLayer4 />
-            {/* <Image alt="Devcon mountains" src={mountainsLayer2} objectFit="contain" /> */}
-          </div>
+          </div> */}
         </div>
 
         <div className={css['parallax-container-2']}>
-          <div className={css['clouds']} style={parallax(parallaxMultiplier, 7.5, 7.5, 5) as any}></div>
+          <div className={css['clouds']} style={parallax(parallaxMultiplier, 4, 4) as any}></div>
         </div>
 
         <div className={css['left-rotated']}>

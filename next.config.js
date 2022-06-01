@@ -37,6 +37,7 @@ const nextConfig = {
                         params: {
                           overrides: {
                             removeViewBox: false,
+                            cleanupIDs: false, // Critical to have this, otherwise svgs can start affecting each other
                           },
                         },
                       },

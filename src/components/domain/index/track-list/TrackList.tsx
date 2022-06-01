@@ -2,7 +2,7 @@ import React from 'react'
 import css from './track-list.module.scss'
 import Accordion from 'components/common/accordion'
 import Image from 'next/image'
-import Layer1 from 'assets/images/tracks/icons/layer-1.png'
+import Layer1 from 'assets/images/tracks/icons/layer-1.svg'
 import Cryptoeconomics from 'assets/images/tracks/icons/cryptoeconomics.png'
 import DeveloperInfra from 'assets/images/tracks/icons/developer-infra.png'
 import Governance from 'assets/images/tracks/icons/governance-coordination.png'
@@ -20,7 +20,8 @@ const tracks = [
     title: (
       <div className={css['track-title']}>
         <span className={css['icon-container']}>
-          <Image src={Layer1} alt="Layer 1 track icon" />
+          <Layer1 />
+          {/* <Image src={Layer1} alt="Layer 1 track icon" /> */}
         </span>
         Layer 1 Protocol
       </div>

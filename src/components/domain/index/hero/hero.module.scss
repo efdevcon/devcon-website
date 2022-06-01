@@ -3,7 +3,8 @@
 
 @keyframes in-up {
   0% {
-    opacity: 0;
+    // opacity: 0;
+    // display: block;
     transform: translateY(15%);
   }
 
@@ -15,8 +16,8 @@
 
 @keyframes enter {
   0% {
-    opacity: 0;
-    transform: scale(0.3);
+    opacity: 0.3;
+    transform: scale(0.1);
   }
 
   100% {
@@ -28,7 +29,7 @@
 @keyframes in-up-logo {
   0% {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.9);
     // transform: translateY(30%);
   }
 
@@ -160,27 +161,20 @@ $logo-offset: 50px;
     display: flex;
     width: 100%;
     height: 100%;
+    top: -75px;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    animation: enter 4.5s ease-out forwards;
+    animation: enter 3.5s 0s ease-out forwards;
+
+    @media (max-width: 1000px) {
+      width: 200%;
+      left: -50%;
+    }
 
     .rays {
-
-      // position: absolute;
       animation: rotate 240s linear infinite;
       width: 100%;
-      // height: 100%;
-      top: -$logo-offset;
-
-      // @media (max-width: $breakpoints-tiny) {
-      //   width: 200%;
-      //   // top: -(math.div($logo-offset, 2));
-      // }
-
-      @media (max-width: $breakpoints-lg) and (orientation: landscape) {
-        // top: -(math.div($logo-offset, 2));
-      }
     }
   }
 
@@ -228,6 +222,7 @@ $logo-offset: 50px;
 
   .logo-container {
     position: absolute;
+    top: -75px;
     width: 100%;
     height: 100%;
     color: white;
@@ -238,12 +233,14 @@ $logo-offset: 50px;
     flex-direction: column;
     opacity: 0;
     transform: scale(1);
-    animation: in-up-logo 4s 2s ease forwards;
+    animation: in-up-logo 3s 2.25s ease forwards;
 
     .logo {
       display: flex;
       position: relative;
-      width: max(275px, 20%);
+      min-width: 300px;
+      width: 100%;
+      max-width: 24%;
       height: auto;
       justify-content: center;
       align-items: center;
@@ -252,7 +249,7 @@ $logo-offset: 50px;
 }
 
 .parallax-container {
-  display: none;
+  // display: none;
 
   @media (min-width: $breakpoints-lg) {
     display: block;
@@ -260,17 +257,30 @@ $logo-offset: 50px;
 }
 
 .parallax-container {
-  opacity: 0;
-  animation: in-up 1.5s 1s ease-out forwards;
+  // opacity: 0;
+  // display: none;
+  animation: in-up 2s ease-out forwards;
   position: absolute;
   width: 100%;
   height: 100%;
+
+  .mountain-container {
+    svg {
+      height: auto;
+      width: 450px;
+      max-width: 80vw;
+    }
+    // @media (max-width: 1000px) {
+    //   width: 200px;
+    //   height: 30%;
+    // }
+  }
 }
 
 .parallax-container-2 {
-  opacity: 0;
+  // opacity: 0;
   // animation: sway 60s linear infinite;
-  animation: in-up 2.5s ease-out forwards, sway 90s 2.5s linear infinite;
+  animation: in-up 2s ease-out forwards, sway 90s 2.5s linear infinite;
   position: absolute;
   width: 108%;
   left: -4%;
@@ -279,7 +289,7 @@ $logo-offset: 50px;
 
 .clouds {
   position: relative;
-  background-image: url('./svgs/clouds.png');
+  background-image: url('./images/clouds.png');
   background-size: auto max(100px, 11%);
   // background-size: cover;
   background-position: center bottom;
