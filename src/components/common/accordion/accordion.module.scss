@@ -34,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
 
-    svg {
+    > svg {
       flex-shrink: 0;
       // --icon-color: white;
       font-size: 0.65em;

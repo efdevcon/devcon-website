@@ -20,7 +20,14 @@
   .icon-container {
     width: 32px;
     height: 32px;
+    position: relative;
     margin-right: 48px;
+    
+    svg {
+      all: unset;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
