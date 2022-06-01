@@ -44,6 +44,11 @@
         fill: $orange;
       }
     }
+
+    &:hover {
+      box-shadow: 0px 4px 11px rgba($colors-monochrome-10, 0.2);
+      border: 1px solid $orange;
+    }
   }
 
   .header, .footer {
