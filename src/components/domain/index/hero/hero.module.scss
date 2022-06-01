@@ -111,9 +111,9 @@ $logo-offset: 50px;
 
   // Using 100vh on mobile devices often doesn't account for the navigation bar at the bottom, so this is a decent compromise - if it's important to fill the entire
   // screen we can fall back to a JS solution - pending feedback
-  // @media (max-width: $breakpoints-lg) {
-  //   height: 90vh;
-  // }
+  @media (max-width: $breakpoints-lg) {
+    height: 90vh;
+  }
 
   // @media (max-width: $breakpoints-md) {
   //   height: 85vh;
@@ -272,6 +272,12 @@ $logo-offset: 50px;
 }
 
 .parallax-container-2 {
+  > * {
+    @media (hover: none) {
+      transform: translateY(0px) !important;
+    }
+  }
+
   animation: in-up 2.5s ease-out forwards, sway 90s 2.5s linear infinite;
   position: absolute;
   width: 108%;
