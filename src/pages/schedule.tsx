@@ -54,7 +54,8 @@ export default pageHOC(function Schedule(props: any) {
                 <h2>Programming</h2>
                 <p className="h2 highlighted">
                   Devcon is geared toward Ethereum&apos;s builders, creators, and thinkers who wish to improve this
-                  world and takes a holistic approach and aims to engage all attendees.
+                  world. Programming at Devcon takes a holistic approach and aims to engage all attendees through talks,
+                  panels, workshops, lightning talks, and freeform learning sessions.
                 </p>
               </div>
 

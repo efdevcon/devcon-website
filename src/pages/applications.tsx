@@ -74,8 +74,9 @@ export default pageHOC(function Applications(props: any) {
               <div>
                 <h2>Speaker Applications</h2>
                 <p className="h2 highlighted">
-                  Learn how to apply to speak or give a workshop, when you can expect to hear back on your application,
-                  how the selection process works, and other ways to contribute to Devcon VI.
+                  Devcon speaker applications are now open and we invite anyone who would like to contribute to submit
+                  an application. Applications are open to the public, anyone can apply to give a talk. You must submit
+                  your application before the deadline of June 23 at 23:59:59 UTC.
                 </p>
               </div>
 
