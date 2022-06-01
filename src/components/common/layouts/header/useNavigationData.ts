@@ -187,28 +187,28 @@ const useNavigationData = () => {
     ],
     right: [
       {
-        title: intl('navigation_tickets'),
-        url: '/tickets',
-        type: 'page',
-      },
-      {
         title: 'FAQ',
         url: '/faq',
         type: 'page',
       },
       {
-        title: intl('navigation_city_guide'),
-        url: '/bogota',
+        title: intl('navigation_tickets'),
+        url: '/tickets',
         type: 'page',
       },
       {
-        title: intl('navigation_news'),
-        url: '/news',
+        title: intl('navigation_program'),
+        url: '/schedule',
         type: 'page',
       },
       {
         title: 'DIPs',
         url: '/dips',
+        type: 'page',
+      },
+      {
+        title: intl('navigation_city_guide'),
+        url: '/bogota',
         type: 'page',
       },
     ],

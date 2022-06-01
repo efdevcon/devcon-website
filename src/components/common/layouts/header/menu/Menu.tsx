@@ -129,7 +129,9 @@ export const Menu = (props: any) => {
 
       <div className={css['right']}>
         <Navigation navigationData={context?.navigation} />
-        <LanguageToggle />
+        <div className={css['language-toggle-container']}>
+          <LanguageToggle />
+        </div>
       </div>
 
       <Buttons buttons={buttons} />
@@ -142,7 +144,7 @@ export const Menu = (props: any) => {
       <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
         <div className={css['foldout-top']}>
           <Left navigationData={context?.navigation} />
-          {/* <LanguageToggle /> */}
+          <LanguageToggle />
         </div>
         <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
       </Foldout>

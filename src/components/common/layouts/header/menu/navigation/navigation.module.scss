@@ -28,7 +28,7 @@
   flex-wrap: wrap;
   font-family: $fonts-primary;
 
-  @media (min-width: $breakpoints-lg + 1) {
+  @media (min-width: 1351px) {
     display: flex;
   }
 

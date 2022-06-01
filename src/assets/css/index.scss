@@ -43,8 +43,5 @@ body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media screen and (max-device-width: 480px){
-    -webkit-text-size-adjust: none; 
-  }
+  -webkit-text-size-adjust: none; 
 }

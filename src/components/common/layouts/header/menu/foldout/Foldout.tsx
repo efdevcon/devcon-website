@@ -18,7 +18,7 @@ const FoldoutContent = (props: any) => {
 
   if (!mounted) return null
 
-  let foldoutClassName = `${css['foldout']}`
+  let foldoutClassName = `${css['foldout']} section`
 
   if (props.foldoutOpen) foldoutClassName += ` ${css['open']}`
 
@@ -35,7 +35,7 @@ const FoldoutContent = (props: any) => {
           </div>
 
           <div className={css['newsletter']}>
-            <Newsletter id='foldout_newsletter_email' />
+            <Newsletter id="foldout_newsletter_email" />
           </div>
 
           <div className={css['copyright']}>

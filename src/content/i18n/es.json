@@ -129,7 +129,10 @@
     "contribute": "Contribuir",
     "tickets": "Entradas",
     "program": "Program",
-    "program_overview": "Overview"
+    "program_overview": "Overview",
+    "program_apply_to_speak": "Apply to speak",
+    "get_tickets": "Get Tickets",
+    "tickets_raffle": "Raffle+Auction"
   },
   "footer": {
     "about_devcon_1": "Acerca de Devcon —",

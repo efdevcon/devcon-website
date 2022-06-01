@@ -1,6 +1,7 @@
 @use 'assets/css/partials/index' as *;
 
 .strip {
+  display: none !important; // Temporarily disabling
   @include fonts-sm;
   position: relative;
   z-index: 20;

@@ -25,7 +25,7 @@
     display: none;
     align-items: center;
 
-    @media (min-width: $breakpoints-lg + 1) {
+    @media (min-width: 1351px) {
       display: flex;
     }
   }
@@ -38,6 +38,12 @@
     align-items: center;
     flex-direction: row;
     justify-content: flex-end;
+
+    @media (max-width: 1350px) {
+      :global(#language-toggle) {
+        display: none;
+      } 
+    }
   }
 }
 
@@ -64,7 +70,7 @@
     cursor: pointer;
     // background: transparent;
 
-    @media (max-width: $breakpoints-lg) {
+    @media (max-width: 1350px) {
       background: transparent;
       border: none !important;
       width: 45px;
@@ -81,7 +87,7 @@
     &.mobile-only {
       display: none;
 
-      @media (max-width: $breakpoints-lg) {
+      @media (max-width: 1350px) {
         touch-action: none;
         display: flex;
       }
@@ -134,7 +140,7 @@
 .desktop {
   display: none !important;
 
-  @media (min-width: $breakpoints-lg + 1) {
+  @media (min-width: 1351px) {
     display: flex !important;
   }
 }
@@ -142,7 +148,7 @@
 .mobile {
   display: none !important;
 
-  @media (max-width: $breakpoints-lg) {
+  @media (max-width: 1350px) {
     display: block !important;
   }
 }

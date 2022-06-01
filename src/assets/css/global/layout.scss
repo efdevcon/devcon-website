@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoints-md) {
+  @media (max-width: $breakpoints-lg) {
     flex-direction: column;
 
     >* {
@@ -35,6 +35,14 @@
       &:first-child {
         margin-bottom: 1em;
       }
+    }
+  }
+
+  .right {
+    margin-top: 32px;
+
+    @media (min-width: $breakpoints-lg) {
+      margin-top: 0px;
     }
   }
 

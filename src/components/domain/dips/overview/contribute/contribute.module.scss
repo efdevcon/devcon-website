@@ -30,7 +30,7 @@
     // flex-wrap: wrap;
     margin-bottom: $gaps-gap-10;
 
-    @media (max-width: $breakpoints-lg) {
+    @media (max-width: $breakpoints-xl) {
       flex-direction: column;
     }
 
@@ -43,15 +43,19 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin-right: 60px;
 
-      @media (max-width: $breakpoints-lg) {
+      @media (max-width: $breakpoints-xl) {
         flex-basis: auto;
+        margin-right: 0px;
       }
 
       .dip-description {
         flex-shrink: 0;
 
+
         @media (max-width: $breakpoints-lg) {
+
           // flex-basis: 100%;
         }
       }
@@ -73,9 +77,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      flex-basis: 50%;
+      flex-basis: 65%;
+      // min-height: 500px;
 
-      @media (max-width: $breakpoints-lg) {
+      @media (max-width: $breakpoints-xl) {
         margin-top: $gaps-gap-10;
         flex-basis: auto;
       }

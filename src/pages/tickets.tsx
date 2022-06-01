@@ -35,6 +35,8 @@ const Ticket = (props: TicketProps) => {
   return (
     <div className={className}>
       <div className={css['background-logo']}></div>
+      <div className={css['mask']}></div>
+      <div className={css['border']}></div>
       <div className={css['left']}>
         <div className={css['background-number']}>
           <span>{props.number}</span>
