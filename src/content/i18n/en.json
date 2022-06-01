@@ -98,7 +98,6 @@
   "rtd_share_copy_link": "Copy link",
   "browser_not_supported": "Your current browser is outdated and does not support modern web technologies, please upgrade your browser to the latest version or use another browser",
   "feed_no_results": "No results",
-  "tickets": "Tickets",
   "previous": "Previous",
   "next": "Next",
   "devcon_updates": "Devcon Updates",
@@ -137,7 +136,21 @@
   "program": {
     "overview_about": "About",
     "overview_values": "Values",
-    "overview_tracks": "Tracks"
+    "overview_tracks": "Tracks",
+    "overview_faq": "FAQ",
+    "application_process": "Process",
+    "application_guidelines": "Application Guidelines"
+  },
+  "tickets": {
+    "title": "Tickets", 
+    "timeline": "Timeline",
+    "auction": "Auction",
+    "raffle": "Raffle",
+    "withdrawal": "Withdrawal",
+    "poap": "POAP",
+    "types_and_pricing": "Types & Pricing",
+    "faq": "FAQ",
+    "reasoning": "Reasoning"
   },
   "footer": {
     "about_devcon_1": "About Devcon —",

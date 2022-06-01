@@ -68,7 +68,9 @@
       box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
       display: none;
       color: $colors-monochrome-10;
+      --color-icon: black;
       background-color: $colors-monochrome-1;
+
 
       .foldout-link {
         text-transform: uppercase;

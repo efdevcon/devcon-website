@@ -98,7 +98,6 @@
   "rtd_share_copy_link": "Copiar link",
   "browser_not_supported": "Su navegador actual está desactualizado y no es compatible con las tecnologías web modernas. Actualice su navegador a la última versión o utilice otro navegador.",
   "feed_no_results": "No results",
-  "tickets": "Entradas",
   "previous": "Previous",
   "next": "Next",
   "devcon_updates": "Actualizaciones de Devcon",
@@ -133,6 +132,25 @@
     "program_apply_to_speak": "Apply to speak",
     "get_tickets": "Get Tickets",
     "tickets_raffle": "Raffle+Auction"
+  },
+  "program": {
+    "overview_about": "About",
+    "overview_values": "Values",
+    "overview_tracks": "Tracks",
+    "overview_faq": "FAQ",
+    "application_process": "Process",
+    "application_guidelines": "Application Guidelines"
+  },
+  "tickets": {
+    "title": "Entradas", 
+    "timeline": "Timeline",
+    "auction": "Auction",
+    "raffle": "Raffle",
+    "withdrawal": "Withdrawal",
+    "poap": "POAP",
+    "types_and_pricing": "Types & Pricing",
+    "faq": "FAQ",
+    "reasoning": "Reasoning"
   },
   "footer": {
     "about_devcon_1": "Acerca de Devcon —",

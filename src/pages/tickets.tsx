@@ -55,7 +55,7 @@ const Ticket = (props: TicketProps) => {
         </p>
       </div>
       <div className={css['right']}>
-        <p className="font-sm">{props.description}</p>
+        <span className="font-sm">{props.description}</span>
         <span className={`${css['tag']} label bold`}>{props.tag}</span>
       </div>
     </div>
@@ -72,12 +72,16 @@ export default pageHOC(function Tickets(props: any) {
         path={[{ text: <span className="bold">Tickets</span> }, { text: 'Get Tickets' }]}
         navigation={[
           {
-            title: intl('program_application_process'),
-            to: '#process',
+            title: intl('tickets_timeline'),
+            to: '#timeline',
           },
           {
-            title: intl('program_application_guidelines'),
-            to: '#guidelines',
+            title: intl('tickets_types_and_pricing'),
+            to: '#types',
+          },
+          {
+            title: intl('tickets_faq'),
+            to: '#faq',
           },
         ]}
       />
@@ -119,7 +123,9 @@ export default pageHOC(function Tickets(props: any) {
           </div>
         </div>
 
-        <h2 className="clear-top clear-bottom border-bottom margin-bottom">Timeline</h2>
+        <h2 className="clear-top clear-bottom border-bottom margin-bottom" id="timeline">
+          Timeline
+        </h2>
 
         <div className="clear-bottom">
           <h2 className="spaced">Presale Raffle+Auction</h2>
@@ -274,7 +280,7 @@ export default pageHOC(function Tickets(props: any) {
           />
         </div>
 
-        <div className="border-bottom clear-bottom margin-bottom">
+        <div className="border-bottom clear-bottom margin-bottom border-top clear-top" id="types">
           <h2 className="spaced">Ticket Types &amp; Pricing</h2>
           <p className="clear-bottom">
             Payment will be accepted in <b>ETH</b> or <b>DAI</b> on Ethereum Mainnet, Arbitrum + Optimism, OR Fiat/Card
@@ -310,7 +316,7 @@ export default pageHOC(function Tickets(props: any) {
                 <div>
                   For students &amp; educators alike. If you&apos;d like to apply for a Student discount.
                   <br /> <br />
-                  <span className="font-xs">
+                  <span className="font-sm">
                     <span className="bold">*Note:</span> School/University ID required at check-in to prevent resale.
                     Secondary/high school, College, or University.
                   </span>

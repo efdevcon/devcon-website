@@ -24,12 +24,24 @@ export default pageHOC(function RaffleAuction(props: any) {
         path={[{ text: <span className="bold">Tickets</span> }, { text: 'Raffle+Auction' }]}
         navigation={[
           {
-            title: intl('program_application_process'),
-            to: '#process',
+            title: intl('tickets_timeline'),
+            to: '#about',
           },
           {
-            title: intl('program_application_guidelines'),
-            to: '#guidelines',
+            title: intl('tickets_auction'),
+            to: '#auction',
+          },
+          {
+            title: intl('tickets_withdrawal'),
+            to: '#raffle',
+          },
+          {
+            title: intl('tickets_poap'),
+            to: '#poap',
+          },
+          {
+            title: intl('tickets_reasoning'),
+            to: '#reasoning',
           },
         ]}
       />
@@ -74,7 +86,7 @@ export default pageHOC(function RaffleAuction(props: any) {
           </div>
         </div>
 
-        <div className="clear-top clear-bottom border-bottom">
+        <div className="clear-top clear-bottom border-bottom" id="auction">
           <h2 className="spaced">How will the auction work?</h2>
           <p>
             We will begin taking bids on ___ at _am EST and bidding will close at _pm EST xx/xx/xxxx. The minimum bid
@@ -84,7 +96,7 @@ export default pageHOC(function RaffleAuction(props: any) {
           </p>
         </div>
 
-        <div className="clear-top clear-bottom border-bottom">
+        <div className="clear-top clear-bottom border-bottom" id="raffle">
           <h2 className="spaced">How will the raffle work?</h2>
           <p>
             All Auction participants who do not make one of the top 20 bids will be funneled into a Raffle to win 1 of
@@ -95,7 +107,7 @@ export default pageHOC(function RaffleAuction(props: any) {
           </p>
         </div>
 
-        <div className="clear-top clear-bottom border-bottom">
+        <div className="clear-top clear-bottom border-bottom" id="withdrawal">
           <h2 className="spaced">Will I get my money back if I do not win the Auction or win the Raffle?</h2>
           <p>
             Yes, you will be able to withdraw your funds if you do not win either the Auction or Raffle &#40;minus a 2%
@@ -104,7 +116,7 @@ export default pageHOC(function RaffleAuction(props: any) {
           </p>
         </div>
 
-        <div className="clear-top clear-bottom border-bottom">
+        <div className="clear-top clear-bottom border-bottom" id="poap">
           <h2 className="spaced">What will the POAP NFTs be good for? </h2>
           <p>
             There may be future opportunities to provide rewards or discounts to those who hold a Devcon Raffle/Auction
@@ -112,7 +124,7 @@ export default pageHOC(function RaffleAuction(props: any) {
           </p>
         </div>
 
-        <div className="clear-top clear-bottom">
+        <div className="clear-top clear-bottom" id="reasoning">
           <h2 className="clear-bottom">Reasoning</h2>
 
           <h3 className="highlighted clear-bottom">Dogfooding</h3>

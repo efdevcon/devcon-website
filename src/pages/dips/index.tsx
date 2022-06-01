@@ -25,18 +25,18 @@ export default pageHOC(function DIPsTemplate(props: any) {
     <Page theme={themes['teal']}>
       <PageHero
         path={[{ text: <span className="bold">Get Involved</span> }, { text: 'DIPs' }]}
-        cta={[
-          {
-            title: intl('dips_review_dips'),
-            to: 'https://forum.devcon.org',
-            icon: <BulletList />,
-          },
-          {
-            title: intl('dips_create_proposal'),
-            to: 'https://forum.devcon.org',
-            icon: <Pencil />,
-          },
-        ]}
+        // cta={[
+        //   {
+        //     title: intl('dips_review_dips'),
+        //     to: 'https://forum.devcon.org',
+        //     icon: <BulletList />,
+        //   },
+        //   {
+        //     title: intl('dips_create_proposal'),
+        //     to: 'https://forum.devcon.org',
+        //     icon: <Pencil />,
+        //   },
+        // ]}
         navigation={[
           {
             title: intl('dips_forum').toUpperCase(),
