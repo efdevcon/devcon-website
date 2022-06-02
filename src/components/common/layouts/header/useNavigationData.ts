@@ -49,6 +49,11 @@ const useNavigationData = () => {
           type: 'page',
         },
         {
+          title: intl('navigation_past_events'),
+          url: '/past-events',
+          type: 'page',
+        },
+        {
           title: intl('navigation_faq'),
           url: '/faq',
           type: 'page',
@@ -91,7 +96,7 @@ const useNavigationData = () => {
         },
         {
           title: intl('navigation_program_overview'),
-          url: '/schedule',
+          url: '/overview',
           type: 'page',
         },
         {

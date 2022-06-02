@@ -157,6 +157,39 @@ $link: #488def;
   color: $monochrome-1 !important;
 }
 
+// Green
+@mixin green {
+  background: $track-green;
+  --color-icon: #{$monochrome-1};
+  color: $monochrome-1;
+  --border-color: #{$track-green};
+}
+@mixin green-ghost {
+  background: none;
+  color: $track-green;
+  --color-icon: #{$track-green};
+  --border-color: #{#{$track-green}};
+}
+@mixin green-hover {
+  background: $track-green-hover;
+
+  // For use by Button component (animates colors when hovering)
+  --button-color: #{$monochrome-1};
+  --button-color-background: #{$track-green};
+  --button-color-background-hover: #{$track-green-hover};
+
+  &.ghost {
+    @include green;
+  }
+}
+
+@mixin green-disabled {
+  background: #ddcccf !important;
+  --border-color: #{#d6b1b6 !important};
+  --color-icon: #{$monochrome-1} !important;
+  color: $monochrome-1 !important;
+}
+
 // Purple
 @mixin purple {
   background: $track-purple;

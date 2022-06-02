@@ -27,6 +27,15 @@
       p, button {
         margin-top: 1em;
       }
+
+      .grey {
+        color: $colors-monochrome-6;
+      }
+
+      .crossed-out {
+        color: $colors-monochrome-6;
+        text-decoration: line-through;
+      }
     }
 
     .right {

@@ -14,7 +14,7 @@ export default pageHOC(function BlogsTemplate(props: any) {
   const pageContext = usePageContext()
 
   return (
-    <Page theme={themes['blue']}>
+    <Page theme={themes['news']}>
       <PageHero />
 
       <div className="section">

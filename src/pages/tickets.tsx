@@ -55,7 +55,7 @@ const Ticket = (props: TicketProps) => {
         </p>
       </div>
       <div className={css['right']}>
-        <span className="font-sm">{props.description}</span>
+        <span className="font-sm bold">{props.description}</span>
         <span className={`${css['tag']} label bold`}>{props.tag}</span>
       </div>
     </div>
@@ -296,27 +296,23 @@ export default pageHOC(function Tickets(props: any) {
               tag="Waves coming soon"
             />
             <Ticket
-              title="Builder Ticket"
-              price="$299"
-              color="grey"
-              number="02"
-              description={
-                <div>
-                  For those who actively volunteer their time to the growth, research and development of the ecosystem.*
-                </div>
-              }
+              title="Press Pass"
+              price="FREE"
+              color="blue"
+              number="04"
+              description={<div>Gain access to Devcon as a Press Staff.* </div>}
               tag="Apply now"
             />
             <Ticket
               title="Student Ticket"
               price="$149"
               color="grey"
-              number="03"
+              number="02"
               description={
                 <div>
                   For students &amp; educators alike. If you&apos;d like to apply for a Student discount.
                   <br /> <br />
-                  <span className="font-sm">
+                  <span className="font-xxs">
                     <span className="bold">*Note:</span> School/University ID required at check-in to prevent resale.
                     Secondary/high school, College, or University.
                   </span>
@@ -328,16 +324,20 @@ export default pageHOC(function Tickets(props: any) {
               title="Volunteer"
               price="FREE"
               color="blue"
-              number="04"
+              number="05"
               description={<div>If you are interested in Volunteering at Devcon.*</div>}
               tag="Apply now"
             />
             <Ticket
-              title="Press Pass"
-              price="FREE"
-              color="blue"
-              number="05"
-              description={<div>Gain access to Devcon as a Press Staff.* </div>}
+              title="Builder Ticket"
+              price="$299"
+              color="grey"
+              number="03"
+              description={
+                <div>
+                  For those who actively volunteer their time to the growth, research and development of the ecosystem.*
+                </div>
+              }
               tag="Apply now"
             />
           </div>

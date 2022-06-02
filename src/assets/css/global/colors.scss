@@ -59,6 +59,18 @@
   }
 }
 
+.green {
+  @include colors-green;
+
+  &.ghost {
+    @include colors-green-ghost;
+  }
+
+  &.disabled {
+    @include colors-green-disabled;
+  }
+}
+
 .app {
   @include colors-app;
 

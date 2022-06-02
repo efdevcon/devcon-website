@@ -87,11 +87,59 @@
   }
 
   &.grey {
-    background: #F7F7F7;
+    background: #FFF6E4;
+
+    .mask {
+      &:before, &:after {
+        border-color: rgb(255, 153, 0, 0.3);
+      }
+    }
+
+    .border, .right {
+      border-color: rgb(255, 153, 0, 0.3);
+    }
+
+    &:hover {
+      background: #FFEFCE;
+
+      .mask {
+        &:before, &:after {
+          border-color: rgb(255, 153, 0, 0.5);
+        }
+      }
+  
+      .border, .right {
+        border-color: rgb(255, 153, 0, 0.5);
+      }
+    }
   }
 
   &.blue {
-    background: #FBFDFF;
+    background: #EAF7FF;
+
+    .mask {
+      &:before, &:after {
+        border-color: rgb(29, 110, 173, 0.3);
+      }
+    }
+
+    .border, .right {
+      border-color: rgb(29, 110, 173, 0.3);
+    }
+
+    &:hover {
+      background: #D3EFFF;
+
+      .mask {
+        &:before, &:after {
+          border-color: rgb(29, 110, 173, 0.5);
+        }
+      }
+
+      .right, .border {
+        border-color: rgb(29, 110, 173, 0.5);
+      }
+    }
   }
 
   .border {
@@ -101,7 +149,7 @@
     top: 0px;
     z-index: 1;
     bottom: 0px;
-    border: 1px solid $colors-standard-border-color;
+    border: 3px solid $colors-standard-border-color;
   }
 
   .mask {
@@ -122,7 +170,7 @@
       height: 38px;
       width: 38px;
       background: white;
-      border: 2px solid $colors-standard-border-color;
+      border: 3px solid $colors-standard-border-color;
       border-radius: 1000px;
     }
   
@@ -207,11 +255,41 @@
 }
 
 .tickets {
-  display: grid;
-  grid-gap: 8px;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin-top: 8px;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 4;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:nth-child(4) {
+      order: 5;
+    }
+
+    &:nth-child(5) {
+      order: 3;
+    }
+  }
 
   @media (min-width: $breakpoints-lg) {
+    margin-top: 0px;
+    display: grid;
+    grid-gap: 8px;
     grid-template-columns: 1fr 1fr;
+
+    > * {
+      order: 0 !important;
+    }
   }
 }

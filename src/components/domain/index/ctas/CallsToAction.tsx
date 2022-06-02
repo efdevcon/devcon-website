@@ -12,7 +12,7 @@ const CallsToAction = () => {
           title="Ticket Pre-sale Raffle & Auction"
           tag="LIVE"
           BackgroundSvg={TicketBackground}
-          link="/ticketing"
+          link="/tickets"
           linkText="Ticketing"
           meta="Raffle Ends: June 20th"
         >
@@ -26,7 +26,7 @@ const CallsToAction = () => {
           title="Speaker Applications"
           tag="OPEN"
           BackgroundSvg={SpeakersBackground}
-          link="/schedule"
+          link="/overview"
           linkText="Program"
           meta="Application Deadline: June 29th"
         >
