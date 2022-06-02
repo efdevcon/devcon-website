@@ -1,5 +1,5 @@
 ---
-title: DI
+title: DIPs
 template: dips
 tags:
   - devcon

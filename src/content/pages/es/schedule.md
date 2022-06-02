@@ -1,6 +1,3 @@
 ---
-title: Schedule
-template: content
+title: Programa
 ---
-
-Schedule

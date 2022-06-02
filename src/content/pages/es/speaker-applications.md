@@ -1,6 +1,3 @@
 ---
-title: Applications
-template: content
+title: Aplicaciones
 ---
-
-Speaker applications

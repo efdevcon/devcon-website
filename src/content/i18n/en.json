@@ -144,13 +144,21 @@
   "tickets": {
     "title": "Tickets", 
     "timeline": "Timeline",
-    "auction": "Auction",
-    "raffle": "Raffle",
-    "withdrawal": "Withdrawal",
-    "poap": "POAP",
     "types_and_pricing": "Types & Pricing",
     "faq": "FAQ",
-    "reasoning": "Reasoning"
+    "raffle": {
+      "auction": "Auction",
+      "poap": "POAP",
+      "withdrawal": "Withdrawal",
+      "reasoning": "Reasoning",
+      "title": "Raffle",
+      "important_dates": "Important Dates",
+      "auction_begins": "Raffle+Auction begins",
+      "ticket_sale_waves": "Ticket Sale Waves",
+      "june_30": "June 30",
+      "july_01": "July 1",
+      "participate": "Participate in Presale Raffle+Auction"
+    }
   },
   "footer": {
     "about_devcon_1": "About Devcon —",
