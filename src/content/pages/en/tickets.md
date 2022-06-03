@@ -3,4 +3,4 @@ title: Tickets
 template: content
 ---
 
-Tickets EN
+Ticket sales will launch in June with Applications for Discounted Tickets, and our Presale Raffle+Auction following shortly after. Ticket sales will begin shortly after and all sales will conclude by September.

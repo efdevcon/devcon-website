@@ -18,7 +18,7 @@ export default pageHOC(function NewsTemplate(props: any) {
       <div className="section">
         {/* <NewsOverview newsItems={props.news} /> */}
 
-        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+        <Tags items={pageContext?.current?.tags} viewOnly />
       </div>
     </Page>
   )

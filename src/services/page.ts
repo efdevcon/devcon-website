@@ -9,6 +9,7 @@ import { Category } from 'types/Category'
 import { FAQ } from 'types/FAQ'
 import markdownUtils from 'utils/markdown'
 import { ContentSection, ContentSections } from 'types/ContentSection'
+import { DevconEdition } from 'types/DevconEdition'
 
 export async function GetPage(slug: string, lang: string = 'en'): Promise<Page | undefined> {
   if (lang !== 'es') lang = 'en'
@@ -224,6 +225,37 @@ export function GetTags(lang: string = 'en'): Array<Tag> {
       } as Tag
     })
     .filter(i => !!i) as Array<Tag>
+}
+
+export function GetDevconEditions(lang: string = 'en'): Array<DevconEdition> {
+  if (lang !== 'es') lang = 'en'
+
+  const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'devcon', lang)
+
+  return fs
+    .readdirSync(dir)
+    .map(i => {
+      const content = fs.readFileSync(join(dir, i), 'utf8')
+      if (!content) {
+        console.log('File has no content..', i)
+        return undefined
+      }
+
+      const doc = matter(content)
+      let edition = {
+        ...doc.data,
+        id: i.replace('.md', '').toLowerCase(),
+        links: doc.data.urls ? doc.data.urls.map((i: any) => {
+          return { title: i.title, url: i.url }
+        }) : [],
+      } as DevconEdition
+
+      if (doc.data.startDate) edition.startDate = new Date(doc.data.startDate).getTime()
+      if (doc.data.endDate) edition.endDate = new Date(doc.data.endDate).getTime()
+
+      return edition
+    })
+    .filter(i => !!i) as Array<DevconEdition>
 }
 
 export async function GetContentSection(slug: string, lang: string = 'en'): Promise<ContentSection | undefined> {

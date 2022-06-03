@@ -56,10 +56,11 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
       <div className="section">
         <div className="two-columns clear-bottom" id="location">
-          <div className="left">
-            <h2 className="spaced">{intl('city_guide_title')}</h2>
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
+          <div className='left section-markdown'>
+            <h2>{intl('city_guide_title')}</h2>
+            <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
+
           <div className="right">
             <Snapshot
               items={[
@@ -163,7 +164,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
           />
         </section>
 
-        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+        <Tags items={pageContext?.current?.tags} viewOnly />
 
         <iframe
           className="expand"

@@ -71,13 +71,9 @@ export default pageHOC(function Applications(props: any) {
         <div className="section">
           <div className={`${css['about']} clear-bottom border-bottom`} id="about">
             <div className={css['left']}>
-              <div>
+              <div className='section-markdown'>
                 <h2>Speaker Applications</h2>
-                <p className="h2 highlighted">
-                  Devcon speaker applications are now open and we invite anyone who would like to contribute to submit
-                  an application. Applications are open to the public, anyone can apply to give a talk. You must submit
-                  your application before the deadline of June 23 at 23:59:59 UTC.
-                </p>
+                <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
 
               <div className={css['links']}>
@@ -245,7 +241,7 @@ export default pageHOC(function Applications(props: any) {
         </div>
 
         <div className="section">
-          <Tags items={pageContext?.current?.tags} viewOnly={false} />
+          <Tags items={pageContext?.current?.tags} viewOnly />
         </div>
       </div>
     </Page>
