@@ -6,11 +6,10 @@ import { pageHOC } from 'context/pageHOC'
 import { usePageContext } from 'context/page-context'
 import { Tags } from 'components/common/tags'
 import { getGlobalData } from 'services/global'
-import { GetPage } from 'services/page'
+import { GetContentSections, GetPage } from 'services/page'
 import css from './applications.module.scss'
 import { useTranslations } from 'next-intl'
 import { Link } from 'components/common/link'
-import List from 'components/common/list'
 import { Button } from 'components/common/button'
 import { Snapshot } from 'components/common/snapshot'
 import PencilIcon from 'assets/icons/pencil.svg'
@@ -124,6 +123,12 @@ export default pageHOC(function Applications(props: any) {
             </div>
           </div>
 
+          {props.sections['application-guidelines'] && <div className={`${css['guidelines']} clear-bottom clear-top border-top`} id="guidelines">
+            <h2 className="clear-bottom">{props.sections['application-guidelines'].title}</h2>
+            <div className={`${css['custom-markdown']} section-markdown`} dangerouslySetInnerHTML={{ __html: props.sections['application-guidelines'].body }} />
+          </div>}
+
+          {/* 
           <div className={`${css['guidelines']} clear-bottom clear-top border-top`} id="guidelines">
             <h2 className="clear-bottom">Application Guidelines</h2>
 
@@ -237,7 +242,7 @@ export default pageHOC(function Applications(props: any) {
             <h2 className="spaced">Additional Questions?</h2>
 
             <p>Head to the FAQ page [link] and if you have further questions reach out to [insert programming alias]</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="section">
@@ -251,11 +256,13 @@ export default pageHOC(function Applications(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/speaker-applications', context.locale)
+  const sections = await GetContentSections(['application-guidelines'], context.locale)
 
   return {
     props: {
       ...globalData,
       page,
+      sections
     },
   }
 }
