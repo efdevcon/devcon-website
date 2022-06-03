@@ -69,4 +69,8 @@ body {
       @include fonts-highlighted-title;
     }
   }
+
+  a {
+    text-decoration: underline;
+  }
 }

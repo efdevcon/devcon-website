@@ -46,8 +46,8 @@ type: list
     - Host an impromptu workshop or talk by booking one of them in one of the bookable workshop rooms [insert link to coworking booking] or in the Hacker Space [insert link to hacker space]
     - Volunteer and help make this Devcon VI the best Devcon ever! 
     - Apply for a Builder Ticket
-    - Share your ideas on the Devcon Forum (https://forum.devcon.org/) to collaborate with other attendees
+    - Share your ideas on the [Devcon Forum](https://forum.devcon.org/) to collaborate with other attendees
 
 ## Additional Questions?
 
-Head to the FAQ page [link] and if you have further questions reach out to [insert programming alias]
+Head to the [FAQ page](/faq#programming) and if you have further questions reach out to [insert programming alias]

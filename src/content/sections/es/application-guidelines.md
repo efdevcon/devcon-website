@@ -46,8 +46,8 @@ type: list
     - Organice un taller improvisado o hable reservando uno de ellos en una de las salas de talleres que se pueden reservar [insertar enlace a la reserva de coworking] o en Hacker Space [insertar enlace a hacker space]
     - Ofrézcase como voluntario y ayude a que este Devcon VI sea el mejor Devcon de todos los tiempos.
     - Solicitar un Boleto de Constructor
-    - Comparta sus ideas en el foro de Devcon (https://forum.devcon.org/) para colaborar con otros asistentes
+    - Comparta sus ideas en el [foro de Devcon](https://forum.devcon.org/) para colaborar con otros asistentes
 
 ## ¿Preguntas adicionales?
 
-Dirígete a la página de preguntas frecuentes [enlace] y, si tienes más preguntas, comunícate con [insertar alias de programación]
+Dirígete a la [página de preguntas frecuentes](/faq#programming) y, si tienes más preguntas, comunícate con [insertar alias de programación]
