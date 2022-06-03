@@ -82,40 +82,10 @@ export default pageHOC(function Schedule(props: any) {
             </div>
           </div>
 
-          <div className={`${css['values']} clear-bottom`} id="values">
-            <h2 className="clear-bottom">Devcon Programming Values</h2>
-
-            <List
-              items={[
-                {
-                  id: 'collab',
-                  title: 'Collaboration',
-                  body: 'Devcon is a place to foster collaboration via technical discussions, debates, knowledge sharing, and innovation.',
-                },
-                {
-                  id: 'teaching',
-                  title: 'Teaching, communicating and generating new ideas',
-                  body: 'Devcon is an opportunity to learn (and teach!) by attending talks, workshops, panels, and lightning talks.',
-                },
-                {
-                  id: 'updating-community',
-                  title:
-                    "Updating the community on the Ethereum Foundation's key messages, updates, and calls to action",
-                  body: 'Devcon is an opportunity to share the Ethereum Foundations vision and values with the world.',
-                },
-                {
-                  id: 'bridging',
-                  title: 'Building bridges with other communities',
-                  body: 'There are many communities adjacent to Ethereum that are value-aligned - Devcon is a chance to come together.',
-                },
-                {
-                  id: 'community-heard',
-                  title: 'Ensuring our community is heard',
-                  body: 'Devcon is a conference for the Ethereum community, and is an opportunity for the community to share important updates.',
-                },
-              ]}
-            />
-          </div>
+          {props.sections['devcon-programming-values'] && <div className={`${css['values']} clear-bottom`} id="values">
+            <h2 className="clear-bottom">{props.sections['devcon-programming-values'].title}</h2>
+            <div className={`${css['custom-markdown']} section-markdown`} dangerouslySetInnerHTML={{ __html: props.sections['devcon-programming-values'].body }} />
+          </div>}
         </div>
 
         <TrackList />
@@ -162,7 +132,7 @@ export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/schedule', context.locale)
   const faq = await GetFAQ(context.locale)
-  const sections = await GetContentSections(['cta-speaker-applications', 'ecosystem-supporters', 'volunteers'], context.locale)
+  const sections = await GetContentSections(['cta-speaker-applications', 'devcon-programming-values', 'ecosystem-supporters', 'volunteers'], context.locale)
 
   return {
     props: {

@@ -43,10 +43,12 @@ body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: none; 
+  -webkit-text-size-adjust: none;
 }
 
-.section-markdown { 
+.section-markdown {
+  padding: 32px 0;
+
   h2 {
     @include fonts-spaced;
   }
