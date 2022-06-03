@@ -294,7 +294,7 @@ export default pageHOC(function PastEvents(props: any) {
 
         {editions.map(edition => {
           return (
-            <div key={edition.id} className="clear-bottom clear-top">
+            <div key={edition.id} className="clear-bottom clear-top border-bottom">
               {edition.body}
             </div>
           )
