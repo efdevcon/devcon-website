@@ -6,7 +6,7 @@ import { pageHOC } from 'context/pageHOC'
 import { usePageContext } from 'context/page-context'
 import { Tags } from 'components/common/tags'
 import { getGlobalData } from 'services/global'
-import { GetPage } from 'services/page'
+import { GetContentSections, GetPage } from 'services/page'
 import { useTranslations } from 'next-intl'
 import { Snapshot } from 'components/common/snapshot'
 import css from './raffle-auction.module.scss'
@@ -49,20 +49,10 @@ export default pageHOC(function RaffleAuction(props: any) {
       <div className="section">
         <div className={`${css['about']} clear-bottom border-bottom`} id="about">
           <div className={css['left']}>
-            <div>
-              <h2>Experimental On-chain Ticket Raffle+Auction</h2>
-              <p className="h2 highlighted">
-                This year, with the help of the amazing TrueFi/TrustToken team, we will be holding a pre-sale Auction
-                and Raffle for 100 tickets to Devcon 6. The entirety of the Auction and Raffle will take place on
-                Arbitrum.
-              </p>
-              <p>
-                Therefore, we will only accept crypto as a method of payment. We advise bridging funds to Arbitrum ahead
-                of time if you wish to participate in the Auction/Raffle. Everybody who participates in the Raffle &amp;
-                Auction will get a POAP NFT to indicate participation. The site for the Raffle &amp; Auction can be
-                found here.
-              </p>
-            </div>
+            {props.sections['on-chain-ticket-raffle-auction'] && <div>
+              <h2>{props.sections['on-chain-ticket-raffle-auction'].title}</h2>
+              <div className={css['markdown']} dangerouslySetInnerHTML={{ __html: props.sections['on-chain-ticket-raffle-auction'].body }} />
+            </div>}
           </div>
 
           <div className={css['right']}>
@@ -86,7 +76,11 @@ export default pageHOC(function RaffleAuction(props: any) {
           </div>
         </div>
 
-        <div className="clear-top clear-bottom border-bottom" id="auction">
+        {props.sections['how-will-the-auction-work'] && (
+          <div className={`${css['markdown']} clear-top clear-bottom`} dangerouslySetInnerHTML={{ __html: props.sections['how-will-the-auction-work'].body }} />
+        )}
+
+        {/* <div className="clear-top clear-bottom border-bottom" id="auction">
           <h2 className="spaced">How will the auction work?</h2>
           <p>
             We will begin taking bids on ___ at _am EST and bidding will close at _pm EST xx/xx/xxxx. The minimum bid
@@ -149,7 +143,7 @@ export default pageHOC(function RaffleAuction(props: any) {
             be better ways &#40;or at least ways with different tradeoffs&#41; to distribute tickets without asking
             people to wait and refresh a website at a certain time.
           </p>
-        </div>
+        </div> */}
       </div>
 
       <div className="section">
@@ -162,11 +156,13 @@ export default pageHOC(function RaffleAuction(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/raffle-auction', context.locale)
+  const sections = await GetContentSections(['on-chain-ticket-raffle-auction', 'how-will-the-auction-work'], context.locale)
 
   return {
     props: {
       ...globalData,
       page,
+      sections
     },
   }
 }

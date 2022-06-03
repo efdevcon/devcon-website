@@ -5,10 +5,10 @@ import { Page } from 'types/Page'
 import { Tag } from 'types/Tag'
 import { BASE_CONTENT_FOLDER } from 'utils/constants'
 import { DIP } from 'types/DIP'
-import { NewsItem } from 'types/NewsItem'
 import { Category } from 'types/Category'
 import { FAQ } from 'types/FAQ'
 import markdownUtils from 'utils/markdown'
+import { ContentSection, ContentSections } from 'types/ContentSection'
 
 export async function GetPage(slug: string, lang: string = 'en'): Promise<Page | undefined> {
   if (lang !== 'es') lang = 'en'
@@ -226,7 +226,7 @@ export function GetTags(lang: string = 'en'): Array<Tag> {
     .filter(i => !!i) as Array<Tag>
 }
 
-export async function GetContentSection(slug: string, lang: string = 'en'): Promise<any> {
+export async function GetContentSection(slug: string, lang: string = 'en'): Promise<ContentSection | undefined> {
   if (lang !== 'es') lang = 'en'
 
   const filePath = join(process.cwd(), BASE_CONTENT_FOLDER, 'sections', lang, slug + '.md')
@@ -241,10 +241,25 @@ export async function GetContentSection(slug: string, lang: string = 'en'): Prom
 
   if (!content) {
     console.log('File not found..', filePath)
-    return []
+    return
   }
 
   const doc = matter(content)
+  return {
+    id: slug,
+    title: doc.data.title,
+    body: await markdownUtils.toHtml(doc.content),
+    data: doc.data,
+  }
+}
 
-  return doc
+export async function GetContentSections(slugs: string[], lang: string = 'en'): Promise<ContentSections> {
+  let data: ContentSections = {}
+  await Promise.all(slugs.map(async (slug: string) => {
+    const section = await GetContentSection(slug, lang)
+    if (section) data[slug] = section
+    return section
+  }))
+
+  return data
 }
