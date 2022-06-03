@@ -120,6 +120,10 @@
     counter-increment: circle-counter;
     padding-left: 56px;
     margin-bottom: 16px;
+    
+    @media (max-width: $breakpoints-md) {
+      padding-left: 40px;
+    }
 
     &::before {
       content: counters(circle-counter, '');

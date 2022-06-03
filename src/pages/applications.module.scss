@@ -100,6 +100,10 @@
     padding-bottom: 16px;
     border-bottom: 1px solid $colors-monochrome-5;
 
+    @media (max-width: $breakpoints-md) {
+      padding-left: 40px;
+    }
+
     &::before {
       content: counters(circle-counter, '');
       position: absolute;

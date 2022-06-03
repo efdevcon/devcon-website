@@ -30,3 +30,24 @@ type: list
     - Deadline to Apply June 30
     - All decisions will be sent before the end of July, and as quickly as possible
     - _NOTE: We want everyone to be able to plan affordable travel if they want to attend Devcon. Opening applications early in the summer allows applicants ample time to prepare their applications, reviewers time to carefully review each application, and applicants to know many months in advance whether or not their application has been accepted._
+
+1. Review Process
+    - Each track has its own reviewing committee, consisting of a Team Lead & multiple Reviewers
+    - Each application will be reviewed by at least 2 members of the review team. All reviewers’ scores are weighted equally.  
+    - Talks will be selected on aggregate scores from the criteria below
+
+    ▼  Review Criteria
+
+1. Decision
+    - The speaker application process is VERY competitive and unfortunately, this may mean that quality talks are not selected due to time and space constraints.  
+    - You will be notified of the status of your application before the end of July. Reviewers’ decisions are final, and there is no repeal process, but(!) there are lots of ways to contribute to Devcon if your application is not accepted.
+
+1. Other ways to contribute
+    - Host an impromptu workshop or talk by booking one of them in one of the bookable workshop rooms [insert link to coworking booking] or in the Hacker Space [insert link to hacker space]
+    - Volunteer and help make this Devcon VI the best Devcon ever! 
+    - Apply for a Builder Ticket
+    - Share your ideas on the Devcon Forum (https://forum.devcon.org/) to collaborate with other attendees
+
+## Additional Questions?
+
+Head to the FAQ page [link] and if you have further questions reach out to [insert programming alias]
