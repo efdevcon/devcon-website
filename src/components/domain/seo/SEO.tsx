@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/router'
 import { Twitter } from './Twitter'
-import { ARCHIVE_TITLE, SITE_URL, TITLE } from 'utils/constants'
+import { SITE_URL } from 'utils/constants'
 import { usePageContext } from 'context/page-context'
 
 interface SEOProps {
@@ -23,8 +23,7 @@ export function SEO(props: SEOProps) {
   const router = useRouter()
   const intl = useTranslations()
   const pageContext = usePageContext()
-
-  let title = TITLE
+  let title = intl('global_title')
 
   if (pageContext?.current?.title) {
     title = pageContext?.current.title
@@ -34,7 +33,7 @@ export function SEO(props: SEOProps) {
     title = props.title
   }
 
-  let description = intl('rtd_intro')
+  let description = intl('global_description')
 
   if (props.description) {
     description = props.description
@@ -48,7 +47,7 @@ export function SEO(props: SEOProps) {
     lang = props.lang
   }
 
-  const globalTitle = TITLE
+  const globalTitle = intl('global_title')
   const canonical = props.canonicalUrl || ''
 
   let image = 'https://www.devcon.org/assets/images/og-graph.png'

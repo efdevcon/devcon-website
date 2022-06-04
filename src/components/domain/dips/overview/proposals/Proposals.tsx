@@ -8,10 +8,10 @@ import { SortVariation } from 'components/common/sort'
 import { DIP } from 'types/DIP'
 import GithubIcon from 'assets/icons/github.svg'
 import TooltipIcon from 'assets/icons/tooltip.svg'
-import { Share } from 'components/common/share'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import { useTranslations } from 'next-intl'
-import { Filter, useFilter } from 'components/common/filter'
+import { useFilter } from 'components/common/filter'
+import { CopyToClipboard } from 'components/common/share/CopyToClipboard'
 
 export const Links = ({ dip }: { dip: DIP }) => {
   return (
@@ -26,7 +26,7 @@ export const Links = ({ dip }: { dip: DIP }) => {
           <GithubIcon />
         </Link>
       )}
-      <Share url={dip.github} /*commented out until DIP page is deployed: url={`https://devcon.org${dip.slug}`}*/ />
+      <CopyToClipboard url={dip.github} /*commented out until DIP page is deployed: url={`https://devcon.org${dip.slug}`}*/ />
     </div>
   )
 }

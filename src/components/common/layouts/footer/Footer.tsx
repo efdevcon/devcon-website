@@ -6,13 +6,12 @@ import { Link } from 'components/common/link'
 import { Link as LinkType } from 'types/Link'
 import { Newsletter } from 'components/common/newsletter'
 import { usePageContext } from 'context/page-context'
-import { EMAIL_DEVCON, LINK_ETHEREUM_FOUNDATION, TITLE } from 'utils/constants'
+import { EMAIL_DEVCON, LINK_ETHEREUM_FOUNDATION } from 'utils/constants'
 import HeaderLogoArchive from '../header/HeaderLogo'
 import { Copyright } from '../Copyright'
 import { useRouter } from 'next/router'
 import { useTranslations } from 'next-intl'
 import useNavigationData from 'components/common/layouts/header/useNavigationData'
-import { Share } from 'components/common/share'
 import IconGithub from 'assets/icons/github.svg'
 import IconTwitter from 'assets/icons/twitter.svg'
 import IconYoutube from 'assets/icons/youtube.svg'
@@ -51,39 +50,6 @@ export const Footer = () => {
   const lang = router.locale
   const navigationData = useNavigationData()
   let footerData = navigationData.footer
-
-  // if (footerData) {
-  //   footerData = {
-  //     ...footerData,
-  //     right: [
-  //       {
-  //         title: 'Watch',
-  //         url: '/archive/watch/',
-  //         type: 'link',
-  //       },
-  //       {
-  //         title: 'Playlists',
-  //         url: '/archive/playlists/',
-  //         type: 'link',
-  //       },
-  //       {
-  //         title: 'Road to Devcon',
-  //         url: 'https://www.devcon.org/',
-  //         type: 'link',
-  //       },
-  //       {
-  //         title: 'Forum',
-  //         url: 'https://forum.devcon.org/',
-  //         type: 'link',
-  //       },
-  //       {
-  //         title: 'Blog',
-  //         url: 'https://blog.ethereum.org/category/devcon/',
-  //         type: 'link',
-  //       },
-  //     ],
-  //   }
-  // }
 
   return (
     <footer className={`footer ${css['container']} ${css['archive']}`}>
@@ -168,12 +134,6 @@ export const Footer = () => {
                 {intl('cookie_policy')}
               </Link>
             </div>
-
-            {/* <div className={css['col-3']}>
-              <Link external className={css['small-logo']} to={LINK_ETHEREUM_FOUNDATION}>
-                <ImageEF />
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>

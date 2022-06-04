@@ -3,35 +3,38 @@ import css from './calls-to-action.module.scss'
 import TicketBackground from 'assets/images/pages/tickets.svg'
 import SpeakersBackground from 'assets/images/pages/speakers.svg'
 import CallToAction from 'components/common/card/CallToActionCard'
+import { ContentSection } from 'types/ContentSection'
 
-const CallsToAction = () => {
+interface Props {
+  ticketPresale: ContentSection
+  speakerApplications: ContentSection
+}
+
+const CallsToAction = (props: Props) => {
   return (
     <div className={`section`}>
       <div className={`${css['container']} border-bottom clear-bottom`}>
         <CallToAction
-          title="Ticket Pre-sale Raffle & Auction"
+          title={props.ticketPresale.title}
           tag="LIVE"
           BackgroundSvg={TicketBackground}
           link="/tickets"
           linkText="Ticketing"
           meta="Raffle Ends: June 20th"
         >
-          We are holding an experimental pre-sale Auction and Raffle for 100 tickets to Devcon 6. With a hybrid
-          mechanism, we get the best of both worlds. 20 tickets will serve the demand of those who just can&apos;t miss
-          Devcon at any price, while 80 tickets are given out in a provably fair fashion, at face value.
+          <div dangerouslySetInnerHTML={{ __html: props.ticketPresale.body }} />
         </CallToAction>
 
         <CallToAction
           color="orange"
-          title="Speaker Applications"
+          title={props.speakerApplications.title}
           tag="OPEN"
           BackgroundSvg={SpeakersBackground}
           link="/overview"
           linkText="Program"
           meta="Application Deadline: June 29th"
         >
-          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.
+          <div dangerouslySetInnerHTML={{ __html: props.speakerApplications.body }} />
         </CallToAction>
       </div>
     </div>

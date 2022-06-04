@@ -1,15 +1,9 @@
 import React from 'react'
 import css from './hero.module.scss'
 import Logo from 'assets/images/hero/hero-logo-mobile.svg'
-// import Logo from 'assets/images/devcon-logo.svg'
 import Rays from './images/Rays'
 import { useTranslations } from 'next-intl'
-import { TITLE } from 'utils/constants'
 import { CallToAction } from './call-to-action'
-import MountainsLayer1 from 'assets/images/mtn-1.svg'
-import MountainsLayer2 from 'assets/images/mtn-2.svg'
-import MountainsLayer3 from 'assets/images/mtn-3.svg'
-import MountainsLayer4 from 'assets/images/mtn-4.svg'
 import Mountains from 'assets/images/mtn-all-layers.svg'
 
 const useParallax = (elementRef: any) => {
@@ -67,18 +61,6 @@ export const Hero = () => {
           <div className={css['mountain-container']}>
             <Mountains />
           </div>
-          {/* <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
-            <MountainsLayer1 />
-          </div>
-          <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
-            <MountainsLayer2 />
-          </div>
-          <div className={css['mountain-container']} style={parallax(parallaxMultiplier, 7.5, 7.5, 5) as any}>
-            <MountainsLayer3 />
-          </div>
-          <div className={css['mountain-container']} style={parallax(parallaxMultiplier) as any}>
-            <MountainsLayer4 />
-          </div> */}
         </div>
 
         <div className={css['parallax-container-2']}>
@@ -86,14 +68,14 @@ export const Hero = () => {
         </div>
 
         <div className={css['left-rotated']}>
-          <p className={'text-uppercase'}>{intl('subtitle')}</p>
+          <p className={'text-uppercase'}>{intl('global_subtitle')}</p>
         </div>
         <div className={css['right-rotated']}>
           <p className={'text-uppercase'}>{intl('journey')}</p>
         </div>
 
         <div className={css['logo-container']}>
-          <Logo alt={TITLE} className={css['logo']} />
+          <Logo alt={intl('global_title')} className={css['logo']} />
         </div>
 
         {/* <div className="section">

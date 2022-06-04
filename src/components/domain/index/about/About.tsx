@@ -5,24 +5,20 @@ import { Button } from 'components/common/button'
 import Image from 'next/image'
 import TriangleWithImages from 'assets/images/about-triangles.png'
 import { Link } from 'components/common/link'
+import { ContentSection } from 'types/ContentSection'
 
-const About = () => {
+interface Props { 
+  content: ContentSection
+}
+
+const About = (props: Props) => {
   return (
     <div className={`section ${css['container']}`}>
       <div className={`${css['body']} clear-top  expand`}>
         <div className={css['left']}>
           <DevconLogo />
 
-          <p className="h2 highlighted">
-            Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a
-            part of our ecosystem, and a source of energy and creativity for all.
-          </p>
-
-          <p>
-            We host Devcon to educate and empower the community to build and use decentralized systems. And it is a
-            conference for builders of all kinds: developers, designers, researchers, client implementers, test
-            engineers, infrastructure operators, community organizers, social economists, artists, and more
-          </p>
+          <div className={`section-markdown`} dangerouslySetInnerHTML={{ __html: props.content.body }} />
 
           <p>
             <span className={css['grey']}>
@@ -33,7 +29,7 @@ const About = () => {
             <br />
             <span className="bold">Devcon Oct 11-14 📌 Agora Bogotá Convention Center</span>
             <br />
-            <span className="font-sm">Devcon week will take place on October 7-16 in Bogota, Colombia.</span>
+            <span className="font-sm">Devcon Week — October 7-16 in Bogota, Colombia.</span>
           </p>
 
           <Link to="/bogota">
