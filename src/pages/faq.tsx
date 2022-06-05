@@ -43,7 +43,7 @@ export default pageHOC(function FaqTemplate(props: any) {
         </div> */}
 
         <FAQ data={props.faq} />
-        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+        <Tags items={pageContext?.current?.tags} viewOnly />
       </div>
     </Page>
   )

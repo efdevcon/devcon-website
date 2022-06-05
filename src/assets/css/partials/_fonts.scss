@@ -117,7 +117,7 @@ $secondary: 'Space Mono', monospace;
 
 @mixin generic-link {
   color: colors.$link;
-  font-weight: bold; 
+  font-weight: bold;
   --color-icon: #{colors.$link};
 }
 
@@ -145,6 +145,22 @@ $secondary: 'Space Mono', monospace;
 
 @mixin very-bold {
   font-weight: 900;
+}
+
+@mixin highlighted-title {
+  @include bold;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+@mixin highlighted {
+  font-weight: 300;
+  line-height: 150%;
+}
+
+@mixin spaced {
+  @include gaps.margin-bottom(gaps.$gap-6, gaps.$gap-4);
 }
 
 @mixin title {

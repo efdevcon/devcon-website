@@ -88,15 +88,9 @@ export default pageHOC(function Tickets(props: any) {
 
       <div className="section">
         <div className={`${css['about']} clear-bottom border-bottom`} id="about">
-          <div className={css['left']}>
-            <div>
-              <h2>Devcon Ticketing</h2>
-              <p className="h2 highlighted">
-                Ticket sales will launch in June with Applications for Discounted Tickets, and our Presale
-                Raffle+Auction following shortly after. Ticket sales will begin shortly after and all sales will
-                conclude by September.
-              </p>
-            </div>
+          <div className={`${css['left']} section-markdown`}>
+            <h2>Devcon Ticketing</h2>
+            <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
 
           <div className={css['right']}>
@@ -359,7 +353,7 @@ export default pageHOC(function Tickets(props: any) {
       </div>
 
       <div className="section">
-        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+        <Tags items={pageContext?.current?.tags} viewOnly />
       </div>
     </Page>
   )

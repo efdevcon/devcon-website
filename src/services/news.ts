@@ -73,7 +73,7 @@ const twitter = (() => {
 
       const result = await fetchWrapper(`/users/${userID}/tweets`, queryParams);
 
-      if (result.meta.result_count === 0) return results;
+      if (!result.meta ?? result.meta.result_count === 0) return results;
 
       results = [...results, ...result.data]; 
 

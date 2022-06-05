@@ -4,13 +4,9 @@ export interface DevconEdition {
   title: string
   description: string
   location: string
-  startDate?: Date
-  endDate?: Date
+  startDate?: number
+  endDate?: number
   imageUrl: string
-  image1: any
-  image2: any
-  image3: any
-  imageTitle: any
   links: Array<{
     title: string
     url: string

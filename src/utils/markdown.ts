@@ -15,7 +15,7 @@ const markdownUtils = (() => {
 
     //   try {
     //     const content = await fs.promises.readFile(filePath, 'utf8')
-  
+
     //     if (!content) {
     //         console.log('File has no content..', filePath)
     //         return undefined
@@ -31,7 +31,7 @@ const markdownUtils = (() => {
     //   }
     // },
     toHtml: async (markdown: string, slice?: number) => {
-      let raw = markdown; 
+      let raw = markdown;
 
       if (slice && raw.length > 255) raw = `${raw.slice(0, slice)}...`
 
@@ -43,5 +43,13 @@ const markdownUtils = (() => {
 
   return _interface;
 })();
+
+export function toHtml(markdown: string, slice?: number) {
+  let raw = markdown
+
+  if (slice && raw.length > 255) raw = `${raw.slice(0, slice)}...`
+
+  return md.render(markdown)
+}
 
 export default markdownUtils;

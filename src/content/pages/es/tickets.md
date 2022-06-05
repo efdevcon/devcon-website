@@ -3,4 +3,4 @@ title: Entradas
 template: content
 ---
 
-Entradas
+La venta de boletos comenzará en junio con las solicitudes de boletos con descuento, y poco después nuestra rifa y subasta de preventa. La venta de boletos comenzará poco después y todas las ventas concluirán en septiembre.

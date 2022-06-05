@@ -9,9 +9,9 @@ import { Snapshot } from 'components/common/snapshot'
 import { pageHOC } from 'context/pageHOC'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
-import { GetFAQ, GetPage, GetContentSection } from 'services/page'
+import { GetFAQ, GetPage, GetContentSections } from 'services/page'
 import { getGlobalData } from 'services/global'
-import markdownUtils from 'utils/markdown'
+import { toHtml } from 'utils/markdown'
 import { Tags } from 'components/common/tags'
 import moment from 'moment-timezone'
 import IconClock from 'assets/icons/icon_clock.svg'
@@ -56,10 +56,11 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
       <div className="section">
         <div className="two-columns clear-bottom" id="location">
-          <div className="left">
-            <h2 className="spaced">{intl('city_guide_title')}</h2>
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
+          <div className='left section-markdown'>
+            <h2>{intl('city_guide_title')}</h2>
+            <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
+
           <div className="right">
             <Snapshot
               items={[
@@ -126,28 +127,34 @@ export default pageHOC(function CityGuideTemplate(props: any) {
           <Carousel />
         </section>
 
-        <h2 className="spaced">{props.sections.todo.title}</h2>
-        <div className="two-columns border-bottom clear-bottom" id="things-to-do">
-          <div className="left">
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.sections.todo.left }} />
-          </div>
-          <div className="right">
-            <div dangerouslySetInnerHTML={{ __html: props.sections.todo.right }} />
-          </div>
-        </div>
+        {props.sections['things-to-do'] && (
+          <>
+            <h2 className="spaced">{props.sections['things-to-do'].title}</h2>
+            <div className="two-columns border-bottom clear-bottom" id="things-to-do">
+              <div className="left">
+                <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.sections['things-to-do'].data.left) }} />
+              </div>
+              <div className="right">
+                <div dangerouslySetInnerHTML={{ __html: toHtml(props.sections['things-to-do'].data.right) }} />
+              </div>
+            </div>
+          </>
+        )}
 
-        {/* <TwoColumns id="things-todo" left={props.sections.todo.left} right={props.sections.todo.right} /> */}
+        {props.sections['why-devcon-in-bogota'] && (
+          <>
+            <h2 className="spaced clear-top">{props.sections['why-devcon-in-bogota'].title}</h2>
 
-        <h2 className="spaced clear-top">{props.sections.why.title}</h2>
-
-        <div className="two-columns clear-bottom" id="why-bogota">
-          <div className="left">
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.sections.why.left }} />
-          </div>
-          <div className="right">
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.sections.why.right }} />
-          </div>
-        </div>
+            <div className="two-columns clear-bottom" id="why-bogota">
+              <div className="left">
+                <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.sections['why-devcon-in-bogota'].data.left) }} />
+              </div>
+              <div className="right">
+                <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.sections['why-devcon-in-bogota'].data.right) }} />
+              </div>
+            </div>
+          </>
+        )}
 
         <section id="FAQ" className="clear-top">
           <FAQ
@@ -157,7 +164,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
           />
         </section>
 
-        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+        <Tags items={pageContext?.current?.tags} viewOnly />
 
         <iframe
           className="expand"
@@ -175,30 +182,14 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/bogota', context.locale)
-  const todoData = await GetContentSection('things-to-do', context.locale)
-  const whyData = await GetContentSection('why-devcon-in-bogota', context.locale)
-
-  const todo = {
-    title: todoData.data.title,
-    left: await markdownUtils.toHtml(todoData.data.left),
-    right: await markdownUtils.toHtml(todoData.data.right),
-  }
-
-  const why = {
-    title: whyData.data.title,
-    left: await markdownUtils.toHtml(whyData.data.left),
-    right: await markdownUtils.toHtml(whyData.data.right),
-  }
+  const sections = await GetContentSections(['things-to-do', 'why-devcon-in-bogota'], context.locale)
 
   return {
     props: {
       ...globalData,
       page,
       faq: await GetFAQ(context.locale),
-      sections: {
-        todo,
-        why,
-      },
+      sections
     },
   }
 }

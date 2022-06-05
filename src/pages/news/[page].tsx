@@ -57,7 +57,7 @@ export default pageHOC(function NewsTemplate(props: any) {
           </ConditionalLink>
         </div>
 
-        <Tags items={pageContext?.current?.tags} viewOnly={false} />
+        <Tags items={pageContext?.current?.tags} viewOnly />
       </div>
     </Page>
   )

@@ -248,6 +248,5 @@ li.plain {
 }
 
 .highlighted {
-  line-height: 150%;
-  font-weight: 300;
+  @include fonts-highlighted;
 }
