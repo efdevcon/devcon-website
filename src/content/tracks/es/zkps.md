@@ -1,5 +1,5 @@
 ---
-title: 'ZKPs: Privacy, Identity, Infrastructure, & More'
+title: ZKPs and Privacy
 order: 8
 ---
 

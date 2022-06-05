@@ -50,9 +50,9 @@ export default pageHOC(function RaffleAuction(props: any) {
         <div className={`${css['about']} clear-bottom border-bottom`} id="about">
           <div className={`${css['left']} section-markdown`}>
             <h2>Experimental On-chain Ticket Raffle+Auction</h2>
-            <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
+            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
-          
+
           <div className={css['right']}>
             <h2 className="spaced">Important Dates</h2>
             <Snapshot
@@ -60,22 +60,25 @@ export default pageHOC(function RaffleAuction(props: any) {
                 {
                   Icon: AuctionIcon,
                   title: 'RAFFLE+AUCTION BEGINS',
-                  right: 'June 30',
+                  right: 'TBA',
                 },
                 {
                   Icon: CalendarIcon,
                   title: 'TICKET sale waves',
-                  right: 'July 01',
+                  right: 'July 18th',
                 },
               ]}
             />
 
-            <Button className="blue lg">Participate in Presale Raffle+Auction</Button>
+            <Button className="blue lg disabled">Coming Soon</Button>
           </div>
         </div>
 
         {props.sections['how-will-the-auction-work'] && (
-          <div className={`section-markdown clear-top clear-bottom`} dangerouslySetInnerHTML={{ __html: props.sections['how-will-the-auction-work'].body }} />
+          <div
+            className={`section-markdown markdown clear-top clear-bottom`}
+            dangerouslySetInnerHTML={{ __html: props.sections['how-will-the-auction-work'].body }}
+          />
         )}
       </div>
 
@@ -95,7 +98,7 @@ export async function getStaticProps(context: any) {
     props: {
       ...globalData,
       page,
-      sections
+      sections,
     },
   }
 }

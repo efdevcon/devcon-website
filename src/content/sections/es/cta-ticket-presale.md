@@ -1,5 +1,5 @@
 ---
-title: Ticket Pre-sale Raffle & Auction
+title: Solicitudes de boletos de descuento
 ---
 
-Estamos realizando una subasta de preventa experimental y una rifa por 100 boletos para Devcon 6. Con un mecanismo híbrido, obtenemos lo mejor de ambos mundos. 20 boletos satisfarán la demanda de aquellos que simplemente no pueden perderse Devcon a cualquier precio, mientras que 80 boletos se entregan de manera demostrablemente justa, a su valor nominal.
+Las solicitudes para boletos con descuento para Devcon ahora están abiertas hasta el 30 de junio. ¡Solicite hoy si es constructor, estudiante (o maestro) o si está interesado en ser voluntario en Devcon! Las respuestas a las solicitudes se enviarán de forma continua.

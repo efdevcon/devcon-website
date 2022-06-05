@@ -49,7 +49,7 @@ export default pageHOC(function Schedule(props: any) {
         <div className="section">
           <div className={`${css['about']} clear-bottom border-bottom margin-bottom`} id="about">
             <div className={css['left']}>
-              <div className='section-markdown'>
+              <div className="section-markdown">
                 <h2>Programming</h2>
                 <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
@@ -74,17 +74,22 @@ export default pageHOC(function Schedule(props: any) {
                 BackgroundSvg={ScheduleBackground}
                 link="/applications"
                 linkText="Applications"
-                meta="Application Deadline: June 29th"
+                meta="Applications Close: June 27th @ 23:59:59 UTC."
               >
                 <div dangerouslySetInnerHTML={{ __html: props.sections['cta-speaker-applications'].body }} />
               </CallToAction>
             </div>
           </div>
 
-          {props.sections['devcon-programming-values'] && <div className={`${css['values']} clear-bottom`} id="values">
-            <h2 className="clear-bottom">{props.sections['devcon-programming-values'].title}</h2>
-            <div className={`${css['custom-markdown']} section-markdown`} dangerouslySetInnerHTML={{ __html: props.sections['devcon-programming-values'].body }} />
-          </div>}
+          {props.sections['devcon-programming-values'] && (
+            <div className={`${css['values']} clear-bottom`} id="values">
+              <h2 className="clear-bottom">{props.sections['devcon-programming-values'].title}</h2>
+              <div
+                className={`${css['custom-markdown']} section-markdown`}
+                dangerouslySetInnerHTML={{ __html: props.sections['devcon-programming-values'].body }}
+              />
+            </div>
+          )}
         </div>
 
         <TrackList tracks={props.tracks} />
@@ -102,20 +107,32 @@ export default pageHOC(function Schedule(props: any) {
         <div className="section">
           <div className={`${css['meta']} border-top clear-top clear-bottom`}>
             <div className={css['left']}>
-              {props.sections['ecosystem-supporters'] && (<>
-                <h2>{props.sections['ecosystem-supporters'].title}</h2>
-                <div className="clear-bottom clear-top"
-                  dangerouslySetInnerHTML={{ __html: props.sections['ecosystem-supporters'].body }} />
-                <Button className="purple lg">Support Now</Button>
-              </>)}
+              {props.sections['ecosystem-supporters'] && (
+                <>
+                  <h2>{props.sections['ecosystem-supporters'].title}</h2>
+                  <div
+                    className="clear-bottom clear-top"
+                    dangerouslySetInnerHTML={{ __html: props.sections['ecosystem-supporters'].body }}
+                  />
+                  <Link to="https://forms.gle/AU45v5g229uTAarA6">
+                    <Button className="purple lg">Support Now</Button>
+                  </Link>
+                </>
+              )}
             </div>
             <div className={css['right']}>
-              {props.sections['volunteers'] && (<>
-                <h2>{props.sections['volunteers'].title}</h2>
-                <div className="clear-bottom clear-top"
-                  dangerouslySetInnerHTML={{ __html: props.sections['volunteers'].body }} />
-                <Button className="purple lg">Volunteer</Button>
-              </>)}
+              {props.sections['volunteers'] && (
+                <>
+                  <h2>{props.sections['volunteers'].title}</h2>
+                  <div
+                    className="clear-bottom clear-top"
+                    dangerouslySetInnerHTML={{ __html: props.sections['volunteers'].body }}
+                  />
+                  <Link to="https://forms.gle/GnH3SyxSNnQCCn8TA">
+                    <Button className="purple lg">Volunteer</Button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -124,7 +141,7 @@ export default pageHOC(function Schedule(props: any) {
           <Tags items={pageContext?.current?.tags} viewOnly />
         </div>
       </div>
-    </Page >
+    </Page>
   )
 })
 
@@ -132,7 +149,10 @@ export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/schedule', context.locale)
   const faq = await GetFAQ(context.locale)
-  const sections = await GetContentSections(['cta-speaker-applications', 'devcon-programming-values', 'ecosystem-supporters', 'volunteers'], context.locale)
+  const sections = await GetContentSections(
+    ['cta-speaker-applications', 'devcon-programming-values', 'ecosystem-supporters', 'volunteers'],
+    context.locale
+  )
   const tracks = GetTracks(context.locale)
 
   return {
@@ -141,7 +161,7 @@ export async function getStaticProps(context: any) {
       faq: faq.filter((faq: any) => faq.category.id === 'programming'),
       page,
       sections,
-      tracks
+      tracks,
     },
   }
 }

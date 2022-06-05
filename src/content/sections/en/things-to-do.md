@@ -1,5 +1,5 @@
 ---
-title: Things to do
+title: 2,600 meters closer to the stars
 showTitle: false
 left: >-
   The capital of Colombia is located in one of the six regions of the country,

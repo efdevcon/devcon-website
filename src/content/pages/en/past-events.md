@@ -3,4 +3,6 @@ title: Past events
 template: content
 ---
 
-Devcon is the Ethereum conference for developers, researchers, thinkers, and makers. Devcon travels the world every year, historically rotating to the east each year with every edition bringing something unique.
+Everything began in Berlin Kreuzberg in 2014 when the co-founders and earliest builders of Ethereum came together for a meet-up they named Devcon 0. Since then, Devcon has rotated the world. The journey went from Berlin to London, Shanghai, Cancún, Prague, and Osaka. Each location brings something unique to the developer conference.
+
+Before the journey continues to Botogá this year, you might want to check out some details about Devcon’s history. Read on below for summaries of past editions, or head to the [Devcon Archive](https://archive.devcon.org/archive) to watch round-up videos, talks, and presentations.

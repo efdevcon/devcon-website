@@ -149,9 +149,9 @@
         // }
       }
 
-      &:last-child {
-        border-bottom: none;
-      }
+      // &:last-child {
+      //   border-bottom: none;
+      // }
 
       @media (max-width: $breakpoints-md) {
         // margin-top: $gaps-gap-2;

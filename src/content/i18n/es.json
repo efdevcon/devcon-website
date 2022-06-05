@@ -95,7 +95,11 @@
     "program_overview": "Visión general",
     "program_apply_to_speak": "Aplicar para hablar",
     "get_tickets": "Conseguir Entradas",
-    "tickets_raffle": "Rifa+Subasta"
+    "tickets_raffle": "Rifa+Subasta",
+    "participate": "Participar",
+    "press": "Prensa",
+    "supporter_application": "Solicitud de apoyo",
+    "volunteer": "Voluntario"
   },
   "program": {
     "overview_about": "Sobre",

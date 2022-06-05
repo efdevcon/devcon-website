@@ -33,7 +33,7 @@
   h5,
   h6 {
     @include fonts-title;
-    @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
+    // @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
     // @include fonts-subsection-header;
     // @include fonts-xl;
     // margin-bottom: var(--markdown-spacing, 1em);

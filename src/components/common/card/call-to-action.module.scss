@@ -78,11 +78,14 @@
     right: 0px;
     height: 100%;
 
+    * {
+      fill: #E55066;
+    }
+
     svg {
       transform: translateY(-25%);
       width: 100%;
       height: 150%;
-      fill: #E55066;
     }
   }
 

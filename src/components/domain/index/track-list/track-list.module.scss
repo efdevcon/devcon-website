@@ -21,7 +21,7 @@
     width: 32px;
     height: 32px;
     position: relative;
-    margin-right: 48px;
+    margin-right: 24px;
     
     svg {
       all: unset;
@@ -35,6 +35,6 @@
   margin-left: 0px;
 
   @media (min-width: $breakpoints-lg) {
-    margin-left: 80px; 
+    margin-left: 56px; 
   }
 }

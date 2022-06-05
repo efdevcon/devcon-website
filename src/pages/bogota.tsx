@@ -56,9 +56,9 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
       <div className="section">
         <div className="two-columns clear-bottom" id="location">
-          <div className='left section-markdown'>
-            <h2>{intl('city_guide_title')}</h2>
-            <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
+          <div className="left section-markdown">
+            <h2 className="spaced">{intl('city_guide_title')}</h2>
+            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
 
           <div className="right">
@@ -131,8 +131,11 @@ export default pageHOC(function CityGuideTemplate(props: any) {
           <>
             <h2 className="spaced">{props.sections['things-to-do'].title}</h2>
             <div className="two-columns border-bottom clear-bottom" id="things-to-do">
-              <div className="left">
-                <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.sections['things-to-do'].data.left) }} />
+              <div className="left section-markdown">
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: toHtml(props.sections['things-to-do'].data.left) }}
+                />
               </div>
               <div className="right">
                 <div dangerouslySetInnerHTML={{ __html: toHtml(props.sections['things-to-do'].data.right) }} />
@@ -146,11 +149,38 @@ export default pageHOC(function CityGuideTemplate(props: any) {
             <h2 className="spaced clear-top">{props.sections['why-devcon-in-bogota'].title}</h2>
 
             <div className="two-columns clear-bottom" id="why-bogota">
-              <div className="left">
-                <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.sections['why-devcon-in-bogota'].data.left) }} />
+              <div className="left section-markdown">
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: toHtml(props.sections['why-devcon-in-bogota'].data.left) }}
+                />
               </div>
               <div className="right">
-                <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.sections['why-devcon-in-bogota'].data.right) }} />
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: toHtml(props.sections['why-devcon-in-bogota'].data.right) }}
+                />
+              </div>
+            </div>
+          </>
+        )}
+
+        {props.sections['is-bogota-safe'] && (
+          <>
+            <h2 className="spaced clear-top border-top">{props.sections['is-bogota-safe'].title}</h2>
+
+            <div className="two-columns clear-bottom border-bottom" id="why-bogota">
+              <div className="left section-markdown">
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: toHtml(props.sections['is-bogota-safe'].data.left) }}
+                />
+              </div>
+              <div className="right">
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: toHtml(props.sections['is-bogota-safe'].data.right) }}
+                />
               </div>
             </div>
           </>
@@ -182,14 +212,14 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/bogota', context.locale)
-  const sections = await GetContentSections(['things-to-do', 'why-devcon-in-bogota'], context.locale)
+  const sections = await GetContentSections(['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe'], context.locale)
 
   return {
     props: {
       ...globalData,
       page,
       faq: await GetFAQ(context.locale),
-      sections
+      sections,
     },
   }
 }

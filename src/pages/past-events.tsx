@@ -38,18 +38,45 @@ export default pageHOC(function PastEvents(props: any) {
 
   return (
     <Page theme={themes['about']}>
-      <PageHero />
+      <PageHero
+        path={[{ text: <span className="bold">About</span> }, { text: 'Past Events' }]}
+        navigation={props.editions.map((edition: any) => {
+          return {
+            title: edition.title,
+            to: `#${edition.id}`,
+          }
+        })}
+
+        // navigation={[
+        //   {
+        //     title: intl('program_overview_about'),
+        //     to: '#about',
+        //   },
+        //   {
+        //     title: intl('program_overview_values'),
+        //     to: '#values',
+        //   },
+        //   {
+        //     title: intl('program_overview_tracks'),
+        //     to: '#tracks',
+        //   },
+        //   {
+        //     title: intl('program_overview_faq'),
+        //     to: '#faq',
+        //   },
+        // ]}
+      />
 
       <div className="section">
         <div className={`two-columns ${css['about']} clear-bottom border-bottom margin-bottom`}>
           <div className={`left ${css['left']}`}>
             <div className="section-markdown">
               <h2>Devcon Editions</h2>
-              <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
+              <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
             </div>
 
             <div className={css['links']}>
-              <Link to="/schedule" className="text-uppercase hover-underline font-lg bold">
+              <Link to="/overview" className="text-uppercase hover-underline font-lg bold">
                 Programming
                 <ArrowRight />
               </Link>
@@ -69,9 +96,15 @@ export default pageHOC(function PastEvents(props: any) {
           <h2>Past Devcons</h2>
         </div>
 
-        {props.editions.map((edition: DevconEdition) => {
+        {props.editions.map((edition: DevconEdition, index: number) => {
+          const isLast = index === props.editions.length - 1
+
+          let className = 'clear-bottom clear-top'
+
+          if (!isLast) className += ` border-bottom`
+
           return (
-            <div key={edition.id} className="clear-bottom clear-top">
+            <div key={edition.id} id={edition.id} className={className}>
               <div className={css['edition']}>
                 <div className={css['left']}>
                   {getEditionImage(edition.number) && (

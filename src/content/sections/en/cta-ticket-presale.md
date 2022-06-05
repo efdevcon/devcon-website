@@ -1,5 +1,5 @@
 ---
-title: Ticket Pre-sale Raffle & Auction
+title: Discount Ticket Applications
 ---
 
-We are holding an experimental pre-sale Auction and Raffle for 100 tickets to Devcon 6. With a hybrid mechanism, we get the best of both worlds. 20 tickets will serve the demand of those who just can't miss Devcon at any price, while 80 tickets are given out in a provably fair fashion, at face value.
+Applications for Discounted Tickets to Devcon are now open until June 30. Apply today if you are a Builder, Student (or teacher!), or are interested in Volunteering at Devcon! Application responses will be sent on a rolling basis.

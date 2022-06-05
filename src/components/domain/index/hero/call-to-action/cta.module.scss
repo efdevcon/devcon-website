@@ -31,27 +31,37 @@
       height: 80px;
     }
 
-    .slider {
-      overflow: hidden;
+    // .slider {
+    //   overflow: hidden;
+    //   width: 100%;
+
+    .swipe-wrapper {
       width: 100%;
-
-      .item {
-        cursor: grab;
-        flex-basis: 25%;
-        flex-shrink: 0;
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        padding: $gaps-gap-2;
-        height: 80px;
-        border-bottom: 2px solid transparent;
-
-        &:hover {
-          border-bottom: 2px solid black;
-        }
-
-        &:focus {
-          outline: none;
+      .items {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+    
+        .item {
+          // cursor: grab;
+          min-width: 200px;
+          flex-basis: 25%;
+          flex-shrink: 0;
+          display: flex !important;
+          flex-direction: column;
+          justify-content: center;
+          padding: $gaps-gap-2;
+          height: 80px;
+          border-bottom: 2px solid transparent;
+    
+          &:hover {
+            border-bottom: 2px solid black;
+          }
+    
+          &:focus {
+            outline: none;
+          }
         }
       }
     }

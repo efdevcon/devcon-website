@@ -20,7 +20,7 @@ const CallsToAction = (props: Props) => {
           BackgroundSvg={TicketBackground}
           link="/tickets"
           linkText="Ticketing"
-          meta="Raffle Ends: June 20th"
+          meta="Applications Close: June 30th @ 23:59:59 UTC"
         >
           <div dangerouslySetInnerHTML={{ __html: props.ticketPresale.body }} />
         </CallToAction>
@@ -32,7 +32,7 @@ const CallsToAction = (props: Props) => {
           BackgroundSvg={SpeakersBackground}
           link="/overview"
           linkText="Program"
-          meta="Application Deadline: June 29th"
+          meta="Applications Close: June 27th @ 23:59:59 UTC"
         >
           <div dangerouslySetInnerHTML={{ __html: props.speakerApplications.body }} />
         </CallToAction>

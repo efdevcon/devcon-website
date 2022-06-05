@@ -137,6 +137,26 @@ const useNavigationData = () => {
           url: 'https://github.com/efdevcon/',
           type: 'link',
         },
+        {
+          title: intl('navigation_participate'),
+          url: '#',
+          type: 'header',
+        },
+        {
+          title: intl('navigation_supporter_application'),
+          url: 'https://forms.gle/AU45v5g229uTAarA6',
+          type: 'link',
+        },
+        {
+          title: intl('navigation_press'),
+          url: 'https://forms.gle/G4FxcQsC2Byy9NEHA',
+          type: 'link',
+        },
+        {
+          title: intl('navigation_volunteer'),
+          url: 'https://forms.gle/GnH3SyxSNnQCCn8TA',
+          type: 'link',
+        },
       ],
     },
     {

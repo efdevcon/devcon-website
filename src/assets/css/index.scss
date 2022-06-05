@@ -47,20 +47,20 @@ body {
 }
 
 .section-markdown {
-  padding: 32px 0;
+  // padding: 0px 0;
 
   h2 {
-    @include fonts-spaced;
+    // @include fonts-spaced;
   }
 
   h3 {
-    @include fonts-spaced;
+    // @include fonts-spaced;
     @include fonts-highlighted;
     margin-top: 16px; // $standard-spacing / 2;
   }
 
   hr {
-    margin: 32px 0; // $standard-spacing:
+    // margin: 32px 0; // $standard-spacing:
     border-bottom: 1px solid $colors-monochrome-5;
   }
 

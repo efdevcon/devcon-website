@@ -17,7 +17,7 @@ import CalendarIcon from 'assets/icons/calendar.svg'
 import SelectionIcon from 'assets/icons/selection.svg'
 import Image from 'next/image'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
-import Process from 'assets/images/application-process.png'
+import Process from 'assets/images/speaker-process.png'
 
 const ProcessOverview = () => {
   return (
@@ -53,13 +53,13 @@ export default pageHOC(function Applications(props: any) {
         <div className="section">
           <div className={`${css['about']} clear-bottom border-bottom`} id="about">
             <div className={css['left']}>
-              <div className='section-markdown'>
+              <div className="section-markdown">
                 <h2>Speaker Applications</h2>
                 <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
 
               <div className={css['links']}>
-                <Link to="/" className="bold text-uppercase">
+                <Link to="https://speak.devcon.org/devcon-vi-2022/cfp">
                   <Button className="purple lg">Apply to Speak</Button>
                 </Link>
               </div>
@@ -72,12 +72,12 @@ export default pageHOC(function Applications(props: any) {
                   {
                     Icon: PencilIcon,
                     title: 'APPLICATIONS OPEN',
-                    right: 'June 1',
+                    right: 'June 6th',
                   },
                   {
                     Icon: CalendarIcon,
                     title: 'DEADLINE TO APPLY',
-                    right: 'June 30',
+                    right: 'June 27th @ 23:59:59 UTC',
                   },
                   {
                     Icon: SelectionIcon,
@@ -85,7 +85,7 @@ export default pageHOC(function Applications(props: any) {
                     right: (
                       <span>
                         <span className="font-xs">Before</span>
-                        <span className="bold">July 30</span>
+                        <span className="bold">July 30th</span>
                       </span>
                     ),
                   },
@@ -106,10 +106,15 @@ export default pageHOC(function Applications(props: any) {
             </div>
           </div>
 
-          {props.sections['application-guidelines'] && <div className={`${css['guidelines']} clear-bottom clear-top border-top`} id="guidelines">
-            <h2 className="clear-bottom">{props.sections['application-guidelines'].title}</h2>
-            <div className={`${css['custom-markdown']} section-markdown`} dangerouslySetInnerHTML={{ __html: props.sections['application-guidelines'].body }} />
-          </div>}
+          {props.sections['application-guidelines'] && (
+            <div className={`${css['guidelines']} clear-bottom clear-top border-top`} id="guidelines">
+              <h2 className="clear-bottom">{props.sections['application-guidelines'].title}</h2>
+              <div
+                className={`${css['custom-markdown']} section-markdown markdown`}
+                dangerouslySetInnerHTML={{ __html: props.sections['application-guidelines'].body }}
+              />
+            </div>
+          )}
         </div>
 
         <div className="section">
@@ -129,7 +134,7 @@ export async function getStaticProps(context: any) {
     props: {
       ...globalData,
       page,
-      sections
+      sections,
     },
   }
 }

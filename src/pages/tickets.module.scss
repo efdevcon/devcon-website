@@ -14,7 +14,7 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-basis: auto;
 
     @media (min-width: $breakpoints-xl) {
@@ -22,10 +22,10 @@
       margin-right: 120px;
     }
 
-    p,
-    button {
-      margin-top: 1em;
-    }
+    // p,
+    // button {
+    //   margin-top: 1em;
+    // }
 
     .links {
       display: flex;
@@ -72,6 +72,12 @@
       color: $colors-monochrome-6;
     }
   }
+
+  > * {
+    &:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
 }
 
 .ticket {
@@ -84,6 +90,14 @@
 
   @media (min-width: $breakpoints-md) {
     padding: 20px 50px;
+  }
+
+  &.disabled {
+   .tag {
+      color: #000;
+      border-color: #000;
+      opacity: 0.4;
+    }
   }
 
   &.grey {
@@ -277,6 +291,10 @@
       order: 5;
     }
 
+    &:nth-child(5) {
+      order: 3;
+    }
+    
     &:nth-child(5) {
       order: 3;
     }
