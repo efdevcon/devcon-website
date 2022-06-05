@@ -4,7 +4,7 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
-import { DEFAULT_APP_PAGE, TITLE } from 'utils/constants'
+import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getMessages } from 'utils/intl'
 
 export default pageHOC((props: any) => {

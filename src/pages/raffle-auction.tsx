@@ -24,23 +24,23 @@ export default pageHOC(function RaffleAuction(props: any) {
         path={[{ text: <span className="bold">Tickets</span> }, { text: 'Raffle+Auction' }]}
         navigation={[
           {
-            title: intl('tickets_timeline'),
+            title: intl('tickets_raffle_about'),
             to: '#about',
           },
           {
-            title: intl('tickets_auction'),
+            title: intl('tickets_raffle_auction'),
             to: '#auction',
           },
           {
-            title: intl('tickets_withdrawal'),
+            title: intl('tickets_raffle_withdrawal'),
             to: '#raffle',
           },
           {
-            title: intl('tickets_poap'),
+            title: intl('tickets_raffle_poap'),
             to: '#poap',
           },
           {
-            title: intl('tickets_reasoning'),
+            title: intl('tickets_raffle_reasoning'),
             to: '#reasoning',
           },
         ]}
@@ -89,7 +89,7 @@ export default pageHOC(function RaffleAuction(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/raffle-auction', context.locale)
-  const sections = await GetContentSections(['on-chain-ticket-raffle-auction', 'how-will-the-auction-work'], context.locale)
+  const sections = await GetContentSections(['how-will-the-auction-work'], context.locale)
 
   return {
     props: {

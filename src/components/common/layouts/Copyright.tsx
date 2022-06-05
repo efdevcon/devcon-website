@@ -7,7 +7,7 @@ export const Copyright = () => {
 
   return (
     <div className="font-xs">
-      <p className="bold">{intl('rtd_footer')}</p>
+      <p className="bold">{intl('global_footer')}</p>
       <p>{COPYRIGHT_NOTICE}</p>
     </div>
   )

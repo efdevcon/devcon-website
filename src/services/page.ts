@@ -7,9 +7,10 @@ import { BASE_CONTENT_FOLDER } from 'utils/constants'
 import { DIP } from 'types/DIP'
 import { Category } from 'types/Category'
 import { FAQ } from 'types/FAQ'
-import markdownUtils from 'utils/markdown'
+import markdownUtils, { toHtml } from 'utils/markdown'
 import { ContentSection, ContentSections } from 'types/ContentSection'
 import { DevconEdition } from 'types/DevconEdition'
+import { Track } from 'types/Track'
 
 export async function GetPage(slug: string, lang: string = 'en'): Promise<Page | undefined> {
   if (lang !== 'es') lang = 'en'
@@ -256,6 +257,34 @@ export function GetDevconEditions(lang: string = 'en'): Array<DevconEdition> {
       return edition
     })
     .filter(i => !!i) as Array<DevconEdition>
+}
+
+export function GetTracks(lang: string = 'en'): Array<Track> {
+  if (lang !== 'es') lang = 'en'
+
+  const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'tracks', lang)
+
+  return fs
+    .readdirSync(dir)
+    .map(i => {
+      const content = fs.readFileSync(join(dir, i), 'utf8')
+      if (!content) {
+        console.log('File has no content..', i)
+        return undefined
+      }
+
+      const doc = matter(content)
+      return {
+        id: i.replace('.md', '').toLowerCase(),
+        slug: i.replace('.md', '').toLowerCase(),
+        lang: lang,
+        title: doc.data.title,
+        body: doc.content,
+        order: doc.data.order,
+      } as Track
+    })
+    .sort((a: any, b: any) => a.order - b.order)
+    .filter(i => !!i) as Array<Track>
 }
 
 export async function GetContentSection(slug: string, lang: string = 'en'): Promise<ContentSection | undefined> {

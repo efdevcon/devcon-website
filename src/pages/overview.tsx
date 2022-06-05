@@ -7,7 +7,7 @@ import { usePageContext } from 'context/page-context'
 import { Tags } from 'components/common/tags'
 import { getGlobalData } from 'services/global'
 import { FAQ } from 'components/domain/faq'
-import { GetPage, GetFAQ, GetContentSections } from 'services/page'
+import { GetPage, GetFAQ, GetContentSections, GetTracks } from 'services/page'
 import TrackList from 'components/domain/index/track-list'
 import css from './overview.module.scss'
 import CallToAction from 'components/common/card/CallToActionCard'
@@ -15,7 +15,6 @@ import ScheduleBackground from 'assets/images/pages/schedule.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import { useTranslations } from 'next-intl'
 import { Link } from 'components/common/link'
-import List from 'components/common/list'
 import { Button } from 'components/common/button'
 
 export default pageHOC(function Schedule(props: any) {
@@ -88,7 +87,8 @@ export default pageHOC(function Schedule(props: any) {
           </div>}
         </div>
 
-        <TrackList />
+        <TrackList tracks={props.tracks} />
+
         <div className="clear-bottom"></div>
 
         <div id="faq" className="section">
@@ -133,13 +133,15 @@ export async function getStaticProps(context: any) {
   const page = await GetPage('/schedule', context.locale)
   const faq = await GetFAQ(context.locale)
   const sections = await GetContentSections(['cta-speaker-applications', 'devcon-programming-values', 'ecosystem-supporters', 'volunteers'], context.locale)
+  const tracks = GetTracks(context.locale)
 
   return {
     props: {
       ...globalData,
       faq: faq.filter((faq: any) => faq.category.id === 'programming'),
       page,
-      sections
+      sections,
+      tracks
     },
   }
 }

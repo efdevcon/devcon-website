@@ -1,9 +1,8 @@
 import { BlogReel } from 'components/domain/blog-overview'
 import { pageHOC } from 'context/pageHOC'
 import { GetBlogs } from 'services/blogs'
-import { TITLE } from 'utils/constants'
+import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
-// import { PWAPrompt } from 'components/domain/app/pwa-prompt'
 import { News } from 'components/domain/news'
 import getNews from 'services/news'
 import { Header } from 'components/common/layouts/header'
@@ -15,6 +14,7 @@ import About from 'components/domain/index/about'
 import CallsToAction from 'components/domain/index/ctas'
 import Image from 'next/image'
 import CircleBackground from 'assets/images/background-circles.png'
+import { GetContentSections, GetTracks } from 'services/page'
 
 export default pageHOC(function Index(props: any) {
   return (
@@ -22,9 +22,9 @@ export default pageHOC(function Index(props: any) {
       <Header withStrip withHero />
       <Hero />
 
-      <About />
+      <About content={props.sections['devcon-bogota']} />
 
-      <CallsToAction />
+      <CallsToAction speakerApplications={props.sections['cta-speaker-applications']} ticketPresale={props.sections['cta-ticket-presale']} />
 
       <News data={props.news} />
 
@@ -36,7 +36,7 @@ export default pageHOC(function Index(props: any) {
         </div>
       </div>
 
-      <TrackList />
+      <TrackList tracks={props.tracks} />
 
       <BlogReel blogs={props.blogs} />
 
@@ -49,21 +49,17 @@ export default pageHOC(function Index(props: any) {
 
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
+  const sections = await GetContentSections(['devcon-bogota', 'cta-speaker-applications', 'cta-ticket-presale'], context.locale)
+  const tracks = GetTracks(context.locale)
 
   return {
     props: {
       ...globalData,
-      page: {
-        title: TITLE,
-        description: globalData.messages.description,
-        template: 'index',
-        tags: [],
-        lang: context.locale,
-        id: 'index',
-        slug: `/${context.locale}/`,
-      },
+      page: DEFAULT_APP_PAGE,
       news: await getNews(context.locale),
       blogs: await GetBlogs(),
+      sections,
+      tracks
     },
   }
 }
