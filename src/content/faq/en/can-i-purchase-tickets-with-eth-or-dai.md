@@ -1,7 +1,7 @@
 ---
 title: Can I purchase tickets with ETH or DAI?
 category: ticketing
-order: 3
+order: 2
 ---
 
-Yes — we will be accepting both ETH and DAI payments for tickets this year, in addition to standard credit/debit card purchases and any ERC-20 token through a Uniswap [integration](https://github.com/esPass/pretix-eth-payment-plugin).
+Yes — we will be accepting both ETH and DAI payments for tickets this year on Mainnet, Optimism & Arbitrum, in addition to standard credit/debit card purchases.
