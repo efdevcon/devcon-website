@@ -30,7 +30,7 @@ const CallsToAction = (props: Props) => {
           title={props.speakerApplications.title}
           tag="OPEN"
           BackgroundSvg={SpeakersBackground}
-          link="/overview"
+          link="/program"
           linkText="Program"
           meta="Applications Close: June 27th @ 23:59:59 UTC"
         >

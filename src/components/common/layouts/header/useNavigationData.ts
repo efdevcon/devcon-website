@@ -218,7 +218,7 @@ const useNavigationData = () => {
       },
       {
         title: intl('navigation_program'),
-        url: '/schedule',
+        url: '/overview',
         type: 'page',
       },
       {
