@@ -25,7 +25,7 @@ type: list
 
    - A 50-minute panel discussion on a topic or challenge. You can have up to 5 panelists plus a moderator.
 
-   _Lightning Talk_
+   **Lightning Talk**
 
    - A 5-minute presentation with 2 minutes for Q&A.
 

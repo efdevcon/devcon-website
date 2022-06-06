@@ -1,5 +1,5 @@
 ---
-title: What are the policies towards Refunds & Transfers? 
+title: '¿Cuáles son las políticas de reembolsos y transferencias?'
 category: ticketing
 order: 4
 ---
