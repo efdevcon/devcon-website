@@ -114,28 +114,34 @@ const getNewsItems = async (lang: string) => {
   const blogs = await blog.getPosts();
   const blogsFormatted = blogs.map(formatting.formatBlogPost);
 
-  const cmsPath = path.resolve(process.cwd(), 'src/content/news', lang)
+  let newsFromCMS: NewsItem[] | [] = [];
 
-  const newsFromCMS = fs.readdirSync(cmsPath).map((file: any)  => {
-      const content = fs.readFileSync(path.join(cmsPath, file), 'utf8')
-
-      if (!content) {
-          console.log('File has no content..', file)
-          return undefined
-      }
-
-      const doc = matter(content)
-      const allTags = GetTags(lang)
-      const tags: Array<string> = doc.data.tags ?? []
-
-      return {
-          ...doc.data,
-          id: file.replace('.md', '').toLowerCase(),
-          title: doc.data.title,
-          date: moment(doc.data.date).valueOf(), //new Date(doc.data.date).getTime(),
-          tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
-      } as NewsItem
-  }).filter((i: any) => !!i) as Array<NewsItem>
+  try {
+    const cmsPath = path.resolve(process.cwd(), 'src/content/news', lang)
+  
+    newsFromCMS = fs.readdirSync(cmsPath).map((file: any)  => {
+        const content = fs.readFileSync(path.join(cmsPath, file), 'utf8')
+  
+        if (!content) {
+            console.log('File has no content..', file)
+            return undefined
+        }
+  
+        const doc = matter(content)
+        const allTags = GetTags(lang)
+        const tags: Array<string> = doc.data.tags ?? []
+  
+        return {
+            ...doc.data,
+            id: file.replace('.md', '').toLowerCase(),
+            title: doc.data.title,
+            date: moment(doc.data.date).valueOf(), //new Date(doc.data.date).getTime(),
+            tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
+        } as NewsItem
+    }).filter((i: any) => !!i) as Array<NewsItem> 
+  } catch(e) {
+    // Doesn't matter really
+  }
 
   return [
     ...newsFromCMS,
