@@ -6,7 +6,7 @@ title: How will the auction work?
 
 ## How will the auction work?
 
-The 20 highest bidders in the Auction will each receive a Voucher Code redeemable for 1 Free Ticket to Devcon 6. All funds/proceeds above the Reserve Price will be donated to public goods.
+The 20 highest bidders in the Auction will pay their bid in exchange for a ticket to Devcon VI. All funds/proceeds will be donated to public goods.
 
 ---
 
@@ -14,7 +14,9 @@ The 20 highest bidders in the Auction will each receive a Voucher Code redeemabl
 
 ## How will the raffle work?
 
-Any participants who do not make the top 20 bids will be funneled into a Raffle to win 1 of 80 tickets to Devcon 6. Each person who wins the Raffle will receive a Voucher Code redeemable for **1 Free Ticket** Devcon 6. One Raffle winner will be randomly selected to have their ticket be a **Golden Ticket** to Devcon 6, which will grant that Raffle winner the ability to withdraw their funds from the Raffle+Auction contract, and still receive a Voucher Code that grants 1 Free Ticket to Devcon 6.
+Any participants who do not make the top 20 bids will be funneled into a Raffle to win 1 of 80 tickets to Devcon VI. Each person who wins the Raffle will receive a ticket in exchange for paying the reserve price of a ticket.
+
+One Raffle winner will be randomly selected to have their ticket be a Golden Ticket to Devcon VI, which means they will receive that ticket for Free.
 
 ---
 
