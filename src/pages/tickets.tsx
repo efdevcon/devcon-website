@@ -22,7 +22,10 @@ import { Link } from 'components/common/link'
 type TicketProps = {
   title: string
   price: string
-  tag: string
+  tags: {
+    text: string
+    link?: string
+  }[]
   disabled?: boolean
   description: React.ReactElement
   number: string
@@ -61,14 +64,30 @@ const Ticket = (props: TicketProps) => {
       </div>
       <div className={css['right']}>
         <span className="font-sm bold">{props.description}</span>
-        <span className={`${css['tag']} label bold`}>{props.tag}</span>
+        <div>
+          {props.tags.map(tag => {
+            if (tag.link) {
+              return (
+                <Link to={tag.link} key={tag.text} className={`${css['tag']} label bold hover-underline`}>
+                  {tag.text}
+                </Link>
+              )
+            }
+
+            return (
+              <span key={tag.text} className={`${css['tag']} label bold`}>
+                {tag.text}
+              </span>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
 
-  if (props.link) {
-    return <Link to={props.link}>{body}</Link>
-  }
+  // if (props.link) {
+  //   return <Link to={props.link}>{body}</Link>
+  // }
 
   return body
 }
@@ -306,7 +325,11 @@ export default pageHOC(function Tickets(props: any) {
               disabled
               number="01"
               description={<div>The Original ticket to Devcon. No ID Required.</div>}
-              tag="Waves coming soon"
+              tags={[
+                {
+                  text: 'Waves Coming Soon',
+                },
+              ]}
             />
             <Ticket
               title="Builder Ticket*"
@@ -319,8 +342,14 @@ export default pageHOC(function Tickets(props: any) {
                   For those who actively volunteer their time to the growth, research and development of the ecosystem.
                 </div>
               }
-              tag="Apply now"
+              tags={[
+                {
+                  text: 'Apply now',
+                  link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
+                },
+              ]}
             />
+
             <Ticket
               title="Student Ticket*"
               price="$149"
@@ -337,22 +366,37 @@ export default pageHOC(function Tickets(props: any) {
                   </span>
                 </div>
               }
-              tag="Apply now"
+              tags={[
+                {
+                  text: 'Apply now',
+                  link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
+                },
+              ]}
             />
+
             <Ticket
               title="LatAm Builder/Student*"
-              link="https://forms.gle/x6GHpq8MAZJCwwsq5"
+              // link="https://forms.gle/x6GHpq8MAZJCwwsq5"
               price="EXTRA DISCOUNT"
               color="grey"
               withoutCurrency
               number="04"
               description={
                 <div>
-                  If you are a Builder or a Student from Latin America, apply through the respective form and receive an
-                  additional discount off your Devcon ticket.
+                  If you are a <Link to="abc">Builder</Link> or a <Link to="abc">Student</Link> from Latin America,
+                  apply through the respective form and receive an additional discount off your Devcon ticket.
                 </div>
               }
-              tag="Apply now"
+              tags={[
+                {
+                  text: 'Builder',
+                  link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
+                },
+                {
+                  text: 'Student',
+                  link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
+                },
+              ]}
             />
 
             <Ticket
@@ -363,7 +407,12 @@ export default pageHOC(function Tickets(props: any) {
               color="blue"
               number="05"
               description={<div>Gain access to Devcon as a Press Staff. </div>}
-              tag="Apply now"
+              tags={[
+                {
+                  text: 'Apply now',
+                  link: 'https://forms.gle/y9SRAnVBWbZfqPGv8',
+                },
+              ]}
             />
             <Ticket
               title="Volunteer*"
@@ -373,7 +422,12 @@ export default pageHOC(function Tickets(props: any) {
               color="blue"
               number="06"
               description={<div>If you are interested in Volunteering at Devcon.</div>}
-              tag="Apply now"
+              tags={[
+                {
+                  text: 'Apply now',
+                  link: 'https://forms.gle/mjHz1oyy2LiVCRvw7',
+                },
+              ]}
             />
           </div>
 

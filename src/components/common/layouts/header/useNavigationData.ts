@@ -186,11 +186,6 @@ const useNavigationData = () => {
   footer: {
     bottom: [
       {
-        title: intl('navigation_faq'),
-        url: '/faq',
-        type: 'page',
-      },
-      {
         title: intl('navigation_news'),
         url: '/news',
         type: 'page',
@@ -212,8 +207,8 @@ const useNavigationData = () => {
     ],
     right: [
       {
-        title: 'FAQ',
-        url: '/faq',
+        title: intl('navigation_about'),
+        url: '/about',
         type: 'page',
       },
       {
@@ -234,6 +229,11 @@ const useNavigationData = () => {
       {
         title: intl('navigation_city_guide'),
         url: '/bogota',
+        type: 'page',
+      },
+      {
+        title: 'FAQ',
+        url: '/faq',
         type: 'page',
       },
     ],
