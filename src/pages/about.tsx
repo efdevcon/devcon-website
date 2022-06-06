@@ -140,7 +140,7 @@ export default pageHOC(function AboutPage(props: any) {
         </h2>
 
         <div id="carousel" className="expand clear-bottom">
-          <Carousel title={intl('about_creating_global_communities')} />
+          <Carousel title={intl('about_creating_communities')} />
         </div>
 
         <div className="two-columns clear-bottom border-bottom">
