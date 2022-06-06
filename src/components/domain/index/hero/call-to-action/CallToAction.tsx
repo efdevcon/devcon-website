@@ -24,7 +24,7 @@ export const CallToAction = (props: CTAProps) => {
         <p className="bold">Discount Tickets —</p>
         <p className="font-sm">Applications open now</p>
       </Link>
-      <Link to="/applications" key="3" className={`no-select ${css['item']}`}>
+      <Link to="/applications" key="3" allowDrag className={`no-select ${css['item']}`}>
         <p className="bold">Speaker Applications —</p>
         <p className="font-sm">Apply to contribute now</p>
       </Link>
@@ -33,11 +33,11 @@ export const CallToAction = (props: CTAProps) => {
         <p className="bold">Archive —</p>
         <p className="font-sm">Check out the Devcon archive!</p>
       </Link> */}
-      <Link to="/dips" key="2" className={`no-select ${css['item']}`}>
+      <Link to="/dips" key="2" allowDrag className={`no-select ${css['item']}`}>
         <p className="bold">DIPs —</p>
         <p className="font-sm">Help improve Devcon</p>
       </Link>
-      <Link to="/bogota" key="4" className={`no-select ${css['item']}`}>
+      <Link to="/bogota" key="4" allowDrag className={`no-select ${css['item']}`}>
         <p className="bold">City Guide —</p>
         <p className="font-sm">Find your way around Bogota</p>
       </Link>
