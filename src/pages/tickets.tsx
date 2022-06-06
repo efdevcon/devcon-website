@@ -383,8 +383,8 @@ export default pageHOC(function Tickets(props: any) {
               number="04"
               description={
                 <div>
-                  If you are a <Link to="abc">Builder</Link> or a <Link to="abc">Student</Link> from Latin America,
-                  apply through the respective form and receive an additional discount off your Devcon ticket.
+                  If you are a Builder or a Student from Latin America, apply through the respective form and receive an
+                  additional discount off your Devcon ticket.
                 </div>
               }
               tags={[
