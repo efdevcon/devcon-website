@@ -2,17 +2,23 @@
 title: ¿Cómo funcionará la subasta?
 ---
 
+<span id="auction"></span>
+
 ## ¿Cómo funcionará la subasta?
 
 Los 20 postores con la oferta más alta en la subasta recibirán cada uno un código de cupón canjeable por 1 boleto gratis para Devcon 6. Todos los fondos/ingresos por encima del precio de reserva se donarán a bienes públicos.
 
 ---
 
+<span id="raffle"></span>
+
 ## ¿Cómo funcionará el sorteo?
 
 Los participantes que no lleguen a las 20 mejores ofertas serán canalizados a una rifa para ganar 1 de 80 boletos para Devcon 6. Cada persona que gane la rifa recibirá un código de cupón canjeable por **1 boleto gratis** Devcon 6. Uno El ganador de la rifa se seleccionará al azar para que su boleto sea un **boleto dorado** para Devcon 6, lo que le otorgará al ganador de la rifa la posibilidad de retirar sus fondos del contrato de rifa+subasta y aún así recibir un código de cupón que otorga 1 Entrada gratuita a Devcon 6.
 
 ---
+
+<span id="withdrawal"></span>
 
 ## ¿Me devolverán el dinero si no gano la subasta o la rifa?
 
@@ -21,11 +27,15 @@ Los participantes que no lleguen a las 20 mejores ofertas serán canalizados a u
 
 ---
 
+<span id="poap"></span>
+
 ## ¿Para qué servirán los POAP NFT?
 
 Es posible que haya oportunidades futuras para proporcionar recompensas o descuentos a aquellos que tengan un POAP NFT de Devcon Raffle+Auction.
 
 ---
+
+<span id="why"></span>
 
 ## ¿Por qué estamos haciendo esto?
 

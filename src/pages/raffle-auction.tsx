@@ -32,8 +32,12 @@ export default pageHOC(function RaffleAuction(props: any) {
             to: '#auction',
           },
           {
-            title: intl('tickets_raffle_withdrawal'),
+            title: intl('tickets_raffle_title'),
             to: '#raffle',
+          },
+          {
+            title: intl('tickets_raffle_withdrawal'),
+            to: '#withdrawal',
           },
           {
             title: intl('tickets_raffle_poap'),
@@ -41,7 +45,7 @@ export default pageHOC(function RaffleAuction(props: any) {
           },
           {
             title: intl('tickets_raffle_reasoning'),
-            to: '#reasoning',
+            to: '#why',
           },
         ]}
       />
@@ -76,7 +80,7 @@ export default pageHOC(function RaffleAuction(props: any) {
 
         {props.sections['how-will-the-auction-work'] && (
           <div
-            className={`section-markdown markdown clear-top clear-bottom`}
+            className={`section-markdown markdown clear-bottom`}
             dangerouslySetInnerHTML={{ __html: props.sections['how-will-the-auction-work'].body }}
           />
         )}

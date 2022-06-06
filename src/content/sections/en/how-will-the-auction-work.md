@@ -2,17 +2,23 @@
 title: How will the auction work?
 ---
 
+<span id="auction"></span>
+
 ## How will the auction work?
 
 The 20 highest bidders in the Auction will each receive a Voucher Code redeemable for 1 Free Ticket to Devcon 6. All funds/proceeds above the Reserve Price will be donated to public goods.
 
 ---
 
+<span id="raffle"></span>
+
 ## How will the raffle work?
 
 Any participants who do not make the top 20 bids will be funneled into a Raffle to win 1 of 80 tickets to Devcon 6. Each person who wins the Raffle will receive a Voucher Code redeemable for **1 Free Ticket** Devcon 6. One Raffle winner will be randomly selected to have their ticket be a **Golden Ticket** to Devcon 6, which will grant that Raffle winner the ability to withdraw their funds from the Raffle+Auction contract, and still receive a Voucher Code that grants 1 Free Ticket to Devcon 6.
 
 ---
+
+<span id="withdrawal"></span>
 
 ## Will I get my money back if I do not win the Auction or win the Raffle?
 
@@ -21,11 +27,15 @@ Any participants who do not make the top 20 bids will be funneled into a Raffle 
 
 ---
 
+<span id="poap"></span>
+
 ## What will the POAP NFTs be good for?
 
 There may be future opportunities to provide rewards or discounts to those who hold a Devcon Raffle+Auction POAP NFT.
 
 ---
+
+<span id="why"></span>
 
 ## Why are we doing this?
 
