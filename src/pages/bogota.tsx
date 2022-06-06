@@ -186,6 +186,27 @@ export default pageHOC(function CityGuideTemplate(props: any) {
           </>
         )}
 
+        {props.sections['what-areas-to-stay'] && (
+          <>
+            <h2 className="spaced clear-top border-top">{props.sections['what-areas-to-stay'].title}</h2>
+
+            <div className="two-columns clear-bottom border-bottom" id="what-areas">
+              <div className="left section-markdown">
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: toHtml(props.sections['what-areas-to-stay'].data.left) }}
+                />
+              </div>
+              <div className="right section-markdown">
+                <div
+                  className="markdown"
+                  dangerouslySetInnerHTML={{ __html: toHtml(props.sections['what-areas-to-stay'].data.right) }}
+                />
+              </div>
+            </div>
+          </>
+        )}
+
         <section id="FAQ" className="clear-top">
           <FAQ
             data={[{ id: 'something', title: 'Frequently Asked Questions', questions: faqs }]}
@@ -212,7 +233,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/bogota', context.locale)
-  const sections = await GetContentSections(['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe'], context.locale)
+  const sections = await GetContentSections(['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe', 'what-areas-to-stay'], context.locale)
 
   return {
     props: {

@@ -1,5 +1,5 @@
 ---
-title: Can I be a sponsor for Devcon VI?
+title: '¿Puedo ser patrocinador de Devcon VI?'
 category: general
 order: 3
 ---

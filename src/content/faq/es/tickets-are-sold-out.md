@@ -1,5 +1,5 @@
 ---
-title: Tickets are sold out - How can I attend?
+title: 'Las entradas están agotadas - ¿Cómo puedo asistir?'
 category: ticketing
 order: 5
 ---

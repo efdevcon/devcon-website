@@ -2,8 +2,7 @@
 title: '¿Por qué Devcon en Bogotá?'
 showTitle: true
 left: >-
-  Nuestra búsqueda de una ubicación adecuada para Devcon 6 comenzó antes de Devcon 5 en 2019. Después de explorar lugares en más de diez ciudades de todo el mundo y evaluar meticulosamente cada uno según un amplio conjunto de criterios, el claro ganador fue Bogotá, Colombia.
-
+  Nuestra búsqueda de una ubicación adecuada para Devcon VI comenzó antes de Devcon V en 2019. Después de explorar lugares en más de diez ciudades de todo el mundo y evaluar meticulosamente cada uno frente a un amplio conjunto de criterios, el claro ganador fue Bogotá, Colombia.
 
   En Bogotá encontramos las semillas de una comunidad ambiciosa que nuestro ecosistema podría ayudar a crecer. Desde constructores hasta entidades educativas, líderes comerciales e industriales locales y más, estamos entusiasmados de conocer y trabajar con aquellos que hacen uso local de la tecnología de Ethereum en el mundo real, y de promover esos esfuerzos.
 right: >-

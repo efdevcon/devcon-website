@@ -9,12 +9,17 @@ left: >-
 
 right: >-
   La expresión local en Bogotá es: “No des papaya”, o “No des una papaya”. Esencialmente significa, no se convierta en un objetivo obvio: use el sentido común mientras esté en Bogotá. Eso significa:
-    - Mira por donde vas
-    - No camine con su teléfono afuera y sus maletas abiertas
-    - No use artículos llamativos como relojes caros o billeteras de hardware chapadas en oro.
-    - Evite tomar taxis en la calle. Usa Uber o DiDi, donde un viaje de 20 minutos cuesta alrededor de $3 USD. Consejo: tal vez pague el dólar extra por un "Uber Comfort" más agradable *(recomendado cuando viene del aeropuerto)*.
-    - Tal vez no camines solo a casa por la noche (Recordatorio: los Ubers son fáciles y baratos).
-    
+  
+   - Mira por donde vas
 
-  Puede elegir su aventura y, con un poco de sentido común y precaución adicional, puede esperar tener una experiencia divertida y segura en Bogotá.
+   - No camine con su teléfono afuera y sus maletas abiertas
+
+   - No use artículos llamativos como relojes caros o billeteras de hardware chapadas en oro.
+
+   - Evite tomar taxis en la calle. Usa Uber o DiDi, donde un viaje de 20 minutos cuesta alrededor de $3 USD. Consejo: tal vez pague el dólar extra por un "Uber Comfort" más agradable *(recomendado cuando viene del aeropuerto)*.
+  
+   - Tal vez no camines solo a casa por la noche (Recordatorio: los Ubers son fáciles y baratos).
+
+
+   Puede elegir su aventura y, con un poco de sentido común y precaución adicional, puede esperar tener una experiencia divertida y segura en Bogotá.
 ---

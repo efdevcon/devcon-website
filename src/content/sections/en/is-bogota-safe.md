@@ -9,11 +9,18 @@ left: >-
 
 right: >-
   The local expression in Bogotá is: “No des papaya,” or “Don’t give a papaya.” It essentially means, don’t make yourself an obvious target: use common sense while in Bogotá. That means:
-    - Look where you’re going
-    - Don’t walk around with your phone out and your bags unzipped
-    - Don’t wear flashy items like expensive watches or gold-plated hardware wallets
-    - Avoid hailing street taxis. Use Uber or DiDi, where a 20-min ride costs around $3 USD. Tip: maybe pay the extra dollar for a nicer “Uber Comfort” *(recommended when coming from the Airport)*.
-    - Maybe don’t walk home alone at night (Reminder: Ubers are easy & cheap).
+  
+  - Look where you’re going
 
-  You can choose your adventure, and with a little bit of common sense and extra precaution, you can expect to have a fun and safe experience in Bogotá.
+  - Don’t walk around with your phone out and your bags unzipped
+
+  - Don’t wear flashy items like expensive watches or gold-plated hardware wallets
+
+  - Avoid hailing street taxis. Use Uber or DiDi, where a 20-min ride costs around $3 USD. Tip: maybe pay the extra dollar for a nicer “Uber Comfort” *(recommended when coming from the Airport)*.
+  
+  - Maybe don’t walk home alone at night (Reminder: Ubers are easy & cheap).
+
+
+  You can choose your adventure, and with a little bit of common sense and extra precaution, you can expect to have a fun and safe experience in Bogotá. 
+
 ---
