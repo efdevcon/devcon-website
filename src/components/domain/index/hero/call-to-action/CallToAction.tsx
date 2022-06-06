@@ -37,7 +37,7 @@ export const CallToAction = (props: CTAProps) => {
       </Link>
       <Link to="/bogota" key="4" allowDrag className={`no-select ${css['item']}`}>
         <p className="bold">City Guide —</p>
-        <p className="font-sm">Find your way around Bogota</p>
+        <p className="font-sm">Find your way around Bogotá</p>
       </Link>
     </div>
   )

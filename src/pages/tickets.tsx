@@ -80,7 +80,7 @@ export default pageHOC(function Tickets(props: any) {
   return (
     <Page theme={themes['tickets']}>
       <PageHero
-        path={[{ text: <span className="bold">Tickets</span> }, { text: 'Get Tickets' }]}
+        path={[{ text: <span className="bold">{intl('navigation_tickets')}</span> }, { text: 'Get Tickets' }]}
         navigation={[
           {
             title: intl('tickets_timeline'),
@@ -100,12 +100,12 @@ export default pageHOC(function Tickets(props: any) {
       <div className="section">
         <div className={`${css['about']} clear-bottom border-bottom`} id="about">
           <div className={`${css['left']} section-markdown`}>
-            <h2 className="spaced">Devcon Ticketing</h2>
+            <h2 className="spaced">{intl('tickets_ticketing')}</h2>
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
 
           <div className={css['right']}>
-            <h2 className="spaced">Important Dates</h2>
+            <h2 className="spaced">{intl('tickets_raffle_important_dates')}</h2>
             <Snapshot
               items={[
                 {
@@ -129,11 +129,11 @@ export default pageHOC(function Tickets(props: any) {
         </div>
 
         <h2 className="clear-top clear-bottom border-bottom margin-bottom" id="timeline">
-          Timeline
+          {intl('tickets_timeline')}
         </h2>
 
         <div className="clear-bottom">
-          <h2 className="spaced">Discounted Tickets</h2>
+          <h2 className="spaced">{intl('tickets_discounted')}</h2>
 
           <List
             connectedItems

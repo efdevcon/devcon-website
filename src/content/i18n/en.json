@@ -28,8 +28,6 @@
   "state_warning": "Warning",
   "state_info": "Info",
   "state_alert": "Alert",
-  "faq_filter_keywords": "Filter by keywords",
-  "faq_filter": "Filter FAQs using relevant key terms.",
   "snapshot_timezone": "Timezone",
   "snapshot_currency": "Currency",
   "snapshot_colombian_peso": "Colombian Peso (COP)",
@@ -73,7 +71,7 @@
   "city_guide": {
     "title": "Location",
     "things_todo": "Things to do",
-    "why_bogota": "Why Bogota?",
+    "why_bogota": "Why Bogotá?",
     "faq": "Frequently Asked Questions",
     "map": "Venue Map"
   },
@@ -102,19 +100,29 @@
     "volunteer": "Volunteer"
   },
   "program": {
+    "title": "Program",
+    "programming": "Programming",
     "overview_about": "About",
     "overview_values": "Values",
     "overview_tracks": "Tracks",
     "overview_faq": "FAQ",
+    "important_dates": "Important Dates",
+    "apply_to_speak": "Apply to speak",
+    "process_overview": "Process Overview",
+    "drag_for_more": "DRAG FOR MORE →",
+    "speaker_applications": "Speaker Applications",
     "application_process": "Process",
     "application_guidelines": "Application Guidelines"
   },
   "tickets": {
-    "title": "Tickets", 
+    "title": "Tickets",
+    "ticketing": "Devcon Ticketing",
     "timeline": "Timeline",
     "types_and_pricing": "Types & Pricing",
+    "discounted": "Discounted Tickets",
     "faq": "FAQ",
     "raffle_title": "Raffle",
+    "raffle_subtitle": "Experimental On-chain Ticket Raffle+Auction",
     "raffle_about": "About",
     "raffle_auction": "Auction",
     "raffle_poap": "POAP",
@@ -126,6 +134,16 @@
     "raffle_june_30": "June 30",
     "raffle_july_01": "July 1",
     "raffle_participate": "Participate in Presale Raffle+Auction"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "filter_keywords": "Filter by keywords",
+    "filter": "Filter FAQs using relevant key terms."
+  },
+  "past_events": {
+    "title_editions": "Devcon Ediciones",
+    "locations": "Locations",
+    "past_devcons": "Past Devcons"
   },
   "footer": {
     "about_devcon_1": "About Devcon —",

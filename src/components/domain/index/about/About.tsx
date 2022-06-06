@@ -29,11 +29,11 @@ const About = (props: Props) => {
             <br />
             <span className="bold">Devcon Oct 11-14 📌 Agora Bogotá Convention Center</span>
             <br />
-            <span className="font-sm">Devcon Week — October 7-16 in Bogota, Colombia.</span>
+            <span className="font-sm">Devcon Week — October 7-16 in Bogotá, Colombia.</span>
           </p>
 
           <Link to="/bogota">
-            <Button className="red lg">Bogota City Guide →</Button>
+            <Button className="red lg">Bogotá City Guide →</Button>
           </Link>
         </div>
         <div className={css['right']}>

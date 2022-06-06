@@ -1,5 +1,5 @@
 ---
-title: Devcon Programming Values
+title: Valores de programación de Devcon
 ---
 
 1. Colaboración

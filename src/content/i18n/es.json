@@ -28,8 +28,6 @@
   "state_warning": "Advertencia",
   "state_info": "Info",
   "state_alert": "Alerta",
-  "faq_filter_keywords": "Filtrar por palabras clave",
-  "faq_filter": "Filtrar FAQs usando términos de clave relevantes.",
   "snapshot_timezone": "Timezone",
   "snapshot_currency": "Moneda",
   "snapshot_colombian_peso": "Peso colombiano (COP)",
@@ -102,30 +100,50 @@
     "volunteer": "Voluntario"
   },
   "program": {
+    "title": "Programa",
+    "programming": "Programación",
     "overview_about": "Sobre",
     "overview_values": "Valores",
     "overview_tracks": "Tracks",
     "overview_faq": "FAQ",
+    "important_dates": "Fechas importantes",
+    "apply_to_speak": "Aplicar para hablar",
+    "process_overview": "Vista general del proceso",
+    "drag_for_more": "ARRASTRA PARA MÁS →",
+    "speaker_applications": "Aplicaciones de altavoces",
     "application_process": "Proceso",
     "application_guidelines": "Pautas de Aplicación"
   },
   "tickets": {
     "title": "Entradas", 
+    "ticketing": "Emisión de boletos de Devcon",
     "timeline": "Cronología",
     "types_and_pricing": "Tipos y Precios",
+    "discounted": "Entradas con descuento",
     "faq": "FAQ",
     "raffle_title": "Rifa",
+    "raffle_subtitle": "Sorteo de boletos en cadena experimental + Subasta",
     "raffle_about": "Sobre",
     "raffle_auction": "Subasta",
     "raffle_poap": "POAP",
     "raffle_withdrawal": "Retiro",
     "raffle_reasoning": "Razonamiento",
-    "raffle_important_dates": "Important Dates",
-    "raffle_auction_begins": "Raffle+Auction begins",
-    "raffle_ticket_sale_waves": "Ticket Sale Waves",
+    "raffle_important_dates": "Fechas importantes",
+    "raffle_auction_begins": "Comienza Sorteo+Subasta",
+    "raffle_ticket_sale_waves": "Olas de venta de entradas",
     "raffle_june_30": "June 30",
     "raffle_july_01": "July 1",
-    "raffle_participate": "Participate in Presale Raffle+Auction"
+    "raffle_participate": "Participa en Sorteo Preventa+Subasta"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "filter_keywords": "Filtrar por palabras clave",
+    "filter": "Filtrar FAQs usando términos de clave relevantes."
+  },
+  "past_events": {
+    "title_editions": "Devcon Ediciones",
+    "locations": "Ubicaciones",
+    "past_devcons": "Pasada Devcons"
   },
   "footer": {
     "about_devcon_1": "Acerca de Devcon —",

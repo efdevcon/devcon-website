@@ -36,7 +36,7 @@ export default pageHOC(function Applications(props: any) {
   return (
     <Page theme={themes['program']}>
       <PageHero
-        path={[{ text: <span className="bold">Program</span> }, { text: 'Applications' }]}
+        path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: 'Applications' }]}
         navigation={[
           {
             title: intl('program_application_process'),
@@ -54,19 +54,19 @@ export default pageHOC(function Applications(props: any) {
           <div className={`${css['about']} clear-bottom border-bottom`} id="about">
             <div className={css['left']}>
               <div className="section-markdown">
-                <h2>Speaker Applications</h2>
+                <h2>{intl('program_speaker_applications')}</h2>
                 <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
 
               <div className={css['links']}>
                 <Link to="https://speak.devcon.org/devcon-vi-2022/cfp">
-                  <Button className="purple lg">Apply to Speak</Button>
+                  <Button className="purple lg">{intl('program_apply_to_speak')}</Button>
                 </Link>
               </div>
             </div>
 
             <div className={css['right']}>
-              <h2 className="spaced">Important Dates</h2>
+              <h2 className="spaced">{intl('program_speaker_applications')}</h2>
               <Snapshot
                 items={[
                   {
@@ -97,9 +97,9 @@ export default pageHOC(function Applications(props: any) {
           <div className={`${css['guidelines']} clear-bottom expand`} id="process">
             <div className="section">
               <div className="split">
-                <h2 className="spaced clear-top">Process Overview</h2>
+                <h2 className="spaced clear-top">{intl('program_process_overview')}</h2>
 
-                <span className="font-sm bold">DRAG FOR MORE →</span>
+                <span className="font-sm bold">{intl('program_drag_for_more')}</span>
               </div>
 
               <ProcessOverview />

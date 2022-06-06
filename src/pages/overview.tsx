@@ -24,7 +24,7 @@ export default pageHOC(function Schedule(props: any) {
   return (
     <Page theme={themes['program']}>
       <PageHero
-        path={[{ text: <span className="bold">Program</span> }, { text: 'Overview' }]}
+        path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: 'Overview' }]}
         navigation={[
           {
             title: intl('program_overview_about'),
@@ -50,17 +50,17 @@ export default pageHOC(function Schedule(props: any) {
           <div className={`${css['about']} clear-bottom border-bottom margin-bottom`} id="about">
             <div className={css['left']}>
               <div className="section-markdown">
-                <h2>Programming</h2>
+                <h2>{intl('program_programming')}</h2>
                 <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
 
               <div className={css['links']}>
                 <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                  Tickets
+                  {intl('tickets_title')}
                   <ArrowRight />
                 </Link>
                 <Link to="/faq" className="text-uppercase hover-underline font-lg bold">
-                  Frequently Asked Questions
+                  {intl('faq_title')}
                   <ArrowRight />
                 </Link>
               </div>

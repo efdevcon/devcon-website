@@ -1,5 +1,5 @@
 ---
-title: How will the auction work?
+title: ¿Cómo funcionará la subasta?
 ---
 
 ## ¿Cómo funcionará la subasta?
