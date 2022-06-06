@@ -199,7 +199,7 @@ export async function GetFAQ(lang: string = 'en'): Promise<Array<FAQ>> {
 
   const filtered = allFAQs.filter(FAQ => !!FAQ) as FAQ[]
 
-  return filtered
+  return filtered.sort((a: any, b: any) => a.order - b.order)
 }
 
 export function GetTags(lang: string = 'en'): Array<Tag> {
