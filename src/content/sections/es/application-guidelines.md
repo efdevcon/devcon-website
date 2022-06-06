@@ -1,5 +1,5 @@
 ---
-title: Application Guidelines
+title: Pautas de aplicación
 type: list
 ---
 

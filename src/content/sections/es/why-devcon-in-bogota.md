@@ -1,5 +1,5 @@
 ---
-title: '¿Por qué Devcon en Bogota?'
+title: '¿Por qué Devcon en Bogotá?'
 showTitle: true
 left: >-
   Nuestra búsqueda de una ubicación adecuada para Devcon 6 comenzó antes de Devcon 5 en 2019. Después de explorar lugares en más de diez ciudades de todo el mundo y evaluar meticulosamente cada uno según un amplio conjunto de criterios, el claro ganador fue Bogotá, Colombia.

@@ -21,6 +21,7 @@ import Shanghai from 'assets/images/editions/Shanghai.png'
 import Cancun from 'assets/images/editions/Cancun.png'
 import Prague from 'assets/images/editions/Prague.png'
 import Osaka from 'assets/images/editions/Osaka.png'
+import { useTranslations } from 'next-intl'
 
 function getEditionImage(edition: number) {
   if (edition === 0) return Berlin
@@ -34,12 +35,13 @@ function getEditionImage(edition: number) {
 }
 
 export default pageHOC(function PastEvents(props: any) {
+  const intl = useTranslations()
   const pageContext = usePageContext()
 
   return (
     <Page theme={themes['about']}>
       <PageHero
-        path={[{ text: <span className="bold">About</span> }, { text: 'Past Events' }]}
+        path={[{ text: <span className="bold">{intl('navigation_about')}</span> }, { text: intl('navigation_past_events') }]}
         navigation={props.editions.map((edition: any) => {
           return {
             title: edition.title,
@@ -52,29 +54,29 @@ export default pageHOC(function PastEvents(props: any) {
         <div className={`two-columns ${css['about']} clear-bottom border-bottom margin-bottom`}>
           <div className={`left ${css['left']}`}>
             <div className="section-markdown">
-              <h2 className="spaced">Devcon Editions</h2>
+              <h2 className="spaced">{intl('past_events_title_editions')}</h2>
               <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
             </div>
 
             <div className={css['links']}>
               <Link to="/overview" className="text-uppercase hover-underline font-lg bold">
-                Programming
+                {intl('program_programming')}
                 <ArrowRight />
               </Link>
               <Link to="https://archive.devcon.org/archive/" className="text-uppercase hover-underline font-lg bold">
-                Archive
+                {intl('navigation_archive')}
                 <ArrowRight />
               </Link>
             </div>
           </div>
           <div className={`right ${css['right']}`}>
-            <h2 className="spaced">Locations</h2>
+            <h2 className="spaced">{intl('past_events_locations')}</h2>
             <Image src={EventLocations} alt="Devcon events on world map" />
           </div>
         </div>
 
         <div className="border-bottom clear-bottom">
-          <h2>Past Devcons</h2>
+          <h2>{intl('past_events_past_devcons')}</h2>
         </div>
 
         {props.editions.map((edition: DevconEdition, index: number) => {

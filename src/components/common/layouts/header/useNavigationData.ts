@@ -160,13 +160,13 @@ const useNavigationData = () => {
       ],
     },
     {
-      title: 'Bogota',
+      title: 'Bogotá',
       url: '#',
       type: 'links',
       logo: LogoBogota,
       links: [
         {
-          title: 'Bogota',
+          title: 'Bogotá',
           url: '#',
           type: 'header',
         },
