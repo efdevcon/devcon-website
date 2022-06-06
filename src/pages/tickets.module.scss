@@ -50,22 +50,42 @@
   display: flex;
   flex-grow: 1;
   width: 100%;
+  align-items: center;
   justify-content: space-between;
   @include fonts-md;
 
-  .left {
-    flex-basis: 40%;
+  > * {
     flex-shrink: 0;
   }
 
-  .right {
-    flex-grow: 1;
+  .left {
     display: flex;
+    order: 1;
+    flex-wrap: wrap;
+    flex-basis: 40%;
+    flex-shrink: 1;
+
+    @media (min-width: $breakpoints-lg) {
+      flex-basis: 40%;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+
+  .right {
+    flex-shrink: 0;
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
+    text-align: right;
 
     @media (min-width: $breakpoints-lg) {
       justify-content: unset;
+      text-align: start;
+      flex-grow: 1;
+      order: 2;
     }
 
     .when {
@@ -73,9 +93,19 @@
     }
   }
 
+
+  
   > * {
-    &:nth-child(2) {
+    &:nth-child(3) {
       margin-left: 20px;
+
+      order: 1;
+      margin-right: 0.5em;
+  
+      @media (min-width: $breakpoints-lg) {
+        order: 3;
+        margin-right: 0px;
+      }  
     }
   }
 }

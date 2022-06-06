@@ -10,7 +10,6 @@
 
   &.with-separators {
     .item {
-
       border-bottom: 1px solid $colors-standard-border-color;
       padding-bottom: 18px;
     }
@@ -93,7 +92,9 @@
     position: relative;
 
     .number {
-      // .number-inner {
+      display: none;
+
+      @media (min-width: $breakpoints-md) {
         flex-shrink: 0;
         height: 2em;
         width: 2em;
@@ -107,7 +108,7 @@
         color: var(--theme-color, $colors-main);
         margin-right: 32px;
         padding-left: 1px;
-      // }
+      }
     }
 
     .content {
