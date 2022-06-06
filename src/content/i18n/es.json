@@ -134,6 +134,11 @@
     "apply_now": "Aplica ya",
     "coming_soon": "Próximamente, en breve, pronto",
     "general_waves": "Olas generales de emisión de boletos",
+    "general_waves_01": "18 de julio",
+    "general_waves_02": "26 de julio",
+    "general_waves_03": "3 de agosto",
+    "general_waves_04": "11 de agosto",
+    "general_waves_05": "23 de agosto",
     "raffle_title": "Rifa",
     "raffle_subtitle": "Sorteo de boletos en cadena experimental + Subasta",
     "raffle_about": "Sobre",
@@ -159,6 +164,9 @@
     "discount_applications_begins": "Solicitudes de entradas con descuento abiertas",
     "discount_applications_ends": "Solicitudes de entradas con descuento cerrar",
     "discount_applications_send_rolling_basis": "Respuestas de boletos de descuento enviadas de forma continua",
+    "discount_applications_begins_date": "6 de junio",
+    "discount_applications_ends_date": "30 de junio",
+    "discount_applications_review_process": "Proceso de revisión",
     "note_id_check": "*Nota: Se requiere identificación al momento del check-in para evitar la reventa."
   },
   "faq": {

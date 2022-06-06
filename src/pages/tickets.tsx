@@ -162,7 +162,7 @@ export default pageHOC(function Tickets(props: any) {
                 title: (
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>{intl('tickets_discount_applications_begins')}</div>
-                    <div className={`${css['right']} bold`}>June 6</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_begins_date')}</div>
                     <Link to="#types" className="generic hover-underline">
                       {intl('tickets_apply_now')}
                     </Link>
@@ -177,7 +177,7 @@ export default pageHOC(function Tickets(props: any) {
                 title: (
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>{intl('tickets_discount_applications_ends')}</div>
-                    <div className={`${css['right']} bold`}>June 30</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_ends_date')}</div>
                   </div>
                 ),
                 indent: false,
@@ -188,7 +188,7 @@ export default pageHOC(function Tickets(props: any) {
                 title: (
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>{intl('tickets_discount_applications_send_rolling_basis')}</div>
-                    <div className={`${css['right']} bold`}>Review Process</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
                   </div>
                 ),
                 indent: false,
@@ -246,7 +246,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 01</div>
                     <div className={`${css['right']} bold`}>
-                      July 18 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    {intl('tickets_general_waves_01')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                     <p className="bold">{intl('tickets_coming_soon')}</p>
                   </div>
@@ -261,7 +261,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 02</div>
                     <div className={`${css['right']} bold`}>
-                      July 26 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_02')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -274,7 +274,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 03</div>
                     <div className={`${css['right']} bold`}>
-                      August 3 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    {intl('tickets_general_waves_03')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -287,7 +287,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 04</div>
                     <div className={`${css['right']} bold`}>
-                      August 11 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_04')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -300,7 +300,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 05</div>
                     <div className={`${css['right']} bold`}>
-                      August 23 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_05')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),

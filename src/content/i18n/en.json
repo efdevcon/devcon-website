@@ -134,6 +134,11 @@
     "apply_now": "Apply Now",
     "coming_soon": "Coming Soon",
     "general_waves": "General Ticketing Waves",
+    "general_waves_01": "July 18",
+    "general_waves_02": "July 26",
+    "general_waves_03": "August 3",
+    "general_waves_04": "August 11",
+    "general_waves_05": "August 23",
     "raffle_title": "Raffle",
     "raffle_subtitle": "Experimental On-chain Ticket Raffle+Auction",
     "raffle_about": "About",
@@ -159,6 +164,9 @@
     "discount_applications_begins": "Discount Ticket Applications open",
     "discount_applications_ends": "Discount Ticket Applications close",
     "discount_applications_send_rolling_basis": "Discount Ticket Responses sent on a rolling basis",
+    "discount_applications_begins_date": "June 6",
+    "discount_applications_ends_date": "June 30",
+    "discount_applications_review_process": "Review Process",
     "note_id_check": "*Note: ID Required at check-in to prevent resale."
   },
   "faq": {
