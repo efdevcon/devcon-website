@@ -309,13 +309,16 @@ export default pageHOC(function Tickets(props: any) {
               tag="Waves coming soon"
             />
             <Ticket
-              title="Press Pass*"
-              price="FREE"
-              link="https://forms.gle/y9SRAnVBWbZfqPGv8"
-              withoutCurrency
-              color="blue"
-              number="04"
-              description={<div>Gain access to Devcon as a Press Staff. </div>}
+              title="Builder Ticket*"
+              link="https://forms.gle/x6GHpq8MAZJCwwsq5"
+              price="$299"
+              color="grey"
+              number="02"
+              description={
+                <div>
+                  For those who actively volunteer their time to the growth, research and development of the ecosystem.
+                </div>
+              }
               tag="Apply now"
             />
             <Ticket
@@ -323,7 +326,7 @@ export default pageHOC(function Tickets(props: any) {
               price="$149"
               color="grey"
               link="https://forms.gle/9L7BwqCP5hS1AT4HA"
-              number="02"
+              number="03"
               description={
                 <div>
                   For students &amp; educators alike. If you&apos;d like to apply for a Student discount.
@@ -337,41 +340,39 @@ export default pageHOC(function Tickets(props: any) {
               tag="Apply now"
             />
             <Ticket
-              title="Volunteer*"
-              link="https://forms.gle/mjHz1oyy2LiVCRvw7"
-              price="FREE"
-              withoutCurrency
-              color="blue"
-              number="05"
-              description={<div>If you are interested in Volunteering at Devcon.</div>}
-              tag="Apply now"
-            />
-            <Ticket
-              title="Builder Ticket*"
-              link="https://forms.gle/x6GHpq8MAZJCwwsq5"
-              price="$299"
-              color="grey"
-              number="03"
-              description={
-                <div>
-                  For those who actively volunteer their time to the growth, research and development of the ecosystem.
-                </div>
-              }
-              tag="Apply now"
-            />
-            <Ticket
               title="LatAm Builder/Student*"
               link="https://forms.gle/x6GHpq8MAZJCwwsq5"
               price="EXTRA DISCOUNT"
               color="grey"
               withoutCurrency
-              number="06"
+              number="04"
               description={
                 <div>
                   If you are a Builder or a Student from Latin America, apply through the respective form and receive an
                   additional discount off your Devcon ticket.
                 </div>
               }
+              tag="Apply now"
+            />
+
+            <Ticket
+              title="Press Pass*"
+              price="FREE"
+              link="https://forms.gle/y9SRAnVBWbZfqPGv8"
+              withoutCurrency
+              color="blue"
+              number="05"
+              description={<div>Gain access to Devcon as a Press Staff. </div>}
+              tag="Apply now"
+            />
+            <Ticket
+              title="Volunteer*"
+              link="https://forms.gle/mjHz1oyy2LiVCRvw7"
+              price="FREE"
+              withoutCurrency
+              color="blue"
+              number="06"
+              description={<div>If you are interested in Volunteering at Devcon.</div>}
               tag="Apply now"
             />
           </div>

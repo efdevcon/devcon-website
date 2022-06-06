@@ -112,6 +112,7 @@
 
 .ticket {
   min-height: 200px; 
+  height: 100%;
   padding: 10px 24px;
   padding-left: 30px;
   display: flex;
@@ -305,29 +306,33 @@
   > * {
     margin-top: 8px;
 
-    &:nth-child(1) {
-      order: 1;
+    @media (min-width: $breakpoints-lg) {
+      margin-top: 0px;
     }
 
-    &:nth-child(2) {
-      order: 4;
-    }
+    // &:nth-child(1) {
+    //   order: 1;
+    // }
 
-    &:nth-child(3) {
-      order: 2;
-    }
+    // &:nth-child(2) {
+    //   order: 2;
+    // }
 
-    &:nth-child(4) {
-      order: 5;
-    }
+    // &:nth-child(3) {
+    //   order: 3;
+    // }
 
-    &:nth-child(5) {
-      order: 3;
-    }
+    // &:nth-child(4) {
+    //   order: 4;
+    // }
+
+    // &:nth-child(5) {
+    //   order: 5;
+    // }
     
-    &:nth-child(5) {
-      order: 3;
-    }
+    // &:nth-child(6) {
+    //   order: 6;
+    // }
   }
 
   @media (min-width: $breakpoints-lg) {
