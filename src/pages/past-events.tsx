@@ -41,7 +41,10 @@ export default pageHOC(function PastEvents(props: any) {
   return (
     <Page theme={themes['about']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('navigation_about')}</span> }, { text: intl('navigation_past_events') }]}
+        path={[
+          { text: <span className="bold">{intl('navigation_about')}</span> },
+          { text: intl('navigation_past_events') },
+        ]}
         navigation={props.editions.map((edition: any) => {
           return {
             title: edition.title,
@@ -59,7 +62,7 @@ export default pageHOC(function PastEvents(props: any) {
             </div>
 
             <div className={css['links']}>
-              <Link to="/overview" className="text-uppercase hover-underline font-lg bold">
+              <Link to="/program" className="text-uppercase hover-underline font-lg bold">
                 {intl('program_programming')}
                 <ArrowRight />
               </Link>
