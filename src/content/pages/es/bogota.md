@@ -1,8 +1,13 @@
 ---
 title: Guía de la ciudad
+tags:
+  - devcon
+  - location
 template: city-guide
 ---
 
-El Devcon 6 se celebrará en **Bogota**, capital de Colombia y ciudad más grande.
+Devcon VI se llevará a cabo en la hermosa Bogotá, Colombia.
 
-**Bogota** es la capital y la ciudad más grande de Colombia. Es un lugar de convergencia para personas de todo el país y, por lo tanto, es diverso y multicultural. Dentro de esta ciudad, el pasado y el presente se unen.
+Bogotá es la capital y la ciudad más grande de Colombia. Es un lugar de convergencia para personas de todo el país y, por lo tanto, es diverso y multicultural.
+
+Devcon se realizará en el [centro de convenciones Agora Bogotá](https://goo.gl/maps/T9o88tm9xug1WtGz7).

@@ -1,8 +1,13 @@
 ---
 title: City Guide
+tags:
+  - devcon
+  - location
 template: city-guide
 ---
 
-Devcon 6 will be held in **Bogota**, Colombia's capital and largest city.
+Devcon VI will be held in beautiful Bogotá, Colombia.
 
-**Bogota** is the capital of and largest city in Colombia. It is a place of convergence for people from all around the country and is therefore diverse and multicultural. Within this city, the past and present come together.
+Bogotá is the capital of and largest city in Colombia. It is a place of convergence for people from all around the country and is therefore diverse and multicultural. 
+
+Devcon will take place at the [Agora Bogotá convention center](https://goo.gl/maps/T9o88tm9xug1WtGz7).

@@ -1,6 +1,7 @@
 import React from 'react'
-import { usePageContext } from 'src/context/page-context'
-import { Link as LinkType } from 'src/types/Link'
+import { useRouter } from 'next/router'
+import { usePageContext } from 'context/page-context'
+import { Link as LinkType } from 'types/Link'
 
 const resolvePageCategory = (pathname: string, link: LinkType, parent?: string): undefined | JSX.Element => {
   const urlMatch = link.url.includes(pathname)
@@ -26,8 +27,9 @@ const resolvePageCategory = (pathname: string, link: LinkType, parent?: string):
   }
 }
 
-export default () => {
+export const usePageCategory = () => {
   const pageContext = usePageContext()
+  const router = useRouter()
 
   const links = React.useMemo(() => {
     if (!pageContext) return []
@@ -47,7 +49,10 @@ export default () => {
 
     We match and resolve the first part (the "group"), and if there is a second part, we append it after resolving the group
   */
-  const pageComponents = pageContext?.location.pathname.match(/(\/[^/]*\/[^/]*\/)(.*)/)
+  const pageComponents = router.pathname.match(/(\/[^/]*\/[^/]*\/)(.*)/)
+
+  if (!pageComponents) return null
+
   const group = pageComponents[1]
   const page = pageComponents[2]
 

@@ -1,0 +1,106 @@
+@use 'assets/css/partials/index' as *;
+
+@mixin fill-header {
+  --color-icon: #{$colors-monochrome-10};
+  --logo-color: #{$colors-main};
+  --header-background-color: #{$colors-monochrome-1};
+  --header-shadow: 0px 4px 2px rgba(0, 0, 0, 0.15);
+}
+
+@mixin fill-strip {
+  background: white;
+  color: black;
+  --color-icon: black;
+  border-bottom: 1px solid $colors-standard-border-color;
+}
+
+.foldout-open {
+  @media (max-width: 1350px) {
+    @include fill-header;
+
+    :global(#strip) {
+      @include fill-strip;
+    }
+  }
+}
+
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  @media (max-width: $breakpoints-lg) {
+    // @include fill-header;
+  }
+
+  @media (min-width: $breakpoints-lg + 1) {
+    display: contents;
+  }
+}
+
+.header-fixed-container {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  --color-icon: white;
+  --logo-color: var(--color-icon);
+  --header-background-color: #ffffff00;
+  --header-shadow: none;
+  --button-border: none;
+
+  &.scrolled {
+    @include fill-header;
+
+    :global(#strip) {
+      @include fill-strip;
+    }
+
+    // @media (min-width: 1351px) {
+    //   transition: transform 0.4s ease-out;
+    //   transform: translateY(-32px);
+    //   --button-border: 1px solid #{$colors-monochrome-5};
+    // }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  color: var(--color-icon, #{$colors-main});
+  background: var(--header-background-color, white);
+  box-shadow: var(--header-shadow, 0px 4px 2px rgba(0, 0, 0, 0.15));
+
+  position: sticky;
+  z-index: 20;
+  top: 0px;
+
+  &.hero {
+    position: relative;
+    --strip-border: none;
+  }
+
+  .menu-container {
+    // @include layout-content;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    > a {
+      display: flex;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      align-items: center;
+
+      svg {
+        height: 38px;
+        fill: var(--logo-color, $colors-main);
+        padding-right: 42px;
+      }
+    }
+  }
+}

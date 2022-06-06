@@ -1,1 +1,1 @@
-export { Dropdown } from './Dropdown'
+export { Dropdown, DropdownVariationDots } from './Dropdown'

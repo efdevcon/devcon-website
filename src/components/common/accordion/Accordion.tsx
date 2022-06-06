@@ -1,66 +1,54 @@
-import React, { useState } from 'react'
-import { AccordionItem } from './AccordionItem'
+import React from 'react'
+import IconMinus from 'assets/icons/chevron-up.svg'
+import IconPlus from 'assets/icons/chevron-down.svg'
 import css from './accordion.module.scss'
-
-import IconMinus from 'src/assets/icons/minus.svg'
-import IconPlus from 'src/assets/icons/plus.svg'
-import IconArrowCollapse from 'src/assets/icons/arrow_collapse.svg'
-import IconArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
+import { AccordionItem } from './types'
 
 interface AccordionProps {
-  title: string
   items: AccordionItem[]
-  open: boolean
+  dense?: boolean
 }
 
-export function Accordion(props: AccordionProps) {
-  const [opens, setOpens] = useState(props.items.map(i => props.open))
-  const [showQuestions, setShowQuestions] = useState(true)
+const Accordion = (props: AccordionProps) => {
+  const [open, setOpen] = React.useState<{ [key: string]: boolean }>({})
 
-  function toggle(index: number) {
-    if (index === -1) {
-      const newState = opens.includes(false) ? true : false
-      setOpens(props.items.map(i => newState))
-    } else {
-      opens[index] = !opens[index]
-      setOpens([...opens])
-    }
-  }
+  let className = css['accordion']
+
+  if (props.dense) className += ` ${css['dense']}`
 
   return (
-    <div>
-      <div
-        role="button"
-        className={css['category']}
-        aria-label={`Toggle ${props.title}`}
-        onClick={() => setShowQuestions(!showQuestions)}
-      >
-        <h3>{props.title}</h3>
-        {showQuestions && <IconMinus />}
-        {!showQuestions && <IconPlus />}
-      </div>
+    <ul className={className}>
+      {props.items.map((item: AccordionItem) => {
+        let className = css['accordion-item']
 
-      {props.items.length > 0 &&
-        showQuestions &&
-        props.items.map((item, index) => {
-          const open = opens[index]
-          return (
-            <div key={item.id} className={css['container']}>
-              <div className={css[open ? 'active' : 'header']} onClick={() => toggle(index)}>
-                <span>{item.title}</span>
-                <div className={css['icon']}>
-                  {!open && <IconArrowDropdown />}
-                  {open && <IconArrowCollapse />}
-                </div>
-              </div>
-              {open && (
-                <div className={css['body']}>
-                  <p dangerouslySetInnerHTML={{ __html: item.body }} />
-                </div>
-              )}
+        const selected = open[item.id]
+
+        if (selected) className += ` ${css['open']}`
+
+        return (
+          <li
+            id={item.id.toString()}
+            key={item.id}
+            onClick={(e: React.SyntheticEvent) => {
+              const nextOpenState = {
+                ...open,
+                [item.id]: !selected,
+              }
+
+              setOpen(nextOpenState)
+            }}
+            className={className}
+          >
+            <div className={css['header']}>
+              <span className={css['title']}>{item.title}</span>
+              {selected ? <IconMinus /> : <IconPlus />}
             </div>
-          )
-        })}
-    </div>
+            <div className={css['content']}>{item.body}</div>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
+
+export default Accordion

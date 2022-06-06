@@ -1,20 +1,21 @@
 {
-    "compilerOptions": {
-      "target": "es6",
-      "module": "esnext",
-      "moduleResolution": "node",
-      "jsx": "react",
-      "strict": true,
-      "noEmit": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "baseUrl": "./",
-      "types": ["node"],
-      "lib": ["dom", "es2015"],
-    },
-    "include": [
-      "src",
-      "node_modules/@types"
-    ]
-  }
-  
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": "./src",
+  },
+  "include": ["next-env.d.ts", "src"],
+  "exclude": ["node_modules"]
+}

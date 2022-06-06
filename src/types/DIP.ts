@@ -39,7 +39,7 @@ export interface DIP {
   authors: Array<string>
   resources: string
   discussion: string
-  created: Date
+  created: number
   body?: string
   slug: string
   next_dip: string

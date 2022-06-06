@@ -1,24 +1,9 @@
 [build]
-  command = "yarn build"
-  publish = "public"
+    command = "yarn build"
+    publish = ".next"
 
-#[[plugins]]
-#   package = "netlify-plugin-gatsby-cache"
-  
-[[redirects]]
-  from = "/"
-  to = "/en/"
-  status = 302
-  force = true
+[functions]
+  included_files = ["src/content/**/*"]
 
-[[redirects]]
-  from = "/archive"
-  to = "https://archive.devcon.org/"
-  status = 302
-  force = true
-
-[[redirects]]
-  from = "/grants"
-  to = "https://esp.ethereum.foundation/en/devcon-grants/"
-  status = 302
-  force = true
+[[plugins]]
+    package = "@netlify/plugin-nextjs"

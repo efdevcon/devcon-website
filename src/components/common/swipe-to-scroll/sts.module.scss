@@ -1,0 +1,21 @@
+@use 'assets/css/partials/index' as *;
+
+.container {
+  overflow: hidden;
+
+  &.no-bounds {
+    overflow: visible;
+  }
+
+  @media (hover: none) {
+    overflow-x: auto;
+  }
+}
+
+.swipe-to-scroll {
+  user-select: none;
+
+  @media (hover: none) {
+    transform: translateX(0px) !important;
+  }
+}

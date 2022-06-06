@@ -1,71 +1,130 @@
 import React from 'react'
-import { Link } from 'src/components/common/link'
-import Img from 'gatsby-image'
-import { GetExcerpt } from 'src/utils/formatting'
+import { Link } from 'components/common/link'
+import Image from 'next/image'
+import { GetExcerpt } from 'utils/formatting'
 import css from './card.module.scss'
-import IconArrowRight from 'src/assets/icons/arrow_right.svg'
-import { useIntl } from 'gatsby-plugin-intl'
+import IconArrowRight from 'assets/icons/arrow_right.svg'
+import { useTranslations } from 'next-intl'
 
 interface CardProps {
   title: string
+  titleAsIcon?: React.ReactElement
   description?: string
   imageUrl?: any
   linkUrl?: string
-  infoUrl?: string
   expandLink?: boolean
   date?: Date
   metadata?: string[]
   customReadMore?: string
   className?: string
-  disabled?: boolean
+  slide?: boolean
+  allowDrag?: boolean
+  children?: React.ReactNode
 }
 
-export const Card = React.forwardRef((props: CardProps, ref: any) => {
-  const intl = useIntl()
+interface BasicCardProps {
+  expandLink?: boolean
+  linkUrl?: string
+  imageUrl?: string
+  className?: string
+  slide?: boolean
+  allowDrag?: boolean
+  children?: React.ReactNode
+}
+
+// Card has too many variations to be encapsulated by the default Card export
+// For places where we need more customization, you can import BasicCard instead of Card and fill in the contents yourself
+export const BasicCard = React.forwardRef((props: BasicCardProps, ref: any) => {
   let className = css['card']
 
-  if (props.className) className = `${props.className} ${className}`
-  if (props.expandLink) className = `${css['expand-link']} ${className}`
-  if (props.imageUrl) className = `${className} ${css['img']}`
-  if (props.disabled) className += ` ${css['disabled']}`
+  if (props.className) className = `${className} ${props.className}`
+  if (props.slide) className = ` ${className} ${css['slide']}`
 
-  // RTD entire card as a link
+  if (props.expandLink && props.linkUrl) {
+    return (
+      <Link className={className} to={props.linkUrl} ref={ref} allowDrag={props.allowDrag}>
+        {props.children}
+      </Link>
+    )
+  }
+
+  return (
+    <div className={className} ref={ref}>
+      {props.children}
+    </div>
+  )
+})
+
+export const Card = React.forwardRef((props: CardProps, ref: any) => {
+  const intl = useTranslations()
+
   const link =
     props.expandLink || !props.linkUrl ? (
-      props.title
+      props.titleAsIcon || props.title
     ) : (
-      <Link className="hover-underline" to={props.infoUrl || props.linkUrl}>
-        {props.title}
+      <Link className="hover-underline" to={props.linkUrl}>
+        {props.titleAsIcon || props.title}
+      </Link>
+    )
+
+  const readMore =
+    props.expandLink || !props.linkUrl ? (
+      <div className={css['read-more']}>
+        {intl('readmore')}
+        <IconArrowRight />
+      </div>
+    ) : (
+      <Link to={props.linkUrl} className={css['read-more']}>
+        <>
+          {intl('readmore')}
+          <IconArrowRight />
+        </>
       </Link>
     )
 
   const image = (() => {
     if (!props.imageUrl) return null
 
-    const isGatsbyOptimized = typeof props.imageUrl !== 'string'
+    const isOptimized = typeof props.imageUrl !== 'string'
 
-    if (isGatsbyOptimized) {
+    if (isOptimized) {
       return (
-        <div className={css['img-wrapper']}>
-          <Img className={css['img']} fluid={props.imageUrl} />
+        <div className="aspect">
+          <div className={css['img-wrapper']}>
+            <Image className={css['img']} src={props.imageUrl} alt={props.title} />
+          </div>
         </div>
       )
     }
 
     return (
-      <div className={css['img-wrapper']}>
-        <img alt="" className={`${css['img']} ${css['not-gatsby']}`} src={props.imageUrl} />
+      <div className="aspect">
+        <div className={css['img-wrapper']}>
+          <Image
+            alt={props.title}
+            className={`${css['img']} ${css['not-gatsby']}`}
+            src={props.imageUrl}
+            objectFit="cover"
+            layout="fill"
+          />
+        </div>
       </div>
     )
   })()
+
+  let bodyClass = css['body']
+
+  if (props.linkUrl) bodyClass += ` ${css['with-link']}`
 
   const cardContent = (
     <>
       {image}
 
-      <div className={css['body']}>
+      <div className={bodyClass}>
         <p className={css['title']}>{link}</p>
-        {props.description && <p className={css['text']}>{GetExcerpt(props.description)}</p>}
+        {props.description && (
+          <p className={css['text']} dangerouslySetInnerHTML={{ __html: GetExcerpt(props.description) }} />
+        )}
 
         <div className={css['bottom-section']}>
           {props.metadata && (
@@ -76,28 +135,20 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
             </div>
           )}
 
-          {props.linkUrl && (
-            <Link to={props.linkUrl} className={css['read-more']}>
-              {props.customReadMore || intl.formatMessage({ id: 'readmore' })}
-              <IconArrowRight />
-            </Link>
-          )}
+          {props.linkUrl && readMore}
         </div>
       </div>
     </>
   )
 
-  if (props.expandLink && props.linkUrl) {
-    return (
-      <Link className={className} to={props.linkUrl}>
-        {cardContent}
-      </Link>
-    )
-  }
+  let className = ''
+
+  if (props.expandLink) className = `${css['expand-link']} ${className}`
+  if (props.imageUrl) className = `${className} ${css['img']}`
 
   return (
-    <div className={className} ref={ref}>
+    <BasicCard className={className} {...props} ref={ref}>
       {cardContent}
-    </div>
+    </BasicCard>
   )
 })

@@ -14,7 +14,7 @@ export const ScrollGradient = (props: Props) => {
   if (props.className) className += ` ${props.className}`
 
   return (
-    <div {...rest} className={className} style={{ '--scroll-gradient-height': height || '100px' }}>
+    <div {...rest} className={className} style={{ '--scroll-gradient-height': height || '100px' } as any}>
       {props.children}
     </div>
   )

@@ -1,6 +1,8 @@
 ---
 title: site
 links:
+  - type: app
+    slug: app
   - type: page
     slug: news
   - type: links
@@ -10,6 +12,8 @@ links:
         slug: devcon
       - type: page
         slug: about
+      - type: page
+        slug: faq
       - type: header
         slug: learn-more
       - type: page

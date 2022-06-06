@@ -1,6 +1,9 @@
 ---
 title: Noticias
-template: content
+template: news
+tags:
+  - devcon
+  - covid-19
 ---
 
 Últimas noticias & actualizaciones

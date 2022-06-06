@@ -1,7 +1,13 @@
 import React, { ReactNode } from 'react'
-import css from './label.module.scss'
 
-type LabelProps = {
+/*
+  Component has become a little redundant; effectively equal to just doing:
+
+  <div className="label *type*">...</div>
+ 
+  Can consider removing it - keeping it around for now until design system is fleshed out, just in case Labels should get more complex and warrant a component
+*/
+export type LabelProps = {
   type?: string
   className?: string
   children?: ReactNode
@@ -11,17 +17,11 @@ type LabelProps = {
 }
 
 export const Label = (props: LabelProps) => {
-  let className = css['label']
+  let className = 'label'
 
   if (props.className) className += ` ${props.className}`
 
-  switch (props.type) {
-    case 'success':
-    case 'error':
-    case 'warning': {
-      className += ` ${css[props.type]}`
-    }
-  }
+  if (props.type) className += ` ${props.type}`
 
   return (
     <div className={className} style={props.style}>

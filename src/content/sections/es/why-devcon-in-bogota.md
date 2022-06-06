@@ -1,25 +1,16 @@
 ---
-title: '¿Por qué Devcon en Bogota?'
-showTitle: verdad
+title: '¿Por qué Devcon en Bogotá?'
+showTitle: true
 left: >-
-  In Bogotá we found the seeds for an ambitious community that our ecosystem
-  could help grow. From builders, to educational entities, local business and
-  industry leaders and more, we’re excited to meet and to work with those making
-  real-world use of Ethereum’s technology locally, and to further those efforts
+  Nuestra búsqueda de una ubicación adecuada para Devcon VI comenzó antes de Devcon V en 2019. Después de explorar lugares en más de diez ciudades de todo el mundo y evaluar meticulosamente cada uno frente a un amplio conjunto de criterios, el claro ganador fue Bogotá, Colombia.
 
-
-  [Devcon Archive](https://archive.devcon.org/)
+  En Bogotá encontramos las semillas de una comunidad ambiciosa que nuestro ecosistema podría ayudar a crecer. Desde constructores hasta entidades educativas, líderes comerciales e industriales locales y más, estamos entusiasmados de conocer y trabajar con aquellos que hacen uso local de la tecnología de Ethereum en el mundo real, y de promover esos esfuerzos.
 right: >-
-  In addition to the potential to grow a community, the venue is located just
-  minutes from hotels, and from both Bogota’s El Dorado International Airport,
-  and the historic Santa Fe and Candelaria neighborhoods. The fully modern
-  conference center is built to handle everything the Devcon requires, from
-  catering, to wifi, meeting-space and more.
+  Además del potencial para hacer crecer una comunidad, el lugar está ubicado a solo minutos de los hoteles y del Aeropuerto Internacional El Dorado de Bogotá, y cerca de algunas de las áreas más bonitas de Bogotá, como Chapinero Alto, La Candelaria, Parkway y Zona G. entre otros. El centro de conferencias completamente moderno está diseñado para manejar todo lo que Devcon requiere, desde catering hasta wifi, espacio para reuniones y más.
 
 
-  Our search for fitting Devcon 6 began prior to Devcon 5. After exploring venues in over ten cities across the world, and meticulously evaluating each against an extensive set of criteria, the clear winner was Bogota, Colombia.
+  Gracias a su ubicación en la parte norte de América del Sur, Bogotá es también una de las ciudades más accesibles de América del Sur. Con su principal aeropuerto internacional que ofrece vuelos directos desde muchas regiones del mundo, Bogotá es una puerta de entrada al resto de la hermosa América Latina.
 
 
-  This process has been long and somewhat delicate given the complicated year that we’ve all had, but we are excited and confident for Devcon 6 in Bogota.
+  Este proceso ha sido largo y algo delicado debido a los últimos años complicados que todos hemos tenido, pero estamos emocionados de finalmente albergar Devcon VI en Bogotá.
 ---
-

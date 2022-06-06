@@ -1,14 +1,14 @@
 import React from 'react'
-import useSort, { SortVariation } from './useSort'
+import { useSort, SortVariation } from 'components/common/sort'
 import css from './table.module.scss'
-import ArrowAsc from 'src/assets/icons/arrow_asc.svg'
-import ArrowDesc from 'src/assets/icons/arrow_desc.svg'
-import { useIntl } from 'gatsby-plugin-intl'
+import ArrowAsc from 'assets/icons/arrow_asc.svg'
+import ArrowDesc from 'assets/icons/arrow_desc.svg'
+import { useTranslations } from 'next-intl'
 
 type HeaderProps = {
   columns: TableColumn[]
-  setSortedBy: Function
-  sortedBy: number
+  setSortBy: Function
+  sortBy: number
   sortDirection: string
 }
 type RowProps = {
@@ -16,12 +16,12 @@ type RowProps = {
   itemKey: string
   items: any[]
 }
-type TableColumn = {
+export type TableColumn = {
   title?: string
   intl?: string
   key: string
   className?: string
-  render?(args: any): Element
+  render?(args: any): any
   sort?: SortVariation | Function
 }
 type TableProps = {
@@ -31,8 +31,8 @@ type TableProps = {
   [key: string]: any
 }
 
-const TableHeader = (props: HeaderProps) => {
-  const intl = useIntl()
+export const TableHeader = (props: HeaderProps) => {
+  const intl = useTranslations()
 
   return (
     <div className={css['header']}>
@@ -42,7 +42,7 @@ const TableHeader = (props: HeaderProps) => {
         if (column.className) className = `${column.className} ${className}`
         if (column.sort) className += ` ${css['sort']}`
 
-        const sortIsActive = props.sortedBy === index
+        const sortIsActive = props.sortBy === index
 
         if (sortIsActive) {
           className += ` ${css[props.sortDirection]}`
@@ -59,10 +59,10 @@ const TableHeader = (props: HeaderProps) => {
               userSelect: 'none', // Prevents accidental text selection when double-clicking
             }}
             onClick={e => {
-              if (column.sort) props.setSortedBy(index)
+              if (column.sort) props.setSortBy(index)
             }}
           >
-            <p className="text-uppercase">{column.intl ? intl.formatMessage({ id: column.intl }) : column.title}</p>
+            <p className="text-uppercase">{column.intl ? intl(column.intl) : column.title}</p>
             {column.sort && (
               <div className={css['sort']}>
                 {shouldRenderAsc && <ArrowAsc />}
@@ -76,42 +76,41 @@ const TableHeader = (props: HeaderProps) => {
   )
 }
 
-const TableRows = (props: RowProps) => {
-  return props.items.map(item => {
-    return (
-      <div key={item[props.itemKey]} className={css['row']}>
-        {props.columns.map(column => {
-          const value = item[column.key]
+export const TableRows = (props: RowProps) => {
+  return <>
+    {props.items.map(item => {
+      return (
+        <div key={item[props.itemKey]} className={css['row']}>
+          {props.columns.map(column => {
+            const value = item[column.key]
 
-          let className = css['cell']
+            let className = css['cell']
 
-          if (column.className) className = `${column.className} ${className}`
+            if (column.className) className = `${column.className} ${className}`
 
-          return (
-            <div key={column.key} className={className}>
-              {column.render ? column.render(item, column) : <p>{value}</p>}
-            </div>
-          )
-        })}
-      </div>
-    )
-  })
+            return (
+              <div key={column.key} className={className}>
+                {column.render ? column.render(item) : <p>{value}</p>}
+                {/* 
+              TODO: build error
+              {column.render ? column.render(item, column) : <p>{value}</p>} */}
+              </div>
+            )
+          })}
+        </div>
+      )
+    })
+    }
+  </>
 }
 
 export const Table = (props: TableProps) => {
-  const [sortedItems, sortedBy, setSortedBy, sortDirection] = useSort(props.items, props.columns)
+  const { sortedData, sortBy, setSortBy, sortDirection } = useSort(props.items, props.columns)
 
   return (
     <div className={css['container']}>
-      <TableHeader
-        columns={props.columns}
-        setSortedBy={setSortedBy}
-        sortedBy={sortedBy}
-        sortDirection={sortDirection}
-      />
-      <TableRows itemKey={props.itemKey} columns={props.columns} items={sortedItems} />
+      <TableHeader columns={props.columns} setSortBy={setSortBy} sortBy={sortBy} sortDirection={sortDirection} />
+      <TableRows itemKey={props.itemKey} columns={props.columns} items={sortedData} />
     </div>
   )
 }
-
-export { TableColumn }

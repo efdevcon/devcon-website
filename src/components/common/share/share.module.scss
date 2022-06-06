@@ -1,5 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/gaps';
+@use 'assets/css/partials/index' as *;
 
 .share {
   display: flex;
@@ -8,7 +7,7 @@
   max-width: 100%;
 
   > * {
-    @include gaps.responsive-gap($attribute: margin, $bottom: $gap-8, $min-gap: $gap-4);
+    @include gaps-responsive-gap($attribute: margin, $bottom: $gaps-gap-8, $min-gap: $gaps-gap-4);
 
     &:last-child {
       margin-bottom: 0px;
@@ -16,7 +15,7 @@
   }
 
   > h2 {
-    font-family: $font-secondary;
+    font-family: $fonts-primary;
     margin-right: 20%;
   }
 
@@ -28,7 +27,7 @@
       width: 175px;
 
       &:first-child {
-        margin-right: $gap-4;
+        margin-right: $gaps-gap-4;
       }
 
       > button {
@@ -50,13 +49,13 @@
 
 .copy-to-clipboard {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: $gap-4;
+  padding-top: $gaps-gap-4;
   display: flex;
 
   .link-text {
     display: flex;
-    padding-left: $gap-4;
-    padding-right: $gap-4;
+    padding-left: $gaps-gap-4;
+    padding-right: $gaps-gap-4;
     align-items: center;
     background: #f7f7f7;
     flex-basis: 70%;
@@ -65,7 +64,7 @@
 
   .copy-button {
     flex-grow: 1;
-    margin-left: $gap-2;
+    margin-left: $gaps-gap-2;
     min-width: 100px;
     display: flex;
     justify-content: center;
@@ -75,7 +74,7 @@
 
 .excited-for {
   > div {
-    margin-top: $gap-3;
+    margin-top: $gaps-gap-3;
     display: flex;
     flex-wrap: wrap;
 
@@ -88,11 +87,11 @@
     }
 
     > p {
-      @include gaps.responsive-gap($attribute: margin, $right: $gap-16, $min-gap: $gap-4);
+      @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-16, $min-gap: $gaps-gap-4);
     }
 
     > button {
-      @include gaps.responsive-gap($attribute: margin, $right: $gap-6, $top: $gap-2, $min-gap: $gap-2);
+      @include gaps-responsive-gap($attribute: margin, $right: $gaps-gap-6, $top: $gaps-gap-2, $min-gap: $gaps-gap-2);
     }
   }
 }

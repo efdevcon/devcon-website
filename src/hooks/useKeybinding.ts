@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 const useKeyBinding = (onKeyDown: (...args: any[]) => any, keys: string[], modifiers?: string[]) => {
   useEffect(() => {
-    const handler = (e: React.SyntheticEvent) => {
+    const handler = (e: any) => {
       if (e.defaultPrevented) {
         return
       }

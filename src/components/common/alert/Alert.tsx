@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import css from './alert.module.scss'
-import { useIntl } from 'gatsby-plugin-intl'
-
-import IconCircleCheck from 'src/assets/icons/circle_check.svg'
-import IconCircleExclamation from 'src/assets/icons/circle_exclamation.svg'
-import IconTriangleExclamation from 'src/assets/icons/triangle_exclamation.svg'
-import IconCross from 'src/assets/icons/cross.svg'
+import { useTranslations } from 'next-intl'
+import IconCircleCheck from 'assets/icons/circle_check.svg'
+import IconCircleExclamation from 'assets/icons/circle_exclamation.svg'
+import IconTriangleExclamation from 'assets/icons/triangle_exclamation.svg'
+import IconCross from 'assets/icons/cross.svg'
 
 interface AlertProps {
   type: 'success' | 'error' | 'warning' | 'info' | 'light'
@@ -16,7 +15,7 @@ interface AlertProps {
 }
 
 export function Alert(props: AlertProps) {
-  const intl = useIntl()
+  const intl = useTranslations()
   const [visible, setVisible] = useState(true)
 
   const renderTitle = () => {
@@ -24,15 +23,15 @@ export function Alert(props: AlertProps) {
 
     switch (props.type) {
       case 'success':
-        return intl.formatMessage({ id: 'state_success' })
+        return intl('state_success')
       case 'error':
-        return intl.formatMessage({ id: 'state_error' })
+        return intl('state_error')
       case 'warning':
-        return intl.formatMessage({ id: 'state_warning' })
+        return intl('state_warning')
       case 'info':
-        return intl.formatMessage({ id: 'state_info' })
+        return intl('state_info')
       default:
-        return intl.formatMessage({ id: 'state_alert' })
+        return intl('state_alert')
     }
   }
 

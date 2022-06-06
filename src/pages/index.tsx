@@ -1,147 +1,65 @@
-import React, { useMemo } from 'react'
-import { HorizontalLayout } from 'src/components/layouts/horizontal-layout'
-import { Intro } from 'src/components/road-to-devcon/intro/Intro'
-import { graphql } from 'gatsby'
-import { useIntl } from 'gatsby-plugin-intl'
-import { ToLinks } from 'src/context/query-mapper'
+import { BlogReel } from 'components/domain/blog-overview'
+import { pageHOC } from 'context/pageHOC'
+import { GetBlogs } from 'services/blogs'
+import { DEFAULT_APP_PAGE } from 'utils/constants'
+import { getGlobalData } from 'services/global'
+import { News } from 'components/domain/news'
+import getNews from 'services/news'
+import { Header } from 'components/common/layouts/header'
+import { Footer } from 'components/common/layouts/footer'
+import { Hero } from 'components/domain/index/hero'
+import css from './index.module.scss'
+import TrackList from 'components/domain/index/track-list'
+import About from 'components/domain/index/about'
+import CallsToAction from 'components/domain/index/ctas'
+import Image from 'next/image'
+import CircleBackground from 'assets/images/background-circles.png'
+import { GetContentSections, GetTracks } from 'services/page'
 
-import { Contribute } from 'src/components/road-to-devcon/contribute'
-import { ToDIPData } from 'src/components/dip-overview/queryMapper'
-import { ToFaqData } from 'src/components/faq/queryMapper'
-import { Ask } from 'src/components/road-to-devcon/ask'
-import { Learn } from 'src/components/road-to-devcon/learn'
-import { Quests } from 'src/components/road-to-devcon/quests'
-import { Participate } from 'src/components/road-to-devcon/participate'
-import { Blog } from 'src/components/road-to-devcon/blog'
-import { MessageFromDeva } from 'src/components/road-to-devcon/message-from-deva'
-// import { Invite } from 'src/components/road-to-devcon/invite'
-import { ToEventData, ToMeetupData } from 'src/components/events-overview/queryMapper'
-import { ToArchiveData } from 'src/components/archive-overview/queryMapper'
-import { toQuestData } from 'src/components/road-to-devcon/quests/queryMapper'
-import { SEO } from 'src/components/common/seo'
-import IconRoad from 'src/assets/icons/road.svg'
-
-export default function Index({ data }: any) {
-  const intl = useIntl()
-  const events = ToEventData(data)
-  const meetups = useMemo(() => ToMeetupData(data), [data])
-  const quests = useMemo(() => toQuestData(data), [data])
-  const dips = useMemo(() => ToDIPData(data), [data])
-  const faqs = useMemo(() => ToFaqData(data), [data])
-  const videos = useMemo(() => ToArchiveData(data), [data])
-  const whatIsDevcon = {
-    title: data.whatIsDevcon ? data.whatIsDevcon.nodes[0]?.frontmatter.title : '',
-    body: data.whatIsDevcon ? data.whatIsDevcon?.nodes[0]?.html : '',
-  }
-  const messageFromDeva = {
-    title: data.messageFromDeva ? data.messageFromDeva.nodes[0]?.frontmatter.title : '',
-    body: data.messageFromDeva ? data.messageFromDeva?.nodes[0]?.html : '',
-  }
-  const whatIsaDIP = {
-    title: data.whatIsaDIP ? data.whatIsaDIP.nodes[0]?.frontmatter.title : '',
-    body: data.whatIsaDIP ? data.whatIsaDIP?.nodes[0]?.html : '',
-  }
-
+export default pageHOC(function Index(props: any) {
   return (
-    <>
-      <SEO />
-      <HorizontalLayout links={ToLinks(data.navigationData.nodes, 'road-to-devcon')}>
-        <Intro
-          title={intl.formatMessage({ id: 'rtd' })}
-          icon={
-            <div style={{ marginTop: '-3px' }}>
-              <IconRoad width="1.4em" height="1.4em" className="override" />
-            </div>
-          }
-          whatIsDevcon={whatIsDevcon}
-        />
+    <div className={css['layout-default']}>
+      <Header withStrip withHero />
+      <Hero />
 
-        <MessageFromDeva title={messageFromDeva.title} messageFromDeva={messageFromDeva.body} />
+      <About content={props.sections['devcon-bogota']} />
 
-        <Blog title={intl.formatMessage({ id: 'rtd_get_informed' })} />
+      <CallsToAction speakerApplications={props.sections['cta-speaker-applications']} ticketPresale={props.sections['cta-ticket-presale']} />
 
-        <Participate title={intl.formatMessage({ id: 'rtd_participate' })} events={events} meetups={meetups} />
+      <News data={props.news} />
 
-        <Contribute title={intl.formatMessage({ id: 'rtd_contribute' })} dips={dips} whatIsaDIP={whatIsaDIP} />
+      <div className="clear-bottom border-bottom"></div>
 
-        <Learn title={intl.formatMessage({ id: 'rtd_learn' })} videos={videos} />
+      <div className={`${css['background-container']} section`}>
+        <div className={`${css['circle-background']} expand`}>
+          <Image src={CircleBackground} alt="Triangles" />
+        </div>
+      </div>
 
-        <Ask title={intl.formatMessage({ id: 'rtd_ask_deva' })} faqs={faqs} />
+      <TrackList tracks={props.tracks} />
 
-        <Quests title={intl.formatMessage({ id: 'rtd_quests' })} quests={quests} />
+      <BlogReel blogs={props.blogs} />
 
-        {/* <Invite title={intl.formatMessage({ id: 'rtd_invite' })} /> */}
-      </HorizontalLayout>
-    </>
+      <div className="clear-bottom"></div>
+
+      <Footer />
+    </div>
   )
-}
+})
 
-export const query = graphql`
-  query($language: String!) {
-    navigationData: allMarkdownRemark(
-      filter: { frontmatter: { title: { eq: "road-to-devcon" } }, fields: { collection: { eq: "navigation" } } }
-    ) {
-      nodes {
-        frontmatter {
-          title
-          links(language: $language) {
-            title
-            type
-            url
-            links {
-              title
-              type
-              url
-            }
-          }
-        }
-      }
-    }
-    messageFromDeva: allMarkdownRemark(
-      filter: {
-        frontmatter: { title: { in: ["Message from Deva", "Mensaje de Deva"] } }
-        fields: { lang: { eq: $language } }
-      }
-    ) {
-      nodes {
-        html
-        frontmatter {
-          title
-        }
-      }
-    }
-    whatIsDevcon: allMarkdownRemark(
-      filter: {
-        frontmatter: { title: { in: ["What is Devcon", "Qué es Devcon"] } }
-        fields: { lang: { eq: $language } }
-      }
-    ) {
-      nodes {
-        html
-        frontmatter {
-          title
-        }
-      }
-    }
-    whatIsaDIP: allMarkdownRemark(
-      filter: {
-        frontmatter: { title: { in: ["What is a DIP", "Qué es un DIP"] } }
-        fields: { lang: { eq: $language } }
-      }
-    ) {
-      nodes {
-        html
-        frontmatter {
-          title
-        }
-      }
-    }
-    ...EventsData
-    ...QuestsData
-    ...MeetupData
-    ...DipsData
-    ...ArchiveData
-    ...Categories
-    ...FAQs
+export async function getStaticProps(context: any) {
+  const globalData = await getGlobalData(context)
+  const sections = await GetContentSections(['devcon-bogota', 'cta-speaker-applications', 'cta-ticket-presale'], context.locale)
+  const tracks = GetTracks(context.locale)
+
+  return {
+    props: {
+      ...globalData,
+      page: DEFAULT_APP_PAGE,
+      news: await getNews(context.locale),
+      blogs: await GetBlogs(),
+      sections,
+      tracks
+    },
   }
-`
+}

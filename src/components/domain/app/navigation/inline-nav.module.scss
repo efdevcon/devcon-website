@@ -1,0 +1,68 @@
+@use 'assets/css/partials/index' as *;
+
+.container {
+  border-bottom: 1px solid $colors-standard-border-color;
+  position: sticky;
+  top: 0px;
+  z-index: 19;
+  background: $colors-monochrome-1;
+}
+
+.inline-nav {
+  display: flex;
+  align-items: center;
+  padding-bottom: $gaps-gap-2;
+  padding-top: $gaps-gap-1;
+  // padding-left: $gaps-gap-16;
+
+  // @media (max-width: $breakpoints-lg) {
+  //   padding-left: $gaps-gap-4;
+  // }
+
+  > * {
+    flex-shrink: 0;
+  }
+
+  @include fonts-lg-fixed;
+
+  .icon {
+    position: relative;
+    top: 2px;
+    --color-icon: #{$colors-track-red};
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 0.9em;
+    }
+
+    &.nested {
+      cursor: pointer;
+    }
+  }
+
+  .nav-item {
+    position: relative;
+    padding: $gaps-gap-3 $gaps-gap-3;
+    padding-bottom: $gaps-gap-2;
+    margin-left: $gaps-gap-2;
+
+    // Using pseudo elements instead of border to prevent centering issues
+    &.selected {
+      @include fonts-bold;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 2px;
+        background-color: $colors-track-red;
+      }
+    }
+
+    // &:hover {
+    //   @include fonts-bold;
+    // }
+  }
+}

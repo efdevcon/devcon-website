@@ -5,6 +5,6 @@ links:
     slug: archive
   - type: link
     slug: forum
-  - type: link
+  - type: page
     slug: blog
 ---

@@ -1,59 +1,124 @@
 import React, { createRef, useEffect, useState } from 'react'
 import css from './dropdown.module.scss'
-import IconArrowDropdown from 'src/assets/icons/arrow_drop_down.svg'
+// import IconArrowDropdown from 'assets/icons/arrow_drop_down.svg'
+import VerticalDotsIcon from 'assets/icons/vertical-dots.svg'
+import ChevronDown from 'assets/icons/arrow_desc.svg'
+import ChevronUp from 'assets/icons/arrow_asc.svg'
 
-interface FilterProps {
-  filters: string[]
-  onFilter?: (value: string) => void
+export interface DropdownProps {
+  value: any
+  className?: string
+  customIcon?: React.ElementType<SVGAElement>
+  renderCustomTrigger?: (foldout: any, defaultTriggerProps: any) => React.ReactElement
+  onChange: (value: any) => void
+  options: {
+    [key: string]: any
+  }[]
 }
 
-export function Dropdown(props: FilterProps) {
-  const defaultValue = props.filters[0]
-  const [filter, setFilter] = useState(defaultValue)
+export const DropdownVariationDots = (props: DropdownProps) => {
+  return (
+    <Dropdown
+      renderCustomTrigger={(triggerProps, foldoutContent) => {
+        return (
+          <div {...triggerProps} className={css['dropdown-variation-dots']}>
+            <VerticalDotsIcon className={`${css['trigger']} icon`} />
+            {foldoutContent}
+          </div>
+        )
+      }}
+      {...props}
+    />
+  )
+}
+
+export const Dropdown = React.forwardRef((props: DropdownProps, externalRef: any) => {
   const [open, setOpen] = useState(false)
-  const ref = createRef()
+  const ref = createRef<HTMLDivElement>()
+  const foldoutRef = createRef<HTMLUListElement>()
+  const currentSelection = props.options.find(option => option.value === props.value)
 
   useEffect(() => {
+    const handleClickOutside = (e: any) => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        setOpen(false)
+      }
+    }
+
     if (open) {
       document.addEventListener('mousedown', handleClickOutside)
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [handleClickOutside, open])
 
-  function handleClickOutside(e: any) {
-    if (ref.current && !ref.current.contains(e.target)) {
-      setOpen(false)
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
     }
+  }, [ref, open])
+
+  let className = `${css['container']}`
+  if (props.className) className += ` ${props.className}`
+  let foldoutClassName = css['dropdown']
+  if (open) foldoutClassName += ` ${css['open']}`
+
+  const Icon = (() => {
+    // Used by e.g. Filter
+    if (props.customIcon) return props.customIcon
+
+    if (open) {
+      return ChevronUp
+    } else {
+      return ChevronDown
+    }
+  })()
+
+  const triggerProps = {
+    role: 'button',
+    onClick: () => setOpen(!open),
+    'aria-label': 'Toggle dropdown',
+    className,
+    ref: (el: any) => {
+      // ref.current = el // TODO: build error
+
+      if (externalRef) externalRef.current = el
+    },
   }
 
-  function onFilter(value: string) {
-    setFilter(value)
-    setOpen(false)
+  const foldoutContent = (
+    <ul className={foldoutClassName} ref={foldoutRef} onClick={e => e.stopPropagation()}>
+      {props.options.map(({ text, value, onClick }) => {
+        const selected = value === props.value
 
-    if (props.onFilter) props.onFilter(value)
+        return (
+          <li
+            key={value}
+            onClick={() => {
+              const closeDropdown = () => setOpen(false)
+
+              if (onClick) {
+                onClick(closeDropdown)
+              } else {
+                props.onChange(value)
+
+                closeDropdown()
+              }
+            }}
+          >
+            <span className={selected ? css['active-filter'] : undefined}>{text}</span>
+          </li>
+        )
+      })}
+    </ul>
+  )
+
+  if (props.renderCustomTrigger) {
+    return props.renderCustomTrigger(triggerProps, foldoutContent)
   }
 
   return (
-    <div className={css['container']} ref={ref}>
-      <span role="button" aria-label="Toggle dropdown" className={css['link']} onClick={() => setOpen(!open)}>
-        {filter}
-        <span className={css['icon']}>
-          <IconArrowDropdown />
-        </span>
-      </span>
+    <div {...triggerProps}>
+      {currentSelection && currentSelection.text}
+      <Icon />
 
-      {open && (
-        <ul className={css['dropdown']}>
-          {props.filters.map(i => {
-            return (
-              <li key={'archive_filter_' + i} onClick={() => onFilter(i)}>
-                <span className={filter === i ? css['active-filter'] : undefined}>{i}</span>
-              </li>
-            )
-          })}
-        </ul>
-      )}
+      {foldoutContent}
     </div>
   )
-}
+})

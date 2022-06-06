@@ -1,0 +1,53 @@
+@use 'assets/css/partials/index' as *;
+
+.intro-right, .for-builders-right {
+  @media (min-width: $breakpoints-lg) {
+    margin-left: 120px;
+  }
+
+  .theme-colored {
+    font-weight: 700;
+    color: var(--theme-color);
+  }
+
+  * {
+    fill: black;
+  }
+}
+
+.for-builders-right {
+  
+  .videos {
+
+    display: flex;
+
+    * {
+      user-select: none;
+    }
+
+    > * {
+      flex-grow: 1;
+      flex-basis: 300px;
+      flex-shrink: 0;
+      margin-left: 16px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+.button {
+  margin-top: 24px;
+}
+
+.link {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-left: 8px;
+  }
+}

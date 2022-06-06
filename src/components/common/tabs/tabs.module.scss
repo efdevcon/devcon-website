@@ -1,5 +1,4 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'assets/css/partials/index' as *;
 
 .tabs {
   display: flex;
@@ -8,27 +7,35 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
   li {
-    cursor: pointer;
-    padding: $gap-6;
-    padding-bottom: $gap-5; // off-set border
-    color: #30354b;
+    padding: $gaps-gap-6;
+    padding-bottom: $gaps-gap-5; // off-set border
+    color: $colors-main;
     font-weight: bold;
     text-transform: uppercase;
     opacity: 0.5;
 
-    &:hover {
-      background: rgba(133, 142, 169, 0.15);
+    @media (max-width: $breakpoints-lg) {
+      padding: $gaps-gap-4;
+      padding-bottom: $gaps-gap-3;
+      // background: none !important;
     }
-  }
 
-  .active {
-    @extend li;
-    opacity: 1;
-    background: rgba(133, 142, 169, 0.15);
+    &.active {
+      opacity: 1;
+      background: $colors-monochrome-2;
 
-    -webkit-box-shadow: inset 0px -2px 0px 0px #30354b;
-    -moz-box-shadow: inset 0px -2px 0px 0px #30354b;
-    box-shadow: inset 0px -2px 0px 0px #30354b;
+      -webkit-box-shadow: inset 0px -2px 0px 0px $colors-main;
+      -moz-box-shadow: inset 0px -2px 0px 0px $colors-main;
+      box-shadow: inset 0px -2px 0px 0px $colors-main;
+    }
+
+    &:not(:only-child) {
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(133, 142, 169, 0.15);
+      }
+    }
   }
 }
 
@@ -36,6 +43,10 @@
   width: 100%;
   height: 100%;
   overflow-y: auto;
+
+  &.with-overflow {
+    overflow-y: visible;
+  }
 
   &::-webkit-scrollbar {
     width: 8px;

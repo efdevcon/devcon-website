@@ -1,15 +1,17 @@
 import React from 'react'
-import { Tooltip } from 'src/components/common/tooltip'
-import ShareIcon from 'src/assets/icons/share.svg'
-import { Modal } from 'src/components/common/modal'
+import { useTranslations } from 'next-intl'
+import { Tooltip } from 'components/common/tooltip'
+import ShareIcon from 'assets/icons/share.svg'
+import { Modal } from 'components/common/modal'
 import { Tweet } from './Tweet'
-import { Link } from 'src/components/common/link'
+import { Link } from 'components/common/link'
 import css from './share.module.scss'
-import { useIntl } from 'react-intl'
-import IconEmail from 'src/assets/icons/pencil.svg'
+import IconEmail from 'assets/icons/pencil.svg'
 
 type ShareProps = {
-  renderTrigger: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
+  renderTrigger?: (onClick: React.Dispatch<React.SetStateAction<undefined>>) => React.ReactNode
+  url?: string
+  onShare?: () => any
 }
 
 // Remove soon - share should now use the custom share sheet instead of this
@@ -45,7 +47,7 @@ const CopyToClipboardLegacy = ({ url, onShare }: any) => {
 
 const CopyToClipboard = ({ url }: any) => {
   const [clicked, setClicked] = React.useState(false)
-  const intl = useIntl()
+  const intl = useTranslations()
   const hashIndex = window.location.href.indexOf(window.location.hash)
   const location = hashIndex ? window.location.href.substring(0, hashIndex) : window.location.href
 
@@ -69,7 +71,7 @@ const CopyToClipboard = ({ url }: any) => {
             }
           }}
         >
-          {intl.formatMessage({ id: 'rtd_share_copy_link' })}
+          {intl('rtd_share_copy_link')}
         </button>
       </Tooltip>
     </div>
@@ -78,28 +80,28 @@ const CopyToClipboard = ({ url }: any) => {
 
 const messages = (intl: any) => [
   {
-    text: intl.formatMessage({ id: 'rtd_share_reunion' }),
-    value: intl.formatMessage({ id: 'rtd_share_reunion_text' }),
-    email: intl.formatMessage({ id: 'rtd_share_reunion_text_email' }),
+    text: intl('rtd_share_reunion'),
+    value: intl('rtd_share_reunion_text'),
+    email: intl('rtd_share_reunion_text_email'),
   },
   {
-    text: intl.formatMessage({ id: 'rtd_share_experience' }),
-    value: intl.formatMessage({ id: 'rtd_share_experience_text' }),
-    email: intl.formatMessage({ id: 'rtd_share_experience_text_email' }),
+    text: intl('rtd_share_experience'),
+    value: intl('rtd_share_experience_text'),
+    email: intl('rtd_share_experience_text_email'),
   },
   {
-    text: intl.formatMessage({ id: 'rtd_share_speakers' }),
-    value: intl.formatMessage({ id: 'rtd_share_speakers_text' }),
-    email: intl.formatMessage({ id: 'rtd_share_speakers_text_email' }),
+    text: intl('rtd_share_speakers'),
+    value: intl('rtd_share_speakers_text'),
+    email: intl('rtd_share_speakers_text_email'),
   },
 ]
 
 const ExcitedFor = (props: { onChange: (...rest: any[]) => any; value: number | null; native: boolean }) => {
-  const intl = useIntl()
+  const intl = useTranslations()
 
   return (
     <div className={css['excited-for']}>
-      <p className="semi-bold">{intl.formatMessage({ id: 'rtd_share_looking_forward_to' })}</p>
+      <p className="semi-bold">{intl('rtd_share_looking_forward_to')}</p>
 
       <div>
         {messages(intl).map(({ text, value }, index) => {
@@ -109,7 +111,7 @@ const ExcitedFor = (props: { onChange: (...rest: any[]) => any; value: number | 
                 key={index}
                 onClick={() => {
                   navigator.share({
-                    title: intl.formatMessage({ id: 'rtd' }),
+                    title: intl('rtd'),
                     text: value,
                     url: window.location.href,
                   })
@@ -139,10 +141,11 @@ const ExcitedFor = (props: { onChange: (...rest: any[]) => any; value: number | 
 }
 
 export const Share = (props: ShareProps) => {
-  const nativeSharePossible = false /*!!(typeof window !== 'undefined' && window.navigator && window.navigator.share) <--- comment back in to enable native share */
+  const nativeSharePossible =
+    false /*!!(typeof window !== 'undefined' && window.navigator && window.navigator.share) <--- comment back in to enable native share */
   const [open, setOpen] = React.useState(false)
   const [excitedFor, setExcitedFor] = React.useState(nativeSharePossible ? null : 0)
-  const intl = useIntl()
+  const intl = useTranslations()
   const message = excitedFor === null ? null : messages(intl)[excitedFor]
   const toggle = () => setOpen(!open)
 
@@ -156,7 +159,7 @@ export const Share = (props: ShareProps) => {
           onWheel={(e: React.SyntheticEvent) => e.nativeEvent.stopImmediatePropagation()}
         >
           <div className={css['share']}>
-            <h2 className="text-uppercase">{intl.formatMessage({ id: 'rtd_share' })}</h2>
+            <h2 className="text-uppercase">{intl('rtd_share')}</h2>
 
             <ExcitedFor value={excitedFor} native={nativeSharePossible} onChange={setExcitedFor} />
 
@@ -167,7 +170,7 @@ export const Share = (props: ShareProps) => {
 
                   <Link
                     title="Share by Email"
-                    to={`mailto:?subject=${intl.formatMessage({ id: 'rtd' })}&body=${message.email}`}
+                    to={`mailto:?subject=${intl('rtd')}&body=${message.email}`}
                   >
                     <button className={`white ${css['email']}`}>
                       <IconEmail /> Email

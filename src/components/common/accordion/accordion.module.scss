@@ -1,55 +1,62 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'assets/css/partials/index' as *;
 
-.header {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $gap-4 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-  span {
-    // RTD: @include fonts.font-xxl;
-    @include fonts.font-lg;
-    margin-right: $gap-2;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: #f8f8f8;
+.accordion {
+  &.dense {
+    .accordion-item {
+      margin-top: 0px;
+      border: none;
+      border-bottom: 1px solid $colors-standard-border-color;
+    }
   }
 }
 
-.icon {
-  flex-shrink: 0;
-}
-
-.active {
-  @extend .header;
-  background: #f8f8f8;
-}
-
-.body {
-  padding: $gap-8 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.category {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: $gap-4 0;
+.accordion-item {
+  list-style-type: none;
+  margin-top: 10px;
+  // background: #1c1c1c;
+  // color: white;
+  // --color-icon: white;
+  border: 1px solid #cfcece;
+  // border-radius: 8px;
   cursor: pointer;
 
-  h3 {
-    @include fonts.font-lg;
-    text-transform: uppercase;
+  &:hover {
+    background: $colors-monochrome-2;
   }
 
-  svg {
-    color: red;
-    fill: red;
+  // &:first-child {
+  //   margin-top: 0px;
+  // }
+
+  .header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > svg {
+      flex-shrink: 0;
+      // --icon-color: white;
+      font-size: 0.65em;
+      margin-left: 12px;
+    }
+  }
+
+  .content {
+    display: none;
+    padding: 15px;
+    padding-top: 0px;
+    @include fonts-sm;
+    // color: #dadada;
+  }
+
+  &.open {
+    .title {
+      font-weight: bold;
+    }
+
+    .content {
+      display: block;
+    }
   }
 }

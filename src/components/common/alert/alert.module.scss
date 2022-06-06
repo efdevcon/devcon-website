@@ -1,14 +1,13 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'assets/css/partials/index' as *;
 
 .alert {
-  color: $color-primary;
-  padding: $size-8;
+  color: $colors-main;
+  padding: $sizes-size-8;
   display: flex;
 }
 
 .message {
-  margin: 0 0 0 $size-8;
+  margin: 0 0 0 $sizes-size-8;
   width: 100%;
 }
 
@@ -21,65 +20,65 @@
 }
 
 .title {
-  @include fonts.font-lg;
+  @include fonts-lg;
 }
 
 .success {
   @extend .alert;
-  background-color: $color-success-light;
+  background-color: $colors-state-success-light;
 
   svg {
-    fill: $color-success;
+    fill: $colors-state-success;
   }
   .title {
-    color: $color-success;
+    color: $colors-state-success;
   }
 }
 
 .error {
   @extend .alert;
-  background-color: $color-error-light;
+  background-color: $colors-state-error-light;
 
   svg {
-    fill: $color-error;
+    fill: $colors-state-error;
   }
   .title {
-    color: $color-error;
+    color: $colors-state-error;
   }
 }
 
 .warning {
   @extend .alert;
-  background-color: $color-warning-light;
+  background-color: $colors-state-warning-light;
 
   svg {
-    fill: $color-warning;
+    fill: $colors-state-warning;
   }
   .title {
-    color: $color-warning;
+    color: $colors-state-warning;
   }
 }
 
 .info {
   @extend .alert;
-  background-color: $color-info-light;
+  background-color: $colors-state-info-light;
 
   svg {
-    fill: $color-info;
+    fill: $colors-state-info;
   }
   .title {
-    color: $color-info;
+    color: $colors-state-info;
   }
 }
 
 .light {
   @extend .alert;
-  background-color: $color-light-light;
+  background-color: $colors-state-neutral-light;
 
   svg {
-    fill: $color-light;
+    fill: $colors-state-neutral;
   }
   .title {
-    color: $color-light;
+    color: $colors-state-neutral;
   }
 }

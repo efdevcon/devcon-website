@@ -1,47 +1,60 @@
-@use 'src/assets/css/variables' as *;
-@use 'src/assets/css/partials/fonts';
+@use 'assets/css/partials/index' as *;
 
 .container {
   height: 38rem;
-  position:relative; 
-  overflow:hidden;
+  position: relative;
+  overflow: hidden;
 
-  h3 { 
+  h3 {
+    @include fonts-normal;
     z-index: 2;
     position: absolute;
-    margin-top: $gap-12;
-    margin-left: $gap-16;
-    max-width: $screen-md;
-    
-    @include fonts.normal;
-    font-size: $size-72;
+    margin-top: $gaps-gap-12;
+    margin-left: $gaps-gap-16;
+    max-width: $breakpoints-md;
+    font-size: $sizes-size-72;
     letter-spacing: -0.03em;
-    color: #FFFFFF;
+    color: $colors-monochrome-1;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    @media (max-width: $screen-lg) {
-      font-size: $size-64;
+    @media (max-width: $breakpoints-lg) {
+      font-size: $sizes-size-64;
     }
 
-    @media (max-width: $screen-sm) {
-      max-width: $size-64;
-      font-size: $size-48;
+    @media (max-width: $breakpoints-sm) {
+      max-width: $sizes-size-64;
+      font-size: $sizes-size-48;
     }
   }
 }
 
 .images {
-  position:absolute; 
-  top:0px; 
-  left:0px; 
+  position: absolute;
+  top: 0px;
+  left: 0px;
 
-  overflow: hidden; 
+  overflow: hidden;
   white-space: nowrap;
   animation: slide 120s linear infinite;
 
+  // > * {
+  //   // flex-shrink: 0;
+  //   height: 38rem !important;
+  //   height: 100% !important;
+  //   position: relative;
+  //   display: inline !important;
+  //   // height: 38rem !important;
+  //   // width: auto !important;
+  // }
+
+  // > * {
+  //   margin-right: 38rem;
+  //   // display: block;
+  // }
+
   img {
     height: 38rem;
-    margin-right: $gap-8;
+    margin-right: $gaps-gap-8;
   }
 }
 
