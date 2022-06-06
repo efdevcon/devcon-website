@@ -81,7 +81,7 @@ const twitter = (() => {
         return await _interface.getTweets(sinceID, results, result.meta.next_token);
       } else {
         // We only collect tweets that are marked with the curation hashtag
-        return results.filter((tweet: any) => tweet?.entities?.hashtags?.some((hashtag: any) => hashtag.tag === curationHashtag));
+        return results.filter((tweet: any) => tweet?.entities?.hashtags?.some((hashtag: any) => true /*hashtag.tag === curationHashtag*/)); // Add curation hash tag back when relevant
       }
     },
     getUserID: async () => {
