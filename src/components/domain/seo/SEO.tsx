@@ -23,14 +23,13 @@ export function SEO(props: SEOProps) {
   const router = useRouter()
   const intl = useTranslations()
   const pageContext = usePageContext()
-  let title = intl('global_title')
+  let title = `${intl('global_title')}`
 
-  if (pageContext?.current?.title) {
-    title = pageContext?.current.title
+  if (pageContext?.current?.title && pageContext?.current?.title !== title) {
+    title = `${pageContext?.current.title} — ${title}`
   }
-
-  if (props.title) {
-    title = props.title
+  else if (props.title) {
+    title = `${props.title} — ${title}`
   }
 
   let description = intl('global_description')
