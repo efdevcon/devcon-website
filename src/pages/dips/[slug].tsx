@@ -4,8 +4,8 @@ import Content from 'components/common/layouts/page'
 import { DIP } from 'components/domain/dips/dip'
 import themes from 'pages/themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
-import { GetDIPs } from 'services/page'
 import { getGlobalData } from 'services/global'
+import { GetDIPs } from 'services/dips'
 
 export default pageHOC(function DIPTemplate(props: any) {
   return (
@@ -34,7 +34,7 @@ export async function getStaticPaths(context: any) {
 }
 
 export async function getStaticProps(context: any) {
-  const dips = await GetDIPs(context.locale)
+  const dips = await GetDIPs()
   const dip = dips.find(i => i.slug.toLowerCase() === context.params.slug.toLowerCase())
 
   if (!dip) {

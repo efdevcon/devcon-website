@@ -10,16 +10,15 @@ import BulletList from 'assets/icons/bullet_list.svg'
 // import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { Contribute } from 'components/domain/dips/overview/contribute'
 import { Proposals } from 'components/domain/dips/overview/proposals'
-import AllContributorsJson from 'content/dips/contributors.json'
 import { Contributor } from 'types/DIP'
 import { getGlobalData } from 'services/global'
-import { GetPage, GetDIPs } from 'services/page'
+import { GetPage } from 'services/page'
 import { Tags } from 'components/common/tags'
+import { GetContributors, GetDIPs } from 'services/dips'
 
 export default pageHOC(function DIPsTemplate(props: any) {
   const pageContext = usePageContext()
   const intl = useTranslations()
-  const contributors = AllContributorsJson as Contributor[]
 
   return (
     <Page theme={themes['teal']}>
@@ -58,7 +57,7 @@ export default pageHOC(function DIPsTemplate(props: any) {
       />
 
       <div className="section">
-        <Contribute dipDescription={props.page.body} contributors={contributors} />
+        <Contribute dipDescription={props.page.body} contributors={props.contributors} />
         <Proposals dips={props.dips} />
 
         <Tags items={pageContext?.current?.tags} viewOnly />
@@ -70,12 +69,15 @@ export default pageHOC(function DIPsTemplate(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/dips', context.locale)
+  const dips = await GetDIPs()
+  const contributors = await GetContributors()
 
   return {
     props: {
       ...globalData,
-      dips: await GetDIPs(context.locale),
       page,
+      dips,
+      contributors
     },
   }
 }

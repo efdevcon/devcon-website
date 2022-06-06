@@ -1,18 +1,19 @@
 import { Octokit } from '@octokit/rest'
 import matter from 'gray-matter'
+import { Contributor, DIP } from 'types/DIP'
 import markdownUtils from 'utils/markdown'
 
 const owner = 'efdevcon'
 const repo = 'DIPs'
 const path = 'DIPs'
 
-export async function GetContributors() {
+export async function GetContributors(): Promise<Array<Contributor>> {
     const octokit = new Octokit({
         auth: process.env.GITHUB_TOKEN,
     })
     const files = await octokit.repos.getContent({ owner, repo, path })
 
-    if (!Array.isArray(files.data)) return
+    if (!Array.isArray(files.data)) return []
 
     const allContributors = Array.from(files.data).map(async i => {
         const commits = await octokit.repos.listCommits({ owner, repo, path: i.path })
@@ -24,7 +25,7 @@ export async function GetContributors() {
                     name: c.author ? c.author.login : c.commit.author?.name,
                     url: c.author && c.author.url,
                     avatarUrl: c.author ? c.author.avatar_url : 'https://camo.githubusercontent.com/6e2f6de0032f63dd90d46812bcc47c1519ee78c4e095733ec35a964901b1274d/68747470733a2f2f302e67726176617461722e636f6d2f6176617461722f35316334663761346261326430393962326261396630343830333264643734613f643d68747470732533412532462532466769746875622e6769746875626173736574732e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d6726733d3634'
-                }
+                } as Contributor
             })
         }
 
@@ -34,16 +35,16 @@ export async function GetContributors() {
     const result = (await Promise.all(allContributors)).flat()
     return [...new Set(result.map(i => i.name))].map(i => {
         return result.find(x => x.name === i)
-    })
+    }).filter(i => i !== undefined) as Array<Contributor>
 }
 
-export async function GetDIPs() {
+export async function GetDIPs(): Promise<Array<DIP>> {
     const octokit = new Octokit({
         auth: process.env.GITHUB_TOKEN,
     })
     const files = await octokit.repos.getContent({ owner, repo, path })
 
-    if (!Array.isArray(files.data)) return
+    if (!Array.isArray(files.data)) return []
 
     const dipNumbers = Array.from(files.data)
         .filter(i => i.name.endsWith('.md'))
@@ -84,8 +85,9 @@ export async function GetDIPs() {
             slug: i.name.replace('.md', '').toLowerCase(),
             next_dip: nextDip,
             prev_dip: prevDip
-        }
-    }).filter(i => !!i)
+        } as DIP
+    })
 
-    return await Promise.all(dips)
+    const all = await Promise.all(dips)
+    return all.filter(i => i !== undefined) as Array<DIP>
 }
