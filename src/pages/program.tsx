@@ -9,7 +9,7 @@ import { getGlobalData } from 'services/global'
 import { FAQ } from 'components/domain/faq'
 import { GetPage, GetFAQ, GetContentSections, GetTracks } from 'services/page'
 import TrackList from 'components/domain/index/track-list'
-import css from './overview.module.scss'
+import css from './program.module.scss'
 import CallToAction from 'components/common/card/CallToActionCard'
 import ScheduleBackground from 'assets/images/pages/schedule.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
@@ -114,7 +114,7 @@ export default pageHOC(function Schedule(props: any) {
                     className="clear-bottom clear-top"
                     dangerouslySetInnerHTML={{ __html: props.sections['ecosystem-supporters'].body }}
                   />
-                  <Link to="https://forms.gle/AU45v5g229uTAarA6">
+                  <Link to="https://forms.gle/mWpzC6dMQFa5WwvG8">
                     <Button className="purple lg">Support Now</Button>
                   </Link>
                 </>

@@ -182,7 +182,7 @@ export default pageHOC(function AboutPage(props: any) {
               className="markdown"
               dangerouslySetInnerHTML={{ __html: props.sections['public-goods'].data.left }}
             ></div>
-            <Link to="https://docs.google.com/forms/d/e/1FAIpQLSeRoyRNFIZpccwkPjxDb7xn3l_ditreQb4R5N2IEHCkIKEo1w/viewform">
+            <Link to="https://forms.gle/mWpzC6dMQFa5WwvG8">
               <Button className={`lg green ${css['button']}`}>{intl('about_supporter_application')}</Button>
             </Link>
           </div>

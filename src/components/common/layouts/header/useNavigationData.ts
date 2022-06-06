@@ -96,7 +96,7 @@ const useNavigationData = () => {
         },
         {
           title: intl('navigation_program_overview'),
-          url: '/overview',
+          url: '/program',
           type: 'page',
         },
         {
@@ -144,7 +144,7 @@ const useNavigationData = () => {
         },
         {
           title: intl('navigation_supporter_application'),
-          url: 'https://forms.gle/AU45v5g229uTAarA6',
+          url: 'https://forms.gle/mWpzC6dMQFa5WwvG8',
           type: 'link',
         },
         {
