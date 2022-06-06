@@ -68,6 +68,16 @@
 
   .footer {
     margin-top: 40px;
+
+    > * {
+      &:first-child {
+        flex-shrink: 0;
+      }
+
+      &:last-child {
+        margin-left: 1em;
+      }
+    }
   }
 
   .background {
