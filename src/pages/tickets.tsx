@@ -324,7 +324,7 @@ export default pageHOC(function Tickets(props: any) {
               price="$599"
               disabled
               number="01"
-              description={<div>The Original ticket to Devcon. No ID Required.</div>}
+              description={<div>The Original ticket to Devcon. Anon-friendly: No ID Required.</div>}
               tags={[
                 {
                   text: 'Waves Coming Soon',
@@ -378,7 +378,7 @@ export default pageHOC(function Tickets(props: any) {
               title="LatAm Builder/Student*"
               // link="https://forms.gle/x6GHpq8MAZJCwwsq5"
               price="EXTRA DISCOUNT"
-              color="grey"
+              color="blue"
               withoutCurrency
               number="04"
               description={
