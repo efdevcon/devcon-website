@@ -399,7 +399,7 @@ export default pageHOC(function Tickets(props: any) {
               ]}
             />
 
-            <Ticket
+            {/* <Ticket
               title="Press Pass*"
               price="FREE"
               link="https://forms.gle/y9SRAnVBWbZfqPGv8"
@@ -413,15 +413,20 @@ export default pageHOC(function Tickets(props: any) {
                   link: 'https://forms.gle/y9SRAnVBWbZfqPGv8',
                 },
               ]}
-            />
+            /> */}
             <Ticket
               title="Volunteer*"
               link="https://forms.gle/mjHz1oyy2LiVCRvw7"
               price="FREE"
               withoutCurrency
               color="blue"
-              number="06"
-              description={<div>If you are interested in Volunteering at Devcon.</div>}
+              number="05"
+              description={
+                <div>
+                  Join the volunteer team alongside 100+ other fun, dedicated, passionate members of the community to
+                  help put on the best Devcon yet!
+                </div>
+              }
               tags={[
                 {
                   text: 'Apply now',
