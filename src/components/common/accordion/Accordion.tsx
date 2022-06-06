@@ -30,7 +30,6 @@ const Accordion = (props: AccordionProps) => {
             id={item.id.toString()}
             key={item.id}
             onClick={(e: React.SyntheticEvent) => {
-              console.log(e.target, 'target')
               const nextOpenState = {
                 ...open,
                 [item.id]: !selected,

@@ -21,7 +21,7 @@ export default pageHOC(function RaffleAuction(props: any) {
   return (
     <Page theme={themes['tickets']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('navigation_tickets')}</span> }, { text: intl('navigation_tickets_raffle') }]}
+        path={[{ text: <span className="bold">{intl('navigation_tickets')}</span> }, { text: props.page.title }]}
         navigation={[
           {
             title: intl('tickets_raffle_about'),
@@ -59,18 +59,18 @@ export default pageHOC(function RaffleAuction(props: any) {
               items={[
                 {
                   Icon: AuctionIcon,
-                  title: 'RAFFLE+AUCTION BEGINS',
+                  title: intl('tickets_raffle_auction_begins'),
                   right: 'TBA',
                 },
                 {
                   Icon: CalendarIcon,
-                  title: 'TICKET sale waves',
-                  right: 'July 18th',
+                  title: intl('tickets_raffle_ticket_sale_waves'),
+                  right: intl('tickets_raffle_july_18'),
                 },
               ]}
             />
 
-            <Button className="blue lg disabled">Coming Soon</Button>
+            <Button className="blue lg disabled">{intl('tickets_raffle_coming_soon')}</Button>
           </div>
         </div>
 

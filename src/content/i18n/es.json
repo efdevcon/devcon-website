@@ -93,7 +93,7 @@
     "program_overview": "Visión general",
     "program_apply_to_speak": "Aplicar para hablar",
     "get_tickets": "Conseguir Entradas",
-    "tickets_raffle": "Rifa+Subasta",
+    "tickets_raffle": "SORTEO+SUBASTA",
     "participate": "Participar",
     "press": "Prensa",
     "supporter_application": "Solicitud de apoyo",
@@ -133,7 +133,9 @@
     "raffle_ticket_sale_waves": "Olas de venta de entradas",
     "raffle_june_30": "June 30",
     "raffle_july_01": "July 1",
-    "raffle_participate": "Participa en Sorteo Preventa+Subasta"
+    "raffle_participate": "Participa en Sorteo Preventa+Subasta",
+    "raffle_coming_soon": "Próximamente, en breve, pronto",
+    "raffle_july_18": "18 de julio"
   },
   "faq": {
     "title": "Preguntas frecuentes",

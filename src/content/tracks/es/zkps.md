@@ -1,5 +1,5 @@
 ---
-title: ZKPs and Privacy
+title: ZKPs - Privacy, Identity, Infrastructure, & More
 order: 8
 ---
 
