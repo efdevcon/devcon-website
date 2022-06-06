@@ -129,18 +129,18 @@ export default pageHOC(function Tickets(props: any) {
               items={[
                 {
                   Icon: NoteIcon,
-                  title: 'DISCOUNT TICKET APPLIcations',
-                  right: 'June 6th to June 30th',
+                  title: intl('tickets_raffle_discount_ticket_applications'),
+                  right: intl('tickets_raffle_discount_ticket_applications_dates'),
                 },
                 {
                   Icon: AuctionIcon,
-                  title: 'RAFFLE+AUCTION BEGINS',
-                  right: 'TBA',
+                  title: intl('tickets_raffle_auction_begins'),
+                  right: intl('tickets_raffle_auction_dates'),
                 },
                 {
                   Icon: TicketIcon,
-                  title: 'TICKET sale waves',
-                  right: 'July 18 to August 23rd',
+                  title: intl('tickets_raffle_ticket_sale_waves'),
+                  right: intl('tickets_raffle_ticket_sale_waves_dates'),
                 },
               ]}
             />
@@ -161,10 +161,10 @@ export default pageHOC(function Tickets(props: any) {
                 id: '1',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Discount Ticket Applications open</div>
-                    <div className={`${css['right']} bold`}>June 6</div>
+                    <div className={css['left']}>{intl('tickets_discount_applications_begins')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_begins_date')}</div>
                     <Link to="#types" className="generic hover-underline">
-                      Apply Now
+                      {intl('tickets_apply_now')}
                     </Link>
                   </div>
                 ),
@@ -176,8 +176,8 @@ export default pageHOC(function Tickets(props: any) {
                 id: '2',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Discount Ticket Applications close</div>
-                    <div className={`${css['right']} bold`}>June 30</div>
+                    <div className={css['left']}>{intl('tickets_discount_applications_ends')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_ends_date')}</div>
                   </div>
                 ),
                 indent: false,
@@ -187,8 +187,8 @@ export default pageHOC(function Tickets(props: any) {
                 id: '3',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Discount Ticket Responses sent on a rolling basis</div>
-                    <div className={`${css['right']} bold`}>Review Process</div>
+                    <div className={css['left']}>{intl('tickets_discount_applications_send_rolling_basis')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
                   </div>
                 ),
                 indent: false,
@@ -199,7 +199,7 @@ export default pageHOC(function Tickets(props: any) {
         </div>
 
         <div className="clear-bottom">
-          <h2 className="spaced">Presale Raffle+Auction</h2>
+          <h2 className="spaced">{intl('tickets_raffle_auction_presale')}</h2>
 
           <List
             connectedItems
@@ -208,10 +208,10 @@ export default pageHOC(function Tickets(props: any) {
                 id: '1',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Begins</div>
-                    <div className={`${css['right']} bold`}>TBA</div>
+                    <div className={css['left']}>{intl('tickets_raffle_auction_begins')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_tba')}</div>
                     <Link to="/raffle-auction" className="generic hover-underline">
-                      Raffle Information
+                      {intl('tickets_raffle_information')}
                     </Link>
                   </div>
                 ),
@@ -223,8 +223,8 @@ export default pageHOC(function Tickets(props: any) {
                 id: '2',
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Raffle+Auction Ends</div>
-                    <div className={`${css['right']} bold`}>TBA</div>
+                    <div className={css['left']}>{intl('tickets_raffle_auction_ends')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_tba')}</div>
                   </div>
                 ),
                 indent: false,
@@ -235,7 +235,7 @@ export default pageHOC(function Tickets(props: any) {
         </div>
 
         <div className="clear-bottom">
-          <h2 className="spaced">General Ticketing Waves</h2>
+          <h2 className="spaced">{intl('tickets_general_waves')}</h2>
 
           <List
             connectedItems
@@ -246,9 +246,9 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 01</div>
                     <div className={`${css['right']} bold`}>
-                      July 18 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    {intl('tickets_general_waves_01')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
-                    <p className="bold">Coming Soon</p>
+                    <p className="bold">{intl('tickets_coming_soon')}</p>
                   </div>
                 ),
                 indent: false,
@@ -261,7 +261,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 02</div>
                     <div className={`${css['right']} bold`}>
-                      July 26 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_02')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -274,7 +274,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 03</div>
                     <div className={`${css['right']} bold`}>
-                      August 3 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                    {intl('tickets_general_waves_03')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -287,7 +287,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 04</div>
                     <div className={`${css['right']} bold`}>
-                      August 11 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_04')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -300,7 +300,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 05</div>
                     <div className={`${css['right']} bold`}>
-                      August 23 —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_05')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -312,11 +312,8 @@ export default pageHOC(function Tickets(props: any) {
         </div>
 
         <div className="border-bottom clear-bottom margin-bottom border-top clear-top" id="types">
-          <h2 className="spaced">Ticket Types &amp; Pricing</h2>
-          <p className="clear-bottom">
-            Payment will be accepted in <b>ETH</b> or <b>DAI</b> on Ethereum Mainnet, Arbitrum + Optimism, OR Fiat/Card
-            via Stripe integration. Prices will be displayed in <b>$USD</b>.
-          </p>
+          <h2 className="spaced">{intl('tickets_types_and_pricing')}</h2>
+          <p className="clear-bottom">{intl('tickets_accepted_payments')}</p>
 
           <div className={`clear-bottom ${css['tickets']}`}>
             <Ticket
@@ -324,10 +321,10 @@ export default pageHOC(function Tickets(props: any) {
               price="$599"
               disabled
               number="01"
-              description={<div>The Original ticket to Devcon. Anon-friendly: No ID Required.</div>}
+              description={<div>{intl('tickets_types_ga')}</div>}
               tags={[
                 {
-                  text: 'Waves Coming Soon',
+                  text: intl('tickets_coming_soon'),
                 },
               ]}
             />
@@ -337,14 +334,10 @@ export default pageHOC(function Tickets(props: any) {
               price="$299"
               color="grey"
               number="02"
-              description={
-                <div>
-                  For those who actively volunteer their time to the growth, research and development of the ecosystem.
-                </div>
-              }
+              description={<div>{intl('tickets_types_builder')}</div>}
               tags={[
                 {
-                  text: 'Apply now',
+                  text: intl('tickets_apply_now'),
                   link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
                 },
               ]}
@@ -358,17 +351,16 @@ export default pageHOC(function Tickets(props: any) {
               number="03"
               description={
                 <div>
-                  For students &amp; educators alike. If you&apos;d like to apply for a Student discount.
+                  {intl('tickets_types_student')}
                   <br /> <br />
                   <span className="font-xxs">
-                    <span className="bold">Note:</span> School/University ID required at check-in to prevent resale.
-                    Secondary/high school, College, or University.
+                    {intl('tickets_types_student_note')}
                   </span>
                 </div>
               }
               tags={[
                 {
-                  text: 'Apply now',
+                  text: intl('tickets_apply_now'),
                   link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
                 },
               ]}
@@ -377,16 +369,11 @@ export default pageHOC(function Tickets(props: any) {
             <Ticket
               title="LatAm Builder/Student*"
               // link="https://forms.gle/x6GHpq8MAZJCwwsq5"
-              price="EXTRA DISCOUNT"
+              price={intl('tickets_extra_discount')}
               color="blue"
               withoutCurrency
               number="04"
-              description={
-                <div>
-                  If you are a Builder or a Student from Latin America, apply through the respective form and receive an
-                  additional discount off your Devcon ticket.
-                </div>
-              }
+              description={<div>{intl('tickets_types_latam')}</div>}
               tags={[
                 {
                   text: 'Builder',
@@ -417,19 +404,14 @@ export default pageHOC(function Tickets(props: any) {
             <Ticket
               title="Volunteer*"
               link="https://forms.gle/mjHz1oyy2LiVCRvw7"
-              price="FREE"
+              price={intl('tickets_free')}
               withoutCurrency
               color="blue"
               number="05"
-              description={
-                <div>
-                  Join the volunteer team alongside 100+ other fun, dedicated, passionate members of the community to
-                  help put on the best Devcon yet!
-                </div>
-              }
+              description={<div>{intl('tickets_types_volunteer')}</div>}
               tags={[
                 {
-                  text: 'Apply now',
+                  text: intl('tickets_apply_now'),
                   link: 'https://forms.gle/mjHz1oyy2LiVCRvw7',
                 },
               ]}
@@ -437,7 +419,7 @@ export default pageHOC(function Tickets(props: any) {
           </div>
 
           <p className="italic">
-            <span className="bold">*Note:</span> ID Required at check-in to prevent resale.
+            {intl('tickets_note_id_check')}
           </p>
         </div>
       </div>
