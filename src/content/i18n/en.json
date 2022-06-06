@@ -131,5 +131,24 @@
     "about_devcon_1": "About Devcon —",
     "about_devcon_2": "Devcon is the Ethereum conference for developers, researchers, thinkers, and makers.",
     "about_devcon_3": "An intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all."
+  },
+  "about": {
+    "title": "About",
+    "supporter_application": "Supporter Application",
+    "speaker_application": "Speaker Application",
+    "improvement_proposals": "Improvement Proposals",
+    "volunteer": "Volunteer",
+    "devcon_archive": "Devcon Archive",
+    "creating_communities": "Creating communities around the world",
+    "past_editions": "Past Editions",
+    "devcon_by_numbers": "Devcon by Numbers",
+    "continents_travelled": "Continents Travelled",
+    "archived_videos": "Archived videos",
+    "what_is_devcon": "What is Devcon",
+    "for_builders": "For Builders",
+    "support": "Support",
+    "communities": "Communities",
+    "get_involved": "Get Involved",
+    "creating_global_communities": "Creating Global Communities"
   }
 }

@@ -124,7 +124,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
         {/* <TwoColumns id="about" title={intl('location_title')} left={pageContext?.current?.body} right={<Snapshot />} /> */}
 
         <section id="carousel" className="expand clear-bottom">
-          <Carousel />
+          <Carousel title="Bogota Colombia" />
         </section>
 
         {props.sections['things-to-do'] && (

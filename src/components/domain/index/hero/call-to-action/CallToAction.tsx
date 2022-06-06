@@ -16,8 +16,6 @@ export const CallToAction = (props: CTAProps) => {
 
   let className = `${css['positional-wrapper']}`
 
-  // if (props.mobile) className += ` ${css['mobile']}`
-
   const callsToAction = (
     <div className={css['items']}>
       <Link key="1" to="/tickets" allowDrag className={`no-select ${css['item']}`}>
@@ -44,31 +42,6 @@ export const CallToAction = (props: CTAProps) => {
     </div>
   )
 
-  // const settings = {
-
-  //   infinite: false,
-  //   slidesToShow: Math.min(callsToAction.length, 4),
-  //   slidesToScroll: 4,
-  //   arrows: false,
-  //   mobileFirst: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: Math.min(callsToAction.length, 3),
-  //         slidesToScroll: 3,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: Math.min(callsToAction.length, 2),
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //   ],
-  // }
-
   return (
     <div className={className}>
       <div className={css['content']}>
@@ -83,12 +56,3 @@ export const CallToAction = (props: CTAProps) => {
     </div>
   )
 }
-
-// <Slider
-//   ref={el => {
-//     if (el) sliderRef.current = el
-//   }}
-//   {...settings}
-// >
-//   {callsToAction}
-// </Slider>

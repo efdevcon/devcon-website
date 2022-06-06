@@ -8,6 +8,7 @@ const nextConfig = {
       'avatars.githubusercontent.com',
       'camo.githubusercontent.com',
       'blog.ethereum.org',
+      'img.youtube.com',
     ],
   },
   i18n: {

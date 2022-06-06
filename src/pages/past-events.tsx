@@ -46,32 +46,13 @@ export default pageHOC(function PastEvents(props: any) {
             to: `#${edition.id}`,
           }
         })}
-
-        // navigation={[
-        //   {
-        //     title: intl('program_overview_about'),
-        //     to: '#about',
-        //   },
-        //   {
-        //     title: intl('program_overview_values'),
-        //     to: '#values',
-        //   },
-        //   {
-        //     title: intl('program_overview_tracks'),
-        //     to: '#tracks',
-        //   },
-        //   {
-        //     title: intl('program_overview_faq'),
-        //     to: '#faq',
-        //   },
-        // ]}
       />
 
       <div className="section">
         <div className={`two-columns ${css['about']} clear-bottom border-bottom margin-bottom`}>
           <div className={`left ${css['left']}`}>
             <div className="section-markdown">
-              <h2>Devcon Editions</h2>
+              <h2 className="spaced">Devcon Editions</h2>
               <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
             </div>
 

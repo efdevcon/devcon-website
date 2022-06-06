@@ -13,13 +13,16 @@ import Image from 'next/image'
 import { getGlobalData } from 'services/global'
 import { GetPage, GetCategories } from 'services/page'
 import { Tags } from 'components/common/tags'
+import { useTranslations } from 'next-intl'
 
 export default pageHOC(function FaqTemplate(props: any) {
   const pageContext = usePageContext()
+  const intl = useTranslations()
 
   return (
     <Page theme={themes['about']}>
       <PageHero
+        path={[{ text: <span className="bold">{intl('about_title')}</span> }, { text: 'FAQ' }]}
         navigation={props.faq.map((category: Category) => {
           return { title: category.title, to: `#${category.id}` }
         })}

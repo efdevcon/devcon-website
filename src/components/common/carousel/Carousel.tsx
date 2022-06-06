@@ -8,10 +8,14 @@ import Bogota4 from './images/Bogota5.jpg'
 // import Bogota5 from './images/Bogota5.jpg'
 // import Bogota6 from './images/Bogota6.jpg'
 
-export function Carousel() {
+type CarouselProps = {
+  title?: string
+}
+
+export function Carousel(props: CarouselProps) {
   return (
     <div className={css['container']}>
-      <h3>Bogota Colombia</h3>
+      <h3>{props.title}</h3>
       {/* TO-DO: Use next/image - couldn't get it working; goal is to set a fixed height and having width be decided by the intrinsic size of the image /*}
       {/* <div className={css['images']}>
         <Image alt={`Bogota`} src={Image1} height="100%" />

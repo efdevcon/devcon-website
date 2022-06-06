@@ -310,8 +310,32 @@ export async function GetContentSection(slug: string, lang: string = 'en'): Prom
     id: slug,
     title: doc.data.title,
     body: await markdownUtils.toHtml(doc.content),
-    data: doc.data,
+    data: {
+      ...doc.data,
+      left: doc.data?.left ? await markdownUtils.toHtml(doc.data.left) : null,
+      right: doc.data?.right ? await markdownUtils.toHtml(doc.data.right) : null,
+    },
   }
+}
+
+export function GetVideos(): Array<any> {
+  const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'videos')
+
+  return fs
+    .readdirSync(dir)
+    .map(i => {
+      const content = fs.readFileSync(join(dir, i), 'utf8')
+      if (!content) {
+        console.log('File has no content..', i)
+        return undefined
+      }
+
+      const doc = matter(content)
+      return {
+        ...doc.data
+      } as any
+    })
+    .filter(i => !!i) as Array<any>
 }
 
 export async function GetContentSections(slugs: string[], lang: string = 'en'): Promise<ContentSections> {
