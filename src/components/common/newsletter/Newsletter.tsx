@@ -1,7 +1,8 @@
 import React from 'react'
+import jsonp from 'jsonp'
+import { validate } from 'email-validator'
 import { useFormField } from 'hooks/useFormField'
 import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/router'
 import css from './newsletter.module.scss'
 import { Alert } from '../alert'
 import { Button } from 'components/common/button'
@@ -14,6 +15,8 @@ export interface Result {
 interface Props {
   id?: string
 }
+
+const MC_ENDPOINT = 'https://ethereum.us7.list-manage.com/subscribe/post-json?u=bfdb1ffb0f71e3a27b9d96aed&amp;id=013a6fa362'
 
 export const Newsletter = (props: Props) => {
   const intl = useTranslations()
@@ -37,9 +40,36 @@ export const Newsletter = (props: Props) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    // let result = (await addToMailchimp(emailField.value, {})) as Result
-    // result.msg = translateMessage(result.msg)
-    setResult(result)
+    const isEmailValid = validate(emailField.value)
+    if (!isEmailValid) {
+      setResult({
+        result: 'error',
+        msg: intl('newsletter_notValid')
+      })
+      return
+    }
+
+    const url = `${MC_ENDPOINT}&EMAIL=${encodeURIComponent(emailField.value)}`
+    jsonp(url, { param: 'c', timeout: 0 }, (err, data) => {
+      if (err) {
+        setResult({
+          result: 'error',
+          msg: 'Something went wrong..'
+        })
+      }
+      else if (data.result !== 'success') {
+        setResult({
+          result: 'error',
+          msg: translateMessage(data.msg)
+        })
+      }
+      else {
+        setResult({
+          result: 'success',
+          msg: translateMessage(data.msg)
+        })
+      }
+    })
   }
 
   function onDismiss() {
