@@ -1,7 +1,7 @@
 import intl from 'content/i18n/en.json' // Default language
 
 export const SITE_URL = 'https://devcon.org/'
-export const EMAIL_DEVCON = 'devcon@ethereum.org'
+export const EMAIL_DEVCON = 'support@devcon.org'
 export const LINK_ETHEREUM_FOUNDATION = 'https://ethereum.foundation'
 export const COPYRIGHT_NOTICE = '© 2022 — Ethereum Foundation. All Rights Reserved.'
 
