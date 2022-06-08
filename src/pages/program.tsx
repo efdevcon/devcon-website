@@ -11,6 +11,7 @@ import { GetPage, GetFAQ, GetContentSections, GetTracks } from 'services/page'
 import TrackList from 'components/domain/index/track-list'
 import css from './program.module.scss'
 import CallToAction from 'components/common/card/CallToActionCard'
+import SpeakersBackground from 'assets/images/pages/speakers.svg'
 import ScheduleBackground from 'assets/images/pages/schedule.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import { useTranslations } from 'next-intl'
@@ -71,7 +72,7 @@ export default pageHOC(function Schedule(props: any) {
                 color="purple"
                 title={props.sections['cta-speaker-applications'].title}
                 tag="OPEN"
-                BackgroundSvg={ScheduleBackground}
+                BackgroundSvg={SpeakersBackground}
                 link="/applications"
                 linkText="Applications"
                 meta="Applications Close: June 27th @ 23:59:59 UTC."

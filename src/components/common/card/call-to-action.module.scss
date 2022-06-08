@@ -23,7 +23,7 @@
     border: 1px solid lighten($purple, 20);
 
     .background {
-      svg {
+      * {
         fill: #2F354B;
       }
     }
@@ -40,7 +40,7 @@
     border: 1px solid lighten($orange, 20);
 
     .background {
-      svg {
+      * {
         fill: $orange;
       }
     }
@@ -98,5 +98,4 @@
       height: 150%;
     }
   }
-
 }

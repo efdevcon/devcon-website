@@ -30,8 +30,8 @@ const CallsToAction = (props: Props) => {
           title={props.speakerApplications.title}
           tag="OPEN"
           BackgroundSvg={SpeakersBackground}
-          link="/program"
-          linkText="Program"
+          link="/applications"
+          linkText="Applications"
           meta="Applications Close: June 27th @ 23:59:59 UTC"
         >
           <div dangerouslySetInnerHTML={{ __html: props.speakerApplications.body }} />
