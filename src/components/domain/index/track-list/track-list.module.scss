@@ -18,6 +18,7 @@
   @include fonts-xl;
 
   .icon-container {
+    flex-shrink: 0;
     width: 32px;
     height: 32px;
     position: relative;
