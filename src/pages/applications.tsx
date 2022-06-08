@@ -23,7 +23,7 @@ const ProcessOverview = () => {
   return (
     <SwipeToScroll>
       <div className={css['process-container']}>
-        <Image src={Process} layout="fill" />
+        <Image src={Process} objectFit="cover" height="100%" />
       </div>
     </SwipeToScroll>
   )
