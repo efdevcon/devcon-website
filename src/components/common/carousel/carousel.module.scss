@@ -30,8 +30,12 @@
 
 .images {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   top: 0px;
   left: 0px;
+  height: 100%;
 
   overflow: hidden;
   white-space: nowrap;
@@ -52,9 +56,10 @@
   //   // display: block;
   // }
 
-  img {
-    height: 38rem;
-    margin-right: $gaps-gap-8;
+  > * {
+    // flex-shrink: 0;
+    // height: 100%;
+    margin-right: $gaps-gap-8 !important;
   }
 }
 

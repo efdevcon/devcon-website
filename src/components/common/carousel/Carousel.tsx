@@ -1,47 +1,37 @@
 import React from 'react'
-// import Image from 'next/image'
 import css from './carousel.module.scss'
-import Bogota1 from './images/Bogota0.jpg'
-import Bogota2 from './images/Bogota2.jpg'
-import Bogota3 from './images/Bogota8.jpg'
-import Bogota4 from './images/Bogota5.jpg'
-// import Bogota5 from './images/Bogota5.jpg'
-// import Bogota6 from './images/Bogota6.jpg'
 
 type CarouselProps = {
   title?: string
+  images: {
+    src: StaticImageData
+    alt: string
+  }[]
 }
 
 export function Carousel(props: CarouselProps) {
   return (
     <div className={css['container']}>
       <h3>{props.title}</h3>
-      {/* TO-DO: Use next/image - couldn't get it working; goal is to set a fixed height and having width be decided by the intrinsic size of the image /*}
-      {/* <div className={css['images']}>
-        <Image alt={`Bogota`} src={Image1} height="100%" />
-        <Image alt={`Bogota`} src={Image2} height="100%" />
-        <Image alt={`Bogota`} src={Image3} height="100%" />
-        <Image alt={`Bogota`} src={Image4} height="100%" />
-        <Image alt={`Bogota`} src={Image5} height="100%" />
-        <Image alt={`Bogota`} src={Image6} height="100%" />
-        <Image alt={`Bogota`} src={Image1} height="100%" />
-        <Image alt={`Bogota`} src={Image2} height="100%" />
-        <Image alt={`Bogota`} src={Image3} height="100%" />
-        <Image alt={`Bogota`} src={Image4} height="100%" />
-        <Image alt={`Bogota`} src={Image5} height="100%" />
-        <Image alt={`Bogota`} src={Image6} height="100%" />
-      </div> */}
 
       <div className={css['images']}>
-        <img src={Bogota1.src} alt="Bogota" />
-        <img src={Bogota3.src} alt="Bogota" />
-        <img src={Bogota2.src} alt="Bogota" />
-        <img src={Bogota4.src} alt="Bogota" />
-        <img src={Bogota1.src} alt="Bogota" />
-        <img src={Bogota3.src} alt="Bogota" />
-        <img src={Bogota2.src} alt="Bogota" />
-        <img src={Bogota4.src} alt="Bogota" />
+        {props.images.map((image, index) => {
+          return <img key={index + 'first'} src={image.src.src} alt={image.alt} />
+        })}
+        {props.images.map((image, index) => {
+          return <img key={index + 'second'} src={image.src.src} alt={image.alt} />
+        })}
       </div>
+
+      {/* TO-DO: Use next/image - couldn't get it working; goal is to set a fixed height and having width be decided by the intrinsic size of the image /*}
+      {/* <div className={css['images']}>
+        {props.images.map((image, index) => {
+          return <Image key={index + 'first'} layout="fixed" src={image.src} alt={image.alt} />
+        })}
+        {props.images.map((image, index) => {
+          return <Image key={index + 'second'} layout="fixed" src={image.src} alt={image.alt} />
+        })}
+      </div> */}
     </div>
   )
 }

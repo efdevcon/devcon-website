@@ -22,6 +22,10 @@ import css from './about.module.scss'
 import { Button } from 'components/common/button'
 import { VideoCard } from 'components/common/card/VideoCard'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
+import About1 from 'assets/images/carousel/about/about-1.jpg'
+import About2 from 'assets/images/carousel/about/about-2.jpg'
+import About3 from 'assets/images/carousel/about/about-3.jpg'
+import About4 from 'assets/images/carousel/about/about-4.jpg'
 
 export default pageHOC(function AboutPage(props: any) {
   const pageContext = usePageContext()
@@ -140,7 +144,27 @@ export default pageHOC(function AboutPage(props: any) {
         </h2>
 
         <div id="carousel" className="expand clear-bottom">
-          <Carousel title={intl('about_creating_communities')} />
+          <Carousel
+            title={intl('about_creating_communities')}
+            images={[
+              {
+                alt: 'About 1',
+                src: About1,
+              },
+              {
+                alt: 'About 2',
+                src: About2,
+              },
+              {
+                alt: 'About 3',
+                src: About3,
+              },
+              {
+                alt: 'About 4',
+                src: About4,
+              },
+            ]}
+          />
         </div>
 
         <div className="two-columns clear-bottom border-bottom">

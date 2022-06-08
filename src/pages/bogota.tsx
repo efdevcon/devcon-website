@@ -2,7 +2,6 @@ import React from 'react'
 import { PageHero } from 'components/common/page-hero'
 import { FAQ } from 'components/domain/faq'
 import Page from 'components/common/layouts/page'
-// import css from './templates.module.scss'
 import themes from './themes.module.scss'
 import { Carousel } from 'components/common/carousel'
 import { Snapshot } from 'components/common/snapshot'
@@ -20,6 +19,10 @@ import IconCurrency from 'assets/icons/icon_currency.svg'
 import IconGlobe from 'assets/icons/icon_globe.svg'
 import IconSun from 'assets/icons/icon_sun.svg'
 import IconWater from 'assets/icons/icon_water.svg'
+import Bogota1 from 'assets/images/carousel/bogota/Bogota0.jpg'
+import Bogota2 from 'assets/images/carousel/bogota/Bogota2.jpg'
+import Bogota3 from 'assets/images/carousel/bogota/Bogota8.jpg'
+import Bogota4 from 'assets/images/carousel/bogota/Bogota5.jpg'
 
 export default pageHOC(function CityGuideTemplate(props: any) {
   const intl = useTranslations()
@@ -121,10 +124,28 @@ export default pageHOC(function CityGuideTemplate(props: any) {
           </div>
         </div>
 
-        {/* <TwoColumns id="about" title={intl('location_title')} left={pageContext?.current?.body} right={<Snapshot />} /> */}
-
         <section id="carousel" className="expand clear-bottom">
-          <Carousel title="Bogota Colombia" />
+          <Carousel
+            title="Bogota Colombia"
+            images={[
+              {
+                alt: 'Bogota 1',
+                src: Bogota1,
+              },
+              {
+                alt: 'Bogota 2',
+                src: Bogota2,
+              },
+              {
+                alt: 'Bogota 3',
+                src: Bogota3,
+              },
+              {
+                alt: 'Bogota 4',
+                src: Bogota4,
+              },
+            ]}
+          />
         </section>
 
         {props.sections['things-to-do'] && (
@@ -233,7 +254,10 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/bogota', context.locale)
-  const sections = await GetContentSections(['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe', 'what-areas-to-stay'], context.locale)
+  const sections = await GetContentSections(
+    ['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe', 'what-areas-to-stay'],
+    context.locale
+  )
 
   return {
     props: {
