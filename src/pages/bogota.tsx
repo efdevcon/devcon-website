@@ -47,6 +47,14 @@ export default pageHOC(function CityGuideTemplate(props: any) {
             to: '#why-bogota',
           },
           {
+            title: intl('city_guide_safety'),
+            to: '#safety',
+          },
+          {
+            title: intl('city_guide_areas'),
+            to: '#areas',
+          },
+          {
             title: intl('city_guide_faq'),
             to: '#FAQ',
           },
@@ -150,8 +158,10 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
         {props.sections['things-to-do'] && (
           <>
-            <h2 className="spaced">{props.sections['things-to-do'].title}</h2>
-            <div className="two-columns border-bottom clear-bottom" id="things-to-do">
+            <h2 id="things-to-do" className="spaced">
+              {props.sections['things-to-do'].title}
+            </h2>
+            <div className="two-columns border-bottom clear-bottom">
               <div className="left section-markdown">
                 <div
                   className="markdown"
@@ -167,9 +177,11 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
         {props.sections['why-devcon-in-bogota'] && (
           <>
-            <h2 className="spaced clear-top">{props.sections['why-devcon-in-bogota'].title}</h2>
+            <h2 id="why-bogota" className="spaced clear-top">
+              {props.sections['why-devcon-in-bogota'].title}
+            </h2>
 
-            <div className="two-columns clear-bottom" id="why-bogota">
+            <div className="two-columns clear-bottom">
               <div className="left section-markdown">
                 <div
                   className="markdown"
@@ -188,9 +200,11 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
         {props.sections['is-bogota-safe'] && (
           <>
-            <h2 className="spaced clear-top border-top">{props.sections['is-bogota-safe'].title}</h2>
+            <h2 id="safety" className="spaced clear-top border-top">
+              {props.sections['is-bogota-safe'].title}
+            </h2>
 
-            <div className="two-columns clear-bottom border-bottom" id="why-bogota">
+            <div className="two-columns clear-bottom border-bottom">
               <div className="left section-markdown">
                 <div
                   className="markdown"
@@ -209,9 +223,11 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
         {props.sections['what-areas-to-stay'] && (
           <>
-            <h2 className="spaced clear-top border-top">{props.sections['what-areas-to-stay'].title}</h2>
+            <h2 id="areas" className="spaced clear-top border-top">
+              {props.sections['what-areas-to-stay'].title}
+            </h2>
 
-            <div className="two-columns clear-bottom border-bottom" id="what-areas">
+            <div className="two-columns clear-bottom border-bottom">
               <div className="left section-markdown">
                 <div
                   className="markdown"
