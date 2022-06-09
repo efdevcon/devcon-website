@@ -1,5 +1,5 @@
 ---
-title: How do I get a press card?
+title: How do I get a press pass?
 category: general
 order: 4
 ---
