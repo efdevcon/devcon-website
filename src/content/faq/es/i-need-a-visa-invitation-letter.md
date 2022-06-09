@@ -4,4 +4,4 @@ category: general
 order: 9
 ---
 
-El equipo de Devcon intentará proporcionar cartas de invitación de Visa para aquellos que tengan un boleto válido para Devcon. Comuníquese con nosotros a support@devcon.org para solicitar una carta de invitación e incluya el código de pedido de su boleto para que podamos verificar su asistencia. Nota: No podemos cubrir ningún costo asociado con las tarifas de la visa.
+El equipo de Devcon intentará proporcionar cartas de invitación de Visa para aquellos que tengan un boleto válido para Devcon. Complete el formulario [aquí](https://forms.gle/d46G73tqD1oU971JA) para solicitar una carta de invitación. Nota: No podemos cubrir ningún costo asociado con las tarifas de la visa.
