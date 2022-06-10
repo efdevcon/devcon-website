@@ -18,6 +18,14 @@ import List from 'components/common/list'
 import DevconLogo from 'assets/images/devcon-6-logo.png'
 import Image from 'next/image'
 import { Link } from 'components/common/link'
+import moment from 'moment';
+
+// Check if given string e.g. "June 6th 2022" is before the current date 
+const isAfterDate = (dateString: string) => {
+  const date = moment(dateString);
+
+  return date.isBefore(moment());
+}
 
 type TicketProps = {
   title: string
@@ -169,7 +177,7 @@ export default pageHOC(function Tickets(props: any) {
                   </div>
                 ),
                 indent: false,
-                active: true, // AUTOMATE DATE CHECKING
+                active: isAfterDate('June 6 2022'),
                 body: '',
               },
               {
@@ -180,6 +188,7 @@ export default pageHOC(function Tickets(props: any) {
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_ends_date')}</div>
                   </div>
                 ),
+                active: isAfterDate('June 30 2022'),
                 indent: false,
                 body: '',
               },
@@ -191,6 +200,7 @@ export default pageHOC(function Tickets(props: any) {
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
                   </div>
                 ),
+                active: isAfterDate('June 30 2022'),
                 indent: false,
                 body: '',
               },
@@ -216,7 +226,6 @@ export default pageHOC(function Tickets(props: any) {
                   </div>
                 ),
                 indent: false,
-                // active: true, // to do: date based activation
                 body: '',
               },
               {
@@ -252,7 +261,6 @@ export default pageHOC(function Tickets(props: any) {
                   </div>
                 ),
                 indent: false,
-                // active: true,
                 body: '',
               },
               {
@@ -367,7 +375,7 @@ export default pageHOC(function Tickets(props: any) {
             />
 
             <Ticket
-              title="LatAm Builder/Student*"
+              title="LatAm Builder / Student*"
               // link="https://forms.gle/x6GHpq8MAZJCwwsq5"
               price={intl('tickets_extra_discount')}
               color="blue"
