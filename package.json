@@ -6,6 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "prebuild": "yarn prebuild:cms",
+    "prebuild:cms": "sed -i \"s|%BRANCH_PLACEHOLDER%|$BRANCH|g\" ./public/admin/config.yml && sed -i \"s|local_backend: true||g\" ./public/admin/config.yml",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
