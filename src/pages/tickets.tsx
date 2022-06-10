@@ -20,7 +20,7 @@ import Image from 'next/image'
 import { Link } from 'components/common/link'
 import moment from 'moment';
 
-// Check if given string e.g. "June 6th 2022" is before the current date 
+// Check if given string e.g. "2022-06-06" is before the current date 
 const isAfterDate = (dateString: string) => {
   const date = moment(dateString);
 
@@ -177,7 +177,7 @@ export default pageHOC(function Tickets(props: any) {
                   </div>
                 ),
                 indent: false,
-                active: isAfterDate('June 6 2022'),
+                active: isAfterDate('2022-06-06'),
                 body: '',
               },
               {
@@ -188,7 +188,7 @@ export default pageHOC(function Tickets(props: any) {
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_ends_date')}</div>
                   </div>
                 ),
-                active: isAfterDate('June 30 2022'),
+                active: isAfterDate('2022-06-30'),
                 indent: false,
                 body: '',
               },
@@ -200,7 +200,7 @@ export default pageHOC(function Tickets(props: any) {
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
                   </div>
                 ),
-                active: isAfterDate('June 30 2022'),
+                active: isAfterDate('2022-06-30'),
                 indent: false,
                 body: '',
               },
