@@ -44,22 +44,6 @@ collections:
           search_fields: ['title'],
           multiple: true,
         }
-      - {
-          name: 'template',
-          label: 'Template',
-          widget: 'select',
-          i18n: 'duplicate',
-          options: ['none', 'blogs', 'city-guide', 'content', 'dips', 'faq', news', 'road-to-devcon'],
-          default: 'content',
-        }
-      - {
-          name: 'translationVerified',
-          label: 'If this translation has been (manually) verified',
-          widget: 'boolean',
-          i18n: 'duplicate',
-          required: false,
-          default: false,
-        }
 
   - name: 'notification'
     label: 'Notifications'
@@ -124,14 +108,7 @@ collections:
     i18n: true
     fields:
       - { name: 'title', label: 'Title', widget: 'string', i18n: true }
-      - {
-          name: 'showTitle',
-          label: 'Show title',
-          widget: 'boolean',
-          i18n: 'duplicate',
-          required: false,
-          default: false,
-        }
+      - { name: body, label: Body, widget: markdown, i18n: true }
       - { name: 'left', widget: 'markdown', i18n: true }
       - { name: 'right', widget: 'markdown', i18n: true }
 
@@ -186,10 +163,11 @@ collections:
 
   - name: 'devcon'
     label: 'Devcon'
-    label_singular: 'Devcon'
     folder: 'src/content/devcon'
-    slug: '{{slug}}'
+    identifier_field: number
+    slug: '{{number}}'
     create: true
+    i18n: true
     fields:
       - { name: 'number', label: 'Number', widget: 'number' }
       - { name: 'title', label: 'Title', widget: 'string' }
@@ -197,7 +175,13 @@ collections:
       - { name: 'location', label: 'Location', widget: 'string' }
       - { name: 'startDate', label: 'Start Date', widget: 'date', format: 'YYYY-MM-DD' }
       - { name: 'endDate', label: 'End Date', widget: 'date', format: 'YYYY-MM-DD' }
-      - { name: 'image', label: 'Image', widget: 'string' }
+      - { name: 'imageUrl', label: 'Image', widget: 'string' }
+      - label: Urls
+        name: urls
+        widget: list
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Url, name: url, widget: string }
 
   - name: 'profiles'
     label: 'Profiles'

@@ -1,6 +1,5 @@
 ---
 title: Application Guidelines
-type: list
 ---
 
 1. Who can apply

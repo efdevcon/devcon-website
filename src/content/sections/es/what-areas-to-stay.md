@@ -1,6 +1,5 @@
 ---
 title: '¿En qué zonas debemos quedarnos en Bogotá?'
-showTitle: true
 left: >-
   - Chapinero (Uber de 30 minutos hasta el lugar)
   

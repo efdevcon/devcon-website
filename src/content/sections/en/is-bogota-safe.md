@@ -1,6 +1,5 @@
 ---
 title: Is Bogotá Safe?
-showTitle: false
 left: >-
   Colombia is safer today than at any point in the last 50 years, and we expect Devcon in Bogotá to be an impactful experience for all. That said, while Bogotá is a very modern city, it is located in a developing country, and we recommend exercising some basic precautions. Do that, and your biggest problem will likely be wanting to stay longer.
 

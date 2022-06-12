@@ -1,6 +1,5 @@
 ---
 title: Devcon Programming Values
-type: list
 ---
 
 1. Collaboration

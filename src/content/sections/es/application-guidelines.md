@@ -1,6 +1,5 @@
 ---
 title: Pautas de aplicación
-type: list
 ---
 
 1. Quién puede presentar una solicitud
