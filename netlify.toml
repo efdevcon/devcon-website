@@ -7,3 +7,9 @@
 
 [[plugins]]
     package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/grants"
+  to = "https://esp.ethereum.foundation/devcon-grants"
+  status = 302
+  force = true
