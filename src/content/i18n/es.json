@@ -117,12 +117,12 @@
     "application_guidelines": "Pautas de Aplicación"
   },
   "tickets": {
-    "title": "Entradas", 
+    "title": "Entradas",
     "ticketing": "Emisión de boletos de Devcon",
     "timeline": "Cronología",
     "types_and_pricing": "Tipos y Precios",
     "types_ga": "El boleto original a Devcon. Anónimo: no se requiere identificación.",
-    "types_builder": "Para aquellos que activamente dedican su tiempo al crecimiento, investigación y desarrollo del ecosistema.",
+    "types_builder": "Para aquellos que se ofrecen activamente como voluntarios o contribuyen con su tiempo al crecimiento, la investigación y el desarrollo del ecosistema.",
     "types_student": "Para estudiantes y educadores por igual. Si desea solicitar un descuento para estudiantes.",
     "types_student_note": "Nota: Se requiere identificación de la escuela/universidad al momento del check-in para evitar la reventa. Secundaria/preparatoria, colegio o universidad.",
     "types_latam": "Si eres Constructor o Estudiante de América Latina, aplica a través del formulario respectivo y recibe un descuento adicional en tu boleto Devcon.",
