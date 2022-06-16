@@ -246,7 +246,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 01</div>
                     <div className={`${css['right']} bold`}>
-                    {intl('tickets_general_waves_01')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_01')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                     <p className="bold">{intl('tickets_coming_soon')}</p>
                   </div>
@@ -274,7 +274,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 03</div>
                     <div className={`${css['right']} bold`}>
-                    {intl('tickets_general_waves_03')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_03')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
