@@ -337,7 +337,7 @@ export default pageHOC(function Tickets(props: any) {
               ]}
             />
             <Ticket
-              title="Builder Ticket*"
+              title="Builder Discount*"
               link="https://forms.gle/x6GHpq8MAZJCwwsq5"
               price="$299"
               color="grey"
@@ -352,7 +352,7 @@ export default pageHOC(function Tickets(props: any) {
             />
 
             <Ticket
-              title="Student Ticket*"
+              title="Student Discount*"
               price="$149"
               color="grey"
               link="https://forms.gle/9L7BwqCP5hS1AT4HA"
