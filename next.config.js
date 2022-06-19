@@ -11,6 +11,11 @@ const nextConfig = {
       'img.youtube.com',
     ],
   },
+  experimental: {
+    images: {
+      layoutRaw: true,
+    },
+  },
   i18n: {
     locales: ['default', 'en', 'es'],
     defaultLocale: 'default',

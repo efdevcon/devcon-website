@@ -125,7 +125,7 @@ export default pageHOC(function AboutPage(props: any) {
           </div>
 
           <div className={`right ${css['for-builders-right']}`}>
-            <SwipeToScroll>
+            <SwipeToScroll scrollIndicatorDirections={{ right: true, left: true }}>
               <div className={css['videos']}>
                 {props.videos.map((video: any) => {
                   const isMatch = ['The Web We Want', 'Ethereum Foundation Values'].includes(video.title)

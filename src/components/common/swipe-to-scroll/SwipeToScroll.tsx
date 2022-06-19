@@ -5,45 +5,97 @@ import useDimensions from 'react-cool-dimensions'
 
 type SwipeToScrollProps = {
   noBounds?: boolean
-  stopped?: boolean
   focusRef?: React.RefObject<HTMLElement>
   children: React.ReactChild | React.ReactChild[]
+  scrollIndicatorDirections?: {
+    ['left']?: boolean
+    ['right']?: boolean
+  }
+  alwaysShowscrollIndicators?: boolean
 }
 
 const SwipeToScroll = (props: SwipeToScrollProps) => {
-  const el = React.useRef<any>()
-  const [maxScrolled, setMaxScrolled] = React.useState(0)
+  const el = React.useRef<HTMLDivElement | null>()
+  const [maxScroll, setMaxScroll] = React.useState(0)
+  const [isNativeScroll, setIsNativeScroll] = React.useState(true);
+  const [scrollIndicatorClass, setScrollIndicatorClass] = React.useState('');
   const lastX = React.useRef(0)
-  // const focusCompleted = React.useRef(false)
 
-  const reset = () => {
-    if (lastX.current && el.current) {
-      lastX.current = 0
-      el.current.style.transform = `translateX(0px)`
+  // Whether or not to display a scroll indicator
+  const syncScrollIndicators = React.useCallback((scrollContainer: HTMLDivElement) => {
+    const threshold = 5; // Add a threshold for when a container is "barely" scrollable - if its just a few pixels then it feels weird to have the indicator there
+    let showIndicatorRight = false;
+    let showIndicatorLeft = false;
+    const leftEnabled = !!props.scrollIndicatorDirections?.left;
+    const rightEnabled = !!props.scrollIndicatorDirections?.right;
+
+    // On mobile we use native scrolling for better UX - as a result, the logic for whether or not we show scroll indicators also changes:
+    if (isNativeScroll) {
+      const canScrollRightNative = scrollContainer.scrollLeft < scrollContainer.scrollWidth - scrollContainer.clientWidth - threshold;
+      const canScrollLeftNative = scrollContainer.scrollLeft > threshold;
+
+      showIndicatorRight = canScrollRightNative && rightEnabled;
+      showIndicatorLeft = canScrollLeftNative && leftEnabled;
+    } else {
+      const canScrollRight = lastX.current < maxScroll - threshold;
+      const canScrollLeft = lastX.current > threshold;
+
+      showIndicatorRight = canScrollRight && rightEnabled;
+      showIndicatorLeft = canScrollLeft && leftEnabled;
     }
-  }
+
+    const canScroll = scrollContainer.scrollWidth > scrollContainer.clientWidth + threshold;
+
+    if (!canScroll) {
+      setScrollIndicatorClass('');
+
+      return;
+    };
+
+    if (showIndicatorLeft && showIndicatorRight) {
+      setScrollIndicatorClass(css['mask-both']);
+    } else if (showIndicatorRight) {
+      setScrollIndicatorClass(css['mask-right']);
+    } else if (showIndicatorLeft) {
+      setScrollIndicatorClass(css['mask-left']);
+    } else {
+      setScrollIndicatorClass('');
+    }
+
+    // We have a case where we want to always show the scroll indicator in a direction regardless of whether or not we are fully scrolled:
+    if (props.alwaysShowscrollIndicators) {
+      if (leftEnabled && rightEnabled) {
+        setScrollIndicatorClass(css['mask-both']);
+      } else if (rightEnabled) {
+        setScrollIndicatorClass(css['mask-right']);
+      } else if (leftEnabled) {
+        setScrollIndicatorClass(css['mask-left']);
+      }
+    }
+  }, [maxScroll, props.alwaysShowscrollIndicators, props.scrollIndicatorDirections, isNativeScroll]);
+
+  const reset = React.useCallback(() => {
+    if (el.current) {
+      const scrollContainer = el.current;
+      lastX.current = 0
+      scrollContainer.style.transform = `translateX(0px)`
+      syncScrollIndicators(scrollContainer);
+    }
+  }, [syncScrollIndicators]);
 
   // When element changes size, record its max scroll boundary (don't want to be able to drag beyond it!)
   const { observe } = useDimensions({
     onResize: ({ width }) => {
+      const isNativeScroll = !window.matchMedia('not all and (hover: none)').matches;
+
+      setIsNativeScroll(isNativeScroll);
+
       reset()
 
       if (el.current && el.current.scrollWidth) {
         const maxScroll = el.current.scrollWidth - width
-        setMaxScrolled(maxScroll)
 
-        // Scroll to focusable element if defined
-        // if (!focusCompleted.current && props.focusRef && props.focusRef.current) {
-        //   const focusElement = props.focusRef.current
-        //   const offsetLeft = focusElement.offsetLeft
-        //   lastX.current = Math.min(offsetLeft, maxScroll)
-        //   el.current.style.transition = 'all 0.7s ease-out'
-        //   el.current.style.transform = `translateX(${-lastX.current}px)`
-        //   el.current.addEventListener('transitionend', () => {
-        //     el.current.style.transition = 'none'
-        //   })
-        //   focusCompleted.current = true
-        // }
+        setMaxScroll(maxScroll)
       }
     },
   })
@@ -57,35 +109,41 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
     return () => {
       window.removeEventListener('resize', resizeListener)
     }
-  }, [props.stopped])
+  }, [reset])
 
   const bind = useDrag(({ down, delta }) => {
-    if (props.stopped) return
+    const scrollContainer = el.current!;
 
-    lastX.current = Math.min(Math.max(0, lastX.current - delta[0]), maxScrolled)
-    el.current.style.transform = `translateX(-${lastX.current}px)`
+    lastX.current = Math.min(Math.max(0, lastX.current - delta[0]), maxScroll)
+    scrollContainer.style.transform = `translateX(-${lastX.current}px)`
 
     if (down) {
-      el.current.style.cursor = 'grabbing'
+      scrollContainer.style.cursor = 'grabbing'
     } else {
-      el.current.style.cursor = 'auto'
+      scrollContainer.style.cursor = 'auto'
     }
+
+    syncScrollIndicators(scrollContainer);
   })
 
-  let className = css['container']
+  let className = `${css['container']}`;
+  
+  if (scrollIndicatorClass) className += ` ${scrollIndicatorClass}`;
+  if (props.noBounds) className += ` ${css['no-bounds']}`
 
-  if (props.noBounds) {
-    className += ` ${css['no-bounds']}`
-  }
+  let scrollContainerClass = css['swipe-to-scroll'];
+
+  if (isNativeScroll) scrollContainerClass += ` ${css['is-native-scroll']}`;
 
   return (
     <div {...bind()} className={className} data-type="swipe-to-scroll-container">
       <div
         ref={element => {
-          el.current = element
+          el.current = element!
           observe(element)
         }}
-        className={css['swipe-to-scroll']}
+        className={scrollContainerClass}
+        onScroll={() => syncScrollIndicators(el.current!)} 
       >
         {props.children}
       </div>

@@ -84,12 +84,24 @@
       flex-grow: 1;
       background: white;
       flex-basis: 40%;
-      height: 410px;
+      position: relative;
+      min-height: 410px;
+      max-height: 100%;
       box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
-      padding: $gaps-gap-4;
+      // padding: $gaps-gap-4;
+      // padding: 16px;
+
 
       @media (max-width: $breakpoints-lg) {
         display: none;
+      }
+
+      .absolute-wrapper {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        bottom: 16px; 
       }
     }
   }

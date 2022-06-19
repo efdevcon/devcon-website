@@ -36,29 +36,14 @@
   top: 0px;
   left: 0px;
   height: 100%;
-
   overflow: hidden;
   white-space: nowrap;
   animation: slide 120s linear infinite;
 
-  // > * {
-  //   // flex-shrink: 0;
-  //   height: 38rem !important;
-  //   height: 100% !important;
-  //   position: relative;
-  //   display: inline !important;
-  //   // height: 38rem !important;
-  //   // width: auto !important;
-  // }
-
-  // > * {
-  //   margin-right: 38rem;
-  //   // display: block;
-  // }
-
   > * {
-    // flex-shrink: 0;
-    // height: 100%;
+    height: 100%;
+    width: auto !important;
+    object-fit: contain;
     margin-right: $gaps-gap-8 !important;
   }
 }

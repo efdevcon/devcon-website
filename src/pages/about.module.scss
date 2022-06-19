@@ -16,14 +16,8 @@
 }
 
 .for-builders-right {
-  
   .videos {
-
     display: flex;
-
-    * {
-      user-select: none;
-    }
 
     > * {
       flex-grow: 1;

@@ -83,6 +83,7 @@ const ModalContent = (props: ModalProps) => {
   return (
     <div
       className={css['container']}
+      data-type="modal-container"
       onClick={e => {
         e.stopPropagation()
       }}
@@ -102,7 +103,7 @@ const ModalContent = (props: ModalProps) => {
           </div>
         )}
 
-        <div className={css['content']}>
+        <div className={css['content']} data-type="modal-content">
           {isSlider ? (
             <div className={css['slides']}>
               {React.Children.map(props.children, (child, index) => {
@@ -143,8 +144,14 @@ export { ModalSlide }
 export const Modal = (props: ModalProps) => {
   if (!props.open) return null
 
+  let className = css['modal'];
+
+  if (props.className) {
+    className += ` ${props.className}`;
+  }
+
   return createPortal(
-    <div className={css['modal']} onClick={props.close}>
+    <div className={className} onClick={props.close}>
       <ModalContent {...props} />
     </div>,
     document.body

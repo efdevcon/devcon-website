@@ -61,5 +61,6 @@ export async function getStaticProps(context: any) {
       sections,
       tracks
     },
+    revalidate: 1 * 60 * 30,
   }
 }

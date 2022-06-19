@@ -334,6 +334,7 @@
 
         @media (max-width: $breakpoints-lg) {
           order: 2;
+          text-align: center;
           flex-direction: column;
           justify-content: center;
         }
@@ -373,6 +374,7 @@
 
         > * {
           margin-right: 16px;
+          text-align: center;
 
           &:last-child {
             margin-right: 0px;
@@ -419,6 +421,10 @@
 
 .small-logo {
   margin-right: 16px; 
+
+  @media (max-width: $breakpoints-lg) {
+    margin-right: 0px;
+  }
 
   svg {
     width: 125px;

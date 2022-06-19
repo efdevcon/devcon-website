@@ -1,21 +1,51 @@
 @use 'assets/css/partials/index' as *;
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .container {
+  position: relative;
   overflow: hidden;
+
+  &.mask-left {
+    -webkit-mask-image: linear-gradient(90deg ,transparent,#000 15%);
+  } 
+  
+  &.mask-right {
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+
+  &.mask-both {
+    -webkit-mask-image: linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);
+  }
 
   &.no-bounds {
     overflow: visible;
   }
-
-  @media (hover: none) {
-    overflow-x: auto;
-  }
 }
 
 .swipe-to-scroll {
+  height: 100%;
   user-select: none;
 
-  @media (hover: none) {
+  &.is-native-scroll {
+    overflow-x: auto;
     transform: translateX(0px) !important;
+  }
+
+  * {
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
   }
 }

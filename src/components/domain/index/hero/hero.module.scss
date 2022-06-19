@@ -252,6 +252,18 @@ $logo-offset: 50px;
       justify-content: center;
       align-items: center;
     }
+
+    .add-to-cal {
+      position: relative;
+      width: 100%;
+
+      > div {
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateY(80%) translateX(-50%);
+      }
+    }
   }
 }
 
@@ -405,4 +417,36 @@ $logo-offset: 50px;
   z-index: -1;
   height: 500px;
   background: linear-gradient(180deg, #BCE2E5 0%, rgba(196, 251, 255, 0) 58.1%);
+}
+
+.nc-loop-mouse-16-icon-f> :nth-child(2) {
+  --animation-duration: 1s;
+  transform-origin: 50% 50%;
+  animation: nc-loop-mouse-anim var(--animation-duration) infinite;
+}
+
+@keyframes nc-loop-mouse-anim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+}
+
+.scroll-for-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  opacity: 0.7;
+
+  p {
+    text-transform: uppercase;
+    margin-right: 0.5em;
+    font-size: 14px;
+    font-weight: 700;
+  }
 }

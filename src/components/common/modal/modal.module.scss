@@ -44,10 +44,11 @@
       top: $gaps-gap-8;
       right: $gaps-gap-8;
 
-      @media (max-width: $breakpoints-sm) {
+      @media (max-width: $breakpoints-lg) {
         top: $gaps-gap-4;
         right: $gaps-gap-4;
       }
+      
       cursor: pointer;
     }
 

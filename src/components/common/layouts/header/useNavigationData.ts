@@ -113,6 +113,16 @@ const useNavigationData = () => {
       logo: LogoGetInvolved,
       links: [
         {
+          title: intl('navigation_community'),
+          url: '#',
+          type: 'header',
+        },
+        {
+          title: 'DIPs',
+          url: '/dips',
+          type: 'page',
+        },
+        {
           title: intl('navigation_participate'),
           url: '#',
           type: 'header',
@@ -131,16 +141,6 @@ const useNavigationData = () => {
           title: intl('navigation_volunteer'),
           url: 'https://forms.gle/GnH3SyxSNnQCCn8TA',
           type: 'link',
-        },
-        {
-          title: intl('navigation_community'),
-          url: '#',
-          type: 'header',
-        },
-        {
-          title: 'DIPs',
-          url: '/dips',
-          type: 'page',
         },
         {
           title: intl('navigation_contribute'),

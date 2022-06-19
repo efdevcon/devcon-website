@@ -2,6 +2,7 @@
 
 .container {
   position: relative;
+  // background: white;
 
   .body {
     grid-column: 2 / 3;
@@ -44,6 +45,7 @@
 
     .right {
       flex-basis: 100%;
+      position: relative;
       display: none;
 
       @media (min-width: $breakpoints-xl) {
@@ -52,15 +54,19 @@
         flex-grow: 1;
       }
 
-      .image-container {
-        position: relative;
+      > * {
+        height: 100%;
         width: 100%;
+      }
+
+      .image-container {
+        position: absolute;
         height: 100%;
 
-        > * {
-          position: absolute;
-          right: 0px;
-          bottom: 0px;
+        img {
+          object-fit: contain;
+          height: 100% !important;
+          width: auto !important;
         }
       }
     }
