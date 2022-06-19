@@ -62,7 +62,7 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
       setScrollIndicatorClass('');
     }
 
-    // We have a case where we want to always show the scroll indicator in a direction regardless of whether or not we are fully scrolled:
+    // We have a case where we want to always show the scroll indicator in a direction regardless of whether or not we are fully scrolled
     if (props.alwaysShowscrollIndicators) {
       if (leftEnabled && rightEnabled) {
         setScrollIndicatorClass(css['mask-both']);
