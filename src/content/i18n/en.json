@@ -112,7 +112,10 @@
     "drag_for_more": "DRAG FOR MORE →",
     "speaker_applications": "Speaker Applications",
     "application_process": "Process",
-    "application_guidelines": "Application Guidelines"
+    "application_guidelines": "Application Guidelines",
+    "applications_open": "APPLICATIONS OPEN",
+    "deadline_to_apply": "DEADLINE TO APPLY",
+    "selection_process": "SELECTION DECISION"
   },
   "tickets": {
     "title": "Tickets",
@@ -175,7 +178,7 @@
     "filter": "Filter FAQs using relevant key terms."
   },
   "past_events": {
-    "title_editions": "Devcon Ediciones",
+    "title_editions": "Devcon editions",
     "locations": "Locations",
     "past_devcons": "Past Devcons"
   },

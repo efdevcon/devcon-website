@@ -110,9 +110,12 @@
     "apply_to_speak": "Aplicar para hablar",
     "process_overview": "Vista general del proceso",
     "drag_for_more": "ARRASTRA PARA MÁS →",
-    "speaker_applications": "Aplicaciones de altavoces",
+    "speaker_applications": "Postulaciones como ponentes",
     "application_process": "Proceso",
-    "application_guidelines": "Pautas de Aplicación"
+    "application_guidelines": "Pautas de Aplicación",
+    "applications_open": "APLICACIONES ABIERTAS",
+    "deadline_to_apply": "FECHA LÍMITE PARA APLICAR",
+    "selection_process": "DECISIÓN DE SELECCIÓN"
   },
   "tickets": {
     "title": "Entradas", 
