@@ -18,6 +18,7 @@
 .for-builders-right {
   .videos {
     display: flex;
+    flex-direction: row;
 
     > * {
       flex-grow: 1;
@@ -31,6 +32,21 @@
     }
   }
 }
+
+.community {
+  .videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    > * {
+      flex-basis: 400px;
+      flex-shrink: 0;
+      margin-right: 16px;
+    }
+  }
+}
+
 
 .button {
   margin-top: 24px;
