@@ -1,5 +1,5 @@
 ---
-title: Aplicaciones como ponentes
+title: Postulaciones como ponentes
 pages:
   - index
   - program
