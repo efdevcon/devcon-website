@@ -1,6 +1,5 @@
 ---
 title: Qué es un DIP
-template: content
 ---
 
 DIP son las siglas de Devcon Improvement Proposal. Un DIP es una propuesta presentada por miembros de la comunidad que describe una nueva característica o proceso deseado para mejorar Devcon. Un DIP debe ser conciso y proporcionar la mayor cantidad de información posible, así como la justificación de la propuesta.

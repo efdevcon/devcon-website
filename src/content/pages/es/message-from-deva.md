@@ -1,6 +1,5 @@
 ---
 title: Mensaje de Deva
-template: content
 ---
 
 Teniendo aún algo de tiempo hasta Devcon, no debemos olvidar que hay muchas formas de involucrarse y contribuir, al igual que mucho que aprender, entorno al ecosistema Ethereum. Durante este tiempo hemos pensado mucho en cómo lograr todo lo que nos propusimos con Devcon, a la vez que aprovechamos oportunidades para generar impacto, incluso antes del reunirnos nuevamente.

@@ -1,5 +1,6 @@
 ---
 title: Apoyar los bienes públicos relacionados con Ethereum
+pages: ['about']
 left: >-
   Este año, estamos probando algo nuevo al encontrar nuevas formas de apoyar los bienes públicos relacionados con Ethereum en lugar de un programa de patrocinio tradicional.
 

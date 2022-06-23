@@ -4,7 +4,6 @@ title: Location
 tags:
   - devcon
   - location
-template: city-guide
 ---
 
 Devcon VI will be held in beautiful Bogotá, Colombia.

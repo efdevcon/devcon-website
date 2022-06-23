@@ -1,6 +1,5 @@
 ---
 title: News
-template: news
 tags:
   - devcon
   - covid-19

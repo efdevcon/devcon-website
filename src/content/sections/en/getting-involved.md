@@ -1,5 +1,6 @@
 ---
 title: Getting Involved
+pages: ['about']
 left: >-
   ## Apply to Speak
 

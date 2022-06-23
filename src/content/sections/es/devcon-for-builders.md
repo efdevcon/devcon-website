@@ -1,5 +1,6 @@
 ---
 title: Devcon es para constructoras de todo tipo.
+pages: ['about']
 ---
 
 Devcon siempre tuvo un fuerte enfoque técnico, y esto seguirá siendo cierto este año y en el futuro (¡después de todo, es la CONFERENCIA DE DESARROLLADORES!). Aunque Ethereum es un avance tecnológico por derecho propio, sus aplicaciones van mucho más allá, en la economía digital, la investigación, la comunidad, el arte y más allá.

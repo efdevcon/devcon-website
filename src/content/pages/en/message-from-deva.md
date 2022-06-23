@@ -1,6 +1,5 @@
 ---
 title: Message from Deva
-template: content
 ---
 
 While we have some time until Devcon, there are many ways to get involved and contribute to Devcon, and lots to learn and participate in across the Ethereum ecosystem. We’ve thought a lot about how to accomplish all that we set out to achieve with Devcon moving forward, and about where we might find room to make an impact even before the event.

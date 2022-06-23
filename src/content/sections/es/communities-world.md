@@ -1,5 +1,6 @@
 ---
 title: Comunidades globales en crecimiento
+pages: ['about']
 left: >-
   Podríamos organizar Devcon en el mismo lugar todos los años, ¡seguro! Pero estamos trabajando para lograr el objetivo de llevar Ethereum a comunidades de todo el mundo y a lugares donde puede tener un impacto real **hoy**.
 

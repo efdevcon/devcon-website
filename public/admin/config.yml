@@ -45,17 +45,31 @@ collections:
           multiple: true,
         }
 
-  - name: 'Content sections'
-    label: 'Content sections'
-    label_singular: 'Content section'
+  - name: 'Sections'
+    label: 'Sections'
+    label_singular: 'Section'
     folder: 'src/content/sections'
     create: true
     i18n: true
+    view_groups:
+      - label: Pages
+        field: pages
     fields:
       - { name: 'title', label: 'Title', widget: 'string', i18n: true }
-      - { name: body, label: Body, widget: markdown, i18n: true }
-      - { name: 'left', widget: 'markdown', i18n: true }
-      - { name: 'right', widget: 'markdown', i18n: true }
+      - {
+          name: 'pages',
+          label: 'Pages',
+          widget: 'hidden',
+          i18n: 'duplicate',
+          multiple: true,
+          required: false,
+          collection: 'pages',
+          value_field: '{{slug}}',
+          search_fields: ['title'],
+        }
+      - { name: 'left', widget: 'markdown', i18n: true, required: false }
+      - { name: 'right', widget: 'markdown', i18n: true, required: false }
+      - { name: body, label: Body, widget: markdown, i18n: true, required: false }
 
   - name: faq
     label: FAQ
@@ -63,6 +77,9 @@ collections:
     folder: src/content/faq
     create: true
     i18n: true
+    view_groups:
+      - label: Category
+        field: category
     fields:
       - { name: title, label: Title, widget: string, i18n: true }
       - { name: body, label: Body, widget: markdown, i18n: true }
@@ -115,20 +132,20 @@ collections:
     create: true
     i18n: true
     fields:
-      - { name: 'number', label: 'Number', widget: 'number' }
+      - { name: 'number', label: 'Number', widget: 'number', i18n: 'duplicate' }
       - { name: 'title', label: 'Title', widget: 'string', i18n: true  }
       - { name: 'description', label: 'Description', widget: 'text', i18n: true }
       - { name: 'location', label: 'Location', widget: 'string', i18n: true }
-      - { name: 'startDate', label: 'Start Date', widget: 'date', format: 'YYYY-MM-DD' }
-      - { name: 'endDate', label: 'End Date', widget: 'date', format: 'YYYY-MM-DD' }
-      - { name: 'imageUrl', label: 'Image', widget: 'string' }
+      - { name: 'startDate', label: 'Start Date', widget: 'date', format: 'YYYY-MM-DD', i18n: 'duplicate' }
+      - { name: 'endDate', label: 'End Date', widget: 'date', format: 'YYYY-MM-DD', i18n: 'duplicate' }
+      - { name: 'imageUrl', label: 'Image', widget: 'string', i18n: 'duplicate' }
       - label: Urls
         name: urls
         widget: list
         i18n: true
         fields:
           - { label: Title, name: title, widget: string, i18n: true }
-          - { label: Url, name: url, widget: string }
+          - { label: Url, name: url, widget: string, i18n: 'duplicate' }
 
   - name: tracks
     label: Tracks

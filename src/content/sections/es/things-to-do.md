@@ -1,5 +1,6 @@
 ---
 title: 2.600 metros más cerca de las estrellas
+pages: ['bogota']
 left: >-
   La capital de Colombia se encuentra en una de las seis regiones del país, la Región Andina, que se encuentra en todo el centro del territorio colombiano. En el altiplano cundiboyacense y en la sabana que lleva su nombre a una altura o elevación de 2.600 metros sobre el nivel del mar.
 

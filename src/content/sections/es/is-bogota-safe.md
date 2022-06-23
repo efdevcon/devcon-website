@@ -1,5 +1,6 @@
 ---
 title: ¿Es segura Bogotá?
+pages: ['bogota']
 left: >-
   Colombia es más segura hoy que en cualquier otro momento de los últimos 50 años, y esperamos que Devcon en Bogotá sea una experiencia impactante para todos. Dicho esto, si bien Bogotá es una ciudad muy moderna, se encuentra en un país en desarrollo, y recomendamos tomar algunas precauciones básicas. Haz eso, y tu mayor problema probablemente será querer quedarte más tiempo.
 

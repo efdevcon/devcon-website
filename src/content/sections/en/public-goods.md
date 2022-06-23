@@ -1,5 +1,6 @@
 ---
 title: Support Ethereum-Related Public Goods
+pages: ['about']
 left: >-
   This year, we’re trying something new by finding new ways to support Ethereum-related public goods in lieu of a traditional Sponsorship program. 
 

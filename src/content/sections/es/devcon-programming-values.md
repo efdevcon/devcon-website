@@ -1,5 +1,6 @@
 ---
 title: Valores de programación de Devcon
+pages: ['program']
 ---
 
 1. Colaboración
