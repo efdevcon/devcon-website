@@ -1,6 +1,7 @@
 ---
 title: Application Guidelines
-pages: ['applications']
+pages:
+  - applications
 ---
 
 1. Who can apply
