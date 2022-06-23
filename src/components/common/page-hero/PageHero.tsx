@@ -232,23 +232,25 @@ export const PageHero = (props: PageHeroProps) => {
       </div>
       {props.navigation && (
         <div className={`${css['page-navigation-container']} section`}>
-          <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
-            <div id="page-navigation" className={`${css['page-navigation']}`}>
-              {props.navigation &&
-                props.navigation.map(link => {
-                  return (
-                    <Link
-                      key={link.to + link.title}
-                      to={link.to}
-                      indicateExternal
-                      className="font-xs bold text-uppercase hover-underline"
-                    >
-                      {link.title}
-                    </Link>
-                  )
-                })}
-            </div>
-          </SwipeToScroll>
+          <div className="expand-right">
+            <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
+              <div id="page-navigation" className={`${css['page-navigation']}`}>
+                {props.navigation &&
+                  props.navigation.map(link => {
+                    return (
+                      <Link
+                        key={link.to + link.title}
+                        to={link.to}
+                        indicateExternal
+                        className="font-xs bold text-uppercase hover-underline"
+                      >
+                        {link.title}
+                      </Link>
+                    )
+                  })}
+              </div>
+            </SwipeToScroll>
+          </div>
         </div>
       )}
 

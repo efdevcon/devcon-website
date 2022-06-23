@@ -44,6 +44,8 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
       showIndicatorLeft = canScrollLeft && leftEnabled;
     }
 
+    const canScroll = scrollContainer.scrollWidth > scrollContainer.clientWidth + threshold;
+
     if (showIndicatorLeft && showIndicatorRight) {
       setScrollIndicatorClass(css['mask-both']);
     } else if (showIndicatorRight) {
@@ -66,9 +68,6 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
 
       return;
     };
-
-
-    const canScroll = scrollContainer.scrollWidth > scrollContainer.clientWidth + threshold;
     
     if (!canScroll) {
       setScrollIndicatorClass('');
@@ -84,7 +83,7 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
     }
   }, [syncScrollIndicators]);
 
-  // When element changes size, record its max scroll boundary (don't want to be able to drag beyond it!)
+  // When element changes size, record its max scroll boundary and reset all scroll related state to avoid edge cases
   const { observe } = useDimensions({
     onResize: ({ width }) => {
       const isNativeScroll = !window.matchMedia('not all and (hover: none)').matches;

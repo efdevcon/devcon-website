@@ -16,6 +16,15 @@
   >.expand {
     grid-column: 1 / 4;
   }
+  
+  >.expand-right {
+    grid-column: 2 / 4;
+  }
+
+  >.expand-left {
+    grid-column: 2 / 4;
+  }
+
 
   &.no-overflow {
     overflow: hidden;

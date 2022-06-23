@@ -40,7 +40,7 @@ const About = (props: Props) => {
         <div className={css['right']}>
           <SwipeToScroll scrollIndicatorDirections={{ left: true }} alwaysShowscrollIndicators>
             <div className={css['image-container']}>
-              <Image src={TriangleWithImages} layout="raw" alt="Devcon images" />
+              <Image src={TriangleWithImages} layout="raw" alt="Devcon images" priority />
             </div>
           </SwipeToScroll>
         </div>
