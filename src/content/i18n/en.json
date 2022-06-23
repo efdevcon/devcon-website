@@ -113,7 +113,10 @@
     "process_overview": "Process Overview",
     "drag_for_more": "DRAG FOR MORE →",
     "application_process": "Process",
-    "application_guidelines": "Application Guidelines"
+    "application_guidelines": "Application Guidelines",
+    "applications_open": "APPLICATIONS OPEN",
+    "deadline_to_apply": "DEADLINE TO APPLY",
+    "selection_process": "SELECTION DECISION"
   },
   "tickets": {
     "title": "Tickets",

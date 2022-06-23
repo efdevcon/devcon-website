@@ -71,17 +71,17 @@ export default pageHOC(function Applications(props: any) {
                 items={[
                   {
                     Icon: PencilIcon,
-                    title: 'APPLICATIONS OPEN',
+                    title: intl('program_applications_open'),
                     right: 'June 6th',
                   },
                   {
                     Icon: CalendarIcon,
-                    title: 'DEADLINE TO APPLY',
+                    title: intl('program_deadline_to_apply'),
                     right: 'June 27th @ 23:59:59 UTC',
                   },
                   {
                     Icon: SelectionIcon,
-                    title: 'SELECTION DECISION',
+                    title: intl('program_selection_process'),
                     right: (
                       <span>
                         <span className="font-xs">Before</span>
