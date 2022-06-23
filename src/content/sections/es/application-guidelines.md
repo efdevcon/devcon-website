@@ -17,7 +17,7 @@ pages:
 
    **Taller**
 
-   * Un taller de 50 minutos o 110 minutos sobre un tema de su elección. Esto podría centrarse en un problema a resolver o estar orientado a ayudar a los asistentes a aprender habilidades, como "Cómo ejecutar su propio nodo".
+   * Un taller de 50 minutos o 110 minutos sobre un tema de tu elección. Esto podría centrarse en un problema a resolver o estar orientado a ayudar a los asistentes a aprender habilidades, como "Cómo ejecutar su propio nodo".
 
    **Panel**
 
