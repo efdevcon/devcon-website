@@ -44,14 +44,6 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
       showIndicatorLeft = canScrollLeft && leftEnabled;
     }
 
-    const canScroll = scrollContainer.scrollWidth > scrollContainer.clientWidth + threshold;
-
-    if (!canScroll) {
-      setScrollIndicatorClass('');
-
-      return;
-    };
-
     if (showIndicatorLeft && showIndicatorRight) {
       setScrollIndicatorClass(css['mask-both']);
     } else if (showIndicatorRight) {
@@ -61,8 +53,8 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
     } else {
       setScrollIndicatorClass('');
     }
-
-    // We have a case where we want to always show the scroll indicator in a direction regardless of whether or not we are fully scrolled
+    
+    // We have a case where we want to always show the scroll indicator in a direction regardless of whether or not we are fully scrolled:
     if (props.alwaysShowscrollIndicators) {
       if (leftEnabled && rightEnabled) {
         setScrollIndicatorClass(css['mask-both']);
@@ -71,6 +63,15 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
       } else if (leftEnabled) {
         setScrollIndicatorClass(css['mask-left']);
       }
+
+      return;
+    };
+
+
+    const canScroll = scrollContainer.scrollWidth > scrollContainer.clientWidth + threshold;
+    
+    if (!canScroll) {
+      setScrollIndicatorClass('');
     }
   }, [maxScroll, props.alwaysShowscrollIndicators, props.scrollIndicatorDirections, isNativeScroll]);
 

@@ -9,6 +9,7 @@ import ChevronLeft from 'assets/icons/chevron_left.svg'
 import ChevronRight from 'assets/icons/chevron_right.svg'
 import { Button } from 'components/common/button'
 import Image from 'next/image'
+import SwipeToScroll from 'components/common/swipe-to-scroll';
 
 type NavigationLink = {
   to: string
@@ -231,21 +232,23 @@ export const PageHero = (props: PageHeroProps) => {
       </div>
       {props.navigation && (
         <div className={`${css['page-navigation-container']} section`}>
-          <div id="page-navigation" className={`${css['page-navigation']}`}>
-            {props.navigation &&
-              props.navigation.map(link => {
-                return (
-                  <Link
-                    key={link.to + link.title}
-                    to={link.to}
-                    indicateExternal
-                    className="font-xs bold text-uppercase hover-underline"
-                  >
-                    {link.title}
-                  </Link>
-                )
-              })}
-          </div>
+          <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
+            <div id="page-navigation" className={`${css['page-navigation']}`}>
+              {props.navigation &&
+                props.navigation.map(link => {
+                  return (
+                    <Link
+                      key={link.to + link.title}
+                      to={link.to}
+                      indicateExternal
+                      className="font-xs bold text-uppercase hover-underline"
+                    >
+                      {link.title}
+                    </Link>
+                  )
+                })}
+            </div>
+          </SwipeToScroll>
         </div>
       )}
 

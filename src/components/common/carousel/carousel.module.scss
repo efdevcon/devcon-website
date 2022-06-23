@@ -8,9 +8,9 @@
   h3 {
     @include fonts-normal;
     z-index: 2;
-    position: absolute;
+    // position: absolute;
     margin-top: $gaps-gap-12;
-    margin-left: $gaps-gap-16;
+    // margin-left: $gaps-gap-16;
     max-width: $breakpoints-md;
     font-size: $sizes-size-72;
     letter-spacing: -0.03em;
@@ -23,7 +23,7 @@
 
     @media (max-width: $breakpoints-sm) {
       max-width: $sizes-size-64;
-      font-size: $sizes-size-48;
+      font-size: 60px;
     }
   }
 }
