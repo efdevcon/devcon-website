@@ -1,5 +1,6 @@
 ---
 title: Blog
+header: Blog
 tags:
   - devcon
 ---
