@@ -32,7 +32,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
   return (
     <Page theme={themes['bogota']}>
       <PageHero
-        path={[{ text: <span className="bold">Bogotá</span> }, { text: 'City Guide' }]}
+        path={[{ text: <span className="bold">Bogotá</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: intl('city_guide_title'),
@@ -68,7 +68,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
       <div className="section">
         <div className="two-columns clear-bottom" id="location">
           <div className="left section-markdown">
-            <h2 className="spaced">{intl('city_guide_title')}</h2>
+            <h2 className="spaced">{props.page.title}</h2>
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
 

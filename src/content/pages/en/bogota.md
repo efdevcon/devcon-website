@@ -1,5 +1,6 @@
 ---
-title: City Guide
+header: City Guide
+title: Location
 tags:
   - devcon
   - location

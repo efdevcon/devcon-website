@@ -7,6 +7,7 @@ import { Tooltip } from 'components/common/tooltip'
 import { useTranslations } from 'next-intl'
 import { chunkArray } from 'utils/chunk-array'
 import Image from 'next/image'
+import { usePageContext } from 'context/page-context'
 
 type ContributeProps = {
   contributors: Array<Contributor>
@@ -137,10 +138,11 @@ const AutoScroller = (props: { contributors: Array<Contributor> }) => {
 
 export const Contribute = (props: ContributeProps) => {
   const intl = useTranslations()
+  const page = usePageContext()?.current
 
   return (
     <section id="contribute" className={css['section']}>
-      <p className="h3 spaced">{intl('dips_contribute')}</p>
+      <p className="h3 spaced">{page?.title ?? intl('dips_contribute')}</p>
 
       <div className={css['container']}>
         <div className={css['left-section']}>

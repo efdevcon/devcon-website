@@ -1,9 +1,9 @@
 ---
-title: Guía de la ciudad
+header: Guía de la ciudad
+title: Ubicación
 tags:
   - devcon
   - location
-template: city-guide
 ---
 
 Devcon VI se llevará a cabo en la hermosa Bogotá, Colombia.

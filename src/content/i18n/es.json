@@ -112,13 +112,11 @@
     "apply_to_speak": "Aplicar para hablar",
     "process_overview": "Vista general del proceso",
     "drag_for_more": "ARRASTRA PARA MÁS →",
-    "speaker_applications": "Aplicaciones de altavoces",
     "application_process": "Proceso",
     "application_guidelines": "Pautas de Aplicación"
   },
   "tickets": {
     "title": "Entradas",
-    "ticketing": "Emisión de boletos de Devcon",
     "timeline": "Cronología",
     "types_and_pricing": "Tipos y Precios",
     "types_ga": "El boleto original a Devcon. Anónimo: no se requiere identificación.",
@@ -142,7 +140,6 @@
     "general_waves_04": "11 de agosto",
     "general_waves_05": "23 de agosto",
     "raffle_title": "Rifa",
-    "raffle_subtitle": "Sorteo de boletos en cadena experimental + Subasta",
     "raffle_about": "Sobre",
     "raffle_auction": "Subasta",
     "raffle_poap": "POAP",
@@ -177,7 +174,6 @@
     "filter": "Filtrar FAQs usando términos de clave relevantes."
   },
   "past_events": {
-    "title_editions": "Devcon Ediciones",
     "locations": "Ubicaciones",
     "past_devcons": "Pasada Devcons"
   },
@@ -198,7 +194,6 @@
     "devcon_by_numbers": "Devcon por números",
     "continents_travelled": "Continentes Viajados",
     "archived_videos": "Vídeos archivados",
-    "what_is_devcon": "¿Qué es Devcon?",
     "for_builders": "Para constructores",
     "support": "Apoyo",
     "communities": "Comunidades",

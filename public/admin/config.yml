@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: efdevcon/devcon-website
-  branch: '%BRANCH_PLACEHOLDER%'
+  branch: main
   accept_roles:
     - admin
     - editor
@@ -44,61 +44,6 @@ collections:
           search_fields: ['title'],
           multiple: true,
         }
-
-  - name: 'notification'
-    label: 'Notifications'
-    label_singular: 'Notification'
-    folder: 'src/content/notifications'
-    i18n: true
-    fields:
-      - {
-          name: 'body',
-          label: 'Body',
-          pattern: ['^.{0,50}$', 'Must have less than 50 characters'],
-          widget: 'markdown',
-          i18n: true,
-        }
-      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: false }
-      - { name: 'label', Label: 'Label', widget: 'string', i18n: true, required: false }
-      - {
-          name: 'labelType',
-          Label: 'Label Type',
-          widget: 'select',
-          options: ['neutral', 'success', 'error'],
-          required: false,
-          i18n: 'duplicate',
-        }
-      - { label: 'Active', name: 'active', widget: 'boolean', default: true, i18n: duplicate }
-
-  - name: 'news'
-    label: 'News'
-    label_singular: 'News item'
-    folder: 'src/content/news'
-    create: true
-    i18n: true
-    fields:
-      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: false }
-      - { name: 'title', label: 'Title', widget: 'string', i18n: true, required: true }
-      - {
-          name: 'body',
-          label: 'Body',
-          pattern: ['^.{0,280}$', 'Must have less than 280 characters'],
-          widget: 'markdown',
-          i18n: true,
-        }
-      - {
-          name: 'tags',
-          label: 'Tags',
-          widget: 'relation',
-          i18n: 'duplicate',
-          required: false,
-          collection: 'tags',
-          value_field: '{{slug}}',
-          search_fields: ['title'],
-          multiple: true,
-        }
-      - { name: 'author', label: 'Author', widget: 'string', required: false }
-      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }
 
   - name: 'Content sections'
     label: 'Content sections'
@@ -166,34 +111,98 @@ collections:
     folder: 'src/content/devcon'
     identifier_field: number
     slug: '{{number}}'
+    sortable_fields: ['number']
     create: true
     i18n: true
     fields:
       - { name: 'number', label: 'Number', widget: 'number' }
-      - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'description', label: 'Description', widget: 'text' }
-      - { name: 'location', label: 'Location', widget: 'string' }
+      - { name: 'title', label: 'Title', widget: 'string', i18n: true  }
+      - { name: 'description', label: 'Description', widget: 'text', i18n: true }
+      - { name: 'location', label: 'Location', widget: 'string', i18n: true }
       - { name: 'startDate', label: 'Start Date', widget: 'date', format: 'YYYY-MM-DD' }
       - { name: 'endDate', label: 'End Date', widget: 'date', format: 'YYYY-MM-DD' }
       - { name: 'imageUrl', label: 'Image', widget: 'string' }
       - label: Urls
         name: urls
         widget: list
+        i18n: true
         fields:
-          - { label: Title, name: title, widget: string }
+          - { label: Title, name: title, widget: string, i18n: true }
           - { label: Url, name: url, widget: string }
 
-  - name: 'profiles'
-    label: 'Profiles'
-    label_singular: 'Profile'
-    folder: 'src/content/profiles'
-    slug: '{{slug}}'
+  - name: tracks
+    label: Tracks
+    label_singular: Track
+    folder: 'src/content/tracks'
+    sortable_fields: ['order']
     create: true
     i18n: true
     fields:
-      - { name: 'name', label: 'Title', widget: 'string', i18n: 'duplicate' }
-      - { name: 'role', label: 'Role', widget: 'string', i18n: 'duplicate' }
-      - { name: 'description', label: 'Description', widget: 'text', i18n: true }
-      - { name: 'organization', label: 'Organization', widget: 'string', i18n: 'duplicate', required: false }
-      - { name: 'country', label: 'Country', widget: 'string', i18n: 'duplicate', required: false }
-      - { name: 'imageUrl', label: 'Image URL', widget: 'string', i18n: true }
+      - { name: title, label: Title, widget: string, i18n: true }
+      - { name: body, label: Body, widget: markdown, i18n: true }
+      - {
+          name: order,
+          label: Order,
+          widget: number,
+          i18n: duplicate,
+          required: false,
+          value_type: int,
+          min: 1,
+          max: 1000,
+          step: 1,
+        }
+
+  - name: 'notification'
+    label: 'Notifications'
+    label_singular: 'Notification'
+    folder: 'src/content/notifications'
+    i18n: true
+    fields:
+      - {
+          name: 'body',
+          label: 'Body',
+          pattern: ['^.{0,50}$', 'Must have less than 50 characters'],
+          widget: 'markdown',
+          i18n: true,
+        }
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: false }
+      - { name: 'label', Label: 'Label', widget: 'string', i18n: true, required: false }
+      - {
+          name: 'labelType',
+          Label: 'Label Type',
+          widget: 'select',
+          options: ['neutral', 'success', 'error'],
+          required: false,
+          i18n: 'duplicate',
+        }
+      - { label: 'Active', name: 'active', widget: 'boolean', default: true, i18n: duplicate }
+
+  - name: 'news'
+    label: 'News'
+    label_singular: 'News item'
+    folder: 'src/content/news'
+    create: true
+    i18n: true
+    fields:
+      - { name: 'url', label: 'URL', widget: 'string', i18n: 'duplicate', required: false }
+      - { name: 'title', label: 'Title', widget: 'string', i18n: true, required: true }
+      - {
+          name: 'body',
+          label: 'Body',
+          pattern: ['^.{0,280}$', 'Must have less than 280 characters'],
+          widget: 'markdown',
+          i18n: true,
+        }
+      - {
+          name: 'tags',
+          label: 'Tags',
+          widget: 'relation',
+          i18n: 'duplicate',
+          required: false,
+          collection: 'tags',
+          value_field: '{{slug}}',
+          search_fields: ['title'],
+          multiple: true,
+        }
+      - { name: 'author', label: 'Author', widget: 'string', required: false }
+      - { name: 'date', label: 'Date', widget: datetime, picker_utc: true, i18n: 'duplicate', required: true }

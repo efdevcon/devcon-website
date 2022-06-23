@@ -112,13 +112,11 @@
     "apply_to_speak": "Apply to speak",
     "process_overview": "Process Overview",
     "drag_for_more": "DRAG FOR MORE →",
-    "speaker_applications": "Speaker Applications",
     "application_process": "Process",
     "application_guidelines": "Application Guidelines"
   },
   "tickets": {
     "title": "Tickets",
-    "ticketing": "Devcon Ticketing",
     "timeline": "Timeline",
     "types_and_pricing": "Types & Pricing",
     "types_ga": "The Original ticket to Devcon. Anon-friendly: No ID Required.",
@@ -142,7 +140,6 @@
     "general_waves_04": "August 11",
     "general_waves_05": "August 23",
     "raffle_title": "Raffle",
-    "raffle_subtitle": "Experimental On-chain Ticket Raffle+Auction",
     "raffle_about": "About",
     "raffle_auction": "Auction",
     "raffle_poap": "POAP",
@@ -177,7 +174,6 @@
     "filter": "Filter FAQs using relevant key terms."
   },
   "past_events": {
-    "title_editions": "Devcon Ediciones",
     "locations": "Locations",
     "past_devcons": "Past Devcons"
   },
@@ -198,7 +194,6 @@
     "devcon_by_numbers": "Devcon by Numbers",
     "continents_travelled": "Continents Travelled",
     "archived_videos": "Archived videos",
-    "what_is_devcon": "What is Devcon",
     "for_builders": "For Builders",
     "support": "Support",
     "communities": "Communities",

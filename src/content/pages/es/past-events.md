@@ -1,6 +1,6 @@
 ---
-title: Eventos pasados
-template: content
+header: Eventos pasados
+title: Devcon Ediciones
 ---
 
 Todo comenzó en Berlín Kreuzberg en 2014 cuando los cofundadores y los primeros constructores de Ethereum se reunieron para una reunión que llamaron Devcon 0. Desde entonces, Devcon ha dado la vuelta al mundo. El viaje fue de Berlín a Londres, Shanghai, Cancún, Praga y Osaka. Cada ubicación aporta algo único a la conferencia de desarrolladores.

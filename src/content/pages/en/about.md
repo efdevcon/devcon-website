@@ -1,8 +1,8 @@
 ---
-title: About Devcon
+header: About Devcon
+title: What is Devcon
 tags:
   - devcon
-template: content
 ---
 
 Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.

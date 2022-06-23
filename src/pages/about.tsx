@@ -34,7 +34,7 @@ export default pageHOC(function AboutPage(props: any) {
   return (
     <Page theme={themes['about']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('about_title')}</span> }, { text: 'Devcon' }]}
+        path={[{ text: <span className="bold">{intl('about_title')}</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: 'Devcon',
@@ -67,7 +67,7 @@ export default pageHOC(function AboutPage(props: any) {
         <div className={`two-columns clear-bottom`}>
           <div className={`left section-markdown ${css['intro-left']}`}>
             <h2 className="spaced" id="intro">
-              {intl('about_what_is_devcon')}
+              {props.page.title}
             </h2>
 
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }}></div>

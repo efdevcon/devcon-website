@@ -2,10 +2,9 @@ import { Tag } from './Tag'
 
 export interface Page {
   title: string
+  header: String
   description?: string
   body?: string
-  template: string
-  translationVerified?: boolean
   tags: Array<Tag>
   lang: string
   id: string

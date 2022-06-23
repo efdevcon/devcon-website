@@ -5,12 +5,8 @@ import { pageHOC } from 'context/pageHOC'
 import { PageHero } from 'components/common/page-hero'
 import { usePageContext } from 'context/page-context'
 import { useTranslations } from 'next-intl'
-import Pencil from 'assets/icons/pencil.svg'
-import BulletList from 'assets/icons/bullet_list.svg'
-// import { PageContentSection } from 'components/common/layouts/content/PageContentSection'
 import { Contribute } from 'components/domain/dips/overview/contribute'
 import { Proposals } from 'components/domain/dips/overview/proposals'
-import { Contributor } from 'types/DIP'
 import { getGlobalData } from 'services/global'
 import { GetPage } from 'services/page'
 import { Tags } from 'components/common/tags'
@@ -23,7 +19,7 @@ export default pageHOC(function DIPsTemplate(props: any) {
   return (
     <Page theme={themes['teal']}>
       <PageHero
-        path={[{ text: <span className="bold">Get Involved</span> }, { text: 'DIPs' }]}
+        path={[{ text: <span className="bold">Get Involved</span> }, { text: props.page.header }]}
         // cta={[
         //   {
         //     title: intl('dips_review_dips'),

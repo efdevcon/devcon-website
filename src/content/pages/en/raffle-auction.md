@@ -1,6 +1,6 @@
 ---
-title: Raffle Auction
-template: content
+header: Raffle+Auction
+title: Experimental On-chain Ticket Raffle+Auction
 ---
 
 This year, we will be holding a pre-sale Raffle+Auction for **100** tickets to Devcon VI. The entirety of the Raffle+Auction will take place on Arbitrum.

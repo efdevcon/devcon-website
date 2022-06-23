@@ -25,7 +25,7 @@ export default pageHOC(function Schedule(props: any) {
   return (
     <Page theme={themes['program']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: 'Overview' }]}
+        path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: intl('program_overview_about'),
@@ -51,7 +51,7 @@ export default pageHOC(function Schedule(props: any) {
           <div className={`${css['about']} clear-bottom border-bottom margin-bottom`} id="about">
             <div className={css['left']}>
               <div className="section-markdown">
-                <h2>{intl('program_programming')}</h2>
+                <h2>{props.page.title}</h2>
                 <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
 
@@ -148,7 +148,7 @@ export default pageHOC(function Schedule(props: any) {
 
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
-  const page = await GetPage('/schedule', context.locale)
+  const page = await GetPage('program', context.locale)
   const faq = await GetFAQ(context.locale)
   const sections = await GetContentSections(
     ['cta-speaker-applications', 'devcon-programming-values', 'ecosystem-supporters', 'volunteers'],
