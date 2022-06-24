@@ -102,7 +102,7 @@ const AddToCalendar = () => {
   const intl = useTranslations();
 
   const description = 'Devcon will officially run from October 11th-14th, but come a few days earlier and stay a little later to experience the full Devcon Week which will run from October 7th-16th!';
-  const location = 'Agora Bogota';
+  const location = 'Agora Bogotá Convention Center';
   const startDate = '20221011';
   const endDate = '20221015'
   
