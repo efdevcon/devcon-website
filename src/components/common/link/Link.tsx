@@ -77,8 +77,8 @@ const Link = React.forwardRef(
     }
 
     return (
-      <NextLink href={to} {...linkAttributes}>
-        <a {...linkAttributes}>{children}</a>
+      <NextLink href={to}>
+        <a {...linkAttributes} onClick={console.log}>{children}</a>
       </NextLink>
     )
   }

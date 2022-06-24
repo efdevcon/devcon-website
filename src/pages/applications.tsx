@@ -21,7 +21,7 @@ import Process from 'assets/images/speaker-process.png'
 
 const ProcessOverview = () => {
   return (
-    <SwipeToScroll>
+    <SwipeToScroll scrollIndicatorDirections={{ left: true, right: true }}>
       <div className={css['process-container']}>
         <Image src={Process} objectFit="cover" height="100%" />
       </div>

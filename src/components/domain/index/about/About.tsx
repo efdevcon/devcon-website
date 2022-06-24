@@ -6,6 +6,7 @@ import Image from 'next/image'
 import TriangleWithImages from 'assets/images/about-triangles.png'
 import { Link } from 'components/common/link'
 import { ContentSection } from 'types/ContentSection'
+import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 interface Props { 
   content: ContentSection
@@ -37,9 +38,11 @@ const About = (props: Props) => {
           </Link>
         </div>
         <div className={css['right']}>
-          <div className={css['image-container']}>
-            <Image src={TriangleWithImages} objectFit="cover" layout="fill" objectPosition="left" alt="Devcon images" />
-          </div>
+          <SwipeToScroll scrollIndicatorDirections={{ left: true }} alwaysShowscrollIndicators>
+            <div className={css['image-container']}>
+              <Image src={TriangleWithImages} layout="raw" alt="Devcon images" priority />
+            </div>
+          </SwipeToScroll>
         </div>
       </div>
       <div className="clear-bottom margin-bottom border-bottom"></div>

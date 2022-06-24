@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'components/common/link'
-import Slider from 'react-slick'
 import css from './cta.module.scss'
 import CtaSrc from 'assets/images/cta.svg'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
@@ -11,7 +10,6 @@ type CTAProps = {
 }
 
 export const CallToAction = (props: CTAProps) => {
-  const sliderRef = React.useRef<Slider>()
   // const intl = useTranslations()
 
   let className = `${css['positional-wrapper']}`
@@ -50,7 +48,7 @@ export const CallToAction = (props: CTAProps) => {
         </div>
 
         <div className={css['swipe-wrapper']}>
-          <SwipeToScroll>{callsToAction}</SwipeToScroll>
+          <SwipeToScroll scrollIndicatorDirections={{ right: true }}>{callsToAction}</SwipeToScroll>
         </div>
       </div>
     </div>

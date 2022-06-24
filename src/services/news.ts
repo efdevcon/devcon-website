@@ -4,11 +4,16 @@ import nodeFetch from 'node-fetch';
 import matter from 'gray-matter';
 import { GetTags } from 'services/page';
 import moment from 'moment';
+import Parser from "rss-parser"
 require('dotenv').config()
 const fs = require('fs');
 const path = require('path');
 const RSSParser = require('rss-parser');
-const rssParser = new RSSParser();
+const parser: Parser = new RSSParser({
+  customFields: {
+      item: ['efblog:image', 'description'],
+  },
+})
 
 const formatting = (() => {
   const _interface = {
@@ -19,6 +24,7 @@ const formatting = (() => {
         date: moment(post.isoDate).valueOf(),
         author: post.author || 'Devcon Team',
         description: post.content,
+        imageUrl: post['efblog:image'] ?? '',
      }
     },
     formatTweet: (tweet: any): NewsItem => {
@@ -97,7 +103,7 @@ const twitter = (() => {
 const blog = (() => {
   const _interface = {
     getPosts: async () => {
-      const feed = await rssParser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml');
+      const feed = await parser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml');
   
       return feed.items;
     },

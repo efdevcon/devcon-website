@@ -12,3 +12,10 @@
     border-radius: 5px;
   }
 }
+
+// Not touch
+@mixin hover-supported {
+  @media not all and (hover: none) {
+    @content;
+  }
+}

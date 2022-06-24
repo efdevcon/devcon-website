@@ -32,7 +32,7 @@ export default pageHOC(function Index(props: any) {
 
       <div className={`${css['background-container']} section`}>
         <div className={`${css['circle-background']} expand`}>
-          <Image src={CircleBackground} alt="Triangles" />
+          <Image src={CircleBackground} alt="Circles" />
         </div>
       </div>
 
@@ -61,5 +61,6 @@ export async function getStaticProps(context: any) {
       sections,
       tracks
     },
+    revalidate: 1 * 60 * 30,
   }
 }

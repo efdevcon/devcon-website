@@ -102,7 +102,9 @@ export const News = (props: NewsProps) => {
           })}
         </div>
         <div className={css['feed']}>
-          <Feed inline title={intl('news_feed')} items={newsItems.slice(2)} />
+          <div className={css['absolute-wrapper']}>
+            <Feed inline title={intl('news_feed')} items={newsItems.slice(2)} />
+          </div>
         </div>
       </div>
     </div>
