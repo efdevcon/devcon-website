@@ -107,7 +107,7 @@ export default pageHOC(function Tickets(props: any) {
   return (
     <Page theme={themes['tickets']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('navigation_tickets')}</span> }, { text: 'Get Tickets' }]}
+        path={[{ text: <span className="bold">{intl('navigation_tickets')}</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: intl('tickets_timeline'),
@@ -127,7 +127,7 @@ export default pageHOC(function Tickets(props: any) {
       <div className="section">
         <div className={`${css['about']} clear-bottom border-bottom`} id="about">
           <div className={`${css['left']} section-markdown`}>
-            <h2 className="spaced">{intl('tickets_ticketing')}</h2>
+            <h2 className="spaced">{props.page.title}</h2>
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
 
@@ -255,7 +255,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 01</div>
                     <div className={`${css['right']} bold`}>
-                    {intl('tickets_general_waves_01')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_01')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                     <p className="bold">{intl('tickets_coming_soon')}</p>
                   </div>
@@ -282,7 +282,7 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 03</div>
                     <div className={`${css['right']} bold`}>
-                    {intl('tickets_general_waves_03')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_03')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -337,7 +337,7 @@ export default pageHOC(function Tickets(props: any) {
               ]}
             />
             <Ticket
-              title="Builder Ticket*"
+              title="Builder Discount*"
               link="https://forms.gle/x6GHpq8MAZJCwwsq5"
               price="$299"
               color="grey"
@@ -352,7 +352,7 @@ export default pageHOC(function Tickets(props: any) {
             />
 
             <Ticket
-              title="Student Ticket*"
+              title="Student Discount*"
               price="$149"
               color="grey"
               link="https://forms.gle/9L7BwqCP5hS1AT4HA"

@@ -1,5 +1,7 @@
 ---
 title: Application Guidelines
+pages:
+  - applications
 ---
 
 1. Who can apply

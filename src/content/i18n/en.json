@@ -113,20 +113,21 @@
     "apply_to_speak": "Apply to speak",
     "process_overview": "Process Overview",
     "drag_for_more": "DRAG FOR MORE →",
-    "speaker_applications": "Speaker Applications",
     "application_process": "Process",
-    "application_guidelines": "Application Guidelines"
+    "application_guidelines": "Application Guidelines",
+    "applications_open": "APPLICATIONS OPEN",
+    "deadline_to_apply": "DEADLINE TO APPLY",
+    "selection_process": "SELECTION DECISION"
   },
   "tickets": {
     "title": "Tickets",
-    "ticketing": "Devcon Ticketing",
     "timeline": "Timeline",
     "types_and_pricing": "Types & Pricing",
     "types_ga": "The Original ticket to Devcon. Anon-friendly: No ID Required.",
-    "types_builder": "For those who actively volunteer or contribute their time to the growth, research and development of the ecosystem.",
-    "types_student": "For students & educators alike. If you'd like to apply for a Student discount.",
+    "types_builder": "A discount for those who actively volunteer or contribute their time to the growth, research and development of the ecosystem.",
+    "types_student": "A discount for students & educators alike to attend Devcon and learn more about Ethereum.",
     "types_student_note": "Note: School/University ID required at check-in to prevent resale. Secondary/high school, College, or University.",
-    "types_latam": "If you are a Builder or a Student from Latin America, apply through the respective form and receive an additional discount off your Devcon ticket.",
+    "types_latam": "And additional discount is available if you are a Builder or a Student from Latin America: apply through the respective form, and upload proof of Latin America residency (Government issued ID, Passport, etc).",
     "types_volunteer": "Join the volunteer team alongside 100+ other fun, dedicated, passionate members of the community to help put on the best Devcon yet!",
     "accepted_payments": "Payment will be accepted in ETH or DAI on Ethereum Mainnet, Arbitrum + Optimism, OR Fiat/Card via Stripe integration. Prices will be displayed in $USD.",
     "discounted": "Discounted Tickets",
@@ -143,7 +144,6 @@
     "general_waves_04": "August 11",
     "general_waves_05": "August 23",
     "raffle_title": "Raffle",
-    "raffle_subtitle": "Experimental On-chain Ticket Raffle+Auction",
     "raffle_about": "About",
     "raffle_auction": "Auction",
     "raffle_poap": "POAP",
@@ -178,7 +178,6 @@
     "filter": "Filter FAQs using relevant key terms."
   },
   "past_events": {
-    "title_editions": "Devcon Ediciones",
     "locations": "Locations",
     "past_devcons": "Past Devcons"
   },
@@ -199,7 +198,6 @@
     "devcon_by_numbers": "Devcon by Numbers",
     "continents_travelled": "Continents Travelled",
     "archived_videos": "Archived videos",
-    "what_is_devcon": "What is Devcon",
     "for_builders": "For Builders",
     "support": "Support",
     "communities": "Communities",

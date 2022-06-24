@@ -1,5 +1,6 @@
 ---
 title: ¿Cómo funcionará la subasta?
+pages: ['raffle-auction']
 ---
 
 <span id="auction"></span>

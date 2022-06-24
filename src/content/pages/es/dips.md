@@ -1,6 +1,6 @@
 ---
-title: DIPs
-template: dips
+header: DIPs
+title: Contribuir
 tags:
   - devcon
   - DIP

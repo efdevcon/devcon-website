@@ -1,5 +1,6 @@
 ---
 title: What areas should we stay in Bogotá?
+pages: ['bogota']
 left: >-
   - Chapinero (30-minute Uber to the venue)
   

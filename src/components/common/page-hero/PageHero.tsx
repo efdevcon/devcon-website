@@ -135,7 +135,7 @@ export const PageHero = (props: PageHeroProps) => {
     }
   }, [props.scenes, setNextScene])
 
-  const title = props.title ?? pageContext?.current?.title
+  const title = props.title ?? pageContext?.current?.header ?? pageContext?.current?.title
 
   return (
     <div id="page-hero" className={className} style={style}>

@@ -1,5 +1,6 @@
 ---
 title: Devcon Programming Values
+pages: ['program']
 ---
 
 1. Collaboration

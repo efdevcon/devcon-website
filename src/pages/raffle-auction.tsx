@@ -21,7 +21,7 @@ export default pageHOC(function RaffleAuction(props: any) {
   return (
     <Page theme={themes['tickets']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('navigation_tickets')}</span> }, { text: props.page.title }]}
+        path={[{ text: <span className="bold">{intl('navigation_tickets')}</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: intl('tickets_raffle_about'),
@@ -53,7 +53,7 @@ export default pageHOC(function RaffleAuction(props: any) {
       <div className="section">
         <div className={`${css['about']} clear-bottom border-bottom`} id="about">
           <div className={`${css['left']} section-markdown`}>
-            <h2>{intl('tickets_raffle_subtitle')}</h2>
+            <h2>{props.page.title}</h2>
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
           </div>
 

@@ -43,7 +43,7 @@ export default pageHOC(function PastEvents(props: any) {
       <PageHero
         path={[
           { text: <span className="bold">{intl('navigation_about')}</span> },
-          { text: intl('navigation_past_events') },
+          { text: props.page.header },
         ]}
         navigation={props.editions.map((edition: any) => {
           return {
@@ -57,7 +57,7 @@ export default pageHOC(function PastEvents(props: any) {
         <div className={`two-columns ${css['about']} clear-bottom border-bottom margin-bottom`}>
           <div className={`left ${css['left']}`}>
             <div className="section-markdown">
-              <h2 className="spaced">{intl('past_events_title_editions')}</h2>
+              <h2 className="spaced">{props.page.title}</h2>
               <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
             </div>
 

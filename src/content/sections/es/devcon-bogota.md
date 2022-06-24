@@ -1,5 +1,6 @@
 ---
 title: Devcon Bogotá
+pages: ['index']
 ---
 
 Devcon es una introducción intensiva para los nuevos exploradores de Ethereum, una reunión familiar global para aquellos que ya forman parte de nuestro ecosistema y una fuente de energía y creatividad para todos.  

@@ -1,5 +1,6 @@
 ---
 title: Involucrado
+pages: ['about']
 left: >-
   ## Aplicar para hablar
 

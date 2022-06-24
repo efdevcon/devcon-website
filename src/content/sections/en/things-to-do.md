@@ -1,5 +1,6 @@
 ---
 title: 2,600 meters closer to the stars
+pages: ['bogota']
 left: >-
   The capital of Colombia is located in one of the six regions of the country, the Andean Region, which is located throughout the center of the Colombian territory. In the Cundiboyacense plateau and on the savanna that bears its name at an altitude or elevation of 2,600 meters above sea level.
 

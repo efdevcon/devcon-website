@@ -1,5 +1,6 @@
 ---
 title: Comparta sus ideas y mejore Devcon
+pages: ['about']
 ---
 
 Siempre nos esforzamos por mejorar Devcon para todos. Sin embargo, somos conscientes de que nuestra perspectiva es limitada. **Es por eso que presentamos DIP: Propuestas de mejora de Devcon.**

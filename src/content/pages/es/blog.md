@@ -1,8 +1,8 @@
 ---
 title: Blog
+header: Blog
 tags:
   - devcon
-template: blogs
 ---
 
 Latest blogs

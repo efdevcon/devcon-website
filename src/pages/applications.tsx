@@ -36,7 +36,7 @@ export default pageHOC(function Applications(props: any) {
   return (
     <Page theme={themes['program']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: 'Applications' }]}
+        path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: intl('program_application_process'),
@@ -54,7 +54,7 @@ export default pageHOC(function Applications(props: any) {
           <div className={`${css['about']} clear-bottom border-bottom`} id="about">
             <div className={css['left']}>
               <div className="section-markdown">
-                <h2>{intl('program_speaker_applications')}</h2>
+                <h2>{props.page.title}</h2>
                 <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
 
@@ -66,22 +66,22 @@ export default pageHOC(function Applications(props: any) {
             </div>
 
             <div className={css['right']}>
-              <h2 className="spaced">{intl('program_speaker_applications')}</h2>
+              <h2 className="spaced">{intl('program_important_dates')}</h2>
               <Snapshot
                 items={[
                   {
                     Icon: PencilIcon,
-                    title: 'APPLICATIONS OPEN',
+                    title: intl('program_applications_open'),
                     right: 'June 6th',
                   },
                   {
                     Icon: CalendarIcon,
-                    title: 'DEADLINE TO APPLY',
+                    title: intl('program_deadline_to_apply'),
                     right: 'June 27th @ 23:59:59 UTC',
                   },
                   {
                     Icon: SelectionIcon,
-                    title: 'SELECTION DECISION',
+                    title: intl('program_selection_process'),
                     right: (
                       <span>
                         <span className="font-xs">Before</span>
@@ -127,7 +127,7 @@ export default pageHOC(function Applications(props: any) {
 
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
-  const page = await GetPage('/speaker-applications', context.locale)
+  const page = await GetPage('applications', context.locale)
   const sections = await GetContentSections(['application-guidelines'], context.locale)
 
   return {

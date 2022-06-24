@@ -1,5 +1,6 @@
 ---
 title: How will the auction work?
+pages: ['raffle-auction']
 ---
 
 <span id="auction"></span>
