@@ -1,6 +1,6 @@
 ---
-header: Sorteo+Subasta
 title: Sorteo de boletos en cadena experimental + Subasta
+header: Sorteo+Subasta
 ---
 
 Este año, realizaremos una rifa + subasta de preventa por **100** boletos para Devcon VI. La totalidad de la Raffle+Auction se llevará a cabo en Arbitrum.
