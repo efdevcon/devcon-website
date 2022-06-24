@@ -101,7 +101,8 @@ const AddToCalendar = () => {
   const [calendarModalOpen, setCalendarModalOpen] = React.useState(false)
   const intl = useTranslations();
 
-  const description = 'Devcon October 11th-14th, Devcon Week October 7th-16th';
+  const description = 'Devcon will officially run from October 11th-14th, but come a few days earlier and stay a little later to experience the full Devcon Week which will run from October 7th-16th!';
+  const location = 'Agora Bogota';
   const startDate = '20221011';
   const endDate = '20221015'
   
@@ -109,14 +110,12 @@ const AddToCalendar = () => {
     const googleCalUrl = new URL(`https://www.google.com/calendar/render?action=TEMPLATE&ctz=America/Bogota`)
     
     googleCalUrl.searchParams.append('text', `Devcon`)
-    googleCalUrl.searchParams.append('details', `Devcon October 11th-14th, Devcon Week October 7th-16th`)
+    googleCalUrl.searchParams.append('details', description)
     googleCalUrl.searchParams.append(
       'dates',
       `${startDate}/${endDate}`
     )
-
-    
-    // if (event.Location.url) googleCalUrl.searchParams.append('location', `${event.Location.text}`)
+    googleCalUrl.searchParams.append('location', location);
     
     return googleCalUrl
   })()
@@ -129,10 +128,10 @@ const AddToCalendar = () => {
     // `DTSTAMP:${moment.utc().format('YYYYMMDDTHHmmss')}`,
     `DTSTART:${startDate}`,
     `DTEND:${endDate}`,
-    `SUMMARY:${description}`,
+    `SUMMARY:Devcon`,
     `DESCRIPTION:${description}`,
-    // event.Location.url && `URL;VALUE=URI:${event.Location.url}`,
-    // event.Location.url && `LOCATION:${event.Location.text}`,
+    `URL;VALUE=URI:devcon.org`,
+    `LOCATION:${location}`,
     `END:VEVENT`
   )
 
