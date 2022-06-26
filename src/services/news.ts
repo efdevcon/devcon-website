@@ -69,7 +69,7 @@ const twitter = (() => {
       // We have rate limiting issues with twitter - we'll just return nothing in dev mode to be sure
       // If looking to debug just comment this out
       // TODO: Had to stop the requests because we're already at 60% of the rate limit for the month
-      if (process.env.NODE_ENV === 'development' && true) return results;
+      if (process.env.NODE_ENV === 'development' || true) return results;
 
       const queryParams = {
         exclude: 'retweets,replies',
