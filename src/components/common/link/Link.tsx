@@ -15,7 +15,7 @@ type LinkProps = {
 }
 
 const Link = React.forwardRef(
-  ({ children, indicateExternal, external, allowDrag, to, ...rest }: LinkProps, ref: any) => {
+  ({ children, indicateExternal, external, allowDrag, locale, to, ...rest }: LinkProps, ref: any) => {
     const dragging = React.useRef(false)
 
     const linkAttributes = {
@@ -77,7 +77,7 @@ const Link = React.forwardRef(
     }
 
     return (
-      <NextLink href={to}>
+      <NextLink href={to} locale={locale}>
         <a {...linkAttributes} onClick={console.log}>{children}</a>
       </NextLink>
     )
