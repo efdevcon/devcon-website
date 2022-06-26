@@ -68,7 +68,8 @@ const twitter = (() => {
     getTweets: async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
       // We have rate limiting issues with twitter - we'll just return nothing in dev mode to be sure
       // If looking to debug just comment this out
-      if (process.env.NODE_ENV === 'development') return results;
+      // TODO: Had to stop the requests because we're already at 60% of the rate limit for the month
+      if (process.env.NODE_ENV === 'development' && true) return results;
 
       const queryParams = {
         exclude: 'retweets,replies',
