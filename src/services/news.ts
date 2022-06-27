@@ -15,6 +15,35 @@ const parser: Parser = new RSSParser({
   },
 })
 
+const timeBasedCache = (() => {
+  let timeLastFetched = moment();
+  let cache: any;
+
+  return (fn: any) => async (...args: any) => {
+    const shouldRefreshCache = moment().isAfter(timeLastFetched.add('30', 'minutes')) || !cache;
+
+    if (shouldRefreshCache) {
+      // Update time last fetched immediately to prevent parallel requests 
+      const previousTimeLastFetched = timeLastFetched.clone();
+      timeLastFetched = moment();
+
+      try {
+        cache = await fn(...args);
+
+        console.log('cache successfully updated');
+      } catch(e) {
+        // If anything goes wrong, we reset timeLastFetched to its previous value so subsequent calls will attempt to refresh the cache
+        timeLastFetched = previousTimeLastFetched;
+        console.error(e, 'cache revalidation failed')
+      }
+    } else {
+      console.log('serving from cache')
+    }
+
+    return cache;
+  }
+})()
+
 const formatting = (() => {
   const _interface = {
     formatBlogPost: (post: any): NewsItem => {
@@ -34,7 +63,8 @@ const formatting = (() => {
         date: moment(tweet.created_at).valueOf(),
         author: '@EFDevcon',
         tweetID: tweet.id,
-        description: tweet.text
+        description: tweet.text,
+        imageUrl: '/assets/images/twitter-banner.jpeg'
       }
     }
   }
@@ -65,11 +95,9 @@ const twitter = (() => {
   }
 
   const _interface = {
-    getTweets: async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
-      // We have rate limiting issues with twitter - we'll just return nothing in dev mode to be sure
-      // If looking to debug just comment this out
-      // TODO: Had to stop the requests because we're already at 60% of the rate limit for the month
-      if (process.env.NODE_ENV === 'development' || true) return results;
+    getTweets: timeBasedCache(async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
+      // We have rate limiting issues with twitter - no page cache in dev mode so its pretty brutal on the rate limit - we'll reserve twitter fetches for production
+      // if (process.env.NODE_ENV === 'development') return results;
 
       const queryParams = {
         exclude: 'retweets,replies',
@@ -94,7 +122,7 @@ const twitter = (() => {
         // We only collect tweets that are marked with the curation hashtag
         return results.filter((tweet: any) => tweet?.entities?.hashtags?.some((hashtag: any) => true /*hashtag.tag === curationHashtag*/)); // Add curation hash tag back when relevant
       }
-    },
+    }),
     getUserID: async () => {
       const result = await fetchWrapper(`/users/by/username/EFDevcon`);
 

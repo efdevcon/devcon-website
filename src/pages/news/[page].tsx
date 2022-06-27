@@ -91,7 +91,7 @@ export async function getStaticPaths(context: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/news', context.locale)
-  const news = await getNews(context.locale) // Should cache this
+  const news = await getNews(context.locale)
 
   const isIndex = !context?.params?.page
 
