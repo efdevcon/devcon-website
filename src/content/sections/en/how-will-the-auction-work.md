@@ -34,7 +34,7 @@ One Raffle winner will be randomly selected to have their ticket be a Golden Tic
 
 ## What will the POAP NFTs be good for?
 
-There may be future opportunities to provide rewards or discounts to those who hold a Devcon Raffle+Auction POAP NFT.
+There may be future opportunities to provide rewards or discounts to those who hold a Devcon Auction & Raffle POAP NFT.
 
 ---
 
