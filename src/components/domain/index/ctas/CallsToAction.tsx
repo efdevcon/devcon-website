@@ -32,7 +32,7 @@ const CallsToAction = (props: Props) => {
           BackgroundSvg={SpeakersBackground}
           link="/applications"
           linkText="Applications"
-          meta="Applications Close: June 27th @ 23:59:59 UTC"
+          meta="Applications Close: July 5th @ 23:59:59 UTC"
         >
           <div dangerouslySetInnerHTML={{ __html: props.speakerApplications.body }} />
         </CallToAction>
