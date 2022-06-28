@@ -125,7 +125,7 @@ export default pageHOC(function AboutPage(props: any) {
           </div>
 
           <div className={`right ${css['for-builders-right']}`}>
-            <SwipeToScroll scrollIndicatorDirections={{ right: true, left: true }}>
+            <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
               <div className={css['videos']}>
                 {props.videos.map((video: any) => {
                   const isMatch = ['The Web We Want', 'Ethereum Foundation Values'].includes(video.title)
@@ -185,13 +185,17 @@ export default pageHOC(function AboutPage(props: any) {
               dangerouslySetInnerHTML={{ __html: props.sections['communities-world'].data.right }}
             ></div>
 
-            <SwipeToScroll scrollIndicatorDirections={{ right: true, left: true }}>
+            <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
               <div className={css['videos']}>
                 {props.videos.map((video: any) => {
-                  const isMatch = ['Living On Defi', 'Money At The Edge: How People Stay Afloat in Venezuela', 'Money is the killer Ðapp: crypto in Venezuela'].includes(video.title)
-                  
+                  const isMatch = [
+                    'Living On Defi',
+                    'Money At The Edge: How People Stay Afloat in Venezuela',
+                    'Money is the killer Ðapp: crypto in Venezuela',
+                  ].includes(video.title)
+
                   if (!isMatch) return null
-                  
+
                   return <VideoCard compact key={video.title} video={{ ...video, url: video.archiveUrl }} />
                 })}
               </div>
