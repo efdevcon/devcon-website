@@ -29,7 +29,7 @@ pages:
 4. Cronología
 
    * Aplicaciones abiertas el 6 de junio
-   * Fecha límite para aplicar 5 de julio
+   * Fecha límite para aplicar 5 de julio 23:59:59 UTC
    * Todas las decisiones se enviarán antes de finales de julio y lo más rápido posible.
    * *NOTA: Queremos que todos puedan planificar viajes asequibles si quieren asistir a Devcon. La apertura de solicitudes a principios del verano permite a los solicitantes tiempo suficiente para preparar sus solicitudes, a los revisores tiempo para revisar cuidadosamente cada solicitud y a los solicitantes saber con muchos meses de anticipación si su solicitud ha sido aceptada o no.*
 5. Proceso de revisión
