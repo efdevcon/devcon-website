@@ -7,6 +7,7 @@ interface Item {
   body: string | React.ReactChild
   indent?: boolean
   active?: boolean
+  disabled?: boolean
 }
 
 interface ListProps {
@@ -27,6 +28,7 @@ const List = (props: ListProps) => {
         let className = css['item']
 
         if (item.active) className += ` ${css['active']}`
+        if (item.disabled) className += ` ${css['disabled']}`
 
         return (
           <li className={className} key={item.id}>

@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { TicketQuota } from 'types/TicketQuota'
 import { useInterval } from './useInterval'
 
-export function useTicketQuota(interval: number = 10000) {
-  const [availability, setAvailability] = useState<TicketQuota | undefined>(undefined)
+export function useTicketQuota(quota: TicketQuota | undefined, interval: number = 10000) {
+  const [availability, setAvailability] = useState<TicketQuota | undefined>(quota)
 
   useEffect(() => {
     async function asyncEffect() {
@@ -18,6 +18,15 @@ export function useTicketQuota(interval: number = 10000) {
   }, interval)
 
   async function trySetQuota() {
+    // 'Sold out' for testing purposes
+    // setAvailability({
+    //   id: '5',
+    //   available_number: 0,
+    //   available: false,
+    //   total_size: 0
+    // })
+    // return
+
     try {
       const response = await fetch('/api/tickets/availability')
       const body = await response.json()
