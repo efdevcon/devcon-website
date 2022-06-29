@@ -131,7 +131,7 @@ export default pageHOC(function Tickets(props: any) {
 
     if (currentDate.isAfter(ticketWaves[wave]) && currentDate.isBefore(ticketWaves[wave + 1]) && ticketQuota && ticketQuota.available) {
       return <p className="bold">
-        <Link to="/raffle-auction" className="generic hover-underline">
+        <Link to="https://ticketh.xyz/Devcon/6/" className="generic hover-underline">
           {intl('tickets_get_ticket')}
         </Link>
       </p>
