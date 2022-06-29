@@ -70,9 +70,15 @@
   display: flex;
   flex-wrap: nowrap;
   position: relative;
-  width: 2628px;
+  // width: 2628px;
   height: 441px;
   pointer-events: none;
+
+  img {
+    flex-shrink: 0;
+    object-fit: cover;
+    height: 100%;
+  }
 }
 
 .custom-markdown {

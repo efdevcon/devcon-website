@@ -1,6 +1,7 @@
 @use 'assets/css/partials/index' as *;
 
-.intro-right, .for-builders-right {
+.intro-right,
+.for-builders-right {
   @media (min-width: $breakpoints-lg) {
     margin-left: 120px;
   }
@@ -39,14 +40,25 @@
     flex-direction: row;
     flex-wrap: nowrap;
 
+    &:after {
+      content: '';
+      width: var(--scroll-mask-size);
+      flex-shrink: 0;
+      height: 100%;
+      display: block;
+    }
+
     > * {
       flex-basis: 400px;
       flex-shrink: 0;
       margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
     }
   }
 }
-
 
 .button {
   margin-top: 24px;

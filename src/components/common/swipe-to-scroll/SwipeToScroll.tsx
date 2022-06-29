@@ -16,6 +16,7 @@ type SwipeToScrollProps = {
 
 const SwipeToScroll = (props: SwipeToScrollProps) => {
   const el = React.useRef<HTMLDivElement | null>()
+  const containerEl = React.useRef<HTMLDivElement | null>(null)
   const [maxScroll, setMaxScroll] = React.useState(0)
   const [isNativeScroll, setIsNativeScroll] = React.useState(true)
   const [scrollIndicatorClass, setScrollIndicatorClass] = React.useState('')
@@ -115,16 +116,16 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
     }
   }, [reset])
 
-  const bind = useDrag(({ down, delta }) => {
+  const bind = useDrag(({ down, delta, event }) => {
     const scrollContainer = el.current!
 
     lastX.current = Math.min(Math.max(0, lastX.current - delta[0]), maxScroll)
     scrollContainer.style.transform = `translateX(-${lastX.current}px)`
 
     if (down) {
-      scrollContainer.style.cursor = 'grabbing'
+      containerEl.current!.style.cursor = 'grabbing'
     } else {
-      scrollContainer.style.cursor = 'auto'
+      containerEl.current!.style.cursor = 'auto'
     }
   })
 
@@ -138,14 +139,14 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
   if (isNativeScroll) scrollContainerClass += ` ${css['is-native-scroll']}`
 
   return (
-    <div {...bind()} className={className} data-type="swipe-to-scroll-container">
+    <div {...bind()} ref={containerEl} className={className} data-type="swipe-to-scroll-container">
       <div
         ref={element => {
           el.current = element!
           observe(element)
         }}
         className={scrollContainerClass}
-        // This prevents selection (text, image) while dragging:
+        // This prevents selection (text, image) while dragging
         onMouseDown={e => {
           e.preventDefault()
         }}

@@ -23,7 +23,7 @@ const ProcessOverview = () => {
   return (
     <SwipeToScroll scrollIndicatorDirections={{ left: true, right: true }}>
       <div className={css['process-container']}>
-        <Image src={Process} objectFit="cover" height="100%" />
+        <Image src={Process} layout="raw" />
       </div>
     </SwipeToScroll>
   )

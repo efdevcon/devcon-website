@@ -322,21 +322,9 @@ $logo-offset: 50px;
       margin-bottom: 8px;
     }
 
-    // position: absolute;
-    // top: 20%;
-    // left: 70%;
-
     p {
       line-height: 100%;
     }
-
-    // @media (max-width: $breakpoints-lg) {
-    //   @include gaps-lg(true);
-    //   display: flex;
-    //   left: unset;
-    //   width: 100%;
-    //   justify-content: flex-end;
-    // }
   }
 
   .calendar {
