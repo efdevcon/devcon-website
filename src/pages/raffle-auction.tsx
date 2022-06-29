@@ -64,7 +64,7 @@ export default pageHOC(function RaffleAuction(props: any) {
                 {
                   Icon: AuctionIcon,
                   title: intl('tickets_raffle_auction_begins'),
-                  right: 'TBA',
+                  right: intl('tickets_raffle_auction_begins_date'),
                 },
                 {
                   Icon: CalendarIcon,

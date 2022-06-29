@@ -32,7 +32,7 @@ Los participantes que no lleguen a las 20 mejores ofertas serán canalizados a u
 
 ## ¿Para qué servirán los POAP NFT?
 
-Es posible que haya oportunidades futuras para proporcionar recompensas o descuentos a aquellos que tengan un POAP NFT de Devcon Raffle+Auction.
+Es posible que haya oportunidades futuras para proporcionar recompensas o descuentos a aquellos que tengan un POAP NFT de Devcon Subasta & Sorteo.
 
 ---
 

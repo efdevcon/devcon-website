@@ -219,7 +219,7 @@ export default pageHOC(function Tickets(props: any) {
                 title: (
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>{intl('tickets_raffle_auction_begins')}</div>
-                    <div className={`${css['right']} bold`}>{intl('tickets_tba')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_raffle_auction_begins_date')}</div>
                     <Link to="/raffle-auction" className="generic hover-underline">
                       {intl('tickets_raffle_information')}
                     </Link>
@@ -233,7 +233,7 @@ export default pageHOC(function Tickets(props: any) {
                 title: (
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>{intl('tickets_raffle_auction_ends')}</div>
-                    <div className={`${css['right']} bold`}>{intl('tickets_tba')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_raffle_auction_ends_date')}</div>
                   </div>
                 ),
                 indent: false,

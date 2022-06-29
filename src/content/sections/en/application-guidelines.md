@@ -33,7 +33,7 @@ pages:
 1. Timeline
 
    - Applications open June 6
-   - Deadline to Apply June 27
+   - Deadline to Apply July 5
    - All decisions will be sent before the end of July, and as quickly as possible
    - _NOTE: We want everyone to be able to plan affordable travel if they want to attend Devcon. Opening applications early in the summer allows applicants ample time to prepare their applications, reviewers time to carefully review each application, and applicants to know many months in advance whether or not their application has been accepted._
 
