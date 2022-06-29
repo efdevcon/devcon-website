@@ -45,12 +45,11 @@ const parallax = (parallaxMultiplier: any, initial = -15, range = 15) => {
   }
 }
 
-// TO-DO: requestAnimationFrame (+ debounce?)
 export const Hero = () => {
   const intl = useTranslations()
   const heroEl = React.useRef(null)
   const parallaxMultiplier = useParallax(heroEl)
-  const isScrolled = parallaxMultiplier > 0;
+  const isScrolled = parallaxMultiplier > 0.15
 
   return (
     <>
@@ -103,22 +102,6 @@ export const Hero = () => {
             </g>
           </svg>
         </div>
-
-        {/* <div className="section">
-          <div className={css['date-calendar']}>
-            <Link to="https://devcon.org/devcon.ics" className={css['calendar']}>
-              <p>{intl('description')}</p>
-              <Button className="lg black ghost thin-borders">
-                <IconEventNote className={`icon ${css['icon']}`} />
-                <p>{intl('addtocalendar')}</p>
-              </Button>
-              <Button className="lg black ghost thin-borders">
-                <IconEventNote className={`icon ${css['icon']}`} />
-                <p>{intl('tickets')}</p>
-              </Button>
-            </Link>
-          </div>
-        </div> */}
       </div>
       <div className="section" style={{ position: 'relative' }}>
         <div className={`expand ${css['gradient']}`}></div>
