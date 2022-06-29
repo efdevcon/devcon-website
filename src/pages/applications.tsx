@@ -23,7 +23,7 @@ const ProcessOverview = () => {
   return (
     <SwipeToScroll scrollIndicatorDirections={{ left: true, right: true }}>
       <div className={css['process-container']}>
-        <Image src={Process} layout="raw" />
+        <Image src={Process} layout="raw" alt="Speaker application process" />
       </div>
     </SwipeToScroll>
   )

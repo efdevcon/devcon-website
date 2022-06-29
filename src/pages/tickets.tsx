@@ -18,13 +18,13 @@ import List from 'components/common/list'
 import DevconLogo from 'assets/images/devcon-6-logo.png'
 import Image from 'next/image'
 import { Link } from 'components/common/link'
-import moment from 'moment';
+import moment from 'moment'
 
-// Check if given string e.g. "2022-06-06" is before the current date 
+// Check if given string e.g. "2022-06-06" is before the current date
 const isAfterDate = (dateString: string) => {
-  const date = moment(dateString);
+  const date = moment(dateString)
 
-  return date.isBefore(moment());
+  return date.isBefore(moment())
 }
 
 type TicketProps = {
@@ -138,7 +138,11 @@ export default pageHOC(function Tickets(props: any) {
                 {
                   Icon: NoteIcon,
                   title: intl('tickets_raffle_discount_ticket_applications'),
-                  right: intl('tickets_raffle_discount_ticket_applications_dates'),
+                  right: (
+                    <Link to="#types" style={{ textTransform: 'none' }}>
+                      {intl('tickets_raffle_discount_ticket_applications_dates')}
+                    </Link>
+                  ),
                 },
                 {
                   Icon: AuctionIcon,
@@ -180,30 +184,45 @@ export default pageHOC(function Tickets(props: any) {
                 active: isAfterDate('2022-06-06'),
                 body: '',
               },
-              {
-                id: '2',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>{intl('tickets_discount_applications_ends')}</div>
-                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_ends_date')}</div>
-                  </div>
-                ),
-                active: isAfterDate('2022-06-30'),
-                indent: false,
-                body: '',
-              },
-              {
-                id: '3',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>{intl('tickets_discount_applications_send_rolling_basis')}</div>
-                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
-                  </div>
-                ),
-                active: isAfterDate('2022-06-30'),
-                indent: false,
-                body: '',
-              },
+              // {
+              //   id: '1',
+              //   title: (
+              //     <div className={css['timeline-item']}>
+              //       <div className={css['left']}>{intl('tickets_discount_applications_begins')}</div>
+              //       <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_begins_date')}</div>
+              //       <Link to="#types" className="generic hover-underline">
+              //         {intl('tickets_apply_now')}
+              //       </Link>
+              //     </div>
+              //   ),
+              //   indent: false,
+              //   active: isAfterDate('2022-06-06'),
+              //   body: '',
+              // },
+              // {
+              //   id: '2',
+              //   title: (
+              //     <div className={css['timeline-item']}>
+              //       <div className={css['left']}>{intl('tickets_discount_applications_ends')}</div>
+              //       <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_ends_date')}</div>
+              //     </div>
+              //   ),
+              //   active: isAfterDate('2022-06-30'),
+              //   indent: false,
+              //   body: '',
+              // },
+              // {
+              //   id: '3',
+              //   title: (
+              //     <div className={css['timeline-item']}>
+              //       <div className={css['left']}>{intl('tickets_discount_applications_send_rolling_basis')}</div>
+              //       <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
+              //     </div>
+              //   ),
+              //   active: isAfterDate('2022-06-30'),
+              //   indent: false,
+              //   body: '',
+              // },
             ]}
           />
         </div>
@@ -255,7 +274,8 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 01</div>
                     <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_01')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_01')} —&nbsp;
+                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                     <p className="bold">{intl('tickets_coming_soon')}</p>
                   </div>
@@ -269,7 +289,8 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 02</div>
                     <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_02')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_02')} —&nbsp;
+                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -282,7 +303,8 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 03</div>
                     <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_03')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_03')} —&nbsp;
+                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -295,7 +317,8 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 04</div>
                     <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_04')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_04')} —&nbsp;
+                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -308,7 +331,8 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>Wave 05</div>
                     <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_05')} —&nbsp;<span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      {intl('tickets_general_waves_05')} —&nbsp;
+                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
                   </div>
                 ),
@@ -361,9 +385,7 @@ export default pageHOC(function Tickets(props: any) {
                 <div>
                   {intl('tickets_types_student')}
                   <br /> <br />
-                  <span className="font-xxs">
-                    {intl('tickets_types_student_note')}
-                  </span>
+                  <span className="font-xxs">{intl('tickets_types_student_note')}</span>
                 </div>
               }
               tags={[
@@ -426,9 +448,7 @@ export default pageHOC(function Tickets(props: any) {
             />
           </div>
 
-          <p className="italic">
-            {intl('tickets_note_id_check')}
-          </p>
+          <p className="italic">{intl('tickets_note_id_check')}</p>
         </div>
       </div>
 

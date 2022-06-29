@@ -116,7 +116,7 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
     }
   }, [reset])
 
-  const bind = useDrag(({ down, delta, event }) => {
+  const bind = useDrag(({ down, delta }) => {
     const scrollContainer = el.current!
 
     lastX.current = Math.min(Math.max(0, lastX.current - delta[0]), maxScroll)
