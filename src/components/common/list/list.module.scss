@@ -28,6 +28,10 @@
         }
       }
 
+      &.disabled {
+        text-decoration: line-through;
+      }
+
       &:first-child {
         .number {
           &:after {
