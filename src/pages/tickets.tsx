@@ -114,9 +114,9 @@ export default pageHOC(function Tickets(props: any) {
   } = {
     1: moment.utc('2022-06-01 14:00:00'),
     2: moment.utc('2022-06-30 15:00:00'),
-    3: moment.utc('2022-07-03 16:00:00'),
-    4: moment.utc('2022-07-11 16:00:00'),
-    5: moment.utc('2022-08-23 16:00:00'),
+    3: moment.utc('2022-06-30 16:00:00'),
+    4: moment.utc('2022-07-01 16:00:00'),
+    5: moment.utc('2022-07-03 16:00:00'),
   }
 
   function renderTicketWaveInfo(wave: number) {
