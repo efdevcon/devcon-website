@@ -108,6 +108,7 @@ export default pageHOC(function Tickets(props: any) {
   const pageContext = usePageContext()
   const ticketQuota = useTicketQuota(props.ticketQuota)
 
+  const ticketLink = 'https://tickets.devcon.org/'
   const currentDate = moment.utc()
   const ticketWaves: {
     [T: number]: moment.Moment
@@ -136,7 +137,7 @@ export default pageHOC(function Tickets(props: any) {
     ) {
       return (
         <p className="bold">
-          <Link to="https://ticketh.xyz/Devcon/6/" className="generic hover-underline">
+          <Link to={ticketLink} className="generic hover-underline">
             {intl('tickets_get_ticket')}
           </Link>
         </p>
