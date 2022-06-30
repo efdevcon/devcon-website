@@ -1,6 +1,4 @@
-import next, { NextPage } from 'next'
 import React, { useEffect } from 'react'
-import { Client } from '@notionhq/client'
 import css from './schedule.module.scss'
 import moment from 'moment'
 import momentTZ from 'moment-timezone'
@@ -11,14 +9,12 @@ import ChevronDown from 'assets/icons/chevron-down.svg'
 import ChevronUp from 'assets/icons/chevron-up.svg'
 import AddToCalendarIcon from 'assets/icons/calendar.svg'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
-// import { SEO } from 'common/components/SEO'
-// import Hero from 'common/components/hero'
+import { Message } from 'components/common/message'
 import { Link } from 'components/common/link'
 import { Modal } from 'components/common/modal'
 import ScheduleBackground from 'assets/images/schedule-bg.svg'
 import { Dropdown } from 'components/common/dropdown'
 import DevconnectAmsterdam from 'assets/images/amsterdam-logo-with-eth.svg'
-import { Alert } from 'components/common/alert'
 import { useRouter } from 'next/dist/client/router'
 // @ts-ignore
 import Toggle from 'react-toggle'
@@ -543,7 +539,7 @@ const EventLinks = (props: any) => {
   return (
     <div className={`${css['event-links']} small-text uppercase`}>
       {event.URL && event.URL.length > 0 ? (
-        <Link href={event.URL} indicateExternal>
+        <Link to={event.URL} indicateExternal>
           Visit website
         </Link>
       ) : (
@@ -551,13 +547,13 @@ const EventLinks = (props: any) => {
       )}
 
       {event.Location && event.Location.url && (
-        <Link href={event.Location.url} indicateExternal>
+        <Link to={event.Location.url} indicateExternal>
           Location
         </Link>
       )}
 
       {event['Stream URL'] && (
-        <Link href={event['Stream URL']} indicateExternal className="button xs orange-fill">
+        <Link to={event['Stream URL']} indicateExternal className="button xs orange-fill">
           Stream
         </Link>
       )}
@@ -581,7 +577,7 @@ const EventLinks = (props: any) => {
                   Download (.ICS)
                 </a>
 
-                <Link indicateExternal href={googleCalUrl.href} className="button sm small-text">
+                <Link indicateExternal to={googleCalUrl.href} className="button sm small-text">
                   Google Calendar
                 </Link>
               </div>
@@ -697,7 +693,7 @@ const ListEventDesktop = (props: any) => {
         <div className={`${css['description']} ${css['col-2']}`}>
           <div>
             {props.event.URL ? (
-              <Link href={props.event.URL} indicateExternal className={`${css['title']} big-text bold uppercase`}>
+              <Link to={props.event.URL} indicateExternal className={`${css['title']} big-text bold uppercase`}>
                 {props.event.Name}
               </Link>
             ) : (
@@ -706,7 +702,7 @@ const ListEventDesktop = (props: any) => {
 
             {props.event.Location && props.event.Location.url && (
               <Link
-                href={props.event.Location.url}
+                to={props.event.Location.url}
                 indicateExternal
                 className={`${css['location']} big-text-bold uppercase`}
               >
@@ -734,7 +730,7 @@ const ListEventDesktop = (props: any) => {
           {props.event['Attend'] &&
             (props.event['URL'] ? (
               <Link
-                href={props.event.URL}
+                to={props.event.URL}
                 indicateExternal
                 className={`${css['ticket-availability']} purple small-text uppercase`}
               >
@@ -757,7 +753,7 @@ const ListEventMobile = (props: any) => {
     <div className={`${css['event']} ${css[props.event['Stable ID']]} ${css[props.event['Difficulty']]} `}>
       <div className={css['content']}>
         {props.event.URL ? (
-          <Link href={props.event.URL} indicateExternal className={`${css['title']} large-text uppercase bold`}>
+          <Link to={props.event.URL} indicateExternal className={`${css['title']} large-text uppercase bold`}>
             {props.event.Name}
           </Link>
         ) : (
@@ -765,11 +761,7 @@ const ListEventMobile = (props: any) => {
         )}
 
         {props.event.Location && props.event.Location.url && (
-          <Link
-            href={props.event.Location.url}
-            indicateExternal
-            className={`${css['location']} big-text-bold uppercase`}
-          >
+          <Link to={props.event.Location.url} indicateExternal className={`${css['location']} big-text-bold uppercase`}>
             {props.event.Location.text}
           </Link>
         )}
@@ -809,7 +801,7 @@ const ListEventMobile = (props: any) => {
         {props.event['Attend'] &&
           (props.event['URL'] ? (
             <Link
-              href={props.event.URL}
+              to={props.event.URL}
               indicateExternal
               className={`${css['ticket-availability']} bold border-top border-bottom purple small-text uppercase`}
             >
@@ -1022,7 +1014,7 @@ const scheduleViewHOC = (Component: any) => {
   return ComponentWithScheduleView
 }
 
-const Schedule: NextPage = scheduleViewHOC((props: any) => {
+const Schedule = scheduleViewHOC((props: any) => {
   const { scheduleView, setScheduleView } = props
   const { events, ...filterAttributes } = useFilter(props.events)
 
@@ -1036,216 +1028,68 @@ const Schedule: NextPage = scheduleViewHOC((props: any) => {
   }, [filterAttributes.filters])
 
   return (
-    <>
-      {/* <SEO title="Schedule" description="Devconnect schedule" />
-      <Hero className={`${css['hero']}`} autoHeight backgroundTitle="Schedule">
-        <p className="uppercase extra-large-text bold secondary title">schedule</p>
-      </Hero> */}
-      <div className={`${css['schedule']} section`}>
-        <div className="fade-in-up clear-vertical">
-          <div className={`${css['header-row']}`}>
-            <h1 className="extra-large-text uppercase bold">Devconnect week</h1>
-            <div className={`${css['view']} small-text`}>
-              <div className={css['options']}>
-                <button
-                  className={`${scheduleView === 'list' && css['selected']} ${css['switch']}`}
-                  onClick={() => setScheduleView('list')}
-                >
-                  <ListIcon style={{ fontSize: '1.1em' }} />
-                  <p className={`${css['text']} small-text`}>List</p>
-                </button>
-                <button
-                  className={`${scheduleView === 'timeline' && css['selected']} ${css['switch']}`}
-                  onClick={() => setScheduleView('timeline')}
-                >
-                  <CalendarIcon />
-                  <p className={`${css['text']} small-text`}>Timeline</p>
-                </button>
-              </div>
+    <div className={`${css['schedule']}`}>
+      <div className="fade-in-up clear-vertical">
+        <div className={`${css['header-row']}`}>
+          <h2>Schedule</h2>
+          <div className={`${css['view']} small-text`}>
+            <div className={css['options']}>
+              <button
+                className={`${scheduleView === 'list' && css['selected']} ${css['switch']}`}
+                onClick={() => setScheduleView('list')}
+              >
+                <ListIcon style={{ fontSize: '1.1em' }} />
+                <p className={`${css['text']} small-text`}>List</p>
+              </button>
+              <button
+                className={`${scheduleView === 'timeline' && css['selected']} ${css['switch']}`}
+                onClick={() => setScheduleView('timeline')}
+              >
+                <CalendarIcon />
+                <p className={`${css['text']} small-text`}>Timeline</p>
+              </button>
             </div>
           </div>
+        </div>
 
-          <Alert title="Ticket Information">
-            <b>
-              EACH event in devconnect is independently hosted and you will require tickets for each event you wish to
-              attend.
-            </b>
-            &nbsp;For information on acquiring tickets to the independently-hosted events during the week of Devconnect
-            please visit their respective websites.
-          </Alert>
+        <Message title="Ticket Information">
+          <b>
+            EACH event in devconnect is independently hosted and you will require tickets for each event you wish to
+            attend.
+          </b>
+          &nbsp;For information on acquiring tickets to the independently-hosted events during the week of Devconnect
+          please visit their respective websites.
+        </Message>
 
-          <div className={`${css['top-bar']}`}>
-            <Filter events={events} {...filterAttributes} />
-            <Expand accordionRefs={accordionRefs} scheduleView={scheduleView} />
+        <div className={`${css['top-bar']}`}>
+          <Filter events={events} {...filterAttributes} />
+          <Expand accordionRefs={accordionRefs} scheduleView={scheduleView} />
 
-            {scheduleView === 'timeline' && (
-              <p className={`small-text uppercase ${css['swipe']}`}>Hold and drag schedule for more →</p>
-            )}
+          {scheduleView === 'timeline' && (
+            <p className={`small-text uppercase ${css['swipe']}`}>Hold and drag schedule for more →</p>
+          )}
+        </div>
+
+        {events.length === 0 ? (
+          <div className={css['no-results']}>
+            <p>No matches for this filter</p>
           </div>
-
-          {events.length === 0 ? (
-            <div className={css['no-results']}>
-              <p>No matches for this filter</p>
-            </div>
-          ) : (
-            <>
-              {/* <div className={`${css['top-bar']}`}>
+        ) : (
+          <>
+            {/* <div className={`${css['top-bar']}`}>
                 <p className={`${css['timezone']} small-text`}>
                   {momentTZ.tz('Europe/Amsterdam').format('HH:mm')} (UTC/GMT +1)
                 </p>
                 {scheduleView === 'calendar' && <p className={`small-text ${css['swipe']}`}>Drag for more →</p>}
               </div> */}
 
-              {scheduleView === 'list' && <List {...scheduleHelpers} accordionRefs={accordionRefs} />}
-              {scheduleView === 'timeline' && <Timeline {...scheduleHelpers} />}
-            </>
-          )}
-        </div>
+            {scheduleView === 'list' && <List {...scheduleHelpers} accordionRefs={accordionRefs} />}
+            {scheduleView === 'timeline' && <Timeline {...scheduleHelpers} />}
+          </>
+        )}
       </div>
-      {/* <Footer /> */}
-    </>
+    </div>
   )
 })
 
 export default Schedule
-
-// Notion fetch/format below
-const notionDatabasePropertyResolver = (property: any, key: any) => {
-  switch (property.type) {
-    case 'text':
-    case 'rich_text':
-    case 'title':
-      // Extract url and url text from the Location column
-      if (key === 'Location' && property[property.type]) {
-        let locationInfo = {} as any
-
-        property[property.type].forEach((chunk: any) => {
-          if (chunk.href) {
-            locationInfo.url = chunk.href
-            locationInfo.text = chunk.plain_text
-          }
-        })
-
-        return locationInfo
-      }
-
-      const dechunked = property[property.type]
-        ? property[property.type].reduce((acc: string, chunk: any) => {
-            if (chunk.href && property.type === 'rich_text' && key !== 'URL' && key !== 'Stream URL') {
-              acc += `<a href=${chunk.href} target="_blank" class="generic" rel="noopener noreferrer">${chunk.plain_text}</a>`
-            } else {
-              acc += chunk.plain_text
-            }
-
-            return acc
-          }, '')
-        : null
-
-      return `${dechunked}`
-
-    case 'date':
-      if (property.date) {
-        return {
-          startDate: property.date.start,
-          endDate: property.date.end || property.date.start,
-        }
-      }
-
-      return null
-
-    case 'multi_select':
-      if (property.multi_select) {
-        return property.multi_select.map((value: any) => value.name)
-      }
-
-      return null
-    case 'select':
-      return property.select && property.select.name
-
-    default:
-      return 'default value no handler for: ' + property.type
-  }
-}
-
-const formatResult = (result: any) => {
-  const properties = {} as { [key: string]: any }
-
-  // Format the raw notion data into something more workable
-  Object.entries(result.properties).forEach(([key, value]) => {
-    const val = notionDatabasePropertyResolver(value, key)
-
-    if (Array.isArray(val)) {
-      properties[key] = val
-    } else if (typeof val === 'object' && val !== null) {
-      properties[key] = {
-        ...val,
-      }
-    } else {
-      properties[key] = val
-    }
-  })
-
-  // Insert a default value for time of day when unspecified
-  if (!properties['Time of Day']) properties['Time of Day'] = 'FULL DAY'
-
-  return properties
-}
-
-export async function getStaticProps() {
-  const notion = new Client({
-    auth: process.env.NOTION_SECRET,
-  })
-
-  const databaseID = '8b177855e75b4964bb9f3622437f04f5'
-
-  let data = {}
-
-  try {
-    // Notion returns up to 100 results per request. We won't have that many events, but if we ever get close, add support for pagination at this step.
-    const response = await notion.databases.query({
-      database_id: databaseID,
-      sorts: [
-        {
-          property: 'Date',
-          direction: 'ascending',
-        },
-        {
-          property: 'Priority (sort)',
-          direction: 'descending',
-        },
-      ],
-      filter: {
-        and: [
-          {
-            property: 'Date',
-            date: {
-              is_not_empty: true,
-            },
-          },
-          {
-            property: 'Live',
-            checkbox: {
-              equals: true,
-            },
-          },
-        ],
-      },
-    })
-
-    data = response.results.map(formatResult)
-  } catch (error) {
-    if (false) {
-      // Handle error codes here if necessary
-    } else {
-      // Other error handling code
-      console.error(error)
-    }
-  }
-
-  return {
-    props: {
-      events: data,
-    },
-    revalidate: 1 * 60 * 30, // 30 minutes, in seconds
-  }
-}

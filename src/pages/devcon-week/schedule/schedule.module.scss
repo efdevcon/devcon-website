@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 16px;
-    color: $colors-monochrome-6;
+    // color: $colors-monochrome-6;
 
     @media (min-width: $breakpoints-md) {
       margin-bottom: 20px;
@@ -165,7 +165,7 @@
       bottom: 0px;
       height: 100%;
       width: 100%;
-      background-image: url('../assets/images/tile.png');
+      background-image: url('../../../assets/images/tile.png');
       background-repeat: repeat-x;
       mix-blend-mode: overlay;
       background-size: var(--tile-size, 35px);
