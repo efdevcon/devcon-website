@@ -6,13 +6,17 @@ import { pageHOC } from 'context/pageHOC'
 import { usePageContext } from 'context/page-context'
 import { Tags } from 'components/common/tags'
 import { getGlobalData } from 'services/global'
-import { GetContentSections, GetPage } from 'services/page'
+import { GetContentSections, GetPage, GetFAQ } from 'services/page'
 import { useTranslations } from 'next-intl'
 import { Snapshot } from 'components/common/snapshot'
 import css from './raffle-auction.module.scss'
 import AuctionIcon from 'assets/icons/auction.svg'
+import { FAQ } from 'components/domain/faq'
 import CalendarIcon from 'assets/icons/calendar.svg'
 import { Button } from 'components/common/button'
+import List from 'components/common/list'
+import ticketingCss from './tickets.module.scss'
+import { isAfterDate } from './tickets'
 
 export default pageHOC(function RaffleAuction(props: any) {
   const intl = useTranslations()
@@ -28,24 +32,16 @@ export default pageHOC(function RaffleAuction(props: any) {
             to: '#about',
           },
           {
-            title: intl('tickets_raffle_auction'),
-            to: '#auction',
+            title: intl('tickets_timeline'),
+            to: '#timeline',
           },
           {
-            title: intl('tickets_raffle_title'),
-            to: '#raffle',
+            title: props.sections['raffle-specs'].title,
+            to: '#specs',
           },
           {
-            title: intl('tickets_raffle_withdrawal'),
-            to: '#withdrawal',
-          },
-          {
-            title: intl('tickets_raffle_poap'),
-            to: '#poap',
-          },
-          {
-            title: intl('tickets_raffle_reasoning'),
-            to: '#why',
+            title: intl('tickets_faq'),
+            to: '#faq',
           },
         ]}
       />
@@ -78,12 +74,97 @@ export default pageHOC(function RaffleAuction(props: any) {
           </div>
         </div>
 
-        {props.sections['how-will-the-auction-work'] && (
-          <div
-            className={`section-markdown markdown clear-bottom`}
-            dangerouslySetInnerHTML={{ __html: props.sections['how-will-the-auction-work'].body }}
+        <div className="clear-top" id="timeline">
+          <h2 className="spaced">{intl('tickets_timeline')}</h2>
+          <List
+            connectedItems
+            items={[
+              {
+                id: '1',
+                title: (
+                  <div className={ticketingCss['timeline-item']}>
+                    <div className={ticketingCss['left']}>{intl('tickets_raffle_bidding_opens')}</div>
+                    <div className={`${ticketingCss['right']} bold`}>
+                      {intl('tickets_raffle_bidding_opens_date')}—&nbsp;
+                      <span className={`${ticketingCss['when']} font-sm`}>08:00 UTC</span>
+                    </div>
+                  </div>
+                ),
+                active: isAfterDate('2022-07-05 08:00'),
+                indent: false,
+                body: '',
+              },
+              {
+                id: '2',
+                title: (
+                  <div className={ticketingCss['timeline-item']}>
+                    <div className={ticketingCss['left']}>{intl('tickets_raffle_bidding_closes')}</div>
+                    <div className={`${ticketingCss['right']} bold`}>
+                      {intl('tickets_raffle_bidding_closes_date')}—&nbsp;
+                      <span className={`${ticketingCss['when']} font-sm`}>07:59 UTC</span>
+                    </div>
+                  </div>
+                ),
+                active: isAfterDate('2022-07-14 07:59'),
+                indent: false,
+                body: '',
+              },
+              {
+                id: '3',
+                title: (
+                  <div className={ticketingCss['timeline-item']}>
+                    <div className={ticketingCss['left']}>{intl('tickets_raffle_claiming_opens')}</div>
+                    <div className={`${ticketingCss['right']} bold`}>
+                      {intl('tickets_raffle_claiming_opens_date')}—&nbsp;
+                      <span className={`${ticketingCss['when']} font-sm`}>08:00 UTC</span>
+                    </div>
+                  </div>
+                ),
+                active: isAfterDate('2022-07-14 08:00'),
+                indent: false,
+                body: '',
+              },
+              {
+                id: '4',
+                title: (
+                  <div className={ticketingCss['timeline-item']}>
+                    <div className={ticketingCss['left']}>{intl('tickets_raffle_claiming_closes')}</div>
+                    <div className={`${ticketingCss['right']} bold`}>
+                      {intl('tickets_raffle_claiming_closes_date')}—&nbsp;
+                      <span className={`${ticketingCss['when']} font-sm`}>08:00 UTC</span>
+                    </div>
+                  </div>
+                ),
+                active: isAfterDate('2022-07-16 08:00'),
+                indent: false,
+                body: '',
+              },
+            ]}
           />
+
+          <p className="bold clear-top clear-bottom text-underline">{intl('tickets_raffle_minimum_bid')}</p>
+        </div>
+
+        {props.sections['raffle-specs'] && (
+          <div>
+            <h2 className="spaced" id="specs">
+              {props.sections['raffle-specs'].title}
+            </h2>
+
+            <div
+              className={`markdown markdown clear-bottom`}
+              dangerouslySetInnerHTML={{ __html: props.sections['raffle-specs'].body }}
+            />
+          </div>
         )}
+
+        <div id="faq">
+          <FAQ
+            noSearch
+            data={[{ id: 'something', title: 'Frequently Asked Questions', questions: props.faq }]}
+            customCategoryTitle="FAQ"
+          />
+        </div>
       </div>
 
       <div className="section">
@@ -96,11 +177,13 @@ export default pageHOC(function RaffleAuction(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/raffle-auction', context.locale)
-  const sections = await GetContentSections(['how-will-the-auction-work'], context.locale)
+  const sections = await GetContentSections(['raffle-specs'], context.locale)
+  const faq = await GetFAQ(context.locale)
 
   return {
     props: {
       ...globalData,
+      faq: faq.filter((faq: any) => faq.category.id === 'raffle'),
       page,
       sections,
     },

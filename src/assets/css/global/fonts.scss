@@ -51,7 +51,7 @@ h3,
 .h3 {
   // @include fonts-secondary;
   @include fonts-bold;
-  font-size: $sizes-size-12;
+  font-size: 20px;
   line-height: 120%;
 
   &.spaced {

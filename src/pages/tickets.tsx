@@ -36,8 +36,9 @@ const ticketWaves: {
 }
 
 // Check if given string e.g. "2022-06-06" is before the current date
-const isAfterDate = (dateString: string) => {
-  const date = moment(dateString)
+export const isAfterDate = (dateString: string) => {
+  const date = moment.utc(dateString)
+  const currentDate = moment.utc()
 
   return date.isBefore(currentDate)
 }
