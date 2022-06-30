@@ -951,11 +951,7 @@ const Filter = (props: any) => {
       })}
 
       <label className={css['hide-sold-out']}>
-        <Toggle
-          defaultChecked={props.hideSoldOut}
-          icons={false}
-          onChange={() => props.setHideSoldOut(!props.hideSoldOut)}
-        />
+        <Toggle defaultChecked={props.hideSoldOut} onChange={() => props.setHideSoldOut(!props.hideSoldOut)} />
         <span>Hide sold out events</span>
       </label>
     </div>
@@ -1032,7 +1028,7 @@ const Schedule = scheduleViewHOC((props: any) => {
       <div className="fade-in-up clear-vertical">
         <div className={`${css['header-row']}`}>
           <h2>Schedule</h2>
-          <div className={`${css['view']} small-text`}>
+          {/* <div className={`${css['view']} small-text`}>
             <div className={css['options']}>
               <button
                 className={`${scheduleView === 'list' && css['selected']} ${css['switch']}`}
@@ -1049,7 +1045,7 @@ const Schedule = scheduleViewHOC((props: any) => {
                 <p className={`${css['text']} small-text`}>Timeline</p>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <Message title="Ticket Information">
