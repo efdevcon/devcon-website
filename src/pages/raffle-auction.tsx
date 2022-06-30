@@ -85,7 +85,7 @@ export default pageHOC(function RaffleAuction(props: any) {
                   <div className={ticketingCss['timeline-item']}>
                     <div className={ticketingCss['left']}>{intl('tickets_raffle_bidding_opens')}</div>
                     <div className={`${ticketingCss['right']} bold`}>
-                      {intl('tickets_raffle_bidding_opens_date')}—&nbsp;
+                      {intl('tickets_raffle_bidding_opens_date')} —&nbsp;
                       <span className={`${ticketingCss['when']} font-sm`}>08:00 UTC</span>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ export default pageHOC(function RaffleAuction(props: any) {
                   <div className={ticketingCss['timeline-item']}>
                     <div className={ticketingCss['left']}>{intl('tickets_raffle_bidding_closes')}</div>
                     <div className={`${ticketingCss['right']} bold`}>
-                      {intl('tickets_raffle_bidding_closes_date')}—&nbsp;
+                      {intl('tickets_raffle_bidding_closes_date')} —&nbsp;
                       <span className={`${ticketingCss['when']} font-sm`}>07:59 UTC</span>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ export default pageHOC(function RaffleAuction(props: any) {
                   <div className={ticketingCss['timeline-item']}>
                     <div className={ticketingCss['left']}>{intl('tickets_raffle_claiming_opens')}</div>
                     <div className={`${ticketingCss['right']} bold`}>
-                      {intl('tickets_raffle_claiming_opens_date')}—&nbsp;
+                      {intl('tickets_raffle_claiming_opens_date')} —&nbsp;
                       <span className={`${ticketingCss['when']} font-sm`}>08:00 UTC</span>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ export default pageHOC(function RaffleAuction(props: any) {
                   <div className={ticketingCss['timeline-item']}>
                     <div className={ticketingCss['left']}>{intl('tickets_raffle_claiming_closes')}</div>
                     <div className={`${ticketingCss['right']} bold`}>
-                      {intl('tickets_raffle_claiming_closes_date')}—&nbsp;
+                      {intl('tickets_raffle_claiming_closes_date')} —&nbsp;
                       <span className={`${ticketingCss['when']} font-sm`}>08:00 UTC</span>
                     </div>
                   </div>
