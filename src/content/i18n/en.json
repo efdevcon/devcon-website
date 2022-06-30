@@ -166,12 +166,11 @@
     "raffle_coming_soon": "Coming Soon",
     "raffle_july_18": "July 18th",
     "raffle_ticket_sale_waves_dates": "July 18 to August 23rd",
-    "discount_applications_begins": "Discount Ticket Applications",
-    "discount_applications_ends": "Discount Ticket Applications close",
+    "discount_applications_begins": "Discount Ticket Applications open",
     "discount_applications_send_rolling_basis": "Discount Ticket Responses sent on a rolling basis",
     "discount_applications_begins_date": "June 6",
     "discount_applications_ends_date": "June 30",
-    "discount_applications_review_process": "Review Process",
+    "discount_applications_review_process": "Ongoing",
     "note_id_check": "*Note: ID Required at check-in to prevent resale."
   },
   "faq": {
