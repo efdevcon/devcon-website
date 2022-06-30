@@ -22,19 +22,6 @@ import moment from 'moment'
 import { GetTicketQuota } from 'services/tickets'
 import { useTicketQuota } from 'hooks/useTicketQuota'
 
-const currentDate = moment.utc()
-const ticketWaves: {
-  [T: number]: moment.Moment
-} = {
-  0: moment.utc('2022-06-01'), // not an actual ticketing wave - announcement date
-  1: moment.utc('2022-07-18 16:00:00'),
-  2: moment.utc('2022-07-26 16:00:00'),
-  3: moment.utc('2022-08-03 16:00:00'),
-  4: moment.utc('2022-08-11 16:00:00'),
-  5: moment.utc('2022-08-23 16:00:00'),
-  6: moment.utc('2022-10-07'), // not an actual ticketing wave - devcon week
-}
-
 // Check if given string e.g. "2022-06-06" is before the current date
 export const isAfterDate = (dateString: string) => {
   const date = moment.utc(dateString)
@@ -120,6 +107,17 @@ export default pageHOC(function Tickets(props: any) {
   const intl = useTranslations()
   const pageContext = usePageContext()
   const ticketQuota = useTicketQuota(props.ticketQuota)
+
+  const currentDate = moment.utc()
+  const ticketWaves: {
+    [T: number]: moment.Moment
+  } = {
+    1: moment.utc('2022-06-01 16:00:00'),
+    2: moment.utc('2022-06-30 16:00:00'),
+    3: moment.utc('2022-08-03 16:00:00'),
+    4: moment.utc('2022-08-11 16:00:00'),
+    5: moment.utc('2022-08-23 16:00:00'),
+  }
 
   function renderTicketWaveInfo(wave: number) {
     if (currentDate.isBefore(ticketWaves[wave]) && currentDate.isAfter(ticketWaves[wave - 1])) {
@@ -288,93 +286,27 @@ export default pageHOC(function Tickets(props: any) {
 
           <List
             connectedItems
-            items={[
-              {
-                id: '1',
+            items={Object.keys(ticketWaves).map(i => {
+              console.log('WAVE', i, 'Number', Number(i), Number(i) + 1, 'Moments', ticketWaves[Number(i)], ticketWaves[Number(i) + 1])
+              return {
+                id: i,
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Wave 01</div>
+                    <div className={css['left']}>Wave 0{i}</div>
                     <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_01')} —&nbsp;
+                      {ticketWaves[Number(i)].format('MMMM DD')} —&nbsp;
                       <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
                     </div>
-                    {renderTicketWaveInfo(1)}
+                    {renderTicketWaveInfo(Number(i))}
                   </div>
                 ),
-                active: isAfterDate(ticketWaves[1].format('YYYY-MM-DD')),
-                disabled: isAfterDate(ticketWaves[2].format('YYYY-MM-DD')),
+                active: isAfterDate(ticketWaves[Number(i)]?.format('YYYY-MM-DD')),
+                disabled: isAfterDate(ticketWaves[Number(i) + 1]?.format()),
                 indent: false,
                 body: '',
-              },
-              {
-                id: '2',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>Wave 02</div>
-                    <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_02')} —&nbsp;
-                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
-                    </div>
-                    {renderTicketWaveInfo(2)}
-                  </div>
-                ),
-                active: isAfterDate(ticketWaves[2].format('YYYY-MM-DD')),
-                disabled: isAfterDate(ticketWaves[3].format('YYYY-MM-DD')),
-                indent: false,
-                body: '',
-              },
-              {
-                id: '3',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>Wave 03</div>
-                    <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_03')} —&nbsp;
-                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
-                    </div>
-                    {renderTicketWaveInfo(3)}
-                  </div>
-                ),
-                active: isAfterDate(ticketWaves[3].format('YYYY-MM-DD')),
-                disabled: isAfterDate(ticketWaves[4].format('YYYY-MM-DD')),
-                indent: false,
-                body: '',
-              },
-              {
-                id: '4',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>Wave 04</div>
-                    <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_04')} —&nbsp;
-                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
-                    </div>
-                    {renderTicketWaveInfo(4)}
-                  </div>
-                ),
-                active: isAfterDate(ticketWaves[4].format('YYYY-MM-DD')),
-                disabled: isAfterDate(ticketWaves[5].format('YYYY-MM-DD')),
-                indent: false,
-                body: '',
-              },
-              {
-                id: '5',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>Wave 05</div>
-                    <div className={`${css['right']} bold`}>
-                      {intl('tickets_general_waves_05')} —&nbsp;
-                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
-                    </div>
-                    {renderTicketWaveInfo(5)}
-                  </div>
-                ),
-                active: isAfterDate(ticketWaves[5].format('YYYY-MM-DD')),
-                disabled: isAfterDate(ticketWaves[6].format('YYYY-MM-DD')),
-                indent: false,
-                body: '',
-              },
-            ]}
+              }
+            }
+            )}
           />
         </div>
 
@@ -515,5 +447,6 @@ export async function getStaticProps(context: any) {
       page,
       ticketQuota,
     },
+    revalidate: 3600,
   }
 }
