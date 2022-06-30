@@ -112,10 +112,10 @@ export default pageHOC(function Tickets(props: any) {
   const ticketWaves: {
     [T: number]: moment.Moment
   } = {
-    1: moment.utc('2022-06-01 16:00:00'),
-    2: moment.utc('2022-06-30 16:00:00'),
-    3: moment.utc('2022-08-03 16:00:00'),
-    4: moment.utc('2022-08-11 16:00:00'),
+    1: moment.utc('2022-06-01 14:00:00'),
+    2: moment.utc('2022-06-30 15:00:00'),
+    3: moment.utc('2022-07-03 16:00:00'),
+    4: moment.utc('2022-07-11 16:00:00'),
     5: moment.utc('2022-08-23 16:00:00'),
   }
 
@@ -287,7 +287,6 @@ export default pageHOC(function Tickets(props: any) {
           <List
             connectedItems
             items={Object.keys(ticketWaves).map(i => {
-              console.log('WAVE', i, 'Number', Number(i), Number(i) + 1, 'Moments', ticketWaves[Number(i)], ticketWaves[Number(i) + 1])
               return {
                 id: i,
                 title: (
