@@ -214,5 +214,14 @@
     "support": "Support",
     "communities": "Communities",
     "get_involved": "Get Involved"
+  },
+  "cd": {
+    "title": "Continuous Devcon",
+    "meet": "Meet CD",
+    "get_involved": "Get Involved",
+    "community_hubs": "Community Hubs",
+    "details": "Details",
+    "infinite_text_1": "Discuss • Learn • Exchange • Explore • Collaborate • Have Fun •",
+    "infinite_text_2": "Learn • Focus • Ideate • Test • Code • Collaborate •"
   }
 }

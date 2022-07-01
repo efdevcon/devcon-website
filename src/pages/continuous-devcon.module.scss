@@ -1,1 +1,154 @@
 @use 'assets/css/partials/index' as *;
+
+// Weird issue where the infinite scroller will sometimes extend the width of the whole page
+// Not sure if its critical/why it happened, but heres the fix to safeguard against it:
+.container {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.links {
+  display: flex;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  position: relative;
+  top: -12px;
+
+  >* {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    margin-top: 12px;
+
+    svg {
+      font-size: 0.9em;
+      margin-left: 8px;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.infinite-text {
+  font-size: 96px;
+  line-height: 120%;
+
+  &.rainbow {
+    background: conic-gradient(from 86.41deg at 34.98% 50.43%, #FF7852 -94.64deg, #EDEFCF 4.11deg, #EDEDCE 24.56deg, #EEEBCC 51.02deg, #F3C4BA 102.55deg, #C5D4E4 137.2deg, #C5D8ED 169.68deg, #C5D7EA 170.39deg, #D9CDD2 202.5deg, #FF7852 265.36deg, #EDEFCF 364.11deg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+
+  &.stroked {
+    background: none;
+    color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #FF7761;
+
+    animation: color-anim 30s infinite forwards;
+  }
+}
+
+@keyframes color-anim {
+  0% {
+    -webkit-text-stroke-color: #b54140;
+  }
+
+  20% {
+    -webkit-text-stroke-color: #ce6150;
+  }
+
+  60% {
+    -webkit-text-stroke-color: #d39048;
+  }
+
+  90% {
+    -webkit-text-stroke-color: #e25050;
+  }
+
+  100% {
+    -webkit-text-stroke-color: #b54140;
+  }
+}
+
+
+.hacker-basement {
+  color: white;
+  overflow: hidden;
+  --color-icon: white;
+  position: relative;
+
+  .background {
+    z-index: -1;
+    background: linear-gradient(180deg, #211d1d 20%, #ff6938fc 90%, #ff5338fc 100%);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: relative;
+      opacity: 0.3;
+
+      // Image doesn't cover the background properly without this (for some reason)
+      height: 104%;
+      top: -2%;
+      background-size: cover;
+      object-fit: cover;
+      width: 100%;
+      background-position: center;
+      
+      @media (min-width: $breakpoints-lg + 1) {
+        opacity: 0.9;
+        object-fit: cover;
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 70%);
+        left: 40%;
+        width: 60%;
+      }
+    }
+  }
+
+  .text-body {
+    > * {
+      &:first-child {
+        @include fonts-title; 
+        @include fonts-highlighted; 
+      }
+
+      &:not(:first-child) {
+        font-style: italic;
+      }
+    }
+  }
+
+  .tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    margin-top: 0px !important;
+
+    img {
+      background-blend-mode: darken;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    img {
+      flex-shrink: 0;
+      width: auto;
+      margin-right: 16px;
+      max-height: 136px;
+    }
+  }
+}

@@ -19,12 +19,12 @@ $secondary: 'Space Mono', monospace;
 }
 
 @mixin sm {
-  font-size: sizes.$size-7;
+  font-size: sizes.$size-fixed-7;
   line-height: 150%;
 }
 
 @mixin md {
-  font-size: sizes.$size-8;
+  font-size: max(1em, 14px);
   line-height: 150%;
 }
 

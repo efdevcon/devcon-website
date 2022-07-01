@@ -1,7 +1,7 @@
 @use 'assets/css/partials/index' as *;
 
 // Generic spacing utility classes to help build more consistent spacing between content blocks
-$standard-spacing: 32px;
+$standard-spacing: 2em;
 $border: 1px solid $colors-monochrome-5;
 
 .margin {
@@ -12,19 +12,17 @@ $border: 1px solid $colors-monochrome-5;
   &-bottom {
     margin-bottom: $standard-spacing;
   }
-}
 
-.padding {
-  &-top {
-    padding-top: $standard-spacing;
+  &-left {
+    padding-left: $standard-spacing;
   }
 
-  &-bottom {
-    padding-bottom: $standard-spacing;
+  &-right {
+    padding-right: $standard-spacing;
   }
 }
 
-.clear {
+.padding, .clear {
   &-top {
     padding-top: $standard-spacing;
   }

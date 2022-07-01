@@ -33,11 +33,6 @@ const useNavigationData = () => {
         type: 'page',
       },
       {
-        title: intl('continuous-devcon'),
-        url: '/continuous-devcon',
-        type: 'page',
-      },
-      {
         title: intl('navigation_about'),
         url: '#',
         type: 'links',
@@ -180,11 +175,16 @@ const useNavigationData = () => {
             url: '/bogota',
             type: 'page',
           },
-          // {
-          //   title: 'Event',
-          //   url: '#',
-          //   type: 'header',
-          // },
+          {
+            title: 'Event',
+            url: '#',
+            type: 'header',
+          },
+          {
+            title: intl('cd_title'),
+            url: '/continuous-devcon',
+            type: 'page',
+          },
         ],
       },
     ],
