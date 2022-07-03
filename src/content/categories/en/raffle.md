@@ -1,3 +1,4 @@
 ---
 title: Raffle
+excludeFromFAQ: true
 ---

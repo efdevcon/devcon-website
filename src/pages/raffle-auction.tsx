@@ -161,8 +161,24 @@ export default pageHOC(function RaffleAuction(props: any) {
         <div id="faq">
           <FAQ
             noSearch
-            data={[{ id: 'something', title: 'Frequently Asked Questions', questions: props.faq }]}
-            customCategoryTitle="FAQ"
+            data={[{ id: 'something', title: `FAQ - ${intl('tickets_raffle_title')}`, questions: props.faqGeneral }]}
+            customCategoryTitle={`FAQ - ${intl('tickets_raffle_general')}`}
+          />
+        </div>
+
+        <div id="faq">
+          <FAQ
+            noSearch
+            data={[{ id: 'something', title: `FAQ - ${intl('tickets_raffle_auction')}`, questions: props.faqAuction }]}
+            customCategoryTitle={`FAQ - ${intl('tickets_raffle_auction')}`}
+          />
+        </div>
+
+        <div>
+          <FAQ
+            noSearch
+            data={[{ id: 'something', title: `FAQ - ${intl('tickets_raffle_title')}`, questions: props.faqRaffle }]}
+            customCategoryTitle={`FAQ - ${intl('tickets_raffle_title')}`}
           />
         </div>
       </div>
@@ -183,7 +199,9 @@ export async function getStaticProps(context: any) {
   return {
     props: {
       ...globalData,
-      faq: faq.filter((faq: any) => faq.category.id === 'raffle'),
+      faqGeneral: faq.filter((faq: any) => faq.category.id === 'raffle-auction-general'),
+      faqAuction: faq.filter((faq: any) => faq.category.id === 'auction'),
+      faqRaffle: faq.filter((faq: any) => faq.category.id === 'raffle'),
       page,
       sections,
     },

@@ -1,3 +1,4 @@
 ---
 title: Subasta
+excludeFromFAQ: true
 ---

@@ -1,4 +1,4 @@
 ---
-title: Auction
+title: Sorteo+Subasta
 excludeFromFAQ: true
 ---

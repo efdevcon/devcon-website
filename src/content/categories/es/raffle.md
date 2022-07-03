@@ -1,4 +1,4 @@
 ---
-title: Auction
+title: Rifa
 excludeFromFAQ: true
 ---

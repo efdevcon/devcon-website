@@ -1,4 +1,4 @@
 ---
-title: Auction
+title: Raffle+Auction
 excludeFromFAQ: true
 ---
