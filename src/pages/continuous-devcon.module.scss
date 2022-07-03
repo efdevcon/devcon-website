@@ -33,8 +33,12 @@
 }
 
 .infinite-text {
-  font-size: 96px;
+  font-size: 48px;
   line-height: 120%;
+
+  @media (min-width: $breakpoints-lg) {
+    font-size: 96px;
+  }
 
   &.rainbow {
     background: conic-gradient(from 86.41deg at 34.98% 50.43%, #FF7852 -94.64deg, #EDEFCF 4.11deg, #EDEDCE 24.56deg, #EEEBCC 51.02deg, #F3C4BA 102.55deg, #C5D4E4 137.2deg, #C5D8ED 169.68deg, #C5D7EA 170.39deg, #D9CDD2 202.5deg, #FF7852 265.36deg, #EDEFCF 364.11deg);

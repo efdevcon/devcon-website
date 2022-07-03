@@ -184,7 +184,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
           <h2 className="clear-bottom">Continuous.... What?</h2>
 
           <HorizontalLooper slow unpadded>
-            <p className={`${css['rainbow']} ${css['infinite-text']}`}>¨{intl('cd_infinite_text_1')}&nbsp;</p>
+            <p className={`${css['rainbow']} ${css['infinite-text']}`}>{intl('cd_infinite_text_1')}&nbsp;</p>
           </HorizontalLooper>
 
           <div className="two-columns clear-top clear-bottom border-bottom margin-bottom" id="details">

@@ -17,6 +17,7 @@
   align-items: center;
   padding: 12px 8px;
   border-bottom: 1px solid $colors-monochrome-10;
+  @include fonts-sm;
 
   > svg {
     font-size: 1.3em;
@@ -43,6 +44,11 @@
     text-transform: uppercase;
   }
 
+  > * {
+    &:last-child {
+      flex-shrink: 0;
+    }
+  }
   // &:hover,
   // &:focus,
   // &:active {

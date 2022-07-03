@@ -9,22 +9,22 @@ $secondary: 'Space Mono', monospace;
 
 // Add more sizes as needed. Make sure to reference any newly added mixins from typography.scss so we have one source of truth for text sizes.
 @mixin xxs {
-  font-size: sizes.$size-fixed-5; // Using fixed size to prevent text getting too small
+  font-size: max(sizes.$size-5, 9px); // Prevent scaling too far down
   line-height: 150%;
 }
 
 @mixin xs {
-  font-size: sizes.$size-fixed-6; // Using fixed size to prevent text getting too small
+  font-size: max(sizes.$size-6, 10px); // Prevent scaling too far down
   line-height: 150%;
 }
 
 @mixin sm {
-  font-size: sizes.$size-fixed-7;
+  font-size: max(sizes.$size-7, 11px); // Prevent scaling too far down
   line-height: 150%;
 }
 
 @mixin md {
-  font-size: max(1em, 14px);
+  font-size: max(sizes.$size-8, 14px);
   line-height: 150%;
 }
 
