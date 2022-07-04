@@ -6,7 +6,7 @@ pages:
 ### Security
 
 * The smart contracts for the Auction & Raffle can be viewed [here](https://github.com/TrueFiEng/devcon-raffle).
-* The contracts were audited by Trail of Bits, and the Audit Report can be viewed [here](https://drive.google.com/file/d/1I3A0Kf-CrPdFRjZaZ8lOvbfN49moyki2/view?usp=sharing)
+* The contracts were audited by Trail of Bits, and the Audit Report can be viewed [here](https://drive.google.com/file/d/1I3A0Kf-CrPdFRjZaZ8lOvbfN49moyki2/view?usp=sharing).
 
 ### Randomness
 
