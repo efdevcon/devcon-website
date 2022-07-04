@@ -4,9 +4,7 @@ import { PageHero } from 'components/common/page-hero'
 import themes from './themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
 import { getGlobalData } from 'services/global'
-import { GetPage } from 'services/page'
-import { Tags } from 'components/common/tags'
-import { usePageContext } from 'context/page-context'
+import { GetPage, GetContentSections } from 'services/page'
 import HorizontalLooper from 'components/common/horizontal-looper'
 import { Carousel } from 'components/common/carousel'
 import Bogota1 from 'assets/images/carousel/bogota/Bogota0.jpg'
@@ -16,22 +14,20 @@ import Bogota4 from 'assets/images/carousel/bogota/Bogota5.jpg'
 import { Link } from 'components/common/link'
 import { Snapshot } from 'components/common/snapshot'
 import IconClock from 'assets/icons/icon_clock.svg'
-import IconCurrency from 'assets/icons/icon_currency.svg'
-import IconGlobe from 'assets/icons/icon_globe.svg'
-import IconSun from 'assets/icons/icon_sun.svg'
-import IconWater from 'assets/icons/icon_water.svg'
+import IconPeople from 'assets/icons/people.svg'
+import IconLayers from 'assets/icons/layers.svg'
+import IconTransactions from 'assets/icons/transactions.svg'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import { useTranslations } from 'next-intl'
-import moment from 'moment-timezone'
 import css from './continuous-devcon.module.scss'
 import HackerBasement from 'assets/images/hacker-basement.png'
+import LinkIcon from 'assets/icons/link-indicator.svg'
 import HackerBasementTag from 'assets/images/hacker-basement-tag.png'
 import Image from 'next/image'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 export default pageHOC(function ContinuousDevcon(props: any) {
   const intl = useTranslations()
-  const pageContext = usePageContext()
 
   return (
     <Page theme={themes['bogota']}>
@@ -64,12 +60,12 @@ export default pageHOC(function ContinuousDevcon(props: any) {
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
 
             <div className={css['links']}>
-              <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                {intl('tickets_title')}
+              <Link to="#involve" className="text-uppercase hover-underline font-lg bold">
+                {props.sections['hacker-basement'].title}
                 <ArrowRight />
               </Link>
-              <Link to="/faq" className="text-uppercase hover-underline font-lg bold">
-                {intl('faq_title')}
+              <Link to="#hubs" className="text-uppercase hover-underline font-lg bold">
+                {intl('cd_community_hubs')}
                 <ArrowRight />
               </Link>
             </div>
@@ -80,43 +76,33 @@ export default pageHOC(function ContinuousDevcon(props: any) {
               items={[
                 {
                   Icon: IconClock,
-                  title: 'EXTENDED Hours',
-                  // left: 'GMT -5',
+                  title: intl('cd_extended_hours'),
                   right: '08:00 AM  — 11:00 PM',
                 },
                 {
-                  Icon: IconCurrency,
-                  title: intl('snapshot_currency'),
-                  left: intl('snapshot_colombian_peso'),
+                  Icon: IconPeople,
+                  title: intl('cd_community_curation'),
                   right: (
-                    <Link indicateExternal to="https://www.xe.com/currency/cop-colombian-peso">
-                      {intl('snapshot_exchange_rate')}
+                    <Link indicateExternal className="theme-color" to="https://forum.devcon.org">
+                      {intl('cd_devcon_forum')}
                     </Link>
                   ),
                 },
                 {
-                  Icon: IconGlobe,
-                  title: intl('snapshot_language'),
-                  left: intl('snapshot_spanish'),
+                  Icon: IconLayers,
+                  title: props.sections['hacker-basement'].title,
                   right: (
-                    <Link
-                      indicateExternal
-                      to="https://www.worldtravelguide.net/guides/south-america/colombia/history-language-culture/"
-                    >
-                      {intl('snapshot_language_guide')}
+                    <Link indicateExternal className="theme-color" to="#involve">
+                      {intl('cd_learn_more')}
                     </Link>
                   ),
                 },
                 {
-                  Icon: IconSun,
-                  title: intl('snapshot_temperature'),
-                  left: '8 TO 20 °C / 46.4 to 68.0 °F',
+                  Icon: IconTransactions,
+                  title: intl('cd_community_hubs'),
                   right: (
-                    <Link
-                      indicateExternal
-                      to="https://www.worldtravelguide.net/guides/south-america/colombia/travel-by/"
-                    >
-                      {intl('snapshot_packing_tips')}
+                    <Link indicateExternal className="theme-color" to="#hubs">
+                      {intl('cd_apply_now')}
                     </Link>
                   ),
                 },
@@ -126,29 +112,27 @@ export default pageHOC(function ContinuousDevcon(props: any) {
         </section>
 
         <section className="clear-top border-top margin-bottom border-bottom clear-bottom" id="details">
-          <h2 className="clear-bottom">Continuous.... What?</h2>
+          <h2 className="clear-bottom">{props.sections['continuous-what'].title}</h2>
           <div className="two-columns" id="details">
             <div className="left">
-              <p className="section-markdown highlighted h2">
-                Continuous Devcon brings together a variety of opportunities for the community to get hands-on involved
-                and shape the event. Furthermore, parts of the amazing venue will be accessible into the evening hours,
-                enabling participants to continue exchanging ideas even after the main program has concluded for the
-                day, turning Devcon into a truly continuous and more holistic and collaboration-focused experience.
-              </p>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['continuous-what'].data.left,
+                }}
+              ></div>
             </div>
             <div className="right">
-              <p>
-                The venue and space will be open, available, and welcoming until 11pm — much later than you might be
-                used to from other Devcons. This means you can smoothly transition into the evening and have more time
-                to explore the initiatives besides the main program! The venue will foster collaboration, networking,
-                exchange, creativity, creation, experimentation and relaxation through various spaces dedicated
-                especially to that. You can get hands-on involved and shape Devcon by hosting (or contributing to) a
-                Community Hub! Learn more about the concept of Community Hubs and how to apply for one below.
-              </p>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['continuous-what'].data.right,
+                }}
+              ></div>
 
               <div className={css['links']}>
-                <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                  {intl('tickets_title')}
+                <Link to="#hubs" className="text-uppercase hover-underline font-lg bold">
+                  {intl('cd_community_hubs')}
                   <ArrowRight />
                 </Link>
               </div>
@@ -181,7 +165,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
         </section>
 
         <section id="hubs" className="border-top clear-top">
-          <h2 className="clear-bottom">Continuous.... What?</h2>
+          <h2 className="clear-bottom">{props.sections['community-and-ecosystem-hubs-at-devcon-bogota'].title}</h2>
 
           <HorizontalLooper slow unpadded>
             <p className={`${css['rainbow']} ${css['infinite-text']}`}>{intl('cd_infinite_text_1')}&nbsp;</p>
@@ -189,57 +173,49 @@ export default pageHOC(function ContinuousDevcon(props: any) {
 
           <div className="two-columns clear-top clear-bottom border-bottom margin-bottom" id="details">
             <div className="left">
-              <p className="section-markdown highlighted h2">
-                Continuous Devcon brings together a variety of opportunities for the community to get hands-on involved
-                and shape the event. Furthermore, parts of the amazing venue will be accessible into the evening hours,
-                enabling participants to continue exchanging ideas even after the main program has concluded for the
-                day, turning Devcon into a truly continuous and more holistic and collaboration-focused experience.
-              </p>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['community-and-ecosystem-hubs-at-devcon-bogota'].data.left,
+                }}
+              ></div>
             </div>
             <div className="right">
-              <p>
-                The venue and space will be open, available, and welcoming until 11pm — much later than you might be
-                used to from other Devcons. This means you can smoothly transition into the evening and have more time
-                to explore the initiatives besides the main program! The venue will foster collaboration, networking,
-                exchange, creativity, creation, experimentation and relaxation through various spaces dedicated
-                especially to that. You can get hands-on involved and shape Devcon by hosting (or contributing to) a
-                Community Hub! Learn more about the concept of Community Hubs and how to apply for one below.
-              </p>
-
-              <div className={css['links']}>
-                <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                  {intl('tickets_title')}
-                  <ArrowRight />
-                </Link>
-              </div>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['community-and-ecosystem-hubs-at-devcon-bogota'].data.right,
+                }}
+              ></div>
             </div>
           </div>
 
           <div className="two-columns margin-bottom" id="details">
             <div className="left">
-              <p className="section-markdown highlighted h2">
-                Continuous Devcon brings together a variety of opportunities for the community to get hands-on involved
-                and shape the event. Furthermore, parts of the amazing venue will be accessible into the evening hours,
-                enabling participants to continue exchanging ideas even after the main program has concluded for the
-                day, turning Devcon into a truly continuous and more holistic and collaboration-focused experience.
-              </p>
-            </div>
-            <div className="right">
-              <p>
-                The venue and space will be open, available, and welcoming until 11pm — much later than you might be
-                used to from other Devcons. This means you can smoothly transition into the evening and have more time
-                to explore the initiatives besides the main program! The venue will foster collaboration, networking,
-                exchange, creativity, creation, experimentation and relaxation through various spaces dedicated
-                especially to that. You can get hands-on involved and shape Devcon by hosting (or contributing to) a
-                Community Hub! Learn more about the concept of Community Hubs and how to apply for one below.
-              </p>
-
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['community-and-ecosystem-hubs-at-devcon-bogota-2'].data.left,
+                }}
+              ></div>
               <div className={css['links']}>
                 <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                  {intl('tickets_title')}
-                  <ArrowRight />
+                  {intl('cd_apply_hub')}
+                  <LinkIcon />
+                </Link>
+                <Link to="https://forum.devcon.org/" className="text-uppercase hover-underline font-lg bold">
+                  {intl('cd_devcon_forum')}
+                  <LinkIcon />
                 </Link>
               </div>
+            </div>
+            <div className="right">
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['community-and-ecosystem-hubs-at-devcon-bogota-2'].data.right,
+                }}
+              ></div>
             </div>
           </div>
         </section>
@@ -249,7 +225,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
             <Image src={HackerBasement} alt="Hacker basement" layout="raw" />
           </div>
           <div className="section">
-            <h2 className="clear-top clear-bottom">Hacker Basement</h2>
+            <h2 className="clear-top clear-bottom">{props.sections['hacker-basement'].title}</h2>
 
             <HorizontalLooper slow unpadded>
               <p className={`${css['stroked']} ${css['infinite-text']}`}>{intl('cd_infinite_text_2')}&nbsp;</p>
@@ -257,8 +233,11 @@ export default pageHOC(function ContinuousDevcon(props: any) {
 
             <div className="two-columns clear-top">
               <div className={`left`}>
-                <div className={`markdown ${css['text-body']}`}>
-                  <p>
+                <div
+                  className={`markdown ${css['text-body']}`}
+                  dangerouslySetInnerHTML={{ __html: props.sections['hacker-basement'].body }}
+                >
+                  {/* <p>
                     Looking for a place where you can test all the new tech and build? This time, we got you covered!
                   </p>
                   <p>The hacker basement will be your high-focus zone away from the busy conference ado.</p>
@@ -269,12 +248,12 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   <p>
                     Everything a hacker needs will be taken care of: cozy seating, electricity and internet and, of
                     course, cyberpunk lighting and low-fi beats to get you in the right mood to build!
-                  </p>
+                  </p> */}
                 </div>
                 <div className={css['links']}>
                   <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                    {intl('tickets_title')}
-                    <ArrowRight />
+                    {intl('cd_apply_hub')}
+                    <LinkIcon />
                   </Link>
                 </div>
               </div>
@@ -316,10 +295,20 @@ export default pageHOC(function ContinuousDevcon(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/continuous-devcon', context.locale)
+  const sections = await GetContentSections(
+    [
+      'continuous-what',
+      'community-and-ecosystem-hubs-at-devcon-bogota-2',
+      'community-and-ecosystem-hubs-at-devcon-bogota',
+      'hacker-basement',
+    ],
+    context.locale
+  )
 
   return {
     props: {
       ...globalData,
+      sections,
       page,
     },
   }

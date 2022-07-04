@@ -288,3 +288,8 @@ $link: #488def;
 //   --color-icon: #{$monochrome-1} !important;
 //   color: $monochrome-1 !important;
 // }
+
+@mixin theme-color {
+  color: var(--theme-color, inherit);
+  --color-icon: var(--theme-color, inherit);
+}

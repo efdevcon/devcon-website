@@ -1,5 +1,5 @@
 ---
-title: Continuous Devcon
+title: Meet Continuous Devcon
 header: Continuous Devcon
 tags:
   - devcon

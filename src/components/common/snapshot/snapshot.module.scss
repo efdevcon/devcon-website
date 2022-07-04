@@ -26,6 +26,7 @@
 
   a {
     @include fonts-generic-link;
+    @include colors-theme-color;
     text-transform: uppercase;
   }
 

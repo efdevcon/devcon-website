@@ -216,5 +216,21 @@
     "support": "Apoyo",
     "communities": "Comunidades",
     "get_involved": "Involucrarse"
+  },
+  "cd": {
+    "title": "Desarrollo continuo",
+    "meet": "Conoce CD",
+    "get_involved": "Involucrarse",
+    "community_hubs": "Centros comunitarios",
+    "details": "Detalles",
+    "apply_hub": "Solicitar centro comunitario",
+    "devcon_forum": "Foro Devcon",
+    "apply_now": "Aplica ya",
+    "learn_more": "Aprende más",
+    "extended_hours": "Horas extendidas",
+    "community_curation": "Curación comunitaria",
+    "infinite_text_1": "Discutir • Aprender • Intercambiar • Explorar • Colaborar • Divertirse •",
+    "infinite_text_2": "Aprender • Centrarse • Idear • Probar • Codificar • Colaborar •"
   }
 }
+

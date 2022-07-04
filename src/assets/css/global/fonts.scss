@@ -24,7 +24,6 @@ h1,
 h2,
 .h2,
 .title {
-  // @include fonts-secondary;
   @include fonts-bold;
   font-size: 24px;
   line-height: 120%;
@@ -32,22 +31,13 @@ h2,
   &.spaced {
     @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
   }
-
-  // // @include fonts-secondary;
-  // @include fonts-normal;
-  // font-size: $sizes-size-16 + $sizes-size-2;
-  // line-height: 120%;
-
-  // &.spaced {
-  //   @include gaps-margin-bottom($gaps-gap-6, $gaps-gap-4);
-  // }
 }
 
 h3,
 .h3 {
-  // @include fonts-secondary;
   @include fonts-bold;
-  font-size: 1.3em;
+  @include fonts-highlighted;
+  font-size: 24px;
   line-height: 120%;
 
   &.spaced {

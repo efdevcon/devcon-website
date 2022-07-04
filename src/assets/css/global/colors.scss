@@ -163,3 +163,8 @@
 //   border: none;
 //   pointer-events: none;
 // }
+
+.theme-color {
+  @include colors-theme-color 
+}
+
