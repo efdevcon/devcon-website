@@ -1,12 +1,12 @@
 ---
 title: Specs
-pages: ['raffle-auction']
+pages:
+  - raffle-auction
 ---
-
 ### Security
 
-- The smart contracts for the Auction & Raffle can be viewed [here](https://github.com/TrueFiEng/devcon-raffle).
-- The contracts were audited by Trail of Bits, and the Audit Report can be viewed [here](https://drive.google.com/file/d/1I3A0Kf-CrPdFRjZaZ8lOvbfN49moyki2/view?usp=sharing)
+* The smart contracts for the Auction & Raffle can be viewed [here](https://github.com/TrueFiEng/devcon-raffle).
+* The contracts were audited by Trail of Bits, and the Audit Report can be viewed [here](https://drive.google.com/file/d/1I3A0Kf-CrPdFRjZaZ8lOvbfN49moyki2/view?usp=sharing)
 
 ### Randomness
 
@@ -19,8 +19,19 @@ The contract uses a series of random numbers to draw the raffle winners. As ther
 …
 
 For transparency reasons, we commit to use a secret number **S** which hash equals to:
-**keccak256(S) = [insert hash here]**
+**keccak256(S) = 28902c742fcf74d7f6edce7c692e2be7e8c4befb8ec14a86e0422b24f714b01c**
 
-After the raffle is settled, we will reveal the secret number **S** so that anyone can verify that the random numbers were not tampered with. The following Ethereum mainnet blocks will be used as a source of randomness: **[insert block numbers of future mainnet blocks].**
+After the raffle is settled, we will reveal the secret number **S** so that anyone can verify that the random numbers were not tampered with. The following Ethereum mainnet blocks will be used as a source of randomness:
+
+*15138000
+15138001
+15138002
+15138003
+15138004
+15138005
+15138006
+15138007
+15138008
+15138009*
 
 Please read the Auction & Raffle Terms & Conditions prior to participating [here](https://docs.google.com/document/d/1pVU-G8mpPD33EwOwE96MTB_4AZrYa2TNWXLSfkOPCJQ/edit?usp=sharing).
