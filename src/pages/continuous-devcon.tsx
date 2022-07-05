@@ -101,7 +101,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   Icon: IconTransactions,
                   title: intl('cd_community_hubs'),
                   right: (
-                    <Link indicateExternal className="theme-color" to="#hubs">
+                    <Link to="https://forum.devcon.org/t/rfp-5-community-hubs/454" className="theme-color">
                       {intl('cd_apply_now')}
                     </Link>
                   ),
@@ -199,7 +199,10 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                 }}
               ></div>
               <div className={css['links']}>
-                <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
+                <Link
+                  to="https://forum.devcon.org/t/rfp-5-community-hubs/454"
+                  className="text-uppercase hover-underline font-lg bold"
+                >
                   {intl('cd_apply_hub')}
                   <LinkIcon />
                 </Link>
@@ -251,7 +254,10 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   </p> */}
                 </div>
                 <div className={css['links']}>
-                  <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
+                  <Link
+                    to="https://forum.devcon.org/t/rfp-5-community-hubs/454"
+                    className="text-uppercase hover-underline font-lg bold"
+                  >
                     {intl('cd_apply_hub')}
                     <LinkIcon />
                   </Link>
@@ -259,7 +265,12 @@ export default pageHOC(function ContinuousDevcon(props: any) {
               </div>
 
               <div className={`right ${css['tag']}`}>
-                <Image src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
+                {/* <Image src={HackerBasementTag} alt="Hacker basement tag" /> */}
               </div>
             </div>
 
