@@ -17,6 +17,7 @@ import { Button } from 'components/common/button'
 import List from 'components/common/list'
 import ticketingCss from './tickets.module.scss'
 import { isAfterDate } from './tickets'
+import { Link } from 'components/common/link'
 
 export default pageHOC(function RaffleAuction(props: any) {
   const intl = useTranslations()
@@ -70,7 +71,9 @@ export default pageHOC(function RaffleAuction(props: any) {
               ]}
             />
 
-            <Button className="blue lg disabled">{intl('tickets_raffle_coming_soon')}</Button>
+            <Link to="https://raffle.devcon.org/">
+              <Button className="blue lg">{intl('tickets_raffle_participate_now')}</Button>
+            </Link>
           </div>
         </div>
 

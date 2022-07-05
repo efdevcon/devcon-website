@@ -48,38 +48,6 @@ export const Button = React.forwardRef((props: any, ref: any) => {
     style,
   }
 
-  // Some fun project when time allows: make buttons optionally flicker to bring attention to themselves :-)
-  // React.useEffect(() => {
-  //   if (props.flicker && x === 0) {
-  //     let frame: number
-  //     let timeout: NodeJS.Timeout
-
-  //     const step = () => {
-  //       setXFlicker(prev => {
-  //         const next = prev + 2
-
-  //         if (next < 100) {
-  //           frame = requestAnimationFrame(step)
-  //         } else {
-  //           timeout = setTimeout(() => {
-  //             setXFlicker(0)
-  //             frame = requestAnimationFrame(step)
-  //           }, 2000)
-  //         }
-
-  //         return next
-  //       })
-  //     }
-
-  //     frame = requestAnimationFrame(step)
-
-  //     return () => {
-  //       typeof frame !== undefined && cancelAnimationFrame(frame)
-  //       clearTimeout(timeout)
-  //     }
-  //   }
-  // }, [props.flicker, x])
-
   const children = (
     <>
       <span className={css['background']}></span>
