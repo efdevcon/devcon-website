@@ -189,3 +189,11 @@
   --theme-gradient: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #7958A5 0%, #7000FF 0.01%, rgba(206, 66, 255, 0.2) 100%);
   --theme-gradient-footer: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #7958A5 0%, #7000FF 0.01%, rgba(206, 66, 255, 0.2) 100%);
 }
+
+.no-page {
+  --theme-color: #{$colors-track-purple};
+  --theme-color-hover: #{$colors-track-purple-hover};
+  --theme-logo: url('../assets/images/pages/bogota-stroked.svg');
+  --theme-gradient: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #948aa2 0%, #909090 0.01%, rgba(162, 162, 162, 0.2) 100%);
+  --theme-gradient-footer: radial-gradient(73.15% 179.46% at 90.19% 25.94%, #948aa2 0%, #424242 0.01%, rgba(126, 126, 126, 0.2) 100%);
+}
