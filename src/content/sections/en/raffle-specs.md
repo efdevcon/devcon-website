@@ -7,6 +7,7 @@ pages:
 
 * The smart contracts for the Auction & Raffle can be viewed [here](https://github.com/TrueFiEng/devcon-raffle).
 * The contracts were audited by Trail of Bits, and the Audit Report can be viewed [here](https://drive.google.com/file/d/1I3A0Kf-CrPdFRjZaZ8lOvbfN49moyki2/view?usp=sharing).
+* The contract has been verified on Sourcify, [available here](https://repo.sourcify.dev/contracts/full_match/42161/0xF53d383525117d1f51BF234966E39bD1508a5948/).
 
 ### Randomness
 
