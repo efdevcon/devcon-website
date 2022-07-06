@@ -6,7 +6,8 @@ pages:
 ### Seguridad
 
 * Los contratos inteligentes para la Subasta y la Rifa se pueden ver [aquí](https://github.com/TrueFiEng/devcon-raffle).
-* Los contratos fueron auditados por Trail of Bits y el Informe de Auditoría se puede ver [aquí](https://drive.google.com/file/d/1I3A0Kf-CrPdFRjZaZ8lOvbfN49moyki2/view?usp=sharing)
+* Los contratos fueron auditados por Trail of Bits y el Informe de Auditoría se puede ver [aquí](https://drive.google.com/file/d/1I3A0Kf-CrPdFRjZaZ8lOvbfN49moyki2/view?usp=sharing).
+*  El contrato ha sido verificado en Sourcify, [disponible aquí](https://repo.sourcify.dev/contracts/full_match/42161/0xF53d383525117d1f51BF234966E39bD1508a5948/).
 
 ### Aleatoriedad
 
