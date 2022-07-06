@@ -89,6 +89,9 @@ export async function GetCategories(lang: string = 'en'): Promise<Array<Category
 
       const doc = matter(content)
       const id = i.replace('.md', '').toLowerCase()
+
+      if (doc.data.excludeFromFAQ) return null
+
       return {
         id: id,
         title: doc.data.title,
@@ -177,9 +180,11 @@ export function GetDevconEditions(lang: string = 'en'): Array<DevconEdition> {
       let edition = {
         ...doc.data,
         id: i.replace('.md', '').toLowerCase(),
-        links: doc.data.urls ? doc.data.urls.map((i: any) => {
-          return { title: i.title, url: i.url }
-        }) : [],
+        links: doc.data.urls
+          ? doc.data.urls.map((i: any) => {
+              return { title: i.title, url: i.url }
+            })
+          : [],
       } as DevconEdition
 
       if (doc.data.startDate) edition.startDate = new Date(doc.data.startDate).getTime()
@@ -263,7 +268,7 @@ export function GetVideos(): Array<any> {
 
       const doc = matter(content)
       return {
-        ...doc.data
+        ...doc.data,
       } as any
     })
     .filter(i => !!i) as Array<any>
@@ -271,11 +276,13 @@ export function GetVideos(): Array<any> {
 
 export async function GetContentSections(slugs: string[], lang: string = 'en'): Promise<ContentSections> {
   let data: ContentSections = {}
-  await Promise.all(slugs.map(async (slug: string) => {
-    const section = await GetContentSection(slug, lang)
-    if (section) data[slug] = section
-    return section
-  }))
+  await Promise.all(
+    slugs.map(async (slug: string) => {
+      const section = await GetContentSection(slug, lang)
+      if (section) data[slug] = section
+      return section
+    })
+  )
 
   return data
 }

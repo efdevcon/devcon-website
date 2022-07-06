@@ -71,6 +71,19 @@
   }
 }
 
+.blue {
+  @include colors-blue;
+
+  &.ghost {
+    @include colors-blue-ghost;
+  }
+
+  &.disabled {
+    @include colors-blue-disabled;
+  }
+}
+
+
 .app {
   @include colors-app;
 
@@ -110,25 +123,25 @@
   }
 }
 
-.blue {
-  background: $colors-track-blue !important;
-  color: $colors-monochrome-1 !important;
-  --color-icon: #{$colors-monochrome-1} !important;
-  border-color: $colors-track-blue !important;
+// .blue {
+//   background: $colors-track-blue !important;
+//   color: $colors-monochrome-1 !important;
+//   --color-icon: #{$colors-monochrome-1} !important;
+//   border-color: $colors-track-blue !important;
 
-  &.ghost {
-    background: none !important;
-    color: $colors-track-blue !important;
-    --color-icon: #{$colors-track-blue} !important;
-    border-color: $colors-track-blue !important;
-  }
+//   &.ghost {
+//     background: none !important;
+//     color: $colors-track-blue !important;
+//     --color-icon: #{$colors-track-blue} !important;
+//     border-color: $colors-track-blue !important;
+//   }
 
-  &.inverted {
-    background: $colors-monochrome-1 !important;
-    color: $colors-track-blue !important;
-    --color-icon: #{$colors-track-blue} !important;
-  }
-}
+//   &.inverted {
+//     background: $colors-monochrome-1 !important;
+//     color: $colors-track-blue !important;
+//     --color-icon: #{$colors-track-blue} !important;
+//   }
+// }
 
 // .red {
 //   background: $colors-track-red !important;

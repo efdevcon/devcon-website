@@ -125,6 +125,38 @@ $link: #488def;
   color: $monochrome-1;
 }
 
+// Blue
+@mixin blue {
+  background: $track-blue;
+  --color-icon: #{$monochrome-1};
+  color: $monochrome-1;
+  --border-color: #{$track-blue};
+}
+@mixin blue-ghost {
+  background: none;
+  color: $track-blue;
+  --color-icon: #{$track-blue};
+  --border-color: #{$track-blue};
+}
+@mixin blue-hover {
+  background: $track-blue-hover;
+
+  // For use by Button component (animates colors when hovering)
+  --button-color: #{$monochrome-1};
+  --button-color-background: #{$track-blue};
+  --button-color-background-hover: #{$track-blue-hover};
+
+  &.ghost {
+    @include blue;
+  }
+}
+@mixin blue-disabled {
+  background: #ddcccf !important;
+  --border-color: #{#d6b1b6 !important};
+  --color-icon: #{$monochrome-1} !important;
+  color: $monochrome-1 !important;
+}
+
 // RED
 @mixin red {
   background: $track-red;
@@ -257,34 +289,3 @@ $link: #488def;
   color: $monochrome-1 !important;
 }
 
-// // GREY
-// @mixin grey {
-//   background: $track-grey;
-//   --color-icon: #{$monochrome-1};
-//   color: $monochrome-1;
-//   --border-color: #{$track-grey};
-// }
-// @mixin grey-ghost {
-//   background: none;
-//   color: $track-grey;
-//   --color-icon: #{$track-grey};
-//   --border-color: #{#{$track-grey}};
-// }
-// @mixin grey-hover {
-//   background: $track-grey-hover;
-
-//   // For use by Button component (animates colors when hovering)
-//   --button-color: #{$monochrome-1};
-//   --button-color-background: #{$track-grey};
-//   --button-color-background-hover: #{$track-grey-hover};
-
-//   &.ghost {
-//     @include grey;
-//   }
-// }
-// @mixin grey-disabled {
-//   background: #ddcccf !important;
-//   --border-color: #{#d6b1b6 !important};
-//   --color-icon: #{$monochrome-1} !important;
-//   color: $monochrome-1 !important;
-// }
