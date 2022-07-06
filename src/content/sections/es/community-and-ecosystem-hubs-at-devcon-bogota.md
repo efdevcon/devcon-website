@@ -27,5 +27,5 @@ right: >-
 
   * Accesible para todos los asistentes a Devcon.
 
-  * Dedicado a una causa o tema específico
+  * Dedicado a una causa o tema específico.
 ---

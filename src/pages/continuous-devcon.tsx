@@ -11,6 +11,12 @@ import Bogota1 from 'assets/images/carousel/bogota/Bogota0.jpg'
 import Bogota2 from 'assets/images/carousel/bogota/Bogota2.jpg'
 import Bogota3 from 'assets/images/carousel/bogota/Bogota8.jpg'
 import Bogota4 from 'assets/images/carousel/bogota/Bogota5.jpg'
+import Hub2 from 'assets/images/continuous-devcon/hub_02.jpg'
+import Hub3 from 'assets/images/continuous-devcon/hub_03.jpg'
+import Hub1 from 'assets/images/continuous-devcon/hub_01.jpg'
+import Agora2 from 'assets/images/continuous-devcon/agora_02.jpeg'
+import Agora4 from 'assets/images/continuous-devcon/agora_04.jpg'
+import Agora5 from 'assets/images/continuous-devcon/agora_05.jpg'
 import { Link } from 'components/common/link'
 import { Snapshot } from 'components/common/snapshot'
 import IconClock from 'assets/icons/icon_clock.svg'
@@ -142,25 +148,52 @@ export default pageHOC(function ContinuousDevcon(props: any) {
 
         <section className="expand clear-bottom">
           <Carousel
-            title="Continuous Devcon"
+            // title="Continuous Devcon"
+            noAnimation
             images={[
               {
-                alt: 'Bogota 1',
-                src: Bogota1,
+                alt: 'Hub',
+                src: Hub3,
               },
               {
-                alt: 'Bogota 2',
-                src: Bogota2,
+                alt: 'Hub',
+                src: Hub2,
               },
               {
-                alt: 'Bogota 3',
-                src: Bogota3,
+                alt: 'Hub',
+                src: Hub1,
               },
               {
-                alt: 'Bogota 4',
-                src: Bogota4,
+                alt: 'Agora Convention Center',
+                src: Agora5,
+              },
+              {
+                alt: 'Agora Convention Center',
+                src: Agora2,
+              },
+              {
+                alt: 'Agora Convention Center',
+                src: Agora4,
               },
             ]}
+            // images={[
+            //   {
+            //     alt: 'Bogota 1',
+            //     src: Bogota1,
+            //   },
+            //   {
+            //     alt: 'Bogota 2',
+            //     src: Bogota2,
+            //   },
+            //   {
+            //     alt: 'Bogota 3',
+            //     src: Bogota3,
+            //   },
+            //   {
+            //     alt: 'Bogota 4',
+            //     src: Bogota4,
+            //   },
+            // ]}
           />
         </section>
 

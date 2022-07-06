@@ -4,7 +4,7 @@ left: >-
   ## Centros potenciales
 
 
-  ### UX y diseño • Scaling Hub • Security Hub • ReGen Hub • Privacy Hub • Diversity Hub / Womxn in Crypto Hub • EIP / Ethereum Improvement Hub • Sin fines de lucro / blockchain-for-social-good Hub • (Digital ) Art/NFT Hub • Fun & Games Hub • **[*Tu idea aquí* 🦄]**
+  ### UX y diseño • Escalamiento • Seguridad • Privacidad • Regeneración • Diversidad • EIP • Sin fines de lucro / blockchain para el bien social • Arte (digital) / NFT • Diversión y juegos • **[*Tu idea aquí* 🦄]**
 right: >-
   ## Objetiva
 
@@ -20,5 +20,5 @@ right: >-
 
   * Un lugar para que este grupo o las partes interesadas se reúnan.
 
-  * Experiencias interactivas según su temática
+  * Experiencias interactivas según su temática.
 ---

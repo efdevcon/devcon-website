@@ -4,7 +4,7 @@ left: >-
   ## Potential Hubs
 
 
-  ### UX & Design • Scaling Hub • Security Hub • ReGen Hub • Privacy Hub • Diversity Hub / Womxn in Crypto Hub • EIPs / Ethereum Improvement Hub • Non-for-profit / blockchain-for-social-good Hub • (Digital) Art / NFT Hub • Fun & Games Hub • **[*Your idea here* 🦄]**
+  ### UX & Design • Scaling • Security  • Privacy • Regen • Diversity • EIPs • Non-for-profit / blockchain-for-social-good • (Digital) Art / NFT • Fun & Games  • **[*Your idea here* 🦄]**
 right: |-
   ## Objective
 
@@ -14,5 +14,5 @@ right: |-
   * Discussion rounds.
   * Learning material on their topic.
   * A place for this group or interested parties to meet.
-  * Interactive experiences depending on their topic
+  * Interactive experiences depending on their topic.
 ---
