@@ -38,7 +38,10 @@
   height: 100%;
   overflow: hidden;
   white-space: nowrap;
-  animation: slide 120s linear infinite;
+
+  &:not(.no-animation) {
+    animation: slide 120s linear infinite;
+  }
 
   > * {
     height: 100%;

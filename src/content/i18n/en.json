@@ -216,5 +216,20 @@
     "support": "Support",
     "communities": "Communities",
     "get_involved": "Get Involved"
+  },
+  "cd": {
+    "title": "Continuous Devcon",
+    "meet": "Meet CD",
+    "get_involved": "Get Involved",
+    "community_hubs": "Community Hubs",
+    "details": "Details",
+    "apply_hub": "Apply for community hub",
+    "devcon_forum": "Devcon Forum",
+    "apply_now": "Apply Now",
+    "learn_more": "Learn More",
+    "extended_hours": "Extended Hours",
+    "community_curation": "Community Curation",
+    "infinite_text_1": "DISCUSS • LEARN • EXCHANGE • EXPLORE • COLLABORATE •",
+    "infinite_text_2": "LEARN • FOCUS • CODE • TEST • IDEATE • HACK •"
   }
 }

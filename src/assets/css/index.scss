@@ -26,14 +26,15 @@ html {
   font-family: $fonts-primary;
   color: $colors-main;
 
-  @include fonts-md;
+  // Scales entire app
+  font-size: 16px;
 
   @media (max-width: $breakpoints-lg) {
-    @include fonts-sm;
+    font-size: 14px;
   }
 
   @media (max-width: $breakpoints-md) {
-    @include fonts-xs;
+    font-size: 12px;
   }
 }
 
@@ -44,6 +45,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
+  @include fonts-md; 
 }
 
 .section-markdown {
