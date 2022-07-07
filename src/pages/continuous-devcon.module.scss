@@ -151,12 +151,19 @@
       position: absolute !important;
     }
 
+		.image-take-up-space {
+			position: relative !important;
+			opacity: 0;
+		}
+
     .glitch-image {
+      opacity: 0.35;
+			max-width: 98%;
+			object-fit: contain;
 
-    }
-
-    img {
-      opacity: 0.3;
+			@media (max-width: $breakpoints-lg) {
+				opacity: 0.5s; // Add more contrast with background on mobile
+			}
 
       &:first-child {
         opacity: 1;

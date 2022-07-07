@@ -47,10 +47,22 @@
     }
   }
 
+  &.reverse-order-on-mobile {
+    @media (max-width: $breakpoints-lg) {
+      .right {
+        order: 1;
+      }
+
+      .left {
+        order: 2;
+      }
+    }
+  }
+
   .right {
     margin-top: 2em;
 
-    @media (min-width: $breakpoints-lg) {
+    @media (min-width: $breakpoints-lg + 1) {
       margin-top: 0px;
     }
   }

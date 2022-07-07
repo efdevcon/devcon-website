@@ -13,7 +13,6 @@ import Hub1 from 'assets/images/continuous-devcon/hub_01.jpg'
 import Agora2 from 'assets/images/continuous-devcon/agora_02.jpeg'
 import Agora4 from 'assets/images/continuous-devcon/agora_04.jpg'
 import Agora5 from 'assets/images/continuous-devcon/agora_05.jpg'
-
 import HackerBasement2 from 'assets/images/hacker-basement/hacker-basement-2.png'
 import HackerBasement3 from 'assets/images/hacker-basement/hacker-basement-3.png'
 import HackerBasement4 from 'assets/images/hacker-basement/hacker-basement-4.png'
@@ -21,7 +20,6 @@ import HackerBasement5 from 'assets/images/hacker-basement/hacker-basement-5.png
 import HackerBasement6 from 'assets/images/hacker-basement/hacker-basement-6.png'
 import HackerBasement7 from 'assets/images/hacker-basement/hacker-basement-7.png'
 import HackerBasement8 from 'assets/images/hacker-basement/hacker-basement-8.png'
-
 import { Link } from 'components/common/link'
 import { Snapshot } from 'components/common/snapshot'
 import IconClock from 'assets/icons/icon_clock.svg'
@@ -257,7 +255,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
               <p className={`${css['stroked']} ${css['infinite-text']}`}>{intl('cd_infinite_text_2')}&nbsp;</p>
             </HorizontalLooper>
 
-            <div className="two-columns clear-top">
+            <div className="two-columns reverse-order-on-mobile clear-top">
               <div className={`left`}>
                 <div
                   className={`markdown ${css['text-body']}`}
@@ -275,6 +273,13 @@ export default pageHOC(function ContinuousDevcon(props: any) {
               </div>
 
               <div className={`right ${css['tag']}`}>
+                <Image
+                  className={css['image-take-up-space']}
+                  layout="raw"
+                  src={HackerBasementTag}
+                  alt="Hacker basement tag"
+                />
+
                 <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
                 <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
                 <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
@@ -283,7 +288,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
               </div>
             </div>
 
-            <div className="clear-top clear-bottom expand">
+            <div className="clear-top clear-bottom expand" style={{ display: 'flex', justifyContent: 'center' }}>
               <SwipeToScroll scrollIndicatorDirections={{ left: true, right: true }} alwaysShowscrollIndicators>
                 <div className={css['gallery']}>
                   <Image src={HackerBasement2} alt="Hacker basement illustration" layout="raw" />
