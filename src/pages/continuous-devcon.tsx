@@ -7,10 +7,6 @@ import { getGlobalData } from 'services/global'
 import { GetPage, GetContentSections } from 'services/page'
 import HorizontalLooper from 'components/common/horizontal-looper'
 import { Carousel } from 'components/common/carousel'
-import Bogota1 from 'assets/images/carousel/bogota/Bogota0.jpg'
-import Bogota2 from 'assets/images/carousel/bogota/Bogota2.jpg'
-import Bogota3 from 'assets/images/carousel/bogota/Bogota8.jpg'
-import Bogota4 from 'assets/images/carousel/bogota/Bogota5.jpg'
 import Hub2 from 'assets/images/continuous-devcon/hub_02.jpg'
 import Hub3 from 'assets/images/continuous-devcon/hub_03.jpg'
 import Hub1 from 'assets/images/continuous-devcon/hub_01.jpg'
@@ -159,7 +155,6 @@ export default pageHOC(function ContinuousDevcon(props: any) {
           <SwipeToScroll>
             <div className={css['carousel-wrapper']}>
               <Carousel
-                // title="Continuous Devcon"
                 noAnimation
                 images={[
                   {
@@ -267,20 +262,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                 <div
                   className={`markdown ${css['text-body']}`}
                   dangerouslySetInnerHTML={{ __html: props.sections['hacker-basement'].body }}
-                >
-                  {/* <p>
-                    Looking for a place where you can test all the new tech and build? This time, we got you covered!
-                  </p>
-                  <p>The hacker basement will be your high-focus zone away from the busy conference ado.</p>
-                  <p>
-                    It sets the right conditions for an individual to test new stuff on their laptop, to learn, or to
-                    hack on new ideas in a group.
-                  </p>
-                  <p>
-                    Everything a hacker needs will be taken care of: cozy seating, electricity and internet and, of
-                    course, cyberpunk lighting and low-fi beats to get you in the right mood to build!
-                  </p> */}
-                </div>
+                ></div>
                 <div className={css['links']}>
                   <Link
                     to="https://forum.devcon.org/t/rfp-5-community-hubs/454"
@@ -298,7 +280,6 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                 <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
                 <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
                 <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
-                {/* <Image src={HackerBasementTag} alt="Hacker basement tag" /> */}
               </div>
             </div>
 
@@ -318,10 +299,6 @@ export default pageHOC(function ContinuousDevcon(props: any) {
             </div>
           </div>
         </section>
-
-        {/* <div className="margin-top">
-          <Tags items={pageContext?.current?.tags} viewOnly />
-        </div> */}
       </div>
     </Page>
   )
