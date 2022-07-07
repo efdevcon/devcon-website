@@ -1,5 +1,5 @@
 ---
-title: '¿Quién puede ser orador en Devcon?'
+title: ¿Quién puede ser orador en Devcon?
 category: programming
 order: 2
 ---
