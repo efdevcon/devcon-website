@@ -102,7 +102,7 @@ const getNotionDatabase = async () => {
           direction: 'ascending',
         },
         {
-          property: 'Priority (sort)',
+          property: 'Priority (0=high,10=low)',
           direction: 'descending',
         },
       ],
@@ -125,6 +125,8 @@ const getNotionDatabase = async () => {
     })
 
     data = response.results.map(formatResult)
+
+    console.log(data, 'data hello')
   } catch (error) {
     if (false) {
       // Handle error codes here if necessary
