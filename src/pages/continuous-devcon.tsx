@@ -56,8 +56,8 @@ export default pageHOC(function ContinuousDevcon(props: any) {
             to: '#hubs',
           },
           {
-            title: intl('cd_get_involved'),
-            to: '#involve',
+            title: props.sections['hacker-basement'].title,
+            to: '#hacker-basement',
           },
         ]}
       />
@@ -69,7 +69,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
 
             <div className={css['links']}>
-              <Link to="#involve" className="text-uppercase hover-underline font-lg bold">
+              <Link to="#hacker-basement" className="text-uppercase hover-underline font-lg bold">
                 {props.sections['hacker-basement'].title}
                 <ArrowRight />
               </Link>
@@ -101,7 +101,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   Icon: IconLayers,
                   title: props.sections['hacker-basement'].title,
                   right: (
-                    <Link indicateExternal className="theme-color" to="#involve">
+                    <Link indicateExternal className="theme-color" to="#hacker-basement">
                       {intl('cd_learn_more')}
                     </Link>
                   ),
@@ -244,11 +244,11 @@ export default pageHOC(function ContinuousDevcon(props: any) {
           </div>
         </section>
 
-        <section className={`${css['hacker-basement']} expand`} id="involve">
+        <section className={`${css['hacker-basement']} expand`}>
           <div className={css['background']}>
             <Image src={HackerBasement} alt="Hacker basement" layout="raw" />
           </div>
-          <div className="section">
+          <div className="section" id="hacker-basement">
             <h2 className="clear-top clear-bottom">{props.sections['hacker-basement'].title}</h2>
 
             <HorizontalLooper slow unpadded>
