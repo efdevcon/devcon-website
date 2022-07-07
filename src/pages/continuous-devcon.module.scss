@@ -147,19 +147,19 @@
     position: relative;
     margin-top: 0px !important;
 
-    > * {
-      position: absolute !important;
-    }
-
+		// Needed 
 		.image-take-up-space {
 			position: relative !important;
 			opacity: 0;
 		}
 
     .glitch-image {
-      opacity: 0.35;
+			position: absolute !important;
+      opacity: 0.4;
 			max-width: 98%;
 			object-fit: contain;
+			background-position: center;
+			background-size: cover;
 
 			@media (max-width: $breakpoints-lg) {
 				opacity: 0.5s; // Add more contrast with background on mobile
@@ -175,7 +175,6 @@
 
       mix-blend-mode: overlay;
       z-index: 0;
-      // background-blend-mode: darken;
     }
   }
 
@@ -193,17 +192,6 @@
   }
 }
 
-.glitch-image {
-  position: absolute;
-  // top: 0;
-  // bottom: 0;
-  // left: 0; 
-  // right: 0;
-  // z-index: 0;
-  // background: url(https://images.unsplash.com/photo-1511800930673-ff8020f680c6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fe2d17bd72e3f44603b0bc5f153a9c6a&auto=format&fit=crop&w=1650&q=80);
-  background-position: center;
-  background-size: cover;
-}
 
 
 // Glitch animation
