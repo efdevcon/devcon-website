@@ -1,5 +1,5 @@
 ---
-title: '¿Cómo puedo contribuir?'
+title: ¿Cómo puedo contribuir?
 category: general
 order: 2
 ---
