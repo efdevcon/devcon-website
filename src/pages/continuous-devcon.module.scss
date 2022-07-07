@@ -32,6 +32,15 @@
   }
 }
 
+.carousel-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+
+	> * {
+		overflow: visible !important;
+	}
+}
+
 .infinite-text {
   font-size: 48px;
   line-height: 120%;
