@@ -77,7 +77,7 @@ export default pageHOC(function Applications(props: any) {
                   {
                     Icon: CalendarIcon,
                     title: intl('program_deadline_to_apply'),
-                    right: 'July 5th @ 23:59:59 UTC',
+                    right: 'Applications are now closed',
                   },
                   {
                     Icon: SelectionIcon,
