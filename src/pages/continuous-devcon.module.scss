@@ -183,11 +183,9 @@
     flex-direction: row;
     flex-wrap: nowrap;
 
-    img {
-      flex-shrink: 0;
-      width: auto;
-      margin-right: 16px;
-      max-height: 136px;
+    > * {
+			flex-shrink: 0;
+      margin-right: 16px !important;
     }
   }
 }

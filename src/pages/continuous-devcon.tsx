@@ -291,14 +291,14 @@ export default pageHOC(function ContinuousDevcon(props: any) {
             <div className="clear-top clear-bottom expand" style={{ display: 'flex', justifyContent: 'center' }}>
               <SwipeToScroll scrollIndicatorDirections={{ left: true, right: true }} alwaysShowscrollIndicators>
                 <div className={css['gallery']}>
-                  <Image src={HackerBasement2} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement3} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement4} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement5} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement6} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement7} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement8} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement} alt="Hacker basement illustration" layout="raw" />
+                  <Image src={HackerBasement2} alt="Hacker basement illustration" width="241px" height="136px" />
+                  <Image src={HackerBasement3} alt="Hacker basement illustration" width="241px" height="136px" />
+                  <Image src={HackerBasement4} alt="Hacker basement illustration" width="241px" height="136px" />
+                  <Image src={HackerBasement5} alt="Hacker basement illustration" width="241px" height="136px" />
+                  <Image src={HackerBasement6} alt="Hacker basement illustration" width="241px" height="136px" />
+                  <Image src={HackerBasement7} alt="Hacker basement illustration" width="241px" height="136px" />
+                  <Image src={HackerBasement8} alt="Hacker basement illustration" width="241px" height="136px" />
+                  <Image src={HackerBasement} alt="Hacker basement illustration" width="241px" height="136px" />
                 </div>
               </SwipeToScroll>
             </div>
