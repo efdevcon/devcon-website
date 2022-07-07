@@ -293,7 +293,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   <Image src={HackerBasement6} alt="Hacker basement illustration" layout="raw" />
                   <Image src={HackerBasement7} alt="Hacker basement illustration" layout="raw" />
                   <Image src={HackerBasement8} alt="Hacker basement illustration" layout="raw" />
-                  <Image src={HackerBasement} alt="Image gallery" layout="raw" />
+                  <Image src={HackerBasement} alt="Hacker basement illustration" layout="raw" />
                 </div>
               </SwipeToScroll>
             </div>
