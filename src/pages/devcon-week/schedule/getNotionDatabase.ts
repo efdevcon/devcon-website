@@ -87,7 +87,8 @@ const getNotionDatabase = async () => {
     auth: process.env.NOTION_SECRET,
   })
 
-  const databaseID = '8b177855e75b4964bb9f3622437f04f5'
+  const databaseID = '8b177855e75b4964bb9f3622437f04f5' // Devconnect
+  // const databaseID = '517164deb17b42c8a00a62e775ce24af' // Devcon week
 
   let data = {}
 

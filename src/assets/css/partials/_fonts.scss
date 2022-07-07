@@ -7,24 +7,24 @@
 $primary: 'Roboto', serif;
 $secondary: 'Space Mono', monospace;
 
-// Add more sizes as needed. Make sure to reference any newly added mixins from typography.scss so we have one source of truth for text sizes.
+// Relative to root (rem) sizes
 @mixin xxs {
-  font-size: sizes.$size-fixed-5; // Using fixed size to prevent text getting too small
+  font-size: max(sizes.$size-5, 9px); // Prevent scaling too far down
   line-height: 150%;
 }
 
 @mixin xs {
-  font-size: sizes.$size-fixed-6; // Using fixed size to prevent text getting too small
+  font-size: max(sizes.$size-6, 10px); // Prevent scaling too far down
   line-height: 150%;
 }
 
 @mixin sm {
-  font-size: sizes.$size-7;
+  font-size: max(sizes.$size-7, 11px); // Prevent scaling too far down
   line-height: 150%;
 }
 
 @mixin md {
-  font-size: sizes.$size-8;
+  font-size: max(sizes.$size-8, 14px);
   line-height: 150%;
 }
 
@@ -40,6 +40,43 @@ $secondary: 'Space Mono', monospace;
 
 @mixin xxl {
   font-size: sizes.$size-16;
+  line-height: 125%;
+}
+
+// Relative (em) sizes
+@mixin xxs-em {
+  font-size: max(sizes.$size-5-em, 9px); // Prevent scaling too far down
+  line-height: 150%;
+}
+
+@mixin xs-em {
+  font-size: max(sizes.$size-6-em, 10px); // Prevent scaling too far down
+  line-height: 150%;
+}
+
+@mixin sm-em {
+  font-size: max(sizes.$size-7-em, 11px); // Prevent scaling too far down
+  line-height: 150%;
+}
+
+@mixin md-em {
+  font-size: max(sizes.$size-8-em, 14px);
+  line-height: 150%;
+}
+
+@mixin lg-em {
+  font-size: sizes.$size-9-em;
+  color: purple !important;
+  line-height: 125%;
+}
+
+@mixin xl-em {
+  font-size: sizes.$size-12-em;
+  line-height: 125%;
+}
+
+@mixin xxl-em {
+  font-size: sizes.$size-16-em;
   line-height: 125%;
 }
 
@@ -180,3 +217,4 @@ $secondary: 'Space Mono', monospace;
 @mixin uppercase {
   text-transform: uppercase;
 }
+

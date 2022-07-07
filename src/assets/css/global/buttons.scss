@@ -15,7 +15,6 @@ button {
 
   &:not(.plain) {
     @include fonts-md;
-    // @include colors-white;
     font-family: $fonts-primary;
     --padding-top-bottom: #{$gaps-gap-2};
     --padding-left-right: #{$gaps-gap-4};

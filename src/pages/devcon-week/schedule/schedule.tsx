@@ -285,7 +285,7 @@ const Timeline = (props: any) => {
     return (
       <React.Fragment key={event.Name + offsetFromFirstDay}>
         <div
-          className={`${css['event']} ${css[event['Stable ID']]} ${css[event['Difficulty']]}`}
+          className={`${css['event']} ${css[event['Stable ID']]} ${css[event['Difficulty']]} expand-right`}
           style={gridPlacement}
           {...draggableAttributes}
           onClick={e => {
@@ -304,7 +304,7 @@ const Timeline = (props: any) => {
             )}
             <div className={css['content-inner']}>
               <div className={css['top']}>
-                <p className={`large-text-em bold ${css['title']} ${totalDays === 1 ? css['single-day'] : ''}`}>
+                <p className={`font-lg-em bold ${css['title']} ${totalDays === 1 ? css['single-day'] : ''}`}>
                   {event.Name}
                 </p>
 
@@ -328,7 +328,7 @@ const Timeline = (props: any) => {
                             {useDayIndicator && (
                               <>
                                 <br />
-                                <span className={`${css['which-day']} small-text-em`}>Day {index + 1}</span>
+                                <span className={`${css['which-day']} font-sm-em`}>Day {index + 1}</span>
                               </>
                             )}
                           </p>
@@ -369,7 +369,7 @@ const Timeline = (props: any) => {
       <div className={`${css['timeline-background']} clear-vertical`}>
         <ScheduleBackground />
       </div>
-      <SwipeToScroll /*focusRef={todayRef}*/ noBounds stopped={eventModalOpen !== ''}>
+      <SwipeToScroll /*focusRef={todayRef}*/ noBounds /*scrollIndicatorDirections={{ right: true }}*/>
         <div className={css['timeline']}>
           {events}
 
@@ -404,21 +404,19 @@ const EventMeta = (props: any) => {
   return (
     <div className={css['meta']}>
       {props.event['General Size'] && props.event['General Size'].length > 0 && (
-        <div className={`small-text-em`} style={{ display: 'flex', alignItems: 'center' }}>
-          <PeopleIcon className={`large-text-em icon`} />
+        <div className={`font-sm-em`} style={{ display: 'flex', alignItems: 'center' }}>
+          <PeopleIcon className={`font-lg-em icon`} />
           &nbsp;{props.event['General Size']}
         </div>
       )}
-      {props.event['Difficulty'] && (
-        <div className={`small-text-em ${css['difficulty']}`}>{props.event.Difficulty}</div>
-      )}
+      {props.event['Difficulty'] && <div className={`font-sm-em ${css['difficulty']}`}>{props.event.Difficulty}</div>}
 
       <div className={css['categories']}>
         {props.event.Category &&
           props.event.Category.length > 0 &&
           props.event.Category.map((category: any) => {
             return (
-              <div key={category} className={`tag tiny-text-em`}>
+              <div key={category} className={`tag font-xs-em`}>
                 {category}
               </div>
             )
@@ -537,7 +535,7 @@ const EventLinks = (props: any) => {
   }
 
   return (
-    <div className={`${css['event-links']} small-text uppercase`}>
+    <div className={`${css['event-links']} font-sm text-uppercase`}>
       {event.URL && event.URL.length > 0 ? (
         <Link to={event.URL} indicateExternal>
           Visit website
@@ -571,13 +569,13 @@ const EventLinks = (props: any) => {
               close={() => setCalendarModalOpen(false)}
             >
               <div className={css['add-to-calendar-modal-content']}>
-                <p className="bold uppercase">Add event to your calendar:</p>
+                <p className="bold text-uppercase">Add event to your calendar:</p>
 
-                <a {...icsAttributes} className="button sm small-text">
+                <a {...icsAttributes} className="button sm font-sm">
                   Download (.ICS)
                 </a>
 
-                <Link indicateExternal to={googleCalUrl.href} className="button sm small-text">
+                <Link indicateExternal to={googleCalUrl.href} className="button sm font-sm">
                   Google Calendar
                 </Link>
               </div>
@@ -594,7 +592,7 @@ const LearnMore = (props: { open: boolean; close: () => void; event: any }) => {
 
   return (
     <>
-      <div className={`${className} tiny-text-em bold`} style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className={`${className} font-xs-em bold`} style={{ display: 'flex', justifyContent: 'space-between' }}>
         <p>Learn More →</p>
         {props.event['Attend'] && <p className={css['attend-details']}>{props.event['Attend']}</p>}
       </div>
@@ -610,7 +608,7 @@ const LearnMore = (props: { open: boolean; close: () => void; event: any }) => {
 
 const ListTableHeader = () => {
   return (
-    <div className={`uppercase ${css['list-table-header']} ${css['list-grid']}`}>
+    <div className={`text-uppercase ${css['list-table-header']} ${css['list-grid']}`}>
       <div className={css['col-1']}>Date & Time</div>
       <div className={css['col-2']}>Event</div>
       <div className={css['col-3']}>Organizers</div>
@@ -643,8 +641,8 @@ const ListDayHeader = React.forwardRef((props: any, ref: any) => {
     <div>
       <div className={className} onClick={() => setOpen(!open)}>
         <div className={css['date']}>
-          <p className="section-header thin large-text">{dayIsActive ? 'TODAY' : day}</p>
-          <p className="section-header thin small-text">{date}</p>
+          <p className="section-header thin font-lg">{dayIsActive ? 'TODAY' : day}</p>
+          <p className="section-header thin font-sm">{date}</p>
         </div>
 
         <div className={css['toggle-open']}>{open ? <ChevronUp /> : <ChevronDown />}</div>
@@ -664,24 +662,24 @@ const ListEventDesktop = (props: any) => {
       <div className={`${css['list-grid']} ${css['content']} `}>
         <div className={`${css['date']} ${css['col-1']}`}>
           <div>
-            <p className="big-text uppercase">
+            <p className="big-text text-uppercase">
               {formattedDate} — <br /> <span className="big-text">{timeOfDay}</span>
               {props.event['Stable ID'] === 'Cowork' && (
                 <>
                   <br />
-                  <span className="small-text bold">Social hours 18:00 - 20:00 🎉</span>
+                  <span className="font-sm bold">Social hours 18:00 - 20:00 🎉</span>
                 </>
               )}
             </p>
             {isMultiDayEvent && (
-              <p className={`${css['end-date']} tiny-text uppercase`}>
+              <p className={`${css['end-date']} font-xs text-uppercase`}>
                 {formattedStartDate} — {formattedEndDate}
               </p>
             )}
           </div>
 
           {isMultiDayEvent && (
-            <div className={`tag purple tiny-text-em ${css['multi-day-indicator']}`}>Multi-day Event</div>
+            <div className={`tag purple font-xs-em ${css['multi-day-indicator']}`}>Multi-day Event</div>
           )}
           {props.event['Stable ID'] === 'Cowork' && (
             <div className={css['cowork-image']}>
@@ -693,18 +691,18 @@ const ListEventDesktop = (props: any) => {
         <div className={`${css['description']} ${css['col-2']}`}>
           <div>
             {props.event.URL ? (
-              <Link to={props.event.URL} indicateExternal className={`${css['title']} big-text bold uppercase`}>
+              <Link to={props.event.URL} indicateExternal className={`${css['title']} big-text bold text-uppercase`}>
                 {props.event.Name}
               </Link>
             ) : (
-              <p className={`${css['title']} big-text bold uppercase`}>{props.event.Name}</p>
+              <p className={`${css['title']} big-text bold text-uppercase`}>{props.event.Name}</p>
             )}
 
             {props.event.Location && props.event.Location.url && (
               <Link
                 to={props.event.Location.url}
                 indicateExternal
-                className={`${css['location']} big-text-bold uppercase`}
+                className={`${css['location']} big-text-bold text-uppercase`}
               >
                 {props.event.Location.text}
               </Link>
@@ -712,7 +710,7 @@ const ListEventDesktop = (props: any) => {
 
             {props.event['Brief Description'] && (
               <p
-                className={`${css['body']} small-text`}
+                className={`${css['body']} font-sm`}
                 dangerouslySetInnerHTML={{ __html: htmlDecode(htmlEscape(props.event['Brief Description'])) }}
               />
             )}
@@ -722,7 +720,7 @@ const ListEventDesktop = (props: any) => {
 
         <div className={`${css['organizers']} ${css['col-3']}`}>
           {props.event['Organizer'] && (
-            <p className={`uppercase ${css['organizers']}`}>{props.event['Organizer'].join(', ')}</p>
+            <p className={`text-uppercase ${css['organizers']}`}>{props.event['Organizer'].join(', ')}</p>
           )}
         </div>
 
@@ -732,12 +730,12 @@ const ListEventDesktop = (props: any) => {
               <Link
                 to={props.event.URL}
                 indicateExternal
-                className={`${css['ticket-availability']} purple small-text uppercase`}
+                className={`${css['ticket-availability']} purple font-sm text-uppercase`}
               >
                 {props.event['Attend']}
               </Link>
             ) : (
-              <p className={`${css['ticket-availability']} purple small-text uppercase`}>{props.event['Attend']}</p>
+              <p className={`${css['ticket-availability']} purple font-sm text-uppercase`}>{props.event['Attend']}</p>
             ))}
         </div>
       </div>
@@ -753,40 +751,44 @@ const ListEventMobile = (props: any) => {
     <div className={`${css['event']} ${css[props.event['Stable ID']]} ${css[props.event['Difficulty']]} `}>
       <div className={css['content']}>
         {props.event.URL ? (
-          <Link to={props.event.URL} indicateExternal className={`${css['title']} large-text uppercase bold`}>
+          <Link to={props.event.URL} indicateExternal className={`${css['title']} font-lg text-uppercase bold`}>
             {props.event.Name}
           </Link>
         ) : (
-          <p className={`${css['title']} large-text uppercase bold`}>{props.event.Name}</p>
+          <p className={`${css['title']} font-lg text-uppercase bold`}>{props.event.Name}</p>
         )}
 
         {props.event.Location && props.event.Location.url && (
-          <Link to={props.event.Location.url} indicateExternal className={`${css['location']} big-text-bold uppercase`}>
+          <Link
+            to={props.event.Location.url}
+            indicateExternal
+            className={`${css['location']} big-text-bold text-uppercase`}
+          >
             {props.event.Location.text}
           </Link>
         )}
 
         <div className={css['date']}>
-          <p className={`small-text uppercase ${css['time-of-day']}`}>
-            {formattedDate} — <br /> <span className="large-text">{timeOfDay}</span>
+          <p className={`font-sm text-uppercase ${css['time-of-day']}`}>
+            {formattedDate} — <br /> <span className="font-lg">{timeOfDay}</span>
             {props.event['Stable ID'] === 'Cowork' && (
               <>
                 <br />
-                <span className="small-text bold">Social hours 18:00 - 20:00 🎉</span>
+                <span className="font-sm bold">Social hours 18:00 - 20:00 🎉</span>
               </>
             )}
           </p>
           {isMultiDayEvent && (
-            <p className={`${css['end-date']} small-text uppercase`}>
+            <p className={`${css['end-date']} font-sm text-uppercase`}>
               {formattedStartDate} — {formattedEndDate}
             </p>
           )}
         </div>
-        {isMultiDayEvent && <div className={`tag purple tiny-text ${css['multi-day-indicator']}`}>Multi-day Event</div>}
+        {isMultiDayEvent && <div className={`tag purple font-xs ${css['multi-day-indicator']}`}>Multi-day Event</div>}
         {props.event['Stable ID'] === 'Cowork' && <DevconnectAmsterdam style={{ width: '50px', display: 'block' }} />}
         {props.event['Brief Description'] && (
           <p
-            className={`${css['description']} small-text`}
+            className={`${css['description']} font-sm`}
             dangerouslySetInnerHTML={{ __html: htmlDecode(htmlEscape(props.event['Brief Description'])) }}
           />
         )}
@@ -796,19 +798,19 @@ const ListEventMobile = (props: any) => {
         )}
 
         {props.event['Organizer'] && (
-          <p className={`uppercase ${css['organizers']}`}>{props.event['Organizer'].join(', ')}</p>
+          <p className={`text-uppercase ${css['organizers']}`}>{props.event['Organizer'].join(', ')}</p>
         )}
         {props.event['Attend'] &&
           (props.event['URL'] ? (
             <Link
               to={props.event.URL}
               indicateExternal
-              className={`${css['ticket-availability']} bold border-top border-bottom purple small-text uppercase`}
+              className={`${css['ticket-availability']} bold border-top border-bottom purple font-sm text-uppercase`}
             >
               {props.event['Attend']}
             </Link>
           ) : (
-            <p className={`${css['ticket-availability']} bold border-top border-bottom purple small-text uppercase`}>
+            <p className={`${css['ticket-availability']} bold border-top border-bottom purple font-sm text-uppercase`}>
               {props.event['Attend']}
             </p>
           ))}
@@ -926,7 +928,7 @@ const useFilter = (events: any) => {
 
 const Filter = (props: any) => {
   return (
-    <div className={`${css['filter']} small-text`}>
+    <div className={`${css['filter']} font-sm`}>
       <p className={`${css['filter-text']} bold`}>Filter:</p>
       {props.keysToFilterOn.map((key: string) => {
         const valuesToFilterBy = props.filterableValues[key]
@@ -964,17 +966,17 @@ const Expand = (props: any) => {
   return (
     <div className={css['expand-container']}>
       <button
-        className={`${css['expand-list']} small-text`}
+        className={`${css['expand-list']} font-sm`}
         onClick={() => Object.values(props.accordionRefs.current).forEach((acc: any) => acc && acc.open && acc.open())}
       >
         <span>
           <ChevronUp />
           <ChevronDown />
         </span>
-        <p className="small-text bold">Expand</p>
+        <p className="font-sm bold">Expand</p>
       </button>
       <button
-        className={`${css['expand-list']} small-text`}
+        className={`${css['expand-list']} font-sm`}
         onClick={() =>
           Object.values(props.accordionRefs.current).forEach((acc: any) => acc && acc.close && acc.close())
         }
@@ -983,7 +985,7 @@ const Expand = (props: any) => {
           <ChevronDown />
           <ChevronUp />
         </span>
-        <p className="small-text bold">Collapse</p>
+        <p className="font-sm bold">Collapse</p>
       </button>
     </div>
   )
@@ -1026,44 +1028,46 @@ const Schedule = scheduleViewHOC((props: any) => {
   return (
     <div className={`${css['schedule']}`}>
       <div className="fade-in-up clear-vertical">
-        <div className={`${css['header-row']}`}>
-          <h2>Schedule</h2>
-          {/* <div className={`${css['view']} small-text`}>
+        <div className="section">
+          <div className={`${css['header-row']}`}>
+            <h2>Schedule</h2>
+            {/* <div className={`${css['view']} font-sm`}>
             <div className={css['options']}>
               <button
                 className={`${scheduleView === 'list' && css['selected']} ${css['switch']}`}
                 onClick={() => setScheduleView('list')}
               >
                 <ListIcon style={{ fontSize: '1.1em' }} />
-                <p className={`${css['text']} small-text`}>List</p>
+                <p className={`${css['text']} font-sm`}>List</p>
               </button>
               <button
                 className={`${scheduleView === 'timeline' && css['selected']} ${css['switch']}`}
                 onClick={() => setScheduleView('timeline')}
               >
                 <CalendarIcon />
-                <p className={`${css['text']} small-text`}>Timeline</p>
+                <p className={`${css['text']} font-sm`}>Timeline</p>
               </button>
             </div>
           </div> */}
-        </div>
+          </div>
 
-        <Message title="Ticket Information">
+          {/* <Message title="Ticket Information">
           <b>
             EACH event in devconnect is independently hosted and you will require tickets for each event you wish to
             attend.
           </b>
           &nbsp;For information on acquiring tickets to the independently-hosted events during the week of Devconnect
           please visit their respective websites.
-        </Message>
+        </Message> */}
 
-        <div className={`${css['top-bar']}`}>
-          <Filter events={events} {...filterAttributes} />
-          <Expand accordionRefs={accordionRefs} scheduleView={scheduleView} />
+          <div className={`${css['top-bar']}`}>
+            <Filter events={events} {...filterAttributes} />
+            <Expand accordionRefs={accordionRefs} scheduleView={scheduleView} />
 
-          {scheduleView === 'timeline' && (
-            <p className={`small-text uppercase ${css['swipe']}`}>Hold and drag schedule for more →</p>
-          )}
+            {scheduleView === 'timeline' && (
+              <p className={`font-sm text-uppercase ${css['swipe']}`}>Hold and drag schedule for more →</p>
+            )}
+          </div>
         </div>
 
         {events.length === 0 ? (
@@ -1071,17 +1075,17 @@ const Schedule = scheduleViewHOC((props: any) => {
             <p>No matches for this filter</p>
           </div>
         ) : (
-          <>
+          <div className="section">
             {/* <div className={`${css['top-bar']}`}>
-                <p className={`${css['timezone']} small-text`}>
+                <p className={`${css['timezone']} font-sm`}>
                   {momentTZ.tz('Europe/Amsterdam').format('HH:mm')} (UTC/GMT +1)
                 </p>
-                {scheduleView === 'calendar' && <p className={`small-text ${css['swipe']}`}>Drag for more →</p>}
+                {scheduleView === 'calendar' && <p className={`font-sm ${css['swipe']}`}>Drag for more →</p>}
               </div> */}
 
             {scheduleView === 'list' && <List {...scheduleHelpers} accordionRefs={accordionRefs} />}
             {scheduleView === 'timeline' && <Timeline {...scheduleHelpers} />}
-          </>
+          </div>
         )}
       </div>
     </div>
