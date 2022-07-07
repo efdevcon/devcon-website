@@ -75,5 +75,6 @@ export async function getStaticProps(context: any) {
       dips,
       contributors
     },
+    revalidate: 3600,
   }
 }

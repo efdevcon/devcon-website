@@ -58,5 +58,6 @@ export async function getStaticProps(context: any) {
       },
       dip,
     },
+    revalidate: 3600,
   }
 }
