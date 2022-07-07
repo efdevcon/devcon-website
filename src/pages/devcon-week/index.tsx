@@ -13,6 +13,7 @@ import { useTranslations } from 'next-intl'
 import { Snapshot } from 'components/common/snapshot'
 import { Link } from 'components/common/link'
 import ArrowRight from 'assets/icons/arrow_right.svg'
+import { Button } from 'components/common/button'
 
 export default pageHOC(function ContinuousDevcon(props: any) {
   const pageContext = usePageContext()
@@ -92,6 +93,38 @@ export default pageHOC(function ContinuousDevcon(props: any) {
       </div>
 
       <Schedule events={props.scheduleData} />
+
+      <div className="section margin-top border-top padding-top margin-bottom">
+        <h2 className="margin-bottom">Post-Devcon Events</h2>
+        <div className="two-columns">
+          <div className="left">
+            <h3 className="clear-bottom">ETHMedellin 🇨🇴 — October 18-22</h3>
+
+            <p className="clear-bottom">
+              A short flight or bus-ride away lies Medellin, Bogotá&apos;s warmer and more touristic neighbor. A great
+              excuse to extend your trip or travel with some newfound friends to unite with the Ethereum Medellin
+              community for a week of open co-working, evening events, NFT activations, and conferences.
+            </p>
+
+            <Link to="https://google.com">
+              <Button className="red">Learn more</Button>
+            </Link>
+          </div>
+          <div className="right">
+            <h3 className="clear-bottom">ETHPanama 🇵🇦 — October 26-28</h3>
+
+            <p className="clear-bottom">
+              Just one week after ETHMedellin and a cheap one-hour flight, ETHPanama will be taking place in Panama
+              City. Join for some continued learning, exposure to the Panamanian Ethereum community, and there just
+              might be group surf trip afterwards for the more adventurous of the group!
+            </p>
+
+            <Link to="https://google.com">
+              <Button className="red">Learn more</Button>
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* <Tags items={pageContext?.current?.tags} viewOnly /> */}
     </Page>
