@@ -1,7 +1,7 @@
 ---
 title: Where can I meet the Ethereum community in Bogotá?
-category: location
-order: ""
+category: community-1
+order: 3
 ---
 There are two Ethereum and blockchain Meetups:
 
