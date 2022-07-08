@@ -1,4 +1,4 @@
 ---
-category: community-1
-order: 1
+category: location
+order: ""
 ---
