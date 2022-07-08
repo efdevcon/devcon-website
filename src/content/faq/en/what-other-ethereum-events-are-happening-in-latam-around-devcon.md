@@ -1,7 +1,7 @@
 ---
 title: What other Ethereum events are happening in LatAm around Devcon?
-category: community-1
-order: 1
+category: location
+order: ""
 ---
 Many ETH events are taking place between August and November all over LatAm:
 
