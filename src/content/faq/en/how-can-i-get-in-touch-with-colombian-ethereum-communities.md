@@ -1,7 +1,7 @@
 ---
 title: How can I get in touch with Colombian Ethereum communities?
-category: community-1
-order: 4
+category: location
+order: ""
 ---
 There are Meetups outside of Bogotá: 
 
