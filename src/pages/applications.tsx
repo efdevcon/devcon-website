@@ -57,12 +57,6 @@ export default pageHOC(function Applications(props: any) {
                 <h2>{props.page.title}</h2>
                 <div dangerouslySetInnerHTML={{ __html: props.page.body }} />
               </div>
-
-              <div className={css['links']}>
-                <Link to="https://speak.devcon.org/devcon-vi-2022/cfp">
-                  <Button className="purple lg">{intl('program_apply_to_speak')}</Button>
-                </Link>
-              </div>
             </div>
 
             <div className={css['right']}>
@@ -77,7 +71,7 @@ export default pageHOC(function Applications(props: any) {
                   {
                     Icon: CalendarIcon,
                     title: intl('program_deadline_to_apply'),
-                    right: 'July 5th @ 23:59:59 UTC',
+                    right: 'Applications are now closed',
                   },
                   {
                     Icon: SelectionIcon,

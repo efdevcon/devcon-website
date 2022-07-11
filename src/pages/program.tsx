@@ -75,7 +75,7 @@ export default pageHOC(function Schedule(props: any) {
                 BackgroundSvg={SpeakersBackground}
                 link="/applications"
                 linkText="Applications"
-                meta="Applications Close: July 5th @ 23:59:59 UTC."
+                meta="Applications are now closed"
               >
                 <div dangerouslySetInnerHTML={{ __html: props.sections['cta-speaker-applications'].body }} />
               </CallToAction>

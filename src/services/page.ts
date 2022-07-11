@@ -95,10 +95,18 @@ export async function GetCategories(lang: string = 'en'): Promise<Array<Category
       return {
         id: id,
         title: doc.data.title,
+        order: doc.data.order || null,
         questions: faqs.filter(x => x.category?.id === id),
       } as Category
     })
-    .filter(i => !!i) as Array<Category>
+    .filter(i => !!i)
+    .sort((a: any, b: any) => {
+      // Defaulting to 0 for unordered items lets us shift items to the end by providing a negative order value (rather than having to order everything before it)
+      const orderA = isNaN(a.order) ? 0 : a.order
+      const orderB = isNaN(b.order) ? 0 : b.order
+
+      return orderB - orderA
+    }) as Array<Category>
 }
 
 export async function GetFAQ(lang: string = 'en'): Promise<Array<FAQ>> {
