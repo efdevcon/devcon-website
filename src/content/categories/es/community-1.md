@@ -1,4 +1,4 @@
 ---
-title: Community
+title: Comunidad
 order: -1
 ---

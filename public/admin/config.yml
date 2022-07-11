@@ -115,6 +115,17 @@ collections:
     i18n: true
     fields:
       - { name: title, label: Title, widget: string, i18n: true }
+      - {
+          name: order,
+          label: Order,
+          widget: number,
+          i18n: duplicate,
+          required: false,
+          value_type: int,
+          min: -1000,
+          max: 1000,
+          step: 1,
+        }
 
   - name: tags
     label: Tags
