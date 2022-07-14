@@ -73,7 +73,7 @@ export default pageHOC(function RaffleAuction(props: any) {
 
             <Link to="https://raffle.devcon.org/">
               <Button className="blue lg">
-                {isAfterDate('2022-07-14 08:00')
+                {isAfterDate('2022-07-14 14:00')
                   ? intl('tickets_raffle_claim')
                   : intl('tickets_raffle_participate_now')}
               </Button>
