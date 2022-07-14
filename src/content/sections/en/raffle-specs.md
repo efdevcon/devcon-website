@@ -19,10 +19,12 @@ The contract uses a series of random numbers to draw the raffle winners. As ther
 
 …
 
-For transparency reasons, we commit to use a secret number **S** which hash equals to:
+For transparency reasons, we commit to use a secret value **S** which hash equals to:
 **keccak256(S) = 28902c742fcf74d7f6edce7c692e2be7e8c4befb8ec14a86e0422b24f714b01c**
 
-After the raffle is settled, we will reveal the secret number **S** so that anyone can verify that the random numbers were not tampered with. The following Ethereum mainnet blocks will be used as a source of randomness:
+The secret value **S** that we used was: *0x64323832333433643661653738623538303461623966386366356436343434343637343237653564363365353334386430376264373338343561313837623131.*
+
+The following Ethereum mainnet blocks were used as a source of randomness:
 
 *15138000
 15138001
