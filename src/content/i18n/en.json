@@ -179,7 +179,9 @@
     "discount_applications_begins_date": "June 6",
     "discount_applications_ends_date": "June 30",
     "discount_applications_review_process": "Ongoing",
-    "note_id_check": "*Note: ID Required at check-in to prevent resale."
+    "note_id_check": "*Note: ID Required at check-in to prevent resale.",
+    "raffle_claim": "Claim!",
+    "on_sale_now": "On Sale Now!"
   },
   "faq": {
     "title": "Frequently Asked Questions",
