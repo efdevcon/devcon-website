@@ -265,6 +265,7 @@ export default pageHOC(function Tickets(props: any) {
                   </div>
                 ),
                 indent: false,
+                active: true,
                 body: '',
               },
               {
@@ -276,6 +277,7 @@ export default pageHOC(function Tickets(props: any) {
                   </div>
                 ),
                 indent: false,
+                active: true,
                 body: '',
               },
             ]}

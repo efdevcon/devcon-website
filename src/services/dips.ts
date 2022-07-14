@@ -3,11 +3,17 @@ import matter from 'gray-matter'
 import { Contributor, DIP } from 'types/DIP'
 import markdownUtils from 'utils/markdown'
 
+const cache = new Map()
 const owner = 'efdevcon'
 const repo = 'DIPs'
 const path = 'DIPs'
 
 export async function GetContributors(): Promise<Array<Contributor>> {
+    const cacheKey = `dips.GetContributors`
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+    }
+
     const octokit = new Octokit({
         auth: process.env.GITHUB_TOKEN,
     })
@@ -33,12 +39,20 @@ export async function GetContributors(): Promise<Array<Contributor>> {
     }).filter(i => !!i)
 
     const result = (await Promise.all(allContributors)).flat()
-    return [...new Set(result.map(i => i.name))].map(i => {
+    const dips = [...new Set(result.map(i => i.name))].map(i => {
         return result.find(x => x.name === i)
     }).filter(i => i !== undefined) as Array<Contributor>
+
+    cache.set(cacheKey, dips)
+    return dips
 }
 
 export async function GetDIPs(): Promise<Array<DIP>> {
+    const cacheKey = `dips.GetDIPs`
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+    }
+
     const octokit = new Octokit({
         auth: process.env.GITHUB_TOKEN,
     })
@@ -89,5 +103,8 @@ export async function GetDIPs(): Promise<Array<DIP>> {
     })
 
     const all = await Promise.all(dips)
-    return all.filter(i => i !== undefined) as Array<DIP>
+    const result = all.filter(i => i !== undefined) as Array<DIP>
+
+    cache.set(cacheKey, result)
+    return result
 }
