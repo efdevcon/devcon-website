@@ -1,4 +1,5 @@
 import { Octokit } from '@octokit/rest'
+import { OctokitResponse } from '@octokit/types'
 import matter from 'gray-matter'
 import { Contributor, DIP } from 'types/DIP'
 import markdownUtils from 'utils/markdown'
@@ -17,8 +18,8 @@ export async function GetContributors(): Promise<Array<Contributor>> {
     const octokit = new Octokit({
         auth: process.env.GITHUB_TOKEN,
     })
-    const files = await octokit.repos.getContent({ owner, repo, path })
-
+    
+    const files = await getGithubFile(owner, repo, path)
     if (!Array.isArray(files.data)) return []
 
     const allContributors = Array.from(files.data).map(async i => {
@@ -53,11 +54,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
         return cache.get(cacheKey)
     }
 
-    const octokit = new Octokit({
-        auth: process.env.GITHUB_TOKEN,
-    })
-    const files = await octokit.repos.getContent({ owner, repo, path })
-
+    const files = await getGithubFile(owner, repo, path)
     if (!Array.isArray(files.data)) return []
 
     const dipNumbers = Array.from(files.data)
@@ -66,7 +63,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
         .sort((a, b) => a - b)
 
     const dips = Array.from(files.data).map(async i => {
-        const file: any = await octokit.repos.getContent({ owner, repo, path: i.path })
+        const file: any = getGithubFile(owner, repo, i.path)
         if (file.data.type !== 'file') return
 
         const buffer = Buffer.from(file.data.content, 'base64')
@@ -106,5 +103,22 @@ export async function GetDIPs(): Promise<Array<DIP>> {
     const result = all.filter(i => i !== undefined) as Array<DIP>
 
     cache.set(cacheKey, result)
+    return result
+}
+
+async function getGithubFile(owner: string, repo: string, path: string): Promise<OctokitResponse<any>> {
+    const cacheKey = `dips.getGithubFile.${owner}.${repo}.${path}`
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+    }
+
+    const octokit = new Octokit({
+        auth: process.env.GITHUB_TOKEN,
+    })
+    const result: any = await octokit.repos.getContent({ owner, repo, path })
+    if (result) {
+        cache.set(cacheKey, result)
+    }
+
     return result
 }
