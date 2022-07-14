@@ -321,11 +321,15 @@ export default pageHOC(function Tickets(props: any) {
               disabled
               number="01"
               description={<div>{intl('tickets_types_ga')}</div>}
-              tags={[
-                {
-                  text: intl('tickets_coming_soon'),
-                },
-              ]}
+              tags={
+                isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD')) ? [
+                  {
+                    text: intl('tickets_ticket_waves'),
+                    link: '#timeline',
+                  }] : [{
+                    text: intl('tickets_coming_soon'),
+                  }]
+              }
             />
             <Ticket
               title="Builder Discount*"
