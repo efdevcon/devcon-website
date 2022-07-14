@@ -18,6 +18,38 @@ import List from 'components/common/list'
 import ticketingCss from './tickets.module.scss'
 import { isAfterDate } from './tickets'
 import { Link } from 'components/common/link'
+import { Message } from 'components/common/message'
+import moment from 'moment'
+
+const claimingWindowCloses = moment.utc('2022-07-16 14:00')
+
+const getDateDifference = (start: any, end: any) => {
+  const duration = moment.duration(end.diff(start))
+
+  return `${Math.floor(duration.asHours())}:${Math.floor(duration.asMinutes() % 60)}`
+}
+
+const ClaimingCountdown = () => {
+  const [timeNow, setTimeNow] = React.useState(moment.utc())
+
+  React.useEffect(() => {
+    setInterval(() => {
+      setTimeNow(moment.utc())
+    }, 1000)
+  }, [])
+
+  return (
+    <Message title="Ticket Information">
+      <b>
+        You have {getDateDifference(timeNow, claimingWindowCloses)} hours to claim your voucher from{' '}
+        <Link to="https://raffle.devcon.org/" className="hover-underline">
+          raffle.devcon.org
+        </Link>
+        .
+      </b>
+    </Message>
+  )
+}
 
 export default pageHOC(function RaffleAuction(props: any) {
   const intl = useTranslations()
@@ -70,6 +102,10 @@ export default pageHOC(function RaffleAuction(props: any) {
                 },
               ]}
             />
+
+            <div className={css['claim']}>
+              <ClaimingCountdown />
+            </div>
 
             <Link to="https://raffle.devcon.org/">
               <Button className="blue lg">
