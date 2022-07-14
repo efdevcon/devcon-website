@@ -39,7 +39,7 @@ const ClaimingCountdown = () => {
   }, [])
 
   return (
-    <Message title="Ticket Information">
+    <Message title="Claiming Window Open">
       <b>
         You have {getDateDifference(timeNow, claimingWindowCloses)} hours to claim your voucher from{' '}
         <Link to="https://raffle.devcon.org/" className="hover-underline">
