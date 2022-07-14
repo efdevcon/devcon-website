@@ -29,6 +29,14 @@
     height: min(100%, 600px);
     display: flex;
 
+    &.unstyled {
+      height: auto;
+
+      .right {
+        padding: 0px !important;
+      }
+    }
+
     @media (max-width: $breakpoints-lg) {
       flex-direction: column;
     }

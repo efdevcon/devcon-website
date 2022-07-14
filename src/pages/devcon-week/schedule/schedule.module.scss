@@ -6,9 +6,10 @@
 }
 
 .schedule {
+  position: relative;
   background: white;
   color: black;
-  --icon-color: black;
+  --color-icon: black;
 
   .header-row {
     display: flex;
@@ -173,33 +174,45 @@
     }
   }
 
-  &:not(.Beginner, .Intermediate, .Advanced) {
-    background: #f9f8ff;
-    border-color: #8f78fb;
-    --difficulty-color: #8f78fb;
-    --difficulty-color-bg: #e9e6ff;
-  }
+  background: transparent;
+  border-color: #4b4b4b;
+  --difficulty-color: #4b4b4b;
+  --difficulty-color-bg: transparent;
 
-  &.Beginner {
-    background: #f8fcff;
-    border-color: #0085ff;
-    --difficulty-color: #0085ff;
-    --difficulty-color-bg: #e3f3ff;
-  }
+  // &:not(.Beginner, .Intermediate, .Advanced) {
+  //   background: transparent;
+  //   border-color: #4b4b4b;
+  //   --difficulty-color: #4b4b4b;
+  //   --difficulty-color-bg: transparent;
+  // }
 
-  &.Intermediate {
-    background: #fffaf8;
-    border-color: #ff9b00;
-    --difficulty-color: #ff9b00;
-    --difficulty-color-bg: #ffece4;
-  }
+  // &:not(.Beginner, .Intermediate, .Advanced) {
+  //   background: #f9f8ff;
+  //   border-color: #8f78fb;
+  //   --difficulty-color: #8f78fb;
+  //   --difficulty-color-bg: #e9e6ff;
+  // }
 
-  &.Advanced {
-    background: #fff8f8;
-    border-color: #ff2a00;
-    --difficulty-color: #ff2a00;
-    --difficulty-color-bg: #ffebeb;
-  }
+  // &.Beginner {
+  //   background: #f8fcff;
+  //   border-color: #0085ff;
+  //   --difficulty-color: #0085ff;
+  //   --difficulty-color-bg: #e3f3ff;
+  // }
+
+  // &.Intermediate {
+  //   background: #fffaf8;
+  //   border-color: #ff9b00;
+  //   --difficulty-color: #ff9b00;
+  //   --difficulty-color-bg: #ffece4;
+  // }
+
+  // &.Advanced {
+  //   background: #fff8f8;
+  //   border-color: #ff2a00;
+  //   --difficulty-color: #ff2a00;
+  //   --difficulty-color-bg: #ffebeb;
+  // }
 
   .multi-day-indicator {
     align-self: flex-start;
@@ -211,14 +224,14 @@
   .event-links {
     background: var(--difficulty-color);
     color: white;
-    --icon-color: white;
+    --color-icon: white;
     pointer-events: all;
   }
 }
 
 .learn-more-modal-content {
   color: black;
-  --icon-color: black;
+  --color-icon: black;
 
   .event {
     display: flex !important;
@@ -273,7 +286,7 @@
   align-items: center;
   padding: 10px 8px;
   color: var(--difficulty-color);
-  --icon-color: var(--difficulty-color);
+  --color-icon: var(--difficulty-color);
   background: var(--difficulty-color-bg);
   font-weight: bold;
   cursor: pointer;
@@ -281,7 +294,7 @@
   &:hover {
     background: var(--difficulty-color);
     color: white;
-    --icon-color: white;
+    --color-icon: white;
   }
 
   > * {
@@ -366,18 +379,20 @@
 .day,
 .day-header,
 .list-table-header {
-  background: #2b2b2b;
+  // background: #2b2b2b;
   padding: 16px;
-  color: $colors-monochrome-2;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  // color: $colors-monochrome-2;
+  background: #f9f9f9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 
   &.open {
     background: black;
   }
 
   &.active {
-    // background: black;
-    background: #6664d3 !important;
+    background: black;
+    // background: #6664d3 !important;
   }
 
   * {
@@ -404,7 +419,7 @@
     flex-wrap: wrap;
     display: flex;
     // margin-top: 4px;
-    transform: translateX(-4px);
+    // transform: translateX(-4px);
 
     > * {
       margin-top: 4px;
@@ -492,7 +507,7 @@
         font-weight: normal;
         margin-bottom: 8px;
         color: $colors-monochrome-6;
-        --icon-color: #{$colors-monochrome-6};
+        --color-icon: #{$colors-monochrome-6};
       }
 
       .date {
@@ -567,7 +582,7 @@
     // &.Cowork {
     //   .event-links {
     //       color: white;
-    //       --icon-color: white;
+    //       --color-icon: white;
     //       background: var(--difficulty-color) !important;
     //   }
     // }
@@ -619,7 +634,7 @@
 // Timeline view
 .timeline {
   display: grid;
-  grid-gap: 4px;
+  grid-gap: 8px;
   text-transform: uppercase;
 
   // hover:none and pointer:coarse targets mobile/touch devices
@@ -667,7 +682,7 @@
     cursor: pointer;
     --padding: 4px 8px 4px 8px;
     --margin: 8px;
-    margin-right: var(--margin);
+    // margin-right: var(--margin);
     font-size: 10px;
     -webkit-text-size-adjust: none;
 
@@ -702,7 +717,7 @@
           @media (min-width: $breakpoints-lg) {
             margin-bottom: 12px;
           }
-          font-size: 10px;
+
 
           .title {
             // margin-bottom: 8px;

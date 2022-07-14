@@ -4,9 +4,7 @@ import { PageHero } from 'components/common/page-hero'
 import themes from '../themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
 import { getGlobalData } from 'services/global'
-import { GetPage } from 'services/page'
-import { Tags } from 'components/common/tags'
-import { usePageContext } from 'context/page-context'
+import { GetPage, GetContentSections } from 'services/page'
 import Schedule from './schedule/schedule'
 import getNotionDatabase from './schedule/getNotionDatabase'
 import { useTranslations } from 'next-intl'
@@ -14,9 +12,9 @@ import { Snapshot } from 'components/common/snapshot'
 import { Link } from 'components/common/link'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import { Button } from 'components/common/button'
+import css from './devcon-week.module.scss'
 
-export default pageHOC(function ContinuousDevcon(props: any) {
-  const pageContext = usePageContext()
+export default pageHOC(function DevconWeek(props: any) {
   const intl = useTranslations()
 
   return (
@@ -30,21 +28,25 @@ export default pageHOC(function ContinuousDevcon(props: any) {
           },
           {
             title: intl('devcon_week_featured_events'),
-            to: '#things-to-do',
+            to: '#schedule',
           },
           {
-            title: intl('devcon_week_overview'),
-            to: '#why-bogota',
+            title: props.sections['post-devcon-events'].title,
+            to: '#post-devcon',
           },
         ]}
       />
 
       <div className="section">
         <div className="two-columns clear-bottom border-bottom margin-bottom">
-          <div className="left">
-            <h2 className="spaced">{props.page.title}</h2>
+          <div className={`left ${css['space-between']}`}>
+            <div>
+              <h2 className="spaced" id="overview">
+                {props.page.title}
+              </h2>
 
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
+              <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
+            </div>
 
             <div className="links">
               <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
@@ -58,69 +60,71 @@ export default pageHOC(function ContinuousDevcon(props: any) {
             </div>
           </div>
 
-          <div className="right">
+          <div className={`right ${css['space-between']}`}>
             <Snapshot
               items={[
                 {
                   Icon: () => <></>,
                   title: '🇦🇷 eTHLATAM - BUENOS AIRES',
-                  right: 'some date',
+                  right: 'AUG 11-14',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇦🇷 eTHLATAM - BUENOS AIRES',
-                  right: 'some date',
+                  title: '🇲🇽 eTHMexicocity',
+                  right: 'AUG 19-21',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇦🇷 eTHLATAM - BUENOS AIRES',
-                  right: 'some date',
+                  title: '🇵🇪 eTHlima day',
+                  right: 'SEP 3',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇦🇷 eTHLATAM - BUENOS AIRES',
-                  right: 'some date',
+                  title: '🇨🇱 eTHsantiago',
+                  right: 'SEP 8-10',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇦🇷 eTHLATAM - BUENOS AIRES',
-                  right: 'some date',
+                  title: '🇧🇷 EthereumSãoPaulo ',
+                  right: 'SEP 27-29',
                 },
               ]}
             />
+
+            <div className="links">
+              <Link to="#post-devcon" className="text-uppercase hover-underline font-lg bold">
+                {props.sections['post-devcon-events'].title}
+                <ArrowRight />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
       <Schedule events={props.scheduleData} />
 
-      <div className="section margin-top border-top padding-top margin-bottom">
-        <h2 className="margin-bottom">Post-Devcon Events</h2>
+      <div className="section padding-top margin-bottom">
+        <h2 className="margin-bottom border-top clear-top" id="post-devcon">
+          {props.sections['post-devcon-events'].title}
+        </h2>
         <div className="two-columns">
-          <div className="left">
-            <h3 className="clear-bottom">ETHMedellin 🇨🇴 — October 18-22</h3>
-
-            <p className="clear-bottom">
-              A short flight or bus-ride away lies Medellin, Bogotá&apos;s warmer and more touristic neighbor. A great
-              excuse to extend your trip or travel with some newfound friends to unite with the Ethereum Medellin
-              community for a week of open co-working, evening events, NFT activations, and conferences.
-            </p>
-
+          <div className={`left ${css['space-between']}`}>
+            <div
+              className="markdown"
+              dangerouslySetInnerHTML={{ __html: props.sections['post-devcon-events'].data.left }}
+            ></div>
             <Link to="https://google.com">
-              <Button className="red">Learn more</Button>
+              <Button className="red margin-top">{intl('devcon_week_learn_more')}</Button>
             </Link>
           </div>
-          <div className="right">
-            <h3 className="clear-bottom">ETHPanama 🇵🇦 — October 26-28</h3>
-
-            <p className="clear-bottom">
-              Just one week after ETHMedellin and a cheap one-hour flight, ETHPanama will be taking place in Panama
-              City. Join for some continued learning, exposure to the Panamanian Ethereum community, and there just
-              might be group surf trip afterwards for the more adventurous of the group!
-            </p>
+          <div className={`right ${css['space-between']}`}>
+            <div
+              className="markdown"
+              dangerouslySetInnerHTML={{ __html: props.sections['post-devcon-events'].data.right }}
+            ></div>
 
             <Link to="https://google.com">
-              <Button className="red">Learn more</Button>
+              <Button className="red margin-top">{intl('devcon_week_learn_more')}</Button>
             </Link>
           </div>
         </div>
@@ -134,11 +138,13 @@ export default pageHOC(function ContinuousDevcon(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/devcon-week', context.locale)
+  const sections = await GetContentSections(['post-devcon-events'], context.locale)
 
   return {
     props: {
       ...globalData,
-      scheduleData: await getNotionDatabase(),
+      sections,
+      scheduleData: await getNotionDatabase(context.locale || 'en'),
       page,
     },
   }

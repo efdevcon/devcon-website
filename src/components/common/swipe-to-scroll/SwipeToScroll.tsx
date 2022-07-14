@@ -97,8 +97,6 @@ const SwipeToScroll = (props: SwipeToScrollProps) => {
 
       reset()
 
-      console.log('element resized')
-
       if (el.current && el.current.scrollWidth) {
         const maxScroll = el.current.scrollWidth - width
 

@@ -5,6 +5,7 @@
     "description": "Devcon es una introducción intensiva para los nuevos exploradores de Ethereum, una reunión familiar global para aquellos que ya forman parte de nuestro ecosistema y una fuente de energía y creatividad para todos.",
     "footer": "Crafted with passion ❤️ at the Ethereum Foundation"
   },
+  "learn_more": "Aprende más",
   "add-to-calendar": "Añadir al calendario",
   "journey": "Camino a Devcon Bogotá 2022",
   "getintouch": "Ponte en contacto",
@@ -227,6 +228,18 @@
     "community_curation": "Curación comunitaria",
     "infinite_text_1": "DISCUTIR • APRENDER • INTERCAMBIAR • EXPLORAR • COLABORAR •",
     "infinite_text_2": "APRENDER • ENFOCAR • CÓDIGO • PRUEBA • IDEA • HACK •"
+  },
+  "devcon_week": {
+    "title": "Semana Devcon",
+    "overview": "Visión general",
+    "featured_events": "Eventos especiales",
+    "post_devcon_events": "Publicar eventos de Devcon",
+    "learn_more": "Aprende más",
+    "schedule": "Eventos destacados de la Semana Devcon",
+    "visit_website": "Visita la página web",
+    "stream": "Stream",
+    "website_coming_soon": "Sitio web próximamente",
+    "location": "Ubicación"
   }
 }
 

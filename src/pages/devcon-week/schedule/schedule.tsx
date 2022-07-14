@@ -12,12 +12,13 @@ import SwipeToScroll from 'components/common/swipe-to-scroll'
 import { Message } from 'components/common/message'
 import { Link } from 'components/common/link'
 import { Modal } from 'components/common/modal'
-import ScheduleBackground from 'assets/images/schedule-bg.svg'
+// import ScheduleBackground from 'assets/images/schedule-bg.svg'
 import { Dropdown } from 'components/common/dropdown'
 import DevconnectAmsterdam from 'assets/images/amsterdam-logo-with-eth.svg'
 import { useRouter } from 'next/dist/client/router'
 // @ts-ignore
 import Toggle from 'react-toggle'
+import { useTranslations } from 'next-intl'
 
 export const useDraggableLink = () => {
   const dragging = React.useRef(false)
@@ -233,14 +234,11 @@ const Timeline = (props: any) => {
   const placementTracker = createPlacementTracker()
   const [eventModalOpen, setEventModalOpen] = React.useState('')
   const draggableAttributes = useDraggableLink()
-  // Ref of current active day element (to scroll into view on load)
-  // const todayRef = React.useRef<any>()
 
-  // React.useEffect(() => {
-  //   if (todayRef.current) {
-  //     todayRef.current.scrollIntoView({ scrollIntoViewOptions: { inline: 'center' } })
-  //   }
-  // }, [])
+  // Virtualizing/precomputing the entire grid before rendering it could simplify it greatly...
+  // ...but likely not relevant; a new schedule component will be created soon...
+  const truncatedDays = {} as { [key: string]: boolean }
+  let totalTruncatedDays = 0
 
   const events = sortedEvents.map((event: any, index: number) => {
     const {
@@ -252,7 +250,8 @@ const Timeline = (props: any) => {
     } = getFormattedEventData(event)
     const offsetFromFirstDay = startDay.diff(min, 'days') + 1
     const offsetFromFirstEventInSchedule = startDay.diff(moment.utc(sortedEvents[0].Date.startDate), 'days')
-    let subtractDays = 0
+    let subtractDays = totalTruncatedDays
+
     // We don't render empty days, so we have to account for that when placing items into our grid - we subtract the empty days prior to the current event, treating them as if they don't exist in the grid
     Array.from(Array(offsetFromFirstEventInSchedule)).forEach((_, index: number) => {
       const emptyDay = !eventsByDay[index]
@@ -260,7 +259,27 @@ const Timeline = (props: any) => {
       if (emptyDay) subtractDays++
     })
 
+    const truncateNDays = (() => {
+      let index = offsetFromFirstEventInSchedule
+      const currentEvent = event
+      let counter = 1
+
+      while (
+        eventsByDay[counter + index] && // the next day has events
+        eventsByDay[counter + index].length === 1 && // there's only one event the next day
+        currentEvent === eventsByDay[counter + index][0] // next days event is the same as the current event
+      ) {
+        counter++
+      }
+
+      return counter
+    })()
+
     let currentRow = 1 // css property grid-row starts at 1
+
+    const shouldTruncate = truncateNDays > 1
+
+    const eventDurationAfterTruncate = shouldTruncate ? 1 : totalDays
 
     /*
         1) Place at first available Y value in the start date column, filling in horizontally if multiple days
@@ -268,19 +287,19 @@ const Timeline = (props: any) => {
           note: Horizontally there will always be room, by definition, because we are filling in left to right 
         3) Keep track of used grid slots along the way (to allow for step 2)
       */
-    while (!placementTracker.placeItem(currentRow, offsetFromFirstDay - subtractDays, totalDays)) {
+    while (!placementTracker.placeItem(currentRow, offsetFromFirstDay - subtractDays, eventDurationAfterTruncate)) {
       currentRow++
     }
 
     const gridPlacement = {
       gridRow: currentRow + 1, // Add 1 to account for the dates occupying the first row
-      gridColumn: `${offsetFromFirstDay - subtractDays} / span ${totalDays}`,
-      '--eventLength': totalDays,
+      gridColumn: `${offsetFromFirstDay - subtractDays} / span ${eventDurationAfterTruncate}`,
+      '--eventLength': eventDurationAfterTruncate,
     }
 
-    // const isLastIteration = index === sortedEvents.length - 1
-
-    // if (isLastIteration) console.log(currentRow)
+    if (shouldTruncate) {
+      totalTruncatedDays += truncateNDays - 1
+    }
 
     return (
       <React.Fragment key={event.Name + offsetFromFirstDay}>
@@ -297,11 +316,6 @@ const Timeline = (props: any) => {
           }}
         >
           <div className={css['content']}>
-            {event['Stable ID'] === 'Cowork' && (
-              <div className={css['image']}>
-                <DevconnectAmsterdam style={{ width: '50px' }} />
-              </div>
-            )}
             <div className={css['content-inner']}>
               <div className={css['top']}>
                 <p className={`font-lg-em bold ${css['title']} ${totalDays === 1 ? css['single-day'] : ''}`}>
@@ -318,6 +332,8 @@ const Timeline = (props: any) => {
                       if (!time) return null
                       if (shouldRepeatTimeOfDay && isMultiDayEvent && index > 0) return null
 
+                      return null
+
                       return (
                         <div key={index}>
                           <p className="bold">
@@ -332,9 +348,6 @@ const Timeline = (props: any) => {
                               </>
                             )}
                           </p>
-                          {event['Stable ID'] === 'Cowork' && (
-                            <i className="bold">🎉 Social hours 18:00 - 20:00 every day 🎉</i>
-                          )}
                         </div>
                       )
                     })}
@@ -342,55 +355,71 @@ const Timeline = (props: any) => {
                 )}
               </div>
 
-              {event['Stable ID'] !== 'Cowork' && (
-                <div className={css['bottom']}>
-                  <div className={`${css['organizers']} bold`}>
-                    {event['Organizer'] ? event['Organizer'].join(', ') : <p>Organizer</p>}
-                  </div>
-
-                  <EventMeta event={event} />
+              <div className={css['bottom']}>
+                <div className={`${css['organizers']} bold`}>
+                  {event['Organizer'] ? event['Organizer'].join(', ') : <p>Organizer</p>}
                 </div>
-              )}
+
+                <EventMeta event={event} />
+              </div>
             </div>
           </div>
 
           <LearnMore event={event} open={eventModalOpen === event.Name} close={() => setEventModalOpen('')} />
         </div>
-
-        {/* {isLastIteration && (
-          <div style={{ gridRow: `1 / ${currentRow + 1}`, gridColumn: '1 / 3', background: 'yellow' }}></div>
-        )} */}
       </React.Fragment>
     )
   })
 
   return (
     <>
-      <div className={`${css['timeline-background']} clear-vertical`}>
+      {/* <div className={`${css['timeline-background']} clear-vertical`}>
         <ScheduleBackground />
-      </div>
+      </div> */}
       <SwipeToScroll /*focusRef={todayRef}*/ noBounds /*scrollIndicatorDirections={{ right: true }}*/>
         <div className={css['timeline']}>
           {events}
 
           {Array.from(Array(scheduleDuration)).map((_, index: number) => {
+            if (truncatedDays[index]) return null // <div className={css['day']}>Truncated</div>
+
             const day = moment.utc(defaultSortEvents[0].Date.startDate).add(index, 'days')
             const weekday = day.format('ddd')
             const date = day.format('MMM DD')
             const noEventsForDay = !eventsByDay[index]
             const now = momentTZ.tz(moment(), 'Europe/Amsterdam')
             const dayIsActive = day.isSame(now, 'day')
+            const truncateNDays = (() => {
+              const currentEvent = eventsByDay[index] && eventsByDay[index][0]
+              let counter = 1
+
+              while (
+                eventsByDay[counter + index] && // the next day has events
+                eventsByDay[counter + index].length === 1 && // there's only one event the next day
+                currentEvent === eventsByDay[counter + index][0] // next days event is the same as the current event
+              ) {
+                truncatedDays[counter + index] = true
+
+                counter++
+              }
+
+              return counter
+            })()
 
             if (noEventsForDay) return null
+
+            const shouldTruncate = truncateNDays > 1
 
             let className = css['day']
 
             if (dayIsActive) className += ` ${css['active']}`
 
             return (
-              <div className={className} key={index} /*ref={dayIsActive ? todayRef : undefined}*/>
-                <p>{dayIsActive ? 'TODAY' : weekday}</p>
-                <p>{date}</p>
+              <div className={className} key={index}>
+                <p className="bold">{dayIsActive ? 'TODAY' : weekday}</p>
+                <p className="bold">
+                  {date} {shouldTruncate && `- ${day.add(truncateNDays - 1, 'days').format('MMM DD')}`}
+                </p>
               </div>
             )
           })}
@@ -409,14 +438,14 @@ const EventMeta = (props: any) => {
           &nbsp;{props.event['General Size']}
         </div>
       )}
-      {props.event['Difficulty'] && <div className={`font-sm-em ${css['difficulty']}`}>{props.event.Difficulty}</div>}
+      {/* {props.event['Difficulty'] && <div className={`font-sm-em ${css['difficulty']}`}>{props.event.Difficulty}</div>} */}
 
       <div className={css['categories']}>
         {props.event.Category &&
           props.event.Category.length > 0 &&
           props.event.Category.map((category: any) => {
             return (
-              <div key={category} className={`tag font-xs-em`}>
+              <div key={category} className={`label neutral font-xs-em`}>
                 {category}
               </div>
             )
@@ -534,25 +563,25 @@ const EventLinks = (props: any) => {
     download: `${event.Name}.ics`,
   }
 
+  const intl = useTranslations()
+
   return (
     <div className={`${css['event-links']} font-sm text-uppercase`}>
       {event.URL && event.URL.length > 0 ? (
         <Link to={event.URL} indicateExternal>
-          Visit website
+          {intl('devcon_week_visit_website')}
         </Link>
-      ) : (
-        <p>Website coming soon</p>
-      )}
+      ) : null}
 
       {event.Location && event.Location.url && (
         <Link to={event.Location.url} indicateExternal>
-          Location
+          {intl('devcon_week_location')}
         </Link>
       )}
 
       {event['Stream URL'] && (
         <Link to={event['Stream URL']} indicateExternal className="button xs orange-fill">
-          Stream
+          {intl('devcon_week_stream')}
         </Link>
       )}
 
@@ -588,32 +617,22 @@ const EventLinks = (props: any) => {
 }
 
 const LearnMore = (props: { open: boolean; close: () => void; event: any }) => {
+  const intl = useTranslations()
   let className = css['learn-more']
 
   return (
     <>
       <div className={`${className} font-xs-em bold`} style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <p>Learn More →</p>
+        <p>{intl('learn_more')} →</p>
         {props.event['Attend'] && <p className={css['attend-details']}>{props.event['Attend']}</p>}
       </div>
 
-      <Modal open={props.open} close={props.close} className={css['learn-more-modal']}>
+      <Modal open={props.open} close={props.close} className={css['learn-more-modal']} unstyled>
         <div className={css['learn-more-modal-content']}>
           <ListEventMobile {...getFormattedEventData(props.event)} event={props.event} timeline />
         </div>
       </Modal>
     </>
-  )
-}
-
-const ListTableHeader = () => {
-  return (
-    <div className={`text-uppercase ${css['list-table-header']} ${css['list-grid']}`}>
-      <div className={css['col-1']}>Date & Time</div>
-      <div className={css['col-2']}>Event</div>
-      <div className={css['col-3']}>Organizers</div>
-      <div className={css['col-4']}>Attend</div>
-    </div>
   )
 }
 
@@ -654,98 +673,9 @@ const ListDayHeader = React.forwardRef((props: any, ref: any) => {
 
 ListDayHeader.displayName = 'ListDayHeader'
 
-const ListEventDesktop = (props: any) => {
-  const { formattedDate, timeOfDay, isMultiDayEvent, formattedStartDate, formattedEndDate } = props
-
-  return (
-    <div className={`${css['event-in-table']} ${css[props.event['Stable ID']]} ${css[props.event['Difficulty']]}`}>
-      <div className={`${css['list-grid']} ${css['content']} `}>
-        <div className={`${css['date']} ${css['col-1']}`}>
-          <div>
-            <p className="big-text text-uppercase">
-              {formattedDate} — <br /> <span className="big-text">{timeOfDay}</span>
-              {props.event['Stable ID'] === 'Cowork' && (
-                <>
-                  <br />
-                  <span className="font-sm bold">Social hours 18:00 - 20:00 🎉</span>
-                </>
-              )}
-            </p>
-            {isMultiDayEvent && (
-              <p className={`${css['end-date']} font-xs text-uppercase`}>
-                {formattedStartDate} — {formattedEndDate}
-              </p>
-            )}
-          </div>
-
-          {isMultiDayEvent && (
-            <div className={`tag purple font-xs-em ${css['multi-day-indicator']}`}>Multi-day Event</div>
-          )}
-          {props.event['Stable ID'] === 'Cowork' && (
-            <div className={css['cowork-image']}>
-              <DevconnectAmsterdam />
-            </div>
-          )}
-        </div>
-
-        <div className={`${css['description']} ${css['col-2']}`}>
-          <div>
-            {props.event.URL ? (
-              <Link to={props.event.URL} indicateExternal className={`${css['title']} big-text bold text-uppercase`}>
-                {props.event.Name}
-              </Link>
-            ) : (
-              <p className={`${css['title']} big-text bold text-uppercase`}>{props.event.Name}</p>
-            )}
-
-            {props.event.Location && props.event.Location.url && (
-              <Link
-                to={props.event.Location.url}
-                indicateExternal
-                className={`${css['location']} big-text-bold text-uppercase`}
-              >
-                {props.event.Location.text}
-              </Link>
-            )}
-
-            {props.event['Brief Description'] && (
-              <p
-                className={`${css['body']} font-sm`}
-                dangerouslySetInnerHTML={{ __html: htmlDecode(htmlEscape(props.event['Brief Description'])) }}
-              />
-            )}
-          </div>
-          <EventMeta event={props.event} />
-        </div>
-
-        <div className={`${css['organizers']} ${css['col-3']}`}>
-          {props.event['Organizer'] && (
-            <p className={`text-uppercase ${css['organizers']}`}>{props.event['Organizer'].join(', ')}</p>
-          )}
-        </div>
-
-        <div className={`${css['attend']} ${css['col-4']}`}>
-          {props.event['Attend'] &&
-            (props.event['URL'] ? (
-              <Link
-                to={props.event.URL}
-                indicateExternal
-                className={`${css['ticket-availability']} purple font-sm text-uppercase`}
-              >
-                {props.event['Attend']}
-              </Link>
-            ) : (
-              <p className={`${css['ticket-availability']} purple font-sm text-uppercase`}>{props.event['Attend']}</p>
-            ))}
-        </div>
-      </div>
-      <EventLinks {...props} />
-    </div>
-  )
-}
-
 const ListEventMobile = (props: any) => {
   const { formattedDate, timeOfDay, isMultiDayEvent, formattedStartDate, formattedEndDate } = props
+  const intl = useTranslations()
 
   return (
     <div className={`${css['event']} ${css[props.event['Stable ID']]} ${css[props.event['Difficulty']]} `}>
@@ -784,18 +714,20 @@ const ListEventMobile = (props: any) => {
             </p>
           )}
         </div>
-        {isMultiDayEvent && <div className={`tag purple font-xs ${css['multi-day-indicator']}`}>Multi-day Event</div>}
-        {props.event['Stable ID'] === 'Cowork' && <DevconnectAmsterdam style={{ width: '50px', display: 'block' }} />}
-        {props.event['Brief Description'] && (
+        {isMultiDayEvent && (
+          <div className={`label font-xs ${css['multi-day-indicator']}`}>{intl('devcon_week_multi_day_event')}</div>
+        )}
+        {/* {props.event['Stable ID'] === 'Cowork' && <DevconnectAmsterdam style={{ width: '50px', display: 'block' }} />} */}
+        {props.event['Description'] && (
           <p
             className={`${css['description']} font-sm`}
-            dangerouslySetInnerHTML={{ __html: htmlDecode(htmlEscape(props.event['Brief Description'])) }}
+            dangerouslySetInnerHTML={{ __html: htmlDecode(htmlEscape(props.event['Description'])) }}
           />
         )}
 
-        {props.event['Stable ID'] === 'Easter' && props.timeline && (
+        {/* {props.event['Stable ID'] === 'Easter' && props.timeline && (
           <img src="https://c.tenor.com/thDFJno0zuAAAAAd/happy-easter-easter-bunny.gif" alt="Easter egg" width="100%" />
-        )}
+        )} */}
 
         {props.event['Organizer'] && (
           <p className={`text-uppercase ${css['organizers']}`}>{props.event['Organizer'].join(', ')}</p>
@@ -819,44 +751,6 @@ const ListEventMobile = (props: any) => {
         </div>
       </div>
       <EventLinks {...props} />
-    </div>
-  )
-}
-
-const ListEvent = (props: any) => {
-  const formattedEventData = getFormattedEventData(props.event, props.day)
-
-  return (
-    <>
-      {/* List view as table (desktop) */}
-      <ListEventDesktop {...formattedEventData} event={props.event} />
-      {/* List view (mobile) */}
-      <ListEventMobile {...formattedEventData} event={props.event} />
-    </>
-  )
-}
-
-const List = (props: any) => {
-  const { scheduleDuration, eventsByDay, events } = props
-
-  return (
-    <div className={css['list']}>
-      <ListTableHeader />
-      {Array.from(Array(scheduleDuration)).map((_, index: number) => {
-        const day = moment.utc(events[0].Date.startDate).add(index, 'days')
-        const eventsForDay = eventsByDay[index]
-
-        // Some days within the event range may not have any events
-        if (!eventsForDay) return null
-
-        return (
-          <ListDayHeader key={index} date={day} ref={el => (props.accordionRefs.current[day.valueOf()] = el)}>
-            {eventsForDay.map((event: any, index: number) => {
-              return <ListEvent event={event} key={index} day={day} />
-            })}
-          </ListDayHeader>
-        )
-      })}
     </div>
   )
 }
@@ -936,7 +830,7 @@ const Filter = (props: any) => {
         if (!valuesToFilterBy) return null
 
         return (
-          <div key={key}>
+          <div key={key} className="font-xs">
             <Dropdown
               placeholder={key}
               value={props.filters[key]}
@@ -952,41 +846,10 @@ const Filter = (props: any) => {
         )
       })}
 
-      <label className={css['hide-sold-out']}>
+      {/* <label className={css['hide-sold-out']}>
         <Toggle defaultChecked={props.hideSoldOut} onChange={() => props.setHideSoldOut(!props.hideSoldOut)} />
         <span>Hide sold out events</span>
-      </label>
-    </div>
-  )
-}
-
-const Expand = (props: any) => {
-  if (props.scheduleView !== 'list') return null
-
-  return (
-    <div className={css['expand-container']}>
-      <button
-        className={`${css['expand-list']} font-sm`}
-        onClick={() => Object.values(props.accordionRefs.current).forEach((acc: any) => acc && acc.open && acc.open())}
-      >
-        <span>
-          <ChevronUp />
-          <ChevronDown />
-        </span>
-        <p className="font-sm bold">Expand</p>
-      </button>
-      <button
-        className={`${css['expand-list']} font-sm`}
-        onClick={() =>
-          Object.values(props.accordionRefs.current).forEach((acc: any) => acc && acc.close && acc.close())
-        }
-      >
-        <span>
-          <ChevronDown />
-          <ChevronUp />
-        </span>
-        <p className="font-sm bold">Collapse</p>
-      </button>
+      </label> */}
     </div>
   )
 }
@@ -1015,6 +878,7 @@ const scheduleViewHOC = (Component: any) => {
 const Schedule = scheduleViewHOC((props: any) => {
   const { scheduleView, setScheduleView } = props
   const { events, ...filterAttributes } = useFilter(props.events)
+  const intl = useTranslations()
 
   const scheduleHelpers = useScheduleData(events)
   const accordionRefs = React.useRef({} as { [key: string]: any })
@@ -1026,11 +890,11 @@ const Schedule = scheduleViewHOC((props: any) => {
   }, [filterAttributes.filters])
 
   return (
-    <div className={`${css['schedule']}`}>
+    <div className={`${css['schedule']}`} id="schedule">
       <div className="fade-in-up clear-vertical">
         <div className="section">
           <div className={`${css['header-row']}`}>
-            <h2>Schedule</h2>
+            <h2 className="spaced">{intl('devcon_week_schedule')}</h2>
             {/* <div className={`${css['view']} font-sm`}>
             <div className={css['options']}>
               <button
@@ -1060,14 +924,14 @@ const Schedule = scheduleViewHOC((props: any) => {
           please visit their respective websites.
         </Message> */}
 
-          <div className={`${css['top-bar']}`}>
+          {/* <div className={`${css['top-bar']}`}>
             <Filter events={events} {...filterAttributes} />
             <Expand accordionRefs={accordionRefs} scheduleView={scheduleView} />
 
             {scheduleView === 'timeline' && (
               <p className={`font-sm text-uppercase ${css['swipe']}`}>Hold and drag schedule for more →</p>
             )}
-          </div>
+          </div> */}
         </div>
 
         {events.length === 0 ? (
@@ -1083,7 +947,6 @@ const Schedule = scheduleViewHOC((props: any) => {
                 {scheduleView === 'calendar' && <p className={`font-sm ${css['swipe']}`}>Drag for more →</p>}
               </div> */}
 
-            {scheduleView === 'list' && <List {...scheduleHelpers} accordionRefs={accordionRefs} />}
             {scheduleView === 'timeline' && <Timeline {...scheduleHelpers} />}
           </div>
         )}

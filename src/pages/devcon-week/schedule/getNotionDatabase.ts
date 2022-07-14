@@ -58,21 +58,35 @@ const notionDatabasePropertyResolver = (property: any, key: any) => {
   }
 }
 
-const formatResult = (result: any) => {
+const formatResult = (language: 'en' | 'es') => (result: any) => {
   const properties = {} as { [key: string]: any }
 
   // Format the raw notion data into something more workable
-  Object.entries(result.properties).forEach(([key, value]) => {
-    const val = notionDatabasePropertyResolver(value, key)
+  const allKeys = Object.keys(result.properties)
 
-    if (Array.isArray(val)) {
-      properties[key] = val
-    } else if (typeof val === 'object' && val !== null) {
+  allKeys.forEach((key, index) => {
+    if (key.endsWith('_ES')) return
+
+    // If the current locale is spanish and the key has a spanish equivalent key, use that key instead
+    const isSpanish = language === 'es'
+    const spanishKeyCandidate = `${key}_ES`
+    const spanishValue = result.properties[spanishKeyCandidate]
+    let parsedValue
+
+    if (isSpanish && spanishValue !== undefined) {
+      parsedValue = notionDatabasePropertyResolver(spanishValue, spanishKeyCandidate)
+    } else {
+      parsedValue = notionDatabasePropertyResolver(result.properties[key], key)
+    }
+
+    if (Array.isArray(parsedValue)) {
+      properties[key] = parsedValue
+    } else if (typeof parsedValue === 'object' && parsedValue !== null) {
       properties[key] = {
-        ...val,
+        ...parsedValue,
       }
     } else {
-      properties[key] = val
+      properties[key] = parsedValue
     }
   })
 
@@ -82,7 +96,7 @@ const formatResult = (result: any) => {
   return properties
 }
 
-const getNotionDatabase = async () => {
+const getNotionDatabase = async (locale: 'en' | 'es') => {
   const notion = new Client({
     auth: process.env.NOTION_SECRET,
   })
@@ -124,9 +138,7 @@ const getNotionDatabase = async () => {
       },
     })
 
-    data = response.results.map(formatResult)
-
-    console.log(data, 'data hello')
+    data = response.results.map(formatResult(locale))
   } catch (error) {
     if (false) {
       // Handle error codes here if necessary

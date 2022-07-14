@@ -9,6 +9,7 @@ import Image from 'next/image'
 
 type ModalProps = {
   open: boolean
+  unstyled?: boolean
   className?: string
   close: () => void
   children: React.ReactNode
@@ -80,9 +81,13 @@ const ModalContent = (props: ModalProps) => {
     }
   }, [])
 
+  let className = css['container']
+
+  if (props.unstyled) className += ` ${css['unstyled']}`
+
   return (
     <div
-      className={css['container']}
+      className={className}
       data-type="modal-container"
       onClick={e => {
         e.stopPropagation()
@@ -144,14 +149,20 @@ export { ModalSlide }
 export const Modal = (props: ModalProps) => {
   if (!props.open) return null
 
-  let className = css['modal'];
+  let className = css['modal']
 
   if (props.className) {
-    className += ` ${props.className}`;
+    className += ` ${props.className}`
   }
 
   return createPortal(
-    <div className={className} onClick={props.close}>
+    <div
+      className={className}
+      onClick={e => {
+        e.stopPropagation()
+        props.close()
+      }}
+    >
       <ModalContent {...props} />
     </div>,
     document.body
