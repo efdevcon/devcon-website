@@ -37,6 +37,10 @@
     margin-top: 32px;
     // display: none;
 
+    .claim {
+      margin-bottom: 16px;
+    }
+
     @media (min-width: $breakpoints-xl) {
       display: block;
       flex-basis: auto;

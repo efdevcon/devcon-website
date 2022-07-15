@@ -137,6 +137,7 @@
     "faq": "FAQ",
     "tba": "Por confirmar",
     "apply_now": "Aplica ya",
+    "ticket_waves": "Olas de boletos",
     "coming_soon": "Próximamente, en breve, pronto",
     "get_ticket": "Obtener boleto",
     "closed": "Cerrada",
@@ -181,7 +182,9 @@
     "discount_applications_begins_date": "6 de junio",
     "discount_applications_ends_date": "30 de junio",
     "discount_applications_review_process": "Proceso de revisión",
-    "note_id_check": "*Nota: Se requiere identificación al momento del check-in para evitar la reventa."
+    "note_id_check": "*Nota: Se requiere identificación al momento del check-in para evitar la reventa.",
+    "raffle_claim": "¡Reclamar!",
+    "on_sale_now": "¡En venta ahora!"
   },
   "faq": {
     "title": "Preguntas frecuentes",
