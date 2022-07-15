@@ -1,18 +1,25 @@
 import { Octokit } from '@octokit/rest'
+import { OctokitResponse } from '@octokit/types'
 import matter from 'gray-matter'
 import { Contributor, DIP } from 'types/DIP'
 import markdownUtils from 'utils/markdown'
 
+const cache = new Map()
 const owner = 'efdevcon'
 const repo = 'DIPs'
 const path = 'DIPs'
 
 export async function GetContributors(): Promise<Array<Contributor>> {
+    const cacheKey = `dips.GetContributors`
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+    }
+
     const octokit = new Octokit({
         auth: process.env.GITHUB_TOKEN,
     })
-    const files = await octokit.repos.getContent({ owner, repo, path })
-
+    
+    const files = await getGithubFile(owner, repo, path)
     if (!Array.isArray(files.data)) return []
 
     const allContributors = Array.from(files.data).map(async i => {
@@ -33,17 +40,21 @@ export async function GetContributors(): Promise<Array<Contributor>> {
     }).filter(i => !!i)
 
     const result = (await Promise.all(allContributors)).flat()
-    return [...new Set(result.map(i => i.name))].map(i => {
+    const dips = [...new Set(result.map(i => i.name))].map(i => {
         return result.find(x => x.name === i)
     }).filter(i => i !== undefined) as Array<Contributor>
+
+    cache.set(cacheKey, dips)
+    return dips
 }
 
 export async function GetDIPs(): Promise<Array<DIP>> {
-    const octokit = new Octokit({
-        auth: process.env.GITHUB_TOKEN,
-    })
-    const files = await octokit.repos.getContent({ owner, repo, path })
+    const cacheKey = `dips.GetDIPs`
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+    }
 
+    const files = await getGithubFile(owner, repo, path)
     if (!Array.isArray(files.data)) return []
 
     const dipNumbers = Array.from(files.data)
@@ -52,7 +63,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
         .sort((a, b) => a - b)
 
     const dips = Array.from(files.data).map(async i => {
-        const file: any = await octokit.repos.getContent({ owner, repo, path: i.path })
+        const file: any = getGithubFile(owner, repo, i.path)
         if (file.data.type !== 'file') return
 
         const buffer = Buffer.from(file.data.content, 'base64')
@@ -89,5 +100,25 @@ export async function GetDIPs(): Promise<Array<DIP>> {
     })
 
     const all = await Promise.all(dips)
-    return all.filter(i => i !== undefined) as Array<DIP>
+    const result = all.filter(i => i !== undefined) as Array<DIP>
+
+    cache.set(cacheKey, result)
+    return result
+}
+
+async function getGithubFile(owner: string, repo: string, path: string): Promise<OctokitResponse<any>> {
+    const cacheKey = `dips.getGithubFile.${owner}.${repo}.${path}`
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+    }
+
+    const octokit = new Octokit({
+        auth: process.env.GITHUB_TOKEN,
+    })
+    const result: any = await octokit.repos.getContent({ owner, repo, path })
+    if (result) {
+        cache.set(cacheKey, result)
+    }
+
+    return result
 }
