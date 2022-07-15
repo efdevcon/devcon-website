@@ -10,13 +10,15 @@
 
   > * {
     flex-basis: 50%;
+    margin-top: 16px;
 
-    &:last-child {
-      margin-top: 16px;
+    &:first-child {
+      margin-top: 0px;
     }
-
-
+    
     @media (min-width: $breakpoints-lg) {
+      margin-top: 0px;
+      
       &:first-child {
         margin-right: 16px;
       }

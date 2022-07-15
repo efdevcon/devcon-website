@@ -20,9 +20,10 @@ export const CallToAction = (props: CTAProps) => {
         <p className="bold">Discount Tickets —</p>
         <p className="font-sm">Applications open now</p>
       </Link>
-      <Link to="/applications" key="3" allowDrag className={`no-select ${css['item']}`}>
-        <p className="bold">Speaker Applications —</p>
-        <p className="font-sm">Apply to contribute now</p>
+
+      <Link to="https://scholars.paperform.co/" key="3" allowDrag className={`no-select ${css['item']}`}>
+        <p className="bold">Scholar Applications —</p>
+        <p className="font-sm">Apply now</p>
       </Link>
 
       {/* <Link to="https://archive.devcon.org" key="3" className={`no-select ${css['item']}`}>

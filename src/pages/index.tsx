@@ -24,7 +24,11 @@ export default pageHOC(function Index(props: any) {
 
       <About content={props.sections['devcon-bogota']} />
 
-      <CallsToAction speakerApplications={props.sections['cta-speaker-applications']} ticketPresale={props.sections['cta-ticket-presale']} />
+      <CallsToAction
+        scholarApplications={props.sections['cta-scholar-applications']}
+        speakerApplications={props.sections['cta-speaker-applications']}
+        ticketPresale={props.sections['cta-ticket-presale']}
+      />
 
       <News data={props.news} />
 
@@ -49,7 +53,10 @@ export default pageHOC(function Index(props: any) {
 
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
-  const sections = await GetContentSections(['devcon-bogota', 'cta-speaker-applications', 'cta-ticket-presale'], context.locale)
+  const sections = await GetContentSections(
+    ['devcon-bogota', 'cta-speaker-applications', 'cta-ticket-presale', 'cta-scholar-applications'],
+    context.locale
+  )
   const tracks = GetTracks(context.locale)
 
   return {
@@ -59,7 +66,7 @@ export async function getStaticProps(context: any) {
       news: await getNews(context.locale),
       blogs: await GetBlogs(),
       sections,
-      tracks
+      tracks,
     },
     revalidate: 1 * 60 * 30,
   }
