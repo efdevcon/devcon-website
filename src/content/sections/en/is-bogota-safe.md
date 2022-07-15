@@ -23,11 +23,11 @@ right: >-
 
   * Don’t walk around with your phone out or with your laptop when not necessary
 
-  * Leave valuables (passport, excess cash/cards, hardware wallets, etc) in your hotel
+  * Leave valuables (passport, excess cash/cards) in your hotel
 
   * Avoid hailing street taxis. Use Uber or DiDi, where a 20-min ride costs around $3 USD. Tip: maybe pay the extra dollar for a nicer “Uber Comfort” *(recommended when coming from the Airport)*
 
-  * Maybe don’t walk home alone at night (Reminder: Ubers are easy & cheap)
+  * Try not to walk home alone at night (Reminder: Ubers are easy & cheap)
 
 
   You can choose your adventure, and with a little bit of common sense and extra precaution, you can expect to have a fun and safe experience in Bogotá.
