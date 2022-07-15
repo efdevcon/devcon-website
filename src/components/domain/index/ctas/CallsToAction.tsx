@@ -7,6 +7,7 @@ import { ContentSection } from 'types/ContentSection'
 
 interface Props {
   ticketPresale: ContentSection
+  scholarApplications: ContentSection
   speakerApplications: ContentSection
 }
 
@@ -27,8 +28,20 @@ const CallsToAction = (props: Props) => {
 
         <CallToAction
           color="orange"
-          title={props.speakerApplications.title}
+          title={props.scholarApplications.title}
           tag="OPEN"
+          BackgroundSvg={SpeakersBackground}
+          link="https://scholars.paperform.co/"
+          linkText="Apply"
+          meta="Applications are now open"
+        >
+          <div dangerouslySetInnerHTML={{ __html: props.scholarApplications.body }} />
+        </CallToAction>
+
+        <CallToAction
+          color="orange"
+          title={props.speakerApplications.title}
+          // tag="OPEN"
           BackgroundSvg={SpeakersBackground}
           link="/applications"
           linkText="Applications"
