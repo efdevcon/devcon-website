@@ -235,13 +235,15 @@
     "title": "Devcon Week",
     "overview": "Overview",
     "featured_events": "Featured Events",
-    "post_devcon_events": "Post Devcon Events",
+    "post_devcon_events": "Post-Devcon Events",
+    "pre_devcon_events": "Pre-Devcon Events",
     "learn_more": "Learn More",
     "schedule": "Devcon Week Featured Events",
     "visit_website": "Visit Website",
     "stream": "Stream",
     "website_coming_soon": "Website coming soon",
     "location": "Location",
-    "multi_day_event": "Multi-Day Event"
+    "multi_day_event": "Multi-Day Event",
+    "bogota_blockchain_week": "BOGOTA BLOCKCHAIN WEEK"
   }
 }

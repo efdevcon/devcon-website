@@ -237,13 +237,15 @@
     "overview": "Visión general",
     "featured_events": "Eventos especiales",
     "post_devcon_events": "Publicar eventos de Devcon",
+    "pre_devcon_events": "Eventos previos a Devco",
     "learn_more": "Aprende más",
     "schedule": "Eventos destacados de la Semana Devcon",
     "visit_website": "Visita la página web",
     "stream": "Stream",
     "website_coming_soon": "Sitio web próximamente",
     "location": "Ubicación",
-    "multi_day_event": "Evento de varios días"
+    "multi_day_event": "Evento de varios días",
+    "bogota_blockchain_week": "EMANA BLOCKCHAIN DE BOGOTÁ"
   }
 }
 

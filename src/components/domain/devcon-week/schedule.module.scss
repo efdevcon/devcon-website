@@ -151,33 +151,84 @@
     }
   }
 
-  &.Cowork {
-    background: none !important;
-    --difficulty-color-bg: none !important;
+  // &.Cowork, &.ID-Devcon {
+  //   background: none !important;
+  //   --difficulty-color-bg: none !important;
+
+  //   &:before {
+  //     content: '';
+  //     z-index: -1;
+  //     position: absolute;
+  //     pointer-events: none;
+  //     background-color: #f9f8ff;
+  //     left: 0px;
+  //     right: 0px;
+  //     bottom: 0px;
+  //     height: 100%;
+  //     width: 100%;
+  //     background-image: url('../../../assets/images/tile.png');
+  //     background-repeat: repeat-x;
+  //     mix-blend-mode: overlay;
+  //     background-size: var(--tile-size, 35px);
+  //     background-position: bottom;
+  //   }
+  // }
+
+  background: #f8f8f8;
+  border-color: #4b4b4b;;
+  --difficulty-color: #4b4b4b;
+  --difficulty-color-bg: #f8f8f8;
+
+  &.ID-Devcon {
+    background: #fff8f8;
+    border-color: #ff2a00;
+    --difficulty-color: #ff2a00;
+    --difficulty-color-bg: #ffebeb;
 
     &:before {
       content: '';
-      z-index: -1;
+      // z-index: -1;
       position: absolute;
       pointer-events: none;
-      background-color: #f9f8ff;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
+      // left: 0px;
+      // right: 5%;
+      left: 30%;
+      bottom: 0%;
       height: 100%;
-      width: 100%;
-      background-image: url('../../../assets/images/tile.png');
-      background-repeat: repeat-x;
-      mix-blend-mode: overlay;
-      background-size: var(--tile-size, 35px);
+      width: 70%;
+      background-image: url('../../../assets/images/mountains.png');
+      // background-repeat: repeat-x;
+      background-repeat: no-repeat;
+      opacity: 0.1;
+      background-position: right;
+      // mix-blend-mode: overlay;
+      background-size: contain;
+      // background-size: var(--tile-size, 35px);
       background-position: bottom;
     }
   }
 
-  background: transparent;
-  border-color: #4b4b4b;
-  --difficulty-color: #4b4b4b;
-  --difficulty-color-bg: transparent;
+  &.ID-ETHBogotaHackathon {
+    background: #f8fcff;
+    border-color: #1a8ffc;
+    --difficulty-color: #1a8ffc;
+    --difficulty-color-bg: #e3f3ff;
+  }
+
+  // Green!
+  &.ID-ETHLatAm {
+    background: #fffdfc;
+    border-color: #ffa51f;
+    --difficulty-color: #ffa51f;;
+    --difficulty-color-bg: #fffdfc;
+  }
+ 
+  &.ID-SchellingPoint {
+    background: #fbf5ff;
+    border-color: #c681ff;
+    --difficulty-color: #c681ff;
+    --difficulty-color-bg: #e7defc;
+  }
 
   // &:not(.Beginner, .Intermediate, .Advanced) {
   //   background: transparent;

@@ -49,18 +49,20 @@ export default pageHOC(function DevconWeek(props: any) {
             </div>
 
             <div className="links">
-              <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                {intl('tickets_title')}
+              {/* <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
+                {intl('devcon_week_bogota_blockchain_week')}
                 <ArrowRight />
-              </Link>
-              <Link to="/faq" className="text-uppercase hover-underline font-lg bold">
-                {intl('faq_title')}
+              </Link> */}
+              <Link to="/continuous-devcon" className="text-uppercase hover-underline font-lg bold">
+                {intl('cd_title')}
                 <ArrowRight />
               </Link>
             </div>
           </div>
 
           <div className={`right ${css['space-between']}`}>
+            <h2 className="spaced">{intl('devcon_week_pre_devcon_events')}</h2>
+
             <Snapshot
               items={[
                 {

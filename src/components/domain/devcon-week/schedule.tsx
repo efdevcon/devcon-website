@@ -315,7 +315,7 @@ const Timeline = (props: any) => {
     return (
       <React.Fragment key={event.Name + offsetFromFirstDay}>
         <div
-          className={`${css['event']} ${css[event['Stable ID']]} ${css[event['Difficulty']]} expand-right`}
+          className={`${css['event']} ${css[`ID-${event['Stable ID']}`]} ${css[event['Difficulty']]} expand-right`}
           style={gridPlacement}
           {...draggableAttributes}
           onClick={e => {
@@ -427,9 +427,17 @@ const Timeline = (props: any) => {
 
             if (dayIsActive) className += ` ${css['active']}`
 
+            const weekdays = (() => {
+              if (shouldTruncate) {
+                return
+              }
+
+              return dayIsActive && !shouldTruncate ? 'TODAY' : weekday
+            })()
+
             return (
               <div className={className} key={index}>
-                <p className="bold">{dayIsActive && !shouldTruncate ? 'TODAY' : weekday}</p>
+                {/* <p className="bold">{weekdays}</p> */}
                 <p className="bold">
                   {date} {shouldTruncate && `- ${day.add(truncateNDays - 1, 'days').format('MMM DD')}`}
                 </p>
@@ -691,7 +699,7 @@ const ListEventMobile = (props: any) => {
   const intl = useTranslations()
 
   return (
-    <div className={`${css['event']} ${css[props.event['Stable ID']]} ${css[props.event['Difficulty']]} `}>
+    <div className={`${css['event']} ${css[`ID-${props.event['Stable ID']}`]} ${css[props.event['Difficulty']]} `}>
       <div className={css['content']}>
         {props.event.URL ? (
           <Link to={props.event.URL} indicateExternal className={`${css['title']} font-lg text-uppercase bold`}>
