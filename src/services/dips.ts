@@ -63,7 +63,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
         .sort((a, b) => a - b)
 
     const dips = Array.from(files.data).map(async i => {
-        const file: any = getGithubFile(owner, repo, i.path)
+        const file: any = await getGithubFile(owner, repo, i.path)
         if (file.data.type !== 'file') return
 
         const buffer = Buffer.from(file.data.content, 'base64')
