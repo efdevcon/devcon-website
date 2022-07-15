@@ -429,7 +429,7 @@ const Timeline = (props: any) => {
 
             return (
               <div className={className} key={index}>
-                <p className="bold">{dayIsActive ? 'TODAY' : weekday}</p>
+                <p className="bold">{dayIsActive && !shouldTruncate ? 'TODAY' : weekday}</p>
                 <p className="bold">
                   {date} {shouldTruncate && `- ${day.add(truncateNDays - 1, 'days').format('MMM DD')}`}
                 </p>
