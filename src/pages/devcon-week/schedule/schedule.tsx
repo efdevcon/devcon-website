@@ -238,7 +238,9 @@ const Timeline = (props: any) => {
   // Virtualizing/precomputing the entire grid before rendering it could simplify it greatly...
   // ...but likely not relevant; a new schedule component will be created soon...
   const truncatedDays = {} as { [key: string]: boolean }
-  let totalTruncatedDays = 0
+  let totalTruncatedDays = {} as any[]
+  // Record the indexes of all truncated events for use in the rendering algorithm
+  const truncationsByIndex = [] as number[]
 
   const events = sortedEvents.map((event: any, index: number) => {
     const {
@@ -250,7 +252,15 @@ const Timeline = (props: any) => {
     } = getFormattedEventData(event)
     const offsetFromFirstDay = startDay.diff(min, 'days') + 1
     const offsetFromFirstEventInSchedule = startDay.diff(moment.utc(sortedEvents[0].Date.startDate), 'days')
-    let subtractDays = totalTruncatedDays
+    let subtractDays = truncationsByIndex.reduce((acc, val) => {
+      if (val < offsetFromFirstDay) {
+        return acc + 1
+      }
+
+      return acc
+    }, 0)
+
+    isNaN(totalTruncatedDays[offsetFromFirstEventInSchedule]) ? 0 : totalTruncatedDays[offsetFromFirstEventInSchedule]
 
     // We don't render empty days, so we have to account for that when placing items into our grid - we subtract the empty days prior to the current event, treating them as if they don't exist in the grid
     Array.from(Array(offsetFromFirstEventInSchedule)).forEach((_, index: number) => {
@@ -259,27 +269,32 @@ const Timeline = (props: any) => {
       if (emptyDay) subtractDays++
     })
 
-    const truncateNDays = (() => {
-      let index = offsetFromFirstEventInSchedule
-      const currentEvent = event
-      let counter = 1
+    const truncatedEventDuration = (() => {
+      let truncating = false
+      let days = totalDays
 
-      while (
-        eventsByDay[counter + index] && // the next day has events
-        eventsByDay[counter + index].length === 1 && // there's only one event the next day
-        currentEvent === eventsByDay[counter + index][0] // next days event is the same as the current event
-      ) {
-        counter++
+      for (let i = 0; i < totalDays; i++) {
+        const currentDayIndex = offsetFromFirstEventInSchedule + i
+        const allEventsOnDay = eventsByDay[currentDayIndex]
+        const isOnlyEventOnDay = allEventsOnDay.length === 1
+
+        if (isOnlyEventOnDay) {
+          if (truncating) {
+            days--
+
+            truncationsByIndex.push(currentDayIndex)
+          }
+
+          truncating = true
+        } else {
+          truncating = false
+        }
       }
 
-      return counter
+      return days
     })()
 
     let currentRow = 1 // css property grid-row starts at 1
-
-    const shouldTruncate = truncateNDays > 1
-
-    const eventDurationAfterTruncate = shouldTruncate ? 1 : totalDays
 
     /*
         1) Place at first available Y value in the start date column, filling in horizontally if multiple days
@@ -287,18 +302,14 @@ const Timeline = (props: any) => {
           note: Horizontally there will always be room, by definition, because we are filling in left to right 
         3) Keep track of used grid slots along the way (to allow for step 2)
       */
-    while (!placementTracker.placeItem(currentRow, offsetFromFirstDay - subtractDays, eventDurationAfterTruncate)) {
+    while (!placementTracker.placeItem(currentRow, offsetFromFirstDay - subtractDays, truncatedEventDuration)) {
       currentRow++
     }
 
     const gridPlacement = {
       gridRow: currentRow + 1, // Add 1 to account for the dates occupying the first row
-      gridColumn: `${offsetFromFirstDay - subtractDays} / span ${eventDurationAfterTruncate}`,
-      '--eventLength': eventDurationAfterTruncate,
-    }
-
-    if (shouldTruncate) {
-      totalTruncatedDays += truncateNDays - 1
+      gridColumn: `${offsetFromFirstDay - subtractDays} / span ${truncatedEventDuration}`,
+      '--eventLength': truncatedEventDuration,
     }
 
     return (
@@ -392,6 +403,8 @@ const Timeline = (props: any) => {
             const truncateNDays = (() => {
               const currentEvent = eventsByDay[index] && eventsByDay[index][0]
               let counter = 1
+
+              if (eventsByDay[index].length > 1) return counter
 
               while (
                 eventsByDay[counter + index] && // the next day has events
