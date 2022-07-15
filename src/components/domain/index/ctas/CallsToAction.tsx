@@ -28,7 +28,7 @@ const CallsToAction = (props: Props) => {
         <CallToAction
           color="orange"
           title={props.speakerApplications.title}
-          tag="OPEN"
+          // tag="OPEN"
           BackgroundSvg={SpeakersBackground}
           link="/applications"
           linkText="Applications"
