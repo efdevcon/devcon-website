@@ -181,6 +181,11 @@ const useNavigationData = () => {
             type: 'header',
           },
           {
+            title: intl('devcon_week_title'),
+            url: '/devcon-week',
+            type: 'page',
+          },
+          {
             title: intl('cd_title'),
             url: '/continuous-devcon',
             type: 'page',

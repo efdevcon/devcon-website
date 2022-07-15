@@ -100,31 +100,58 @@ h6,
 // Sizes
 .font-xxs {
   @include fonts-xxs;
+
+  &-em {
+    @include fonts-xxs-em;
+  }
 }
 
 .font-xs {
   @include fonts-xs;
+
+  &-em {
+    @include fonts-xs-em;
+  }
 }
 
 .font-sm {
   @include fonts-sm;
+
+  &-em {
+    @include fonts-sm-em;
+  }
 }
 
 .font-md {
   @include fonts-md;
+
+  &-em {
+    @include fonts-md-em;
+  }
 }
 
 .font-lg {
   @include fonts-lg;
+
+  &-em {
+    @include fonts-lg-em;
+  }
 }
 
 .font-xl {
   @include fonts-xl;
+
+  &-em {
+    @include fonts-xl-em;
+  }
 }
 
 .font-xxl {
   @include fonts-xxl;
-  // font-size: $sizes-size-16 + $sizes-size-8;
+
+  &-em {
+    @include fonts-xxl-em;
+  }
 }
 
 // Sizes

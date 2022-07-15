@@ -11,6 +11,7 @@ export interface DropdownProps {
   customIcon?: React.ElementType<SVGAElement>
   renderCustomTrigger?: (foldout: any, defaultTriggerProps: any) => React.ReactElement
   onChange: (value: any) => void
+  placeholder?: string
   options: {
     [key: string]: any
   }[]
@@ -115,7 +116,7 @@ export const Dropdown = React.forwardRef((props: DropdownProps, externalRef: any
 
   return (
     <div {...triggerProps}>
-      {currentSelection && currentSelection.text}
+      {currentSelection ? <p>{currentSelection.text}</p> : <p className={css['placeholder']}>{props.placeholder}</p>}
       <Icon />
 
       {foldoutContent}

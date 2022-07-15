@@ -24,6 +24,32 @@ $size-72: $size-1 * 72; // 9rem 144px;
 $size-80: $size-1 * 80; // 10rem 160px;
 $size-88: $size-1 * 88; // 11rem 176px;
 
+$size-1-em: 0.125em; // 2px (assuming root font-size is 16px)
+$size-2-em: $size-1-em * 2;
+$size-3-em: $size-1-em * 3;
+$size-4-em: $size-1-em * 4; // 0.5rem 8px
+$size-5-em: $size-1-em * 5;
+$size-6-em: $size-1-em * 6;
+$size-7-em: $size-1-em * 7;
+$size-8-em: $size-1-em * 8; // 1rem 16px
+$size-9-em: $size-1-em * 9;
+$size-10-em: $size-1-em * 10;
+$size-11-em: $size-1-em * 11;
+$size-12-em: $size-1-em * 12;
+$size-13-em: $size-1-em * 13;
+$size-14-em: $size-1-em * 14;
+$size-15-em: $size-1-em * 15;
+$size-16-em: $size-1-em * 16; // 2rem 32px;
+$size-20-em: $size-1-em * 20; // 2rem 40px;
+$size-32-em: $size-1-em * 32; // 4rem 64px;
+$size-40-em: $size-1-em * 40; // 5rem 80px;
+$size-44-em: $size-1-em * 44; // 5.5rem 88px;
+$size-48-em: $size-1-em * 48; // 6rem 96px;
+$size-64-em: $size-1-em * 64; // 8rem 128px;
+$size-72-em: $size-1-em * 72; // 9rem 144px;
+$size-80-em: $size-1-em * 80; // 10rem 160px;
+$size-88-em: $size-1-em * 88; // 11rem 176px;
+
 $size-fixed-1: 2px;
 $size-fixed-2: $size-fixed-1 * 2;
 $size-fixed-3: $size-fixed-1 * 3;
