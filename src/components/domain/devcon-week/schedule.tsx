@@ -348,23 +348,6 @@ const Timeline = (props: any) => {
                       if (shouldRepeatTimeOfDay && isMultiDayEvent && index > 0) return null
 
                       return null
-
-                      return (
-                        <div key={index}>
-                          <p className="bold">
-                            <span className={css['time']}>
-                              {time}
-                              {sameTimeEveryDay ? ' Every day' : ''}
-                            </span>
-                            {useDayIndicator && (
-                              <>
-                                <br />
-                                <span className={`${css['which-day']} font-sm-em`}>Day {index + 1}</span>
-                              </>
-                            )}
-                          </p>
-                        </div>
-                      )
                     })}
                   </div>
                 )}

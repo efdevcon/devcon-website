@@ -21,7 +21,7 @@ export function Snapshot(props: SnapshotProps) {
       <ul className={css['list']}>
         {props.items.map((item: SnapshotItem) => {
           return (
-            <li className={css['list-item']} key={item.title}>
+            <li data-type="snapshot-item" className={css['list-item']} key={item.title}>
               <item.Icon />
               <span className={css['label']}>{item.title}</span>
               <span>{item.left}</span>

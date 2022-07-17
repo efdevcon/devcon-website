@@ -60,34 +60,34 @@ export default pageHOC(function DevconWeek(props: any) {
             </div>
           </div>
 
-          <div className={`right ${css['space-between']}`}>
+          <div className={`right ${css['space-between']} ${css['snapshot-container']}`}>
             <h2 className="spaced">{intl('devcon_week_pre_devcon_events')}</h2>
 
             <Snapshot
               items={[
                 {
                   Icon: () => <></>,
-                  title: '🇦🇷 eTHLATAM - BUENOS AIRES',
+                  title: '🇦🇷 ETHLatam - Buenos Aires',
                   right: 'AUG 11-14',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇲🇽 eTHMexicocity',
+                  title: '🇲🇽 ETHMexicoCity',
                   right: 'AUG 19-21',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇵🇪 eTHlima day',
+                  title: '🇵🇪 ETHLima day',
                   right: 'SEP 3',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇨🇱 eTHsantiago',
+                  title: '🇨🇱 ETHSantiago',
                   right: 'SEP 8-10',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇧🇷 EthereumSãoPaulo ',
+                  title: '🇧🇷 EthereumSãoPaulo',
                   right: 'SEP 27-29',
                 },
               ]}
