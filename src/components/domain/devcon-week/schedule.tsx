@@ -329,7 +329,11 @@ const Timeline = (props: any) => {
           <div className={css['content']}>
             <div className={css['content-inner']}>
               <div className={css['top']}>
-                <p className={`font-lg-em bold ${css['title']} ${totalDays === 1 ? css['single-day'] : ''}`}>
+                <p
+                  className={`font-lg-em ${event['Stable ID'] === 'Devcon' ? 'font-xxl-em' : ''} bold ${css['title']} ${
+                    totalDays === 1 ? css['single-day'] : ''
+                  }`}
+                >
                   {event.Name}
                 </p>
 
@@ -395,7 +399,6 @@ const Timeline = (props: any) => {
             if (truncatedDays[index]) return null // <div className={css['day']}>Truncated</div>
 
             const day = moment.utc(defaultSortEvents[0].Date.startDate).add(index, 'days')
-            const weekday = day.format('ddd')
             const date = day.format('MMM DD')
             const noEventsForDay = !eventsByDay[index]
             const now = momentTZ.tz(moment(), 'Europe/Amsterdam')
@@ -428,18 +431,39 @@ const Timeline = (props: any) => {
             if (dayIsActive) className += ` ${css['active']}`
 
             const weekdays = (() => {
+              const firstDay = day.format('ddd')
+
               if (shouldTruncate) {
-                return
+                return `${firstDay} - ${day
+                  .clone()
+                  .add(truncateNDays - 1, 'days')
+                  .format('ddd')}`
               }
 
-              return dayIsActive && !shouldTruncate ? 'TODAY' : weekday
+              return firstDay
             })()
+
+            const isDevcon = (() => {
+              const devconDay1 = moment.utc('2022-10-11')
+              const devconDay2 = moment.utc('2022-10-12')
+              const devconDay3 = moment.utc('2022-10-13')
+              const devconDay4 = moment.utc('2022-10-14')
+
+              return [devconDay1, devconDay2, devconDay3, devconDay4].some(devconDay => devconDay.isSame(day, 'date'))
+            })()
+
+            if (isDevcon) className += ` ${css['is-devcon']}`
 
             return (
               <div className={className} key={index}>
-                {/* <p className="bold">{weekdays}</p> */}
+                <p className="bold">{weekdays}</p>
                 <p className="bold">
-                  {date} {shouldTruncate && `- ${day.add(truncateNDays - 1, 'days').format('MMM DD')}`}
+                  {date}{' '}
+                  {shouldTruncate &&
+                    `- ${day
+                      .clone()
+                      .add(truncateNDays - 1, 'days')
+                      .format('MMM DD')}`}
                 </p>
               </div>
             )
