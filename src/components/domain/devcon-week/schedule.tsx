@@ -330,7 +330,7 @@ const Timeline = (props: any) => {
             <div className={css['content-inner']}>
               <div className={css['top']}>
                 <p
-                  className={`font-lg-em ${event['Stable ID'] === 'Devcon' ? 'font-xxl-em' : ''} bold ${css['title']} ${
+                  className={`font-xl-em ${event['Stable ID'] === 'Devcon' ? 'font-xxl-em' : ''} bold ${css['title']} ${
                     totalDays === 1 ? css['single-day'] : ''
                   }`}
                 >
