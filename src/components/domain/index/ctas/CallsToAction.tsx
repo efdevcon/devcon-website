@@ -17,11 +17,11 @@ const CallsToAction = (props: Props) => {
       <div className={`${css['container']} border-bottom clear-bottom`}>
         <CallToAction
           title={props.ticketPresale.title}
-          tag="LIVE"
+          // tag="LIVE"
           BackgroundSvg={TicketBackground}
           link="/tickets"
           linkText="Ticketing"
-          meta="Applications Close: June 30th @ 23:59:59 UTC"
+          meta="Ongoing Reviews"
         >
           <div dangerouslySetInnerHTML={{ __html: props.ticketPresale.body }} />
         </CallToAction>
