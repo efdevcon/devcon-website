@@ -127,11 +127,11 @@ const useNavigationData = () => {
             url: '#',
             type: 'header',
           },
-          {
-            title: intl('navigation_supporter_application'),
-            url: 'https://forms.gle/mWpzC6dMQFa5WwvG8',
-            type: 'link',
-          },
+          // {
+          //   title: intl('navigation_supporter_application'),
+          //   url: 'https://forms.gle/mWpzC6dMQFa5WwvG8',
+          //   type: 'link',
+          // },
           {
             title: intl('navigation_press'),
             url: 'https://forms.gle/G4FxcQsC2Byy9NEHA',
