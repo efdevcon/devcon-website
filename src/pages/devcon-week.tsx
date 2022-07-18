@@ -115,9 +115,9 @@ export default pageHOC(function DevconWeek(props: any) {
               className="markdown"
               dangerouslySetInnerHTML={{ __html: props.sections['post-devcon-events'].data.left }}
             ></div>
-            <Link to="https://google.com">
+            {/* <Link to="https://google.com">
               <Button className="red margin-top">{intl('devcon_week_learn_more')}</Button>
-            </Link>
+            </Link> */}
           </div>
           <div className={`right ${css['space-between']}`}>
             <div
@@ -125,9 +125,9 @@ export default pageHOC(function DevconWeek(props: any) {
               dangerouslySetInnerHTML={{ __html: props.sections['post-devcon-events'].data.right }}
             ></div>
 
-            <Link to="https://google.com">
+            {/* <Link to="https://google.com">
               <Button className="red margin-top">{intl('devcon_week_learn_more')}</Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
