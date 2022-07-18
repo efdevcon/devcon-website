@@ -199,7 +199,11 @@ export default pageHOC(function Tickets(props: any) {
                 {
                   Icon: TicketIcon,
                   title: intl('tickets_raffle_ticket_sale_waves'),
-                  right: intl('tickets_raffle_ticket_sale_waves_dates'),
+                  right: (
+                    <Link to="#waves" style={{ textTransform: 'none' }}>
+                      {intl('tickets_raffle_ticket_sale_waves_dates')}
+                    </Link>
+                  ),
                 },
               ]}
             />
@@ -285,7 +289,9 @@ export default pageHOC(function Tickets(props: any) {
         </div>
 
         <div className="clear-bottom">
-          <h2 className="spaced">{intl('tickets_general_waves')}</h2>
+          <h2 id="waves" className="spaced">
+            {intl('tickets_general_waves')}
+          </h2>
 
           <List
             connectedItems
@@ -307,8 +313,7 @@ export default pageHOC(function Tickets(props: any) {
                 indent: false,
                 body: '',
               }
-            }
-            )}
+            })}
           />
         </div>
 
@@ -324,13 +329,18 @@ export default pageHOC(function Tickets(props: any) {
               number="01"
               description={<div>{intl('tickets_types_ga')}</div>}
               tags={
-                isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD')) ? [
-                  {
-                    text: intl('tickets_ticket_waves'),
-                    link: '#timeline',
-                  }] : [{
-                    text: intl('tickets_coming_soon'),
-                  }]
+                isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD'))
+                  ? [
+                      {
+                        text: intl('tickets_ticket_waves'),
+                        link: '#timeline',
+                      },
+                    ]
+                  : [
+                      {
+                        text: intl('tickets_coming_soon'),
+                      },
+                    ]
               }
             />
             <Ticket
