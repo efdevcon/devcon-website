@@ -45,7 +45,7 @@ const AddToCalendar = () => {
 
   return (
     <>
-      <Button className={`${css['button']} lg black text-uppercase hover`} onClick={() => setCalendarModalOpen(true)}>
+      <Button className={`${css['button']} bold black text-uppercase hover`} onClick={() => setCalendarModalOpen(true)}>
         <AddToCalendarIcon /> <span className={css['button-text']}>{intl('add-to-calendar')}</span>
       </Button>
 
