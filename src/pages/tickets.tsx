@@ -114,10 +114,15 @@ export default pageHOC(function Tickets(props: any) {
     [T: number]: moment.Moment
   } = {
     1: moment.utc('2022-07-18 16:00:00'),
-    2: moment.utc('2022-07-26 16:00:00'),
-    3: moment.utc('2022-08-03 16:00:00'),
-    4: moment.utc('2022-08-11 16:00:00'),
-    5: moment.utc('2022-08-23 16:00:00'),
+    2: moment.utc('2022-07-18 23:00:00'),
+    3: moment.utc('2022-07-26 16:00:00'),
+    4: moment.utc('2022-07-26 23:00:00'),
+    5: moment.utc('2022-08-03 16:00:00'),
+    6: moment.utc('2022-08-03 23:00:00'),
+    7: moment.utc('2022-08-11 16:00:00'),
+    8: moment.utc('2022-08-11 23:00:00'),
+    9: moment.utc('2022-08-23 16:00:00'),
+    10: moment.utc('2022-08-23 23:00:00'),
   }
 
   function renderTicketWaveInfo(wave: number) {
@@ -300,16 +305,16 @@ export default pageHOC(function Tickets(props: any) {
                 id: i,
                 title: (
                   <div className={css['timeline-item']}>
-                    <div className={css['left']}>Wave 0{i}</div>
+                    <div className={css['left']}>Wave {i.padStart(2, '0')}</div>
                     <div className={`${css['right']} bold`}>
                       {ticketWaves[Number(i)].format('MMMM DD')} —&nbsp;
-                      <span className={`${css['when']} font-sm`}>16:00 UTC &amp; 23:00 UTC</span>
+                      <span className={`${css['when']} font-sm`}>{ticketWaves[Number(i)].format('HH:mm')} UTC</span>
                     </div>
                     {renderTicketWaveInfo(Number(i))}
                   </div>
                 ),
                 active: isAfterDate(ticketWaves[Number(i)]?.format('YYYY-MM-DD')),
-                disabled: isAfterDate(ticketWaves[Number(i) + 1]?.format()),
+                disabled: moment.utc().isAfter(ticketWaves[Number(i)]) && ticketQuota?.available === false,
                 indent: false,
                 body: '',
               }
@@ -331,16 +336,16 @@ export default pageHOC(function Tickets(props: any) {
               tags={
                 isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD'))
                   ? [
-                      {
-                        text: intl('tickets_ticket_waves'),
-                        link: '#timeline',
-                      },
-                    ]
+                    {
+                      text: intl('tickets_ticket_waves'),
+                      link: '#timeline',
+                    },
+                  ]
                   : [
-                      {
-                        text: intl('tickets_coming_soon'),
-                      },
-                    ]
+                    {
+                      text: intl('tickets_coming_soon'),
+                    },
+                  ]
               }
             />
             <Ticket
