@@ -71,7 +71,7 @@ export default pageHOC(function Schedule(props: any) {
               <CallToAction
                 color="purple"
                 title={props.sections['cta-speaker-applications'].title}
-                tag="OPEN"
+                tag="CLOSED"
                 BackgroundSvg={SpeakersBackground}
                 link="/applications"
                 linkText="Applications"
