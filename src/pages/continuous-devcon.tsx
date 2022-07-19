@@ -39,9 +39,9 @@ export default pageHOC(function ContinuousDevcon(props: any) {
   const intl = useTranslations()
 
   return (
-    <Page theme={themes['bogota']}>
+    <Page theme={themes['teal']}>
       <PageHero
-        path={[{ text: <span className="bold">{intl('city_guide_title')}</span> }, { text: props.page.header }]}
+        path={[{ text: <span className="bold">{intl('cd_get_involved')}</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: intl('cd_meet'),

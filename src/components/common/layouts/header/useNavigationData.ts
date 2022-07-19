@@ -104,6 +104,16 @@ const useNavigationData = () => {
             url: '/applications',
             type: 'page',
           },
+          {
+            title: 'Event',
+            url: '#',
+            type: 'header',
+          },
+          {
+            title: intl('devcon_week_title'),
+            url: '/devcon-week',
+            type: 'page',
+          },
         ],
       },
       {
@@ -123,15 +133,15 @@ const useNavigationData = () => {
             type: 'page',
           },
           {
+            title: intl('cd_title'),
+            url: '/continuous-devcon',
+            type: 'page',
+          },
+          {
             title: intl('navigation_participate'),
             url: '#',
             type: 'header',
           },
-          // {
-          //   title: intl('navigation_supporter_application'),
-          //   url: 'https://forms.gle/mWpzC6dMQFa5WwvG8',
-          //   type: 'link',
-          // },
           {
             title: intl('navigation_press'),
             url: 'https://forms.gle/G4FxcQsC2Byy9NEHA',
@@ -161,37 +171,9 @@ const useNavigationData = () => {
       },
       {
         title: 'Bogotá',
-        url: '#',
-        type: 'links',
-        logo: LogoBogota,
-        links: [
-          {
-            title: 'Bogotá',
-            url: '#',
-            type: 'header',
-          },
-          {
-            title: intl('navigation_city_guide'),
-            url: '/bogota',
-            type: 'page',
-          },
-          {
-            title: 'Event',
-            url: '#',
-            type: 'header',
-          },
-          {
-            title: intl('devcon_week_title'),
-            url: '/devcon-week',
-            type: 'page',
-          },
-          {
-            title: intl('cd_title'),
-            url: '/continuous-devcon',
-            type: 'page',
-          },
-        ],
-      },
+        url: '/bogota',
+        type: 'page',
+      }
     ],
     footer: {
       bottom: [

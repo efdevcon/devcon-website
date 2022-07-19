@@ -18,9 +18,9 @@ export default pageHOC(function DevconWeek(props: any) {
   const intl = useTranslations()
 
   return (
-    <Page theme={themes['bogota']}>
+    <Page theme={themes['program']}>
       <PageHero
-        path={[{ text: <span className="bold">Bogotá</span> }, { text: props.page.header }]}
+        path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: props.page.header }]}
         navigation={[
           {
             title: intl('devcon_week_overview'),
