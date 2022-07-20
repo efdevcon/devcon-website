@@ -6,7 +6,7 @@ import { pageHOC } from 'context/pageHOC'
 import { usePageContext } from 'context/page-context'
 import { Tags } from 'components/common/tags'
 import { getGlobalData } from 'services/global'
-import { GetPage, GetFAQ } from 'services/page'
+import { GetPage, GetFAQ, GetContentSections } from 'services/page'
 import { FAQ } from 'components/domain/faq'
 import { useTranslations } from 'next-intl'
 import { Snapshot } from 'components/common/snapshot'
@@ -21,6 +21,7 @@ import { Link } from 'components/common/link'
 import moment from 'moment'
 import { GetTicketQuota } from 'services/tickets'
 import { useTicketQuota } from 'hooks/useTicketQuota'
+import { DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 
 // Check if given string e.g. "2022-06-06" is before the current date
 export const isAfterDate = (dateString: string) => {
@@ -404,21 +405,6 @@ export default pageHOC(function Tickets(props: any) {
               ]}
             />
 
-            {/* <Ticket
-              title="Press Pass*"
-              price="FREE"
-              link="https://forms.gle/y9SRAnVBWbZfqPGv8"
-              withoutCurrency
-              color="blue"
-              number="05"
-              description={<div>Gain access to Devcon as a Press Staff. </div>}
-              tags={[
-                {
-                  text: 'Apply now',
-                  link: 'https://forms.gle/y9SRAnVBWbZfqPGv8',
-                },
-              ]}
-            /> */}
             <Ticket
               title="Volunteer*"
               link="https://forms.gle/mjHz1oyy2LiVCRvw7"
@@ -434,6 +420,23 @@ export default pageHOC(function Tickets(props: any) {
                 },
               ]}
             />
+
+            {props.sections['cta-scholar-applications'] && (<Ticket
+              title={props.sections['cta-scholar-applications'].title}
+              price="FREE"
+              link="https://scholars.paperform.co/"
+              withoutCurrency
+              color="blue"
+              number="05"
+              description={<div dangerouslySetInnerHTML={{ __html: props.sections['cta-scholar-applications'].body }} />}
+              tags={[
+                {
+                  text: intl('tickets_apply_now'),
+                  link: 'https://scholars.paperform.co/',
+                },
+              ]}
+            />
+            )}
           </div>
 
           <p className="italic">{intl('tickets_note_id_check')}</p>
@@ -459,15 +462,17 @@ export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/tickets', context.locale)
   const faq = await GetFAQ(context.locale)
+  const sections = await GetContentSections(['cta-scholar-applications'], context.locale)
   const ticketQuota = await GetTicketQuota()
 
   return {
     props: {
       ...globalData,
-      faq: faq.filter((faq: any) => faq.category.id === 'ticketing'),
       page,
+      faq: faq.filter((faq: any) => faq.category.id === 'ticketing'),
+      sections,
       ticketQuota,
     },
-    revalidate: 3600,
+    revalidate: DEFAULT_REVALIDATE_PERIOD,
   }
 }
