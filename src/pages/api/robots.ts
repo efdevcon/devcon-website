@@ -6,7 +6,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (APP_CONFIG.NODE_ENV === 'production') {
         return res.send(`User-agent: *
 Allow: /
-Sitemap: ${SITE_URL}/sitemap.xml
+Sitemap: ${SITE_URL}sitemap.xml
         `)
     }
 
