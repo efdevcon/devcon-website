@@ -99,6 +99,115 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/devcon-0',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-0/details',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-1',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-1/details',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-2',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-2/details',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-3',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-3/details',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-4',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-4/details',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-5',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/devcon-5/details',
+        destination: '/past-events',
+        permanent: true,
+      },
+      {
+        source: '/agenda',
+        destination: '/en/program',
+        permanent: true,
+      },
+      {
+        source: '/lightning-speakers',
+        destination: '/en/program',
+        permanent: true,
+      },
+      {
+        source: '/workshops-and-breakouts',
+        destination: '/en/program',
+        permanent: true,
+      },
+      {
+        source: '/call-for-participation',
+        destination: '/en/applications',
+        permanent: true,
+      },
+      {
+        source: '/speakers',
+        destination: '/en/applications',
+        permanent: true,
+      },
+      {
+        source: '/vi',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/zh',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/faq',
+        destination: '/en/faq',
+        permanent: true,
+      },
+      {
+        source: '/applications',
+        destination: '/en/applications',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

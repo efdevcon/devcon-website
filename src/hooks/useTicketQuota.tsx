@@ -23,7 +23,6 @@ export function useTicketQuota(quota: TicketQuota | undefined, interval: number 
     //   id: '5',
     //   available_number: 0,
     //   available: false,
-    //   total_size: 0
     // })
     // return
 

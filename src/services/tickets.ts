@@ -21,8 +21,7 @@ export async function GetTicketQuota(id: string = ''): Promise<TicketQuota | und
         return {
             id: productId,
             available_number: data.available_number,
-            available: data.available,
-            total_size: data.total_size
+            available: data.available
         } as TicketQuota
     }
     catch (e) {
