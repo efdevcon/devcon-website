@@ -92,13 +92,17 @@ export default pageHOC(function RaffleAuction(props: any) {
               items={[
                 {
                   Icon: AuctionIcon,
-                  title: intl('tickets_raffle_auction_begins'),
-                  right: intl('tickets_raffle_auction_begins_date'),
+                  title: props.page.header,
+                  right: intl('tickets_raffle_auction_dates'),
                 },
                 {
                   Icon: CalendarIcon,
                   title: intl('tickets_raffle_ticket_sale_waves'),
-                  right: intl('tickets_raffle_july_18'),
+                  right: (
+                    <Link to="/tickets" style={{ textTransform: 'none' }}>
+                      {intl('tickets_raffle_ticket_sale_waves_dates')}
+                    </Link>
+                  ),
                 },
               ]}
             />

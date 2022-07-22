@@ -83,7 +83,7 @@ export default pageHOC(function DevconWeek(props: any) {
                 {
                   Icon: () => <></>,
                   title: '🇨🇱 ETHSantiago',
-                  right: 'SEP 8-10',
+                  right: 'SEP 22-23',
                 },
                 {
                   Icon: () => <></>,
