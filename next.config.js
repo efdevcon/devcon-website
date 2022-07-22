@@ -196,16 +196,6 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-      {
-        source: '/faq',
-        destination: '/en/faq',
-        permanent: true,
-      },
-      {
-        source: '/applications',
-        destination: '/en/applications',
-        permanent: true,
-      },
     ]
   },
 }
