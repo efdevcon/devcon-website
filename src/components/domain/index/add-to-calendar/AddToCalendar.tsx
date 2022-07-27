@@ -55,10 +55,6 @@ const AddToCalendar = () => {
             <p className="bold uppercase clear-bottom">{intl('add-to-calendar')}:</p>
 
             <div className={css['buttons']}>
-              <Link to={googleCalUrl.href}>
-                <Button className="black ghost">Google Calendar</Button>
-              </Link>
-
               <a
                 href={(() => {
                   const file = new Blob([ics.filter((row: string) => !!row).join('\n')], { type: 'text/calendar' })
@@ -69,6 +65,10 @@ const AddToCalendar = () => {
               >
                 <Button className="black ghost">Download (.ICS)</Button>
               </a>
+
+              <Link to={googleCalUrl.href}>
+                <Button className="black ghost">Google Calendar</Button>
+              </Link>
             </div>
           </div>
         </Modal>

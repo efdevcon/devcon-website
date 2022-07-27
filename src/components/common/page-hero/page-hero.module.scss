@@ -4,12 +4,6 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  // padding-top: $gaps-gap-4;
-  // margin-bottom: $gaps-gap-10;
-  // background-repeat: no-repeat;
-  // background-position: center right;
-  // background-color: var(--theme-gradient-background-color, #{$colors-monochrome-1});
-  // background-image: var(--theme-logo), var(--theme-gradient);
 
   &:before,
   &:after {
@@ -98,11 +92,11 @@
     z-index: 10;
 
     // Strip is always present on mobile (but not on desktop) - we have to account for that:
-    &.scrolled {
-      @media (max-width: $breakpoints-lg) {
-        top: calc(var(--negative-offset) + var(--strip-height));
-      }
-    }
+    // &.scrolled {
+    //   @media (max-width: $breakpoints-lg) {
+    //     top: var(--negative-offset); // calc(var(--negative-offset) + var(--strip-height));
+    //   }
+    // }
   }
 
   &:not(.with-navigation) {

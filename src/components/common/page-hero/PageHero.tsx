@@ -9,7 +9,7 @@ import ChevronLeft from 'assets/icons/chevron_left.svg'
 import ChevronRight from 'assets/icons/chevron_right.svg'
 import { Button } from 'components/common/button'
 import Image from 'next/image'
-import SwipeToScroll from 'components/common/swipe-to-scroll';
+import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 type NavigationLink = {
   to: string
@@ -82,8 +82,8 @@ const PathNavigation = (props: PageHeroProps) => {
 
 export const PageHero = (props: PageHeroProps) => {
   const pageContext = usePageContext()
-  const stripHeight = useGetElementHeight('strip')
-  const headerHeight = useGetElementHeight('header')
+  // const stripHeight = useGetElementHeight('strip')
+  const headerHeight = useGetElementHeight('header-container')
   const pageHeaderHeight = useGetElementHeight('page-navigation')
   const pageHeroHeight = useGetElementHeight('page-hero')
   const negativeOffset = `-${pageHeroHeight - pageHeaderHeight - headerHeight}px`
@@ -92,7 +92,7 @@ export const PageHero = (props: PageHeroProps) => {
 
   let style: any = {
     '--negative-offset': negativeOffset,
-    '--strip-height': `${stripHeight}px`,
+    // '--strip-height': `${stripHeight}px`,
   }
 
   if (props.background) {

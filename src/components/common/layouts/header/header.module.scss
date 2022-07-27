@@ -34,7 +34,7 @@
   }
 
   @media (min-width: $breakpoints-lg + 1) {
-    display: contents;
+    // display: contents;$
   }
 }
 
@@ -54,12 +54,6 @@
     :global(#strip) {
       @include fill-strip;
     }
-
-    // @media (min-width: 1351px) {
-    //   transition: transform 0.4s ease-out;
-    //   transform: translateY(-32px);
-    //   --button-border: 1px solid #{$colors-monochrome-5};
-    // }
   }
 }
 

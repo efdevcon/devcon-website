@@ -8,6 +8,6 @@ export const getGlobalData = async (context: any) => {
   return {
     messages: intl,
     navigationData: await GetNavigationData(context.locale),
-    notification: GetLatestNotification(context.locale),
+    notification: GetLatestNotification(context.locale) || null,
   }
 }

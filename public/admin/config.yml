@@ -183,11 +183,10 @@ collections:
         }
 
   - name: 'notification'
-    label: 'Notifications'
+    label: 'Notification Strip'
     label_singular: 'Notification'
     folder: 'src/content/notifications'
     i18n: true
-    hide: true
     fields:
       - {
           name: 'body',

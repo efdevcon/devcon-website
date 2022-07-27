@@ -1,47 +1,46 @@
-import { NewsItem } from 'types/NewsItem';
+import { NewsItem } from 'types/NewsItem'
 import { BASE_CONTENT_FOLDER } from 'utils/constants'
-import nodeFetch from 'node-fetch';
-import matter from 'gray-matter';
-import { GetTags } from 'services/page';
-import moment from 'moment';
-import Parser from "rss-parser"
+import nodeFetch from 'node-fetch'
+import matter from 'gray-matter'
+import { GetTags } from 'services/page'
+import moment from 'moment'
+import Parser from 'rss-parser'
 require('dotenv').config()
-const fs = require('fs');
-const path = require('path');
-const RSSParser = require('rss-parser');
+const fs = require('fs')
+const path = require('path')
+const RSSParser = require('rss-parser')
 const parser: Parser = new RSSParser({
   customFields: {
-      item: ['efblog:image', 'description'],
+    item: ['efblog:image', 'description'],
   },
 })
 
 const timeBasedCache = (() => {
-  let timeLastFetched = moment();
-  let cache: any;
+  let timeLastFetched = moment()
+  let cache: any
 
-  return (fn: any) => async (...args: any) => {
-    const shouldRefreshCache = moment().isAfter(timeLastFetched.add('30', 'minutes')) || !cache;
+  return (fn: any) =>
+    async (...args: any) => {
+      const shouldRefreshCache = moment().isAfter(timeLastFetched.add('30', 'minutes')) || !cache
 
-    if (shouldRefreshCache) {
-      // Update time last fetched immediately to prevent parallel requests 
-      const previousTimeLastFetched = timeLastFetched.clone();
-      timeLastFetched = moment();
+      if (shouldRefreshCache) {
+        // Update time last fetched immediately to prevent parallel requests
+        const previousTimeLastFetched = timeLastFetched.clone()
+        timeLastFetched = moment()
 
-      try {
-        cache = await fn(...args);
-
-        console.log('cache successfully updated');
-      } catch(e) {
-        // If anything goes wrong, we reset timeLastFetched to its previous value so subsequent calls will attempt to refresh the cache
-        timeLastFetched = previousTimeLastFetched;
-        console.error(e, 'cache revalidation failed')
+        try {
+          cache = await fn(...args)
+        } catch (e) {
+          // If anything goes wrong, we reset timeLastFetched to its previous value so subsequent calls will attempt to refresh the cache
+          timeLastFetched = previousTimeLastFetched
+          console.error(e, 'twitter cache revalidation failed')
+        }
+      } else {
+        console.log('serving from cache')
       }
-    } else {
-      console.log('serving from cache')
-    }
 
-    return cache;
-  }
+      return cache
+    }
 })()
 
 const formatting = (() => {
@@ -49,12 +48,12 @@ const formatting = (() => {
     formatBlogPost: (post: any): NewsItem => {
       return {
         title: post.title,
-        url: post.link,     
+        url: post.link,
         date: moment(post.isoDate).valueOf(),
         author: post.author || 'Devcon Team',
         description: post.content,
         imageUrl: post['efblog:image'] ?? '',
-     }
+      }
     },
     formatTweet: (tweet: any): NewsItem => {
       return {
@@ -64,34 +63,34 @@ const formatting = (() => {
         author: '@EFDevcon',
         tweetID: tweet.id,
         description: tweet.text,
-        imageUrl: '/assets/images/twitter-banner.jpeg'
+        imageUrl: '/assets/images/twitter-banner.jpeg',
       }
-    }
+    },
   }
 
-  return _interface;
-})();
+  return _interface
+})()
 
 const twitter = (() => {
   // const twitterDir = path.resolve(newsDirectory, 'tweets');
   // We only include tweets which include a specific hashtag
-  const curationHashtag = 'Devcon'; 
-  const host = 'https://api.twitter.com/2';
-  const bearer = `Bearer ${process.env.TWITTER_API_KEY}`;
-  const userID = '1013526003015184385';
+  const curationHashtag = 'Devcon'
+  const host = 'https://api.twitter.com/2'
+  const bearer = `Bearer ${process.env.TWITTER_API_KEY}`
+  const userID = '1013526003015184385'
 
   const fetchWrapper = (pathname = '', queryParams?: { [key: string]: any }) => {
     const fetchOptions = {
       headers: {
-        Authorization: bearer
-      }
+        Authorization: bearer,
+      },
     }
-  
-    const queryString = new URLSearchParams(queryParams).toString();
 
-    const url = `${host}${pathname}${queryString ? `?${queryString}` : ''}`;
-  
-    return nodeFetch(url, fetchOptions).then((response: any) => response.json());
+    const queryString = new URLSearchParams(queryParams).toString()
+
+    const url = `${host}${pathname}${queryString ? `?${queryString}` : ''}`
+
+    return nodeFetch(url, fetchOptions).then((response: any) => response.json())
   }
 
   const _interface = {
@@ -103,98 +102,99 @@ const twitter = (() => {
         exclude: 'retweets,replies',
         since_id: sinceID,
         max_results: 100,
-        'tweet.fields': 'created_at,entities'
+        'tweet.fields': 'created_at,entities',
       } as any
 
       if (nextToken) {
-        queryParams.pagination_token = nextToken;
+        queryParams.pagination_token = nextToken
       }
 
-      const result = await fetchWrapper(`/users/${userID}/tweets`, queryParams);
+      const result = await fetchWrapper(`/users/${userID}/tweets`, queryParams)
 
-      if (!result.meta ?? result.meta.result_count === 0) return results;
+      if (!result.meta ?? result.meta.result_count === 0) return results
 
-      results = [...results, ...result.data]; 
+      results = [...results, ...result.data]
 
       if (result.meta.next_token) {
-        return await _interface.getTweets(sinceID, results, result.meta.next_token);
+        return await _interface.getTweets(sinceID, results, result.meta.next_token)
       } else {
         // We only collect tweets that are marked with the curation hashtag
-        return results.filter((tweet: any) => tweet?.entities?.hashtags?.some((hashtag: any) => true /*hashtag.tag === curationHashtag*/)); // Add curation hash tag back when relevant
+        return results.filter((tweet: any) =>
+          tweet?.entities?.hashtags?.some((hashtag: any) => true /*hashtag.tag === curationHashtag*/)
+        ) // Add curation hash tag back when relevant
       }
     }),
     getUserID: async () => {
-      const result = await fetchWrapper(`/users/by/username/EFDevcon`);
+      const result = await fetchWrapper(`/users/by/username/EFDevcon`)
 
-      return result;
+      return result
     },
   }
 
-  return _interface;
-})();
+  return _interface
+})()
 
 const blog = (() => {
   const _interface = {
     getPosts: async () => {
-      const feed = await parser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml');
-  
-      return feed.items;
+      const feed = await parser.parseURL('http://blog.ethereum.org/feed/category/devcon.xml')
+
+      return feed.items
     },
   }
 
-  return _interface;
-})();
+  return _interface
+})()
 
 const getNewsItems = async (lang: string) => {
   if (lang !== 'es') lang = 'en'
 
-  const tweets = await twitter.getTweets(1379132185274384384);
-  const tweetsFormatted = tweets.map(formatting.formatTweet);
-  const blogs = await blog.getPosts();
-  const blogsFormatted = blogs.map(formatting.formatBlogPost);
+  const tweets = await twitter.getTweets(1379132185274384384)
+  const tweetsFormatted = tweets.map(formatting.formatTweet)
+  const blogs = await blog.getPosts()
+  const blogsFormatted = blogs.map(formatting.formatBlogPost)
 
-  let newsFromCMS: NewsItem[] | [] = [];
+  let newsFromCMS: NewsItem[] | [] = []
 
   try {
     const cmsPath = path.resolve(process.cwd(), 'src/content/news', lang)
-  
-    newsFromCMS = fs.readdirSync(cmsPath).map((file: any)  => {
+
+    newsFromCMS = fs
+      .readdirSync(cmsPath)
+      .map((file: any) => {
         const content = fs.readFileSync(path.join(cmsPath, file), 'utf8')
-  
+
         if (!content) {
-            console.log('File has no content..', file)
-            return undefined
+          console.log('File has no content..', file)
+          return undefined
         }
-  
+
         const doc = matter(content)
         const allTags = GetTags(lang)
         const tags: Array<string> = doc.data.tags ?? []
-  
+
         return {
-            ...doc.data,
-            id: file.replace('.md', '').toLowerCase(),
-            title: doc.data.title,
-            date: moment(doc.data.date).valueOf(), //new Date(doc.data.date).getTime(),
-            tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i)
+          ...doc.data,
+          id: file.replace('.md', '').toLowerCase(),
+          title: doc.data.title,
+          date: moment(doc.data.date).valueOf(), //new Date(doc.data.date).getTime(),
+          tags: tags.map(i => allTags.find(x => x.slug === i)).filter(i => !!i),
         } as NewsItem
-    }).filter((i: any) => !!i) as Array<NewsItem> 
-  } catch(e) {
+      })
+      .filter((i: any) => !!i) as Array<NewsItem>
+  } catch (e) {
     // Doesn't matter really
   }
 
-  return [
-    ...newsFromCMS,
-    ...blogsFormatted,
-    ...tweetsFormatted
-  ].sort((a, b) => {
-      if (a.date < b.date) {
-        return 1
-      } else if (a.date === b.date) {
-        return 0
-      } else {
-        return -1
-      }
-  });
+  return [...newsFromCMS, ...blogsFormatted, ...tweetsFormatted].sort((a, b) => {
+    if (a.date < b.date) {
+      return 1
+    } else if (a.date === b.date) {
+      return 0
+    } else {
+      return -1
+    }
+  })
 }
 
-export default getNewsItems;
+export default getNewsItems
