@@ -7,7 +7,7 @@ import { BASE_CONTENT_FOLDER } from 'utils/constants'
 export function GetLatestNotification(lang: string = 'en') {
   if (lang !== 'es') lang = 'en'
 
-  return GetNotifications(lang).shift()
+  return GetNotifications(lang).shift() || null
 }
 
 export function GetNotifications(lang: string = 'en'): Array<Notification> {
