@@ -35,6 +35,9 @@ const Accordion = (props: AccordionProps) => {
                 [item.id]: !selected,
               }
 
+              // If clicking on a link it can be a bit jarring if the accordion closes so we'll hold off in that case
+              if (e.target?.tagName === 'A') return
+
               setOpen(nextOpenState)
             }}
             className={className}
