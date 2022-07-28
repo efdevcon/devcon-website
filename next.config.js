@@ -1,5 +1,13 @@
+const withPWA = require('next-pwa')
+const webpack = require('webpack')
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withPWA({
+  pwa: {
+    dest: '/public',
+    cacheOnFrontEndNav: true,
+    customWorkerDir: 'workbox',
+  },
   reactStrictMode: true,
   images: {
     domains: [
@@ -22,9 +30,15 @@ const nextConfig = {
     localeDetection: false,
   },
   trailingSlash: true,
-  webpack: config => {
+  webpack: (config, { buildId }) => {
     return {
       ...config,
+      plugins: [
+        ...config.plugins,
+        new webpack.DefinePlugin({
+          'process.env.CONFIG_BUILD_ID': JSON.stringify(buildId),
+        }),
+      ],
       module: {
         ...config.module,
         rules: [
@@ -198,6 +212,6 @@ const nextConfig = {
       },
     ]
   },
-}
+})
 
 module.exports = nextConfig

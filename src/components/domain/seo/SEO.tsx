@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/router'
 import { Twitter } from './Twitter'
+import { PWA } from './PWA'
 import { SITE_URL } from 'utils/constants'
 import { usePageContext } from 'context/page-context'
 
@@ -27,8 +28,7 @@ export function SEO(props: SEOProps) {
 
   if (pageContext?.current?.title && pageContext?.current?.title !== title) {
     title = `${pageContext?.current.title} — ${title}`
-  }
-  else if (props.title) {
+  } else if (props.title) {
     title = `${props.title} — ${title}`
   }
 
@@ -84,6 +84,7 @@ export function SEO(props: SEOProps) {
             </span>
           ))}
         <Twitter title={title} description={description} image={image} />
+        <PWA />
       </Head>
     </>
   )
