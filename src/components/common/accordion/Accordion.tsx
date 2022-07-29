@@ -29,7 +29,7 @@ const Accordion = (props: AccordionProps) => {
           <li
             id={item.id.toString()}
             key={item.id}
-            onClick={(e: React.SyntheticEvent) => {
+            onClick={(e: any) => {
               const nextOpenState = {
                 ...open,
                 [item.id]: !selected,
