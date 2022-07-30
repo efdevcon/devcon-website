@@ -134,7 +134,7 @@ export default pageHOC(function CityGuideTemplate(props: any) {
 
         <section id="carousel" className="expand clear-bottom">
           <Carousel
-            title="Bogota Colombia"
+            title="Bogotá Colombia"
             images={[
               {
                 alt: 'Bogota 1',

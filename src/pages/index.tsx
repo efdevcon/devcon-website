@@ -26,8 +26,9 @@ export default pageHOC(function Index(props: any) {
 
       <CallsToAction
         scholarApplications={props.sections['cta-scholar-applications']}
-        speakerApplications={props.sections['cta-speaker-applications']}
-        ticketPresale={props.sections['cta-ticket-presale']}
+        // speakerApplications={props.sections['cta-speaker-applications']}
+        // ticketPresale={props.sections['cta-ticket-presale']}
+        ticketsOnSale={props.sections['tickets-on-sale-now']}
       />
 
       <News data={props.news} />
@@ -54,7 +55,13 @@ export default pageHOC(function Index(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const sections = await GetContentSections(
-    ['devcon-bogota', 'cta-speaker-applications', 'cta-ticket-presale', 'cta-scholar-applications'],
+    [
+      'devcon-bogota',
+      'cta-speaker-applications',
+      'cta-ticket-presale',
+      'cta-scholar-applications',
+      'tickets-on-sale-now',
+    ],
     context.locale
   )
   const tracks = GetTracks(context.locale)

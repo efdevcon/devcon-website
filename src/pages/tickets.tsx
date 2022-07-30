@@ -337,16 +337,16 @@ export default pageHOC(function Tickets(props: any) {
               tags={
                 isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD'))
                   ? [
-                    {
-                      text: intl('tickets_ticket_waves'),
-                      link: '#timeline',
-                    },
-                  ]
+                      {
+                        text: intl('tickets_ticket_waves'),
+                        link: '#timeline',
+                      },
+                    ]
                   : [
-                    {
-                      text: intl('tickets_coming_soon'),
-                    },
-                  ]
+                      {
+                        text: intl('tickets_coming_soon'),
+                      },
+                    ]
               }
             />
             <Ticket
@@ -415,27 +415,29 @@ export default pageHOC(function Tickets(props: any) {
               description={<div>{intl('tickets_types_volunteer')}</div>}
               tags={[
                 {
-                  text: intl('tickets_apply_now'),
-                  link: 'https://forms.gle/mjHz1oyy2LiVCRvw7',
+                  text: intl('tickets_closed'),
                 },
               ]}
             />
 
-            {props.sections['cta-scholar-applications'] && (<Ticket
-              title={props.sections['cta-scholar-applications'].title}
-              price="FREE"
-              link="https://scholars.paperform.co/"
-              withoutCurrency
-              color="blue"
-              number="05"
-              description={<div dangerouslySetInnerHTML={{ __html: props.sections['cta-scholar-applications'].body }} />}
-              tags={[
-                {
-                  text: intl('tickets_apply_now'),
-                  link: 'https://scholars.paperform.co/',
-                },
-              ]}
-            />
+            {props.sections['cta-scholar-applications'] && (
+              <Ticket
+                title={props.sections['cta-scholar-applications'].title}
+                price="FREE"
+                link="https://scholars.paperform.co/"
+                withoutCurrency
+                color="blue"
+                number="06"
+                description={
+                  <div dangerouslySetInnerHTML={{ __html: props.sections['cta-scholar-applications'].body }} />
+                }
+                tags={[
+                  {
+                    text: intl('tickets_apply_now'),
+                    link: 'https://scholars.paperform.co/',
+                  },
+                ]}
+              />
             )}
           </div>
 

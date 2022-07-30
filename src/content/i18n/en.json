@@ -80,6 +80,12 @@
     "areas": "Areas",
     "safety": "Safety"
   },
+  "cta": {
+    "waves_ongoing": "Waves Ongoing",
+    "applications_now_open": "Applications are now open",
+    "apply": "Apply",
+    "open": "Open"
+  },
   "navigation": {
     "archive": "Archive",
     "forum": "Forum",
@@ -130,7 +136,7 @@
     "types_student": "A discount for students & educators alike to attend Devcon and learn more about Ethereum.",
     "types_student_note": "Note: School/University ID required at check-in to prevent resale. Secondary/high school, College, or University.",
     "types_latam": "An additional discount is available if you are a Builder or a Student from Latin America: apply through the respective form, and upload proof of Latin America residency (Government issued ID, Passport, etc).",
-    "types_volunteer": "Join the volunteer team alongside 100+ other fun, dedicated, passionate members of the community to help put on the best Devcon yet!",
+    "types_volunteer": "Volunteer applications for Devcon have closed! Thank you for applying & we look forward to seeing you in Bogotá!",
     "accepted_payments": "Payment will be accepted in ETH or DAI on Ethereum Mainnet, Arbitrum + Optimism, OR Fiat/Card via Stripe integration. Prices will be displayed in $USD.",
     "discounted": "Discounted Tickets",
     "extra_discount": "EXTRA DISCOUNT",
