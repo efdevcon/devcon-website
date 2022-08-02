@@ -94,13 +94,14 @@ const twitter = (() => {
   }
 
   const _interface = {
-    getTweets: timeBasedCache(async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
+    recursiveFetch: async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
       // We have rate limiting issues with twitter - no page cache in dev mode so its pretty brutal on the rate limit - we'll reserve twitter fetches for production
-      // if (process.env.NODE_ENV === 'development') return results;
+      if (process.env.NODE_ENV === 'development') return results
 
       const queryParams = {
         exclude: 'retweets,replies',
         since_id: sinceID,
+        // start_time: '2010-11-06T00:00:00Z'
         max_results: 100,
         'tweet.fields': 'created_at,entities',
       } as any
@@ -116,13 +117,20 @@ const twitter = (() => {
       results = [...results, ...result.data]
 
       if (result.meta.next_token) {
-        return await _interface.getTweets(sinceID, results, result.meta.next_token)
+        await _interface.recursiveFetch(sinceID, results, result.meta.next_token)
+
+        return results
       } else {
         // We only collect tweets that are marked with the curation hashtag
         return results.filter((tweet: any) =>
           tweet?.entities?.hashtags?.some((hashtag: any) => true /*hashtag.tag === curationHashtag*/)
         ) // Add curation hash tag back when relevant
       }
+    },
+    getTweets: timeBasedCache(async (sinceID: number): Promise<any> => {
+      const tweets = await _interface.recursiveFetch(sinceID)
+
+      return tweets
     }),
     getUserID: async () => {
       const result = await fetchWrapper(`/users/by/username/EFDevcon`)
