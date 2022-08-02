@@ -46,11 +46,11 @@ const CallsToAction = (props: Props) => {
         <CallToAction
           color="orange"
           title={props.scholarApplications.title}
-          tag={intl('cta_open')}
+          tag={intl('cta_closed')}
           BackgroundSvg={SpeakersBackground}
-          link="https://scholars.paperform.co/"
-          linkText={intl('cta_apply')}
-          meta={intl('cta_applications_now_open')}
+          link="/tickets"
+          linkText={intl('cta_ticket_sales')}
+          meta={intl('cta_applications_closed')}
         >
           <div dangerouslySetInnerHTML={{ __html: props.scholarApplications.body }} />
         </CallToAction>

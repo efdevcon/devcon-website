@@ -83,8 +83,11 @@
   "cta": {
     "waves_ongoing": "Olas en curso",
     "applications_now_open": "Las aplicaciones ya están abiertas",
+    "applications_closed": "Las aplicaciones están cesado",
     "apply": "Aplicar",
-    "open": "Abierta"
+    "open": "Abierta",
+    "closed": "Cesado",
+    "ticket_sales": "Venta de entradas"
   },
   "navigation": {
     "archive": "Archivo",

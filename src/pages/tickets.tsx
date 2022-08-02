@@ -433,8 +433,7 @@ export default pageHOC(function Tickets(props: any) {
                 }
                 tags={[
                   {
-                    text: intl('tickets_apply_now'),
-                    link: 'https://scholars.paperform.co/',
+                    text: intl('tickets_closed'),
                   },
                 ]}
               />
