@@ -1,71 +1,66 @@
-import React from "react";
-import css from "./inline-nav.module.scss";
-import IconBack from "assets/icons/arrow_left.svg";
-import { HorizontalScroller } from "components/common/horizontal-scroller";
-import { Link } from "components/common/link";
-import IconSwirl from "assets/icons/swirl.svg";
-import { useRouter } from "next/router";
+import React from 'react'
+import css from './inline-nav.module.scss'
+import IconBack from 'assets/icons/arrow_left.svg'
+import { HorizontalScroller } from 'components/common/horizontal-scroller'
+import { Link } from 'components/common/link'
+import IconSwirl from 'assets/icons/swirl.svg'
+import { useRouter } from 'next/router'
+import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 const Links = (props: any) => {
-  const router = useRouter();
-  const pathname = router.pathname;
-  const normalizedPathname =
-    pathname[pathname.length - 1] === "/"
-      ? pathname.slice(0, pathname.length - 1)
-      : pathname;
-  const toRemove = normalizedPathname.split("/").pop();
-  const nextPathname = normalizedPathname.replace(toRemove ?? '', '');
+  const router = useRouter()
+  const pathname = router.pathname
+  const normalizedPathname = pathname[pathname.length - 1] === '/' ? pathname.slice(0, pathname.length - 1) : pathname
+  const toRemove = normalizedPathname.split('/').pop()
+  const nextPathname = normalizedPathname.replace(toRemove ?? '', '')
 
   return (
-    <HorizontalScroller>
-      <div className={css["inline-nav"]}>
+    <SwipeToScroll scrollIndicatorDirections={{ right: true }} noBounds>
+      <div className={css['inline-nav']}>
         {props.nested ? (
-          <Link
-            to={nextPathname}
-            className={`${css["icon"]} icon ${css["nested"]}`}
-          >
+          <Link to={nextPathname} className={`${css['icon']} icon ${css['nested']}`}>
             <IconBack />
           </Link>
         ) : (
-          <IconSwirl className={`${css["icon"]} icon`} />
+          <IconSwirl className={`${css['icon']} icon`} />
         )}
 
         {props.links.map((link: any, index: number) => {
-          let className = css["nav-item"];
+          let className = css['nav-item']
 
           // If there's only one item, we can assume it's selected
-          const selected = props.links.length === 1 || link.useIsActive(); // link.to === normalizedPathname || props.links.length === 1
+          const selected = props.links.length === 1 || link.useIsActive() // link.to === normalizedPathname || props.links.length === 1
 
-          if (selected) className += ` ${css["selected"]}`;
+          if (selected) className += ` ${css['selected']}`
 
           // Can optionally pass in a component as a title to dynamically resolve the link text
-          const title = link.Title ? link.Title() : link.title;
+          const title = link.Title ? link.Title() : link.title
 
           const body = link.to ? (
-            <Link className={css["title"]} to={link.to} allowDrag>
+            <Link className={css['title']} to={link.to} allowDrag>
               {title}
             </Link>
           ) : (
-            <p className={css["title"]}>{title}</p>
-          );
+            <p className={css['title']}>{title}</p>
+          )
 
           return (
             <div className={className} key={link.to || index}>
               {body}
             </div>
-          );
+          )
         })}
       </div>
-    </HorizontalScroller>
-  );
-};
+    </SwipeToScroll>
+  )
+}
 
 // Testing custom data resolvers for dynamic routes
 const useSession = (id: string | null) => {
-  const sessions = [{ id: "test", title: "Test session" }];
+  const sessions = [{ id: 'test', title: 'Test session' }]
 
-  return sessions.find((session) => session.id === id);
-};
+  return sessions.find(session => session.id === id)
+}
 
 export const InlineNav = React.memo((props: any) => {
   const router = useRouter()
@@ -74,21 +69,21 @@ export const InlineNav = React.memo((props: any) => {
   }
 
   return (
-    <div id="inline-nav" className={`${css["container"]} section`}>
-      <div className="content">
+    <div id="inline-nav" className={`${css['container']} section no-overflow`}>
+      <div>
         <Links
           path="*"
           links={[
             {
-              title: "Home",
-              to: "/app",
+              title: 'Home',
+              to: '/app',
               useIsActive: () => {
                 return isMatch('/app')
               },
             },
             {
-              title: "Dashboard",
-              to: "/app/dashboard",
+              title: 'Dashboard',
+              to: '/app/dashboard',
               useIsActive: () => {
                 return isMatch('/app/dashboard')
               },
@@ -101,8 +96,8 @@ export const InlineNav = React.memo((props: any) => {
             //   },
             // },
             {
-              title: "Schedule",
-              to: "/app/schedule",
+              title: 'Schedule',
+              to: '/app/schedule',
               useIsActive: () => {
                 return isMatch('/app/schedule')
               },
@@ -115,22 +110,22 @@ export const InlineNav = React.memo((props: any) => {
             //   },
             // },
             {
-              title: "Speakers",
-              to: "/app/speakers",
+              title: 'Speakers',
+              to: '/app/speakers',
               useIsActive: () => {
                 return isMatch('/app/speakers')
               },
             },
             {
-              title: "Venue",
-              to: "/app/venue",
+              title: 'Venue',
+              to: '/app/venue',
               useIsActive: () => {
                 return isMatch('/app/venue')
               },
             },
             {
-              title: "Side Events",
-              to: "/app/side-events",
+              title: 'Side Events',
+              to: '/app/side-events',
               useIsActive: () => {
                 return isMatch('/app/side-events')
               },
@@ -159,7 +154,7 @@ export const InlineNav = React.memo((props: any) => {
           ]}
           {...props}
         />
-{/* TODO: Fix subnavs
+        {/* TODO: Fix subnavs
         <Links
           nested
           path="/settings"
@@ -287,7 +282,7 @@ export const InlineNav = React.memo((props: any) => {
         /> */}
       </div>
     </div>
-  );
-});
+  )
+})
 
-InlineNav.displayName = "InlineNav";
+InlineNav.displayName = 'InlineNav'

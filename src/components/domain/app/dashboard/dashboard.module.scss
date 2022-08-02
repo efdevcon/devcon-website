@@ -5,7 +5,25 @@
   padding-bottom: $gaps-gap-4;
   max-width: 800px;
 
+
+  @media (min-width: $breakpoints-md) {
+    display: flex;
+    flex-direction: row;
+    max-width: none;
+    
+    > * {
+      flex-basis: 50%;
+      flex-shrink: 0;
+    }
+
+    .text {
+      padding-top: 0px;
+      border: none !important;
+    }
+  }
+
   .image-container {
+
   }
 
   .text {

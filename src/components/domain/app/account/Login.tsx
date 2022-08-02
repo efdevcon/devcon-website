@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import IconSwirl from 'assets/icons/swirl.svg'
 import css from './login.module.scss'
 import pwaIcon from './pwa-icon.png'
@@ -26,14 +26,19 @@ export default function LoginPage() {
   const [nonce, setNonce] = useState('')
   const loggedIn = !!accountContext.account
 
+  useEffect(() => {
+    if (loggedIn) {
+      router.push('/app' + location?.search)
+    }
+  }, [router, loggedIn])
+
   if (loggedIn) {
-    router.push('/app' + location?.search)
     return null
   }
 
   const connectWeb3AndLogin = async () => {
     const provider = await accountContext.connectWeb3()
-    if (!provider) { 
+    if (!provider) {
       setError('Unable to connect to Web3 provider')
       return
     }
@@ -41,7 +46,7 @@ export default function LoginPage() {
     const signer = provider.getSigner()
     const address = await signer.getAddress()
     const token = await accountContext.getToken(address.toLowerCase())
-    if (!token) { 
+    if (!token) {
       setError('Unable to create verification token')
       return
     }
@@ -71,16 +76,14 @@ export default function LoginPage() {
     if (!isEmail(email)) {
       setError('Please provide a valid email address.')
       return
-    }
-    else { 
+    } else {
       setError('')
     }
 
     const token = await accountContext.getToken(email)
     if (token) {
       setEmailSent(true)
-    }
-    else { 
+    } else {
       setEmailSent(false)
       setError('Unable to create verification token')
     }
@@ -126,57 +129,63 @@ export default function LoginPage() {
                 <IconSwirl className={`${css['swirl-icon']} icon`} />
               </div>
               <p>
-                If this is the first time you&apos;re logging in, <b>Connect</b> will automatically create a new account on
-                your behalf.
+                If this is the first time you&apos;re logging in, <b>Connect</b> will automatically create a new account
+                on your behalf.
               </p>
             </div>
 
-            <div className={css['alert']}>
-              {error && <Alert type="info" message={error} />}
-            </div>
+            <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
 
-            {emailSent && 
+            {emailSent && (
               <div className={css['email']}>
                 <p className="bold">Email — Confirm your email address</p>
-                <p>
-                  We&apos;ve sent a verification code to your email address. Please enter this code on below.
-                </p>
-                <InputForm 
-                  className={css['input']} 
+                <p>We&apos;ve sent a verification code to your email address. Please enter this code on below.</p>
+                <InputForm
+                  className={css['input']}
                   placeholder="Verification code"
-                  defaultValue={nonce} 
-                  onChange={(value) => setNonce(value)} 
-                  onSubmit={verifyEmail} />
-                <Button className={`black`} onClick={verifyEmail}>Verify your email</Button>
+                  defaultValue={nonce}
+                  onChange={value => setNonce(value)}
+                  onSubmit={verifyEmail}
+                />
+                <Button className={`black`} onClick={verifyEmail}>
+                  Verify your email
+                </Button>
               </div>
-            }
+            )}
 
-            {!emailSent && <>
-              <div className={css['trust-model']}>
-                <p>Choose your Trust model.</p>
-                <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
-                  <span onClick={() => setTooltipVisible(!tooltipVisible)}>
-                    <IconHelp className={`icon ${css['icon-help']}`} />
-                  </span>
-                </Tooltip>
-              </div>
+            {!emailSent && (
+              <>
+                <div className={css['trust-model']}>
+                  <p>Choose your Trust model.</p>
+                  <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
+                    <span onClick={() => setTooltipVisible(!tooltipVisible)}>
+                      <IconHelp className={`icon ${css['icon-help']}`} />
+                    </span>
+                  </Tooltip>
+                </div>
 
-              <div className={css['email']}>
-                <p className="bold">Email — Not interested in Web 3 usage</p>
-                <InputForm 
-                  className={css['input']} 
-                  placeholder="Email"
-                  defaultValue={email} 
-                  onChange={(value) => setEmail(value)} 
-                  onSubmit={connectEmail} />
-                <Button className={`black`} onClick={connectEmail}>Connect with Email</Button>
-              </div>
-              
-              <div className={css['wallet']}>
-                <p className="bold">Wallet — For Experienced Web 3 Users</p>
-                <Button className={`red ${css['button']}`} onClick={connectWeb3AndLogin}>Sign-in with Ethereum</Button>
-              </div>
-            </>}
+                <div className={css['email']}>
+                  <p className="bold">Email — Not interested in Web 3 usage</p>
+                  <InputForm
+                    className={css['input']}
+                    placeholder="Email"
+                    defaultValue={email}
+                    onChange={value => setEmail(value)}
+                    onSubmit={connectEmail}
+                  />
+                  <Button className={`black`} onClick={connectEmail}>
+                    Connect with Email
+                  </Button>
+                </div>
+
+                <div className={css['wallet']}>
+                  <p className="bold">Wallet — For Experienced Web 3 Users</p>
+                  <Button className={`red ${css['button']}`} onClick={connectWeb3AndLogin}>
+                    Sign-in with Ethereum
+                  </Button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

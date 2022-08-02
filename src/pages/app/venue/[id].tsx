@@ -2,28 +2,29 @@ import { AppLayout } from 'components/domain/app/Layout'
 import { Room } from 'components/domain/app/venue'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
-import { GetNavigationData } from 'services/navigation'
-import { GetLatestNotification } from 'services/notifications'
 import { GetRooms, GetSessionsByRoom } from 'services/programming'
 import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { getMessages } from 'utils/intl'
+import { getGlobalData } from 'services/global'
 
 export default pageHOC((props: any) => {
-  return <AppLayout>
-    <Room {...props} />
-  </AppLayout>
+  return (
+    <AppLayout>
+      <Room {...props} />
+    </AppLayout>
+  )
 })
 
 export async function getStaticPaths() {
   const rooms = await GetRooms()
-  const paths = rooms.map((i) => {
-    return { params: { id: i.id }, locale: "en" }
+  const paths = rooms.map(i => {
+    return { params: { id: i.id }, locale: 'en' }
   })
 
   return {
     paths,
-    fallback: false
-  };
+    fallback: false,
+  }
 }
 
 export async function getStaticProps(context: any) {
@@ -40,12 +41,10 @@ export async function getStaticProps(context: any) {
 
   return {
     props: {
-      messages: intl,
-      navigationData: await GetNavigationData(context.locale),
-      notification: GetLatestNotification(context.locale),
+      ...(await getGlobalData(context.locale)),
       page: DEFAULT_APP_PAGE,
       room,
-      sessions: await GetSessionsByRoom(id)
-    }
+      sessions: await GetSessionsByRoom(id),
+    },
   }
 }

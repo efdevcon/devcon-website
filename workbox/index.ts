@@ -20,30 +20,30 @@ _self.addEventListener('message', event => {
   console.log(process.env, 'env')
 })
 
-_self.addEventListener('push', event => {
-  const data = JSON.parse(event?.data.text() || '{}')
-  event?.waitUntil(
-    _self.registration.showNotification(data.title, {
-      body: data.message,
-      icon: '/icons/android-chrome-192x192.png',
-    })
-  )
-})
+// _self.addEventListener('push', event => {
+//   const data = JSON.parse(event?.data.text() || '{}')
+//   event?.waitUntil(
+//     _self.registration.showNotification(data.title, {
+//       body: data.message,
+//       icon: '/icons/android-chrome-192x192.png',
+//     })
+//   )
+// })
 
-_self.addEventListener('notificationclick', event => {
-  event?.notification.close()
-  event?.waitUntil(
-    _self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(function (clientList) {
-      if (clientList.length > 0) {
-        let client = clientList[0]
-        for (let i = 0; i < clientList.length; i++) {
-          if (clientList[i].focused) {
-            client = clientList[i]
-          }
-        }
-        return client.focus()
-      }
-      return _self.clients.openWindow('/')
-    })
-  )
-})
+// _self.addEventListener('notificationclick', event => {
+//   event?.notification.close()
+//   event?.waitUntil(
+//     _self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(function (clientList) {
+//       if (clientList.length > 0) {
+//         let client = clientList[0]
+//         for (let i = 0; i < clientList.length; i++) {
+//           if (clientList[i].focused) {
+//             client = clientList[i]
+//           }
+//         }
+//         return client.focus()
+//       }
+//       return _self.clients.openWindow('/')
+//     })
+//   )
+// })

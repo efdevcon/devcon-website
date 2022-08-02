@@ -4,7 +4,7 @@ import css from './schedule.module.scss'
 
 export const Schedule = ({ sessions }: any) => {
   return (
-    <div>
+    <div className="section">
       <h1>Sessions:</h1>
       <div className={css['list']}>
         {sessions.map((session: any) => {

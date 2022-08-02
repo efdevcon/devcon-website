@@ -11,11 +11,12 @@ import { useOnOutsideClick } from 'hooks/useOnOutsideClick'
 
 type HeaderProps = {
   withStrip?: boolean
+  isApp?: boolean
   withHero?: boolean
   className?: string
 }
 
-export const Header = React.memo(({ withStrip, withHero, className }: HeaderProps) => {
+export const Header = React.memo(({ withStrip, withHero, className, isApp }: HeaderProps) => {
   const ref = useRef(null)
   const router = useRouter()
   const isScrolled = useIsScrolled()
@@ -48,13 +49,14 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
     <header id="header-container" className={headerContainerClass}>
       {withStrip && <Strip withHero={withHero} />}
       <div id="header" className={headerClass} ref={ref}>
-        <div className="section">
+        <div className="section no-overflow">
           <div className={`${css['menu-container']}`}>
             <Link to={`/${router.locale}`}>
               <HeaderLogo />
             </Link>
 
             <Menu
+              isApp={isApp}
               searchOpen={searchOpen}
               setSearchOpen={setSearchOpen}
               foldoutOpen={foldoutOpen}

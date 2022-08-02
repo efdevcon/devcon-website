@@ -10,10 +10,12 @@ import IconMenu from 'assets/icons/menu.svg'
 import AccountIcon from 'assets/icons/account.svg'
 import IconCross from 'assets/icons/cross.svg'
 import SearchIcon from 'assets/icons/search.svg'
-// import BellIcon from 'assets/icons/bell.svg'
+import { Tooltip } from 'components/common/tooltip'
+import BackIcon from 'assets/icons/subdirectory-left.svg'
 import BellIcon from 'assets/icons/bell-simple.svg'
 import { LanguageToggle } from 'components/common/layouts/header/strip/language-toggle'
 import useNavigationData from '../useNavigationData'
+import { TippyProps } from '@tippyjs/react'
 
 type ButtonProps = {
   buttons: {
@@ -22,6 +24,7 @@ type ButtonProps = {
     url?: string
     className?: string
     onClick?: any
+    tooltip?: TippyProps
   }[]
 }
 
@@ -51,26 +54,37 @@ const Buttons = (props: ButtonProps) => {
   return (
     <div className={css['buttons']}>
       {props.buttons.map(button => {
-        let className = css['button']
+        let body
 
         if (button.url) {
-          return (
-            <Link key={button.key} to={button.url} className={className}>
+          body = (
+            <Link key={button.key} to={button.url}>
               {button.icon}
             </Link>
           )
+        } else {
+          body = (
+            <button
+              key={button.key}
+              aria-label={button.key}
+              className={`plain ${button.className}`}
+              onClick={button.onClick}
+            >
+              {button.icon}
+            </button>
+          )
         }
 
-        return (
-          <button
-            key={button.key}
-            aria-label={button.key}
-            className={`${className} plain ${button.className}`}
-            onClick={button.onClick}
-          >
-            {button.icon}
-          </button>
-        )
+        if (button.tooltip) {
+          return (
+            <Tooltip {...button.tooltip}>
+              {/* Need the wrapping div due to Link and Tooltip not interacting well together */}
+              <div>{body}</div>
+            </Tooltip>
+          )
+        }
+
+        return body
       })}
     </div>
   )
@@ -81,11 +95,14 @@ export const Menu = (props: any) => {
   const context = usePageContext()
 
   let buttons: ButtonProps['buttons'] = [
-    // {
-    //   key: 'account',
-    //   icon: <AccountIcon />,
-    //   url: '/app',
-    // },
+    {
+      key: 'account',
+      tooltip: {
+        content: 'Event App',
+      },
+      icon: <AccountIcon />,
+      url: '/app',
+    },
     {
       key: 'mobile-menu-toggle',
       icon: props.foldoutOpen ? <IconCross style={{ width: '0.8em' }} /> : <IconMenu />,
@@ -94,22 +111,13 @@ export const Menu = (props: any) => {
     },
   ]
 
-  // if (router.pathname.startsWith('/archive')) {
-  //   buttons = [
-  //     {
-  //       key: 'search',
-  //       icon: <SearchIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
-  //       onClick: () => props.setSearchOpen(!props.searchOpen),
-  //     },
-  //     ...buttons,
-  //   ]
-  // }
-
-  if (router.pathname.startsWith('/app/')) {
+  if (props.isApp) {
     buttons = [
-      ...buttons.slice(0, 1),
       {
         key: 'notifications',
+        tooltip: {
+          content: 'Notifications',
+        },
         icon: (
           <div className={css['app-notifications']}>
             <BellIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />
@@ -117,37 +125,58 @@ export const Menu = (props: any) => {
           </div>
         ),
         url: '/app/notifications',
-        // onClick: () => alert('Not done'),
       },
-      ...buttons.slice(1),
+      {
+        key: 'account',
+        tooltip: {
+          content: 'App Homescreen',
+        },
+        icon: <AccountIcon />,
+        url: '/app',
+      },
+      {
+        key: 'back-button',
+        tooltip: {
+          content: 'Leave App',
+        },
+        icon: <BackIcon style={{ fontSize: '1.2em', transform: 'translateX(-2px)' }} />,
+        url: '/',
+      },
     ]
   }
 
   return (
     <div className={css['menu']}>
-      <Left navigationData={context?.navigation} />
+      {!props.isApp && (
+        <>
+          <Left navigationData={context?.navigation} />
 
-      <div className={css['right']}>
-        <Navigation navigationData={context?.navigation} />
-        <div className={css['language-toggle-container']}>
-          <LanguageToggle />
-        </div>
-      </div>
+          <div className={css['right']}>
+            <Navigation navigationData={context?.navigation} />
+
+            <div className={css['language-toggle-container']}>
+              <LanguageToggle />
+            </div>
+          </div>
+        </>
+      )}
 
       <Buttons buttons={buttons} />
 
-      {/* <Account /> */}
+      {/* 
+      <Account /> */}
       {/* <Search open={props.setSearchOpen} /> */}
-      {/* </Buttons> */}
 
       {/* Mobile */}
-      <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
-        <div className={css['foldout-top']}>
-          <Left navigationData={context?.navigation} />
-          <LanguageToggle />
-        </div>
-        <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
-      </Foldout>
+      {!props.isApp && (
+        <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
+          <div className={css['foldout-top']}>
+            <Left navigationData={context?.navigation} />
+            <LanguageToggle />
+          </div>
+          <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
+        </Foldout>
+      )}
     </div>
   )
 }

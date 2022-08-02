@@ -8,27 +8,29 @@ import { GetLatestNotification } from 'services/notifications'
 import { GetSessions, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { getMessages } from 'utils/intl'
+import { getGlobalData } from 'services/global'
 
 export default pageHOC((props: any) => {
-  return <AppLayout>
-    <Session {...props} />
-  </AppLayout>
+  return (
+    <AppLayout>
+      <Session {...props} />
+    </AppLayout>
+  )
 })
 
 export async function getStaticPaths() {
   const sessions = await GetSessions()
-  const paths = sessions.map((i) => {
-    return { params: { id: i.id }, locale: "en" }
+  const paths = sessions.map(i => {
+    return { params: { id: i.id }, locale: 'en' }
   })
 
   return {
     paths,
-    fallback: false
-  };
+    fallback: false,
+  }
 }
 
 export async function getStaticProps(context: any) {
-  const intl = await getMessages(context.locale)
   const session = (await GetSessions()).find(i => i.id === context.params.id)
 
   if (!session) {
@@ -41,11 +43,9 @@ export async function getStaticProps(context: any) {
 
   return {
     props: {
-      messages: intl,
-      navigationData: await GetNavigationData(context.locale),
-      notification: GetLatestNotification(context.locale),
+      ...(await getGlobalData(context.locale)),
       page: DEFAULT_APP_PAGE,
-      session
-    }
+      session,
+    },
   }
 }

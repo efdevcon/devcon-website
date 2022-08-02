@@ -76,6 +76,14 @@
     --strip-border: none;
   }
 
+  > * {
+    > * {
+      @media (max-width: 1350px) {
+        grid-column: 2 / 4;
+      }
+    }
+  }
+
   .menu-container {
     // @include layout-content;
 

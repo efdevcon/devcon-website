@@ -6,6 +6,10 @@
   top: 0px;
   z-index: 19;
   background: $colors-monochrome-1;
+
+  > * {
+    grid-column: 2 / 4;
+  }
 }
 
 .inline-nav {
@@ -13,12 +17,7 @@
   align-items: center;
   padding-bottom: $gaps-gap-2;
   padding-top: $gaps-gap-1;
-  // padding-left: $gaps-gap-16;
-
-  // @media (max-width: $breakpoints-lg) {
-  //   padding-left: $gaps-gap-4;
-  // }
-
+  
   > * {
     flex-shrink: 0;
   }

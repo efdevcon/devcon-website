@@ -3,6 +3,7 @@ import { AccountContextProvider } from 'context/account-context-provider'
 import { BottomNav, InlineNav } from 'components/domain/app/navigation'
 import css from './app.module.scss'
 import { Header } from 'components/common/layouts/header'
+import { SEO } from 'components/domain/seo'
 import { useAccountContext } from 'context/account-context'
 
 export const AppLayout = (props: any) => {
@@ -11,12 +12,11 @@ export const AppLayout = (props: any) => {
 
   return (
     <AccountContextProvider>
-      <Header className={css['header']} withStrip={false} withHero={false} />
+      <SEO />
+      <Header isApp className={css['header']} withStrip={false} withHero={false} />
       <InlineNav />
-      
-      <div className={css['app']}>
-        {props.children}
-      </div>
+
+      <div className={css['app']}>{props.children}</div>
 
       {loggedIn && <BottomNav location={location} />}
     </AccountContextProvider>
