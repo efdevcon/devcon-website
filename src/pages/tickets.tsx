@@ -191,11 +191,7 @@ export default pageHOC(function Tickets(props: any) {
                 {
                   Icon: NoteIcon,
                   title: intl('tickets_raffle_discount_ticket_applications'),
-                  right: (
-                    <Link to="#types" style={{ textTransform: 'none' }}>
-                      {intl('tickets_raffle_discount_ticket_applications_dates')}
-                    </Link>
-                  ),
+                  right: intl('tickets_raffle_discount_ticket_applications_dates'),
                 },
                 {
                   Icon: AuctionIcon,
@@ -232,9 +228,9 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>{intl('tickets_discount_applications_begins')}</div>
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_begins_date')}</div>
-                    <Link to="#types" className="generic hover-underline">
+                    {/* <Link to="#types" className="generic hover-underline">
                       {intl('tickets_apply_now')}
-                    </Link>
+                    </Link> */}
                   </div>
                 ),
                 indent: false,
@@ -249,7 +245,7 @@ export default pageHOC(function Tickets(props: any) {
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
                   </div>
                 ),
-                active: false, //isAfterDate('2022-06-30'),
+                active: true,
                 indent: false,
                 body: '',
               },
@@ -358,8 +354,7 @@ export default pageHOC(function Tickets(props: any) {
               description={<div>{intl('tickets_types_builder')}</div>}
               tags={[
                 {
-                  text: intl('tickets_apply_now'),
-                  link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
+                  text: intl('tickets_closed'),
                 },
               ]}
             />
@@ -379,8 +374,7 @@ export default pageHOC(function Tickets(props: any) {
               }
               tags={[
                 {
-                  text: intl('tickets_apply_now'),
-                  link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
+                  text: intl('tickets_closed'),
                 },
               ]}
             />
@@ -395,12 +389,7 @@ export default pageHOC(function Tickets(props: any) {
               description={<div>{intl('tickets_types_latam')}</div>}
               tags={[
                 {
-                  text: 'Builder',
-                  link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
-                },
-                {
-                  text: 'Student',
-                  link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
+                  text: intl('tickets_closed'),
                 },
               ]}
             />
