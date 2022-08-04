@@ -1,1 +1,0 @@
-self.addEventListener("message",(e=>{console.log(null==e?void 0:e.data,"data"),console.log(process.env,"env")}));

@@ -77,7 +77,7 @@ const Buttons = (props: ButtonProps) => {
 
         if (button.tooltip) {
           return (
-            <Tooltip {...button.tooltip}>
+            <Tooltip key={button.key} {...button.tooltip}>
               {/* Need the wrapping div due to Link and Tooltip not interacting well together */}
               <div>{body}</div>
             </Tooltip>

@@ -4,20 +4,26 @@ import css from './pwa.module.scss'
 import { Modal } from 'components/common/modal'
 import IconPlus from 'assets/icons/plus.svg'
 import imagePWA from 'assets/images/pwa_prompt.png'
+import { Button } from 'components/common/button'
+import { pwaUtilities } from './pwa-utilities'
 
-const getIsPWAPossible = () => {
-  return true
-}
+// const getIsPWAPossible = () => {
+//   return true
+// }
 
 export const PWAPrompt = (props: any) => {
   const [open, setOpen] = React.useState(false)
 
-  useEffect(() => {
-    setOpen(getIsPWAPossible())
-  }, [])
+  // useEffect(() => {
+  //   setOpen(getIsPWAPossible())
+  // }, [])
+
+  const [deferredInstallEvent, setDeferredInstallEvent] = pwaUtilities.useDetectInstallable({
+    togglePrompt: () => setOpen(true),
+  })
 
   return (
-    <Modal open={open} close={() => setOpen(!open)} className={css['container']}>
+    <Modal open={open} close={() => setOpen(!open)} className={css['modal']}>
       <Image alt="Devcon wizard" className={css['background']} src={imagePWA} />
       <div className={css['content']}>
         <div className={css['tag']}>
@@ -26,15 +32,25 @@ export const PWAPrompt = (props: any) => {
         {/* Should tag be added to design system? */}
         <div className={css['info']}>
           <p className={`${css['cta']} font-xl`}>
-            <span className="bold">Devcon.org</span> is now an App! Install on your smartphone.
+            <span className="bold">Devcon.org</span> is now an App! Install on your device.
           </p>
 
           <div className={css['description']}>
-            <button className="squared light-blue sm">
+            <Button
+              className="squared light-blue sm"
+              onClick={() =>
+                pwaUtilities.installPwa({
+                  togglePrompt: () => setOpen(false),
+                  deferredInstallEvent,
+                  setDeferredInstallEvent,
+                })
+              }
+            >
               <IconPlus />
-            </button>
+            </Button>
+
             <p className="font-xs bold text-uppercase">
-              open your browser menu and “Add to Home Screen” to use app that works offline.
+              Install on your device by clicking the button and accepting the prompt!
             </p>
           </div>
         </div>
