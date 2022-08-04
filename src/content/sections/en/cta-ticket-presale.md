@@ -3,4 +3,4 @@ title: Discount Ticket Applications
 pages:
   - index
 ---
-Apply today if you are a Builder, Student (or teacher!), or are interested in Volunteering at Devcon! Application responses will be sent on a rolling basis.
+Discount Ticket Applications to Devcon VI have closed for this year. Thank you so much for applying & we look forward to seeing you in Bogotá!
