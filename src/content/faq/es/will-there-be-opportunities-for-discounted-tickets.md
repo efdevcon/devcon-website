@@ -3,5 +3,4 @@ title: ¿Habrá oportunidades para comprar boletos con descuento para Devcon?
 category: ticketing
 order: 3
 ---
-
-¡Sí! Más información se puede encontrar [aquí](/tickets).
+Las solicitudes de boletos con descuento para Devcon VI han cerrado este año. ¡Muchas gracias por aplicar y esperamos verte en Bogotá!
