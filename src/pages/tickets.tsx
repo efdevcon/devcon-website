@@ -245,7 +245,7 @@ export default pageHOC(function Tickets(props: any) {
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
                   </div>
                 ),
-                active: true,
+                active: false,
                 indent: false,
                 body: '',
               },
