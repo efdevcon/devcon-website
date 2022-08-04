@@ -3,4 +3,4 @@ title: Solicitudes de boletos de descuento
 pages:
   - index
 ---
-¡Solicite hoy si es constructor, estudiante (¡o maestro!) o si está interesado en ser voluntario en Devcon! Las respuestas a las solicitudes se enviarán de forma continua.
+Las solicitudes de boletos con descuento para Devcon VI han cerrado este año. ¡Muchas gracias por aplicar y esperamos verte en Bogotá!
