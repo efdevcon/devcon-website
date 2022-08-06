@@ -7,16 +7,14 @@ import imagePWA from 'assets/images/pwa_prompt.png'
 import { Button } from 'components/common/button'
 import { pwaUtilities } from './pwa-utilities'
 
-// const getIsPWAPossible = () => {
-//   return true
-// }
+/*
+  TODO: 
+    Workbox inspect
+    Apple prompt
+*/
 
 export const PWAPrompt = (props: any) => {
   const [open, setOpen] = React.useState(false)
-
-  // useEffect(() => {
-  //   setOpen(getIsPWAPossible())
-  // }, [])
 
   const [deferredInstallEvent, setDeferredInstallEvent] = pwaUtilities.useDetectInstallable({
     togglePrompt: () => setOpen(true),
@@ -29,7 +27,7 @@ export const PWAPrompt = (props: any) => {
         <div className={css['tag']}>
           <p className="font-xs bold">DEVCON WEB APP</p>
         </div>
-        {/* Should tag be added to design system? */}
+
         <div className={css['info']}>
           <p className={`${css['cta']} font-xl`}>
             <span className="bold">Devcon.org</span> is now an App! Install on your device.

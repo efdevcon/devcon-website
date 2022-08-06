@@ -90,8 +90,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    overflow: hidden;
     width: 100%;
+
+    &.no-overflow {
+      overflow: hidden;
+    }
 
     > a {
       display: flex;
