@@ -80,6 +80,15 @@
     "areas": "Áreas",
     "safety": "La seguridad"
   },
+  "cta": {
+    "waves_ongoing": "Olas en curso",
+    "applications_now_open": "Las aplicaciones ya están abiertas",
+    "applications_closed": "Las aplicaciones están cesado",
+    "apply": "Aplicar",
+    "open": "Abierta",
+    "closed": "Cesado",
+    "ticket_sales": "Venta de entradas"
+  },
   "navigation": {
     "archive": "Archivo",
     "forum": "Foro",
@@ -130,7 +139,7 @@
     "types_student": "Un descuento para estudiantes y educadores por igual para asistir a Devcon y obtener más información sobre Ethereum.",
     "types_student_note": "Nota: Se requiere identificación de la escuela/universidad al momento del check-in para evitar la reventa. Secundaria/preparatoria, colegio o universidad.",
     "types_latam": "Y hay un descuento adicional disponible si es un constructor o un estudiante de América Latina: solicite a través del formulario respectivo y cargue un comprobante de residencia en América Latina (identificación emitida por el gobierno, pasaporte, etc.).",
-    "types_volunteer": "¡Únase al equipo de voluntarios junto con más de 100 miembros divertidos, dedicados y apasionados de la comunidad para ayudar a poner en marcha el mejor Devcon hasta ahora!",
+    "types_volunteer": "¡Las solicitudes de voluntarios para Devcon se han cerrado! ¡Gracias por aplicar y esperamos verte en Bogotá!",
     "accepted_payments": "El pago se aceptará en ETH o DAI en Ethereum Mainnet, Arbitrum + Optimism, O Fiat/Card a través de la integración de Stripe. Los precios se mostrarán en $USD.",
     "discounted": "Entradas con descuento",
     "extra_discount": "DESCUENTO EXTRA",
@@ -153,7 +162,7 @@
     "raffle_reasoning": "¿Por qué?",
     "raffle_important_dates": "Fechas importantes",
     "raffle_discount_ticket_applications": "Solicitudes de boletos de descuento",
-    "raffle_discount_ticket_applications_dates": "¡Abierto ahora!",
+    "raffle_discount_ticket_applications_dates": "6 de junio al 3 de agosto",
     "raffle_auction_begins": "Comienza Subasta & Sorteo",
     "raffle_auction_begins_date": "5 de julio",
     "raffle_auction_dates": "5 de julio al 14 de julio",
@@ -181,8 +190,8 @@
     "discount_applications_ends": "Solicitudes de entradas con descuento cerrar",
     "discount_applications_send_rolling_basis": "Respuestas de boletos de descuento enviadas de forma continua",
     "discount_applications_begins_date": "6 de junio",
-    "discount_applications_ends_date": "30 de junio",
-    "discount_applications_review_process": "Proceso de revisión",
+    "discount_applications_ends_date": "3 de agosto",
+    "discount_applications_review_process": "En curso",
     "note_id_check": "*Nota: Se requiere identificación al momento del check-in para evitar la reventa.",
     "raffle_claim": "¡Reclamar!",
     "on_sale_now": "¡En venta ahora!"
@@ -230,6 +239,7 @@
     "learn_more": "Aprende más",
     "extended_hours": "Horas extendidas",
     "community_curation": "Curación comunitaria",
+    "production_contacts": "Contactos de producción",
     "infinite_text_1": "DISCUTIR • APRENDER • INTERCAMBIAR • EXPLORAR • COLABORAR •",
     "infinite_text_2": "APRENDER • ENFOCAR • CÓDIGO • PRUEBA • IDEA • HACK •"
   },

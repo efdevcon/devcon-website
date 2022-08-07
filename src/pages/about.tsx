@@ -245,9 +245,9 @@ export default pageHOC(function AboutPage(props: any) {
               className="markdown"
               dangerouslySetInnerHTML={{ __html: props.sections['getting-involved'].data.right }}
             ></div>
-            <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfCZyBMdyTSrJa9GNIbiQMeNQ-3jQJrdr9JQemKD0VXKduOhA/viewform">
+            {/* <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfCZyBMdyTSrJa9GNIbiQMeNQ-3jQJrdr9JQemKD0VXKduOhA/viewform">
               <Button className={`lg green ${css['button']}`}>{intl('about_volunteer')}</Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

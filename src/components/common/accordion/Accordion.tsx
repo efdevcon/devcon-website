@@ -29,11 +29,14 @@ const Accordion = (props: AccordionProps) => {
           <li
             id={item.id.toString()}
             key={item.id}
-            onClick={(e: React.SyntheticEvent) => {
+            onClick={(e: any) => {
               const nextOpenState = {
                 ...open,
                 [item.id]: !selected,
               }
+
+              // If clicking on a link it can be a bit jarring if the accordion closes so we'll hold off in that case
+              if (e.target?.tagName === 'A') return
 
               setOpen(nextOpenState)
             }}

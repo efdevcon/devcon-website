@@ -4,50 +4,55 @@ import TicketBackground from 'assets/images/pages/tickets.svg'
 import SpeakersBackground from 'assets/images/pages/speakers.svg'
 import CallToAction from 'components/common/card/CallToActionCard'
 import { ContentSection } from 'types/ContentSection'
+import { useTranslations } from 'next-intl'
 
 interface Props {
-  ticketPresale: ContentSection
-  scholarApplications: ContentSection
-  speakerApplications: ContentSection
+  [key: string]: ContentSection
+  // ticketPresale: ContentSection
+  // scholarApplications: ContentSection
+  // speakerApplications: ContentSection
+  // ticketsOnSaleNow: ContentSection
 }
 
 const CallsToAction = (props: Props) => {
+  const intl = useTranslations()
+
   return (
     <div className={`section`}>
       <div className={`${css['container']} border-bottom clear-bottom`}>
         <CallToAction
-          title={props.ticketPresale.title}
-          // tag="LIVE"
+          color="blue"
+          title={props.ticketsOnSale.title}
           BackgroundSvg={TicketBackground}
           link="/tickets"
-          linkText="Ticketing"
-          meta="Ongoing Reviews"
+          linkText={intl('tickets_title')}
+          meta={intl('cta_waves_ongoing')}
         >
-          <div dangerouslySetInnerHTML={{ __html: props.ticketPresale.body }} />
+          <div dangerouslySetInnerHTML={{ __html: props.ticketsOnSale.body }} />
         </CallToAction>
 
-        <CallToAction
-          color="orange"
-          title={props.scholarApplications.title}
-          tag="OPEN"
-          BackgroundSvg={SpeakersBackground}
-          link="https://scholars.paperform.co/"
-          linkText="Apply"
-          meta="Applications are now open"
-        >
-          <div dangerouslySetInnerHTML={{ __html: props.scholarApplications.body }} />
-        </CallToAction>
-
-        <CallToAction
+        {/* <CallToAction
           color="orange"
           title={props.speakerApplications.title}
           // tag="OPEN"
-          BackgroundSvg={SpeakersBackground}
+          BackgroundSvg={TicketBackground}
           link="/applications"
           linkText="Applications"
           meta="Applications are now closed"
         >
           <div dangerouslySetInnerHTML={{ __html: props.speakerApplications.body }} />
+        </CallToAction> */}
+
+        <CallToAction
+          color="orange"
+          title={props.scholarApplications.title}
+          tag={intl('cta_closed')}
+          BackgroundSvg={SpeakersBackground}
+          link="/tickets"
+          linkText={intl('cta_ticket_sales')}
+          meta={intl('cta_applications_closed')}
+        >
+          <div dangerouslySetInnerHTML={{ __html: props.scholarApplications.body }} />
         </CallToAction>
       </div>
     </div>

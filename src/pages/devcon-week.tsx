@@ -4,14 +4,14 @@ import { PageHero } from 'components/common/page-hero'
 import themes from './themes.module.scss'
 import { pageHOC } from 'context/pageHOC'
 import { getGlobalData } from 'services/global'
-import { GetPage, GetContentSections } from 'services/page'
+import { GetPage, GetFAQ, GetContentSections } from 'services/page'
 import Schedule from 'components/domain/devcon-week/schedule'
 import getNotionDatabase from 'components/domain/devcon-week/getNotionDatabase'
 import { useTranslations } from 'next-intl'
 import { Snapshot } from 'components/common/snapshot'
 import { Link } from 'components/common/link'
 import ArrowRight from 'assets/icons/arrow_right.svg'
-import { Button } from 'components/common/button'
+import { FAQ } from 'components/domain/faq'
 import css from './devcon-week.module.scss'
 
 export default pageHOC(function DevconWeek(props: any) {
@@ -34,6 +34,10 @@ export default pageHOC(function DevconWeek(props: any) {
             title: props.sections['post-devcon-events'].title,
             to: '#post-devcon',
           },
+          {
+            title: 'FAQ',
+            to: '#faq',
+          },
         ]}
       />
 
@@ -55,6 +59,11 @@ export default pageHOC(function DevconWeek(props: any) {
               </Link> */}
               <Link to="/continuous-devcon" className="text-uppercase hover-underline font-lg bold">
                 {intl('cd_title')}
+                <ArrowRight />
+              </Link>
+
+              <Link to="#faq" className="text-uppercase hover-underline font-lg bold">
+                {intl('cd_production_contacts')}
                 <ArrowRight />
               </Link>
             </div>
@@ -132,6 +141,14 @@ export default pageHOC(function DevconWeek(props: any) {
         </div>
       </div>
 
+      <div id="faq" className="section">
+        <FAQ
+          data={[{ id: 'something', title: 'Frequently Asked Questions', questions: props.faq }]}
+          customCategoryTitle="FAQ"
+          noSearch
+        />
+      </div>
+
       {/* <Tags items={pageContext?.current?.tags} viewOnly /> */}
     </Page>
   )
@@ -140,12 +157,14 @@ export default pageHOC(function DevconWeek(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/devcon-week', context.locale)
+  const faq = await GetFAQ(context.locale)
   const sections = await GetContentSections(['post-devcon-events'], context.locale)
 
   return {
     props: {
       ...globalData,
       sections,
+      faq: faq.filter((faq: any) => faq.category.id === 'devcon-week'),
       scheduleData: await getNotionDatabase(context.locale || 'en'),
       page,
     },

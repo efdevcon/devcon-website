@@ -7,7 +7,7 @@ type CallToActionProps = {
   title: string
   tag?: string
   children: any
-  color?: 'orange' | 'purple'
+  color?: 'orange' | 'purple' | 'blue'
   BackgroundSvg: React.ElementType
   link: any
   linkText: string
@@ -22,8 +22,14 @@ const CallToAction = (props: CallToActionProps) => {
     className += ` ${css[props.color]}`
   }
 
-  if (props.color === 'purple') {
-    buttonColor = 'purple'
+  switch (props.color) {
+    case 'purple': {
+      buttonColor = 'purple'
+    }
+
+    case 'blue': {
+      buttonColor = 'blue'
+    }
   }
 
   return (
