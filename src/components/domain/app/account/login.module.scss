@@ -151,7 +151,7 @@
 
 .footer {
   position: relative;
-  height: 180px;
+  min-height: 180px;
   display: flex;
   align-items: flex-end;
   padding-bottom: $gaps-gap-4;
@@ -163,8 +163,11 @@
   .text {
     width: 75%;
 
+    @media (min-width: $breakpoints-sm) {
+      width: auto;
+    }
+
     .description {
-      opacity: 0.7;
       margin-bottom: $gaps-gap-4;
     }
 

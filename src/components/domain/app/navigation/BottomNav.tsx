@@ -97,7 +97,7 @@ export const BottomNav = (props: any) => {
   // if (didScrollDown) className += ` ${css['hide']}`
 
   return (
-    <div className={className}>
+    <div id="bottom-nav" className={className}>
       <div className={css['items']}>
         {navItems.map(navItem => {
           let className = css['nav-item']

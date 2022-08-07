@@ -64,7 +64,6 @@ export const Header = React.memo(({ withStrip, withHero, className, isApp }: Hea
               setFoldoutOpen={setFoldoutOpen}
             />
           </div>
-          {/* {isArchive && <Search open={searchActive} />} */}
         </div>
       </div>
     </header>

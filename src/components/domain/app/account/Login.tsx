@@ -117,7 +117,7 @@ export default function LoginPage() {
                 <p className={css['connect']}>Connect —</p>
                 <p className={css['description']}>Your personalized passport to the Devcon experience.</p>
 
-                <Image className={css['logo']} src={pwaIcon} alt="App logo" />
+                <Image className={css['logo']} layout="raw" src={pwaIcon} alt="App logo" />
               </div>
             </div>
           </div>

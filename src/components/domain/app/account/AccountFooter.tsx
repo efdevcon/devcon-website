@@ -5,7 +5,8 @@ import css from './login.module.scss'
 import Image from 'next/image'
 
 export default function AccountFooter() {
-    return <div className={css['footer']}>
+  return (
+    <div className={css['footer']}>
       <div className="section">
         <div className="content">
           <div className={css['text']}>
@@ -21,8 +22,9 @@ export default function AccountFooter() {
               Terms & Conditions
             </Link>
           </div>
-          <Image className={css['img']} src={footerRoad} alt="Man and dog on road" />
+          <Image layout="raw" className={css['img']} src={footerRoad} alt="Man and dog on road" />
         </div>
       </div>
     </div>
+  )
 }
