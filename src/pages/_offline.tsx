@@ -11,9 +11,11 @@ import Page from 'components/common/layouts/page'
 const Offline = () => {
   return (
     <Page theme={themes['no-page']}>
-      <PageHero path={[{ text: <span className="bold">NETWORK OFFLINE</span> }]} />
+      <PageHero path={[{ text: <span className="bold">NETWORK OFFLINE</span> }]} title="Network Offline" />
 
-      <div className="section clear-top clear-bottom">You are currently offline</div>
+      <div className="section clear-top clear-bottom">
+        <p>You are currently offline and this page was not cached. Try again later.</p>
+      </div>
     </Page>
   )
 }

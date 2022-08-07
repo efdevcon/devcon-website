@@ -52,49 +52,49 @@ const navItems = [
 ]
 
 export const BottomNav = (props: any) => {
-  const [didScrollDown, setDidScrollDown] = React.useState(false)
-  const lastScrollDistance = React.useRef(0)
+  // const [didScrollDown, setDidScrollDown] = React.useState(false)
+  // const lastScrollDistance = React.useRef(0)
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollDistance = window.scrollY
+  // React.useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollDistance = window.scrollY
 
-      const scrolledDown = currentScrollDistance > lastScrollDistance.current && currentScrollDistance > 0
+  //     const scrolledDown = currentScrollDistance > lastScrollDistance.current && currentScrollDistance > 0
 
-      // const fullyScrolled = window.innerHeight + currentScrollDistance >= document.body.offsetHeight
-      const fullHeightIncludingScroll = document.body.offsetHeight
+  //     // const fullyScrolled = window.innerHeight + currentScrollDistance >= document.body.offsetHeight
+  //     const fullHeightIncludingScroll = document.body.offsetHeight
 
-      // If scrolling is barely possible (due to not that much vertical content), we don't animate the menu in and out (it feels bad) - we allow a decent threshold before activating animations
-      const contentTooShort = fullHeightIncludingScroll < window.innerHeight * 1.3
-      // const isScrollBounce = currentScrollDistance + window.innerHeight >= fullHeightIncludingScroll
+  //     // If scrolling is barely possible (due to not that much vertical content), we don't animate the menu in and out (it feels bad) - we allow a decent threshold before activating animations
+  //     const contentTooShort = fullHeightIncludingScroll < window.innerHeight * 1.3
+  //     // const isScrollBounce = currentScrollDistance + window.innerHeight >= fullHeightIncludingScroll
 
-      if (contentTooShort /* || isScrollBounce*/) return
+  //     if (contentTooShort /* || isScrollBounce*/) return
 
-      if (scrolledDown) {
-        if (!didScrollDown) {
-          setDidScrollDown(true)
-        }
-      } else {
-        if (didScrollDown) {
-          setDidScrollDown(false)
-        }
-      }
+  //     if (scrolledDown) {
+  //       if (!didScrollDown) {
+  //         setDidScrollDown(true)
+  //       }
+  //     } else {
+  //       if (didScrollDown) {
+  //         setDidScrollDown(false)
+  //       }
+  //     }
 
-      // if (fullyScrolled && lastScrollDistance.current < 0) {
-      //   setDidScrollDown(false)
-      // }
+  //     // if (fullyScrolled && lastScrollDistance.current < 0) {
+  //     //   setDidScrollDown(false)
+  //     // }
 
-      lastScrollDistance.current = currentScrollDistance
-    }
+  //     lastScrollDistance.current = currentScrollDistance
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
+  //   window.addEventListener('scroll', handleScroll)
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [didScrollDown])
+  //   return () => window.removeEventListener('scroll', handleScroll)
+  // }, [didScrollDown])
 
   let className = css['bottom-nav']
 
-  if (didScrollDown) className += ` ${css['hide']}`
+  // if (didScrollDown) className += ` ${css['hide']}`
 
   return (
     <div className={className}>

@@ -76,6 +76,10 @@
     --strip-border: none;
   }
 
+  &:not(.app) {
+    --button-border: none;
+  }
+
   > * {
     > * {
       @media (max-width: 1350px) {

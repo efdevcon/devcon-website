@@ -44,6 +44,7 @@ export const Header = React.memo(({ withStrip, withHero, className, isApp }: Hea
 
   if (foldoutOpen) headerContainerClass += ` ${css['foldout-open']}`
   if (className) headerContainerClass += ` ${className}`
+  if (isApp) headerClass += ` ${css['app']}`
 
   const body = (
     <header id="header-container" className={headerContainerClass}>

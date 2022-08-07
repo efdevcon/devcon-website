@@ -18,7 +18,9 @@ export const AppLayout = (props: any) => {
 
       <div className={css['app']}>{props.children}</div>
 
-      {loggedIn && <BottomNav location={location} />}
+      <BottomNav />
+
+      {/* {loggedIn && <BottomNav location={location} />} */}
     </AccountContextProvider>
   )
 }

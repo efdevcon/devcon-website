@@ -16,9 +16,9 @@
   transition: transform 0.3s linear;
   transform: translateY(0%);
 
-  &.hide {
-    transform: translateY(100%);
-  }
+  // &.hide {
+  //   transform: translateY(100%);
+  // }
 
   .items {
     display: flex;
