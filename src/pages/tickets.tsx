@@ -238,6 +238,21 @@ export default pageHOC(function Tickets(props: any) {
                 body: '',
               },
               {
+                id: '1',
+                title: (
+                  <div className={css['timeline-item']}>
+                    <div className={css['left']}>{intl('tickets_discount_applications_ends')}</div>
+                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_ends_date')}</div>
+                    {/* <Link to="#types" className="generic hover-underline">
+                      {intl('tickets_apply_now')}
+                    </Link> */}
+                  </div>
+                ),
+                indent: false,
+                active: isAfterDate('2022-06-06'),
+                body: '',
+              },
+              {
                 id: '2',
                 title: (
                   <div className={css['timeline-item']}>
