@@ -27,7 +27,7 @@ export default pageHOC(function BlogsTemplate(props: any) {
 
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
-  const page = await GetPage('/blog', context.locale)
+  const page = await GetPage('/blogs', context.locale)
 
   return {
     props: {
