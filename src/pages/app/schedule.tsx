@@ -5,11 +5,10 @@ import React from 'react'
 import { GetSessions, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
-import { InlineNav } from 'components/domain/app/navigation'
 
 export default pageHOC((props: any) => {
   return (
-    <AppLayout withoutInlineNav>
+    <AppLayout>
       <Schedule {...props} />
     </AppLayout>
   )
