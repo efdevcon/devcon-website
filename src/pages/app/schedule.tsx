@@ -5,10 +5,11 @@ import React from 'react'
 import { GetSessions, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { InlineNav } from 'components/domain/app/navigation'
 
 export default pageHOC((props: any) => {
   return (
-    <AppLayout>
+    <AppLayout withoutInlineNav>
       <Schedule {...props} />
     </AppLayout>
   )
@@ -17,7 +18,7 @@ export default pageHOC((props: any) => {
 export async function getStaticProps(context: any) {
   return {
     props: {
-      ...(await getGlobalData(context.locale)),
+      // ...(await getGlobalData(context.locale)),
       page: DEFAULT_APP_PAGE,
       sessions: await GetSessions(),
       speakers: await GetSpeakers(),

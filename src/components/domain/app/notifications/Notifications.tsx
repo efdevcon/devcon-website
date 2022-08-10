@@ -99,8 +99,8 @@ const unsubscribePushService = async () => {
 //       setPermissionStatus(status)
 
 //       /*
-//         Since this request for permission was triggered by a user action (toggling notifications back on) it would be weird if the status becomes denied; 
-//         when that's the case, it's probable that the browser itself is blocking push notifications - we warn the user that this may be the case so they can take 
+//         Since this request for permission was triggered by a user action (toggling notifications back on) it would be weird if the status becomes denied;
+//         when that's the case, it's probable that the browser itself is blocking push notifications - we warn the user that this may be the case so they can take
 //         further action
 //       */
 //       if (status !== 'granted') {
@@ -275,29 +275,27 @@ export const Notifications = (props: any) => {
   const [currentFilter, setCurrentFilter] = React.useState('inbox')
 
   return (
-    <div className="section">
-      <div className="content">
-        <div className={css['filter']}>
-          {filters.map(filter => {
-            const selected = currentFilter === filter.value
+    <div>
+      <div className={css['filter']}>
+        {filters.map(filter => {
+          const selected = currentFilter === filter.value
 
-            let className = 'plain'
+          let className = 'plain'
 
-            if (selected) className += ` ${css['selected']}`
+          if (selected) className += ` ${css['selected']}`
 
-            return (
-              <button onClick={() => setCurrentFilter(filter.value)} key={filter.value} className={className}>
-                <p className="hover-underline">{filter.text}</p>
-                {selected && <div className="label sm error">4</div>}
-              </button>
-            )
-          })}
-        </div>
-
-        <Notification />
-        <Notification />
-        <Notification />
+          return (
+            <button onClick={() => setCurrentFilter(filter.value)} key={filter.value} className={className}>
+              <p className="hover-underline">{filter.text}</p>
+              {selected && <div className="label sm error">4</div>}
+            </button>
+          )
+        })}
       </div>
+
+      <Notification />
+      <Notification />
+      <Notification />
     </div>
   )
 }

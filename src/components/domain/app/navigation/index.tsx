@@ -1,2 +1,2 @@
 export { BottomNav } from './BottomNav'
-export { InlineNav } from './InlineNav'
+export { AppNav } from './AppNav'

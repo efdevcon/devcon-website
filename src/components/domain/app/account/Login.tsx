@@ -15,6 +15,7 @@ import { getSiweMessage } from 'utils/web3'
 import AccountFooter from './AccountFooter'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { AppNav } from 'components/domain/app/navigation'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -106,91 +107,94 @@ export default function LoginPage() {
   }
 
   return (
-    <div className={css['container']}>
-      <div>
-        <div className={css['hero']}>
+    <>
+      <AppNav />
+      <div className={css['container']}>
+        <div>
+          <div className={css['hero']}>
+            <div className="section">
+              <div className="content">
+                {/* Need this layer to have something to position the image relatively to (within the bounds of the parent content div) */}
+                <div className={css['hero-content']}>
+                  <p className={css['devcon']}>Devcon (use image)</p>
+                  <p className={css['connect']}>Connect —</p>
+                  <p className={css['description']}>Your personalized passport to the Devcon experience.</p>
+
+                  <Image className={css['logo']} layout="raw" src={pwaIcon} alt="App logo" />
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="section">
             <div className="content">
-              {/* Need this layer to have something to position the image relatively to (within the bounds of the parent content div) */}
-              <div className={css['hero-content']}>
-                <p className={css['devcon']}>Devcon (use image)</p>
-                <p className={css['connect']}>Connect —</p>
-                <p className={css['description']}>Your personalized passport to the Devcon experience.</p>
-
-                <Image className={css['logo']} layout="raw" src={pwaIcon} alt="App logo" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="section">
-          <div className="content">
-            <div className={css['info']}>
-              <div className={css['left']}>
-                <IconSwirl className={`${css['swirl-icon']} icon`} />
-              </div>
-              <p>
-                If this is the first time you&apos;re logging in, <b>Connect</b> will automatically create a new account
-                on your behalf.
-              </p>
-            </div>
-
-            <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
-
-            {emailSent && (
-              <div className={css['email']}>
-                <p className="bold">Email — Confirm your email address</p>
-                <p>We&apos;ve sent a verification code to your email address. Please enter this code on below.</p>
-                <InputForm
-                  className={css['input']}
-                  placeholder="Verification code"
-                  defaultValue={nonce}
-                  onChange={value => setNonce(value)}
-                  onSubmit={verifyEmail}
-                />
-                <Button className={`black`} onClick={verifyEmail}>
-                  Verify your email
-                </Button>
-              </div>
-            )}
-
-            {!emailSent && (
-              <>
-                <div className={css['trust-model']}>
-                  <p>Choose your Trust model.</p>
-                  <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
-                    <span onClick={() => setTooltipVisible(!tooltipVisible)}>
-                      <IconHelp className={`icon ${css['icon-help']}`} />
-                    </span>
-                  </Tooltip>
+              <div className={css['info']}>
+                <div className={css['left']}>
+                  <IconSwirl className={`${css['swirl-icon']} icon`} />
                 </div>
+                <p>
+                  If this is the first time you&apos;re logging in, <b>Connect</b> will automatically create a new
+                  account on your behalf.
+                </p>
+              </div>
 
+              <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
+
+              {emailSent && (
                 <div className={css['email']}>
-                  <p className="bold">Email — Not interested in Web 3 usage</p>
+                  <p className="bold">Email — Confirm your email address</p>
+                  <p>We&apos;ve sent a verification code to your email address. Please enter this code on below.</p>
                   <InputForm
                     className={css['input']}
-                    placeholder="Email"
-                    defaultValue={email}
-                    onChange={value => setEmail(value)}
-                    onSubmit={connectEmail}
+                    placeholder="Verification code"
+                    defaultValue={nonce}
+                    onChange={value => setNonce(value)}
+                    onSubmit={verifyEmail}
                   />
-                  <Button className={`black`} onClick={connectEmail}>
-                    Connect with Email
+                  <Button className={`black`} onClick={verifyEmail}>
+                    Verify your email
                   </Button>
                 </div>
+              )}
 
-                <div className={css['wallet']}>
-                  <p className="bold">Wallet — For Experienced Web 3 Users</p>
-                  <Button className={`red ${css['button']}`} onClick={connectWeb3AndLogin}>
-                    Sign-in with Ethereum
-                  </Button>
-                </div>
-              </>
-            )}
+              {!emailSent && (
+                <>
+                  <div className={css['trust-model']}>
+                    <p>Choose your Trust model.</p>
+                    <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
+                      <span onClick={() => setTooltipVisible(!tooltipVisible)}>
+                        <IconHelp className={`icon ${css['icon-help']}`} />
+                      </span>
+                    </Tooltip>
+                  </div>
+
+                  <div className={css['email']}>
+                    <p className="bold">Email — Not interested in Web 3 usage</p>
+                    <InputForm
+                      className={css['input']}
+                      placeholder="Email"
+                      defaultValue={email}
+                      onChange={value => setEmail(value)}
+                      onSubmit={connectEmail}
+                    />
+                    <Button className={`black`} onClick={connectEmail}>
+                      Connect with Email
+                    </Button>
+                  </div>
+
+                  <div className={css['wallet']}>
+                    <p className="bold">Wallet — For Experienced Web 3 Users</p>
+                    <Button className={`red ${css['button']}`} onClick={connectWeb3AndLogin}>
+                      Sign-in with Ethereum
+                    </Button>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
-      </div>
 
-      <AccountFooter />
-    </div>
+        <AccountFooter />
+      </div>
+    </>
   )
 }

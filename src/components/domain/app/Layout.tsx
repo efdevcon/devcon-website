@@ -1,13 +1,17 @@
 import React from 'react'
 import { AccountContextProvider } from 'context/account-context-provider'
-import { BottomNav, InlineNav } from 'components/domain/app/navigation'
+import { BottomNav } from 'components/domain/app/navigation'
 import css from './app.module.scss'
 import { Header } from 'components/common/layouts/header'
 import { SEO } from 'components/domain/seo'
 import { useAccountContext } from 'context/account-context'
 import useGetElementHeight from 'hooks/useGetElementHeight'
 
-export const AppLayout = (props: any) => {
+type LayoutProps = {
+  children: React.ReactChild
+}
+
+export const AppLayout = (props: LayoutProps) => {
   const accountContext = useAccountContext()
   const loggedIn = !!accountContext.account
 
@@ -20,6 +24,7 @@ export const AppLayout = (props: any) => {
       <SEO />
       <AccountContextProvider>
         <div
+          className={css['app']}
           style={
             {
               '--header-height': `${headerHeight}px`,
@@ -29,14 +34,13 @@ export const AppLayout = (props: any) => {
           }
         >
           <Header isApp className={css['header']} withStrip={false} withHero={false} />
-          <InlineNav />
 
-          <div className={css['app']}>{props.children}</div>
+          {props.children}
 
           <BottomNav />
-        </div>
 
-        {/* {loggedIn && <BottomNav location={location} />} */}
+          {/* {loggedIn && <BottomNav location={location} />} */}
+        </div>
       </AccountContextProvider>
     </>
   )

@@ -6,52 +6,46 @@ import IconHome from 'assets/icons/home.svg'
 import IconInfo from 'assets/icons/info-filled.svg'
 import IconSchedule from 'assets/icons/schedule.svg'
 import { Link } from 'components/common/link'
+import { useRouter } from 'next/router'
+import { NavLink, isSelected } from './AppNav'
+
+interface NavLinkWithIcon extends NavLink {
+  icon: any
+}
 
 const navItems = [
   {
     title: 'Home',
     icon: IconHome,
     to: '/app',
-    useIsActive: () => {
-      return false
+    useIsActive: pathname => {
+      return pathname.endsWith('/app')
     },
   },
   {
     title: 'Schedule',
     icon: IconSchedule,
     to: '/app/schedule',
-    useIsActive: () => {
-      return false
-    },
   },
   {
     title: 'Speakers',
     icon: IconSpeakers,
     to: '/app/speakers',
-    useIsActive: () => {
-      return false
-    },
   },
   {
     title: 'Venue',
     icon: IconPin,
     to: '/app/venue',
-    useIsActive: () => {
-      return false
-    },
   },
   {
     title: 'Info',
     icon: IconInfo,
     to: '/app/info',
-    useIsActive: () => {
-      return false
-      // return useMatch('/app/info/*')
-    },
   },
-]
+] as NavLinkWithIcon[]
 
-export const BottomNav = (props: any) => {
+export const BottomNav = () => {
+  const router = useRouter()
   // const [didScrollDown, setDidScrollDown] = React.useState(false)
   // const lastScrollDistance = React.useRef(0)
 
@@ -102,7 +96,7 @@ export const BottomNav = (props: any) => {
         {navItems.map(navItem => {
           let className = css['nav-item']
 
-          const selected = navItem.useIsActive() // normalizedPathname.includes(navItem.to)
+          const selected = isSelected(navItem, router.pathname) // navItem.navItem.useIsActive(router.pathname) // normalizedPathname.includes(navItem.to)
 
           if (selected) className += ` ${css['selected']}`
 

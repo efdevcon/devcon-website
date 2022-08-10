@@ -4,7 +4,6 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
-import useGetElementHeight from 'hooks/useGetElementHeight'
 
 export default pageHOC((props: any) => {
   return (
@@ -15,6 +14,7 @@ export default pageHOC((props: any) => {
 })
 
 export async function getStaticProps(context: any) {
+  console.log(context, 'context')
   return {
     props: {
       ...(await getGlobalData(context.locale)),

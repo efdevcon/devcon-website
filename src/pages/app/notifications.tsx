@@ -19,8 +19,6 @@ export async function getStaticProps(context: any) {
     props: {
       ...(await getGlobalData(context.locale)),
       page: DEFAULT_APP_PAGE,
-      sessions: await GetSessions(),
-      speakers: await GetSpeakers(),
     },
   }
 }

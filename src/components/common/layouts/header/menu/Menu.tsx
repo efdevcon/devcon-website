@@ -16,6 +16,7 @@ import BellIcon from 'assets/icons/bell-simple.svg'
 import { LanguageToggle } from 'components/common/layouts/header/strip/language-toggle'
 import useNavigationData from '../useNavigationData'
 import { TippyProps } from '@tippyjs/react'
+import { Notification, Notifications } from 'components/domain/app/notifications'
 
 type ButtonProps = {
   buttons: {
@@ -120,11 +121,11 @@ export const Menu = (props: any) => {
         },
         icon: (
           <div className={css['app-notifications']}>
-            <BellIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />
+            <BellIcon />
             <div className={css['counter']}>3</div>
           </div>
         ),
-        url: '/app/notifications',
+        onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
       },
       {
         key: 'account',
@@ -163,18 +164,12 @@ export const Menu = (props: any) => {
 
       <Buttons buttons={buttons} />
 
-      {/* 
-      <Account /> */}
       {/* <Search open={props.setSearchOpen} /> */}
 
       {/* Mobile */}
-      {!props.isApp && (
-        <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
-          <div className={css['foldout-top']}>
-            <Left navigationData={context?.navigation} />
-            <LanguageToggle />
-          </div>
-          <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
+      {props.isApp && (
+        <Foldout isApp foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
+          <Notifications />
         </Foldout>
       )}
     </div>

@@ -6,6 +6,7 @@ import AccountFooter from '../AccountFooter'
 import { Button } from 'components/common/button'
 import { InputForm } from 'components/common/input-form'
 import { useAvatar } from 'hooks/useAvatar'
+import { AppNav } from 'components/domain/app/navigation'
 
 export default function UsernameSettings() {
   const accountContext = useAccountContext()
@@ -20,7 +21,7 @@ export default function UsernameSettings() {
 
   async function updateProfile() {
     if (accountContext && currentAccount) {
-      const updated = await accountContext.updateAccount(currentAccount._id, {...currentAccount, username: username})
+      const updated = await accountContext.updateAccount(currentAccount._id, { ...currentAccount, username: username })
       if (updated) {
         setError('Profile successfully updated.')
       } else {
@@ -34,25 +35,28 @@ export default function UsernameSettings() {
       <div>
         <div className="section">
           <div className="content">
-
-            <div className={css['alert']}>
-              {error && <Alert type="info" message={error} />}
-            </div>
+            <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
 
             <div className={css['form']}>
               <p className={`${css['title']} title`}>Edit Username</p>
-              {avatar.ens && !currentAccount?.username && 
-                <p className={css['content']}>You&apos;re using your ENS username. Updating your username on Devcon.org doesn&apos;t update your ENS name.</p>
-              }
+              {avatar.ens && !currentAccount?.username && (
+                <p className={css['content']}>
+                  You&apos;re using your ENS username. Updating your username on Devcon.org doesn&apos;t update your ENS
+                  name.
+                </p>
+              )}
 
-              <InputForm 
-                className={css['input']} 
+              <InputForm
+                className={css['input']}
                 placeholder="Username"
-                defaultValue={username} 
-                onChange={(value) => setUsername(value)} 
-                onSubmit={updateProfile} />
-                
-              <Button className={`red`} onClick={updateProfile}>Update username</Button>
+                defaultValue={username}
+                onChange={value => setUsername(value)}
+                onSubmit={updateProfile}
+              />
+
+              <Button className={`red`} onClick={updateProfile}>
+                Update username
+              </Button>
             </div>
           </div>
         </div>

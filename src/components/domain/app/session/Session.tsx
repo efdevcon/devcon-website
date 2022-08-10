@@ -19,6 +19,8 @@ import moment from 'moment'
 import { GetDevconDay } from 'utils/formatting'
 import Image from 'next/image'
 import { useAccountContext } from 'context/account-context'
+import { AppNav } from 'components/domain/app/navigation'
+import Share from 'assets/icons/share.svg'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -59,7 +61,22 @@ export const Session = (props: SessionProps) => {
   }
 
   return (
-    <div>
+    <>
+      <AppNav
+        nested
+        links={[
+          {
+            title: props.session.title || 'Session',
+          },
+        ]}
+        renderRight={() => (
+          <>
+            <Share />
+            <Share />
+          </>
+        )}
+      />
+
       <Hero icon={IconSecurity} className={css['session-hero']}>
         <div className="section">
           <div className={css['container']}>
@@ -194,6 +211,6 @@ export const Session = (props: SessionProps) => {
           </div>
         )}
       </div>
-    </div>
+    </>
   )
 }

@@ -6,7 +6,7 @@ import useGetElementHeight from 'hooks/useGetElementHeight'
 import { Copyright } from 'components/common/layouts/Copyright'
 import { createPortal } from 'react-dom'
 
-const FoldoutContent = (props: any) => {
+const Foldout = (props: any) => {
   const headerHeight = useGetElementHeight('header')
   const stripHeight = useGetElementHeight('strip')
   const fullHeaderHeight = headerHeight + stripHeight
@@ -28,45 +28,34 @@ const FoldoutContent = (props: any) => {
       <div>
         <div className={css['top']}>{props.children}</div>
 
-        <div className={css['bottom']}>
-          <div className={css['social-media']}>
-            <p>Social</p>
-            <SocialMedia url="devcon.org" className={css['social-media-extension']} onShare={() => {}} />
-          </div>
+        {!props.isApp && (
+          <div className={css['bottom']}>
+            <div className={css['social-media']}>
+              <p>Social</p>
+              <SocialMedia url="devcon.org" className={css['social-media-extension']} onShare={() => {}} />
+            </div>
 
-          <div className={css['newsletter']}>
-            <Newsletter id="foldout_newsletter_email" />
-          </div>
+            <div className={css['newsletter']}>
+              <Newsletter id="foldout_newsletter_email" />
+            </div>
 
-          <div className={css['copyright']}>
-            <Copyright />
+            <div className={css['copyright']}>
+              <Copyright />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>,
     document.body
   )
 }
 
-const Foldout = (props: any) => {
-  // const iconProps = {
-  //   id: 'hamburger-toggle',
-  //   className: `icon ${css['toggle']}`,
-  //   onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
-  //   role: 'button',
-  // }
-
-  return (
-    <>
-      {/* <div className={css['toggle-container']}>
-        {props.foldoutOpen ? <IconCross {...iconProps} style={{ width: '0.8em' }} /> : <IconMenu {...iconProps} />}
-      </div> */}
-
-      <FoldoutContent foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
-        {props.children}
-      </FoldoutContent>
-    </>
-  )
-}
+// const Foldout = (props: any) => {
+//   return (
+//     <FoldoutContent foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
+//       {props.children}
+//     </FoldoutContent>
+//   )
+// }
 
 export { Foldout }

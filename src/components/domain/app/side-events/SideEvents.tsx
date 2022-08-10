@@ -1,11 +1,7 @@
 import React from 'react'
 import css from './side-events.module.scss'
 import { Link, LinkList } from 'components/common/link'
-import {
-  CollapsedSection,
-  CollapsedSectionContent,
-  CollapsedSectionHeader,
-} from 'components/common/collapsed-section'
+import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 import { AppSearch } from 'components/domain/app/app-search'
 import { useSort, SortVariation } from 'components/common/sort'
 import { useFilter } from 'components/common/filter'
@@ -13,6 +9,7 @@ import { SessionCard } from 'components/domain/app/session'
 import LogoImage from 'assets/images/test-asset.svg'
 import Image from 'next/image'
 import imageBogota from 'assets/images/bogota-city.png'
+import { AppNav } from 'components/domain/app/navigation'
 
 const dummySessions = [
   { id: '1', title: 'Test session' },
@@ -63,72 +60,75 @@ export const SideEvents = (props: any) => {
   )
 
   return (
-    <div className="section">
-      <div className="content">
-        <div className={`${css['hero']}`}>
-          <div className={`${css['hero-content']}`}>
-            <div className={css['image-container']}>
-              <Image src={imageBogota} objectFit='cover' alt={'Devcon Side event'} layout='fill' />
-            </div>
-
-            <div className={`${css['details']}`}>
-              <div>
-                <LogoImage />
-
-                <div className={css['title']}>
-                  <h2 className="bold font-primary font-xxl">Devcon Bogota</h2>
-                  <h2 className="font-primary font-xxl">Side Events</h2>
-                </div>
+    <>
+      <AppNav />
+      <div className="section">
+        <div className="content">
+          <div className={`${css['hero']}`}>
+            <div className={`${css['hero-content']}`}>
+              <div className={css['image-container']}>
+                <Image src={imageBogota} objectFit="cover" alt={'Devcon Side event'} layout="fill" />
               </div>
 
-              <p className="font-sm">
-                <b>Note:</b> These events are not organized or endorsed by Devcon in any capacity beyond listings and
-                schedule integration for ease of access.
-              </p>
+              <div className={`${css['details']}`}>
+                <div>
+                  <LogoImage />
+
+                  <div className={css['title']}>
+                    <h2 className="bold font-primary font-xxl">Devcon Bogota</h2>
+                    <h2 className="font-primary font-xxl">Side Events</h2>
+                  </div>
+                </div>
+
+                <p className="font-sm">
+                  <b>Note:</b> These events are not organized or endorsed by Devcon in any capacity beyond listings and
+                  schedule integration for ease of access.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className={css['curator']}>
-          <div className={css['title']}>
-            <p className="bold">Curated by:</p>
-            <h3 className="bold">OFFDevcon</h3>
+          <div className={css['curator']}>
+            <div className={css['title']}>
+              <p className="bold">Curated by:</p>
+              <h3 className="bold">OFFDevcon</h3>
+            </div>
+            <div className={`${css['submit-event']} label neutral bold`}>Submit Event</div>
           </div>
-          <div className={`${css['submit-event']} label neutral bold`}>Submit Event</div>
+
+          <CollapsedSection>
+            <CollapsedSectionHeader title="Additional Resources" />
+            <CollapsedSectionContent>
+              <LinkList>
+                <Link to="https://devcon.org">EF Ecosystem Support Program</Link>
+                <Link to="https://devcon.org">Grantee Roundup August 2021</Link>
+                <Link to="https://devcon.org">Grantee Roundup July 2021</Link>
+              </LinkList>
+            </CollapsedSectionContent>
+          </CollapsedSection>
+
+          <AppSearch
+            noResults={sessions.length === 0}
+            search={{
+              placeholder: 'Search side events...',
+              onChange: setSearch,
+            }}
+            sortState={sortState}
+            filterStates={[
+              { title: 'Test', filterState },
+              { title: 'Test', filterState },
+              { title: 'Test', filterState },
+            ]}
+            className={css['search-section']}
+          />
+
+          {/* <h4 className={`app-header ${css['header']}`}>Side Events</h4> */}
+
+          {sessions.map(session => {
+            return <SessionCard key={session.id} session={props.sessions[0]} />
+          })}
         </div>
-
-        <CollapsedSection>
-          <CollapsedSectionHeader title="Additional Resources" />
-          <CollapsedSectionContent>
-            <LinkList>
-              <Link to="https://devcon.org">EF Ecosystem Support Program</Link>
-              <Link to="https://devcon.org">Grantee Roundup August 2021</Link>
-              <Link to="https://devcon.org">Grantee Roundup July 2021</Link>
-            </LinkList>
-          </CollapsedSectionContent>
-        </CollapsedSection>
-
-        <AppSearch
-          noResults={sessions.length === 0}
-          search={{
-            placeholder: 'Search side events...',
-            onChange: setSearch,
-          }}
-          sortState={sortState}
-          filterStates={[
-            { title: 'Test', filterState },
-            { title: 'Test', filterState },
-            { title: 'Test', filterState },
-          ]}
-          className={css['search-section']}
-        />
-
-        {/* <h4 className={`app-header ${css['header']}`}>Side Events</h4> */}
-
-        {sessions.map(session => {
-          return <SessionCard key={session.id} session={props.sessions[0]} />
-        })}
       </div>
-    </div>
+    </>
   )
 }

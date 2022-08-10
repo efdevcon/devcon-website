@@ -25,9 +25,20 @@
 }
 
 .header-container {
-  position: sticky;
-  top: 0;
   z-index: 20;
+
+  &:not(&.app) {
+    position: sticky;
+    top: 0px;
+    --button-border: none;
+
+    .header {
+      position: sticky;
+      top: 0px;
+      --button-border: none;
+    }
+  }
+
 
   @media (max-width: $breakpoints-lg) {
     // @include fill-header;
@@ -73,12 +84,6 @@
     --strip-border: none;
   }
 
-  &:not(.app) {
-    position: sticky;
-    top: 0px;
-    --button-border: none;
-  }
-
   > * {
     > * {
       @media (max-width: 1350px) {
@@ -98,6 +103,7 @@
     }
 
     > a {
+      flex-shrink: 1;
       display: flex;
       padding-top: 8px;
       padding-bottom: 8px;

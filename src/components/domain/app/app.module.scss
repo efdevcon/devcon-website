@@ -5,7 +5,8 @@
 }
 
 .app {
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  width: 100vw;
   min-height: calc(var(--viewport-height) - var(--header-height) - var(--app-nav-upper-height) - var(--app-nav-lower-height));
   padding-bottom: 64px; // Adjusting for fixed bottom nav overlaying content
 

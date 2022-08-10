@@ -16,7 +16,7 @@
 .filter {
   display: flex;
   align-items: center;
-  margin-top: $gaps-gap-4;
+  // margin-top: $gaps-gap-4;
   margin-bottom: $gaps-gap-4;
 
   > button {
@@ -50,6 +50,7 @@
 }
 
 .notification-block {
+  border: 1px solid $colors-standard-border-color; 
   [data-type='thumbnail-block-image'] {
     background: $colors-ef-pink;
   }

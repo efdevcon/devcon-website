@@ -8,6 +8,7 @@ import css from './venue.module.scss'
 import ListIcon from 'assets/icons/list.svg'
 import LayersIcon from 'assets/icons/layers.svg'
 import { Room } from 'types/Room'
+import { AppNav } from 'components/domain/app/navigation'
 
 interface Props {
   rooms: Array<Room>
@@ -59,7 +60,8 @@ export const Venue = (props: Props) => {
   )
 
   return (
-    <div>
+    <>
+      <AppNav />
       <div className="section">
         <div className="content">
           <AppSearch
@@ -88,7 +90,7 @@ export const Venue = (props: Props) => {
 
       <div className="section">
         <div className="content">
-          {props.floors.map((floor) => {
+          {props.floors.map(floor => {
             const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
             return (
@@ -108,6 +110,6 @@ export const Venue = (props: Props) => {
           })}
         </div>
       </div>
-    </div>
+    </>
   )
 }

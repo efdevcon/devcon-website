@@ -3,11 +3,7 @@ import css from './speakers.module.scss'
 import IconStar from 'assets/icons/star.svg'
 import IconStarFill from 'assets/icons/star-fill.svg'
 import { Link } from 'components/common/link'
-import {
-  CollapsedSection,
-  CollapsedSectionHeader,
-  CollapsedSectionContent,
-} from 'components/common/collapsed-section'
+import { CollapsedSection, CollapsedSectionHeader, CollapsedSectionContent } from 'components/common/collapsed-section'
 import { Speaker, Speaker as SpeakerType } from 'types/Speaker'
 import { useSort, SortVariation, Sort } from 'components/common/sort'
 import { NoResults, useFilter } from 'components/common/filter'
@@ -16,6 +12,7 @@ import { useAccountContext } from 'context/account-context'
 import Image from 'next/image'
 import makeBlockie from 'ethereum-blockies-base64'
 import moment from 'moment'
+import { AppNav } from 'components/domain/app/navigation'
 
 type CardProps = {
   speaker: SpeakerType
@@ -40,7 +37,12 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
       <>
         <div className={css['thumbnail']}>
           <div className={css['wrapper']}>
-            <Image src={speaker.avatar || makeBlockie(speaker.name)} alt={speaker.name} objectFit='contain' layout='fill' />
+            <Image
+              src={speaker.avatar || makeBlockie(speaker.name)}
+              alt={speaker.name}
+              objectFit="contain"
+              layout="fill"
+            />
           </div>
         </div>
 
@@ -50,11 +52,11 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
           <p className={css['company']}>{speaker.company}</p>
         </div>
 
-        {account &&
+        {account && (
           <div className={css['icon']}>
             {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
           </div>
-        }
+        )}
       </>
     </Link>
   )
@@ -71,22 +73,25 @@ const ListTrackSort = (props: ListProps) => {
 
   return (
     <div className={`${css['list-container']} ${css['track-sort']}`}>
-      {props.tracks && props.tracks.map((track) => {
-
-        return (
-          <CollapsedSection
-            key={track}
-            open={track === activeTrack}
-            setOpen={() => track === activeTrack ? setActiveTrack('') : setActiveTrack(track)}>
-            <CollapsedSectionHeader title={track} />
-            <CollapsedSectionContent dontAnimate>
-              {props.speakers.filter(i => i.tracks?.some(t => t === track)).map(speaker => {
-                return <SpeakerCard key={speaker.name} speaker={speaker} />
-              })}
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        )
-      })}
+      {props.tracks &&
+        props.tracks.map(track => {
+          return (
+            <CollapsedSection
+              key={track}
+              open={track === activeTrack}
+              setOpen={() => (track === activeTrack ? setActiveTrack('') : setActiveTrack(track))}
+            >
+              <CollapsedSectionHeader title={track} />
+              <CollapsedSectionContent dontAnimate>
+                {props.speakers
+                  .filter(i => i.tracks?.some(t => t === track))
+                  .map(speaker => {
+                    return <SpeakerCard key={speaker.name} speaker={speaker} />
+                  })}
+              </CollapsedSectionContent>
+            </CollapsedSection>
+          )
+        })}
     </div>
   )
 }
@@ -96,25 +101,29 @@ const ListDaySort = (props: ListProps) => {
 
   return (
     <div className={`${css['list-container']} ${css['day-sort']}`}>
-      {props.days && props.days.map((day, index) => {
-        const hasPassed = moment.utc().isAfter(moment(day))
-        return (
-          <CollapsedSection
-            key={day}
-            open={day === activeDay}
-            setOpen={() => day === activeDay ? setActiveDay(0) : setActiveDay(day)}>
-            <CollapsedSectionHeader title={`${moment(day).format('MMMM DD, YYYY')} - Day ${index + 1}`} />
+      {props.days &&
+        props.days.map((day, index) => {
+          const hasPassed = moment.utc().isAfter(moment(day))
+          return (
+            <CollapsedSection
+              key={day}
+              open={day === activeDay}
+              setOpen={() => (day === activeDay ? setActiveDay(0) : setActiveDay(day))}
+            >
+              <CollapsedSectionHeader title={`${moment(day).format('MMMM DD, YYYY')} - Day ${index + 1}`} />
 
-            {hasPassed ? <p className={css['past']}>Previously Scheduled</p> : <></>}
+              {hasPassed ? <p className={css['past']}>Previously Scheduled</p> : <></>}
 
-            <CollapsedSectionContent dontAnimate>
-              {props.speakers.filter(i => i.eventDays?.some(d => d === day)).map(speaker => {
-                return <SpeakerCard key={speaker.name} speaker={speaker} />
-              })}
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        )
-      })}
+              <CollapsedSectionContent dontAnimate>
+                {props.speakers
+                  .filter(i => i.eventDays?.some(d => d === day))
+                  .map(speaker => {
+                    return <SpeakerCard key={speaker.name} speaker={speaker} />
+                  })}
+              </CollapsedSectionContent>
+            </CollapsedSection>
+          )
+        })}
     </div>
   )
 }
@@ -125,10 +134,9 @@ const ListAlphabeticalSort = (props: ListProps) => {
 
   return (
     <div className={`${css['list-container']} ${css['alphabet-sort']}`}>
-
       <div className={css['speakers-letters']}>
         <div className={css['speakers']}>
-          {alphabet.map((letter) => {
+          {alphabet.map(letter => {
             const speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
             if (speakersByLetter.length === 0) return undefined
 
@@ -204,22 +212,26 @@ export const Speakers = (props: any) => {
       let filtered = props.speakers as SpeakerType[]
       if (activeFilter && Object.keys(activeFilter).length > 0) {
         const filters = Object.keys(activeFilter)
-        filtered = props.speakers.filter((i: any) => i.tracks?.some((x: any) => filters.some(y => x === y) && activeFilter[x]))
+        filtered = props.speakers.filter((i: any) =>
+          i.tracks?.some((x: any) => filters.some(y => x === y) && activeFilter[x])
+        )
       }
 
       if (sortState.sortBy === 0) {
-        filtered = sortState.sortDirection === 'asc' ?
-          filtered.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name)) :
-          filtered.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
+        filtered =
+          sortState.sortDirection === 'asc'
+            ? filtered.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
+            : filtered.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
       }
 
       if (search) {
         const filter = search.toLowerCase()
-        filtered = filtered.filter(i =>
-          i.name.toLowerCase().includes(filter) ||
-          i.description?.toLowerCase().includes(filter) ||
-          i.company?.toLowerCase().includes(filter) ||
-          i.tracks?.some(x => x.toLowerCase().includes(filter))
+        filtered = filtered.filter(
+          i =>
+            i.name.toLowerCase().includes(filter) ||
+            i.description?.toLowerCase().includes(filter) ||
+            i.company?.toLowerCase().includes(filter) ||
+            i.tracks?.some(x => x.toLowerCase().includes(filter))
         )
       }
       return filtered
@@ -230,7 +242,8 @@ export const Speakers = (props: any) => {
   const noResults = speakers.length === 0
 
   return (
-    <div>
+    <>
+      <AppNav />
       <div className="section">
         <div className="content">
           <AppSearch
@@ -239,9 +252,7 @@ export const Speakers = (props: any) => {
               onChange: setSearch,
             }}
             sortState={sortState}
-            filterStates={[
-              { title: 'Track', filterState },
-            ]}
+            filterStates={[{ title: 'Track', filterState }]}
           />
 
           {noResults ? (
@@ -249,12 +260,14 @@ export const Speakers = (props: any) => {
           ) : (
             <>
               {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={speakers as [SpeakerType]} />}
-              {sortedBy.key === 'tracks' && <ListTrackSort speakers={speakers as [SpeakerType]} tracks={props.tracks} />}
+              {sortedBy.key === 'tracks' && (
+                <ListTrackSort speakers={speakers as [SpeakerType]} tracks={props.tracks} />
+              )}
               {sortedBy.key === 'days' && <ListDaySort speakers={speakers as [SpeakerType]} days={props.eventDays} />}
             </>
           )}
         </div>
       </div>
-    </div>
+    </>
   )
 }

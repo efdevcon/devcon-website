@@ -5,17 +5,14 @@ import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
 import { Share } from 'components/common/share'
 import { useRouter } from 'next/router'
 import QRCode from 'qrcode.react'
-import {
-  CollapsedSection,
-  CollapsedSectionHeader,
-  CollapsedSectionContent,
-} from 'components/common/collapsed-section'
+import { CollapsedSection, CollapsedSectionHeader, CollapsedSectionContent } from 'components/common/collapsed-section'
 import css from './home.module.scss'
 import ticket from './ticket.png'
 import { useAccountContext } from 'context/account-context'
-import { useActiveAddress } from "hooks/useActiveAddress"
+import { useActiveAddress } from 'hooks/useActiveAddress'
 import { useAvatar } from 'hooks/useAvatar'
 import Image from 'next/image'
+import { AppNav } from 'components/domain/app/navigation'
 
 export const Home = () => {
   const router = useRouter()
@@ -30,65 +27,88 @@ export const Home = () => {
   }
 
   return (
-    <div className="section">
-      <div className="content">
-        {loggedIn &&
+    <>
+      <AppNav />
+      <div className="section no-overflow">
+        {loggedIn && (
           <div className={`${css['account']} border-bottom`}>
             <div className="font-xxl font-primary">
               <h2 className="font-primary">
-                Welcome{accountContext.account?.username && <>
-                  ,<br />{accountContext.account?.username}
-                </>}
+                Welcome
+                {accountContext.account?.username && (
+                  <>
+                    ,<br />
+                    {accountContext.account?.username}
+                  </>
+                )}
                 {!accountContext.account?.username && <> 👋</>}
               </h2>
             </div>
             <div className={css['profile-actions']}>
-              <button className="label error plain" onClick={() => router.push('/app/settings')}>SETTINGS</button>
-              {!accountContext.account?.username && <button className="label error plain" onClick={() => router.push('/app/settings/username')}>ADD USERNAME</button>}
-              <button className="label error plain" onClick={() => router.push('/app/settings/wallets')}>MANAGE WALLETS</button>
-              <button className="label error plain" onClick={() => router.push('/app/settings/email')}>MANAGE EMAILS</button>
+              <button className="label error plain" onClick={() => router.push('/app/settings')}>
+                SETTINGS
+              </button>
+              {!accountContext.account?.username && (
+                <button className="label error plain" onClick={() => router.push('/app/settings/username')}>
+                  ADD USERNAME
+                </button>
+              )}
+              <button className="label error plain" onClick={() => router.push('/app/settings/wallets')}>
+                MANAGE WALLETS
+              </button>
+              <button className="label error plain" onClick={() => router.push('/app/settings/email')}>
+                MANAGE EMAILS
+              </button>
             </div>
 
             <div className={css['dropdown']}>
               <DropdownVariationDots
                 value="Another thing2"
-                onChange={() => { }}
+                onChange={() => {}}
                 options={[
                   {
                     text: 'Settings',
                     value: 'Settings',
-                    onClick: () => { router.push('/app/settings') },
+                    onClick: () => {
+                      router.push('/app/settings')
+                    },
                   },
                   {
                     text: 'View on Etherscan',
                     value: 'Etherscan',
-                    onClick: () => { router.push('https://etherscan.io/address/' + accountContext.account?.addresses[0]) },
+                    onClick: () => {
+                      router.push('https://etherscan.io/address/' + accountContext.account?.addresses[0])
+                    },
                   },
                   {
                     text: 'Sign out',
                     value: 'Signout',
                     onClick: disconnect,
-                  }
+                  },
                 ]}
               />
             </div>
           </div>
-        }
+        )}
 
-        {loggedIn && !!activeAddress &&
-          <div className={css['connection-info']}>
-            <div className={css['wallet']}>
-              <div className={css['circle']}>
-                <Image src={avatar.url} alt={avatar.name} layout='fill' />
-              </div>
+        {
+          loggedIn && !!activeAddress && (
+            <div className={css['connection-info']}>
+              <div className={css['wallet']}>
+                <div className={css['circle']}>
+                  <Image src={avatar.url} alt={avatar.name} layout="fill" />
+                </div>
 
-              <div className={css['details']}>
-                {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
-                {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
-                {avatar.status && <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>}
+                <div className={css['details']}>
+                  {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
+                  {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
+                  {avatar.status && (
+                    <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          )
 
           // <CollapsedSection>
           //   <CollapsedSectionHeader>
@@ -114,10 +134,11 @@ export const Home = () => {
         <div className={css['slider-container']}>
           <p className={`${css['header']} font-lg bold`}>
             Devcon
-
-            {!loggedIn &&
-              <button className="label plain" onClick={() => router.push('/app/login')}>LOGIN</button>
-            }
+            {!loggedIn && (
+              <button className="label plain" onClick={() => router.push('/app/login')}>
+                LOGIN
+              </button>
+            )}
           </p>
 
           <SliderStickyNotes
@@ -198,6 +219,6 @@ export const Home = () => {
           </CollapsedSectionContent>
         </CollapsedSection> */}
       </div>
-    </div>
+    </>
   )
 }

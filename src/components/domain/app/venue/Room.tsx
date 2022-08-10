@@ -11,6 +11,7 @@ import InfoIcon from 'assets/icons/info.svg'
 import { Session as SessionType } from 'types/Session'
 import { Room as RoomType } from 'types/Room'
 import moment from 'moment'
+import { AppNav } from 'components/domain/app/navigation'
 
 interface Props {
   room: RoomType
@@ -64,76 +65,80 @@ export const Room = (props: Props) => {
   )
 
   return (
-    <div className="section">
-      <div className="content">
-        <AppSearch
-          noResults={sessions.length === 0}
-          search={{
-            placeholder: 'Search room sessions...',
-            onChange: setSearch,
-          }}
-          sortState={sortState}
-          filterStates={[]}
-          className={css['search-section']}
-        />
+    <>
+      <AppNav />
+      <div className="section">
+        <div className="content">
+          <AppSearch
+            noResults={sessions.length === 0}
+            search={{
+              placeholder: 'Search room sessions...',
+              onChange: setSearch,
+            }}
+            sortState={sortState}
+            filterStates={[]}
+            className={css['search-section']}
+          />
 
-        <Gallery className={css['gallery']}>
-          <h1>{props.room.name}</h1>
-          <h1>{props.room.name}</h1>
-        </Gallery>
+          <Gallery className={css['gallery']}>
+            <h1>{props.room.name}</h1>
+            <h1>{props.room.name}</h1>
+          </Gallery>
 
-        <div className={css['room-info']}>
-          <p className="bold">{props.room.description}</p>
-          <p className="h2">{props.room.name}</p>
-          {props.room.capacity &&
-            <div className="label">
-              <CapacityIcon className={`icon ${css['capacity-icon']}`} />
-              <p>Capacity - {props.room.capacity} </p>
-              <InfoIcon />
-            </div>
-          }
+          <div className={css['room-info']}>
+            <p className="bold">{props.room.description}</p>
+            <p className="h2">{props.room.name}</p>
+            {props.room.capacity && (
+              <div className="label">
+                <CapacityIcon className={`icon ${css['capacity-icon']}`} />
+                <p>Capacity - {props.room.capacity} </p>
+                <InfoIcon />
+              </div>
+            )}
+          </div>
+
+          <AppTabsSection
+            className={css['tabs']}
+            title="Sessions"
+            tabs={[
+              {
+                title: 'Past',
+                content: (
+                  <div>
+                    {pastSessions.length > 0 &&
+                      pastSessions.map(i => {
+                        return <SessionCard key={i.id} session={i} />
+                      })}
+                    {pastSessions.length === 0 && <p>No sessions found</p>}
+                  </div>
+                ),
+              },
+              {
+                title: 'Attending',
+                content: (
+                  <div>
+                    {attendingSessions.map(i => {
+                      return <SessionCard key={i.id} session={i} />
+                    })}
+                    {attendingSessions.length === 0 && <p>No sessions found</p>}
+                  </div>
+                ),
+              },
+              {
+                title: 'Upcoming',
+                content: (
+                  <div>
+                    {upcomingSessions.map(i => {
+                      return <SessionCard key={i.id} session={i} />
+                    })}
+                    {upcomingSessions.length === 0 && <p>No sessions found</p>}
+                  </div>
+                ),
+              },
+            ]}
+          />
         </div>
-
-        <AppTabsSection
-          className={css['tabs']}
-          title="Sessions"
-          tabs={[
-            {
-              title: 'Past',
-              content: (
-                <div>
-                  {pastSessions.length > 0 && pastSessions.map((i) => {
-                    return <SessionCard key={i.id} session={i} />
-                  })}
-                  {pastSessions.length === 0 && <p>No sessions found</p>}
-                </div>
-              ),
-            },
-            {
-              title: 'Attending',
-              content: (
-                <div>
-                  {attendingSessions.map((i) => {
-                    return <SessionCard key={i.id} session={i} />
-                  })}
-                  {attendingSessions.length === 0 && <p>No sessions found</p>}
-                </div>
-              ),
-            },
-            {
-              title: 'Upcoming',
-              content: (
-                <div>
-                  {upcomingSessions.map((i) => {
-                    return <SessionCard key={i.id} session={i} />
-                  })}
-                  {upcomingSessions.length === 0 && <p>No sessions found</p>}
-                </div>
-              ),
-            },
-          ]}
-        />
       </div>
-    </div>
+    </>
   )
 }

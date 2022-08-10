@@ -8,6 +8,7 @@ import makeBlockie from 'ethereum-blockies-base64'
 import { SessionCard } from '../session'
 import { Session } from 'types/Session'
 import { Link } from 'components/common/link'
+import { AppNav } from 'components/domain/app/navigation'
 
 export const SpeakerDetails = (props: any) => {
   const splitName = props.speaker.name.split(' ') as string[]
@@ -17,8 +18,12 @@ export const SpeakerDetails = (props: any) => {
   return (
     <>
       <div className="aspect">
-        <Image src={props.speaker.avatar ?? makeBlockie(props.speaker.name)} alt={props.speaker.name}
-          objectFit='contain' layout='fill' />
+        <Image
+          src={props.speaker.avatar ?? makeBlockie(props.speaker.name)}
+          alt={props.speaker.name}
+          objectFit="contain"
+          layout="fill"
+        />
       </div>
 
       <div className="section">
@@ -34,27 +39,37 @@ export const SpeakerDetails = (props: any) => {
               {props.speaker.company && <p className={css['company']}>{props.speaker.company}</p>}
             </div>
             <div className={css['socials']}>
-              {props.speaker.website && <Link to={props.speaker.website}><IconGlobe /></Link>}
-              {props.speaker.twitter && <Link to={props.speaker.twitter}><IconTwitter /></Link>}
-              {props.speaker.github && <Link to={props.speaker.github}><IconGithub /></Link>}
+              {props.speaker.website && (
+                <Link to={props.speaker.website}>
+                  <IconGlobe />
+                </Link>
+              )}
+              {props.speaker.twitter && (
+                <Link to={props.speaker.twitter}>
+                  <IconTwitter />
+                </Link>
+              )}
+              {props.speaker.github && (
+                <Link to={props.speaker.github}>
+                  <IconGithub />
+                </Link>
+              )}
             </div>
           </div>
 
           <div className={css['description']}>
             <p className={css['header']}>Profile</p>
-            <p className={css['body']}>
-              {props.speaker.description}
-            </p>
+            <p className={css['body']}>{props.speaker.description}</p>
           </div>
 
-          {props.sessions.length > 0 &&
+          {props.sessions.length > 0 && (
             <div className={css['sessions']}>
               <p className={css['header']}>Sessions</p>
               {props.sessions.map((i: Session) => {
                 return <SessionCard key={i.id} session={i} />
               })}
             </div>
-          }
+          )}
 
           {/* <div className={css['videos']}>
             <p className={css['header']}>Archive</p>
