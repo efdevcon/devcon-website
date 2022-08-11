@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     //     <priority>0.8</priority>
     // </url>
 
-    const priorities = ['blog', 'devcon-week', 'dips', 'faq', 'news', 'tickets', 'program']
+    const priorities = ['blogs', 'devcon-week', 'dips', 'faq', 'news', 'tickets', 'program']
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
             <url>
@@ -28,14 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             </url>
 
             ${pages.map(i => {
-        if (i.id === '404') {
-            return `<url>
-                        <loc>${baseUrl}${i.lang}${i.slug}</loc>
-                        <lastmod>${launchDate}</lastmod>
-                        <changefreq>never</changefreq>
-                        <priority>0.1</priority>
-                    </url>`
-        }
+        if (i.id === '404') return ``
         if (priorities.includes(i.id)) {
             return `<url>
                         <loc>${baseUrl}${i.lang}${i.slug}</loc>
@@ -44,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                         <priority>0.8</priority>
                     </url>`
         }
-
         return `<url>
                         <loc>${baseUrl}${i.lang}${i.slug}</loc>
                         <lastmod>${launchDate}</lastmod>

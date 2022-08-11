@@ -17,11 +17,33 @@ import IconTwitter from 'assets/icons/twitter.svg'
 import IconYoutube from 'assets/icons/youtube.svg'
 import IconTelegram from 'assets/icons/telegram.svg'
 import IconDiscord from 'assets/icons/discord.svg'
+import { CodeOfConduct, TermsOfService } from './Legal'
+import { Modal } from 'components/common/modal'
 
 type SocialMediaProps = {
   onShare?: () => void
   url?: string
   className?: string
+}
+
+const ModalLink = (props: { children: any; title: string }) => {
+  const [open, setOpen] = React.useState(false)
+
+  return (
+    <>
+      <Modal className={css['modal-overrides']} open={open} close={() => setOpen(false)}>
+        {props.children}
+      </Modal>
+      <a
+        className="bold font-xs text-uppercase hover-underline"
+        style={{ cursor: 'pointer' }}
+        target="_blank"
+        onClick={() => setOpen(true)}
+      >
+        {props.title}
+      </a>
+    </>
+  )
 }
 
 export const SocialMedia = ({ onShare, url, className: extraClassName }: SocialMediaProps) => {
@@ -141,6 +163,12 @@ export const Footer = () => {
               <Link className="bold font-xs text-uppercase hover-underline" to="https://ethereum.org/en/cookie-policy/">
                 {intl('cookie_policy')}
               </Link>
+              <ModalLink title={intl('code_of_conduct')}>
+                <CodeOfConduct />
+              </ModalLink>
+              <ModalLink title={intl('terms_of_service')}>
+                <TermsOfService />
+              </ModalLink>
             </div>
           </div>
         </div>
