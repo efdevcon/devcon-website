@@ -9,12 +9,12 @@ export const CodeOfConduct = () => {
       <p className="font-lg text-underline bold">TL;DR</p>
       <p>
         <b>Be excellent to each other</b>. If a participant is, in our sole discretion, harassing or otherwise
-        unacceptably impacting other participants&apos; ability to enjoy Devconnect, we at all times reserve the right
-        to remove the offending person(s) from the event without refund.
+        unacceptably impacting other participants&apos; ability to enjoy Devcon, we at all times reserve the right to
+        remove the offending person(s) from the event without refund.
       </p>
       <p className="font-lg text-underline bold">Don&apos;t Shill</p>
       <p>
-        Devconnect is designed for builders and developers -{' '}
+        Devcon is designed for builders and developers -{' '}
         <i>
           <b>
             We aim to create a welcoming, collaborative space which allows for great networking opportunities. Please
@@ -42,22 +42,22 @@ export const CodeOfConduct = () => {
       </p>
       <p>
         {' '}
-        This Code of Conduct applies to everyone participating at Devconnect - from attendees and exhibitors to
-        speakers, press, volunteers, etc.
+        This Code of Conduct applies to everyone participating at Devcon - from attendees and exhibitors to speakers,
+        press, volunteers, etc.
       </p>
       <p>
         {' '}
         Anyone can report harassment. If you were or are being harassed, notice that someone else was or is being
-        harassed, or have any other concerns related to harassment, you can contact a Devconnect volunteer or staff
-        member, make a report at the registration desk or info booth, or submit a complaint to support@devcon.org.
+        harassed, or have any other concerns related to harassment, you can contact a Devcon volunteer or staff member,
+        make a report at the registration desk or info booth, or submit a complaint to support@devcon.org.
       </p>
       <p className="font-lg text-underline bold">Approved Swag Only</p>
       <p>
         <b>
           Only pre-approved teams are authorized to distribute swag (clothing, sales, freebies, or any form of
-          promotional material) at Devconnect!
+          promotional material) at Devcon!
         </b>{' '}
-        Examples of permitted groups include the Devconnect team, and some of the other pre-approved event organizers.
+        Examples of permitted groups include the Devcon team, and some of the other pre-approved event organizers.
         Please respect this decision. If you are unsure of whether you are allowed to distribute your swag, ask the
         friendly staff!
       </p>
@@ -76,8 +76,8 @@ export const CodeOfConduct = () => {
       </ul>
       <p className="font-lg text-underline bold">Media Policy</p>
       <p>
-        At Devconnect we aim to respect the privacy of our attendees. It is important for you to review the Devconnect
-        Media Policy and to ensure you understand and follow it.
+        At Devcon we aim to respect the privacy of our attendees. It is important for you to review the Devcon Media
+        Policy and to ensure you understand and follow it.
       </p>{' '}
       <p className="font-lg text-underline bold">Be Respectful to Speakers (and audiences)</p>
       <p>
@@ -88,17 +88,17 @@ export const CodeOfConduct = () => {
       </p>
       <p className="font-lg text-underline bold">Local Laws</p>
       <p>
-        You must comply with all venue and facility rules and regulations during your participation in Devconnect,
-        including all safety instructions and requirements. It is also very important to note that <b>ALL</b> attendees
-        are expected to conform to <b>ALL</b> local laws, including Covid-19 restrictions and policies imposed by the
-        venue, facility, and/or local authorities.
+        You must comply with all venue and facility rules and regulations during your participation in Devcon, including
+        all safety instructions and requirements. It is also very important to note that <b>ALL</b> attendees are
+        expected to conform to <b>ALL</b> local laws, including Covid-19 restrictions and policies imposed by the venue,
+        facility, and/or local authorities.
       </p>
       <p className="font-lg text-underline bold">How to Report</p>
       <p>If you notice any violations of this Code of Conduct please report them to support@devcon.org.</p>
       <p className="font-lg text-underline bold">Remember</p>
       <p className="bold">
-        Devconnect is what you make of it, and as a community we can create a safe, meaningful, and incredible
-        experience for everyone! 🦄
+        Devcon is what you make of it, and as a community we can create a safe, meaningful, and incredible experience
+        for everyone! 🦄
       </p>
     </div>
   )
