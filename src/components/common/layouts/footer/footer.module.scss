@@ -323,9 +323,13 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        flex-wrap: wrap;
+        top: -8px;
+        position: relative;
 
         > * {
           margin-right: 16px;
+          margin-top: 8px;
           text-align: center;
 
           &:last-child {
@@ -336,7 +340,7 @@
         @media (max-width: $breakpoints-lg) {
           order: 1;
           margin-bottom: 8px;
-          margin-right: 16px;
+          margin-right: 0px;
           justify-content: center;
         }
       }
@@ -382,5 +386,11 @@
     width: 125px;
     height: 50px;
     max-width: 100%;
+  }
+}
+
+.modal-overrides {
+  [data-type='modal-content'] {
+    width: min(800px, 80vw) !important;
   }
 }
