@@ -17,6 +17,7 @@ const nextConfig = withPWA({
       'camo.githubusercontent.com',
       'blog.ethereum.org',
       'img.youtube.com',
+      'www.gravatar.com',
     ],
   },
   experimental: {

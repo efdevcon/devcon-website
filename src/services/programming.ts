@@ -3,20 +3,23 @@ import { Room } from 'types/Room'
 import { Session as SessionType } from 'types/Session'
 import { defaultSlugify } from 'utils/formatting'
 import moment from 'moment'
+import fs from 'fs'
+import speakerData from '../content/speakers-data.json'
+
 require('dotenv').config()
 
 const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
-const eventName = 'pwa-data'
-const defaultLimit = 25
-const test = false
+const eventName = 'devcon-vi-2022'
+const defaultLimit = 100
+const test = process.env.NODE_ENV !== 'production'
 const nrOfTestSpeakers = 50
-const organizationQuestionId = 23
-const roleQuestionId = 24
-const websiteQuestionId = 25
-const twitterQuestionId = 26
-const githubQuestionId = 27
-const expertiseQuestionId = 28
+const organizationQuestionId = 23 // not used
+const roleQuestionId = 24 // not used
+const websiteQuestionId = 29
+const twitterQuestionId = 44
+const githubQuestionId = 43
+const expertiseQuestionId = 40
 
 export async function GetSessions(): Promise<Array<SessionType>> {
     if (test) return await generateSessions()
@@ -113,8 +116,8 @@ export async function GetSpeakers(): Promise<Array<Speaker>> {
     if (test) return await generateSpeakers()
 
     const sessions = await GetSessions()
-    const speakers = await exhaustResource(`/events/${eventName}/speakers`)
-    return speakers.map((i: any) => {
+    const speakersData = await exhaustResource(`/events/${eventName}/speakers`)
+    const speakers = speakersData.map((i: any) => {
         const speakerSessions = sessions.filter((s: SessionType) => i.submissions.find((x: string) => x === s.id))
         const organization = i.answers.find((i: any) => i.question.id === organizationQuestionId)?.answer
         const role = i.answers.find((i: any) => i.question.id === roleQuestionId)?.answer
@@ -122,27 +125,38 @@ export async function GetSpeakers(): Promise<Array<Speaker>> {
         const twitter = i.answers.find((i: any) => i.question.id === twitterQuestionId)?.answer
         const github = i.answers.find((i: any) => i.question.id === githubQuestionId)?.answer
 
-        return {
+        let speaker: any = {
             id: i.code,
             name: i.name,
-            role: role ?? null,
-            company: organization ?? null,
-            website: website ?? null,
-            twitter: twitter ?? null,
-            github: github ?? null,
             avatar: i.avatar,
-            description: i.biography,
+            description: i.biography ?? '',
             tracks: [...new Set(speakerSessions.map(i => i.track))],
             eventDays: [...new Set(speakerSessions.map(i => moment.utc(i.start).startOf('day').valueOf()))]
         }
+
+        if (role) speaker.role = role
+        if (organization) speaker.company = organization
+        if (website) speaker.website = website
+        if (twitter) speaker.twitter = twitter
+        if (github) speaker.github = github
+
+        return speaker
     })
+
+    // fs.writeFile("./src/content/speakers-data.json", JSON.stringify(speakers, null, 2), function (err) {
+    //     if (err) {
+    //         console.log(err)
+    //     }
+    // })
+
+    return speakers
 }
 
 async function exhaustResource(slug: string, limit = defaultLimit, offset = 0, results = [] as any): Promise<any> {
     return get(`${slug}?limit=${limit}&offset=${offset}`).then((data: any) => {
         results.push(data.results);
         if (data.next) {
-            return exhaustResource(slug, limit + defaultLimit, offset + defaultLimit, results);
+            return exhaustResource(slug, defaultLimit, offset + defaultLimit, results);
         } else {
             return results.flat();
         }
@@ -209,30 +223,7 @@ export async function generateSessions(): Promise<Array<SessionType>> {
 }
 
 export async function generateSpeakers(): Promise<Array<Speaker>> {
-    const key = 'TEST:speakers'
-    if (cache.has(key)) return cache.get(key)
-
-    const tracks = await GetTracks()
-    const eventDays = await GetEventDays()
-
-    const namesResponse = await fetch('https://www.randomlists.com/data/names-female.json')
-    const names = (await namesResponse.json()).data
-    const surNamesResponse = await fetch('https://www.randomlists.com/data/names-surnames.json')
-    const surNames = (await surNamesResponse.json()).data
-
-    const speakers = names.map((i: string, index: number) => {
-        return {
-            id: defaultSlugify(i),
-            name: `${i} ${surNames[index]}`,
-            description: `Biography for ${i}`,
-            tracks: [tracks[Math.floor(Math.random() * tracks.length)]],
-            eventDays: [eventDays[Math.floor(Math.random() * eventDays.length)]]
-        } as Speaker
-    }).sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name)).slice(0, nrOfTestSpeakers)
-
-    cache.set(key, speakers)
-    return speakers
-
+    return speakerData as Speaker[]
 }
 
 export async function generateTracks(): Promise<Array<string>> {
