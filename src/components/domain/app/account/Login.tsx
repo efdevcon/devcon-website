@@ -16,6 +16,8 @@ import AccountFooter from './AccountFooter'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { AppNav } from 'components/domain/app/navigation'
+import { InfoIcon } from 'components/common/info-icon'
+import Info from 'pages/app/info'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -160,11 +162,15 @@ export default function LoginPage() {
                 <>
                   <div className={css['trust-model']}>
                     <p>Choose your Trust model.</p>
-                    <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
+
+                    <InfoIcon className={`icon ${css['icon-help']}`}>
+                      <div>Hey</div>
+                    </InfoIcon>
+                    {/* <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
                       <span onClick={() => setTooltipVisible(!tooltipVisible)}>
                         <IconHelp className={`icon ${css['icon-help']}`} />
                       </span>
-                    </Tooltip>
+                    </Tooltip> */}
                   </div>
 
                   <div className={css['email']}>

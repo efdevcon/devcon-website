@@ -139,13 +139,18 @@
   }
 }
 
+.wallet, .email {
+  button {
+    align-self: flex-start;
+  }
+}
+
 .wallet {
   padding-top: $gaps-gap-4;
   padding-bottom: $gaps-gap-4;
 
   .button {
-    margin-top: $gaps-gap-4;
-    width: 100%;
+    margin-top: 8px;
   }
 }
 

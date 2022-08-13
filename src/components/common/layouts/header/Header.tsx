@@ -29,6 +29,7 @@ export const Header = React.memo(({ withStrip, withHero, className, isApp }: Hea
   // Prevent page scroll when menu is open
   useEffect(() => {
     if (foldoutOpen) {
+      if (isApp) window.scrollTo(0, 0) // Header isn't sticky in the app so we have to scroll to the top to align the foldout content properly
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
@@ -37,7 +38,7 @@ export const Header = React.memo(({ withStrip, withHero, className, isApp }: Hea
     return () => {
       document.body.style.overflow = ''
     }
-  }, [foldoutOpen])
+  }, [foldoutOpen, isApp])
 
   let headerContainerClass = `${css['header-container']}`
   let headerClass = `${css['header']}`
