@@ -5,55 +5,97 @@ import { Notification } from '../notifications'
 import { Session, SessionCard } from '../session'
 import { SliderStickyNotes } from 'components/common/slider/SliderVariations'
 import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
-import { Gallery } from 'components/common/gallery'
 import Image from 'next/image'
 import image1 from 'assets/images/side-events-hero.png'
 import image2 from 'assets/images/neo-matrix.png'
 import { AppNav } from 'components/domain/app/navigation'
+import { Card } from 'components/common/card'
+import { Slider, useSlider } from 'components/common/slider'
 
 const galleryEvents = [
   {
     title: 'Continuous Devcon',
     description:
       'Be sure to visit the Cyber Basement to experience the truly immersive co-working space. Kept open late into the night to accomodate your needs.',
+    image: image1,
   },
   {
     title: 'Continuous Devcon 2',
     description: 'Kept open late into the night to accomodate your needs.',
+    image: image2,
   },
   {
     title: 'Continuous Devcon 3',
     description:
       'Be sure to visit the Cyber Basement to experience the truly immersive co-working space. Kept open late into the night to accomodate your needs.',
+    image: image1,
   },
   {
     title: 'Continuous Devcon 4',
     description: 'Kept open late into the night to accomodate your needs.',
+    image: image2,
   },
 ]
 
 export const Dashboard = (props: any) => {
   const [openNotifications, setOpenNotifications] = React.useState(true)
   const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(true)
-  const [currentSlide, setCurrentSlide] = React.useState(0)
+
+  const sliderSettings = {
+    infinite: false,
+    touchThreshold: 100,
+    speed: 500,
+    slidesToShow: 3,
+    arrows: false,
+    // slidesToScroll: 3,
+    swipeToSlide: true,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2.1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1.1,
+        },
+      },
+    ],
+  }
+
+  const sliderProps = useSlider(sliderSettings)
 
   return (
     <>
       <AppNav />
       <div className="section no-overflow">
         <div className={css['hero']}>
-          <div className={css['image-container']}>
-            <Gallery onChange={setCurrentSlide}>
-              <Image src={image1} objectFit="cover" layout="fill" alt={galleryEvents[currentSlide].title} />
-              <Image src={image2} objectFit="cover" layout="fill" alt={galleryEvents[currentSlide].title} />
-              <Image src={image1} objectFit="cover" layout="fill" alt={galleryEvents[currentSlide].title} />
-              <Image src={image2} objectFit="cover" layout="fill" alt={galleryEvents[currentSlide].title} />
-            </Gallery>
-          </div>
+          <div className={css['cards']}>
+            <Slider sliderProps={sliderProps} onlySlider>
+              {galleryEvents.map((event, i: number) => {
+                let className = css['card']
 
-          <div className={css['text']}>
-            <p className={css['title']}>{galleryEvents[currentSlide].title}</p>
-            <p className={css['description']}>{galleryEvents[currentSlide].description}</p>
+                if (i === galleryEvents.length - 1) className += ` ${css['last']}`
+
+                return (
+                  <Card
+                    className={className}
+                    slide={sliderProps[1].canSlide}
+                    key={event.title}
+                    title={event.title}
+                    description={event.description}
+                    imageUrl={image1}
+                    expandLink
+                    // linkUrl={blog.permaLink} // Linking to blog domain temporarily until blog page is done (static-phase)
+                    // metadata={[moment(blog.date).format('ll'), blog.author]}
+                    allowDrag
+                  />
+                )
+              })}
+            </Slider>
           </div>
         </div>
 

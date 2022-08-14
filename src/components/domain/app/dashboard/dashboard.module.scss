@@ -3,27 +3,9 @@
 .hero {
   margin-top: $gaps-gap-4;
   padding-bottom: $gaps-gap-4;
-  max-width: 800px;
 
-
-  @media (min-width: $breakpoints-md) {
-    display: flex;
-    flex-direction: row;
-    max-width: none;
-    
-    > * {
-      flex-basis: 50%;
-      flex-shrink: 0;
-    }
-
-    .text {
-      padding-top: 0px;
-      border: none !important;
-    }
-  }
-
-  .image-container {
-
+  [data-type="slider-container"] {
+    margin-top: 16px !important;
   }
 
   .text {
@@ -62,5 +44,22 @@
       z-index: 1;
       position: absolute;
     }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 16px;
+
+  .card {
+    height: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 16px;
+    background: white;
   }
 }
