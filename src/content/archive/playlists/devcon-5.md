@@ -21,7 +21,6 @@ videos:
   - 5/building-mainstream-ready-dapps/index
   - 5/panel-community-interoperability/index
   - 5/opportunities-for-collaboration-eth1x-and-ethereum-classic/index
-  - 5/ask-not-what-ethereum-can-do-for-videogames-ask-what-video-games-can-do-for-ethereum/index
   - 5/what-do-we-do-about-libra/index
   - 5/analyzing-the-security-of-casper/index
   - 5/grantee-expose-lightning-talk-1-formality-an-efficient-proof-language/index

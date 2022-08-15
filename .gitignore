@@ -32,6 +32,7 @@ typings/
 # gatsby files
 .cache/
 public
+.next/
 
 # Mac files
 .DS_Store
