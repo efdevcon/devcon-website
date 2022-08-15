@@ -5,6 +5,10 @@
   flex-direction: column;
   border-bottom: 1px solid $colors-standard-border-color;
 
+  &.indent {
+    margin-left: 1em;
+  }
+
   &:last-child {
     border-bottom: none;
   }

@@ -62,53 +62,50 @@ export const Venue = (props: Props) => {
   return (
     <>
       <AppNav />
-      <div className="section">
-        <div className="content">
-          <AppSearch
-            noResults={sessions.length === 0}
-            search={{
-              placeholder: 'Search venue...',
-              onChange: setSearch,
-            }}
-            actions={
-              <>
-                <button className={`app squared sm thin-borders`} onClick={console.log}>
-                  {/* {open ? <IconClose /> : <IconFilter />} */}
-                  <ListIcon />
-                </button>
-                <button className={`app squared sm thin-borders`} onClick={console.log}>
-                  {/* {open ? <IconClose /> : <IconFilter />} */}
-                  <LayersIcon />
-                </button>
-              </>
-            }
-          />
-        </div>
-      </div>
 
       <CSS3D />
 
       <div className="section">
-        <div className="content">
-          {props.floors.map(floor => {
-            const roomsByFloor = props.rooms.filter(i => i.info === floor)
+        <AppSearch
+          noResults={sessions.length === 0}
+          search={{
+            placeholder: 'Search venue...',
+            onChange: setSearch,
+          }}
+          actions={
+            <>
+              <button className={`app squared sm thin-borders`} onClick={console.log}>
+                {/* {open ? <IconClose /> : <IconFilter />} */}
+                <ListIcon />
+              </button>
+              <button className={`app squared sm thin-borders`} onClick={console.log}>
+                {/* {open ? <IconClose /> : <IconFilter />} */}
+                <LayersIcon />
+              </button>
+            </>
+          }
+        />
+      </div>
 
-            return (
-              <React.Fragment key={floor}>
-                <div className={`list-item padded bold ${css['title']}`}>{floor}</div>
-                <LinkList noIndicator>
-                  {roomsByFloor.map((room: Room) => {
-                    return (
-                      <Link key={room.id} to={`/app/venue/${room.id}`}>
-                        {room.name}
-                      </Link>
-                    )
-                  })}
-                </LinkList>
-              </React.Fragment>
-            )
-          })}
-        </div>
+      <div className="section">
+        {props.floors.map(floor => {
+          const roomsByFloor = props.rooms.filter(i => i.info === floor)
+
+          return (
+            <React.Fragment key={floor}>
+              <div className={`list-item padded bold ${css['title']}`}>{floor}</div>
+              <LinkList noIndicator>
+                {roomsByFloor.map((room: Room) => {
+                  return (
+                    <Link key={room.id} to={`/app/venue/${room.id}`}>
+                      {room.name}
+                    </Link>
+                  )
+                })}
+              </LinkList>
+            </React.Fragment>
+          )
+        })}
       </div>
     </>
   )

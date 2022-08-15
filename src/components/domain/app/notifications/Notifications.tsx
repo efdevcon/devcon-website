@@ -248,7 +248,7 @@ const filters = [
   },
 ]
 
-export const Notification = (props: any) => {
+export const NotificationCard = (props: any) => {
   return (
     <ThumbnailBlock className={css['notification-block']}>
       <div className={css['top']}>
@@ -264,8 +264,8 @@ export const Notification = (props: any) => {
         <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
       </div>
       <div className={css['labels']}>
-        <div className="label sm error">Devcon</div>
-        <div className="label sm error">Travel</div>
+        <div className="label sm bold">Devcon</div>
+        <div className="label sm bold">Travel</div>
       </div>
     </ThumbnailBlock>
   )
@@ -293,9 +293,9 @@ export const Notifications = (props: any) => {
         })}
       </div>
 
-      <Notification />
-      <Notification />
-      <Notification />
+      <NotificationCard />
+      <NotificationCard />
+      <NotificationCard />
     </div>
   )
 }

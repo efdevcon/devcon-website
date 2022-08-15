@@ -53,9 +53,7 @@ export const SessionCard = (props: CardProps) => {
 
           {false ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
 
-          <div className="label sm">
-            {props.session.track}
-          </div>
+          <div className="label sm bold">{props.session.track}</div>
         </div>
         <div className={css['bottom']}>
           <div className={css['time']}>
@@ -70,7 +68,7 @@ export const SessionCard = (props: CardProps) => {
               <p>{props.session.room.name}</p>
             </div>
           )}
-          {props.session.speakers.length > 0 &&
+          {props.session.speakers.length > 0 && (
             <div className={css['authors']}>
               <IconSpeaker />
               <p>
@@ -79,7 +77,7 @@ export const SessionCard = (props: CardProps) => {
                 })}
               </p>
             </div>
-          }
+          )}
           {props.session.room && props.session.room.capacity && (
             <div className={css['n-seats']}>
               <IconPeople />

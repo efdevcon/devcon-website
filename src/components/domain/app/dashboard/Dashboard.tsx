@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './dashboard.module.scss'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
-import { Notification } from '../notifications'
+import { NotificationCard } from '../notifications'
 import { Session, SessionCard } from '../session'
 import { SliderStickyNotes } from 'components/common/slider/SliderVariations'
 import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
@@ -106,7 +106,7 @@ export const Dashboard = (props: any) => {
         >
           <CollapsedSectionHeader title="Latest Notification" />
           <CollapsedSectionContent>
-            <Notification />
+            <NotificationCard />
           </CollapsedSectionContent>
         </CollapsedSection>
 
@@ -120,14 +120,14 @@ export const Dashboard = (props: any) => {
         <CollapsedSection>
           <CollapsedSectionHeader title="Schedule Overview" />
           <CollapsedSectionContent>
-            <Notification />
+            <NotificationCard />
           </CollapsedSectionContent>
         </CollapsedSection>
 
         <CollapsedSection>
           <CollapsedSectionHeader title="Suggested Sessions" />
           <CollapsedSectionContent>
-            <Notification />
+            <NotificationCard />
           </CollapsedSectionContent>
         </CollapsedSection>
 
@@ -198,7 +198,7 @@ export const Dashboard = (props: any) => {
         <CollapsedSection>
           <CollapsedSectionHeader title="Side Events" />
           <CollapsedSectionContent>
-            <Notification />
+            <NotificationCard />
           </CollapsedSectionContent>
         </CollapsedSection>
       </div>
