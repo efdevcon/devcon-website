@@ -16,7 +16,7 @@ import BellIcon from 'assets/icons/bell-simple.svg'
 import { LanguageToggle } from 'components/common/layouts/header/strip/language-toggle'
 import useNavigationData from '../useNavigationData'
 import { TippyProps } from '@tippyjs/react'
-import { Notification, Notifications } from 'components/domain/app/notifications'
+import { Notifications } from 'components/domain/app/notifications'
 
 type ButtonProps = {
   buttons: {
