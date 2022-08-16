@@ -13,13 +13,13 @@ const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'devcon-vi-2022'
 const defaultLimit = 100
 const test = process.env.NODE_ENV !== 'production'
-const nrOfTestSpeakers = 50
-const organizationQuestionId = 23 // not used
-const roleQuestionId = 24 // not used
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
 const expertiseQuestionId = 40
+
+const organizationQuestionId = 23 // not used
+const roleQuestionId = 24 // not used
 
 export async function GetSessions(): Promise<Array<SessionType>> {
     if (test) return await generateSessions()

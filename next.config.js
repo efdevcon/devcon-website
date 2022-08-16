@@ -9,6 +9,7 @@ const nextConfig = withPWA({
     customWorkerDir: 'workbox',
   },
   reactStrictMode: true,
+  staticPageGenerationTimeout: 300,
   images: {
     domains: [
       'speak.devcon.org',
