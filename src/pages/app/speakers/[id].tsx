@@ -2,7 +2,7 @@ import { AppLayout } from 'components/domain/app/Layout'
 import { SpeakerDetails } from 'components/domain/app/speakers'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
-import { GetSessionsBySpeaker, GetSpeakers, GetTracks } from 'services/programming'
+import { GetSessionsBySpeaker, GetSpeaker, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { getGlobalData } from 'services/global'
 
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: any) {
-  const speaker = (await GetSpeakers()).find(i => i.id === context.params.id)
+  const speaker = await GetSpeaker(context.params.id)
 
   if (!speaker) {
     return {

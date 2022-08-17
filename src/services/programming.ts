@@ -10,7 +10,7 @@ require('dotenv').config()
 
 const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
-const eventName = 'devcon-vi-2022'
+const eventName = 'devcon-vi-2022' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
 const test = process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
@@ -110,6 +110,18 @@ export async function GetRooms(): Promise<Array<Room>> {
 export async function GetFloors(): Promise<Array<string>> {
     const rooms = await GetRooms()
     return [...new Set(rooms.map(i => i.info).filter(i => !!i))]
+}
+
+export async function GetSpeaker(id: string): Promise<Speaker | undefined> {
+    if (test) {
+        const speakers = await GetSpeakers()
+        return speakers.find(i => i.id === id)
+    }
+
+    const speaker = await get(`/events/${eventName}/speakers/${id}`)
+    if (!speaker || speaker.detail === 'Not found.') return undefined
+
+    return speaker
 }
 
 export async function GetSpeakers(): Promise<Array<Speaker>> {
