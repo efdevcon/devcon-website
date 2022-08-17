@@ -45,5 +45,6 @@ export async function getStaticProps(context: any) {
       speaker,
       sessions,
     },
+    revalidate: DEFAULT_REVALIDATE_PERIOD,
   }
 }
