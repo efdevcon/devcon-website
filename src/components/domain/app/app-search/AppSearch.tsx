@@ -3,11 +3,7 @@ import IconSearch from 'assets/icons/search.svg'
 import { Sort } from 'components/common/sort'
 import { InputForm } from 'components/common/input-form'
 import { Filter, FilterFoldout, NoResults } from 'components/common/filter'
-import {
-  CollapsedSection,
-  CollapsedSectionHeader,
-  CollapsedSectionContent,
-} from 'components/common/collapsed-section'
+import { CollapsedSection, CollapsedSectionHeader, CollapsedSectionContent } from 'components/common/collapsed-section'
 import { Button } from 'components/common/button'
 import css from './app-search.module.scss'
 
@@ -24,7 +20,7 @@ type AppSearchProps = {
 }
 
 export const AppSearch = (props: AppSearchProps) => {
-  let className = css['filter']
+  let className = `${css['filter']} expand section`
 
   const noSort = !props.sortState
   const noFilter = !props.filterStates
@@ -34,7 +30,7 @@ export const AppSearch = (props: AppSearchProps) => {
   if (noFilter) className += ` ${css['no-filter']}`
 
   return (
-    <>
+    <div className="section">
       <div className={className}>
         <div className={css['search-filter-container']}>
           <InputForm
@@ -104,6 +100,6 @@ export const AppSearch = (props: AppSearchProps) => {
       </div>
 
       {props.noResults && <NoResults />}
-    </>
+    </div>
   )
 }

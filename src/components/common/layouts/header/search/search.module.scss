@@ -23,7 +23,6 @@
   }
 
   .content {
-    @include layout-content;
     padding-top: $gaps-gap-2;
     padding-bottom: $gaps-gap-4;
     width: 100%;

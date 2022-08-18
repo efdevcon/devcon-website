@@ -106,28 +106,27 @@ export const SideEvents = (props: any) => {
               </LinkList>
             </CollapsedSectionContent>
           </CollapsedSection>
-
-          <AppSearch
-            noResults={sessions.length === 0}
-            search={{
-              placeholder: 'Search side events...',
-              onChange: setSearch,
-            }}
-            sortState={sortState}
-            filterStates={[
-              { title: 'Test', filterState },
-              { title: 'Test', filterState },
-              { title: 'Test', filterState },
-            ]}
-            className={css['search-section']}
-          />
-
-          {/* <h4 className={`app-header ${css['header']}`}>Side Events</h4> */}
-
-          {sessions.map(session => {
-            return <SessionCard key={session.id} session={props.sessions[0]} />
-          })}
         </div>
+      </div>
+
+      <AppSearch
+        noResults={sessions.length === 0}
+        search={{
+          placeholder: 'Search side events...',
+          onChange: setSearch,
+        }}
+        sortState={sortState}
+        filterStates={[
+          { title: 'Test', filterState },
+          { title: 'Test', filterState },
+          { title: 'Test', filterState },
+        ]}
+        className={css['search-section']}
+      />
+      <div className="section">
+        {sessions.map(session => {
+          return <SessionCard key={session.id} session={props.sessions[0]} />
+        })}
       </div>
     </>
   )

@@ -244,29 +244,25 @@ export const Speakers = (props: any) => {
   return (
     <>
       <AppNav />
-      <div className="section">
-        <div className="content">
-          <AppSearch
-            search={{
-              placeholder: 'Search speakers...',
-              onChange: setSearch,
-            }}
-            sortState={sortState}
-            filterStates={[{ title: 'Track', filterState }]}
-          />
+      <AppSearch
+        search={{
+          placeholder: 'Search speakers...',
+          onChange: setSearch,
+        }}
+        sortState={sortState}
+        filterStates={[{ title: 'Track', filterState }]}
+      />
 
-          {noResults ? (
-            <NoResults />
-          ) : (
-            <>
-              {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={speakers as [SpeakerType]} />}
-              {sortedBy.key === 'tracks' && (
-                <ListTrackSort speakers={speakers as [SpeakerType]} tracks={props.tracks} />
-              )}
-              {sortedBy.key === 'days' && <ListDaySort speakers={speakers as [SpeakerType]} days={props.eventDays} />}
-            </>
-          )}
-        </div>
+      <div className="section">
+        {noResults ? (
+          <NoResults />
+        ) : (
+          <>
+            {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={speakers as [SpeakerType]} />}
+            {sortedBy.key === 'tracks' && <ListTrackSort speakers={speakers as [SpeakerType]} tracks={props.tracks} />}
+            {sortedBy.key === 'days' && <ListDaySort speakers={speakers as [SpeakerType]} days={props.eventDays} />}
+          </>
+        )}
       </div>
     </>
   )

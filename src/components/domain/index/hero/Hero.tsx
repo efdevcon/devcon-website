@@ -5,6 +5,7 @@ import Rays from './images/Rays'
 import { useTranslations } from 'next-intl'
 import { CallToAction } from './call-to-action'
 import AddToCalendar from '../add-to-calendar'
+import PolygonAnim from 'components/domain/index/hero/polygon-anim'
 import Mountains from 'assets/images/mtn-all-layers.svg'
 
 const useParallax = (elementRef: any) => {
@@ -57,6 +58,8 @@ export const Hero = () => {
         <div className={css['rays-container']}>
           <Rays className={css['rays']} />
         </div>
+
+        <PolygonAnim />
 
         <div className={css['parallax-container']}>
           <div className={css['mountain-container']}>

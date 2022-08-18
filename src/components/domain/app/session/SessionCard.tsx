@@ -13,13 +13,14 @@ import moment from 'moment'
 
 type CardProps = {
   session: Session
+  compact?: boolean
 }
 
 export const SessionCard = (props: CardProps) => {
   // TODO: personalization/bookmarks
-  // const { account, setSessionBookmark } = useAccountContext()
-  // const bookmarkedSessions = account?.appState?.bookmarkedSessions
-  // const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
+  const { account, setSessionBookmark } = useAccountContext()
+  const bookmarkedSessions = account?.appState?.bookmarkedSessions
+  const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
 
   const iconProps = {
     className: `${css['save-session']} icon`,
@@ -33,6 +34,8 @@ export const SessionCard = (props: CardProps) => {
   // }
 
   let thumbnailClassName = css['thumbnail-container']
+
+  if (props.compact) thumbnailClassName += ` ${css['compact']}`
 
   switch ('UX & Design' as string) {
     case 'Security':
@@ -51,10 +54,11 @@ export const SessionCard = (props: CardProps) => {
         <div className={css['top']}>
           <p className={css['title']}>{props.session.title}</p>
 
-          {false ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
-
           <div className="label sm bold">{props.session.track}</div>
+
+          {account && <> {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}</>}
         </div>
+
         <div className={css['bottom']}>
           <div className={css['time']}>
             <IconClock />

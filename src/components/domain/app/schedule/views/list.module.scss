@@ -1,0 +1,31 @@
+@use 'assets/css/partials/index' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+
+  .session {
+    margin-top: 2px;
+    padding: 5px;
+    border: 1px solid black;
+  }
+}
+
+
+
+.timeslot {
+  position: relative;
+
+  .start-time {
+    position: sticky;
+    top: 64px;
+    background: white;
+    z-index: 1;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    margin-left: 8px;
+    @include fonts-bold;
+    @include fonts-sm;
+  }
+}

@@ -65,27 +65,25 @@ export const Venue = (props: Props) => {
 
       <CSS3D />
 
-      <div className="section">
-        <AppSearch
-          noResults={sessions.length === 0}
-          search={{
-            placeholder: 'Search venue...',
-            onChange: setSearch,
-          }}
-          actions={
-            <>
-              <button className={`app squared sm thin-borders`} onClick={console.log}>
-                {/* {open ? <IconClose /> : <IconFilter />} */}
-                <ListIcon />
-              </button>
-              <button className={`app squared sm thin-borders`} onClick={console.log}>
-                {/* {open ? <IconClose /> : <IconFilter />} */}
-                <LayersIcon />
-              </button>
-            </>
-          }
-        />
-      </div>
+      <AppSearch
+        noResults={sessions.length === 0}
+        search={{
+          placeholder: 'Search venue...',
+          onChange: setSearch,
+        }}
+        actions={
+          <>
+            <button className={`app squared sm thin-borders`} onClick={console.log}>
+              {/* {open ? <IconClose /> : <IconFilter />} */}
+              <ListIcon />
+            </button>
+            <button className={`app squared sm thin-borders`} onClick={console.log}>
+              {/* {open ? <IconClose /> : <IconFilter />} */}
+              <LayersIcon />
+            </button>
+          </>
+        }
+      />
 
       <div className="section">
         {props.floors.map(floor => {

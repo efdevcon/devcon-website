@@ -9,6 +9,7 @@ import SwipeToScroll from 'components/common/swipe-to-scroll'
 export type NavLink = {
   title: string
   to?: string
+  onClick?: () => void
   useIsActive?: (pathname: string) => boolean
 }
 
@@ -18,10 +19,10 @@ type LinksProps = {
 }
 
 export const isSelected = (link: NavLink, pathname: string) => {
-  if (!link.to) return false
+  // if (!link.to) return false
 
   // Definitely some possible edge cases - may want to think of a more sophisticated way to see if a route is active, but realistically this probably works
-  return link.useIsActive ? link.useIsActive(pathname) : pathname.includes(link.to)
+  return link.useIsActive ? link.useIsActive(pathname) : link.to ? pathname.includes(link.to) : false
 }
 
 export const Links = (props: LinksProps) => {
@@ -44,11 +45,11 @@ export const Links = (props: LinksProps) => {
         const title = link.title
 
         const body = link.to ? (
-          <Link className={className} to={link.to} allowDrag key={link.to || index}>
+          <Link className={className} onClick={link.onClick} to={link.to} allowDrag key={link.to || index}>
             {title}
           </Link>
         ) : (
-          <p className={className} key={link.to || index}>
+          <p className={className} onClick={link.onClick} key={link.to || index}>
             {title}
           </p>
         )
@@ -62,11 +63,7 @@ export const Links = (props: LinksProps) => {
 type NavProps = {
   nested?: boolean
   renderRight?: React.FC
-  links?: {
-    title: string
-    to?: string
-    useIsActive?: () => boolean
-  }[]
+  links?: NavLink[]
 }
 
 // The root/main navigation:
