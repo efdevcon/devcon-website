@@ -19,8 +19,8 @@ type CardProps = {
 export const SessionCard = (props: CardProps) => {
   // TODO: personalization/bookmarks
   const { account, setSessionBookmark } = useAccountContext()
-  const bookmarkedSessions = account?.appState?.bookmarkedSessions
-  const sessionIsBookmarked = bookmarkedSessions?.[props.session.id]
+  // const bookmarkedSessions = account?.appState?.bookmarkedSessions
+  const sessionIsBookmarked = false // bookmarkedSessions?.[props.session.id]
 
   const iconProps = {
     className: `${css['save-session']} icon`,
