@@ -48,7 +48,16 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
 
         userAccount = await repo.findOne(userId)
         if (!userAccount) {
-            return res.status(400).send({ code: 400, message: 'Invalid session.' })
+            const model = new UserAccountModel()
+            model.addresses.push(address)
+            model.activeAddress = address
+
+            userAccount = await repo.create(model)
+            if (userAccount) {
+                return res.status(200).send({ code: 200, message: '', data: userAccount })
+            }
+            
+            return res.status(400).send({ code: 400, message: 'Unable to create user account.' })
         }
 
         userAccount = { ...userAccount, addresses: [...userAccount.addresses, address], activeAddress: address }

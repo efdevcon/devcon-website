@@ -80,6 +80,7 @@ export abstract class BaseRepository<T> implements IRepository<T> {
   public async deleteMany(conditions: object): Promise<boolean> {
     try {
       const result = await this._model.deleteMany(conditions)
+      console.log('Deleted', result.deletedCount, 'items. Condition', conditions)
 
       return !!result
     } catch (e) {

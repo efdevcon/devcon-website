@@ -14,7 +14,6 @@ export default pageHOC((props: any) => {
 })
 
 export async function getStaticProps(context: any) {
-  console.log(context, 'context')
   return {
     props: {
       ...(await getGlobalData(context.locale)),

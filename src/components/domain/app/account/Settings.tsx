@@ -60,7 +60,6 @@ export default function SettingsPage() {
                 <CollapsedSectionContent>
                   <div className={css['links']}>
                     <LinkList>
-                      <Link to="/app/settings/username">Edit username</Link>
                       <Link to="/app/settings/email">Manage Email</Link>
                       <Link to="/app/settings/wallets">Manage Wallets</Link>
                     </LinkList>

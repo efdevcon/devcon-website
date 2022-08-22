@@ -173,8 +173,10 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       const body = await response.json()
-      setContext({ ...context, account: body.data, loading: false })
-      return body.data
+      if (body.data) {
+        setContext({ ...context, account: body.data, loading: false })
+        return body.data
+      }
     }
 
     setContext({ ...context, account: undefined, loading: false })
