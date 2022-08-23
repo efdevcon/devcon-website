@@ -45,7 +45,7 @@ export default function SettingsPage() {
 
               <div className={css['profile']}>
                 <div className={css['avatar']}>
-                  <Image src={avatar.url} alt={avatar.name} layout="fill" />
+                  <img src={avatar.url} alt={avatar.name} />
                 </div>
                 <p className={`${css['name']} title`}>
                   {isEmail(avatar.name) ? avatar.name : TruncateMiddle(avatar.name, 8)}

@@ -25,8 +25,7 @@ export default function WalletSettings() {
     return null
   }
 
-  const canDelete =
-    (accountContext.account.addresses && accountContext.account.addresses.length > 0) || !!accountContext.account.email
+  const canDelete = accountContext.account?.addresses?.length > 1 || !!accountContext.account.email
 
   const addWallet = async () => {
     const provider = await accountContext.connectWeb3()
@@ -117,8 +116,7 @@ export default function WalletSettings() {
                             visible={tooltipVisible}
                             content={
                               <p>
-                                Can&apos;`t delete this address. You need at least 1 wallet or your email address
-                                connected.
+                                Can&apos;t delete this address. You need at least 1 wallet or email address connected.
                               </p>
                             }
                           >

@@ -8,7 +8,6 @@ import { InputForm } from 'components/common/input-form'
 import { isEmail } from 'utils/validators'
 import NotFound from './NotFound'
 import { useRouter } from 'next/router'
-import { AppNav } from 'components/domain/app/navigation'
 
 export default function EmailSettings() {
   const router = useRouter()
@@ -24,8 +23,7 @@ export default function EmailSettings() {
     return <></>
   }
 
-  const canDelete =
-    (accountContext.account.addresses && accountContext.account.addresses.length > 0) || !!accountContext.account.email
+  const canDelete = accountContext.account?.addresses?.length > 1 || !!accountContext.account.email
   const buttonText = accountContext.account.email ? 'Update Email' : 'Add Email'
 
   const connectEmail = async () => {
