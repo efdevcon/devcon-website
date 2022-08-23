@@ -57,16 +57,16 @@ export function getDefaultProvider(): ethers.providers.BaseProvider {
 
 export function getSiweMessage(address: string, token: VerificationToken): string {
   return `devcon.org wants you to sign in with your Ethereum account:
-    ${address}
-    
-    Sign this message to prove you have access to this wallet. This won't cost you anything.
-    
-    URI: https://devcon.org/
-    Version: 1
-    Nonce: ${token.nonce}
-    Issued At: ${token.issued}
-    Expiration Time: ${token.expires}
-    Chain ID: 1`
+${address}
+
+Sign this message to prove you have access to this wallet. This won't cost you anything.
+
+URI: https://devcon.org/
+Version: 1
+Nonce: ${token.nonce}
+Issued At: ${token.issued}
+Expiration Time: ${token.expires}
+Chain ID: 1`
 }
 
 export const isValidSignature = (address: string, message: string, signature: string): boolean => {

@@ -51,7 +51,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       web3Modal.clearCachedProvider()
       const web3 = await web3Modal.connect()
       const provider = new providers.Web3Provider(web3)
-      setContext({ ...context, provider: provider })
+      // setContext({ ...context, provider: provider })
       return provider
     } catch (e) {
       console.log('Unable to connect to web3')

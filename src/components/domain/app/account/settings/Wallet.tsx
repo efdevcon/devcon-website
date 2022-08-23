@@ -55,9 +55,6 @@ export default function WalletSettings() {
       signedMessage.message,
       signedMessage.signature
     )
-    if (userAccount) {
-      router.push('/app')
-    }
     if (!userAccount) {
       setError('Unable to login with web3')
     }
