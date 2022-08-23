@@ -108,6 +108,16 @@ export default function LoginPage() {
     }
   }
 
+  const resendVerificationEmail = async () => {
+    const token = await accountContext.getToken(email)
+    if (token) {
+      setEmailSent(true)
+    } else {
+      setEmailSent(false)
+      setError('Unable to create verification token')
+    }
+  }
+
   return (
     <>
       <AppNav />
@@ -152,9 +162,12 @@ export default function LoginPage() {
                     onChange={value => setNonce(value)}
                     onSubmit={verifyEmail}
                   />
-                  <Button className={`black`} onClick={verifyEmail}>
-                    Verify your email
-                  </Button>
+                  <div className={css['actions']}>
+                    <Button className={`black`} onClick={verifyEmail}>
+                      Verify your email
+                    </Button>
+                    <span className={css['resend']} role='button' onClick={resendVerificationEmail}>Re-send verification code</span>
+                  </div>
                 </div>
               )}
 
@@ -166,11 +179,6 @@ export default function LoginPage() {
                     <InfoIcon className={`icon ${css['icon-help']}`}>
                       <div>Hey</div>
                     </InfoIcon>
-                    {/* <Tooltip arrow={false} visible={tooltipVisible} content={<p>\(x_x) (TODO)/</p>}>
-                      <span onClick={() => setTooltipVisible(!tooltipVisible)}>
-                        <IconHelp className={`icon ${css['icon-help']}`} />
-                      </span>
-                    </Tooltip> */}
                   </div>
 
                   <div className={css['email']}>

@@ -93,6 +93,17 @@
     margin-top: $gaps-gap-4;
     margin-bottom: $gaps-gap-2;
   }
+
+  .actions {
+    display: flex;
+    gap: $gaps-gap-2;
+    align-items: center;
+
+    .resend {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 }
 
 .profile { 
