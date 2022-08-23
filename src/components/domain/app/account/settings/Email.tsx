@@ -8,6 +8,7 @@ import { InputForm } from 'components/common/input-form'
 import { isEmail } from 'utils/validators'
 import NotFound from './NotFound'
 import { useRouter } from 'next/router'
+import { AppNav } from '../../navigation'
 
 export default function EmailSettings() {
   const router = useRouter()
@@ -69,80 +70,101 @@ export default function EmailSettings() {
   }
 
   return (
-    <div className={css['container']}>
-      <div>
-        <div className="section">
-          <div className="content">
-            <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
+    <>
+      <AppNav
+        nested
+        links={[
+          {
+            title: 'Settings',
+            to: '/app/settings',
+            useIsActive: () => {
+              return false
+            },
+          },
+          {
+            title: 'Email',
+            useIsActive: () => {
+              return true
+            },
+          },
+        ]}
+      />
 
-            <div className={css['form']}>
-              <p className={`${css['title']} title`}>Manage Email</p>
+      <div className={css['container']}>
+        <div>
+          <div className="section">
+            <div className="content">
+              <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
 
-              {!accountContext.account.email && (
-                <div className={css['not-found']}>
-                  <NotFound type="email" />
-                </div>
-              )}
+              <div className={css['form']}>
+                <p className={`${css['title']} title`}>Manage Email</p>
 
-              {emailSent && (
-                <>
-                  <p className={css['content']}>
-                    We&apos;ve sent a verification code to your email address. Please enter this code on below.
-                  </p>
-                  <InputForm
-                    className={css['input']}
-                    placeholder="Verification code"
-                    defaultValue={nonce}
-                    onChange={value => setNonce(value)}
-                    onSubmit={verifyEmail}
-                  />
-                  <Button className={`red`} onClick={verifyEmail}>
-                    Verify your email
-                  </Button>
-                </>
-              )}
+                {!accountContext.account.email && (
+                  <div className={css['not-found']}>
+                    <NotFound type="email" />
+                  </div>
+                )}
 
-              {!emailSent && (
-                <>
-                  <InputForm
-                    className={css['input']}
-                    placeholder="Email"
-                    defaultValue={email}
-                    onChange={value => setEmail(value)}
-                    onSubmit={connectEmail}
-                  />
-
-                  {!areYouSure && (
-                    <Button className={`black`} onClick={connectEmail}>
-                      {buttonText}
+                {emailSent && (
+                  <>
+                    <p className={css['content']}>
+                      We&apos;ve sent a verification code to your email address. Please enter this code on below.
+                    </p>
+                    <InputForm
+                      className={css['input']}
+                      placeholder="Verification code"
+                      defaultValue={nonce}
+                      onChange={value => setNonce(value)}
+                      onSubmit={verifyEmail}
+                    />
+                    <Button className={`red`} onClick={verifyEmail}>
+                      Verify your email
                     </Button>
-                  )}
-                </>
-              )}
+                  </>
+                )}
 
-              {!areYouSure && !emailSent && canDelete && (
-                <Button className={`red ${css['button']}`} onClick={() => setAreYouSure(true)}>
-                  Delete Email
-                </Button>
-              )}
+                {!emailSent && (
+                  <>
+                    <InputForm
+                      className={css['input']}
+                      placeholder="Email"
+                      defaultValue={email}
+                      onChange={value => setEmail(value)}
+                      onSubmit={connectEmail}
+                    />
 
-              {areYouSure && (
-                <>
-                  <p>Are you sure you want to remove your associated email address?</p>
-                  <Button className={`black ${css['button']}`} onClick={() => setAreYouSure(false)}>
-                    No, keep my email
+                    {!areYouSure && (
+                      <Button className={`black`} onClick={connectEmail}>
+                        {buttonText}
+                      </Button>
+                    )}
+                  </>
+                )}
+
+                {!areYouSure && !emailSent && canDelete && (
+                  <Button className={`red ${css['button']}`} onClick={() => setAreYouSure(true)}>
+                    Delete Email
                   </Button>
-                  <Button className={`red ${css['button']}`} onClick={removeEmail}>
-                    Yes, delete my email
-                  </Button>
-                </>
-              )}
+                )}
+
+                {areYouSure && (
+                  <>
+                    <p>Are you sure you want to remove your associated email address?</p>
+                    <Button className={`black ${css['button']}`} onClick={() => setAreYouSure(false)}>
+                      No, keep my email
+                    </Button>
+                    <Button className={`red ${css['button']}`} onClick={removeEmail}>
+                      Yes, delete my email
+                    </Button>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <AccountFooter />
-    </div>
+        <AccountFooter />
+      </div>
+    </>
   )
 }
