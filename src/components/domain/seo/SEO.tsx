@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { Twitter } from './Twitter'
 import { SITE_URL } from 'utils/constants'
 import { usePageContext } from 'context/page-context'
+import { EventMetadata } from './EventMetadata'
 
 interface SEOProps {
   title?: string
@@ -32,8 +33,12 @@ export function SEO(props: SEOProps) {
     title = `${props.title} — ${title}`
   }
 
-  let description = intl('global_description')
+  const globalTitle = intl('global_title')
+  const globalDescription = intl('global_description')
+  const globalImage = 'https://www.devcon.org/assets/images/og-graph.png'
+  const canonical = props.canonicalUrl || ''
 
+  let description = globalDescription
   if (props.description) {
     description = props.description
   }
@@ -46,10 +51,7 @@ export function SEO(props: SEOProps) {
     lang = props.lang
   }
 
-  const globalTitle = intl('global_title')
-  const canonical = props.canonicalUrl || ''
-
-  let image = 'https://www.devcon.org/assets/images/og-graph.png'
+  let image = globalImage
   if (props.imageUrl) {
     image = props.imageUrl
   }
@@ -84,6 +86,7 @@ export function SEO(props: SEOProps) {
             </span>
           ))}
         <Twitter title={title} description={description} image={image} />
+        <EventMetadata title={globalTitle} description={globalDescription} image={globalImage} />
       </Head>
     </>
   )
