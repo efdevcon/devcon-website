@@ -86,8 +86,8 @@ export function SEO(props: SEOProps) {
             </span>
           ))}
         <Twitter title={title} description={description} image={image} />
-        <EventMetadata title={globalTitle} description={globalDescription} image={globalImage} />
       </Head>
+      <EventMetadata title={globalTitle} description={globalDescription} image={globalImage} />
     </>
   )
 }
