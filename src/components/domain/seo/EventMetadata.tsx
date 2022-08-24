@@ -15,7 +15,7 @@ export function EventMetadata(props: EventMetadataProps) {
                 "name": "${props.title}",
                 "description": "${props.description}",
                 "startDate": "2022-10-11",
-                "endDate": "2022-10-14"
+                "endDate": "2022-10-14",
                 "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                 "eventStatus": "https://schema.org/EventScheduled",
                 "location": {
@@ -30,7 +30,7 @@ export function EventMetadata(props: EventMetadataProps) {
                     }
                 },
                 "image": [
-                    "${props.image}",
+                    "${props.image}"
                 ],
                 "offers": {
                     "@type": "Offer",
@@ -48,6 +48,8 @@ export function EventMetadata(props: EventMetadataProps) {
             }
         `}
     }
+
+    console.log('ADDING EVENT METADATA')
 
     return <script
         type="application/ld+json"
