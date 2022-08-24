@@ -312,7 +312,7 @@ export default pageHOC(function Tickets(props: any) {
 
           <List
             connectedItems
-            items={Object.keys(ticketWaves).map(i => {
+            items={[...Object.keys(ticketWaves).map(i => {
               return {
                 id: i,
                 title: (
@@ -330,7 +330,22 @@ export default pageHOC(function Tickets(props: any) {
                 indent: false,
                 body: '',
               }
-            })}
+            }), {
+              id: 'waitlist',
+              title: (
+                <div className={css['timeline-item']}>
+                  <div className={css['left']}>{intl('tickets_join_waitlist')}</div>
+                  <div className={`${css['right']} bold`}>{intl('tickets_ongoing')}</div>
+                  <Link to="https://tickets.devcon.org/" className="generic hover-underline">
+                    {intl('tickets_shop')}
+                  </Link>
+                </div>
+              ),
+              active: true,
+              disabled: false,
+              indent: false,
+              body: '',
+            }]}
           />
         </div>
 
@@ -348,16 +363,16 @@ export default pageHOC(function Tickets(props: any) {
               tags={
                 isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD'))
                   ? [
-                      {
-                        text: intl('tickets_ticket_waves'),
-                        link: '#timeline',
-                      },
-                    ]
+                    {
+                      text: intl('tickets_ticket_waves'),
+                      link: '#timeline',
+                    },
+                  ]
                   : [
-                      {
-                        text: intl('tickets_coming_soon'),
-                      },
-                    ]
+                    {
+                      text: intl('tickets_coming_soon'),
+                    },
+                  ]
               }
             />
             <Ticket
