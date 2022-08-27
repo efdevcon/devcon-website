@@ -1,2 +1,30 @@
 @use 'assets/css/partials/index' as *;
 
+.date-selector-container {
+  margin-top: 8px;
+  border-top: 1px solid $colors-standard-border-color;
+  border-bottom: 1px solid $colors-standard-border-color;
+
+  .date-selector {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    padding: 8px 0px;
+
+    li {
+      @include fonts-lg-fixed;
+      flex-shrink: 0;
+      cursor: pointer;
+      padding: 8px 12px;
+  
+      &:first-child {
+        position: relative;
+        padding-left: 0px;
+      }
+  
+      &.selected/*, &:hover */{
+        @include fonts-bold;
+      }
+    }
+  }  
+}

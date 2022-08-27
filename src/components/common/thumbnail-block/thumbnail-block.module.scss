@@ -5,16 +5,34 @@
   position: relative;
   margin-bottom: 16px;
 
+  &.with-subtext {
+    .thumbnail-container {
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+
   .thumbnail-container {
-    padding: 16px 8px;
+    padding: 12px 8px;
+    padding-bottom: 8px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 80px;
     flex-shrink: 0;
 
     img {
-      width: 80%;
+      width: 56px;
+      height: 56px;
+    }
+
+    .thumbnail-text {
+      margin-top: 8px;
+      @include fonts-xxs-fixed;
+      @include fonts-bold;
+      line-height: 1em;
     }
   }
 

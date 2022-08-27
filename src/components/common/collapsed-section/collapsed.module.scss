@@ -9,12 +9,9 @@
     margin-left: 1em;
   }
 
-  &:last-child {
+  &:last-child, &.sticky {
     border-bottom: none;
   }
-
-  // padding-left: $gaps-gap-2;
-  // padding-right: $gaps-gap-2;
 
   .header {
     user-select: none;
@@ -25,9 +22,18 @@
     padding-bottom: $gaps-gap-4;
     padding-top: $gaps-gap-4;
 
+    &.sticky {
+      position: sticky;
+      z-index: 1;
+      background: white;
+      transform: translateY(-1px);
+      top: var(--app-nav-upper-height);
+      border-bottom: 1px solid $colors-standard-border-color;
+    }
+
     .title {
       @include fonts-bold;
-      @include fonts-lg;
+      @include fonts-sm;
     }
 
     .icon {
@@ -36,7 +42,6 @@
 
     &:hover {
       cursor: pointer;
-      // background: $colors-monochrome-2;
     }
   }
 

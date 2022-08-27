@@ -8,6 +8,7 @@ interface SectionProps {
   children?: any
   className?: string
   open?: boolean
+  sticky?: boolean
   indent?: boolean
   setOpen?: (open: boolean) => void
 }
@@ -17,6 +18,7 @@ interface CollapsedSectionHeaderProps {
   children?: any
   className?: string
   open?: boolean
+  sticky?: boolean
   setOpen?: (open: boolean) => void
 }
 
@@ -24,6 +26,7 @@ const CollapsedSectionHeader = (props: CollapsedSectionHeaderProps) => {
   let className = css['header']
 
   if (props.className) className += ` ${props.className}`
+  if (props.sticky) className += ` ${css['sticky']}`
 
   return (
     <div className={className} onClick={() => (props.setOpen ? props.setOpen(!props.open) : '')}>
@@ -127,6 +130,7 @@ export function CollapsedSection(props: SectionProps) {
           return React.cloneElement(child, {
             open: isControlled ? props.open : open,
             setOpen: isControlled ? props.setOpen : setOpen,
+            sticky: props.sticky,
           })
 
         return React.cloneElement(child, { open: isControlled ? props.open : open })

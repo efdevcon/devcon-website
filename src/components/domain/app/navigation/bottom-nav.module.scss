@@ -27,6 +27,8 @@
     height: 100%;
     width: 100%;
     max-width: 700px;
+    --color-icon: white;
+
 
     .nav-item {
       display: flex;
@@ -39,13 +41,14 @@
       padding-top: $gaps-gap-3;
 
       &.selected {
-        background: $colors-track-red;
-        color: $colors-monochrome-1;
+        color: $colors-track-red;
+        --color-icon: #{$colors-track-red};
       }
 
       svg {
         font-size: 1.6em;
-        --color-icon: white;
+        margin-bottom: 2px;
+ 
       }
 
       .title {

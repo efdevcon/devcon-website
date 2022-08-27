@@ -49,29 +49,45 @@ export const SessionCard = (props: CardProps) => {
   }
 
   return (
-    <ThumbnailBlock className={thumbnailClassName}>
+    <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track}>
       <div className={css['details']}>
         <div className={css['top']}>
           <p className={css['title']}>{props.session.title}</p>
 
-          <div className="label sm bold">{props.session.track}</div>
+          {/* <div className="label sm bold">{props.session.track}</div> */}
 
           {account && <> {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}</>}
         </div>
 
         <div className={css['bottom']}>
+          {props.session.room && (
+            <div className={css['room']}>
+              <div className={css['room-title']}>
+                <IconMarker />
+                <p>{props.session.room.name}</p>
+              </div>
+
+              {props.session.room.capacity && (
+                <div className={css['n-seats']}>
+                  <IconPeople />
+                  <p>{props.session.room.capacity}</p>
+                </div>
+              )}
+            </div>
+          )}
+
           <div className={css['time']}>
             <IconClock />
             <p>
-              {moment.utc(props.session.start).format('MMM DD - HH:mm a')} {/*Oct 22nd — 10:00 AM*/}
+              {(() => {
+                const startTime = moment.utc(props.session.start)
+                const endTime = startTime.clone().add(props.session.duration, 'minutes')
+
+                return `${startTime.format('MMM Do')} — ${startTime.format('h:mm A')} - ${endTime.format('h:mm A')}`
+              })()}
             </p>
           </div>
-          {props.session.room && (
-            <div className={css['room']}>
-              <IconMarker />
-              <p>{props.session.room.name}</p>
-            </div>
-          )}
+
           {props.session.speakers.length > 0 && (
             <div className={css['authors']}>
               <IconSpeaker />
@@ -80,12 +96,6 @@ export const SessionCard = (props: CardProps) => {
                   return i.name
                 })}
               </p>
-            </div>
-          )}
-          {props.session.room && props.session.room.capacity && (
-            <div className={css['n-seats']}>
-              <IconPeople />
-              <p>{props.session.room.capacity}</p>
             </div>
           )}
         </div>

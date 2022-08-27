@@ -3,45 +3,54 @@ import { Session } from 'types/Session'
 import css from './list.module.scss'
 import { SessionCard } from 'components/domain/app/session'
 import moment from 'moment'
+import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
+import { ScheduleInformation } from '../Schedule'
 
-type ListProps = {
+interface ListProps extends ScheduleInformation {
   sessions: Session[]
 }
 
-const getSessionTimeslots = (sessions: Session[]) => {
-  const sessionTimeslots = {} as { [key: number]: Session[] }
-  const order = [] as number[]
-
-  sessions.forEach(session => {
-    if (!sessionTimeslots[session.start]) {
-      order.push(session.start)
-      sessionTimeslots[session.start] = []
-    }
-
-    sessionTimeslots[session.start].push(session)
-  })
-
-  return { sessionTimeslots, order }
-}
-
 export const List = (props: ListProps) => {
-  const uniqueStartTimes = new Set()
-  const { sessionTimeslots, order } = getSessionTimeslots(props.sessions)
+  const { sessionTimeslots, timeslotOrder, dates } = props
+
+  console.log(props.sessionsByTime, 'by time')
 
   return (
     <div className={css['list']}>
-      {order.map(time => {
-        const sessionsForTimeslot = sessionTimeslots[time]
-        const startTime = moment.utc(time)
-        const startTimeFormatted = startTime.format('h:mm A')
+      {props.sessionsByTime.map(({ date, timeslots }) => {
+        // TODO: How/why is it ever null?
+        if (date.readable === 'Invalid date') return null // 'date start is null, not rendering'
+        if (timeslots.length === 0) return null
 
         return (
-          <div className={css['timeslot']} key={time}>
-            <div className={css['start-time']}>{startTimeFormatted}</div>
-            {sessionsForTimeslot.map(session => {
-              return <SessionCard compact session={session} key={session.id} />
-            })}
-          </div>
+          <CollapsedSection sticky key={date.readable}>
+            <CollapsedSectionHeader>
+              <p className="font-md-fixed bold">{date.moment ? date.moment.format('dddd, MMM Do') : date.readable}</p>
+            </CollapsedSectionHeader>
+            <CollapsedSectionContent dontAnimate>
+              {timeslots.map(({ time, sessions }) => {
+                // const sessionsForTimeslot = sessionTimeslots[time]
+                const startTime = moment.utc(time)
+                const dateOfSession = startTime.format('MMM Do')
+                const startTimeFormatted = startTime.format('h:mm A')
+
+                if (dateOfSession !== date.readable) {
+                  return null
+                }
+                if (startTimeFormatted === 'Invalid date') return null
+
+                return (
+                  <div key={time} className={css['timeslot']}>
+                    <div className={css['start-time']}>{startTimeFormatted} UTC-5</div>
+
+                    {sessions.map(session => {
+                      return <SessionCard session={session} key={session.id} />
+                    })}
+                  </div>
+                )
+              })}
+            </CollapsedSectionContent>
+          </CollapsedSection>
         )
       })}
     </div>
@@ -49,26 +58,39 @@ export const List = (props: ListProps) => {
 
   return (
     <div className={css['list']}>
-      {props.sessions.map(session => {
-        const startTime = moment.utc(session.start)
-
-        const body = <SessionCard compact session={session} key={session.id} />
-
-        const startTimeFormatted = startTime.format('h:mm A')
-
-        const startTimeAlreadyRendered = uniqueStartTimes.has(startTimeFormatted)
-
-        if (startTimeAlreadyRendered) {
-          return body
-        }
-
-        uniqueStartTimes.add(startTimeFormatted)
+      {dates.map(date => {
+        // TODO: How/why is it ever null?
+        if (date.readable === 'Invalid date') return null // 'date start is null, not rendering'
 
         return (
-          <React.Fragment key={session.id}>
-            <div className={css['start-time']}>{startTimeFormatted}</div>
-            {body}
-          </React.Fragment>
+          <CollapsedSection sticky key={date.readable}>
+            <CollapsedSectionHeader>
+              <p className="font-md-fixed bold">{date.moment ? date.moment.format('dddd, MMM Do') : date.readable}</p>
+            </CollapsedSectionHeader>
+            <CollapsedSectionContent dontAnimate>
+              {timeslotOrder.map(time => {
+                const sessionsForTimeslot = sessionTimeslots[time]
+                const startTime = moment.utc(time)
+                const dateOfSession = startTime.format('MMM Do')
+                const startTimeFormatted = startTime.format('h:mm A')
+
+                if (dateOfSession !== date.readable) {
+                  return null
+                }
+                if (startTimeFormatted === 'Invalid date') return null
+
+                return (
+                  <div key={time} className={css['timeslot']}>
+                    <div className={css['start-time']}>{startTimeFormatted} UTC-5</div>
+
+                    {sessionsForTimeslot.map(session => {
+                      return <SessionCard session={session} key={session.id} />
+                    })}
+                  </div>
+                )
+              })}
+            </CollapsedSectionContent>
+          </CollapsedSection>
         )
       })}
     </div>

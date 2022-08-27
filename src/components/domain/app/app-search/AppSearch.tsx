@@ -12,11 +12,16 @@ type AppSearchProps = {
     onChange: (args: any) => void
     placeholder: string
   }
+  children?: any
   sortState?: any
   filterStates?: any[]
   actions?: any
   noResults?: boolean
   className?: string
+}
+
+type FilterProps = {
+  filters: []
 }
 
 export const AppSearch = (props: AppSearchProps) => {
@@ -97,6 +102,8 @@ export const AppSearch = (props: AppSearchProps) => {
         </div>
 
         {props.sortState && <Sort {...props.sortState} />}
+
+        {props.children}
       </div>
 
       {props.noResults && <NoResults />}

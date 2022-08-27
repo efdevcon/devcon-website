@@ -12,20 +12,21 @@
   }
 }
 
-
-
 .timeslot {
   position: relative;
+  // &:first-child {
+  //   .start-time {
+  //     margin-top: 0px;
+  //   }
+  // }
 
   .start-time {
-    position: sticky;
-    top: 64px;
-    background: white;
-    z-index: 1;
-    margin-bottom: 16px;
-    margin-top: 12px;
-    margin-left: 8px;
-    @include fonts-bold;
-    @include fonts-sm;
+    // position: sticky;
+    // top: 64px;
+    // background: white;
+    // z-index: 1;
+    color: $colors-monochrome-7;
+    margin: 12px 0px;
+    @include fonts-xs-fixed;
   }
 }

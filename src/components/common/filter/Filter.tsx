@@ -9,17 +9,20 @@ import { Button } from 'components/common/button'
 
 export type FilterOptions = {
   tags?: boolean
+  basic?: boolean
   multiSelect?: boolean
   initialFilter?: any
   filters: {
     text: string
     value: any
+    count?: number
   }[]
   filterFunction: (currentFilter?: string) => any[]
 }
 
 type FilterState = {
   collapsed?: boolean
+  basic?: boolean
   neverCollapse?: boolean
   tags?: boolean
   options: FilterOptions
@@ -36,7 +39,7 @@ export const useFilter = (options: FilterOptions | undefined) => {
     (options?.initialFilter || {}) as { [key: string]: any }
   )
 
-  if (!options) return [[], null] as [any[], null]
+  if (!options) return [[], null] as [any[], any]
 
   const wrappedSetActiveFilter = (value: string | any, setExact?: false) => {
     if (options.multiSelect) {
@@ -146,6 +149,27 @@ export const Filter = (props: FilterState) => {
                 <IconPlus className={`icon ${css['icon-plus']}`} />
               </div>
               <span>{filter.text}</span>
+            </button>
+          )
+        })}
+      </div>
+    )
+  }
+
+  if (props.options.basic) {
+    return (
+      <div className={css['basic']}>
+        {props.options.filters.map(filter => {
+          const selected = props.activeFilter === filter.value
+
+          let className = 'plain'
+
+          if (selected) className += ` ${css['selected']}`
+
+          return (
+            <button onClick={() => props.setActiveFilter(filter.value)} key={filter.value} className={className}>
+              <p>{filter.text}</p>
+              {filter.count && <div className="label sm error">4</div>}
             </button>
           )
         })}
