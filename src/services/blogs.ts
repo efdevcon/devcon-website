@@ -19,7 +19,7 @@ export async function GetBlogs(maxItems: number = defaultMaxItems): Promise<Arra
             description: i.description,
             date: i.pubDate ? new Date(i.pubDate).getTime() : 0,
             author: 'Devcon Team',
-            body: i['content:encoded'],
+            body: i['content:encoded'] || i.description,
             slug: slugify(i.title ?? ''),
             permaLink: i.link,
             imageUrl: i['efblog:image'] ?? '',
