@@ -2,28 +2,54 @@ import React from 'react'
 import { SliderStickyNotes } from 'components/common/slider/SliderVariations'
 import { Link } from 'components/common/link'
 import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
-import { Share } from 'components/common/share'
 import { useRouter } from 'next/router'
-import QRCode from 'qrcode.react'
-import { CollapsedSection, CollapsedSectionHeader, CollapsedSectionContent } from 'components/common/collapsed-section'
 import css from './home.module.scss'
-import ticket from './ticket.png'
 import { useAccountContext } from 'context/account-context'
 import { useActiveAddress } from 'hooks/useActiveAddress'
 import { useAvatar } from 'hooks/useAvatar'
-import Image from 'next/image'
 import { AppNav } from 'components/domain/app/navigation'
+import { useMediaQuery } from 'hooks/useMediaQuery'
+import { TruncateMiddle } from 'utils/formatting'
+
 
 export const Home = () => {
   const router = useRouter()
+  const maxWidthTruncate = useMediaQuery(640) // breakpoint-sm
   const accountContext = useAccountContext()
   const activeAddress = useActiveAddress()
   const avatar = useAvatar()
   const loggedIn = !!accountContext.account
+  const accountContextOptions = [
+    {
+      text: 'Settings',
+      value: 'Settings',
+      onClick: () => {
+        router.push('/app/settings')
+      },
+    }
+  ]
 
-  const disconnect = async () => {
-    accountContext.logout(accountContext.account?._id)
-    router.push('/app/login')
+  if (loggedIn && accountContext.account?.addresses[0]) {
+    accountContextOptions.push({
+      text: 'View on Etherscan',
+      value: 'Etherscan',
+      onClick: () => {
+        const url = 'https://etherscan.io/address/' + accountContext.account?.addresses[0]
+        if (window) window.open(url, '_ blank');
+        else router.push(url)
+      },
+    })
+  }
+
+  if (loggedIn) {
+    accountContextOptions.push({
+      text: 'Sign out',
+      value: 'Signout',
+      onClick: () => {
+        accountContext.logout(accountContext.account?._id)
+        router.push('/app/login')
+      },
+    })
   }
 
   return (
@@ -48,11 +74,6 @@ export const Home = () => {
               <button className="label error plain" onClick={() => router.push('/app/settings')}>
                 SETTINGS
               </button>
-              {!accountContext.account?.username && (
-                <button className="label error plain" onClick={() => router.push('/app/settings/username')}>
-                  ADD USERNAME
-                </button>
-              )}
               <button className="label error plain" onClick={() => router.push('/app/settings/wallets')}>
                 MANAGE WALLETS
               </button>
@@ -63,29 +84,9 @@ export const Home = () => {
 
             <div className={css['dropdown']}>
               <DropdownVariationDots
-                value="Another thing2"
-                onChange={() => {}}
-                options={[
-                  {
-                    text: 'Settings',
-                    value: 'Settings',
-                    onClick: () => {
-                      router.push('/app/settings')
-                    },
-                  },
-                  {
-                    text: 'View on Etherscan',
-                    value: 'Etherscan',
-                    onClick: () => {
-                      router.push('https://etherscan.io/address/' + accountContext.account?.addresses[0])
-                    },
-                  },
-                  {
-                    text: 'Sign out',
-                    value: 'Signout',
-                    onClick: disconnect,
-                  },
-                ]}
+                value="AccountContext"
+                onChange={() => { }}
+                options={accountContextOptions}
               />
             </div>
           </div>
@@ -96,12 +97,15 @@ export const Home = () => {
             <div className={css['connection-info']}>
               <div className={css['wallet']}>
                 <div className={css['circle']}>
-                  <Image src={avatar.url} alt={avatar.name} layout="fill" />
+                  <img src={avatar.url} alt={avatar.name} />
                 </div>
 
                 <div className={css['details']}>
                   {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
-                  {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
+                  {avatar.name && <p className={css['wallet-address']}>
+                    {maxWidthTruncate && TruncateMiddle(avatar.name, 8)}
+                    {!maxWidthTruncate && avatar.name}
+                  </p>}
                   {avatar.status && (
                     <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>
                   )}
@@ -109,26 +113,6 @@ export const Home = () => {
               </div>
             </div>
           )
-
-          // <CollapsedSection>
-          //   <CollapsedSectionHeader>
-          //     <div className={css['wallet']}>
-          //       <div className={css['circle']}>
-          //         <Image src={avatar.url} alt={avatar.name} layout='fill' />
-          //       </div>
-
-          //       <div className={css['details']}>
-          //         {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
-          //         {avatar.name && <p className={css['wallet-address']}>{avatar.name}</p>}
-          //         {avatar.status && <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>}
-          //       </div>
-          //     </div>
-          //   </CollapsedSectionHeader>
-
-          //   <CollapsedSectionContent>
-          //     <div> Hidden content </div>
-          //   </CollapsedSectionContent>
-          // </CollapsedSection>
         }
 
         <div className={css['slider-container']}>
@@ -170,54 +154,6 @@ export const Home = () => {
             ]}
           />
         </div>
-
-        {/* <CollapsedSection>
-          <CollapsedSectionHeader title="Updates" />
-
-          <CollapsedSectionContent>
-            <div>Hidden content</div>
-          </CollapsedSectionContent>
-        </CollapsedSection> */}
-
-        {/* {loggedIn &&
-          <CollapsedSection>
-            <CollapsedSectionHeader title="Ticket Attestation" />
-
-            <CollapsedSectionContent>
-              <div className={css['ticket-container']}>
-                <div className={css['ticket']}>
-                  <Image src={ticket} alt='Your Devcon Ticket' />
-
-                  <p className={css['ticket-type']}>Builder Ticket</p>
-                  <p className={css['ticket-id']}>No 1561854</p>
-                  <div className={css['qr-code']}>
-                    <QRCode value="https://en.wikipedia.org/wiki/Larry" style={{ height: '100%', width: '100%' }} />
-                  </div>
-                </div>
-
-                <div className={css['bottom']}>
-                  <button className="label neutral plain">Manage Attestations</button>
-                  <div className={css['nft']}>
-                    <Link to="https://www.youtube.com/watch?v=lCcwn6bGUtU" className={css['view-nft']}>
-                      View ticket NFT
-                    </Link>
-
-                    <Share url="https://www.youtube.com/watch?v=lCcwn6bGUtU" />
-                  </div>
-                </div>
-              </div>
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        } */}
-
-        {/* 
-        <CollapsedSection>
-          <CollapsedSectionHeader title="Collection" />
-
-          <CollapsedSectionContent>
-            <div>Collection</div>
-          </CollapsedSectionContent>
-        </CollapsedSection> */}
       </div>
     </>
   )

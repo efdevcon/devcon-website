@@ -2,7 +2,6 @@ import { UserAccount } from 'types/UserAccount'
 import { BaseRepository } from './BaseRepository'
 import { IUserAccountRepository } from './interfaces/IUserAccountRepository'
 
-console.log('registering data models')
 require('server/models/UserAccountModel')
 
 export class UserAccountRepository extends BaseRepository<UserAccount> implements IUserAccountRepository {

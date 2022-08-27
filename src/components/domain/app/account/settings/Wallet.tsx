@@ -25,8 +25,7 @@ export default function WalletSettings() {
     return null
   }
 
-  const canDelete =
-    (accountContext.account.addresses && accountContext.account.addresses.length > 0) || !!accountContext.account.email
+  const canDelete = accountContext.account?.addresses?.length > 0 && !!accountContext.account.email
 
   const addWallet = async () => {
     const provider = await accountContext.connectWeb3()
@@ -56,9 +55,6 @@ export default function WalletSettings() {
       signedMessage.message,
       signedMessage.signature
     )
-    if (userAccount) {
-      router.push('/app')
-    }
     if (!userAccount) {
       setError('Unable to login with web3')
     }
@@ -76,92 +72,113 @@ export default function WalletSettings() {
   }
 
   return (
-    <div className={css['container']}>
-      <div>
-        <div className="section">
-          <div className="content">
-            <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
+    <>
 
-            <div className={css['form']}>
-              <p className={`${css['title']} title`}>Manage Wallets</p>
+      <AppNav
+        nested
+        links={[
+          {
+            title: 'Settings',
+            to: '/app/settings',
+            useIsActive: () => {
+              return false
+            },
+          },
+          {
+            title: 'Wallet',
+            useIsActive: () => {
+              return true
+            },
+          },
+        ]}
+      />
 
-              {accountContext.account.addresses?.length === 0 && (
-                <div className={css['wallet-not-found']}>
-                  <NotFound type="wallet" />
-                </div>
-              )}
+      <div className={css['container']}>
+        <div>
+          <div className="section">
+            <div className="content">
+              <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
 
-              {accountContext.account.addresses?.length > 0 && (
-                <ul className={css['items']}>
-                  {accountContext.account.addresses.map(i => {
-                    const isActive = activeAddress === i.toLowerCase()
+              <div className={css['form']}>
+                <p className={`${css['title']} title`}>Manage Wallets</p>
 
-                    return (
-                      <li key={i}>
-                        <Link to={`https://etherscan.io/address/${i}`}>
-                          <>
-                            <span className={isActive ? 'semi-bold' : ''}>{i}</span>
-                            {isActive && <> (active)</>}
-                          </>
-                        </Link>
+                {accountContext.account.addresses?.length === 0 && (
+                  <div className={css['wallet-not-found']}>
+                    <NotFound type="wallet" />
+                  </div>
+                )}
 
-                        {canDelete && (
-                          <span role="button" className={css['delete']} onClick={() => setPromptRemove(i)}>
-                            <IconCross />
-                          </span>
-                        )}
+                {accountContext.account.addresses?.length > 0 && (
+                  <ul className={css['items']}>
+                    {accountContext.account.addresses.map(i => {
+                      const isActive = activeAddress === i.toLowerCase()
 
-                        {!canDelete && (
-                          <Tooltip
-                            arrow={false}
-                            visible={tooltipVisible}
-                            content={
-                              <p>
-                                Can&apos;`t delete this address. You need at least 1 wallet or your email address
-                                connected.
-                              </p>
-                            }
-                          >
-                            <span
-                              role="button"
-                              className={css['disabled']}
-                              onClick={() => setTooltipVisible(!tooltipVisible)}
-                            >
+                      return (
+                        <li key={i}>
+                          <Link to={`https://etherscan.io/address/${i}`}>
+                            <>
+                              <span className={isActive ? 'semi-bold' : ''}>{i}</span>
+                              {isActive && <> (active)</>}
+                            </>
+                          </Link>
+
+                          {canDelete && (
+                            <span role="button" className={css['delete']} onClick={() => setPromptRemove(i)}>
                               <IconCross />
                             </span>
-                          </Tooltip>
-                        )}
-                      </li>
-                    )
-                  })}
-                </ul>
-              )}
+                          )}
 
-              {promptRemove && (
-                <>
-                  <p>
-                    Are you sure you want to remove <strong>{promptRemove}</strong> from your account?
-                  </p>
-                  <Button className={`black ${css['button']}`} onClick={() => setPromptRemove('')}>
-                    No, keep address
-                  </Button>
-                  <Button className={`red ${css['button']}`} onClick={removeWallet}>
-                    Yes, delete address
-                  </Button>
-                </>
-              )}
+                          {!canDelete && (
+                            <Tooltip
+                              arrow={false}
+                              visible={tooltipVisible}
+                              content={
+                                <p>
+                                  Can&apos;t delete this address. You need at least 1 wallet or email address connected.
+                                </p>
+                              }
+                            >
+                              <span
+                                role="button"
+                                className={css['disabled']}
+                                onClick={() => setTooltipVisible(!tooltipVisible)}
+                              >
+                                <IconCross />
+                              </span>
+                            </Tooltip>
+                          )}
+                        </li>
+                      )
+                    })}
+                  </ul>
+                )}
 
-              {!promptRemove && (
-                <Button className={`red`} onClick={addWallet}>
-                  Add Ethereum Wallet
-                </Button>
-              )}
+                {promptRemove && (
+                  <>
+                    <p>
+                      Are you sure you want to remove <strong>{promptRemove}</strong> from your account?
+                    </p>
+                    <Button className={`black ${css['button']}`} onClick={() => setPromptRemove('')}>
+                      No, keep address
+                    </Button>
+                    <Button className={`red ${css['button']}`} onClick={removeWallet}>
+                      Yes, delete address
+                    </Button>
+                  </>
+                )}
+
+                {!promptRemove && (
+                  <Button className={`red`} onClick={addWallet}>
+                    Add Ethereum Wallet
+                  </Button>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <AccountFooter />
-    </div>
+        <AccountFooter />
+      </div>
+    </>
   )
 }
