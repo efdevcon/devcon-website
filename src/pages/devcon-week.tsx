@@ -121,7 +121,13 @@ export default pageHOC(function DevconWeek(props: any) {
                 },
                 {
                   Icon: () => <></>,
-                  title: isAfterDate('2022-10-01') ? <s>🇪🇨 ETHQuito Day</s> : '🇪🇨 ETHQuito Day',
+                  title: isAfterDate('2022-10-01') ? (
+                    <s>🇪🇨 ETHQuito Day</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ethereum_ec" indicateExternal>
+                      🇪🇨 ETHQuito Day
+                    </Link>
+                  ),
                   right: 'OCT 1',
                 },
                 {
@@ -137,7 +143,13 @@ export default pageHOC(function DevconWeek(props: any) {
                 },
                 {
                   Icon: () => <></>,
-                  title: isAfterDate('2022-10-10') ? <s>🇨🇴 ETHLatam @ Bogotá</s> : '🇨🇴 ETHLatam @ Bogotá',
+                  title: isAfterDate('2022-10-10') ? (
+                    <s>🇨🇴 ETHLatam @ Bogotá</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ethlatam" indicateExternal>
+                      🇨🇴 ETHLatam @ Bogotá
+                    </Link>
+                  ),
                   right: 'OCT 10',
                 },
               ]}
