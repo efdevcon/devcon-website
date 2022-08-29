@@ -432,9 +432,19 @@ export default pageHOC(function Tickets(props: any) {
               description={<div>{intl('tickets_types_latam')}</div>}
               tags={[
                 {
-                  text: intl('tickets_closed'),
+                  text: 'Builder',
+                  link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
+                },
+                {
+                  text: 'Student',
+                  link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
                 },
               ]}
+              // tags={[
+              //   {
+              //     text: intl('tickets_closed'),
+              //   },
+              // ]}
             />
 
             <Ticket
