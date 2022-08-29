@@ -20,6 +20,7 @@ import moment from 'moment'
 import { UserProfile } from 'src/types/UserProfile'
 import { Avatar } from './Avatar'
 import { Banner } from '../ipfs'
+import { Metadata } from '../seo/Metadata'
 
 type VideoProps = {
   video: ArchiveVideo
@@ -157,6 +158,7 @@ export const Video = (props: VideoProps) => {
           url: `/archive/watch?edition=${video.edition}`,
         }}
       />
+      <Metadata type='video' data={props.video} />
       <Header withStrip={false} />
 
       <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>
