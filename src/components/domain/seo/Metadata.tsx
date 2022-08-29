@@ -24,7 +24,7 @@ export function Metadata(props: Props) {
         "@context": "https://schema.org",
         "@type": "VideoObject",
         "name": "${video.title}",
-        "description": "${video.description}",
+        "description": "${video.description.replaceAll('"', "'")}",
         "thumbnailUrl": [
           "https://archive.devcon.org/assets/images/archive-social.png"
         ],
@@ -36,6 +36,8 @@ export function Metadata(props: Props) {
 
     return ``
   }
+
+  // console.log('METADATA', generateJsonLd())
 
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: generateJsonLd() }} key="event-jsonld" />
 }
