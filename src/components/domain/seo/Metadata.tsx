@@ -37,7 +37,7 @@ export function Metadata(props: Props) {
     return ``
   }
 
-  console.log('METADATA', generateJsonLd())
+  // console.log('METADATA', generateJsonLd())
 
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: generateJsonLd() }} key="event-jsonld" />
 }
