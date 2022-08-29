@@ -7,7 +7,7 @@ import { BlogPost } from 'src/types/BlogPost'
 import { Slider, useSlider } from 'src/components/common/slider'
 
 export function BlogReel() {
-  const blogs = useBlogs()
+  const blogs: BlogPost[] = [] // useBlogs(props.maxItems) - NOT USED ON Archive
 
   const settings = {
     infinite: false,

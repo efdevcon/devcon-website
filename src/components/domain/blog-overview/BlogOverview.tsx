@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const BlogOverview = (props: Props) => {
-  const blogs = useBlogs(props.maxItems)
+  const blogs: BlogPost[] = [] // useBlogs(props.maxItems) - NOT USED ON Archive
 
   let className = css['overview']
   if (props.className) className += ` ${props.className}`
