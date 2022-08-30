@@ -1,11 +1,10 @@
 import React from 'react'
 import css from './schedule.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
-import { Search, DropdownNew, Foldout, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
-import { NoResults, useFilter, Filter } from 'components/common/filter'
+import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import { NoResults } from 'components/common/filter'
 import Star from 'assets/icons/star.svg'
 import StarFill from 'assets/icons/star-fill.svg'
-import { AppSearch } from 'components/domain/app/app-search'
 import TileIcon from 'assets/icons/tiles.svg'
 import ListIcon from 'assets/icons/list-simple.svg'
 import { List } from './views/List'
@@ -32,7 +31,6 @@ export type ScheduleInformation = {
     date: Date
     timeslots: Timeslot[]
   }[]
-  dates: Date[]
   timeslotOrder: number[]
 }
 
@@ -57,7 +55,7 @@ const useFormatSessions = (sessions: Session[]) => {
   }, [sessions])
 }
 
-const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: ScheduleInformation['dates']) => {
+const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   const sessionTimeslots = {} as ScheduleInformation['sessionTimeslots']
   const timeslotOrder = [] as ScheduleInformation['timeslotOrder']
 
@@ -70,7 +68,7 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: ScheduleInfo
     sessionTimeslots[session.start].push(session)
   })
 
-  const sessionsByTime = dates.map(date => {
+  const sessionsByTime = dates.map((date: Date) => {
     return {
       date,
       timeslots: timeslotOrder.reduce((acc, time) => {

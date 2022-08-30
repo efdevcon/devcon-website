@@ -7,7 +7,6 @@ import IconClose from 'assets/icons/cross.svg'
 import { InputForm } from 'components/common/input-form'
 import IconSearch from 'assets/icons/search.svg'
 import IconFilter from 'assets/icons/filter.svg'
-import { Button } from 'components/common/button'
 
 export type FilterOptions = {
   tags?: boolean
@@ -32,7 +31,7 @@ type FilterState = {
   setActiveFilter: (value: string) => void
   clearFilter: () => void
 }
-
+// Don't use this anymore, it's too unwieldy. TODO: Deprecate existing uses of it.
 export const useFilter = (options: FilterOptions | undefined) => {
   const defaultValue = options?.filters[0]?.value ?? ''
   const [activeFilter, setActiveFilter] = React.useState(options?.initialFilter || defaultValue)
@@ -80,60 +79,7 @@ export const useFilter = (options: FilterOptions | undefined) => {
   return [filteredData, filterState] as [any[], FilterState]
 }
 
-type FilterFoldoutProps = {
-  children: (open: boolean, setOpen: (isOpen: boolean) => void) => React.ReactElement
-  active?: boolean
-}
-
-export const FilterFoldout = (props: FilterFoldoutProps) => {
-  const [open, setOpen] = React.useState(false)
-  const ref = React.createRef<HTMLDivElement>()
-  const buttonRef = React.createRef<HTMLButtonElement>()
-
-  React.useEffect(() => {
-    const handleClickOutside = (e: any) => {
-      const isButtonClick = buttonRef.current && buttonRef.current.contains(e.target)
-
-      if (!isButtonClick && ref.current && !ref.current.contains(e.target)) {
-        setOpen(false)
-      }
-    }
-
-    if (open) {
-      document.addEventListener('mousedown', handleClickOutside)
-
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside)
-      }
-    }
-  }, [ref, buttonRef, open])
-
-  let className = css['filter-foldout']
-
-  if (open) className += ` ${css['open']}`
-
-  return (
-    <div className={`${className}`}>
-      <button
-        ref={buttonRef}
-        className={`${open || props.active ? 'app hover' : 'app'} squared sm thin-borders`}
-        onClick={(e: any) => {
-          setOpen(!open)
-        }}
-      >
-        {open ? <IconClose /> : <IconFilter />}
-      </button>
-
-      <div className={css['foldout']}>
-        <div className={css['content']} ref={ref}>
-          <p className={css['header']}>Filter</p>
-          {props.children(open, setOpen)}
-        </div>
-      </div>
-    </div>
-  )
-}
-
+// Don't use this anymore, it's too unwieldy. TODO: Deprecate existing uses of it.
 export const Filter = (props: FilterState) => {
   if (props.options.tags) {
     return (
@@ -214,8 +160,6 @@ export const Filter = (props: FilterState) => {
   )
 }
 
-// Filtermania below, move to separate files later?
-
 type Filter = {
   options: {
     id?: string | number
@@ -237,21 +181,47 @@ export const Search = (props: SearchProps) => {
   )
 }
 
-type DropdownProps = {
-  options: Filter['options']
-  value: Filter['value']
-  onChange: Filter['onChange']
-}
-export const DropdownNew = (props: DropdownProps) => {
-  return <div className={css['dropdown']}>Search deez nuts</div>
-}
+// type DropdownProps = {
+//   options: Filter['options']
+//   value: Filter['value']
+//   onChange: Filter['onChange']
+//   collapsed?: boolean
+//   neverCollapse?: boolean
+// }
+// export const DropdownFilter = (props: DropdownProps) => {
+//   let className = css['filter']
 
-type FoldoutProps = {
-  children?: React.ReactElement
-}
-export const Foldout = (props: FoldoutProps) => {
-  return <div className={css['foldout']}>Search deez nuts</div>
-}
+//   if (props.collapsed) className += ` ${css['collapsed']}`
+//   if (props.neverCollapse) className += ` ${css['never-collapse']}`
+
+//   return (
+//     <div className={css['filter']} data-type="filter">
+//       <Dropdown
+//         className={css['dropdown']}
+//         customIcon={IconFilter}
+//         options={props.options}
+//         value={props.value}
+//         onChange={nextValue => props.onChange(nextValue)}
+//       />
+
+//       <div className={css['inline']}>
+//         {props.options.map(filter => {
+//           let className = ''
+
+//           const active = props.value === filter.value || props.value?.[filter.value]
+
+//           if (active) className += `${css['active-filter']}`
+
+//           return (
+//             <p key={filter.value} onClick={() => props.onChange(filter.value)} className={className}>
+//               {filter.text}
+//             </p>
+//           )
+//         })}
+//       </div>
+//     </div>
+//   )
+// }
 
 type TagProps = {
   options: Filter['options']
@@ -303,6 +273,60 @@ export const Basic = (props: BasicProps) => {
           </button>
         )
       })}
+    </div>
+  )
+}
+
+type FilterFoldoutProps = {
+  children: (open: boolean, setOpen: (isOpen: boolean) => void) => React.ReactElement
+  active?: boolean
+}
+
+export const FilterFoldout = (props: FilterFoldoutProps) => {
+  const [open, setOpen] = React.useState(false)
+  const ref = React.createRef<HTMLDivElement>()
+  const buttonRef = React.createRef<HTMLButtonElement>()
+
+  React.useEffect(() => {
+    const handleClickOutside = (e: any) => {
+      const isButtonClick = buttonRef.current && buttonRef.current.contains(e.target)
+
+      if (!isButtonClick && ref.current && !ref.current.contains(e.target)) {
+        setOpen(false)
+      }
+    }
+
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside)
+
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }
+  }, [ref, buttonRef, open])
+
+  let className = css['filter-foldout']
+
+  if (open) className += ` ${css['open']}`
+
+  return (
+    <div className={`${className}`}>
+      <button
+        ref={buttonRef}
+        className={`${open || props.active ? 'app hover' : 'app'} squared sm thin-borders`}
+        onClick={(e: any) => {
+          setOpen(!open)
+        }}
+      >
+        {open ? <IconClose /> : <IconFilter />}
+      </button>
+
+      <div className={css['foldout']}>
+        <div className={css['content']} ref={ref}>
+          <p className={css['header']}>Filter</p>
+          {props.children(open, setOpen)}
+        </div>
+      </div>
     </div>
   )
 }
