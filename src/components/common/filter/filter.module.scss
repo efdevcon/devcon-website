@@ -77,16 +77,16 @@
     @include fonts-bold;
 
     &:not(.selected) {
-      p {
+      // p {
         color: $colors-monochrome-6;
-      }
+      // }
     }
 
-    p {
+    // p {
       @include fonts-uppercase;
       cursor: pointer;
       color: $colors-track-red;
-    }
+    // }
 
     :global(.label) {
       @include fonts-xs;
@@ -151,6 +151,7 @@
 
 .filter-foldout {
   display: flex;
+  position: relative;
   justify-content: space-between;
 
   pointer-events: none;

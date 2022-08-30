@@ -4,6 +4,8 @@ import { Dropdown } from 'components/common/dropdown'
 import IconCheck from 'assets/icons/check_circle.svg'
 import IconPlus from 'assets/icons/plus.svg'
 import IconClose from 'assets/icons/cross.svg'
+import { InputForm } from 'components/common/input-form'
+import IconSearch from 'assets/icons/search.svg'
 import IconFilter from 'assets/icons/filter.svg'
 import { Button } from 'components/common/button'
 
@@ -80,6 +82,7 @@ export const useFilter = (options: FilterOptions | undefined) => {
 
 type FilterFoldoutProps = {
   children: (open: boolean, setOpen: (isOpen: boolean) => void) => React.ReactElement
+  active?: boolean
 }
 
 export const FilterFoldout = (props: FilterFoldoutProps) => {
@@ -113,7 +116,7 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
     <div className={`${className}`}>
       <button
         ref={buttonRef}
-        className={`${open ? 'app hover' : 'app'} squared sm thin-borders`}
+        className={`${open || props.active ? 'app hover' : 'app'} squared sm thin-borders`}
         onClick={(e: any) => {
           setOpen(!open)
         }}
@@ -207,6 +210,99 @@ export const Filter = (props: FilterState) => {
           )
         })}
       </div>
+    </div>
+  )
+}
+
+// Filtermania below, move to separate files later?
+
+type Filter = {
+  options: {
+    id?: string | number
+    text?: React.ReactElement | string
+    value: any
+  }[]
+  value: any
+  onChange: (nextVal: any) => void
+}
+
+type SearchProps = {
+  value: Filter['value']
+  onChange: Filter['onChange']
+  placeholder?: string | undefined
+}
+export const Search = (props: SearchProps) => {
+  return (
+    <InputForm className={css['search']} placeholder={props.placeholder} onChange={props.onChange} icon={IconSearch} />
+  )
+}
+
+type DropdownProps = {
+  options: Filter['options']
+  value: Filter['value']
+  onChange: Filter['onChange']
+}
+export const DropdownNew = (props: DropdownProps) => {
+  return <div className={css['dropdown']}>Search deez nuts</div>
+}
+
+type FoldoutProps = {
+  children?: React.ReactElement
+}
+export const Foldout = (props: FoldoutProps) => {
+  return <div className={css['foldout']}>Search deez nuts</div>
+}
+
+type TagProps = {
+  options: Filter['options']
+  value: Filter['value']
+  onChange: Filter['onChange']
+}
+export const Tags = (props: TagProps) => {
+  return (
+    <div className={css['tags']} data-type="filter">
+      {props.options.map(filter => {
+        let className = `${css['tag']} label label-hover white plain`
+
+        const active = props.value === filter.value || props.value?.[filter.value]
+
+        if (active) className += ` ${css['active']} black`
+
+        return (
+          <button key={filter.value} onClick={() => props.onChange(filter.value)} className={className}>
+            <div className={css['icons']}>
+              <IconCheck className={`icon ${css['icon-check']}`} />
+              <IconPlus className={`icon ${css['icon-plus']}`} />
+            </div>
+            <span>{filter.text}</span>
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
+type BasicProps = {
+  options: Filter['options']
+  value: Filter['value']
+  onChange: Filter['onChange']
+}
+export const Basic = (props: BasicProps) => {
+  return (
+    <div className={css['basic']}>
+      {props.options.map(option => {
+        const selected = props.value === option.value
+
+        let className = 'plain'
+
+        if (selected) className += ` ${css['selected']}`
+
+        return (
+          <button onClick={() => props.onChange(option.value)} key={option.value} className={className}>
+            {option.text}
+          </button>
+        )
+      })}
     </div>
   )
 }

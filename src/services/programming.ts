@@ -21,6 +21,12 @@ const expertiseQuestionId = 40
 const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
 
+export async function GetEvent(): Promise<any> {
+  const event = await get(`/events/${eventName}`)
+  
+  return event;
+}
+
 export async function GetSessions(): Promise<Array<SessionType>> {
   if (test) return await generateSessions()
 

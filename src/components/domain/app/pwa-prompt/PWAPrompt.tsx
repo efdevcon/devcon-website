@@ -22,7 +22,7 @@ export const PWAPrompt = (props: any) => {
 
   return (
     <Modal open={open} close={() => setOpen(!open)} className={css['modal']}>
-      <Image alt="Devcon wizard" className={css['background']} src={imagePWA} />
+      <Image alt="Devcon wizard" objectFit="cover" className={css['background']} src={imagePWA} />
       <div className={css['content']}>
         <div className={css['tag']}>
           <p className="font-xs bold">DEVCON WEB APP</p>

@@ -52,8 +52,10 @@
   .icon {
     cursor: pointer;
     position: absolute;
-    --icon-color: $colors-monochrome-5;
+    top: 50%;
+    transform: translateY(-50%);
     height: 100%;
+    --icon-color: $colors-monochrome-5;
     right: $gaps-gap-3;
   }
 }

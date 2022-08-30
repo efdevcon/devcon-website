@@ -1,31 +1,47 @@
 import React from 'react'
 import css from './schedule.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
+import { Search, DropdownNew, Foldout, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import { NoResults, useFilter, Filter } from 'components/common/filter'
 import Star from 'assets/icons/star.svg'
 import StarFill from 'assets/icons/star-fill.svg'
 import { AppSearch } from 'components/domain/app/app-search'
+import TileIcon from 'assets/icons/tiles.svg'
+import ListIcon from 'assets/icons/list-simple.svg'
 import { List } from './views/List'
 import { Session } from 'types/Session'
 import moment, { Moment } from 'moment'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
+import FuzzySearch from 'fuzzy-search'
+
+type Timeslot = {
+  time: number
+  sessions: Session[]
+}
+
+type Date = {
+  readable: string
+  moment?: Moment
+}
 
 export type ScheduleInformation = {
-  sessions: Session[]
   sessionTimeslots: {
     [key: number]: Session[]
   }
-  dates: {
-    readable: string
-    moment?: Moment
+  sessionsByTime: {
+    date: Date
+    timeslots: Timeslot[]
   }[]
+  dates: Date[]
   timeslotOrder: number[]
 }
 
-// Process sessions
-// TODO: Move to backend? No need to do it in client, and we can pregenerate search index on the backend instead for efficient searching
-const useScheduleInformation = (() => {
-  const formatSessions = (sessions: Session[]) => {
+const normalizeDate = (moment: Moment) => {
+  return moment.format('MMM Do')
+}
+
+const useFormatSessions = (sessions: Session[]) => {
+  return React.useMemo(() => {
     return sessions.map(session => {
       const startTimeAsMoment = moment.utc(session.start)
       const endTimeAsMoment = startTimeAsMoment.clone().add(session.duration, 'minutes')
@@ -35,123 +51,99 @@ const useScheduleInformation = (() => {
         startTimeAsMoment,
         endTimeAsMoment,
         day: startTimeAsMoment.format('dddd, MMM Do'),
-        date: startTimeAsMoment.format('MMM Do'),
+        date: normalizeDate(startTimeAsMoment),
       }
     })
-  }
+  }, [sessions])
+}
 
-  const getSessionTimeslots = (sessions: Session[]) => {
-    const sessionTimeslots = {} as ScheduleInformation['sessionTimeslots']
-    const dates = [] as ScheduleInformation['dates']
-    const timeslotOrder = [] as ScheduleInformation['timeslotOrder']
+const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: ScheduleInformation['dates']) => {
+  const sessionTimeslots = {} as ScheduleInformation['sessionTimeslots']
+  const timeslotOrder = [] as ScheduleInformation['timeslotOrder']
 
-    sessions.forEach(session => {
-      if (session.date && session.startTimeAsMoment && !dates.some(({ readable }) => session.date === readable)) {
-        dates.push({ readable: session.date, moment: session.startTimeAsMoment })
-      }
+  sessions.forEach(session => {
+    if (!sessionTimeslots[session.start]) {
+      timeslotOrder.push(session.start)
+      sessionTimeslots[session.start] = []
+    }
 
-      if (!sessionTimeslots[session.start]) {
-        timeslotOrder.push(session.start)
-        sessionTimeslots[session.start] = []
-      }
+    sessionTimeslots[session.start].push(session)
+  })
 
-      sessionTimeslots[session.start].push(session)
-    })
+  const sessionsByTime = dates.map(date => {
+    return {
+      date,
+      timeslots: timeslotOrder.reduce((acc, time) => {
+        const startTime = moment.utc(time)
 
-    const sessionsByTime = dates.map(date => {
-      return {
-        date,
-        timeslots: timeslotOrder.reduce((acc, time) => {
-          const startTime = moment.utc(time)
+        if (startTime.isSame(date.moment, 'day')) {
+          const sessionsInTimeslot = sessionTimeslots[time]
 
-          if (startTime.isSame(date.moment, 'day')) {
-            const sessionsInTimeslot = sessionTimeslots[time]
-
-            acc.push({ time: time, sessions: sessionsInTimeslot })
-          }
-
-          return acc
-        }, [] as any),
-      }
-    })
-
-    return { sessionsByTime, sessionTimeslots, timeslotOrder, dates }
-  }
-
-  const useScheduleInformation = (sessions: Session[]): ScheduleInformation => {
-    return React.useMemo(() => {
-      const formattedSessions = formatSessions(sessions)
-      const { dates, sessionTimeslots, timeslotOrder, sessionsByTime } = getSessionTimeslots(formattedSessions)
-
-      return {
-        sessions: formattedSessions,
-        sessionTimeslots,
-        dates,
-        sessionsByTime,
-        timeslotOrder,
-      }
-    }, [sessions])
-  }
-
-  return useScheduleInformation
-})()
-
-export const Schedule = ({ sessions: sessionsBeforeFormatting, speakers, tracks, rooms }: any) => {
-  const scheduleInformation = useScheduleInformation(sessionsBeforeFormatting)
-  const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment }>({ readable: 'all' })
-  const [favoritesOnly, setFavoritesOnly] = React.useState(false)
-
-  const [search, setSearch] = React.useState('')
-  const [filteredByTracks, filterState] = useFilter({
-    tags: true,
-    multiSelect: true,
-    filters: tracks.map((i: string) => {
-      return {
-        text: i,
-        value: i,
-      }
-    }),
-    filterFunction: (activeFilter: any) => {
-      // TODO: Fusejs or minisearch?
-      const sessionsAfterSearch = scheduleInformation.sessions
-
-      return scheduleInformation.sessions.filter((session: Session) => {
-        if (dateFilter.readable !== 'all') {
-          console.log('filtering by date', session.date === dateFilter.readable)
-          return session.date === dateFilter.readable
+          acc.push({ time, sessions: sessionsInTimeslot })
         }
 
-        return true
-      })
-    },
+        return acc
+      }, [] as Timeslot[]),
+    }
   })
 
-  const [filteredSessions, filterState2] = useFilter({
-    basic: true,
-    filters: [
-      {
-        text: 'All',
-        value: 'all',
-      },
-      {
-        text: 'Attending',
-        value: 'attending',
-      },
-      {
-        text: 'Past',
-        value: 'past',
-      },
-      {
-        text: 'Upcoming',
-        value: 'upcoming',
-      },
-    ],
-    filterFunction: (activeFilter: any) => {
-      return filteredByTracks
-    },
+  return { sessionsByTime, sessionTimeslots, timeslotOrder, dates }
+}
+
+export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: any) => {
+  const [search, setSearch] = React.useState('')
+  const [view, setView] = React.useState('list')
+  const [basicFilter, setBasicFilter] = React.useState('all')
+  const [selectedTracks, setSelectedTracks] = React.useState({} as any)
+  const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment }>({ readable: 'all' })
+  const eventDates = React.useMemo(() => {
+    const dates = []
+    const end = moment.utc(event.date_to).add(1, 'days')
+
+    let current = moment.utc(event.date_from)
+
+    while (!current.isSame(end)) {
+      const next = current.clone()
+      dates.push({ readable: normalizeDate(next), moment: next })
+      current.add(1, 'days')
+    }
+
+    return dates
+  }, [event])
+  const [favoritesOnly, setFavoritesOnly] = React.useState(false)
+  // Format sessions (memoized)
+  const formattedSessions = useFormatSessions(sessionsBeforeFormatting)
+  // Create search index
+  const searcher = React.useMemo(
+    () => new FuzzySearch(formattedSessions, ['title', 'speakers.name', 'description', 'room.name']),
+    [formattedSessions]
+  )
+  // Apply search filter
+  const sessionsMatchingSearch = search.length > 0 ? searcher.search(search) : formattedSessions
+  // Apply remaining filters
+  const filteredSessions = sessionsMatchingSearch.filter((session: Session) => {
+    // Filter by tracks
+    const tracks = Object.keys(selectedTracks)
+    const thereAreTracksToFilterBy = tracks.length > 0
+
+    if (thereAreTracksToFilterBy) {
+      if (!selectedTracks[session.track]) return false
+    }
+
+    // Filter by day
+    if (dateFilter.readable !== 'all') {
+      const sessionIsSameDay = session.date === dateFilter.readable
+
+      if (!sessionIsSameDay) return false
+    }
+
+    return true
   })
 
-  console.log(filteredByTracks.length, 'wtf')
+  const { sessionTimeslots, timeslotOrder, sessionsByTime } = getSessionsByDatesAndTimeslots(
+    filteredSessions,
+    eventDates
+  )
 
   const noResults = filteredSessions.length === 0
 
@@ -182,78 +174,154 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, speakers, tracks,
       />
 
       <div className="section">
-        <Filter {...filterState2} />
+        <Basic
+          value={basicFilter}
+          onChange={setBasicFilter}
+          options={[
+            {
+              text: 'All',
+              value: 'all',
+            },
+            {
+              text: 'Attending',
+              value: 'attending',
+            },
+            {
+              text: 'Past',
+              value: 'past',
+            },
+            {
+              text: 'Upcoming',
+              value: 'upcoming',
+            },
+          ]}
+        />
       </div>
 
-      <AppSearch
-        search={{
-          placeholder: 'Search agenda',
-          onChange: setSearch,
-        }}
-        filterStates={[{ title: 'Track', filterState }]}
-      >
-        <div className={css['date-selector-container']}>
-          <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
-            <ul className={css['date-selector']}>
-              {[
-                { text: 'All', value: { readable: 'all' } },
-                ...scheduleInformation.dates.map(date => {
-                  return {
-                    text: date.readable,
-                    value: date,
-                  }
-                }),
-              ].map(filter => {
-                const selected = dateFilter.readable === filter.value.readable
+      <div className={css['filter']}>
+        <div className="section">
+          <Search value={search} onChange={setSearch} />
 
-                // TODO: clear up this stuff
-                if (filter.value.readable === 'Invalid date') return null
-
+          <div className={css['foldout']}>
+            <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
+              {(open, setOpen) => {
                 return (
-                  <li
-                    className={selected ? css['selected'] : undefined}
-                    key={filter.value.readable}
-                    onClick={() => setDateFilter(filter.value)}
-                  >
-                    {filter.text}
-                  </li>
+                  <div className={css['foldout-content']}>
+                    <div className={css['tracks']}>
+                      <Tags
+                        value={selectedTracks}
+                        onChange={nextValue => {
+                          const isAlreadySelected = selectedTracks[nextValue]
+
+                          const nextState = {
+                            ...selectedTracks,
+                          }
+
+                          if (isAlreadySelected) {
+                            delete nextState[nextValue]
+                          } else {
+                            nextState[nextValue] = true
+                          }
+
+                          setSelectedTracks(nextState)
+                        }}
+                        options={tracks.map((i: string) => {
+                          return {
+                            text: i,
+                            value: i,
+                          }
+                        })}
+                      />
+                    </div>
+
+                    <div className={css['actions']}>
+                      <button className={`app hover sm thin-borders`} onClick={() => setSelectedTracks({})}>
+                        Reset
+                      </button>
+
+                      <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
+                        Confirm
+                      </button>
+                    </div>
+                  </div>
                 )
-              })}
-            </ul>
-          </SwipeToScroll>
+              }}
+            </FilterFoldout>
+
+            <div className={css['right']}>
+              <div>
+                <p className="font-xs-fixed">Current Filter:</p>
+                <p className={css['filter-indicator']}>
+                  {(() => {
+                    const trackFilters = Object.keys(selectedTracks)
+
+                    if (trackFilters.length === 0) return 'All tracks'
+
+                    return trackFilters.join(', ')
+                  })()}
+                </p>
+              </div>
+              <div className={css['end']}>
+                <button
+                  onClick={() => setView('list')}
+                  className={`${view === 'list' ? 'hover' : ''} app squared sm thin-borders`}
+                >
+                  <ListIcon />
+                </button>
+                <button
+                  onClick={() => setView('timeline')}
+                  className={`${view === 'timeline' ? 'hover' : ''} app squared sm thin-borders`}
+                >
+                  <TileIcon />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className={css['date-selector-container']}>
+            <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
+              <ul className={css['date-selector']}>
+                {[
+                  { text: 'All', value: { readable: 'all' } },
+                  ...eventDates.map(date => {
+                    return {
+                      text: date.readable,
+                      value: date,
+                    }
+                  }),
+                ].map(filter => {
+                  const selected = dateFilter.readable === filter.value.readable
+
+                  // TODO: clear up this stuff
+                  if (filter.value.readable === 'Invalid date') return null
+
+                  return (
+                    <li
+                      className={selected ? css['selected'] : undefined}
+                      key={filter.value.readable}
+                      onClick={() => setDateFilter(filter.value)}
+                    >
+                      {filter.text}
+                    </li>
+                  )
+                })}
+              </ul>
+            </SwipeToScroll>
+          </div>
         </div>
-      </AppSearch>
+      </div>
 
       <div className="section">
-        {noResults ? <NoResults /> : <List {...scheduleInformation} sessions={filteredSessions} />}
+        {(() => {
+          if (noResults) return <NoResults />
+
+          return view === 'list' ? (
+            <List sessionTimeslots={sessionTimeslots} timeslotOrder={timeslotOrder} sessionsByTime={sessionsByTime} />
+          ) : (
+            <p>Timeline view goes here</p>
+          )
+        })()}
       </div>
     </>
   )
 }
-
-/*
-  Simplify filtering in general; the abstractions are causing more bad than good
-  
-    Create standalone filter components:
-      Foldout w. trigger
-      Search
-
-      const [search, setSearch] = React.useState()
-      const [foldoutOpen, setFoldoutOpen] = React.useState()
-      const [sort, setSort] = React.useState()
-      const [day, setDay] = React.useState()
-      
-
-      <div className="app-filter">
-        <Search />
-        <FilterFoldout>
-          <FilterTitle />
-          <FilterTab />
-        </FilterFoldout>
-        <Button className="filter-button" />
-      </div>
-
-      <Filter>
-      </Filter>
-    
-*/
