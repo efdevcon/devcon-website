@@ -13,6 +13,7 @@ import Image from 'next/image'
 import makeBlockie from 'ethereum-blockies-base64'
 import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
+import FuzzySearch from 'fuzzy-search'
 
 type CardProps = {
   speaker: SpeakerType
@@ -177,6 +178,10 @@ const ListAlphabeticalSort = (props: ListProps) => {
 export const Speakers = (props: any) => {
   const trackFilters = props.tracks
   const [search, setSearch] = React.useState('')
+  const searcher = React.useMemo(
+    () => new FuzzySearch(props.speakers, ['name', 'tracks.name', 'description', 'company']),
+    [props.speakers]
+  )
   const sortState = useSort(
     [],
     [
@@ -199,6 +204,9 @@ export const Speakers = (props: any) => {
     false,
     'desc'
   )
+
+  const speakersMatchingSearch = search.length > 0 ? searcher.search(search) : props.speakers
+
   const [speakers, filterState] = useFilter({
     tags: true,
     multiSelect: true,
@@ -209,10 +217,11 @@ export const Speakers = (props: any) => {
       }
     }),
     filterFunction: (activeFilter: any) => {
-      let filtered = props.speakers as SpeakerType[]
+      let filtered = speakersMatchingSearch as SpeakerType[]
+
       if (activeFilter && Object.keys(activeFilter).length > 0) {
         const filters = Object.keys(activeFilter)
-        filtered = props.speakers.filter((i: any) =>
+        filtered = speakersMatchingSearch.filter((i: any) =>
           i.tracks?.some((x: any) => filters.some(y => x === y) && activeFilter[x])
         )
       }
@@ -224,16 +233,16 @@ export const Speakers = (props: any) => {
             : filtered.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
       }
 
-      if (search) {
-        const filter = search.toLowerCase()
-        filtered = filtered.filter(
-          i =>
-            i.name.toLowerCase().includes(filter) ||
-            i.description?.toLowerCase().includes(filter) ||
-            i.company?.toLowerCase().includes(filter) ||
-            i.tracks?.some(x => x.toLowerCase().includes(filter))
-        )
-      }
+      // if (search) {
+      //   const filter = search.toLowerCase()
+      //   filtered = filtered.filter(
+      //     i =>
+      //       i.name.toLowerCase().includes(filter) ||
+      //       i.description?.toLowerCase().includes(filter) ||
+      //       i.company?.toLowerCase().includes(filter) ||
+      //       i.tracks?.some(x => x.toLowerCase().includes(filter))
+      //   )
+      // }
       return filtered
     },
   })

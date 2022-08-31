@@ -66,6 +66,7 @@
   "devDependencies": {
     "@octokit/types": "^6.34.0",
     "@svgr/webpack": "^6.2.1",
+    "@types/fuzzy-search": "^2.1.2",
     "@types/js-search": "^1.4.0",
     "@types/jsonp": "^0.2.1",
     "@types/mongoose": "^5.11.97",
