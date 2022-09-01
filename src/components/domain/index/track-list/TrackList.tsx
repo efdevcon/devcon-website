@@ -55,10 +55,10 @@ const Tracks = (props: Props) => {
       <div className={`${css['background']} expand`}>
         <Image src={TriangleBackground} alt="Triangles" />
       </div>
-      <h2 className="border-top clear-top">Tracks</h2>
+      {/* <h2 className="border-top clear-top">Tracks</h2> */}
 
       <div className={css['tracks']}>
-        <Slider sliderProps={sliderProps} title="Tracks" onlySlider>
+        <Slider sliderProps={sliderProps} title="Tracks">
           {props.tracks.map((track: Track, i: number) => {
             let className = css['card']
 

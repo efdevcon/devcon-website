@@ -19,11 +19,9 @@
   position: relative;
   height: 300px;
   width: 300px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  border: 1px solid $colors-standard-border-color;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
 
-  transition: transform 0.5s;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 
