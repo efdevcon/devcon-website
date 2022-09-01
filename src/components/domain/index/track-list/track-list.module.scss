@@ -39,3 +39,89 @@
     margin-left: 56px; 
   }
 }
+
+.tracks {
+  // height: 300px;
+  position: relative;
+  display: flex;
+}
+
+.card {
+  &.layer-1 {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #E6F0FF;
+    }
+  }
+  &.layer-2s {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background:  #E4FAFF;
+    }
+  }
+  &.developer-infrastructure {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #F6F2FF;
+    }
+  }
+  &.governance-coordination {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background:  #F9FFDF;
+    }
+  }
+  &.ux-design {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #FFF4F4;
+    }
+  }
+  &.staking-validator-experience {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #FCF4FF;
+    }
+  }
+  &.security {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #E4FFFD;
+    }
+  }
+  &.zkps {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #F2FFFA;
+    }
+  }
+  &.opportunity-global-impact {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #FFFBF4;
+    }
+  }
+  &.cryptoeconomics {
+    [data-type="flip-card-front"], [data-type="flip-card-back"] {
+      background: #FFFEF4;
+    }
+  }
+
+  .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+  }
+
+  .details {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    // justify-content: center;
+    padding: 20px;
+
+    .title {
+      @include fonts-lg;
+      @include fonts-bold;
+      margin-bottom: 12px;
+    }
+
+    .text {
+      @include fonts-sm;
+    }
+    // align-items: center;
+  }
+}
+
