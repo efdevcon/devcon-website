@@ -128,7 +128,7 @@ export default pageHOC(function DevconWeek(props: any) {
                       🇪🇨 ETHQuito Day
                     </Link>
                   ),
-                  right: 'OCT 1',
+                  right: 'SEP 30',
                 },
                 {
                   Icon: () => <></>,
