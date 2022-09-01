@@ -99,7 +99,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
       return {
         number: doc.data.DIP,
         title: doc.data.Title,
-        summary: doc.data.Summary,
+        summary: doc.data.Summary ? await markdownUtils.toHtml(doc.data.Summary) : '',
         status: doc.data.Status,
         github: doc.data['Github URL'],
         themes: doc.data.Themes ? doc.data.Themes.split(',') : [],
