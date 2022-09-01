@@ -126,9 +126,11 @@
     }
 
     .speakers {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      > p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
     }
   }
 }
