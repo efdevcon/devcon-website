@@ -10,6 +10,7 @@ import { ThumbnailBlock } from 'components/common/thumbnail-block'
 import { Session } from 'types/Session'
 import { useAccountContext } from 'context/account-context'
 import moment from 'moment'
+import { Link } from 'components/common/link'
 
 type CardProps = {
   session: Session
@@ -22,9 +23,6 @@ export const SessionCard = (props: CardProps) => {
   const bookmarkedSessions = account?.appState?.sessions
   const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === props.session.id)
   const sessionIsBookmarked = !!bookmarkedSession
-
-  // console.log(setSessionBookmark, 'set session bookmark')
-  console.log(account, 'account')
 
   const iconProps = {
     className: `${css['save-session']} icon`,
@@ -60,7 +58,9 @@ export const SessionCard = (props: CardProps) => {
     <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track}>
       <div className={css['details']}>
         <div className={css['top']}>
-          <p className={css['title']}>{props.session.title}</p>
+          <Link to={`/app/schedule/${props.session.id}`} className={css['title']}>
+            {props.session.title}
+          </Link>
 
           {/* <div className="label sm bold">{props.session.track}</div> */}
 

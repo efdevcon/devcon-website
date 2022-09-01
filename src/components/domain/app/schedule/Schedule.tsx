@@ -12,6 +12,7 @@ import { Session } from 'types/Session'
 import moment, { Moment } from 'moment'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 import FuzzySearch from 'fuzzy-search'
+import { useAccountContext } from 'context/account-context'
 
 type Timeslot = {
   time: number
@@ -89,6 +90,7 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
 }
 
 export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: any) => {
+  const { account } = useAccountContext()
   const [search, setSearch] = React.useState('')
   const [view, setView] = React.useState('list')
   const [basicFilter, setBasicFilter] = React.useState('all')
@@ -109,6 +111,10 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
     return dates
   }, [event])
   const [favoritesOnly, setFavoritesOnly] = React.useState(false)
+  const bookmarkedSessions = account?.appState?.sessions
+  // const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === props.session.id)
+  // const sessionIsBookmarked = !!bookmarkedSession
+
   // Format sessions (memoized)
   const formattedSessions = useFormatSessions(sessionsBeforeFormatting)
   // Create search index
@@ -120,6 +126,20 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
   const sessionsMatchingSearch = search.length > 0 ? searcher.search(search) : formattedSessions
   // Apply remaining filters
   const filteredSessions = sessionsMatchingSearch.filter((session: Session) => {
+    // Filter by interested
+    if (favoritesOnly) {
+      const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
+
+      if (bookmarkedSession?.level !== 'interested') return false
+    }
+
+    // Filter by attending
+    if (basicFilter === 'attending') {
+      const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
+
+      if (bookmarkedSession?.level !== 'attending') return false
+    }
+
     // Filter by tracks
     const tracks = Object.keys(selectedTracks)
     const thereAreTracksToFilterBy = tracks.length > 0

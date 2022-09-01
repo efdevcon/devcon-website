@@ -10,6 +10,7 @@ import { LinkList, Link } from 'components/common/link'
 import { SpeakerCard } from 'components/domain/app/speakers'
 import { SessionCard } from './SessionCard'
 import css from './session.module.scss'
+import IconCheck from 'assets/icons/check_circle.svg'
 import { Tabs } from 'components/common/tabs'
 import { Tab } from 'components/common/tabs/Tabs'
 import { AppTabsSection } from 'components/domain/app/app-tabs-section'
@@ -111,7 +112,7 @@ export const Session = (props: SessionProps) => {
             )}
 
             {/* Update className - not sure what it does yet */}
-            <div className={css['calendar-icon-in-circle']}>
+            <div className={css['calendar-icon-in-circle']} onClick={() => bookmakSession('attending')}>
               <IconCalendar />
             </div>
           </div>
@@ -124,7 +125,7 @@ export const Session = (props: SessionProps) => {
             <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
           </div>
           <div onClick={() => bookmakSession('attending')} className={css[attending ? 'active' : '']}>
-            <p>Attend Session</p> <IconCalendar />
+            <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendar />}</>
           </div>
           {/* <div>
               <p>Mark as interesting</p> <IconCalendar />
@@ -136,7 +137,7 @@ export const Session = (props: SessionProps) => {
 
         {props.session.speakers.length > 0 && (
           <div className={css['speakers']}>
-            <h3 className={css['title']}>Speakers</h3>
+            <h3 className="font-md-fixed bold spaced">Speakers</h3>
             {props.session.speakers.map(i => {
               return <SpeakerCard key={i.id} speaker={i} />
             })}
@@ -144,7 +145,7 @@ export const Session = (props: SessionProps) => {
         )}
 
         <div className={css['description']}>
-          <h3 className={css['title']}>Description</h3>
+          <h3 className="font-md-fixed bold">Description</h3>
           <p>{props.session.description}</p>
         </div>
 
