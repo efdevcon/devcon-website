@@ -20,7 +20,7 @@ export const ThumbnailBlock = (props: ThumbnailBlock) => {
   return (
     <div className={className}>
       <div data-type="thumbnail-block-image" className={css['thumbnail-container']}>
-        <Image src={trackIcon} alt={props.thumbnailAlt || 'thumbnail'} />
+        <Image src={trackIcon} width="56px" height="56px" alt={props.thumbnailAlt || 'thumbnail'} />
         {props.thumbnailSubtext && <p className={css['thumbnail-text']}>{props.thumbnailSubtext}</p>}
       </div>
       <div data-type="thumbnail-block-content" className={css['children']}>

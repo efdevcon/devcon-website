@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import { Web3Provider } from '@ethersproject/providers'
 import { VerificationToken } from 'types/VerificationToken'
 import { Session } from 'types/Session'
+import { makeConsoleLogger } from '@notionhq/client/build/src/logging'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -29,7 +30,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     updateAccount,
     deleteAccount,
     setSpeakerFavorite,
-    setSessionBookmark
+    setSessionBookmark,
   })
 
   useEffect(() => {
@@ -109,7 +110,12 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     }
   }
 
-  async function loginWeb3(address: string, nonce: number, message: string, signature: string): Promise<UserAccount | undefined> {
+  async function loginWeb3(
+    address: string,
+    nonce: number,
+    message: string,
+    signature: string
+  ): Promise<UserAccount | undefined> {
     const response = await fetch('/api/account/login/web3', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -226,7 +232,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       ...account,
       appState: {
         ...account.appState,
-        speakers: favorites
+        speakers: favorites,
       },
     }
 
@@ -237,7 +243,12 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     })
   }
 
-  async function setSessionBookmark(account: UserAccount, session: Session, level: 'interested' | 'attending', remove: boolean) {
+  async function setSessionBookmark(
+    account: UserAccount,
+    session: Session,
+    level: 'interested' | 'attending',
+    remove?: boolean
+  ) {
     let sessions = account.appState?.sessions ?? []
 
     if (remove) {
@@ -247,7 +258,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
         id: session.id,
         level: level,
         start: new Date(session.start),
-        end: new Date(session.end)
+        end: new Date(session.end),
       })
     }
 
@@ -255,11 +266,12 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       ...account,
       appState: {
         ...account.appState,
-        sessions: sessions
+        sessions: sessions,
       },
     }
 
     await updateAccount(account._id, newAccountState)
+
     setContext({
       ...context,
       account: newAccountState,

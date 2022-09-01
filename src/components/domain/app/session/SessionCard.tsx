@@ -19,19 +19,27 @@ type CardProps = {
 export const SessionCard = (props: CardProps) => {
   // TODO: personalization/bookmarks
   const { account, setSessionBookmark } = useAccountContext()
-  // const bookmarkedSessions = account?.appState?.bookmarkedSessions
-  const sessionIsBookmarked = false // bookmarkedSessions?.[props.session.id]
+  const bookmarkedSessions = account?.appState?.sessions
+  const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === props.session.id)
+  const sessionIsBookmarked = !!bookmarkedSession
+
+  // console.log(setSessionBookmark, 'set session bookmark')
+  console.log(account, 'account')
 
   const iconProps = {
     className: `${css['save-session']} icon`,
-    onClick: () => {
-      // setSessionBookmark(props.session, 'attending', !!sessionIsBookmarked),
+    onClick: (e: React.SyntheticEvent) => {
+      e.stopPropagation()
+
+      if (account) {
+        setSessionBookmark(account, props.session, 'attending', !!sessionIsBookmarked)
+      }
     },
   }
 
-  // if (sessionIsBookmarked) {
-  //   iconProps.className += ` ${css['saved']}`
-  // }
+  if (sessionIsBookmarked) {
+    iconProps.className += ` ${css['saved']}`
+  }
 
   let thumbnailClassName = css['thumbnail-container']
 
@@ -89,12 +97,14 @@ export const SessionCard = (props: CardProps) => {
           </div>
 
           {props.session.speakers.length > 0 && (
-            <div className={css['authors']}>
+            <div className={css['speakers']}>
               <IconSpeaker />
               <p>
-                {props.session.speakers.map(i => {
-                  return i.name
-                })}
+                {props.session.speakers
+                  .map(i => {
+                    return i.name
+                  })
+                  .join(', ')}
               </p>
             </div>
           )}

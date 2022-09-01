@@ -13,7 +13,7 @@ export const List = (props: ListProps) => {
     <div className={css['list']}>
       {props.sessionsByTime.map(({ date, timeslots }) => {
         // TODO: How/why is it ever null?
-        if (date.readable === 'Invalid date') return null // 'date start is null, not rendering'
+        if (date.readable === 'Invalid date') return null
         if (timeslots.length === 0) return null
 
         return (

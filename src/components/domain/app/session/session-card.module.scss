@@ -62,12 +62,12 @@
   padding: $gaps-gap-2;
 
   .top {
-    padding-bottom: $gaps-gap-2;
+    padding-bottom: 8px;
     border-bottom: 1px solid $colors-standard-border-color;
 
     .title {
       @include fonts-bold;
-      @include fonts-md-fixed;
+      @include fonts-sm-fixed;
       // margin-bottom: $gaps-gap-2;
       padding-right: $gaps-gap-8;
     }
@@ -77,8 +77,8 @@
       cursor: pointer;
       user-select: none;
       position: absolute;
-      right: $gaps-gap-2;
-      top: $gaps-gap-2;
+      right: 8px;
+      top: 8px;
 
       &.saved {
         --color-icon: #{$colors-track-red};
@@ -87,11 +87,11 @@
   }
 
   .bottom {
-    padding-top: $gaps-gap-2;
+    padding-top: 8px;
+    @include fonts-sm;
 
     p {
       @include fonts-bold;
-      @include fonts-sm;
       margin-left: $gaps-gap-2;
     }
 
@@ -116,13 +116,19 @@
       .room-title, .n-seats {
         display: flex;
         align-items: center;
-        margin-right: 32px;
+        margin-right: 16px;
       }
 
       .room-title {
         color: $colors-track-purple;
         --color-icon: #{$colors-track-purple};
       }
+    }
+
+    .speakers {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 }
