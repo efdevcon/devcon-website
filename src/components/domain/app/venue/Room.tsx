@@ -66,7 +66,15 @@ export const Room = (props: Props) => {
 
   return (
     <>
-      <AppNav />
+      <AppNav
+        nested
+        links={[
+          {
+            title: props.room.name,
+            // to: '/app/schedule',
+          },
+        ]}
+      />
       <div className="section">
         <div className="content">
           <AppSearch

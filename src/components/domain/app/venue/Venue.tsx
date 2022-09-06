@@ -61,7 +61,15 @@ export const Venue = (props: Props) => {
 
   return (
     <>
-      <AppNav />
+      <AppNav
+        nested
+        links={[
+          {
+            title: 'Venue',
+            to: '/app/venue',
+          },
+        ]}
+      />
 
       <CSS3D />
 

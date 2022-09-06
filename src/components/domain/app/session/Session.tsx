@@ -2,7 +2,7 @@ import React from 'react'
 import IconClock from 'assets/icons/icon_clock.svg'
 import IconStar from 'assets/icons/star.svg'
 import IconStarFill from 'assets/icons/star-fill.svg'
-import IconCalendar from 'assets/icons/schedule-plus.svg'
+import IconCalendarAdd from 'assets/icons/schedule-plus.svg'
 import IconMarker from 'assets/icons/icon_marker.svg'
 import IconPeople from 'assets/icons/icon_people.svg'
 import IconSecurity from 'assets/images/tracks/security.svg'
@@ -22,6 +22,7 @@ import Image from 'next/image'
 import { useAccountContext } from 'context/account-context'
 import { AppNav } from 'components/domain/app/navigation'
 import Share from 'assets/icons/share.svg'
+import IconCalendar from 'assets/icons/calendar.svg'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -52,7 +53,7 @@ export const Session = (props: SessionProps) => {
   const interested = account?.appState?.sessions?.some(i => i.level === 'interested' && i.id === props.session.id)
   const attending = account?.appState?.sessions?.some(i => i.level === 'attending' && i.id === props.session.id)
 
-  async function bookmakSession(level: 'interested' | 'attending') {
+  async function bookmarkSession(level: 'interested' | 'attending') {
     if (account && level === 'interested') {
       setSessionBookmark(account, props.session, level, !!interested)
     }
@@ -73,7 +74,12 @@ export const Session = (props: SessionProps) => {
         renderRight={() => (
           <>
             <Share />
-            <Share />
+
+            {attending ? (
+              <IconCheck className="icon fill-red" onClick={() => bookmarkSession('attending')} />
+            ) : (
+              <IconCalendarAdd onClick={() => bookmarkSession('attending')} />
+            )}
           </>
         )}
       />
@@ -83,8 +89,8 @@ export const Session = (props: SessionProps) => {
           <div className={css['container']}>
             <div className={css['info-line']}>
               <IconClock />
-              <p>
-                {GetDevconDay(props.session.start)} - {moment.utc(props.session.start).format('MMM DD')} <br />
+              <p className="bold">
+                {GetDevconDay(props.session.start)} - {moment.utc(props.session.start).format('MMM DD')},&nbsp;
                 {moment.utc(props.session.start).format('HH:mm')} - {moment.utc(props.session.end).format('HH:mm')}{' '}
                 <span style={{ marginLeft: '12px' }}> {mins} Mins</span>
               </p>
@@ -112,7 +118,7 @@ export const Session = (props: SessionProps) => {
             )}
 
             {/* Update className - not sure what it does yet */}
-            <div className={css['calendar-icon-in-circle']} onClick={() => bookmakSession('attending')}>
+            <div className={css['calendar-icon-in-circle']} onClick={() => bookmarkSession('attending')}>
               <IconCalendar />
             </div>
           </div>
@@ -121,11 +127,11 @@ export const Session = (props: SessionProps) => {
 
       <div className="section">
         <div className={css['actions']}>
-          <div onClick={() => bookmakSession('interested')} className={css[interested ? 'active' : '']}>
+          <div onClick={() => bookmarkSession('interested')} className={css[interested ? 'active' : '']}>
             <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
           </div>
-          <div onClick={() => bookmakSession('attending')} className={css[attending ? 'active' : '']}>
-            <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendar />}</>
+          <div onClick={() => bookmarkSession('attending')} className={css[attending ? 'active' : '']}>
+            <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendarAdd />}</>
           </div>
           {/* <div>
               <p>Mark as interesting</p> <IconCalendar />
@@ -137,7 +143,7 @@ export const Session = (props: SessionProps) => {
 
         {props.session.speakers.length > 0 && (
           <div className={css['speakers']}>
-            <h3 className="font-md-fixed bold spaced">Speakers</h3>
+            <h3 className="font-lg bold spaced">Speakers</h3>
             {props.session.speakers.map(i => {
               return <SpeakerCard key={i.id} speaker={i} />
             })}
@@ -145,7 +151,7 @@ export const Session = (props: SessionProps) => {
         )}
 
         <div className={css['description']}>
-          <h3 className="font-md-fixed bold">Description</h3>
+          <h3 className="font-lg bold">Description</h3>
           <p>{props.session.description}</p>
         </div>
 

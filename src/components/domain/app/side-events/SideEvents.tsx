@@ -61,7 +61,15 @@ export const SideEvents = (props: any) => {
 
   return (
     <>
-      <AppNav />
+      <AppNav
+        nested
+        links={[
+          {
+            title: 'Side Events',
+            to: '/app/side-events',
+          },
+        ]}
+      />
       <div className="section">
         <div className="content">
           <div className={`${css['hero']}`}>

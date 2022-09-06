@@ -1,14 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Session } from 'types/Session'
 import css from './list.module.scss'
 import { SessionCard } from 'components/domain/app/session'
-import moment from 'moment'
+import moment, { Moment } from 'moment'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
-import { ScheduleInformation } from '../Schedule'
+import { ScheduleInformation, normalizeDate } from '../Schedule'
+import ClockIcon from 'assets/icons/clock.svg'
+import { ButtonOverlay } from 'components/domain/app/button-overlay'
 
-interface ListProps extends ScheduleInformation {}
+interface ListProps extends ScheduleInformation {
+  now?: Moment | null
+}
 
 export const List = (props: ListProps) => {
+  const [openDays, setOpenDays] = React.useState({} as any)
+  const normalizedNow = props.now ? normalizeDate(props.now) : ''
+
+  const setNowOpen = React.useMemo(() => {
+    return () => {
+      if (normalizedNow) {
+        const openState = {} as any
+
+        openState[normalizedNow] = true
+
+        setOpenDays(openState)
+      }
+    }
+  }, [normalizedNow])
+
+  useEffect(() => {
+    setNowOpen()
+  }, [setNowOpen])
+
   return (
     <div className={css['list']}>
       {props.sessionsByTime.map(({ date, timeslots }) => {
@@ -16,14 +39,37 @@ export const List = (props: ListProps) => {
         if (date.readable === 'Invalid date') return null
         if (timeslots.length === 0) return null
 
+        const dayIsNow = props.now && props.now.isSame(date.moment, 'day')
+
         return (
-          <CollapsedSection sticky key={date.readable}>
-            <CollapsedSectionHeader>
-              <p className="font-md-fixed bold">{date.moment ? date.moment.format('dddd, MMM Do') : date.readable}</p>
+          <CollapsedSection
+            sticky
+            key={date.readable}
+            open={openDays[date.readable]}
+            setOpen={() => {
+              const isOpen = openDays[date.readable]
+
+              const nextOpenState = {
+                ...openDays,
+                [date.readable]: true,
+              }
+
+              if (isOpen) {
+                delete nextOpenState[date.readable]
+              }
+
+              setOpenDays(nextOpenState)
+            }}
+          >
+            <div className={css['anchor']} id={date.readable}></div>
+            <CollapsedSectionHeader className={css['day-header']}>
+              <p className="font-md-fixed bold">
+                {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
+                <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
+              </p>
             </CollapsedSectionHeader>
             <CollapsedSectionContent dontAnimate>
               {timeslots.map(({ time, sessions }) => {
-                // const sessionsForTimeslot = sessionTimeslots[time]
                 const startTime = moment.utc(time)
                 const dateOfSession = startTime.format('MMM Do')
                 const startTimeFormatted = startTime.format('h:mm A')
@@ -47,6 +93,19 @@ export const List = (props: ListProps) => {
           </CollapsedSection>
         )
       })}
+
+      <ButtonOverlay
+        text="Now"
+        onClick={() => {
+          const nowElement = document.getElementById(`${normalizedNow}`)
+
+          setNowOpen()
+
+          nowElement?.scrollIntoView({ behavior: 'smooth' })
+        }}
+      >
+        <ClockIcon />
+      </ButtonOverlay>
     </div>
   )
 }

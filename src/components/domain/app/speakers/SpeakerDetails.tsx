@@ -9,15 +9,49 @@ import { SessionCard } from '../session'
 import { Session } from 'types/Session'
 import { Link } from 'components/common/link'
 import { AppNav } from 'components/domain/app/navigation'
+import Star from 'assets/icons/star.svg'
+import StarFill from 'assets/icons/star-fill.svg'
+import { useAccountContext } from 'context/account-context'
 
 export const SpeakerDetails = (props: any) => {
+  const { account, setSpeakerFavorite } = useAccountContext()
+  const isSpeakerFavorited = account?.appState?.speakers?.some((speaker: any) => speaker === props.speaker.id)
   const splitName = props.speaker.name.split(' ') as string[]
   const firstName = splitName.shift()
   const lastName = splitName.join(' ')
 
   return (
     <>
-      <div className="aspect">
+      <AppNav
+        nested
+        links={[
+          {
+            title: props.speaker.name,
+            // to: '/app/schedule',
+          },
+        ]}
+        renderRight={() => {
+          const starProps = {
+            style: {
+              cursor: 'pointer',
+            },
+            onClick: (e: React.SyntheticEvent) => {
+              e.preventDefault()
+              if (account) {
+                setSpeakerFavorite(account, props.speaker.id, !!isSpeakerFavorited)
+              }
+            },
+          }
+
+          if (isSpeakerFavorited) {
+            return <StarFill {...starProps} className="icon fill-red" />
+          } else {
+            return <Star {...starProps} />
+          }
+        }}
+      />
+
+      <div className={css['image']}>
         <Image
           src={props.speaker.avatar ?? makeBlockie(props.speaker.name)}
           alt={props.speaker.name}
@@ -29,8 +63,7 @@ export const SpeakerDetails = (props: any) => {
       <div className="section">
         <div className="content">
           <h1 className={css['header']}>
-            {firstName}
-            <br /> {lastName}
+            {firstName} {lastName}
           </h1>
 
           <div className={css['meta']}>
@@ -45,12 +78,12 @@ export const SpeakerDetails = (props: any) => {
                 </Link>
               )}
               {props.speaker.twitter && (
-                <Link to={props.speaker.twitter}>
+                <Link to={`https://twitter.com/${props.speaker.twitter}`}>
                   <IconTwitter />
                 </Link>
               )}
               {props.speaker.github && (
-                <Link to={props.speaker.github}>
+                <Link to={`https://github.com/${props.speaker.github}`}>
                   <IconGithub />
                 </Link>
               )}
@@ -58,13 +91,13 @@ export const SpeakerDetails = (props: any) => {
           </div>
 
           <div className={css['description']}>
-            <p className={css['header']}>Profile</p>
+            <p className="font-lg bold margin-top-less margin-bottom-less">Profile</p>
             <p className={css['body']}>{props.speaker.description}</p>
           </div>
 
           {props.sessions.length > 0 && (
             <div className={css['sessions']}>
-              <p className={css['header']}>Sessions</p>
+              <p className="font-lg bold margin-top-less margin-bottom-less">Sessions</p>
               {props.sessions.map((i: Session) => {
                 return <SessionCard key={i.id} session={i} />
               })}

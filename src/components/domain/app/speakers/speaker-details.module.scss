@@ -3,6 +3,15 @@
 .image {
   width: 100%;
   object-fit: cover;
+  height: min(40vh, 300px);
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: $breakpoints-md) {
+    img {
+      object-fit: cover !important;
+    }
+  }
 }
 
 .header {
@@ -13,9 +22,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding-top: $gaps-gap-2;
-  padding-bottom: $gaps-gap-2;
+  // justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-top: 1px solid $colors-standard-border-color;
   border-bottom: 1px solid $colors-standard-border-color;
 
@@ -25,16 +34,26 @@
 }
 
 .socials {
+  display: flex;
+  align-items: center;
   :global(.icon) {
     font-size: 20px;
-    --color-icon: #{$colors-monochrome-6};
-    margin-left: $gaps-gap-3;
+    // --color-icon: #{$colors-monochrome-7};
+
+  }
+
+  a {
+    display: flex;
+    margin-left: 12px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
   }
 }
 
 .description {
-  .body {
-  }
+  margin-top: 16px;
 }
 
 .sessions {
@@ -62,5 +81,6 @@
 .header {
   margin-top: $gaps-gap-2;
   margin-bottom: $gaps-gap-2;
+  @include fonts-xxl-fixed;
   @include fonts-bold;
 }

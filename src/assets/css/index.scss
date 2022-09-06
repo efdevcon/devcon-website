@@ -27,6 +27,7 @@ html {
   margin: 0 auto;
   font-family: $fonts-primary;
   color: $colors-main;
+  scroll-behavior: smooth;
 
   // Scales entire app
   font-size: 16px;

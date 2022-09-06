@@ -80,7 +80,7 @@
   border: 1px solid $colors-standard-border-color;
 
   > * {
-    height: 52px;
+    // height: 52px;
     display: flex;
     justify-content: space-between;
     background: $colors-monochrome-1;
@@ -91,14 +91,13 @@
     }
 
     > svg {
-      font-size: 32px;
+      font-size: 24px;
       --color-icon: #{$colors-monochrome-5};
     }
   }
 
   .active {
     > svg {
-      font-size: 32px;
       --color-icon: #{$colors-track-red};
     }
   }

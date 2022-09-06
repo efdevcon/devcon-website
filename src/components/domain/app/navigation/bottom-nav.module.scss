@@ -41,7 +41,7 @@
       padding-top: $gaps-gap-3;
 
       &.selected {
-        color: $colors-track-red;
+        // color: $colors-track-red;
         --color-icon: #{$colors-track-red};
       }
 

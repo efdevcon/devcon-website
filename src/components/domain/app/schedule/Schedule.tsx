@@ -13,6 +13,7 @@ import moment, { Moment } from 'moment'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 import FuzzySearch from 'fuzzy-search'
 import { useAccountContext } from 'context/account-context'
+import filterCss from 'components/domain/app/app-filter.module.scss'
 
 type Timeslot = {
   time: number
@@ -35,7 +36,7 @@ export type ScheduleInformation = {
   timeslotOrder: number[]
 }
 
-const normalizeDate = (moment: Moment) => {
+export const normalizeDate = (moment: Moment) => {
   return moment.format('MMM Do')
 }
 
@@ -89,13 +90,37 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   return { sessionsByTime, sessionTimeslots, timeslotOrder, dates }
 }
 
+// Sync current time periodically to keep time related functionality up to date
+const useCurrentTime = () => {
+  const [currentTime, setCurrentTime] = React.useState<Moment | null>(null)
+
+  React.useEffect(() => {
+    const now = process.env.NODE_ENV === 'development' ? moment.utc('2022-10-12') : moment.utc()
+
+    const syncTime = () => setCurrentTime(now)
+
+    const clear = setInterval(() => {
+      syncTime()
+    }, 1000 * 60)
+
+    syncTime()
+
+    return () => clearInterval(clear)
+  }, [])
+
+  return currentTime
+}
+
 export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: any) => {
   const { account } = useAccountContext()
   const [search, setSearch] = React.useState('')
   const [view, setView] = React.useState('list')
   const [basicFilter, setBasicFilter] = React.useState('all')
+  const [favoritesOnly, setFavoritesOnly] = React.useState(false)
   const [selectedTracks, setSelectedTracks] = React.useState({} as any)
-  const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment }>({ readable: 'all' })
+  const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
+  const now = useCurrentTime()
+
   const eventDates = React.useMemo(() => {
     const dates = []
     const end = moment.utc(event.date_to).add(1, 'days')
@@ -110,10 +135,8 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
 
     return dates
   }, [event])
-  const [favoritesOnly, setFavoritesOnly] = React.useState(false)
+
   const bookmarkedSessions = account?.appState?.sessions
-  // const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === props.session.id)
-  // const sessionIsBookmarked = !!bookmarkedSession
 
   // Format sessions (memoized)
   const formattedSessions = useFormatSessions(sessionsBeforeFormatting)
@@ -133,11 +156,19 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
       if (bookmarkedSession?.level !== 'interested') return false
     }
 
-    // Filter by attending
+    // Filter by attending/past/upcoming
     if (basicFilter === 'attending') {
       const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
 
       if (bookmarkedSession?.level !== 'attending') return false
+    } else if (basicFilter === 'past') {
+      const sessionHasHappened = now && now.isAfter(session.endTimeAsMoment)
+
+      if (!sessionHasHappened) return false
+    } else if (basicFilter === 'upcoming') {
+      const sessionIsUpcoming = now && now.isBefore(session.startTimeAsMoment)
+
+      if (!sessionIsUpcoming) return false
     }
 
     // Filter by tracks
@@ -184,7 +215,7 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
           }
 
           if (favoritesOnly) {
-            return <StarFill {...starProps} />
+            return <StarFill {...starProps} className="icon fill-red" />
           } else {
             return <Star {...starProps} />
           }
@@ -216,16 +247,16 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
         />
       </div>
 
-      <div className={css['filter']}>
+      <div className={filterCss['filter']}>
         <div className="section">
-          <Search value={search} onChange={setSearch} />
+          <Search placeholder="Find a session" value={search} onChange={setSearch} />
 
-          <div className={css['foldout']}>
+          <div className={filterCss['foldout']}>
             <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
               {(open, setOpen) => {
                 return (
-                  <div className={css['foldout-content']}>
-                    <div className={css['tracks']}>
+                  <div className={filterCss['foldout-content']}>
+                    <div className={filterCss['tracks']}>
                       <Tags
                         value={selectedTracks}
                         onChange={nextValue => {
@@ -252,7 +283,7 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
                       />
                     </div>
 
-                    <div className={css['actions']}>
+                    <div className={filterCss['actions']}>
                       <button className={`app hover sm thin-borders`} onClick={() => setSelectedTracks({})}>
                         Reset
                       </button>
@@ -266,10 +297,10 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
               }}
             </FilterFoldout>
 
-            <div className={css['right']}>
+            <div className={filterCss['right']}>
               <div>
                 <p className="font-xs-fixed">Current Filter:</p>
-                <p className={css['filter-indicator']}>
+                <p className={filterCss['filter-indicator']}>
                   {(() => {
                     const trackFilters = Object.keys(selectedTracks)
 
@@ -279,7 +310,7 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
                   })()}
                 </p>
               </div>
-              <div className={css['end']}>
+              <div className={filterCss['end']}>
                 <button
                   onClick={() => setView('list')}
                   className={`${view === 'list' ? 'hover' : ''} app squared sm thin-borders`}
@@ -300,25 +331,28 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
             <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
               <ul className={css['date-selector']}>
                 {[
-                  { text: 'All', value: { readable: 'all' } },
+                  { text: 'All', value: { readable: 'all', moment: null } },
                   ...eventDates.map(date => {
                     return {
                       text: date.readable,
                       value: date,
+                      moment: date.moment,
                     }
                   }),
                 ].map(filter => {
+                  let className = ''
+
                   const selected = dateFilter.readable === filter.value.readable
+                  const isCurrentDay = filter.value.moment && filter.value.moment.isSame(now, 'day')
+
+                  if (selected) className += css['selected']
+                  if (isCurrentDay) className += ` ${css['is-current-day']}`
 
                   // TODO: clear up this stuff
                   if (filter.value.readable === 'Invalid date') return null
 
                   return (
-                    <li
-                      className={selected ? css['selected'] : undefined}
-                      key={filter.value.readable}
-                      onClick={() => setDateFilter(filter.value)}
-                    >
+                    <li className={className} key={filter.value.readable} onClick={() => setDateFilter(filter.value)}>
                       {filter.text}
                     </li>
                   )
@@ -329,12 +363,17 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
         </div>
       </div>
 
-      <div className="section">
+      <div className="section" style={{ position: 'relative' }}>
         {(() => {
           if (noResults) return <NoResults />
 
           return view === 'list' ? (
-            <List sessionTimeslots={sessionTimeslots} timeslotOrder={timeslotOrder} sessionsByTime={sessionsByTime} />
+            <List
+              now={now}
+              sessionTimeslots={sessionTimeslots}
+              timeslotOrder={timeslotOrder}
+              sessionsByTime={sessionsByTime}
+            />
           ) : (
             <p>Timeline view goes here</p>
           )

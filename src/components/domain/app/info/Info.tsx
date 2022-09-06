@@ -55,7 +55,15 @@ type InfoProps = {
 export const Info = (props: InfoProps) => {
   return (
     <>
-      <AppNav />
+      <AppNav
+        nested
+        links={[
+          {
+            title: 'Information',
+            to: '/app/info',
+          },
+        ]}
+      />
       <div className="section">
         <CollapsedSection>
           <CollapsedSectionHeader title="FAQ" />

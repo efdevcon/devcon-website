@@ -5,6 +5,12 @@
   display: flex;
   box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
   margin-bottom: $gaps-gap-4;
+  --color-icon: #{$colors-monochrome-8};
+
+  &.favorited {
+    --color-icon: #{$colors-track-red};
+    border: 1px solid $colors-track-red;
+  }
 
   .thumbnail {
     background: #f5f6f6;
@@ -85,24 +91,30 @@
       .letters {
         flex-grow: 0;
         flex-shrink: 0;
-        top: 0px;
+        top: calc(var(--app-nav-upper-height) + 8px);
         position: sticky;
         display: flex;
         flex-direction: column;
+        align-self: flex-start;
 
-        a,
-        .disabled-letter {
+        span {
           position: relative;
           @include fonts-bold;
           @include fonts-sm-fixed;
-          padding-left: $gaps-gap-3;
-          padding-right: $gaps-gap-2;
+          padding-left: 12px;
+          padding-right: 8px;
           color: #bcbfca;
           height: 20px;
           background: transparent;
 
           &.selected {
             color: $colors-main;
+            @include fonts-md-fixed;
+            margin-bottom: 4px;
+          }
+
+          &.disabled-letter {
+            
           }
         }
       }
@@ -120,4 +132,8 @@
       @include fonts-bold;
     }
   }
+}
+
+.foldout-overrides {
+  padding-bottom: 8px;
 }

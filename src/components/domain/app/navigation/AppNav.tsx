@@ -116,7 +116,14 @@ export const AppNav = React.memo((props: NavProps) => {
       <div className={`${props.renderRight ? css['has-right'] : ''} ${css['nav-content']}`}>
         <div className={css['left']}>
           {props.nested ? (
-            <Link to={parentRoute} className={`${css['icon']} icon ${css['nested']}`}>
+            <Link
+              to={parentRoute}
+              // onClick={e => {
+              //   // e.preventDefault()
+              //   router.back()
+              // }}
+              className={`${css['icon']} icon ${css['nested']}`}
+            >
               <IconBack />
             </Link>
           ) : (

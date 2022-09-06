@@ -8,12 +8,17 @@ import { Speaker, Speaker as SpeakerType } from 'types/Speaker'
 import { useSort, SortVariation, Sort } from 'components/common/sort'
 import { NoResults, useFilter } from 'components/common/filter'
 import { AppSearch } from 'components/domain/app/app-search'
+import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import { useAccountContext } from 'context/account-context'
 import Image from 'next/image'
+import Star from 'assets/icons/star.svg'
+import StarFill from 'assets/icons/star-fill.svg'
 import makeBlockie from 'ethereum-blockies-base64'
 import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
 import FuzzySearch from 'fuzzy-search'
+import filterCss from 'components/domain/app/app-filter.module.scss'
+import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 type CardProps = {
   speaker: SpeakerType
@@ -24,7 +29,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
   const isSpeakerFavorited = account?.appState?.speakers?.some(i => i === speaker.id)
 
   const iconProps = {
-    className: css['favorite'],
+    className: `${css['favorite']} icon ${isSpeakerFavorited ? css['favorited'] : ''}`,
     onClick: (e: React.SyntheticEvent) => {
       e.preventDefault()
       if (account) {
@@ -33,8 +38,12 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
     },
   }
 
+  let className = css['speaker-card']
+
+  if (isSpeakerFavorited) className += ` ${css['favorited']}`
+
   return (
-    <Link to={`/app/speakers/${speaker.id}`} className={css['speaker-card']}>
+    <Link to={`/app/speakers/${speaker.id}`} className={className}>
       <>
         <div className={css['thumbnail']}>
           <div className={css['wrapper']}>
@@ -130,6 +139,7 @@ const ListDaySort = (props: ListProps) => {
 }
 
 const ListAlphabeticalSort = (props: ListProps) => {
+  const [selectedLetter, setSelectedLetter] = React.useState('A')
   const alpha = Array.from(Array(26)).map((e, i) => i + 65)
   const alphabet = alpha.map(x => String.fromCharCode(x))
 
@@ -138,14 +148,16 @@ const ListAlphabeticalSort = (props: ListProps) => {
       <div className={css['speakers-letters']}>
         <div className={css['speakers']}>
           {alphabet.map(letter => {
+            if (letter !== selectedLetter) return null
+
             const speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
-            if (speakersByLetter.length === 0) return undefined
+            if (speakersByLetter.length === 0) return null
 
             return (
               <div key={letter} id={`speakers-${letter}`}>
                 <p className="bold">{letter}</p>
                 {speakersByLetter.map(speaker => {
-                  return <SpeakerCard key={speaker.name} speaker={speaker} />
+                  return <SpeakerCard key={speaker.id} speaker={speaker} />
                 })}
               </div>
             )
@@ -155,16 +167,32 @@ const ListAlphabeticalSort = (props: ListProps) => {
         <div className={css['letters']}>
           {alphabet.map(letter => {
             const letterHasSpeakers = props.speakers.some(i => i.name.charAt(0) === letter)
-            if (letterHasSpeakers) {
-              return (
-                <a key={letter} className={`plain ${css['selected']}`} href={`#speakers-${letter}`}>
-                  {letter}
-                </a>
-              )
-            }
+            const selected = letter === selectedLetter
+            let className = `plain`
+
+            if (selected) className += ` ${css['selected']}`
+            // if (!letterHasSpeakers) className += ` ${css['disabled']}`
+            if (!letterHasSpeakers) return null
+
+            // if (letterHasSpeakers) {
+            //   return (
+            //     <a key={letter} className={`plain ${css['selected']}`} /*href={`#speakers-${letter}`}*/>
+            //       {letter}
+            //     </a>
+            //   )
+            // }
 
             return (
-              <span key={letter} className={css['disabled-letter']}>
+              <span
+                key={letter}
+                className={className}
+                style={{ cursor: 'pointer' }}
+                onClick={() => {
+                  if (letterHasSpeakers) {
+                    setSelectedLetter(letter)
+                  }
+                }}
+              >
                 {letter}
               </span>
             )
@@ -176,12 +204,15 @@ const ListAlphabeticalSort = (props: ListProps) => {
 }
 
 export const Speakers = (props: any) => {
-  const trackFilters = props.tracks
+  const { account } = useAccountContext()
   const [search, setSearch] = React.useState('')
+  const [favoritesOnly, setFavoritesOnly] = React.useState(false)
+  const [selectedTracks, setSelectedTracks] = React.useState({} as any)
   const searcher = React.useMemo(
     () => new FuzzySearch(props.speakers, ['name', 'tracks.name', 'description', 'company']),
     [props.speakers]
   )
+  const favoritedSpeakers = account?.appState?.speakers
   const sortState = useSort(
     [],
     [
@@ -207,69 +238,143 @@ export const Speakers = (props: any) => {
 
   const speakersMatchingSearch = search.length > 0 ? searcher.search(search) : props.speakers
 
-  const [speakers, filterState] = useFilter({
-    tags: true,
-    multiSelect: true,
-    filters: trackFilters.map((i: string) => {
-      return {
-        text: i,
-        value: i,
-      }
-    }),
-    filterFunction: (activeFilter: any) => {
-      let filtered = speakersMatchingSearch as SpeakerType[]
+  const speakers = speakersMatchingSearch.filter((speaker: Speaker) => {
+    // Filter by interested
+    if (favoritesOnly) {
+      const favoritedSpeaker = favoritedSpeakers?.find(favoritedSpeaker => favoritedSpeaker === speaker.id)
 
-      if (activeFilter && Object.keys(activeFilter).length > 0) {
-        const filters = Object.keys(activeFilter)
-        filtered = speakersMatchingSearch.filter((i: any) =>
-          i.tracks?.some((x: any) => filters.some(y => x === y) && activeFilter[x])
-        )
-      }
+      if (!favoritedSpeaker) return false
+    }
 
-      if (sortState.sortBy === 0) {
-        filtered =
-          sortState.sortDirection === 'asc'
-            ? filtered.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
-            : filtered.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
-      }
+    const tracks = Object.keys(selectedTracks)
+    const thereAreTracksToFilterBy = tracks.length > 0
 
-      // if (search) {
-      //   const filter = search.toLowerCase()
-      //   filtered = filtered.filter(
-      //     i =>
-      //       i.name.toLowerCase().includes(filter) ||
-      //       i.description?.toLowerCase().includes(filter) ||
-      //       i.company?.toLowerCase().includes(filter) ||
-      //       i.tracks?.some(x => x.toLowerCase().includes(filter))
-      //   )
-      // }
-      return filtered
-    },
+    if (thereAreTracksToFilterBy) {
+      const match = speaker.tracks?.some((track: any) => selectedTracks[track])
+
+      if (!match) return false
+    }
+
+    return true
   })
+
+  const sortedSpeakers =
+    sortState.sortDirection === 'asc'
+      ? speakers.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
+      : speakers.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
 
   const sortedBy = sortState.fields[sortState.sortBy]
   const noResults = speakers.length === 0
 
   return (
     <>
-      <AppNav />
-      <AppSearch
-        search={{
-          placeholder: 'Search speakers...',
-          onChange: setSearch,
+      <AppNav
+        nested
+        links={[
+          {
+            title: 'Speakers',
+            to: '/app/speakers',
+          },
+        ]}
+        renderRight={() => {
+          const starProps = {
+            onClick: () => setFavoritesOnly(!favoritesOnly),
+            style: {
+              cursor: 'pointer',
+            },
+          }
+
+          if (favoritesOnly) {
+            return <StarFill {...starProps} className="icon fill-red" />
+          } else {
+            return <Star {...starProps} />
+          }
         }}
-        sortState={sortState}
-        filterStates={[{ title: 'Track', filterState }]}
       />
+
+      <div className={filterCss['filter']}>
+        <div className="section">
+          <Search placeholder="Find a speaker" value={search} onChange={setSearch} />
+
+          <div className={`${filterCss['foldout']} ${css['foldout-overrides']}`}>
+            <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
+              {(open, setOpen) => {
+                return (
+                  <div className={filterCss['foldout-content']}>
+                    <div className={filterCss['tracks']}>
+                      <Tags
+                        value={selectedTracks}
+                        onChange={nextValue => {
+                          const isAlreadySelected = selectedTracks[nextValue]
+
+                          const nextState = {
+                            ...selectedTracks,
+                          }
+
+                          if (isAlreadySelected) {
+                            delete nextState[nextValue]
+                          } else {
+                            nextState[nextValue] = true
+                          }
+
+                          setSelectedTracks(nextState)
+                        }}
+                        options={props.tracks.map((i: string) => {
+                          return {
+                            text: i,
+                            value: i,
+                          }
+                        })}
+                      />
+                    </div>
+
+                    <div className={filterCss['actions']}>
+                      <button className={`app hover sm thin-borders`} onClick={() => setSelectedTracks({})}>
+                        Reset
+                      </button>
+
+                      <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
+                        Confirm
+                      </button>
+                    </div>
+                  </div>
+                )
+              }}
+            </FilterFoldout>
+
+            <div data-type="right" className={`${filterCss['right']} ${css['tracks']}`}>
+              <div>
+                <p className="font-xs-fixed">Current Filter:</p>
+                <p className={filterCss['filter-indicator']}>
+                  {(() => {
+                    const trackFilters = Object.keys(selectedTracks)
+
+                    if (trackFilters.length === 0) return 'All tracks'
+
+                    return trackFilters.join(', ')
+                  })()}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="border-top">
+            <Sort {...sortState} />
+          </div>
+        </div>
+      </div>
 
       <div className="section">
         {noResults ? (
           <NoResults />
         ) : (
           <>
-            {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={speakers as [SpeakerType]} />}
-            {sortedBy.key === 'tracks' && <ListTrackSort speakers={speakers as [SpeakerType]} tracks={props.tracks} />}
-            {sortedBy.key === 'days' && <ListDaySort speakers={speakers as [SpeakerType]} days={props.eventDays} />}
+            {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={sortedSpeakers as [SpeakerType]} />}
+            {sortedBy.key === 'tracks' && (
+              <ListTrackSort speakers={sortedSpeakers as [SpeakerType]} tracks={props.tracks} />
+            )}
+            {sortedBy.key === 'days' && (
+              <ListDaySort speakers={sortedSpeakers as [SpeakerType]} days={props.eventDays} />
+            )}
           </>
         )}
       </div>
