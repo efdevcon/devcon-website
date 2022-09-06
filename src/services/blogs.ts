@@ -7,7 +7,7 @@ const defaultMaxItems = 6
 export async function GetBlogs(maxItems: number = defaultMaxItems): Promise<Array<BlogPost>> {
     const parser: Parser = new Parser({
         customFields: {
-            item: ['efblog:image', 'description'],
+            item: ['description'],
         },
     })
 
