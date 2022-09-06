@@ -186,6 +186,10 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
       if (!sessionIsSameDay) return false
     }
 
+    if (dateFilter.readable === 'Invalid date') {
+      return false
+    }
+
     return true
   })
 
