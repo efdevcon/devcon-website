@@ -131,7 +131,7 @@ export async function GetFAQ(lang: string = 'en'): Promise<Array<FAQ>> {
         id: fileName.replace('.md', '').toLowerCase(),
         title: doc.data.title,
         body: await markdownUtils.toHtml(doc.content),
-        order: doc.data.order ?? undefined,
+        order: doc.data.order ?? null,
         category: { id: doc.data.category },
       } as FAQ
 

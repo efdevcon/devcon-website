@@ -194,6 +194,9 @@
     "discount_applications_begins_date": "June 6th",
     "discount_applications_ends_date": "August 3rd",
     "discount_applications_review_process": "Ongoing",
+    "join_waitlist": "Join the waitlist",
+    "ongoing": "Ongoing",
+    "shop": "Ticket Shop",
     "note_id_check": "*Note: ID Required at check-in to prevent resale.",
     "raffle_claim": "Claim!",
     "on_sale_now": "On Sale Now!"

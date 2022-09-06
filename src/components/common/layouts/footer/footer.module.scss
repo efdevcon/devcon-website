@@ -391,6 +391,7 @@
 
 .modal-overrides {
   [data-type='modal-content'] {
+    max-height: 80vh;
     width: min(800px, 80vw) !important;
   }
 }

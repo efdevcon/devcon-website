@@ -234,6 +234,7 @@ const Timeline = (props: any) => {
   const placementTracker = createPlacementTracker()
   const [eventModalOpen, setEventModalOpen] = React.useState('')
   const draggableAttributes = useDraggableLink()
+  const devconDates = [moment('2022-10-11'), moment('2022-10-12'), moment('2022-10-13'), moment('2022-10-14')]
 
   // Virtualizing/precomputing the entire grid before rendering it could simplify it greatly...
   // ...but likely not relevant; a new schedule component will be created soon...
@@ -279,6 +280,10 @@ const Timeline = (props: any) => {
         const isOnlyEventOnDay = allEventsOnDay.length === 1
 
         if (isOnlyEventOnDay) {
+          const isDevcon = allEventsOnDay.some((event: any) => event['Stable ID'] === 'Devcon')
+
+          if (isDevcon) return days
+
           if (truncating) {
             days--
 
@@ -395,7 +400,9 @@ const Timeline = (props: any) => {
               while (
                 eventsByDay[counter + index] && // the next day has events
                 eventsByDay[counter + index].length === 1 && // there's only one event the next day
-                currentEvent === eventsByDay[counter + index][0] // next days event is the same as the current event
+                currentEvent === eventsByDay[counter + index][0] && // next days event is the same as the current event
+                !devconDates.some(devconDate => devconDate.isSame(day, 'date'))
+                // !['Oct 11', 'Oct 12', 'Oct 13', 'Oct 14'].includes(date) // No truncation of the devcon event range
               ) {
                 truncatedDays[counter + index] = true
 
@@ -427,12 +434,7 @@ const Timeline = (props: any) => {
             })()
 
             const isDevcon = (() => {
-              const devconDay1 = moment.utc('2022-10-11')
-              const devconDay2 = moment.utc('2022-10-12')
-              const devconDay3 = moment.utc('2022-10-13')
-              const devconDay4 = moment.utc('2022-10-14')
-
-              return [devconDay1, devconDay2, devconDay3, devconDay4].some(devconDay => devconDay.isSame(day, 'date'))
+              return devconDates.some(devconDay => devconDay.isSame(day, 'date'))
             })()
 
             if (isDevcon) className += ` ${css['is-devcon']}`

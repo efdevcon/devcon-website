@@ -17,8 +17,8 @@ export const CallToAction = (props: CTAProps) => {
   const callsToAction = (
     <div className={css['items']}>
       <Link key="1" to="/tickets" allowDrag className={`no-select ${css['item']}`}>
-        <p className="bold">Get Tickets Now —</p>
-        <p className="font-sm">Waves ongoing</p>
+        <p className="bold">Waitlist & Builder Ticket Applications Open —</p>
+        <p className="font-sm">Read more</p>
       </Link>
       <Link to="/dips" key="2" allowDrag className={`no-select ${css['item']}`}>
         <p className="bold">DIPs —</p>

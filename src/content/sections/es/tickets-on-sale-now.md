@@ -1,4 +1,5 @@
 ---
-title: ¡Entradas a la venta ya!
+title: Lista de espera y aplicaciones de descuento abiertas
 ---
-La venta de boletos está actualmente en curso. Dirígete a nuestra página de venta de boletos para obtener más información sobre nuestra cronología de olas.
+
+Las oleadas de venta de boletos han concluido, ¡pero regístrese en nuestra lista de espera o envíe una solicitud para un boleto con descuento!

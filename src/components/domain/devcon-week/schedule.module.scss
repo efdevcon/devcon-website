@@ -443,12 +443,13 @@
 
     &:before {
       content: '';
-      opacity: 0.35;
+      // opacity: 0.35;
       position: absolute;
       width: 100%;
+      z-index: -1;
       height: 100%;
       left: 0px;
-      background: var(--theme-gradient);
+      background: #ffebeb;
     }
   }
 

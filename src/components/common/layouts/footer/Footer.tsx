@@ -31,7 +31,7 @@ const ModalLink = (props: { children: any; title: string }) => {
 
   return (
     <>
-      <Modal className={css['modal-overrides']} open={open} close={() => setOpen(false)}>
+      <Modal className={css['modal-overrides']} unstyled open={open} close={() => setOpen(false)}>
         {props.children}
       </Modal>
       <a

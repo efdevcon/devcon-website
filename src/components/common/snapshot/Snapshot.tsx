@@ -2,8 +2,9 @@ import React from 'react'
 import css from './snapshot.module.scss'
 
 type SnapshotItem = {
+  id?: string | number
   Icon: React.ElementType
-  title: string
+  title: string | React.ReactElement
   left?: string
   right: string | React.ReactElement
 }
@@ -21,7 +22,11 @@ export function Snapshot(props: SnapshotProps) {
       <ul className={css['list']}>
         {props.items.map((item: SnapshotItem) => {
           return (
-            <li data-type="snapshot-item" className={css['list-item']} key={item.title}>
+            <li
+              data-type="snapshot-item"
+              className={css['list-item']}
+              key={typeof item.title === 'string' ? item.title : item.id}
+            >
               <item.Icon />
               <span className={css['label']}>{item.title}</span>
               <span>{item.left}</span>

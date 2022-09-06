@@ -13,6 +13,7 @@ import { Link } from 'components/common/link'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import { FAQ } from 'components/domain/faq'
 import css from './devcon-week.module.scss'
+import { isAfterDate } from './tickets'
 
 export default pageHOC(function DevconWeek(props: any) {
   const intl = useTranslations()
@@ -76,28 +77,80 @@ export default pageHOC(function DevconWeek(props: any) {
               items={[
                 {
                   Icon: () => <></>,
-                  title: '🇦🇷 ETHLatam - Buenos Aires',
+                  id: '1',
+                  title: isAfterDate('2022-08-14') ? <s>🇦🇷 ETHLatam - Buenos Aires</s> : '🇦🇷 ETHLatam - Buenos Aires',
                   right: 'AUG 11-14',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇲🇽 ETHMexicoCity',
+                  title: isAfterDate('2022-08-21') ? <s>🇲🇽 ETHMexicoCity</s> : '🇲🇽 ETHMexicoCity',
                   right: 'AUG 19-21',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇵🇪 ETHLima day',
+                  title: isAfterDate('2022-09-03') ? (
+                    <s>🇵🇪 ETHLima day</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ethereumlima" indicateExternal>
+                      🇵🇪 ETHLima day
+                    </Link>
+                  ),
                   right: 'SEP 3',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇨🇱 ETHSantiago',
-                  right: 'SEP 22-23',
+                  title: isAfterDate('2022-09-11') ? (
+                    <s>🇧🇷 EthereumSãoPaulo</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ethereumbrasil" indicateExternal>
+                      🇧🇷 EthereumSãoPaulo
+                    </Link>
+                  ),
+                  right: 'SEP 9-11',
                 },
                 {
                   Icon: () => <></>,
-                  title: '🇧🇷 EthereumSãoPaulo',
-                  right: 'SEP 27-29',
+                  title: isAfterDate('2022-09-24') ? (
+                    <s>🇨🇱 ETHSantiago</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ethsantiago" indicateExternal>
+                      🇨🇱 ETHSantiago
+                    </Link>
+                  ),
+                  right: 'SEP 23-24',
+                },
+                {
+                  Icon: () => <></>,
+                  title: isAfterDate('2022-10-01') ? (
+                    <s>🇪🇨 ETHQuito Day</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ethereum_ec" indicateExternal>
+                      🇪🇨 ETHQuito Day
+                    </Link>
+                  ),
+                  right: 'SEP 30',
+                },
+                {
+                  Icon: () => <></>,
+                  title: isAfterDate('2022-10-09') ? (
+                    <s>🇨🇴 ETHBogotá</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ETHGlobal" indicateExternal>
+                      🇨🇴 ETHBogotá
+                    </Link>
+                  ),
+                  right: 'OCT 7-9',
+                },
+                {
+                  Icon: () => <></>,
+                  title: isAfterDate('2022-10-10') ? (
+                    <s>🇨🇴 ETHLatam @ Bogotá</s>
+                  ) : (
+                    <Link className="hover-underline" to="https://twitter.com/ethlatam" indicateExternal>
+                      🇨🇴 ETHLatam @ Bogotá
+                    </Link>
+                  ),
+                  right: 'OCT 10',
                 },
               ]}
             />
@@ -124,9 +177,6 @@ export default pageHOC(function DevconWeek(props: any) {
               className="markdown"
               dangerouslySetInnerHTML={{ __html: props.sections['post-devcon-events'].data.left }}
             ></div>
-            {/* <Link to="https://google.com">
-              <Button className="red margin-top">{intl('devcon_week_learn_more')}</Button>
-            </Link> */}
           </div>
           <div className={`right ${css['space-between']}`}>
             <div

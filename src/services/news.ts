@@ -52,7 +52,7 @@ const formatting = (() => {
         date: moment(post.isoDate).valueOf(),
         author: post.author || 'Devcon Team',
         description: post.content,
-        imageUrl: post['efblog:image'] ?? '',
+        imageUrl: post.enclosure ? post.enclosure.url : '',
       }
     },
     formatTweet: (tweet: any): NewsItem => {

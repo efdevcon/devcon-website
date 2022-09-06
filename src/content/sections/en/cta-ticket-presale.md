@@ -3,4 +3,4 @@ title: Discount Ticket Applications
 pages:
   - index
 ---
-Discount Ticket Applications to Devcon VI have closed for this year. Thank you so much for applying & we look forward to seeing you in Bogotá!
+Please refer to our [main ticketing page](https://devcon.org/tickets) for any changes in Discount Ticket Applications.
