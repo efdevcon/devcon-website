@@ -22,7 +22,7 @@ export async function GetBlogs(maxItems: number = defaultMaxItems): Promise<Arra
             body: i['content:encoded'] || i.description,
             slug: slugify(i.title ?? ''),
             permaLink: i.link,
-            imageUrl: i['efblog:image'] ?? '',
+            imageUrl: i.enclosure ? i['enclosure'].url : '',
         } as BlogPost
     })
 
