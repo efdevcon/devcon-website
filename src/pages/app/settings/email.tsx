@@ -23,7 +23,7 @@ export default pageHOC((props: any) => {
 export async function getStaticProps(context: any) {
   return {
     props: {
-      ...(await getGlobalData(context.locale)),
+      ...(await getGlobalData(context.locale, true)),
       blogs: await GetBlogs(),
       page: DEFAULT_APP_PAGE,
     },

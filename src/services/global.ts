@@ -1,12 +1,19 @@
 import { GetNavigationData } from 'services/navigation'
 import { GetLatestNotification } from 'services/notifications'
-import { getMessages } from 'utils/intl'
+import { getMessages, flattenMessages } from 'utils/intl'
 
 export const getGlobalData = async (context: any, isApp?: boolean) => {
-  const intl = await getMessages(context.locale)
+  const intl = await getMessages(context.locale, isApp)
 
   if (isApp) {
-    return {}
+    return {
+      messages: flattenMessages({ 
+        global: {
+          ...intl.global 
+        },
+        readmore: intl.readmore
+      })
+    }
   }
 
   return {

@@ -1,13 +1,9 @@
-import { Info } from 'components/domain/app/info'
 import { AppLayout } from 'components/domain/app/Layout'
 import { Session } from 'components/domain/app/session'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
-import { GetNavigationData } from 'services/navigation'
-import { GetLatestNotification } from 'services/notifications'
 import { GetSessions, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-import { getMessages } from 'utils/intl'
 import { getGlobalData } from 'services/global'
 
 export default pageHOC((props: any) => {
@@ -43,7 +39,7 @@ export async function getStaticProps(context: any) {
 
   return {
     props: {
-      ...(await getGlobalData(context.locale)),
+      ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
       session,
     },

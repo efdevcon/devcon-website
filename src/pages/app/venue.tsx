@@ -20,7 +20,7 @@ export async function getStaticProps(context: any) {
 
   return {
     props: {
-      ...(await getGlobalData(context.locale)),
+      ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
       rooms,
       floors,

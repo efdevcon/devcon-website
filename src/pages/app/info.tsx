@@ -27,7 +27,6 @@ export async function getStaticProps(context: any) {
   return {
     props: {
       messages: globalData.messages,
-      ...(await getGlobalData(context.locale)),
       faqs: await GetCategories(context.locale),
       cityGuideFaqs: await GetFAQ(context.locale),
       sections,

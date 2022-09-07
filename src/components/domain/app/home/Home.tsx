@@ -11,7 +11,6 @@ import { AppNav } from 'components/domain/app/navigation'
 import { useMediaQuery } from 'hooks/useMediaQuery'
 import { TruncateMiddle } from 'utils/formatting'
 
-
 export const Home = () => {
   const router = useRouter()
   const maxWidthTruncate = useMediaQuery(640) // breakpoint-sm
@@ -26,7 +25,7 @@ export const Home = () => {
       onClick: () => {
         router.push('/app/settings')
       },
-    }
+    },
   ]
 
   if (loggedIn && accountContext.account?.addresses[0]) {
@@ -35,7 +34,7 @@ export const Home = () => {
       value: 'Etherscan',
       onClick: () => {
         const url = 'https://etherscan.io/address/' + accountContext.account?.addresses[0]
-        if (window) window.open(url, '_ blank');
+        if (window) window.open(url, '_ blank')
         else router.push(url)
       },
     })
@@ -83,37 +82,33 @@ export const Home = () => {
             </div>
 
             <div className={css['dropdown']}>
-              <DropdownVariationDots
-                value="AccountContext"
-                onChange={() => { }}
-                options={accountContextOptions}
-              />
+              <DropdownVariationDots value="AccountContext" onChange={() => {}} options={accountContextOptions} />
             </div>
           </div>
         )}
 
-        {
-          loggedIn && !!activeAddress && (
-            <div className={css['connection-info']}>
-              <div className={css['wallet']}>
-                <div className={css['circle']}>
-                  <img src={avatar.url} alt={avatar.name} />
-                </div>
+        {loggedIn && !!activeAddress && (
+          <div className={css['connection-info']}>
+            <div className={css['wallet']}>
+              <div className={css['circle']}>
+                <img src={avatar.url} alt={avatar.name} />
+              </div>
 
-                <div className={css['details']}>
-                  {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
-                  {avatar.name && <p className={css['wallet-address']}>
+              <div className={css['details']}>
+                {avatar.connection && <p className={css['network']}>{avatar.connection}</p>}
+                {avatar.name && (
+                  <p className={css['wallet-address']}>
                     {maxWidthTruncate && TruncateMiddle(avatar.name, 8)}
                     {!maxWidthTruncate && avatar.name}
-                  </p>}
-                  {avatar.status && (
-                    <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>
-                  )}
-                </div>
+                  </p>
+                )}
+                {avatar.status && (
+                  <p className={`${css['connection']} ${css[avatar.status.toLowerCase()]}`}>{avatar.status}</p>
+                )}
               </div>
             </div>
-          )
-        }
+          </div>
+        )}
 
         <div className={css['slider-container']}>
           <p className={`${css['header']} font-lg bold`}>

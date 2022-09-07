@@ -1,5 +1,5 @@
 // Allows translations nested in objects for easier management
-function flattenMessages(nestedMessages: any, prefix = '') {
+export function flattenMessages(nestedMessages: any, prefix = '') {
   return Object.keys(nestedMessages).reduce((messages: any, key) => {
     let value = nestedMessages[key]
     let prefixedKey = prefix ? `${prefix}_${key}` : key
@@ -14,14 +14,18 @@ function flattenMessages(nestedMessages: any, prefix = '') {
   }, {})
 }
 
-export async function getMessages(locale: string) {
+export async function getMessages(locale: string, dontFlatten?: boolean) {
   if (locale === 'es') {
     const beforeFlatten = (await import(`../content/i18n/es.json`)).default
+
+    if (dontFlatten) return beforeFlatten;
     
     return flattenMessages(beforeFlatten);
   }
 
   const beforeFlatten = (await import(`../content/i18n/en.json`)).default
+
+  if (dontFlatten) return beforeFlatten;
     
   return flattenMessages(beforeFlatten);
 }

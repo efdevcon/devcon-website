@@ -5,6 +5,7 @@ import { Link } from 'components/common/link'
 import IconSwirl from 'assets/icons/swirl.svg'
 import { useRouter } from 'next/router'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
+// import { useHistory } from '../history-tracker'
 
 export type NavLink = {
   title: string
@@ -99,36 +100,50 @@ const defaultLinks = [
 
 export const AppNav = React.memo((props: NavProps) => {
   const router = useRouter()
+  // const historyDepth = useHistory()
+  // const previousRouteWasInApp = previousRoute?.startsWith('/app')
 
-  const parentRoute = (() => {
-    if (!props.nested) return
+  // const parentRoute = (() => {
+  //   if (!props.nested) return
 
-    const pathname = router.pathname
-    const normalizedPathname = pathname[pathname.length - 1] === '/' ? pathname.slice(0, pathname.length - 1) : pathname
-    const toRemove = normalizedPathname.split('/').pop()
-    const nextPathname = normalizedPathname.replace(toRemove ?? '', '')
+  //   const pathname = router.pathname
+  //   const normalizedPathname = pathname[pathname.length - 1] === '/' ? pathname.slice(0, pathname.length - 1) : pathname
+  //   const toRemove = normalizedPathname.split('/').pop()
+  //   const nextPathname = normalizedPathname.replace(toRemove ?? '', '')
 
-    return nextPathname
-  })()
+  //   return nextPathname
+  // })()
 
   return (
     <div id="inline-nav" className={`${css['container']} section no-overflow`}>
       <div className={`${props.renderRight ? css['has-right'] : ''} ${css['nav-content']}`}>
         <div className={css['left']}>
-          {props.nested ? (
-            <Link
-              to={parentRoute}
-              // onClick={e => {
-              //   // e.preventDefault()
-              //   router.back()
-              // }}
-              className={`${css['icon']} icon ${css['nested']}`}
-            >
+          <IconBack
+            className={`${css['icon']} icon`}
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              router.back()
+            }}
+          />
+
+          {/* {historyDepth > 0 ? (
+            <IconBack
+              className={`${css['icon']} icon`}
+              onClick={() => {
+                router.back()
+              }}
+            />
+          ) : (
+            <IconSwirl className={`${css['icon']} icon`} />
+          )} */}
+
+          {/* {props.nested ? (
+            <Link className={`${css['icon']} icon ${css['nested']}`}>
               <IconBack />
             </Link>
           ) : (
             <IconSwirl className={`${css['icon']} icon`} />
-          )}
+          )} */}
         </div>
 
         <SwipeToScroll scrollIndicatorDirections={{ right: true, left: true }}>
