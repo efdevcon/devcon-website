@@ -21,7 +21,7 @@ export const HistoryTracker = (props: HistoryTrackerProps) => {
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       // console.log(url, 'url')
-      const isBackNavigation = url.includes(prevRoute) // === router.pathname
+      // const isBackNavigation = url.includes(prevRoute) // === router.pathname
 
       // console.log(isBackNavigation, 'is back nav')
 
@@ -33,7 +33,7 @@ export const HistoryTracker = (props: HistoryTrackerProps) => {
         return
       }
 
-      if (isBackNavigation) {
+      if (true /*isBackNavigation*/) {
         setDepth(depth => depth - 1)
       } else {
         setDepth(depth => depth + 1)
