@@ -122,6 +122,7 @@ export function CollapsedSection(props: SectionProps) {
 
   if (props.className) className += ` ${props.className}`
   if (props.indent) className += ` ${css['indent']}`
+  if (props.sticky) className += ` ${css['sticky']}`
 
   return (
     <div className={className}>

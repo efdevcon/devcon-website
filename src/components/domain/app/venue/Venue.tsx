@@ -3,12 +3,17 @@ import { CSS3D } from './css-3d'
 import { AppSearch } from 'components/domain/app/app-search'
 import { useSort, SortVariation, Sort } from 'components/common/sort'
 import { LinkList, Link } from 'components/common/link'
-import { useFilter } from 'components/common/filter'
 import css from './venue.module.scss'
 import ListIcon from 'assets/icons/list.svg'
 import LayersIcon from 'assets/icons/layers.svg'
+import { NoResults } from 'components/common/filter'
 import { Room } from 'types/Room'
 import { AppNav } from 'components/domain/app/navigation'
+import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import filterCss from 'components/domain/app/app-filter.module.scss'
+import Image from 'next/image'
+import Floor from 'assets/images/venue-map/venue-map.png'
+import Panzoom from 'panzoom'
 
 interface Props {
   rooms: Array<Room>
@@ -16,48 +21,31 @@ interface Props {
 }
 
 export const Venue = (props: Props) => {
-  const [listView, setListView] = React.useState()
+  // const [listView, setListView] = React.useState()
   const [search, setSearch] = React.useState('')
-  const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
-  const [sessions, filterState] = useFilter({
-    tags: true,
-    multiSelect: true,
-    filters: trackFilters.map(i => {
-      return {
-        text: i.toString(),
-        value: i.toString(),
-      }
-    }),
-    filterFunction: (activeFilter: any) => {
-      // if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
 
-      // dummySessions.filter(speaker => activeFilter[speaker.title])
-      return []
-    },
-  })
+  // const filteredFloors = props.floors.filter(floor => {
+  //   if (search.toLowerCase().includes(floor.toLowerCase())) return true;
 
-  const sortState = useSort(
-    [],
-    [
-      {
-        title: 'Alphabetical',
-        key: 'name',
-        sort: SortVariation.basic,
+  //   return false;
+  // })
+
+  React.useEffect(() => {
+    const scene = document.getElementById('image-container')
+    const panzoomInstance = Panzoom(scene, {
+      bounds: true,
+      boundsPadding: 0.8,
+      beforeWheel: function (e) {
+        // allow wheel-zoom only if altKey is down. Otherwise - ignore
+        var shouldIgnore = !e.ctrlKey
+        return shouldIgnore
       },
-      {
-        title: 'Floor',
-        key: 'days',
-        sort: SortVariation.basic,
-      },
-      {
-        title: 'Purpose',
-        key: 'tracks',
-        sort: SortVariation.date,
-      },
-    ],
-    false,
-    'desc'
-  )
+    })
+
+    return () => {
+      panzoomInstance.dispose()
+    }
+  }, [])
 
   return (
     <>
@@ -71,39 +59,32 @@ export const Venue = (props: Props) => {
         ]}
       />
 
-      <CSS3D />
+      {/* <CSS3D /> */}
 
-      <AppSearch
-        noResults={sessions.length === 0}
-        search={{
-          placeholder: 'Search venue...',
-          onChange: setSearch,
-        }}
-        actions={
-          <>
-            <button className={`app squared sm thin-borders`} onClick={console.log}>
-              {/* {open ? <IconClose /> : <IconFilter />} */}
-              <ListIcon />
-            </button>
-            <button className={`app squared sm thin-borders`} onClick={console.log}>
-              {/* {open ? <IconClose /> : <IconFilter />} */}
-              <LayersIcon />
-            </button>
-          </>
-        }
-      />
+      <div className={css['panzoom']}>
+        <div className={css['image']} id="image-container">
+          <Image src={Floor} alt="Floor" objectFit="contain" layout="fill" />
+        </div>
+      </div>
 
-      <div className="section">
+      <div className={`${filterCss['filter']} border-top`}>
+        <div className="section clear-bottom-less">
+          <Search placeholder="Search venue" onChange={setSearch} value={search} />
+        </div>
+      </div>
+
+      <div className="section clear-top-less">
+        <h2 className="primary clear-bottom-less">Floors</h2>
         {props.floors.map(floor => {
           const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
           return (
             <React.Fragment key={floor}>
-              <div className={`list-item padded bold ${css['title']}`}>{floor}</div>
-              <LinkList noIndicator>
+              <div className={`padded bold font-md-fixed ${css['floor-header']}`}>{floor}</div>
+              <LinkList>
                 {roomsByFloor.map((room: Room) => {
                   return (
-                    <Link key={room.id} to={`/app/venue/${room.id}`}>
+                    <Link className="font-md font-bold" key={room.id} to={`/app/venue/${room.id}`}>
                       {room.name}
                     </Link>
                   )

@@ -13,7 +13,24 @@
 //   }
 // }
 
-.title {
-  border-bottom: none;
-  border-top: 1px solid $colors-standard-border-color;
+.panzoom {
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  // object-fit: contain;
+  height: min(50vh, 300px);
+  overflow: hidden;
+  position: relative;
+
+  // @media (max-width: $breakpoints-md) {
+  //   img {
+  //     object-fit: cover !important;
+  //   }
+  // }
+}
+
+.floor-header {
+  margin-bottom: 8px;
 }

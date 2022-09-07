@@ -91,6 +91,7 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
 }
 
 // Sync current time periodically to keep time related functionality up to date
+// TODO: MOVE TO GLOBAL CONTEXT
 const useCurrentTime = () => {
   const [currentTime, setCurrentTime] = React.useState<Moment | null>(null)
 

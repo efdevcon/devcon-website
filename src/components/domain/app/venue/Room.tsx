@@ -12,6 +12,11 @@ import { Session as SessionType } from 'types/Session'
 import { Room as RoomType } from 'types/Room'
 import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
+import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import filterCss from 'components/domain/app/app-filter.module.scss'
+import Image from 'next/image'
+import Floor from 'assets/images/venue-map/venue-map-floor-1.jpeg'
+import Panzoom from 'panzoom'
 
 interface Props {
   room: RoomType
@@ -22,47 +27,24 @@ export const Room = (props: Props) => {
   const pastSessions = props.sessions.filter(i => moment(i.start) <= moment.utc())
   const upcomingSessions = props.sessions.filter(i => moment(i.start) >= moment.utc())
   const attendingSessions = props.sessions.slice(0, 1)
-
   const [search, setSearch] = React.useState('')
-  const trackFilters = ['']
-  const [sessions, filterState] = useFilter({
-    tags: true,
-    multiSelect: true,
-    filters: trackFilters.map(i => {
-      return {
-        text: i.toString(),
-        value: i.toString(),
-      }
-    }),
-    filterFunction: (activeFilter: any) => {
-      if (!activeFilter || Object.keys(activeFilter).length === 0) return props.sessions
 
-      return props.sessions.filter(speaker => activeFilter[speaker.title])
-    },
-  })
+  React.useEffect(() => {
+    const scene = document.getElementById('image-container')
+    const panzoomInstance = Panzoom(scene, {
+      bounds: true,
+      boundsPadding: 0.8,
+      beforeWheel: function (e) {
+        // allow wheel-zoom only if altKey is down. Otherwise - ignore
+        var shouldIgnore = !e.ctrlKey
+        return shouldIgnore
+      },
+    })
 
-  const sortState = useSort(
-    [],
-    [
-      {
-        title: 'Alphabetical',
-        key: 'name',
-        sort: SortVariation.basic,
-      },
-      {
-        title: 'Schedule',
-        key: 'days',
-        sort: SortVariation.basic,
-      },
-      {
-        title: 'Tracks',
-        key: 'tracks',
-        sort: SortVariation.date,
-      },
-    ],
-    false,
-    'desc'
-  )
+    return () => {
+      panzoomInstance.dispose()
+    }
+  }, [])
 
   return (
     <>
@@ -75,9 +57,21 @@ export const Room = (props: Props) => {
           },
         ]}
       />
+
+      <div className={filterCss['filter']}>
+        <div className="section clear-bottom-less">
+          <Search placeholder="Search room sessions" onChange={setSearch} value={search} />
+        </div>
+      </div>
+
+      <div className={css['panzoom']}>
+        <div className={css['image']} id="image-container">
+          <Image src={Floor} alt="Floor" objectFit="contain" layout="fill" />
+        </div>
+      </div>
+
       <div className="section">
-        <div className="content">
-          <AppSearch
+        {/* <AppSearch
             noResults={sessions.length === 0}
             search={{
               placeholder: 'Search room sessions...',
@@ -86,66 +80,68 @@ export const Room = (props: Props) => {
             sortState={sortState}
             filterStates={[]}
             className={css['search-section']}
-          />
+          /> */}
 
-          <Gallery className={css['gallery']}>
-            <h1>{props.room.name}</h1>
-            <h1>{props.room.name}</h1>
-          </Gallery>
+        <div className={css['background']}></div>
 
-          <div className={css['room-info']}>
-            <p className="bold">{props.room.description}</p>
-            <p className="h2">{props.room.name}</p>
-            {props.room.capacity && (
-              <div className="label">
-                <CapacityIcon className={`icon ${css['capacity-icon']}`} />
-                <p>Capacity - {props.room.capacity} </p>
-                <InfoIcon />
-              </div>
-            )}
-          </div>
+        {/* <Gallery className={css['gallery']}>
+          <h1>{props.room.name}</h1>
+          <h1>{props.room.name}</h1>
+        </Gallery> */}
 
-          <AppTabsSection
-            className={css['tabs']}
-            title="Sessions"
-            tabs={[
-              {
-                title: 'Past',
-                content: (
-                  <div>
-                    {pastSessions.length > 0 &&
-                      pastSessions.map(i => {
-                        return <SessionCard key={i.id} session={i} />
-                      })}
-                    {pastSessions.length === 0 && <p>No sessions found</p>}
-                  </div>
-                ),
-              },
-              {
-                title: 'Attending',
-                content: (
-                  <div>
-                    {attendingSessions.map(i => {
-                      return <SessionCard key={i.id} session={i} />
-                    })}
-                    {attendingSessions.length === 0 && <p>No sessions found</p>}
-                  </div>
-                ),
-              },
-              {
-                title: 'Upcoming',
-                content: (
-                  <div>
-                    {upcomingSessions.map(i => {
-                      return <SessionCard key={i.id} session={i} />
-                    })}
-                    {upcomingSessions.length === 0 && <p>No sessions found</p>}
-                  </div>
-                ),
-              },
-            ]}
-          />
+        <div className={css['room-info']}>
+          <p className="h2 clear-bottom-less">{props.room.name}</p>
+          <p className="bold clear-bottom-less">{props.room.description}</p>
+          {props.room.capacity && (
+            <div className="label">
+              <CapacityIcon className={`icon ${css['capacity-icon']}`} />
+              <p>Capacity - {props.room.capacity} </p>
+              {/* <InfoIcon /> */}
+            </div>
+          )}
         </div>
+
+        <AppTabsSection
+          className={css['tabs']}
+          title="Sessions"
+          tabs={[
+            {
+              title: 'Upcoming',
+              content: (
+                <div>
+                  {upcomingSessions.map(i => {
+                    return <SessionCard key={i.id} session={i} />
+                  })}
+                  {upcomingSessions.length === 0 && <p>No sessions found</p>}
+                </div>
+              ),
+            },
+
+            {
+              title: 'Attending',
+              content: (
+                <div>
+                  {attendingSessions.map(i => {
+                    return <SessionCard key={i.id} session={i} />
+                  })}
+                  {attendingSessions.length === 0 && <p>No sessions found</p>}
+                </div>
+              ),
+            },
+            {
+              title: 'Past',
+              content: (
+                <div>
+                  {pastSessions.length > 0 &&
+                    pastSessions.map(i => {
+                      return <SessionCard key={i.id} session={i} />
+                    })}
+                  {pastSessions.length === 0 && <p>No sessions found</p>}
+                </div>
+              ),
+            },
+          ]}
+        />
       </div>
     </>
   )
