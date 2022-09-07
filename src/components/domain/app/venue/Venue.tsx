@@ -20,32 +20,37 @@ interface Props {
   floors: Array<string>
 }
 
+export const usePanzoom = () => {
+  React.useEffect(() => {
+    const scene = document.getElementById('image-container')
+    if (scene) {
+      const panzoomInstance = Panzoom(scene, {
+        bounds: true,
+        boundsPadding: 0.8,
+        beforeWheel: function (e) {
+          // allow wheel-zoom only if altKey is down. Otherwise - ignore
+          var shouldIgnore = !e.ctrlKey
+          return shouldIgnore
+        },
+      })
+
+      return () => {
+        panzoomInstance.dispose()
+      }
+    }
+  }, [])
+}
+
 export const Venue = (props: Props) => {
   // const [listView, setListView] = React.useState()
   const [search, setSearch] = React.useState('')
+  usePanzoom()
 
   // const filteredFloors = props.floors.filter(floor => {
   //   if (search.toLowerCase().includes(floor.toLowerCase())) return true;
 
   //   return false;
   // })
-
-  React.useEffect(() => {
-    const scene = document.getElementById('image-container')
-    const panzoomInstance = Panzoom(scene, {
-      bounds: true,
-      boundsPadding: 0.8,
-      beforeWheel: function (e) {
-        // allow wheel-zoom only if altKey is down. Otherwise - ignore
-        var shouldIgnore = !e.ctrlKey
-        return shouldIgnore
-      },
-    })
-
-    return () => {
-      panzoomInstance.dispose()
-    }
-  }, [])
 
   return (
     <>

@@ -17,6 +17,7 @@ import filterCss from 'components/domain/app/app-filter.module.scss'
 import Image from 'next/image'
 import Floor from 'assets/images/venue-map/venue-map-floor-1.jpeg'
 import Panzoom from 'panzoom'
+import { usePanzoom } from './Venue'
 
 interface Props {
   room: RoomType
@@ -28,23 +29,7 @@ export const Room = (props: Props) => {
   const upcomingSessions = props.sessions.filter(i => moment(i.start) >= moment.utc())
   const attendingSessions = props.sessions.slice(0, 1)
   const [search, setSearch] = React.useState('')
-
-  React.useEffect(() => {
-    const scene = document.getElementById('image-container')
-    const panzoomInstance = Panzoom(scene, {
-      bounds: true,
-      boundsPadding: 0.8,
-      beforeWheel: function (e) {
-        // allow wheel-zoom only if altKey is down. Otherwise - ignore
-        var shouldIgnore = !e.ctrlKey
-        return shouldIgnore
-      },
-    })
-
-    return () => {
-      panzoomInstance.dispose()
-    }
-  }, [])
+  usePanzoom()
 
   return (
     <>
