@@ -13,20 +13,65 @@ import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Fil
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import Image from 'next/image'
 import Floor from 'assets/images/venue-map/venue-map.png'
-import Panzoom from 'panzoom'
+import Panzoom, { PanZoom, PanZoomController } from 'panzoom'
+import IconPlus from 'assets/icons/plus.svg'
+import IconMinus from 'assets/icons/minus.svg'
 
 interface Props {
   rooms: Array<Room>
   floors: Array<string>
 }
 
-export const usePanzoom = () => {
-  React.useEffect(() => {
+type ButtonOverlayProps = {
+  children?: React.ReactChild
+  onClick: () => void
+  text?: string
+}
+
+export const PanzoomControls = (props: { pz: PanZoom | null }) => {
+  const onClick = (e: any) => {
+    e.nativeEvent.preventDefault()
+
     const scene = document.getElementById('image-container')
+
+    if (!scene || !props.pz) return
+
+    const rect = scene.getBoundingClientRect()
+    // const cx = rect.x + rect.width / 2
+    // const cy = rect.y + rect.height / 2
+    const cx = scene.offsetLeft + rect.width / 2
+    const cy = scene.offsetTop + rect.height / 2
+    const isZoomIn = e.currentTarget.id === 'zoomIn'
+    const zoomBy = isZoomIn ? 2 : 0.5
+    props.pz.smoothZoom(cx, cy, zoomBy)
+  }
+
+  return (
+    <div className={`${css['container']} section`}>
+      <div className={css['shift-end']}>
+        <div id="zoomIn" onClick={onClick} className={css['content']}>
+          <IconPlus />
+        </div>
+        <div id="zoomOut" onClick={onClick} className={css['content']}>
+          <IconMinus />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export const usePanzoom = () => {
+  const [panzoomInstance, setPanzoomInstance] = React.useState<PanZoom | null>(null)
+
+  React.useEffect(() => {
+    const scene = document.getElementById('venue-image')
+
     if (scene) {
       const panzoomInstance = Panzoom(scene, {
         bounds: true,
-        boundsPadding: 0.8,
+        // boundsPadding: 0.8,
+        // maxZoom: 1,
+        minZoom: 0.5,
         beforeWheel: function (e) {
           // allow wheel-zoom only if altKey is down. Otherwise - ignore
           var shouldIgnore = !e.ctrlKey
@@ -34,17 +79,22 @@ export const usePanzoom = () => {
         },
       })
 
+      setPanzoomInstance(panzoomInstance)
+
       return () => {
+        setPanzoomInstance(null)
         panzoomInstance.dispose()
       }
     }
   }, [])
+
+  return panzoomInstance
 }
 
 export const Venue = (props: Props) => {
   // const [listView, setListView] = React.useState()
   const [search, setSearch] = React.useState('')
-  usePanzoom()
+  const pz = usePanzoom()
 
   // const filteredFloors = props.floors.filter(floor => {
   //   if (search.toLowerCase().includes(floor.toLowerCase())) return true;
@@ -68,8 +118,9 @@ export const Venue = (props: Props) => {
 
       <div className={css['panzoom']}>
         <div className={css['image']} id="image-container">
-          <Image src={Floor} alt="Floor" objectFit="contain" layout="fill" />
+          <Image src={Floor} alt="venue map" layout="raw" id="venue-image" priority />
         </div>
+        <PanzoomControls pz={pz} />
       </div>
 
       <div className={`${filterCss['filter']} border-top`}>

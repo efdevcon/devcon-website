@@ -241,7 +241,7 @@ export async function generateSessions(): Promise<Array<SessionType>> {
 }
 
 export async function generateSpeakers(): Promise<Array<Speaker>> {
-  return speakerData as Speaker[]
+  return speakerData.slice(0, 300) as Speaker[]
 }
 
 export async function generateTracks(): Promise<Array<string>> {

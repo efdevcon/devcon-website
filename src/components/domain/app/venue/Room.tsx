@@ -16,8 +16,8 @@ import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Fil
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import Image from 'next/image'
 import Floor from 'assets/images/venue-map/venue-map-floor-1.jpeg'
-import Panzoom from 'panzoom'
-import { usePanzoom } from './Venue'
+import { usePanzoom, PanzoomControls } from './Venue'
+import venueCss from './venue.module.scss'
 
 interface Props {
   room: RoomType
@@ -29,7 +29,7 @@ export const Room = (props: Props) => {
   const upcomingSessions = props.sessions.filter(i => moment(i.start) >= moment.utc())
   const attendingSessions = props.sessions.slice(0, 1)
   const [search, setSearch] = React.useState('')
-  usePanzoom()
+  const pz = usePanzoom()
 
   return (
     <>
@@ -43,19 +43,20 @@ export const Room = (props: Props) => {
         ]}
       />
 
-      <div className={filterCss['filter']}>
+      <div className={venueCss['panzoom']}>
+        <div className={venueCss['image']} id="image-container">
+          <Image src={Floor} alt="venue map" layout="raw" id="venue-image" priority />
+        </div>
+        <PanzoomControls pz={pz} />
+      </div>
+
+      <div className={`${filterCss['filter']} border-top`}>
         <div className="section clear-bottom-less">
           <Search placeholder="Search room sessions" onChange={setSearch} value={search} />
         </div>
       </div>
 
-      <div className={css['panzoom']}>
-        <div className={css['image']} id="image-container">
-          <Image src={Floor} alt="Floor" objectFit="contain" layout="fill" />
-        </div>
-      </div>
-
-      <div className="section">
+      <div className="section padding-top-less">
         {/* <AppSearch
             noResults={sessions.length === 0}
             search={{
