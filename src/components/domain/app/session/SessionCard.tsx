@@ -11,6 +11,7 @@ import { Session } from 'types/Session'
 import { useAccountContext } from 'context/account-context'
 import moment from 'moment'
 import { Link } from 'components/common/link'
+import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'
 
 type CardProps = {
   session: Session
@@ -43,19 +44,8 @@ export const SessionCard = (props: CardProps) => {
 
   if (props.compact) thumbnailClassName += ` ${css['compact']}`
 
-  switch ('UX & Design' as string) {
-    case 'Security':
-      thumbnailClassName += ` ${css['security']}`
-
-      break
-
-    case 'UX & Design':
-    default:
-      thumbnailClassName += ` ${css['ux-design']}`
-  }
-
   return (
-    <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track}>
+    <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track} track={props.session.track}>
       <div className={css['details']}>
         <div className={css['top']}>
           <Link to={`/app/schedule/${props.session.id}`} className={css['title']}>

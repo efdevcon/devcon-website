@@ -246,15 +246,16 @@ export async function generateSpeakers(): Promise<Array<Speaker>> {
 
 export async function generateTracks(): Promise<Array<string>> {
   return [
+    'Layer 1 Protocol',
+    'Layer 2s',
     'Developer Infrastructure',
-    'Privacy',
-    'Consensus & Coordination',
-    'Scaling & Interoperability',
-    'Consensus Layer',
-    'Execution Layer',
+    'Governance & Coordination',
     'UX & Design',
+    'Staking & Validator Experience',
     'Security',
-    'Opportunity & Impact',
+    'ZKPs: Privacy, Identity, Infrastructure, & More',
+    'Opportunity & Global Impact',
+    'Cryptoeconomics'
   ].sort()
 }
 

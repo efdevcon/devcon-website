@@ -54,6 +54,19 @@
       @include fonts-xs-fixed;
       line-height: 1.1em;
     }
+
+    .twitter {
+      display: flex;
+      margin-top: 4px;
+      align-items: center;
+      @include fonts-bold;
+
+      svg {
+        margin-right: 4px;
+        font-size: 1.4em;
+        --color-icon: #1DA1F2;
+      }
+    }
   }
 
   .icon {

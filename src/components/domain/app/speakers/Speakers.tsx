@@ -18,6 +18,7 @@ import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
 import FuzzySearch from 'fuzzy-search'
 import filterCss from 'components/domain/app/app-filter.module.scss'
+import IconTwitter from 'assets/icons/twitter.svg'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 type CardProps = {
@@ -60,6 +61,12 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
           <p className={css['name']}>{speaker.name}</p>
           <p className={css['role']}>{speaker.role}</p>
           <p className={css['company']}>{speaker.company}</p>
+          {speaker.twitter && (
+            <Link className={css['twitter']} to={`https://twitter.com/${speaker.twitter}`}>
+              <IconTwitter />
+              {`${speaker.twitter.split('twitter.com/').pop()}`}
+            </Link>
+          )}
         </div>
 
         {account && (

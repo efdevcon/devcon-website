@@ -32,17 +32,84 @@ const settings = {
   mobileFirst: true,
 }
 
-function getTrackImage(id: string) {
-  if (id === 'layer-1') return <Layer1 />
-  if (id === 'layer-2s') return <Layer2 />
-  if (id === 'developer-infrastructure') return <DeveloperInfra />
-  if (id === 'governance-coordination') return <Governance />
-  if (id === 'ux-design') return <UXDesign />
-  if (id === 'staking-validator-experience') return <Staking />
-  if (id === 'security') return <Security />
-  if (id === 'zkps') return <ZKPs />
-  if (id === 'opportunity-global-impact') return <GlobalImpact />
-  if (id === 'cryptoeconomics') return <Cryptoeconomics />
+export const getTrackID = (trackName?: string) => {
+  let trackID
+
+  switch (trackName) {
+    case 'Layer 1 Protocol': {
+      trackID = 'layer-1'
+
+      break
+    }
+
+    case 'Layer 2s': {
+      trackID = 'layer-2s'
+
+      break
+    }
+
+    case 'Governance & Coordination': {
+      trackID = 'governance-coordination'
+
+      break
+    }
+
+    case 'Developer Infrastructure': {
+      trackID = 'developer-infrastructure'
+
+      break
+    }
+
+    case 'Staking & Validator Experience': {
+      trackID = 'staking-validator-experience'
+
+      break
+    }
+
+    case 'ZKPs: Privacy, Identity, Infrastructure, & More': {
+      trackID = 'zkps'
+
+      break
+    }
+
+    case 'Security': {
+      trackID = 'security'
+
+      break
+    }
+
+    case 'Opportunity & Global Impact': {
+      trackID = 'opportunity-global-impact'
+
+      break
+    }
+
+    case 'Cryptoeconomics': {
+      trackID = 'cryptoeconomics'
+
+      break
+    }
+
+    case 'UX & Design':
+      trackID = 'ux-design'
+
+      break
+  }
+
+  return trackID
+}
+
+export function getTrackImage(id?: string, className?: string) {
+  if (id === 'layer-1') return <Layer1 className={className} />
+  if (id === 'layer-2s') return <Layer2 className={className} />
+  if (id === 'developer-infrastructure') return <DeveloperInfra className={className} />
+  if (id === 'governance-coordination') return <Governance className={className} />
+  if (id === 'ux-design') return <UXDesign className={className} />
+  if (id === 'staking-validator-experience') return <Staking className={className} />
+  if (id === 'security') return <Security className={className} />
+  if (id === 'zkps') return <ZKPs className={className} />
+  if (id === 'opportunity-global-impact') return <GlobalImpact className={className} />
+  if (id === 'cryptoeconomics') return <Cryptoeconomics className={className} />
 
   return null
 }

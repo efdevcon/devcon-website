@@ -11,18 +11,6 @@
   position: relative;
   border: 1px solid $colors-standard-border-color;
 
-  &.ux-design {
-    [data-type='thumbnail-block-image'] {
-      background: $colors-ef-pink;
-    }
-  }
-
-  &.security {
-    [data-type='thumbnail-block-image'] {
-      background: $colors-ef-blue;
-    }
-  }
-
   // &.compact {
   //   [data-type='thumbnail-block-image'] {
   //     display: none;

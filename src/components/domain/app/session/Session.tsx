@@ -23,19 +23,18 @@ import { useAccountContext } from 'context/account-context'
 import { AppNav } from 'components/domain/app/navigation'
 import Share from 'assets/icons/share.svg'
 import IconCalendar from 'assets/icons/calendar.svg'
+import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'
 
 const Hero = (props: any) => {
   let className = css['hero']
+  const trackID = getTrackID(props.track)
 
   if (props.className) className += ` ${props.className}`
+  if (trackID) className += ` ${css[trackID]}`
 
   return (
     <div className={className}>
-      {props.icon && (
-        <div className={css['background-icon']}>
-          <IconSecurity />
-        </div>
-      )}
+      <div className={css['background-icon']}>{getTrackImage(trackID)}</div>
       {props.children}
     </div>
   )
@@ -84,7 +83,7 @@ export const Session = (props: SessionProps) => {
         )}
       />
 
-      <Hero icon={IconSecurity} className={css['session-hero']}>
+      <Hero track={props.session.track} className={css['session-hero']}>
         <div className="section">
           <div className={css['container']}>
             <div className={css['info-line']}>

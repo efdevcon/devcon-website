@@ -5,6 +5,62 @@
   position: relative;
   margin-bottom: 16px;
 
+  .thumbnail-svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.layer-1 {
+    [data-type="thumbnail-block-image"] {
+      background: #E6F0FF;
+    }
+  }
+  &.layer-2s {
+    [data-type="thumbnail-block-image"] {
+      background:  #E4FAFF;
+    }
+  }
+  &.developer-infrastructure {
+    [data-type="thumbnail-block-image"] {
+      background: #F6F2FF;
+    }
+  }
+  &.governance-coordination {
+    [data-type="thumbnail-block-image"] {
+      background:  #F9FFDF;
+    }
+  }
+  &.ux-design {
+    [data-type="thumbnail-block-image"] {
+      background: #FFF4F4;
+    }
+  }
+  &.staking-validator-experience {
+    [data-type="thumbnail-block-image"] {
+      background: #FCF4FF;
+    }
+  }
+  &.security {
+    [data-type="thumbnail-block-image"] {
+      background: #E4FFFD;
+    }
+  }
+  &.zkps {
+    [data-type="thumbnail-block-image"] {
+      background: #F2FFFA;
+    }
+  }
+  &.opportunity-global-impact {
+    [data-type="thumbnail-block-image"] {
+      background: #FFFBF4;
+    }
+  }
+  &.cryptoeconomics {
+    [data-type="thumbnail-block-image"] {
+      background: #FFFEF4;
+    }
+  }
+
   &.with-subtext {
     .thumbnail-container {
       justify-content: space-between;
@@ -13,6 +69,7 @@
   }
 
   .thumbnail-container {
+    border-right: 1px solid $colors-standard-border-color;
     padding: 12px 8px;
     padding-bottom: 8px;
 
@@ -20,7 +77,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 80px;
+    width: 88px;
     flex-shrink: 0;
 
     img {

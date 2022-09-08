@@ -20,7 +20,36 @@
 }
 
 .session-hero {
-  background: $colors-ef-blue;
+  &.layer-1 {
+      background: #E6F0FF;
+  }
+  &.layer-2s {
+      background:  #E4FAFF;
+  }
+  &.developer-infrastructure {
+      background: #F6F2FF;
+  }
+  &.governance-coordination {
+      background:  #F9FFDF;
+  }
+  &.ux-design {
+      background: #FFF4F4;
+  }
+  &.staking-validator-experience {
+      background: #FCF4FF;
+  }
+  &.security {
+      background: #E4FFFD;
+  }
+  &.zkps {
+      background: #F2FFFA;
+  }
+  &.opportunity-global-impact {
+      background: #FFFBF4;
+  }
+  &.cryptoeconomics {
+      background: #FFFEF4;
+  }
 
   .container {
     position: relative;

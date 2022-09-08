@@ -6,34 +6,36 @@ import { Session, SessionCard } from '../session'
 import { SliderStickyNotes } from 'components/common/slider/SliderVariations'
 import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
 import Image from 'next/image'
-import image1 from 'assets/images/side-events-hero.png'
-import image2 from 'assets/images/neo-matrix.png'
+import HighlightChivas from 'assets/images/highlight-chivas-sound.png'
+import HighlightHackerBasement from 'assets/images/highlight-hacker-basement.png'
+import HighlightCommunityHubs from 'assets/images/highlight-hub.png'
 import { AppNav } from 'components/domain/app/navigation'
 import { Card } from 'components/common/card'
 import { Slider, useSlider } from 'components/common/slider'
 
 const galleryEvents = [
   {
-    title: 'Continuous Devcon',
+    title: 'Continuous Devcon - Hacker Basement',
     description:
       'Be sure to visit the Cyber Basement to experience the truly immersive co-working space. Kept open late into the night to accomodate your needs.',
-    image: image1,
+    url: 'https://devcon.org/continuous-devcon/#hacker-basement',
+    image: HighlightHackerBasement,
   },
   {
-    title: 'Continuous Devcon 2',
-    description: 'Kept open late into the night to accomodate your needs.',
-    image: image2,
-  },
-  {
-    title: 'Continuous Devcon 3',
+    title: 'Community Hubs',
     description:
-      'Be sure to visit the Cyber Basement to experience the truly immersive co-working space. Kept open late into the night to accomodate your needs.',
-    image: image1,
+      'Want to engage and learn about the core communities that make Ethereum and Devcon the truly special place that it is? Be sure to find the community hubs on Floor 1.',
+    // TODO: Update URL
+    url: 'https://devcon.org/continuous-devcon/#hacker-basement',
+    image: HighlightCommunityHubs,
   },
   {
-    title: 'Continuous Devcon 4',
-    description: 'Kept open late into the night to accomodate your needs.',
-    image: image2,
+    title: 'CHIVAS Sound Stage',
+    description:
+      'Brought an instrument, or just musically inclined? come jam with the community at the traditional CHIVAS sound stage.',
+    // TODO: Update URL
+    url: 'https://devcon.org/continuous-devcon/#hacker-basement',
+    image: HighlightChivas,
   },
 ]
 
@@ -87,9 +89,9 @@ export const Dashboard = (props: any) => {
                     key={event.title}
                     title={event.title}
                     description={event.description}
-                    imageUrl={image1}
+                    imageUrl={event.image}
                     expandLink
-                    // linkUrl={blog.permaLink} // Linking to blog domain temporarily until blog page is done (static-phase)
+                    linkUrl={event.url} // Linking to blog domain temporarily until blog page is done (static-phase)
                     // metadata={[moment(blog.date).format('ll'), blog.author]}
                     allowDrag
                   />
