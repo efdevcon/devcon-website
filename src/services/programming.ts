@@ -3,16 +3,16 @@ import { Room } from 'types/Room'
 import { Session as SessionType } from 'types/Session'
 import { defaultSlugify } from 'utils/formatting'
 import moment from 'moment'
-import fs from 'fs'
+import { GetTracks as GetContentTracks } from 'services/page'
 import speakerData from '../content/speakers-data.json'
 
 require('dotenv').config()
 
 const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
-const eventName = 'devcon-vi-2022' // 'devcon-vi-2022' // 'pwa-data'
+const eventName = 'pwa-data' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
-const test = false // process.env.NODE_ENV !== 'production'
+const test = process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
@@ -21,7 +21,6 @@ const expertiseQuestionId = 40
 const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
 
-console.log('Fetching Programming data for event', eventName, 'NODE_ENV', process.env.NODE_ENV)
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)
   
@@ -246,17 +245,19 @@ export async function generateSpeakers(): Promise<Array<Speaker>> {
 }
 
 export async function generateTracks(): Promise<Array<string>> {
-  return [
-    'Developer Infrastructure',
-    'Privacy',
-    'Consensus & Coordination',
-    'Scaling & Interoperability',
-    'Consensus Layer',
-    'Execution Layer',
-    'UX & Design',
-    'Security',
-    'Opportunity & Impact',
-  ].sort()
+  return GetContentTracks().map(i => i.title)
+
+  // return [
+  //   'Developer Infrastructure',
+  //   'Privacy',
+  //   'Consensus & Coordination',
+  //   'Scaling & Interoperability',
+  //   'Consensus Layer',
+  //   'Execution Layer',
+  //   'UX & Design',
+  //   'Security',
+  //   'Opportunity & Impact',
+  // ].sort()
 }
 
 export async function generateEventDays(): Promise<Array<number>> {
