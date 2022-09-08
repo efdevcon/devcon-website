@@ -129,7 +129,7 @@ export const Info = (props: InfoProps) => {
             <p className="font-md-fixed bold">City Guide</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <CityGuideContent {...props} faqs={props.cityGuideFaqs} />
+            <CityGuideContent {...props} faqs={props.cityGuideFaqs} insideApp />
           </CollapsedSectionContent>
         </CollapsedSection>
 

@@ -32,10 +32,12 @@ export const CityGuideContent = (props: any) => {
   return (
     <>
       <div className="two-columns clear-bottom" id="location">
-        <div className="left section-markdown">
-          <h2 className="spaced">{props.page.title}</h2>
-          <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
-        </div>
+        {!props.insideApp && (
+          <div className="left section-markdown">
+            <h2 className="spaced">{props.page.title}</h2>
+            <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
+          </div>
+        )}
 
         <div className="right">
           <Snapshot
