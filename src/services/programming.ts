@@ -3,7 +3,7 @@ import { Room } from 'types/Room'
 import { Session as SessionType } from 'types/Session'
 import { defaultSlugify } from 'utils/formatting'
 import moment from 'moment'
-import fs from 'fs'
+import { GetTracks as GetContentTracks } from 'services/page'
 import speakerData from '../content/speakers-data.json'
 
 require('dotenv').config()
@@ -257,6 +257,7 @@ export async function generateTracks(): Promise<Array<string>> {
     'Opportunity & Global Impact',
     'Cryptoeconomics'
   ].sort()
+  // return GetContentTracks().map(i => i.title)
 }
 
 export async function generateEventDays(): Promise<Array<number>> {
