@@ -21,6 +21,7 @@ const expertiseQuestionId = 40
 const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
 
+console.log('Fetching Programming data for event', eventName, 'NODE_ENV', process.env.NODE_ENV)
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)
   
