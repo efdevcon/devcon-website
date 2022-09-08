@@ -65,28 +65,36 @@ export const Info = (props: InfoProps) => {
         ]}
       />
       <div className="section">
-        <CollapsedSection>
-          <CollapsedSectionHeader title="FAQ" />
+        <CollapsedSection className={css['no-border']}>
+          <CollapsedSectionHeader className="border-bottom">
+            <p className="font-md-fixed bold">FAQ</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <div className={css['faq']}>
               {props.faqs.map(({ questions, title }) => {
                 return (
-                  <CollapsedSection key={title}>
-                    <CollapsedSectionHeader className={css['subheader']} title={title} />
+                  <CollapsedSection key={title} className={css['no-border']}>
+                    <CollapsedSectionHeader className={`${css['subheader']} border-bottom`}>
+                      <p className="font-sm-fixed bold">{title}</p>
+                    </CollapsedSectionHeader>
                     <CollapsedSectionContent>
-                      {questions.map(({ body, title }) => {
-                        return (
-                          <CollapsedSection key={title}>
-                            <CollapsedSectionHeader className={`${css['subheader']} bold`} title={title} />
-                            <CollapsedSectionContent>
-                              <div
-                                className="markdown font-sm clear-bottom"
-                                dangerouslySetInnerHTML={{ __html: body }}
-                              />
-                            </CollapsedSectionContent>
-                          </CollapsedSection>
-                        )
-                      })}
+                      <div className={css['faq-inner']}>
+                        {questions.map(({ body, title }) => {
+                          return (
+                            <CollapsedSection key={title}>
+                              <CollapsedSectionHeader className={`${css['subheader']}`}>
+                                <p className="font-sm bold">{title}</p>
+                              </CollapsedSectionHeader>
+                              <CollapsedSectionContent>
+                                <div
+                                  className="markdown font-sm clear-bottom-less"
+                                  dangerouslySetInnerHTML={{ __html: body }}
+                                />
+                              </CollapsedSectionContent>
+                            </CollapsedSection>
+                          )
+                        })}
+                      </div>
                     </CollapsedSectionContent>
                   </CollapsedSection>
                 )
@@ -95,7 +103,9 @@ export const Info = (props: InfoProps) => {
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Registration / Check-in Info" />
+          <CollapsedSectionHeader>
+            <p className="font-md-fixed bold">Registration / Check-in Info</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <p>
               Machine learning is being adopted more and more broadly in technology. Such success is largely due to a
@@ -115,38 +125,50 @@ export const Info = (props: InfoProps) => {
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="City Guide" />
+          <CollapsedSectionHeader>
+            <p className="font-md-fixed bold">City Guide</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <CityGuideContent {...props} faqs={props.cityGuideFaqs} />
           </CollapsedSectionContent>
         </CollapsedSection>
 
         <CollapsedSection>
-          <CollapsedSectionHeader title="Health and Safety Guides" />
+          <CollapsedSectionHeader>
+            <p className="font-md-fixed bold">Health and Safety Guides</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p className="clear-bottom">Nothing here</p>
+            <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Venue Guide" />
+          <CollapsedSectionHeader>
+            <p className="font-md-fixed bold">Venue Guide</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p className="clear-bottom">Nothing here</p>
+            <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Local Guides" />
+          <CollapsedSectionHeader>
+            <p className="font-md-fixed bold">Local Guides</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p className="clear-bottom">Nothing here</p>
+            <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Food & Drink" />
+          <CollapsedSectionHeader>
+            <p className="font-md-fixed bold">Food & Drink</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p className="clear-bottom">Nothing here</p>
+            <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Provide Feedback" />
+          <CollapsedSectionHeader>
+            <p className="font-md-fixed bold">Provide Feedback</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <ProvideFeedbackForm />
           </CollapsedSectionContent>

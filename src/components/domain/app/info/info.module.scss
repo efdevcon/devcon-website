@@ -1,12 +1,12 @@
 @use 'assets/css/partials/index' as *;
 
-.faq {
+.faq, .faq-inner {
   // h4 {
   //   margin-top: $gaps-gap-4;
   //   padding-bottom: $gaps-gap-2;
   //   border-bottom: 1px solid $colors-standard-border-color;
   // }
-
+    margin-left: 0.5em;
 }
 
 .links {
@@ -25,4 +25,8 @@
   button {
     // width: 100%;
   }
+}
+
+.no-border {
+  border-bottom: none !important;
 }
