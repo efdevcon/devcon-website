@@ -33,8 +33,6 @@ export function GetAppNotifications(): Array<Notification> {
     } as Notification
   })
 
-  console.log(notifications, 'notifications')
-
   return notifications //.filter(i => i && i.active) as Array<Notification>
 }
 
