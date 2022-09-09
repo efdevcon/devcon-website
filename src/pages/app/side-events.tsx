@@ -5,6 +5,7 @@ import React from 'react'
 import { GetSessions, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import getNotionDatabase from 'components/domain/devcon-week/getNotionDatabase'
 
 export default pageHOC((props: any) => {
   return (
@@ -19,8 +20,9 @@ export async function getStaticProps(context: any) {
     props: {
       ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
-      sessions: await GetSessions(),
-      speakers: await GetSpeakers(),
+      // sessions: await GetSessions(),
+      scheduleData: await getNotionDatabase(context.locale || 'en', 'cc11ba1c0daa40359710c0958da7739c'),
+      // speakers: await GetSpeakers(),
     },
   }
 }

@@ -14,13 +14,14 @@ import SwipeToScroll from 'components/common/swipe-to-scroll'
 import FuzzySearch from 'fuzzy-search'
 import { useAccountContext } from 'context/account-context'
 import filterCss from 'components/domain/app/app-filter.module.scss'
+import { useAppContext } from 'context/app-context'
 
 type Timeslot = {
   time: number
   sessions: Session[]
 }
 
-type Date = {
+export type Date = {
   readable: string
   moment?: Moment
 }
@@ -90,37 +91,15 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   return { sessionsByTime, sessionTimeslots, timeslotOrder, dates }
 }
 
-// Sync current time periodically to keep time related functionality up to date
-// TODO: MOVE TO GLOBAL CONTEXT
-const useCurrentTime = () => {
-  const [currentTime, setCurrentTime] = React.useState<Moment | null>(null)
-
-  React.useEffect(() => {
-    const now = process.env.NODE_ENV === 'development' ? moment.utc('2022-10-12') : moment.utc()
-
-    const syncTime = () => setCurrentTime(now)
-
-    const clear = setInterval(() => {
-      syncTime()
-    }, 1000 * 60)
-
-    syncTime()
-
-    return () => clearInterval(clear)
-  }, [])
-
-  return currentTime
-}
-
 export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: any) => {
   const { account } = useAccountContext()
+  const { now } = useAppContext()
   const [search, setSearch] = React.useState('')
   const [view, setView] = React.useState('list')
   const [basicFilter, setBasicFilter] = React.useState('all')
   const [favoritesOnly, setFavoritesOnly] = React.useState(false)
   const [selectedTracks, setSelectedTracks] = React.useState({} as any)
   const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
-  const now = useCurrentTime()
 
   const eventDates = React.useMemo(() => {
     const dates = []

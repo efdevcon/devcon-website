@@ -2,62 +2,87 @@ import React from 'react'
 import css from './side-events.module.scss'
 import { Link, LinkList } from 'components/common/link'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
-import { AppSearch } from 'components/domain/app/app-search'
-import { useSort, SortVariation } from 'components/common/sort'
-import { useFilter } from 'components/common/filter'
-import { SessionCard } from 'components/domain/app/session'
+import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import { SideEventCard, SideEvent } from './SideEventCard'
 import LogoImage from 'assets/images/test-asset.svg'
 import Image from 'next/image'
 import imageBogota from 'assets/images/bogota-city.png'
 import { AppNav } from 'components/domain/app/navigation'
+import filterCss from 'components/domain/app/app-filter.module.scss'
+import offdevcon from 'assets/images/off-devcon.png'
+import { Date, normalizeDate } from '../schedule/Schedule'
+import { List } from '../schedule/views/List'
+import { useAppContext } from 'context/app-context'
+import moment from 'moment'
 
-const dummySessions = [
-  { id: '1', title: 'Test session' },
-  { id: '2', title: 'Test session 2' },
-  { id: '3', title: 'Test session 3' },
-]
+/*
+export interface Session {
+  id: string
+  speakers: Speaker[]
+  title: string
+  track: string
+  duration: number
+  start: number
+  end: number
+  startTimeAsMoment?: Moment
+  endTimeAsMoment?: Moment
+  day?: string
+  date?: string
+  dayOfWeek?: string
+  room?: Room
+  type?: string
+  description?: string
+  abstract?: string
+  expertise?: string
+  image?: string
+  resources?: string[]
+  tags?: string[]
+}
 
-export const SideEvents = (props: any) => {
-  const [search, setSearch] = React.useState('')
-  const trackFilters = ['Test session', 'Test session 2', 'Test session 3']
-  const [sessions, filterState] = useFilter({
-    tags: true,
-    multiSelect: true,
-    filters: trackFilters.map(i => {
-      return {
-        text: i.toString(),
-        value: i.toString(),
+*/
+
+const getDates = (sideEvents: SideEvent[]): Date[] => {
+  const dates = {} as { [key: Date['readable']]: Date }
+  const order = [] as Date['readable'][]
+
+  sideEvents.forEach(sideEvent => {
+    const startDate = moment.utc(sideEvent.start)
+    const normalizedDate = normalizeDate(startDate)
+
+    if (!dates[normalizedDate]) {
+      dates[normalizedDate] = {
+        readable: normalizedDate,
+        moment: startDate,
       }
-    }),
-    filterFunction: (activeFilter: any) => {
-      if (!activeFilter || Object.keys(activeFilter).length === 0) return dummySessions
-
-      return dummySessions.filter(speaker => activeFilter[speaker.title])
-    },
+      order.push(normalizedDate)
+    }
   })
 
-  const sortState = useSort(
-    [],
-    [
-      {
-        title: 'Alphabetical',
-        key: 'name',
-        sort: SortVariation.basic,
-      },
-      {
-        title: 'Schedule',
-        key: 'days',
-        sort: SortVariation.basic,
-      },
-      {
-        title: 'Tracks',
-        key: 'tracks',
-        sort: SortVariation.date,
-      },
-    ],
-    false,
-    'desc'
-  )
+  return order.map(date => dates[date])
+}
+
+export const SideEvents = (props: any) => {
+  const [openDays, setOpenDays] = React.useState({} as any)
+  const [search, setSearch] = React.useState('')
+  const { now } = useAppContext()
+
+  const sideEvents: SideEvent[] = props.scheduleData.map((event: any) => {
+    return {
+      id: event['Name'],
+      title: event['Name'],
+      start: event['Date'].startDate,
+      end: event['Date'].endDate,
+      location: event['Where'],
+      capacity: event['Capacity'],
+      image: event['Cover image'] && event['Cover image'][0] && event['Cover image'][0].file.url,
+    }
+  })
+
+  const dates = getDates(sideEvents)
+
+  const filteredSideEvents = sideEvents.filter(sideEvent => {
+    return sideEvent.title.toLowerCase().includes(search.toLowerCase())
+  })
 
   return (
     <>
@@ -99,7 +124,7 @@ export const SideEvents = (props: any) => {
           <div className={css['curator']}>
             <div className={css['title']}>
               <p className="bold">Curated by:</p>
-              <h3 className="bold">OFFDevcon</h3>
+              <Image src={offdevcon} alt={'OffDevcon logo'} />
             </div>
             <div className={`${css['submit-event']} label neutral bold`}>Submit Event</div>
           </div>
@@ -108,32 +133,81 @@ export const SideEvents = (props: any) => {
             <CollapsedSectionHeader title="Additional Resources" />
             <CollapsedSectionContent>
               <LinkList>
-                <Link to="https://devcon.org">EF Ecosystem Support Program</Link>
-                <Link to="https://devcon.org">Grantee Roundup August 2021</Link>
-                <Link to="https://devcon.org">Grantee Roundup July 2021</Link>
+                {/* TODO: Add event links here */}
+                <Link to="https://devcon.org">Bogota Blockchain Week</Link>
+                <Link to="https://devcon.org">Googlesheets Event List</Link>
+                <Link to="https://devcon.org">Ethereum Jesus Bogota Eventlist</Link>
               </LinkList>
             </CollapsedSectionContent>
           </CollapsedSection>
         </div>
       </div>
 
-      <AppSearch
-        noResults={sessions.length === 0}
-        search={{
-          placeholder: 'Search side events...',
-          onChange: setSearch,
-        }}
-        sortState={sortState}
-        filterStates={[
-          { title: 'Test', filterState },
-          { title: 'Test', filterState },
-          { title: 'Test', filterState },
-        ]}
-        className={css['search-section']}
-      />
-      <div className="section">
-        {sessions.map(session => {
-          return <SessionCard key={session.id} session={props.sessions[0]} />
+      <div className={filterCss['filter']}>
+        <div className={`section ${css['search']}`}>
+          <Search
+            placeholder="Find an event"
+            value={search}
+            onChange={value => {
+              setSearch(value)
+
+              const openState = {} as any
+
+              dates.forEach(date => {
+                openState[date.readable] = true
+              })
+
+              setOpenDays(openState)
+            }}
+          />
+        </div>
+      </div>
+
+      <div className="section margin-top-less">
+        {dates.map(date => {
+          const dayIsNow = now && now.isSame(date.moment, 'day')
+          const eventsForDay = filteredSideEvents.filter(
+            sideEvent => date.moment && date.moment.isSame(moment.utc(sideEvent.start), 'day')
+          )
+
+          if (eventsForDay.length === 0) return null
+
+          return (
+            <CollapsedSection
+              sticky
+              key={date.readable}
+              open={openDays[date.readable]}
+              setOpen={() => {
+                const isOpen = openDays[date.readable]
+
+                const nextOpenState = {
+                  ...openDays,
+                  [date.readable]: true,
+                }
+
+                if (isOpen) {
+                  delete nextOpenState[date.readable]
+                }
+
+                setOpenDays(nextOpenState)
+              }}
+            >
+              <div className={css['anchor']} id={date.readable}></div>
+              <CollapsedSectionHeader className={css['day-header']}>
+                <p className="font-md-fixed bold">
+                  {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
+                  <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
+                </p>
+              </CollapsedSectionHeader>
+              <CollapsedSectionContent dontAnimate>
+                <div className="clear-top-less clear-left-less">
+                  {eventsForDay.map(sideEvent => {
+                    return <SideEventCard key={sideEvent.id} event={sideEvent} />
+                  })}
+                </div>
+              </CollapsedSectionContent>
+            </CollapsedSection>
+          )
         })}
       </div>
     </>

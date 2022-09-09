@@ -95,7 +95,7 @@ export const List = (props: ListProps) => {
       })}
 
       <ButtonOverlay
-        text="Now"
+        text="Today"
         onClick={() => {
           const nowElement = document.getElementById(`${normalizedNow}`)
 

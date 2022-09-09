@@ -53,6 +53,15 @@ const notionDatabasePropertyResolver = (property: any, key: any) => {
     case 'select':
       return property.select && property.select.name
 
+    case 'number': 
+      return property.number;
+
+    case 'files':
+      return property.files;
+
+    case 'url':
+      return property.url;
+
     default:
       return 'default value no handler for: ' + property.type
   }
@@ -96,46 +105,66 @@ const formatResult = (language: 'en' | 'es') => (result: any) => {
   return properties
 }
 
-const getNotionDatabase = async (locale: 'en' | 'es') => {
+const getNotionDatabase = async (locale: 'en' | 'es', databaseID = '517164deb17b42c8a00a62e775ce24af') => {
   const notion = new Client({
     auth: process.env.NOTION_SECRET,
   })
 
   // const databaseID = '8b177855e75b4964bb9f3622437f04f5' // Devconnect
-  const databaseID = '517164deb17b42c8a00a62e775ce24af' // Devcon week
+  // const databaseID = '517164deb17b42c8a00a62e775ce24af' // Devcon week
+
+  const isDevconWeek = databaseID === '517164deb17b42c8a00a62e775ce24af'
+  const isColombiaBlockhainWeek = databaseID === 'cc11ba1c0daa40359710c0958da7739c'
 
   let data = {}
 
   try {
+    const sorts: any = [
+      {
+        property: 'Date',
+        direction: 'ascending',
+      },
+    ]
+
+    const filter: any = {
+      and: [
+        {
+          property: 'Date',
+          date: {
+            is_not_empty: true,
+          },
+        },
+      ]
+    }
+
+    if (isColombiaBlockhainWeek) {
+      filter.and.push({
+        property: 'Approved?',
+        checkbox: {
+          equals: true,
+        },
+      })
+    }
+
+    if (isDevconWeek) {
+      sorts.push(        {
+        property: 'Priority (0=high,10=low)',
+        direction: 'descending',
+      })
+
+      filter.and.push({
+        property: 'Live',
+        checkbox: {
+          equals: true,
+        },
+      })
+    }
+
     // Notion returns up to 100 results per request. We won't have that many events, but if we ever get close, add support for pagination at this step.
     const response = await notion.databases.query({
       database_id: databaseID,
-      sorts: [
-        {
-          property: 'Date',
-          direction: 'ascending',
-        },
-        {
-          property: 'Priority (0=high,10=low)',
-          direction: 'descending',
-        },
-      ],
-      filter: {
-        and: [
-          {
-            property: 'Date',
-            date: {
-              is_not_empty: true,
-            },
-          },
-          {
-            property: 'Live',
-            checkbox: {
-              equals: true,
-            },
-          },
-        ],
-      },
+      sorts,
+      filter
     })
 
     data = response.results.map(formatResult(locale))

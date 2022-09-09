@@ -58,3 +58,13 @@
 .search-section {
   margin-bottom: $gaps-gap-4;
 }
+
+.search {
+  padding-bottom: 12px;
+}
+
+.header-today-indicator {
+  @include fonts-xs-fixed;
+  margin-left: 12px;
+  color: $colors-track-red;
+}
