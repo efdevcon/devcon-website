@@ -12,6 +12,7 @@ import HighlightCommunityHubs from 'assets/images/highlight-hub.png'
 import { AppNav } from 'components/domain/app/navigation'
 import { Card } from 'components/common/card'
 import { Slider, useSlider } from 'components/common/slider'
+import { usePageContext } from 'context/page-context'
 
 const galleryEvents = [
   {
@@ -42,6 +43,7 @@ const galleryEvents = [
 export const Dashboard = (props: any) => {
   const [openNotifications, setOpenNotifications] = React.useState(true)
   const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(true)
+  const pageContext = usePageContext()
 
   const sliderSettings = {
     infinite: false,
@@ -101,16 +103,18 @@ export const Dashboard = (props: any) => {
           </div>
         </div>
 
-        <CollapsedSection
-          className={css['latest-notification']}
-          open={openNotifications}
-          setOpen={() => setOpenNotifications(!openNotifications)}
-        >
-          <CollapsedSectionHeader title="Latest Notification" />
-          <CollapsedSectionContent>
-            <NotificationCard />
-          </CollapsedSectionContent>
-        </CollapsedSection>
+        {pageContext?.appNotifications[0] && (
+          <CollapsedSection
+            className={css['latest-notification']}
+            open={openNotifications}
+            setOpen={() => setOpenNotifications(!openNotifications)}
+          >
+            <CollapsedSectionHeader title="Latest Notification" />
+            <CollapsedSectionContent>
+              <NotificationCard notification={pageContext?.appNotifications[0]} />
+            </CollapsedSectionContent>
+          </CollapsedSection>
+        )}
 
         <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
           <CollapsedSectionHeader title="Upcoming Sessions" />
@@ -122,14 +126,14 @@ export const Dashboard = (props: any) => {
         <CollapsedSection>
           <CollapsedSectionHeader title="Schedule Overview" />
           <CollapsedSectionContent>
-            <NotificationCard />
+            <SessionCard session={props.sessions[0]} />
           </CollapsedSectionContent>
         </CollapsedSection>
 
         <CollapsedSection>
           <CollapsedSectionHeader title="Suggested Sessions" />
           <CollapsedSectionContent>
-            <NotificationCard />
+            <SessionCard session={props.sessions[0]} />
           </CollapsedSectionContent>
         </CollapsedSection>
 
@@ -200,7 +204,7 @@ export const Dashboard = (props: any) => {
         <CollapsedSection>
           <CollapsedSectionHeader title="Side Events" />
           <CollapsedSectionContent>
-            <NotificationCard />
+            <SessionCard session={props.sessions[0]} />
           </CollapsedSectionContent>
         </CollapsedSection>
       </div>

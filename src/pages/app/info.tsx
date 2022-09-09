@@ -17,6 +17,7 @@ export default pageHOC((props: any) => {
 
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
+  const globalAppData = await getGlobalData(context, true)
   // const pageFAQ = await GetPage('/faq', context.locale)
   // const pageBogota = await GetPage('/bogota', context.locale)
   const sections = await GetContentSections(
@@ -26,6 +27,7 @@ export async function getStaticProps(context: any) {
 
   return {
     props: {
+      ...globalAppData,
       messages: globalData.messages,
       faqs: await GetCategories(context.locale),
       cityGuideFaqs: await GetFAQ(context.locale),
