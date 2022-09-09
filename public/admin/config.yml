@@ -207,6 +207,35 @@ collections:
         }
       - { label: 'Active', name: 'active', widget: 'boolean', default: true, i18n: duplicate }
 
+  - name: 'app-notification'
+    label: 'App Notifications'
+    create: true
+    label_singular: 'App Notification'
+    folder: 'src/content/app-notifications'
+    fields:
+      - { name: 'title', label: 'Title', widget: 'string', required: true }
+      - { name: 'body', label: 'Body', widget: 'markdown', required: true }
+      - {
+          label: 'Date (UTC)',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'YYYY-MM-DD',
+          time_format: 'THH:mm:ss',
+          format: 'YYYY-MM-DDTHH:mm:ss',
+          picker_utc: true,
+          required: true,
+        }
+      - { name: 'url', label: 'URL', widget: 'string', required: false }
+      - { name: 'label', Label: 'Label', widget: 'string', required: false }
+      - {
+          name: 'labelType',
+          Label: 'Label Type',
+          widget: 'select',
+          options: ['neutral', 'success', 'error'],
+          required: false,
+          i18n: 'duplicate',
+        }
+
   - name: 'news'
     label: 'News'
     label_singular: 'News item'

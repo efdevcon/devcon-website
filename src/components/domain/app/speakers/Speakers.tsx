@@ -62,7 +62,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
           <p className={css['role']}>{speaker.role}</p>
           <p className={css['company']}>{speaker.company}</p>
           {speaker.twitter && (
-            <Link className={css['twitter']} to={`https://twitter.com/${speaker.twitter}`}>
+            <Link className={`${css['twitter']}`} to={`https://twitter.com/${speaker.twitter}`}>
               <IconTwitter />
               {`${speaker.twitter.split('twitter.com/').pop()}`}
             </Link>
@@ -284,6 +284,8 @@ export const Speakers = (props: any) => {
           },
         ]}
         renderRight={() => {
+          if (!account) return null
+
           const starProps = {
             onClick: () => setFavoritesOnly(!favoritesOnly),
             style: {

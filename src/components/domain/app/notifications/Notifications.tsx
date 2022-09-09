@@ -1,10 +1,13 @@
 import React from 'react'
 import { PushNotification } from 'types/PushNotification'
 import { ThumbnailBlock } from 'components/common/thumbnail-block'
-import IconCalendar from 'assets/icons/schedule-plus.svg'
 import IconCheck from 'assets/icons/check_circle.svg'
 import css from './notifications.module.scss'
-import { useFilter, Filter } from 'components/common/filter'
+// import { useFilter, Filter } from 'components/common/filter'
+import { usePageContext } from 'context/page-context'
+// import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import moment from 'moment'
+// import notifications from 'pages/app/notifications'
 
 // Copied from the web-push documentation
 // const urlBase64ToUint8Array = (base64String: string) => {
@@ -250,66 +253,75 @@ const filters = [
 ]
 
 export const NotificationCard = (props: any) => {
+  const [seen, setSeen] = React.useState<boolean>(false)
+
+  React.useLayoutEffect(() => {
+    const seen = window.localStorage.getItem(`notification-seen-${props.notification.id}`)
+
+    setSeen(seen === 'yes')
+
+    window.localStorage.setItem(`notification-seen-${props.notification.id}`, 'yes')
+  }, [props.notification.id])
+
+  let className = css['notification-block']
+
+  if (!seen) className += ` ${css['highlight']}`
+
+  const notification = props.notification
+  const dateAsMoment = moment.utc(notification.date)
+
   return (
-    <ThumbnailBlock className={css['notification-block']}>
+    <ThumbnailBlock key={notification.id} className={className} onMouseEnter={() => setSeen(true)}>
       <div className={css['top']}>
         <div className={css['time']}>
-          <p>05/12/2022</p>
-          <p>8:50 AM</p>
+          <p>{dateAsMoment.format('MM/DD/YY')}</p>
+          <p>{dateAsMoment.format('HH:mm A')}</p>
+          {/* TODO: Why the fook doesn't this work? */}
+          {/* <p>{dateAsMoment.from(moment.utc())}</p> */}
         </div>
 
-        {true ? <IconCheck /> : <IconCalendar />}
+        {seen ? <IconCheck /> : <div className="label sm error bold">New</div>}
       </div>
       <div className={css['details']}>
-        <p className={`bold ${css['title']}`}> Keynote Delayed</p>
-        <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
+        <p className={`bold ${css['title']}`}>{notification.title}</p>
+        <p>{notification.body}</p>
       </div>
-      <div className={css['labels']}>
-        <div className="label sm bold">Devcon</div>
-        <div className="label sm bold">Travel</div>
-      </div>
+      {notification.label && (
+        <div className={css['labels']}>
+          <div className={`label sm bold ${notification.labelType}`}>{notification.label}</div>
+        </div>
+      )}
     </ThumbnailBlock>
   )
 }
 
 export const Notifications = (props: any) => {
-  const [currentFilter, setCurrentFilter] = React.useState('all')
-
-  const [filteredNotifcations, filterState] = useFilter({
-    basic: true,
-    filters: [
-      {
-        value: 'all',
-        text: 'All',
-        count: 4,
-      },
-      {
-        value: 'new',
-        text: 'New',
-        count: 4,
-      },
-      // {
-      //   value: 'health-safety',
-      //   text: 'Health & Safety',
-      //   count: 4,
-      // },
-      {
-        value: 'archived',
-        text: 'Archived',
-      },
-    ],
-    filterFunction: (activeFilter: any) => {
-      return []
-    },
-  })
+  const pageContext = usePageContext()
+  // const [basicFilter, setBasicFilter] = React.useState('all')
 
   return (
     <div>
-      <Filter {...filterState} />
+      <h2 className="font-lg-fixed clear-bottom-less">Notifications</h2>
 
-      <NotificationCard />
-      <NotificationCard />
-      <NotificationCard />
+      {/* <Basic
+        className={css['filter']}
+        value={basicFilter}
+        onChange={setBasicFilter}
+        options={[
+          {
+            text: 'All',
+            value: 'all',
+          },
+          {
+            text: 'New',
+            value: 'new',
+          },
+        ]}
+      /> */}
+
+      {pageContext?.appNotifications.map(notification => {
+        return <NotificationCard key={notification.id} notification={notification} />
+      })}
     </div>
   )
 }

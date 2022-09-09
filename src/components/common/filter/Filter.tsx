@@ -256,10 +256,15 @@ type BasicProps = {
   options: Filter['options']
   value: Filter['value']
   onChange: Filter['onChange']
+  className?: string
 }
 export const Basic = (props: BasicProps) => {
+  let className = css['basic']
+
+  if (props.className) className += ` ${props.className}`
+
   return (
-    <div className={css['basic']}>
+    <div className={className}>
       {props.options.map(option => {
         const selected = props.value === option.value
 

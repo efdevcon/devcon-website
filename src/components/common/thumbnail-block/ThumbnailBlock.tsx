@@ -11,6 +11,7 @@ type ThumbnailBlock = {
   thumbnail?: any
   thumbnailAlt?: string
   thumbnailSubtext?: string
+  onMouseEnter?: any
 }
 
 export const ThumbnailBlock = (props: ThumbnailBlock) => {

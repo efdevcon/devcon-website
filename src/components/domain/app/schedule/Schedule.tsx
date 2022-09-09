@@ -191,6 +191,8 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
           },
         ]}
         renderRight={() => {
+          if (!account) return null
+
           const starProps = {
             onClick: () => setFavoritesOnly(!favoritesOnly),
             style: {

@@ -7,6 +7,18 @@
   margin-bottom: $gaps-gap-4;
   --color-icon: #{$colors-monochrome-8};
 
+  &:hover {
+    outline: 1px solid $colors-standard-border-color;
+
+
+  }
+
+  .name, .twitter {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &.favorited {
     --color-icon: #{$colors-track-red};
     border: 1px solid $colors-track-red;
@@ -62,7 +74,7 @@
       @include fonts-bold;
 
       svg {
-        margin-right: 4px;
+        margin-right: 6px;
         font-size: 1.4em;
         --color-icon: #1DA1F2;
       }

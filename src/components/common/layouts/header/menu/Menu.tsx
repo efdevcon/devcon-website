@@ -113,6 +113,21 @@ export const Menu = (props: any) => {
   ]
 
   if (props.isApp) {
+    const notifications = context?.appNotifications
+
+    const countUnreadNotifications =
+      typeof window !== 'undefined'
+        ? (() => {
+            return (
+              notifications?.filter(notification => {
+                const seen = window.localStorage.getItem(`notification-seen-${notification.id}`)
+
+                return !seen
+              }).length || 0
+            )
+          })()
+        : 0
+
     buttons = [
       {
         key: 'notifications',
@@ -122,7 +137,7 @@ export const Menu = (props: any) => {
         icon: (
           <div className={css['app-notifications']}>
             <BellIcon />
-            <div className={css['counter']}>3</div>
+            {countUnreadNotifications > 0 && <div className={css['counter']}>{countUnreadNotifications}</div>}
           </div>
         ),
         onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
