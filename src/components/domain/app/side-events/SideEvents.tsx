@@ -14,6 +14,7 @@ import { Date, normalizeDate } from '../schedule/Schedule'
 import { List } from '../schedule/views/List'
 import { useAppContext } from 'context/app-context'
 import moment from 'moment'
+import { NoResults } from 'components/common/filter'
 
 /*
 export interface Session {
@@ -162,53 +163,56 @@ export const SideEvents = (props: any) => {
           />
         </div>
       </div>
-
       <div className="section margin-top-less">
-        {dates.map(date => {
-          const dayIsNow = now && now.isSame(date.moment, 'day')
-          const eventsForDay = filteredSideEvents.filter(
-            sideEvent => date.moment && date.moment.isSame(moment.utc(sideEvent.start), 'day')
-          )
+        {filteredSideEvents.length === 0 ? (
+          <NoResults />
+        ) : (
+          dates.map(date => {
+            const dayIsNow = now && now.isSame(date.moment, 'day')
+            const eventsForDay = filteredSideEvents.filter(
+              sideEvent => date.moment && date.moment.isSame(moment.utc(sideEvent.start), 'day')
+            )
 
-          if (eventsForDay.length === 0) return null
+            if (eventsForDay.length === 0) return null
 
-          return (
-            <CollapsedSection
-              sticky
-              key={date.readable}
-              open={openDays[date.readable]}
-              setOpen={() => {
-                const isOpen = openDays[date.readable]
+            return (
+              <CollapsedSection
+                sticky
+                key={date.readable}
+                open={openDays[date.readable]}
+                setOpen={() => {
+                  const isOpen = openDays[date.readable]
 
-                const nextOpenState = {
-                  ...openDays,
-                  [date.readable]: true,
-                }
+                  const nextOpenState = {
+                    ...openDays,
+                    [date.readable]: true,
+                  }
 
-                if (isOpen) {
-                  delete nextOpenState[date.readable]
-                }
+                  if (isOpen) {
+                    delete nextOpenState[date.readable]
+                  }
 
-                setOpenDays(nextOpenState)
-              }}
-            >
-              <div className={css['anchor']} id={date.readable}></div>
-              <CollapsedSectionHeader className={css['day-header']}>
-                <p className="font-md-fixed bold">
-                  {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
-                  <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
-                </p>
-              </CollapsedSectionHeader>
-              <CollapsedSectionContent dontAnimate>
-                <div className="clear-top-less clear-left-less">
-                  {eventsForDay.map(sideEvent => {
-                    return <SideEventCard key={sideEvent.id} event={sideEvent} />
-                  })}
-                </div>
-              </CollapsedSectionContent>
-            </CollapsedSection>
-          )
-        })}
+                  setOpenDays(nextOpenState)
+                }}
+              >
+                <div className={css['anchor']} id={date.readable}></div>
+                <CollapsedSectionHeader className={css['day-header']}>
+                  <p className="font-md-fixed bold">
+                    {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
+                    <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
+                  </p>
+                </CollapsedSectionHeader>
+                <CollapsedSectionContent dontAnimate>
+                  <div className="clear-top-less clear-left-less">
+                    {eventsForDay.map(sideEvent => {
+                      return <SideEventCard key={sideEvent.id} event={sideEvent} />
+                    })}
+                  </div>
+                </CollapsedSectionContent>
+              </CollapsedSection>
+            )
+          })
+        )}
       </div>
     </>
   )

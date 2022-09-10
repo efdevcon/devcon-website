@@ -7,6 +7,7 @@ import css from './notifications.module.scss'
 import { usePageContext } from 'context/page-context'
 // import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import moment from 'moment'
+import { Button } from 'components/common/button'
 // import notifications from 'pages/app/notifications'
 
 // Copied from the web-push documentation
@@ -252,15 +253,22 @@ const filters = [
   },
 ]
 
-export const NotificationCard = (props: any) => {
-  const [seen, setSeen] = React.useState<boolean>(false)
+export const NotificationCard = React.forwardRef((props: any, ref: any) => {
+  const [seen, setSeen] = React.useState<boolean>(true)
+
+  React.useImperativeHandle(ref, () => ({
+    seen,
+    markAsSeen: () => {
+      setSeen(true)
+
+      window.localStorage.setItem(`notification-seen-${props.notification.id}`, 'yes')
+    },
+  }))
 
   React.useLayoutEffect(() => {
     const seen = window.localStorage.getItem(`notification-seen-${props.notification.id}`)
 
     setSeen(seen === 'yes')
-
-    window.localStorage.setItem(`notification-seen-${props.notification.id}`, 'yes')
   }, [props.notification.id])
 
   let className = css['notification-block']
@@ -293,15 +301,30 @@ export const NotificationCard = (props: any) => {
       )}
     </ThumbnailBlock>
   )
-}
+})
 
 export const Notifications = (props: any) => {
   const pageContext = usePageContext()
+  const notificationRefs = React.createRef<any>()
   // const [basicFilter, setBasicFilter] = React.useState('all')
+
+  React.useEffect(() => {
+    // Object.values(notificationRefs.current).forEach(console.log)
+  }, [])
 
   return (
     <div>
-      <h2 className="font-lg-fixed clear-bottom-less">Notifications</h2>
+      <div className={css['header']}>
+        <h2 className="font-lg-fixed">Notifications</h2>
+        <Button
+          className="red sm"
+          onClick={() => {
+            Object.values(notificationRefs.current).forEach(console.log)
+          }}
+        >
+          Mark all as read
+        </Button>
+      </div>
 
       {/* <Basic
         className={css['filter']}
@@ -320,7 +343,13 @@ export const Notifications = (props: any) => {
       /> */}
 
       {pageContext?.appNotifications.map(notification => {
-        return <NotificationCard key={notification.id} notification={notification} />
+        return (
+          <NotificationCard
+            key={notification.id}
+            notification={notification}
+            // ref={(ref: any) => (notificationRefs.current[notification.id] = ref)}
+          />
+        )
       })}
     </div>
   )

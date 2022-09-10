@@ -56,7 +56,7 @@
     .title {
       @include fonts-bold;
       @include fonts-sm-fixed;
-      // margin-bottom: $gaps-gap-2;
+      display: block;
       padding-right: $gaps-gap-8;
     }
 

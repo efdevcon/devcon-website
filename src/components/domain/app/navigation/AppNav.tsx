@@ -93,6 +93,10 @@ const defaultLinks = [
     to: '/app/venue',
   },
   {
+    title: 'Info',
+    to: '/app/info',
+  },
+  {
     title: 'Side Events',
     to: '/app/side-events',
   },

@@ -155,7 +155,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
       <div className={css['speakers-letters']}>
         <div className={css['speakers']}>
           {alphabet.map(letter => {
-            if (letter !== selectedLetter) return null
+            // if (letter !== selectedLetter) return null
 
             const speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
             if (speakersByLetter.length === 0) return null

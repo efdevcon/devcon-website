@@ -106,7 +106,7 @@ export const CollapsedSectionContent = (props: any) => {
 
   let className = css['content']
 
-  // if (props.className) className += ` ${props.className}`
+  if (props.className) className += ` ${props.className}`
 
   return (
     <div ref={ref} className={className} style={{ '--contentHeight': contentHeight } as any}>

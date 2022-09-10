@@ -105,3 +105,11 @@
 .filter {
   margin-top: 0px !important;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  @include fonts-bold;
+}

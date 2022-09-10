@@ -85,7 +85,7 @@ export const Info = (props: InfoProps) => {
                               <CollapsedSectionHeader className={`${css['subheader']}`}>
                                 <p className="font-sm bold">{title}</p>
                               </CollapsedSectionHeader>
-                              <CollapsedSectionContent>
+                              <CollapsedSectionContent className={css['faq-inner-content']}>
                                 <div
                                   className="markdown font-sm clear-bottom-less"
                                   dangerouslySetInnerHTML={{ __html: body }}
