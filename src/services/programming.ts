@@ -14,7 +14,7 @@ const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'pwa-data' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
-const test = process.env.NODE_ENV !== 'production'
+const test = false // process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
@@ -62,9 +62,10 @@ export async function GetSessions(): Promise<Array<SessionType>> {
       expertise: expertise ?? null,
       // image?: string
       // resources?: string[]
-      tags: tagsAnswer.includes(',') ?
+      tags: tagsAnswer ? tagsAnswer.includes(',') ?
         tagsAnswer.split(',').map(i => i.replace(/['"]+/g, '').trim()) :
-        tagsAnswer.split(' ').map(i => i.replace(/['"]+/g, '').trim()),
+        tagsAnswer.split(' ').map(i => i.replace(/['"]+/g, '').trim()) :
+        []
     }
   })
 
