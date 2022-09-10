@@ -14,7 +14,7 @@ const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'pwa-data' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
-const test = false // process.env.NODE_ENV !== 'production'
+const test = true // process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
@@ -33,12 +33,17 @@ export async function GetEvent(): Promise<any> {
 export async function GetSessions(): Promise<Array<SessionType>> {
   if (test) return await generateSessions()
 
-  const talks = await exhaustResource(`/events/${eventName}/talks`)
+  const talks = await exhaustResource(`/events/${eventName}/talks`) // /submissions 
   const rooms = await GetRooms()
 
   const sessions = talks.map((i: any) => {
     const expertise = i.answers.find((i: any) => i.question.id === expertiseQuestionId)?.answer as string
     const tagsAnswer = i.answers.find((i: any) => i.question.id === tagsQuestionId)?.answer as string
+
+    // const d = Math.floor(Math.random() * 4) + 11
+    // const h = Math.floor(Math.random() * 9) + 10
+    // const start = new Date(`2022-10-${d}T${h}:00:00`).getTime()
+    // const end = new Date(`2022-10-${d}T${h + 1}:00:00`).getTime()
 
     return {
       id: i.code,
@@ -47,7 +52,7 @@ export async function GetSessions(): Promise<Array<SessionType>> {
           id: x.code,
           name: x.name,
           description: x.biography,
-          avatar: x.avatar,
+          avatar: x.avatar ?? '',
         }
       }),
       title: i.title,
@@ -70,9 +75,9 @@ export async function GetSessions(): Promise<Array<SessionType>> {
   })
 
   // fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
-  //     if (err) {
-  //         console.log(err)
-  //     }
+  //   if (err) {
+  //     console.log(err)
+  //   }
   // })
 
   return sessions
@@ -123,7 +128,7 @@ export async function GetRooms(): Promise<Array<Room>> {
       id: i.name?.en ? defaultSlugify(i.name?.en) : String(i.id),
       name: i.name?.en ?? '',
       description: i.description?.en ?? '',
-      info: i.speaker_info?.en ?? null,
+      info: i.speaker_info?.en ?? '',
       capacity: i.capacity,
     }
   })
@@ -215,7 +220,7 @@ async function get(slug: string) {
 
 // TEST DATA
 export async function generateSessions(): Promise<Array<SessionType>> {
-  return sessionData
+  return sessionData as SessionType[]
 
   const key = 'TEST:sessions'
   if (cache.has(key)) return cache.get(key)
