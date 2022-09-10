@@ -4,7 +4,9 @@ import { Session as SessionType } from 'types/Session'
 import { defaultSlugify } from 'utils/formatting'
 import moment from 'moment'
 import { GetTracks as GetContentTracks } from 'services/page'
+import sessionData from '../content/session-data.json'
 import speakerData from '../content/speakers-data.json'
+// import fs from 'fs'
 
 require('dotenv').config()
 
@@ -12,29 +14,37 @@ const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'pwa-data' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
-const test = process.env.NODE_ENV !== 'production'
+const test = true // process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
 const expertiseQuestionId = 40
+const tagsQuestionId = 42
 
 const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
 
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)
-  
+
   return event;
 }
 
 export async function GetSessions(): Promise<Array<SessionType>> {
   if (test) return await generateSessions()
 
-  const talks = await exhaustResource(`/events/${eventName}/talks`)
+  const talks = await exhaustResource(`/events/${eventName}/talks`) // /submissions 
   const rooms = await GetRooms()
 
-  return talks.map((i: any) => {
-    const expertise = i.answers.find((i: any) => i.question.id === expertiseQuestionId)?.answer
+  const sessions = talks.map((i: any) => {
+    const expertise = i.answers.find((i: any) => i.question.id === expertiseQuestionId)?.answer as string
+    const tagsAnswer = i.answers.find((i: any) => i.question.id === tagsQuestionId)?.answer as string
+
+    // const d = Math.floor(Math.random() * 4) + 11
+    // const h = Math.floor(Math.random() * 9) + 10
+    // const start = new Date(`2022-10-${d}T${h}:00:00`).getTime()
+    // const end = new Date(`2022-10-${d}T${h + 1}:00:00`).getTime()
+
     return {
       id: i.code,
       speakers: i.speakers.map((x: any) => {
@@ -42,7 +52,7 @@ export async function GetSessions(): Promise<Array<SessionType>> {
           id: x.code,
           name: x.name,
           description: x.biography,
-          avatar: x.avatar,
+          avatar: x.avatar ?? '',
         }
       }),
       title: i.title,
@@ -57,9 +67,20 @@ export async function GetSessions(): Promise<Array<SessionType>> {
       expertise: expertise ?? null,
       // image?: string
       // resources?: string[]
-      tags: [],
+      tags: tagsAnswer ? tagsAnswer.includes(',') ?
+        tagsAnswer.split(',').map(i => i.replace(/['"]+/g, '').trim()) :
+        tagsAnswer.split(' ').map(i => i.replace(/['"]+/g, '').trim()) :
+        []
     }
   })
+
+  // fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
+  //   if (err) {
+  //     console.log(err)
+  //   }
+  // })
+
+  return sessions
 }
 
 export async function GetSessionsByTrack(id: string): Promise<Array<SessionType>> {
@@ -107,7 +128,7 @@ export async function GetRooms(): Promise<Array<Room>> {
       id: i.name?.en ? defaultSlugify(i.name?.en) : String(i.id),
       name: i.name?.en ?? '',
       description: i.description?.en ?? '',
-      info: i.speaker_info?.en ?? null,
+      info: i.speaker_info?.en ?? '',
       capacity: i.capacity,
     }
   })
@@ -119,15 +140,15 @@ export async function GetFloors(): Promise<Array<string>> {
 }
 
 export async function GetSpeaker(id: string): Promise<Speaker | undefined> {
-    if (test) {
-        const speakers = await GetSpeakers()
-        return speakers.find(i => i.id === id)
-    }
+  if (test) {
+    const speakers = await GetSpeakers()
+    return speakers.find(i => i.id === id)
+  }
 
-    const speaker = await get(`/events/${eventName}/speakers/${id}`)
-    if (!speaker || speaker.detail === 'Not found.') return undefined
+  const speaker = await get(`/events/${eventName}/speakers/${id}`)
+  if (!speaker || speaker.detail === 'Not found.') return undefined
 
-    return speaker
+  return speaker
 }
 
 export async function GetSpeakers(): Promise<Array<Speaker>> {
@@ -171,7 +192,7 @@ export async function GetSpeakers(): Promise<Array<Speaker>> {
 }
 
 async function exhaustResource(slug: string, limit = defaultLimit, offset = 0, results = [] as any): Promise<any> {
-  return get(`${slug}?limit=${limit}&offset=${offset}`).then((data: any) => {
+  return get(`${slug}${slug.includes('?') ? '&' : '?'}limit=${limit}&offset=${offset}`).then((data: any) => {
     results.push(data.results)
     if (data.next) {
       return exhaustResource(slug, defaultLimit, offset + defaultLimit, results)
@@ -199,6 +220,8 @@ async function get(slug: string) {
 
 // TEST DATA
 export async function generateSessions(): Promise<Array<SessionType>> {
+  return sessionData as SessionType[]
+
   const key = 'TEST:sessions'
   if (cache.has(key)) return cache.get(key)
 
