@@ -4,6 +4,7 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { GetRooms, GetSessions, GetSpeakers } from 'services/programming'
 
 export default pageHOC((props: any) => {
   return (
@@ -18,6 +19,8 @@ export async function getStaticProps(context: any) {
     props: {
       ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
+      sessions: await GetSessions(),
+      speakers: await GetSpeakers(),
     },
   }
 }

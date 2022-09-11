@@ -10,8 +10,9 @@ import { useAvatar } from 'hooks/useAvatar'
 import { AppNav } from 'components/domain/app/navigation'
 import { useMediaQuery } from 'hooks/useMediaQuery'
 import { TruncateMiddle } from 'utils/formatting'
+import { Dashboard } from 'components/domain/app/dashboard'
 
-export const Home = () => {
+export const Home = (props: any) => {
   const router = useRouter()
   const maxWidthTruncate = useMediaQuery(640) // breakpoint-sm
   const accountContext = useAccountContext()
@@ -110,17 +111,22 @@ export const Home = () => {
           </div>
         )}
 
-        <div className={css['slider-container']}>
-          <p className={`${css['header']} font-lg bold`}>
-            Devcon
-            {!loggedIn && (
-              <button className="label plain" onClick={() => router.push('/app/login')}>
+        {!loggedIn && (
+          <div className={css['slider-container']}>
+            <p className={`${css['header']} font-lg bold`}>
+              <span>
+                Welcome to the Devcon app!
+                <br />
+                <span className="font-xs">
+                  Log in to personalize your schedule, track your favorite speakers, and more.
+                </span>
+              </span>
+              <button className="red sm" onClick={() => router.push('/app/login')}>
                 LOGIN
               </button>
-            )}
-          </p>
+            </p>
 
-          <SliderStickyNotes
+            {/* <SliderStickyNotes
             cards={[
               {
                 title: 'Schedule',
@@ -147,9 +153,12 @@ export const Home = () => {
                 color: 'blue',
               },
             ]}
-          />
-        </div>
+          /> */}
+          </div>
+        )}
       </div>
+
+      <Dashboard {...props} />
     </>
   )
 }

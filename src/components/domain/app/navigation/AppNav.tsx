@@ -76,10 +76,10 @@ const defaultLinks = [
       return pathname.endsWith('/app')
     },
   },
-  {
-    title: 'Dashboard',
-    to: '/app/dashboard',
-  },
+  // {
+  //   title: 'Dashboard',
+  //   to: '/app/dashboard',
+  // },
   {
     title: 'Schedule',
     to: '/app/schedule',

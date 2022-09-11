@@ -74,69 +74,8 @@ export const Dashboard = (props: any) => {
 
   return (
     <>
-      <AppNav />
+      {/* <AppNav /> */}
       <div className="section no-overflow">
-        <div className={css['hero']}>
-          <div className={css['cards']}>
-            <Slider sliderProps={sliderProps} onlySlider>
-              {galleryEvents.map((event, i: number) => {
-                let className = css['card']
-
-                if (i === galleryEvents.length - 1) className += ` ${css['last']}`
-
-                return (
-                  <Card
-                    className={className}
-                    slide={sliderProps[1].canSlide}
-                    key={event.title}
-                    title={event.title}
-                    description={event.description}
-                    imageUrl={event.image}
-                    expandLink
-                    linkUrl={event.url} // Linking to blog domain temporarily until blog page is done (static-phase)
-                    // metadata={[moment(blog.date).format('ll'), blog.author]}
-                    allowDrag
-                  />
-                )
-              })}
-            </Slider>
-          </div>
-        </div>
-
-        {pageContext?.appNotifications[0] && (
-          <CollapsedSection
-            className={css['latest-notification']}
-            open={openNotifications}
-            setOpen={() => setOpenNotifications(!openNotifications)}
-          >
-            <CollapsedSectionHeader title="Latest Notification" />
-            <CollapsedSectionContent>
-              <NotificationCard notification={pageContext?.appNotifications[0]} />
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        )}
-
-        <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
-          <CollapsedSectionHeader title="Upcoming Sessions" />
-          <CollapsedSectionContent>
-            <SessionCard session={props.sessions[0]} />
-          </CollapsedSectionContent>
-        </CollapsedSection>
-
-        <CollapsedSection>
-          <CollapsedSectionHeader title="Schedule Overview" />
-          <CollapsedSectionContent>
-            <SessionCard session={props.sessions[0]} />
-          </CollapsedSectionContent>
-        </CollapsedSection>
-
-        <CollapsedSection>
-          <CollapsedSectionHeader title="Suggested Sessions" />
-          <CollapsedSectionContent>
-            <SessionCard session={props.sessions[0]} />
-          </CollapsedSectionContent>
-        </CollapsedSection>
-
         <div className={css['quicklinks']}>
           <div className={css['title-container']}>
             <p className="app-header bold">Quicklinks</p>
@@ -200,6 +139,69 @@ export const Dashboard = (props: any) => {
             ]}
           />
         </div>
+
+        <div className={css['hero']}>
+          <p className="app-header bold">Dashboard</p>
+          <div className={css['cards']}>
+            <Slider sliderProps={sliderProps} onlySlider>
+              {galleryEvents.map((event, i: number) => {
+                let className = css['card']
+
+                if (i === galleryEvents.length - 1) className += ` ${css['last']}`
+
+                return (
+                  <Card
+                    className={className}
+                    slide={sliderProps[1].canSlide}
+                    key={event.title}
+                    title={event.title}
+                    description={event.description}
+                    imageUrl={event.image}
+                    expandLink
+                    linkUrl={event.url} // Linking to blog domain temporarily until blog page is done (static-phase)
+                    // metadata={[moment(blog.date).format('ll'), blog.author]}
+                    allowDrag
+                  />
+                )
+              })}
+            </Slider>
+          </div>
+        </div>
+
+        {pageContext?.appNotifications[0] && (
+          <CollapsedSection
+            className={css['latest-notification']}
+            open={openNotifications}
+            setOpen={() => setOpenNotifications(!openNotifications)}
+          >
+            <CollapsedSectionHeader title="Latest Notification" />
+            <CollapsedSectionContent>
+              <NotificationCard notification={pageContext?.appNotifications[0]} />
+            </CollapsedSectionContent>
+          </CollapsedSection>
+        )}
+
+        <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
+          <CollapsedSectionHeader title="Upcoming Sessions" />
+          <CollapsedSectionContent>
+            <SessionCard session={props.sessions[0]} />
+          </CollapsedSectionContent>
+        </CollapsedSection>
+
+        {/* <CollapsedSection>
+          <CollapsedSectionHeader title="Schedule Overview" />
+          <CollapsedSectionContent>
+            <SessionCard session={props.sessions[0]} />
+          </CollapsedSectionContent>
+        </CollapsedSection> */}
+
+        {/* TODO: These will be hardcoded I suppose? */}
+        <CollapsedSection>
+          <CollapsedSectionHeader title="Suggested Sessions" />
+          <CollapsedSectionContent>
+            <SessionCard session={props.sessions[0]} />
+          </CollapsedSectionContent>
+        </CollapsedSection>
 
         <CollapsedSection>
           <CollapsedSectionHeader title="Side Events" />
