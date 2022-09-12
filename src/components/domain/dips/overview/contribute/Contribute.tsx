@@ -154,7 +154,7 @@ export const Contribute = (props: ContributeProps) => {
             <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold">
               {intl('dips_visit_forum')}
             </Link>
-            <Link to="https://forum.devcon.org" indicateExternal className="text-uppercase font-lg bold">
+            <Link to="https://github.com/efdevcon/DIPs" indicateExternal className="text-uppercase font-lg bold">
               {intl('dips_create_proposal')}
             </Link>
           </div>
