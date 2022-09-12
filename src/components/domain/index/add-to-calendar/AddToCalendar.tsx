@@ -58,7 +58,6 @@ export const generateAddToCalendarUrls = (event: EventData) => {
       `DTEND:${end.format('YYYYMMDD')}`,
       `SUMMARY:${title}`,
       `DESCRIPTION:${description}`,
-      location && `URL;VALUE=URI:${location}`,
       location && `LOCATION:${location}`,
       `END:VEVENT`
     )
@@ -75,7 +74,6 @@ export const generateAddToCalendarUrls = (event: EventData) => {
       `DTEND:${end.format('YYYYMMDD')}T${endOfLastDay}`,
       `SUMMARY:${title}`,
       `DESCRIPTION:${description}`,
-      location && `URL;VALUE=URI:${location}`,
       location && `LOCATION:${location}`,
       // event.Location.url && `URL;VALUE=URI:${event.Location.url}`,
       // event.Location.url && `LOCATION:${event.Location.text}`,

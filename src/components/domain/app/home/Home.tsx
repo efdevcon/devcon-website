@@ -121,7 +121,7 @@ export const Home = (props: any) => {
                   Log in to personalize your schedule, track your favorite speakers, and more.
                 </span>
               </span>
-              <button className="red sm" onClick={() => router.push('/app/login')}>
+              <button style={{ marginLeft: '8px' }} className="red sm" onClick={() => router.push('/app/login')}>
                 LOGIN
               </button>
             </p>
