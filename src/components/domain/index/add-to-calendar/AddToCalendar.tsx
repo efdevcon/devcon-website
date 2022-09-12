@@ -5,49 +5,119 @@ import { useTranslations } from 'next-intl'
 import { Modal } from 'components/common/modal'
 import { Link } from 'components/common/link'
 import AddToCalendarIcon from 'assets/icons/calendar.svg'
+import moment, { Moment } from 'moment'
+import { leftPad } from 'utils/left-pad'
 
-const AddToCalendar = () => {
-  const [calendarModalOpen, setCalendarModalOpen] = React.useState(false)
-  const intl = useTranslations()
+type EventData = {
+  id: string
+  title: string
+  description: string
+  location?: string
+  startDate: Moment
+  endDate: Moment
+}
 
-  const description =
-    'Devcon will officially run from October 11th-14th, but come a few days earlier and stay a little later to experience the full Devcon Week which will run from October 7th-16th!'
-  const location = 'Agora Bogotá Convention Center'
-  const startDate = '20221011'
-  const endDate = '20221015'
+const formatTimeOfDay = (date: Moment) => {
+  return `${leftPad(date.get('hours'))}${leftPad(date.get('minutes'))}${leftPad(date.get('seconds'))}`
+}
+
+export const generateAddToCalendarUrls = (event: EventData) => {
+  const { id, title, description, location, startDate, endDate } = event
+
+  const start = startDate.clone()
+  const end = endDate.clone()
+  const isMultiDayEvent = !start.isSame(end, 'days')
+
+  const startOfFirstDay = formatTimeOfDay(start)
+  const endOfLastDay = formatTimeOfDay(end)
 
   const googleCalUrl = (() => {
     const googleCalUrl = new URL(`https://www.google.com/calendar/render?action=TEMPLATE&ctz=America/Bogota`)
 
-    googleCalUrl.searchParams.append('text', `Devcon`)
+    googleCalUrl.searchParams.append('text', title)
     googleCalUrl.searchParams.append('details', description)
-    googleCalUrl.searchParams.append('dates', `${startDate}/${endDate}`)
-    googleCalUrl.searchParams.append('location', location)
+    if (location) googleCalUrl.searchParams.append('location', location)
 
     return googleCalUrl
   })()
 
-  const ics = [`BEGIN:VCALENDAR`, `PRODID:devconnect.org`, `METHOD:PUBLISH`, `VERSION:2.0`, `CALSCALE:GREGORIAN`]
+  const ics = [`BEGIN:VCALENDAR`, `PRODID:devcon.org`, `METHOD:PUBLISH`, `VERSION:2.0`, `CALSCALE:GREGORIAN`] as any
 
-  ics.push(
-    `BEGIN:VEVENT`,
-    `UID:Devcon Week`,
-    `DTSTART:${startDate}`,
-    `DTEND:${endDate}`,
-    `SUMMARY:Devcon`,
-    `DESCRIPTION:${description}`,
-    `URL;VALUE=URI:devcon.org`,
-    `LOCATION:${location}`,
-    `END:VEVENT`
-  )
+  if (isMultiDayEvent) {
+    // Have to add a day for multi-day events since the final day is not included in the range
+    // (if not, it will make a boundary at exactly midnight on the previous day since the dates default to 00:00 when no time is specified)
+    end.add(1, 'days')
+
+    googleCalUrl.searchParams.append('dates', `${start.format('YYYYMMDD')}/${end.format('YYYYMMDD')}`)
+
+    ics.push(
+      `BEGIN:VEVENT`,
+      `UID:${id}`,
+      `DTSTAMP:${moment.utc().format('YYYYMMDDTHHmmss')}`,
+      `DTSTART:${start.format('YYYYMMDD')}`,
+      `DTEND:${end.format('YYYYMMDD')}`,
+      `SUMMARY:${title}`,
+      `DESCRIPTION:${description}`,
+      location && `URL;VALUE=URI:${location}`,
+      location && `LOCATION:${location}`,
+      `END:VEVENT`
+    )
+  } else {
+    googleCalUrl.searchParams.append(
+      'dates',
+      `${start.format('YYYYMMDD')}T${startOfFirstDay}/${end.format('YYYYMMDD')}T${endOfLastDay}`
+    )
+    ics.push(
+      `BEGIN:VEVENT`,
+      `UID:${id}`,
+      `DTSTAMP:${moment.utc().format('YYYYMMDDTHHmmss')}`,
+      `DTSTART:${start.format('YYYYMMDD')}T${startOfFirstDay}`,
+      `DTEND:${end.format('YYYYMMDD')}T${endOfLastDay}`,
+      `SUMMARY:${title}`,
+      `DESCRIPTION:${description}`,
+      location && `URL;VALUE=URI:${location}`,
+      location && `LOCATION:${location}`,
+      // event.Location.url && `URL;VALUE=URI:${event.Location.url}`,
+      // event.Location.url && `LOCATION:${event.Location.text}`,
+      `END:VEVENT`
+    )
+  }
 
   ics.push(`END:VCALENDAR`)
 
+  return {
+    ics,
+    google: googleCalUrl,
+  }
+}
+
+const AddToCalendar = (props: any) => {
+  const [calendarModalOpen, setCalendarModalOpen] = React.useState(false)
+  const intl = useTranslations()
+
+  const { google, ics } = generateAddToCalendarUrls(
+    props.event || {
+      id: 'Devcon Main Event',
+      title: 'Devcon',
+      description:
+        'Devcon will officially run from October 11th-14th, but come a few days earlier and stay a little later to experience the full Devcon Week which will run from October 7th-16th!',
+      location: 'Agora Bogotá Convention Center',
+      startDate: moment.utc('2022-10-11'),
+      endDate: moment.utc('2022-10-14'),
+    }
+  )
+
+  const triggerModal = () => setCalendarModalOpen(true)
+
   return (
     <>
-      <Button className={`${css['button']} bold black text-uppercase hover`} onClick={() => setCalendarModalOpen(true)}>
-        <AddToCalendarIcon /> <span className={css['button-text']}>{intl('add-to-calendar')}</span>
-      </Button>
+      {props.children ? (
+        React.cloneElement(props.children, { onClick: triggerModal })
+      ) : (
+        <Button className={`${css['button']} bold black text-uppercase hover`} onClick={triggerModal}>
+          <AddToCalendarIcon /> <span className={css['button-text']}>{intl('add-to-calendar')}</span>
+        </Button>
+      )}
 
       {calendarModalOpen && (
         <Modal className={css['modal']} open={calendarModalOpen} close={() => setCalendarModalOpen(false)}>
@@ -66,7 +136,7 @@ const AddToCalendar = () => {
                 <Button className="black ghost">Download (.ICS)</Button>
               </a>
 
-              <Link to={googleCalUrl.href}>
+              <Link to={google.href}>
                 <Button className="black ghost">Google Calendar</Button>
               </Link>
             </div>

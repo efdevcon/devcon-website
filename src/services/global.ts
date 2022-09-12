@@ -11,7 +11,8 @@ export const getGlobalData = async (context: any, isApp?: boolean) => {
         global: {
           ...intl.global 
         },
-        readmore: intl.readmore
+        readmore: intl.readmore,
+        'add-to-calendar': intl['add-to-calendar']
       }),
       appNotifications: GetAppNotifications()
     }

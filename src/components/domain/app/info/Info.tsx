@@ -132,7 +132,6 @@ export const Info = (props: InfoProps) => {
             <CityGuideContent {...props} faqs={props.cityGuideFaqs} insideApp />
           </CollapsedSectionContent>
         </CollapsedSection>
-
         <CollapsedSection>
           <CollapsedSectionHeader>
             <p className="font-md-fixed bold">Health and Safety Guides</p>
@@ -165,14 +164,14 @@ export const Info = (props: InfoProps) => {
             <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
-        <CollapsedSection>
+        {/* <CollapsedSection>
           <CollapsedSectionHeader>
             <p className="font-md-fixed bold">Provide Feedback</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <ProvideFeedbackForm />
           </CollapsedSectionContent>
-        </CollapsedSection>
+        </CollapsedSection> */}
       </div>
     </>
   )

@@ -5,25 +5,22 @@ import IconStarFill from 'assets/icons/star-fill.svg'
 import IconCalendarAdd from 'assets/icons/schedule-plus.svg'
 import IconMarker from 'assets/icons/icon_marker.svg'
 import IconPeople from 'assets/icons/icon_people.svg'
-import IconSecurity from 'assets/images/tracks/big-icons/Security.svg'
-import { LinkList, Link } from 'components/common/link'
 import { SpeakerCard } from 'components/domain/app/speakers'
 import { SessionCard } from './SessionCard'
 import css from './session.module.scss'
 import IconCheck from 'assets/icons/check_circle.svg'
-import { Tabs } from 'components/common/tabs'
-import { Tab } from 'components/common/tabs/Tabs'
-import { AppTabsSection } from 'components/domain/app/app-tabs-section'
-import { ThumbnailBlock } from 'components/common/thumbnail-block'
 import { Session as SessionType } from 'types/Session'
 import moment from 'moment'
 import { GetDevconDay } from 'utils/formatting'
 import Image from 'next/image'
 import { useAccountContext } from 'context/account-context'
 import { AppNav } from 'components/domain/app/navigation'
-import Share from 'assets/icons/share.svg'
 import IconCalendar from 'assets/icons/calendar.svg'
 import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'
+import { CopyToClipboardLegacy } from 'components/common/share/Share'
+import PinIcon from 'assets/icons/pin.svg'
+import { Link } from 'components/common/link'
+import AddToCalendar from 'components/domain/index/add-to-calendar/AddToCalendar'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -72,12 +69,18 @@ export const Session = (props: SessionProps) => {
         ]}
         renderRight={() => (
           <>
-            <Share />
+            {/* <Share /> */}
 
-            {attending ? (
-              <IconCheck className="icon fill-red" onClick={() => bookmarkSession('attending')} />
-            ) : (
-              <IconCalendarAdd onClick={() => bookmarkSession('attending')} />
+            <CopyToClipboardLegacy url={`https://devcon.org/app/schedule/${props.session.id}`} />
+
+            {account && (
+              <>
+                {attending ? (
+                  <IconCheck className="icon fill-red" onClick={() => bookmarkSession('attending')} />
+                ) : (
+                  <IconCalendarAdd onClick={() => bookmarkSession('attending')} />
+                )}
+              </>
             )}
           </>
         )}
@@ -126,18 +129,34 @@ export const Session = (props: SessionProps) => {
 
       <div className="section">
         <div className={css['actions']}>
-          <div onClick={() => bookmarkSession('interested')} className={css[interested ? 'active' : '']}>
-            <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
-          </div>
-          <div onClick={() => bookmarkSession('attending')} className={css[attending ? 'active' : '']}>
-            <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendarAdd />}</>
-          </div>
-          {/* <div>
-              <p>Mark as interesting</p> <IconCalendar />
-            </div>
+          {account && (
+            <>
+              <div onClick={() => bookmarkSession('interested')} className={css[interested ? 'active' : '']}>
+                <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
+              </div>
+              <div onClick={() => bookmarkSession('attending')} className={css[attending ? 'active' : '']}>
+                <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendarAdd />}</>
+              </div>
+            </>
+          )}
+          <AddToCalendar
+            event={{
+              id: props.session.id,
+              title: props.session.title,
+              description: props.session.description,
+              location: 'Agora Bogotá Convention Center',
+              startDate: moment.utc(props.session.start),
+              endDate: moment.utc(props.session.end),
+            }}
+          >
             <div>
-              <p>Mark as interesting</p> <IconCalendar />
-            </div> */}
+              <p>Export to Calendar</p> <IconCalendar />
+            </div>
+          </AddToCalendar>
+
+          <Link to="/app/venue">
+            <p>Venue Map</p> <PinIcon />
+          </Link>
         </div>
 
         {props.session.speakers.length > 0 && (

@@ -41,8 +41,8 @@ const galleryEvents = [
 ]
 
 export const Dashboard = (props: any) => {
-  const [openNotifications, setOpenNotifications] = React.useState(true)
-  const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(true)
+  const [openNotifications, setOpenNotifications] = React.useState(false)
+  const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(false)
   const pageContext = usePageContext()
 
   const sliderSettings = {

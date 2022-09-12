@@ -15,12 +15,12 @@ type ShareProps = {
 }
 
 // Remove soon - share should now use the custom share sheet instead of this
-const CopyToClipboardLegacy = ({ url, onShare }: any) => {
+export const CopyToClipboardLegacy = ({ url, onShare }: any) => {
   const [clicked, setClicked] = React.useState(false)
 
   return (
     <Tooltip arrow={false} visible={clicked} content={<p>Copied to clipboard</p>}>
-      <div style={{ display: 'inline-block', cursor: 'pointer' }}>
+      <div style={{ display: 'inline-flex', alignItems: 'center', cursor: 'pointer' }}>
         <ShareIcon
           onClick={() => {
             if (onShare) {
@@ -168,10 +168,7 @@ export const Share = (props: ShareProps) => {
                 <div className={css['buttons']}>
                   <Tweet text={message.value} />
 
-                  <Link
-                    title="Share by Email"
-                    to={`mailto:?subject=${intl('rtd')}&body=${message.email}`}
-                  >
+                  <Link title="Share by Email" to={`mailto:?subject=${intl('rtd')}&body=${message.email}`}>
                     <button className={`white ${css['email']}`}>
                       <IconEmail /> Email
                     </button>
