@@ -150,33 +150,6 @@ export const Venue = (props: Props) => {
                   )
                 })}
               </LinkList>
-              {/* Just duplicating to make it closer to reality */}
-              <LinkList>
-                {roomsByFloor.map((room: Room) => {
-                  return (
-                    <Link
-                      className={`font-md font-bold ${css['floor-link']}`}
-                      key={room.id}
-                      to={`/app/venue/${room.id}`}
-                    >
-                      {room.name}
-                    </Link>
-                  )
-                })}
-              </LinkList>
-              <LinkList>
-                {roomsByFloor.map((room: Room) => {
-                  return (
-                    <Link
-                      className={`font-md font-bold ${css['floor-link']}`}
-                      key={room.id}
-                      to={`/app/venue/${room.id}`}
-                    >
-                      {room.name}
-                    </Link>
-                  )
-                })}
-              </LinkList>
             </React.Fragment>
           )
         })}

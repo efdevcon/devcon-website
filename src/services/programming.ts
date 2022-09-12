@@ -6,6 +6,7 @@ import moment from 'moment'
 import { GetTracks as GetContentTracks } from 'services/page'
 import sessionData from '../content/session-data.json'
 import speakerData from '../content/speakers-data.json'
+import roomsData from '../content/rooms-data.json'
 // import fs from 'fs'
 
 require('dotenv').config()
@@ -293,34 +294,5 @@ export async function generateEventDays(): Promise<Array<number>> {
 }
 
 export async function generateRooms(): Promise<Array<Room>> {
-  return [
-    {
-      id: 'main',
-      name: 'Main',
-      description: 'Main stage',
-      info: 'Floor 1',
-      capacity: 1000,
-    },
-    {
-      id: '2',
-      name: 'Stage #2',
-      description: 'Stage Two description',
-      info: 'Floor 2',
-      capacity: 200,
-    },
-    {
-      id: '3',
-      name: 'Stage #3',
-      description: 'Stage Three description',
-      info: 'Floor 3',
-      capacity: 300,
-    },
-    {
-      id: 'hacker-basement',
-      name: 'Hacker Basement',
-      description: '',
-      info: 'Basement',
-      capacity: 500,
-    },
-  ]
+  return roomsData
 }
