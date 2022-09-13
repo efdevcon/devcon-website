@@ -13,5 +13,5 @@ left: >-
 
 
   Un dato sorprendente es [la ciclabilidad de Bogotá](https://www.colombia.co/en/colombia-travel/bogota-bike-friendly-city/). Más de 220 kilómetros de carriles bici facilitan los desplazamientos en bicicleta, y todos los domingos se prohíbe la circulación de coches en enormes calles dejando espacio para que los ciudadanos puedan ir en bicicleta, correr y patinar por la famosa Civlovia.
-right: "@[youtube](czfKyc-HtF4)"
+right: '@[youtube](KNmuPc4yQe4)'
 ---
