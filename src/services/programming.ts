@@ -7,7 +7,7 @@ import { GetTracks as GetContentTracks } from 'services/page'
 import sessionData from '../content/session-data.json'
 import speakerData from '../content/speakers-data.json'
 import roomsData from '../content/rooms-data.json'
-// import fs from 'fs'
+import fs from 'fs'
 
 require('dotenv').config()
 
@@ -15,7 +15,7 @@ const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'devcon-vi-2022' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
-const test = process.env.NODE_ENV !== 'production'
+const test = true // process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
@@ -26,6 +26,23 @@ const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
 
 console.log('Pretalx Service', eventName, '- Test:', test)
+
+export async function ExportSchedule() {
+    const sessions = await GetSessions()
+    fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
+      if (err) {
+        console.log(err)
+      }
+    })
+
+    const speakers = await GetSpeakers()
+    const filtered = speakers.filter(i => sessions.map(x => x.speakers.map(y => y.id)).some(x => x.includes(i.id)))
+    fs.writeFile("./src/content/speakers-data.json", JSON.stringify(filtered, null, 2), function (err) {
+        if (err) {
+            console.log(err)
+        }
+    })
+}
 
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)
@@ -40,8 +57,8 @@ export async function GetSessions(): Promise<Array<SessionType>> {
   const rooms = await GetRooms()
 
   const sessions = talks.map((i: any) => {
-    const expertise = i.answers.find((i: any) => i.question.id === expertiseQuestionId)?.answer as string
-    const tagsAnswer = i.answers.find((i: any) => i.question.id === tagsQuestionId)?.answer as string
+    const expertise = i.answers?.find((i: any) => i.question.id === expertiseQuestionId)?.answer as string
+    const tagsAnswer = i.answers?.find((i: any) => i.question.id === tagsQuestionId)?.answer as string
 
     // const d = Math.floor(Math.random() * 4) + 11
     // const h = Math.floor(Math.random() * 9) + 10
@@ -161,11 +178,11 @@ export async function GetSpeakers(): Promise<Array<Speaker>> {
   const speakersData = await exhaustResource(`/events/${eventName}/speakers`)
   const speakers = speakersData.map((i: any) => {
     const speakerSessions = sessions.filter((s: SessionType) => i.submissions.find((x: string) => x === s.id))
-    const organization = i.answers.find((i: any) => i.question.id === organizationQuestionId)?.answer
-    const role = i.answers.find((i: any) => i.question.id === roleQuestionId)?.answer
-    const website = i.answers.find((i: any) => i.question.id === websiteQuestionId)?.answer
-    const twitter = i.answers.find((i: any) => i.question.id === twitterQuestionId)?.answer
-    const github = i.answers.find((i: any) => i.question.id === githubQuestionId)?.answer
+    const organization = i.answers?.find((i: any) => i.question.id === organizationQuestionId)?.answer
+    const role = i.answers?.find((i: any) => i.question.id === roleQuestionId)?.answer
+    const website = i.answers?.find((i: any) => i.question.id === websiteQuestionId)?.answer
+    const twitter = i.answers?.find((i: any) => i.question.id === twitterQuestionId)?.answer
+    const github = i.answers?.find((i: any) => i.question.id === githubQuestionId)?.answer
 
     let speaker: any = {
       id: i.code,
@@ -198,7 +215,7 @@ async function exhaustResource(slug: string, limit = defaultLimit, offset = 0, r
   return get(`${slug}${slug.includes('?') ? '&' : '?'}limit=${limit}&offset=${offset}`).then((data: any) => {
     results.push(data.results)
     if (data.next) {
-      console.log('GET ALL', slug, 'TOTAL COUNT', data.count)
+      console.log('GET', slug, 'TOTAL COUNT', data.count)
       return exhaustResource(slug, defaultLimit, offset + defaultLimit, results)
     } else {
       console.log('Return results', slug, results.flat().length)
@@ -269,7 +286,7 @@ export async function generateSessions(): Promise<Array<SessionType>> {
 }
 
 export async function generateSpeakers(): Promise<Array<Speaker>> {
-  return speakerData.slice(0, 300) as Speaker[]
+  return speakerData as Speaker[]
 }
 
 export async function generateTracks(): Promise<Array<string>> {
