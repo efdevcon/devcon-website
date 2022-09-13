@@ -25,6 +25,8 @@ const tagsQuestionId = 42
 const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
 
+console.log('Pretalx Service', eventName, '- Test:', test)
+
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)
 
@@ -196,8 +198,10 @@ async function exhaustResource(slug: string, limit = defaultLimit, offset = 0, r
   return get(`${slug}${slug.includes('?') ? '&' : '?'}limit=${limit}&offset=${offset}`).then((data: any) => {
     results.push(data.results)
     if (data.next) {
+      console.log('GET ALL', slug, 'TOTAL COUNT', data.count)
       return exhaustResource(slug, defaultLimit, offset + defaultLimit, results)
     } else {
+      console.log('Return results', slug, results.flat().length)
       return results.flat()
     }
   })
