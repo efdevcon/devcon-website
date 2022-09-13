@@ -13,9 +13,9 @@ require('dotenv').config()
 
 const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
-const eventName = 'pwa-data' // 'devcon-vi-2022' // 'pwa-data'
+const eventName = 'devcon-vi-2022' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
-const test = true // process.env.NODE_ENV !== 'production'
+const test = process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
