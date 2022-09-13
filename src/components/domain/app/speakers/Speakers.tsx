@@ -146,7 +146,7 @@ const ListDaySort = (props: ListProps) => {
 }
 
 const ListAlphabeticalSort = (props: ListProps) => {
-  const [selectedLetter, setSelectedLetter] = React.useState('A')
+  const [selectedLetter, setSelectedLetter] = React.useState<string>()
   const alpha = Array.from(Array(26)).map((e, i) => i + 65)
   const alphabet = alpha.map(x => String.fromCharCode(x))
 
@@ -155,14 +155,14 @@ const ListAlphabeticalSort = (props: ListProps) => {
       <div className={css['speakers-letters']}>
         <div className={css['speakers']}>
           {alphabet.map(letter => {
-            // if (letter !== selectedLetter) return null
+            if (letter !== selectedLetter) return null
 
             const speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
             if (speakersByLetter.length === 0) return null
 
             return (
               <div key={letter} id={`speakers-${letter}`}>
-                <p className="bold">{letter}</p>
+                <p className={`${css['sticky-letter']} app-header`}>{letter}</p>
                 {speakersByLetter.map(speaker => {
                   return <SpeakerCard key={speaker.id} speaker={speaker} />
                 })}
@@ -265,10 +265,10 @@ export const Speakers = (props: any) => {
     return true
   })
 
-  const sortedSpeakers =
-    sortState.sortDirection === 'asc'
-      ? speakers.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
-      : speakers.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
+  const sortedSpeakers = speakers
+  // sortState.sortDirection === 'asc'
+  //   ? speakers.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
+  //   : speakers.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
 
   const sortedBy = sortState.fields[sortState.sortBy]
   const noResults = speakers.length === 0
@@ -366,9 +366,9 @@ export const Speakers = (props: any) => {
               </div>
             </div>
           </div>
-          <div className="border-top">
+          {/* <div className="border-top">
             <Sort {...sortState} />
-          </div>
+          </div> */}
         </div>
       </div>
 

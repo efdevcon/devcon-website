@@ -3,17 +3,18 @@
 .speaker-card {
   position: relative;
   display: flex;
-  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.1);
+  border: 1px solid $colors-standard-border-color;
   margin-bottom: $gaps-gap-4;
   --color-icon: #{$colors-monochrome-8};
 
   &:hover {
-    outline: 1px solid $colors-standard-border-color;
-
-
+    .name {
+      text-decoration: underline;
+    }
   }
 
-  .name, .twitter {
+  .name {
     &:hover {
       text-decoration: underline;
     }
@@ -94,7 +95,7 @@
 }
 
 .list-container {
-  margin-top: $gaps-gap-2;
+  // margin-top: $gaps-gap-2;
 
   .past {
     margin-bottom: 20px;
@@ -105,16 +106,32 @@
 
   &.alphabet-sort {
     .speakers-letters {
-      margin-top: $gaps-gap-2;
+      // margin-top: $gaps-gap-2;
       display: flex;
       flex-direction: row;
 
       .speakers {
         flex-grow: 1;
+
+        .sticky-letter {
+          // padding: 8px;
+          padding: 8px 0px;
+          margin-bottom: 8px;
+          @include fonts-bold;
+          border-bottom: 1px solid $colors-standard-border-color;
+          // display: inline-block;
+          // transform: translateX(-100%);
+          transform: translateY(-1px);
+          position: sticky;
+          top: var(--app-nav-upper-height);
+          z-index: 5;
+          background: white;
+        }
       }
 
       .letters {
         flex-grow: 0;
+        margin-top: 8px;
         flex-shrink: 0;
         top: calc(var(--app-nav-upper-height) + 8px);
         position: sticky;
@@ -126,6 +143,7 @@
           position: relative;
           @include fonts-bold;
           @include fonts-sm-fixed;
+          transform: translateX(4px);
           padding-left: 12px;
           padding-right: 8px;
           color: #bcbfca;
