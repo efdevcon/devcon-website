@@ -27,14 +27,14 @@ const roleQuestionId = 24 // not used
 console.log('Pretalx Service', eventName)
 
 export async function ExportSchedule() {
-  // console.log('Export Event Schedule..')
-  // const rooms = await GetRooms(false)
-  // fs.writeFile("./src/content/rooms-data.json", JSON.stringify(rooms, null, 2), function (err) {
-  //   if (err) {
-  //     console.log(err)
-  //   }
-  // })
-  // console.log('Rooms exported', rooms.length)
+  console.log('Export Event Schedule..')
+  const rooms = await GetRooms(false)
+  fs.writeFile("./src/content/rooms-data.json", JSON.stringify(rooms, null, 2), function (err) {
+    if (err) {
+      console.log(err)
+    }
+  })
+  console.log('Rooms exported', rooms.length)
 
   const sessions = await GetSessions(false)
   fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
@@ -44,14 +44,14 @@ export async function ExportSchedule() {
   })
   console.log('Sessions exported', sessions.length)
 
-  // const speakers = await GetSpeakers(false)
-  // const filtered = speakers.filter(i => sessions.map(x => x.speakers.map(y => y.id)).some(x => x.includes(i.id)))
-  // fs.writeFile("./src/content/speakers-data.json", JSON.stringify(filtered, null, 2), function (err) {
-  //   if (err) {
-  //     console.log(err)
-  //   }
-  // })
-  // console.log('Speakers exported', filtered.length)
+  const speakers = await GetSpeakers(false)
+  const filtered = speakers.filter(i => sessions.map(x => x.speakers.map(y => y.id)).some(x => x.includes(i.id)))
+  fs.writeFile("./src/content/speakers-data.json", JSON.stringify(filtered, null, 2), function (err) {
+    if (err) {
+      console.log(err)
+    }
+  })
+  console.log('Speakers exported', filtered.length)
 }
 
 export async function GetEvent(): Promise<any> {
