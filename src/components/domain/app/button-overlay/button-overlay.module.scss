@@ -20,18 +20,24 @@
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
     background: $colors-track-red;
-    font-size: 20px;
+    font-size: 14px;
     color: white;
     --color-icon: white;
     pointer-events: auto;
 
     .text {
       @include fonts-xxs;
-      margin-top: 0.5em;
+      margin-top: 0.25em;
       line-height: 1em;
+    }
+    
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0px;
     }
   }
 }

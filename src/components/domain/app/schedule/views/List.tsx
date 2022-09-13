@@ -6,6 +6,9 @@ import moment, { Moment } from 'moment'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 import { ScheduleInformation, normalizeDate } from '../Schedule'
 import ClockIcon from 'assets/icons/clock.svg'
+import CollapseIcon from 'assets/icons/collapse.svg'
+import ChevronUp from 'assets/icons/chevron-up.svg'
+import ExpandIcon from 'assets/icons/expand.svg'
 import { ButtonOverlay } from 'components/domain/app/button-overlay'
 
 interface ListProps extends ScheduleInformation {
@@ -31,6 +34,8 @@ export const List = (props: ListProps) => {
   useEffect(() => {
     setNowOpen()
   }, [setNowOpen])
+
+  const allOpen = props.sessionsByTime.every(time => openDays[time.date.readable])
 
   return (
     <div className={css['list']}>
@@ -95,17 +100,51 @@ export const List = (props: ListProps) => {
       })}
 
       <ButtonOverlay
-        text="Today"
-        onClick={() => {
-          const nowElement = document.getElementById(`${normalizedNow}`)
+        buttons={[
+          {
+            id: 'collapse2',
+            className: css['collapse'],
+            text: allOpen ? 'Close' : 'Open',
+            onClick: () => {
+              if (allOpen) {
+                setOpenDays({})
+              } else {
+                props.sessionsByTime.forEach(time =>
+                  setOpenDays(openDays => {
+                    return {
+                      ...openDays,
+                      [time.date.readable]: true,
+                    }
+                  })
+                )
+              }
+            },
+            render: () => (allOpen ? <CollapseIcon /> : <ExpandIcon />),
+          },
+          {
+            id: 'scroll-up',
+            className: css['collapse'],
+            text: 'Top',
+            onClick: () => {
+              window.scrollTo(0, 0)
+            },
+            render: () => <ChevronUp />,
+          },
 
-          setNowOpen()
+          {
+            id: 'today',
+            text: 'Today',
+            onClick: () => {
+              const nowElement = document.getElementById(`${normalizedNow}`)
 
-          nowElement?.scrollIntoView({ behavior: 'smooth' })
-        }}
-      >
-        <ClockIcon />
-      </ButtonOverlay>
+              setNowOpen()
+
+              nowElement?.scrollIntoView({ behavior: 'smooth' })
+            },
+            render: () => <ClockIcon />,
+          },
+        ]}
+      />
     </div>
   )
 }
