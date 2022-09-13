@@ -2,12 +2,12 @@ import { Speaker } from 'types/Speaker'
 import { Room } from 'types/Room'
 import { Session as SessionType } from 'types/Session'
 import { defaultSlugify } from 'utils/formatting'
-import moment from 'moment'
-import { GetTracks as GetContentTracks } from 'services/page'
 import sessionData from '../content/session-data.json'
 import speakerData from '../content/speakers-data.json'
 import roomsData from '../content/rooms-data.json'
+import moment from 'moment'
 import fs from 'fs'
+import fetch from 'cross-fetch'
 
 require('dotenv').config()
 
@@ -15,7 +15,6 @@ const cache = new Map()
 const baseUrl = 'https://speak.devcon.org/api'
 const eventName = 'devcon-vi-2022' // 'devcon-vi-2022' // 'pwa-data'
 const defaultLimit = 100
-const test = true // process.env.NODE_ENV !== 'production'
 const websiteQuestionId = 29
 const twitterQuestionId = 44
 const githubQuestionId = 43
@@ -25,23 +24,34 @@ const tagsQuestionId = 42
 const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
 
-console.log('Pretalx Service', eventName, '- Test:', test)
+console.log('Pretalx Service', eventName)
 
 export async function ExportSchedule() {
-    const sessions = await GetSessions()
-    fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
-      if (err) {
-        console.log(err)
-      }
-    })
+  console.log('Export Event Schedule..')
+  const rooms = await GetRooms(false)
+  fs.writeFile("./src/content/rooms-data.json", JSON.stringify(rooms, null, 2), function (err) {
+    if (err) {
+      console.log(err)
+    }
+  })
+  console.log('Rooms exported', rooms.length)
 
-    const speakers = await GetSpeakers()
-    const filtered = speakers.filter(i => sessions.map(x => x.speakers.map(y => y.id)).some(x => x.includes(i.id)))
-    fs.writeFile("./src/content/speakers-data.json", JSON.stringify(filtered, null, 2), function (err) {
-        if (err) {
-            console.log(err)
-        }
-    })
+  const sessions = await GetSessions(false)
+  fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
+    if (err) {
+      console.log(err)
+    }
+  })
+  console.log('Sessions exported', sessions.length)
+
+  const speakers = await GetSpeakers(false)
+  const filtered = speakers.filter(i => sessions.map(x => x.speakers.map(y => y.id)).some(x => x.includes(i.id)))
+  fs.writeFile("./src/content/speakers-data.json", JSON.stringify(filtered, null, 2), function (err) {
+    if (err) {
+      console.log(err)
+    }
+  })
+  console.log('Speakers exported', filtered.length)
 }
 
 export async function GetEvent(): Promise<any> {
@@ -50,20 +60,15 @@ export async function GetEvent(): Promise<any> {
   return event;
 }
 
-export async function GetSessions(): Promise<Array<SessionType>> {
-  if (test) return await generateSessions()
+export async function GetSessions(fromCache = true): Promise<Array<SessionType>> {
+  if (fromCache) return sessionData as SessionType[]
 
-  const talks = await exhaustResource(`/events/${eventName}/talks`) // /submissions 
+  const talks = await exhaustResource(`/events/${eventName}/talks`)
   const rooms = await GetRooms()
 
   const sessions = talks.map((i: any) => {
     const expertise = i.answers?.find((i: any) => i.question.id === expertiseQuestionId)?.answer as string
     const tagsAnswer = i.answers?.find((i: any) => i.question.id === tagsQuestionId)?.answer as string
-
-    // const d = Math.floor(Math.random() * 4) + 11
-    // const h = Math.floor(Math.random() * 9) + 10
-    // const start = new Date(`2022-10-${d}T${h}:00:00`).getTime()
-    // const end = new Date(`2022-10-${d}T${h + 1}:00:00`).getTime()
 
     return {
       id: i.code,
@@ -80,11 +85,11 @@ export async function GetSessions(): Promise<Array<SessionType>> {
       duration: i.duration,
       start: new Date(i.slot.start).getTime(),
       end: new Date(i.slot.end).getTime(),
-      room: rooms.find(x => x.name === i.slot?.room?.en) || null,
-      type: i.submission_type,
+      room: rooms.find(x => x.name === i.slot?.room?.en) || '',
+      type: i.submission_type?.en ?? '',
       description: i.description,
-      abstract: i.abstract,
-      expertise: expertise ?? null,
+      abstract: i.abstract ?? '',
+      expertise: expertise ?? '',
       // image?: string
       // resources?: string[]
       tags: tagsAnswer ? tagsAnswer.includes(',') ?
@@ -94,23 +99,7 @@ export async function GetSessions(): Promise<Array<SessionType>> {
     }
   })
 
-  // fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
-  //   if (err) {
-  //     console.log(err)
-  //   }
-  // })
-
   return sessions
-}
-
-export async function GetSessionsByTrack(id: string): Promise<Array<SessionType>> {
-  // no endpoint exists, so fetches and filters all sessions recursively
-  return (await GetSessions()).filter(i => i.track === id)
-}
-
-export async function GetSessionsByDay(date: Date): Promise<Array<SessionType>> {
-  // no endpoint exists, so fetches and filters all sessions recursively
-  return (await GetSessions()).filter(i => moment(i.start).isSame(moment(date), 'day'))
 }
 
 export async function GetSessionsBySpeaker(id: string): Promise<Array<SessionType>> {
@@ -124,23 +113,19 @@ export async function GetSessionsByRoom(id: string): Promise<Array<SessionType>>
 }
 
 export async function GetTracks(): Promise<Array<string>> {
-  if (test) return generateTracks()
-
   // no endpoint exists, so fetches and filters all sessions recursively
   const tracks = (await GetSessions()).map(i => i.track)
   return [...new Set(tracks)].sort()
 }
 
 export async function GetEventDays(): Promise<Array<number>> {
-  if (test) return generateEventDays()
-
   // no endpoint exists, so fetches and filters all sessions recursively
   const days = (await GetSessions()).map(i => moment.utc(i.start).startOf('day').valueOf())
   return [...new Set(days)].sort()
 }
 
-export async function GetRooms(): Promise<Array<Room>> {
-  if (test) return generateRooms()
+export async function GetRooms(fromCache = true): Promise<Array<Room>> {
+  if (fromCache) return roomsData as Room[]
 
   const rooms = await exhaustResource(`/events/${eventName}/rooms`)
   return rooms.map((i: any) => {
@@ -159,8 +144,8 @@ export async function GetFloors(): Promise<Array<string>> {
   return [...new Set(rooms.map(i => i.info).filter(i => !!i))]
 }
 
-export async function GetSpeaker(id: string): Promise<Speaker | undefined> {
-  if (test) {
+export async function GetSpeaker(id: string, fromCache = true): Promise<Speaker | undefined> {
+  if (fromCache) {
     const speakers = await GetSpeakers()
     return speakers.find(i => i.id === id)
   }
@@ -171,8 +156,8 @@ export async function GetSpeaker(id: string): Promise<Speaker | undefined> {
   return speaker
 }
 
-export async function GetSpeakers(): Promise<Array<Speaker>> {
-  if (test) return await generateSpeakers()
+export async function GetSpeakers(fromCache = true): Promise<Array<Speaker>> {
+  if (fromCache) return speakerData as Speaker[]
 
   const sessions = await GetSessions()
   const speakersData = await exhaustResource(`/events/${eventName}/speakers`)
@@ -201,12 +186,6 @@ export async function GetSpeakers(): Promise<Array<Speaker>> {
 
     return speaker
   })
-
-  // fs.writeFile("./src/content/speakers-data.json", JSON.stringify(speakers, null, 2), function (err) {
-  //     if (err) {
-  //         console.log(err)
-  //     }
-  // })
 
   return speakers
 }
@@ -238,82 +217,4 @@ async function get(slug: string) {
   const data = await response.json()
   cache.set(slug, data)
   return data
-}
-
-// TEST DATA
-export async function generateSessions(): Promise<Array<SessionType>> {
-  return sessionData as SessionType[]
-
-  const key = 'TEST:sessions'
-  if (cache.has(key)) return cache.get(key)
-
-  const tracks = await GetTracks()
-  const rooms = await GetRooms()
-  const types = await GetTracks()
-  const speakers = await GetSpeakers()
-
-  const sessions: Array<SessionType> = []
-  for (let d = 11; d < 15; d++) {
-    for (let h = 9; h < 18; h++) {
-      for (let t = 0; t < tracks.length; t++) {
-        const type = types[Math.floor(Math.random() * types.length)]
-        const sessionId = `${d}${h}${defaultSlugify(tracks[t])}`
-        const nrOfSpeakers = Math.floor(Math.random() * 3) + 1
-        const sessionSpeakers = new Array<Speaker>()
-        for (let s = 0; s < nrOfSpeakers; s++) {
-          sessionSpeakers.push(speakers[Math.floor(Math.random() * speakers.length)])
-        }
-
-        sessions.push({
-          id: sessionId,
-          speakers: sessionSpeakers,
-          title: `${tracks[t]}`, //, Oct ${d} ${h}:00`,
-          track: tracks[t],
-          duration: 60,
-          start: new Date(`2022-10-${d}T${h}:00:00`).getTime(),
-          end: new Date(`2022-10-${d}T${h + 1}:00:00`).getTime(),
-          room: rooms[Math.floor(Math.random() * rooms.length)],
-          type: type,
-          description: 'Lorem ipsum dolor sit amet..',
-          abstract: `Abstract for ${sessionId} (${type})`,
-        })
-      }
-    }
-  }
-
-  cache.set(key, sessions)
-  return sessions
-}
-
-export async function generateSpeakers(): Promise<Array<Speaker>> {
-  return speakerData as Speaker[]
-}
-
-export async function generateTracks(): Promise<Array<string>> {
-  return [
-    'Layer 1 Protocol',
-    'Layer 2s',
-    'Developer Infrastructure',
-    'Governance & Coordination',
-    'UX & Design',
-    'Staking & Validator Experience',
-    'Security',
-    'ZKPs: Privacy, Identity, Infrastructure, & More',
-    'Opportunity & Global Impact',
-    'Cryptoeconomics'
-  ].sort()
-  // return GetContentTracks().map(i => i.title)
-}
-
-export async function generateEventDays(): Promise<Array<number>> {
-  return [
-    new Date(2022, 10, 11).valueOf(),
-    new Date(2022, 10, 12).valueOf(),
-    new Date(2022, 10, 13).valueOf(),
-    new Date(2022, 10, 14).valueOf(),
-  ]
-}
-
-export async function generateRooms(): Promise<Array<Room>> {
-  return roomsData
 }
