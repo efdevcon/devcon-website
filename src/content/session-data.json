@@ -8448,7 +8448,7 @@
     "type": {
       "en": "Lightning Talk"
     },
-    "description": "I’ll cover frameworks and useful tools to help emerging web3 product development teams: \r\n1. have a structured approach to identifying problem-solution fit \r\n2. properly sequence activities including requirements analysis and mapping data flows (smart contracts highly influence UX)  \r\n3. know when to engage dev teams (SC, FE, data eng) throughout the process  \r\n4. understand common web3 nuances that affect UX, specifically entry and exit points (vs. web2)",
+    "description": "I’ll cover frameworks and useful tools to help emerging web3 product development teams:\r\n1. have a structured approach to identifying problem-solution fit\r\n2. properly sequence activities including requirements analysis and mapping data flows (smart contracts highly influence UX) \r\n3. know when to engage dev teams (SC, FE, data eng) throughout the process  \r\n4. understand common web3 nuances that affect UX, specifically entry and exit points (vs. web2)",
     "abstract": null,
     "expertise": null,
     "tags": [
