@@ -61,12 +61,26 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
           <p className={css['name']}>{speaker.name}</p>
           <p className={css['role']}>{speaker.role}</p>
           <p className={css['company']}>{speaker.company}</p>
-          {speaker.twitter && (
-            <Link className={`${css['twitter']}`} to={`https://twitter.com/${speaker.twitter}`}>
-              <IconTwitter />
-              {`${speaker.twitter.split('twitter.com/').pop()}`}
-            </Link>
-          )}
+          {speaker.twitter &&
+            (() => {
+              // Extract twitter user
+              const twitterUser = speaker.twitter.split('twitter.com/').pop()
+
+              // Split on any white space and use the first part
+              const twitterUserNoDuplicates = twitterUser && twitterUser.split(' ').shift()
+
+              // Remove @ prefix if present
+              const twitterUserNoLeadingAt = twitterUserNoDuplicates && twitterUserNoDuplicates.split('@').pop()
+
+              if (!twitterUserNoLeadingAt) return
+
+              return (
+                <Link className={`${css['twitter']}`} to={`https://twitter.com/${twitterUserNoLeadingAt}`}>
+                  <IconTwitter />
+                  {`${twitterUserNoLeadingAt}`}
+                </Link>
+              )
+            })()}
         </div>
 
         {account && (
@@ -155,7 +169,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
       <div className={css['speakers-letters']}>
         <div className={css['speakers']}>
           {alphabet.map(letter => {
-            if (letter !== selectedLetter) return null
+            if (typeof selectedLetter === 'string' && letter !== selectedLetter) return null
 
             const speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
             if (speakersByLetter.length === 0) return null
@@ -196,7 +210,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
                 style={{ cursor: 'pointer' }}
                 onClick={() => {
                   if (letterHasSpeakers) {
-                    setSelectedLetter(letter)
+                    setSelectedLetter(selectedLetter === letter ? undefined : letter)
                   }
                 }}
               >
