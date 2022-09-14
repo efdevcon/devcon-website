@@ -13,5 +13,5 @@ left: >-
 
 
   One surprising fact is [Bogotá’s bike-ability](https://www.colombia.co/en/colombia-travel/bogota-bike-friendly-city/). More than 220 miles of cycle paths make it easy to move around by bike, and every Sunday, cars are banned from huge streets making space for citizens to cycle, jog, and rollerblade on the famous Civlovia.
-right: '@[youtube](KNmuPc4yQe4)'
+right: '@[youtube](Euihd5Iv_XU)'
 ---
