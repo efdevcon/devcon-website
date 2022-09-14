@@ -30,12 +30,20 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
   }
 
   public async findPersonalizedAgenda(userId: string): Promise<Session[]> {
+    console.log('Find personalized schedule', userId)
     try {
+      console.log('find User')
       const user = await this._model.findOne({ _id: userId }) as UserAccount
       if (!user.appState.publicSchedule) return []
 
+      console.log('Get Sessions')
       const sessions = await GetSessions()
-      return sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+
+      console.log('Filter')
+      const filtered = sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+
+      console.log('Return', filtered.length)
+      return filtered
     } catch (e) {
       console.log("Couldn't find user account", userId)
       console.error(e)

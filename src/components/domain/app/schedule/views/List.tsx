@@ -12,6 +12,7 @@ import ExpandIcon from 'assets/icons/expand.svg'
 import ShareIcon from 'assets/icons/share.svg'
 import { ButtonOverlay } from 'components/domain/app/button-overlay'
 import { useRouter } from 'next/router'
+import { useAccountContext } from 'context/account-context'
 
 interface ListProps extends ScheduleInformation {
   now?: Moment | null
@@ -19,6 +20,7 @@ interface ListProps extends ScheduleInformation {
 
 export const List = (props: ListProps) => {
   const router = useRouter()
+  const { account } = useAccountContext()
   const [openDays, setOpenDays] = React.useState({} as { [key: string]: boolean })
   const normalizedNow = props.now ? normalizeDate(props.now) : ''
 
@@ -39,6 +41,59 @@ export const List = (props: ListProps) => {
   }, [setNowOpen])
 
   const allOpen = props.sessionsByTime.every(time => openDays[time.date.readable])
+
+  const fabs = [{
+    id: 'collapse2',
+    className: css['collapse'],
+    text: allOpen ? 'Close' : 'Open',
+    onClick: () => {
+      if (allOpen) {
+        setOpenDays({})
+      } else {
+        props.sessionsByTime.forEach(time =>
+          setOpenDays(openDays => {
+            return {
+              ...openDays,
+              [time.date.readable]: true,
+            }
+          })
+        )
+      }
+    },
+    render: () => (allOpen ? <CollapseIcon /> : <ExpandIcon />),
+  },
+  {
+    id: 'scroll-up',
+    className: css['collapse'],
+    text: 'Top',
+    onClick: () => {
+      window.scrollTo(0, 0)
+    },
+    render: () => <ChevronUp />,
+  },
+  {
+    id: 'today',
+    text: 'Today',
+    onClick: () => {
+      const nowElement = document.getElementById(`${normalizedNow}`)
+
+      setNowOpen()
+
+      nowElement?.scrollIntoView({ behavior: 'smooth' })
+    },
+    render: () => <ClockIcon />,
+  }]
+
+  if (account) fabs.unshift(
+    {
+      id: 'share-schedule',
+      className: css['collapse'],
+      text: 'Share',
+      onClick: () => {
+        router.push('/app/settings#schedule')
+      },
+      render: () => <ShareIcon />,
+    })
 
   return (
     <div className={css['list']}>
@@ -102,60 +157,7 @@ export const List = (props: ListProps) => {
         )
       })}
 
-      <ButtonOverlay
-        buttons={[
-          {
-            id: 'share-schedule',
-            className: css['collapse'],
-            text: 'Share',
-            onClick: () => {
-              router.push('/app/settings#schedule')
-            },
-            render: () => <ShareIcon />,
-          },
-          {
-            id: 'collapse2',
-            className: css['collapse'],
-            text: allOpen ? 'Close' : 'Open',
-            onClick: () => {
-              if (allOpen) {
-                setOpenDays({})
-              } else {
-                props.sessionsByTime.forEach(time =>
-                  setOpenDays(openDays => {
-                    return {
-                      ...openDays,
-                      [time.date.readable]: true,
-                    }
-                  })
-                )
-              }
-            },
-            render: () => (allOpen ? <CollapseIcon /> : <ExpandIcon />),
-          },
-          {
-            id: 'scroll-up',
-            className: css['collapse'],
-            text: 'Top',
-            onClick: () => {
-              window.scrollTo(0, 0)
-            },
-            render: () => <ChevronUp />,
-          },
-          {
-            id: 'today',
-            text: 'Today',
-            onClick: () => {
-              const nowElement = document.getElementById(`${normalizedNow}`)
-
-              setNowOpen()
-
-              nowElement?.scrollIntoView({ behavior: 'smooth' })
-            },
-            render: () => <ClockIcon />,
-          },
-        ]}
-      />
+      <ButtonOverlay buttons={fabs} />
     </div>
   )
 }
