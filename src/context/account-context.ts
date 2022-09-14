@@ -20,6 +20,7 @@ export interface AccountContextType {
   deleteAccount: (id: string) => Promise<boolean>,
   setSpeakerFavorite: (account: UserAccount, speakerId: string, remove: boolean) => void,
   setSessionBookmark: (account: UserAccount, session: Session, level: 'attending' | 'interested', remove?: boolean) => void,
+  toggleScheduleSharing: (account: UserAccount) => void,
 }
 
 export const useAccountContext = () => useContext<AccountContextType>(AccountContext)
@@ -38,4 +39,5 @@ export const AccountContext = createContext<AccountContextType>({
   deleteAccount: async () => false,
   setSpeakerFavorite: () => {},
   setSessionBookmark: () => {},
+  toggleScheduleSharing: () => {}
 })

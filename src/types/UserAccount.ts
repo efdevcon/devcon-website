@@ -22,4 +22,5 @@ export interface AppState {
     start: Date
     end: Date
   }>
+  publicSchedule?: boolean
 }

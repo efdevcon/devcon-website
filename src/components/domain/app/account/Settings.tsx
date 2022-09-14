@@ -12,6 +12,7 @@ import { TruncateMiddle } from 'utils/formatting'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { AppNav } from 'components/domain/app/navigation'
+import Toggle from 'react-toggle'
 
 export default function SettingsPage() {
   const router = useRouter()
@@ -19,6 +20,9 @@ export default function SettingsPage() {
   const avatar = useAvatar()
   const [areYouSure, setAreYouSure] = useState(false)
   const [error, setError] = useState('')
+  const [openTabs, setOpenTabs] = React.useState<any>(
+    router.asPath.split('#')[1] ? { [router.asPath.split('#')[1]]: true } : {}
+  )
 
   const deleteAccount = async () => {
     if (!accountContext.account?._id) {
@@ -27,6 +31,12 @@ export default function SettingsPage() {
     }
 
     await accountContext.deleteAccount(accountContext.account?._id)
+  }
+
+  const toggleScheduleSharing = async () => {
+    if (accountContext.account) {
+      accountContext.toggleScheduleSharing(accountContext.account)
+    }
   }
 
   const disconnect = async () => {
@@ -55,7 +65,22 @@ export default function SettingsPage() {
                 </span>
               </div>
 
-              <CollapsedSection>
+              <CollapsedSection
+                open={openTabs['account']}
+                setOpen={() => {
+                  const isOpen = openTabs['account']
+
+                  const nextOpenState = {
+                    ...openTabs,
+                    ['account']: true,
+                  }
+
+                  if (isOpen) {
+                    delete nextOpenState['account']
+                  }
+
+                  setOpenTabs(nextOpenState)
+                }}>
                 <CollapsedSectionHeader title="Account" />
                 <CollapsedSectionContent>
                   <div className={css['links']}>
@@ -67,7 +92,56 @@ export default function SettingsPage() {
                 </CollapsedSectionContent>
               </CollapsedSection>
 
-              <CollapsedSection>
+              <CollapsedSection
+                open={openTabs['schedule']}
+                setOpen={() => {
+                  const isOpen = openTabs['schedule']
+
+                  const nextOpenState = {
+                    ...openTabs,
+                    ['schedule']: true,
+                  }
+
+                  if (isOpen) {
+                    delete nextOpenState['schedule']
+                  }
+
+                  setOpenTabs(nextOpenState)
+                }}>
+                <CollapsedSectionHeader title="Schedule" />
+                <CollapsedSectionContent>
+                  <div className={css['share']}>
+                    <p>Share your Schedule publicly</p>
+                    <div className={css['toggle']}>
+                      <Toggle defaultChecked={accountContext.account?.appState?.publicSchedule} onChange={toggleScheduleSharing} />
+                    </div>
+                  </div>
+                  {accountContext.account?._id && accountContext.account?.appState?.publicSchedule && (
+                    <div className={css['links']}>
+                      <LinkList>
+                        <Link to={`/app/schedule/u/${accountContext.account._id}/`}>Personal Schedule link</Link>
+                      </LinkList>
+                    </div>
+                  )}
+                </CollapsedSectionContent>
+              </CollapsedSection>
+
+              <CollapsedSection
+                open={openTabs['notifications']}
+                setOpen={() => {
+                  const isOpen = openTabs['notifications']
+
+                  const nextOpenState = {
+                    ...openTabs,
+                    ['notifications']: true,
+                  }
+
+                  if (isOpen) {
+                    delete nextOpenState['notifications']
+                  }
+
+                  setOpenTabs(nextOpenState)
+                }}>
                 <CollapsedSectionHeader title="Notifications" />
                 <CollapsedSectionContent>
                   <div className={css['links']}>
@@ -80,7 +154,22 @@ export default function SettingsPage() {
                 </CollapsedSectionContent>
               </CollapsedSection>
 
-              <CollapsedSection>
+              <CollapsedSection
+                open={openTabs['application']}
+                setOpen={() => {
+                  const isOpen = openTabs['application']
+
+                  const nextOpenState = {
+                    ...openTabs,
+                    ['application']: true,
+                  }
+
+                  if (isOpen) {
+                    delete nextOpenState['application']
+                  }
+
+                  setOpenTabs(nextOpenState)
+                }}>
                 <CollapsedSectionHeader title="Application" />
                 <CollapsedSectionContent>
                   <div className={css['links']}>
@@ -92,7 +181,22 @@ export default function SettingsPage() {
                 </CollapsedSectionContent>
               </CollapsedSection>
 
-              <CollapsedSection>
+              <CollapsedSection
+                open={openTabs['delete']}
+                setOpen={() => {
+                  const isOpen = openTabs['delete']
+
+                  const nextOpenState = {
+                    ...openTabs,
+                    ['delete']: true,
+                  }
+
+                  if (isOpen) {
+                    delete nextOpenState['delete']
+                  }
+
+                  setOpenTabs(nextOpenState)
+                }}>
                 <CollapsedSectionHeader title="Delete Account" />
                 <CollapsedSectionContent>
                   <div className={css['wallet']}>

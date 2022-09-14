@@ -18,6 +18,7 @@ const appStateSchema: Schema = new Schema(
   {
     speakers: { type: [String] },
     sessions: [sessionSchema],
+    publicSchedule: { type: Boolean, default: false }
   },
   {
     _id: false,

@@ -31,6 +31,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     deleteAccount,
     setSpeakerFavorite,
     setSessionBookmark,
+    toggleScheduleSharing
   })
 
   useEffect(() => {
@@ -267,6 +268,23 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       appState: {
         ...account.appState,
         sessions: sessions,
+      },
+    }
+
+    await updateAccount(account._id, newAccountState)
+
+    setContext({
+      ...context,
+      account: newAccountState,
+    })
+  }
+
+  async function toggleScheduleSharing(account: UserAccount) {
+    const newAccountState = {
+      ...account,
+      appState: {
+        ...account.appState,
+        publicSchedule: !account.appState.publicSchedule ? true : false,
       },
     }
 
