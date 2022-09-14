@@ -17,6 +17,7 @@ import { LanguageToggle } from 'components/common/layouts/header/strip/language-
 import useNavigationData from '../useNavigationData'
 import { TippyProps } from '@tippyjs/react'
 import { Notifications } from 'components/domain/app/notifications'
+import { useAppContext } from 'context/app-context'
 
 type ButtonProps = {
   buttons: {
@@ -94,6 +95,7 @@ const Buttons = (props: ButtonProps) => {
 export const Menu = (props: any) => {
   const router = useRouter()
   const context = usePageContext()
+  const appContext = useAppContext()
 
   let buttons: ButtonProps['buttons'] = [
     {
@@ -114,19 +116,9 @@ export const Menu = (props: any) => {
 
   if (props.isApp) {
     const notifications = context?.appNotifications
+    const seenNotifications = appContext.seenNotifications
 
-    const countUnreadNotifications =
-      typeof window !== 'undefined'
-        ? (() => {
-            return (
-              notifications?.filter(notification => {
-                const seen = window.localStorage.getItem(`notification-seen-${notification.id}`)
-
-                return !seen
-              }).length || 0
-            )
-          })()
-        : 0
+    const countUnreadNotifications = notifications ? notifications.length - Object.values(seenNotifications).length : 0
 
     buttons = [
       {

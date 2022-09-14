@@ -49,6 +49,12 @@
 .details {
   padding: $gaps-gap-2;
 
+  .title, .room-title, .speaker {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .top {
     padding-bottom: 8px;
     border-bottom: 1px solid $colors-standard-border-color;
@@ -78,7 +84,7 @@
     padding-top: 8px;
     @include fonts-sm;
 
-    p {
+    p, a {
       @include fonts-bold;
       margin-left: $gaps-gap-2;
     }
@@ -114,10 +120,19 @@
     }
 
     .speakers {
-      > p {
+      .speaker {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        margin-left: 0px;
+
+        &.is-first {
+          margin-left: 8px !important;
+        }
+
+        // &:not(&:first-child) {
+        //   margin-left: 0px;
+        // }
       }
     }
   }

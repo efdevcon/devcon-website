@@ -12,6 +12,7 @@ import { AppNav } from 'components/domain/app/navigation'
 import Star from 'assets/icons/star.svg'
 import StarFill from 'assets/icons/star-fill.svg'
 import { useAccountContext } from 'context/account-context'
+import { extractTwitterUsername, extractGithubUsername } from './Speakers'
 
 export const SpeakerDetails = (props: any) => {
   const { account, setSpeakerFavorite } = useAccountContext()
@@ -19,6 +20,9 @@ export const SpeakerDetails = (props: any) => {
   const splitName = props.speaker.name.split(' ') as string[]
   const firstName = splitName.shift()
   const lastName = splitName.join(' ')
+  const twitterUrl = extractTwitterUsername(props.speaker.twitter)
+  // Funnily enough it seems
+  const githubUrl = extractGithubUsername(props.speaker.github)
 
   return (
     <>
@@ -77,13 +81,13 @@ export const SpeakerDetails = (props: any) => {
                   <IconGlobe />
                 </Link>
               )}
-              {props.speaker.twitter && (
-                <Link to={`https://twitter.com/${props.speaker.twitter}`}>
+              {twitterUrl && (
+                <Link to={`https://twitter.com/${twitterUrl}`}>
                   <IconTwitter />
                 </Link>
               )}
-              {props.speaker.github && (
-                <Link to={`https://github.com/${props.speaker.github}`}>
+              {githubUrl && (
+                <Link to={githubUrl}>
                   <IconGithub />
                 </Link>
               )}

@@ -11,6 +11,10 @@
   .shift-end {
     display: flex;
     justify-content: flex-end;
+
+    &.left-aligned {
+      justify-content: flex-start;
+    }
   }
 
   .content {
@@ -20,17 +24,17 @@
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     background: $colors-track-red;
-    font-size: 14px;
+    font-size: 15px;
     color: white;
     --color-icon: white;
     pointer-events: auto;
 
     .text {
       @include fonts-xxs;
-      margin-top: 0.25em;
+      margin-top: 0.35em;
       line-height: 1em;
     }
     

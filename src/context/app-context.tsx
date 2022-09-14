@@ -1,15 +1,22 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, Dispatch, SetStateAction, useContext, useEffect, useState } from 'react'
 import moment, { Moment } from 'moment'
+import { Notification } from 'types/Notification'
+import { usePageContext } from 'context/page-context'
 
 type AppContextProps = {
   children?: any
+  notifications?: Notification[]
 }
 
 type AppContext = {
   now: null | Moment
+  seenNotifications: {
+    [key: string]: boolean
+  }
+  setSeenNotifications: Dispatch<SetStateAction<any>>
 }
 
-const Context = createContext<AppContext>({ now: null })
+const Context = createContext<AppContext>({ now: null, seenNotifications: {}, setSeenNotifications: () => undefined })
 
 export const useAppContext = () => {
   return useContext(Context)
@@ -17,6 +24,8 @@ export const useAppContext = () => {
 
 export const AppContext = (props: AppContextProps) => {
   const [currentTime, setCurrentTime] = useState<Moment | null>(null)
+  const { appNotifications } = usePageContext()
+  const [seenNotifications, setSeenNotifications] = useState({})
 
   // Sync current time periodically to keep time related functionality up to date
   useEffect(() => {
@@ -33,5 +42,27 @@ export const AppContext = (props: AppContextProps) => {
     return () => clearInterval(clear)
   }, [])
 
-  return <Context.Provider value={{ now: currentTime }}>{props.children}</Context.Provider>
+  useEffect(() => {
+    if (!appNotifications) return
+
+    const seenNotifications = {} as any
+
+    appNotifications.forEach(notification => {
+      const seen = window.localStorage.getItem(`notification-seen-${notification.id}`)
+
+      if (seen) {
+        seenNotifications[notification.id] = true
+      }
+    })
+
+    console.log(seenNotifications, 'uhhh')
+
+    setSeenNotifications(seenNotifications)
+  }, [appNotifications])
+
+  return (
+    <Context.Provider value={{ now: currentTime, seenNotifications, setSeenNotifications }}>
+      {props.children}
+    </Context.Provider>
+  )
 }

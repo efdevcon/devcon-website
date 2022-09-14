@@ -15,6 +15,7 @@ import { getTrackImage, getTrackID } from 'components/domain/index/track-list/Tr
 
 type CardProps = {
   session: Session
+  className?: string
   compact?: boolean
 }
 
@@ -43,6 +44,7 @@ export const SessionCard = (props: CardProps) => {
   let thumbnailClassName = css['thumbnail-container']
 
   if (props.compact) thumbnailClassName += ` ${css['compact']}`
+  if (props.className) thumbnailClassName += ` ${props.className}`
 
   return (
     <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track} track={props.session.track}>
@@ -62,7 +64,7 @@ export const SessionCard = (props: CardProps) => {
             <div className={css['room']}>
               <div className={css['room-title']}>
                 <IconMarker />
-                <p>{props.session.room.name}</p>
+                <Link to={`/en/app/venue/${props.session.room.id}`}>{props.session.room.name}</Link>
               </div>
 
               {props.session.room.capacity && (
@@ -89,13 +91,21 @@ export const SessionCard = (props: CardProps) => {
           {props.session.speakers.length > 0 && (
             <div className={css['speakers']}>
               <IconSpeaker />
-              <p>
-                {props.session.speakers
-                  .map(i => {
-                    return i.name
-                  })
-                  .join(', ')}
-              </p>
+              {props.session.speakers.map((session, index) => {
+                const isLast = props.session.speakers.length - 1 === index
+                const isFirst = index === 0
+
+                return (
+                  <Link
+                    key={session.id}
+                    className={`${css['speaker']} ${isFirst ? css['is-first'] : ''}`}
+                    to={`/en/app/speakers/${session.id}`}
+                  >
+                    {session.name}
+                    {!isLast && <>,&nbsp;</>}
+                  </Link>
+                )
+              })}
             </div>
           )}
         </div>

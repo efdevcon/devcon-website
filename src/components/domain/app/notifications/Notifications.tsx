@@ -8,6 +8,7 @@ import { usePageContext } from 'context/page-context'
 // import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import moment from 'moment'
 import { Button } from 'components/common/button'
+import { useAppContext } from 'context/app-context'
 // import notifications from 'pages/app/notifications'
 
 // Copied from the web-push documentation
@@ -254,22 +255,24 @@ const filters = [
 ]
 
 export const NotificationCard = React.forwardRef((props: any, ref: any) => {
-  const [seen, setSeen] = React.useState<boolean>(true)
+  const { seenNotifications, setSeenNotifications } = useAppContext()
+  const seen = seenNotifications?.[props.notification.id]
+
+  const markAsSeen = () => {
+    setSeenNotifications((seenNotifications: any) => {
+      return {
+        ...seenNotifications,
+        [props.notification.id]: true,
+      }
+    })
+
+    window.localStorage.setItem(`notification-seen-${props.notification.id}`, 'yes')
+  }
 
   React.useImperativeHandle(ref, () => ({
     seen,
-    markAsSeen: () => {
-      setSeen(true)
-
-      window.localStorage.setItem(`notification-seen-${props.notification.id}`, 'yes')
-    },
+    markAsSeen,
   }))
-
-  React.useLayoutEffect(() => {
-    const seen = window.localStorage.getItem(`notification-seen-${props.notification.id}`)
-
-    setSeen(seen === 'yes')
-  }, [props.notification.id])
 
   let className = css['notification-block']
 
@@ -279,7 +282,7 @@ export const NotificationCard = React.forwardRef((props: any, ref: any) => {
   const dateAsMoment = moment.utc(notification.date)
 
   return (
-    <ThumbnailBlock key={notification.id} className={className} onMouseEnter={() => setSeen(true)}>
+    <ThumbnailBlock key={notification.id} className={className}>
       <div className={css['top']}>
         <div className={css['time']}>
           <p>{dateAsMoment.format('MM/DD/YY')}</p>
@@ -305,25 +308,27 @@ export const NotificationCard = React.forwardRef((props: any, ref: any) => {
 
 export const Notifications = (props: any) => {
   const pageContext = usePageContext()
-  const notificationRefs = React.createRef<any>()
+  const notificationRefs = React.useRef<any>({})
+  const { seenNotifications, setSeenNotifications } = useAppContext()
   // const [basicFilter, setBasicFilter] = React.useState('all')
 
-  React.useEffect(() => {
-    // Object.values(notificationRefs.current).forEach(console.log)
-  }, [])
+  const unseenNotifications =
+    pageContext && Object.values(seenNotifications).length < pageContext.appNotifications?.length
 
   return (
     <div>
       <div className={css['header']}>
         <h2 className="font-lg-fixed">Notifications</h2>
-        <Button
-          className="red sm"
-          onClick={() => {
-            Object.values(notificationRefs.current).forEach(console.log)
-          }}
-        >
-          Mark all as read
-        </Button>
+        {unseenNotifications && (
+          <Button
+            className="red sm"
+            onClick={() => {
+              Object.values(notificationRefs.current).forEach((notification: any) => notification.markAsSeen())
+            }}
+          >
+            Mark all as read
+          </Button>
+        )}
       </div>
 
       {/* <Basic
@@ -347,7 +352,7 @@ export const Notifications = (props: any) => {
           <NotificationCard
             key={notification.id}
             notification={notification}
-            // ref={(ref: any) => (notificationRefs.current[notification.id] = ref)}
+            ref={(ref: any) => (notificationRefs.current[notification.id] = ref)}
           />
         )
       })}

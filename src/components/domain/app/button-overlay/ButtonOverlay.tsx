@@ -11,12 +11,13 @@ type ButtonContent = {
 
 type ButtonOverlayProps = {
   buttons: ButtonContent[]
+  leftAligned?: boolean
 }
 
 export const ButtonOverlay = (props: ButtonOverlayProps) => {
   return (
     <div data-type="button-overlay" className={`${css['container']} section`}>
-      <div className={css['shift-end']}>
+      <div className={`${css['shift-end']} ${props.leftAligned ? css['left-aligned'] : ''}`}>
         {props.buttons.map(button => {
           let className = css['content']
 

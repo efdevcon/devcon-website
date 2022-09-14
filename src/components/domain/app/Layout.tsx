@@ -14,7 +14,7 @@ type LayoutProps = {
 
 export const AppLayout = (props: LayoutProps) => {
   const accountContext = useAccountContext()
-  const loggedIn = !!accountContext.account
+  // const loggedIn = !!accountContext.account
 
   const headerHeight = useGetElementHeight('header')
   const upperNavHeight = useGetElementHeight('inline-nav')

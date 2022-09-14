@@ -62,7 +62,7 @@ export const ThumbnailBlock = (props: ThumbnailBlock) => {
   })()
 
   return (
-    <div className={className}>
+    <div className={className} onMouseEnter={props.onMouseEnter}>
       {thumbnail}
       <div data-type="thumbnail-block-content" className={css['children']}>
         {props.children}

@@ -88,8 +88,14 @@ export const List = (props: ListProps) => {
                   <div key={time} className={css['timeslot']}>
                     <div className={css['start-time']}>{startTimeFormatted} UTC-5</div>
 
-                    {sessions.map(session => {
-                      return <SessionCard session={session} key={session.id} />
+                    {sessions.map((session, index) => {
+                      return (
+                        <SessionCard
+                          className={index === 0 ? css['session-card'] : ''}
+                          session={session}
+                          key={session.id}
+                        />
+                      )
                     })}
                   </div>
                 )
@@ -130,7 +136,6 @@ export const List = (props: ListProps) => {
             },
             render: () => <ChevronUp />,
           },
-
           {
             id: 'today',
             text: 'Today',

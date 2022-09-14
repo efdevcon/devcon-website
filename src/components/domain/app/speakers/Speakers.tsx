@@ -19,7 +19,47 @@ import { AppNav } from 'components/domain/app/navigation'
 import FuzzySearch from 'fuzzy-search'
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import IconTwitter from 'assets/icons/twitter.svg'
-import SwipeToScroll from 'components/common/swipe-to-scroll'
+import { ButtonOverlay } from 'components/domain/app/button-overlay'
+import ChevronUp from 'assets/icons/chevron-up.svg'
+
+export const extractTwitterUsername = (twitter: string) => {
+  if (!twitter) return
+
+  // Extract twitter user
+  const twitterUser = twitter.split('twitter.com/').pop()
+
+  // Split on any white space and use the first part
+  const twitterUserNoDuplicates = twitterUser && twitterUser.split(' ').shift()
+
+  // Remove @ prefix if present
+  const twitterUserNoLeadingAt = twitterUserNoDuplicates && twitterUserNoDuplicates.split('@').pop()
+
+  if (!twitterUserNoLeadingAt) return
+
+  return twitterUserNoLeadingAt
+}
+
+// Coincidentally people have been using the same structure for their free text github profiles, but separating out for clarity/flexibility
+export const extractGithubUsername = (github: string) => {
+  if (!github) return
+  // Spotted one outlier not caught by the heuristics above (https://git.xx.network/*****), just giving it a custom case
+  if (github.includes('git.xx.network')) return github
+
+  // Extract github user
+  const githubUser = github.split('github.com/').pop()
+
+  // Split on any white space and use the first part
+  const githubUserNoDuplicates = githubUser && githubUser.split(' ').shift()
+
+  // Remove @ prefix if present
+  const githubUserNoLeadingAt = githubUserNoDuplicates && githubUserNoDuplicates.split('@').pop()
+
+  const githubUserNoTrailingSlash = githubUserNoLeadingAt?.split('/').shift()
+
+  if (!githubUserNoTrailingSlash) return
+
+  return `https://github.com/${githubUserNoTrailingSlash}`
+}
 
 type CardProps = {
   speaker: SpeakerType
@@ -44,9 +84,9 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
   if (isSpeakerFavorited) className += ` ${css['favorited']}`
 
   return (
-    <Link to={`/app/speakers/${speaker.id}`} className={className}>
+    <div className={className}>
       <>
-        <div className={css['thumbnail']}>
+        <Link to={`/app/speakers/${speaker.id}`} className={css['thumbnail']}>
           <div className={css['wrapper']}>
             <Image
               src={speaker.avatar || makeBlockie(speaker.name)}
@@ -55,29 +95,22 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
               layout="fill"
             />
           </div>
-        </div>
+        </Link>
 
         <div className={css['details']}>
-          <p className={css['name']}>{speaker.name}</p>
+          <Link to={`/app/speakers/${speaker.id}`} className={css['name']}>
+            {speaker.name}
+          </Link>
           <p className={css['role']}>{speaker.role}</p>
           <p className={css['company']}>{speaker.company}</p>
           {speaker.twitter &&
             (() => {
-              // Extract twitter user
-              const twitterUser = speaker.twitter.split('twitter.com/').pop()
-
-              // Split on any white space and use the first part
-              const twitterUserNoDuplicates = twitterUser && twitterUser.split(' ').shift()
-
-              // Remove @ prefix if present
-              const twitterUserNoLeadingAt = twitterUserNoDuplicates && twitterUserNoDuplicates.split('@').pop()
-
-              if (!twitterUserNoLeadingAt) return
+              const twitter = extractTwitterUsername(speaker.twitter)
 
               return (
-                <Link className={`${css['twitter']}`} to={`https://twitter.com/${twitterUserNoLeadingAt}`}>
+                <Link className={`${css['twitter']} hover-underline`} to={`https://twitter.com/${twitter}`}>
                   <IconTwitter />
-                  {`${twitterUserNoLeadingAt}`}
+                  {`${twitter}`}
                 </Link>
               )
             })()}
@@ -89,7 +122,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
           </div>
         )}
       </>
-    </Link>
+    </div>
   )
 }
 
@@ -166,6 +199,20 @@ const ListAlphabeticalSort = (props: ListProps) => {
 
   return (
     <div className={`${css['list-container']} ${css['alphabet-sort']}`}>
+      <ButtonOverlay
+        // leftAligned
+        buttons={[
+          {
+            id: 'scroll-up',
+            className: css['collapse'],
+            text: 'Top',
+            onClick: () => {
+              window.scrollTo(0, 0)
+            },
+            render: () => <ChevronUp />,
+          },
+        ]}
+      />
       <div className={css['speakers-letters']}>
         <div className={css['speakers']}>
           {alphabet.map(letter => {
