@@ -21,7 +21,6 @@ export const SpeakerDetails = (props: any) => {
   const firstName = splitName.shift()
   const lastName = splitName.join(' ')
   const twitterUrl = extractTwitterUsername(props.speaker.twitter)
-  // Funnily enough it seems
   const githubUrl = extractGithubUsername(props.speaker.github)
 
   return (
