@@ -1,6 +1,7 @@
 import { GetSessions } from 'services/programming'
 import { Session } from 'types/Session'
 import { UserAccount } from 'types/UserAccount'
+import dbConnect from 'utils/dbConnect'
 import { BaseRepository } from './BaseRepository'
 import { IUserAccountRepository } from './interfaces/IUserAccountRepository'
 
@@ -31,8 +32,12 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
 
   public async findPersonalizedAgenda(userId: string): Promise<Session[]> {
     console.log('Find personalized schedule', userId)
+
+    console.log('Connect Db')
+    await dbConnect()
+
     try {
-      console.log('find User')
+      console.log('Find User')
       const user = await this._model.findOne({ _id: userId }) as UserAccount
       if (!user.appState.publicSchedule) return []
 
