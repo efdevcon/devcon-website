@@ -238,7 +238,7 @@ export const Schedule = (props: any) => {
               },
             ]}
         />
-        {personalAgenda && <p>You're watching a personalized agenda. </p>}
+        {personalAgenda && <p>This is a personalized schedule.</p>}
       </div>
 
       {!personalAgenda &&
