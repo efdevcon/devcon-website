@@ -24,7 +24,7 @@ export const useAppContext = () => {
 
 export const AppContext = (props: AppContextProps) => {
   const [currentTime, setCurrentTime] = useState<Moment | null>(null)
-  const { appNotifications } = usePageContext()
+  const pageContext = usePageContext()
   const [seenNotifications, setSeenNotifications] = useState({})
 
   // Sync current time periodically to keep time related functionality up to date
@@ -43,11 +43,11 @@ export const AppContext = (props: AppContextProps) => {
   }, [])
 
   useEffect(() => {
-    if (!appNotifications) return
+    if (!pageContext?.appNotifications) return
 
     const seenNotifications = {} as any
 
-    appNotifications.forEach(notification => {
+    pageContext.appNotifications?.forEach(notification => {
       const seen = window.localStorage.getItem(`notification-seen-${notification.id}`)
 
       if (seen) {
@@ -55,10 +55,8 @@ export const AppContext = (props: AppContextProps) => {
       }
     })
 
-    console.log(seenNotifications, 'uhhh')
-
     setSeenNotifications(seenNotifications)
-  }, [appNotifications])
+  }, [pageContext?.appNotifications])
 
   return (
     <Context.Provider value={{ now: currentTime, seenNotifications, setSeenNotifications }}>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useImperativeHandle } from 'react'
 import { Session } from 'types/Session'
 import css from './list.module.scss'
 import { SessionCard } from 'components/domain/app/session'
@@ -18,7 +18,7 @@ interface ListProps extends ScheduleInformation {
   now?: Moment | null
 }
 
-export const List = (props: ListProps) => {
+export const List = React.forwardRef((props: ListProps, ref: any) => {
   const router = useRouter()
   const { account } = useAccountContext()
   const [openDays, setOpenDays] = React.useState({} as { [key: string]: boolean })
@@ -40,7 +40,26 @@ export const List = (props: ListProps) => {
     setNowOpen()
   }, [setNowOpen])
 
+  useImperativeHandle(ref, () => {
+    return {
+      closeAll: () => {
+        setOpenDays({})
+      },
+      openAll: () => {
+        props.sessionsByTime.forEach(time =>
+          setOpenDays(openDays => {
+            return {
+              ...openDays,
+              [time.date.readable]: true,
+            }
+          })
+        )
+      },
+    }
+  })
+
   const allOpen = props.sessionsByTime.every(time => openDays[time.date.readable])
+  const todayIsDuringEvent = props.sessionsByTime.some(time => props.now && props.now.isSame(time.date.moment, 'day'))
 
   const fabs = [
     {
@@ -72,9 +91,13 @@ export const List = (props: ListProps) => {
       },
       render: () => <ChevronUp />,
     },
-    {
+  ]
+
+  if (todayIsDuringEvent) {
+    fabs.push({
       id: 'today',
       text: 'Today',
+      className: '',
       onClick: () => {
         const nowElement = document.getElementById(`${normalizedNow}`)
 
@@ -83,8 +106,8 @@ export const List = (props: ListProps) => {
         nowElement?.scrollIntoView({ behavior: 'smooth' })
       },
       render: () => <ClockIcon />,
-    },
-  ]
+    })
+  }
 
   if (account)
     fabs.unshift({
@@ -168,4 +191,4 @@ export const List = (props: ListProps) => {
       <ButtonOverlay buttons={fabs} />
     </div>
   )
-}
+})

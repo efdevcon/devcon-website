@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import css from './schedule.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
 import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
@@ -102,6 +102,7 @@ export const Schedule = (props: any) => {
   const [favoritesOnly, setFavoritesOnly] = React.useState(false)
   const [selectedTracks, setSelectedTracks] = React.useState({} as any)
   const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
+  const listRef = useRef<any>()
 
   const eventDates = React.useMemo(() => {
     const dates = []
@@ -117,6 +118,24 @@ export const Schedule = (props: any) => {
 
     return dates
   }, [event])
+
+  useEffect(() => {
+    if (listRef.current) {
+      if (dateFilter.readable !== 'all') {
+        listRef.current.openAll()
+      } else if (dateFilter.readable) {
+        listRef.current.closeAll()
+      }
+    }
+  }, [search, dateFilter])
+
+  useEffect(() => {
+    if (listRef.current) {
+      if (search.length > 0) {
+        listRef.current.openAll()
+      }
+    }
+  }, [search, dateFilter])
 
   const bookmarkedSessions = account?.appState?.sessions
 
@@ -215,36 +234,40 @@ export const Schedule = (props: any) => {
           value={basicFilter}
           onChange={setBasicFilter}
           options={
-            personalAgenda ? [
-              {
-                text: 'Personal Agenda',
-                value: 'personal',
-              }] : [
-              {
-                text: 'All',
-                value: 'all',
-              },
-              {
-                text: 'Attending',
-                value: 'attending',
-              },
-              {
-                text: 'Past',
-                value: 'past',
-              },
-              {
-                text: 'Upcoming',
-                value: 'upcoming',
-              },
-            ]}
+            personalAgenda
+              ? [
+                  {
+                    text: 'Personal Agenda',
+                    value: 'personal',
+                  },
+                ]
+              : [
+                  {
+                    text: 'All',
+                    value: 'all',
+                  },
+                  {
+                    text: 'Attending',
+                    value: 'attending',
+                  },
+                  {
+                    text: 'Past',
+                    value: 'past',
+                  },
+                  {
+                    text: 'Upcoming',
+                    value: 'upcoming',
+                  },
+                ]
+          }
         />
         {personalAgenda && <p>This is a personalized schedule.</p>}
       </div>
 
-      {!personalAgenda &&
+      {!personalAgenda && (
         <div className={filterCss['filter']}>
           <div className="section">
-            <Search placeholder="Find a session" value={search} onChange={setSearch} />
+            <Search placeholder="Find a session" value={search} onChange={setSearch} timeout={300} />
 
             <div className={filterCss['foldout']}>
               <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
@@ -357,7 +380,7 @@ export const Schedule = (props: any) => {
             </div>
           </div>
         </div>
-      }
+      )}
 
       <div className="section" style={{ position: 'relative' }}>
         {(() => {
@@ -369,6 +392,7 @@ export const Schedule = (props: any) => {
               sessionTimeslots={sessionTimeslots}
               timeslotOrder={timeslotOrder}
               sessionsByTime={sessionsByTime}
+              ref={listRef}
             />
           ) : (
             <p>Timeline view goes here</p>

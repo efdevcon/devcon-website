@@ -364,7 +364,7 @@ export const Speakers = (props: any) => {
 
       <div className={filterCss['filter']}>
         <div className="section">
-          <Search placeholder="Find a speaker" value={search} onChange={setSearch} />
+          <Search placeholder="Find a speaker" value={search} onChange={setSearch} timeout={300} />
 
           <div className={`${filterCss['foldout']} ${css['foldout-overrides']}`}>
             <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
