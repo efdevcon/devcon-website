@@ -16,7 +16,7 @@ interface ListProps extends ScheduleInformation {
 }
 
 export const List = (props: ListProps) => {
-  const [openDays, setOpenDays] = React.useState({} as any)
+  const [openDays, setOpenDays] = React.useState({} as { [key: string]: boolean })
   const normalizedNow = props.now ? normalizeDate(props.now) : ''
 
   const setNowOpen = React.useMemo(() => {
