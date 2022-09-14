@@ -204,3 +204,13 @@
     z-index: -1;
   }
 }
+
+.share { 
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+
+  .toggle {
+    margin-right: 4px;
+  }
+}

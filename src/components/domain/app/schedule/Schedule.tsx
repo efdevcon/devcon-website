@@ -91,12 +91,14 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   return { sessionsByTime, sessionTimeslots, timeslotOrder, dates }
 }
 
-export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: any) => {
+export const Schedule = (props: any) => {
+  const { sessions: sessionsBeforeFormatting, tracks, event } = props
+  const personalAgenda = !!props.userId
   const { account } = useAccountContext()
   const { now } = useAppContext()
   const [search, setSearch] = React.useState('')
   const [view, setView] = React.useState('list')
-  const [basicFilter, setBasicFilter] = React.useState('all')
+  const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'all')
   const [favoritesOnly, setFavoritesOnly] = React.useState(false)
   const [selectedTracks, setSelectedTracks] = React.useState({} as any)
   const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
@@ -212,142 +214,150 @@ export const Schedule = ({ sessions: sessionsBeforeFormatting, tracks, event }: 
         <Basic
           value={basicFilter}
           onChange={setBasicFilter}
-          options={[
-            {
-              text: 'All',
-              value: 'all',
-            },
-            {
-              text: 'Attending',
-              value: 'attending',
-            },
-            {
-              text: 'Past',
-              value: 'past',
-            },
-            {
-              text: 'Upcoming',
-              value: 'upcoming',
-            },
-          ]}
+          options={
+            personalAgenda ? [
+              {
+                text: 'Personal Agenda',
+                value: 'personal',
+              }] : [
+              {
+                text: 'All',
+                value: 'all',
+              },
+              {
+                text: 'Attending',
+                value: 'attending',
+              },
+              {
+                text: 'Past',
+                value: 'past',
+              },
+              {
+                text: 'Upcoming',
+                value: 'upcoming',
+              },
+            ]}
         />
+        {personalAgenda && <p>You're watching a personalized agenda. </p>}
       </div>
 
-      <div className={filterCss['filter']}>
-        <div className="section">
-          <Search placeholder="Find a session" value={search} onChange={setSearch} />
+      {!personalAgenda &&
+        <div className={filterCss['filter']}>
+          <div className="section">
+            <Search placeholder="Find a session" value={search} onChange={setSearch} />
 
-          <div className={filterCss['foldout']}>
-            <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
-              {(open, setOpen) => {
-                return (
-                  <div className={filterCss['foldout-content']}>
-                    <div className={filterCss['tracks']}>
-                      <Tags
-                        value={selectedTracks}
-                        onChange={nextValue => {
-                          const isAlreadySelected = selectedTracks[nextValue]
+            <div className={filterCss['foldout']}>
+              <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
+                {(open, setOpen) => {
+                  return (
+                    <div className={filterCss['foldout-content']}>
+                      <div className={filterCss['tracks']}>
+                        <Tags
+                          value={selectedTracks}
+                          onChange={nextValue => {
+                            const isAlreadySelected = selectedTracks[nextValue]
 
-                          const nextState = {
-                            ...selectedTracks,
-                          }
+                            const nextState = {
+                              ...selectedTracks,
+                            }
 
-                          if (isAlreadySelected) {
-                            delete nextState[nextValue]
-                          } else {
-                            nextState[nextValue] = true
-                          }
+                            if (isAlreadySelected) {
+                              delete nextState[nextValue]
+                            } else {
+                              nextState[nextValue] = true
+                            }
 
-                          setSelectedTracks(nextState)
-                        }}
-                        options={tracks.map((i: string) => {
-                          return {
-                            text: i,
-                            value: i,
-                          }
-                        })}
-                      />
+                            setSelectedTracks(nextState)
+                          }}
+                          options={tracks.map((i: string) => {
+                            return {
+                              text: i,
+                              value: i,
+                            }
+                          })}
+                        />
+                      </div>
+
+                      <div className={filterCss['actions']}>
+                        <button className={`app hover sm thin-borders`} onClick={() => setSelectedTracks({})}>
+                          Reset
+                        </button>
+
+                        <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
+                          Confirm
+                        </button>
+                      </div>
                     </div>
+                  )
+                }}
+              </FilterFoldout>
 
-                    <div className={filterCss['actions']}>
-                      <button className={`app hover sm thin-borders`} onClick={() => setSelectedTracks({})}>
-                        Reset
-                      </button>
+              <div className={filterCss['right']}>
+                <div>
+                  <p className="font-xs-fixed">Current Filter:</p>
+                  <p className={filterCss['filter-indicator']}>
+                    {(() => {
+                      const trackFilters = Object.keys(selectedTracks)
 
-                      <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
-                        Confirm
-                      </button>
-                    </div>
-                  </div>
-                )
-              }}
-            </FilterFoldout>
+                      if (trackFilters.length === 0) return 'All tracks'
 
-            <div className={filterCss['right']}>
-              <div>
-                <p className="font-xs-fixed">Current Filter:</p>
-                <p className={filterCss['filter-indicator']}>
-                  {(() => {
-                    const trackFilters = Object.keys(selectedTracks)
-
-                    if (trackFilters.length === 0) return 'All tracks'
-
-                    return trackFilters.join(', ')
-                  })()}
-                </p>
-              </div>
-              <div className={filterCss['end']}>
-                <button
-                  onClick={() => setView('list')}
-                  className={`${view === 'list' ? 'hover' : ''} app squared sm thin-borders`}
-                >
-                  <ListIcon />
-                </button>
-                <button
-                  onClick={() => setView('timeline')}
-                  className={`${view === 'timeline' ? 'hover' : ''} app squared sm thin-borders`}
-                >
-                  <TileIcon />
-                </button>
+                      return trackFilters.join(', ')
+                    })()}
+                  </p>
+                </div>
+                <div className={filterCss['end']}>
+                  <button
+                    onClick={() => setView('list')}
+                    className={`${view === 'list' ? 'hover' : ''} app squared sm thin-borders`}
+                  >
+                    <ListIcon />
+                  </button>
+                  <button
+                    onClick={() => setView('timeline')}
+                    className={`${view === 'timeline' ? 'hover' : ''} app squared sm thin-borders`}
+                  >
+                    <TileIcon />
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className={css['date-selector-container']}>
-            <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
-              <ul className={css['date-selector']}>
-                {[
-                  { text: 'All', value: { readable: 'all', moment: null } },
-                  ...eventDates.map(date => {
-                    return {
-                      text: date.readable,
-                      value: date,
-                      moment: date.moment,
-                    }
-                  }),
-                ].map(filter => {
-                  let className = ''
+            <div className={css['date-selector-container']}>
+              <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
+                <ul className={css['date-selector']}>
+                  {[
+                    { text: 'All', value: { readable: 'all', moment: null } },
+                    ...eventDates.map(date => {
+                      return {
+                        text: date.readable,
+                        value: date,
+                        moment: date.moment,
+                      }
+                    }),
+                  ].map(filter => {
+                    let className = ''
 
-                  const selected = dateFilter.readable === filter.value.readable
-                  const isCurrentDay = filter.value.moment && filter.value.moment.isSame(now, 'day')
+                    const selected = dateFilter.readable === filter.value.readable
+                    const isCurrentDay = filter.value.moment && filter.value.moment.isSame(now, 'day')
 
-                  if (selected) className += css['selected']
-                  if (isCurrentDay) className += ` ${css['is-current-day']}`
+                    if (selected) className += css['selected']
+                    if (isCurrentDay) className += ` ${css['is-current-day']}`
 
-                  // TODO: clear up this stuff
-                  if (filter.value.readable === 'Invalid date') return null
+                    // TODO: clear up this stuff
+                    if (filter.value.readable === 'Invalid date') return null
 
-                  return (
-                    <li className={className} key={filter.value.readable} onClick={() => setDateFilter(filter.value)}>
-                      {filter.text}
-                    </li>
-                  )
-                })}
-              </ul>
-            </SwipeToScroll>
+                    return (
+                      <li className={className} key={filter.value.readable} onClick={() => setDateFilter(filter.value)}>
+                        {filter.text}
+                      </li>
+                    )
+                  })}
+                </ul>
+              </SwipeToScroll>
+            </div>
           </div>
         </div>
-      </div>
+      }
 
       <div className="section" style={{ position: 'relative' }}>
         {(() => {

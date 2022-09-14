@@ -9,13 +9,16 @@ import ClockIcon from 'assets/icons/clock.svg'
 import CollapseIcon from 'assets/icons/collapse.svg'
 import ChevronUp from 'assets/icons/chevron-up.svg'
 import ExpandIcon from 'assets/icons/expand.svg'
+import ShareIcon from 'assets/icons/share.svg'
 import { ButtonOverlay } from 'components/domain/app/button-overlay'
+import { useRouter } from 'next/router'
 
 interface ListProps extends ScheduleInformation {
   now?: Moment | null
 }
 
 export const List = (props: ListProps) => {
+  const router = useRouter()
   const [openDays, setOpenDays] = React.useState({} as { [key: string]: boolean })
   const normalizedNow = props.now ? normalizeDate(props.now) : ''
 
@@ -102,6 +105,15 @@ export const List = (props: ListProps) => {
       <ButtonOverlay
         buttons={[
           {
+            id: 'share-schedule',
+            className: css['collapse'],
+            text: 'Share',
+            onClick: () => {
+              router.push('/app/settings#schedule')
+            },
+            render: () => <ShareIcon />,
+          },
+          {
             id: 'collapse2',
             className: css['collapse'],
             text: allOpen ? 'Close' : 'Open',
@@ -130,7 +142,6 @@ export const List = (props: ListProps) => {
             },
             render: () => <ChevronUp />,
           },
-
           {
             id: 'today',
             text: 'Today',

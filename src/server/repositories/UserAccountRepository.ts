@@ -1,3 +1,5 @@
+import { GetSessions } from 'services/programming'
+import { Session } from 'types/Session'
 import { UserAccount } from 'types/UserAccount'
 import { BaseRepository } from './BaseRepository'
 import { IUserAccountRepository } from './interfaces/IUserAccountRepository'
@@ -25,5 +27,20 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
       console.log("Couldn't find user account by address", address)
       console.error(e)
     }
+  }
+
+  public async findPersonalizedAgenda(userId: string): Promise<Session[]> {
+    try {
+      const user = await this._model.findOne({ _id: userId }) as UserAccount
+      if (!user.appState.publicSchedule) return []
+
+      const sessions = await GetSessions()
+      return sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+    } catch (e) {
+      console.log("Couldn't find user account", userId)
+      console.error(e)
+    }
+
+    return []
   }
 }
