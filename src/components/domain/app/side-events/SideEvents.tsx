@@ -98,7 +98,7 @@ export const SideEvents = (props: any) => {
       />
       <div className="section">
         <div className="content">
-          <div className={`${css['hero']}`}>
+          {/* <div className={`${css['hero']}`}>
             <div className={`${css['hero-content']}`}>
               <div className={css['image-container']}>
                 <Image src={imageBogota} objectFit="cover" alt={'Devcon Side event'} layout="fill" />
@@ -120,7 +120,12 @@ export const SideEvents = (props: any) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
+
+          <p className="font-lg clear-bottom clear-top-less">
+            <b>Note:</b> These events are not organized or endorsed by Devcon in any capacity beyond listings and
+            schedule integration for ease of access.
+          </p>
 
           <div className={css['curator']}>
             <div className={css['title']}>
@@ -202,8 +207,8 @@ export const SideEvents = (props: any) => {
                     <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
                   </p>
                 </CollapsedSectionHeader>
-                <CollapsedSectionContent dontAnimate>
-                  <div className="clear-top-less clear-left-less">
+                <CollapsedSectionContent>
+                  <div className="clear-top-less">
                     {eventsForDay.map(sideEvent => {
                       return <SideEventCard key={sideEvent.id} event={sideEvent} />
                     })}

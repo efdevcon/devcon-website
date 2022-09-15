@@ -86,24 +86,28 @@ export const Dashboard = (props: any) => {
                 onChange={() => {}}
                 options={[
                   {
-                    text: 'Menu Item 1',
-                    value: 'Another thing2',
-                    onClick: (close: any) => close(),
+                    text: 'Schedule',
+                    value: 'schedule',
+                    url: '/app/schedule',
+                    // onClick: (close: any) => close(),
                   },
                   {
-                    text: 'Menu Item 2',
-                    value: 'Another thing3',
-                    onClick: (close: any) => close(),
+                    text: 'Guides',
+                    value: 'guides',
+                    url: '/app/info',
+                    // onClick: (close: any) => close(),
                   },
                   {
-                    text: 'Menu Item 3',
-                    value: 'Another thing4',
-                    onClick: (close: any) => close(),
+                    text: 'Venue Map',
+                    value: 'venue map',
+                    url: '/app/venue',
+                    // onClick: (close: any) => close(),
                   },
                   {
-                    text: 'Menu Item 4',
-                    value: 'Another thing5',
-                    onClick: (close: any) => close(),
+                    text: 'Speakers',
+                    value: 'speakers',
+                    url: '/app/speakers',
+                    // onClick: (close: any) => close(),
                   },
                 ]}
               />
@@ -121,7 +125,7 @@ export const Dashboard = (props: any) => {
               {
                 title: 'Guides',
                 description: 'Access Devcon Bogota local guides.',
-                url: '/app/guides',
+                url: '/app/info',
                 color: 'yellow',
               },
               {

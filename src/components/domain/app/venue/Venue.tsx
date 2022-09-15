@@ -96,11 +96,15 @@ export const Venue = (props: Props) => {
   const [search, setSearch] = React.useState('')
   const pz = usePanzoom()
 
-  // const filteredFloors = props.floors.filter(floor => {
-  //   if (search.toLowerCase().includes(floor.toLowerCase())) return true;
+  const filteredFloors = search
+    ? props.floors.filter(floor => {
+        if (search.toLowerCase().includes(floor.toLowerCase())) return true
 
-  //   return false;
-  // })
+        const roomsByFloor = props.rooms.filter(i => i.info === floor)
+
+        return roomsByFloor.some(room => room.name.toLowerCase().includes(search))
+      })
+    : props.floors
 
   return (
     <>
@@ -108,8 +112,7 @@ export const Venue = (props: Props) => {
         nested
         links={[
           {
-            title: 'Venue',
-            to: '/app/venue',
+            title: 'Venue Map',
           },
         ]}
       />
@@ -130,27 +133,23 @@ export const Venue = (props: Props) => {
       </div>
 
       <div className="section clear-top-less">
-        <h2 className="primary clear-bottom-less">Floors</h2>
-        {props.floors.map(floor => {
+        <h2 className="app-header clear-bottom-less">Floors</h2>
+        {filteredFloors.sort().map(floor => {
           const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
           return (
-            <React.Fragment key={floor}>
+            <div className="clear-top-less" key={floor}>
               <div className={`padded bold font-md-fixed ${css['floor-header']}`}>{floor}</div>
               <LinkList>
                 {roomsByFloor.map((room: Room) => {
                   return (
-                    <Link
-                      className={`font-md font-bold ${css['floor-link']}`}
-                      key={room.id}
-                      to={`/app/venue/${room.id}`}
-                    >
+                    <Link className={`font-sm ${css['floor-link']}`} key={room.id} to={`/app/venue/${room.id}`}>
                       {room.name}
                     </Link>
                   )
                 })}
               </LinkList>
-            </React.Fragment>
+            </div>
           )
         })}
       </div>
