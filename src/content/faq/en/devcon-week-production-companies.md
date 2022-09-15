@@ -4,22 +4,6 @@ category: devcon-week
 order: 1
 ---
 
-### Bogota Event Producers
-
-_Best for small events, side events, happy hours, one-day events, etc._
-
-**Andrea Barrera**
-
-- Event Producer
-- [andreabarrera@toctalk.com.co](mailto:andreabarrera@toctalk.com.co)
-- +57 3158916541
-
-**Diego Cantor**
-
-- Concept and event logistics
-- [diegocantor@toctalk.com.co](mailto:diegocantor@toctalk.com.co)
-- +57 3203066507
-
 ### Bogota Event Production Companies
 
 _Best for larger events, multi-day events, more complex or creative events, etc._

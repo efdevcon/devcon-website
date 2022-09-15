@@ -4,22 +4,6 @@ category: devcon-week
 order: 1
 ---
 
-### Bogotá Productores de Eventos
-
-_Ideal para eventos pequeños, eventos paralelos, happy hours, eventos de un día, etc._
-
-**Andrea Barrera**
-
-- Productor de eventos
-- [andreabarrera@toctalk.com.co](mailto:andreabarrera@toctalk.com.co)
-- +57 3158916541
-
-**Diego Cantor**
-
-- Concepto y logística de eventos.
-- [diegocantor@toctalk.com.co](mailto:diegocantor@toctalk.com.co)
-- +57 3203066507
-
 ### Bogotá Productoras de Eventos
 
 _Mejor para eventos más grandes, eventos de varios días, eventos más complejos o creativos, etc._
