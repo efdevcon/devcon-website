@@ -139,7 +139,7 @@ export const Venue = (props: Props) => {
 
           return (
             <div className="clear-top-less" key={floor}>
-              <div className={`padded bold font-md-fixed ${css['floor-header']}`}>{floor}</div>
+              <div className={`padded bold app-header ${css['floor-header']}`}>{floor}</div>
               <LinkList>
                 {roomsByFloor.map((room: Room) => {
                   return (

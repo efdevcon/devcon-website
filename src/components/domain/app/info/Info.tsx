@@ -67,7 +67,7 @@ export const Info = (props: InfoProps) => {
       <div className="section">
         <CollapsedSection className={css['no-border']}>
           <CollapsedSectionHeader className="border-bottom">
-            <p className="font-md-fixed bold">FAQ</p>
+            <p className="app-header">FAQ</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <div className={css['faq']}>
@@ -104,7 +104,7 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         <CollapsedSection>
           <CollapsedSectionHeader>
-            <p className="font-md-fixed bold">Registration / Check-in Info</p>
+            <p className="app-header">Registration / Check-in Info</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <p>
@@ -126,7 +126,7 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         <CollapsedSection>
           <CollapsedSectionHeader>
-            <p className="font-md-fixed bold">City Guide</p>
+            <p className="app-header">City Guide</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <CityGuideContent {...props} faqs={props.cityGuideFaqs} insideApp />
@@ -134,7 +134,7 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         <CollapsedSection>
           <CollapsedSectionHeader>
-            <p className="font-md-fixed bold">Health and Safety Guides</p>
+            <p className="app-header">Health and Safety Guides</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <p className="clear-bottom-less">Nothing here</p>
@@ -142,7 +142,7 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         <CollapsedSection>
           <CollapsedSectionHeader>
-            <p className="font-md-fixed bold">Venue Guide</p>
+            <p className="app-header">Venue Guide</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <p className="clear-bottom-less">Nothing here</p>
@@ -150,7 +150,7 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         <CollapsedSection>
           <CollapsedSectionHeader>
-            <p className="font-md-fixed bold">Local Guides</p>
+            <p className="app-header">Local Guides</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <p className="clear-bottom-less">Nothing here</p>
@@ -158,7 +158,7 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         <CollapsedSection>
           <CollapsedSectionHeader>
-            <p className="font-md-fixed bold">Food & Drink</p>
+            <p className="app-header">Food & Drink</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <p className="clear-bottom-less">Nothing here</p>
@@ -166,7 +166,7 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         {/* <CollapsedSection>
           <CollapsedSectionHeader>
-            <p className="font-md-fixed bold">Provide Feedback</p>
+            <p className="app-header">Provide Feedback</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <ProvideFeedbackForm />

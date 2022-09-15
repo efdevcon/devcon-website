@@ -216,7 +216,9 @@ export const Dashboard = (props: any) => {
             open={openNotifications}
             setOpen={() => setOpenNotifications(!openNotifications)}
           >
-            <CollapsedSectionHeader title="Latest Notification" />
+            <CollapsedSectionHeader>
+              <p className="app-header">Latest Notification</p>
+            </CollapsedSectionHeader>
             <CollapsedSectionContent>
               <NotificationCard notification={pageContext?.appNotifications[0]} />
             </CollapsedSectionContent>
@@ -225,24 +227,21 @@ export const Dashboard = (props: any) => {
 
         {upcomingSessions && upcomingSessions.length > 0 && (
           <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
-            <CollapsedSectionHeader title="Upcoming Sessions" />
+            <CollapsedSectionHeader>
+              <p className="app-header">Your Upcoming Sessions</p>
+            </CollapsedSectionHeader>
             <CollapsedSectionContent>{upcomingSessions}</CollapsedSectionContent>
           </CollapsedSection>
         )}
-
-        {/* <CollapsedSection>
-          <CollapsedSectionHeader title="Schedule Overview" />
-          <CollapsedSectionContent>
-            <SessionCard session={props.sessions[0]} />
-          </CollapsedSectionContent>
-        </CollapsedSection> */}
 
         {suggestedSessions.length > 0 && (
           <CollapsedSection
             open={openSuggestedSessions}
             setOpen={() => setOpenSuggestedSessions(!openSuggestedSessions)}
           >
-            <CollapsedSectionHeader title="Suggested Sessions" />
+            <CollapsedSectionHeader>
+              <p className="app-header">Suggested Sessions</p>
+            </CollapsedSectionHeader>
             <CollapsedSectionContent>{suggestedSessions}</CollapsedSectionContent>
           </CollapsedSection>
         )}
