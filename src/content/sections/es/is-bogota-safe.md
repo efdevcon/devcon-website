@@ -6,7 +6,7 @@ left: >-
   Colombia es más segura hoy que en cualquier otro momento de los últimos 50
   años, y esperamos que Devcon en Bogotá sea una experiencia impactante para
   todos. Dicho esto, si bien Bogotá es una ciudad muy moderna, se encuentra en
-  un país en desarrollo, y recomendamos tomar algunas precauciones básicas. Haz
+  un país en desarrollo, **y recomendamos tomar algunas precauciones básicas.** Haz
   eso, y tu mayor problema probablemente será querer quedarte más tiempo.
 
 
@@ -17,15 +17,15 @@ right: >-
   Bogotá. Eso significa:
 
 
-  * Mira por donde vas
+  * **Mira por donde vas**
 
-  * No camine con su teléfono afuera o con su computadora cuando no sea necesario
+  * **No camine con su teléfono afuera o con su computadora cuando no sea necesario**
 
-  * No lleve artículos llamativos como relojes caros o billeteras de hardware chapadas en oro
+  * **No lleve artículos llamativos como relojes caros o billeteras de hardware chapadas en oro**
 
-  * Evite tomar taxis en la calle. Usa Uber o DiDi, donde un viaje de 20 minutos cuesta alrededor de $3 USD. Consejo: tal vez pague el dólar extra por un "Uber Comfort" más agradable *(recomendado cuando viene del aeropuerto)*.
+  * **Evite tomar taxis en la calle. Usa Uber o DiDi, donde un viaje de 20 minutos cuesta alrededor de $3 USD. Consejo: tal vez pague el dólar extra por un "Uber Comfort" más agradable *(recomendado cuando viene del aeropuerto)*.**
 
-  * Tal vez no camines solo a casa por la noche (Recordatorio: los Ubers son fáciles y baratos).
+  * **Tal vez no camines solo a casa por la noche (Recordatorio: los Ubers son fáciles y baratos).**
 
    Puede elegir su aventura y, con un poco de sentido común y precaución adicional, puede esperar tener una experiencia divertida y segura en Bogotá.
 ---
