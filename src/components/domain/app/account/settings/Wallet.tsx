@@ -73,22 +73,11 @@ export default function WalletSettings() {
 
   return (
     <>
-
       <AppNav
         nested
         links={[
           {
-            title: 'Settings',
-            to: '/app/settings',
-            useIsActive: () => {
-              return false
-            },
-          },
-          {
             title: 'Wallet',
-            useIsActive: () => {
-              return true
-            },
           },
         ]}
       />

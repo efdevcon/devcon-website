@@ -128,7 +128,7 @@ export const Menu = (props: any) => {
         },
         icon: (
           <div className={css['app-notifications']}>
-            <BellIcon />
+            <BellIcon style={props.foldoutOpen ? { opacity: 0.7 } : {}} />
             {countUnreadNotifications > 0 && <div className={css['counter']}>{countUnreadNotifications}</div>}
           </div>
         ),

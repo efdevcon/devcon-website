@@ -59,7 +59,7 @@
   //   border: 1px solid darken($colors-standard-border-color, 20%);
   // }
 
-  border: 1px solid $colors-standard-border-color; 
+  border: 2px solid $colors-standard-border-color; 
 
   [data-type='thumbnail-block-content'] {
     padding: $gaps-gap-2;
@@ -68,6 +68,7 @@
   .top {
     display: flex;
     justify-content: space-between;
+    --color-icon: #{$colors-track-red};
 
     .time {
       display: flex;

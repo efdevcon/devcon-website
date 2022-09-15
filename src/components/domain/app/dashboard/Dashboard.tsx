@@ -2,17 +2,19 @@ import React from 'react'
 import css from './dashboard.module.scss'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 import { NotificationCard } from '../notifications'
-import { Session, SessionCard } from '../session'
+import { SessionCard } from '../session'
+import { Session as SessionType } from 'types/Session'
 import { SliderStickyNotes } from 'components/common/slider/SliderVariations'
 import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
-import Image from 'next/image'
 import HighlightChivas from 'assets/images/highlight-chivas-sound.png'
 import HighlightHackerBasement from 'assets/images/highlight-hacker-basement.png'
 import HighlightCommunityHubs from 'assets/images/highlight-hub.png'
-import { AppNav } from 'components/domain/app/navigation'
 import { Card } from 'components/common/card'
 import { Slider, useSlider } from 'components/common/slider'
 import { usePageContext } from 'context/page-context'
+import { useAppContext } from 'context/app-context'
+import { useAccountContext } from 'context/account-context'
+import moment from 'moment'
 
 const galleryEvents = [
   {
@@ -41,9 +43,12 @@ const galleryEvents = [
 ]
 
 export const Dashboard = (props: any) => {
-  const [openNotifications, setOpenNotifications] = React.useState(false)
-  const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(false)
+  const [openNotifications, setOpenNotifications] = React.useState(true)
+  const [openUpcomingSessions, setOpenUpcomingSessions] = React.useState(true)
+  const [openSuggestedSessions, setOpenSuggestedSessions] = React.useState(true)
+  const { account } = useAccountContext()
   const pageContext = usePageContext()
+  const { now } = useAppContext()
 
   const sliderSettings = {
     infinite: false,
@@ -71,6 +76,39 @@ export const Dashboard = (props: any) => {
   }
 
   const sliderProps = useSlider(sliderSettings)
+
+  const upcomingSessions = (() => {
+    const bookmarkedSessions = account?.appState?.sessions
+    const sessions: SessionType[] = props.sessions
+    const nowPlusThreshold = now && now.clone().add(24, 'hours')
+
+    if (!now) return null
+
+    return sessions
+      .map(session => {
+        const attending = bookmarkedSessions?.some(bookmarkedSession => bookmarkedSession.id === session.id)
+
+        if (!attending) return null
+
+        const isUpcoming =
+          moment.utc(session.start).isAfter(now) && moment.utc(session.start).isBefore(nowPlusThreshold)
+
+        if (!isUpcoming) return null
+
+        return <SessionCard key={session.id} session={session} />
+      })
+      .filter(session => !!session)
+  })()
+
+  const suggestedSessions = ['7LHLPB', '9CNZCW']
+    .map(sessionId => {
+      const session = props.sessions.find((session: SessionType) => session.id === sessionId)
+
+      if (!session) return null
+
+      return <SessionCard key={sessionId} session={session} />
+    })
+    .filter(session => !!session)
 
   return (
     <>
@@ -185,12 +223,12 @@ export const Dashboard = (props: any) => {
           </CollapsedSection>
         )}
 
-        <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
-          <CollapsedSectionHeader title="Upcoming Sessions" />
-          <CollapsedSectionContent>
-            <SessionCard session={props.sessions[0]} />
-          </CollapsedSectionContent>
-        </CollapsedSection>
+        {upcomingSessions && upcomingSessions.length > 0 && (
+          <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
+            <CollapsedSectionHeader title="Upcoming Sessions" />
+            <CollapsedSectionContent>{upcomingSessions}</CollapsedSectionContent>
+          </CollapsedSection>
+        )}
 
         {/* <CollapsedSection>
           <CollapsedSectionHeader title="Schedule Overview" />
@@ -199,20 +237,22 @@ export const Dashboard = (props: any) => {
           </CollapsedSectionContent>
         </CollapsedSection> */}
 
-        {/* TODO: These will be hardcoded I suppose? */}
-        <CollapsedSection>
-          <CollapsedSectionHeader title="Suggested Sessions" />
-          <CollapsedSectionContent>
-            <SessionCard session={props.sessions[0]} />
-          </CollapsedSectionContent>
-        </CollapsedSection>
+        {suggestedSessions.length > 0 && (
+          <CollapsedSection
+            open={openSuggestedSessions}
+            setOpen={() => setOpenSuggestedSessions(!openSuggestedSessions)}
+          >
+            <CollapsedSectionHeader title="Suggested Sessions" />
+            <CollapsedSectionContent>{suggestedSessions}</CollapsedSectionContent>
+          </CollapsedSection>
+        )}
 
-        <CollapsedSection>
+        {/* <CollapsedSection>
           <CollapsedSectionHeader title="Side Events" />
           <CollapsedSectionContent>
             <SessionCard session={props.sessions[0]} />
           </CollapsedSectionContent>
-        </CollapsedSection>
+        </CollapsedSection> */}
       </div>
     </>
   )

@@ -46,7 +46,13 @@ export default function SettingsPage() {
 
   return (
     <>
-      <AppNav />
+      <AppNav
+        links={[
+          {
+            title: 'Settings',
+          },
+        ]}
+      />
       <div className={css['container']}>
         <div>
           <div className="section">
@@ -80,7 +86,8 @@ export default function SettingsPage() {
                   }
 
                   setOpenTabs(nextOpenState)
-                }}>
+                }}
+              >
                 <CollapsedSectionHeader title="Account" />
                 <CollapsedSectionContent>
                   <div className={css['links']}>
@@ -107,13 +114,17 @@ export default function SettingsPage() {
                   }
 
                   setOpenTabs(nextOpenState)
-                }}>
+                }}
+              >
                 <CollapsedSectionHeader title="Schedule" />
                 <CollapsedSectionContent>
                   <div className={css['share']}>
                     <p>Share your Schedule publicly</p>
                     <div className={css['toggle']}>
-                      <Toggle defaultChecked={accountContext.account?.appState?.publicSchedule} onChange={toggleScheduleSharing} />
+                      <Toggle
+                        defaultChecked={accountContext.account?.appState?.publicSchedule}
+                        onChange={toggleScheduleSharing}
+                      />
                     </div>
                   </div>
                   {accountContext.account?._id && accountContext.account?.appState?.publicSchedule && (
@@ -141,7 +152,8 @@ export default function SettingsPage() {
                   }
 
                   setOpenTabs(nextOpenState)
-                }}>
+                }}
+              >
                 <CollapsedSectionHeader title="Notifications" />
                 <CollapsedSectionContent>
                   <div className={css['links']}>
@@ -169,7 +181,8 @@ export default function SettingsPage() {
                   }
 
                   setOpenTabs(nextOpenState)
-                }}>
+                }}
+              >
                 <CollapsedSectionHeader title="Application" />
                 <CollapsedSectionContent>
                   <div className={css['links']}>
@@ -196,7 +209,8 @@ export default function SettingsPage() {
                   }
 
                   setOpenTabs(nextOpenState)
-                }}>
+                }}
+              >
                 <CollapsedSectionHeader title="Delete Account" />
                 <CollapsedSectionContent>
                   <div className={css['wallet']}>

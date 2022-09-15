@@ -75,17 +75,7 @@ export default function EmailSettings() {
         nested
         links={[
           {
-            title: 'Settings',
-            to: '/app/settings',
-            useIsActive: () => {
-              return false
-            },
-          },
-          {
             title: 'Email',
-            useIsActive: () => {
-              return true
-            },
           },
         ]}
       />

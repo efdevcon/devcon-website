@@ -54,7 +54,14 @@ export const Home = (props: any) => {
 
   return (
     <>
-      <AppNav />
+      <AppNav
+        links={[
+          {
+            title: 'Home',
+            to: '/app',
+          },
+        ]}
+      />
       <div className="section no-overflow">
         {loggedIn && (
           <div className={`${css['account']} border-bottom`}>

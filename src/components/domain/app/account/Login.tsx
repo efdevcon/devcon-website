@@ -120,7 +120,14 @@ export default function LoginPage() {
 
   return (
     <>
-      <AppNav />
+      <AppNav
+        links={[
+          {
+            title: 'Login',
+            // to: '/app/login',
+          },
+        ]}
+      />
       <div className={css['container']}>
         <div>
           <div className={css['hero']}>
@@ -166,7 +173,9 @@ export default function LoginPage() {
                     <Button className={`black`} onClick={verifyEmail}>
                       Verify your email
                     </Button>
-                    <span className={css['resend']} role='button' onClick={resendVerificationEmail}>Re-send verification code</span>
+                    <span className={css['resend']} role="button" onClick={resendVerificationEmail}>
+                      Re-send verification code
+                    </span>
                   </div>
                 </div>
               )}
