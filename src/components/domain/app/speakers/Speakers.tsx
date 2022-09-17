@@ -16,7 +16,6 @@ import StarFill from 'assets/icons/star-fill.svg'
 import makeBlockie from 'ethereum-blockies-base64'
 import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
-import FuzzySearch from 'fuzzy-search'
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import IconTwitter from 'assets/icons/twitter.svg'
 import { ButtonOverlay } from 'components/domain/app/button-overlay'
@@ -287,30 +286,6 @@ export const Speakers = (props: any) => {
   //   [props.speakers]
   // )
   const favoritedSpeakers = account?.appState?.speakers
-  // const sortState = useSort(
-  //   [],
-  //   [
-  //     {
-  //       title: 'Alphabetical',
-  //       key: 'name',
-  //       sort: SortVariation.basic,
-  //     },
-  //     {
-  //       title: 'Schedule',
-  //       key: 'days',
-  //       sort: SortVariation.basic,
-  //     },
-  //     {
-  //       title: 'Tracks',
-  //       key: 'tracks',
-  //       sort: SortVariation.date,
-  //     },
-  //   ],
-  //   false,
-  //   'desc'
-  // )
-
-  // const speakersMatchingSearch = search.length > 0 ? searcher.search(search) : props.speakers
 
   const speakers = props.speakers.filter((speaker: Speaker) => {
     // Filter by interested
@@ -323,11 +298,11 @@ export const Speakers = (props: any) => {
     // Filter by search
     if (search) {
       let matchesAnySearch
-      const lowerCaseSearch = search.toLowerCase()
+      const lowerCaseSearch = search.toLowerCase().trim()
 
       if (speaker.name.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
-
-      speaker.sessions.some((session: any) => {
+      if (speaker.twitter && speaker.twitter.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+      ;(speaker.sessions || []).some((session: any) => {
         if (session.room && session.room.name.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
         if (session.title.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
         if (session.description && session.description.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
@@ -337,7 +312,7 @@ export const Speakers = (props: any) => {
     }
 
     // Filter by tracks
-    const match = speaker.sessions.every((session: any) => {
+    const match = (speaker.sessions || []).every((session: any) => {
       const trackMatches = multiSelectFilter(selectedTracks, session.track)
       const roomMatches = multiSelectFilter(selectedRooms, session.room?.name)
       const difficultyMatches = multiSelectFilter(selectedExpertise, session.expertise)
@@ -352,15 +327,6 @@ export const Speakers = (props: any) => {
     })
 
     if (!match) return false
-
-    // const tracks = Object.keys(selectedTracks)
-    // const thereAreTracksToFilterBy = tracks.length > 0
-
-    // if (thereAreTracksToFilterBy) {
-    //   const match = speaker.tracks?.some((track: any) => selectedTracks[track])
-
-    //   if (!match) return false
-    // }
 
     return true
   })
