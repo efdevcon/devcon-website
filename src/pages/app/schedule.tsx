@@ -2,7 +2,15 @@ import { AppLayout } from 'components/domain/app/Layout'
 import { Schedule } from 'components/domain/app/schedule'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
-import { GetSessions, GetSpeakers, GetRooms, GetTracks, GetEvent } from 'services/programming'
+import {
+  GetSessions,
+  GetSpeakers,
+  GetRooms,
+  GetTracks,
+  GetEvent,
+  GetExpertiseLevels,
+  GetSessionTypes,
+} from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
 
@@ -24,6 +32,8 @@ export async function getStaticProps(context: any) {
       tracks: await GetTracks(),
       speakers: await GetSpeakers(),
       rooms: await GetRooms(),
+      expertiseLevels: await GetExpertiseLevels(),
+      sessionTypes: await GetSessionTypes(),
     },
   }
 }

@@ -6,15 +6,18 @@ import { NoResults } from 'components/common/filter'
 import Star from 'assets/icons/star.svg'
 import StarFill from 'assets/icons/star-fill.svg'
 import TileIcon from 'assets/icons/tiles.svg'
+import ShareIcon from 'assets/icons/share.svg'
 import ListIcon from 'assets/icons/list-simple.svg'
 import { List } from './views/List'
 import { Session } from 'types/Session'
+import { useRouter } from 'next/router'
 import moment, { Moment } from 'moment'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
-import FuzzySearch from 'fuzzy-search'
+// import FuzzySearch from 'fuzzy-search'
 import { useAccountContext } from 'context/account-context'
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import { useAppContext } from 'context/app-context'
+import { Room } from 'types/Room'
 
 type Timeslot = {
   time: number
@@ -74,7 +77,7 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   const sessionsByTime = dates.map((date: Date) => {
     return {
       date,
-      timeslots: timeslotOrder.reduce((acc, time) => {
+      timeslots: timeslotOrder.sort().reduce((acc, time) => {
         const startTime = moment.utc(time)
 
         if (startTime.isSame(date.moment, 'day')) {
@@ -91,16 +94,32 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   return { sessionsByTime, sessionTimeslots, timeslotOrder, dates }
 }
 
+const multiSelectFilter = (selectedFilter: { [key: string]: boolean }, key?: string) => {
+  const filter = Object.keys(selectedFilter)
+  const filterIsActive = filter.length > 0
+
+  if (filterIsActive) {
+    if (!key) return false
+    if (!selectedFilter[key]) return false
+  }
+
+  return true
+}
+
 export const Schedule = (props: any) => {
   const { sessions: sessionsBeforeFormatting, tracks, event } = props
   const personalAgenda = !!props.userId
   const { account } = useAccountContext()
+  const router = useRouter()
   const { now } = useAppContext()
   const [search, setSearch] = React.useState('')
   const [view, setView] = React.useState('list')
   const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'all')
   const [favoritesOnly, setFavoritesOnly] = React.useState(false)
-  const [selectedTracks, setSelectedTracks] = React.useState({} as any)
+  const [selectedTracks, setSelectedTracks] = React.useState({} as { [key: string]: boolean })
+  const [selectedRooms, setSelectedRooms] = React.useState({} as { [key: string]: boolean })
+  const [selectedSessionTypes, setSelectedSessionTypes] = React.useState({} as { [key: string]: boolean })
+  const [selectedExpertise, setSelectedExpertise] = React.useState({} as { [key: string]: boolean })
   const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
   const listRef = useRef<any>()
 
@@ -119,6 +138,8 @@ export const Schedule = (props: any) => {
     return dates
   }, [event])
 
+  // When selecting a specific day, open it immediately
+  // When selecting all days, close them to provide a hollistic view of the events
   useEffect(() => {
     if (listRef.current) {
       if (dateFilter.readable !== 'all') {
@@ -127,29 +148,44 @@ export const Schedule = (props: any) => {
         listRef.current.closeAll()
       }
     }
-  }, [search, dateFilter])
+  }, [dateFilter])
 
+  // Open all days when searching
   useEffect(() => {
     if (listRef.current) {
       if (search.length > 0) {
         listRef.current.openAll()
       }
     }
-  }, [search, dateFilter])
+  }, [search])
 
   const bookmarkedSessions = account?.appState?.sessions
 
   // Format sessions (memoized)
   const formattedSessions = useFormatSessions(sessionsBeforeFormatting)
   // Create search index
-  const searcher = React.useMemo(
-    () => new FuzzySearch(formattedSessions, ['title', 'speakers.name', 'description', 'room.name']),
-    [formattedSessions]
-  )
+  // const searcher = React.useMemo(
+  //   () => new FuzzySearch(formattedSessions, ['title', 'speakers.name', 'description', 'room.name']),
+  //   [formattedSessions]
+  // )
   // Apply search filter
-  const sessionsMatchingSearch = search.length > 0 ? searcher.search(search) : formattedSessions
+  // const sessionsMatchingSearch = search.length > 0 ? searcher.search(search) : formattedSessions
   // Apply remaining filters
-  const filteredSessions = sessionsMatchingSearch.filter((session: Session) => {
+  const filteredSessions = formattedSessions.filter((session: Session) => {
+    // Filter by search
+    if (search) {
+      let matchesAnySearch
+      const lowerCaseSearch = search.toLowerCase()
+
+      if (session.room && session.room.name.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+      if (session.title.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+      if (session.speakers.some(speaker => speaker.name.toLowerCase().includes(lowerCaseSearch)))
+        matchesAnySearch = true
+      if (session.description && session.description.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+
+      if (!matchesAnySearch) return false
+    }
+
     // Filter by interested
     if (favoritesOnly) {
       const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
@@ -173,12 +209,15 @@ export const Schedule = (props: any) => {
     }
 
     // Filter by tracks
-    const tracks = Object.keys(selectedTracks)
-    const thereAreTracksToFilterBy = tracks.length > 0
+    const trackMatches = multiSelectFilter(selectedTracks, session.track)
+    const roomMatches = multiSelectFilter(selectedRooms, session.room?.name)
+    const difficultyMatches = multiSelectFilter(selectedExpertise, session.expertise)
+    const typeMatches = multiSelectFilter(selectedSessionTypes, session.type)
 
-    if (thereAreTracksToFilterBy) {
-      if (!selectedTracks[session.track]) return false
-    }
+    if (!trackMatches) return false
+    if (!roomMatches) return false
+    if (!difficultyMatches) return false
+    if (!typeMatches) return false
 
     // Filter by day
     if (dateFilter.readable !== 'all') {
@@ -221,11 +260,18 @@ export const Schedule = (props: any) => {
             },
           }
 
-          if (favoritesOnly) {
-            return <StarFill {...starProps} className="icon fill-red" />
-          } else {
-            return <Star {...starProps} />
-          }
+          return (
+            <>
+              {account && (
+                <ShareIcon
+                  onClick={() => {
+                    router.push('/app/settings#schedule')
+                  }}
+                />
+              )}
+              {favoritesOnly ? <StarFill {...starProps} className="icon fill-red" /> : <Star {...starProps} />}
+            </>
+          )
         }}
       />
 
@@ -270,11 +316,21 @@ export const Schedule = (props: any) => {
             <Search placeholder="Find a session" value={search} onChange={setSearch} timeout={300} />
 
             <div className={filterCss['foldout']}>
-              <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
+              <FilterFoldout
+                active={
+                  Math.max(
+                    Object.keys(selectedTracks).length,
+                    Object.keys(selectedRooms).length,
+                    Object.keys(selectedExpertise).length,
+                    Object.keys(selectedSessionTypes).length
+                  ) > 0
+                }
+              >
                 {(open, setOpen) => {
                   return (
                     <div className={filterCss['foldout-content']}>
-                      <div className={filterCss['tracks']}>
+                      <div className={filterCss['filter-section']}>
+                        <p className="app-header clear-bottom-less">Tracks</p>
                         <Tags
                           value={selectedTracks}
                           onChange={nextValue => {
@@ -292,7 +348,37 @@ export const Schedule = (props: any) => {
 
                             setSelectedTracks(nextState)
                           }}
-                          options={tracks.map((i: string) => {
+                          options={tracks
+                            .filter((track: string) => !!track)
+                            .map((i: string) => {
+                              return {
+                                text: i,
+                                value: i,
+                              }
+                            })}
+                        />
+                      </div>
+
+                      <div className={filterCss['filter-section']}>
+                        <p className="app-header clear-bottom-less">Expertise</p>
+                        <Tags
+                          value={selectedExpertise}
+                          onChange={nextValue => {
+                            const isAlreadySelected = selectedExpertise[nextValue]
+
+                            const nextState = {
+                              ...selectedExpertise,
+                            }
+
+                            if (isAlreadySelected) {
+                              delete nextState[nextValue]
+                            } else {
+                              nextState[nextValue] = true
+                            }
+
+                            setSelectedExpertise(nextState)
+                          }}
+                          options={props.expertiseLevels.map((i: string) => {
                             return {
                               text: i,
                               value: i,
@@ -301,9 +387,73 @@ export const Schedule = (props: any) => {
                         />
                       </div>
 
+                      <div className={filterCss['filter-section']}>
+                        <p className="app-header clear-bottom-less">Session Type</p>
+                        <Tags
+                          value={selectedSessionTypes}
+                          onChange={nextValue => {
+                            const isAlreadySelected = selectedSessionTypes[nextValue]
+
+                            const nextState = {
+                              ...selectedSessionTypes,
+                            }
+
+                            if (isAlreadySelected) {
+                              delete nextState[nextValue]
+                            } else {
+                              nextState[nextValue] = true
+                            }
+
+                            setSelectedSessionTypes(nextState)
+                          }}
+                          options={props.sessionTypes.map((i: string) => {
+                            return {
+                              text: i,
+                              value: i,
+                            }
+                          })}
+                        />
+                      </div>
+
+                      <div className={filterCss['filter-section']}>
+                        <p className="app-header clear-bottom-less">Room</p>
+                        <Tags
+                          value={selectedRooms}
+                          onChange={nextValue => {
+                            const isAlreadySelected = selectedRooms[nextValue]
+
+                            const nextState = {
+                              ...selectedRooms,
+                            }
+
+                            if (isAlreadySelected) {
+                              delete nextState[nextValue]
+                            } else {
+                              nextState[nextValue] = true
+                            }
+
+                            setSelectedRooms(nextState)
+                          }}
+                          options={props.rooms.map((i: Room) => {
+                            return {
+                              text: i.name,
+                              value: i.name,
+                            }
+                          })}
+                        />
+                      </div>
+
                       <div className={filterCss['actions']}>
-                        <button className={`app hover sm thin-borders`} onClick={() => setSelectedTracks({})}>
-                          Reset
+                        <button
+                          className={`app hover sm thin-borders`}
+                          onClick={() => {
+                            setSelectedTracks({})
+                            setSelectedRooms({})
+                            setSelectedSessionTypes({})
+                            setSelectedExpertise({})
+                          }}
+                        >
+                          Reset Filter
                         </button>
 
                         <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
@@ -320,11 +470,25 @@ export const Schedule = (props: any) => {
                   <p className="font-xs-fixed">Current Filter:</p>
                   <p className={filterCss['filter-indicator']}>
                     {(() => {
-                      const trackFilters = Object.keys(selectedTracks)
+                      const computeFilterShorthand = (filter: { [key: string]: boolean }, key: string) => {
+                        const filterAsKeys = Object.keys(filter)
 
-                      if (trackFilters.length === 0) return 'All tracks'
+                        if (filterAsKeys.length === 0) return
+                        if (filterAsKeys.length === 1) return filterAsKeys[0]
 
-                      return trackFilters.join(', ')
+                        return `${key} (${filterAsKeys.length})`
+                      }
+
+                      return (
+                        [
+                          computeFilterShorthand(selectedTracks, 'Track'),
+                          computeFilterShorthand(selectedSessionTypes, 'Session Type'),
+                          computeFilterShorthand(selectedExpertise, 'Expertise'),
+                          computeFilterShorthand(selectedRooms, 'Room'),
+                        ]
+                          .filter(val => !!val)
+                          .join(', ') || 'No filter applied'
+                      )
                     })()}
                   </p>
                 </div>

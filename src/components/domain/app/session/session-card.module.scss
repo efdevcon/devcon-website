@@ -117,6 +117,11 @@
         color: $colors-track-purple;
         --color-icon: #{$colors-track-purple};
       }
+
+      .n-seats {
+        flex-shrink: 0;
+        margin-right: 8px;
+      }
     }
 
     .speakers {

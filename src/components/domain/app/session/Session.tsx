@@ -112,15 +112,18 @@ export const Session = (props: SessionProps) => {
 
             <h2 className={css['title']}>{props.session.title}</h2>
 
-            {props.session.expertise && (
-              <div className={css['meta']}>
-                <div className="label white bold">{props.session.track}</div>
-                <p className="bold text-uppercase">{props.session.expertise}</p>
+            <div className={css['meta']}>
+              <div className="label white bold">{props.session.track || 'No specific track'}</div>
+            </div>
+
+            {(props.session.expertise || props.session.type) && (
+              <div className={`${css['expertise-and-type']} ${css['meta']}`}>
+                {props.session.expertise && <p className="bold text-uppercase">{props.session.expertise}</p>}
+                {props.session.type && <p className="bold text-uppercase">{props.session.type}</p>}
               </div>
             )}
 
-            {/* Update className - not sure what it does yet */}
-            <div className={css['calendar-icon-in-circle']} onClick={() => bookmarkSession('attending')}>
+            <div className={css['calendar-icon-in-circle']}>
               <IconCalendar />
             </div>
           </div>
@@ -149,12 +152,12 @@ export const Session = (props: SessionProps) => {
               endDate: moment.utc(props.session.end),
             }}
           >
-            <div>
+            <div style={{ cursor: 'pointer' }}>
               <p>Export to Calendar</p> <IconCalendar />
             </div>
           </AddToCalendar>
 
-          <Link to="/app/venue">
+          <Link to={`/app/venue/${props.session.room?.id}`}>
             <p>Room Details</p> <PinIcon />
           </Link>
         </div>

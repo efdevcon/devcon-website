@@ -83,8 +83,8 @@ export async function GetSessions(fromCache = true): Promise<Array<SessionType>>
       title: i.title,
       track: i.track?.en ?? '',
       duration: i.duration,
-      start: new Date(i.slot.start).getTime(),
-      end: new Date(i.slot.end).getTime(),
+      start: i.slot.start,
+      end: i.slot.end,
       room: rooms.find(x => x.name === i.slot?.room?.en) || '',
       type: i.submission_type?.en ?? '',
       description: i.description,
@@ -110,6 +110,26 @@ export async function GetSessionsBySpeaker(id: string): Promise<Array<SessionTyp
 export async function GetSessionsByRoom(id: string): Promise<Array<SessionType>> {
   // no endpoint exists, so fetches and filters all sessions recursively
   return (await GetSessions()).filter(i => i.room?.id === id)
+}
+
+export async function GetExpertiseLevels(): Promise<Array<string>> {
+  return Array.from((await GetSessions()).reduce((acc: any, session: SessionType) => {
+    if (session.expertise) {
+      acc.add(session.expertise);
+    }
+
+    return acc;
+  }, new Set()));
+}
+
+export async function GetSessionTypes(): Promise<Array<string>> {
+  return Array.from((await GetSessions()).reduce((acc: any, session: SessionType) => {
+    if (session.type) {
+      acc.add(session.type);
+    }
+
+    return acc;
+  }, new Set()));
 }
 
 export async function GetTracks(): Promise<Array<string>> {

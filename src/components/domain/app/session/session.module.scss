@@ -75,9 +75,18 @@
     .meta {
       display: flex;
       align-items: center;
+      padding-right: 4px;
 
-      p {
-        margin-left: $gaps-gap-4;
+      &.expertise-and-type {
+        margin-top: 8px;
+      }
+
+      > * {
+        margin-left: 16px;
+
+        &:first-child {
+          margin-left: 0px;
+        }
       }
     }
 
@@ -107,6 +116,7 @@
   grid-gap: 1px;
   background: $colors-standard-border-color;
   border: 1px solid $colors-standard-border-color;
+  max-width: 600px;
 
   > * {
     // height: 52px;
@@ -114,14 +124,20 @@
     justify-content: space-between;
     background: $colors-monochrome-1;
     padding: $gaps-gap-2;
+    cursor: pointer;
+    --color-icon: #{$colors-monochrome-5};
+
+    &:hover {
+      --color-icon: #{$colors-monochrome-7};
+    }
 
     > p {
+      @include fonts-bold;
       align-self: flex-end;
     }
 
     > svg {
       font-size: 32px;
-      --color-icon: #{$colors-monochrome-5};
     }
   }
 

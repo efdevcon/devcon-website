@@ -31,7 +31,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     deleteAccount,
     setSpeakerFavorite,
     setSessionBookmark,
-    toggleScheduleSharing
+    toggleScheduleSharing,
   })
 
   useEffect(() => {
@@ -253,14 +253,17 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     let sessions = account.appState?.sessions ?? []
 
     if (remove) {
-      sessions = sessions.filter(i => i.id !== session.id)
+      sessions = sessions.filter(i => i.id !== session.id || level !== i.level)
     } else {
-      sessions.push({
-        id: session.id,
-        level: level,
-        start: new Date(session.start),
-        end: new Date(session.end),
-      })
+      sessions = [
+        ...sessions,
+        {
+          id: session.id,
+          level: level,
+          start: new Date(session.start),
+          end: new Date(session.end),
+        },
+      ]
     }
 
     const newAccountState = {

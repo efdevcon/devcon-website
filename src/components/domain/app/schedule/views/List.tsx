@@ -11,7 +11,6 @@ import ChevronUp from 'assets/icons/chevron-up.svg'
 import ExpandIcon from 'assets/icons/expand.svg'
 import ShareIcon from 'assets/icons/share.svg'
 import { ButtonOverlay } from 'components/domain/app/button-overlay'
-import { useRouter } from 'next/router'
 import { useAccountContext } from 'context/account-context'
 
 interface ListProps extends ScheduleInformation {
@@ -19,7 +18,6 @@ interface ListProps extends ScheduleInformation {
 }
 
 export const List = React.forwardRef((props: ListProps, ref: any) => {
-  const router = useRouter()
   const { account } = useAccountContext()
   const [openDays, setOpenDays] = React.useState({} as { [key: string]: boolean })
   const normalizedNow = props.now ? normalizeDate(props.now) : ''
@@ -109,17 +107,6 @@ export const List = React.forwardRef((props: ListProps, ref: any) => {
     })
   }
 
-  if (account)
-    fabs.unshift({
-      id: 'share-schedule',
-      className: css['collapse'],
-      text: 'Share',
-      onClick: () => {
-        router.push('/app/settings#schedule')
-      },
-      render: () => <ShareIcon />,
-    })
-
   return (
     <div className={css['list']}>
       {props.sessionsByTime.map(({ date, timeslots }) => {
@@ -169,7 +156,7 @@ export const List = React.forwardRef((props: ListProps, ref: any) => {
 
                 return (
                   <div key={time} className={css['timeslot']}>
-                    <div className={css['start-time']}>{startTimeFormatted} UTC-5</div>
+                    <div className={css['start-time']}>{startTimeFormatted} - Colombia Time (UTC-5)</div>
 
                     {sessions.map((session, index) => {
                       return (

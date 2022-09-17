@@ -717,7 +717,7 @@
     "eventDays": [
       1665619200000
     ],
-    "website": "daos.paradigm.xyz",
+    "website": "https://daos.paradigm.xyz/",
     "twitter": "@rssh273"
   },
   {
@@ -2710,7 +2710,7 @@
     "id": "FPN3HY",
     "name": "Matt Pearring",
     "avatar": null,
-    "description": "Matt leads Developer Relations at Arbitrum. Originally from the Big Island of Hawaii, he enjoys music, video games, and the daily coffee ritual.",
+    "description": "Matt leads Product Management at Arbitrum. Originally from the Big Island of Hawaii, he enjoys music, video games, and the daily coffee ritual.",
     "tracks": [
       "Layer 2s"
     ],
@@ -4080,7 +4080,7 @@
   },
   {
     "id": "WQ3EN9",
-    "name": "Heather - Holds",
+    "name": "Ethereum Foundation",
     "avatar": null,
     "description": "Holding for others",
     "tracks": [
@@ -4209,7 +4209,7 @@
   {
     "id": "RZCDNC",
     "name": "Uros Kukic",
-    "avatar": "https://speak.devcon.org/media/avatars/profile_ZaXbJ6x.png",
+    "avatar": "https://www.gravatar.com/avatar/d8c113bfc248f410ced1a41c563f33f9",
     "description": "I'm a long-time solidity developer and a researcher at 3327. Always interested in new technologies and getting a clear understanding of various topics.",
     "tracks": [
       "Developer Infrastructure"
@@ -4593,6 +4593,59 @@
     ],
     "eventDays": [
       1665619200000
+    ]
+  },
+  {
+    "id": "TDB9TN",
+    "name": "Moritz Stellmacher",
+    "avatar": "https://speak.devcon.org/media/avatars/moritz_QurLEza.png",
+    "description": "After school (2009), Moritz joined two friends to help them grow their backyard magazine proud into a national marketing and event agency as the creative director.\r\n\r\nIn 2014 Moritz co-founded abend, a tech company with the mission to democratize marketing, and served as the CEO of Abend to over 3000 clients.\r\n\r\nIn 2013 Moritz started investing in and advocating Bitcoin. Since 2017 he fully focused on blockchain adoption, co-funding the peer-to-peer blockchain developer education platform.",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "https://twitter.com/moritzfelipe",
+    "github": "https://github.com/moritzfelipe"
+  },
+  {
+    "id": "3ZAZ97",
+    "name": "Vanessa Koh",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
+  },
+  {
+    "id": "9CRGTY",
+    "name": "Nalin Bhardwaj",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://nibnalin.me",
+    "twitter": "nibnalin",
+    "github": "nalinbhardwaj"
+  },
+  {
+    "id": "QGZZN7",
+    "name": "George",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Layer 1 Protocol"
+    ],
+    "eventDays": [
+      1665705600000
     ]
   }
 ]
