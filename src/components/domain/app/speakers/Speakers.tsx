@@ -21,6 +21,8 @@ import filterCss from 'components/domain/app/app-filter.module.scss'
 import IconTwitter from 'assets/icons/twitter.svg'
 import { ButtonOverlay } from 'components/domain/app/button-overlay'
 import ChevronUp from 'assets/icons/chevron-up.svg'
+import { Room } from 'types/Room'
+import { multiSelectFilter } from '../schedule/Schedule'
 
 export const extractTwitterUsername = (twitter: string) => {
   if (!twitter) return
@@ -276,37 +278,41 @@ export const Speakers = (props: any) => {
   const [search, setSearch] = React.useState('')
   const [favoritesOnly, setFavoritesOnly] = React.useState(false)
   const [selectedTracks, setSelectedTracks] = React.useState({} as any)
-  const searcher = React.useMemo(
-    () => new FuzzySearch(props.speakers, ['name', 'tracks.name', 'description', 'company']),
-    [props.speakers]
-  )
+  const [selectedRooms, setSelectedRooms] = React.useState({} as { [key: string]: boolean })
+  const [selectedSessionTypes, setSelectedSessionTypes] = React.useState({} as { [key: string]: boolean })
+  const [selectedExpertise, setSelectedExpertise] = React.useState({} as { [key: string]: boolean })
+
+  // const searcher = React.useMemo(
+  //   () => new FuzzySearch(props.speakers, ['name', 'tracks.name', 'description', 'company']),
+  //   [props.speakers]
+  // )
   const favoritedSpeakers = account?.appState?.speakers
-  const sortState = useSort(
-    [],
-    [
-      {
-        title: 'Alphabetical',
-        key: 'name',
-        sort: SortVariation.basic,
-      },
-      {
-        title: 'Schedule',
-        key: 'days',
-        sort: SortVariation.basic,
-      },
-      {
-        title: 'Tracks',
-        key: 'tracks',
-        sort: SortVariation.date,
-      },
-    ],
-    false,
-    'desc'
-  )
+  // const sortState = useSort(
+  //   [],
+  //   [
+  //     {
+  //       title: 'Alphabetical',
+  //       key: 'name',
+  //       sort: SortVariation.basic,
+  //     },
+  //     {
+  //       title: 'Schedule',
+  //       key: 'days',
+  //       sort: SortVariation.basic,
+  //     },
+  //     {
+  //       title: 'Tracks',
+  //       key: 'tracks',
+  //       sort: SortVariation.date,
+  //     },
+  //   ],
+  //   false,
+  //   'desc'
+  // )
 
-  const speakersMatchingSearch = search.length > 0 ? searcher.search(search) : props.speakers
+  // const speakersMatchingSearch = search.length > 0 ? searcher.search(search) : props.speakers
 
-  const speakers = speakersMatchingSearch.filter((speaker: Speaker) => {
+  const speakers = props.speakers.filter((speaker: Speaker) => {
     // Filter by interested
     if (favoritesOnly) {
       const favoritedSpeaker = favoritedSpeakers?.find(favoritedSpeaker => favoritedSpeaker === speaker.id)
@@ -314,14 +320,47 @@ export const Speakers = (props: any) => {
       if (!favoritedSpeaker) return false
     }
 
-    const tracks = Object.keys(selectedTracks)
-    const thereAreTracksToFilterBy = tracks.length > 0
+    // Filter by search
+    if (search) {
+      let matchesAnySearch
+      const lowerCaseSearch = search.toLowerCase()
 
-    if (thereAreTracksToFilterBy) {
-      const match = speaker.tracks?.some((track: any) => selectedTracks[track])
+      if (speaker.name.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
 
-      if (!match) return false
+      speaker.sessions.some((session: any) => {
+        if (session.room && session.room.name.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+        if (session.title.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+        if (session.description && session.description.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+      })
+
+      if (!matchesAnySearch) return false
     }
+
+    // Filter by tracks
+    const match = speaker.sessions.every((session: any) => {
+      const trackMatches = multiSelectFilter(selectedTracks, session.track)
+      const roomMatches = multiSelectFilter(selectedRooms, session.room?.name)
+      const difficultyMatches = multiSelectFilter(selectedExpertise, session.expertise)
+      const typeMatches = multiSelectFilter(selectedSessionTypes, session.type)
+
+      if (!trackMatches) return false
+      if (!roomMatches) return false
+      if (!difficultyMatches) return false
+      if (!typeMatches) return false
+
+      return true
+    })
+
+    if (!match) return false
+
+    // const tracks = Object.keys(selectedTracks)
+    // const thereAreTracksToFilterBy = tracks.length > 0
+
+    // if (thereAreTracksToFilterBy) {
+    //   const match = speaker.tracks?.some((track: any) => selectedTracks[track])
+
+    //   if (!match) return false
+    // }
 
     return true
   })
@@ -331,7 +370,7 @@ export const Speakers = (props: any) => {
   //   ? speakers.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
   //   : speakers.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))
 
-  const sortedBy = sortState.fields[sortState.sortBy]
+  // const sortedBy = sortState.fields[sortState.sortBy]
   const noResults = speakers.length === 0
 
   return (
@@ -367,11 +406,21 @@ export const Speakers = (props: any) => {
           <Search placeholder="Find a speaker" value={search} onChange={setSearch} timeout={300} />
 
           <div className={`${filterCss['foldout']} ${css['foldout-overrides']}`}>
-            <FilterFoldout active={Object.keys(selectedTracks).length > 0}>
+            <FilterFoldout
+              active={
+                Math.max(
+                  Object.keys(selectedTracks).length,
+                  Object.keys(selectedRooms).length,
+                  Object.keys(selectedExpertise).length,
+                  Object.keys(selectedSessionTypes).length
+                ) > 0
+              }
+            >
               {(open, setOpen) => {
                 return (
                   <div className={filterCss['foldout-content']}>
-                    <div className={filterCss['tracks']}>
+                    <div className={filterCss['filter-section']}>
+                      <p className="app-header clear-bottom-less">Tracks</p>
                       <Tags
                         value={selectedTracks}
                         onChange={nextValue => {
@@ -389,7 +438,37 @@ export const Speakers = (props: any) => {
 
                           setSelectedTracks(nextState)
                         }}
-                        options={props.tracks.map((i: string) => {
+                        options={props.tracks
+                          .filter((track: string) => !!track)
+                          .map((i: string) => {
+                            return {
+                              text: i,
+                              value: i,
+                            }
+                          })}
+                      />
+                    </div>
+
+                    <div className={filterCss['filter-section']}>
+                      <p className="app-header clear-bottom-less">Expertise</p>
+                      <Tags
+                        value={selectedExpertise}
+                        onChange={nextValue => {
+                          const isAlreadySelected = selectedExpertise[nextValue]
+
+                          const nextState = {
+                            ...selectedExpertise,
+                          }
+
+                          if (isAlreadySelected) {
+                            delete nextState[nextValue]
+                          } else {
+                            nextState[nextValue] = true
+                          }
+
+                          setSelectedExpertise(nextState)
+                        }}
+                        options={props.expertiseLevels.map((i: string) => {
                           return {
                             text: i,
                             value: i,
@@ -398,9 +477,73 @@ export const Speakers = (props: any) => {
                       />
                     </div>
 
+                    <div className={filterCss['filter-section']}>
+                      <p className="app-header clear-bottom-less">Session Type</p>
+                      <Tags
+                        value={selectedSessionTypes}
+                        onChange={nextValue => {
+                          const isAlreadySelected = selectedSessionTypes[nextValue]
+
+                          const nextState = {
+                            ...selectedSessionTypes,
+                          }
+
+                          if (isAlreadySelected) {
+                            delete nextState[nextValue]
+                          } else {
+                            nextState[nextValue] = true
+                          }
+
+                          setSelectedSessionTypes(nextState)
+                        }}
+                        options={props.sessionTypes.map((i: string) => {
+                          return {
+                            text: i,
+                            value: i,
+                          }
+                        })}
+                      />
+                    </div>
+
+                    <div className={filterCss['filter-section']}>
+                      <p className="app-header clear-bottom-less">Room</p>
+                      <Tags
+                        value={selectedRooms}
+                        onChange={nextValue => {
+                          const isAlreadySelected = selectedRooms[nextValue]
+
+                          const nextState = {
+                            ...selectedRooms,
+                          }
+
+                          if (isAlreadySelected) {
+                            delete nextState[nextValue]
+                          } else {
+                            nextState[nextValue] = true
+                          }
+
+                          setSelectedRooms(nextState)
+                        }}
+                        options={props.rooms.map((i: Room) => {
+                          return {
+                            text: i.name,
+                            value: i.name,
+                          }
+                        })}
+                      />
+                    </div>
+
                     <div className={filterCss['actions']}>
-                      <button className={`app hover sm thin-borders`} onClick={() => setSelectedTracks({})}>
-                        Reset
+                      <button
+                        className={`app hover sm thin-borders`}
+                        onClick={() => {
+                          setSelectedTracks({})
+                          setSelectedRooms({})
+                          setSelectedSessionTypes({})
+                          setSelectedExpertise({})
+                        }}
+                      >
+                        Reset Filter
                       </button>
 
                       <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
@@ -417,11 +560,25 @@ export const Speakers = (props: any) => {
                 <p className="font-xs-fixed">Current Filter:</p>
                 <p className={filterCss['filter-indicator']}>
                   {(() => {
-                    const trackFilters = Object.keys(selectedTracks)
+                    const computeFilterShorthand = (filter: { [key: string]: boolean }, key: string) => {
+                      const filterAsKeys = Object.keys(filter)
 
-                    if (trackFilters.length === 0) return 'All tracks'
+                      if (filterAsKeys.length === 0) return
+                      if (filterAsKeys.length === 1) return filterAsKeys[0]
 
-                    return trackFilters.join(', ')
+                      return `${key} (${filterAsKeys.length})`
+                    }
+
+                    return (
+                      [
+                        computeFilterShorthand(selectedTracks, 'Track'),
+                        computeFilterShorthand(selectedSessionTypes, 'Session Type'),
+                        computeFilterShorthand(selectedExpertise, 'Expertise'),
+                        computeFilterShorthand(selectedRooms, 'Room'),
+                      ]
+                        .filter(val => !!val)
+                        .join(', ') || 'No filter applied'
+                    )
                   })()}
                 </p>
               </div>
@@ -438,13 +595,14 @@ export const Speakers = (props: any) => {
           <NoResults />
         ) : (
           <>
-            {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={sortedSpeakers as [SpeakerType]} />}
+            <ListAlphabeticalSort speakers={sortedSpeakers as [SpeakerType]} />
+            {/* {sortedBy.key === 'name' && <ListAlphabeticalSort speakers={sortedSpeakers as [SpeakerType]} />}
             {sortedBy.key === 'tracks' && (
               <ListTrackSort speakers={sortedSpeakers as [SpeakerType]} tracks={props.tracks} />
             )}
             {sortedBy.key === 'days' && (
               <ListDaySort speakers={sortedSpeakers as [SpeakerType]} days={props.eventDays} />
-            )}
+            )} */}
           </>
         )}
       </div>

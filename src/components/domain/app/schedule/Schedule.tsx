@@ -94,7 +94,7 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   return { sessionsByTime, sessionTimeslots, timeslotOrder, dates }
 }
 
-const multiSelectFilter = (selectedFilter: { [key: string]: boolean }, key?: string) => {
+export const multiSelectFilter = (selectedFilter: { [key: string]: boolean }, key?: string) => {
   const filter = Object.keys(selectedFilter)
   const filterIsActive = filter.length > 0
 
