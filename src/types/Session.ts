@@ -8,8 +8,8 @@ export interface Session {
   title: string
   track: string
   duration: number
-  start: string
-  end: string
+  start: number
+  end: number
   startTimeAsMoment?: Moment
   endTimeAsMoment?: Moment
   day?: string
