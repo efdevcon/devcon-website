@@ -293,6 +293,7 @@ export const Basic = (props: BasicProps) => {
 type FilterFoldoutProps = {
   children: (open: boolean, setOpen: (isOpen: boolean) => void) => React.ReactElement
   active?: boolean
+  renderRight?: React.ReactElement
 }
 
 export const FilterFoldout = (props: FilterFoldoutProps) => {
@@ -354,8 +355,11 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
 
       <div className={css['foldout']}>
         <div className={css['content']} ref={ref}>
-          <p className={css['header']}>Filter</p>
-          {props.children(open, setOpen)}
+          <div className={css['header']}>
+            <p>Filter</p>
+            {props.renderRight}
+          </div>
+          <div className={css['children']}>{props.children(open, setOpen)}</div>
         </div>
       </div>
     </div>

@@ -183,14 +183,22 @@
 
       overflow-y: auto;
       background: white;
-      padding: $gaps-gap-4;
       box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.14);
 
       .header {
+        position: sticky;
+        top: 0px;
         @include fonts-bold;
         @include fonts-lg;
+        background: white;
+        padding: 16px;
         border-bottom: 1px solid $colors-standard-border-color;
         padding-bottom: $gaps-gap-4;
+      }
+
+      .children {
+        padding: 16px;
+        
       }
     }
   }

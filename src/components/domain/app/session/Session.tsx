@@ -164,7 +164,7 @@ export const Session = (props: SessionProps) => {
 
         {props.session.speakers.length > 0 && (
           <div className={css['speakers']}>
-            <h3 className="font-lg bold spaced">Speakers</h3>
+            <h3 className="app-header clear-bottom-less">Speakers</h3>
             {props.session.speakers.map(i => {
               return <SpeakerCard key={i.id} speaker={i} />
             })}
@@ -172,7 +172,7 @@ export const Session = (props: SessionProps) => {
         )}
 
         <div className={css['description']}>
-          <h3 className="font-lg bold">Description</h3>
+          <h3 className="app-header clear-bottom-less">Description</h3>
           <p>{props.session.description}</p>
         </div>
 

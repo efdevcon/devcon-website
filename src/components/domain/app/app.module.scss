@@ -9,7 +9,7 @@
   width: 100vw;
   min-height: calc(var(--viewport-height) - var(--header-height) - var(--app-nav-upper-height) - var(--app-nav-lower-height));
   padding-bottom: 64px; // Adjusting for fixed bottom nav overlaying content
-  @include fonts-sm;   
+  @include fonts-sm-fixed;   
 
   > h3,
   > button,

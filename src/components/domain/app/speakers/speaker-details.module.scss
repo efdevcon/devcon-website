@@ -14,8 +14,14 @@
   }
 }
 
+.speaker-title {
+  @include fonts-xxl;
+  @include fonts-primary;
+  margin: 16px 0px;
+}
+
 .header {
-  margin-bottom: $gaps-gap-2;
+  margin: 16px 0px;
 }
 
 .meta {
@@ -53,7 +59,7 @@
 }
 
 .description {
-  margin-top: 16px;
+  // margin-top: 16px;
 }
 
 .sessions {
@@ -81,6 +87,4 @@
 .header {
   margin-top: $gaps-gap-2;
   margin-bottom: $gaps-gap-2;
-  @include fonts-xxl-fixed;
-  @include fonts-bold;
 }
