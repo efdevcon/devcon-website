@@ -306,7 +306,7 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
 
       const boundingBox = button.getBoundingClientRect()
 
-      const buttonCutoff = boundingBox.top + boundingBox.height
+      const buttonCutoff = document.body.scrollTop + boundingBox.top + boundingBox.height
 
       const maxFoldoutHeight = height - buttonCutoff
 

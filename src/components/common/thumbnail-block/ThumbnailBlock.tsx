@@ -27,7 +27,11 @@ export const ThumbnailBlock = (props: ThumbnailBlock) => {
 
   const thumbnailSubtext = (() => {
     if (props.thumbnailSubtext) {
-      return <p className={css['thumbnail-text']}>{props.thumbnailSubtext}</p>
+      return (
+        <p className={css['thumbnail-text']}>
+          {props.thumbnailSubtext.toLowerCase() === 'cryptoeconomics' ? 'Crypto-economics' : props.thumbnailSubtext}
+        </p>
+      )
     }
 
     return null
