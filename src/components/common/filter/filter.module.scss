@@ -179,7 +179,8 @@
       top: calc(100% + #{$gaps-gap-2});
       width: 100%;
       right: 0px;
-      max-height: 55vh;
+      max-height: calc(var(--max-foldout-height, 55vh) - var(--app-nav-lower-height) - 16px);
+
       overflow-y: auto;
       background: white;
       padding: $gaps-gap-4;
@@ -193,4 +194,12 @@
       }
     }
   }
+}
+
+.screen-size-simulator {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
 }

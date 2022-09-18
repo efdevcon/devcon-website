@@ -7,6 +7,7 @@ import IconClose from 'assets/icons/cross.svg'
 import { InputForm } from 'components/common/input-form'
 import IconSearch from 'assets/icons/search.svg'
 import IconFilter from 'assets/icons/filter.svg'
+import useDimensions from 'react-cool-dimensions'
 
 export type FilterOptions = {
   tags?: boolean
@@ -296,8 +297,22 @@ type FilterFoldoutProps = {
 
 export const FilterFoldout = (props: FilterFoldoutProps) => {
   const [open, setOpen] = React.useState(false)
-  const ref = React.createRef<HTMLDivElement>()
-  const buttonRef = React.createRef<HTMLButtonElement>()
+  const [maxHeight, setMaxHeight] = React.useState<number>()
+  const ref = React.useRef<any>()
+  const buttonRef = React.useRef<any>()
+  const { observe } = useDimensions({
+    onResize: ({ height }) => {
+      const button = buttonRef.current
+
+      const boundingBox = button.getBoundingClientRect()
+
+      const buttonCutoff = boundingBox.top + boundingBox.height
+
+      const maxFoldoutHeight = height - buttonCutoff
+
+      setMaxHeight(maxFoldoutHeight)
+    },
+  })
 
   React.useEffect(() => {
     const handleClickOutside = (e: any) => {
@@ -321,8 +336,10 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
 
   if (open) className += ` ${css['open']}`
 
+  let style: any = maxHeight ? { '--max-foldout-height': `${maxHeight}px` } : {}
+
   return (
-    <div className={`${className}`}>
+    <div className={`${className}`} style={style}>
       <button
         ref={buttonRef}
         className={`${open || props.active ? 'app hover' : 'app'} squared sm thin-borders`}
@@ -332,6 +349,8 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
       >
         {open ? <IconClose /> : <IconFilter />}
       </button>
+
+      <div className={css['screen-size-simulator']} ref={observe} />
 
       <div className={css['foldout']}>
         <div className={css['content']} ref={ref}>
