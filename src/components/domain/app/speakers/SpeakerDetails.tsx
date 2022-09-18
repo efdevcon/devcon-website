@@ -34,15 +34,16 @@ export const SpeakerDetails = (props: any) => {
           },
         ]}
         renderRight={() => {
+          if (!account) return null
+
           const starProps = {
             style: {
               cursor: 'pointer',
             },
             onClick: (e: React.SyntheticEvent) => {
               e.preventDefault()
-              if (account) {
-                setSpeakerFavorite(account, props.speaker.id, !!isSpeakerFavorited)
-              }
+
+              setSpeakerFavorite(account, props.speaker.id, !!isSpeakerFavorited)
             },
           }
 
