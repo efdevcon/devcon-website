@@ -19,6 +19,7 @@ import IconCurrency from 'assets/icons/icon_currency.svg'
 import IconGlobe from 'assets/icons/icon_globe.svg'
 import IconSun from 'assets/icons/icon_sun.svg'
 import IconWater from 'assets/icons/icon_water.svg'
+import ArrowRight from 'assets/icons/arrow_right.svg'
 import Bogota1 from 'assets/images/carousel/bogota/Bogota0.jpg'
 import Bogota2 from 'assets/images/carousel/bogota/Bogota2.jpg'
 import Bogota3 from 'assets/images/carousel/bogota/Bogota8.jpg'
@@ -219,12 +220,11 @@ export const CityGuideContent = (props: any) => {
       <Tags items={pageContext?.current?.tags} viewOnly />
 
       <iframe
-        className="expand"
-        id="map"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.197000779528!2d-74.0926271!3d4.6298745!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x23880f62017a68ac!2sAgora%20Bogot%C3%A1%20Convention%20Center!5e0!3m2!1sda!2sdk!4v1652018534291!5m2!1sda!2sdk"
+        src="https://www.google.com/maps/d/embed?mid=1cFL_2NVU6-O5WrYlXcpX8X5u2OJVhGE&ehbc=2E312F&z=14"
         width="100%"
         height="500px"
-        loading="lazy"
+        id="map"
+        className="expand"
       ></iframe>
     </>
   )

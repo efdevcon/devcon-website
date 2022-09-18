@@ -5,8 +5,8 @@ pages:
 left: >-
   Colombia is safer today than at any point in the last 50 years, and we expect
   Devcon in Bogotá to be an impactful experience for all. That said, while
-  Bogotá is a very modern city, it is located in a developing country, and we
-  recommend exercising some basic precautions. Do that, and your biggest problem
+  Bogotá is a very modern city, it is located in a developing country, and **we
+  recommend exercising some basic precautions.** Do that, and your biggest problem
   will likely be wanting to stay longer.
 
 
@@ -17,17 +17,17 @@ right: >-
   while in Bogotá. That means:
 
 
-  * Look where you’re going
+  * **Look where you’re going**
 
-  * Don’t wear flashy items like expensive watches or gold-plated hardware wallets
+  * **Don’t wear flashy items like expensive watches or gold-plated hardware wallets**
 
-  * Don’t walk around with your phone out or with your laptop when not necessary
+  * **Don’t walk around with your phone out or with your laptop when not necessary**
 
-  * Leave valuables (passport, excess cash/cards) in your hotel
+  * **Leave valuables (passport, excess cash/cards) in your hotel**
 
-  * Avoid hailing street taxis. Use Uber or DiDi, where a 20-min ride costs around $3 USD. Tip: maybe pay the extra dollar for a nicer “Uber Comfort” *(recommended when coming from the Airport)*
+  * **Avoid hailing street taxis. Use Uber or DiDi, where a 20-min ride costs around $3 USD. Tip: maybe pay the extra dollar for a nicer “Uber Comfort” *(recommended when coming from the Airport)***
 
-  * Try not to walk home alone at night (Reminder: Ubers are easy & cheap)
+  * **Try not to walk home alone at night (Reminder: Ubers are easy & cheap)**
 
 
   You can choose your adventure, and with a little bit of common sense and extra precaution, you can expect to have a fun and safe experience in Bogotá.

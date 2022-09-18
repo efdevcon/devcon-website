@@ -97,8 +97,9 @@ const twitter = (() => {
     recursiveFetch: async (sinceID: number, results: any[] = [], nextToken?: string): Promise<any> => {
       // We have rate limiting issues with twitter - no page cache in dev mode so its pretty brutal on the rate limit - we'll reserve twitter fetches for production
       // Disabled recursive on all environments. Just fetching latest 100 results should be sufficient for news
-      return results
+      // return results
       // if (process.env.NODE_ENV === 'development') return results
+      if (process.env.NODE_ENV === 'development' || true) return results
 
       const queryParams = {
         exclude: 'retweets,replies',
