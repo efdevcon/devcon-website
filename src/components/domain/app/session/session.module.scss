@@ -19,43 +19,43 @@
   }
 }
 
-.session-hero {
-  &.layer-1 {
-      background: #E6F0FF;
-  }
-  &.layer-2s {
-      background:  #E4FAFF;
-  }
-  &.developer-infrastructure {
-      background: #F6F2FF;
-  }
-  &.governance-coordination {
-      background:  #F9FFDF;
-  }
-  &.ux-design {
-      background: #FFF4F4;
-  }
-  &.staking-validator-experience {
-      background: #FCF4FF;
-  }
-  &.security {
-      background: #E4FFFD;
-  }
-  &.zkps {
-      background: #F2FFFA;
-  }
-  &.opportunity-global-impact {
-      background: #FFFBF4;
-  }
-  &.cryptoeconomics {
-      background: #FFFEF4;
-  }
+.layer-1, .layer-1 .info-line {
+  background: #E6F0FF;
+}
+.layer-2s, .layer-2s .info-line {
+  background:  #E4FAFF;
+}
+.developer-infrastructure, .developer-infrastructure .info-line {
+  background: #F6F2FF;
+}
+.governance-coordination, .governance-coordination .info-line {
+  background:  #F9FFDF;
+}
+.ux-design, .ux-design .info-line {
+  background: #FFF4F4;
+}
+.staking-validator-experience, .staking-validator-experience .info-line {
+  background: #FCF4FF;
+}
+.security, .security .info-line {
+  background: #E4FFFD;
+}
+.zkps, .zkps .info-line {
+  background: #F2FFFA;
+}
+.opportunity-global-impact, .opportunity-global-impact .info-line {
+  background: #FFFBF4;
+}
+.cryptoeconomics, .cryptoeconomics .info-line {
+  background: #FFFEF4;
+}
 
+.session-hero {
   .container {
     position: relative;
 
     .info-line {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       @include fonts-bold;
 
@@ -72,13 +72,18 @@
       margin-bottom: $gaps-gap-4;
     }
 
+    .relative-time {
+      @include fonts-bold;
+      margin-bottom: 8px;
+    }
+
     .meta {
       display: flex;
       align-items: center;
       padding-right: 4px;
 
       &.expertise-and-type {
-        margin-top: 8px;
+        margin-bottom: 8px;
       }
 
       > * {

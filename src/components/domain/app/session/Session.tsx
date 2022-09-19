@@ -21,6 +21,7 @@ import { CopyToClipboardLegacy } from 'components/common/share/Share'
 import PinIcon from 'assets/icons/pin.svg'
 import { Link } from 'components/common/link'
 import AddToCalendar from 'components/domain/index/add-to-calendar/AddToCalendar'
+import { useAppContext } from 'context/app-context'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -43,11 +44,20 @@ type SessionProps = {
 }
 
 export const Session = (props: SessionProps) => {
+  const { now } = useAppContext()
   const { account, setSessionBookmark } = useAccountContext()
-  const duration = moment.duration(moment(props.session.end).diff(props.session.start))
+  const start = moment.utc(props.session.start)
+  const end = moment.utc(props.session.end)
+  const duration = moment.duration(moment(props.session.end).diff(start))
   const mins = duration.asMinutes()
+
   const interested = account?.appState?.sessions?.some(i => i.level === 'interested' && i.id === props.session.id)
   const attending = account?.appState?.sessions?.some(i => i.level === 'attending' && i.id === props.session.id)
+
+  const sessionUpcoming = now?.isBefore(start)
+  const sessionEnded = now?.isAfter(end)
+  const isOngoing = !sessionUpcoming && !sessionEnded
+  const relativeTime = sessionUpcoming ? start.from(now) : end.from(now)
 
   async function bookmarkSession(level: 'interested' | 'attending') {
     if (account && level === 'interested') {
@@ -112,16 +122,28 @@ export const Session = (props: SessionProps) => {
 
             <h2 className={css['title']}>{props.session.title}</h2>
 
+            {(props.session.expertise || props.session.type) && (
+              <div className={`${css['expertise-and-type']} ${css['meta']}`}>
+                {props.session.type && <p className="bold">{props.session.type}</p>}
+                {props.session.expertise && <p className="bold">{props.session.expertise}</p>}
+              </div>
+            )}
+
+            <p className={css['relative-time']}>
+              {(() => {
+                if (isOngoing) return 'Session ongoing now!'
+
+                if (sessionUpcoming) {
+                  return `Session starts ${relativeTime}`
+                } else {
+                  return `Session ended ${relativeTime}`
+                }
+              })()}
+            </p>
+
             <div className={css['meta']}>
               <div className="label white bold">{props.session.track || 'No specific track'}</div>
             </div>
-
-            {(props.session.expertise || props.session.type) && (
-              <div className={`${css['expertise-and-type']} ${css['meta']}`}>
-                {props.session.expertise && <p className="bold text-uppercase">{props.session.expertise}</p>}
-                {props.session.type && <p className="bold text-uppercase">{props.session.type}</p>}
-              </div>
-            )}
 
             <div className={css['calendar-icon-in-circle']}>
               <IconCalendar />
