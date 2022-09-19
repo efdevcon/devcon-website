@@ -7,6 +7,7 @@ import IconClose from 'assets/icons/cross.svg'
 import { InputForm } from 'components/common/input-form'
 import IconSearch from 'assets/icons/search.svg'
 import IconFilter from 'assets/icons/filter.svg'
+import { ScrollGradient } from '../scroll-gradient'
 import useDimensions from 'react-cool-dimensions'
 
 export type FilterOptions = {
@@ -378,7 +379,11 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
             <p>Filter</p>
             <props.renderRight setOpen={setOpen} />
           </div>
-          <div className={css['children']}>{props.children(open, setOpen)}</div>
+          <div className={css['children']}>
+            {props.children(open, setOpen)}
+
+            <div className={css['scroll-gradient']}></div>
+          </div>
         </div>
       </div>
     </div>
