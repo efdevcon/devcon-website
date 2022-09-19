@@ -100,6 +100,11 @@ const useNavigationData = () => {
             type: 'page',
           },
           {
+            title: intl('navigation_program_schedule'),
+            url: '/app/schedule',
+            type: 'page',
+          },
+          {
             title: intl('navigation_program_apply_to_speak'),
             url: '/applications',
             type: 'page',
@@ -172,6 +177,11 @@ const useNavigationData = () => {
       {
         title: 'Bogotá',
         url: '/bogota',
+        type: 'page',
+      },
+      {
+        title: 'App',
+        url: '/app',
         type: 'page',
       }
     ],

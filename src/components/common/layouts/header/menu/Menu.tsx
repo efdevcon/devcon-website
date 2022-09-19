@@ -18,6 +18,7 @@ import useNavigationData from '../useNavigationData'
 import { TippyProps } from '@tippyjs/react'
 import { Notifications } from 'components/domain/app/notifications'
 import { useAppContext } from 'context/app-context'
+import { useAccountContext } from 'context/account-context'
 
 type ButtonProps = {
   buttons: {
@@ -79,7 +80,7 @@ const Buttons = (props: ButtonProps) => {
 
         if (button.tooltip) {
           return (
-            <Tooltip key={button.key} {...button.tooltip}>
+            <Tooltip key={button.key} {...button.tooltip} touch={false}>
               {/* Need the wrapping div due to Link and Tooltip not interacting well together */}
               <div>{body}</div>
             </Tooltip>
@@ -96,15 +97,16 @@ export const Menu = (props: any) => {
   const router = useRouter()
   const context = usePageContext()
   const appContext = useAppContext()
+  const accountContext = useAccountContext()
 
   let buttons: ButtonProps['buttons'] = [
     {
       key: 'account',
       tooltip: {
-        content: 'Event App',
+        content: 'Account',
       },
       icon: <AccountIcon />,
-      url: '/app',
+      url: '/app/login',
     },
     {
       key: 'mobile-menu-toggle',
@@ -137,10 +139,10 @@ export const Menu = (props: any) => {
       {
         key: 'account',
         tooltip: {
-          content: 'App Homescreen',
+          content: 'Account',
         },
         icon: <AccountIcon />,
-        url: '/app',
+        url: accountContext.account ? '/app' : '/app/login',
       },
       {
         key: 'back-button',

@@ -201,7 +201,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
   return (
     <div className={`${css['list-container']} ${css['alphabet-sort']}`}>
       <ButtonOverlay
-        // leftAligned
+        leftAligned
         buttons={[
           {
             id: 'scroll-up',
