@@ -381,6 +381,27 @@ export const Speakers = (props: any) => {
                   Object.keys(selectedSessionTypes).length
                 ) > 0
               }
+              renderRight={({ setOpen }: any) => {
+                return (
+                  <div className={filterCss['actions']}>
+                    <button
+                      className={`app hover sm thin-borders`}
+                      onClick={() => {
+                        setSelectedTracks({})
+                        setSelectedRooms({})
+                        setSelectedSessionTypes({})
+                        setSelectedExpertise({})
+                      }}
+                    >
+                      Reset
+                    </button>
+
+                    <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
+                      Close
+                    </button>
+                  </div>
+                )
+              }}
             >
               {(open, setOpen) => {
                 return (
@@ -499,21 +520,9 @@ export const Speakers = (props: any) => {
                       />
                     </div>
 
-                    <div className={filterCss['actions']}>
-                      <button
-                        className={`app hover sm thin-borders`}
-                        onClick={() => {
-                          setSelectedTracks({})
-                          setSelectedRooms({})
-                          setSelectedSessionTypes({})
-                          setSelectedExpertise({})
-                        }}
-                      >
-                        Reset Filter
-                      </button>
-
+                    <div className={filterCss['actions']} style={{ marginTop: '8px' }}>
                       <button className={`app hover sm thin-borders`} onClick={() => setOpen(false)}>
-                        Confirm
+                        Close
                       </button>
                     </div>
                   </div>

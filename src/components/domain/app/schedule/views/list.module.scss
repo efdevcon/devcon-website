@@ -22,7 +22,7 @@
 
   .start-time {
     position: sticky;
-    top: calc(var(--header-height) + var(--app-nav-upper-height));
+    top: calc(44px + var(--app-nav-upper-height));
     // border-top: 1px solid $colors-standard-border-color;
     padding: 4px 0px;
     padding-top: 5px;
@@ -60,10 +60,11 @@
   visibility: hidden;
 }
 
-// .day-header {
-//   margin-bottom: 0px !important;
-//   z-index: 2 !important;
-// }
+.day-header {
+  padding: 12px 0px !important;
+  // margin-bottom: 0px !important;
+  // z-index: 2 !important;
+}
 
 .collapse {
   background: #585858 !important; 

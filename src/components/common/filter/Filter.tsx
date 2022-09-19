@@ -293,12 +293,13 @@ export const Basic = (props: BasicProps) => {
 type FilterFoldoutProps = {
   children: (open: boolean, setOpen: (isOpen: boolean) => void) => React.ReactElement
   active?: boolean
-  renderRight?: React.ReactElement
+  renderRight?: any
 }
 
 export const FilterFoldout = (props: FilterFoldoutProps) => {
   const [open, setOpen] = React.useState(false)
   const [maxHeight, setMaxHeight] = React.useState<number>()
+  const scrollDistanceSinceOpen = React.useRef<number>()
   const ref = React.useRef<any>()
   const buttonRef = React.useRef<any>()
   const { observe } = useDimensions({
@@ -314,6 +315,24 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
       setMaxHeight(maxFoldoutHeight)
     },
   })
+
+  React.useEffect(() => {
+    if (!open) return
+
+    scrollDistanceSinceOpen.current = window.scrollY
+
+    const handler = () => {
+      if (typeof scrollDistanceSinceOpen.current !== 'undefined') {
+        if (window.scrollY > scrollDistanceSinceOpen.current + 300) {
+          setOpen(false)
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handler)
+
+    return () => window.removeEventListener('scroll', handler)
+  }, [open])
 
   React.useEffect(() => {
     const handleClickOutside = (e: any) => {
@@ -357,7 +376,7 @@ export const FilterFoldout = (props: FilterFoldoutProps) => {
         <div className={css['content']} ref={ref}>
           <div className={css['header']}>
             <p>Filter</p>
-            {props.renderRight}
+            <props.renderRight setOpen={setOpen} />
           </div>
           <div className={css['children']}>{props.children(open, setOpen)}</div>
         </div>

@@ -38,6 +38,8 @@
 
     .icon {
       margin-right: $gaps-gap-2;
+      display: flex;
+    align-items: center;
     }
 
     &:hover {

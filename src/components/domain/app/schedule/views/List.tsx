@@ -138,7 +138,7 @@ export const List = React.forwardRef((props: ListProps, ref: any) => {
           >
             <div className={css['anchor']} id={date.readable}></div>
             <CollapsedSectionHeader className={css['day-header']}>
-              <p className="font-md-fixed bold">
+              <p className="font-sm-fixed bold">
                 {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
                 <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
               </p>
