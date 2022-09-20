@@ -5,13 +5,14 @@
   overflow: hidden;
   padding-top: $gaps-gap-4;
   padding-bottom: $gaps-gap-4;
+  background: var(--background);
 
   .background-icon {
     position: absolute;
     right: 0px;
     top: 0px;
-    transform: translateY(-30%);
-    max-width: 30%;
+    transform: translateY(-20%);
+    max-width: 40%;
 
     img {
       width: 100%;
@@ -20,44 +21,53 @@
 }
 
 .layer-1, .layer-1 .info-line {
-  background: #E6F0FF;
+  --background: #E6F0FF;
 }
 .layer-2s, .layer-2s .info-line {
-  background:  #E4FAFF;
+  --background: #E4FAFF;
 }
 .developer-infrastructure, .developer-infrastructure .info-line {
-  background: #F6F2FF;
+  --background: #F6F2FF;
 }
 .governance-coordination, .governance-coordination .info-line {
-  background:  #F9FFDF;
+  --background: #F9FFDF;
 }
 .ux-design, .ux-design .info-line {
-  background: #FFF4F4;
+  --background: #FFF4F4;
 }
 .staking-validator-experience, .staking-validator-experience .info-line {
-  background: #FCF4FF;
+  --background: #FCF4FF;
 }
 .security, .security .info-line {
-  background: #E4FFFD;
+  --background: #E4FFFD;
 }
 .zkps, .zkps .info-line {
-  background: #F2FFFA;
+  --background: #F2FFFA;
 }
 .opportunity-global-impact, .opportunity-global-impact .info-line {
-  background: #FFFBF4;
+  --background: #FFFBF4;
 }
 .cryptoeconomics, .cryptoeconomics .info-line {
-  background: #FFFEF4;
+  --background: #FFFEF4;
 }
 
 .session-hero {
   .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     .info-line {
-      display: inline-flex;
+      display: flex;
+      align-self: flex-start;
       align-items: center;
       @include fonts-bold;
+
+      p {
+        align-self: flex-start;
+        background: var(--background);
+        display: inline;
+      }
 
       svg {
         margin-right: $gaps-gap-2;
@@ -70,6 +80,11 @@
       width: min(700px, 70%);
       margin-top: $gaps-gap-4;
       margin-bottom: $gaps-gap-4;
+
+      span {
+        background: var(--background);
+        display: inline;
+      }
     }
 
     .relative-time {

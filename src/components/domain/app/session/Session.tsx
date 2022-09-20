@@ -120,7 +120,9 @@ export const Session = (props: SessionProps) => {
               </div>
             )}
 
-            <h2 className={css['title']}>{props.session.title}</h2>
+            <h2 className={css['title']}>
+              <span>{props.session.title}</span>
+            </h2>
 
             {(props.session.expertise || props.session.type) && (
               <div className={`${css['expertise-and-type']} ${css['meta']}`}>
