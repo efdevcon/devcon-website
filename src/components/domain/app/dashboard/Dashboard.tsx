@@ -85,6 +85,9 @@ export const Dashboard = (props: any) => {
     if (!now) return null
 
     return sessions
+      .sort((a, b) => {
+        return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
+      })
       .map(session => {
         const attending = bookmarkedSessions?.some(bookmarkedSession => bookmarkedSession.id === session.id)
 
