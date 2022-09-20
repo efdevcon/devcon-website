@@ -155,12 +155,35 @@ export default pageHOC(function DevconWeek(props: any) {
               ]}
             />
 
-            <div className="links">
+            <div className={`spaced ${css['devcon-separator']}`}>
+              <h2>Devcon - Oct 11-14</h2>
+            </div>
+
+            <h2 className="spaced">{intl('devcon_week_post_devcon_events')}</h2>
+
+            <Snapshot
+              items={[
+                {
+                  Icon: () => <></>,
+                  id: '1',
+                  title: 'ETHMedellin 🇨🇴',
+                  right: 'OCT 18-22',
+                },
+                {
+                  Icon: () => <></>,
+                  title: 'ETHPanama 🇵🇦',
+                  right: 'OCT 26-28',
+                },
+              ]}
+            />
+
+            {/* <div className="links">
               <Link to="#post-devcon" className="text-uppercase hover-underline font-lg bold">
                 {props.sections['post-devcon-events'].title}
                 <ArrowRight />
               </Link>
-            </div>
+
+            </div> */}
           </div>
         </div>
       </div>
@@ -183,10 +206,6 @@ export default pageHOC(function DevconWeek(props: any) {
               className="markdown"
               dangerouslySetInnerHTML={{ __html: props.sections['post-devcon-events'].data.right }}
             ></div>
-
-            {/* <Link to="https://google.com">
-              <Button className="red margin-top">{intl('devcon_week_learn_more')}</Button>
-            </Link> */}
           </div>
         </div>
       </div>
