@@ -54,8 +54,6 @@ export async function ImportSchedule() {
   console.log('Speakers imported', filtered.length)
 }
 
-// ExportSchedule();
-
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)
 
