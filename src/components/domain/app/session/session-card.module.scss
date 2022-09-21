@@ -3,6 +3,11 @@
 .thumbnail-container {
   margin-bottom: 8px;
 
+  &.passed {
+    // background: yellow !important;
+    opacity: 0.7;
+  }
+
   &:hover {
     cursor: pointer;
     border: 1px solid darken($colors-standard-border-color, 20%);

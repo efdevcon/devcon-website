@@ -175,7 +175,6 @@ export const Schedule = (props: any) => {
   // Format sessions (memoized)
   const formattedSessions = useFormatSessions(sessionsBeforeFormatting)
 
-  // Apply remaining filters
   const filteredSessions = formattedSessions.filter((session: Session) => {
     // Filter by search
     if (search) {
