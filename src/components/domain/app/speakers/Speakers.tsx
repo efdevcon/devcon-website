@@ -74,9 +74,8 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
     className: `${css['favorite']} icon ${isSpeakerFavorited ? css['favorited'] : ''}`,
     onClick: (e: React.SyntheticEvent) => {
       e.preventDefault()
-      if (account) {
-        setSpeakerFavorite(account, speaker.id, !!isSpeakerFavorited)
-      }
+
+      setSpeakerFavorite(speaker.id, !!isSpeakerFavorited, account)
     },
   }
 
@@ -117,11 +116,9 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
             })()}
         </div>
 
-        {account && (
-          <div className={css['icon']}>
-            {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
-          </div>
-        )}
+        <div className={css['icon']}>
+          {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
+        </div>
       </>
     </div>
   )
@@ -350,7 +347,7 @@ export const Speakers = (props: any) => {
           },
         ]}
         renderRight={() => {
-          if (!account) return null
+          // if (!account) return null
 
           const starProps = {
             onClick: () => setFavoritesOnly(!favoritesOnly),

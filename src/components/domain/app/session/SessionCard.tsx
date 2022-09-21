@@ -12,6 +12,7 @@ import { useAccountContext } from 'context/account-context'
 import moment from 'moment'
 import { Link } from 'components/common/link'
 import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'
+import { useAppContext } from 'context/app-context'
 
 type CardProps = {
   session: Session
@@ -22,18 +23,22 @@ type CardProps = {
 export const SessionCard = (props: CardProps) => {
   // TODO: personalization/bookmarks
   const { account, setSessionBookmark } = useAccountContext()
+  const { now } = useAppContext()
   const bookmarkedSessions = account?.appState?.sessions
-  const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === props.session.id)
+  const bookmarkedSession = bookmarkedSessions?.find(
+    bookmark => bookmark.id === props.session.id && bookmark.level === 'attending'
+  )
   const sessionIsBookmarked = !!bookmarkedSession
+  const sessionHasPassed = now?.isAfter(moment.utc(props.session.end))
 
   const iconProps = {
     className: `${css['save-session']} icon`,
     onClick: (e: React.SyntheticEvent) => {
       e.stopPropagation()
 
-      if (account) {
-        setSessionBookmark(account, props.session, 'attending', !!sessionIsBookmarked)
-      }
+      // if (account) {
+      setSessionBookmark(props.session, 'attending', account, !!sessionIsBookmarked)
+      // }
     },
   }
 
@@ -45,6 +50,9 @@ export const SessionCard = (props: CardProps) => {
 
   if (props.compact) thumbnailClassName += ` ${css['compact']}`
   if (props.className) thumbnailClassName += ` ${props.className}`
+  if (sessionHasPassed) {
+    thumbnailClassName += ` ${css['passed']}`
+  }
 
   return (
     <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track} track={props.session.track}>
@@ -56,7 +64,7 @@ export const SessionCard = (props: CardProps) => {
 
           {/* <div className="label sm bold">{props.session.track}</div> */}
 
-          {account && <> {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}</>}
+          {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
         </div>
 
         <div className={css['bottom']}>

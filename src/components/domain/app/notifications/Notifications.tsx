@@ -9,6 +9,8 @@ import { usePageContext } from 'context/page-context'
 import moment from 'moment'
 import { Button } from 'components/common/button'
 import { useAppContext } from 'context/app-context'
+import Image from 'next/image'
+import EthBackground from 'assets/images/eth-diamond-rainbow.png'
 // import notifications from 'pages/app/notifications'
 
 // Copied from the web-push documentation
@@ -316,7 +318,7 @@ export const Notifications = (props: any) => {
     pageContext && Object.values(seenNotifications).length < pageContext.appNotifications?.length
 
   return (
-    <div>
+    <div className={css['container']}>
       <div className={css['header']}>
         <h2 className="font-lg-fixed">Notifications</h2>
         {unseenNotifications && (
@@ -356,6 +358,10 @@ export const Notifications = (props: any) => {
           />
         )
       })}
+
+      <div className={css['background']}>
+        <Image src={EthBackground} layout="fill" objectFit="contain" objectPosition="right" alt="Ether" />
+      </div>
     </div>
   )
 }

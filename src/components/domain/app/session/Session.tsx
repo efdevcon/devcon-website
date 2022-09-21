@@ -60,11 +60,11 @@ export const Session = (props: SessionProps) => {
   const relativeTime = sessionUpcoming ? start.from(now) : end.from(now)
 
   async function bookmarkSession(level: 'interested' | 'attending') {
-    if (account && level === 'interested') {
-      setSessionBookmark(account, props.session, level, !!interested)
+    if (level === 'interested') {
+      setSessionBookmark(props.session, level, account, !!interested)
     }
-    if (account && level === 'attending') {
-      setSessionBookmark(account, props.session, level, !!attending)
+    if (level === 'attending') {
+      setSessionBookmark(props.session, level, account, !!attending)
     }
   }
 
@@ -83,15 +83,13 @@ export const Session = (props: SessionProps) => {
 
             <CopyToClipboardLegacy url={`https://devcon.org/app/schedule/${props.session.id}`} />
 
-            {account && (
-              <>
-                {attending ? (
-                  <IconCheck className="icon fill-red" onClick={() => bookmarkSession('attending')} />
-                ) : (
-                  <IconCalendarAdd onClick={() => bookmarkSession('attending')} />
-                )}
-              </>
-            )}
+            <>
+              {attending ? (
+                <IconCheck className="icon fill-red" onClick={() => bookmarkSession('attending')} />
+              ) : (
+                <IconCalendarAdd onClick={() => bookmarkSession('attending')} />
+              )}
+            </>
           </>
         )}
       />
@@ -156,16 +154,16 @@ export const Session = (props: SessionProps) => {
 
       <div className="section">
         <div className={css['actions']}>
-          {account && (
-            <>
-              <div onClick={() => bookmarkSession('interested')} className={css[interested ? 'active' : '']}>
-                <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
-              </div>
-              <div onClick={() => bookmarkSession('attending')} className={css[attending ? 'active' : '']}>
-                <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendarAdd />}</>
-              </div>
-            </>
-          )}
+          {/* {account && ( */}
+          <>
+            <div onClick={() => bookmarkSession('interested')} className={css[interested ? 'active' : '']}>
+              <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
+            </div>
+            <div onClick={() => bookmarkSession('attending')} className={css[attending ? 'active' : '']}>
+              <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendarAdd />}</>
+            </div>
+          </>
+          {/* )} */}
           <AddToCalendar
             event={{
               id: props.session.id,

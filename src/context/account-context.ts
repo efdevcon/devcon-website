@@ -18,9 +18,11 @@ export interface AccountContextType {
   getAccount: () => Promise<UserAccount | undefined>
   updateAccount: (id: string, account: UserAccount) => Promise<boolean>
   deleteAccount: (id: string) => Promise<boolean>,
-  setSpeakerFavorite: (account: UserAccount, speakerId: string, remove: boolean) => void,
-  setSessionBookmark: (account: UserAccount, session: Session, level: 'attending' | 'interested', remove?: boolean) => void,
+  setSpeakerFavorite: (speakerId: string, remove: boolean, account?: UserAccount) => void,
+  setSessionBookmark: (session: Session, level: 'attending' | 'interested', account?: UserAccount, remove?: boolean) => void,
   toggleScheduleSharing: (account: UserAccount) => void,
+  showLoginRequired?: boolean
+  setShowLoginRequired?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const useAccountContext = () => useContext<AccountContextType>(AccountContext)

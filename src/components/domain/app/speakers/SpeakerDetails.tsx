@@ -40,9 +40,9 @@ export const SpeakerDetails = (props: any) => {
             },
             onClick: (e: React.SyntheticEvent) => {
               e.preventDefault()
-              if (account) {
-                setSpeakerFavorite(account, props.speaker.id, !!isSpeakerFavorited)
-              }
+              // if (account) {
+              setSpeakerFavorite(props.speaker.id, !!isSpeakerFavorited, account)
+              // }
             },
           }
 

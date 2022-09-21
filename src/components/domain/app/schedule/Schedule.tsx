@@ -150,6 +150,16 @@ export const Schedule = (props: any) => {
     }
   }, [dateFilter])
 
+  useEffect(() => {
+    if (listRef.current) {
+      if (basicFilter !== 'all') {
+        listRef.current.openAll()
+      } else if (basicFilter) {
+        listRef.current.closeAll()
+      }
+    }
+  }, [basicFilter])
+
   // Open all days when searching
   useEffect(() => {
     if (listRef.current) {
@@ -160,16 +170,11 @@ export const Schedule = (props: any) => {
   }, [search])
 
   const bookmarkedSessions = account?.appState?.sessions
+  const favoritedSpeakers = account?.appState.speakers
 
   // Format sessions (memoized)
   const formattedSessions = useFormatSessions(sessionsBeforeFormatting)
-  // Create search index
-  // const searcher = React.useMemo(
-  //   () => new FuzzySearch(formattedSessions, ['title', 'speakers.name', 'description', 'room.name']),
-  //   [formattedSessions]
-  // )
-  // Apply search filter
-  // const sessionsMatchingSearch = search.length > 0 ? searcher.search(search) : formattedSessions
+
   // Apply remaining filters
   const filteredSessions = formattedSessions.filter((session: Session) => {
     // Filter by search
@@ -188,9 +193,13 @@ export const Schedule = (props: any) => {
 
     // Filter by interested
     if (favoritesOnly) {
-      const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
+      const speakerIsFavorited = favoritedSpeakers?.some(speaker =>
+        session.speakers.some(sessionSpeaker => speaker === sessionSpeaker.id)
+      )
 
-      if (bookmarkedSession?.level !== 'interested') return false
+      if (!speakerIsFavorited) return false
+      // const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
+      // if (bookmarkedSession?.level !== 'interested') return false
     }
 
     // Filter by attending/past/upcoming
@@ -198,6 +207,10 @@ export const Schedule = (props: any) => {
       const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
 
       if (bookmarkedSession?.level !== 'attending') return false
+    } else if (basicFilter === 'interested') {
+      const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
+
+      if (bookmarkedSession?.level !== 'interested') return false
     } else if (basicFilter === 'past') {
       const sessionHasHappened = now && now.isAfter(session.endTimeAsMoment)
 
@@ -262,14 +275,22 @@ export const Schedule = (props: any) => {
 
           return (
             <>
+              <ShareIcon
+                style={{ cursor: 'pointer' }}
+                onClick={() => {
+                  if (!account) {
+                    alert('No account (call modal manually)')
+
+                    return
+                  }
+
+                  router.push('/app/settings#schedule')
+                }}
+              />
+
               {account && (
-                <ShareIcon
-                  onClick={() => {
-                    router.push('/app/settings#schedule')
-                  }}
-                />
+                <>{favoritesOnly ? <StarFill {...starProps} className="icon fill-red" /> : <Star {...starProps} />}</>
               )}
-              {favoritesOnly ? <StarFill {...starProps} className="icon fill-red" /> : <Star {...starProps} />}
             </>
           )
         }}
@@ -297,12 +318,16 @@ export const Schedule = (props: any) => {
                     value: 'attending',
                   },
                   {
-                    text: 'Past',
-                    value: 'past',
+                    text: 'Interested',
+                    value: 'interested',
                   },
                   {
                     text: 'Upcoming',
                     value: 'upcoming',
+                  },
+                  {
+                    text: 'Past',
+                    value: 'past',
                   },
                 ]
           }

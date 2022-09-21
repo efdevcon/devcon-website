@@ -8,7 +8,8 @@ import { useRouter } from 'next/router'
 import { Web3Provider } from '@ethersproject/providers'
 import { VerificationToken } from 'types/VerificationToken'
 import { Session } from 'types/Session'
-import { makeConsoleLogger } from '@notionhq/client/build/src/logging'
+import { Modal } from 'components/common/modal'
+import { Link } from 'components/common/link'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -16,6 +17,7 @@ interface AccountContextProviderProps {
 
 export const AccountContextProvider = ({ children }: AccountContextProviderProps) => {
   const router = useRouter()
+  const [showLoginRequired, setShowLoginRequired] = useState(false)
   const [context, setContext] = useState<AccountContextType>({
     loading: true,
     provider: undefined,
@@ -32,6 +34,8 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     setSpeakerFavorite,
     setSessionBookmark,
     toggleScheduleSharing,
+    showLoginRequired,
+    setShowLoginRequired,
   })
 
   useEffect(() => {
@@ -220,7 +224,13 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     return false
   }
 
-  async function setSpeakerFavorite(account: UserAccount, speakerId: string, remove: boolean) {
+  async function setSpeakerFavorite(speakerId: string, remove: boolean, account?: UserAccount) {
+    if (!account) {
+      setShowLoginRequired(true)
+
+      return
+    }
+
     let favorites = account.appState?.speakers ?? []
 
     if (remove) {
@@ -245,11 +255,17 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   }
 
   async function setSessionBookmark(
-    account: UserAccount,
     session: Session,
     level: 'interested' | 'attending',
+    account?: UserAccount,
     remove?: boolean
   ) {
+    if (!account) {
+      setShowLoginRequired(true)
+
+      return
+    }
+
     let sessions = account.appState?.sessions ?? []
 
     if (remove) {
@@ -299,5 +315,24 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     })
   }
 
-  return <AccountContext.Provider value={context}>{children}</AccountContext.Provider>
+  return (
+    <AccountContext.Provider value={context}>
+      <>
+        {children}
+
+        {showLoginRequired && (
+          <Modal autoHeight open close={() => setShowLoginRequired(false)}>
+            <div>
+              <p className="bold clear-bottom-less clear-top-less">
+                You need to be logged in to personalize your schedule, track your favorite speakers, and more.
+              </p>
+              <Link to="/app/login" className="button red">
+                Go to login
+              </Link>
+            </div>
+          </Modal>
+        )}
+      </>
+    </AccountContext.Provider>
+  )
 }
