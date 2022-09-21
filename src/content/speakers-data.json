@@ -381,20 +381,6 @@
     "github": "mahsamoosavi"
   },
   {
-    "id": "ZPGMCS",
-    "name": "Gabriela Chang",
-    "avatar": "https://speak.devcon.org/media/avatars/Gabriela_Chang_EthicHub_6k6JZpa.png",
-    "description": "CSO and Co-founder of EthicHub.\r\nBuilder of win/win regenerative economic models for the Unbanked farmers",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665619200000
-    ],
-    "website": "ethix.ethichub.com",
-    "twitter": "https://twitter.com/GabrielaChang17"
-  },
-  {
     "id": "TKWW8K",
     "name": "Eugene Leventhal",
     "avatar": "https://speak.devcon.org/media/avatars/headshot_L77RZZk.jpg",
@@ -1199,7 +1185,7 @@
   },
   {
     "id": "MESBKF",
-    "name": "crypto@antonela.me",
+    "name": "Antonela",
     "avatar": "https://speak.devcon.org/media/avatars/M3svpLSu_400x400_A9VvdSj.png",
     "description": "Antonela is a product design lead practicing ethical user research and open, human-centered, participatory design. She is interested in critical internet infrastructure, security, privacy, open-source communities, and feminism as an intersectional practice.  Currently, she is bringing usable security to the decentralized identity manager, MetaMask. Before, she led the User Experience team at The Tor Project. \r\nBetween 2012—20, she has been wandering all over the world, living a nomad life.",
     "tracks": [
@@ -1591,7 +1577,7 @@
   },
   {
     "id": "VEDWYZ",
-    "name": "haoyun",
+    "name": "Haoyun",
     "avatar": null,
     "description": "Based in Shanghai China｜ETHPlanet TEAM ｜ EDCON TEAM ｜ Member of togETHer",
     "tracks": [
@@ -1631,7 +1617,7 @@
   },
   {
     "id": "HKTBAK",
-    "name": "Georgios",
+    "name": "Georgios Gontikas",
     "avatar": "https://speak.devcon.org/media/avatars/Screenshot_2022-06-20_at_11.02.30_zjSYe6i.png",
     "description": "Product Manager at ChainSafe with focus on dApp interoperability and bridges.",
     "tracks": [
@@ -2804,7 +2790,7 @@
   },
   {
     "id": "SDHXUT",
-    "name": "terence tsao",
+    "name": "Terence Tsao",
     "avatar": "https://speak.devcon.org/media/avatars/avatar1_DZ1o9iE.jpg",
     "description": "👋 Hi, I'm a core dev at Prismatic labs. I'm most known for my work on Prysm, a consensus layer client written in Go. I mostly worked on the proof of stake Ethereum, known as the beacon chain. Lately, I've been working extensively on \"the merge\", hybrid PBS, and eip4844.",
     "tracks": [
@@ -3489,7 +3475,7 @@
   },
   {
     "id": "WKQZLV",
-    "name": "Stefan",
+    "name": "Stefan Starflinger",
     "avatar": "https://speak.devcon.org/media/avatars/me2_v2SdjSy.jpeg",
     "description": "Stefan Starflinger is a vienna-based fullstack developer at Bitfly. He attended the University of Vienna and graduated with a master's degree in business informatics. Currently he's working on multiple crypto related projects, namely Ethermine, Beaconcha.in and Ethermine Staking.",
     "tracks": [
@@ -3697,6 +3683,21 @@
     "github": "https://github.com/rachelaux"
   },
   {
+    "id": "LXM3XY",
+    "name": "Yi Sun",
+    "avatar": "https://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg",
+    "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://yisun.io/",
+    "twitter": "theyisun",
+    "github": "yi-sun"
+  },
+  {
     "id": "ZYXBSK",
     "name": "gubsheep",
     "avatar": null,
@@ -3742,18 +3743,6 @@
     ],
     "twitter": "therealyingtong",
     "github": "therealyingtong"
-  },
-  {
-    "id": "KGGWEZ",
-    "name": "Uma Roy",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
-    ]
   },
   {
     "id": "CZMY7Z",
@@ -4259,7 +4248,7 @@
   },
   {
     "id": "T89AAP",
-    "name": "yanyan ho",
+    "name": "Yanyan Ho",
     "avatar": "https://www.gravatar.com/avatar/60caa2ef4ce1a3213703510d3589c692",
     "description": "Dapp-Learning Founder.  Faithful of Austrian economics, Interested in DEFI, ZK, DAO",
     "tracks": [
@@ -4470,8 +4459,8 @@
   },
   {
     "id": "HGMDTU",
-    "name": "John",
-    "avatar": null,
+    "name": "John Kane",
+    "avatar": "https://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg",
     "description": ".",
     "tracks": [
       "Developer Infrastructure"
@@ -4646,6 +4635,33 @@
     ],
     "eventDays": [
       1665705600000
+    ]
+  },
+  {
+    "id": "7PH9MT",
+    "name": "protolambda",
+    "avatar": "https://speak.devcon.org/media/avatars/pineapple_social_7XNfiXn.png",
+    "description": "Ethereum R&D at OP Labs, EIP-4844 co-author, eth2 dev.",
+    "tracks": [
+      "Layer 1 Protocol"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "website": "https://protolambda.com/",
+    "twitter": "protolambda",
+    "github": "protolambda"
+  },
+  {
+    "id": "JXP3T8",
+    "name": "Lang Cui",
+    "avatar": "https://speak.devcon.org/media/avatars/8F411BAC-BC3B-4817-B151-4B66566E5E7D_cETvPVG.jpeg",
+    "description": "Venture Investor at Struck Crypto | Angel Investor | Startup Advisor | Kellogg MBA",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
     ]
   }
 ]
