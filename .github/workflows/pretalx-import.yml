@@ -27,6 +27,8 @@ jobs:
 
       - name: Import Pretalx schedule
         run: yarn run scripts:pretalx-import
+        env:
+          PRETALX_API_KEY: ${{ secrets.PRETALX_API_KEY }}
 
       - name: Commit updates
         uses: EndBug/add-and-commit@v9
