@@ -14,7 +14,7 @@
     "start": "next start",
     "lint": "next lint",
     "scripts:db-cleanup": "ts-node src/scripts/db-cleanup",
-    "scripts:export-pretalx": "ts-node src/scripts/export-pretalx"
+    "scripts:pretalx-import": "ts-node src/scripts/pretalx-import"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^8.1.0",
