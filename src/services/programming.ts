@@ -5,6 +5,9 @@ import { defaultSlugify } from 'utils/formatting'
 import moment from 'moment'
 import fs from 'fs'
 import fetch from 'cross-fetch'
+import sessionData from 'content/session-data.json'
+import speakerData from 'content/speakers-data.json'
+import roomsData from 'content/rooms-data.json'
 
 require('dotenv').config()
 
@@ -58,7 +61,7 @@ export async function GetEvent(): Promise<any> {
 }
 
 export async function GetSessions(fromCache = true): Promise<Array<SessionType>> {
-  if (fromCache) return require('content/session-data.json') as SessionType[]
+  if (fromCache) return sessionData as SessionType[]
 
   const talks = await exhaustResource(`/events/${eventName}/talks`)
   const rooms = await GetRooms()
@@ -144,7 +147,7 @@ export async function GetEventDays(): Promise<Array<number>> {
 }
 
 export async function GetRooms(fromCache = true): Promise<Array<Room>> {
-  if (fromCache) return require('content/rooms-data.json') as Room[]
+  if (fromCache) return roomsData as Room[]
 
   const rooms = await exhaustResource(`/events/${eventName}/rooms`)
   return rooms.map((i: any) => {
@@ -176,7 +179,7 @@ export async function GetSpeaker(id: string, fromCache = true): Promise<Speaker 
 }
 
 export async function GetSpeakers(fromCache = true): Promise<Array<Speaker>> {
-  if (fromCache) return require('content/speakers-data.json') as Speaker[]
+  if (fromCache) return speakerData as Speaker[]
 
   const sessions = await GetSessions()
   const speakersData = await exhaustResource(`/events/${eventName}/speakers`)
