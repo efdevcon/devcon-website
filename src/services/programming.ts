@@ -2,12 +2,12 @@ import { Speaker } from 'types/Speaker'
 import { Room } from 'types/Room'
 import { Session as SessionType } from 'types/Session'
 import { defaultSlugify } from 'utils/formatting'
-import sessionData from '../content/session-data.json'
-import speakerData from '../content/speakers-data.json'
-import roomsData from '../content/rooms-data.json'
 import moment from 'moment'
 import fs from 'fs'
 import fetch from 'cross-fetch'
+import sessionData from 'content/session-data.json'
+import speakerData from 'content/speakers-data.json'
+import roomsData from 'content/rooms-data.json'
 
 require('dotenv').config()
 
@@ -26,15 +26,15 @@ const roleQuestionId = 24 // not used
 
 console.log('Pretalx Service', eventName)
 
-export async function ExportSchedule() {
-  // console.log('Export Event Schedule..')
-  // const rooms = await GetRooms(false)
-  // fs.writeFile("./src/content/rooms-data.json", JSON.stringify(rooms, null, 2), function (err) {
-  //   if (err) {
-  //     console.log(err)
-  //   }
-  // })
-  // console.log('Rooms exported', rooms.length)
+export async function ImportSchedule() {
+  console.log('Import Pretalx Event Schedule..')
+  const rooms = await GetRooms(false)
+  fs.writeFile("./src/content/rooms-data.json", JSON.stringify(rooms, null, 2), function (err) {
+    if (err) {
+      console.log(err)
+    }
+  })
+  console.log('Rooms imported', rooms.length)
 
   const sessions = await GetSessions(false)
   fs.writeFile("./src/content/session-data.json", JSON.stringify(sessions, null, 2), function (err) {
@@ -42,19 +42,17 @@ export async function ExportSchedule() {
       console.log(err)
     }
   })
-  console.log('Sessions exported', sessions.length)
+  console.log('Sessions imported', sessions.length)
 
-  // const speakers = await GetSpeakers(false)
-  // const filtered = speakers.filter(i => sessions.map(x => x.speakers.map(y => y.id)).some(x => x.includes(i.id)))
-  // fs.writeFile("./src/content/speakers-data.json", JSON.stringify(filtered, null, 2), function (err) {
-  //   if (err) {
-  //     console.log(err)
-  //   }
-  // })
-  // console.log('Speakers exported', filtered.length)
+  const speakers = await GetSpeakers(false)
+  const filtered = speakers.filter(i => sessions.map(x => x.speakers.map(y => y.id)).some(x => x.includes(i.id)))
+  fs.writeFile("./src/content/speakers-data.json", JSON.stringify(filtered, null, 2), function (err) {
+    if (err) {
+      console.log(err)
+    }
+  })
+  console.log('Speakers imported', filtered.length)
 }
-
-// ExportSchedule();
 
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)

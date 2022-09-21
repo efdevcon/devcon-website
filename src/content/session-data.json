@@ -193,7 +193,7 @@
     ],
     "title": "EVM Panel",
     "track": "Developer Infrastructure",
-    "duration": 60,
+    "duration": 30,
     "start": 1665597600000,
     "end": 1665601200000,
     "room": {
@@ -389,7 +389,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/-IlNT4nV_400x400_X2wzWMp.jpg"
       }
     ],
-    "title": "Public goods and experiments, sunsetting Zkopru V1",
+    "title": "Public Goods and Experiments, Sunsetting Zkopru V1",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665604800000,
@@ -615,7 +615,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/pfp_Ndk0Tkr.png"
       }
     ],
-    "title": "Little things I’ve learned in developing Halo2 circuits",
+    "title": "Little Things I’ve Learned in Developing Halo2 Circuits",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665527400000,
@@ -817,6 +817,13 @@
         "name": "George",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "7PH9MT",
+        "name": "protolambda",
+        "description": "Ethereum R&D at OP Labs, EIP-4844 co-author, eth2 dev.",
+        "twitter": "protolambda",
+        "avatar": "http://speak.devcon.org/media/avatars/pineapple_social_7XNfiXn.png"
       }
     ],
     "title": "Danksharding + Data Availability Sampling (DAS) Workshop",
@@ -858,7 +865,7 @@
         "avatar": ""
       }
     ],
-    "title": "Reducing beacon chain bandwidth for institutional and home stakers",
+    "title": "Reducing Beacon Chain Bandwidth for Institutional and Home Stakers",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665678600000,
@@ -987,7 +994,7 @@
         "avatar": ""
       }
     ],
-    "title": "Light Clients after the Merge",
+    "title": "Light Clients After the Merge",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665770400000,
@@ -1057,7 +1064,7 @@
         "avatar": ""
       }
     ],
-    "title": "Experiments with the EthereumJS client",
+    "title": "Experiments with the EthereumJS Client",
     "track": "Developer Infrastructure",
     "duration": 120,
     "start": 1665759600000,
@@ -1271,7 +1278,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/DB_headshot_small_v29yZIf.jpg"
       }
     ],
-    "title": "EEA Community Projects: a home for open standards development projects, managed by OASIS",
+    "title": "EEA Community Projects: a Home for Open Standards Development Projects, Managed by OASIS",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665528600000,
@@ -1434,7 +1441,7 @@
         "avatar": ""
       }
     ],
-    "title": "Quest for the best tests, a retrospective on #TestingTheMerge",
+    "title": "Quest for the Best Tests, a Retrospective on #TestingTheMerge",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665516600000,
@@ -1467,7 +1474,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/OwT0LdXU_400x400_8drFhaa.jpeg"
       }
     ],
-    "title": "ultra sound money",
+    "title": "Ultra Sound Money",
     "track": "Cryptoeconomics",
     "duration": 30,
     "start": 1665601200000,
@@ -1706,7 +1713,7 @@
         "avatar": ""
       }
     ],
-    "title": "Technical details of the opcode compatible zkEVM",
+    "title": "Technical Details of the Opcode Compatible zkEVM",
     "track": "Layer 2s",
     "duration": 30,
     "start": 1665763200000,
@@ -1739,7 +1746,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/sasha_Rn8X5CR.jpeg"
       }
     ],
-    "title": "The Future of Web3UX - a paradigm shift for a better collaboration between design and development.",
+    "title": "The Future of Web3UX - a Paradigm Shift for a Better Collaboration between Design and Development",
     "track": "UX & Design",
     "duration": 30,
     "start": 1665520200000,
@@ -1838,7 +1845,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/foto_IIi6GR9.jpg"
       }
     ],
-    "title": "The state of fiat on-ramps for layer 2s",
+    "title": "The State of Fiat On-Ramps for Layer 2s",
     "track": "Layer 2s",
     "duration": 10,
     "start": 1665527400000,
@@ -1871,7 +1878,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/i11-DPwB_400x400_EoRDBO3.png"
       }
     ],
-    "title": "Build your first contract with the wizard of OZ",
+    "title": "Build Your First Contract with the Wizard of OZ",
     "track": "Developer Infrastructure",
     "duration": 10,
     "start": 1665594600000,
@@ -1910,7 +1917,7 @@
         "avatar": ""
       }
     ],
-    "title": "Compositionality: The 10x engineer secret sauce",
+    "title": "Compositionality: The 10x Engineer Secret Sauce",
     "track": "Cryptoeconomics",
     "duration": 120,
     "start": 1665687600000,
@@ -2036,7 +2043,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/5ECA3EE9-A09A-4810-ABF7-070E0CBBB8D8_gO2w1JF.jpeg"
       }
     ],
-    "title": "Securing cross-chain communication",
+    "title": "Securing Cross-chain Communication",
     "track": "Security",
     "duration": 30,
     "start": 1665523800000,
@@ -2433,7 +2440,7 @@
         "avatar": ""
       }
     ],
-    "title": "Proving evm bytecode execution in the zk-evm",
+    "title": "Proving EVM Bytecode Execution in the zk-EVM",
     "track": "Layer 2s",
     "duration": 30,
     "start": 1665678600000,
@@ -2464,7 +2471,7 @@
         "avatar": ""
       }
     ],
-    "title": "Coincidence of Chains",
+    "title": "MEV Capturing AMMs(McAMMs)",
     "track": "Layer 2s",
     "duration": 10,
     "start": 1665681000000,
@@ -2477,13 +2484,14 @@
       "capacity": 260
     },
     "type": "Lightning Talk",
-    "description": "Given the recent increase in L2 viability, we will present a way to connect L1s with L2s without needing to actually move funds. Coincidence of Wants shows us that if one user wants to bridge from L1 ETH-USD to an L2, and another user wants to do the opposite, we can match these users completely without going through a bridge or liquidity pool. Not only are there benefits in price but also in security as no MEV can be extracted.",
+    "description": "A prevailing thought is that the power of transaction ordering is mostly in the hands of block-builders in the current MEV-Boost and PBS specifications. This talk will present a new AMM design, which could shift the transaction ordering power, at least partly, to AMM designers and liquidity providers. These constructions would allow AMMs to capture part of the MEV that is currently only harvested by block-builders and proposers.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
-      "Cross Chain CoWs",
-      "Layer2",
-      "Interconnectivity"
+      "AMMs",
+      "MEV",
+      "DEX",
+      ""
     ]
   },
   {
@@ -2604,7 +2612,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/flpfp_m1w5lTh.jpg"
       }
     ],
-    "title": "Positive framing and communication for web3",
+    "title": "Positive Framing and Communication for Web3",
     "track": "UX & Design",
     "duration": 30,
     "start": 1665774000000,
@@ -2637,7 +2645,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/blueprofile_pp0Mjfp.jpg"
       }
     ],
-    "title": "under 2 min - Become an Etheruem staker and set up node",
+    "title": "Under 2 Min - Become an Etheruem Staker and Set Up Node",
     "track": "Staking & Validator Experience",
     "duration": 10,
     "start": 1665673200000,
@@ -2698,13 +2706,13 @@
     "speakers": [
       {
         "id": "HKTBAK",
-        "name": "Georgios",
+        "name": "Georgios Gontikas",
         "description": "Product Manager at ChainSafe with focus on dApp interoperability and bridges.",
         "twitter": "https://twitter.com/geogont",
         "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-06-20_at_11.02.30_zjSYe6i.png"
       }
     ],
-    "title": "How bridges can improve L2 interoperability",
+    "title": "How Bridges Can Improve L2 Interoperability",
     "track": "Layer 2s",
     "duration": 10,
     "start": 1665768000000,
@@ -2840,7 +2848,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_2040_1_5nrRzkv.png"
       }
     ],
-    "title": "ENS Mail - Decentralized, secure and open messaging protocol",
+    "title": "dm3 - Decentralized, Secure and Open Messaging Protocol",
     "track": "Developer Infrastructure",
     "duration": 10,
     "start": 1665594000000,
@@ -2853,7 +2861,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "ENS Mail is a protocol enabling decentralized, open, and secure messaging based on established web3 services like ENS and IPFS. It doesn't rely on any central service. The user has complete control over where their messaging data is stored. By using ENS names and ENS text records as the registry for public keys, the user owns the identity linked to their messages.\r\nENS Mail comes with a reference implementation for a standalone web application, a widget, and a delivery service.",
+    "description": "dm3 is a protocol enabling decentralized, open, and secure messaging based on established web3 services like ENS and IPFS. It doesn't rely on any central service. The user has complete control over where their messaging data is stored. By using ENS names and ENS text records as the registry for public keys, the user owns the identity linked to their messages.\r\ndm3 comes with a reference implementation for a standalone web application, a widget, and a delivery service.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -3193,7 +3201,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile_ZaXbJ6x.png"
       }
     ],
-    "title": "How to Stay up to date with all the movements and the rise of new technologies",
+    "title": "How to Stay Up to Sate with All the Movements and the Rise of New Technologies",
     "track": "Developer Infrastructure",
     "duration": 10,
     "start": 1665765600000,
@@ -3224,7 +3232,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Evan_Miyazono_IPqfCk1.jpeg"
       }
     ],
-    "title": "Impact certificates powering regenerative cryptoeconomics",
+    "title": "Impact Certificates Powering Regenerative Cryptoeconomics",
     "track": "Cryptoeconomics",
     "duration": 30,
     "start": 1665687600000,
@@ -3361,7 +3369,7 @@
         "avatar": ""
       }
     ],
-    "title": "Buidl the Buidlers: how you can create the next generation of web3 contributors through education, peer review, and professional development",
+    "title": "Buidl the Buidlers: How You Can Create the Next Generation of Web3 Contributors through Education, Peer Review, and Professional Development",
     "track": "Governance & Coordination",
     "duration": 120,
     "start": 1665684000000,
@@ -3467,7 +3475,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/_DSC6385_20201026_662_small_rb7lWLU.jpg"
       }
     ],
-    "title": "Vampire, a novel, cheap to verify, zkSNARK",
+    "title": "Vampire, a Novel, Cheap to Verify, zkSNARK",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 10,
     "start": 1665699600000,
@@ -3564,7 +3572,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/raoul.schaffranek_0fL5mmD.jpg"
       }
     ],
-    "title": "Tackling rounding errors with precision analysis",
+    "title": "Tackling Rounding Errors with Precision Analysis",
     "track": "Security",
     "duration": 30,
     "start": 1665518400000,
@@ -3696,7 +3704,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/pic_RbEC8WY.png"
       }
     ],
-    "title": "A better mental model Rollups, Plasma, and Validating Bridges",
+    "title": "A Better Mental Model for Rollups, Plasma, and Validating Bridges",
     "track": "Layer 2s",
     "duration": 30,
     "start": 1665511200000,
@@ -3834,7 +3842,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile-picture-2_I4y0GRy.jpg"
       }
     ],
-    "title": "The history and future of decentralized operations at MakerDAO",
+    "title": "The History and Future of Decentralized Operations at MakerDAO",
     "track": "Governance & Coordination",
     "duration": 30,
     "start": 1665765000000,
@@ -4136,7 +4144,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile-pic_xBDugIn.jpeg"
       }
     ],
-    "title": "Demystifying L2 transactions",
+    "title": "Demystifying L2 Transactions",
     "track": "Layer 2s",
     "duration": 60,
     "start": 1665586800000,
@@ -4170,13 +4178,13 @@
       },
       {
         "id": "WKQZLV",
-        "name": "Stefan",
+        "name": "Stefan Starflinger",
         "description": "Stefan Starflinger is a vienna-based fullstack developer at Bitfly. He attended the University of Vienna and graduated with a master's degree in business informatics. Currently he's working on multiple crypto related projects, namely Ethermine, Beaconcha.in and Ethermine Staking.",
         "twitter": "https://twitter.com/stefan_star",
         "avatar": "http://speak.devcon.org/media/avatars/me2_v2SdjSy.jpeg"
       }
     ],
-    "title": "Run your own beaconcha.in",
+    "title": "Run Your Own Beaconcha.in",
     "track": "Staking & Validator Experience",
     "duration": 60,
     "start": 1665523800000,
@@ -4209,7 +4217,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/main_t5PZfqk.png"
       }
     ],
-    "title": "Anonymous signalling on Ethereum",
+    "title": "Anonymous Signalling on Ethereum",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665696600000,
@@ -4360,7 +4368,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Capture_gan96Vd.PNG"
       }
     ],
-    "title": "Options for Small and Independent Stakers: Q&A with the Ethereum staking protocols",
+    "title": "Options for Small and Independent Stakers: Q&A with the Ethereum Staking Protocols",
     "track": "Staking & Validator Experience",
     "duration": 60,
     "start": 1665522000000,
@@ -4373,7 +4381,7 @@
       "capacity": 110
     },
     "type": "Panel",
-    "description": "The Node Operator Association presents a roundtable discussion with the various Ethereum staking protocols to discuss opportunities for small staking operations. Discussion will include qualifications,  application processes, costs, risks, and advantages. Join us to learn how small businesses and solo stakers can partner with the various staking protocols to increase revenue.",
+    "description": "The Node Operator Association presents a roundtable discussion with several Ethereum staking protocols to discuss opportunities for small staking operations. Darren Langley (Rocket Pool), Vasiliy Shapovalov (Lido), Oisin Kyne (Obol), and Adam Efrima (SSV) will discuss how small businesses and solo stakers can partner with the various staking protocols to increase revenue.\r\n\r\nTopics include operator qualifications, application processes, costs, risks, and each protocol's unique advantages.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -4393,7 +4401,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Ken_-_Copy_PqLSvAn.jpeg"
       }
     ],
-    "title": "Does it make sense to aggregate and average feeReceipent rewards using a smoothing pool?",
+    "title": "Does it Make Sense to Aggregate and Average feeReceipent Rewards Using a Smoothing Pool?",
     "track": "Staking & Validator Experience",
     "duration": 30,
     "start": 1665592200000,
@@ -4426,7 +4434,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/trippy-0_rxbGWWE.jpg"
       }
     ],
-    "title": "The right way to hash a Merkle tree",
+    "title": "The Right Way to Hash a Merkle Tree",
     "track": "Developer Infrastructure",
     "duration": 30,
     "start": 1665523800000,
@@ -4458,7 +4466,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Alexey_Face_NoDK4ty.png"
       }
     ],
-    "title": "Erigon 2 as a distributed database technology",
+    "title": "Erigon 2 as a Distributed Database Technology",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665612000000,
@@ -4523,7 +4531,7 @@
         "avatar": ""
       }
     ],
-    "title": "Improving PBS: Lessons learned from mev-boost and Builder API",
+    "title": "Improving PBS: Lessons Learned from MEV-Boost and Builder API",
     "track": "Cryptoeconomics",
     "duration": 30,
     "start": 1665689400000,
@@ -4550,13 +4558,13 @@
     "speakers": [
       {
         "id": "SDHXUT",
-        "name": "terence tsao",
+        "name": "Terence Tsao",
         "description": "👋 Hi, I'm a core dev at Prismatic labs. I'm most known for my work on Prysm, a consensus layer client written in Go. I mostly worked on the proof of stake Ethereum, known as the beacon chain. Lately, I've been working extensively on \"the merge\", hybrid PBS, and eip4844.",
         "twitter": "terencechain",
         "avatar": "http://speak.devcon.org/media/avatars/avatar1_DZ1o9iE.jpg"
       }
     ],
-    "title": "Hybrid PBS from CL's perspective",
+    "title": "Hybrid PBS from CL's Perspective",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665676800000,
@@ -4655,7 +4663,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile_tiny_sqHavw5.jpeg"
       }
     ],
-    "title": "EELS: The future of execution layer specifications",
+    "title": "EELS: The Future of Execution Layer Specifications",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665675000000,
@@ -4819,7 +4827,7 @@
         "avatar": ""
       }
     ],
-    "title": "The fight for MEV",
+    "title": "The Fight for MEV",
     "track": "Cryptoeconomics",
     "duration": 30,
     "start": 1665516600000,
@@ -4852,7 +4860,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IvJEm0J2_400x400_swIJn6A.jpeg"
       }
     ],
-    "title": "Economic incentives and Souls in Schelling-point based oracles",
+    "title": "Economic Incentives and Souls in Schelling-point Based Oracles",
     "track": "Cryptoeconomics",
     "duration": 30,
     "start": 1665774000000,
@@ -4958,7 +4966,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Headshot_2015_round_ed5uguf.png"
       }
     ],
-    "title": "Validator receipts: an alternative to liquid staking derivatives",
+    "title": "Validator Receipts: an Alternative to Liquid Staking Derivatives",
     "track": "Cryptoeconomics",
     "duration": 30,
     "start": 1665509400000,
@@ -5242,7 +5250,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/JPG_ALTA-8_56NAZoF.jpg"
       }
     ],
-    "title": "Using blockchain to overcome LATAM challenges",
+    "title": "Using Blockchain to Overcome LATAM Challenges",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665778800000,
@@ -5340,7 +5348,7 @@
         "avatar": ""
       }
     ],
-    "title": "Unlimited size contracts using Solidity",
+    "title": "Unlimited Size Contracts Using Solidity",
     "track": "Developer Infrastructure",
     "duration": 60,
     "start": 1665513000000,
@@ -5478,7 +5486,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3935_xZiNqlX.jpeg"
       }
     ],
-    "title": "Reaching the next billion users for Ethereum leverage the African numbers",
+    "title": "Reaching The Next Billion Users for Ethereum - Leverage the African Numbers",
     "track": "Opportunity & Global Impact",
     "duration": 30,
     "start": 1665761400000,
@@ -5997,7 +6005,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/spalladino-elysium_CPqFm27.jpg"
       }
     ],
-    "title": "Being a responsible multisig signer (verify, don't trust!)",
+    "title": "Being a Responsible Multisig Signer (Verify, Don't Trust!)",
     "track": "Security",
     "duration": 10,
     "start": 1665698400000,
@@ -6062,19 +6070,19 @@
     "speakers": [
       {
         "id": "VEDWYZ",
-        "name": "haoyun",
+        "name": "Haoyun",
         "description": "Based in Shanghai China｜ETHPlanet TEAM ｜ EDCON TEAM ｜ Member of togETHer",
         "avatar": ""
       },
       {
         "id": "T89AAP",
-        "name": "yanyan ho",
+        "name": "Yanyan Ho",
         "description": "Dapp-Learning Founder.  Faithful of Austrian economics, Interested in DEFI, ZK, DAO",
         "twitter": "https://twitter.com/Dapp_Learning",
         "avatar": ""
       }
     ],
-    "title": "The community support team in china",
+    "title": "The Community Support Team in China",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665777000000,
@@ -6099,16 +6107,17 @@
     "id": "7XN3JL",
     "speakers": [
       {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "twitter": "theyisun",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      },
+      {
         "id": "ZYXBSK",
         "name": "gubsheep",
         "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
         "twitter": "gubsheep",
-        "avatar": ""
-      },
-      {
-        "id": "KGGWEZ",
-        "name": "Uma Roy",
-        "description": null,
         "avatar": ""
       }
     ],
@@ -6125,9 +6134,9 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "We build a brief mental model of zkSNARKs and give an overview of application design patterns and techniques for ZK-enabled apps: modeling state transitions (ZK card game), nullifiers, accumulators, managing and accessing state, key exchange, building for compatibility with existing data sets, conditional execution, and more. This talk assumes that you have some basic familiarity with zkSNARKs and have written ZK circuits before.",
+    "description": "We build a brief mental model of zkSNARKs and give an overview of application design patterns and techniques for ZK-enabled apps. We discuss the overall landscape of proving environments and applications of each: the affordances of browser proving, mobile proving, server proving, GPU proving, etc. We'll go over the current state of the art and key benchmarks, and how improvements across the landscape can unlock new applications of both privacy and succinctness.",
     "abstract": "",
-    "expertise": "Advanced",
+    "expertise": "Intermediate",
     "tags": [
       "zero-knowledge",
       "application"
@@ -6420,7 +6429,7 @@
         "avatar": ""
       }
     ],
-    "title": "Ups and Downs: Onboarding a million users to Layer-2",
+    "title": "Ups and Downs: Onboarding a Million Users to Layer-2",
     "track": "Layer 2s",
     "duration": 10,
     "start": 1665526200000,
@@ -6524,7 +6533,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/947fd5b0-54a7-4162-9ed4-63a9a94836e1_rS5jhPl.jpg"
       }
     ],
-    "title": "Improving performance of provable computations using Rust",
+    "title": "Improving Performance of Provable Computations Using Rust",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665691200000,
@@ -6680,6 +6689,12 @@
         "description": "Justina is Developer Success Lead at 3Box Labs where she focuses on improving the developer experience when building applications on the Ceramic network. Prior to joining 3Box Labs team, she has been working in the Developer Relations space, focused on data science and machine learning, for over 4 years helping open source projects to build successful developer products and vibrant communities around them.",
         "twitter": "juste_petr",
         "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-06-27_at_15.57.27_1qMDA9y.png"
+      },
+      {
+        "id": "JXP3T8",
+        "name": "Lang Cui",
+        "description": "Venture Investor at Struck Crypto | Angel Investor | Startup Advisor | Kellogg MBA",
+        "avatar": "http://speak.devcon.org/media/avatars/8F411BAC-BC3B-4817-B151-4B66566E5E7D_cETvPVG.jpeg"
       }
     ],
     "title": "Sign in with Ethereum: the most powerful protocol in #Web3?",
@@ -6746,7 +6761,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/jorgeportrait-1_-_Copy_2_hcLahr9.jpg"
       }
     ],
-    "title": "Shamir Secret Sharing with no ID numbers!",
+    "title": "Shamir Secret Sharing with No ID Numbers!",
     "track": "Security",
     "duration": 10,
     "start": 1665528000000,
@@ -6845,7 +6860,7 @@
         "avatar": ""
       }
     ],
-    "title": "Time-locked recovery factors for secret sharing",
+    "title": "Time-locked Recovery Factors for Secret Sharing",
     "track": "Security",
     "duration": 30,
     "start": 1665613800000,
@@ -6952,7 +6967,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3405_3RYCYV9.jpg"
       }
     ],
-    "title": "How to build bigger and stronger ETH communities in Latam",
+    "title": "How to Build Bigger and Stronger ETH Communities in Latam",
     "track": "Opportunity & Global Impact",
     "duration": 60,
     "start": 1665608400000,
@@ -7018,7 +7033,7 @@
         "avatar": ""
       }
     ],
-    "title": "Scalability is boring, privacy is dead: zk-proofs, what are they good for?",
+    "title": "Scalability is Boring, Privacy is Dead: ZK-Proofs, What are They Good for?",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665610200000,
@@ -7057,7 +7072,7 @@
         "avatar": ""
       }
     ],
-    "title": "Towards a feature-complete and backwards-compatible Privacy Layer for Ethereum",
+    "title": "Towards a Feature-Complete and Backwards-Compatible Privacy Layer for Ethereum",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665763200000,
@@ -7123,7 +7138,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/i11-DPwB_400x400_EoRDBO3.png"
       }
     ],
-    "title": "5 smart contract patterns I wish more devs would use",
+    "title": "5 Smart Contract Patterns I Wish More Devs Would Use",
     "track": "Developer Infrastructure",
     "duration": 10,
     "start": 1665592800000,
@@ -7163,7 +7178,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Mattias_vIkCNSw.png"
       }
     ],
-    "title": "Using The Graph and Dune to power on chain actions",
+    "title": "Using The Graph and Dune to Power on Chain Actions",
     "track": "Developer Infrastructure",
     "duration": 60,
     "start": 1665608400000,
@@ -7301,7 +7316,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/WeiDai_OxzS1vF.jpg"
       }
     ],
-    "title": "Why we need Threshold FHE for blockchains",
+    "title": "Why We Need Threshold FHE for Blockchains",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 10,
     "start": 1665699000000,
@@ -7432,7 +7447,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_4646_KP0ItcP.jpg"
       }
     ],
-    "title": "Using IPFS to create a Metaverse",
+    "title": "Using IPFS to Create a Metaverse",
     "track": "Developer Infrastructure",
     "duration": 10,
     "start": 1665767400000,
@@ -7465,7 +7480,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/laser-eth-glyph_Zg03e83.jpeg"
       }
     ],
-    "title": "Education as a public good: past, present & future of ethereum.org",
+    "title": "Education as a Public Good: Past, Present & Future of ethereum.org",
     "track": "UX & Design",
     "duration": 30,
     "start": 1665696600000,
@@ -7591,13 +7606,13 @@
     "speakers": [
       {
         "id": "MESBKF",
-        "name": "crypto@antonela.me",
+        "name": "Antonela",
         "description": "Antonela is a product design lead practicing ethical user research and open, human-centered, participatory design. She is interested in critical internet infrastructure, security, privacy, open-source communities, and feminism as an intersectional practice.  Currently, she is bringing usable security to the decentralized identity manager, MetaMask. Before, she led the User Experience team at The Tor Project. \r\nBetween 2012—20, she has been wandering all over the world, living a nomad life.",
         "twitter": "holantonela",
         "avatar": "http://speak.devcon.org/media/avatars/M3svpLSu_400x400_A9VvdSj.png"
       }
     ],
-    "title": "Usable security in web3",
+    "title": "Usable Security in Web3",
     "track": "Security",
     "duration": 30,
     "start": 1665765000000,
@@ -7663,7 +7678,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/my_avatar_a798RFz.jpeg"
       }
     ],
-    "title": "Bad proofs in Formal Verification",
+    "title": "Bad Proofs in Formal Verification",
     "track": "Security",
     "duration": 30,
     "start": 1665608400000,
@@ -7695,7 +7710,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/cv_KrYykBP.jpeg"
       }
     ],
-    "title": "Thinking like an auditor to develop safer smart contracts",
+    "title": "Thinking Like an Auditor to Develop Safer Smart Contracts",
     "track": "Security",
     "duration": 60,
     "start": 1665590400000,
@@ -7735,7 +7750,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/photo_2_1ULXYkn.jpg"
       }
     ],
-    "title": "Hunting and monitoring for on-chain attacks",
+    "title": "Hunting and Monitoring for On-Chain Attacks",
     "track": "Security",
     "duration": 120,
     "start": 1665691200000,
@@ -7768,7 +7783,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/rikard.hjort_jeI8KMh.jpg"
       }
     ],
-    "title": "Formal methods for the working DeFi dev",
+    "title": "Formal Methods for the Working DeFi Dev",
     "track": "Security",
     "duration": 60,
     "start": 1665597600000,
@@ -7940,7 +7955,7 @@
         "avatar": ""
       }
     ],
-    "title": "The past, present and future of web 3 in LATAM",
+    "title": "The Past, Present and Future of Web3 in LATAM",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665777600000,
@@ -8084,7 +8099,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/SOYFIRA_p1gu7pg.jpg"
       }
     ],
-    "title": "Art reflects what happens in society",
+    "title": "Art Reflects What Happens in Society",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665776400000,
@@ -8255,7 +8270,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/drew.headshot_z78fhRA.jpg"
       }
     ],
-    "title": "Data + Empathy: How to approach UX Decisions in Web3",
+    "title": "Data + Empathy: How to Approach UX Decisions in Web3",
     "track": "UX & Design",
     "duration": 10,
     "start": 1665700800000,
@@ -8590,7 +8605,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/weiwu_2x_copyA_ocQ2Dlv.jpg"
       }
     ],
-    "title": "Tokenizing brands : 3 key learnings",
+    "title": "Tokenizing Brands: 3 Key Learnings",
     "track": "UX & Design",
     "duration": 30,
     "start": 1665673200000,
@@ -8760,7 +8775,7 @@
         "avatar": ""
       }
     ],
-    "title": "Asset rights abstractions - a case for smart contract wallets",
+    "title": "Asset Rights Abstractions - a Case for Smart Contract Wallets",
     "track": "UX & Design",
     "duration": 30,
     "start": 1665511200000,
@@ -8793,7 +8808,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile_49NwdRC.jpg"
       }
     ],
-    "title": "The future of wallets: MPC vs smart wallets",
+    "title": "The Future of Wallets: MPC vs Smart Wallets",
     "track": "Developer Infrastructure",
     "duration": 10,
     "start": 1665680400000,
@@ -8827,7 +8842,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/mug_P1Y3l40.png"
       }
     ],
-    "title": "How to build a decentralized Ethereum liquid staking protocol?",
+    "title": "How to Build a Decentralized Ethereum Liquid Staking Protocol?",
     "track": "Staking & Validator Experience",
     "duration": 30,
     "start": 1665588600000,
@@ -8956,7 +8971,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/bobbin_hc_npGQXVA.png"
       }
     ],
-    "title": "Using a hybrid UTXO and account-based state model in a ZK rollup on an example of Polygon Miden",
+    "title": "Using a Hybrid UTXO and Account-Based State Model in a ZK Rollup on an Example of Polygon Miden",
     "track": "Layer 2s",
     "duration": 30,
     "start": 1665675000000,
@@ -9059,7 +9074,7 @@
         "avatar": ""
       }
     ],
-    "title": "The challenges and learnings of implementing wallet connection on Mobile",
+    "title": "The Challenges and Learnings of Implementing Wallet Connection on Mobile",
     "track": "Developer Infrastructure",
     "duration": 10,
     "start": 1665592200000,
@@ -9954,9 +9969,9 @@
     "speakers": [
       {
         "id": "HGMDTU",
-        "name": "John",
+        "name": "John Kane",
         "description": ".",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
       }
     ],
     "title": "Hardhat Talk",
@@ -10132,20 +10147,13 @@
     "id": "JEU9YR",
     "speakers": [
       {
-        "id": "ZPGMCS",
-        "name": "Gabriela Chang",
-        "description": "CSO and Co-founder of EthicHub.\r\nBuilder of win/win regenerative economic models for the Unbanked farmers",
-        "twitter": "https://twitter.com/GabrielaChang17",
-        "avatar": "http://speak.devcon.org/media/avatars/Gabriela_Chang_EthicHub_6k6JZpa.png"
-      },
-      {
         "id": "L9FPZR",
         "name": "Gabriela",
         "description": null,
         "avatar": ""
       }
     ],
-    "title": "The unbanked, a real blue ocean opportunity for crypto",
+    "title": "The Unbanked, A Real Blue Ocean Opportunity for Crypto",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665701400000,
@@ -10170,13 +10178,6 @@
   {
     "id": "PNYZDB",
     "speakers": [
-      {
-        "id": "8V9HA3",
-        "name": "Rob Stupay",
-        "description": "Rob Stupay is managing communications at Remix.",
-        "twitter": "ryestew",
-        "avatar": ""
-      },
       {
         "id": "TDB9TN",
         "name": "Moritz Stellmacher",
@@ -10429,7 +10430,7 @@
     ],
     "title": "Workshops",
     "track": "Developer Infrastructure",
-    "duration": 120,
+    "duration": 60,
     "start": 1665759600000,
     "end": 1665766800000,
     "room": {
