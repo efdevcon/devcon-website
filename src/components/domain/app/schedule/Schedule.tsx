@@ -356,7 +356,7 @@ export const Schedule = (props: any) => {
 
         {personalAgenda && (
           <p>
-            You're watching the schedule of <b>{userSchedule.username}</b>
+            You&apos;re watching the schedule of <b>{userSchedule.username}</b>
           </p>
         )}
       </div>
