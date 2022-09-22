@@ -6,6 +6,7 @@ import { Session } from 'types/Session'
 import { VerificationToken } from 'types/VerificationToken'
 
 export interface AccountContextType {
+  edit: boolean
   loading: boolean
   provider: providers.Web3Provider | undefined
   account: UserAccount | undefined
@@ -27,6 +28,7 @@ export interface AccountContextType {
 
 export const useAccountContext = () => useContext<AccountContextType>(AccountContext)
 export const AccountContext = createContext<AccountContextType>({
+  edit: false,
   loading: false,
   provider: undefined,
   account: undefined,

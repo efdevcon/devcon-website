@@ -19,6 +19,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
   const router = useRouter()
   const [showLoginRequired, setShowLoginRequired] = useState(false)
   const [context, setContext] = useState<AccountContextType>({
+    edit: false,
     loading: true,
     provider: undefined,
     account: undefined,
@@ -311,6 +312,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     setContext({
       ...context,
+      edit: true,
       account: newAccountState,
     })
   }

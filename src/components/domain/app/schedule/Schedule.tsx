@@ -6,7 +6,6 @@ import { NoResults } from 'components/common/filter'
 import Star from 'assets/icons/star.svg'
 import StarFill from 'assets/icons/star-fill.svg'
 import TileIcon from 'assets/icons/tiles.svg'
-import ShareIcon from 'assets/icons/share.svg'
 import ListIcon from 'assets/icons/list-simple.svg'
 import { List } from './views/List'
 import { Session } from 'types/Session'
@@ -18,6 +17,7 @@ import { useAccountContext } from 'context/account-context'
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import { useAppContext } from 'context/app-context'
 import { Room } from 'types/Room'
+import { ShareScheduleModal } from './ShareScheduleModal'
 
 type Timeslot = {
   time: number
@@ -111,10 +111,9 @@ export const multiSelectFilter = (selectedFilter: { [key: string]: boolean }, ke
 }
 
 export const Schedule = (props: any) => {
-  const { sessions: sessionsBeforeFormatting, tracks, event } = props
-  const personalAgenda = !!props.userId
+  const { sessions: sessionsBeforeFormatting, userSchedule, tracks, event } = props
+  const personalAgenda = !!userSchedule
   const { account } = useAccountContext()
-  const router = useRouter()
   const { now } = useAppContext()
   const [search, setSearch] = React.useState('')
   const [view, setView] = React.useState('list')
@@ -173,8 +172,8 @@ export const Schedule = (props: any) => {
     }
   }, [search])
 
-  const bookmarkedSessions = account?.appState?.sessions
-  const favoritedSpeakers = account?.appState.speakers
+  const bookmarkedSessions = account?.appState?.sessions ?? []
+  const favoritedSpeakers = account?.appState?.speakers ?? []
 
   // Format sessions (memoized)
   const formattedSessions = useFormatSessions(sessionsBeforeFormatting)
@@ -284,18 +283,7 @@ export const Schedule = (props: any) => {
 
           return (
             <>
-              <ShareIcon
-                style={{ cursor: 'pointer' }}
-                onClick={() => {
-                  if (!account) {
-                    alert('No account (call modal manually)')
-
-                    return
-                  }
-
-                  router.push('/app/settings#schedule')
-                }}
-              />
+              <ShareScheduleModal />
 
               {account && (
                 <>{favoritesOnly ? <StarFill {...starProps} className="icon fill-red" /> : <Star {...starProps} />}</>
@@ -316,7 +304,7 @@ export const Schedule = (props: any) => {
                   personalAgenda
                     ? [
                         {
-                          text: 'Personal Agenda',
+                          text: 'Personalized Schedule',
                           value: 'personal',
                         },
                       ]
@@ -352,7 +340,7 @@ export const Schedule = (props: any) => {
           </SwipeToScroll>
         </div>
 
-        {personalAgenda && <p>This is a personalized schedule.</p>}
+        {personalAgenda && <p>You're watching the schedule of <b>{userSchedule.username}</b></p>}
       </div>
 
       {!personalAgenda && (

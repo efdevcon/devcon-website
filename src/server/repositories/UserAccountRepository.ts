@@ -1,7 +1,8 @@
 import { GetSessions } from 'services/programming'
-import { Session } from 'types/Session'
-import { UserAccount } from 'types/UserAccount'
+import { UserAccount, UserSchedule } from 'types/UserAccount'
+import { getRandomUsername, getUsername } from 'utils/account'
 import dbConnect from 'utils/dbConnect'
+import { getDefaultProvider } from 'utils/web3'
 import { BaseRepository } from './BaseRepository'
 import { IUserAccountRepository } from './interfaces/IUserAccountRepository'
 
@@ -30,22 +31,31 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
     }
   }
 
-  public async findPersonalizedAgenda(userId: string): Promise<Session[]> {
+  public async findPersonalizedAgenda(userId: string): Promise<UserSchedule | undefined> {
     console.log('Find personalized schedule', userId)
 
     await dbConnect()
 
     try {
       const user = await this._model.findOne({ _id: userId }) as UserAccount
-      if (!user.appState.publicSchedule) return []
+      if (!user) return
 
+      const username = getUsername(user)
+      const provider = getDefaultProvider()
+      const name = await provider.lookupAddress(username)
       const sessions = await GetSessions()
-      return sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+
+      return {
+        userId: String(user._id),
+        username: name ?? getRandomUsername(String(user._id)),
+        publicSchedule: user.appState.publicSchedule,
+        sessions: sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+      }
     } catch (e) {
       console.log("Couldn't find user account", userId)
       console.error(e)
     }
 
-    return []
+    return
   }
 }
