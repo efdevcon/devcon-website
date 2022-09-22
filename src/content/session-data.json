@@ -775,7 +775,7 @@
         "avatar": ""
       }
     ],
-    "title": "[Layer 1 Protocol] Let's run and contribute to Consensus Pyspec",
+    "title": "How to use Executable Consensus Pyspec",
     "track": "Layer 1 Protocol",
     "duration": 10,
     "start": 1665674400000,
@@ -1605,7 +1605,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/aJw3qmVR_400x400-2_AY2swoh.jpg"
       }
     ],
-    "title": "MEV NFT: ERC-721 fork for blocking atomic arbitrage",
+    "title": "MEV NFT: ERC-721 Fork for Blocking Atomic Arbitrage",
     "track": "Cryptoeconomics",
     "duration": 10,
     "start": 1665681600000,
@@ -2402,7 +2402,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/georgia_photo_sxsw_1_1_copy_small_XwdmPKS.jpeg"
       }
     ],
-    "title": "Going on safari: researching users in the metaverse",
+    "title": "Going on Safari: Researching Users in the Metaverse",
     "track": "UX & Design",
     "duration": 30,
     "start": 1665612000000,
@@ -3402,7 +3402,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/fe9200c4-2241-40ef-b853-eaebab8b39f8_rw_1200_photos_v2_x4_3MjzB9c.jpg"
       }
     ],
-    "title": "Social composability design: how DAOs can leverage it for the future of work",
+    "title": "Social Composability Design: How DAOs Can Leverage It for the Future of Work",
     "track": "UX & Design",
     "duration": 30,
     "start": 1665613800000,
@@ -5315,7 +5315,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/James_Beck_ConsenSys_gk7zQyf.JPG"
       }
     ],
-    "title": "Ethereum Won’t Be The Money Layer of the Internet if People Think It’s an Earth-Destroying Scam: Four Ways to Change the Narrative.",
+    "title": "Ethereum Won’t Be The Money Layer of the Internet if People Think It’s an Earth-Destroying Scam: Four Ways to Change the Narrative",
     "track": "Opportunity & Global Impact",
     "duration": 30,
     "start": 1665606600000,
@@ -5617,7 +5617,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_9906_1_IvEuLd3.jpeg"
       }
     ],
-    "title": "learn2earn - learnings from educating & financing the next batch of web3 developers",
+    "title": "Learn2Earn - Learnings from Educating & Financing the Next Batch of Web3 Developers",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665775800000,
@@ -5649,7 +5649,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/photo_2022-05-10_15-17-42_Hd7Z7Km.jpg"
       }
     ],
-    "title": "The biggest web3 opportunity no one is talking about!",
+    "title": "The Biggest Web3 Opportunity No One is Talking About!",
     "track": "Opportunity & Global Impact",
     "duration": 30,
     "start": 1665694800000,
@@ -5884,18 +5884,17 @@
     "id": "FBL3RR",
     "speakers": [
       {
-        "id": "K9B8EC",
-        "name": "cryptowanderer",
-        "description": "Lover",
-        "twitter": "cryptowanderer",
-        "avatar": "http://speak.devcon.org/media/avatars/profile_wmcgCTO.png"
-      },
-      {
         "id": "T39AXQ",
         "name": "Vivek Singh",
         "description": "co-founder at Gitcoin. currently focused on KERNEL, a web3 educational web which brings together 200 incredible peers, 3 times a year for a unique experience. the primary orientation is around deepening generative relationships amongst incredible peers.",
         "twitter": "vsinghdothings",
         "avatar": "http://speak.devcon.org/media/avatars/Sig_Eco_KERNEL_pIbmmgt.png"
+      },
+      {
+        "id": "GQ8XUY",
+        "name": "Sachin",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "A More Regenerative, Interactive Commons",
@@ -6919,13 +6918,6 @@
     "id": "7CAZ7U",
     "speakers": [
       {
-        "id": "XUDSBB",
-        "name": "Lefteris Karapetsas",
-        "description": "ethereum developer since 2014! Contributed to solidity compiler and c++ ethereum.\r\nBuilt the DAO, saw it get destroyed, then hacked it back to save whatever we could both in ETH and ETC.\r\nDevelopment lead for the Raiden network.\r\nFounder of rotki.\r\n\r\nI like birding :D",
-        "twitter": "lefterisjp",
-        "avatar": "http://speak.devcon.org/media/avatars/profile2_LYcOUYL.png"
-      },
-      {
         "id": "J9HBR7",
         "name": "Konstantinos Paparas",
         "description": "Open-source software developer",
@@ -6933,7 +6925,7 @@
         "avatar": ""
       }
     ],
-    "title": "rotki: Why it’s open source and local-first and why should you care?",
+    "title": "Rotki: Why it’s Open Source and Local-First and Why Should You Care?",
     "track": "Opportunity & Global Impact",
     "duration": 30,
     "start": 1665775800000,
@@ -7849,7 +7841,7 @@
         "avatar": ""
       }
     ],
-    "title": "Product-driven protocols",
+    "title": "Product-Driven Protocols",
     "track": "Opportunity & Global Impact",
     "duration": 10,
     "start": 1665700200000,
@@ -8729,7 +8721,7 @@
     "speakers": [
       {
         "id": "CUNSE9",
-        "name": "Camila",
+        "name": "Camila Garzon",
         "description": "Camila is an engineer and educator who is passionate about making it easier for developers to build in web3. Camila works as a Developer Relations Engineer at Edge & Node where she helps devs build performant, decentralized APIs. She is core team at Women Build Web3, an accelerator for developing top woman engineering talent and fund for projects led by women.",
         "twitter": "@camiinthisthang",
         "avatar": "http://speak.devcon.org/media/avatars/cami_wxd6kZv.jpeg"
@@ -9872,8 +9864,8 @@
       {
         "id": "XE8PTP",
         "name": "Anett Rolikova",
-        "description": null,
-        "avatar": ""
+        "description": "Internship Program Manager at Nethermind.io",
+        "avatar": "http://speak.devcon.org/media/avatars/twheadshottupdate_zFYunPz.jpeg"
       }
     ],
     "title": "Ethereum Magicians Protocol Roadmap Session",
@@ -10148,9 +10140,9 @@
     "speakers": [
       {
         "id": "L9FPZR",
-        "name": "Gabriela",
-        "description": null,
-        "avatar": ""
+        "name": "Gabriela Chang",
+        "description": "Gabriela Chang\r\nCSO and Co-founder of EthicHub.\r\nBuilder of win/win regenerative economic models for the Unbanked farmers.\r\n\r\nIndustrial designer, artist and writer. She worked at the Secretary of Economic Development in Chiapas, Mexico and was an organic coffee producer. Involved in Blockchain since 2017, she promotes its enormous potential as a catalyst for the SDGs. Frequent speaker and panelist in both crypto and impact forums.",
+        "avatar": "http://speak.devcon.org/media/avatars/Gabriela_Chang_EthicHub_MKxiMDX.png"
       }
     ],
     "title": "The Unbanked, A Real Blue Ocean Opportunity for Crypto",

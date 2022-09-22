@@ -34,11 +34,9 @@
     "avatar": "https://speak.devcon.org/media/avatars/profile2_LYcOUYL.png",
     "description": "ethereum developer since 2014! Contributed to solidity compiler and c++ ethereum.\r\nBuilt the DAO, saw it get destroyed, then hacked it back to save whatever we could both in ETH and ETC.\r\nDevelopment lead for the Raiden network.\r\nFounder of rotki.\r\n\r\nI like birding :D",
     "tracks": [
-      "Opportunity & Global Impact",
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665705600000,
       1665446400000
     ],
     "website": "rotki.com",
@@ -147,21 +145,6 @@
     ],
     "website": "www.diegomazo.com",
     "twitter": "@dmazorosete"
-  },
-  {
-    "id": "K9B8EC",
-    "name": "cryptowanderer",
-    "avatar": "https://speak.devcon.org/media/avatars/profile_wmcgCTO.png",
-    "description": "Lover",
-    "tracks": [
-      "Governance & Coordination"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "website": "https://andytudhope.africa",
-    "twitter": "cryptowanderer",
-    "github": "andytudhope"
   },
   {
     "id": "NBJJXC",
@@ -423,7 +406,7 @@
   },
   {
     "id": "CUNSE9",
-    "name": "Camila",
+    "name": "Camila Garzon",
     "avatar": "https://speak.devcon.org/media/avatars/cami_wxd6kZv.jpeg",
     "description": "Camila is an engineer and educator who is passionate about making it easier for developers to build in web3. Camila works as a Developer Relations Engineer at Edge & Node where she helps devs build performant, decentralized APIs. She is core team at Women Build Web3, an accelerator for developing top woman engineering talent and fund for projects led by women.",
     "tracks": [
@@ -4435,8 +4418,8 @@
   {
     "id": "XE8PTP",
     "name": "Anett Rolikova",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/twheadshottupdate_zFYunPz.jpeg",
+    "description": "Internship Program Manager at Nethermind.io",
     "tracks": [
       "Layer 1 Protocol"
     ],
@@ -4574,15 +4557,17 @@
   },
   {
     "id": "L9FPZR",
-    "name": "Gabriela",
-    "avatar": null,
-    "description": "",
+    "name": "Gabriela Chang",
+    "avatar": "https://speak.devcon.org/media/avatars/Gabriela_Chang_EthicHub_MKxiMDX.png",
+    "description": "Gabriela Chang\r\nCSO and Co-founder of EthicHub.\r\nBuilder of win/win regenerative economic models for the Unbanked farmers.\r\n\r\nIndustrial designer, artist and writer. She worked at the Secretary of Economic Development in Chiapas, Mexico and was an organic coffee producer. Involved in Blockchain since 2017, she promotes its enormous potential as a catalyst for the SDGs. Frequent speaker and panelist in both crypto and impact forums.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "website": "https://www.linkedin.com/in/gabriela-chang-valdovinos-76b34410/",
+    "twitter": "https://twitter.com/GabrielaChang17"
   },
   {
     "id": "TDB9TN",
@@ -4662,6 +4647,18 @@
     ],
     "eventDays": [
       1665619200000
+    ]
+  },
+  {
+    "id": "GQ8XUY",
+    "name": "Sachin",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Governance & Coordination"
+    ],
+    "eventDays": [
+      1665446400000
     ]
   }
 ]
