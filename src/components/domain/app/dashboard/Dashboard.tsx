@@ -101,6 +101,7 @@ export const Dashboard = (props: any) => {
         return <SessionCard key={session.id} session={session} />
       })
       .filter(session => !!session)
+      .slice(0, 3)
   })()
 
   const suggestedSessions = ['7LHLPB', '9CNZCW']
@@ -231,7 +232,7 @@ export const Dashboard = (props: any) => {
         {upcomingSessions && upcomingSessions.length > 0 && (
           <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
             <CollapsedSectionHeader>
-              <p className="app-header">Your Upcoming Sessions</p>
+              <p className="app-header">Your Next Sessions</p>
             </CollapsedSectionHeader>
             <CollapsedSectionContent>{upcomingSessions}</CollapsedSectionContent>
           </CollapsedSection>

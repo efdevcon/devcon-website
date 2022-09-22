@@ -21,7 +21,6 @@ type CardProps = {
 }
 
 export const SessionCard = (props: CardProps) => {
-  // TODO: personalization/bookmarks
   const { account, setSessionBookmark } = useAccountContext()
   const { now } = useAppContext()
   const bookmarkedSessions = account?.appState?.sessions

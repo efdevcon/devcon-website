@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import IconClock from 'assets/icons/icon_clock.svg'
 import IconStar from 'assets/icons/star.svg'
 import IconStarFill from 'assets/icons/star-fill.svg'
@@ -50,6 +50,7 @@ export const Session = (props: SessionProps) => {
   const end = moment.utc(props.session.end)
   const duration = moment.duration(moment(props.session.end).diff(start))
   const mins = duration.asMinutes()
+  const [relativeTime, setRelativeTime] = React.useState<any>(null)
 
   const interested = account?.appState?.sessions?.some(i => i.level === 'interested' && i.id === props.session.id)
   const attending = account?.appState?.sessions?.some(i => i.level === 'attending' && i.id === props.session.id)
@@ -57,7 +58,14 @@ export const Session = (props: SessionProps) => {
   const sessionUpcoming = now?.isBefore(start)
   const sessionEnded = now?.isAfter(end)
   const isOngoing = !sessionUpcoming && !sessionEnded
-  const relativeTime = sessionUpcoming ? start.from(now) : end.from(now)
+  // const relativeTime = sessionUpcoming ? start.from(now) : end.from(now)
+
+  // Have to defer to useEffect because of potential time related client/server mismatch causing hydration errors
+  useEffect(() => {
+    const relativeTime = sessionUpcoming ? start.from(now) : end.from(now)
+
+    setRelativeTime(relativeTime)
+  }, [start, end, now, sessionUpcoming])
 
   async function bookmarkSession(level: 'interested' | 'attending') {
     if (level === 'interested') {
@@ -83,9 +91,13 @@ export const Session = (props: SessionProps) => {
 
             <>
               {attending ? (
-                <IconCheck className="icon fill-red" onClick={() => bookmarkSession('attending')} />
+                <IconCheck
+                  style={{ cursor: 'pointer' }}
+                  className="icon fill-red"
+                  onClick={() => bookmarkSession('attending')}
+                />
               ) : (
-                <IconCalendarAdd onClick={() => bookmarkSession('attending')} />
+                <IconCalendarAdd style={{ cursor: 'pointer' }} onClick={() => bookmarkSession('attending')} />
               )}
             </>
           </>
@@ -127,21 +139,23 @@ export const Session = (props: SessionProps) => {
               </div>
             )}
 
-            <p className={css['relative-time']}>
-              {(() => {
-                if (isOngoing) return 'Session ongoing now!'
-
-                if (sessionUpcoming) {
-                  return `Session starts ${relativeTime}`
-                } else {
-                  return `Session ended ${relativeTime}`
-                }
-              })()}
-            </p>
-
             <div className={css['meta']}>
               <div className="label white bold">{props.session.track || 'No specific track'}</div>
             </div>
+
+            {relativeTime && (
+              <p className={css['relative-time']}>
+                {(() => {
+                  if (isOngoing) return <div className="label red sm">Session is happening now</div>
+
+                  if (sessionUpcoming) {
+                    return `Session starts ${relativeTime}`
+                  } else {
+                    return `Session ended ${relativeTime}`
+                  }
+                })()}
+              </p>
+            )}
 
             <div className={css['calendar-icon-in-circle']}>
               <IconCalendar />
