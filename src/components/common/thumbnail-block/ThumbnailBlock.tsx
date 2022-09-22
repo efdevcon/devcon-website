@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import css from './thumbnail-block.module.scss'
 import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'
+import { Link } from 'components/common/link'
 
 type ThumbnailBlock = {
   children: any
@@ -10,6 +11,7 @@ type ThumbnailBlock = {
   unoptimized?: boolean
   thumbnail?: any
   thumbnailAlt?: string
+  thumbnailUrl?: string
   thumbnailSubtext?: string
   onMouseEnter?: any
 }
@@ -40,10 +42,10 @@ export const ThumbnailBlock = (props: ThumbnailBlock) => {
   const thumbnail = (() => {
     if (trackID) {
       return (
-        <div data-type="thumbnail-block-image" className={css['thumbnail-container']}>
+        <Link to={props.thumbnailUrl} data-type="thumbnail-block-image" className={css['thumbnail-container']}>
           {getTrackImage(trackID, css['thumbnail-svg'])}
           {thumbnailSubtext}
-        </div>
+        </Link>
       )
     }
 

@@ -62,11 +62,18 @@ export const SessionCard = (props: CardProps) => {
     thumbnailClassName += ` ${css['ongoing']}`
   }
 
+  const sessionUrl = `/app/schedule/${props.session.id}`
+
   return (
-    <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track} track={props.session.track}>
+    <ThumbnailBlock
+      className={thumbnailClassName}
+      thumbnailSubtext={props.session.track}
+      track={props.session.track}
+      thumbnailUrl={sessionUrl}
+    >
       <div className={css['details']}>
         <div className={css['top']}>
-          <Link to={`/app/schedule/${props.session.id}`} className={css['title']}>
+          <Link to={sessionUrl} className={css['title']}>
             {props.session.title}
           </Link>
 
