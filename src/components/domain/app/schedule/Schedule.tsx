@@ -5,11 +5,8 @@ import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Fil
 import { NoResults } from 'components/common/filter'
 import Star from 'assets/icons/star.svg'
 import StarFill from 'assets/icons/star-fill.svg'
-import TileIcon from 'assets/icons/tiles.svg'
-import ListIcon from 'assets/icons/list-simple.svg'
 import { List } from './views/List'
 import { Session } from 'types/Session'
-import { useRouter } from 'next/router'
 import moment, { Moment } from 'moment'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 // import FuzzySearch from 'fuzzy-search'
@@ -358,7 +355,7 @@ export const Schedule = (props: any) => {
           </SwipeToScroll>
         </div>
 
-        {personalAgenda && <p>You're watching the schedule of <b>{userSchedule.username}</b></p>}
+        {personalAgenda && <p>You&apos;re watching the schedule of <b>{userSchedule.username}</b></p>}
       </div>
 
       {!personalAgenda && (
