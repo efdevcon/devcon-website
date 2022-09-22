@@ -6,6 +6,7 @@ import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Fil
 import { SideEventCard, SideEvent } from './SideEventCard'
 import LogoImage from 'assets/images/test-asset.svg'
 import Image from 'next/image'
+import ChevronUp from 'assets/icons/chevron-up.svg'
 import imageBogota from 'assets/images/bogota-city.png'
 import { AppNav } from 'components/domain/app/navigation'
 import filterCss from 'components/domain/app/app-filter.module.scss'
@@ -15,6 +16,8 @@ import { List } from '../schedule/views/List'
 import { useAppContext } from 'context/app-context'
 import moment from 'moment'
 import { NoResults } from 'components/common/filter'
+import { ButtonOverlay } from '../button-overlay'
+import { Button } from 'components/common/button'
 
 /*
 export interface Session {
@@ -63,7 +66,7 @@ const getDates = (sideEvents: SideEvent[]): Date[] => {
 }
 
 export const SideEvents = (props: any) => {
-  const [openDays, setOpenDays] = React.useState({} as any)
+  // console.log(openDays, 'open days')
   const [search, setSearch] = React.useState('')
   const { now } = useAppContext()
 
@@ -82,6 +85,14 @@ export const SideEvents = (props: any) => {
   })
 
   const dates = getDates(sideEvents)
+
+  const [openDays, setOpenDays] = React.useState(
+    dates.reduce((acc: { [key: string]: boolean }, date) => {
+      acc[date.readable] = true
+
+      return acc
+    }, {})
+  )
 
   const filteredSideEvents = sideEvents.filter(sideEvent => {
     return sideEvent.title.toLowerCase().includes(search.toLowerCase())
@@ -203,7 +214,7 @@ export const SideEvents = (props: any) => {
                 }}
               >
                 <div className={css['anchor']} id={date.readable}></div>
-                <CollapsedSectionHeader className={css['day-header']}>
+                <CollapsedSectionHeader className={css['day-header']} sticky>
                   <p className="font-sm-fixed bold">
                     {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
                     <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
@@ -220,6 +231,19 @@ export const SideEvents = (props: any) => {
             )
           })
         )}
+
+        <ButtonOverlay
+          buttons={[
+            {
+              id: 'scroll-up',
+              className: css['collapse'],
+              onClick: () => {
+                window.scrollTo(0, 0)
+              },
+              render: () => <ChevronUp />,
+            },
+          ]}
+        />
       </div>
     </>
   )
