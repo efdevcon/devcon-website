@@ -17,6 +17,7 @@ export type SideEvent = {
   location?: string
   image?: string
   capacity?: number
+  type?: string
 }
 
 type CardProps = {
@@ -27,51 +28,70 @@ type CardProps = {
 export const SideEventCard = (props: CardProps) => {
   let thumbnailClassName = css['thumbnail-container']
 
+  if (!props.event.url) return null
+
   return (
-    <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext="" thumbnail={props.event.image} unoptimized>
+    <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext="" /*thumbnail={props.event.image}*/ unoptimized>
       <div className={css['details']}>
         <div className={css['top']}>
-          <Link to={`/app/schedule/${props.event.id}`} className={css['title']}>
+          <Link to={props.event.url} /*`/app/schedule/${props.event.id}`}*/ className={css['title']}>
             {props.event.title}
           </Link>
+
+          {/* {props.event.type && (
+            <div className={css['type']}>
+              <div className="label sm bold">{props.event.type}</div>
+            </div>
+          )} */}
         </div>
 
         <div className={css['bottom']}>
-          <div className={css['location-title']}>
-            <IconMarker />
-            <p>{props.event.location}</p>
-          </div>
+          {/* {props.event.location && (
+            <div className={css['location-title']}>
+              <IconMarker />
+              <p>{props.event.location}</p>
+            </div>
+          )} */}
 
-          {props.event.capacity && (
+          {/* {props.event.capacity && (
             <div className={css['capacity']}>
               <IconPeople />
               <p>{props.event.capacity}</p>
             </div>
-          )}
+          )} */}
 
-          <div className={css['time']}>
-            <IconClock />
-            <p>
-              {(() => {
-                const startTime = moment.utc(props.event.start)
-                const endTime = moment.utc(props.event.end)
-                let startFormatted = startTime.format('MMM Do')
-                let endFormatted = endTime.format('MMM Do')
+          <div className={css['meta']}>
+            <div className={css['time']}>
+              <IconClock />
+              <p>
+                {(() => {
+                  const startTime = moment.utc(props.event.start)
+                  const endTime = moment.utc(props.event.end)
+                  let startFormatted = startTime.format('MMM Do')
+                  let endFormatted = endTime.format('MMM Do')
 
-                // If time of day is specified...
-                if (props.event.start && props.event.start.includes('T')) {
-                  startFormatted += `, ${startTime.format('h:mm A')}`
-                }
+                  // If time of day is specified...
+                  if (props.event.start && props.event.start.includes('T')) {
+                    startFormatted += `, ${startTime.format('h:mm A')}`
+                  }
 
-                if (props.event.end && props.event.end.includes('T')) {
-                  endFormatted += `, ${endTime.format('h:mm A')}`
-                }
+                  if (props.event.end && props.event.end.includes('T')) {
+                    endFormatted += `, ${endTime.format('h:mm A')}`
+                  }
 
-                if (!endTime || startTime.isSame(endTime)) return startFormatted
+                  if (!endTime || startTime.isSame(endTime)) return startFormatted
 
-                return `${startFormatted} — ${endFormatted}`
-              })()}
-            </p>
+                  return `${startFormatted} — ${endFormatted}`
+                })()}
+              </p>
+            </div>
+
+            {props.event.type && (
+              <div className={css['type']}>
+                {/* <IconPeople /> */}
+                <div className="label black bold">{props.event.type}</div>
+              </div>
+            )}
           </div>
         </div>
       </div>

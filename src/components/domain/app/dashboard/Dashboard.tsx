@@ -40,6 +40,13 @@ const galleryEvents = [
     url: 'https://devcon.org/continuous-devcon/#hacker-basement',
     image: HighlightChivas,
   },
+  {
+    title: 'Side Events',
+    description: 'Check out Side Events happening in Bogotá!',
+    // TODO: Update URL
+    url: '/app/side-events',
+    image: HighlightChivas,
+  },
 ]
 
 export const Dashboard = (props: any) => {
@@ -121,7 +128,7 @@ export const Dashboard = (props: any) => {
   return (
     <>
       {/* <AppNav /> */}
-      <div className="section no-overflow clear-bottom">
+      <div className="section no-overflow">
         <div className={css['quicklinks']}>
           <div className={css['title-container']}>
             <p className="app-header bold">Quicklinks</p>
@@ -155,6 +162,12 @@ export const Dashboard = (props: any) => {
                     url: '/app/speakers',
                     // onClick: (close: any) => close(),
                   },
+                  {
+                    text: 'Side Events',
+                    value: 'side-events',
+                    url: '/app/side-events',
+                    // onClick: (close: any) => close(),
+                  },
                 ]}
               />
             </div>
@@ -185,6 +198,12 @@ export const Dashboard = (props: any) => {
                 description: 'View speakers presenting at Devcon.',
                 url: '/app/speakers',
                 color: 'blue',
+              },
+              {
+                title: 'Side Events',
+                description: 'Check out Side Events happening in Bogotá!',
+                url: '/app/side-events',
+                color: 'grey',
               },
             ]}
           />

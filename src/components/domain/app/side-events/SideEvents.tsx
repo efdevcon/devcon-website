@@ -75,6 +75,8 @@ export const SideEvents = (props: any) => {
       end: event['Date'].endDate,
       location: event['Where'],
       capacity: event['Capacity'],
+      type: event['Type of event'],
+      url: event['Registration Link'],
       image: event['Cover image'] && event['Cover image'][0] && event['Cover image'][0].file.url,
     }
   })
@@ -202,7 +204,7 @@ export const SideEvents = (props: any) => {
               >
                 <div className={css['anchor']} id={date.readable}></div>
                 <CollapsedSectionHeader className={css['day-header']}>
-                  <p className="font-md-fixed bold">
+                  <p className="font-sm-fixed bold">
                     {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
                     <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
                   </p>

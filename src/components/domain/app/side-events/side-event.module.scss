@@ -30,11 +30,10 @@
 
   .bottom {
     padding-top: 8px;
-    @include fonts-sm;
+    @include fonts-md;
 
     p {
       @include fonts-bold;
-      margin-left: $gaps-gap-2;
     }
 
     > div {
@@ -59,3 +58,18 @@
   }
 }
 
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .time {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: 8px;
+    }
+  }
+}
