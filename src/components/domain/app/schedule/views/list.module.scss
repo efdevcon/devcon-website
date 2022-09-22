@@ -29,8 +29,7 @@
     border-bottom: 1px solid $colors-standard-border-color;
     background: white;
     z-index: 1;
-    // color: $colors-monochrome-7;
-    // margin: 12px 0px;
+    color: $colors-monochrome-7;
     @include fonts-xs-fixed;
     @include fonts-bold;
 
@@ -42,8 +41,6 @@
     //   width: 100%;
     //   z-index: -1;
     // }
-
-
   }
 }
 

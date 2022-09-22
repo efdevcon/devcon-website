@@ -193,7 +193,6 @@
         background: white;
         padding: 8px 16px;
         border-bottom: 1px solid $colors-standard-border-color;
-        // padding-bottom: $gaps-gap-4;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -204,6 +203,10 @@
         padding-top: 0px;
 
         .scroll-gradient {
+          @media (orientation: landscape) {
+            display: none;
+          }
+
           position: sticky;
           bottom: 75px;
           height: 1px;
