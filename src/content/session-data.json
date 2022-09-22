@@ -4008,7 +4008,7 @@
     "speakers": [
       {
         "id": "WB8KEZ",
-        "name": "odysseas_eth",
+        "name": "Odysseas",
         "description": "℣ibes ℯngineer  @nomadxyz_ | sovereign individual 𓀀 ⋃ shitposter 𓁀 ⋃ system design, rust, solidity (🔥,⚒️) ⋃⛓",
         "twitter": "odysseas_eth",
         "avatar": "http://speak.devcon.org/media/avatars/twitter-profile-01_7v56gU2.png"
@@ -5716,6 +5716,12 @@
       {
         "id": "HE3SX3",
         "name": "Guillaume Drevon",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "T8Q3YB",
+        "name": "Maxim",
         "description": null,
         "avatar": ""
       }
@@ -10273,7 +10279,7 @@
     ],
     "title": "Intro Workshops",
     "track": "Developer Infrastructure",
-    "duration": 240,
+    "duration": 180,
     "start": 1665579600000,
     "end": 1665597600000,
     "room": {
@@ -10303,7 +10309,7 @@
     ],
     "title": "Hold",
     "track": "Developer Infrastructure",
-    "duration": 90,
+    "duration": 30,
     "start": 1665568800000,
     "end": 1665574200000,
     "room": {
