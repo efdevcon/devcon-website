@@ -74,6 +74,8 @@ export async function GetEvent(): Promise<any> {
 // }
 // testTime();
 
+// ImportSchedule();
+
 export async function GetSessions(fromCache = true): Promise<Array<SessionType>> {
   if (fromCache) return sessionData as SessionType[]
 
@@ -99,8 +101,8 @@ export async function GetSessions(fromCache = true): Promise<Array<SessionType>>
       title: i.title,
       track: i.track?.en ?? '',
       duration: i.duration,
-      start: moment.utc(i.slot.start).subtract(5, 'hours').format('YYYY-MM-DDTHH:mm:ss'),
-      end: moment.utc(i.slot.end).subtract(5, 'hours').format('YYYY-MM-DDTHH:mm:ss'),
+      start: moment.utc(i.slot.start).subtract(5, 'hours').valueOf(),
+      end: moment.utc(i.slot.end).subtract(5, 'hours').valueOf(),
       room: rooms.find(x => x.name === i.slot?.room?.en) || '',
       type: i.submission_type?.en ?? '',
       description: i.description,

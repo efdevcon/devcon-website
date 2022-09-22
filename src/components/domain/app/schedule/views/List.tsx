@@ -107,7 +107,7 @@ export const List = React.forwardRef((props: ListProps, ref: any) => {
   }
 
   return (
-    <div className={css['list']}>
+    <div className={`${css['list']}`}>
       {props.sessionsByTime.map(({ date, timeslots }) => {
         // TODO: How/why is it ever null?
         if (date.readable === 'Invalid date') return null

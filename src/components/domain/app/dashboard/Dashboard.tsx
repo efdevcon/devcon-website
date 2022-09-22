@@ -110,6 +110,10 @@ export const Dashboard = (props: any) => {
 
       if (!session) return null
 
+      const sessionHasPassed = moment.utc(session.end).isBefore(now)
+
+      if (sessionHasPassed) return null
+
       return <SessionCard key={sessionId} session={session} />
     })
     .filter(session => !!session)
@@ -117,7 +121,7 @@ export const Dashboard = (props: any) => {
   return (
     <>
       {/* <AppNav /> */}
-      <div className="section no-overflow">
+      <div className="section no-overflow clear-bottom">
         <div className={css['quicklinks']}>
           <div className={css['title-container']}>
             <p className="app-header bold">Quicklinks</p>
@@ -186,7 +190,7 @@ export const Dashboard = (props: any) => {
           />
         </div>
 
-        <div className={css['hero']}>
+        <div className={`${css['hero']}`}>
           <p className="app-header bold">Dashboard</p>
           <div className={css['cards']}>
             <Slider sliderProps={sliderProps} onlySlider>

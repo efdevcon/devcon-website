@@ -70,7 +70,6 @@ export const SessionCard = (props: CardProps) => {
             {props.session.title}
           </Link>
 
-          {/* <div className="label sm bold">{props.session.track}</div> */}
           {sessionIsLive && <div className="label red bold sm">Happening now!</div>}
           {isSoon && <div className="label bold sm">Starts {relativeTime}</div>}
 
