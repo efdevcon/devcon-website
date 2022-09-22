@@ -79,8 +79,6 @@ export const Session = (props: SessionProps) => {
         ]}
         renderRight={() => (
           <>
-            {/* <Share /> */}
-
             <CopyToClipboardLegacy url={`https://devcon.org/app/schedule/${props.session.id}`} />
 
             <>
