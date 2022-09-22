@@ -1,13 +1,15 @@
-// const withPWA = require('next-pwa')
+const withPWA = require('next-pwa')
 const webpack = require('webpack')
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // pwa: {
-  //   dest: '/public',
-  //   cacheOnFrontEndNav: true,
-  //   customWorkerDir: 'workbox',
-  // },
+const nextConfig = withPWA({
+  pwa: {
+    dest: '/public',
+    scope: '/app',
+    cacheOnFrontEndNav: true,
+    mode: 'production',
+    customWorkerDir: 'workbox',
+  },
   reactStrictMode: true,
   staticPageGenerationTimeout: 300,
   images: {
@@ -219,6 +221,6 @@ const nextConfig = {
       },
     ]
   },
-}
+})
 
 module.exports = nextConfig
