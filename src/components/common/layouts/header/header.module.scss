@@ -86,7 +86,7 @@
 
   > * {
     > * {
-      @media (max-width: 1350px) {
+      @media (max-width: $breakpoints-sm) {
         grid-column: 2 / 4;
       }
     }

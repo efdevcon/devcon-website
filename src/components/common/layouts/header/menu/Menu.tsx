@@ -155,8 +155,12 @@ export const Menu = (props: any) => {
     ]
   }
 
+  let className = css['menu']
+
+  if (props.isApp) className += ` ${css['is-app']}`
+
   return (
-    <div className={css['menu']}>
+    <div className={className}>
       {!props.isApp && (
         <>
           <Left navigationData={context?.navigation} />

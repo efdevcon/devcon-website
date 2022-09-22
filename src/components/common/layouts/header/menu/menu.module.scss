@@ -23,6 +23,12 @@
   align-self: stretch;
   min-width: 0;
 
+  &.is-app {
+    .buttons {
+      transform: none !important;
+    }
+  }
+
   .left {
     display: none;
     align-items: center;
@@ -52,6 +58,11 @@
 .buttons {
   display: flex;
   flex-direction: row;
+  transform: translateX(10px);
+
+  @media (max-width: $breakpoints-sm) {
+    transform: none;
+  }
 
   > * {
     position: relative;

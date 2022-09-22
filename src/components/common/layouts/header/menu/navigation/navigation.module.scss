@@ -219,15 +219,16 @@
   }
 
   &.highlight {
-    height: 100%;
-    padding-left: $gaps-gap-4;
-    padding-right: $gaps-gap-4;
-    border-left: 1px solid $colors-monochrome-5;
-    border-right: 1px solid $colors-monochrome-5;
+    // height: 100%;
+    // // padding-left: $gaps-gap-4;
+    // // padding-right: $gaps-gap-4;
+    // // border-left: 1px solid $colors-monochrome-5;
+    // // border-right: 1px solid $colors-monochrome-5;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $colors-monochrome-2;
+    // background: $colors-monochrome-2;
+
 
     >svg {
       margin-left: $gaps-gap-2;

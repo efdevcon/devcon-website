@@ -8,6 +8,7 @@ import ArrowDropdown from 'assets/icons/arrow_drop_down.svg'
 import OnDemandVideoIcon from 'assets/icons/on_demand_video.svg'
 import Image from 'next/image'
 import useNavigationData from '../../useNavigationData'
+import IconCalendar from 'assets/icons/calendar.svg'
 
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
@@ -48,7 +49,7 @@ const Mobile = (props: any) => {
                   <Link
                     className={`plain hover-underline`}
                     style={
-                      i.title === 'Watch'
+                      i.highlight === 'app'
                         ? { display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }
                         : undefined
                     }
@@ -57,7 +58,7 @@ const Mobile = (props: any) => {
                   >
                     <>
                       {i.title}
-                      {i.title === 'Watch' && <OnDemandVideoIcon style={{ fontSize: '1em' }} />}
+                      {i.highlight === 'app' && <IconCalendar style={{ fontSize: '1em' }} />}
                     </>
                   </Link>
                 </div>
@@ -118,10 +119,10 @@ export const Navigation = (props: any) => {
           const link = (() => {
             let className = `${css['foldout-link']} bold`
 
-            const isWatch = i.title === 'Watch'
+            const isApp = i.highlight === 'app' // i.title === 'Devcon App + Schedule'
 
             // Just keeping it simple since this is possibly a one-off thing - can generalize later if needed
-            if (isWatch) {
+            if (isApp) {
               className += ` ${css['highlight']}`
             } else {
               className += ` plain`
@@ -131,7 +132,7 @@ export const Navigation = (props: any) => {
               <Link className={className} to={i.url} indicateExternal>
                 <>
                   {i.title}
-                  {isWatch && <OnDemandVideoIcon />}
+                  {isApp && <IconCalendar />}
                 </>
               </Link>
             )
