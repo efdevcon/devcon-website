@@ -8,6 +8,7 @@ import fetch from 'cross-fetch'
 import sessionData from 'content/session-data.json'
 import speakerData from 'content/speakers-data.json'
 import roomsData from 'content/rooms-data.json'
+import { makeConsoleLogger } from '@notionhq/client/build/src/logging'
 
 require('dotenv').config()
 
@@ -60,6 +61,19 @@ export async function GetEvent(): Promise<any> {
   return event;
 }
 
+// const testTime = async () => {
+//   // const talks = await exhaustResource(`/events/${eventName}/talks`)
+//   const data = await get(`/events/${eventName}/talks`);
+//   const firstTalk = data.results[0];
+//   console.log(firstTalk.title, 'title');
+//   console.log(firstTalk.slot, 'data')
+//   console.log(firstTalk.duration)
+//   const wrong = new Date(firstTalk.slot.start).getTime()
+//   console.log(moment.utc(firstTalk.slot.start).utc())
+//   console.log(moment.utc(wrong).utc())
+// }
+// testTime();
+
 export async function GetSessions(fromCache = true): Promise<Array<SessionType>> {
   if (fromCache) return sessionData as SessionType[]
 
@@ -85,8 +99,8 @@ export async function GetSessions(fromCache = true): Promise<Array<SessionType>>
       title: i.title,
       track: i.track?.en ?? '',
       duration: i.duration,
-      start: new Date(i.slot.start).getTime(),
-      end: new Date(i.slot.end).getTime(),
+      start: moment.utc(i.slot.start).subtract(5, 'hours').format('YYYY-MM-DDTHH:mm:ss'),
+      end: moment.utc(i.slot.end).subtract(5, 'hours').format('YYYY-MM-DDTHH:mm:ss'),
       room: rooms.find(x => x.name === i.slot?.room?.en) || '',
       type: i.submission_type?.en ?? '',
       description: i.description,

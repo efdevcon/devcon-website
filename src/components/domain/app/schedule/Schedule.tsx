@@ -81,7 +81,11 @@ const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
         const startTime = moment.utc(time)
 
         if (startTime.isSame(date.moment, 'day')) {
-          const sessionsInTimeslot = sessionTimeslots[time]
+          const sessionsInTimeslot = sessionTimeslots[time].sort((a, b) => {
+            if (!a.endTimeAsMoment) return 1
+
+            return a.endTimeAsMoment.isBefore(b.endTimeAsMoment) ? -1 : 1
+          })
 
           acc.push({ time, sessions: sessionsInTimeslot })
         }
