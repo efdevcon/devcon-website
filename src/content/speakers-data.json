@@ -3229,7 +3229,7 @@
   },
   {
     "id": "WB8KEZ",
-    "name": "odysseas_eth",
+    "name": "Odysseas",
     "avatar": "https://speak.devcon.org/media/avatars/twitter-profile-01_7v56gU2.png",
     "description": "℣ibes ℯngineer  @nomadxyz_ | sovereign individual 𓀀 ⋃ shitposter 𓁀 ⋃ system design, rust, solidity (🔥,⚒️) ⋃⛓",
     "tracks": [
@@ -4659,6 +4659,18 @@
     ],
     "eventDays": [
       1665446400000
+    ]
+  },
+  {
+    "id": "T8Q3YB",
+    "name": "Maxim",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
     ]
   }
 ]
