@@ -118,7 +118,7 @@ export const Schedule = (props: any) => {
   const { now } = useAppContext()
   const [search, setSearch] = React.useState('')
   const [view, setView] = React.useState('list')
-  const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'all')
+  const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'upcoming')
   const [favoritesOnly, setFavoritesOnly] = React.useState(false)
   const [selectedTracks, setSelectedTracks] = React.useState({} as { [key: string]: boolean })
   const [selectedRooms, setSelectedRooms] = React.useState({} as { [key: string]: boolean })
@@ -144,34 +144,34 @@ export const Schedule = (props: any) => {
 
   // When selecting a specific day, open it immediately
   // When selecting all days, close them to provide a hollistic view of the events
-  useEffect(() => {
-    if (listRef.current) {
-      if (dateFilter.readable !== 'all') {
-        listRef.current.openAll()
-      } else if (dateFilter.readable) {
-        listRef.current.closeAll()
-      }
-    }
-  }, [dateFilter])
+  // useEffect(() => {
+  //   if (listRef.current) {
+  //     if (dateFilter.readable !== 'all') {
+  //       listRef.current.openAll()
+  //     } else if (dateFilter.readable) {
+  //       listRef.current.closeAll()
+  //     }
+  //   }
+  // }, [dateFilter])
 
-  useEffect(() => {
-    if (listRef.current) {
-      if (basicFilter !== 'all') {
-        listRef.current.openAll()
-      } else if (basicFilter) {
-        listRef.current.closeAll()
-      }
-    }
-  }, [basicFilter])
+  // useEffect(() => {
+  //   if (listRef.current) {
+  //     if (basicFilter !== 'all') {
+  //       listRef.current.openAll()
+  //     } else if (basicFilter) {
+  //       listRef.current.closeAll()
+  //     }
+  //   }
+  // }, [basicFilter])
 
-  // Open all days when searching
-  useEffect(() => {
-    if (listRef.current) {
-      if (search.length > 0) {
-        listRef.current.openAll()
-      }
-    }
-  }, [search])
+  // // Open all days when searching
+  // useEffect(() => {
+  //   if (listRef.current) {
+  //     if (search.length > 0) {
+  //       listRef.current.openAll()
+  //     }
+  //   }
+  // }, [search])
 
   const bookmarkedSessions = account?.appState?.sessions
   const favoritedSpeakers = account?.appState.speakers
@@ -255,6 +255,23 @@ export const Schedule = (props: any) => {
     return true
   })
 
+  // Whenever a filter changes, open all the accordions
+  useEffect(() => {
+    if (listRef.current) {
+      listRef.current.openAll()
+    }
+  }, [
+    search,
+    view,
+    basicFilter,
+    favoritesOnly,
+    selectedTracks,
+    selectedRooms,
+    selectedSessionTypes,
+    selectedExpertise,
+    dateFilter,
+  ])
+
   const { sessionTimeslots, timeslotOrder, sessionsByTime } = getSessionsByDatesAndTimeslots(
     filteredSessions,
     eventDates
@@ -322,9 +339,10 @@ export const Schedule = (props: any) => {
                       ]
                     : [
                         {
-                          text: 'All',
-                          value: 'all',
+                          text: 'Upcoming',
+                          value: 'upcoming',
                         },
+
                         {
                           text: 'Live',
                           value: 'live',
@@ -338,12 +356,12 @@ export const Schedule = (props: any) => {
                           value: 'interested',
                         },
                         {
-                          text: 'Upcoming',
-                          value: 'upcoming',
-                        },
-                        {
                           text: 'Past',
                           value: 'past',
+                        },
+                        {
+                          text: 'All',
+                          value: 'all',
                         },
                       ]
                 }
@@ -546,7 +564,7 @@ export const Schedule = (props: any) => {
                     })()}
                   </p>
                 </div>
-                <div className={filterCss['end']}>
+                {/* <div className={filterCss['end']}>
                   <button
                     onClick={() => setView('list')}
                     className={`${view === 'list' ? 'hover' : ''} app squared sm thin-borders`}
@@ -559,7 +577,7 @@ export const Schedule = (props: any) => {
                   >
                     <TileIcon />
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
 
