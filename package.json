@@ -64,6 +64,7 @@
     "swr": "^1.2.0",
     "three": "^0.119.1",
     "three-orbit-controls": "^82.1.0",
+    "unique-names-generator": "^4.7.1",
     "web3modal": "^1.9.5"
   },
   "devDependencies": {

@@ -10,12 +10,21 @@ import { GetEvent } from 'services/programming'
 import { NoResults } from 'components/common/filter'
 
 export default pageHOC((props: any) => {
+  if (!props.userSchedule) {
+    return <AppLayout>
+      <NoResults text='Sorry Agenda Not found' subtext='Please try another link or go back to the schedule.' />
+    </AppLayout>
+  }
+
+  if (!props.userSchedule.publicSchedule) {
+    return <AppLayout>
+      <NoResults text='Agenda is not public' subtext='Please try another link or go back to the schedule.' />
+    </AppLayout>
+  }
+
   return (
     <AppLayout>
-      <>
-        {props.sessions.length === 0 && <NoResults text='Sorry Agenda Not found' subtext='Please try another link or go back to the schedule.' />}
-        {props.sessions.length > 0 && <Schedule {...props} />}
-      </>
+      <Schedule {...props} sessions={props.userSchedule.sessions} />
     </AppLayout>
   )
 })
@@ -27,9 +36,9 @@ export async function getServerSideProps(context: any) {
     props: {
       ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
-      userId: context.params.id,
       event: await GetEvent(),
-      sessions: await repo.findPersonalizedAgenda(context.params.id),
+      userId: context.params.id,
+      userSchedule: await repo.findPersonalizedAgenda(context.params.id) ?? null,
       tracks: await GetTracks(),
     },
   }

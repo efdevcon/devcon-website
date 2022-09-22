@@ -1,4 +1,5 @@
 import { useAccountContext } from 'context/account-context'
+import { getUsername } from 'utils/account'
 
 export const useActiveAddress = (): string => {
   const context = useAccountContext()
@@ -6,18 +7,6 @@ export const useActiveAddress = (): string => {
   if (!context.account) {
     return ''
   }
-
-  if (context.account.activeAddress) {
-    return context.account.activeAddress
-  }
-
-  if (context.account.addresses.length > 0) {
-    return context.account.addresses[0]
-  }
-
-  if (context.account.email) {
-    return context.account.email
-  }
-
-  return ''
+  
+  return getUsername(context.account)
 }

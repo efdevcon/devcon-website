@@ -87,6 +87,9 @@ export const Home = (props: any) => {
               <button className="label error plain" onClick={() => router.push('/app/settings/email')}>
                 MANAGE EMAILS
               </button>
+              <button className="label error plain" onClick={() => router.push('/app/settings/username')}>
+                MANAGE USERNAME
+              </button>
             </div>
 
             <div className={css['dropdown']}>

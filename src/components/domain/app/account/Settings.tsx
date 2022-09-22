@@ -64,7 +64,8 @@ export default function SettingsPage() {
                   <img src={avatar.url} alt={avatar.name} />
                 </div>
                 <p className={`${css['name']} title`}>
-                  {isEmail(avatar.name) ? avatar.name : TruncateMiddle(avatar.name, 8)}
+                  {accountContext.account?.username ? accountContext.account?.username :
+                    isEmail(avatar.name) ? avatar.name : TruncateMiddle(avatar.name, 8)}
                 </p>
                 <span className={css['signout']} role="button" onClick={disconnect}>
                   Sign out
@@ -94,6 +95,7 @@ export default function SettingsPage() {
                     <LinkList>
                       <Link to="/app/settings/email">Manage Email</Link>
                       <Link to="/app/settings/wallets">Manage Wallets</Link>
+                      <Link to="/app/settings/username">Manage Username</Link>
                     </LinkList>
                   </div>
                 </CollapsedSectionContent>
@@ -119,7 +121,7 @@ export default function SettingsPage() {
                 <CollapsedSectionHeader title="Schedule" />
                 <CollapsedSectionContent>
                   <div className={css['share']}>
-                    <p>Share your Schedule publicly</p>
+                    <p>Public schedule</p>
                     <div className={css['toggle']}>
                       <Toggle
                         defaultChecked={accountContext.account?.appState?.publicSchedule}
@@ -130,7 +132,7 @@ export default function SettingsPage() {
                   {accountContext.account?._id && accountContext.account?.appState?.publicSchedule && (
                     <div className={css['links']}>
                       <LinkList>
-                        <Link to={`/app/schedule/u/${accountContext.account._id}/`}>Personal Schedule link</Link>
+                        <Link to={`/app/schedule/u/${accountContext.account._id}/`}>Personal schedule link</Link>
                       </LinkList>
                     </div>
                   )}
