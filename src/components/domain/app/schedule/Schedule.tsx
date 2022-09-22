@@ -218,6 +218,12 @@ export const Schedule = (props: any) => {
       const sessionIsUpcoming = now && now.isBefore(session.startTimeAsMoment)
 
       if (!sessionIsUpcoming) return false
+    } else if (basicFilter === 'live') {
+      const sessionHasHappened = now && now.isAfter(session.endTimeAsMoment)
+      const sessionIsUpcoming = now && now.isBefore(session.startTimeAsMoment)
+      const sessionIsNow = !sessionHasHappened && !sessionIsUpcoming
+
+      if (!sessionIsNow) return false
     }
 
     // Filter by tracks
@@ -296,41 +302,52 @@ export const Schedule = (props: any) => {
       />
 
       <div className="section">
-        <Basic
-          value={basicFilter}
-          onChange={setBasicFilter}
-          options={
-            personalAgenda
-              ? [
-                  {
-                    text: 'Personal Agenda',
-                    value: 'personal',
-                  },
-                ]
-              : [
-                  {
-                    text: 'All',
-                    value: 'all',
-                  },
-                  {
-                    text: 'Attending',
-                    value: 'attending',
-                  },
-                  {
-                    text: 'Interested',
-                    value: 'interested',
-                  },
-                  {
-                    text: 'Upcoming',
-                    value: 'upcoming',
-                  },
-                  {
-                    text: 'Past',
-                    value: 'past',
-                  },
-                ]
-          }
-        />
+        <div className="expand-right">
+          <SwipeToScroll scrollIndicatorDirections={{ right: true }}>
+            <div className={css['basic-filter-container']}>
+              <Basic
+                value={basicFilter}
+                onChange={setBasicFilter}
+                options={
+                  personalAgenda
+                    ? [
+                        {
+                          text: 'Personal Agenda',
+                          value: 'personal',
+                        },
+                      ]
+                    : [
+                        {
+                          text: 'All',
+                          value: 'all',
+                        },
+                        {
+                          text: 'Live',
+                          value: 'live',
+                        },
+                        {
+                          text: 'Attending',
+                          value: 'attending',
+                        },
+                        {
+                          text: 'Interested',
+                          value: 'interested',
+                        },
+                        {
+                          text: 'Upcoming',
+                          value: 'upcoming',
+                        },
+                        {
+                          text: 'Past',
+                          value: 'past',
+                        },
+                      ]
+                }
+              />
+            </div>
+          </SwipeToScroll>
+        </div>
+
         {personalAgenda && <p>This is a personalized schedule.</p>}
       </div>
 

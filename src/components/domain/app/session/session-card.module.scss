@@ -8,6 +8,11 @@
     opacity: 0.7;
   }
 
+  &.ongoing {
+    // box-shadow: 0px 0px 4px 2px #f1f1f1;
+    // border: 1px solid darken($colors-track-red, 20%);
+  }
+
   &:hover {
     cursor: pointer;
     border: 1px solid darken($colors-standard-border-color, 20%);

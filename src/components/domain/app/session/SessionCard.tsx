@@ -29,16 +29,21 @@ export const SessionCard = (props: CardProps) => {
     bookmark => bookmark.id === props.session.id && bookmark.level === 'attending'
   )
   const sessionIsBookmarked = !!bookmarkedSession
-  const sessionHasPassed = now?.isAfter(moment.utc(props.session.end))
+  const start = moment.utc(props.session.start)
+  const end = moment.utc(props.session.end)
+  const sessionHasPassed = now?.isAfter(end)
+  const sessionIsUpcoming = now?.isBefore(start)
+  const sessionIsLive = !sessionHasPassed && !sessionIsUpcoming
+  const nowPlusSoonThreshold = now && now.clone().add(1, 'hours')
+  const isSoon = moment.utc(start).isAfter(now) && moment.utc(start).isBefore(nowPlusSoonThreshold)
+  const relativeTime = start.from(now)
 
   const iconProps = {
     className: `${css['save-session']} icon`,
     onClick: (e: React.SyntheticEvent) => {
       e.stopPropagation()
 
-      // if (account) {
       setSessionBookmark(props.session, 'attending', account, !!sessionIsBookmarked)
-      // }
     },
   }
 
@@ -54,6 +59,10 @@ export const SessionCard = (props: CardProps) => {
     thumbnailClassName += ` ${css['passed']}`
   }
 
+  if (sessionIsLive) {
+    thumbnailClassName += ` ${css['ongoing']}`
+  }
+
   return (
     <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext={props.session.track} track={props.session.track}>
       <div className={css['details']}>
@@ -63,6 +72,8 @@ export const SessionCard = (props: CardProps) => {
           </Link>
 
           {/* <div className="label sm bold">{props.session.track}</div> */}
+          {sessionIsLive && <div className="label red bold sm">Happening now!</div>}
+          {isSoon && <div className="label bold sm">Starts {relativeTime}</div>}
 
           {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
         </div>

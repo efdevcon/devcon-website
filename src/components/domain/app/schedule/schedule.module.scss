@@ -42,3 +42,12 @@
     }
   }  
 }
+
+.basic-filter-container {
+  display: flex;
+  flex-wrap: nowrap;
+
+  > * {
+    flex-shrink: 0;
+  }
+}

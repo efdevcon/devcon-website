@@ -63,7 +63,7 @@ export const List = React.forwardRef((props: ListProps, ref: any) => {
     {
       id: 'collapse2',
       className: css['collapse'],
-      text: allOpen ? 'Close' : 'Open',
+      // text: allOpen ? 'Close' : 'Open',
       onClick: () => {
         if (allOpen) {
           setOpenDays({})
@@ -83,13 +83,12 @@ export const List = React.forwardRef((props: ListProps, ref: any) => {
     {
       id: 'scroll-up',
       className: css['collapse'],
-      text: 'Top',
       onClick: () => {
         window.scrollTo(0, 0)
       },
       render: () => <ChevronUp />,
     },
-  ]
+  ] as any
 
   if (todayIsDuringEvent) {
     fabs.push({
