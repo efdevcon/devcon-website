@@ -16,7 +16,6 @@ _self.addEventListener('message', event => {
   // OR use next-pwa injected workbox object
   //     window.workbox.messageSW({command: 'log', message: 'hello world'})
   console.log(event?.data, 'data')
-
   console.log(process.env, 'env')
 })
 
