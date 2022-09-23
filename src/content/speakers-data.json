@@ -4672,5 +4672,17 @@
     "eventDays": [
       1665619200000
     ]
+  },
+  {
+    "id": "Y8FYJ3",
+    "name": "Alejandra Borda",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Governance & Coordination"
+    ],
+    "eventDays": [
+      1665705600000
+    ]
   }
 ]
