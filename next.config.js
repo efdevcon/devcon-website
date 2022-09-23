@@ -1,12 +1,54 @@
 const withPWA = require('next-pwa')
 const webpack = require('webpack')
+// import { nanoid } from 'nanoid'
+const { nanoid } = require('nanoid')
+
+function getStaticPrecacheEntries() {
+  // build list of manifest entries to precache content of public folder
+  // ...
+}
+
+const getGeneratedPrecacheEntries = buildId => {
+  // build list of page entries, using buildId as revision for HTML files and as part of the url for JSON files
+  // ...
+}
+
+const pages = [
+  {
+    route: '/app',
+    precacheHtml: false, // next-pwa already caches the home page
+    precacheJson: false, // no props
+  },
+  {
+    route: '/app/login',
+    precacheHtml: false,
+    precacheJson: true,
+  },
+  {
+    route: '/app/schedule/',
+    precacheHtml: true, // this is now the start url for A2HS
+    precacheJson: true,
+  },
+  {
+    route: '/denizens/',
+    precacheHtml: false,
+    precacheJson: true,
+    // dynamicPages: getDenizenPages(),
+  },
+]
+
+const buildId = nanoid()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withPWA({
+  generateBuildId: () => buildId,
   pwa: {
     dest: '/public',
     scope: '/app',
     cacheOnFrontEndNav: true,
+    publicExcludes: ['!assets/images/**/*', '!assets/uploads/**/*', '!admin/**/*'],
+    buildExcludes: [/media\/.*$/],
+    additionalManifestEntries: getGeneratedPrecacheEntries(buildId),
     mode: 'production',
     customWorkerDir: 'workbox',
   },

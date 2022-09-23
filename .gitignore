@@ -40,8 +40,13 @@ yarn-error.log*
 *.tsbuildinfo
 
 # next-pwa
-**/public/workbox-*.js
+**/public/precache.*.*.js
 **/public/sw.js
-**/public/*.js.map
+**/public/workbox-*.js
 **/public/worker-*.js
-**/public/fallback-development.js
+**/public/fallback-*.js
+**/public/precache.*.*.js.map
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
+**/public/fallback-*.js
