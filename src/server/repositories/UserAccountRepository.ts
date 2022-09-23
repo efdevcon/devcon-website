@@ -47,7 +47,7 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
 
       return {
         userId: String(user._id),
-        username: name ?? getRandomUsername(String(user._id)),
+        username: user.username ?? name ?? getRandomUsername(String(user._id)),
         publicSchedule: user.appState.publicSchedule,
         sessions: sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
       }
