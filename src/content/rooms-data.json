@@ -1,70 +1,70 @@
 [
   {
-    "id": "main-stage-oc-5th-floor",
-    "name": "Main Stage - OC - 5th Floor",
+    "id": "main-stage-oc",
+    "name": "Main Stage - OC",
     "description": "Main Stage for Opening Day",
     "info": "5th Floor",
     "capacity": 3060
   },
   {
-    "id": "main-stage-on-top-of-the-mountain-5th-floor",
-    "name": "Main Stage - On Top of the Mountain - 5th Floor",
-    "description": "Main Stage post-OC",
+    "id": "main-stage",
+    "name": "Main Stage",
+    "description": "On Top of the Mountain",
     "info": "5th Floor",
     "capacity": 1140
   },
   {
-    "id": "talk-1-tropical-sunset-2nd-floor",
-    "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-    "description": "",
+    "id": "talk-1",
+    "name": "Talk 1",
+    "description": "Tropical Sunset",
     "info": "2nd Floor",
     "capacity": 414
   },
   {
-    "id": "talk-2-cold-forest-3rd-floor",
-    "name": "Talk 2 - Cold Forest - 3rd Floor",
-    "description": "",
+    "id": "talk-2",
+    "name": "Talk 2",
+    "description": "Cold Forest",
     "info": "3rd Floor",
     "capacity": 414
   },
   {
-    "id": "talk-3-flowers-3rd-floor",
-    "name": "Talk 3 - Flowers - 3rd Floor",
-    "description": "3rd Floor",
+    "id": "talk-3",
+    "name": "Talk 3",
+    "description": "Flowers",
     "info": "3rd Floor",
     "capacity": 260
   },
   {
-    "id": "talk-4-river-3rd-floor",
-    "name": "Talk 4 - River - 3rd Floor",
-    "description": "",
+    "id": "talk-4",
+    "name": "Talk 4",
+    "description": "River",
     "info": "3rd Floor",
     "capacity": 110
   },
   {
-    "id": "workshop-1-slscommunity-room-2nd-floor",
-    "name": "Workshop 1 - SLS/Community Room - 2nd Floor",
-    "description": "2nd Floor",
+    "id": "workshop-1",
+    "name": "Workshop 1",
+    "description": "SLS/Community Room",
     "info": "2nd Floor",
     "capacity": 96
   },
   {
-    "id": "workshop-2-3rd-floor",
-    "name": "Workshop 2 - 3rd Floor",
-    "description": "3rd Floor",
-    "info": "3rd Floor",
-    "capacity": 128
-  },
-  {
-    "id": "workshop-3-3rd-floor",
-    "name": "Workshop 3 - 3rd Floor",
+    "id": "workshop-2",
+    "name": "Workshop 2",
     "description": "",
     "info": "3rd Floor",
     "capacity": 128
   },
   {
-    "id": "workshop-4-3rd-floor",
-    "name": "Workshop 4 - 3rd Floor",
+    "id": "workshop-3",
+    "name": "Workshop 3",
+    "description": "",
+    "info": "3rd Floor",
+    "capacity": 128
+  },
+  {
+    "id": "workshop-4",
+    "name": "Workshop 4",
     "description": "",
     "info": "3rd Floor",
     "capacity": 128
