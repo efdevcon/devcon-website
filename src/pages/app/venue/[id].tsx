@@ -31,11 +31,11 @@ export async function getStaticProps(context: any) {
   const id = context.params.id
   const intl = await getMessages(context.locale)
   const room = (await GetRooms()).find(i => i.id === id)
+  
   if (!room) {
     return {
       props: null,
       notFound: true,
-      revalidate: DEFAULT_REVALIDATE_PERIOD,
     }
   }
 

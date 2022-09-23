@@ -33,7 +33,6 @@ export async function getStaticProps(context: any) {
     return {
       props: null,
       notFound: true,
-      revalidate: DEFAULT_REVALIDATE_PERIOD,
     }
   }
 
