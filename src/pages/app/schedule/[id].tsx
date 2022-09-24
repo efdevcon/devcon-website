@@ -5,11 +5,15 @@ import React from 'react'
 import { GetSessions, GetSpeakers } from 'services/programming'
 import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   return (
     <AppLayout>
-      <Session {...props} />
+      <>
+        <SEO title={props.session.title} description={props.session.description} />
+        <Session {...props} />
+      </>
     </AppLayout>
   )
 })

@@ -3,13 +3,17 @@ import { SpeakerDetails } from 'components/domain/app/speakers'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { GetSessionsBySpeaker, GetSpeaker, GetSpeakers } from 'services/programming'
-import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
+import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   return (
     <AppLayout>
-      <SpeakerDetails {...props} />
+      <>
+        <SEO title={props.speaker.name} description={props.speaker.description} />
+        <SpeakerDetails {...props} />
+      </>
     </AppLayout>
   )
 })
