@@ -31,16 +31,16 @@ self.addEventListener("fetch", (e: any) => {
     console.log(requestURL, 'request url')
     console.log(urlWithNoQuery, 'no query redirect!')
 
-    e.respondWith(
-      caches.match(urlWithNoQuery).then(response => {
-            if (response) {
-                console.log('[demoPWA - ServiceWorker] Retrieving from cache...');
-                return response;
-            }
-            console.log('[demoPWA - ServiceWorker] Retrieving from URL...');
-            return fetch(e.request);
-        })
-    );
+    e.respondWith(fetch(urlWithNoQuery));
+    //   caches.match(urlWithNoQuery).then(response => {
+    //         if (response) {
+    //             console.log('[demoPWA - ServiceWorker] Retrieving from cache...');
+    //             return response;
+    //         }
+    //         console.log('[demoPWA - ServiceWorker] Retrieving from URL...');
+    //         return fetch(e.request);
+    //     })
+    // );
   }
 
   // e.respondWith(
