@@ -12,7 +12,6 @@ import IconCheck from 'assets/icons/check_circle.svg'
 import { Session as SessionType } from 'types/Session'
 import moment from 'moment'
 import { GetDevconDay } from 'utils/formatting'
-import Image from 'next/image'
 import { useAccountContext } from 'context/account-context'
 import { AppNav } from 'components/domain/app/navigation'
 import IconCalendar from 'assets/icons/calendar.svg'
@@ -22,6 +21,7 @@ import PinIcon from 'assets/icons/pin.svg'
 import { Link } from 'components/common/link'
 import AddToCalendar from 'components/domain/index/add-to-calendar/AddToCalendar'
 import { useAppContext } from 'context/app-context'
+import { LivestreamCard } from './LivestreamCard'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -233,36 +233,7 @@ export const Session = (props: SessionProps) => {
             </div>
           </div> */}
 
-        {/* <div className={css['livestream']}>
-            <AppTabsSection
-              title="Livestream"
-              tabs={[
-                {
-                  title: 'Livepeer',
-                  content: (
-                    <ThumbnailBlock className={css['banner']}>
-                      <div className={css['content']}>
-                        <p className="font-xs-fixed">Waiting for scheduled livestream to begin.</p>
-                        <p className="bold font-xs-fixed">Streaming in 24:20:12</p>
-                        <p className={css['powered-by']}>Powered by Livepeer</p>
-                      </div>
-                    </ThumbnailBlock>
-                  ),
-                },
-                {
-                  title: 'Youtube',
-                  content: <p>Youtube</p>,
-                },
-              ]}
-            />
-            <div>
-              <h3 className={css['title']}>Livestream</h3>
-              <Tabs>
-                <Tab title="LivePeer">Livepeer</Tab>
-                <Tab title="YouTube">YouTube</Tab>
-              </Tabs>
-            </div>
-          </div> */}
+        {relativeTime && <LivestreamCard session={props.session} relativeTime={relativeTime} />}
 
         {props.relatedSessions && props.relatedSessions.length > 0 && (
           <div className={css['related-sessions']}>
