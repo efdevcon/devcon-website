@@ -1,12 +1,27 @@
 const withPWA = require('next-pwa')
 const webpack = require('webpack')
-// import { nanoid } from 'nanoid'
 const { nanoid } = require('nanoid')
 const getGeneratedPrecacheEntries = require('./precache')
 const getStaticPrecacheEntries = require('./publicprecache.js')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
+=======
+  generateBuildId: () => `build-${buildId}`,
+  pwa: {
+    dest: '/public',
+    cacheOnFrontEndNav: true,
+    // additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
+    dynamicStartUrl: false,
+    mode: 'production',
+    customWorkerDir: 'workbox',
+    fallbacks: {
+      image:
+        'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    },
+  },
+>>>>>>> 79216e6a3b3912ceb6d3090d6e80f13ec1a830c2
   reactStrictMode: true,
   staticPageGenerationTimeout: 300,
   images: {

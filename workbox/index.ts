@@ -9,15 +9,15 @@ const _self = self as unknown as ServiceWorkerGlobalScope
 // const buildId = process.env.CONFIG_BUILD_ID
 
 // listen to message event from window
-_self.addEventListener('message', event => {
-  // HOW TO TEST THIS?
-  // Run this in your browser console:
-  //     window.navigator.serviceWorker.controller.postMessage({command: 'log', message: 'hello world'})
-  // OR use next-pwa injected workbox object
-  //     window.workbox.messageSW({command: 'log', message: 'hello world'})
-  console.log(event?.data, 'data')
-  console.log(process.env, 'env')
-})
+// _self.addEventListener('message', event => {
+//   // HOW TO TEST THIS?
+//   // Run this in your browser console:
+//   //     window.navigator.serviceWorker.controller.postMessage({command: 'log', message: 'hello world'})
+//   // OR use next-pwa injected workbox object
+//   //     window.workbox.messageSW({command: 'log', message: 'hello world'})
+//   // console.log(event?.data, 'data')
+//   // console.log(process.env, 'env')
+// })
 
 self.addEventListener("fetch", (e: any) => {
   // console.log('[demoPWA - ServiceWorker] Fetch event fired.', e.request.url);
