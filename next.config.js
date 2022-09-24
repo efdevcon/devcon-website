@@ -5,24 +5,8 @@ const { nanoid } = require('nanoid')
 const getGeneratedPrecacheEntries = require('./precache')
 const getStaticPrecacheEntries = require('./publicprecache.js')
 
-const buildId = nanoid()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  generateBuildId: () => buildId,
-  pwa: {
-    dest: '/public',
-    // scope: '/',
-    cacheOnFrontEndNav: true,
-    // publicExcludes: ['!assets/images/**/*', '!assets/uploads/**/*', '!admin/**/*'],
-    // buildExcludes: [/media\/.*$/],
-    additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
-    // mode: 'production',
-    customWorkerDir: 'workbox',
-    fallbacks: {
-      image:
-        'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-    },
-  },
   reactStrictMode: true,
   staticPageGenerationTimeout: 300,
   images: {
@@ -237,9 +221,28 @@ const nextConfig = {
 }
 
 module.exports = (phase, { defaultConfig }) => {
+  const buildId = nanoid()
+
   const config = {
     ...defaultConfig,
     ...nextConfig,
+    generateBuildId: () => buildId,
+    pwa: {
+      dest: '/public',
+      // scope: '/',
+      // cacheOnFrontEndNav: true,
+      // publicExcludes: ['!assets/images/**/*', '!assets/uploads/**/*', '!admin/**/*'],
+      // buildExcludes: [/media\/.*$/],
+      additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
+      mode: 'production',
+      dynamicStartUrl: false,
+      customWorkerDir: 'workbox',
+      ignoreURLParametersMatching: [/^session/, /^speaker/, /^room/],
+      fallbacks: {
+        image:
+          'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      },
+    },
   }
 
   return withPWA(config)

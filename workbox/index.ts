@@ -19,43 +19,43 @@ _self.addEventListener('message', event => {
   console.log(process.env, 'env')
 })
 
-// self.addEventListener("fetch", (e: any) => {
-//   console.log('[demoPWA - ServiceWorker] Fetch event fired.', e.request.url);
-//   const controlledRoutes = ['/schedule', '/speakers', '/rooms'];
-//   const requestURL = e.request.url;
-//   const controlledRoute = controlledRoutes.find(route => requestURL.includes(route));
+self.addEventListener("fetch", (e: any) => {
+  // console.log('[demoPWA - ServiceWorker] Fetch event fired.', e.request.url);
+  // const controlledRoutes = ['/schedule', '/speakers', '/rooms'];
+  // const requestURL = e.request.url;
+  // const controlledRoute = controlledRoutes.find(route => requestURL.includes(route));
 
-//   if (controlledRoute) {
-//     const urlWithNoQuery = requestURL.split('?')[0];
+  // if (controlledRoute) {
+  //   const urlWithNoQuery = requestURL.split('?')[0];
 
-//     console.log(requestURL, 'request url')
-//     console.log(urlWithNoQuery, 'no query redirect!')
+  //   console.log(requestURL, 'request url')
+  //   console.log(urlWithNoQuery, 'no query redirect!')
 
-//     e.respondWith(fetch(urlWithNoQuery));
-//     //   caches.match(urlWithNoQuery).then(response => {
-//     //         if (response) {
-//     //             console.log('[demoPWA - ServiceWorker] Retrieving from cache...');
-//     //             return response;
-//     //         }
-//     //         console.log('[demoPWA - ServiceWorker] Retrieving from URL...');
-//     //         return fetch(e.request);
-//     //     })
-//     // );
-//   } else {
-//     e.respondWith(fetch(e.request));
-//   }
+  //   // e.respondWith(fetch(urlWithNoQuery));
+  //   e.respondWith(caches.match(urlWithNoQuery).then(response => {
+  //       if (response) {
+  //           console.log('[demoPWA - ServiceWorker] Retrieving from cache...');
+  //           return response;
+  //       }
+  //       console.log('[demoPWA - ServiceWorker] Retrieving from URL...');
+  //       return fetch(e.request);
+  //   }))
+  //   // );
+  // } else {
+  //   e.respondWith(fetch(e.request));
+  // }
 
-//   // e.respondWith(
-//   //   caches.match(e.request).then(function(response) {
-//   //       if (response) {
-//   //           console.log('[demoPWA - ServiceWorker] Retrieving from cache...');
-//   //           return response;
-//   //       }
-//   //       console.log('[demoPWA - ServiceWorker] Retrieving from URL...');
-//   //       return fetch(e.request);
-//   //   })
-//   // );
-// });
+  // e.respondWith(
+  //   caches.match(e.request).then(function(response) {
+  //       if (response) {
+  //           console.log('[demoPWA - ServiceWorker] Retrieving from cache...');
+  //           return response;
+  //       }
+  //       console.log('[demoPWA - ServiceWorker] Retrieving from URL...');
+  //       return fetch(e.request);
+  //   })
+  // );
+});
 
 // _self.addEventListener('push', event => {
 //   const data = JSON.parse(event?.data.text() || '{}')
