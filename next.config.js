@@ -12,7 +12,7 @@ const nextConfig = {
   pwa: {
     dest: '/public',
     // scope: '/',
-    // cacheOnFrontEndNav: true,
+    cacheOnFrontEndNav: true,
     // publicExcludes: ['!assets/images/**/*', '!assets/uploads/**/*', '!admin/**/*'],
     // buildExcludes: [/media\/.*$/],
     additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
