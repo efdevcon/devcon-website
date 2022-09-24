@@ -1,6 +1,5 @@
 const withPWA = require('next-pwa')
 const webpack = require('webpack')
-// import { nanoid } from 'nanoid'
 const { nanoid } = require('nanoid')
 const getGeneratedPrecacheEntries = require('./precache')
 const getStaticPrecacheEntries = require('./publicprecache.js')
@@ -8,15 +7,13 @@ const getStaticPrecacheEntries = require('./publicprecache.js')
 const buildId = nanoid()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  generateBuildId: () => buildId,
+  generateBuildId: () => `build-${buildId}`,
   pwa: {
     dest: '/public',
-    // scope: '/',
     cacheOnFrontEndNav: true,
-    // publicExcludes: ['!assets/images/**/*', '!assets/uploads/**/*', '!admin/**/*'],
-    // buildExcludes: [/media\/.*$/],
-    additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
-    // mode: 'production',
+    // additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
+    dynamicStartUrl: false,
+    mode: 'production',
     customWorkerDir: 'workbox',
     fallbacks: {
       image:
