@@ -15,6 +15,7 @@ interface SEOProps {
   lang?: string
   canonicalUrl?: string
   type?: string
+  separator?: string
   author?: {
     name?: string
     url?: string
@@ -25,12 +26,13 @@ export function SEO(props: SEOProps) {
   const router = useRouter()
   const intl = useTranslations()
   const pageContext = usePageContext()
+  const separator = props.separator ?? '—'
   let title = `${intl('global_title')}`
 
   if (pageContext?.current?.title && pageContext?.current?.title !== title) {
-    title = `${pageContext?.current.title} — ${title}`
+    title = `${pageContext?.current.title} ${separator} ${title}`
   } else if (props.title) {
-    title = `${props.title} — ${title}`
+    title = `${props.title} ${separator} ${title}`
   }
 
   const globalTitle = intl('global_title')
