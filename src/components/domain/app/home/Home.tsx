@@ -24,7 +24,7 @@ export const Home = (props: any) => {
       text: 'Settings',
       value: 'Settings',
       onClick: () => {
-        router.push('/app/settings')
+        router.push('/settings')
       },
     },
   ]
@@ -47,7 +47,7 @@ export const Home = (props: any) => {
       value: 'Signout',
       onClick: () => {
         accountContext.logout(accountContext.account?._id)
-        router.push('/app/login')
+        router.push('/login')
       },
     })
   }
@@ -58,7 +58,6 @@ export const Home = (props: any) => {
         links={[
           {
             title: 'Home',
-            to: '/app',
           },
         ]}
       />
@@ -78,16 +77,16 @@ export const Home = (props: any) => {
               </h2>
             </div>
             <div className={css['profile-actions']}>
-              <button className="label error plain" onClick={() => router.push('/app/settings')}>
+              <button className="label error plain" onClick={() => router.push('/settings')}>
                 SETTINGS
               </button>
-              <button className="label error plain" onClick={() => router.push('/app/settings/wallets')}>
+              <button className="label error plain" onClick={() => router.push('/settings/wallets')}>
                 MANAGE WALLETS
               </button>
-              <button className="label error plain" onClick={() => router.push('/app/settings/email')}>
+              <button className="label error plain" onClick={() => router.push('/settings/email')}>
                 MANAGE EMAILS
               </button>
-              <button className="label error plain" onClick={() => router.push('/app/settings/username')}>
+              <button className="label error plain" onClick={() => router.push('/settings/username')}>
                 MANAGE USERNAME
               </button>
             </div>
@@ -131,9 +130,9 @@ export const Home = (props: any) => {
                   Log in to personalize your schedule, track your favorite speakers, and more.
                 </span>
               </span>
-              <button style={{ marginLeft: '8px' }} className="red sm" onClick={() => router.push('/app/login')}>
+              <Link to="/login" style={{ marginLeft: '8px' }} className="button red sm">
                 LOGIN
-              </button>
+              </Link>
             </p>
 
             {/* <SliderStickyNotes
@@ -141,7 +140,7 @@ export const Home = (props: any) => {
               {
                 title: 'Schedule',
                 description: 'View & manage your devcon schedule.',
-                url: '/app/schedule',
+                url: '/schedule',
                 color: 'pink',
               },
               {
@@ -153,13 +152,13 @@ export const Home = (props: any) => {
               {
                 title: 'Venue Map',
                 description: 'Find your way around the Conference.',
-                url: '/app/venue',
+                url: '/venue',
                 color: 'green',
               },
               {
                 title: 'Speakers',
                 description: 'View speakers presenting at Devcon.',
-                url: '/app/speakers',
+                url: '/speakers',
                 color: 'blue',
               },
             ]}

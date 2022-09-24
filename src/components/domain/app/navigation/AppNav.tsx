@@ -71,34 +71,30 @@ type NavProps = {
 const defaultLinks = [
   {
     title: 'Home',
-    to: '/app',
-    useIsActive: pathname => {
-      return pathname.endsWith('/app')
-    },
+    to: '/',
+    // useIsActive: pathname => {
+    //   return pathname.endsWith('/')
+    // },
   },
-  // {
-  //   title: 'Dashboard',
-  //   to: '/app/dashboard',
-  // },
   {
     title: 'Schedule',
-    to: '/app/schedule',
+    to: '/schedule',
   },
   {
     title: 'Speakers',
-    to: '/app/speakers',
+    to: '/speakers',
   },
   {
     title: 'Venue',
-    to: '/app/venue',
+    to: '/venue',
   },
   {
     title: 'Info',
-    to: '/app/info',
+    to: '/info',
   },
   {
     title: 'Side Events',
-    to: '/app/side-events',
+    to: '/side-events',
   },
 ] as NavLink[]
 

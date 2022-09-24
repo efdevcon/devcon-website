@@ -2,6 +2,8 @@ import { AppLayout } from 'components/domain/app/Layout'
 import { Speakers } from 'components/domain/app/speakers'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
+import { useRouter } from 'next/router'
+import { Speaker as SpeakerType } from 'types/Speaker'
 import {
   GetEventDays,
   GetSessions,
@@ -13,11 +15,16 @@ import {
 } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { SpeakerDetails } from 'components/domain/app/speakers'
 
 export default pageHOC((props: any) => {
+  const { query } = useRouter()
+  const speakerID = query.speaker
+  const speaker = props.speakers.find((speaker: SpeakerType) => speaker.id === speakerID)
+
   return (
     <AppLayout>
-      <Speakers {...props} />
+      <>{speaker ? <SpeakerDetails speaker={speaker} {...props} /> : <Speakers {...props} />}</>
     </AppLayout>
   )
 })

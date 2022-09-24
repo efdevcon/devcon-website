@@ -3,7 +3,7 @@ import { GetNotificationStrip, GetAppNotifications } from 'services/notification
 import { getMessages, flattenMessages } from 'utils/intl'
 
 export const getGlobalData = async (context: any, isApp?: boolean) => {
-  const intl = await getMessages(context.locale, isApp)
+  const intl = await getMessages('en', isApp)
 
   if (isApp) {
     return {
@@ -20,7 +20,7 @@ export const getGlobalData = async (context: any, isApp?: boolean) => {
 
   return {
     messages: intl,
-    navigationData: await GetNavigationData(context.locale),
-    notification: GetNotificationStrip(context.locale) || null,
+    navigationData: await GetNavigationData('en'),
+    notification: GetNotificationStrip('en') || null,
   }
 }

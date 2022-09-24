@@ -191,7 +191,7 @@ export const Session = (props: SessionProps) => {
             </div>
           </AddToCalendar>
 
-          <Link to={`/app/venue/${props.session.room?.id}`}>
+          <Link to={`/venue/${props.session.room?.id}`}>
             <p>Room Details</p> <PinIcon />
           </Link>
         </div>

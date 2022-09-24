@@ -44,7 +44,7 @@ const galleryEvents = [
     title: 'Side Events',
     description: 'Check out Side Events happening in Bogotá!',
     // TODO: Update URL
-    url: '/app/side-events',
+    url: '/side-events',
     image: HighlightChivas,
   },
 ]
@@ -141,31 +141,31 @@ export const Dashboard = (props: any) => {
                   {
                     text: 'Schedule',
                     value: 'schedule',
-                    url: '/app/schedule',
+                    url: '/schedule',
                     // onClick: (close: any) => close(),
                   },
                   {
                     text: 'Guides',
                     value: 'guides',
-                    url: '/app/info',
+                    url: '/info',
                     // onClick: (close: any) => close(),
                   },
                   {
                     text: 'Venue Map',
                     value: 'venue map',
-                    url: '/app/venue',
+                    url: '/venue',
                     // onClick: (close: any) => close(),
                   },
                   {
                     text: 'Speakers',
                     value: 'speakers',
-                    url: '/app/speakers',
+                    url: '/speakers',
                     // onClick: (close: any) => close(),
                   },
                   {
                     text: 'Side Events',
                     value: 'side-events',
-                    url: '/app/side-events',
+                    url: '/side-events',
                     // onClick: (close: any) => close(),
                   },
                 ]}
@@ -178,31 +178,31 @@ export const Dashboard = (props: any) => {
               {
                 title: 'Schedule',
                 description: 'View & manage your devcon schedule.',
-                url: '/app/schedule',
+                url: '/schedule',
                 color: 'pink',
               },
               {
                 title: 'Guides',
                 description: 'Access Devcon Bogota local guides.',
-                url: '/app/info',
+                url: '/info',
                 color: 'yellow',
               },
               {
                 title: 'Venue Map',
                 description: 'Find your way around the Conference.',
-                url: '/app/venue',
+                url: '/venue',
                 color: 'green',
               },
               {
                 title: 'Speakers',
                 description: 'View speakers presenting at Devcon.',
-                url: '/app/speakers',
+                url: '/speakers',
                 color: 'blue',
               },
               {
                 title: 'Side Events',
                 description: 'Check out Side Events happening in Bogotá!',
-                url: '/app/side-events',
+                url: '/side-events',
                 color: 'grey',
               },
             ]}

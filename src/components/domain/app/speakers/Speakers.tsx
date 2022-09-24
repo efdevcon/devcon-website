@@ -86,7 +86,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
   return (
     <div className={className}>
       <>
-        <Link to={`/app/speakers/${speaker.id}`} className={css['thumbnail']}>
+        <Link to={`/speakers?speaker=${speaker.id}`} className={css['thumbnail']}>
           <div className={css['wrapper']}>
             <Image
               src={speaker.avatar || makeBlockie(speaker.name)}
@@ -98,7 +98,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
         </Link>
 
         <div className={css['details']}>
-          <Link to={`/app/speakers/${speaker.id}`} className={css['name']}>
+          <Link to={`/speakers?speaker=${speaker.id}`} className={css['name']}>
             {speaker.name}
           </Link>
           <p className={css['role']}>{speaker.role}</p>
@@ -343,7 +343,6 @@ export const Speakers = (props: any) => {
         links={[
           {
             title: 'Speakers',
-            to: '/app/speakers',
           },
         ]}
         renderRight={() => {

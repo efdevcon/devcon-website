@@ -106,7 +106,7 @@ export const Menu = (props: any) => {
         content: 'Account',
       },
       icon: <AccountIcon />,
-      url: '/app/login',
+      url: '/login',
     },
     {
       key: 'mobile-menu-toggle',
@@ -142,7 +142,7 @@ export const Menu = (props: any) => {
           content: 'Account',
         },
         icon: <AccountIcon />,
-        url: accountContext.account ? '/app' : '/app/login',
+        url: accountContext.account ? '/' : '/login',
       },
       {
         key: 'back-button',

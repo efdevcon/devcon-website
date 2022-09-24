@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app'
 import { NextIntlProvider } from 'next-intl'
 import Head from 'next/head'
 import { PWAPrompt } from 'components/domain/app/pwa-prompt'
-import { HistoryTracker } from 'components/domain/app/history-tracker'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -26,12 +25,10 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
 
-      <HistoryTracker>
-        <NextIntlProvider messages={pageProps.messages}>
-          <PWAPrompt />
-          <Component {...pageProps} />
-        </NextIntlProvider>
-      </HistoryTracker>
+      <NextIntlProvider locale="en" messages={pageProps.messages}>
+        <PWAPrompt />
+        <Component {...pageProps} />
+      </NextIntlProvider>
     </>
   )
 }

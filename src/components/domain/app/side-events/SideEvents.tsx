@@ -105,7 +105,7 @@ export const SideEvents = (props: any) => {
         links={[
           {
             title: 'Side Events',
-            to: '/app/side-events',
+            to: '/side-events',
           },
         ]}
       />

@@ -17,7 +17,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { AppNav } from 'components/domain/app/navigation'
 import { InfoIcon } from 'components/common/info-icon'
-import Info from 'pages/app/info'
+import Info from 'pages/info'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -31,7 +31,8 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (loggedIn) {
-      router.push('/app' + location?.search)
+      console.log('logged in redirect')
+      router.push('/' + location?.search)
     }
   }, [router, loggedIn])
 
@@ -68,7 +69,7 @@ export default function LoginPage() {
       signedMessage.signature
     )
     if (userAccount) {
-      router.push('/app')
+      router.push('/')
     }
     if (!userAccount) {
       setError('Unable to login with web3')
@@ -101,7 +102,7 @@ export default function LoginPage() {
 
     const userAccount = await accountContext.loginEmail(email, nonceNr)
     if (userAccount) {
-      router.push('/app')
+      router.push('/')
     }
     if (!userAccount) {
       setError('Unable to verify your email address.')
@@ -124,7 +125,6 @@ export default function LoginPage() {
         links={[
           {
             title: 'Login',
-            // to: '/app/login',
           },
         ]}
       />

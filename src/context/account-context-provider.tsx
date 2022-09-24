@@ -41,7 +41,11 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
   useEffect(() => {
     async function asyncEffect() {
-      await getAccount()
+      try {
+        await getAccount()
+      } catch (e) {
+        console.log(e, 'Account fetch failed')
+      }
     }
 
     asyncEffect()
@@ -328,7 +332,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
               <p className="bold clear-bottom-less clear-top-less">
                 You need to be logged in to personalize your schedule, track your favorite speakers, and more.
               </p>
-              <Link to="/app/login" className="button red">
+              <Link to="/login" className="button red">
                 Go to login
               </Link>
             </div>

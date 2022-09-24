@@ -281,7 +281,6 @@ export const Schedule = (props: any) => {
         links={[
           {
             title: 'Agenda',
-            to: '/app/schedule',
           },
         ]}
         renderRight={() => {

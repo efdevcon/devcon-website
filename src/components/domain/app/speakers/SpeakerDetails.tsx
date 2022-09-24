@@ -30,7 +30,6 @@ export const SpeakerDetails = (props: any) => {
         links={[
           {
             title: props.speaker.name,
-            // to: '/app/schedule',
           },
         ]}
         renderRight={() => {

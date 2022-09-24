@@ -1,80 +1,26 @@
-import { BlogReel } from 'components/domain/blog-overview'
+import { Home } from 'components/domain/app/home'
+import { AppLayout } from 'components/domain/app/Layout'
 import { pageHOC } from 'context/pageHOC'
-import { GetBlogs } from 'services/blogs'
+import React from 'react'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
-import { News } from 'components/domain/news'
-import getNews from 'services/news'
-import { Header } from 'components/common/layouts/header'
-import { Footer } from 'components/common/layouts/footer'
-import { Hero } from 'components/domain/index/hero'
-import css from './index.module.scss'
-import TrackList from 'components/domain/index/track-list'
-import About from 'components/domain/index/about'
-import CallsToAction from 'components/domain/index/ctas'
-import Image from 'next/image'
-import CircleBackground from 'assets/images/background-circles.png'
-import { GetContentSections, GetTracks } from 'services/page'
+import { GetRooms, GetSessions, GetSpeakers } from 'services/programming'
 
-export default pageHOC(function Index(props: any) {
+export default pageHOC((props: any) => {
   return (
-    <div className={css['layout-default']}>
-      <Header withStrip withHero />
-      <Hero />
-
-      <About content={props.sections['devcon-bogota']} />
-
-      <CallsToAction
-        scholarApplications={props.sections['cta-scholar-applications']}
-        // speakerApplications={props.sections['cta-speaker-applications']}
-        // ticketPresale={props.sections['cta-ticket-presale']}
-        ticketsOnSale={props.sections['tickets-on-sale-now']}
-      />
-
-      <News data={props.news} />
-
-      <div className="clear-bottom border-bottom"></div>
-
-      <div className={`${css['background-container']} section`}>
-        <div className={`${css['circle-background']} expand`}>
-          <Image src={CircleBackground} alt="Circles" />
-        </div>
-      </div>
-
-      <TrackList tracks={props.tracks} />
-
-      <BlogReel blogs={props.blogs} />
-
-      <div className="clear-bottom"></div>
-
-      <Footer />
-    </div>
+    <AppLayout>
+      <Home {...props} />
+    </AppLayout>
   )
 })
 
 export async function getStaticProps(context: any) {
-  const globalData = await getGlobalData(context)
-  const sections = await GetContentSections(
-    [
-      'devcon-bogota',
-      'cta-speaker-applications',
-      'cta-ticket-presale',
-      'cta-scholar-applications',
-      'tickets-on-sale-now',
-    ],
-    context.locale
-  )
-  const tracks = GetTracks(context.locale)
-
   return {
     props: {
-      ...globalData,
+      ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
-      news: await getNews(context.locale),
-      blogs: await GetBlogs(),
-      sections,
-      tracks,
+      sessions: await GetSessions(),
+      speakers: await GetSpeakers(),
     },
-    revalidate: 1 * 60 * 30,
   }
 }

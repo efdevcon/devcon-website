@@ -1,6 +1,6 @@
-import { useAccountContext } from "context/account-context"
-import { useRouter } from "next/router"
-import { Component } from "react"
+import { useAccountContext } from 'context/account-context'
+import { useRouter } from 'next/router'
+import { Component } from 'react'
 import css from './private.module.scss'
 
 export const PrivatePage = (props: any) => {
@@ -16,8 +16,8 @@ export const PrivatePage = (props: any) => {
     )
   }
 
-  if (!loggedIn && location?.pathname !== `/app/login`) {
-    router.push('/app/login' + location?.search)
+  if (!loggedIn && location?.pathname !== `/login`) {
+    router.push('/login' + location?.search)
     return null
   }
 

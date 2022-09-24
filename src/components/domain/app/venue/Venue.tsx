@@ -143,7 +143,7 @@ export const Venue = (props: Props) => {
               <LinkList>
                 {roomsByFloor.map((room: Room) => {
                   return (
-                    <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/app/venue/${room.id}`}>
+                    <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue?room=${room.id}`}>
                       {room.name}
                     </Link>
                   )

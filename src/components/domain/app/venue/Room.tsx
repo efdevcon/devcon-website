@@ -46,7 +46,6 @@ export const Room = (props: Props) => {
         links={[
           {
             title: props.room.name,
-            // to: '/app/schedule',
           },
         ]}
       />

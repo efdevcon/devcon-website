@@ -53,7 +53,7 @@ export default function EmailSettings() {
 
     const userAccount = await accountContext.loginEmail(email, nonceNr)
     if (userAccount) {
-      router.push('/app')
+      router.push('/')
     }
     if (!userAccount) {
       setError('Unable to verify your email address.')

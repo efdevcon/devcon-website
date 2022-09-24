@@ -26,12 +26,12 @@ export const pageHOC =
       current: props.page,
     }
 
-    if (props.page.lang === 'es') {
-      require('moment/locale/es')
-      moment.locale('es')
-    } else {
-      moment.locale('en')
-    }
+    // if (props.page.lang === 'es') {
+    //   require('moment/locale/es')
+    //   moment.locale('es')
+    // } else {
+    //   moment.locale('en')
+    // }
 
     return (
       <PageContext.Provider value={context}>

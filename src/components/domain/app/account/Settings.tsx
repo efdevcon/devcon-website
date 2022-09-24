@@ -41,7 +41,7 @@ export default function SettingsPage() {
 
   const disconnect = async () => {
     accountContext.logout(accountContext.account?._id)
-    router.push('/app/login')
+    router.push('/login')
   }
 
   return (
@@ -64,8 +64,11 @@ export default function SettingsPage() {
                   <img src={avatar.url} alt={avatar.name} />
                 </div>
                 <p className={`${css['name']} title`}>
-                  {accountContext.account?.username ? accountContext.account?.username :
-                    isEmail(avatar.name) ? avatar.name : TruncateMiddle(avatar.name, 8)}
+                  {accountContext.account?.username
+                    ? accountContext.account?.username
+                    : isEmail(avatar.name)
+                    ? avatar.name
+                    : TruncateMiddle(avatar.name, 8)}
                 </p>
                 <span className={css['signout']} role="button" onClick={disconnect}>
                   Sign out
@@ -93,9 +96,9 @@ export default function SettingsPage() {
                 <CollapsedSectionContent>
                   <div className={css['links']}>
                     <LinkList>
-                      <Link to="/app/settings/email">Manage Email</Link>
-                      <Link to="/app/settings/wallets">Manage Wallets</Link>
-                      <Link to="/app/settings/username">Manage Username</Link>
+                      <Link to="/settings/email">Manage Email</Link>
+                      <Link to="/settings/wallets">Manage Wallets</Link>
+                      <Link to="/settings/username">Manage Username</Link>
                     </LinkList>
                   </div>
                 </CollapsedSectionContent>
@@ -132,7 +135,7 @@ export default function SettingsPage() {
                   {accountContext.account?._id && accountContext.account?.appState?.publicSchedule && (
                     <div className={css['links']}>
                       <LinkList>
-                        <Link to={`/app/schedule/u/${accountContext.account._id}/`}>Personal schedule link</Link>
+                        <Link to={`/schedule/u/${accountContext.account._id}/`}>Personal schedule link</Link>
                       </LinkList>
                     </div>
                   )}
@@ -160,9 +163,9 @@ export default function SettingsPage() {
                 <CollapsedSectionContent>
                   <div className={css['links']}>
                     <LinkList>
-                      <Link to="/app/settings">Personalized Agenda</Link>
-                      <Link to="/app/settings">Programming Suggestions</Link>
-                      <Link to="/app/settings">Health &amp; Safety</Link>
+                      <Link to="/settings">Personalized Agenda</Link>
+                      <Link to="/settings">Programming Suggestions</Link>
+                      <Link to="/settings">Health &amp; Safety</Link>
                     </LinkList>
                   </div>
                 </CollapsedSectionContent>
@@ -189,8 +192,8 @@ export default function SettingsPage() {
                 <CollapsedSectionContent>
                   <div className={css['links']}>
                     <LinkList>
-                      <Link to="/app/faq">FAQ</Link>
-                      <Link to="/app/support">Support</Link>
+                      <Link to="/faq">FAQ</Link>
+                      <Link to="/support">Support</Link>
                     </LinkList>
                   </div>
                 </CollapsedSectionContent>

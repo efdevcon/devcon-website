@@ -17,30 +17,30 @@ const navItems = [
   {
     title: 'Home',
     icon: IconHome,
-    to: '/app',
+    to: '/',
     useIsActive: pathname => {
-      return pathname.endsWith('/app')
+      return pathname === '/'
     },
   },
   {
     title: 'Schedule',
     icon: IconSchedule,
-    to: '/app/schedule',
+    to: '/schedule',
   },
   {
     title: 'Speakers',
     icon: IconSpeakers,
-    to: '/app/speakers',
+    to: '/speakers',
   },
   {
     title: 'Venue',
     icon: IconPin,
-    to: '/app/venue',
+    to: '/venue',
   },
   {
     title: 'Info',
     icon: IconInfo,
-    to: '/app/info',
+    to: '/info',
   },
 ] as NavLinkWithIcon[]
 

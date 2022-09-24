@@ -173,7 +173,7 @@ const useNavigationData = () => {
       },
       {
         title: intl('navigation_devcon_app'),
-        url: '/app',
+        url: 'https://app.devcon.org',
         type: 'page',
         highlight: 'app'
       }

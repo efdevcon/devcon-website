@@ -60,7 +60,6 @@ export const Info = (props: InfoProps) => {
         links={[
           {
             title: 'Information',
-            to: '/app/info',
           },
         ]}
       />
