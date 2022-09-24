@@ -80,7 +80,7 @@ export async function GetSessions(fromCache = true): Promise<Array<SessionType>>
   if (fromCache) return sessionData as SessionType[]
 
   const talks = await exhaustResource(`/events/${eventName}/talks`)
-  const rooms = await GetRooms()
+  const rooms = await GetRooms(fromCache)
   const speakers = await GetSpeakers()
 
   const sessions = talks.map((i: any) => {
@@ -103,7 +103,7 @@ export async function GetSessions(fromCache = true): Promise<Array<SessionType>>
       duration: i.duration,
       start: moment.utc(i.slot.start).subtract(5, 'hours').valueOf(),
       end: moment.utc(i.slot.end).subtract(5, 'hours').valueOf(),
-      room: rooms.find(x => x.name === i.slot?.room?.en) || '',
+      room: rooms.find(x => x.name === i.slot?.room?.en) || null,
       type: i.submission_type?.en ?? '',
       description: i.description,
       abstract: i.abstract ?? '',
