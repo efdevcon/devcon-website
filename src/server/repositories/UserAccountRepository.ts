@@ -1,7 +1,9 @@
+import username from 'pages/app/settings/username'
 import { GetSessions } from 'services/programming'
 import { UserAccount, UserSchedule } from 'types/UserAccount'
 import { getRandomUsername, getUsername } from 'utils/account'
 import dbConnect from 'utils/dbConnect'
+import { isEmail } from 'utils/validators'
 import { getDefaultProvider } from 'utils/web3'
 import { BaseRepository } from './BaseRepository'
 import { IUserAccountRepository } from './interfaces/IUserAccountRepository'
@@ -40,14 +42,35 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
       const user = await this._model.findOne({ _id: userId }) as UserAccount
       if (!user) return
 
-      const username = getUsername(user)
-      const provider = getDefaultProvider()
-      const name = await provider.lookupAddress(username)
       const sessions = await GetSessions()
+      // username above all
+      if (user.username) {
+        return {
+          userId: String(user._id),
+          username: user.username,
+          publicSchedule: user.appState.publicSchedule,
+          sessions: sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+        }
+      }
+
+      // check if ENS exists
+      const username = getUsername(user)
+      let name = getRandomUsername(String(user._id))
+      
+      if (!isEmail(username)) {
+        try {
+          const provider = getDefaultProvider()
+          const ens = await provider.lookupAddress(username)
+          if (ens) name = ens
+        }
+        catch (e) {
+          console.log('ENS not found for', username)
+        }
+      }
 
       return {
         userId: String(user._id),
-        username: user.username ?? name ?? getRandomUsername(String(user._id)),
+        username: name,
         publicSchedule: user.appState.publicSchedule,
         sessions: sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
       }
