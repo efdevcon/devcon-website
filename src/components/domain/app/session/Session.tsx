@@ -62,7 +62,7 @@ export const Session = (props: SessionProps) => {
 
   // Have to defer to useEffect because of potential time related client/server mismatch causing hydration errors
   useEffect(() => {
-    const relativeTime = sessionUpcoming ? start.from(now) : end.from(now)
+    const relativeTime = sessionUpcoming ? start.from(now, true) : end.from(now, true)
 
     setRelativeTime(relativeTime)
   }, [start, end, now, sessionUpcoming])
@@ -149,9 +149,9 @@ export const Session = (props: SessionProps) => {
                   if (isOngoing) return <div className="label red sm">Session is happening now</div>
 
                   if (sessionUpcoming) {
-                    return `Session starts ${relativeTime}`
+                    return `Session starts in ${relativeTime}`
                   } else {
-                    return `Session ended ${relativeTime}`
+                    return `Session ended ${relativeTime} ago`
                   }
                 })()}
               </p>
