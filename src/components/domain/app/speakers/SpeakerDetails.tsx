@@ -96,10 +96,10 @@ export const SpeakerDetails = (props: any) => {
           <p className={css['body']}>{props.speaker.description}</p>
         </div>
 
-        {props.sessions.length > 0 && (
+        {props.speaker.sessions.length > 0 && (
           <div className={css['sessions']}>
             <p className="font-lg bold margin-top-less margin-bottom-less">Sessions</p>
-            {props.sessions.map((i: Session) => {
+            {props.speaker.sessions.map((i: Session) => {
               return <SessionCard key={i.id} session={i} />
             })}
           </div>

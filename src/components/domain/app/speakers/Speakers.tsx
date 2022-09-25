@@ -91,8 +91,10 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
             <Image
               src={speaker.avatar || makeBlockie(speaker.name)}
               alt={speaker.name}
-              objectFit="contain"
-              layout="fill"
+              objectFit="cover"
+              width="64px"
+              height="64px"
+              layout="fixed"
             />
           </div>
         </Link>

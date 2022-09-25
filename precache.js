@@ -3,8 +3,8 @@ const path = require('path')
 const pages = [
   {
     route: '/',
-    precacheHtml: false, // next-pwa already caches the home page
-    precacheJson: false, // no props
+    precacheHtml: true,
+    precacheJson: true,
   },
   {
     route: '/login',
@@ -13,6 +13,11 @@ const pages = [
   },
   {
     route: '/schedule',
+    precacheHtml: true,
+    precacheJson: true,
+  },
+  {
+    route: '/side-events',
     precacheHtml: true,
     precacheJson: true,
   },

@@ -20,8 +20,8 @@ export async function getStaticProps(context: any) {
     props: {
       ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
-      // sessions: await GetSessions(),
       scheduleData: await getNotionDatabase(context.locale || 'en', 'cc11ba1c0daa40359710c0958da7739c'),
+      // sessions: await GetSessions(),
       // speakers: await GetSpeakers(),
     },
   }
