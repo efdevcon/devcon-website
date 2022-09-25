@@ -11,7 +11,7 @@ export default pageHOC((props: any) => {
   return (
     <AppLayout>
       <>
-        <SEO title={props.session.title} description={props.session.description} />
+        <SEO title={props.session.title} description={props.session.description} imageUrl={`https://api-xe5o.vercel.app/api/og?id=${props.session.id}`}/>
         <Session {...props} />
       </>
     </AppLayout>
