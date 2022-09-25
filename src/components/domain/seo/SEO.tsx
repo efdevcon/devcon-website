@@ -24,19 +24,18 @@ interface SEOProps {
 
 export function SEO(props: SEOProps) {
   const router = useRouter()
-  const intl = useTranslations()
   const pageContext = usePageContext()
   const separator = props.separator ?? '—'
-  let title = `${intl('global_title')}`
 
+  let title = 'Devcon Bogotá, Oct 11 → 14'
   if (pageContext?.current?.title && pageContext?.current?.title !== title) {
     title = `${pageContext?.current.title} ${separator} ${title}`
   } else if (props.title) {
     title = `${props.title} ${separator} ${title}`
   }
 
-  const globalTitle = intl('global_title')
-  const globalDescription = intl('global_description')
+  const globalTitle = 'Devcon Bogotá, Oct 11 → 14'
+  const globalDescription = 'Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.'
   const globalImage = 'https://www.devcon.org/assets/images/og-graph.png'
   const canonical = props.canonicalUrl || ''
 
@@ -45,7 +44,7 @@ export function SEO(props: SEOProps) {
     description = props.description
   }
 
-  let lang = router.locale || router.defaultLocale
+  let lang = router?.locale || 'en'
   if (pageContext?.current?.lang) {
     lang = pageContext?.current.lang
   }
@@ -59,7 +58,7 @@ export function SEO(props: SEOProps) {
   }
 
   const siteUrl = SITE_URL
-  const url = `${siteUrl}${router.pathname || '/'}`.replace(/\/$/, '')
+  const url = `${siteUrl}${router?.pathname || '/'}`.replace(/\/$/, '')
 
   return (
     <>

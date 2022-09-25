@@ -21,30 +21,27 @@ export const AppLayout = (props: LayoutProps) => {
   const lowerNavHeight = useGetElementHeight('bottom-nav')
 
   return (
-    <>
-      <SEO />
-      <AppContext>
-        <AccountContextProvider>
-          <div
-            className={css['app']}
-            style={
-              {
-                '--header-height': `${headerHeight}px`,
-                '--app-nav-upper-height': `${upperNavHeight}px`,
-                '--app-nav-lower-height': `${lowerNavHeight}px`,
-              } as any
-            }
-          >
-            <Header isApp className={css['header']} withStrip={false} withHero={false} />
+    <AppContext>
+      <AccountContextProvider>
+        <div
+          className={css['app']}
+          style={
+            {
+              '--header-height': `${headerHeight}px`,
+              '--app-nav-upper-height': `${upperNavHeight}px`,
+              '--app-nav-lower-height': `${lowerNavHeight}px`,
+            } as any
+          }
+        >
+          <Header isApp className={css['header']} withStrip={false} withHero={false} />
 
-            {props.children}
+          {props.children}
 
-            <BottomNav />
+          <BottomNav />
 
-            {/* {loggedIn && <BottomNav location={location} />} */}
-          </div>
-        </AccountContextProvider>
-      </AppContext>
-    </>
+          {/* {loggedIn && <BottomNav location={location} />} */}
+        </div>
+      </AccountContextProvider>
+    </AppContext>
   )
 }
