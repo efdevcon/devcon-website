@@ -234,10 +234,6 @@ module.exports = (phase, { defaultConfig }) => {
       ...config,
       pwa: {
         dest: '/public',
-        // scope: '/',
-        // cacheOnFrontEndNav: true,
-        // publicExcludes: ['!assets/images/**/*', '!assets/uploads/**/*', '!admin/**/*'],
-        // buildExcludes: [/media\/.*$/],
         additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
         mode: 'production',
         dynamicStartUrl: false,
@@ -253,5 +249,3 @@ module.exports = (phase, { defaultConfig }) => {
 
   return config
 }
-
-// module.exports = nextConfig

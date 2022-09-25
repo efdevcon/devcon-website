@@ -144,14 +144,14 @@ export const Menu = (props: any) => {
         icon: <AccountIcon />,
         url: accountContext.account ? '/' : '/login',
       },
-      {
-        key: 'back-button',
-        tooltip: {
-          content: 'Leave App',
-        },
-        icon: <BackIcon style={{ fontSize: '1.2em', transform: 'translateX(-2px)' }} />,
-        url: '/',
-      },
+      // {
+      //   key: 'back-button',
+      //   tooltip: {
+      //     content: 'Leave App',
+      //   },
+      //   icon: <BackIcon style={{ fontSize: '1.2em', transform: 'translateX(-2px)' }} />,
+      //   url: '/',
+      // },
     ]
   }
 
@@ -161,7 +161,7 @@ export const Menu = (props: any) => {
 
   return (
     <div className={className}>
-      {!props.isApp && (
+      {/* {!props.isApp && (
         <>
           <Left navigationData={context?.navigation} />
 
@@ -181,7 +181,7 @@ export const Menu = (props: any) => {
             <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
           </Foldout>
         </>
-      )}
+      )} */}
 
       <Buttons buttons={buttons} />
 

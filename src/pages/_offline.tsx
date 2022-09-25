@@ -1,33 +1,45 @@
 import React from 'react'
-import Image404 from 'assets/images/404.png'
-import themes from './themes.module.scss'
-import { PageHero } from 'components/common/page-hero'
-import Image from 'next/image'
 import { pageHOC } from 'context/pageHOC'
 import { GetPage } from 'services/page'
 import { getGlobalData } from 'services/global'
-import Page from 'components/common/layouts/page'
+import { AppLayout } from 'components/domain/app/Layout'
+import { Link } from 'components/common/link'
+import { AppNav } from 'components/domain/app/navigation'
+import { DEFAULT_APP_PAGE } from 'utils/constants'
 
-const Offline = () => {
+const Offline = pageHOC(() => {
   return (
-    <Page theme={themes['no-page']}>
-      <PageHero path={[{ text: <span className="bold">NETWORK OFFLINE</span> }]} title="Network Offline" />
+    <AppLayout>
+      <>
+        <AppNav
+          nested
+          links={[
+            {
+              title: 'Offline',
+            },
+          ]}
+        />
 
-      <div className="section clear-top clear-bottom">
-        <p>You are currently offline and this page was not cached. Try again later.</p>
-      </div>
-    </Page>
+        <div className="section clear-top clear-bottom">
+          <p>
+            You are currently offline and this page was not cached.&nbsp;
+            <Link to="/" className="generic">
+              Go back to home.
+            </Link>
+          </p>
+        </div>
+      </>
+    </AppLayout>
   )
-}
+})
 
 export async function getStaticProps(context: any) {
-  const globalData = await getGlobalData(context)
-  const page = await GetPage('/404')
+  const globalData = await getGlobalData(context, true)
 
   return {
     props: {
       ...globalData,
-      page,
+      page: DEFAULT_APP_PAGE,
     },
   }
 }
