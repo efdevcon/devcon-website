@@ -11,6 +11,7 @@ import { Button } from 'components/common/button'
 import { useAppContext } from 'context/app-context'
 import Image from 'next/image'
 import EthBackground from 'assets/images/eth-diamond-rainbow.png'
+import { useLocalStorage } from "hooks/useLocalStorage"
 // import notifications from 'pages/app/notifications'
 
 // Copied from the web-push documentation
@@ -258,7 +259,7 @@ const filters = [
 
 export const NotificationCard = React.forwardRef((props: any, ref: any) => {
   const { seenNotifications, setSeenNotifications } = useAppContext()
-  const seen = seenNotifications?.[props.notification.id]
+  const [notificationSeen, setNotificationSeen] = useLocalStorage(`notification-seen-${props.notification.id}`, seenNotifications?.[props.notification.id])
 
   const markAsSeen = () => {
     setSeenNotifications((seenNotifications: any) => {
@@ -268,17 +269,17 @@ export const NotificationCard = React.forwardRef((props: any, ref: any) => {
       }
     })
 
-    window.localStorage.setItem(`notification-seen-${props.notification.id}`, 'yes')
+    setNotificationSeen('yes')
   }
 
   React.useImperativeHandle(ref, () => ({
-    seen,
+    notificationSeen,
     markAsSeen,
   }))
 
   let className = css['notification-block']
 
-  if (!seen) className += ` ${css['highlight']}`
+  if (!notificationSeen) className += ` ${css['highlight']}`
 
   const notification = props.notification
   const dateAsMoment = moment.utc(notification.date)
@@ -293,7 +294,7 @@ export const NotificationCard = React.forwardRef((props: any, ref: any) => {
           {/* <p>{dateAsMoment.from(moment.utc())}</p> */}
         </div>
 
-        {seen ? <IconCheck /> : <div className="label sm error bold">New</div>}
+        {notificationSeen ? <IconCheck /> : <div className="label sm error bold">New</div>}
       </div>
       <div className={css['details']}>
         <p className={`bold ${css['title']}`}>{notification.title}</p>

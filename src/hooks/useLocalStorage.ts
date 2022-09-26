@@ -1,7 +1,11 @@
 import { useState } from "react"
 
+const isBrowser = typeof window !== 'undefined'
+
 export function useLocalStorage(key: string, initialValue: any) {
     const [storedValue, setStoredValue] = useState(() => {
+        if (!isBrowser) return initialValue;
+
         try {
             const item = window.localStorage.getItem(key)
             return item ? JSON.parse(item) : initialValue

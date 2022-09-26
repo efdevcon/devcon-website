@@ -12,19 +12,17 @@ const defaultValue = { connection: '', name: '', url: defaultImage.src, ens: fal
 export function useAvatar() {
     const context = useAccountContext()
     const activeAddress = useActiveAddress()
-    const [avatar, setAvatar] = useSessionStorage(activeAddress, defaultValue)
+    const [avatar, setAvatar] = useSessionStorage('avatar', defaultValue)
 
     useEffect(() => {
         async function getAvatar() {
-            if (!activeAddress) {
-                setAvatar({...defaultValue, status: 'Loading'})
+            if (avatar.connection && avatar.name && avatar.status != defaultValue.status) {            
+                // Return avatar from session storage
                 return
             }
-            
-            const item = window.sessionStorage.getItem(activeAddress)
-            if (item) { 
-                const avatar = JSON.parse(item)
-                setAvatar(avatar)
+
+            if (!activeAddress) {
+                setAvatar({ ...defaultValue, status: 'Loading' })
                 return
             }
 
@@ -38,7 +36,7 @@ export function useAvatar() {
                 })
                 return
             }
-            
+
             const provider = context.provider ?? getDefaultProvider()
             const name = await provider.lookupAddress(activeAddress)
             if (!name) {
