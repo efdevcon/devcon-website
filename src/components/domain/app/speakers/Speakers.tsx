@@ -40,10 +40,9 @@ export const extractTwitterUsername = (twitter: string) => {
   return twitterUserNoLeadingAt
 }
 
-// Coincidentally people have been using the same structure for their free text github profiles, but separating out for clarity/flexibility
 export const extractGithubUsername = (github: string) => {
   if (!github) return
-  // Spotted one outlier not caught by the heuristics above (https://git.xx.network/*****), just giving it a custom case
+  // Spotted one outlier (https://git.xx.network/*****), just giving it a custom case
   if (github.includes('git.xx.network')) return github
 
   // Extract github user
@@ -195,7 +194,7 @@ const ListDaySort = (props: ListProps) => {
 const ListAlphabeticalSort = (props: ListProps) => {
   const [selectedLetter, setSelectedLetter] = React.useState<string>()
   const alpha = Array.from(Array(26)).map((e, i) => i + 65)
-  const alphabet = alpha.map(x => String.fromCharCode(x))
+  const alphabet = ['ALL', ...alpha.map(x => String.fromCharCode(x))]
 
   return (
     <div className={`${css['list-container']} ${css['alphabet-sort']}`}>
@@ -216,9 +215,22 @@ const ListAlphabeticalSort = (props: ListProps) => {
       <div className={css['speakers-letters']}>
         <div className={css['speakers']}>
           {alphabet.map(letter => {
-            if (typeof selectedLetter === 'string' && letter !== selectedLetter) return null
+            if (typeof selectedLetter === 'string' && selectedLetter !== 'ALL' && letter !== selectedLetter) return null
 
-            const speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
+            let speakersByLetter = props.speakers.filter(i => i.name.charAt(0) === letter)
+
+            // For letter A we merge in any potential non-alphabet characters
+            if (letter === 'A') {
+              speakersByLetter = [
+                ...props.speakers.filter(speaker => {
+                  const firstLetter = speaker.name.charAt(0).toUpperCase()
+
+                  return alphabet.every(letter => letter !== firstLetter)
+                }),
+                ...speakersByLetter,
+              ]
+            }
+
             if (speakersByLetter.length === 0) return null
 
             return (
@@ -234,7 +246,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
 
         <div className={css['letters']}>
           {alphabet.map(letter => {
-            const letterHasSpeakers = props.speakers.some(i => i.name.charAt(0) === letter)
+            const letterHasSpeakers = props.speakers.some(i => i.name.charAt(0) === letter) || letter === 'ALL'
             const selected = letter === selectedLetter
             let className = `plain`
 
@@ -257,7 +269,7 @@ const ListAlphabeticalSort = (props: ListProps) => {
                 style={{ cursor: 'pointer' }}
                 onClick={() => {
                   if (letterHasSpeakers) {
-                    setSelectedLetter(selectedLetter === letter ? undefined : letter)
+                    setSelectedLetter(selectedLetter === letter ? 'ALL' : letter)
                   }
                 }}
               >
@@ -330,7 +342,7 @@ export const Speakers = (props: any) => {
     return true
   })
 
-  const sortedSpeakers = speakers
+  const sortedSpeakers = speakers.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
   // sortState.sortDirection === 'asc'
   //   ? speakers.sort((a: Speaker, b: Speaker) => a.name.localeCompare(b.name))
   //   : speakers.sort((a: Speaker, b: Speaker) => b.name.localeCompare(a.name))

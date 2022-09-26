@@ -135,10 +135,12 @@
 
         span {
           position: relative;
+          display: flex;
+          justify-content: center;
           @include fonts-bold;
           @include fonts-sm-fixed;
           transform: translateX(4px);
-          padding-left: 12px;
+          padding-left: 4px;
           padding-right: 8px;
           color: #bcbfca;
           height: 20px;
@@ -146,7 +148,7 @@
 
           &.selected {
             color: $colors-main;
-            @include fonts-md-fixed;
+            // @include fonts-md-fixed;
             margin-bottom: 4px;
           }
 
