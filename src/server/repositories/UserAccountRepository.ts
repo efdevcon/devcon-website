@@ -1,4 +1,3 @@
-import username from 'pages/app/settings/username'
 import { GetSessions } from 'services/programming'
 import { UserAccount, UserSchedule } from 'types/UserAccount'
 import { getRandomUsername, getUsername } from 'utils/account'
