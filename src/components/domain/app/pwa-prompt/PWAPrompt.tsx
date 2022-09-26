@@ -9,7 +9,7 @@ import { pwaUtilities } from './pwa-utilities'
 import moment from 'moment'
 
 export const PWAPrompt = () => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(true)
 
   const { requiresManualInstall, deferredInstallEvent, setDeferredInstallEvent } = pwaUtilities.useDetectInstallable({
     togglePrompt: () => setOpen(true),
@@ -39,8 +39,8 @@ export const PWAPrompt = () => {
 
         <div className={css['info']}>
           <p className={`${css['cta']} font-xl`}>
-            This website can be used as an <span className="bold">App!</span> Install on your device by following the
-            instructions below.
+            This website can be used as an <span className="bold">App!</span> Install by following the instructions
+            below.
           </p>
 
           <div className={css['description']}>
