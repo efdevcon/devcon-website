@@ -21,4 +21,17 @@ export class VerificationTokenRepository extends BaseRepository<VerificationToke
       console.error(e)
     }
   }
+
+  public async findValidVerificationTokenById(id: string, nonce: number): Promise<VerificationToken | undefined> {
+    try {
+      return await this._model.findOne({
+        id: id,
+        nonce: nonce,
+        expires: { $gt: new Date() }
+      })
+    } catch (e) {
+      console.log("Couldn't find verification token by id", id, nonce)
+      console.error(e)
+    }
+  }
 }
