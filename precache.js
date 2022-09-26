@@ -86,8 +86,6 @@ function getPageEntries(buildId, page) {
 function getGeneratedPrecacheEntries(buildId) {
   const precacheEntries = pages.map(page => getPageEntries(buildId, page)).reduce((acc, curr) => acc.concat(curr), [])
 
-  console.log(precacheEntries, 'PRE CACHE ENTRIES')
-
   return precacheEntries
 }
 

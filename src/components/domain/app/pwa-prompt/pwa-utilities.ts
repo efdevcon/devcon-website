@@ -14,6 +14,19 @@ export const pwaUtilities = {
   // Detect when browser marks the website as installable and show our custom prompt
   useDetectInstallable: ({ togglePrompt }: DetectInstallableArgs) => {
     const [deferredEvent, setDeferredEvent] = React.useState<Event | null>(null)
+    const [requiresManualInstall, setRequiresManualInstall] = React.useState<false | 'ios' | 'samsung'>(false);
+
+    // When app launches, determine if PWA prompt is possible in browser/OS combination, otherwise trigger the manual prompt with install instructions:
+    React.useEffect(() => {
+      // Don't prompt if already installed
+      if (pwaUtilities.isStandalone()) return; 
+
+      if (pwaUtilities.isIOS()) {
+        setRequiresManualInstall('ios');
+      } else if (pwaUtilities.isSamsungBrowser()) {
+        setRequiresManualInstall('samsung');
+      }
+    }, [])
 
     // Detect when browser is ready to install the PWA
     React.useEffect(() => {
@@ -44,12 +57,12 @@ export const pwaUtilities = {
       window.addEventListener('beforeinstallprompt', beforeInstallHandler)
 
       return () => {
-        window.removeEventListener('beforeinstallprompt', beforeInstallHandler)
+        window.removeEventListener('appinstalled', outsideFlowInstallHandler)
         window.removeEventListener('beforeinstallprompt', beforeInstallHandler)
       }
     }, [togglePrompt])
 
-    return [deferredEvent, setDeferredEvent]
+    return { deferredEvent, setDeferredEvent, requiresManualInstall } as any
   },
   installPwa: async ({ togglePrompt, deferredInstallEvent, setDeferredInstallEvent }: InstallArgs) => {
     if (deferredInstallEvent === null) return
@@ -67,6 +80,67 @@ export const pwaUtilities = {
   },
 
   isStandalone: () => {
-    // ...
+    const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
+
+    if (document.referrer.startsWith("android-app://")) {
+      return true; // Trusted web app
+    } else if ("standalone" in navigator || isStandalone) {
+      return true;
+    }
+
+    return false;
   },
+
+  isIOS: () => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+
+    return /iphone|ipad|ipod/.test( userAgent );
+  },
+  isSamsungBrowser: () => {
+    return navigator.userAgent.match(
+      /SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[A|N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i,
+    );
+  }
 }
+
+
+// Chrome - auto
+// Safari - Press "Share" icon then "Add to home"
+// Samsung internet - An "Install" icon will be shown on the top bar (I didn't quite understand if the app should be registered in Samsung Store for it to show) OR press "Menu" on the bottom bar then "Add/install to home"
+// Other browsers - Press menu on the bottom/top bar then "Add/install to home"
+
+// // helps you detect mobile browsers (to show a relevant message as the process of installing your PWA changes from browser to browser)
+// var isMobile = {
+//   Android: function () {
+//     return navigator.userAgent.match(/Android/i);
+//   },
+//   BlackBerry: function () {
+//     return navigator.userAgent.match(/BlackBerry/i);
+//   },
+//   iOS: function () {
+//     return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+//   },
+//   Opera: function () {
+//     return navigator.userAgent.match(/Opera Mini/i);
+//   },
+//   Samsung: function () {
+//     return navigator.userAgent.match(
+//       /SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[A|N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i,
+//     );
+//   },
+//   Windows: function () {
+//     return (
+//       navigator.userAgent.match(/IEMobile/i) ||
+//       navigator.userAgent.match(/WPDesktop/i)
+//     );
+//   },
+//   any: function () {
+//     return (
+//       isMobile.Android() ||
+//       isMobile.BlackBerry() ||
+//       isMobile.iOS() ||
+//       isMobile.Opera() ||
+//       isMobile.Windows()
+//     );
+//   },
+// }
