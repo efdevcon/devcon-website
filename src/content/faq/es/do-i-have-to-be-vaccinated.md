@@ -1,6 +1,6 @@
 ---
 title: ¿Tengo que vacunarme?
-category: general
+category: location
 ---
 **Fiebre amarilla**:
 
