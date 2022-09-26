@@ -1,5 +1,6 @@
 // const withPWA = require('next-pwa')
 const webpack = require('webpack')
+const { withSentryConfig } = require('@sentry/nextjs')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -25,6 +26,9 @@ const nextConfig = {
     images: {
       layoutRaw: true,
     },
+  },
+  sentry: {
+    hideSourceMaps: true,
   },
   i18n: {
     locales: ['default', 'en', 'es'],
@@ -221,4 +225,6 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withSentryConfig(nextConfig, {
+  silent: true, // Suppresses all Sentry logs
+})

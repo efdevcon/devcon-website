@@ -4,7 +4,7 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
-import { GetRooms, GetSessions, GetSpeakers } from 'services/programming'
+import { GetSessions, GetSpeakers } from 'services/programming'
 
 export default pageHOC((props: any) => {
   return (
