@@ -2771,13 +2771,6 @@
     "id": "PUWLD9",
     "speakers": [
       {
-        "id": "GG7QPV",
-        "name": "Rajeev",
-        "description": "Founder @TheSecureum (https://twitter.com/0xRajeev)",
-        "twitter": "0xRajeev",
-        "avatar": "http://speak.devcon.org/media/avatars/Secureum_LogoMark_nVWszYY.jpeg"
-      },
-      {
         "id": "DSXCDN",
         "name": "Mudit Gupta",
         "description": "Mudit is the Chief Information Security Officer at Polygon. He's a security researcher by the day and an ethereum developer by the night.",
@@ -3359,7 +3352,7 @@
         "name": "Melanie Davis",
         "description": "Contributor Experience @DXdao_ I DAO and DeFi enthusiast",
         "twitter": "@melanie__davis",
-        "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2021-12-13_at_9.35.00_PM_NJziiYc.png"
+        "avatar": "http://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg"
       },
       {
         "id": "8KJFF7",
@@ -3762,6 +3755,12 @@
   {
     "id": "NNTKKY",
     "speakers": [
+      {
+        "id": "MPXDXL",
+        "name": "Juan",
+        "description": "After scaling fintech startups for several years in Product and Sales Operations, Juan discovered DeFi through a beautiful accident. He has ever since been involved in scaling DAOs through governance design, improving frameworks, and connecting great teams together.\r\n\r\nJuan is also a proud dad.",
+        "avatar": "http://speak.devcon.org/media/avatars/photo_2022-06-27_17.10.30_5v7gxsv.jpeg"
+      },
       {
         "id": "A88CV9",
         "name": "Anna Kryukova",
@@ -6805,13 +6804,6 @@
         "avatar": "http://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png"
       },
       {
-        "id": "GG7QPV",
-        "name": "Rajeev",
-        "description": "Founder @TheSecureum (https://twitter.com/0xRajeev)",
-        "twitter": "0xRajeev",
-        "avatar": "http://speak.devcon.org/media/avatars/Secureum_LogoMark_nVWszYY.jpeg"
-      },
-      {
         "id": "NN778F",
         "name": "Gonçalo Sá",
         "description": "Gonçalo, currently co-founder of the ConsenSys Diligence team, has 20+ years of experience in offensive security.\r\nNotable achievements range from cracking DRM algorithms to breaching a major international consumer electronics retailer.\r\n\r\nWhile studying Aerospace engineering, Gonçalo also built 3 startups (AdTech, BioTech, Mobile). Passionate about turning MVPs into production-ready products, he has also mentored a fair share of entrepreneurs in the past 5+ years.",
@@ -6834,6 +6826,12 @@
       {
         "id": "3PMBEA",
         "name": "Chandrakana Nandi",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "7AGF99",
+        "name": "John Mardlin",
         "description": null,
         "avatar": ""
       }
