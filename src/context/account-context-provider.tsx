@@ -28,6 +28,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     getToken,
     loginWeb3,
     loginEmail,
+    loginToken,
     logout,
     getAccount,
     updateAccount,
@@ -152,6 +153,22 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         address: email,
+        nonce: nonce,
+      }),
+    })
+
+    const body = await response.json()
+    if (response.status === 200) {
+      setContext({ ...context, account: body.data })
+      return body.data
+    }
+  }
+
+  async function loginToken(nonce: number): Promise<UserAccount | undefined> {
+    const response = await fetch('/api/account/login/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
         nonce: nonce,
       }),
     })

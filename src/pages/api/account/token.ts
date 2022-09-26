@@ -5,12 +5,13 @@ import { withSessionRoute } from "server/withIronSession"
 import { EmailService } from "server/services/email-service"
 import dbConnect from "utils/dbConnect"
 import VerificationTokenModel from "server/models/VerificationTokenModel";
+import { SITE_URL } from "utils/constants";
 
 const tokenRepo = new VerificationTokenRepository()
 
 export default withSessionRoute(async function route(req: NextApiRequest, res: NextApiResponse) {
     console.log(req.method, '/api/account/token')
-    
+
     if (req.method !== 'POST') {
         return res.status(404).send({ code: 404, message: '' })
     }
@@ -36,13 +37,15 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
 
         if (isEmail) {
             const emailService = new EmailService()
-            await emailService.sendMail(identifier, 'default-email', `${token.nonce} is your Devcon verification code`, {
+            await emailService.sendMail(identifier, 'email-cta', `${token.nonce} is your Devcon verification code`, {
                 TITLE: 'Confirm your email address',
                 DESCRIPTION: `Please enter this verification code on Devcon.org\n
 
           ${token.nonce}\n
            
-          This verification codes expires in 20 minutes.`
+          This verification codes expires in 20 minutes.`,
+                CALL_TO_ACTION: 'Login using magic link',
+                URL: `${req.headers.origin || SITE_URL}/login?token=${token.nonce}`
             })
 
             data.nonce = -1 // only share nonce via email

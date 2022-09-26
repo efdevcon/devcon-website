@@ -15,6 +15,7 @@ export interface AccountContextType {
   getToken: (identifier: string) => Promise<VerificationToken | undefined>
   loginWeb3: (address: string, nonce: number, message: string, signature: string) => Promise<UserAccount | undefined>
   loginEmail: (email: string, nonce: number) => Promise<UserAccount | undefined>
+  loginToken: (nonce: number) => Promise<UserAccount | undefined>
   logout: (id: string) => Promise<boolean>
   getAccount: () => Promise<UserAccount | undefined>
   updateAccount: (id: string, account: UserAccount) => Promise<boolean>
@@ -37,6 +38,7 @@ export const AccountContext = createContext<AccountContextType>({
   getToken: async () => undefined,
   loginWeb3: async () => undefined,
   loginEmail: async () => undefined,
+  loginToken: async () => undefined,
   logout: async () => false,
   getAccount: async () => undefined,
   updateAccount: async () => false,

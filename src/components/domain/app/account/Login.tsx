@@ -31,10 +31,23 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (loggedIn) {
-      console.log('logged in redirect')
       router.push('/' + location?.search)
     }
   }, [router, loggedIn])
+
+  useEffect(() => {
+    async function LoginWithToken() {
+      const userAccount = await accountContext.loginToken(Number(router.query.token))
+      if (userAccount) {
+        router.push({ pathname: '/', query: {} })
+      }
+      if (!userAccount) {
+        setError('Unable to verify your email address.')
+      }
+    }
+
+    if (router.query.token) LoginWithToken()
+  }, [router.query.token])
 
   if (loggedIn) {
     return null
