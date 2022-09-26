@@ -4,6 +4,7 @@ const { nanoid } = require('nanoid')
 const { PHASE_PRODUCTION_BUILD } = require('next/constants')
 const getGeneratedPrecacheEntries = require('./precache')
 const getStaticPrecacheEntries = require('./publicprecache.js')
+const { withSentryConfig } = require('@sentry/nextjs')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -25,12 +26,9 @@ const nextConfig = {
       layoutRaw: true,
     },
   },
-  // i18n: {
-  //   locales: ['default', 'en', 'es'],
-  //   defaultLocale: 'default',
-  //   localeDetection: false,
-  // },
-  // trailingSlash: true,
+  sentry: {
+    hideSourceMaps: true,
+  },
   webpack: (config, { buildId }) => {
     return {
       ...config,
@@ -119,108 +117,9 @@ const nextConfig = {
       },
     ]
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/devcon-0',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-0/details',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-1',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-1/details',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-2',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-2/details',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-3',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-3/details',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-4',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-4/details',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-5',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/devcon-5/details',
-  //       destination: '/past-events',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/agenda',
-  //       destination: '/en/program',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/lightning-speakers',
-  //       destination: '/en/program',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/workshops-and-breakouts',
-  //       destination: '/en/program',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/call-for-participation',
-  //       destination: '/en/applications',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/speakers',
-  //       destination: '/en/applications',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/vi',
-  //       destination: '/',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/zh',
-  //       destination: '/',
-  //       permanent: true,
-  //     },
-  //   ]
-  // },
 }
 
-module.exports = (phase, { defaultConfig }) => {
+module.exports = withSentryConfig((phase, { defaultConfig }) => {
   const buildId = nanoid()
 
   let config = {
@@ -248,4 +147,6 @@ module.exports = (phase, { defaultConfig }) => {
   }
 
   return config
-}
+}, {
+  silent: true, // Suppresses all Sentry logs
+})

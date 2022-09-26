@@ -6,6 +6,7 @@ import { PWAPrompt } from 'components/domain/app/pwa-prompt'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'assets/css/index.scss'
+import { SEO } from 'components/domain/seo'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -19,6 +20,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <SEO />
       </Head>
 
       <NextIntlProvider locale="en" messages={pageProps.messages}>

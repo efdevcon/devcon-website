@@ -78,7 +78,7 @@ export const SessionCard = (props: CardProps) => {
           </Link>
 
           {sessionIsLive && <div className="label red bold sm">Happening now!</div>}
-          {isSoon && <div className="label bold sm">Starts {relativeTime}</div>}
+          {isSoon && <div className="label bold sm">Starts in {relativeTime}</div>}
 
           {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
         </div>

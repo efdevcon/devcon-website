@@ -35,7 +35,6 @@ export const pageHOC =
 
     return (
       <PageContext.Provider value={context}>
-        <SEO />
         <PageContent {...props} />
       </PageContext.Provider>
     )

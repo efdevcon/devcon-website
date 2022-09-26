@@ -50,3 +50,7 @@ yarn-error.log*
 **/public/workbox-*.js.map
 **/public/worker-*.js.map
 **/public/fallback-*.js
+**/public/fallback-development.js
+
+# Sentry
+.sentryclirc

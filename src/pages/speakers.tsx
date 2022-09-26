@@ -16,6 +16,7 @@ import {
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
 import { SpeakerDetails } from 'components/domain/app/speakers'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   const { query } = useRouter()
@@ -24,7 +25,12 @@ export default pageHOC((props: any) => {
 
   return (
     <AppLayout>
-      <>{speaker ? <SpeakerDetails speaker={speaker} {...props} /> : <Speakers {...props} />}</>
+      {speaker ?
+        <>
+          <SEO title={props.speaker.name} description={props.speaker.description} separator='@' />
+          <SpeakerDetails speaker={speaker} {...props} />
+        </> : <Speakers {...props} />
+      }
     </AppLayout>
   )
 })

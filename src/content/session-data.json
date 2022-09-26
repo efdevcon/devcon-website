@@ -16,8 +16,8 @@
     "start": 1665496800000,
     "end": 1665498600000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -47,9 +47,9 @@
     "start": 1665491400000,
     "end": 1665493200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -80,9 +80,9 @@
     "start": 1665507600000,
     "end": 1665509400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -113,9 +113,9 @@
     "start": 1665673200000,
     "end": 1665675000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -158,9 +158,9 @@
     "start": 1665658800000,
     "end": 1665662400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -197,9 +197,9 @@
     "start": 1665579600000,
     "end": 1665583200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -228,9 +228,9 @@
     "start": 1665590400000,
     "end": 1665592200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -260,9 +260,9 @@
     "start": 1665585000000,
     "end": 1665586800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -293,9 +293,9 @@
     "start": 1665510600000,
     "end": 1665511200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -325,9 +325,9 @@
     "start": 1665585000000,
     "end": 1665586800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -363,9 +363,9 @@
     "start": 1665748800000,
     "end": 1665750600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -395,9 +395,9 @@
     "start": 1665586800000,
     "end": 1665588600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -428,9 +428,9 @@
     "start": 1665586800000,
     "end": 1665588600000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -460,9 +460,9 @@
     "start": 1665588600000,
     "end": 1665590400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -492,9 +492,9 @@
     "start": 1665680400000,
     "end": 1665684000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -524,9 +524,9 @@
     "start": 1665666000000,
     "end": 1665669600000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -556,9 +556,9 @@
     "start": 1665658800000,
     "end": 1665662400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -589,9 +589,9 @@
     "start": 1665568800000,
     "end": 1665570600000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -621,9 +621,9 @@
     "start": 1665509400000,
     "end": 1665511200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -654,9 +654,9 @@
     "start": 1665747000000,
     "end": 1665748800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -685,8 +685,8 @@
     "start": 1665505800000,
     "end": 1665507600000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -712,14 +712,14 @@
         "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
       }
     ],
-    "title": "Can't Someone else do it!? — Shifting behaviors in Ethereum network participation",
+    "title": "Can’t Someone Else Do It!? Shifting Behaviors in Ethereum Network Participation",
     "track": "Staking & Validator Experience",
     "duration": 30,
     "start": 1665507600000,
     "end": 1665509400000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -750,9 +750,9 @@
     "start": 1665498600000,
     "end": 1665502200000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -781,9 +781,9 @@
     "start": 1665656400000,
     "end": 1665657000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -832,9 +832,9 @@
     "start": 1665741600000,
     "end": 1665748800000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -871,9 +871,9 @@
     "start": 1665660600000,
     "end": 1665662400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -904,9 +904,9 @@
     "start": 1665745200000,
     "end": 1665747000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -937,9 +937,9 @@
     "start": 1665675000000,
     "end": 1665676800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -970,9 +970,9 @@
     "start": 1665498600000,
     "end": 1665500400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1000,9 +1000,9 @@
     "start": 1665752400000,
     "end": 1665754200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1032,9 +1032,9 @@
     "start": 1665655200000,
     "end": 1665657000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -1070,8 +1070,8 @@
     "start": 1665741600000,
     "end": 1665748800000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -1103,9 +1103,9 @@
     "start": 1665496800000,
     "end": 1665498600000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1142,9 +1142,9 @@
     "start": 1665491400000,
     "end": 1665493200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -1175,9 +1175,9 @@
     "start": 1665572400000,
     "end": 1665574200000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -1202,15 +1202,15 @@
         "avatar": "http://speak.devcon.org/media/avatars/DSC00278_D1RZN1P.jpg"
       }
     ],
-    "title": "The KZG Ceremony - or how I learnt to stop worrying and love trusted setups",
+    "title": "The KZG Ceremony - or How I Learnt to Stop Worrying and Love Trusted Setups",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665671400000,
     "end": 1665673200000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -1247,9 +1247,9 @@
     "start": 1665508800000,
     "end": 1665509400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -1284,9 +1284,9 @@
     "start": 1665510600000,
     "end": 1665511200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -1316,9 +1316,9 @@
     "start": 1665590400000,
     "end": 1665592200000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -1348,9 +1348,9 @@
     "start": 1665592200000,
     "end": 1665594000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1381,9 +1381,9 @@
     "start": 1665673200000,
     "end": 1665675000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -1408,15 +1408,15 @@
         "avatar": "http://speak.devcon.org/media/avatars/37338979_RK5MaNn.jpeg"
       }
     ],
-    "title": "Growing the global Ethereum community through localization",
+    "title": "Growing the Global Ethereum Community Through Localization",
     "track": "Opportunity & Global Impact",
     "duration": 30,
     "start": 1665759600000,
     "end": 1665761400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1447,8 +1447,8 @@
     "start": 1665498600000,
     "end": 1665500400000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -1480,9 +1480,9 @@
     "start": 1665583200000,
     "end": 1665585000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -1513,9 +1513,9 @@
     "start": 1665676800000,
     "end": 1665680400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1546,8 +1546,8 @@
     "start": 1665495000000,
     "end": 1665496800000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -1578,8 +1578,8 @@
     "start": 1665495000000,
     "end": 1665498600000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -1611,9 +1611,9 @@
     "start": 1665663600000,
     "end": 1665664200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -1645,9 +1645,9 @@
     "start": 1665594000000,
     "end": 1665597600000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -1686,9 +1686,9 @@
     "start": 1665588600000,
     "end": 1665590400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1719,9 +1719,9 @@
     "start": 1665745200000,
     "end": 1665747000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -1752,9 +1752,9 @@
     "start": 1665502200000,
     "end": 1665504000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -1785,9 +1785,9 @@
     "start": 1665588600000,
     "end": 1665590400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -1819,9 +1819,9 @@
     "start": 1665495000000,
     "end": 1665496800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -1851,9 +1851,9 @@
     "start": 1665509400000,
     "end": 1665510000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -1884,9 +1884,9 @@
     "start": 1665576600000,
     "end": 1665577200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -1923,9 +1923,9 @@
     "start": 1665669600000,
     "end": 1665676800000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -1974,9 +1974,9 @@
     "start": 1665741600000,
     "end": 1665743400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -2010,9 +2010,9 @@
     "start": 1665673200000,
     "end": 1665675000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -2049,9 +2049,9 @@
     "start": 1665505800000,
     "end": 1665507600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -2082,9 +2082,9 @@
     "start": 1665502200000,
     "end": 1665504000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2114,9 +2114,9 @@
     "start": 1665747000000,
     "end": 1665747600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2146,9 +2146,9 @@
     "start": 1665493200000,
     "end": 1665495000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2179,9 +2179,9 @@
     "start": 1665669600000,
     "end": 1665671400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -2211,9 +2211,9 @@
     "start": 1665676800000,
     "end": 1665684000000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -2257,8 +2257,8 @@
     "start": 1665583200000,
     "end": 1665590400000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -2311,9 +2311,9 @@
     "start": 1665575400000,
     "end": 1665576000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2343,9 +2343,9 @@
     "start": 1665572400000,
     "end": 1665574200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -2375,9 +2375,9 @@
     "start": 1665682200000,
     "end": 1665684000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -2408,9 +2408,9 @@
     "start": 1665594000000,
     "end": 1665595800000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -2446,9 +2446,9 @@
     "start": 1665660600000,
     "end": 1665662400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -2477,9 +2477,9 @@
     "start": 1665663000000,
     "end": 1665663600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -2518,9 +2518,9 @@
     "start": 1665666000000,
     "end": 1665669600000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -2552,9 +2552,9 @@
     "start": 1665583200000,
     "end": 1665586800000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -2585,9 +2585,9 @@
     "start": 1665757800000,
     "end": 1665759600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -2618,9 +2618,9 @@
     "start": 1665756000000,
     "end": 1665757800000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -2651,9 +2651,9 @@
     "start": 1665655200000,
     "end": 1665655800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -2685,9 +2685,9 @@
     "start": 1665592200000,
     "end": 1665594000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -2718,9 +2718,9 @@
     "start": 1665750000000,
     "end": 1665750600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2751,9 +2751,9 @@
     "start": 1665655200000,
     "end": 1665657000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -2770,13 +2770,6 @@
   {
     "id": "PUWLD9",
     "speakers": [
-      {
-        "id": "GG7QPV",
-        "name": "Rajeev",
-        "description": "Founder @TheSecureum (https://twitter.com/0xRajeev)",
-        "twitter": "0xRajeev",
-        "avatar": "http://speak.devcon.org/media/avatars/Secureum_LogoMark_nVWszYY.jpeg"
-      },
       {
         "id": "DSXCDN",
         "name": "Mudit Gupta",
@@ -2821,9 +2814,9 @@
     "start": 1665496800000,
     "end": 1665500400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -2854,9 +2847,9 @@
     "start": 1665576000000,
     "end": 1665576600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2887,9 +2880,9 @@
     "start": 1665495000000,
     "end": 1665496800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2919,9 +2912,9 @@
     "start": 1665754200000,
     "end": 1665756000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2952,9 +2945,9 @@
     "start": 1665590400000,
     "end": 1665592200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -2985,9 +2978,9 @@
     "start": 1665682800000,
     "end": 1665683400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3032,9 +3025,9 @@
     "start": 1665502200000,
     "end": 1665505800000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -3063,9 +3056,9 @@
     "start": 1665667800000,
     "end": 1665669600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -3090,15 +3083,15 @@
         "avatar": ""
       }
     ],
-    "title": "Survey of aggregation and batching techniques for SNARKs",
+    "title": "Survey of Aggregation and Batching Techniques for SNARKs",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665570600000,
     "end": 1665572400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -3129,9 +3122,9 @@
     "start": 1665594600000,
     "end": 1665595200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -3168,9 +3161,9 @@
     "start": 1665752400000,
     "end": 1665759600000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -3207,9 +3200,9 @@
     "start": 1665747600000,
     "end": 1665748200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -3238,9 +3231,9 @@
     "start": 1665669600000,
     "end": 1665671400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -3284,9 +3277,9 @@
     "start": 1665496800000,
     "end": 1665500400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -3322,9 +3315,9 @@
     "start": 1665502200000,
     "end": 1665504000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3359,7 +3352,7 @@
         "name": "Melanie Davis",
         "description": "Contributor Experience @DXdao_ I DAO and DeFi enthusiast",
         "twitter": "@melanie__davis",
-        "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2021-12-13_at_9.35.00_PM_NJziiYc.png"
+        "avatar": "http://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg"
       },
       {
         "id": "8KJFF7",
@@ -3375,8 +3368,8 @@
     "start": 1665666000000,
     "end": 1665673200000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -3408,9 +3401,9 @@
     "start": 1665595800000,
     "end": 1665597600000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -3448,8 +3441,8 @@
     "start": 1665502200000,
     "end": 1665509400000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -3481,9 +3474,9 @@
     "start": 1665681600000,
     "end": 1665682200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3513,9 +3506,9 @@
     "start": 1665507600000,
     "end": 1665508200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3545,9 +3538,9 @@
     "start": 1665579600000,
     "end": 1665583200000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -3578,9 +3571,9 @@
     "start": 1665500400000,
     "end": 1665502200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3611,9 +3604,9 @@
     "start": 1665577200000,
     "end": 1665577800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -3644,9 +3637,9 @@
     "start": 1665495000000,
     "end": 1665496800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3677,8 +3670,8 @@
     "start": 1665658800000,
     "end": 1665662400000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -3710,9 +3703,9 @@
     "start": 1665493200000,
     "end": 1665495000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3743,9 +3736,9 @@
     "start": 1665759600000,
     "end": 1665761400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3763,6 +3756,13 @@
     "id": "NNTKKY",
     "speakers": [
       {
+        "id": "MPXDXL",
+        "name": "Juan",
+        "description": "After scaling fintech startups for several years in Product and Sales Operations, Juan discovered DeFi through a beautiful accident. He has ever since been involved in scaling DAOs through governance design, improving frameworks, and connecting great teams together.\r\n\r\nJuan is also a proud dad.",
+        "twitter": "0x7u4n",
+        "avatar": "http://speak.devcon.org/media/avatars/photo_2022-06-27_17.10.30_5v7gxsv.jpeg"
+      },
+      {
         "id": "A88CV9",
         "name": "Anna Kryukova",
         "description": "Anna currently leads Community Programs at the Celo Foundation. She has previously decentralized her own job as a community lead at the Maker Foundation and is an active member of communities of care like Meta Gamma Delta Kernel. Is likely traveling and wandering around.",
@@ -3774,6 +3774,12 @@
         "name": "Alp Ergin",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "Y8FYJ3",
+        "name": "Alejandra Borda",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Sustainable Ecosystem Scaling: How Do We Fund Community And Ecosystem Growth",
@@ -3782,9 +3788,9 @@
     "start": 1665757800000,
     "end": 1665761400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -3815,9 +3821,9 @@
     "start": 1665676800000,
     "end": 1665678600000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -3848,9 +3854,9 @@
     "start": 1665747000000,
     "end": 1665748800000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -3888,9 +3894,9 @@
     "start": 1665743400000,
     "end": 1665745200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -3921,9 +3927,9 @@
     "start": 1665756000000,
     "end": 1665757800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -3954,9 +3960,9 @@
     "start": 1665574200000,
     "end": 1665576000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -3987,9 +3993,9 @@
     "start": 1665669600000,
     "end": 1665671400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -4020,9 +4026,9 @@
     "start": 1665741600000,
     "end": 1665743400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -4052,9 +4058,9 @@
     "start": 1665748800000,
     "end": 1665749400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4085,9 +4091,9 @@
     "start": 1665741600000,
     "end": 1665745200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4117,9 +4123,9 @@
     "start": 1665595200000,
     "end": 1665595800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4150,9 +4156,9 @@
     "start": 1665568800000,
     "end": 1665572400000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -4190,9 +4196,9 @@
     "start": 1665505800000,
     "end": 1665509400000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -4223,9 +4229,9 @@
     "start": 1665678600000,
     "end": 1665680400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -4256,9 +4262,9 @@
     "start": 1665662400000,
     "end": 1665663000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -4289,8 +4295,8 @@
     "start": 1665655200000,
     "end": 1665658800000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -4322,9 +4328,9 @@
     "start": 1665568800000,
     "end": 1665570600000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -4374,9 +4380,9 @@
     "start": 1665504000000,
     "end": 1665507600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4407,9 +4413,9 @@
     "start": 1665574200000,
     "end": 1665576000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -4440,9 +4446,9 @@
     "start": 1665505800000,
     "end": 1665507600000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -4472,9 +4478,9 @@
     "start": 1665594000000,
     "end": 1665595800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -4505,9 +4511,9 @@
     "start": 1665750600000,
     "end": 1665752400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -4537,9 +4543,9 @@
     "start": 1665671400000,
     "end": 1665673200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4570,9 +4576,9 @@
     "start": 1665658800000,
     "end": 1665660600000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -4603,9 +4609,9 @@
     "start": 1665748800000,
     "end": 1665750600000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -4636,9 +4642,9 @@
     "start": 1665666000000,
     "end": 1665667800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -4669,9 +4675,9 @@
     "start": 1665657000000,
     "end": 1665658800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -4701,9 +4707,9 @@
     "start": 1665754200000,
     "end": 1665756000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -4734,9 +4740,9 @@
     "start": 1665595800000,
     "end": 1665597600000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -4767,9 +4773,9 @@
     "start": 1665500400000,
     "end": 1665502200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4800,9 +4806,9 @@
     "start": 1665572400000,
     "end": 1665574200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -4833,9 +4839,9 @@
     "start": 1665498600000,
     "end": 1665500400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4866,9 +4872,9 @@
     "start": 1665756000000,
     "end": 1665757800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -4899,9 +4905,9 @@
     "start": 1665675000000,
     "end": 1665676800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4939,9 +4945,9 @@
     "start": 1665673200000,
     "end": 1665675000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -4972,9 +4978,9 @@
     "start": 1665491400000,
     "end": 1665493200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -5012,9 +5018,9 @@
     "start": 1665588600000,
     "end": 1665590400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -5044,9 +5050,9 @@
     "start": 1665568800000,
     "end": 1665570600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -5091,9 +5097,9 @@
     "start": 1665754200000,
     "end": 1665756000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -5124,9 +5130,9 @@
     "start": 1665496800000,
     "end": 1665498600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -5157,9 +5163,9 @@
     "start": 1665576000000,
     "end": 1665577800000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -5190,9 +5196,9 @@
     "start": 1665657000000,
     "end": 1665658800000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -5223,9 +5229,9 @@
     "start": 1665678600000,
     "end": 1665680400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -5256,9 +5262,9 @@
     "start": 1665760800000,
     "end": 1665761400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -5289,9 +5295,9 @@
     "start": 1665570600000,
     "end": 1665572400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -5321,9 +5327,9 @@
     "start": 1665588600000,
     "end": 1665590400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -5354,9 +5360,9 @@
     "start": 1665495000000,
     "end": 1665498600000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -5394,9 +5400,9 @@
     "start": 1665583200000,
     "end": 1665585000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -5426,9 +5432,9 @@
     "start": 1665594000000,
     "end": 1665594600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -5459,8 +5465,8 @@
     "start": 1665568800000,
     "end": 1665572400000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -5492,9 +5498,9 @@
     "start": 1665743400000,
     "end": 1665745200000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -5525,9 +5531,9 @@
     "start": 1665745200000,
     "end": 1665747000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -5557,9 +5563,9 @@
     "start": 1665583200000,
     "end": 1665585000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -5590,9 +5596,9 @@
     "start": 1665657000000,
     "end": 1665658800000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -5623,9 +5629,9 @@
     "start": 1665757800000,
     "end": 1665758400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -5655,9 +5661,9 @@
     "start": 1665676800000,
     "end": 1665678600000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -5688,9 +5694,9 @@
     "start": 1665741600000,
     "end": 1665743400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -5732,9 +5738,9 @@
     "start": 1665667800000,
     "end": 1665669600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -5764,9 +5770,9 @@
     "start": 1665671400000,
     "end": 1665673200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -5797,9 +5803,9 @@
     "start": 1665504000000,
     "end": 1665505800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -5830,9 +5836,9 @@
     "start": 1665581400000,
     "end": 1665583200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -5870,9 +5876,9 @@
     "start": 1665745200000,
     "end": 1665747000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -5909,8 +5915,8 @@
     "start": 1665491400000,
     "end": 1665495000000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -5942,9 +5948,9 @@
     "start": 1665500400000,
     "end": 1665502200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -5983,9 +5989,9 @@
     "start": 1665597000000,
     "end": 1665597600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6016,9 +6022,9 @@
     "start": 1665680400000,
     "end": 1665681000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6054,9 +6060,9 @@
     "start": 1665574200000,
     "end": 1665576000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -6093,9 +6099,9 @@
     "start": 1665759000000,
     "end": 1665759600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6132,9 +6138,9 @@
     "start": 1665676800000,
     "end": 1665678600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6178,9 +6184,9 @@
     "start": 1665595800000,
     "end": 1665597600000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -6210,9 +6216,9 @@
     "start": 1665676800000,
     "end": 1665680400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6242,9 +6248,9 @@
     "start": 1665754200000,
     "end": 1665756000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -6276,9 +6282,9 @@
     "start": 1665595800000,
     "end": 1665596400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6309,9 +6315,9 @@
     "start": 1665491400000,
     "end": 1665495000000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -6342,9 +6348,9 @@
     "start": 1665509400000,
     "end": 1665510000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6375,9 +6381,9 @@
     "start": 1665761400000,
     "end": 1665762000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -6408,9 +6414,9 @@
     "start": 1665757800000,
     "end": 1665759600000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -6440,9 +6446,9 @@
     "start": 1665508200000,
     "end": 1665508800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6473,9 +6479,9 @@
     "start": 1665658800000,
     "end": 1665660600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6506,9 +6512,9 @@
     "start": 1665510600000,
     "end": 1665511200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6544,9 +6550,9 @@
     "start": 1665673200000,
     "end": 1665675000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6598,9 +6604,9 @@
     "start": 1665581400000,
     "end": 1665585000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -6631,9 +6637,9 @@
     "start": 1665675000000,
     "end": 1665676800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6662,9 +6668,9 @@
     "start": 1665572400000,
     "end": 1665576000000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -6708,9 +6714,9 @@
     "start": 1665658800000,
     "end": 1665662400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -6740,9 +6746,9 @@
     "start": 1665594000000,
     "end": 1665595800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6772,9 +6778,9 @@
     "start": 1665510000000,
     "end": 1665510600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6797,13 +6803,6 @@
         "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder and council member of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
         "twitter": "https://twitter.com/jalex206",
         "avatar": "http://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png"
-      },
-      {
-        "id": "GG7QPV",
-        "name": "Rajeev",
-        "description": "Founder @TheSecureum (https://twitter.com/0xRajeev)",
-        "twitter": "0xRajeev",
-        "avatar": "http://speak.devcon.org/media/avatars/Secureum_LogoMark_nVWszYY.jpeg"
       },
       {
         "id": "NN778F",
@@ -6830,6 +6829,12 @@
         "name": "Chandrakana Nandi",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "7AGF99",
+        "name": "John Mardlin",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Future of Smart Contract Security Audits: REKT or WAGMI?",
@@ -6838,9 +6843,9 @@
     "start": 1665669600000,
     "end": 1665673200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -6871,9 +6876,9 @@
     "start": 1665595800000,
     "end": 1665597600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6904,9 +6909,9 @@
     "start": 1665592200000,
     "end": 1665594000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -6937,9 +6942,9 @@
     "start": 1665757800000,
     "end": 1665759600000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -6971,9 +6976,9 @@
     "start": 1665590400000,
     "end": 1665594000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -7004,9 +7009,9 @@
     "start": 1665743400000,
     "end": 1665745200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -7037,9 +7042,9 @@
     "start": 1665592200000,
     "end": 1665594000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7076,9 +7081,9 @@
     "start": 1665745200000,
     "end": 1665747000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -7109,9 +7114,9 @@
     "start": 1665572400000,
     "end": 1665574200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -7142,9 +7147,9 @@
     "start": 1665574800000,
     "end": 1665575400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7182,9 +7187,9 @@
     "start": 1665590400000,
     "end": 1665594000000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -7222,9 +7227,9 @@
     "start": 1665502200000,
     "end": 1665504000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -7255,9 +7260,9 @@
     "start": 1665586800000,
     "end": 1665590400000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -7288,9 +7293,9 @@
     "start": 1665748200000,
     "end": 1665748800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7320,9 +7325,9 @@
     "start": 1665681000000,
     "end": 1665681600000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -7353,9 +7358,9 @@
     "start": 1665680400000,
     "end": 1665681000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -7386,9 +7391,9 @@
     "start": 1665655200000,
     "end": 1665662400000,
     "room": {
-      "id": "workshop-2-3rd-floor",
-      "name": "Workshop 2 - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
       "info": "3rd Floor",
       "capacity": 128
     },
@@ -7419,9 +7424,9 @@
     "start": 1665657000000,
     "end": 1665658800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7451,9 +7456,9 @@
     "start": 1665749400000,
     "end": 1665750000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7484,9 +7489,9 @@
     "start": 1665678600000,
     "end": 1665680400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -7517,9 +7522,9 @@
     "start": 1665680400000,
     "end": 1665682200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -7550,9 +7555,9 @@
     "start": 1665509400000,
     "end": 1665510000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -7583,9 +7588,9 @@
     "start": 1665510000000,
     "end": 1665510600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7616,9 +7621,9 @@
     "start": 1665747000000,
     "end": 1665748800000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -7649,9 +7654,9 @@
     "start": 1665681000000,
     "end": 1665681600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7682,9 +7687,9 @@
     "start": 1665590400000,
     "end": 1665592200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -7714,8 +7719,8 @@
     "start": 1665572400000,
     "end": 1665576000000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -7754,8 +7759,8 @@
     "start": 1665673200000,
     "end": 1665680400000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -7787,8 +7792,8 @@
     "start": 1665579600000,
     "end": 1665583200000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -7820,9 +7825,9 @@
     "start": 1665585000000,
     "end": 1665586800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7853,9 +7858,9 @@
     "start": 1665682200000,
     "end": 1665682800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -7893,9 +7898,9 @@
     "start": 1665667800000,
     "end": 1665669600000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -7926,9 +7931,9 @@
     "start": 1665568800000,
     "end": 1665572400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -7959,9 +7964,9 @@
     "start": 1665759600000,
     "end": 1665760200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -7992,9 +7997,9 @@
     "start": 1665596400000,
     "end": 1665597000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8024,8 +8029,8 @@
     "start": 1665509400000,
     "end": 1665511200000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -8070,8 +8075,8 @@
     "start": 1665498600000,
     "end": 1665502200000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -8103,9 +8108,9 @@
     "start": 1665758400000,
     "end": 1665759000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8135,9 +8140,9 @@
     "start": 1665594000000,
     "end": 1665595800000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -8175,9 +8180,9 @@
     "start": 1665655200000,
     "end": 1665657000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -8208,9 +8213,9 @@
     "start": 1665682200000,
     "end": 1665682800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8242,9 +8247,9 @@
     "start": 1665683400000,
     "end": 1665684000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8274,9 +8279,9 @@
     "start": 1665682800000,
     "end": 1665683400000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8313,9 +8318,9 @@
     "start": 1665493200000,
     "end": 1665495000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -8346,9 +8351,9 @@
     "start": 1665655800000,
     "end": 1665656400000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -8379,9 +8384,9 @@
     "start": 1665681600000,
     "end": 1665682200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8411,9 +8416,9 @@
     "start": 1665508800000,
     "end": 1665509400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -8444,9 +8449,9 @@
     "start": 1665663600000,
     "end": 1665664200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -8471,15 +8476,15 @@
         "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-06-24_at_16.20.20_WizzJQr.png"
       }
     ],
-    "title": "ENS cross chain integration strategy",
+    "title": "ENS Cross Chain Integration Strategy",
     "track": "Layer 2s",
     "duration": 30,
     "start": 1665586800000,
     "end": 1665588600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8510,9 +8515,9 @@
     "start": 1665508200000,
     "end": 1665508800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -8543,9 +8548,9 @@
     "start": 1665504000000,
     "end": 1665505800000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -8576,9 +8581,9 @@
     "start": 1665663000000,
     "end": 1665663600000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8609,9 +8614,9 @@
     "start": 1665655200000,
     "end": 1665657000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8641,9 +8646,9 @@
     "start": 1665491400000,
     "end": 1665493200000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -8674,9 +8679,9 @@
     "start": 1665747000000,
     "end": 1665748800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -8707,9 +8712,9 @@
     "start": 1665495000000,
     "end": 1665496800000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -8739,9 +8744,9 @@
     "start": 1665760200000,
     "end": 1665760800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8779,9 +8784,9 @@
     "start": 1665493200000,
     "end": 1665495000000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -8812,9 +8817,9 @@
     "start": 1665662400000,
     "end": 1665663000000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -8846,9 +8851,9 @@
     "start": 1665570600000,
     "end": 1665572400000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -8878,9 +8883,9 @@
     "start": 1665586800000,
     "end": 1665588600000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -8910,9 +8915,9 @@
     "start": 1665752400000,
     "end": 1665754200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -8942,9 +8947,9 @@
     "start": 1665576000000,
     "end": 1665577800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -8975,9 +8980,9 @@
     "start": 1665657000000,
     "end": 1665658800000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -9008,8 +9013,8 @@
     "start": 1665504000000,
     "end": 1665505800000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -9040,9 +9045,9 @@
     "start": 1665675000000,
     "end": 1665676800000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -9078,9 +9083,9 @@
     "start": 1665574200000,
     "end": 1665574800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -9110,9 +9115,9 @@
     "start": 1665507600000,
     "end": 1665508200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -9143,9 +9148,9 @@
     "start": 1665500400000,
     "end": 1665502200000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -9175,9 +9180,9 @@
     "start": 1665756000000,
     "end": 1665757800000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -9207,9 +9212,9 @@
     "start": 1665574200000,
     "end": 1665576000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9239,9 +9244,9 @@
     "start": 1665504000000,
     "end": 1665505800000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -9271,9 +9276,9 @@
     "start": 1665741600000,
     "end": 1665745200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -9302,9 +9307,9 @@
     "start": 1665585000000,
     "end": 1665588600000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -9333,9 +9338,9 @@
     "start": 1665680400000,
     "end": 1665684000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9364,9 +9369,9 @@
     "start": 1665505800000,
     "end": 1665509400000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -9395,9 +9400,9 @@
     "start": 1665759600000,
     "end": 1665761400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9426,8 +9431,8 @@
     "start": 1665489600000,
     "end": 1665491400000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -9456,9 +9461,9 @@
     "start": 1665577800000,
     "end": 1665579600000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9486,9 +9491,9 @@
     "start": 1665664200000,
     "end": 1665666000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9517,8 +9522,8 @@
     "start": 1665500400000,
     "end": 1665504000000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -9547,8 +9552,8 @@
     "start": 1665493200000,
     "end": 1665495000000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -9577,8 +9582,8 @@
     "start": 1665491400000,
     "end": 1665493200000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -9608,9 +9613,9 @@
     "start": 1665756000000,
     "end": 1665757800000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9638,8 +9643,8 @@
     "start": 1665481500000,
     "end": 1665488700000,
     "room": {
-      "id": "main-stage-oc-5th-floor",
-      "name": "Main Stage - OC - 5th Floor",
+      "id": "main-stage-oc",
+      "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
       "info": "5th Floor",
       "capacity": 3060
@@ -9670,9 +9675,9 @@
     "start": 1665675000000,
     "end": 1665676800000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9703,9 +9708,9 @@
     "start": 1665585000000,
     "end": 1665586800000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9735,9 +9740,9 @@
     "start": 1665662400000,
     "end": 1665664200000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9771,9 +9776,9 @@
     "start": 1665579600000,
     "end": 1665583200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -9809,9 +9814,9 @@
     "start": 1665510000000,
     "end": 1665510600000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -9842,9 +9847,9 @@
     "start": 1665491400000,
     "end": 1665500400000,
     "room": {
-      "id": "workshop-1-slscommunity-room-2nd-floor",
-      "name": "Workshop 1 - SLS/Community Room - 2nd Floor",
-      "description": "2nd Floor",
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
       "info": "2nd Floor",
       "capacity": 96
     },
@@ -9880,9 +9885,9 @@
     "start": 1665500400000,
     "end": 1665511200000,
     "room": {
-      "id": "workshop-1-slscommunity-room-2nd-floor",
-      "name": "Workshop 1 - SLS/Community Room - 2nd Floor",
-      "description": "2nd Floor",
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
       "info": "2nd Floor",
       "capacity": 96
     },
@@ -9917,9 +9922,9 @@
     "start": 1665568800000,
     "end": 1665597600000,
     "room": {
-      "id": "workshop-1-slscommunity-room-2nd-floor",
-      "name": "Workshop 1 - SLS/Community Room - 2nd Floor",
-      "description": "2nd Floor",
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
       "info": "2nd Floor",
       "capacity": 96
     },
@@ -9948,9 +9953,9 @@
     "start": 1665669600000,
     "end": 1665671400000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -9978,9 +9983,9 @@
     "start": 1665583200000,
     "end": 1665585000000,
     "room": {
-      "id": "talk-2-cold-forest-3rd-floor",
-      "name": "Talk 2 - Cold Forest - 3rd Floor",
-      "description": "",
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
       "info": "3rd Floor",
       "capacity": 414
     },
@@ -10009,9 +10014,9 @@
     "start": 1665671400000,
     "end": 1665673200000,
     "room": {
-      "id": "talk-1-tropical-sunset-2nd-floor",
-      "name": "Talk 1 - Tropical Sunset - 2nd Floor",
-      "description": "",
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
       "info": "2nd Floor",
       "capacity": 414
     },
@@ -10040,9 +10045,9 @@
     "start": 1665762000000,
     "end": 1665765000000,
     "room": {
-      "id": "main-stage-on-top-of-the-mountain-5th-floor",
-      "name": "Main Stage - On Top of the Mountain - 5th Floor",
-      "description": "Main Stage post-OC",
+      "id": "main-stage",
+      "name": "Main Stage",
+      "description": "On Top of the Mountain",
       "info": "5th Floor",
       "capacity": 1140
     },
@@ -10071,9 +10076,9 @@
     "start": 1665669600000,
     "end": 1665684000000,
     "room": {
-      "id": "workshop-1-slscommunity-room-2nd-floor",
-      "name": "Workshop 1 - SLS/Community Room - 2nd Floor",
-      "description": "2nd Floor",
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
       "info": "2nd Floor",
       "capacity": 96
     },
@@ -10102,9 +10107,9 @@
     "start": 1665655200000,
     "end": 1665669600000,
     "room": {
-      "id": "workshop-1-slscommunity-room-2nd-floor",
-      "name": "Workshop 1 - SLS/Community Room - 2nd Floor",
-      "description": "2nd Floor",
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
       "info": "2nd Floor",
       "capacity": 96
     },
@@ -10126,9 +10131,9 @@
     "start": 1665741600000,
     "end": 1665761400000,
     "room": {
-      "id": "workshop-1-slscommunity-room-2nd-floor",
-      "name": "Workshop 1 - SLS/Community Room - 2nd Floor",
-      "description": "2nd Floor",
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
       "info": "2nd Floor",
       "capacity": 96
     },
@@ -10158,9 +10163,9 @@
     "start": 1665683400000,
     "end": 1665684000000,
     "room": {
-      "id": "talk-3-flowers-3rd-floor",
-      "name": "Talk 3 - Flowers - 3rd Floor",
-      "description": "3rd Floor",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "3rd Floor",
       "capacity": 260
     },
@@ -10191,8 +10196,8 @@
     "start": 1665491400000,
     "end": 1665498600000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10223,8 +10228,8 @@
     "start": 1665498600000,
     "end": 1665511200000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10253,8 +10258,8 @@
     "start": 1665568800000,
     "end": 1665576000000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10283,8 +10288,8 @@
     "start": 1665579600000,
     "end": 1665597600000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10313,9 +10318,9 @@
     "start": 1665568800000,
     "end": 1665574200000,
     "room": {
-      "id": "talk-4-river-3rd-floor",
-      "name": "Talk 4 - River - 3rd Floor",
-      "description": "",
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
       "info": "3rd Floor",
       "capacity": 110
     },
@@ -10343,8 +10348,8 @@
     "start": 1665655200000,
     "end": 1665662400000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10373,8 +10378,8 @@
     "start": 1665666000000,
     "end": 1665683940000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10403,8 +10408,8 @@
     "start": 1665752400000,
     "end": 1665759600000,
     "room": {
-      "id": "workshop-3-3rd-floor",
-      "name": "Workshop 3 - 3rd Floor",
+      "id": "workshop-3",
+      "name": "Workshop 3",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10433,8 +10438,8 @@
     "start": 1665741600000,
     "end": 1665748800000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128
@@ -10463,8 +10468,8 @@
     "start": 1665752400000,
     "end": 1665759600000,
     "room": {
-      "id": "workshop-4-3rd-floor",
-      "name": "Workshop 4 - 3rd Floor",
+      "id": "workshop-4",
+      "name": "Workshop 4",
       "description": "",
       "info": "3rd Floor",
       "capacity": 128

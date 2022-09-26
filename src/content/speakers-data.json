@@ -1571,20 +1571,6 @@
     ]
   },
   {
-    "id": "GG7QPV",
-    "name": "Rajeev",
-    "avatar": "https://speak.devcon.org/media/avatars/Secureum_LogoMark_nVWszYY.jpeg",
-    "description": "Founder @TheSecureum (https://twitter.com/0xRajeev)",
-    "tracks": [
-      "Security"
-    ],
-    "eventDays": [
-      1665446400000,
-      1665619200000
-    ],
-    "twitter": "0xRajeev"
-  },
-  {
     "id": "GP3TNP",
     "name": "Nick Johnson",
     "avatar": "https://speak.devcon.org/media/avatars/me_jRN7fzn.jpg",
@@ -2214,7 +2200,7 @@
   {
     "id": "CCVCAZ",
     "name": "Melanie Davis",
-    "avatar": "https://speak.devcon.org/media/avatars/Screen_Shot_2021-12-13_at_9.35.00_PM_NJziiYc.png",
+    "avatar": "https://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg",
     "description": "Contributor Experience @DXdao_ I DAO and DeFi enthusiast",
     "tracks": [
       "Governance & Coordination"
@@ -2489,6 +2475,21 @@
     "website": "https://scholar.google.com/citations?user=8GvdbjwAAAAJ&hl=en&oi=ao",
     "twitter": "phildaian",
     "github": "pdaian"
+  },
+  {
+    "id": "MPXDXL",
+    "name": "Juan",
+    "avatar": "https://speak.devcon.org/media/avatars/photo_2022-06-27_17.10.30_5v7gxsv.jpeg",
+    "description": "After scaling fintech startups for several years in Product and Sales Operations, Juan discovered DeFi through a beautiful accident. He has ever since been involved in scaling DAOs through governance design, improving frameworks, and connecting great teams together.\r\n\r\nJuan is also a proud dad.",
+    "tracks": [
+      "Governance & Coordination"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "website": "-",
+    "twitter": "0x7u4n",
+    "github": "juan-fintech"
   },
   {
     "id": "TVWKXG",
@@ -4668,6 +4669,30 @@
     "description": "",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "Y8FYJ3",
+    "name": "Alejandra Borda",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Governance & Coordination"
+    ],
+    "eventDays": [
+      1665705600000
+    ]
+  },
+  {
+    "id": "7AGF99",
+    "name": "John Mardlin",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Security"
     ],
     "eventDays": [
       1665619200000

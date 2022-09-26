@@ -16,6 +16,7 @@ import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
 import { Session } from 'components/domain/app/session'
 import { Session as SessionType } from 'types/Session'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   const { query } = useRouter()
@@ -24,8 +25,13 @@ export default pageHOC((props: any) => {
 
   return (
     <AppLayout>
-      <>{session ? <Session session={session} {...props} /> : <Schedule {...props} />}</>
-    </AppLayout>
+      {session ?
+        <>
+          <SEO title={props.session.title} description={props.session.description} imageUrl={`https://api-xe5o.vercel.app/api/og?id=${props.session.id}`} />
+          <Session session={session} {...props} />
+        </> : <Schedule {...props} />
+      }
+    </AppLayout >
   )
 })
 
