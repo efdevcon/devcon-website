@@ -25,12 +25,14 @@ export default pageHOC((props: any) => {
 
   return (
     <AppLayout>
-      {speaker ?
+      {speaker ? (
         <>
-          <SEO title={props.speaker.name} description={props.speaker.description} separator='@' />
+          <SEO title={speaker.name} description={speaker.description} separator="@" />
           <SpeakerDetails speaker={speaker} {...props} />
-        </> : <Speakers {...props} />
-      }
+        </>
+      ) : (
+        <Speakers {...props} />
+      )}
     </AppLayout>
   )
 })
