@@ -19,13 +19,17 @@ export const PWAPrompt = () => {
     if (requiresManualInstall) {
       const lastRejectionTimestamp = localStorage.getItem('pwa_denied_timestamp')
 
-      const nowMinusThreshold = moment.utc().subtract(8, 'hours')
-      const lastRejection = moment.utc(lastRejectionTimestamp)
+      if (lastRejectionTimestamp) {
+        const nowMinusThreshold = moment.utc().subtract(8, 'hours')
+        const lastRejection = moment.utc(lastRejectionTimestamp)
 
-      if (nowMinusThreshold.isAfter(lastRejection)) {
-        localStorage.setItem('pwa_denied_timestamp', moment.utc().valueOf() + '')
-        setOpen(true)
+        if (!nowMinusThreshold.isAfter(lastRejection)) {
+          return
+        }
       }
+
+      localStorage.setItem('pwa_denied_timestamp', moment.utc().valueOf() + '')
+      setOpen(true)
     }
   }, [requiresManualInstall])
 
