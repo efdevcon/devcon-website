@@ -9,7 +9,6 @@ export const SERVER_CONFIG = {
 
   SESSION_SECRET: process.env.SESSION_SECRET || 'default-test-session-secret-for-iron-session',
   DB_CONNECTION_STRING: process.env.DB_CONNECTION_STRING || '',
-  ELASTIC_ENDPOINT: process.env.ELASTIC_ENDPOINT || '',
 
   SMTP_DEFAULT_FROM_NAME: process.env.SMTP_DEFAULT_FROM_NAME || 'Devcon',
   SMTP_DEFAULT_FROM: process.env.SMTP_DEFAULT_FROM || 'support@devcon.org',

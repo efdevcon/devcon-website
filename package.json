@@ -14,7 +14,6 @@
     "scripts:pretalx-import": "ts-node src/scripts/pretalx-import"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "8.1.0",
     "@notionhq/client": "^0.4.11",
     "@octokit/rest": "^18.12.0",
     "@sentry/nextjs": "^7.13.0",
