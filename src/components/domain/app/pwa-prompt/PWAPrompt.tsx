@@ -6,6 +6,7 @@ import IconPlus from 'assets/icons/plus.svg'
 import imagePWA from 'assets/images/pwa_prompt.png'
 import { Button } from 'components/common/button'
 import { pwaUtilities } from './pwa-utilities'
+import moment from 'moment'
 
 export const PWAPrompt = () => {
   const [open, setOpen] = React.useState(false)
@@ -16,7 +17,15 @@ export const PWAPrompt = () => {
 
   useEffect(() => {
     if (requiresManualInstall) {
-      setOpen(true)
+      const lastRejectionTimestamp = localStorage.getItem('pwa_denied_timestamp')
+
+      const nowMinusThreshold = moment.utc().subtract(8, 'hours')
+      const lastRejection = moment.utc(lastRejectionTimestamp)
+
+      if (nowMinusThreshold.isAfter(lastRejection)) {
+        localStorage.setItem('pwa_denied_timestamp', moment.utc().valueOf() + '')
+        setOpen(true)
+      }
     }
   }, [requiresManualInstall])
 
