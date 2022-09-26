@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const isBrowser = typeof window !== 'undefined';
+const isBrowser = typeof window !== 'undefined'
 
 export function useLocalStorage(key: string, initialValue: any) {
     const [storedValue, setStoredValue] = useState(() => {
