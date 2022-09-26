@@ -69,6 +69,7 @@ export default function LoginPage() {
     }
 
     const message = getSiweMessage(address, token)
+    setError('Sign the message in your wallet to prove you have access.')
     const signedMessage = await accountContext.signMessage(message, provider)
     if (!signedMessage) {
       setError('Unable to sign message')
