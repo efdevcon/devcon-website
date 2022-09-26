@@ -9,7 +9,7 @@ import { pwaUtilities } from './pwa-utilities'
 import moment from 'moment'
 
 export const PWAPrompt = () => {
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(false)
 
   const { requiresManualInstall, deferredInstallEvent, setDeferredInstallEvent } = pwaUtilities.useDetectInstallable({
     togglePrompt: () => setOpen(true),
