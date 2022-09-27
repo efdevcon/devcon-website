@@ -1,31 +1,19 @@
 import React from 'react'
-import { CSS3D } from './css-3d'
-import { AppSearch } from 'components/domain/app/app-search'
-import { useSort, SortVariation, Sort } from 'components/common/sort'
 import { LinkList, Link } from 'components/common/link'
 import css from './venue.module.scss'
-import ListIcon from 'assets/icons/list.svg'
-import LayersIcon from 'assets/icons/layers.svg'
-import { NoResults } from 'components/common/filter'
 import { Room } from 'types/Room'
 import { AppNav } from 'components/domain/app/navigation'
-import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import { Search } from 'components/common/filter/Filter'
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import Image from 'next/image'
 import Floor from 'assets/images/venue-map/venue-map.png'
-import Panzoom, { PanZoom, PanZoomController } from 'panzoom'
+import Panzoom, { PanZoom } from 'panzoom'
 import IconPlus from 'assets/icons/plus.svg'
 import IconMinus from 'assets/icons/minus.svg'
 
 interface Props {
   rooms: Array<Room>
   floors: Array<string>
-}
-
-type ButtonOverlayProps = {
-  children?: React.ReactChild
-  onClick: () => void
-  text?: string
 }
 
 export const PanzoomControls = (props: { pz: PanZoom | null }) => {
@@ -98,12 +86,12 @@ export const Venue = (props: Props) => {
 
   const filteredFloors = search
     ? props.floors.filter(floor => {
-        if (search.toLowerCase().includes(floor.toLowerCase())) return true
+      if (search.toLowerCase().includes(floor.toLowerCase())) return true
 
-        const roomsByFloor = props.rooms.filter(i => i.info === floor)
+      const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
-        return roomsByFloor.some(room => room.name.toLowerCase().includes(search))
-      })
+      return roomsByFloor.some(room => room.name.toLowerCase().includes(search))
+    })
     : props.floors
 
   return (
@@ -144,7 +132,7 @@ export const Venue = (props: Props) => {
                 {roomsByFloor.map((room: Room) => {
                   return (
                     <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue?room=${room.id}`}>
-                      {room.name}
+                      <strong>{room.name}</strong> {room.description && `— ${room.description}`}
                     </Link>
                   )
                 })}

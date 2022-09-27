@@ -1,25 +1,27 @@
 import React from 'react'
 import { AppTabsSection } from '../app-tabs-section'
 import { SessionCard } from '../session'
-import { AppSearch } from '../app-search'
-import { useSort, SortVariation } from 'components/common/sort'
-import { NoResults, useFilter } from 'components/common/filter'
+import { NoResults } from 'components/common/filter'
 import css from './room.module.scss'
-import { Gallery } from 'components/common/gallery'
 import CapacityIcon from 'assets/icons/capacity.svg'
-import InfoIcon from 'assets/icons/info.svg'
 import { Session as SessionType } from 'types/Session'
 import { Room as RoomType } from 'types/Room'
 import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
-import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import { Search } from 'components/common/filter/Filter'
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import Image from 'next/image'
-import Floor from 'assets/images/venue-map/venue-map-floor-1.jpeg'
 import { usePanzoom, PanzoomControls } from './Venue'
 import venueCss from './venue.module.scss'
 import { useAppContext } from 'context/app-context'
 import { useAccountContext } from 'context/account-context'
+
+import FloorBasement from 'assets/images/venue-map/venue-map-floor-basement.jpeg'
+import Floor1 from 'assets/images/venue-map/venue-map-floor-1.jpeg'
+import Floor2 from 'assets/images/venue-map/venue-map-floor-2.jpeg'
+import Floor3 from 'assets/images/venue-map/venue-map-floor-3.jpeg'
+import Floor4 from 'assets/images/venue-map/venue-map-floor-4.jpeg'
+import Floor5 from 'assets/images/venue-map/venue-map-floor-5.jpeg'
 
 interface Props {
   room: RoomType
@@ -39,6 +41,15 @@ export const Room = (props: Props) => {
   const [search, setSearch] = React.useState('')
   const pz = usePanzoom()
 
+  const getFloorImage = () => {
+    if (props.room.info === '1st Floor') return <Image src={Floor1} alt={props.room.name} layout="raw" id="venue-image" priority />
+    if (props.room.info === '2nd Floor') return <Image src={Floor2} alt={props.room.name} layout="raw" id="venue-image" priority />
+    if (props.room.info === '3rd Floor') return <Image src={Floor3} alt={props.room.name} layout="raw" id="venue-image" priority />
+    if (props.room.info === '4th Floor') return <Image src={Floor4} alt={props.room.name} layout="raw" id="venue-image" priority />
+    if (props.room.info === '5th Floor') return <Image src={Floor5} alt={props.room.name} layout="raw" id="venue-image" priority />
+    if (props.room.info === 'Basement') return <Image src={FloorBasement} alt={props.room.name} layout="raw" id="venue-image" priority />
+  }
+
   return (
     <>
       <AppNav
@@ -52,7 +63,7 @@ export const Room = (props: Props) => {
 
       <div className={venueCss['panzoom']}>
         <div className={venueCss['image']} id="image-container">
-          <Image src={Floor} alt="venue map" layout="raw" id="venue-image" priority />
+          {getFloorImage()}
         </div>
         <PanzoomControls pz={pz} />
       </div>
