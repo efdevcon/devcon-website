@@ -5,6 +5,7 @@
     "description": "Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.",
     "footer": "Crafted with passion ❤️ at the Ethereum Foundation"
   },
+  "keynote_speakers": "Keynote Speakers",
   "learn_more": "Learn More",
   "terms_of_service": "Terms of Service",
   "code_of_conduct": "Code of Conduct",
@@ -100,7 +101,8 @@
     "event": "Event",
     "about_devcon": "About Devcon",
     "past_events": "Past events",
-    "devcon_app": "Devcon App + Schedule",
+    "live": "Live",
+    "devcon_app": "Devcon App",
     "faq": "FAQ",
     "get_involved": "Get Involved",
     "city_guide": "City Guide",

@@ -36,8 +36,14 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 20px;
     position: relative;
+
+    .app, .livestream {
+      svg {
+        margin-right: 8px;
+      }
+    }
 
     &:last-child {
       // margin-right: 0px;

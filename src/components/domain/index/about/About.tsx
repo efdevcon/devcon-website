@@ -4,18 +4,19 @@ import DevconLogo from 'assets/images/devcon-logo-bogota-text.svg'
 import { Button } from 'components/common/button'
 import Image from 'next/image'
 import TriangleWithImages from 'assets/images/about-triangles.png'
+import DevconManual from 'assets/images/devcon-manual.png'
 import { Link } from 'components/common/link'
 import { ContentSection } from 'types/ContentSection'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 
-interface Props { 
+interface Props {
   content: ContentSection
 }
 
 const About = (props: Props) => {
   return (
     <div className={`section ${css['container']}`}>
-      <div className={`${css['body']} clear-top  expand`}>
+      <div className={`${css['body']} clear-top`}>
         <div className={css['left']}>
           <DevconLogo />
 
@@ -33,17 +34,22 @@ const About = (props: Props) => {
             <span className="font-sm">Devcon Week — October 7-16 in Bogotá, Colombia.</span>
           </p>
 
-          <Link to="/bogota">
+          {/* <Link to="/bogota">
             <Button className="red lg">Bogotá City Guide →</Button>
-          </Link>
+          </Link> */}
         </div>
         <div className={css['right']}>
+          <div className={css['image-container']}>
+            <Image src={DevconManual} alt="Devcon images" priority />
+          </div>
+        </div>
+        {/* <div className={css['right']}>
           <SwipeToScroll scrollIndicatorDirections={{ left: true }} alwaysShowscrollIndicators>
             <div className={css['image-container']}>
               <Image src={TriangleWithImages} layout="raw" alt="Devcon images" priority />
             </div>
           </SwipeToScroll>
-        </div>
+        </div> */}
       </div>
       <div className="clear-bottom margin-bottom border-bottom"></div>
     </div>

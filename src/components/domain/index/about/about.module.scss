@@ -5,11 +5,12 @@
   // background: white;
 
   .body {
-    grid-column: 2 / 3;
+    // grid-column: 2 / 3;
     display: flex;
+    flex-wrap: wrap;
 
     @media (min-width: $breakpoints-xl) {
-      grid-column: 2 / 4;
+      // grid-column: 2 / 4;
     }
 
     .left {
@@ -20,8 +21,8 @@
         max-width: 90%;
       }
 
-      @media (min-width: $breakpoints-xl) {
-        flex-basis: 40%;
+      @media (min-width: $breakpoints-sm) {
+        flex-basis: 60%;
       }
 
       .highlighted {
@@ -46,22 +47,20 @@
     .right {
       flex-basis: 100%;
       position: relative;
-      display: none;
+      display: flex;
+      justify-content: center;
+      max-height: 475px;
+      margin-top: 32px;
 
-      @media (min-width: $breakpoints-xl) {
-        display: block;
-        flex-basis: auto;
-        flex-grow: 1;
-      }
-
-      > * {
-        height: 100%;
-        width: 100%;
+      @media (min-width: $breakpoints-sm) {
+        margin-top: 0px;
+        flex-basis: 40%;
+        max-height: 475px;
       }
 
       .image-container {
-        position: absolute;
-        height: 100%;
+        display: flex;
+        justify-content: center;
 
         img {
           object-fit: contain;
