@@ -1576,10 +1576,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/me_jRN7fzn.jpg",
     "description": "Nick Johnson is the founder and lead developer of the Ethereum Name Service. Prior to launching ENS, he worked at the Ethereum Foundation, where he acted as core developer on go-ethereum.",
     "tracks": [
-      "Governance & Coordination"
+      "Governance & Coordination",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "twitter": "nicksdjohnson",
     "github": "arachnid"
@@ -4693,6 +4695,18 @@
     "description": "",
     "tracks": [
       "Security"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "BAKZ9F",
+    "name": "Yoav Weiss",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
