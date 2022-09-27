@@ -12,7 +12,7 @@ import {
   GetExpertiseLevels,
   GetSessionTypes,
 } from 'services/programming'
-import { DEFAULT_APP_PAGE } from 'utils/constants'
+import { API_URL, DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
 import { Session } from 'components/domain/app/session'
 import { Session as SessionType } from 'types/Session'
@@ -30,7 +30,7 @@ export default pageHOC((props: any) => {
           <SEO
             title={session.title}
             description={session.description}
-            imageUrl={`https://api-xe5o.vercel.app/api/og?id=${session.id}`}
+            imageUrl={`${API_URL}api/og?id=${session.id}`}
           />
           <Session session={session} {...props} />
         </>

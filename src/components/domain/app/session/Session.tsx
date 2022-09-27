@@ -22,6 +22,7 @@ import { Link } from 'components/common/link'
 import AddToCalendar from 'components/domain/index/add-to-calendar/AddToCalendar'
 import { useAppContext } from 'context/app-context'
 import { LivestreamCard } from './LivestreamCard'
+import { APP_URL } from 'utils/constants'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -87,7 +88,7 @@ export const Session = (props: SessionProps) => {
         ]}
         renderRight={() => (
           <>
-            <CopyToClipboardLegacy url={`https://devcon.org/app/schedule/${props.session.id}`} />
+            <CopyToClipboardLegacy url={`${APP_URL}/schedule/${props.session.id}`} />
 
             <>
               {attending ? (
@@ -209,29 +210,6 @@ export const Session = (props: SessionProps) => {
           <h3 className="app-header clear-bottom-less">Description</h3>
           <p>{props.session.description}</p>
         </div>
-
-        {/* <div className={css['resources']}>
-            <h3 className={css['title']}>Resources</h3>
-
-            <div className={css['slides']}>
-              <h4 className={css['subtitle']}>Presentation Slides</h4>
-              <LinkList className={css['link-list']}>
-                <Link to="https://drive.google.com">
-                  <p>Access presentation Slides.</p>
-                  <p className="bold">drive.google.com/file/d/1rGuCVLyMV-2T...</p>
-                </Link>
-              </LinkList>
-            </div>
-
-            <div className={css['suggested-reading']}>
-              <h4 className={css['subtitle']}>Suggested Reading</h4>
-              <LinkList className={css['link-list']}>
-                <Link to="https://devcon.org">EF Ecosystem Support Program </Link>
-                <Link to="https://devcon.org">Grantee Roundup: August 2021</Link>
-                <Link to="https://devcon.org">Grantee Roundup: July 2021</Link>
-              </LinkList>
-            </div>
-          </div> */}
 
         {relativeTime && <LivestreamCard session={props.session} relativeTime={relativeTime} />}
 

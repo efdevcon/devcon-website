@@ -198,10 +198,10 @@ export default function LoginPage() {
                 <>
                   <div className={css['trust-model']}>
                     <p>Choose your Trust model.</p>
-
+                    {/* 
                     <InfoIcon className={`icon ${css['icon-help']}`}>
                       <div>Hey</div>
-                    </InfoIcon>
+                    </InfoIcon> */}
                   </div>
 
                   <div className={css['email']}>

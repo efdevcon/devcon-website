@@ -5,7 +5,7 @@ import { withSessionRoute } from "server/withIronSession"
 import { EmailService } from "server/services/email-service"
 import dbConnect from "utils/dbConnect"
 import VerificationTokenModel from "server/models/VerificationTokenModel";
-import { SITE_URL } from "utils/constants";
+import { APP_URL } from "utils/constants"
 
 const tokenRepo = new VerificationTokenRepository()
 
@@ -45,7 +45,7 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
            
           This verification codes expires in 20 minutes.`,
                 CALL_TO_ACTION: 'Login using magic link',
-                URL: `${req.headers.origin || SITE_URL}/login?token=${token.nonce}`
+                URL: `${req.headers.origin || APP_URL}/login?token=${token.nonce}`
             })
 
             data.nonce = -1 // only share nonce via email

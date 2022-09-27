@@ -191,7 +191,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       setContext({ ...context, provider: undefined, account: undefined, loading: true })
-      router.push('/app/login')
+      router.push('/login')
       return true
     }
 
@@ -238,7 +238,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       setContext({ ...context, provider: undefined, account: undefined, loading: true })
-      router.push('/app/login')
+      router.push('/login')
       return true
     }
 
