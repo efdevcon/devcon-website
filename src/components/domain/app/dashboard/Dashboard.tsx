@@ -111,7 +111,7 @@ export const Dashboard = (props: any) => {
       .slice(0, 3)
   })()
 
-  const suggestedSessions = ['7LHLPB', '9CNZCW']
+  const suggestedSessions = ['HFPLPD', 'RJQZFR', '7LHLPB', '9CNZCW', 'ZC9D8N', 'B3UQM7', 'ETJQDZ', 'LHM9LA', 'ZPHEXR']
     .map(sessionId => {
       const session = props.sessions.find((session: SessionType) => session.id === sessionId)
 
@@ -121,9 +121,12 @@ export const Dashboard = (props: any) => {
 
       if (sessionHasPassed) return null
 
-      return <SessionCard key={sessionId} session={session} />
+      return session
     })
     .filter(session => !!session)
+    .sort((a, b) => {
+      return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
+    }).map(i => <SessionCard key={i.id} session={i} />)
 
   return (
     <>
@@ -135,8 +138,8 @@ export const Dashboard = (props: any) => {
 
             <div className={css['dropdown']}>
               <DropdownVariationDots
-                value="Another thing2"
-                onChange={() => {}}
+                value="Quicklinks"
+                onChange={() => { }}
                 options={[
                   {
                     text: 'Schedule',

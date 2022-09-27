@@ -126,6 +126,7 @@ export const SideEvents = (props: any) => {
               <LinkList>
                 <Link to="https://devcon.org/devcon-week/">Devcon Week</Link>
                 <Link to="https://colombiablockchain.xyz/">Colombia Blockchain Week</Link>
+                <Link to="https://docs.google.com/spreadsheets/d/1KtyFTb_W282bQ1xoVA5rlTwTDz3QfhswWIVpXhpbQIc/edit#gid=1286053629">Crypto Nomads Club</Link>
               </LinkList>
             </CollapsedSectionContent>
           </CollapsedSection>

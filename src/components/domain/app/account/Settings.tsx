@@ -10,9 +10,9 @@ import { useAvatar } from 'hooks/useAvatar'
 import { isEmail } from 'utils/validators'
 import { TruncateMiddle } from 'utils/formatting'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { AppNav } from 'components/domain/app/navigation'
 import Toggle from 'react-toggle'
+import { EMAIL_DEVCON } from 'utils/constants'
 
 export default function SettingsPage() {
   const router = useRouter()
@@ -67,8 +67,8 @@ export default function SettingsPage() {
                   {accountContext.account?.username
                     ? accountContext.account?.username
                     : isEmail(avatar.name)
-                    ? avatar.name
-                    : TruncateMiddle(avatar.name, 8)}
+                      ? avatar.name
+                      : TruncateMiddle(avatar.name, 8)}
                 </p>
                 <span className={css['signout']} role="button" onClick={disconnect}>
                   Sign out
@@ -143,35 +143,6 @@ export default function SettingsPage() {
               </CollapsedSection>
 
               <CollapsedSection
-                open={openTabs['notifications']}
-                setOpen={() => {
-                  const isOpen = openTabs['notifications']
-
-                  const nextOpenState = {
-                    ...openTabs,
-                    ['notifications']: true,
-                  }
-
-                  if (isOpen) {
-                    delete nextOpenState['notifications']
-                  }
-
-                  setOpenTabs(nextOpenState)
-                }}
-              >
-                <CollapsedSectionHeader title="Notifications" />
-                <CollapsedSectionContent>
-                  <div className={css['links']}>
-                    <LinkList>
-                      <Link to="/settings">Personalized Agenda</Link>
-                      <Link to="/settings">Programming Suggestions</Link>
-                      <Link to="/settings">Health &amp; Safety</Link>
-                    </LinkList>
-                  </div>
-                </CollapsedSectionContent>
-              </CollapsedSection>
-
-              <CollapsedSection
                 open={openTabs['application']}
                 setOpen={() => {
                   const isOpen = openTabs['application']
@@ -192,8 +163,8 @@ export default function SettingsPage() {
                 <CollapsedSectionContent>
                   <div className={css['links']}>
                     <LinkList>
-                      <Link to="/faq">FAQ</Link>
-                      <Link to="/support">Support</Link>
+                      <Link to="/info#faq">FAQ</Link>
+                      <Link to={`mailto:${EMAIL_DEVCON}`}>Support</Link>
                     </LinkList>
                   </div>
                 </CollapsedSectionContent>
