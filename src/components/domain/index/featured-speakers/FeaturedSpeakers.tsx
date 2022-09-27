@@ -47,12 +47,12 @@ const FeaturedSpeakers = () => {
       {/* <div className="section expand">
         <div className={css['background-title']}>Featured Speakers</div>
       </div> */}
-      <div className={`${css['container']} expand-right`}>
+      <div className={`${css['container']}`}>
         {/* <div className={css['background-logo']}>
           <Image src={Background} layout="raw" alt="Keynote speakers logo" />
         </div> */}
         <div className={css['background-title']}>Featured Speakers</div>
-        <SwipeToScroll noBounds>
+        <SwipeToScroll noBounds scrollIndicatorDirections={{ left: true, right: true }}>
           <div className={css['speakers']}>
             <Speaker name="Brewster Kahle" image={BrewsterKahle} />
             <Speaker name="Danny Ryan" image={DannyRyan} />
