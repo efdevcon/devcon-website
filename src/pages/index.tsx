@@ -11,6 +11,7 @@ import { Hero } from 'components/domain/index/hero'
 import css from './index.module.scss'
 import TrackList from 'components/domain/index/track-list'
 import About from 'components/domain/index/about'
+import FeaturedSpeakers from 'components/domain/index/featured-speakers'
 import CallsToAction from 'components/domain/index/ctas'
 import Image from 'next/image'
 import CircleBackground from 'assets/images/background-circles.png'
@@ -23,6 +24,8 @@ export default pageHOC(function Index(props: any) {
       <Hero />
 
       <About content={props.sections['devcon-bogota']} />
+
+      <FeaturedSpeakers />
 
       <CallsToAction
         scholarApplications={props.sections['cta-scholar-applications']}
