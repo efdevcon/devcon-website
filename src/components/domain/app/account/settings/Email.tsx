@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import css from './settings.module.scss'
 import { useAccountContext } from 'context/account-context'
 import { Alert } from 'components/common/alert'
@@ -9,6 +9,8 @@ import { isEmail } from 'utils/validators'
 import NotFound from './NotFound'
 import { useRouter } from 'next/router'
 import { AppNav } from '../../navigation'
+import { useLocalStorage } from 'hooks/useLocalStorage'
+import { defaultAvatarValue, useAvatar } from 'hooks/useAvatar'
 
 export default function EmailSettings() {
   const router = useRouter()
@@ -19,6 +21,7 @@ export default function EmailSettings() {
   const [emailSent, setEmailSent] = useState(false)
   const [nonce, setNonce] = useState('')
   const [areYouSure, setAreYouSure] = useState(false)
+  const [avatar, setAvatar] = useLocalStorage('avatar', defaultAvatarValue)
 
   if (!accountContext.account) {
     return <></>
@@ -26,6 +29,23 @@ export default function EmailSettings() {
 
   const canDelete = accountContext.account?.addresses?.length > 0 && !!accountContext.account.email
   const buttonText = accountContext.account.email ? 'Update Email' : 'Add Email'
+
+  useEffect(() => {
+    async function UpdateWithToken() {
+      const userAccount = await accountContext.loginEmail(email, Number(router.query.token))
+      if (userAccount) {
+        setAvatar(defaultAvatarValue)
+        setEmail(userAccount.email ?? '')
+        setError('Email address updated.')
+        router.push('/')
+      }
+      if (!userAccount) {
+        setError('Unable to verify your email address.')
+      }
+    }
+
+    if (router.query.token) UpdateWithToken()
+  }, [router.query.token])
 
   const connectEmail = async () => {
     if (!isEmail(email)) {
@@ -35,7 +55,7 @@ export default function EmailSettings() {
       setError('')
     }
 
-    const token = await accountContext.getToken(email)
+    const token = await accountContext.getToken(email, true)
     if (token) {
       setEmailSent(true)
     } else {
@@ -53,6 +73,7 @@ export default function EmailSettings() {
 
     const userAccount = await accountContext.loginEmail(email, nonceNr)
     if (userAccount) {
+      setAvatar(defaultAvatarValue)
       router.push('/')
     }
     if (!userAccount) {
@@ -84,7 +105,7 @@ export default function EmailSettings() {
         <div>
           <div className="section">
             <div className="content">
-              <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
+              <div className={css['alert']}>{error && <Alert title='Info' type="info" message={error} />}</div>
 
               <div className={css['form']}>
                 <p className={`${css['title']} title`}>Manage Email</p>

@@ -19,6 +19,7 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
     await dbConnect()
 
     const identifier: string = req.body?.identifier
+    const update: boolean = req.body?.update
     if (!identifier) {
         return res.status(400).send({ code: 400, message: 'Identifier not provided.' })
     }
@@ -36,6 +37,11 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
         }
 
         if (isEmail) {
+            const cta = update ? 'Confirm email' : 'Login using magic link'
+            const magiclink = update ?
+                `${req.headers.origin || APP_URL}/settings/email?token=${token.nonce}` :
+                `${req.headers.origin || APP_URL}/login?token=${token.nonce}`
+
             const emailService = new EmailService()
             await emailService.sendMail(identifier, 'email-cta', `${token.nonce} is your Devcon verification code`, {
                 TITLE: 'Confirm your email address',
@@ -44,8 +50,8 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
           ${token.nonce}\n
            
           This verification codes expires in 20 minutes.`,
-                CALL_TO_ACTION: 'Login using magic link',
-                URL: `${req.headers.origin || APP_URL}/login?token=${token.nonce}`
+                CALL_TO_ACTION: cta,
+                URL: magiclink
             })
 
             data.nonce = -1 // only share nonce via email

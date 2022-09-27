@@ -15,15 +15,20 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
         return res.status(400).send({ code: 400, message: 'No session token.' })
     }
 
-    const address: string = req.body.address
+    let address: string = req.body.address
     const nonce: number = req.body.nonce
     if (!address || !nonce) {
         return res.status(400).send({ code: 400, message: 'Invalid input.' })
     }
 
-    const data = await tokenRepo.findValidVerificationToken(address, nonce)
+    let data = await tokenRepo.findValidVerificationToken(address, nonce)
     if (!data) {
-        return res.status(400).send({ code: 400, message: 'No valid verification token found.' })
+        data = await tokenRepo.findValidVerificationTokenById(id, nonce)
+
+        if (!data) {
+            return res.status(400).send({ code: 400, message: 'No valid verification token found.' })
+        }
+        address = data.identifier
     }
 
     const userId = req.session.userId

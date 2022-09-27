@@ -48,7 +48,7 @@ export default function UsernameSettings() {
             <div className="content">
 
               <div className={css['alert']}>
-                {error && <Alert type="info" message={error} />}
+                {error && <Alert title='Info' type="info" message={error} />}
               </div>
 
               <div className={css['form']}>

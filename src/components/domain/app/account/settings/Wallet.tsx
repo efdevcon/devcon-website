@@ -36,7 +36,7 @@ export default function WalletSettings() {
 
     const signer = provider.getSigner()
     const address = await signer.getAddress()
-    const token = await accountContext.getToken(address.toLowerCase())
+    const token = await accountContext.getToken(address.toLowerCase(), false)
     if (!token) {
       setError('Unable to create verification token')
       return
@@ -86,7 +86,7 @@ export default function WalletSettings() {
         <div>
           <div className="section">
             <div className="content">
-              <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
+              <div className={css['alert']}>{error && <Alert title='Info' type="info" message={error} />}</div>
 
               <div className={css['form']}>
                 <p className={`${css['title']} title`}>Manage Wallets</p>

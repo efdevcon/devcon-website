@@ -4,25 +4,25 @@ import { useAccountContext } from "context/account-context"
 import { getDefaultProvider } from "utils/web3"
 import { useActiveAddress } from "./useActiveAddress"
 import defaultImage from 'assets/images/account_circle.png'
-import { useSessionStorage } from "./useSessionStorage"
 import { isEmail } from "utils/validators"
+import { useLocalStorage } from "./useLocalStorage"
 
-const defaultValue = { connection: '', name: '', url: defaultImage.src, ens: false, status: 'Loading' }
+export const defaultAvatarValue = { connection: '', name: '', url: defaultImage.src, ens: false, status: 'Loading' }
 
 export function useAvatar() {
     const context = useAccountContext()
     const activeAddress = useActiveAddress()
-    const [avatar, setAvatar] = useSessionStorage('avatar', defaultValue)
+    const [avatar, setAvatar] = useLocalStorage('avatar', defaultAvatarValue)
 
     useEffect(() => {
         async function getAvatar() {
-            if (avatar.connection && avatar.name && avatar.status != defaultValue.status) {            
+            if (avatar.connection && avatar.name && avatar.status != defaultAvatarValue.status) {            
                 // Return avatar from session storage
                 return
             }
 
             if (!activeAddress) {
-                setAvatar({ ...defaultValue, status: 'Loading' })
+                setAvatar({ ...defaultAvatarValue, status: 'Loading' })
                 return
             }
 

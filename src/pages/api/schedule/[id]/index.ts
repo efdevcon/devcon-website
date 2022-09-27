@@ -8,7 +8,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const sessions = await GetSessions()
         const session = sessions.find(i => i.id === id)
 
-        res.setHeader('Cache-Control', `public, max-age=0, s-maxage=${DEFAULT_MAX_CACHE_AGE}, stale-while-revalidate=${DEFAULT_REVALIDATE_PERIOD}`)
+        if (process.env.NODE_ENV === 'production') {
+            res.setHeader('Cache-Control', `public, max-age=0, s-maxage=${DEFAULT_MAX_CACHE_AGE}, stale-while-revalidate=${DEFAULT_REVALIDATE_PERIOD}`)
+        }
         return res.status(200).send({ code: 200, message: '', data: session })
     }
 

@@ -106,12 +106,13 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     }
   }
 
-  async function getToken(identifier: string): Promise<VerificationToken | undefined> {
+  async function getToken(identifier: string, update: boolean): Promise<VerificationToken | undefined> {
     const response = await fetch('/api/account/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         identifier: identifier,
+        update: update,
       }),
     })
 

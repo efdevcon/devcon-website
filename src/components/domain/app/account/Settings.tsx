@@ -57,7 +57,7 @@ export default function SettingsPage() {
         <div>
           <div className="section">
             <div className="content">
-              <div className={css['alert']}>{error && <Alert type="info" message={error} />}</div>
+              <div className={css['alert']}>{error && <Alert title='Info' type="info" message={error} />}</div>
 
               <div className={css['profile']}>
                 <div className={css['avatar']}>

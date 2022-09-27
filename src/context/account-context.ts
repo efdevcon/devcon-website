@@ -12,7 +12,7 @@ export interface AccountContextType {
   account: UserAccount | undefined
   connectWeb3: () => Promise<providers.Web3Provider | undefined>
   signMessage: (message: string, provider?: providers.Web3Provider) => Promise<SignedMessage | undefined>
-  getToken: (identifier: string) => Promise<VerificationToken | undefined>
+  getToken: (identifier: string, update: boolean) => Promise<VerificationToken | undefined>
   loginWeb3: (address: string, nonce: number, message: string, signature: string) => Promise<UserAccount | undefined>
   loginEmail: (email: string, nonce: number) => Promise<UserAccount | undefined>
   loginToken: (nonce: number) => Promise<UserAccount | undefined>

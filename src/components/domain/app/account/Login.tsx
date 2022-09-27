@@ -62,7 +62,7 @@ export default function LoginPage() {
 
     const signer = provider.getSigner()
     const address = await signer.getAddress()
-    const token = await accountContext.getToken(address.toLowerCase())
+    const token = await accountContext.getToken(address.toLowerCase(), false)
     if (!token) {
       setError('Unable to create verification token')
       return
@@ -98,7 +98,7 @@ export default function LoginPage() {
       setError('')
     }
 
-    const token = await accountContext.getToken(email)
+    const token = await accountContext.getToken(email, false)
     if (token) {
       setEmailSent(true)
     } else {
@@ -124,7 +124,7 @@ export default function LoginPage() {
   }
 
   const resendVerificationEmail = async () => {
-    const token = await accountContext.getToken(email)
+    const token = await accountContext.getToken(email, false)
     if (token) {
       setEmailSent(true)
     } else {
