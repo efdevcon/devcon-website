@@ -23,13 +23,6 @@ export default function EmailSettings() {
   const [areYouSure, setAreYouSure] = useState(false)
   const [avatar, setAvatar] = useLocalStorage('avatar', defaultAvatarValue)
 
-  if (!accountContext.account) {
-    return <></>
-  }
-
-  const canDelete = accountContext.account?.addresses?.length > 0 && !!accountContext.account.email
-  const buttonText = accountContext.account.email ? 'Update Email' : 'Add Email'
-
   useEffect(() => {
     async function UpdateWithToken() {
       const userAccount = await accountContext.loginEmail(email, Number(router.query.token))
@@ -46,6 +39,15 @@ export default function EmailSettings() {
 
     if (router.query.token) UpdateWithToken()
   }, [router.query.token])
+
+
+  if (!accountContext.account) {
+    return <></>
+  }
+
+  const canDelete = accountContext.account?.addresses?.length > 0 && !!accountContext.account.email
+  const buttonText = accountContext.account.email ? 'Update Email' : 'Add Email'
+
 
   const connectEmail = async () => {
     if (!isEmail(email)) {
