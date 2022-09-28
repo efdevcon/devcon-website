@@ -49,7 +49,7 @@ export async function getStaticProps(context: any) {
       event: await GetEvent(),
       sessions: await GetSessions(),
       tracks: await GetTracks(),
-      speakers: await GetSpeakers(),
+      // speakers: await GetSpeakers(),
       rooms: await GetRooms(),
       expertiseLevels: await GetExpertiseLevels(),
       sessionTypes: await GetSessionTypes(),

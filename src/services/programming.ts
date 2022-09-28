@@ -214,6 +214,7 @@ export async function GetSpeakers(fromCache = true): Promise<Array<Speaker>> {
       description: i.biography ?? '',
       tracks: [...new Set(speakerSessions.map(i => i.track))],
       eventDays: [...new Set(speakerSessions.map(i => moment.utc(i.start).startOf('day').valueOf()))],
+      // sessions: speakerSessions
     }
 
     if (role) speaker.role = role

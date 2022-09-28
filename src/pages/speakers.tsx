@@ -63,11 +63,11 @@ export async function getStaticProps(context: any) {
   return {
     props: {
       ...(await getGlobalData(context.locale, true)),
+      // sessions,
       page: DEFAULT_APP_PAGE,
-      sessions,
       speakers: speakersWithSessions,
       tracks: await GetTracks(),
-      eventDays: await GetEventDays(),
+      // eventDays: await GetEventDays(),
       rooms: await GetRooms(),
       expertiseLevels: await GetExpertiseLevels(),
       sessionTypes: await GetSessionTypes(),
