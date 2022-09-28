@@ -3268,7 +3268,7 @@
         "name": "Oisín Kyne",
         "description": "Co-founder of Obol Labs and building Distributed Validator Technology for Ethereum.",
         "twitter": "OisinKyne",
-        "avatar": "http://speak.devcon.org/media/avatars/2021-06-16_19.32.48-2_PKnvkwO.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg"
       }
     ],
     "title": "\"It's 10pm, do you know where your mnemonic is?\"",
@@ -4354,6 +4354,13 @@
         "avatar": "http://speak.devcon.org/media/avatars/Ken_-_Copy_PqLSvAn.jpeg"
       },
       {
+        "id": "UFYGRK",
+        "name": "Oisín Kyne",
+        "description": "Co-founder of Obol Labs and building Distributed Validator Technology for Ethereum.",
+        "twitter": "OisinKyne",
+        "avatar": "http://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg"
+      },
+      {
         "id": "8W7LEH",
         "name": "Darren Langley",
         "description": "Darren Langley is the General Manager of Rocket Pool. He is passionate about Ethereum and staking. He is dedicated to lowering the barriers-to-entry for Ethereum staking so that everyone can participate.",
@@ -5004,8 +5011,8 @@
         "avatar": "http://speak.devcon.org/media/avatars/hilbert_6PfDp4t.jpeg"
       },
       {
-        "id": "QUULWK",
-        "name": "guille",
+        "id": "9N3L3K",
+        "name": "Guillermo Angeris",
         "description": null,
         "twitter": "tarunchitra",
         "avatar": ""
@@ -5713,25 +5720,13 @@
     "id": "DLSBGB",
     "speakers": [
       {
-        "id": "DDQH9C",
-        "name": "Kev Wedderburn",
-        "description": "Head of Noir Language at Aztec. BSc Computer Science and Mathematics from Queen Mary University. Two years experience implementing ZKPs including PLONK as a Cryptography Engineer at Dusk Network. Rust specialist.",
-        "avatar": ""
-      },
-      {
-        "id": "HE3SX3",
-        "name": "Guillaume Drevon",
-        "description": null,
-        "avatar": ""
-      },
-      {
         "id": "T8Q3YB",
         "name": "Maxim",
         "description": null,
         "avatar": ""
       }
     ],
-    "title": "Join Split in 10 Lines",
+    "title": "Private Value Transfer in 10 Lines",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665667800000,
@@ -9526,9 +9521,15 @@
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
+      },
+      {
+        "id": "8WNXVV",
+        "name": "Albert Ni",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "title": "Albert ZKP Panel",
+    "title": "ZKP Panel",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 60,
     "start": 1665500400000,
@@ -9541,7 +9542,7 @@
       "capacity": 3060
     },
     "type": "Panel",
-    "description": "A tentative proposal would be a 45 minute panel discussion with me hosting, and Barry, Brian, Vitalik, and Justin Drake participating as panelists",
+    "description": "A discussion about ZK -- how it will affect and complement Ethereum in the future, and how people should think about it in general.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -9740,13 +9741,19 @@
     "id": "M97JEG",
     "speakers": [
       {
+        "id": "XNXEYH",
+        "name": "Bartek Kiepuszewski",
+        "description": null,
+        "avatar": ""
+      },
+      {
         "id": "WQ3EN9",
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
       }
     ],
-    "title": "Hold",
+    "title": "Bartek - Title TBD",
     "track": "Layer 2s",
     "duration": 30,
     "start": 1665662400000,
