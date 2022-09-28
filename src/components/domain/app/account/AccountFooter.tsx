@@ -6,23 +6,25 @@ import Image from 'next/image'
 
 export default function AccountFooter() {
   return (
-    <div className={css['footer']}>
-      <div className="section">
-        <div className="content">
+    <div className="section">
+      <div className='content'>
+        <div className={css['footer']}>
           <div className={css['text']}>
             <p className={css['description']}>
               Devcon facilitates complete ownership over your data, while allowing you to access web3 interactivity
               through our application if you choose to.
             </p>
 
-            <Link className={css['link']} to="https://google.com">
-              Learn more
+            <Link className={css['link']} to="https://ethereum.org/en/terms-of-use/">
+              Terms of Use
             </Link>
-            <Link className={css['link']} to="https://google.com">
-              Terms & Conditions
+            <Link className={css['link']} to="https://ethereum.org/en/privacy-policy/">
+              Privacy Policy
             </Link>
           </div>
-          <Image layout="raw" className={css['img']} src={footerRoad} alt="Man and dog on road" />
+          <div className={css['img']}>
+            <Image className={css['image']} src={footerRoad} alt="Man and dog on road" />
+          </div>
         </div>
       </div>
     </div>

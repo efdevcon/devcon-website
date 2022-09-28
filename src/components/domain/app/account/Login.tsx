@@ -149,8 +149,8 @@ export default function LoginPage() {
               <div className="content">
                 {/* Need this layer to have something to position the image relatively to (within the bounds of the parent content div) */}
                 <div className={css['hero-content']}>
-                  <p className={css['devcon']}>Devcon (use image)</p>
-                  <p className={css['connect']}>Connect —</p>
+                  <p className={css['devcon']}>Devcon</p>
+                  <p className={css['connect']}>Passport —</p>
                   <p className={css['description']}>Your personalized passport to the Devcon experience.</p>
 
                   <Image className={css['logo']} layout="raw" src={pwaIcon} alt="App logo" />
@@ -165,7 +165,7 @@ export default function LoginPage() {
                   <IconSwirl className={`${css['swirl-icon']} icon`} />
                 </div>
                 <p>
-                  If this is the first time you&apos;re logging in, <b>Connect</b> will automatically create a new
+                  If this is the first time you&apos;re logging in, <b>Passport</b> will automatically create a new
                   account on your behalf.
                 </p>
               </div>
@@ -197,7 +197,7 @@ export default function LoginPage() {
               {!emailSent && (
                 <>
                   <div className={css['trust-model']}>
-                    <p>Choose your Trust model.</p>
+                    <p>Choose your Trust model</p>
                     {/* 
                     <InfoIcon className={`icon ${css['icon-help']}`}>
                       <div>Hey</div>

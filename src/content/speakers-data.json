@@ -74,21 +74,6 @@
     "github": "@Souptacular"
   },
   {
-    "id": "QUULWK",
-    "name": "guille",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Cryptoeconomics"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "website": "tarunchitra.com [but it is very outdated -_-]",
-    "twitter": "tarunchitra",
-    "github": "pluriholonomic"
-  },
-  {
     "id": "LKQCZU",
     "name": "Franz",
     "avatar": "https://speak.devcon.org/media/avatars/aJw3qmVR_400x400-2_AY2swoh.jpg",
@@ -953,21 +938,6 @@
     "twitter": "@christine_dkim"
   },
   {
-    "id": "UZ889Q",
-    "name": "Yábir García Benchakhtir",
-    "avatar": null,
-    "description": "I'm a backend developer working at rotki. I have studied mathematics and computer science and I'm currently living in spain",
-    "tracks": [
-      "Developer Infrastructure"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "website": "https://yabirgb.com/",
-    "twitter": "yabirgb",
-    "github": "yabirgb"
-  },
-  {
     "id": "QEAYQH",
     "name": "Sam Flamini",
     "avatar": "https://speak.devcon.org/media/avatars/headshot_2020_f4QrCJn.jpeg",
@@ -1576,10 +1546,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/me_jRN7fzn.jpg",
     "description": "Nick Johnson is the founder and lead developer of the Ethereum Name Service. Prior to launching ENS, he worked at the Ethereum Foundation, where he acted as core developer on go-ethereum.",
     "tracks": [
-      "Governance & Coordination"
+      "Governance & Coordination",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "twitter": "nicksdjohnson",
     "github": "arachnid"
@@ -1959,6 +1931,19 @@
     "twitter": "@dnsvckvc"
   },
   {
+    "id": "ARTED7",
+    "name": "Ioannis Sachinoglou",
+    "avatar": "https://speak.devcon.org/media/avatars/linkedin_pic_Ihb4qpG.jpg",
+    "description": "Senior Blockchain Security Engineer at ChainSecurity. Particularly interested in software verification and static analysis. MSc in Computer Science from ETH Zurich.",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "website": "https://www.linkedin.com/in/ioannis-sachinoglou-10b696180/"
+  },
+  {
     "id": "9QEUQT",
     "name": "Justina Petraityte",
     "avatar": "https://speak.devcon.org/media/avatars/Screenshot_2022-06-27_at_15.57.27_1qMDA9y.png",
@@ -2015,6 +2000,20 @@
     "website": "https://twitter.com/wkampmann/",
     "twitter": "wkampmann",
     "github": "wkampmann"
+  },
+  {
+    "id": "J7DTZN",
+    "name": "Danny Ryan",
+    "avatar": "https://speak.devcon.org/media/avatars/Danny_Ryan_Headshot_RlA2Arp.jpg",
+    "description": "Danny Ryan is a Researcher at the Ethereum Foundation, focused on a series of core protocol upgrades aimed to make Ethereum more secure, sustainable, and scalable while retaining decentralization. He is involved with research, spec writing, client development, and general coordination around the project.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "dannyryan",
+    "github": "djrtwo"
   },
   {
     "id": "C7PAZD",
@@ -2394,7 +2393,7 @@
   {
     "id": "UFYGRK",
     "name": "Oisín Kyne",
-    "avatar": "https://speak.devcon.org/media/avatars/2021-06-16_19.32.48-2_PKnvkwO.jpg",
+    "avatar": "https://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg",
     "description": "Co-founder of Obol Labs and building Distributed Validator Technology for Ethereum.",
     "tracks": [
       "Staking & Validator Experience"
@@ -2490,33 +2489,6 @@
     "website": "-",
     "twitter": "0x7u4n",
     "github": "juan-fintech"
-  },
-  {
-    "id": "TVWKXG",
-    "name": "Matthias Egli",
-    "avatar": "https://speak.devcon.org/media/avatars/Matthias-JPEG-300x300_DVpPjQU.jpg",
-    "description": "Matthias Egli is a principal and founding partner of ChainSecurity where he is responsible for strategy and operations. Before ChainSecurity he protected Fortune500 company networks as a security data scientist at Exabeam. He started his career after his MSc ETH Zurich as a software engineer and later CTO/COO for Dealini, a Swiss StartUp.",
-    "tracks": [
-      "Security"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "website": "https://chainsecurity.com",
-    "twitter": "@chain_security",
-    "github": "@ChainSecurityAudits"
-  },
-  {
-    "id": "DDQH9C",
-    "name": "Kev Wedderburn",
-    "avatar": null,
-    "description": "Head of Noir Language at Aztec. BSc Computer Science and Mathematics from Queen Mary University. Two years experience implementing ZKPs including PLONK as a Cryptography Engineer at Dusk Network. Rust specialist.",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
-    ]
   },
   {
     "id": "9QBM9U",
@@ -3024,9 +2996,11 @@
     "avatar": "https://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg",
     "description": "Ethereum optimist. Worked at the Ethereum Foundation on PoS & Eth2, then co-founded Plasma Group & Optimism to build Ethereum L2 technology which funds public goods. Currently optimistically scaling Ethereum and making impact=profit.",
     "tracks": [
+      "Developer Infrastructure",
       "Layer 2s"
     ],
     "eventDays": [
+      1665532800000,
       1665705600000
     ],
     "website": "http://karl.tech/",
@@ -3149,9 +3123,10 @@
   {
     "id": "7BSSFC",
     "name": "Tim Beiko",
-    "avatar": "https://www.gravatar.com/avatar/51deb6740f5c36a1e814c723f182dc56",
+    "avatar": "https://speak.devcon.org/media/avatars/Tim_Beiko_Headshot_UkavMoT.jpeg",
     "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
     "tracks": [
+      "Opportunity & Global Impact",
       "Layer 1 Protocol"
     ],
     "eventDays": [
@@ -3629,7 +3604,7 @@
   },
   {
     "id": "V33CZQ",
-    "name": "Aqeel",
+    "name": "Aqeel Mohammad",
     "avatar": "https://speak.devcon.org/media/avatars/unknown_CF5enPL.png",
     "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
     "tracks": [
@@ -4059,8 +4034,7 @@
     "tracks": [
       "Opportunity & Global Impact",
       "ZKPs: Privacy, Identity, Infrastructure, & More",
-      "Developer Infrastructure",
-      "Layer 2s"
+      "Developer Infrastructure"
     ],
     "eventDays": [
       1665446400000,
@@ -4217,18 +4191,6 @@
       1665532800000
     ],
     "twitter": "Guthl"
-  },
-  {
-    "id": "HE3SX3",
-    "name": "Guillaume Drevon",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
-    ]
   },
   {
     "id": "T89AAP",
@@ -4510,6 +4472,7 @@
     "avatar": null,
     "description": "",
     "tracks": [
+      "UX & Design",
       "Opportunity & Global Impact",
       "Developer Infrastructure"
     ],
@@ -4696,6 +4659,135 @@
     ],
     "eventDays": [
       1665619200000
+    ]
+  },
+  {
+    "id": "BAKZ9F",
+    "name": "Yoav Weiss",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "9N3L3K",
+    "name": "Guillermo Angeris",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Cryptoeconomics"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "tarunchitra.com [but it is very outdated -_-]",
+    "twitter": "tarunchitra",
+    "github": "pluriholonomic"
+  },
+  {
+    "id": "8WNXVV",
+    "name": "Albert Ni",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "XNXEYH",
+    "name": "Bartek Kiepuszewski",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Layer 2s"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "Z93KWP",
+    "name": "Venkatesh Rao",
+    "avatar": "https://speak.devcon.org/media/avatars/Venkatesh_Rao_Headshot_cV4sr57.jpeg",
+    "description": "Venkatesh Rao is a writer and consultant. He writes the Ribbonfarm blog, and is the author of Tempo, a book on decision-making. He holds a PhD in Aerospace Engineering (2003) from the University of Michigan. He is currently based in Los Angeles",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "website": "https://venkateshrao.com/",
+    "twitter": "https://twitter.com/vgr"
+  },
+  {
+    "id": "PRM7AM",
+    "name": "Bruno Macaes",
+    "avatar": "https://speak.devcon.org/media/avatars/Bruno_Macaes_Headshot_LDVaSU5.jpeg",
+    "description": "Bruno Maçães is a senior advisor at Flint Global and a columnist for the New Statesman. The author of 'Belt and Road'; 'History Has Begun'; and 'The Dawn of Eurasia', he advises some of the world's leading companies on geopolitics and technology. His latest book is 'Geopolitics for the End Time.'",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "https://twitter.com/MacaesBruno"
+  },
+  {
+    "id": "ZUMDMJ",
+    "name": "Pia Mancini",
+    "avatar": "https://speak.devcon.org/media/avatars/Screen_Shot_2022-09-28_at_9.08.20_AM_53SDATc.png",
+    "description": "Democracy activist, open source sustainer, co-founder & CEO at Open Collective and Chair of DemocracyEarth Foundation. I worked in politics in Argentina and developed technology for democracy around the world. YC Alum, YGL (World Economic Forum),  globe-trotter and Roma's mum.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "https://twitter.com/piamancini"
+  },
+  {
+    "id": "KYRM3C",
+    "name": "Brewster Kahle",
+    "avatar": "https://speak.devcon.org/media/avatars/Brewster_Kahle_Headshot_GBcqZZP.jpeg",
+    "description": "Brewster Kahle is the founder and Digital Librarian of the Internet Archive, which now preserves 99+ unique petabytes of data - the books, Web pages, music, television, and software of our cultural heritage, working with more than 950 library and university partners to create a digital library, accessible to all.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "twitter": "https://twitter.com/brewster_kahle"
+  },
+  {
+    "id": "ADH9HF",
+    "name": "Aya Miyaguchi",
+    "avatar": null,
+    "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "https://twitter.com/AyaMiyagotchi"
+  },
+  {
+    "id": "QVD933",
+    "name": "Trent Van Epps",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
     ]
   }
 ]

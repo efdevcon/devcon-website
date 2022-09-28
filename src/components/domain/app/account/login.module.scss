@@ -172,19 +172,11 @@
   min-height: 180px;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   padding-bottom: $gaps-gap-4;
-
-  &:global(.section) {
-    width: 100%;
-  }
+  gap: $gaps-gap-4;
 
   .text {
-    width: 75%;
-
-    @media (min-width: $breakpoints-sm) {
-      width: auto;
-    }
-
     .description {
       margin-bottom: $gaps-gap-4;
     }
@@ -197,11 +189,7 @@
   }
 
   .img {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    max-height: 100%;
-    z-index: -1;
+    flex-shrink: 0;
   }
 }
 

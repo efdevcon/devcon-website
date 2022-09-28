@@ -6,7 +6,7 @@ import { AppNav } from 'components/domain/app/navigation'
 import { Search } from 'components/common/filter/Filter'
 import filterCss from 'components/domain/app/app-filter.module.scss'
 import Image from 'next/image'
-import Floor from 'assets/images/venue-map/venue-map.png'
+import VenueMap from 'assets/images/venue-map/Venue.png'
 import Panzoom, { PanZoom } from 'panzoom'
 import IconPlus from 'assets/icons/plus.svg'
 import IconMinus from 'assets/icons/minus.svg'
@@ -86,11 +86,13 @@ export const Venue = (props: Props) => {
 
   const filteredFloors = search
     ? props.floors.filter(floor => {
-      if (search.toLowerCase().includes(floor.toLowerCase())) return true
+      if (floor.toLowerCase().includes(search.toLowerCase())) return true
 
       const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
-      return roomsByFloor.some(room => room.name.toLowerCase().includes(search))
+      return roomsByFloor.some(room => room.name.toLowerCase().includes(search) ||
+        room.description.toLowerCase().includes(search) || 
+        room.capacity?.toString().includes(search))
     })
     : props.floors
 
@@ -105,13 +107,11 @@ export const Venue = (props: Props) => {
         ]}
       />
 
-      {/* <CSS3D /> */}
-
-      <div className={css['panzoom']}>
+      <div className={css['panzoom-cover']}>
         <div className={css['image']} id="image-container">
-          <Image src={Floor} alt="venue map" layout="raw" id="venue-image" priority />
+          <Image src={VenueMap} alt="venue map" layout="raw" />
         </div>
-        <PanzoomControls pz={pz} />
+        {/* <PanzoomControls pz={pz} /> */}
       </div>
 
       <div className={`${filterCss['filter']} border-top`}>

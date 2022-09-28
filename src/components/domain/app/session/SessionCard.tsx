@@ -88,7 +88,10 @@ export const SessionCard = (props: CardProps) => {
             <div className={css['room']}>
               <div className={css['room-title']}>
                 <IconMarker />
-                <Link to={`/venue?room=${props.session.room.id}`}>{props.session.room.name}</Link>
+                <Link to={`/venue?room=${props.session.room.id}`}>
+                  {props.session.room.name}
+                  {props.session.room.description && ` — ${props.session.room.description}`}
+                </Link>
               </div>
 
               {props.session.room.capacity && (

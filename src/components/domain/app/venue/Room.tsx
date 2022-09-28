@@ -16,12 +16,12 @@ import venueCss from './venue.module.scss'
 import { useAppContext } from 'context/app-context'
 import { useAccountContext } from 'context/account-context'
 
-import FloorBasement from 'assets/images/venue-map/venue-map-floor-basement.jpeg'
-import Floor1 from 'assets/images/venue-map/venue-map-floor-1.jpeg'
-import Floor2 from 'assets/images/venue-map/venue-map-floor-2.jpeg'
-import Floor3 from 'assets/images/venue-map/venue-map-floor-3.jpeg'
-import Floor4 from 'assets/images/venue-map/venue-map-floor-4.jpeg'
-import Floor5 from 'assets/images/venue-map/venue-map-floor-5.jpeg'
+import FloorBasement from 'assets/images/venue-map/Floor Basement.png'
+import Floor1 from 'assets/images/venue-map/Floor 1.png'
+import Floor2 from 'assets/images/venue-map/Floor 2.png'
+import Floor3 from 'assets/images/venue-map/Floor 3.png'
+import Floor4 from 'assets/images/venue-map/Floor 4.png'
+import Floor5 from 'assets/images/venue-map/Floor 5.png'
 
 interface Props {
   room: RoomType
@@ -75,26 +75,10 @@ export const Room = (props: Props) => {
       </div>
 
       <div className="section padding-top-less">
-        {/* <AppSearch
-            noResults={sessions.length === 0}
-            search={{
-              placeholder: 'Search room sessions...',
-              onChange: setSearch,
-            }}
-            sortState={sortState}
-            filterStates={[]}
-            className={css['search-section']}
-          /> */}
-
         <div className={css['background']}></div>
 
-        {/* <Gallery className={css['gallery']}>
-          <h1>{props.room.name}</h1>
-          <h1>{props.room.name}</h1>
-        </Gallery> */}
-
         <div className={css['room-info']}>
-          <p className="h2 clear-bottom-less">{props.room.name}</p>
+          <p className="h2 clear-bottom-less">{props.room.name}{props.room.info && <small> — {props.room.info}</small>}</p>
           {props.room.description && <p className="bold clear-bottom-less">{props.room.description}</p>}
           {props.room.capacity && (
             <div className="label">
@@ -104,14 +88,6 @@ export const Room = (props: Props) => {
             </div>
           )}
         </div>
-
-        {/* {props.sessions
-          .sort((a, b) => {
-            return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
-          })
-          .map(i => {
-            return <SessionCard key={i.id} session={i} />
-          })} */}
 
         <AppTabsSection
           className={css['tabs']}

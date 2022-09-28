@@ -706,7 +706,7 @@
     "speakers": [
       {
         "id": "V33CZQ",
-        "name": "Aqeel",
+        "name": "Aqeel Mohammad",
         "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
         "twitter": "@qnou",
         "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
@@ -2251,7 +2251,7 @@
         "avatar": ""
       }
     ],
-    "title": "Parameter optimization and emergent behavior in DeFi: agent based simulations and reinforcement learning",
+    "title": "Parameter Optimization and Emergent Behavior in DeFi: Agent Based Simulations and Reinforcement Learning",
     "track": "Governance & Coordination",
     "duration": 120,
     "start": 1665583200000,
@@ -2296,6 +2296,13 @@
         "description": "DAO obsessed co-founder of Gnosis Guild and clr.fund. Former professional basketball player.",
         "twitter": "@auryn_macmillan",
         "avatar": "http://speak.devcon.org/media/avatars/profile_DW2qKaJ.jpg"
+      },
+      {
+        "id": "YVARFY",
+        "name": "Karl Floersch",
+        "description": "Ethereum optimist. Worked at the Ethereum Foundation on PoS & Eth2, then co-founded Plasma Group & Optimism to build Ethereum L2 technology which funds public goods. Currently optimistically scaling Ethereum and making impact=profit.",
+        "twitter": "karl_dot_tech",
+        "avatar": "http://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg"
       },
       {
         "id": "VYQT8X",
@@ -2512,7 +2519,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/michal_sieczkowski_selfie_fbjGVqt.jpeg"
       }
     ],
-    "title": "Workshop: How to build a multilayer DApp in less than 30 minutes?",
+    "title": "How to Build a Multilayer DApp in Less Than 30 Minutes?",
     "track": "Developer Infrastructure",
     "duration": 60,
     "start": 1665666000000,
@@ -3116,7 +3123,7 @@
         "avatar": ""
       }
     ],
-    "title": "2022 statistics on DAO governance",
+    "title": "2022 Statistics on DAO Governance",
     "track": "Governance & Coordination",
     "duration": 10,
     "start": 1665594600000,
@@ -3268,7 +3275,7 @@
         "name": "Oisín Kyne",
         "description": "Co-founder of Obol Labs and building Distributed Validator Technology for Ethereum.",
         "twitter": "OisinKyne",
-        "avatar": "http://speak.devcon.org/media/avatars/2021-06-16_19.32.48-2_PKnvkwO.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg"
       }
     ],
     "title": "\"It's 10pm, do you know where your mnemonic is?\"",
@@ -3493,14 +3500,13 @@
     "id": "VEMBB9",
     "speakers": [
       {
-        "id": "TVWKXG",
-        "name": "Matthias Egli",
-        "description": "Matthias Egli is a principal and founding partner of ChainSecurity where he is responsible for strategy and operations. Before ChainSecurity he protected Fortune500 company networks as a security data scientist at Exabeam. He started his career after his MSc ETH Zurich as a software engineer and later CTO/COO for Dealini, a Swiss StartUp.",
-        "twitter": "@chain_security",
-        "avatar": "http://speak.devcon.org/media/avatars/Matthias-JPEG-300x300_DVpPjQU.jpg"
+        "id": "ARTED7",
+        "name": "Ioannis Sachinoglou",
+        "description": "Senior Blockchain Security Engineer at ChainSecurity. Particularly interested in software verification and static analysis. MSc in Computer Science from ETH Zurich.",
+        "avatar": "http://speak.devcon.org/media/avatars/linkedin_pic_Ihb4qpG.jpg"
       }
     ],
-    "title": "Read-only Reentrency - a novel vulnerability class responsible for $100m+ funds at risk",
+    "title": "Read-only Reentrency - a Novel Vulnerability Class Responsible for $100m+ Funds at Risk",
     "track": "Security",
     "duration": 10,
     "start": 1665507600000,
@@ -3815,7 +3821,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3193_iLg1pfa.JPG"
       }
     ],
-    "title": "Validating made light and simple",
+    "title": "Validating Made Light and Simple",
     "track": "Staking & Validator Experience",
     "duration": 30,
     "start": 1665676800000,
@@ -4355,6 +4361,13 @@
         "avatar": "http://speak.devcon.org/media/avatars/Ken_-_Copy_PqLSvAn.jpeg"
       },
       {
+        "id": "UFYGRK",
+        "name": "Oisín Kyne",
+        "description": "Co-founder of Obol Labs and building Distributed Validator Technology for Ethereum.",
+        "twitter": "OisinKyne",
+        "avatar": "http://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg"
+      },
+      {
         "id": "8W7LEH",
         "name": "Darren Langley",
         "description": "Darren Langley is the General Manager of Rocket Pool. He is passionate about Ethereum and staking. He is dedicated to lowering the barriers-to-entry for Ethereum staking so that everyone can participate.",
@@ -4701,7 +4714,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Danno-Ferrin_EO864vt.png"
       }
     ],
-    "title": "What alternative blockchains compatibility with Ethereum tooling can teach us about Ethereum's Future",
+    "title": "What Alternative Blockchains Compatibility with Ethereum Tooling Can Teach Us About Ethereum's Future",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665754200000,
@@ -5005,10 +5018,9 @@
         "avatar": "http://speak.devcon.org/media/avatars/hilbert_6PfDp4t.jpeg"
       },
       {
-        "id": "QUULWK",
-        "name": "guille",
+        "id": "9N3L3K",
+        "name": "Guillermo Angeris",
         "description": null,
-        "twitter": "tarunchitra",
         "avatar": ""
       }
     ],
@@ -5714,25 +5726,13 @@
     "id": "DLSBGB",
     "speakers": [
       {
-        "id": "DDQH9C",
-        "name": "Kev Wedderburn",
-        "description": "Head of Noir Language at Aztec. BSc Computer Science and Mathematics from Queen Mary University. Two years experience implementing ZKPs including PLONK as a Cryptography Engineer at Dusk Network. Rust specialist.",
-        "avatar": ""
-      },
-      {
-        "id": "HE3SX3",
-        "name": "Guillaume Drevon",
-        "description": null,
-        "avatar": ""
-      },
-      {
         "id": "T8Q3YB",
         "name": "Maxim",
         "description": null,
         "avatar": ""
       }
     ],
-    "title": "Join Split in 10 Lines",
+    "title": "Private Value Transfer in 10 Lines",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665667800000,
@@ -6695,6 +6695,13 @@
         "avatar": "http://speak.devcon.org/media/avatars/Shiv_headshot_2_high_res_pic_1_kO59v6k.jpg"
       },
       {
+        "id": "GP3TNP",
+        "name": "Nick Johnson",
+        "description": "Nick Johnson is the founder and lead developer of the Ethereum Name Service. Prior to launching ENS, he worked at the Ethereum Foundation, where he acted as core developer on go-ethereum.",
+        "twitter": "nicksdjohnson",
+        "avatar": "http://speak.devcon.org/media/avatars/me_jRN7fzn.jpg"
+      },
+      {
         "id": "9QEUQT",
         "name": "Justina Petraityte",
         "description": "Justina is Developer Success Lead at 3Box Labs where she focuses on improving the developer experience when building applications on the Ceramic network. Prior to joining 3Box Labs team, she has been working in the Developer Relations space, focused on data science and machine learning, for over 4 years helping open source projects to build successful developer products and vibrant communities around them.",
@@ -6740,7 +6747,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/heidi_wilder_profile_BmRmVh9.jpg"
       }
     ],
-    "title": "Rug Life: Using blockchain analytics to detect illicit activity and protect yourself",
+    "title": "Rug Life: Using Blockchain Analytics to Detect Illicit Activity and Protect Yourself",
     "track": "Security",
     "duration": 30,
     "start": 1665594000000,
@@ -7108,7 +7115,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
       }
     ],
-    "title": "Private and incentivized p2p messaging with Waku using ZKPs",
+    "title": "Private and Incentivized P2P Messaging with Waku Using ZKPs",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 30,
     "start": 1665572400000,
@@ -7212,16 +7219,9 @@
         "description": "ethereum developer since 2014! Contributed to solidity compiler and c++ ethereum.\r\nBuilt the DAO, saw it get destroyed, then hacked it back to save whatever we could both in ETH and ETC.\r\nDevelopment lead for the Raiden network.\r\nFounder of rotki.\r\n\r\nI like birding :D",
         "twitter": "lefterisjp",
         "avatar": "http://speak.devcon.org/media/avatars/profile2_LYcOUYL.png"
-      },
-      {
-        "id": "UZ889Q",
-        "name": "Yábir García Benchakhtir",
-        "description": "I'm a backend developer working at rotki. I have studied mathematics and computer science and I'm currently living in spain",
-        "twitter": "yabirgb",
-        "avatar": ""
       }
     ],
-    "title": "Understanding transactions in EVM-compatible blockchains powered by opensource",
+    "title": "Understanding Transactions in EVM-Compatible Blockchains Powered by Opensource",
     "track": "Developer Infrastructure",
     "duration": 30,
     "start": 1665502200000,
@@ -7234,7 +7234,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Transactions are stored in the blockchain as hexadecimal data.That may be useful if you are a shadowy super coder but if you are like the rest of us you just need to have them explained in English.\r\nIf there are no tools that allow decoding of those transactions then the potential of web3 can not be realized. Is crucial that such tools are developed in the opens, as opensource code since decoding events for different chains and protocols scale faster than what any team of developers can maintain",
+    "description": "Transactions are stored in the blockchain as hexadecimal data. That may be ok if you are a shadowy super coder but if you are like the rest of us you just need to have them explained in English.\r\nIf there are no tools that allow decoding of those transactions then the potential of web3 can not be realized\r\n\r\nIts crucial such tools are developed in the open, as opensource code since decoding events for different chains and protocols scale faster than what any team of developers can maintain alone",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -7418,7 +7418,7 @@
         "avatar": ""
       }
     ],
-    "title": "Machine Learning and the Lens Protocol: How to do ML with web3 vibes",
+    "title": "The Lens Protocol Reputation System: How to Integrate Diverse Sources of Reputational Evidence",
     "track": "Developer Infrastructure",
     "duration": 30,
     "start": 1665657000000,
@@ -7865,7 +7865,7 @@
       "capacity": 260
     },
     "type": "Lightning Talk",
-    "description": "I want to talk about:\r\n-The importance of decentralizing the social graph, and how it enables permissionless innovation. Talk about Twitter APIs as the reason why we need to make APIs public goods (shawkisukkar.com/2022/twitter-api)\r\n-The main technical components (network, identity, and storage), and their current state.\r\n-Explore different social protocol architectures (Lens, Farcaster)\r\n-What do we need to do to make it happen and the importance of being a Product-driven protocol.",
+    "description": "What, why, and how to build a product-driven protocol.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -8509,7 +8509,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/photo_2022-02-08_14-11-31_Mb2Ze1c.jpg"
       }
     ],
-    "title": "Future- and Multi-block MEV in PoS Ethereum",
+    "title": "Future-block MEV in Proof of Stake",
     "track": "Security",
     "duration": 10,
     "start": 1665508200000,
@@ -9330,9 +9330,15 @@
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
+      },
+      {
+        "id": "BAKZ9F",
+        "name": "Yoav Weiss",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "title": "Local Engagement",
+    "title": "Account Abstraction Panel",
     "track": "Opportunity & Global Impact",
     "duration": 60,
     "start": 1665680400000,
@@ -9392,6 +9398,12 @@
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
+      },
+      {
+        "id": "ZUMDMJ",
+        "name": "Pia Mancini",
+        "description": "Democracy activist, open source sustainer, co-founder & CEO at Open Collective and Chair of DemocracyEarth Foundation. I worked in politics in Argentina and developed technology for democracy around the world. YC Alum, YGL (World Economic Forum),  globe-trotter and Roma's mum.",
+        "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2022-09-28_at_9.08.20_AM_53SDATc.png"
       }
     ],
     "title": "Pia Mancini",
@@ -9423,6 +9435,12 @@
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
+      },
+      {
+        "id": "Z93KWP",
+        "name": "Venkatesh Rao",
+        "description": "Venkatesh Rao is a writer and consultant. He writes the Ribbonfarm blog, and is the author of Tempo, a book on decision-making. He holds a PhD in Aerospace Engineering (2003) from the University of Michigan. He is currently based in Los Angeles",
+        "avatar": "http://speak.devcon.org/media/avatars/Venkatesh_Rao_Headshot_cV4sr57.jpeg"
       }
     ],
     "title": "Venkatesh Rao",
@@ -9453,6 +9471,12 @@
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
+      },
+      {
+        "id": "PRM7AM",
+        "name": "Bruno Macaes",
+        "description": "Bruno Maçães is a senior advisor at Flint Global and a columnist for the New Statesman. The author of 'Belt and Road'; 'History Has Begun'; and 'The Dawn of Eurasia', he advises some of the world's leading companies on geopolitics and technology. His latest book is 'Geopolitics for the End Time.'",
+        "avatar": "http://speak.devcon.org/media/avatars/Bruno_Macaes_Headshot_LDVaSU5.jpeg"
       }
     ],
     "title": "Bruno Macaes",
@@ -9483,6 +9507,12 @@
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
+      },
+      {
+        "id": "KYRM3C",
+        "name": "Brewster Kahle",
+        "description": "Brewster Kahle is the founder and Digital Librarian of the Internet Archive, which now preserves 99+ unique petabytes of data - the books, Web pages, music, television, and software of our cultural heritage, working with more than 950 library and university partners to create a digital library, accessible to all.",
+        "avatar": "http://speak.devcon.org/media/avatars/Brewster_Kahle_Headshot_GBcqZZP.jpeg"
       }
     ],
     "title": "Brewster Kahle",
@@ -9514,9 +9544,15 @@
         "name": "Ethereum Foundation",
         "description": "Holding for others",
         "avatar": ""
+      },
+      {
+        "id": "8WNXVV",
+        "name": "Albert Ni",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "title": "Albert ZKP Panel",
+    "title": "ZKP Panel",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 60,
     "start": 1665500400000,
@@ -9529,7 +9565,7 @@
       "capacity": 3060
     },
     "type": "Panel",
-    "description": "A tentative proposal would be a 45 minute panel discussion with me hosting, and Barry, Brian, Vitalik, and Justin Drake participating as panelists",
+    "description": "A discussion about ZK -- how it will affect and complement Ethereum in the future, and how people should think about it in general.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -9576,7 +9612,7 @@
         "avatar": ""
       }
     ],
-    "title": "Josh Stark",
+    "title": "Hold",
     "track": "",
     "duration": 30,
     "start": 1665491400000,
@@ -9605,6 +9641,12 @@
         "name": "aqeel",
         "description": "Let’s create a more intuitive, safe and delightful experience for users of Ethereum and its applications! Design, UI, product-market fit, marketing, etc.\r\n\r\nPlease select the most relevant track for your presentation. Definitions for each track will appear once you select that option.",
         "avatar": ""
+      },
+      {
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "DEVA Awards",
@@ -9631,9 +9673,28 @@
     "id": "7LHLPB",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
+        "id": "J7DTZN",
+        "name": "Danny Ryan",
+        "description": "Danny Ryan is a Researcher at the Ethereum Foundation, focused on a series of core protocol upgrades aimed to make Ethereum more secure, sustainable, and scalable while retaining decentralization. He is involved with research, spec writing, client development, and general coordination around the project.",
+        "avatar": "http://speak.devcon.org/media/avatars/Danny_Ryan_Headshot_RlA2Arp.jpg"
+      },
+      {
+        "id": "7BSSFC",
+        "name": "Tim Beiko",
+        "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
+        "twitter": "timbeiko",
+        "avatar": "http://speak.devcon.org/media/avatars/Tim_Beiko_Headshot_UkavMoT.jpeg"
+      },
+      {
+        "id": "ADH9HF",
+        "name": "Aya Miyaguchi",
+        "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
+        "avatar": ""
+      },
+      {
+        "id": "QVD933",
+        "name": "Trent Van Epps",
+        "description": null,
         "avatar": ""
       }
     ],
@@ -9728,13 +9789,13 @@
     "id": "M97JEG",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
+        "id": "XNXEYH",
+        "name": "Bartek Kiepuszewski",
+        "description": null,
         "avatar": ""
       }
     ],
-    "title": "Hold",
+    "title": "Bartek - Title TBD",
     "track": "Layer 2s",
     "duration": 30,
     "start": 1665662400000,
@@ -9870,7 +9931,7 @@
         "name": "Tim Beiko",
         "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
         "twitter": "timbeiko",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Tim_Beiko_Headshot_UkavMoT.jpeg"
       },
       {
         "id": "XE8PTP",

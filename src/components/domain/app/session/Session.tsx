@@ -119,7 +119,7 @@ export const Session = (props: SessionProps) => {
             {props.session.room && (
               <div className={css['info-line']}>
                 <IconMarker />
-                <p>{props.session.room.name}</p>
+                <p>{props.session.room.name} {props.session.room.description && ` — ${props.session.room.description}`}</p>
               </div>
             )}
             {props.session.room?.capacity && (
