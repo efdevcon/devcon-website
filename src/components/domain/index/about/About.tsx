@@ -34,9 +34,9 @@ const About = (props: Props) => {
             <span className="font-sm">Devcon Week — October 7-16 in Bogotá, Colombia.</span>
           </p>
 
-          {/* <Link to="/bogota">
-            <Button className="red lg">Bogotá City Guide →</Button>
-          </Link> */}
+          <Link to="/bogota">
+            <Button className="red lg bold">Bogotá City Guide →</Button>
+          </Link>
         </div>
         <div className={css['right']}>
           <div className={css['image-container']}>

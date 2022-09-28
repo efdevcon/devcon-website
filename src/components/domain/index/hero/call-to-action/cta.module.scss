@@ -37,13 +37,14 @@
 
     .swipe-wrapper {
       width: 100%;
+
       .items {
         width: 100%;
         position: relative;
         display: flex;
         flex-wrap: nowrap;
     
-        .item {
+        > * {
           // cursor: grab;
           min-width: 200px;
           flex-basis: 25%;
