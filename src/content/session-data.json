@@ -36,6 +36,7 @@
         "id": "WL7PZV",
         "name": "Alex Van de Sande",
         "description": "Alex joined the Ethereum foundation in 2014 and was lead of the Wallet and Browser project as well as many other contributions. During his term in the foundation he also founded ENS with Nick Johnson. He has also since worked on many projects, trying to help onboard users in a multisig account (Unilogin) and worked at the Defi project Balancer Labs. Alex is currently a delegate and public goods stewards for ENS.",
+        "twitter": "avsa",
         "avatar": "http://speak.devcon.org/media/avatars/avsa_profile_picture_avatar_L28vXUh.png"
       }
     ],
@@ -68,6 +69,7 @@
         "id": "J7DTZN",
         "name": "Danny Ryan",
         "description": "Danny Ryan is a Researcher at the Ethereum Foundation, focused on a series of core protocol upgrades aimed to make Ethereum more secure, sustainable, and scalable while retaining decentralization. He is involved with research, spec writing, client development, and general coordination around the project.",
+        "twitter": "dannyryan",
         "avatar": "http://speak.devcon.org/media/avatars/Danny_Ryan_Headshot_RlA2Arp.jpg"
       },
       {
@@ -81,6 +83,7 @@
         "id": "ADH9HF",
         "name": "Aya Miyaguchi",
         "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
+        "twitter": "https://twitter.com/AyaMiyagotchi",
         "avatar": ""
       },
       {
@@ -124,6 +127,7 @@
         "id": "Z93KWP",
         "name": "Venkatesh Rao",
         "description": "Venkatesh Rao is a writer and consultant. He writes the Ribbonfarm blog, and is the author of Tempo, a book on decision-making. He holds a PhD in Aerospace Engineering (2003) from the University of Michigan. He is currently based in Los Angeles",
+        "twitter": "https://twitter.com/vgr",
         "avatar": "http://speak.devcon.org/media/avatars/Venkatesh_Rao_Headshot_cV4sr57.jpeg"
       }
     ],
@@ -3669,6 +3673,7 @@
         "id": "PRM7AM",
         "name": "Bruno Macaes",
         "description": "Bruno Maçães is a senior advisor at Flint Global and a columnist for the New Statesman. The author of 'Belt and Road'; 'History Has Begun'; and 'The Dawn of Eurasia', he advises some of the world's leading companies on geopolitics and technology. His latest book is 'Geopolitics for the End Time.'",
+        "twitter": "https://twitter.com/MacaesBruno",
         "avatar": "http://speak.devcon.org/media/avatars/Bruno_Macaes_Headshot_LDVaSU5.jpeg"
       }
     ],
@@ -4816,12 +4821,14 @@
         "id": "FXELXR",
         "name": "Puja Ohlhaver",
         "description": "Puja Ohlhaver is co-author of Decentralized Society: Finding Web3's Soul. \r\n\r\nShe is a lawyer, entrepreneur, and social incentive design thinker, whose work has been featured in various outlets, including the New York Times, Washington Post, Wired Magazine, Politico. \r\n\r\nShe is currently a strategist at Flashbots.",
+        "twitter": "@pujaohlhaver",
         "avatar": "http://speak.devcon.org/media/avatars/21733683-a9d8-43ae-83ea-2d9731d69e4c_son0A5Z.jpg"
       },
       {
         "id": "XLVMQN",
         "name": "Paula Berman",
         "description": "Paula Berman is COO of RadicalxChange Foundation, a non-profit supporting a global movement for next-generation political economies.",
+        "twitter": "@_paulaberman",
         "avatar": "http://speak.devcon.org/media/avatars/NrNq_FLf_400x400_1lrkGGZ.jpeg"
       }
     ],
@@ -6567,6 +6574,7 @@
         "id": "KYRM3C",
         "name": "Brewster Kahle",
         "description": "Brewster Kahle is the founder and Digital Librarian of the Internet Archive, which now preserves 99+ unique petabytes of data - the books, Web pages, music, television, and software of our cultural heritage, working with more than 950 library and university partners to create a digital library, accessible to all.",
+        "twitter": "https://twitter.com/brewster_kahle",
         "avatar": "http://speak.devcon.org/media/avatars/Brewster_Kahle_Headshot_GBcqZZP.jpeg"
       }
     ],
@@ -10268,6 +10276,7 @@
         "id": "ZUMDMJ",
         "name": "Pia Mancini",
         "description": "Democracy activist, open source sustainer, co-founder & CEO at Open Collective and Chair of DemocracyEarth Foundation. I worked in politics in Argentina and developed technology for democracy around the world. YC Alum, YGL (World Economic Forum),  globe-trotter and Roma's mum.",
+        "twitter": "https://twitter.com/piamancini",
         "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2022-09-28_at_9.08.20_AM_53SDATc.png"
       }
     ],
@@ -10462,6 +10471,7 @@
         "id": "ADLKJF",
         "name": "Collin Myers",
         "description": "Collin is the co-founder & CEO of Obol Labs, a R&D-focused team developing a protocol for trust-minimized staking. Before Obol, Collin led global product strategy at ConsenSys and was the global head of BD at Token Foundry.",
+        "twitter": "https://twitter.com/stakeeth",
         "avatar": "http://speak.devcon.org/media/avatars/Collin_O8glJJe.png"
       },
       {
@@ -10546,6 +10556,7 @@
         "id": "R3XSH3",
         "name": "Pol",
         "description": "Pol Lanski is the COO of DAppNode and builder at dOrg.\r\nAfter mining dogecoin in 2014, fell in love with the political possibilities of blockchains - starting with the dependency of political sovereignty from economic sovereignty. \r\nHe spends most of the time thinking about economics, incentives, ecosystems and outcomes.",
+        "twitter": "@Pol-Lanski",
         "avatar": "http://speak.devcon.org/media/avatars/twitter400x400_EXR808Z.jpg"
       }
     ],
@@ -10577,6 +10588,7 @@
         "id": "Y9NMJJ",
         "name": "Diego Losada",
         "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
+        "twitter": "https://twitter.com/EthereumOnARM",
         "avatar": "http://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg"
       }
     ],
@@ -10643,6 +10655,7 @@
         "id": "JWVEXT",
         "name": "Attila Gazso",
         "description": "Attila has a background in distributed systems engineering and currently works on Swarm, where he wears many hats. His current interests are cryptography, CRDTs and designing incentivised markets. In his free time he likes to herd cats, collect herbs and visit remote places.",
+        "twitter": "agazso",
         "avatar": ""
       }
     ],
@@ -10675,6 +10688,7 @@
         "id": "LLNFVN",
         "name": "Will Villanueva",
         "description": "A former eth2 core researcher, Will Villanueva is currently the CEO and Cofounder of Element Finance.",
+        "twitter": "wjvill",
         "avatar": "http://speak.devcon.org/media/avatars/-IfDBgS-_400x400_QLrcogp.png"
       }
     ],
@@ -10737,6 +10751,7 @@
         "id": "3GSD8J",
         "name": "Zero Age",
         "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
+        "twitter": "z0age",
         "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
       }
     ],
@@ -10769,6 +10784,7 @@
         "id": "YSBNN3",
         "name": "Brandon Ramirez",
         "description": "Brandon Ramirez is the Co-Founder of The Graph & E&N, and was the original inventor of The Graph's protocol design and economics.\r\n\r\nBrandon is a deep generalist, drawing from his academic studies in Robotics, Control Systems, Economics & Signal Processing, and professional experience in Product Management, UX Design and Software Engineering.\r\n\r\nHe believes many of the world’s most pressing problems are fundamentally about incentives and social coordination.",
+        "twitter": "RezBrandon",
         "avatar": "http://speak.devcon.org/media/avatars/Copy_of_Brandon_Ramirez_-_bright2x_gPKOwdd.jpg"
       }
     ],
@@ -10801,6 +10817,7 @@
         "id": "7UPFQY",
         "name": "Carlos",
         "description": "Builder on Ethereum. I'm a core member of the BuidlGuidl where I build tools and public goods for the ecosystem, like SpeedRunEthereum and ABI Ninja. Previously worked for more than 10 years as a freelance web developer.",
+        "twitter": "_carletex_",
         "avatar": "http://speak.devcon.org/media/avatars/2486142_vAT00yx.jpeg"
       }
     ],
@@ -10832,12 +10849,14 @@
         "id": "8DSTCX",
         "name": "Omar Espejel",
         "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Winner of the Miami Activate X Wormhole Hackathon 2022 thanks to the creation of [functions to provide numerical operations to Cairo](https://twitter.com/galronx/status/1528472289054175232).",
+        "twitter": "https://twitter.com/espejelomar",
         "avatar": "http://speak.devcon.org/media/avatars/badBunny_Bw16cyu.png"
       },
       {
         "id": "T9E8UR",
         "name": "Henri",
         "description": "I explain to people what StarkNet is and how they can build cool stuff on top of it",
+        "twitter": "henrlihenrli",
         "avatar": ""
       }
     ],
@@ -10870,6 +10889,7 @@
         "id": "83KGXF",
         "name": "Johns Gresham",
         "description": "Working on NiceNode https://nicenode.xyz",
+        "twitter": "sirjohnsgresham",
         "avatar": "http://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg"
       }
     ],
