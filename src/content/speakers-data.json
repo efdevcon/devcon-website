@@ -74,21 +74,6 @@
     "github": "@Souptacular"
   },
   {
-    "id": "QUULWK",
-    "name": "guille",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Cryptoeconomics"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "website": "tarunchitra.com [but it is very outdated -_-]",
-    "twitter": "tarunchitra",
-    "github": "pluriholonomic"
-  },
-  {
     "id": "LKQCZU",
     "name": "Franz",
     "avatar": "https://speak.devcon.org/media/avatars/aJw3qmVR_400x400-2_AY2swoh.jpg",
@@ -2409,7 +2394,7 @@
   {
     "id": "UFYGRK",
     "name": "Oisín Kyne",
-    "avatar": "https://speak.devcon.org/media/avatars/2021-06-16_19.32.48-2_PKnvkwO.jpg",
+    "avatar": "https://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg",
     "description": "Co-founder of Obol Labs and building Distributed Validator Technology for Ethereum.",
     "tracks": [
       "Staking & Validator Experience"
@@ -2505,18 +2490,6 @@
     "website": "-",
     "twitter": "0x7u4n",
     "github": "juan-fintech"
-  },
-  {
-    "id": "DDQH9C",
-    "name": "Kev Wedderburn",
-    "avatar": null,
-    "description": "Head of Noir Language at Aztec. BSc Computer Science and Mathematics from Queen Mary University. Two years experience implementing ZKPs including PLONK as a Cryptography Engineer at Dusk Network. Rust specialist.",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
-    ]
   },
   {
     "id": "9QBM9U",
@@ -4219,18 +4192,6 @@
     "twitter": "Guthl"
   },
   {
-    "id": "HE3SX3",
-    "name": "Guillaume Drevon",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
-    ]
-  },
-  {
     "id": "T89AAP",
     "name": "Yanyan Ho",
     "avatar": "https://www.gravatar.com/avatar/60caa2ef4ce1a3213703510d3589c692",
@@ -4705,6 +4666,45 @@
     "description": "",
     "tracks": [
       "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "9N3L3K",
+    "name": "Guillermo Angeris",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Cryptoeconomics"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "tarunchitra.com [but it is very outdated -_-]",
+    "twitter": "tarunchitra",
+    "github": "pluriholonomic"
+  },
+  {
+    "id": "8WNXVV",
+    "name": "Albert Ni",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "XNXEYH",
+    "name": "Bartek Kiepuszewski",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Layer 2s"
     ],
     "eventDays": [
       1665619200000
