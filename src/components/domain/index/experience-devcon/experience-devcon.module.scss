@@ -1,0 +1,14 @@
+@use 'assets/css/partials/index' as *;
+
+.content {
+  position: relative;
+
+  .image-container {
+    position: relative;
+    width: 105%;
+    left: -2.5%;
+    // > * {
+    //   border-bottom: 1px solid $colors-standard-border-color !important;
+    // }
+  }
+}
