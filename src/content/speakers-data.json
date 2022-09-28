@@ -1961,6 +1961,19 @@
     "twitter": "@dnsvckvc"
   },
   {
+    "id": "ARTED7",
+    "name": "Ioannis Sachinoglou",
+    "avatar": "https://speak.devcon.org/media/avatars/linkedin_pic_Ihb4qpG.jpg",
+    "description": "Senior Blockchain Security Engineer at ChainSecurity. Particularly interested in software verification and static analysis. MSc in Computer Science from ETH Zurich.",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "website": "https://www.linkedin.com/in/ioannis-sachinoglou-10b696180/"
+  },
+  {
     "id": "9QEUQT",
     "name": "Justina Petraityte",
     "avatar": "https://speak.devcon.org/media/avatars/Screenshot_2022-06-27_at_15.57.27_1qMDA9y.png",
@@ -2492,21 +2505,6 @@
     "website": "-",
     "twitter": "0x7u4n",
     "github": "juan-fintech"
-  },
-  {
-    "id": "TVWKXG",
-    "name": "Matthias Egli",
-    "avatar": "https://speak.devcon.org/media/avatars/Matthias-JPEG-300x300_DVpPjQU.jpg",
-    "description": "Matthias Egli is a principal and founding partner of ChainSecurity where he is responsible for strategy and operations. Before ChainSecurity he protected Fortune500 company networks as a security data scientist at Exabeam. He started his career after his MSc ETH Zurich as a software engineer and later CTO/COO for Dealini, a Swiss StartUp.",
-    "tracks": [
-      "Security"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "website": "https://chainsecurity.com",
-    "twitter": "@chain_security",
-    "github": "@ChainSecurityAudits"
   },
   {
     "id": "DDQH9C",

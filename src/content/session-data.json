@@ -3116,7 +3116,7 @@
         "avatar": ""
       }
     ],
-    "title": "2022 statistics on DAO governance",
+    "title": "2022 Statistics on DAO Governance",
     "track": "Governance & Coordination",
     "duration": 10,
     "start": 1665594600000,
@@ -3493,14 +3493,13 @@
     "id": "VEMBB9",
     "speakers": [
       {
-        "id": "TVWKXG",
-        "name": "Matthias Egli",
-        "description": "Matthias Egli is a principal and founding partner of ChainSecurity where he is responsible for strategy and operations. Before ChainSecurity he protected Fortune500 company networks as a security data scientist at Exabeam. He started his career after his MSc ETH Zurich as a software engineer and later CTO/COO for Dealini, a Swiss StartUp.",
-        "twitter": "@chain_security",
-        "avatar": "http://speak.devcon.org/media/avatars/Matthias-JPEG-300x300_DVpPjQU.jpg"
+        "id": "ARTED7",
+        "name": "Ioannis Sachinoglou",
+        "description": "Senior Blockchain Security Engineer at ChainSecurity. Particularly interested in software verification and static analysis. MSc in Computer Science from ETH Zurich.",
+        "avatar": "http://speak.devcon.org/media/avatars/linkedin_pic_Ihb4qpG.jpg"
       }
     ],
-    "title": "Read-only Reentrency - a novel vulnerability class responsible for $100m+ funds at risk",
+    "title": "Read-only Reentrency - a Novel Vulnerability Class Responsible for $100m+ Funds at Risk",
     "track": "Security",
     "duration": 10,
     "start": 1665507600000,
@@ -4701,7 +4700,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Danno-Ferrin_EO864vt.png"
       }
     ],
-    "title": "What alternative blockchains compatibility with Ethereum tooling can teach us about Ethereum's Future",
+    "title": "What Alternative Blockchains Compatibility with Ethereum Tooling Can Teach Us About Ethereum's Future",
     "track": "Layer 1 Protocol",
     "duration": 30,
     "start": 1665754200000,
