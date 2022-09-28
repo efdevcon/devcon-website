@@ -32,7 +32,7 @@ const Speaker = (props: SpeakerProps) => {
             return <p key={partOfName}>{partOfName}</p>
           })}
         </div>
-        <Image src={props.image} layout="raw" alt={props.name} />
+        <Image src={props.image} layout="raw" alt={props.name} priority />
       </div>
     </div>
   )
