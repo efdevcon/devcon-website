@@ -298,9 +298,9 @@ export const Hero = () => {
       </div>
       <div className="section" style={{ position: 'relative' }}>
         <div className={`expand ${css['gradient']}`}></div>
-        <div className={`border-bottom clear-bottom ${css['mobile']}`}>
+        {/* <div className={`border-bottom clear-bottom ${css['mobile']}`}>
           <CallToAction mobile />
-        </div>
+        </div> */}
       </div>
     </>
   )
