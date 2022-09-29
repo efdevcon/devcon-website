@@ -145,7 +145,10 @@ export const Hero = () => {
     if (focusNextPage) {
       const el = document.getElementById(page.id)
 
-      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      // Only scroll into view if not scrolled vertically, because otherwise we scroll the user back up to the top :D
+      if (window.scrollY === 0) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
 
       setFocusNextPage(false)
     }
