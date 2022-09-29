@@ -1,17 +1,5 @@
 [
   {
-    "id": "ZWVE9J",
-    "name": "aqeel",
-    "avatar": null,
-    "description": "Let’s create a more intuitive, safe and delightful experience for users of Ethereum and its applications! Design, UI, product-market fit, marketing, etc.\r\n\r\nPlease select the most relevant track for your presentation. Definitions for each track will appear once you select that option.",
-    "tracks": [
-      "UX & Design"
-    ],
-    "eventDays": [
-      1665705600000
-    ]
-  },
-  {
     "id": "JPT3FG",
     "name": "Kevin Owocki",
     "avatar": "https://speak.devcon.org/media/avatars/zpLPRpbS_400x400_o9leGA6.jpg",
@@ -3681,10 +3669,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/unknown_CF5enPL.png",
     "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
     "tracks": [
-      "Staking & Validator Experience"
+      "Staking & Validator Experience",
+      "UX & Design"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665705600000
     ],
     "twitter": "@qnou",
     "github": "qnou"

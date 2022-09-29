@@ -18,7 +18,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -49,7 +49,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -102,7 +102,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -140,7 +140,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -171,7 +171,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -203,7 +203,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -242,7 +242,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -275,7 +275,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -314,7 +314,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -346,7 +346,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -378,7 +378,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -410,7 +410,7 @@
       "id": "workshop-1",
       "name": "Workshop 1",
       "description": "SLS/Community Room",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -442,7 +442,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -475,7 +475,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -514,7 +514,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -554,7 +554,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -586,7 +586,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -617,7 +617,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -650,7 +650,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -683,7 +683,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -715,7 +715,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -747,7 +747,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -780,7 +780,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -812,7 +812,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -844,7 +844,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -877,7 +877,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -910,7 +910,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -942,7 +942,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -1005,7 +1005,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Panel",
@@ -1052,7 +1052,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -1085,7 +1085,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -1117,7 +1117,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Panel",
@@ -1149,7 +1149,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -1180,7 +1180,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -1227,7 +1227,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -1259,7 +1259,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -1290,7 +1290,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -1323,7 +1323,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -1357,7 +1357,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -1392,7 +1392,7 @@
         "avatar": ""
       }
     ],
-    "title": "ZKP Panel",
+    "title": "What to know about Zero Knowledge",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 50,
     "start": 1665500400000,
@@ -1401,7 +1401,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Panel",
@@ -1409,7 +1409,12 @@
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "ZKPs"
+      "ZKP",
+      "Zero Knowledge",
+      "Future of Ethereum",
+      "Scalability",
+      "Security",
+      "Privacy"
     ]
   },
   {
@@ -1438,7 +1443,7 @@
       "id": "workshop-1",
       "name": "Workshop 1",
       "description": "SLS/Community Room",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -1470,7 +1475,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -1503,7 +1508,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -1536,7 +1541,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -1569,7 +1574,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -1615,7 +1620,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -1652,7 +1657,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -1691,7 +1696,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -1724,7 +1729,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -1757,7 +1762,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -1790,7 +1795,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -1839,7 +1844,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Capture_gan96Vd.PNG"
       }
     ],
-    "title": "Options for Small and Independent Stakers: Q&A with the Ethereum Staking Protocols",
+    "title": "Promoting Small and Independent Stakers: Q&A with the Ethereum Staking Protocols",
     "track": "Staking & Validator Experience",
     "duration": 50,
     "start": 1665504000000,
@@ -1848,7 +1853,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Panel",
@@ -1880,7 +1885,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -1919,7 +1924,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -1951,7 +1956,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -1990,7 +1995,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -2023,7 +2028,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -2056,7 +2061,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -2089,7 +2094,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -2122,7 +2127,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -2154,7 +2159,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -2186,7 +2191,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -2219,7 +2224,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -2258,7 +2263,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -2290,7 +2295,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -2323,7 +2328,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -2355,7 +2360,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -2387,7 +2392,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -2420,7 +2425,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Lightning Talk",
@@ -2453,7 +2458,7 @@
       "id": "main-stage-oc",
       "name": "Main Stage - OC",
       "description": "Main Stage for Opening Day",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 3060
     },
     "type": "Talk",
@@ -2484,7 +2489,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -2517,7 +2522,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -2555,7 +2560,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Lightning Talk",
@@ -2588,7 +2593,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -2620,7 +2625,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -2658,7 +2663,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Lightning Talk",
@@ -2690,7 +2695,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -2723,7 +2728,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -2756,7 +2761,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -2789,7 +2794,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Panel",
@@ -2827,7 +2832,7 @@
       "id": "workshop-1",
       "name": "Workshop 1",
       "description": "SLS/Community Room",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -2858,7 +2863,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Workshop 2h",
@@ -2889,7 +2894,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -2922,7 +2927,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -2955,7 +2960,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -2987,7 +2992,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -3019,7 +3024,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -3052,7 +3057,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -3085,7 +3090,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -3118,7 +3123,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -3151,7 +3156,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -3183,7 +3188,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -3216,7 +3221,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -3255,7 +3260,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -3293,7 +3298,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -3324,7 +3329,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -3357,7 +3362,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -3390,7 +3395,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -3423,7 +3428,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -3484,7 +3489,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -3516,7 +3521,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -3548,7 +3553,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -3581,7 +3586,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -3614,7 +3619,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -3647,7 +3652,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -3686,7 +3691,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -3723,7 +3728,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Panel",
@@ -3754,7 +3759,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -3792,7 +3797,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -3824,7 +3829,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -3857,7 +3862,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -3911,7 +3916,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Panel",
@@ -3951,7 +3956,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -3983,7 +3988,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -4016,7 +4021,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -4062,7 +4067,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -4095,7 +4100,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -4127,7 +4132,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -4158,7 +4163,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -4191,7 +4196,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -4223,7 +4228,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -4255,7 +4260,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -4287,7 +4292,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -4320,7 +4325,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -4353,7 +4358,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -4386,7 +4391,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -4419,7 +4424,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -4452,7 +4457,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -4491,7 +4496,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -4523,7 +4528,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -4555,7 +4560,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -4595,7 +4600,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -4628,7 +4633,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -4663,7 +4668,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -4696,7 +4701,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -4729,7 +4734,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -4768,7 +4773,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -4801,7 +4806,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -4841,7 +4846,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -4874,7 +4879,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -4907,7 +4912,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -4939,7 +4944,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -4972,7 +4977,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -5004,7 +5009,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -5036,7 +5041,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -5069,7 +5074,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -5103,7 +5108,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -5136,7 +5141,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -5168,7 +5173,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -5201,7 +5206,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -5234,7 +5239,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -5267,7 +5272,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -5314,7 +5319,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -5346,7 +5351,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -5379,7 +5384,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -5412,7 +5417,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -5445,7 +5450,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -5484,7 +5489,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -5516,7 +5521,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -5548,7 +5553,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -5588,7 +5593,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -5621,7 +5626,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -5654,7 +5659,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Lightning Talk",
@@ -5688,7 +5693,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -5720,7 +5725,7 @@
       "id": "workshop-1",
       "name": "Workshop 1",
       "description": "SLS/Community Room",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -5751,7 +5756,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -5782,7 +5787,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -5815,7 +5820,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Lightning Talk",
@@ -5847,7 +5852,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Lightning Talk",
@@ -5880,7 +5885,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -5912,7 +5917,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -5945,7 +5950,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -5978,7 +5983,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -6011,7 +6016,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -6058,7 +6063,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Panel",
@@ -6090,7 +6095,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -6123,7 +6128,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -6176,7 +6181,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Panel",
@@ -6209,7 +6214,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -6242,7 +6247,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -6281,7 +6286,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -6319,7 +6324,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -6350,7 +6355,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -6383,7 +6388,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -6414,7 +6419,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -6447,7 +6452,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -6481,7 +6486,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -6514,7 +6519,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -6548,7 +6553,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -6587,7 +6592,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -6619,7 +6624,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -6651,7 +6656,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -6691,7 +6696,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -6746,7 +6751,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -6778,7 +6783,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -6808,7 +6813,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -6848,7 +6853,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -6880,7 +6885,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -6945,7 +6950,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Panel",
@@ -6984,7 +6989,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -7017,7 +7022,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -7049,7 +7054,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -7080,7 +7085,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -7110,7 +7115,7 @@
       "id": "workshop-1",
       "name": "Workshop 1",
       "description": "SLS/Community Room",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -7142,7 +7147,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -7174,7 +7179,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -7207,7 +7212,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -7239,7 +7244,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -7270,7 +7275,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -7310,7 +7315,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -7343,7 +7348,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -7379,7 +7384,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -7412,7 +7417,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -7452,7 +7457,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -7485,7 +7490,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -7518,7 +7523,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -7551,7 +7556,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -7582,7 +7587,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -7615,7 +7620,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -7648,7 +7653,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -7688,7 +7693,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -7720,7 +7725,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Panel",
@@ -7752,7 +7757,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Workshop 1h",
@@ -7785,7 +7790,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -7818,7 +7823,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -7851,7 +7856,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -7884,7 +7889,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -7917,7 +7922,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -7950,7 +7955,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -7981,7 +7986,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -8014,7 +8019,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -8047,7 +8052,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -8085,7 +8090,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Panel",
@@ -8117,7 +8122,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -8150,7 +8155,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -8183,7 +8188,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -8215,7 +8220,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -8247,7 +8252,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -8280,7 +8285,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -8313,7 +8318,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -8346,7 +8351,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -8379,7 +8384,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -8412,7 +8417,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -8444,7 +8449,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -8477,7 +8482,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -8528,7 +8533,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -8567,7 +8572,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -8618,7 +8623,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -8646,7 +8651,7 @@
       "id": "workshop-1",
       "name": "Workshop 1",
       "description": "SLS/Community Room",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -8677,7 +8682,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -8708,7 +8713,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -8741,7 +8746,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Panel",
@@ -8773,7 +8778,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -8797,7 +8802,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/pfp_dhadrien_jjSZvKL.png"
       }
     ],
-    "title": "ZK Attestations = Web3 Cookies",
+    "title": "ZK Badges",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665743400000,
@@ -8806,11 +8811,11 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
-    "description": "How to prove that you donated to Gitcoin grants or that you voted for a specific DAO proposal without giving out your Ethereum address? \r\n\r\nYou can prove - in a SNARK - that you own an Ethereum account part of a group (e.g Gitcoin donors or DAO voters) and receive a ZK Attestation!\r\n\r\nBuilt as a new primitive, ZK Attestations are a reputation and access control tool used by on-chain (e.g governances) and off-chain apps.\r\n\r\nThey enable users to fully leverage their on-chain data, with privacy.",
+    "description": "How to prove that you donated to Gitcoin grants or that you voted for a specific DAO proposal without giving out your Ethereum address? \r\n\r\nYou can prove - in a SNARK - that you own an Ethereum account part of a group (e.g Gitcoin donors or DAO voters) and receive a ZK Badge!\r\n\r\nBuilt as a new primitive, ZK Badges are a reputation and access control tool used by on-chain (e.g governances) and off-chain apps.\r\n\r\nThey enable users to fully leverage their on-chain data, with privacy.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -8846,7 +8851,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -8879,7 +8884,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -8912,7 +8917,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -8945,7 +8950,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -8985,7 +8990,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -9018,7 +9023,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -9051,7 +9056,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -9083,7 +9088,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -9116,7 +9121,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -9148,7 +9153,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -9181,7 +9186,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -9220,7 +9225,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -9251,7 +9256,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -9283,7 +9288,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -9322,7 +9327,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -9353,7 +9358,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -9385,7 +9390,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -9418,7 +9423,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Lightning Talk",
@@ -9451,7 +9456,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -9483,7 +9488,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -9516,7 +9521,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -9555,7 +9560,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -9587,7 +9592,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -9617,7 +9622,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 2h",
@@ -9648,7 +9653,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -9695,7 +9700,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -9728,7 +9733,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -9762,7 +9767,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -9795,7 +9800,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -9828,7 +9833,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -9861,7 +9866,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -9878,10 +9883,11 @@
     "id": "R9QRVK",
     "speakers": [
       {
-        "id": "ZWVE9J",
-        "name": "aqeel",
-        "description": "Let’s create a more intuitive, safe and delightful experience for users of Ethereum and its applications! Design, UI, product-market fit, marketing, etc.\r\n\r\nPlease select the most relevant track for your presentation. Definitions for each track will appear once you select that option.",
-        "avatar": ""
+        "id": "V33CZQ",
+        "name": "Aqeel Mohammad",
+        "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
+        "twitter": "@qnou",
+        "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
       },
       {
         "id": "3RRW9H",
@@ -9899,7 +9905,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -9930,7 +9936,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -9963,7 +9969,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -9995,7 +10001,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -10028,7 +10034,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -10062,7 +10068,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -10114,7 +10120,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
@@ -10147,7 +10153,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -10185,7 +10191,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -10217,7 +10223,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -10250,7 +10256,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -10289,7 +10295,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -10321,7 +10327,7 @@
       "id": "talk-3",
       "name": "Talk 3",
       "description": "Flowers",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 260
     },
     "type": "Talk",
@@ -10354,7 +10360,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -10387,7 +10393,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -10420,7 +10426,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Lightning Talk",
@@ -10452,7 +10458,7 @@
       "id": "main-stage",
       "name": "Main Stage",
       "description": "On Top of the Mountain",
-      "info": "5th Floor",
+      "info": "Floor 5",
       "capacity": 1140
     },
     "type": "Talk",
@@ -10491,7 +10497,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -10536,7 +10542,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -10569,7 +10575,7 @@
       "id": "workshop-2",
       "name": "Workshop 2",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Talk",
@@ -10601,7 +10607,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -10637,7 +10643,7 @@
       "id": "talk-2",
       "name": "Talk 2",
       "description": "Cold Forest",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 414
     },
     "type": "Talk",
@@ -10668,7 +10674,7 @@
       "id": "workshop-3",
       "name": "Workshop 3",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -10701,7 +10707,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Lightning Talk",
@@ -10733,7 +10739,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -10764,7 +10770,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -10797,7 +10803,7 @@
       "id": "talk-4",
       "name": "Talk 4",
       "description": "River",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 110
     },
     "type": "Talk",
@@ -10830,7 +10836,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -10869,7 +10875,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -10902,7 +10908,7 @@
       "id": "workshop-4",
       "name": "Workshop 4",
       "description": "",
-      "info": "3rd Floor",
+      "info": "Floor 3",
       "capacity": 112
     },
     "type": "Workshop 1h",
@@ -10934,7 +10940,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Talk",
@@ -10967,7 +10973,7 @@
       "id": "talk-1",
       "name": "Talk 1",
       "description": "Tropical Sunset",
-      "info": "2nd Floor",
+      "info": "Floor 2",
       "capacity": 414
     },
     "type": "Panel",
