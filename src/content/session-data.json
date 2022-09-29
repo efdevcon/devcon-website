@@ -1602,13 +1602,6 @@
         "description": "- Blockchain developer since 2018\r\n- Ethereum enthusiastic :)\r\n- Worked on self-sovereign identity at Iden3\r\n- Main contributor to zkRollup PoC developed at Iden3\r\n- Protocol designer at hermez zkRollup\r\n- Protocol designer at polygon-hermez developing the zkEVM",
         "twitter": "https://twitter.com/KrlsMata",
         "avatar": "http://speak.devcon.org/media/avatars/Poster_Wolverine_8VHVqQy.jpg"
-      },
-      {
-        "id": "33GJBY",
-        "name": "Carlos Matallana",
-        "description": "I'm blockchain enthusiastic and I have been working on blockchain since 2018.\r\nI have been enrolled in iden3 (identity project) and afterwards be part of the zk-rollup development.\r\nRollup-PoC and later on hermez-network has been the two main projects related to zk-rollups. Currently working on the zkEVM as a team lead in the protocol team.",
-        "twitter": "https://twitter.com/KrlsMata",
-        "avatar": "http://speak.devcon.org/media/avatars/Poster_Wolverine_xb1yDvX.jpg"
       }
     ],
     "title": "Introduction to Circom2.0",
@@ -5538,7 +5531,7 @@
     "speakers": [
       {
         "id": "VCZZVF",
-        "name": "Joshua",
+        "name": "Joshua Riley",
         "description": "I am a self-taught software engineer working to improve decentralized technology at the lowest levels!",
         "twitter": "jtriley_eth",
         "avatar": "http://speak.devcon.org/media/avatars/smolJosh_3j9EijZ.jpeg"
@@ -6800,8 +6793,8 @@
       {
         "id": "T8Q3YB",
         "name": "Maxim",
-        "description": null,
-        "avatar": ""
+        "description": "Software Engineer / Language Designer at Aztec Network on the Noir team",
+        "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2021-05-17_at_10.39.25_AM_j9qiSbk.png"
       }
     ],
     "title": "Private Value Transfer in 10 Lines",
@@ -6831,14 +6824,14 @@
     "speakers": [
       {
         "id": "8NFBXW",
-        "name": "kumavis",
+        "name": "Kumavis",
         "description": "kumavis founded MetaMask and now leads their Security Research team. Contributor to MetaMask, LavaMoat, Endo, SES, Ethereumjs, js-libp2p.",
         "twitter": "kumavis_",
         "avatar": "http://speak.devcon.org/media/avatars/phong-profile-square_2ijEKi8.jpg"
       },
       {
         "id": "AF3FHA",
-        "name": "naugtur",
+        "name": "Naugtur",
         "description": "Full-stack developer and technology researcher. JS Security Engineer at MetaMask working on LavaMoat and Endo. Started using Node.js at v0.8 and never stopped. Enjoys innovating and teaching security, diagnostics and maintainability. One of the oldest members of meet.js Poland community - both as a speaker and organizer.",
         "twitter": "naugtur",
         "avatar": ""
