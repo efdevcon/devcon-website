@@ -169,7 +169,7 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000
+      1665619200000
     ],
     "website": "democracy.earth",
     "twitter": "santisiri",
@@ -293,6 +293,20 @@
     "github": "jbaylina"
   },
   {
+    "id": "WL7PZV",
+    "name": "Alex Van de Sande",
+    "avatar": "https://speak.devcon.org/media/avatars/avsa_profile_picture_avatar_L28vXUh.png",
+    "description": "Alex joined the Ethereum foundation in 2014 and was lead of the Wallet and Browser project as well as many other contributions. During his term in the foundation he also founded ENS with Nick Johnson. He has also since worked on many projects, trying to help onboard users in a multisig account (Unilogin) and worked at the Defi project Balancer Labs. Alex is currently a delegate and public goods stewards for ENS.",
+    "tracks": [
+      "UX & Design"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "twitter": "avsa",
+    "github": "alexvansande"
+  },
+  {
     "id": "WFMPYE",
     "name": "Chandler De Kock",
     "avatar": "https://speak.devcon.org/media/avatars/c05e05c8-a0f1-48d6-bab8-00e86780ae0d_kKfwqER.jpg",
@@ -304,19 +318,6 @@
       1665705600000
     ],
     "twitter": "https://twitter.com/chandler_dkk"
-  },
-  {
-    "id": "7FXJMC",
-    "name": "Julia Rosenberg",
-    "avatar": "https://speak.devcon.org/media/avatars/IMG_5827_WB8AjN4.jpeg",
-    "description": "Co-founder & CEO at Orca Protocol",
-    "tracks": [
-      "Governance & Coordination"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "twitter": "@JulzRoze"
   },
   {
     "id": "3JA9GR",
@@ -661,20 +662,6 @@
     "github": "thelastjosh"
   },
   {
-    "id": "MJWKDW",
-    "name": "Rodrigo",
-    "avatar": "https://speak.devcon.org/media/avatars/1653055886403_fEimEl5.jpeg",
-    "description": "Rodrigo Seira is Associate General Counsel at Paradigm. Prior to joining Paradigm, he was outside counsel to crypto investors and entrepreneurs at Cooley LLP. Prior to that, Rodrigo was a founding member of DLX Law, a blockchain and crypto focused boutique. Rodrigo earned a J.D. from Harvard Law School and a B.A. in Philosophy and Political Science from Middlebury College.",
-    "tracks": [
-      "Governance & Coordination"
-    ],
-    "eventDays": [
-      1665619200000
-    ],
-    "website": "https://daos.paradigm.xyz/",
-    "twitter": "@rssh273"
-  },
-  {
     "id": "CXHCHS",
     "name": "Philipp Zahn",
     "avatar": null,
@@ -750,8 +737,8 @@
       "Security"
     ],
     "eventDays": [
-      1665619200000,
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "https://www.linkedin.com/in/jonathanealexander/",
     "twitter": "https://twitter.com/jalex206",
@@ -794,7 +781,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665619200000
+      1665705600000
     ],
     "twitter": "https://twitter.com/ivshti",
     "github": "https://github.com/ivshti/"
@@ -886,8 +873,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/Headshot_2015_round_ed5uguf.png",
     "description": "Jim has worked on internet infrastructure for over 30 years, including running one of the first public access internet services. He has worked on hardware and software, in startups and multinationals, in technical, management and leadership roles. His current focus is on Ethereum staking, decentralized infrastructure, and advanced validator strategies.",
     "tracks": [
-      "Staking & Validator Experience",
-      "Cryptoeconomics"
+      "Cryptoeconomics",
+      "Staking & Validator Experience"
     ],
     "eventDays": [
       1665446400000
@@ -938,19 +925,17 @@
     "twitter": "@christine_dkim"
   },
   {
-    "id": "UZ889Q",
-    "name": "Yábir García Benchakhtir",
+    "id": "UP9DY8",
+    "name": "Steven Valeri",
     "avatar": null,
-    "description": "I'm a backend developer working at rotki. I have studied mathematics and computer science and I'm currently living in spain",
+    "description": "Smart Contract Dev @ Aave",
     "tracks": [
-      "Developer Infrastructure"
+      "Cryptoeconomics"
     ],
     "eventDays": [
-      1665446400000
+      1665619200000
     ],
-    "website": "https://yabirgb.com/",
-    "twitter": "yabirgb",
-    "github": "yabirgb"
+    "github": "@stevenvaleri"
   },
   {
     "id": "QEAYQH",
@@ -1260,7 +1245,7 @@
       "Cryptoeconomics"
     ],
     "eventDays": [
-      1665446400000
+      1665532800000
     ],
     "twitter": "https://twitter.com/VinyasAlex",
     "github": "https://github.com/avsavsavs"
@@ -1580,7 +1565,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665705600000
+      1665619200000
     ],
     "website": "https://medium.com/@george.gontikas",
     "twitter": "https://twitter.com/geogont",
@@ -1673,6 +1658,20 @@
     "website": "justinholmes.com",
     "twitter": "PintSzPorcupine",
     "github": "jMyles"
+  },
+  {
+    "id": "8DSTCX",
+    "name": "Omar Espejel",
+    "avatar": "https://speak.devcon.org/media/avatars/badBunny_Bw16cyu.png",
+    "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Winner of the Miami Activate X Wormhole Hackathon 2022 thanks to the creation of [functions to provide numerical operations to Cairo](https://twitter.com/galronx/status/1528472289054175232).",
+    "tracks": [
+      "Layer 2s"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "https://twitter.com/espejelomar",
+    "github": "https://github.com/omarespejel"
   },
   {
     "id": "7A8YTK",
@@ -1786,6 +1785,21 @@
     "github": "hlambur"
   },
   {
+    "id": "ADLKJF",
+    "name": "Collin Myers",
+    "avatar": "https://speak.devcon.org/media/avatars/Collin_O8glJJe.png",
+    "description": "Collin is the co-founder & CEO of Obol Labs, a R&D-focused team developing a protocol for trust-minimized staking. Before Obol, Collin led global product strategy at ConsenSys and was the global head of BD at Token Foundry.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://obol.tech/",
+    "twitter": "https://twitter.com/stakeeth",
+    "github": "https://github.com/collinjmyers"
+  },
+  {
     "id": "F8NWYN",
     "name": "Ken Smith",
     "avatar": "https://speak.devcon.org/media/avatars/Ken_-_Copy_PqLSvAn.jpeg",
@@ -1848,20 +1862,6 @@
     "github": "oskarth"
   },
   {
-    "id": "DWTPGZ",
-    "name": "Fred",
-    "avatar": null,
-    "description": "Fred is fascinated by complex systems, distributed ledger technology and the oxford comma.",
-    "tracks": [
-      "Layer 2s"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "twitter": "https://twitter.com/0x66726564",
-    "github": "https://github.com/fredlacs"
-  },
-  {
     "id": "WVSDNV",
     "name": "Luis Bezzenberger",
     "avatar": "https://speak.devcon.org/media/avatars/iZcf9EwP_400x400_dufKyho.jpg",
@@ -1887,6 +1887,20 @@
       1665446400000
     ],
     "twitter": "@MTorgin"
+  },
+  {
+    "id": "R3XSH3",
+    "name": "Pol",
+    "avatar": "https://speak.devcon.org/media/avatars/twitter400x400_EXR808Z.jpg",
+    "description": "Pol Lanski is the COO of DAppNode and builder at dOrg.\r\nAfter mining dogecoin in 2014, fell in love with the political possibilities of blockchains - starting with the dependency of political sovereignty from economic sovereignty. \r\nHe spends most of the time thinking about economics, incentives, ecosystems and outcomes.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "@Pol-Lanski",
+    "github": "Pol-Lanski"
   },
   {
     "id": "WCS9KR",
@@ -1917,6 +1931,20 @@
     "website": "https://dblp.org/pid/02/6977.html",
     "twitter": "https://twitter.com/mpfzajac",
     "github": "https://github.com/mpzajac"
+  },
+  {
+    "id": "T9E8UR",
+    "name": "Henri",
+    "avatar": null,
+    "description": "I explain to people what StarkNet is and how they can build cool stuff on top of it",
+    "tracks": [
+      "Layer 2s"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "henrlihenrli",
+    "github": "l-henri"
   },
   {
     "id": "D9BM9F",
@@ -2015,6 +2043,35 @@
     "website": "https://twitter.com/wkampmann/",
     "twitter": "wkampmann",
     "github": "wkampmann"
+  },
+  {
+    "id": "Y9NMJJ",
+    "name": "Diego Losada",
+    "avatar": "https://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg",
+    "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/",
+    "twitter": "https://twitter.com/EthereumOnARM",
+    "github": "https://github.com/diglos/ethereumonarm"
+  },
+  {
+    "id": "J7DTZN",
+    "name": "Danny Ryan",
+    "avatar": "https://speak.devcon.org/media/avatars/Danny_Ryan_Headshot_RlA2Arp.jpg",
+    "description": "Danny Ryan is a Researcher at the Ethereum Foundation, focused on a series of core protocol upgrades aimed to make Ethereum more secure, sustainable, and scalable while retaining decentralization. He is involved with research, spec writing, client development, and general coordination around the project.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "dannyryan",
+    "github": "djrtwo"
   },
   {
     "id": "C7PAZD",
@@ -2254,6 +2311,20 @@
     "twitter": "@emiyazono"
   },
   {
+    "id": "LLNFVN",
+    "name": "Will Villanueva",
+    "avatar": "https://speak.devcon.org/media/avatars/-IfDBgS-_400x400_QLrcogp.png",
+    "description": "A former eth2 core researcher, Will Villanueva is currently the CEO and Cofounder of Element Finance.",
+    "tracks": [
+      "Cryptoeconomics"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "twitter": "wjvill",
+    "github": "villanuevawill"
+  },
+  {
     "id": "XVNSBE",
     "name": "James Beck",
     "avatar": "https://speak.devcon.org/media/avatars/James_Beck_ConsenSys_gk7zQyf.JPG",
@@ -2320,7 +2391,7 @@
       "Cryptoeconomics"
     ],
     "eventDays": [
-      1665532800000
+      1665446400000
     ],
     "twitter": "mattdeible",
     "github": "mdeib"
@@ -2400,7 +2471,8 @@
       "Staking & Validator Experience"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665619200000
     ],
     "twitter": "OisinKyne",
     "github": "OisinKyne"
@@ -2670,8 +2742,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665705600000,
-      1665619200000
+      1665619200000,
+      1665705600000
     ],
     "website": "https://wdai.us",
     "twitter": "@_weidai"
@@ -2798,8 +2870,8 @@
       "Security"
     ],
     "eventDays": [
-      1665619200000,
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "https://www.venona.com/rdl/",
     "twitter": "octal"
@@ -2997,9 +3069,11 @@
     "avatar": "https://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg",
     "description": "Ethereum optimist. Worked at the Ethereum Foundation on PoS & Eth2, then co-founded Plasma Group & Optimism to build Ethereum L2 technology which funds public goods. Currently optimistically scaling Ethereum and making impact=profit.",
     "tracks": [
+      "Developer Infrastructure",
       "Layer 2s"
     ],
     "eventDays": [
+      1665532800000,
       1665705600000
     ],
     "website": "http://karl.tech/",
@@ -3122,9 +3196,10 @@
   {
     "id": "7BSSFC",
     "name": "Tim Beiko",
-    "avatar": "https://www.gravatar.com/avatar/51deb6740f5c36a1e814c723f182dc56",
+    "avatar": "https://speak.devcon.org/media/avatars/Tim_Beiko_Headshot_UkavMoT.jpeg",
     "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
     "tracks": [
+      "Opportunity & Global Impact",
       "Layer 1 Protocol"
     ],
     "eventDays": [
@@ -3509,7 +3584,7 @@
       "Staking & Validator Experience"
     ],
     "eventDays": [
-      1665619200000
+      1665705600000
     ],
     "website": "https://twitter.com/maggielove_",
     "twitter": "@maggielove_",
@@ -3602,7 +3677,7 @@
   },
   {
     "id": "V33CZQ",
-    "name": "Aqeel",
+    "name": "Aqeel Mohammad",
     "avatar": "https://speak.devcon.org/media/avatars/unknown_CF5enPL.png",
     "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
     "tracks": [
@@ -3619,6 +3694,18 @@
     "name": "Bryan Moreno",
     "avatar": null,
     "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
+  },
+  {
+    "id": "KFAEPV",
+    "name": "Justin Glibert",
+    "avatar": "https://speak.devcon.org/media/avatars/IOhWHC7W_400x400_1gfjsrI.jpg",
+    "description": "cyberspace vintner and digital physicist.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -3664,10 +3751,10 @@
       "UX & Design"
     ],
     "eventDays": [
-      1665705600000,
-      1665619200000,
+      1665446400000,
       1665532800000,
-      1665446400000
+      1665619200000,
+      1665705600000
     ],
     "twitter": "gubsheep",
     "github": "gubsheep"
@@ -3678,8 +3765,8 @@
     "avatar": null,
     "description": "Ben is Chief Scientist and Musician at the Optimism Foundation.",
     "tracks": [
-      "Opportunity & Global Impact",
-      "Governance & Coordination"
+      "Governance & Coordination",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665705600000
@@ -3797,12 +3884,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/IMG_4885-small_C9i5SDl.jpg",
     "description": "Alex Stokes is a researcher at the Ethereum Foundation who believes deeply in the Ethereum vision. To achieve this vision, he has been working on scaling R&D to make the core protocol more secure and accessible to everyone. This includes tooling and testing work for the Merge, exploratory prototyping for sharding work like EIP-4844 and EIP-4895 to enable validator withdrawals after the Merge. When he is not working on Ethereum, you can find him at the nearest mountaintop.",
     "tracks": [
-      "Cryptoeconomics",
-      "Layer 1 Protocol"
+      "Layer 1 Protocol",
+      "Cryptoeconomics"
     ],
     "eventDays": [
-      1665532800000,
-      1665446400000
+      1665446400000,
+      1665532800000
     ],
     "website": "https://stokes.io",
     "twitter": "ralexstokes",
@@ -3831,8 +3918,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665619200000,
       1665532800000,
+      1665619200000,
       1665705600000
     ],
     "twitter": "alexberegszaszi",
@@ -3940,6 +4027,18 @@
     "github": "https://github.com/barnabemonnot"
   },
   {
+    "id": "X3R8UY",
+    "name": "Alvarius",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
+  },
+  {
     "id": "LVQDUE",
     "name": "Richard Moore",
     "avatar": "https://www.gravatar.com/avatar/21ced755523257b80e403ae475b4779a",
@@ -3953,6 +4052,21 @@
     "website": "https://www.ricmoo.com",
     "twitter": "ricmoo",
     "github": "ricmoo"
+  },
+  {
+    "id": "3GSD8J",
+    "name": "Zero Age",
+    "avatar": "https://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif",
+    "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "opensea.io",
+    "twitter": "z0age",
+    "github": "0age"
   },
   {
     "id": "ZXKVGH",
@@ -4031,15 +4145,13 @@
     "description": "Holding for others",
     "tracks": [
       "Opportunity & Global Impact",
-      "ZKPs: Privacy, Identity, Infrastructure, & More",
-      "Developer Infrastructure",
-      "Layer 2s"
+      "Developer Infrastructure"
     ],
     "eventDays": [
       1665446400000,
-      1665705600000,
+      1665619200000,
       1665532800000,
-      1665619200000
+      1665705600000
     ]
   },
   {
@@ -4124,6 +4236,19 @@
     "github": "tkornuta-semiotic"
   },
   {
+    "id": "YSBNN3",
+    "name": "Brandon Ramirez",
+    "avatar": "https://speak.devcon.org/media/avatars/Copy_of_Brandon_Ramirez_-_bright2x_gPKOwdd.jpg",
+    "description": "Brandon Ramirez is the Co-Founder of The Graph & E&N, and was the original inventor of The Graph's protocol design and economics.\r\n\r\nBrandon is a deep generalist, drawing from his academic studies in Robotics, Control Systems, Economics & Signal Processing, and professional experience in Product Management, UX Design and Software Engineering.\r\n\r\nHe believes many of the world’s most pressing problems are fundamentally about incentives and social coordination.",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "RezBrandon"
+  },
+  {
     "id": "KDUATR",
     "name": "Arkadiy Kukarkin",
     "avatar": "https://speak.devcon.org/media/avatars/WgZMHBaj_400x400_JRq95GG.jpg",
@@ -4190,6 +4315,19 @@
       1665532800000
     ],
     "twitter": "Guthl"
+  },
+  {
+    "id": "FXELXR",
+    "name": "Puja Ohlhaver",
+    "avatar": "https://speak.devcon.org/media/avatars/21733683-a9d8-43ae-83ea-2d9731d69e4c_son0A5Z.jpg",
+    "description": "Puja Ohlhaver is co-author of Decentralized Society: Finding Web3's Soul. \r\n\r\nShe is a lawyer, entrepreneur, and social incentive design thinker, whose work has been featured in various outlets, including the New York Times, Washington Post, Wired Magazine, Politico. \r\n\r\nShe is currently a strategist at Flashbots.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "@pujaohlhaver"
   },
   {
     "id": "T89AAP",
@@ -4361,8 +4499,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000,
-      1665446400000
+      1665446400000,
+      1665532800000
     ]
   },
   {
@@ -4471,14 +4609,15 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Opportunity & Global Impact",
-      "Developer Infrastructure"
+      "Developer Infrastructure",
+      "UX & Design",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000,
       1665446400000,
       1665532800000,
-      1665619200000
+      1665619200000,
+      1665705600000
     ]
   },
   {
@@ -4532,6 +4671,19 @@
     "twitter": "https://twitter.com/GabrielaChang17"
   },
   {
+    "id": "XLVMQN",
+    "name": "Paula Berman",
+    "avatar": "https://speak.devcon.org/media/avatars/NrNq_FLf_400x400_1lrkGGZ.jpeg",
+    "description": "Paula Berman is COO of RadicalxChange Foundation, a non-profit supporting a global movement for next-generation political economies.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "@_paulaberman"
+  },
+  {
     "id": "TDB9TN",
     "name": "Moritz Stellmacher",
     "avatar": "https://speak.devcon.org/media/avatars/moritz_QurLEza.png",
@@ -4540,7 +4692,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665446400000
+      1665532800000
     ],
     "twitter": "https://twitter.com/moritzfelipe",
     "github": "https://github.com/moritzfelipe"
@@ -4612,6 +4764,20 @@
     ]
   },
   {
+    "id": "JWVEXT",
+    "name": "Attila Gazso",
+    "avatar": null,
+    "description": "Attila has a background in distributed systems engineering and currently works on Swarm, where he wears many hats. His current interests are cryptography, CRDTs and designing incentivised markets. In his free time he likes to herd cats, collect herbs and visit remote places.",
+    "tracks": [
+      "Layer 2s"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "twitter": "agazso",
+    "github": "agazso"
+  },
+  {
     "id": "GQ8XUY",
     "name": "Sachin",
     "avatar": null,
@@ -4621,6 +4787,18 @@
     ],
     "eventDays": [
       1665446400000
+    ]
+  },
+  {
+    "id": "DZVDNL",
+    "name": "Diego Fernandez",
+    "avatar": null,
+    "description": ".",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
     ]
   },
   {
@@ -4648,6 +4826,20 @@
     ]
   },
   {
+    "id": "7UPFQY",
+    "name": "Carlos",
+    "avatar": "https://speak.devcon.org/media/avatars/2486142_vAT00yx.jpeg",
+    "description": "Builder on Ethereum. I'm a core member of the BuidlGuidl where I build tools and public goods for the ecosystem, like SpeedRunEthereum and ABI Ninja. Previously worked for more than 10 years as a freelance web developer.",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "_carletex_",
+    "github": "carletex"
+  },
+  {
     "id": "7AGF99",
     "name": "John Mardlin",
     "avatar": null,
@@ -4658,6 +4850,21 @@
     "eventDays": [
       1665619200000
     ]
+  },
+  {
+    "id": "83KGXF",
+    "name": "Johns Gresham",
+    "avatar": "https://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg",
+    "description": "Working on NiceNode https://nicenode.xyz",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://nicenode.xyz",
+    "twitter": "sirjohnsgresham",
+    "github": "jgresham"
   },
   {
     "id": "BAKZ9F",
@@ -4707,7 +4914,109 @@
       "Layer 2s"
     ],
     "eventDays": [
+      1665532800000
+    ]
+  },
+  {
+    "id": "Z93KWP",
+    "name": "Venkatesh Rao",
+    "avatar": "https://speak.devcon.org/media/avatars/Venkatesh_Rao_Headshot_cV4sr57.jpeg",
+    "description": "Venkatesh Rao is a writer and consultant. He writes the Ribbonfarm blog, and is the author of Tempo, a book on decision-making. He holds a PhD in Aerospace Engineering (2003) from the University of Michigan. He is currently based in Los Angeles",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "website": "https://venkateshrao.com/",
+    "twitter": "https://twitter.com/vgr"
+  },
+  {
+    "id": "PRM7AM",
+    "name": "Bruno Macaes",
+    "avatar": "https://speak.devcon.org/media/avatars/Bruno_Macaes_Headshot_LDVaSU5.jpeg",
+    "description": "Bruno Maçães is a senior advisor at Flint Global and a columnist for the New Statesman. The author of 'Belt and Road'; 'History Has Begun'; and 'The Dawn of Eurasia', he advises some of the world's leading companies on geopolitics and technology. His latest book is 'Geopolitics for the End Time.'",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
       1665619200000
+    ],
+    "twitter": "https://twitter.com/MacaesBruno"
+  },
+  {
+    "id": "ZUMDMJ",
+    "name": "Pia Mancini",
+    "avatar": "https://speak.devcon.org/media/avatars/Screen_Shot_2022-09-28_at_9.08.20_AM_53SDATc.png",
+    "description": "Democracy activist, open source sustainer, co-founder & CEO at Open Collective and Chair of DemocracyEarth Foundation. I worked in politics in Argentina and developed technology for democracy around the world. YC Alum, YGL (World Economic Forum),  globe-trotter and Roma's mum.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "https://twitter.com/piamancini"
+  },
+  {
+    "id": "KYRM3C",
+    "name": "Brewster Kahle",
+    "avatar": "https://speak.devcon.org/media/avatars/Brewster_Kahle_Headshot_GBcqZZP.jpeg",
+    "description": "Brewster Kahle is the founder and Digital Librarian of the Internet Archive, which now preserves 99+ unique petabytes of data - the books, Web pages, music, television, and software of our cultural heritage, working with more than 950 library and university partners to create a digital library, accessible to all.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "https://twitter.com/brewster_kahle"
+  },
+  {
+    "id": "ADH9HF",
+    "name": "Aya Miyaguchi",
+    "avatar": null,
+    "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "https://twitter.com/AyaMiyagotchi"
+  },
+  {
+    "id": "QVD933",
+    "name": "Trent Van Epps",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "ZRNNVV",
+    "name": "Barry Whitehat",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "PQLDN3",
+    "name": "Andrew Milich",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665446400000
     ]
   }
 ]
