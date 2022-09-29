@@ -45,19 +45,19 @@
         flex-wrap: nowrap;
     
         > * {
-          // cursor: grab;
           min-width: 200px;
           flex-basis: 25%;
           flex-shrink: 0;
           display: flex !important;
           flex-direction: column;
           justify-content: center;
-          padding: $gaps-gap-2;
+          padding: 4px 0px;
+          margin: 0px 8px;
           height: 80px;
-          border-bottom: 2px solid transparent;
+          border-bottom: 3px solid transparent;
     
           &:hover {
-            border-bottom: 2px solid black;
+            border-bottom: 3px solid black;
           }
     
           &:focus {

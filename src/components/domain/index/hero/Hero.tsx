@@ -16,7 +16,7 @@ import { Link } from 'components/common/link'
 import TitleBogota from './images/bogota-title.svg'
 import TitleDevcon from './images/devcon-title.svg'
 import LogoBogota from 'assets/images/pages/bogota.svg'
-import LogoVideo from 'assets/images/pages/archive.svg'
+import LogoVideo from 'assets/images/pages/archive-1.svg'
 import LogoGetInvolved from 'assets/images/pages/get-involved.svg'
 import LogoPassport from 'assets/images/pages/devcon-passport.svg'
 import Image from 'next/image'
@@ -68,7 +68,7 @@ const usePages = () => {
       background: BackgroundPassport,
       titlePrefix: TitleDevcon,
       title: 'Passport',
-      logo: LogoBogota,
+      logo: LogoPassport,
       imageAlt: 'LogoBogota',
       button: {
         text: 'Launch Devcon App',
@@ -93,7 +93,7 @@ const usePages = () => {
       background: BackgroundDevconWeek,
       titlePrefix: TitleDevcon,
       title: 'Week',
-      logo: LogoBogota,
+      logo: LogoGetInvolved,
       imageAlt: 'LogoBogota',
       button: {
         text: 'Devcon Week',
@@ -105,7 +105,7 @@ const usePages = () => {
       background: BackgroundLive,
       titlePrefix: TitleDevcon,
       title: 'Live',
-      logo: LogoBogota,
+      logo: LogoVideo,
       imageAlt: 'LogoBogota',
       button: {
         text: 'Stream Now',
@@ -126,14 +126,20 @@ export const Hero = () => {
   // const parallaxMultiplier = useParallax(heroEl)
   // const isScrolled = parallaxMultiplier > 0.15
 
-  React.useEffect(() => {
-    const timeout = setTimeout(() => {
-      setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
-      setFocusNextPage(true)
-    }, 1000 * 12)
+  // React.useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
+  //     setFocusNextPage(true)
+  //   }, 1000 * 12)
 
-    return () => clearTimeout(timeout)
-  }, [pages, currentPage, setCurrentPage])
+  //   return () => clearTimeout(timeout)
+  // }, [pages, currentPage, setCurrentPage])
+
+  const rotateNextPage = () => {
+    setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
+    //
+    setFocusNextPage(true)
+  }
 
   React.useEffect(() => {
     if (focusNextPage) {
@@ -236,6 +242,7 @@ export const Hero = () => {
                     >
                       <p className="bold">Devcon Passport App —</p>
                       <p className="font-sm">Customize your Devcon experience</p>
+                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
                       onClick={() => setCurrentPage(1)}
@@ -244,6 +251,7 @@ export const Hero = () => {
                     >
                       <p className="bold">Bogota City Guide —</p>
                       <p className="font-sm">Discover the wonders of Bogotá</p>
+                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
                       onClick={() => setCurrentPage(2)}
@@ -252,6 +260,7 @@ export const Hero = () => {
                     >
                       <p className="bold">Devcon Week —</p>
                       <p className="font-sm">Participate in all devcon week</p>
+                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
                       onClick={() => setCurrentPage(3)}
@@ -260,6 +269,7 @@ export const Hero = () => {
                     >
                       <p className="bold">Devcon Live —</p>
                       <p className="font-sm">Stream Devcon</p>
+                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                   </>
                 }
