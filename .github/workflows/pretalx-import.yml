@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - next
+      - app
 
 jobs:
   build:

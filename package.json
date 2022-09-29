@@ -25,6 +25,7 @@
     "eth-sig-util": "^3.0.1",
     "ethereum-blockies-base64": "^1.0.2",
     "ethers": "^5.5.4",
+    "fuse.js": "^6.6.2",
     "fuzzy-search": "^3.2.1",
     "globby": "^11.0.4",
     "gray-matter": "^4.0.3",

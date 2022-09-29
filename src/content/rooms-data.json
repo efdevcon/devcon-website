@@ -46,34 +46,27 @@
     "name": "Workshop 1",
     "description": "SLS/Community Room",
     "info": "2nd Floor",
-    "capacity": 96
+    "capacity": 112
   },
   {
     "id": "workshop-2",
     "name": "Workshop 2",
     "description": "",
     "info": "3rd Floor",
-    "capacity": 128
+    "capacity": 112
   },
   {
     "id": "workshop-3",
     "name": "Workshop 3",
     "description": "",
     "info": "3rd Floor",
-    "capacity": 128
+    "capacity": 112
   },
   {
     "id": "workshop-4",
     "name": "Workshop 4",
     "description": "",
     "info": "3rd Floor",
-    "capacity": 128
-  },
-  {
-    "id": "hacker-basement",
-    "name": "Hacker Basement",
-    "description": "",
-    "info": "Basement",
-    "capacity": null
+    "capacity": 112
   }
 ]

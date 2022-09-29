@@ -8,7 +8,7 @@ import fetch from 'cross-fetch'
 import sessionData from 'content/session-data.json'
 import speakerData from 'content/speakers-data.json'
 import roomsData from 'content/rooms-data.json'
-import { makeConsoleLogger } from '@notionhq/client/build/src/logging'
+import Fuse from 'fuse.js'
 
 require('dotenv').config()
 
@@ -24,6 +24,27 @@ const tagsQuestionId = 42
 
 const organizationQuestionId = 23 // not used
 const roleQuestionId = 24 // not used
+
+export const fuseOptions = {
+  includeScore: true,
+  useExtendedSearch: true,
+  shouldSort: true,
+  ignoreLocation: true,
+  keys: [
+    {
+      name: 'speakers.name',
+      weight: 1
+    },
+    {
+      name: 'track',
+      weight: 0.5
+    },
+    {
+      name: 'tags',
+      weight: 0.2
+    },
+  ]
+}
 
 console.log('Pretalx Service', eventName)
 
@@ -128,6 +149,19 @@ export async function GetSessionsBySpeaker(id: string): Promise<Array<SessionTyp
 export async function GetSessionsByRoom(id: string): Promise<Array<SessionType>> {
   // no endpoint exists, so fetches and filters all sessions recursively
   return (await GetSessions()).filter(i => i.room?.id === id)
+}
+
+export async function GetRelatedSessions(id: string, sessions: SessionType[]): Promise<Array<SessionType>> {
+  const data = sessions.length > 0 ? sessions : await GetSessions()
+  const session = data.find(i => i.id === id)
+  if (!session) return []
+
+  const query = `${session.speakers.map(i => `"${i.name}"`).join(' | ')} | "${session.track}" | ${session.tags?.map(i => `"${i}"`).join(' | ')}`
+
+  const fuse = new Fuse(data, fuseOptions)
+  const result = fuse.search(query)
+
+  return result.map(i => i.item).filter(i => i.id !== id).slice(0, 5)
 }
 
 export async function GetExpertiseLevels(): Promise<Array<string>> {
