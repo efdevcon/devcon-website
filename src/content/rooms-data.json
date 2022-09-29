@@ -70,6 +70,13 @@
     "capacity": null
   },
   {
+    "id": "badges-station",
+    "name": "Badges Station",
+    "description": "",
+    "info": "Floor 1",
+    "capacity": null
+  },
+  {
     "id": "main-stage-oc",
     "name": "Main Stage - OC",
     "description": "Main Stage for Opening Day",
