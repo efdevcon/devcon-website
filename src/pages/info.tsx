@@ -21,7 +21,7 @@ export async function getStaticProps(context: any) {
   // const pageFAQ = await GetPage('/faq', context.locale)
   // const pageBogota = await GetPage('/bogota', context.locale)
   const sections = await GetContentSections(
-    ['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe', 'what-areas-to-stay', 'registration-checkin', 'venue-guide', 'food-drinks'],
+    ['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe', 'what-areas-to-stay', 'registration-checkin', 'venue-guide'],
     context.locale
   )
 
