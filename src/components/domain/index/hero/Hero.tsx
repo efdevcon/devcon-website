@@ -1,12 +1,8 @@
 import React from 'react'
 import css from './hero.module.scss'
-import Logo from 'assets/images/hero/hero-logo-mobile.svg'
 import Rays from './images/Rays'
 import { useTranslations } from 'next-intl'
 import { CallToAction } from './call-to-action'
-import AddToCalendar from '../add-to-calendar'
-import PolygonAnim from 'components/domain/index/hero/polygon-anim'
-import Mountains from 'assets/images/mtn-all-layers.svg'
 import BackgroundBogota from './images/bogota-background.png'
 import BackgroundPassport from './images/passport-background.png'
 import BackgroundLive from './images/live-background.png'
@@ -21,41 +17,24 @@ import LogoGetInvolved from 'assets/images/pages/get-involved.svg'
 import LogoPassport from 'assets/images/pages/devcon-passport.svg'
 import Image from 'next/image'
 
-const useParallax = (elementRef: any) => {
-  const [parallaxMultiplier, setParallaxMultiplier] = React.useState(0)
-
-  React.useEffect(() => {
-    const element = elementRef.current
-
-    if (!element) return
-
-    let options = {
-      threshold: new Array(101).fill(0).map((v, i) => i * 0.01),
-    }
-
-    const callback = (entries: any) => {
-      const { intersectionRatio } = entries[0]
-
-      setParallaxMultiplier(1 - intersectionRatio)
-    }
-
-    const observer = new IntersectionObserver(callback, options)
-
-    observer.observe(element)
-
-    return () => {
-      observer.unobserve(element)
-    }
-  }, [elementRef])
-
-  return parallaxMultiplier
-}
-
-const parallax = (parallaxMultiplier: any, initial = -15, range = 15) => {
-  const translateY = initial - parallaxMultiplier * range
+const useDraggableLink = () => {
+  const dragging = React.useRef(false)
 
   return {
-    transform: `translateY(${translateY}%)`,
+    onMouseDown: () => {
+      dragging.current = false
+    },
+    onMouseMove: () => {
+      dragging.current = true
+    },
+    onClick: (e: React.SyntheticEvent) => {
+      e.stopPropagation()
+
+      if (dragging.current) {
+        e.preventDefault()
+      }
+    },
+    draggable: false,
   }
 }
 
@@ -117,27 +96,15 @@ const usePages = () => {
 
 export const Hero = () => {
   const intl = useTranslations()
+  const draggableLinkAttributes = useDraggableLink()
   const heroEl = React.useRef(null)
   const pages = usePages()
   const [currentPage, setCurrentPage] = React.useState(0)
   const [focusNextPage, setFocusNextPage] = React.useState(false)
   const page = pages[currentPage]
 
-  // const parallaxMultiplier = useParallax(heroEl)
-  // const isScrolled = parallaxMultiplier > 0.15
-
-  // React.useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
-  //     setFocusNextPage(true)
-  //   }, 1000 * 12)
-
-  //   return () => clearTimeout(timeout)
-  // }, [pages, currentPage, setCurrentPage])
-
   const rotateNextPage = () => {
     setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
-    //
     setFocusNextPage(true)
   }
 
@@ -160,18 +127,6 @@ export const Hero = () => {
         <div className={css['rays-container']}>
           <Rays className={css['rays']} />
         </div>
-
-        {/* <PolygonAnim /> */}
-
-        {/* <div className={css['parallax-container']}>
-          <div className={css['mountain-container']}>
-            <Mountains />
-          </div>
-        </div>
-
-        <div className={css['parallax-container-2']}>
-          <div className={css['clouds']} style={parallax(parallaxMultiplier, 2, 2) as any}></div>
-        </div> */}
 
         <div className={css['page-background']}>
           <Image
@@ -239,7 +194,14 @@ export const Hero = () => {
                 items={
                   <>
                     <div
-                      onClick={() => setCurrentPage(0)}
+                      {...draggableLinkAttributes}
+                      onClick={(e: any) => {
+                        draggableLinkAttributes.onClick(e)
+
+                        if (e.defaultPrevented) return
+
+                        setCurrentPage(0)
+                      }}
                       id="passport"
                       className={`${page.id === 'passport' && css['active']} ${css['cta-item']}`}
                     >
@@ -248,7 +210,14 @@ export const Hero = () => {
                       <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
-                      onClick={() => setCurrentPage(1)}
+                      {...draggableLinkAttributes}
+                      onClick={(e: any) => {
+                        draggableLinkAttributes.onClick(e)
+
+                        if (e.defaultPrevented) return
+
+                        setCurrentPage(1)
+                      }}
                       id="bogota"
                       className={`${page.id === 'bogota' && css['active']} ${css['cta-item']}`}
                     >
@@ -257,7 +226,14 @@ export const Hero = () => {
                       <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
-                      onClick={() => setCurrentPage(2)}
+                      {...draggableLinkAttributes}
+                      onClick={(e: any) => {
+                        draggableLinkAttributes.onClick(e)
+
+                        if (e.defaultPrevented) return
+
+                        setCurrentPage(2)
+                      }}
                       id="devcon-week"
                       className={`${page.id === 'devcon-week' && css['active']} ${css['cta-item']}`}
                     >
@@ -266,7 +242,14 @@ export const Hero = () => {
                       <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
-                      onClick={() => setCurrentPage(3)}
+                      {...draggableLinkAttributes}
+                      onClick={(e: any) => {
+                        draggableLinkAttributes.onClick(e)
+
+                        if (e.defaultPrevented) return
+
+                        setCurrentPage(3)
+                      }}
                       id="livestream"
                       className={`${page.id === 'livestream' && css['active']} ${css['cta-item']}`}
                     >
@@ -310,7 +293,7 @@ export const Hero = () => {
         </div> */}
       </div>
       <div className="section" style={{ position: 'relative' }}>
-        <div className={`expand ${css['gradient']}`}></div>
+        {/* <div className={`expand ${css['gradient']}`}></div> */}
         {/* <div className={`border-bottom clear-bottom ${css['mobile']}`}>
           <CallToAction mobile />
         </div> */}
