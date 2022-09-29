@@ -146,7 +146,7 @@ export const Hero = () => {
       const el = document.getElementById(page.id)
 
       // Only scroll into view if not scrolled vertically, because otherwise we scroll the user back up to the top :D
-      if (window.scrollY === 0) {
+      if (window.scrollY === 0 && el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
       }
 
