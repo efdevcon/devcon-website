@@ -5,6 +5,8 @@ import matter from 'gray-matter'
 import { GetTags } from 'services/page'
 import moment from 'moment'
 import Parser from 'rss-parser'
+import newsTweets from 'content/news-tweets.json'
+
 require('dotenv').config()
 const fs = require('fs')
 const path = require('path')
@@ -160,8 +162,7 @@ const blog = (() => {
 const getNewsItems = async (lang: string) => {
   if (lang !== 'es') lang = 'en'
 
-  const tweets = await twitter.getTweets(1379132185274384384)
-  const tweetsFormatted = tweets.map(formatting.formatTweet)
+  const tweetsFormatted = newsTweets.map(formatting.formatTweet)
   const blogs = await blog.getPosts()
   const blogsFormatted = blogs.map(formatting.formatBlogPost)
 
