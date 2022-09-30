@@ -18,7 +18,8 @@ category: general
 — Schelling Point @ Gran Carpa Américas Corferias: 8:30am - 5pm 
 — ETHLatam @ Ágora Bogotá: **8am - 9pm** 
 
-## **Registration** 
+## **Registration**
 
 **We'll begin registration on Oct. 11-14 at 8am.**\
-H﻿ead to the front of the Ágora Bogotá Convention Center, where you'll see 4 doors with designated lines.
+H﻿ead to the front of the Ágora Bogotá Convention Center, where you'll see 4 doors with designated lines.\
+O﻿nce you reach the desk, you'll get your conference wristband.

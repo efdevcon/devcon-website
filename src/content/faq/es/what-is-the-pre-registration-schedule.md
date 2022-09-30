@@ -17,7 +17,8 @@ category: general
 — Punto Schelling @ Gran Carpa Américas Corferias: 8:30am - 5pm
 — ETHLatam @ Ágora Bogotá: **8am - 9pm**
 
-## **La inscripción** 
+## **La inscripción**
 
 **Comenzaremos a registrarse del 11 al 14 de octubre a las 8 a.m.**\
-Dirígete al frente del Centro de Convenciones Ágora Bogotá, donde verás 4 puertas con líneas designadas.
+Dirígete al frente del Centro de Convenciones Ágora Bogotá, donde verás 4 puertas con líneas designadas.\
+Una vez que llegue al escritorio, obtendrá su pulsera de conferencia.
