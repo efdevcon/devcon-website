@@ -124,19 +124,6 @@ export const Menu = (props: any) => {
 
     buttons = [
       {
-        key: 'notifications',
-        tooltip: {
-          content: 'Notifications',
-        },
-        icon: (
-          <div className={css['app-notifications']}>
-            <BellIcon style={props.foldoutOpen ? { opacity: 0.7 } : {}} />
-            {countUnreadNotifications > 0 && <div className={css['counter']}>{countUnreadNotifications}</div>}
-          </div>
-        ),
-        onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
-      },
-      {
         key: 'account',
         tooltip: {
           content: 'Account',
@@ -144,6 +131,26 @@ export const Menu = (props: any) => {
         icon: <AccountIcon />,
         url: accountContext.account ? '/' : '/login',
       },
+      {
+        key: 'notifications',
+        tooltip: {
+          content: 'Notifications',
+        },
+        icon: (
+          <div className={css['app-notifications']}>
+            {props.foldoutOpen ? (
+              <IconCross style={{ width: '0.8em' }} />
+            ) : (
+              <>
+                <BellIcon style={props.foldoutOpen ? { opacity: 0.7 } : {}} />
+                {countUnreadNotifications > 0 && <div className={css['counter']}>{countUnreadNotifications}</div>}
+              </>
+            )}
+          </div>
+        ),
+        onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
+      },
+
       // {
       //   key: 'back-button',
       //   tooltip: {
