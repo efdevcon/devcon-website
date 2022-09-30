@@ -82,3 +82,50 @@
 .floor-link {
   // margin-left: 8px;
 }
+
+.filter {
+  display: flex;
+  width: 100%;
+
+  .search {
+    flex-grow: 4;
+  }
+
+  .end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+
+    >* {
+      margin-left: 8px;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+.list-item {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $colors-standard-border-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    background: $colors-monochrome-3;
+  }
+}
+
+.floor-image {
+  position: relative;
+  width: 205px;
+  height: 110px;
+  flex-shrink: 0;
+}

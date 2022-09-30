@@ -10,18 +10,11 @@ import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
 import { Search } from 'components/common/filter/Filter'
 import filterCss from 'components/domain/app/app-filter.module.scss'
-import Image from 'next/image'
 import { usePanzoom, PanzoomControls } from './Venue'
 import venueCss from './venue.module.scss'
 import { useAppContext } from 'context/app-context'
 import { useAccountContext } from 'context/account-context'
-
-import FloorBasement from 'assets/images/venue-map/Floor Basement.png'
-import Floor1 from 'assets/images/venue-map/Floor 1.png'
-import Floor2 from 'assets/images/venue-map/Floor 2.png'
-import Floor3 from 'assets/images/venue-map/Floor 3.png'
-import Floor4 from 'assets/images/venue-map/Floor 4.png'
-import Floor5 from 'assets/images/venue-map/Floor 5.png'
+import { getFloorImage } from './Floor'
 
 interface Props {
   room: RoomType
@@ -41,15 +34,6 @@ export const Room = (props: Props) => {
   const [search, setSearch] = React.useState('')
   const pz = usePanzoom()
 
-  const getFloorImage = () => {
-    if (props.room.info === '1st Floor') return <Image src={Floor1} alt={props.room.name} layout="raw" id="venue-image" priority />
-    if (props.room.info === '2nd Floor') return <Image src={Floor2} alt={props.room.name} layout="raw" id="venue-image" priority />
-    if (props.room.info === '3rd Floor') return <Image src={Floor3} alt={props.room.name} layout="raw" id="venue-image" priority />
-    if (props.room.info === '4th Floor') return <Image src={Floor4} alt={props.room.name} layout="raw" id="venue-image" priority />
-    if (props.room.info === '5th Floor') return <Image src={Floor5} alt={props.room.name} layout="raw" id="venue-image" priority />
-    if (props.room.info === 'Basement') return <Image src={FloorBasement} alt={props.room.name} layout="raw" id="venue-image" priority />
-  }
-
   return (
     <>
       <AppNav
@@ -63,7 +47,7 @@ export const Room = (props: Props) => {
 
       <div className={venueCss['panzoom']}>
         <div className={venueCss['image']} id="image-container">
-          {getFloorImage()}
+          {getFloorImage(props.room.info)}
         </div>
         <PanzoomControls pz={pz} />
       </div>

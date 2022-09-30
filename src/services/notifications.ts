@@ -73,6 +73,7 @@ export function GetNotifications(lang: string = 'en'): Array<Notification> {
 export async function GetTwitterNotifications(): Promise<Array<Notification>> {
   if (process.env.NODE_ENV !== 'production') {
     console.log('Reducing API limits.. Return')
+    return []
   }
 
   const value = cacheData.get(CACHE_KEY)

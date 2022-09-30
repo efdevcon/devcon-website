@@ -11,8 +11,8 @@ import { Session } from 'types/Session'
 import { useAccountContext } from 'context/account-context'
 import moment from 'moment'
 import { Link } from 'components/common/link'
-import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'
 import { useAppContext } from 'context/app-context'
+import { RoomInfo } from '../venue/RoomInfo'
 
 type CardProps = {
   session: Session
@@ -86,13 +86,7 @@ export const SessionCard = (props: CardProps) => {
         <div className={css['bottom']}>
           {props.session.room && (
             <div className={css['room']}>
-              <div className={css['room-title']}>
-                <IconMarker />
-                <Link to={`/venue?room=${props.session.room.id}`}>
-                  {props.session.room.name}
-                  {props.session.room.description && ` — ${props.session.room.description}`}
-                </Link>
-              </div>
+              <RoomInfo room={props.session.room} align />
 
               {props.session.room.capacity && (
                 <div className={css['n-seats']}>

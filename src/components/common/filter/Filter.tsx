@@ -177,12 +177,15 @@ type SearchProps = {
   onChange: Filter['onChange']
   placeholder?: string | undefined
   timeout?: number
+  className?: string
 }
 export const Search = (props: SearchProps) => {
+  let className = css['search']
+  if (props.className) className += ` ${props.className}`
   return (
     <InputForm
       timeout={props.timeout}
-      className={css['search']}
+      className={className}
       placeholder={props.placeholder}
       onChange={props.onChange}
       icon={IconSearch}

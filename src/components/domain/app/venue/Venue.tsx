@@ -10,6 +10,13 @@ import VenueMap from 'assets/images/venue-map/Venue.png'
 import Panzoom, { PanZoom } from 'panzoom'
 import IconPlus from 'assets/icons/plus.svg'
 import IconMinus from 'assets/icons/minus.svg'
+import ListIcon from 'assets/icons/list.svg'
+import TileIcon from 'assets/icons/layers.svg'
+import { RoomInfo } from './RoomInfo'
+import { getFloorImage } from './Floor'
+import { defaultSlugify } from 'utils/formatting'
+import { RoomList } from './roomlist'
+import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 
 interface Props {
   rooms: Array<Room>
@@ -80,21 +87,19 @@ export const usePanzoom = () => {
 }
 
 export const Venue = (props: Props) => {
-  // const [listView, setListView] = React.useState()
+  const [listView, setListView] = React.useState(true)
   const [search, setSearch] = React.useState('')
-  const pz = usePanzoom()
 
-  const filteredFloors = search
+  const filteredFloors = (search
     ? props.floors.filter(floor => {
       if (floor.toLowerCase().includes(search.toLowerCase())) return true
 
       const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
       return roomsByFloor.some(room => room.name.toLowerCase().includes(search) ||
-        room.description.toLowerCase().includes(search) || 
-        room.capacity?.toString().includes(search))
+        room.description.toLowerCase().includes(search))
     })
-    : props.floors
+    : props.floors).sort().reverse()
 
   return (
     <>
@@ -111,33 +116,53 @@ export const Venue = (props: Props) => {
         <div className={css['image']} id="image-container">
           <Image src={VenueMap} alt="venue map" layout="raw" />
         </div>
-        {/* <PanzoomControls pz={pz} /> */}
       </div>
 
       <div className={`${filterCss['filter']} border-top`}>
         <div className="section clear-bottom-less">
-          <Search placeholder="Search venue" onChange={setSearch} value={search} />
+          <div className={css['filter']}>
+            <Search className={css['search']} placeholder="Search venue" onChange={setSearch} value={search} />
+
+            <div className={css['end']}>
+              <button
+                onClick={() => setListView(true)}
+                className={`${listView ? 'hover' : ''} app squared sm thin-borders`}
+              >
+                <ListIcon />
+              </button>
+              <button
+                onClick={() => setListView(false)}
+                className={`${listView ? '' : 'hover'} app squared sm thin-borders`}
+              >
+                <TileIcon />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="section clear-top-less">
-        <h2 className="app-header clear-bottom-less">Floors</h2>
-        {filteredFloors.sort().map(floor => {
+        {/* <h2 className="app-header clear-bottom-less">Floors</h2> */}
+
+        {listView && filteredFloors.map(floor => {
           const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
+          return <CollapsedSection key={floor}>
+            <CollapsedSectionHeader>
+              <p className="app-header">{floor}</p>
+            </CollapsedSectionHeader>
+            <CollapsedSectionContent>
+              <RoomList rooms={roomsByFloor} />
+            </CollapsedSectionContent>
+          </CollapsedSection>
+        })}
+
+        {!listView && filteredFloors.sort().map(floor => {
           return (
-            <div className="clear-top-less" key={floor}>
-              <div className={`padded bold app-header ${css['floor-header']}`}>{floor}</div>
-              <LinkList>
-                {roomsByFloor.map((room: Room) => {
-                  return (
-                    <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue?room=${room.id}`}>
-                      <strong>{room.name}</strong> {room.description && `— ${room.description}`}
-                    </Link>
-                  )
-                })}
-              </LinkList>
-            </div>
+            <Link to={`/venue?floor=${defaultSlugify(floor)}`} className={`${css['list-item']} clear-top-less`} key={floor}>
+              <div className={`padded bold app-header`}>{floor}</div>
+              <div className={css['floor-image']}>{getFloorImage(floor, 'fill')}</div>
+            </Link>
           )
         })}
       </div>

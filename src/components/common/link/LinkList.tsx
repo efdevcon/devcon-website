@@ -13,8 +13,8 @@ export const LinkList = (props: any) => {
         return React.cloneElement(child, {
           className: child.props.className ? `${child.props.className} list-item` : 'list-item',
           children: (() => {
-            const isGoogleDrive = child.props.to.includes('drive.google.com')
-            const isExternal = child.props.to.match(/^([a-z0-9]*:|.{0})\/\/.*$/)
+            const isGoogleDrive = child.props.to?.includes('drive.google.com')
+            const isExternal = child.props.to?.match(/^([a-z0-9]*:|.{0})\/\/.*$/)
 
             let className = css['link']
 
