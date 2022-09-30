@@ -776,7 +776,7 @@
   },
   {
     "id": "VCZZVF",
-    "name": "Joshua",
+    "name": "Joshua Riley",
     "avatar": "https://speak.devcon.org/media/avatars/smolJosh_3j9EijZ.jpeg",
     "description": "I am a self-taught software engineer working to improve decentralized technology at the lowest levels!",
     "tracks": [
@@ -2358,7 +2358,7 @@
   },
   {
     "id": "8NFBXW",
-    "name": "kumavis",
+    "name": "Kumavis",
     "avatar": "https://speak.devcon.org/media/avatars/phong-profile-square_2ijEKi8.jpg",
     "description": "kumavis founded MetaMask and now leads their Security Research team. Contributor to MetaMask, LavaMoat, Endo, SES, Ethereumjs, js-libp2p.",
     "tracks": [
@@ -2996,7 +2996,7 @@
   },
   {
     "id": "AF3FHA",
-    "name": "naugtur",
+    "name": "Naugtur",
     "avatar": "https://www.gravatar.com/avatar/c541838c5795886fd1b264330b305a1d",
     "description": "Full-stack developer and technology researcher. JS Security Engineer at MetaMask working on LavaMoat and Endo. Started using Node.js at v0.8 and never stopped. Enjoys innovating and teaching security, diagnostics and maintainability. One of the oldest members of meet.js Poland community - both as a speaker and organizer.",
     "tracks": [
@@ -4071,20 +4071,6 @@
     ]
   },
   {
-    "id": "33GJBY",
-    "name": "Carlos Matallana",
-    "avatar": "https://speak.devcon.org/media/avatars/Poster_Wolverine_xb1yDvX.jpg",
-    "description": "I'm blockchain enthusiastic and I have been working on blockchain since 2018.\r\nI have been enrolled in iden3 (identity project) and afterwards be part of the zk-rollup development.\r\nRollup-PoC and later on hermez-network has been the two main projects related to zk-rollups. Currently working on the zkEVM as a team lead in the protocol team.",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "twitter": "https://twitter.com/KrlsMata",
-    "github": "https://github.com/krlosMata"
-  },
-  {
     "id": "WHNHUQ",
     "name": "Sam Richards",
     "avatar": "https://speak.devcon.org/media/avatars/laser-eth-glyph_Zg03e83.jpeg",
@@ -4631,7 +4617,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665705600000
     ]
   },
   {
@@ -4794,8 +4781,8 @@
   {
     "id": "T8Q3YB",
     "name": "Maxim",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/Screen_Shot_2021-05-17_at_10.39.25_AM_j9qiSbk.png",
+    "description": "Software Engineer / Language Designer at Aztec Network on the Noir team",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -4831,15 +4818,17 @@
   },
   {
     "id": "7AGF99",
-    "name": "John Mardlin",
-    "avatar": null,
-    "description": "",
+    "name": "Maurelian",
+    "avatar": "https://speak.devcon.org/media/avatars/maurelian_ZrENEIe.jpeg",
+    "description": "Security at Optimism. \r\nPreviously co-founder of ConsenSys Diligence.",
     "tracks": [
       "Security"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "twitter": "maurelian_",
+    "github": "maurelian"
   },
   {
     "id": "83KGXF",
