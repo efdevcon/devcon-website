@@ -10,16 +10,18 @@ import Floor2 from 'assets/images/venue-map/Floor 2.png'
 import Floor3 from 'assets/images/venue-map/Floor 3.png'
 import Floor4 from 'assets/images/venue-map/Floor 4.png'
 import Floor5 from 'assets/images/venue-map/Floor 5.png'
+import ArrowLeft from 'assets/icons/chevron_left.svg'
+import ArrowRight from 'assets/icons/chevron_right.svg'
 import { AppNav } from '../navigation'
 import { PanzoomControls, usePanzoom } from './Venue'
 import { Search } from 'components/common/filter/Filter'
 import { RoomList } from './roomlist'
 import { Room } from 'types/Room'
+import { useRouter } from 'next/router'
 
 interface Props {
   floor: string
   rooms: Room[]
-  className?: string
 }
 
 declare const VALID_LAYOUT_VALUES: readonly ["fill", "fixed", "intrinsic", "responsive", "raw", undefined]
@@ -37,8 +39,6 @@ export const getFloorImage = (floor: string, layout: LayoutValue = 'raw', classN
 export const Floor = (props: Props) => {
   const [search, setSearch] = React.useState('')
   const pz = usePanzoom()
-  let className = css['container']
-  if (props.className) className += ` ${props.className}`
 
   const filteredRooms = search
     ? props.rooms.filter(room => room.name.toLowerCase().includes(search) ||
@@ -57,6 +57,7 @@ export const Floor = (props: Props) => {
       />
 
       <div className={venueCss['panzoom']}>
+        <FloorNavigator current={props.floor} />
         <div className={venueCss['image']} id="image-container">
           {getFloorImage(props.floor)}
         </div>
@@ -80,4 +81,41 @@ export const Floor = (props: Props) => {
       </div>
     </>
   )
+}
+
+interface NavigatorProps {
+  current: string
+}
+
+export function FloorNavigator(props: NavigatorProps) {
+  const router = useRouter()
+
+  function navigateFloor(action: 'prev' | 'next') {
+    const floor = Number(props.current.charAt(props.current.length - 1))
+
+    if (action === 'next') {
+      if (props.current === 'S1') router.push(`/venue?floor=floor-1`)
+      else if (props.current === 'Floor 5') router.push(`/venue?floor=s1`)
+      else router.push(`/venue?floor=floor-${floor + 1}`)
+    }
+
+    if (action === 'prev') {
+      if (props.current === 'S1') router.push(`/venue?floor=floor-5`)
+      else if (props.current === 'Floor 1') router.push(`/venue?floor=s1`)
+      else router.push(`/venue?floor=floor-${floor - 1}`)
+    }
+  }
+
+  return <div className={`${css['navigator']} section`}>
+    <div className={css['shift-end']}>
+      <button className={`${css['content']} app squared sm thin-borders`}
+        onClick={() => navigateFloor('prev')}>
+        <ArrowLeft />
+      </button>
+      <button className={`${css['content']} app squared sm thin-borders`}
+        onClick={() => navigateFloor('next')}>
+        <ArrowRight />
+      </button>
+    </div>
+  </div>
 }

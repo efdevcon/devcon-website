@@ -15,6 +15,7 @@ import venueCss from './venue.module.scss'
 import { useAppContext } from 'context/app-context'
 import { useAccountContext } from 'context/account-context'
 import { getFloorImage } from './Floor'
+import { RoomInfo } from './RoomInfo'
 
 interface Props {
   room: RoomType
@@ -62,8 +63,10 @@ export const Room = (props: Props) => {
         <div className={css['background']}></div>
 
         <div className={css['room-info']}>
-          <p className="h2 clear-bottom-less">{props.room.name}{props.room.info && <small> — {props.room.info}</small>}</p>
-          {props.room.description && <p className="bold clear-bottom-less">{props.room.description}</p>}
+          <div className="h2 clear-bottom-less">
+            <RoomInfo room={props.room} />
+          </div>
+          {props.room.info && <p className="h1 bold clear-bottom-less">{props.room.info}</p>}
           {props.room.capacity && (
             <div className="label">
               <CapacityIcon className={`icon ${css['capacity-icon']}`} />

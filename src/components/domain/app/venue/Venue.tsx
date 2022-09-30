@@ -101,6 +101,8 @@ export const Venue = (props: Props) => {
     })
     : props.floors).sort().reverse()
 
+  const reorderedFloors = filteredFloors.find(i => i === 'S1') ? [...filteredFloors.filter(i => i !== 'S1'), 'S1'] : filteredFloors
+
   return (
     <>
       <AppNav
@@ -144,7 +146,7 @@ export const Venue = (props: Props) => {
       <div className="section clear-top-less">
         {/* <h2 className="app-header clear-bottom-less">Floors</h2> */}
 
-        {listView && filteredFloors.map(floor => {
+        {listView && reorderedFloors.map(floor => {
           const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
           return <CollapsedSection key={floor}>
@@ -157,7 +159,7 @@ export const Venue = (props: Props) => {
           </CollapsedSection>
         })}
 
-        {!listView && filteredFloors.sort().map(floor => {
+        {!listView && reorderedFloors.sort().map(floor => {
           return (
             <Link to={`/venue?floor=${defaultSlugify(floor)}`} className={`${css['list-item']} clear-top-less`} key={floor}>
               <div className={`padded bold app-header`}>{floor}</div>
