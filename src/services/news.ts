@@ -65,7 +65,7 @@ const formatting = (() => {
         author: '@EFDevcon',
         tweetID: tweet.id,
         description: tweet.text,
-        imageUrl: '/assets/images/twitter-banner.jpeg',
+        imageUrl: '/assets/images/twitter-banner.png',
       }
     },
   }

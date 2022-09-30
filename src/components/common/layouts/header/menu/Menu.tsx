@@ -106,7 +106,7 @@ export const Menu = (props: any) => {
         content: 'Account',
       },
       icon: <AccountIcon />,
-      url: '/app/login',
+      url: 'https://app.devcon.org/login',
     },
     {
       key: 'mobile-menu-toggle',

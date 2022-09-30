@@ -47,10 +47,15 @@ const Mobile = (props: any) => {
               ) : (
                 <div className={`${css['accordion-toggle']} ${css['no-children']}`}>
                   <Link
-                    className={`plain hover-underline button red ${css[i.highlight as any]}`}
+                    className={`plain hover-underline button ${css[i.highlight as any]}`}
                     style={
-                      i.highlight === 'app'
-                        ? { display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }
+                      i.highlight
+                        ? {
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            width: '100%',
+                          }
                         : undefined
                     }
                     to={i.url}
@@ -59,6 +64,7 @@ const Mobile = (props: any) => {
                     <>
                       {i.title}
                       {i.highlight === 'app' && <IconCalendar style={{ fontSize: '1em' }} />}
+                      {i.highlight === 'livestream' && <IconWatch style={{ fontSize: '1em' }} />}
                     </>
                   </Link>
                 </div>
