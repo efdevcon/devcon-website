@@ -268,5 +268,23 @@
     "location": "Location",
     "multi_day_event": "Multi-Day Event",
     "bogota_blockchain_week": "BOGOTA BLOCKCHAIN WEEK"
+  },
+  "hero": {
+    "passport_title": "Passport",
+    "passport_cta": "Launch Devcon App",
+    "passport": "Devcon Passport App",
+    "passport_subtext": "Customize your Devcon experience",
+    "city_guide_title": "City Guide",
+    "city_guide_cta": "Discover Bogotá",
+    "city_guide": "Bogotá City Guide",
+    "city_guide_subtext": "Discover the wonders of Bogotá",
+    "devcon_week_title": "Week",
+    "devcon_week_cta": "Devcon Week",
+    "devcon_week": "Devcon Week",
+    "devcon_week_subtext": "Participate in all devcon week",
+    "live_title": "Live",
+    "live_cta": "Stream Now",
+    "live": "Devcon Live",
+    "live_subtext": "Stream Devcon"
   }
 }

@@ -268,6 +268,24 @@
     "location": "Ubicación",
     "multi_day_event": "Evento de varios días",
     "bogota_blockchain_week": "EMANA BLOCKCHAIN DE BOGOTÁ"
+  },
+  "hero": {
+    "passport_title": "Pasaporte",
+    "passport_cta": "Aplicación Devcon",
+    "passport": "Aplicación de pasaporte Devcon",
+    "passport_subtext": "Personaliza tu experiencia Devcon",
+    "city_guide_title": "Guía de la ciudad",
+    "city_guide_cta": "Descubre Bogotá",
+    "city_guide": "Guía de la ciudad de Bogotá",
+    "city_guide_subtext": "Descubre las maravillas de Bogotá",
+    "devcon_week_title": "Semana",
+    "devcon_week_cta": "Semana Devcon",
+    "devcon_week": "Semana Devcon",
+    "devcon_week_subtext": "Participa en toda la semana devcon",
+    "live_title": "Live",
+    "live_cta": "Stream Ahora",
+    "live": "Devcon Live",
+    "live_subtext": "Stream Devcon"
   }
 }
 

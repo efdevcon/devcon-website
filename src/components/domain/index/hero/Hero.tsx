@@ -46,11 +46,11 @@ const usePages = () => {
       id: 'passport',
       background: BackgroundPassport,
       titlePrefix: TitleDevcon,
-      title: 'Passport',
+      title: intl('hero_passport_title'), // 'Passport',
       logo: LogoPassport,
       imageAlt: 'LogoBogota',
       button: {
-        text: 'Launch Devcon App',
+        text: intl('hero_passport_cta'), //'Launch Devcon App',
         url: 'https://app.devcon.org',
       },
     },
@@ -59,11 +59,11 @@ const usePages = () => {
       background: BackgroundBogota,
       backgroundAlt: 'Deva',
       titlePrefix: TitleBogota,
-      title: 'City Guide',
+      title: intl('hero_city_guide_title'),
       logo: LogoBogota,
       imageAlt: 'LogoBogota',
       button: {
-        text: 'Discover Bogota',
+        text: intl('hero_city_guide_cta'),
         url: '/bogota',
       },
     },
@@ -71,11 +71,11 @@ const usePages = () => {
       id: 'devcon-week',
       background: BackgroundDevconWeek,
       titlePrefix: TitleDevcon,
-      title: 'Week',
+      title: intl('hero_devcon_week_title'),
       logo: LogoGetInvolved,
       imageAlt: 'LogoBogota',
       button: {
-        text: 'Devcon Week',
+        text: intl('hero_devcon_week_cta'),
         url: '/devcon-week',
       },
     },
@@ -83,11 +83,11 @@ const usePages = () => {
       id: 'livestream',
       background: BackgroundLive,
       titlePrefix: TitleDevcon,
-      title: 'Live',
+      title: intl('hero_live_title'),
       logo: LogoVideo,
       imageAlt: 'LogoBogota',
       button: {
-        text: 'Stream Now',
+        text: intl('hero_live_cta'),
         url: 'https://live.devcon.org',
       },
     },
@@ -184,7 +184,7 @@ export const Hero = () => {
                 <page.titlePrefix className={css['title-prefix']} />
                 <p className={css['title']}>{page.title} —</p>
               </div>
-              <Button className="red bold lg">
+              <Button className="red bold lg hover">
                 <Link to={page.button.url}>{page.button.text} →</Link>
               </Button>
             </div>
@@ -205,8 +205,8 @@ export const Hero = () => {
                       id="passport"
                       className={`${page.id === 'passport' && css['active']} ${css['cta-item']}`}
                     >
-                      <p className="bold">Devcon Passport App —</p>
-                      <p className="font-sm">Customize your Devcon experience</p>
+                      <p className="bold">{intl('hero_passport')} —</p>
+                      <p className="font-sm">{intl('hero_passport_subtext')}</p>
                       <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
@@ -221,8 +221,8 @@ export const Hero = () => {
                       id="bogota"
                       className={`${page.id === 'bogota' && css['active']} ${css['cta-item']}`}
                     >
-                      <p className="bold">Bogota City Guide —</p>
-                      <p className="font-sm">Discover the wonders of Bogotá</p>
+                      <p className="bold">{intl('hero_city_guide')} —</p>
+                      <p className="font-sm">{intl('hero_city_guide_subtext')}</p>
                       <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
@@ -237,8 +237,8 @@ export const Hero = () => {
                       id="devcon-week"
                       className={`${page.id === 'devcon-week' && css['active']} ${css['cta-item']}`}
                     >
-                      <p className="bold">Devcon Week —</p>
-                      <p className="font-sm">Participate in all devcon week</p>
+                      <p className="bold">{intl('hero_devcon_week')} —</p>
+                      <p className="font-sm">{intl('hero_devcon_week_subtext')}</p>
                       <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                     <div
@@ -253,8 +253,8 @@ export const Hero = () => {
                       id="livestream"
                       className={`${page.id === 'livestream' && css['active']} ${css['cta-item']}`}
                     >
-                      <p className="bold">Devcon Live —</p>
-                      <p className="font-sm">Stream Devcon</p>
+                      <p className="bold">{intl('hero_live')} —</p>
+                      <p className="font-sm">{intl('hero_live_subtext')}</p>
                       <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
                     </div>
                   </>
