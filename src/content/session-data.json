@@ -5256,7 +5256,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_20190918_130908_475_dmLZppk.jpg"
       }
     ],
-    "title": "How to ethically build public good infrastructure",
+    "title": "How to Ethically Build Public Good Infrastructure",
     "track": "Layer 1 Protocol",
     "duration": 25,
     "start": 1665595800000,
@@ -6929,9 +6929,9 @@
       },
       {
         "id": "7AGF99",
-        "name": "John Mardlin",
-        "description": null,
-        "avatar": ""
+        "name": "Maurelian",
+        "description": "Security at Optimism. \r\nPreviously co-founder of ConsenSys Diligence.",
+        "avatar": "http://speak.devcon.org/media/avatars/maurelian_ZrENEIe.jpeg"
       }
     ],
     "title": "Future of Smart Contract Security Audits: REKT or WAGMI?",
@@ -7722,7 +7722,7 @@
       "capacity": 110
     },
     "type": "Panel",
-    "description": "This panel invites 4 of the leading bridge protocols to debate the various tradeoffs that have emerged between different cross chain bridge designs, including pros and cons, and security considerations. Panelists include the founders of Across (Hart Lambur), Hop (Chris Whinfrey), Nomad (Arjun Bhuptani), and Stargate (Bryan Pellegrino).",
+    "description": "This panel invites 3 of the leading bridge protocols to debate the various tradeoffs that have emerged between different cross chain bridge designs, including pros and cons, and security considerations. Panelists include the founders of Across (Hart Lambur), Hop (Chris Whinfrey), Succinct (Uma Roy), and will be moderated by Tarun Chitra (Gauntlet).",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -8569,13 +8569,13 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": "The idea of the workshop is to present the EthereumJS stack and  then help people to set up a local EthereumJS Client testnet. With a set up and running EthereumJS client, we will then experiment as a group, for example by activating one of the newer EIPs on our own testnet and then sending a custom tx which would make use of the new opcode/functionality.",
+    "description": "The idea of the workshop is to present the EthereumJS stack and then help people to set up a local EthereumJS experimentation environment. We will demonstrate how how our packages can be used for research, testing and experimentation and will then let people experiment on their own (or in small groups), for example by activating one of the newer EIPs and testing blocks/tx, or even running our experimental client.",
     "abstract": "",
     "expertise": "",
     "tags": [
-      "Client",
       "Experiments",
-      "JavaScript"
+      "JavaScript",
+      "Execution"
     ]
   },
   {
@@ -8634,7 +8634,14 @@
   },
   {
     "id": "8UNNBN",
-    "speakers": [],
+    "speakers": [
+      {
+        "id": "8DMBJM",
+        "name": "Remy",
+        "description": null,
+        "avatar": ""
+      }
+    ],
     "title": "Autonomous Worlds Self Led Session",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 330,
@@ -8896,7 +8903,7 @@
       {
         "id": "WFMPYE",
         "name": "Chandler De Kock",
-        "description": "Growth Strategy at UMA, Lead at Outcome, Co-founder at Across. Chandler focuses on building the future of web3 by solving the problems that matter to the humans that are the creators",
+        "description": "Growth Strategy at Astaria. Chandler focuses on building the future of web3 by solving the problems that matter to the people that work in the space every day.",
         "twitter": "https://twitter.com/chandler_dkk",
         "avatar": "http://speak.devcon.org/media/avatars/c05e05c8-a0f1-48d6-bab8-00e86780ae0d_kKfwqER.jpg"
       }
