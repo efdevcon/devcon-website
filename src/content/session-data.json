@@ -7723,7 +7723,7 @@
       "capacity": 110
     },
     "type": "Panel",
-    "description": "This panel invites 4 of the leading bridge protocols to debate the various tradeoffs that have emerged between different cross chain bridge designs, including pros and cons, and security considerations. Panelists include the founders of Across (Hart Lambur), Hop (Chris Whinfrey), Nomad (Arjun Bhuptani), and Stargate (Bryan Pellegrino).",
+    "description": "This panel invites 3 of the leading bridge protocols to debate the various tradeoffs that have emerged between different cross chain bridge designs, including pros and cons, and security considerations. Panelists include the founders of Across (Hart Lambur), Hop (Chris Whinfrey), Succinct (Uma Roy), and will be moderated by Tarun Chitra (Gauntlet).",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -8904,7 +8904,7 @@
       {
         "id": "WFMPYE",
         "name": "Chandler De Kock",
-        "description": "Growth Strategy at UMA, Lead at Outcome, Co-founder at Across. Chandler focuses on building the future of web3 by solving the problems that matter to the humans that are the creators",
+        "description": "Growth Strategy at Astaria. Chandler focuses on building the future of web3 by solving the problems that matter to the people that work in the space every day.",
         "twitter": "https://twitter.com/chandler_dkk",
         "avatar": "http://speak.devcon.org/media/avatars/c05e05c8-a0f1-48d6-bab8-00e86780ae0d_kKfwqER.jpg"
       }
