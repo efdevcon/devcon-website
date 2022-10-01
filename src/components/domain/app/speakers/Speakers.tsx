@@ -521,7 +521,7 @@ export const Speakers = (props: any) => {
 
                           setSelectedRooms(nextState)
                         }}
-                        options={props.rooms.map((i: Room) => {
+                        options={props.rooms.filter(i => i.capacity && i.capacity > 0).map((i: Room) => {
                           return {
                             text: i.name,
                             value: i.name,
