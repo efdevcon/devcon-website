@@ -16,6 +16,6 @@ Tuesday Oct 11-14: 9 AM — 11PM
 
 **Address:** Ac. 24 #38-47, Bogotá, Colombia
 
-**Phone:** +57 13810000
+**Phone:** +57-13810000
 
-**Emergency Contact:** emergency@devcon.org
+**Emergency Contact:** [emergency@devcon.org](mailto:emergency@devcon.org)
