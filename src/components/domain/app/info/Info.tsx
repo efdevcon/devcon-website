@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 import css from './info.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
@@ -7,6 +7,7 @@ import { CityGuideContent } from 'pages/bogota'
 import { FAQ } from 'types/FAQ'
 import { ContentSections } from 'types/ContentSection'
 import { ContentSectionRow } from 'components/common/sections/ContentSection'
+import { Search } from 'components/common/filter/Filter'
 
 type InfoProps = {
   faqs: Category[]
@@ -15,6 +16,7 @@ type InfoProps = {
 }
 
 export const Info = (props: InfoProps) => {
+  const [search, setSearch] = useState('')
   const cityGuideSections = { ...props.sections }
   delete cityGuideSections['is-bogota-safe']
   delete cityGuideSections['registration-checkin']
@@ -22,6 +24,14 @@ export const Info = (props: InfoProps) => {
   const registrationSection = props.sections['registration-checkin']
   const venueSection = props.sections['venue-guide']
   const foodSection = props.sections['food-drinks']
+
+  const filteredFaq = search ? props.faqs.filter(category => {
+    if (category.title.toLowerCase().includes(search.toLowerCase())) return true
+
+    return category.questions.some(q => q.title.toLowerCase().includes(search) ||
+      q.body.toLowerCase().includes(search))
+  })
+    : props.faqs
 
   return (
     <>
@@ -39,8 +49,11 @@ export const Info = (props: InfoProps) => {
             <p className="app-header">FAQ</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
+            <div className={css['filter']}>
+              <Search className={css['search']} placeholder="Search FAQ" onChange={setSearch} value={search} />
+            </div>
             <div className={css['faq']}>
-              {props.faqs.map(({ questions, title }) => {
+              {filteredFaq.map(({ questions, title }) => {
                 return (
                   <CollapsedSection key={title} className={css['no-border']}>
                     <CollapsedSectionHeader className={`${css['subheader']} border-bottom`}>
@@ -48,7 +61,8 @@ export const Info = (props: InfoProps) => {
                     </CollapsedSectionHeader>
                     <CollapsedSectionContent>
                       <div className={css['faq-inner']}>
-                        {questions.map(({ body, title }) => {
+                        {questions.filter(q => q.title.toLowerCase().includes(search) ||
+                          q.body.toLowerCase().includes(search)).map(({ body, title }) => {
                           return (
                             <CollapsedSection key={title}>
                               <CollapsedSectionHeader className={`${css['subheader']}`}>

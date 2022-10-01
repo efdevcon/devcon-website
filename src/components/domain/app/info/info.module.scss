@@ -1,12 +1,18 @@
 @use 'assets/css/partials/index' as *;
 
-.faq, .faq-inner, .faq-inner-content {
+.filter {
+  margin-top: $gaps-gap-4;
+}
+
+.faq,
+.faq-inner,
+.faq-inner-content {
   // h4 {
   //   margin-top: $gaps-gap-4;
   //   padding-bottom: $gaps-gap-2;
   //   border-bottom: 1px solid $colors-standard-border-color;
   // }
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
 .links {
@@ -18,7 +24,7 @@
 }
 
 .feedback-form {
-  > * {
+  >* {
     margin-bottom: $gaps-gap-3;
   }
 
