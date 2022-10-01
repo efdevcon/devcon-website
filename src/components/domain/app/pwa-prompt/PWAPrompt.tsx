@@ -3,35 +3,50 @@ import Image from 'next/image'
 import css from './pwa.module.scss'
 import { Modal } from 'components/common/modal'
 import IconPlus from 'assets/icons/plus.svg'
+import IconAppleShare from 'assets/icons/share-apple.svg'
 import imagePWA from 'assets/images/pwa_prompt.png'
 import { Button } from 'components/common/button'
 import { pwaUtilities } from './pwa-utilities'
 import moment from 'moment'
 
+const lastSeenKey = 'pwa_prompt_timestamp'
+const howOftenToPrompt = [8, 'hours'] // [30, 'seconds']
+
 export const PWAPrompt = () => {
   const [open, setOpen] = React.useState(false)
 
-  const { requiresManualInstall, deferredInstallEvent, setDeferredInstallEvent } = pwaUtilities.useDetectInstallable({
-    togglePrompt: () => setOpen(true),
-  })
-
-  useEffect(() => {
-    if (requiresManualInstall) {
-      const lastRejectionTimestamp = localStorage.getItem('pwa_denied_timestamp')
+  const promptIfNotLocked = React.useMemo(
+    () => () => {
+      const lastRejectionTimestamp = localStorage.getItem(lastSeenKey)
 
       if (lastRejectionTimestamp) {
-        const nowMinusThreshold = moment.utc().subtract(8, 'hours')
         const lastRejection = moment.utc(lastRejectionTimestamp)
+        const nowWithThreshold = moment.utc().subtract(...howOftenToPrompt)
 
-        if (!nowMinusThreshold.isAfter(lastRejection)) {
+        // If prompted recently, abort
+        if (nowWithThreshold.isBefore(lastRejection)) {
           return
         }
       }
 
-      localStorage.setItem('pwa_denied_timestamp', moment.utc().valueOf() + '')
+      localStorage.setItem(lastSeenKey, moment.utc().toISOString())
       setOpen(true)
+    },
+    []
+  )
+
+  const { requiresManualInstall, deferredEvent, setDeferredEvent } = pwaUtilities.useDetectInstallable({
+    togglePrompt: promptIfNotLocked,
+  })
+
+  useEffect(() => {
+    if (requiresManualInstall) {
+      console.log(requiresManualInstall, 'manual install prompt')
+      promptIfNotLocked()
     }
-  }, [requiresManualInstall])
+  }, [requiresManualInstall, promptIfNotLocked])
+
+  console.log(requiresManualInstall, 'req manual install')
 
   return (
     <Modal open={open} close={() => setOpen(!open)} className={css['modal']}>
@@ -53,7 +68,8 @@ export const PWAPrompt = () => {
                 if (requiresManualInstall === 'ios') {
                   return (
                     <p className="font-xs bold text-uppercase">
-                      Instructions: Press &quot;Share&quot; icon then &quot;Add to home&quot;
+                      Instructions: Press <IconAppleShare style={{ fontSize: '2em', transform: 'translateY(3px) ' }} />{' '}
+                      then &quot;Add to home screen&quot;
                     </p>
                   )
                 } else if (requiresManualInstall === 'samsung') {
@@ -78,8 +94,8 @@ export const PWAPrompt = () => {
                   onClick={() =>
                     pwaUtilities.installPwa({
                       togglePrompt: () => setOpen(false),
-                      deferredInstallEvent,
-                      setDeferredInstallEvent,
+                      deferredEvent,
+                      setDeferredEvent,
                     })
                   }
                 >

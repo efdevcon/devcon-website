@@ -1,3 +1,4 @@
+import { makeConsoleLogger } from '@notionhq/client/build/src/logging'
 import React from 'react'
 
 type DetectInstallableArgs = {
@@ -6,8 +7,8 @@ type DetectInstallableArgs = {
 
 type InstallArgs = {
   togglePrompt: () => void
-  deferredInstallEvent: Event | null | any
-  setDeferredInstallEvent: any
+  deferredEvent: Event | null | any
+  setDeferredEvent: any
 }
 
 export const pwaUtilities = {
@@ -64,19 +65,20 @@ export const pwaUtilities = {
 
     return { deferredEvent, setDeferredEvent, requiresManualInstall } as any
   },
-  installPwa: async ({ togglePrompt, deferredInstallEvent, setDeferredInstallEvent }: InstallArgs) => {
-    if (deferredInstallEvent === null) return
+  installPwa: async ({ togglePrompt, deferredEvent, setDeferredEvent }: InstallArgs) => {
+    console.log('trying to install ')
+    if (deferredEvent === null) return
 
     // Hide the app provided install promotion
     togglePrompt()
     // Show the install prompt
-    deferredInstallEvent.prompt()
+    deferredEvent.prompt()
     // Wait for the user to respond to the prompt
-    const { outcome } = await deferredInstallEvent.userChoice
+    const { outcome } = await deferredEvent.userChoice
     // Optionally, send analytics event with outcome of user choice
-    console.log(`User response to the install prompt: ${outcome}`)
+    console.log('user prompt outcome:',  outcome);
     // We've used the prompt, and can't use it again, throw it away
-    setDeferredInstallEvent(null)
+    setDeferredEvent(null)
   },
 
   isStandalone: () => {
