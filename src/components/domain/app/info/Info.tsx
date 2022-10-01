@@ -16,6 +16,7 @@ type InfoProps = {
 }
 
 export const Info = (props: InfoProps) => {
+  const [openFaq, setOpenFaq] = React.useState({} as { [key: string]: boolean })
   const [search, setSearch] = useState('')
   const cityGuideSections = { ...props.sections }
   delete cityGuideSections['is-bogota-safe']
@@ -32,6 +33,23 @@ export const Info = (props: InfoProps) => {
       q.body.toLowerCase().includes(search))
   })
     : props.faqs
+
+  function onSearch(nextVal: any) {
+    setSearch(nextVal)
+
+    if (!nextVal) {
+      setOpenFaq({})
+    } else {
+      filteredFaq.forEach(category =>
+        setOpenFaq(openFaq => {
+          return {
+            ...openFaq,
+            [category.title]: true,
+          }
+        })
+      )
+    }
+  }
 
   return (
     <>
@@ -50,33 +68,47 @@ export const Info = (props: InfoProps) => {
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <div className={css['filter']}>
-              <Search className={css['search']} placeholder="Search FAQ" onChange={setSearch} value={search} />
+              <Search className={css['search']} placeholder="Search FAQ" onChange={onSearch} value={search} />
             </div>
             <div className={css['faq']}>
               {filteredFaq.map(({ questions, title }) => {
                 return (
-                  <CollapsedSection key={title} className={css['no-border']}>
+                  <CollapsedSection key={title} className={css['no-border']}
+                    open={openFaq[title]}
+                    setOpen={() => {
+                      const isOpen = openFaq[title]
+                      const nextOpenState = {
+                        ...openFaq,
+                        [title]: true,
+                      }
+
+                      if (isOpen) {
+                        delete nextOpenState[title]
+                      }
+
+                      setOpenFaq(nextOpenState)
+                    }}>
                     <CollapsedSectionHeader className={`${css['subheader']} border-bottom`}>
                       <p className="font-sm-fixed bold">{title}</p>
                     </CollapsedSectionHeader>
-                    <CollapsedSectionContent>
+                    <CollapsedSectionContent dontAnimate>
                       <div className={css['faq-inner']}>
                         {questions.filter(q => q.title.toLowerCase().includes(search) ||
                           q.body.toLowerCase().includes(search)).map(({ body, title }) => {
-                          return (
-                            <CollapsedSection key={title}>
-                              <CollapsedSectionHeader className={`${css['subheader']}`}>
-                                <p className="font-sm bold">{title}</p>
-                              </CollapsedSectionHeader>
-                              <CollapsedSectionContent className={css['faq-inner-content']}>
-                                <div
-                                  className="markdown font-sm clear-bottom-less"
-                                  dangerouslySetInnerHTML={{ __html: body }}
-                                />
-                              </CollapsedSectionContent>
-                            </CollapsedSection>
-                          )
-                        })}
+                            return (
+                              <CollapsedSection key={title}>
+                                <CollapsedSectionHeader className={`${css['subheader']}`}>
+                                  <p className="font-sm bold">{title}</p>
+                                </CollapsedSectionHeader>
+                                <CollapsedSectionContent className={css['faq-inner-content']}>
+                                  <div
+                                    className="markdown font-sm clear-bottom-less"
+                                    dangerouslySetInnerHTML={{ __html: body }}
+                                  />
+                                </CollapsedSectionContent>
+                              </CollapsedSection>
+                            )
+                          })}
                       </div>
                     </CollapsedSectionContent>
                   </CollapsedSection>

@@ -87,6 +87,7 @@ export const usePanzoom = () => {
 }
 
 export const Venue = (props: Props) => {
+  const [openFloors, setOpenFloors] = React.useState({} as { [key: string]: boolean })
   const [listView, setListView] = React.useState(false)
   const [search, setSearch] = React.useState('')
 
@@ -102,6 +103,23 @@ export const Venue = (props: Props) => {
     : props.floors).sort().reverse()
 
   const reorderedFloors = filteredFloors.find(i => i === 'S1') ? [...filteredFloors.filter(i => i !== 'S1'), 'S1'] : filteredFloors
+
+  function onSearch(nextVal: any) {
+    setSearch(nextVal)
+
+    if (!nextVal) {
+      setOpenFloors({})
+    } else {
+      reorderedFloors.forEach(floor =>
+        setOpenFloors(openFloors => {
+          return {
+            ...openFloors,
+            [floor]: true,
+          }
+        })
+      )
+    }
+  }
 
   return (
     <>
@@ -123,7 +141,7 @@ export const Venue = (props: Props) => {
       <div className={`${filterCss['filter']} border-top`}>
         <div className="section clear-bottom-less">
           <div className={css['filter']}>
-            <Search className={css['search']} placeholder="Search venue" onChange={setSearch} value={search} />
+            <Search className={css['search']} placeholder="Search venue" onChange={onSearch} value={search} />
 
             <div className={css['end']}>
               <button
@@ -149,11 +167,25 @@ export const Venue = (props: Props) => {
         {listView && reorderedFloors.map(floor => {
           const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
-          return <CollapsedSection key={floor}>
+          return <CollapsedSection key={floor}
+            open={openFloors[floor]}
+            setOpen={() => {
+              const isOpen = openFloors[floor]
+              const nextOpenState = {
+                ...openFloors,
+                [floor]: true,
+              }
+
+              if (isOpen) {
+                delete nextOpenState[floor]
+              }
+
+              setOpenFloors(nextOpenState)
+            }}>
             <CollapsedSectionHeader>
               <p className="app-header">{floor}</p>
             </CollapsedSectionHeader>
-            <CollapsedSectionContent>
+            <CollapsedSectionContent dontAnimate>
               <RoomList rooms={roomsByFloor} />
             </CollapsedSectionContent>
           </CollapsedSection>
