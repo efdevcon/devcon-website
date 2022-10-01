@@ -4997,5 +4997,17 @@
     "eventDays": [
       1665446400000
     ]
+  },
+  {
+    "id": "MJJN9F",
+    "name": "Jordan Sutcliffe",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
   }
 ]
