@@ -193,9 +193,11 @@ export default pageHOC(function Tickets(props: any) {
                   title: intl('tickets_raffle_discount_ticket_applications'),
                   // right: intl('tickets_raffle_discount_ticket_applications_dates'),
                   right: (
-                    <Link to="#types" style={{ textTransform: 'none' }}>
-                      {intl('tickets_apply_now')}
-                    </Link>
+                    // <Link to="#types" style={{ textTransform: 'none' }}>
+                    <span className="bold" style={{ display: 'inline' }}>
+                      {intl('tickets_closed')}
+                    </span>
+                    // </Link>
                   ),
                 },
                 {
@@ -207,9 +209,9 @@ export default pageHOC(function Tickets(props: any) {
                   Icon: TicketIcon,
                   title: intl('tickets_raffle_ticket_sale_waves'),
                   right: (
-                    <Link to="#waves" style={{ textTransform: 'none' }}>
-                      {intl('tickets_raffle_ticket_sale_waves_dates')}
-                    </Link>
+                    // <Link to="#waves" style={{ textTransform: 'none' }}>
+                    <span className="bold">{intl('tickets_raffle_ticket_sale_waves_dates')}</span>
+                    // </Link>
                   ),
                 },
               ]}
@@ -233,9 +235,9 @@ export default pageHOC(function Tickets(props: any) {
                   <div className={css['timeline-item']}>
                     <div className={css['left']}>{intl('tickets_discount_applications_begins')}</div>
                     <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_begins_date')}</div>
-                    <Link to="#types" className="generic hover-underline">
+                    {/* <Link to="#types" className="generic hover-underline">
                       {intl('tickets_apply_now')}
-                    </Link>
+                    </Link> */}
                     {/* <Link to="#types" className="generic hover-underline">
                       {intl('tickets_apply_now')}
                     </Link> */}
@@ -260,18 +262,18 @@ export default pageHOC(function Tickets(props: any) {
               //   active: false, // isAfterDate('2022-06-06'),
               //   body: '',
               // },
-              {
-                id: '2',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>{intl('tickets_discount_applications_send_rolling_basis')}</div>
-                    <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
-                  </div>
-                ),
-                active: false,
-                indent: false,
-                body: '',
-              },
+              // {
+              //   id: '2',
+              //   title: (
+              //     <div className={css['timeline-item']}>
+              //       <div className={css['left']}>{intl('tickets_discount_applications_send_rolling_basis')}</div>
+              //       <div className={`${css['right']} bold`}>{intl('tickets_discount_applications_review_process')}</div>
+              //     </div>
+              //   ),
+              //   active: true,
+              //   indent: false,
+              //   body: '',
+              // },
             ]}
           />
         </div>
@@ -340,22 +342,22 @@ export default pageHOC(function Tickets(props: any) {
                   body: '',
                 }
               }),
-              {
-                id: 'waitlist',
-                title: (
-                  <div className={css['timeline-item']}>
-                    <div className={css['left']}>{intl('tickets_join_waitlist')}</div>
-                    <div className={`${css['right']} bold`}>{intl('tickets_ongoing')}</div>
-                    <Link to="https://tickets.devcon.org/" className="generic hover-underline">
-                      {intl('tickets_shop')}
-                    </Link>
-                  </div>
-                ),
-                active: true,
-                disabled: false,
-                indent: false,
-                body: '',
-              },
+              // {
+              //   id: 'waitlist',
+              //   title: (
+              //     <div className={css['timeline-item']}>
+              //       <div className={css['left']}>{intl('tickets_join_waitlist')}</div>
+              //       <div className={`${css['right']} bold`}>{intl('tickets_ongoing')}</div>
+              //       {/* <Link to="https://tickets.devcon.org/" className="generic hover-underline">
+              //         {intl('tickets_shop')}
+              //       </Link> */}
+              //     </div>
+              //   ),
+              //   active: true,
+              //   disabled: false,
+              //   indent: false,
+              //   body: '',
+              // },
             ]}
           />
         </div>
@@ -371,20 +373,25 @@ export default pageHOC(function Tickets(props: any) {
               disabled
               number="01"
               description={<div>{intl('tickets_types_ga')}</div>}
-              tags={
-                isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD'))
-                  ? [
-                      {
-                        text: intl('tickets_ticket_waves'),
-                        link: '#timeline',
-                      },
-                    ]
-                  : [
-                      {
-                        text: intl('tickets_coming_soon'),
-                      },
-                    ]
-              }
+              // tags={
+              //   isAfterDate(ticketWaves[1]?.format('YYYY-MM-DD'))
+              //     ? [
+              //         {
+              //           text: intl('tickets_ticket_waves'),
+              //           link: '#timeline',
+              //         },
+              //       ]
+              //     : [
+              //         {
+              //           text: intl('tickets_coming_soon'),
+              //         },
+              //       ]
+              // }
+              tags={[
+                {
+                  text: intl('tickets_closed'),
+                },
+              ]}
             />
             <Ticket
               title="Builder Discount*"
@@ -393,10 +400,15 @@ export default pageHOC(function Tickets(props: any) {
               color="grey"
               number="02"
               description={<div>{intl('tickets_types_builder')}</div>}
+              // tags={[
+              //   {
+              //     text: intl('tickets_apply_now'),
+              //     link: 'https://docs.google.com/forms/d/e/1FAIpQLSd0Ce92qxcCsOOPAhPAs2mo87bzfaL5ezcKXpd5M20OuBUmMQ/viewform?usp=sf_link',
+              //   },
+              // ]}
               tags={[
                 {
-                  text: intl('tickets_apply_now'),
-                  link: 'https://docs.google.com/forms/d/e/1FAIpQLSd0Ce92qxcCsOOPAhPAs2mo87bzfaL5ezcKXpd5M20OuBUmMQ/viewform?usp=sf_link',
+                  text: intl('tickets_closed'),
                 },
               ]}
             />
@@ -414,10 +426,15 @@ export default pageHOC(function Tickets(props: any) {
                   <span className="font-xxs">{intl('tickets_types_student_note')}</span>
                 </div>
               }
+              // tags={[
+              //   {
+              //     text: intl('tickets_apply_now'),
+              //     link: 'https://forms.gle/GB1JsruumAVMWZZVA',
+              //   },
+              // ]}
               tags={[
                 {
-                  text: intl('tickets_apply_now'),
-                  link: 'https://forms.gle/GB1JsruumAVMWZZVA',
+                  text: intl('tickets_closed'),
                 },
               ]}
             />
@@ -430,21 +447,21 @@ export default pageHOC(function Tickets(props: any) {
               withoutCurrency
               number="04"
               description={<div>{intl('tickets_types_latam')}</div>}
-              tags={[
-                {
-                  text: 'Builder',
-                  link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
-                },
-                {
-                  text: 'Student',
-                  link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
-                },
-              ]}
               // tags={[
               //   {
-              //     text: intl('tickets_closed'),
+              //     text: 'Builder',
+              //     link: 'https://forms.gle/x6GHpq8MAZJCwwsq5',
+              //   },
+              //   {
+              //     text: 'Student',
+              //     link: 'https://forms.gle/9L7BwqCP5hS1AT4HA',
               //   },
               // ]}
+              tags={[
+                {
+                  text: intl('tickets_closed'),
+                },
+              ]}
             />
 
             <Ticket

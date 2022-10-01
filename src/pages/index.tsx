@@ -27,24 +27,24 @@ export default pageHOC(function Index(props: any) {
 
       <FeaturedSpeakers />
 
-      <CallsToAction
+      {/* <CallsToAction
         scholarApplications={props.sections['cta-scholar-applications']}
         // speakerApplications={props.sections['cta-speaker-applications']}
         // ticketPresale={props.sections['cta-ticket-presale']}
         ticketsOnSale={props.sections['tickets-on-sale-now']}
-      />
+      /> */}
 
       <News data={props.news} />
 
       <div className="clear-bottom border-bottom"></div>
+
+      <TrackList tracks={props.tracks} />
 
       <div className={`${css['background-container']} section`}>
         <div className={`${css['circle-background']} expand`}>
           <Image src={CircleBackground} alt="Circles" />
         </div>
       </div>
-
-      <TrackList tracks={props.tracks} />
 
       <BlogReel blogs={props.blogs} />
 
