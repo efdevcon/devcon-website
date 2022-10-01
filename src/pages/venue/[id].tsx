@@ -2,9 +2,8 @@ import { AppLayout } from 'components/domain/app/Layout'
 import { Room } from 'components/domain/app/venue'
 import { pageHOC } from 'context/pageHOC'
 import React from 'react'
-import { GetRooms, GetSessionsByRoom } from 'services/programming'
-import { DEFAULT_APP_PAGE, DEFAULT_REVALIDATE_PERIOD } from 'utils/constants'
-import { getMessages } from 'utils/intl'
+import { GetEvent, GetRooms, GetSessionsByRoom } from 'services/programming'
+import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
 
 export default pageHOC((props: any) => {
@@ -29,7 +28,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: any) {
   const id = context.params.id
-  const intl = await getMessages(context.locale)
   const room = (await GetRooms()).find(i => i.id === id)
 
   if (!room) {
@@ -43,6 +41,7 @@ export async function getStaticProps(context: any) {
     props: {
       ...(await getGlobalData(context.locale, true)),
       page: DEFAULT_APP_PAGE,
+      event: await GetEvent(),
       room,
       sessions: await GetSessionsByRoom(id),
     },

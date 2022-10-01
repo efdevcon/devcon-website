@@ -35,7 +35,7 @@ export const RoomList = (props: Props) => {
 
       {otherRooms.length > 0 && (
         <div className="clear-bottom-less">
-          <h6>Ameneties &amp; Experiences</h6>
+          <h6>Amenities &amp; Experiences</h6>
           <LinkList noIndicator>
             {otherRooms.map((room: RoomType) => {
               return (
