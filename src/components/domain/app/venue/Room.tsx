@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { AppTabsSection } from '../app-tabs-section'
-import { SessionCard } from '../session'
 import { NoResults } from 'components/common/filter'
 import css from './room.module.scss'
 import CapacityIcon from 'assets/icons/capacity.svg'
@@ -16,24 +15,84 @@ import { useAppContext } from 'context/app-context'
 import { useAccountContext } from 'context/account-context'
 import { getFloorImage } from './Floor'
 import { RoomInfo } from './RoomInfo'
+import { getSessionsByDatesAndTimeslots, normalizeDate } from '../schedule/Schedule'
+import { List } from '../schedule/views/List'
 
 interface Props {
+  event: any
   room: RoomType
   sessions: Array<SessionType>
+}
+
+function sessionSearch(search: string, session: SessionType): boolean {
+  if (search) {
+    let matchesAnySearch
+    const lowerCaseSearch = search.toLowerCase()
+
+    if (session.room && session.room.name.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+    if (session.title.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+    if (session.speakers.some(speaker => speaker.name.toLowerCase().includes(lowerCaseSearch))) matchesAnySearch = true
+    if (session.description && session.description.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+
+    if (!matchesAnySearch) return false
+  }
+
+  return true
 }
 
 export const Room = (props: Props) => {
   const { now } = useAppContext()
   const { account } = useAccountContext()
+  const [search, setSearch] = React.useState('')
+  const pz = usePanzoom()
+  const listRef1 = useRef<any>()
+  const listRef2 = useRef<any>()
+  const listRef3 = useRef<any>()
+
   const sortedSessions = props.sessions.slice().sort((a, b) => {
     return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
   })
-  const pastSessions = sortedSessions.filter(i => !moment.utc(i.end).isAfter(now))
-  const upcomingSessions = sortedSessions.filter(i => !moment.utc(i.start).isBefore(now))
   const bookmarkedSessions = account?.appState?.sessions
-  const attendingSessions = sortedSessions.filter(i => bookmarkedSessions?.find(bookmark => bookmark.id === i.id))
-  const [search, setSearch] = React.useState('')
-  const pz = usePanzoom()
+  const upcomingSessions = sortedSessions.filter(i => sessionSearch(search, i)).filter(i => !moment.utc(i.start).isBefore(now))
+  const attendingSessions = sortedSessions.filter(i => sessionSearch(search, i)).filter(i => bookmarkedSessions?.find(bookmark => bookmark.id === i.id))
+  const pastSessions = sortedSessions.filter(i => sessionSearch(search, i)).filter(i => !moment.utc(i.end).isAfter(now))
+
+  const eventDates = React.useMemo(() => {
+    const dates = []
+    const end = moment.utc(props.event.date_to).add(1, 'days')
+
+    let current = moment.utc(props.event.date_from)
+
+    while (!current.isSame(end)) {
+      const next = current.clone()
+      dates.push({ readable: normalizeDate(next), moment: next })
+      current.add(1, 'days')
+    }
+
+    return dates
+  }, [props.event])
+
+  const upcomingSessionsData = getSessionsByDatesAndTimeslots(upcomingSessions, eventDates)
+  const attendingSessionsData = getSessionsByDatesAndTimeslots(attendingSessions, eventDates)
+  const pastSessionsData = getSessionsByDatesAndTimeslots(pastSessions, eventDates)
+
+  useEffect(() => {
+    if (listRef1.current) {
+      if (search.length > 0) {
+        listRef1.current.openAll()
+      }
+    }
+    if (listRef2.current) {
+      if (search.length > 0) {
+        listRef2.current.openAll()
+      }
+    }
+    if (listRef3.current) {
+      if (search.length > 0) {
+        listRef3.current.openAll()
+      }
+    }
+  }, [search])
 
   return (
     <>
@@ -84,9 +143,13 @@ export const Room = (props: Props) => {
               title: 'Upcoming',
               content: (
                 <div>
-                  {upcomingSessions.map(i => {
-                    return <SessionCard key={i.id} session={i} />
-                  })}
+                  {upcomingSessions && <List
+                    now={now}
+                    sessionTimeslots={upcomingSessionsData.sessionTimeslots}
+                    timeslotOrder={upcomingSessionsData.timeslotOrder}
+                    sessionsByTime={upcomingSessionsData.sessionsByTime}
+                    ref={listRef1}
+                  />}
                   {upcomingSessions.length === 0 && <NoResults />}
                 </div>
               ),
@@ -95,9 +158,13 @@ export const Room = (props: Props) => {
               title: 'Attending',
               content: (
                 <div>
-                  {attendingSessions.map(i => {
-                    return <SessionCard key={i.id} session={i} />
-                  })}
+                  {attendingSessions && <List
+                    now={now}
+                    sessionTimeslots={attendingSessionsData.sessionTimeslots}
+                    timeslotOrder={attendingSessionsData.timeslotOrder}
+                    sessionsByTime={attendingSessionsData.sessionsByTime}
+                    ref={listRef2}
+                  />}
                   {attendingSessions.length === 0 && <NoResults />}
                 </div>
               ),
@@ -106,10 +173,13 @@ export const Room = (props: Props) => {
               title: 'Past',
               content: (
                 <div>
-                  {pastSessions.length > 0 &&
-                    pastSessions.map(i => {
-                      return <SessionCard key={i.id} session={i} />
-                    })}
+                  {pastSessions && <List
+                    now={now}
+                    sessionTimeslots={pastSessionsData.sessionTimeslots}
+                    timeslotOrder={pastSessionsData.timeslotOrder}
+                    sessionsByTime={pastSessionsData.sessionsByTime}
+                    ref={listRef3}
+                  />}
                   {pastSessions.length === 0 && <NoResults />}
                 </div>
               ),

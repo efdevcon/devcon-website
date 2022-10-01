@@ -57,7 +57,7 @@ const useFormatSessions = (sessions: Session[]) => {
   }, [sessions])
 }
 
-const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
+export const getSessionsByDatesAndTimeslots = (sessions: Session[], dates: Date[]) => {
   const sessionTimeslots = {} as ScheduleInformation['sessionTimeslots']
   const timeslotOrder = [] as ScheduleInformation['timeslotOrder']
 
