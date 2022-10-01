@@ -3313,7 +3313,7 @@
         "avatar": ""
       }
     ],
-    "title": "Nosy Neighbor - Automated fuzz harness generation for Golang projects",
+    "title": "Nosy Neighbor - Automated Fuzz Harness Generation for Golang Projects",
     "track": "Security",
     "duration": 25,
     "start": 1665574200000,
@@ -7229,7 +7229,7 @@
         "avatar": ""
       }
     ],
-    "title": "Nomic Foundation",
+    "title": "Nomic Foundation: the creation of an Ethereum non-profit",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665671400000,
@@ -7242,12 +7242,13 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": ".",
+    "description": "Origin story behind Hardhat and Nomic Foundation",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "developer",
-      "infrastructure"
+      "developer experience",
+      "hardhat",
+      "nomic"
     ]
   },
   {
@@ -7710,7 +7711,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/06_Hart_011-cropped-tight_WlIkhn9.jpg"
       }
     ],
-    "title": "Battle of the bridges: Untangling the tradeoffs of various bridge designs",
+    "title": "Battle of the Bridges: Untangling the Tradeoffs of Various Bridge Designs",
     "track": "Security",
     "duration": 50,
     "start": 1665676800000,
@@ -9928,7 +9929,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg"
       }
     ],
-    "title": "Superchain: Path to the Monolithic Multi-Chain",
+    "title": "OP Stack: Building the Open Source Superchain",
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665756000000,
@@ -9941,7 +9942,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Traditional mono-chain and multi-chain narratives do not capture the inevitable evolution of blockchain architecture. Over time we will see the multi-chain backend infrastructure become unified with atomic sequencing and frontends that provide the experience of interacting with a single chain. This is the Superchian future.\r\n\r\nThis talk will paint the Superchain vision and lay out the practical engineering challenges which we need to overcome in Ethereum to realize it.",
+    "description": "Introducing the OP Stack — a standardized tech stack for L2 chains.\r\n\r\nIntroducing the Superchain vision — the inevitable unification of the distinct L2 chains into a single, horizontally scalable, super-sequenced, Superchain!\r\n\r\nThe OP Stack is how we realize the Superchain vision.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -10945,7 +10946,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": ".aa",
+    "description": "Wallets, decentralized identity, distributed storage, and naming services are the backbone of a new, data-ownership-first application stack for decentralized and Web3 apps. But, how do they all fit together to build performant, usable, and private applications? We’ll walk through how distributed storage, decentralized identity, crypto wallets, and naming services all fit together to build modern, private, and data ownership focused applications.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
