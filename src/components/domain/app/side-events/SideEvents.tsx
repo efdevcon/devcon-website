@@ -13,32 +13,6 @@ import moment from 'moment'
 import { NoResults } from 'components/common/filter'
 import { ButtonOverlay } from '../button-overlay'
 
-/*
-export interface Session {
-  id: string
-  speakers: Speaker[]
-  title: string
-  track: string
-  duration: number
-  start: number
-  end: number
-  startTimeAsMoment?: Moment
-  endTimeAsMoment?: Moment
-  day?: string
-  date?: string
-  dayOfWeek?: string
-  room?: Room
-  type?: string
-  description?: string
-  abstract?: string
-  expertise?: string
-  image?: string
-  resources?: string[]
-  tags?: string[]
-}
-
-*/
-
 const getDates = (sideEvents: SideEvent[]): Date[] => {
   const dates = {} as { [key: Date['readable']]: Date }
   const order = [] as Date['readable'][]
@@ -113,10 +87,10 @@ export const SideEvents = (props: any) => {
           <div className={css['curator']}>
             <div className={css['title']}>
               <p>Curated by:</p>
-              <p className='bold font-md text-uppercase'>Colombia Blockchain Week</p>
+              <p className="bold font-md text-uppercase">Colombia Blockchain Week</p>
             </div>
             <div className={`${css['submit-event']} label neutral bold`}>
-              <Link to='https://notionforms.io/forms/colombia-blockchain-week'>Submit Event</Link>
+              <Link to="https://notionforms.io/forms/colombia-blockchain-week">Submit Event</Link>
             </div>
           </div>
 
@@ -126,7 +100,9 @@ export const SideEvents = (props: any) => {
               <LinkList>
                 <Link to="https://devcon.org/devcon-week/">Devcon Week</Link>
                 <Link to="https://colombiablockchain.xyz/">Colombia Blockchain Week</Link>
-                <Link to="https://docs.google.com/spreadsheets/d/1KtyFTb_W282bQ1xoVA5rlTwTDz3QfhswWIVpXhpbQIc/edit#gid=1286053629">Crypto Nomads Club</Link>
+                <Link to="https://docs.google.com/spreadsheets/d/1KtyFTb_W282bQ1xoVA5rlTwTDz3QfhswWIVpXhpbQIc/edit#gid=1286053629">
+                  Crypto Nomads Club
+                </Link>
               </LinkList>
             </CollapsedSectionContent>
           </CollapsedSection>
@@ -186,7 +162,7 @@ export const SideEvents = (props: any) => {
               >
                 <div className={css['anchor']} id={date.readable}></div>
                 <CollapsedSectionHeader className={css['day-header']} sticky>
-                  <p className="font-sm-fixed bold">
+                  <p className="app-header bold">
                     {date.moment ? date.moment.format('dddd, MMM Do') : date.readable}
                     <span className={css['header-today-indicator']}>{dayIsNow && 'Today'}</span>
                   </p>

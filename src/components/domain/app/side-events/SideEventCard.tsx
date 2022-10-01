@@ -29,6 +29,11 @@ export const SideEventCard = (props: CardProps) => {
   let thumbnailClassName = css['thumbnail-container']
 
   if (!props.event.url) return null
+  if (props.event.type) {
+    const normalized = props.event.type.replaceAll('/', '').replaceAll(' ', '').toLowerCase()
+
+    thumbnailClassName += ` ${css[normalized]}`
+  }
 
   return (
     <ThumbnailBlock className={thumbnailClassName} thumbnailSubtext="" /*thumbnail={props.event.image}*/ unoptimized>
@@ -63,7 +68,7 @@ export const SideEventCard = (props: CardProps) => {
           <div className={css['meta']}>
             <div className={css['time']}>
               <IconClock />
-              <p>
+              <p className="font-xs-fixed">
                 {(() => {
                   const startTime = moment.utc(props.event.start)
                   const endTime = moment.utc(props.event.end)
@@ -85,13 +90,7 @@ export const SideEventCard = (props: CardProps) => {
                 })()}
               </p>
             </div>
-
-            {props.event.type && (
-              <div className={css['type']}>
-                {/* <IconPeople /> */}
-                <div className="label black bold">{props.event.type}</div>
-              </div>
-            )}
+            {props.event.type && <div className={`label ${css[props.event.type] || 'black'}`}>{props.event.type}</div>}
           </div>
         </div>
       </div>
