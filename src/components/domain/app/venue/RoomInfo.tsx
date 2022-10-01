@@ -22,7 +22,7 @@ export const RoomInfo = (props: Props) => {
 
     {!props.noIndicator && <IconMarker />}
 
-    {!props.noLink && <Link to={`/venue?room=${props.room.id}`}>
+    {!props.noLink && <Link to={`/venue/${props.room.id}`}>
       <strong>{props.room.name}</strong>
       <span className={css['default']}>{props.room.description && ` — ${props.room.description}`}</span>
     </Link>}

@@ -87,7 +87,7 @@ export const usePanzoom = () => {
 }
 
 export const Venue = (props: Props) => {
-  const [listView, setListView] = React.useState(true)
+  const [listView, setListView] = React.useState(false)
   const [search, setSearch] = React.useState('')
 
   const filteredFloors = (search
@@ -161,7 +161,7 @@ export const Venue = (props: Props) => {
 
         {!listView && reorderedFloors.sort().map(floor => {
           return (
-            <Link to={`/venue?floor=${defaultSlugify(floor)}`} className={`${css['list-item']} clear-top-less`} key={floor}>
+            <Link to={`/venue/floor/${defaultSlugify(floor)}`} className={`${css['list-item']} clear-top-less`} key={floor}>
               <div className={`padded bold app-header`}>{floor}</div>
               <div className={css['floor-image']}>{getFloorImage(floor, 'fill')}</div>
             </Link>

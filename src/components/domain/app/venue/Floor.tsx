@@ -94,15 +94,15 @@ export function FloorNavigator(props: NavigatorProps) {
     const floor = Number(props.current.charAt(props.current.length - 1))
 
     if (action === 'next') {
-      if (props.current === 'S1') router.push(`/venue?floor=floor-1`)
-      else if (props.current === 'Floor 5') router.push(`/venue?floor=s1`)
-      else router.push(`/venue?floor=floor-${floor + 1}`)
+      if (props.current === 'S1') router.push(`/venue/floor/floor-1`)
+      else if (props.current === 'Floor 5') router.push(`/venue/floor/s1`)
+      else router.push(`/venue/floor/floor-${floor + 1}`)
     }
 
     if (action === 'prev') {
-      if (props.current === 'S1') router.push(`/venue?floor=floor-5`)
-      else if (props.current === 'Floor 1') router.push(`/venue?floor=s1`)
-      else router.push(`/venue?floor=floor-${floor - 1}`)
+      if (props.current === 'S1') router.push(`/venue/floor/floor-5`)
+      else if (props.current === 'Floor 1') router.push(`/venue/floor/s1`)
+      else router.push(`/venue/floor/floor-${floor - 1}`)
     }
   }
 

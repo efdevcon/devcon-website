@@ -24,7 +24,7 @@ export const RoomList = (props: Props) => {
           <LinkList noIndicator>
             {sessionRooms.map((room: RoomType) => {
               return (
-                <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue?room=${room.id}`}>
+                <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue/${room.id}`}>
                   <RoomInfo room={room} />
                 </Link>
               )
