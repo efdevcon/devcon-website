@@ -1835,6 +1835,12 @@
         "name": "Ariel Zimroni",
         "description": "VP Product @ BloxStaking, developing ssv.network decentralized infrastructure for Ethereum staking.",
         "avatar": "http://speak.devcon.org/media/avatars/Capture_gan96Vd.PNG"
+      },
+      {
+        "id": "MJJN9F",
+        "name": "Jordan Sutcliffe",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Promoting Small and Independent Stakers: Q&A with the Ethereum Staking Protocols",
@@ -1850,7 +1856,7 @@
       "capacity": 110
     },
     "type": "Panel",
-    "description": "The Node Operator Association presents a roundtable discussion with Darren Langley (Rocket Pool), Vasiliy Shapovalov (Lido), Oisin Kyne (Obol), and Ariel Zimroni (SSV Network) to discuss how small businesses and solo stakers can partner with the various staking protocols to increase revenue.\r\n\r\nTopics include operator qualifications, application processes, costs, risks, and each protocol's unique advantages.",
+    "description": "The Node Operator Association presents a roundtable discussion with Darren Langley (Rocket Pool), Vasiliy Shapovalov (Lido), Oisin Kyne (Obol), Jordan Sutcliffe (Stakewise), and Ariel Zimroni (SSV Network) to discuss how small businesses and solo stakers can partner with the various staking protocols to increase revenue.\r\n\r\nTopics include operator qualifications, application processes, costs, risks, and each protocol's unique advantages.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -3486,7 +3492,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "Pluralism — the understanding that diversity of people, beliefs, opinions, mechanisms, approaches, implementations, etc within a given context generally results in better outcomes than in the absence of such diversity. \r\n\r\nIn this lightning talk, Regen Web3 Founders Trent Van Epps, Abbey Titcomb, Karl Flouresch, Kevin Owocki, and Auryn MacMillan will talk about how they're baking pluralism into their projects + building a more pluralistic world by doing so.",
+    "description": "Pluralism — the understanding that diversity of people, beliefs, opinions, mechanisms, approaches, implementations, etc within a given context generally results in better outcomes than in the absence of such diversity. \r\n\r\nIn this lightning talk, Regen Web3 Founders Trent Van Epps, Abbey Titcomb, Karl Flouresch, Kevin Owocki, Griff Green, and Auryn MacMillan will talk about how they're baking pluralism into their projects + building a more pluralistic world by doing so.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -10516,13 +10522,6 @@
     "id": "D8PG7L",
     "speakers": [
       {
-        "id": "YVARFY",
-        "name": "Karl Floersch",
-        "description": "Ethereum optimist. Worked at the Ethereum Foundation on PoS & Eth2, then co-founded Plasma Group & Optimism to build Ethereum L2 technology which funds public goods. Currently optimistically scaling Ethereum and making impact=profit.",
-        "twitter": "karl_dot_tech",
-        "avatar": "http://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg"
-      },
-      {
         "id": "KFAEPV",
         "name": "Justin Glibert",
         "description": "cyberspace vintner and digital physicist.",
@@ -10535,7 +10534,7 @@
         "avatar": ""
       }
     ],
-    "title": "MUD: The fabric of Autonomous Worlds w Intro by Karl Floresch",
+    "title": "MUD: The fabric of Autonomous Worlds w Intro by Kelvin Fichter",
     "track": "Developer Infrastructure",
     "duration": 60,
     "start": 1665570600000,
