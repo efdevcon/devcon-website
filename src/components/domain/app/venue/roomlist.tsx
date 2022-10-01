@@ -16,33 +16,37 @@ export const RoomList = (props: Props) => {
   const sessionRooms = props.rooms.filter(i => i.capacity && i.capacity > 0)
   const otherRooms = props.rooms.filter(i => !i.capacity || i.capacity === 0)
 
-  return <div className={className}>
-    {sessionRooms.length > 0 && (
-      <div className='clear-bottom-less'>
-        <h6>Session Rooms</h6>
-        <LinkList noIndicator>
-          {sessionRooms.map((room: RoomType) => {
-            return (
-              <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue?room=${room.id}`}>
-                <RoomInfo room={room} />
-              </Link>
-            )
-          })
-          }
-        </LinkList>
-      </div>
-    )}
+  return (
+    <div className={className}>
+      {sessionRooms.length > 0 && (
+        <div className="clear-bottom-less">
+          <h6>Session Rooms</h6>
+          <LinkList noIndicator>
+            {sessionRooms.map((room: RoomType) => {
+              return (
+                <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue?room=${room.id}`}>
+                  <RoomInfo room={room} />
+                </Link>
+              )
+            })}
+          </LinkList>
+        </div>
+      )}
 
-    {otherRooms.length > 0 && (
-      <div className='clear-bottom-less'>
-        <h6>Ameneties &amp; Experiences</h6>
-        <LinkList noIndicator>
-          {otherRooms.map((room: RoomType) => {
-            return <div><RoomInfo room={room} noIndicator noLink /></div>
-          })
-          }
-        </LinkList>
-      </div>
-    )}
-  </div>
+      {otherRooms.length > 0 && (
+        <div className="clear-bottom-less">
+          <h6>Ameneties &amp; Experiences</h6>
+          <LinkList noIndicator>
+            {otherRooms.map((room: RoomType) => {
+              return (
+                <div key={room.id}>
+                  <RoomInfo room={room} noIndicator noLink />
+                </div>
+              )
+            })}
+          </LinkList>
+        </div>
+      )}
+    </div>
+  )
 }
