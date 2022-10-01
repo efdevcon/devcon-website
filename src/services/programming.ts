@@ -79,7 +79,12 @@ export async function ImportSchedule() {
 export async function GetEvent(): Promise<any> {
   const event = await get(`/events/${eventName}`)
 
-  return event;
+  return event
+
+  // return {
+  //   date_from: new Date('10/11/2022').toISOString(),
+  //   date_to: new Date('10/14/2022').toISOString()
+  // }
 }
 
 // const testTime = async () => {

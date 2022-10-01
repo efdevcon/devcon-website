@@ -219,7 +219,7 @@ export const Session = (props: SessionProps) => {
 
         {props.relatedSessions && props.relatedSessions.length > 0 && (
           <div className={css['related-sessions']}>
-            <h3 className={css['title']}>Related Sessions</h3>
+            <h3 className="app-header clear-bottom-less">Related Sessions</h3>
             {props.relatedSessions.map(session => {
               return <SessionCard session={session} key={session.id} />
             })}

@@ -298,7 +298,7 @@
     "id": "WFMPYE",
     "name": "Chandler De Kock",
     "avatar": "https://speak.devcon.org/media/avatars/c05e05c8-a0f1-48d6-bab8-00e86780ae0d_kKfwqER.jpg",
-    "description": "Growth Strategy at UMA, Lead at Outcome, Co-founder at Across. Chandler focuses on building the future of web3 by solving the problems that matter to the humans that are the creators",
+    "description": "Growth Strategy at Astaria. Chandler focuses on building the future of web3 by solving the problems that matter to the people that work in the space every day.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -4617,7 +4617,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665705600000
     ]
   },
   {
@@ -4817,15 +4818,17 @@
   },
   {
     "id": "7AGF99",
-    "name": "John Mardlin",
-    "avatar": null,
-    "description": "",
+    "name": "Maurelian",
+    "avatar": "https://speak.devcon.org/media/avatars/maurelian_ZrENEIe.jpeg",
+    "description": "Security at Optimism. \r\nPreviously co-founder of ConsenSys Diligence.",
     "tracks": [
       "Security"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "twitter": "maurelian_",
+    "github": "maurelian"
   },
   {
     "id": "83KGXF",

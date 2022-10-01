@@ -29,21 +29,29 @@ export const LivestreamCard = (props: Props) => {
 
   return (
     <div className={css['container']}>
-      <h4 className={css['subtitle']}>Livestream {isOngoing && <div className="label red sm">Session is live</div>}</h4>
+      <h4 className="app-header">Livestream {isOngoing && <div className="label red sm">Session is live</div>}</h4>
 
       <div>
-        {isStreamActive &&
+        {isStreamActive && (
           <div className={css['responsive']}>
-            <iframe className={css['iframe']} src={`${STREAMING_URL}stage/${props.session.room?.id}/embed`} frameBorder="0" allow="autoplay; encrypted-media"></iframe>
+            <iframe
+              className={css['iframe']}
+              src={`${STREAMING_URL}stage/${props.session.room?.id}/embed`}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+            ></iframe>
           </div>
-        }
-        <ThumbnailBlock className={css['banner']}
-          thumbnail={LivestreamIcon.src}>
+        )}
+        <ThumbnailBlock className={css['banner']} thumbnail={LivestreamIcon.src}>
           <div className={css['content']}>
             <p className="font-xs-fixed">
               {isStreamActive && 'Livestream is currently active.'}
               {!isStreamActive && sessionUpcoming && 'Waiting for scheduled Livestream to begin.'}
-              {!isStreamActive && sessionEnded && <>Visit our <Link to='https://archive.devcon.org/'>archive</Link> to watch the recordings.</>}
+              {!isStreamActive && sessionEnded && (
+                <>
+                  Visit our <Link to="https://archive.devcon.org/">archive</Link> to watch the recordings.
+                </>
+              )}
             </p>
             <p className="bold font-xs-fixed">
               {(() => {

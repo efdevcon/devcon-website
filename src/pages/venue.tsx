@@ -9,17 +9,37 @@ import { useRouter } from 'next/router'
 import { Room as RoomType } from 'types/Room'
 import { Room } from 'components/domain/app/venue'
 import { Session as SessionType } from 'types/Session'
+import { defaultSlugify } from 'utils/formatting'
+import { Floor } from 'components/domain/app/venue/Floor'
 
 export default pageHOC(({ sessions, ...props }: any) => {
-  // const { query } = useRouter()
-  // const roomID = query.room
-  // const room = props.rooms.find((room: RoomType) => room.id === roomID)
-  // const sessionsByRoom = sessions.filter((i: SessionType) => i.room?.id === roomID)
+  const { query } = useRouter()
+  const roomID = query.room
+  const room = props.rooms.find((room: RoomType) => room.id === roomID)
+  const sessionsByRoom = sessions.filter((i: SessionType) => i.room?.id === roomID)
+  const floorID = query.floor
+  const floor = props.floors.find((i: string) => defaultSlugify(i) === floorID)
+  const roomsByFloor = props.rooms.filter((i: RoomType) => i.info === floor)
+
+  if (room) {
+    return (
+      <AppLayout>
+        <Room room={room} sessions={sessionsByRoom} {...props} />
+      </AppLayout>
+    )
+  }
+
+  if (floor) {
+    return (
+      <AppLayout>
+        <Floor floor={floor} rooms={roomsByFloor} />
+      </AppLayout>
+    )
+  }
 
   return (
     <AppLayout>
       <Venue {...props} />
-      {/* <>{room ? <Room room={room} sessions={sessionsByRoom} {...props} /> : <Venue {...props} />}</> */}
     </AppLayout>
   )
 })
