@@ -85,7 +85,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
   return (
     <div className={className}>
       <>
-        <Link to={`/speakers?speaker=${speaker.id}`} className={css['thumbnail']}>
+        <Link to={`/speakers/${speaker.id}`} className={css['thumbnail']}>
           <div className={css['wrapper']}>
             <Image
               src={speaker.avatar || makeBlockie(speaker.name)}
@@ -99,7 +99,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
         </Link>
 
         <div className={css['details']}>
-          <Link to={`/speakers?speaker=${speaker.id}`} className={css['name']}>
+          <Link to={`/speakers/${speaker.id}`} className={css['name']}>
             {speaker.name}
           </Link>
           <p className={css['role']}>{speaker.role}</p>
@@ -192,7 +192,7 @@ const ListDaySort = (props: ListProps) => {
 }
 
 const ListAlphabeticalSort = (props: ListProps) => {
-  const [selectedLetter, setSelectedLetter] = React.useState<string>()
+  const [selectedLetter, setSelectedLetter] = React.useState<string>('ALL')
   const alpha = Array.from(Array(26)).map((e, i) => i + 65)
   const alphabet = ['ALL', ...alpha.map(x => String.fromCharCode(x))]
 

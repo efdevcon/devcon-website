@@ -11,14 +11,15 @@ import { Room } from 'components/domain/app/venue'
 import { Session as SessionType } from 'types/Session'
 
 export default pageHOC(({ sessions, ...props }: any) => {
-  const { query } = useRouter()
-  const roomID = query.room
-  const room = props.rooms.find((room: RoomType) => room.id === roomID)
-  const sessionsByRoom = sessions.filter((i: SessionType) => i.room?.id === roomID)
+  // const { query } = useRouter()
+  // const roomID = query.room
+  // const room = props.rooms.find((room: RoomType) => room.id === roomID)
+  // const sessionsByRoom = sessions.filter((i: SessionType) => i.room?.id === roomID)
 
   return (
     <AppLayout>
-      <>{room ? <Room room={room} sessions={sessionsByRoom} {...props} /> : <Venue {...props} />}</>
+      <Venue {...props} />
+      {/* <>{room ? <Room room={room} sessions={sessionsByRoom} {...props} /> : <Venue {...props} />}</> */}
     </AppLayout>
   )
 })

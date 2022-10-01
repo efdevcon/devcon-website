@@ -1,4 +1,7 @@
 const path = require('path')
+const sessionData = require('./src/content/session-data.json')
+const speakerData = require('./src/content/speakers-data.json')
+const roomData = require('./src/content/rooms-data.json')
 
 const pages = [
   {
@@ -35,6 +38,24 @@ const pages = [
     route: '/venue',
     precacheHtml: true,
     precacheJson: true,
+  },
+  {
+    route: '/schedule',
+    precacheHtml: false,
+    precacheJson: true,
+    dynamicPages: sessionData.map(session => session.id),
+  },
+  {
+    route: '/venue',
+    precacheHtml: false,
+    precacheJson: true,
+    dynamicPages: roomData.map(room => room.id),
+  },
+  {
+    route: '/speakers',
+    precacheHtml: false,
+    precacheJson: true,
+    dynamicPages: speakerData.map(speaker => speaker.id),
   },
 ]
 

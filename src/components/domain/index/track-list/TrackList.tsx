@@ -2,16 +2,16 @@ import React from 'react'
 import css from './track-list.module.scss'
 import Accordion from 'components/common/accordion'
 import Image from 'next/image'
-import Layer1 from 'assets/images/tracks/big-icons/Layer 1 Protocol.svg'
-import Cryptoeconomics from 'assets/images/tracks/big-icons/Cryptoeconomics.svg'
-import DeveloperInfra from 'assets/images/tracks/big-icons/Developer Infrastructure.svg'
-import Governance from 'assets/images/tracks/big-icons/Governance & Coordination.svg'
-import Layer2 from 'assets/images/tracks/big-icons/Layer 2s.svg'
-import GlobalImpact from 'assets/images/tracks/big-icons/Opportunity & Global Impact.svg'
-import Security from 'assets/images/tracks/big-icons/Security.svg'
-import Staking from 'assets/images/tracks/big-icons/Staking & Validator Experience.svg'
-import UXDesign from 'assets/images/tracks/big-icons/UX & Design.svg'
-import ZKPs from 'assets/images/tracks/big-icons/ZKPs and Privacy.svg'
+import Layer1 from 'assets/images/tracks/big-icons/Layer 1 Protocol.png'
+import Cryptoeconomics from 'assets/images/tracks/big-icons/Cryptoeconomics.png'
+import DeveloperInfra from 'assets/images/tracks/big-icons/Developer Infrastructure.png'
+import Governance from 'assets/images/tracks/big-icons/Governance & Coordination.png'
+import Layer2 from 'assets/images/tracks/big-icons/Layer 2s.png'
+import GlobalImpact from 'assets/images/tracks/big-icons/Opportunity & Global Impact.png'
+import Security from 'assets/images/tracks/big-icons/Security.png'
+import Staking from 'assets/images/tracks/big-icons/Staking & Validator Experience.png'
+import UXDesign from 'assets/images/tracks/big-icons/UX & Design.png'
+import ZKPs from 'assets/images/tracks/big-icons/ZKPs and Privacy.png'
 import TriangleBackground from 'assets/images/background-triangles.png'
 import { Track } from 'types/Track'
 import { Card } from 'components/common/card'
@@ -100,16 +100,16 @@ export const getTrackID = (trackName?: string) => {
 }
 
 export function getTrackImage(id?: string, className?: string) {
-  if (id === 'layer-1') return <Layer1 className={className} />
-  if (id === 'layer-2s') return <Layer2 className={className} />
-  if (id === 'developer-infrastructure') return <DeveloperInfra className={className} />
-  if (id === 'governance-coordination') return <Governance className={className} />
-  if (id === 'ux-design') return <UXDesign className={className} />
-  if (id === 'staking-validator-experience') return <Staking className={className} />
-  if (id === 'security') return <Security className={className} />
-  if (id === 'zkps') return <ZKPs className={className} />
-  if (id === 'opportunity-global-impact') return <GlobalImpact className={className} />
-  if (id === 'cryptoeconomics') return <Cryptoeconomics className={className} />
+  if (id === 'layer-1') return <Image layout="raw" src={Layer1} alt="Layer 1" />
+  if (id === 'layer-2s') return <Image layout="raw" src={Layer2} alt="Layer 2" />
+  if (id === 'developer-infrastructure') return <Image layout="raw" src={DeveloperInfra} alt="Developer Infra" />
+  if (id === 'governance-coordination') return <Image layout="raw" src={Governance} alt="Governance" />
+  if (id === 'ux-design') return <Image layout="raw" src={UXDesign} alt="UX and Design" />
+  if (id === 'staking-validator-experience') return <Image layout="raw" src={Staking} alt="Validator experience" />
+  if (id === 'security') return <Image layout="raw" src={Security} alt="Security" />
+  if (id === 'zkps') return <Image layout="raw" src={ZKPs} alt="ZKPs" />
+  if (id === 'opportunity-global-impact') return <Image layout="raw" src={GlobalImpact} alt="Global impact" />
+  if (id === 'cryptoeconomics') return <Image layout="raw" src={Cryptoeconomics} alt="Cryptoecon" />
 
   return null
 }

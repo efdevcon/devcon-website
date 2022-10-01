@@ -62,7 +62,7 @@ export const SessionCard = (props: CardProps) => {
     thumbnailClassName += ` ${css['ongoing']}`
   }
 
-  const sessionUrl = `/schedule?session=${props.session.id}`
+  const sessionUrl = `/schedule/${props.session.id}`
 
   return (
     <ThumbnailBlock
@@ -88,7 +88,7 @@ export const SessionCard = (props: CardProps) => {
             <div className={css['room']}>
               <div className={css['room-title']}>
                 <IconMarker />
-                <Link to={`/venue?room=${props.session.room.id}`}>
+                <Link to={`/venue/${props.session.room.id}`}>
                   {props.session.room.name}
                   {props.session.room.description && ` — ${props.session.room.description}`}
                 </Link>
@@ -126,7 +126,7 @@ export const SessionCard = (props: CardProps) => {
                   <Link
                     key={session.id}
                     className={`${css['speaker']} ${isFirst ? css['is-first'] : ''}`}
-                    to={`/speakers?speaker=${session.id}`}
+                    to={`/speakers/${session.id}`}
                   >
                     {session.name}
                     {!isLast && <>,&nbsp;</>}

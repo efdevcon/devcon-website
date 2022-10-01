@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const { nanoid } = require('nanoid')
 const { PHASE_PRODUCTION_BUILD } = require('next/constants')
 const getGeneratedPrecacheEntries = require('./precache')
-const getStaticPrecacheEntries = require('./publicprecache.js')
+const getStaticPrecacheEntries = require('./precache-public')
 const { withSentryConfig } = require('@sentry/nextjs')
 
 /** @type {import('next').NextConfig} */
@@ -119,34 +119,37 @@ const nextConfig = {
   },
 }
 
-module.exports = withSentryConfig((phase, { defaultConfig }) => {
-  const buildId = nanoid()
+module.exports = withSentryConfig(
+  (phase, { defaultConfig }) => {
+    const buildId = nanoid()
 
-  let config = {
-    ...defaultConfig,
-    ...nextConfig,
-    generateBuildId: () => buildId,
-  }
+    let config = {
+      ...defaultConfig,
+      ...nextConfig,
+      generateBuildId: () => buildId,
+    }
 
-  if (phase === PHASE_PRODUCTION_BUILD) {
-    config = withPWA({
-      ...config,
-      pwa: {
-        dest: '/public',
-        additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
-        mode: 'production',
-        dynamicStartUrl: false,
-        customWorkerDir: 'workbox',
-        ignoreURLParametersMatching: [/^session/, /^speaker/, /^room/],
-        fallbacks: {
-          image:
-            'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    if (phase === PHASE_PRODUCTION_BUILD) {
+      config = withPWA({
+        ...config,
+        pwa: {
+          dest: '/public',
+          additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
+          mode: 'production',
+          dynamicStartUrl: false,
+          customWorkerDir: 'workbox',
+          ignoreURLParametersMatching: [/^session/, /^speaker/, /^room/],
+          fallbacks: {
+            image:
+              'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+          },
         },
-      },
-    })
-  }
+      })
+    }
 
-  return config
-}, {
-  silent: true, // Suppresses all Sentry logs
-})
+    return config
+  },
+  {
+    silent: true, // Suppresses all Sentry logs
+  }
+)

@@ -33,7 +33,9 @@ const Hero = (props: any) => {
 
   return (
     <div className={className}>
-      <div className={css['background-icon']}>{getTrackImage(trackID)}</div>
+      <div className={`section`} style={{ position: 'relative' }}>
+        <div className={css['background-icon']}>{getTrackImage(trackID)}</div>
+      </div>
       {props.children}
     </div>
   )
@@ -119,7 +121,9 @@ export const Session = (props: SessionProps) => {
             {props.session.room && (
               <div className={css['info-line']}>
                 <IconMarker />
-                <p>{props.session.room.name} {props.session.room.description && ` — ${props.session.room.description}`}</p>
+                <p>
+                  {props.session.room.name} {props.session.room.description && ` — ${props.session.room.description}`}
+                </p>
               </div>
             )}
             {props.session.room?.capacity && (
