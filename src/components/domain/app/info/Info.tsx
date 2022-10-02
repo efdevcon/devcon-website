@@ -8,6 +8,10 @@ import { FAQ } from 'types/FAQ'
 import { ContentSections } from 'types/ContentSection'
 import { ContentSectionRow } from 'components/common/sections/ContentSection'
 import { Search } from 'components/common/filter/Filter'
+import { CodeOfConduct, TermsOfService } from 'components/common/layouts/footer/Legal'
+import { ModalLink } from 'components/common/layouts/footer/Footer'
+import { Modal } from 'components/common/modal'
+import { Link } from 'components/common/link'
 
 type InfoProps = {
   faqs: Category[]
@@ -17,6 +21,8 @@ type InfoProps = {
 
 export const Info = (props: InfoProps) => {
   const [openFaq, setOpenFaq] = React.useState({} as { [key: string]: boolean })
+  const [cocOpen, setCocOpen] = useState(false)
+  const [tosOpen, setTosOpen] = useState(false)
   const [search, setSearch] = useState('')
   const cityGuideSections = { ...props.sections }
   delete cityGuideSections['is-bogota-safe']
@@ -165,6 +171,21 @@ export const Info = (props: InfoProps) => {
             </CollapsedSectionContent>
           </CollapsedSection>
         }
+        <CollapsedSection>
+          <CollapsedSectionHeader>
+            <p className="app-header">App Feedback</p>
+          </CollapsedSectionHeader>
+          <CollapsedSectionContent>
+            <p className={`${css['github']} clear-bottom`}>If you have any (technical) issues, feedback or questions about the App, feel free to reach out on our <Link to='https://github.com/efdevcon/devcon-website/'>Github</Link>.</p>
+          </CollapsedSectionContent>
+        </CollapsedSection>
+
+        <ModalLink title='Code of Conduct' linkClassName={`${css['modal-link']} app-header`}>
+          <CodeOfConduct />
+        </ModalLink>
+        <ModalLink title='Terms of Service' linkClassName={`${css['modal-link']} app-header`}>
+          <TermsOfService />
+        </ModalLink>
       </div>
     </>
   )
