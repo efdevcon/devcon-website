@@ -15,11 +15,14 @@ export default function AccountFooter() {
               through our application if you choose to.
             </p>
 
+            <Link className={css['link']} to="https://ethereum.org/en/privacy-policy/">
+              Privacy Policy
+            </Link>
             <Link className={css['link']} to="https://ethereum.org/en/terms-of-use/">
               Terms of Use
             </Link>
-            <Link className={css['link']} to="https://ethereum.org/en/privacy-policy/">
-              Privacy Policy
+            <Link className={css['link']} to="https://ethereum.org/en/cookie-policy/">
+              Cookie Policy
             </Link>
           </div>
           <div className={css['img']}>

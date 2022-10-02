@@ -78,7 +78,6 @@ export async function GetTwitterNotifications(): Promise<Array<Notification>> {
 
   const value = cacheData.get(CACHE_KEY)
   if (value) {
-    console.log('Return Twitter data from memory-cache..')
     return value
   }
 
@@ -103,7 +102,6 @@ export async function GetTwitterNotifications(): Promise<Array<Notification>> {
       }
     }) || []
 
-    console.log('Save to cache', tweets)
     cacheData.put(CACHE_KEY, tweets)
     return tweets
   }

@@ -9,8 +9,6 @@ import { isEmail } from 'utils/validators'
 import NotFound from './NotFound'
 import { useRouter } from 'next/router'
 import { AppNav } from '../../navigation'
-import { useLocalStorage } from 'hooks/useLocalStorage'
-import { defaultAvatarValue, useAvatar } from 'hooks/useAvatar'
 
 export default function EmailSettings() {
   const router = useRouter()
@@ -21,13 +19,11 @@ export default function EmailSettings() {
   const [emailSent, setEmailSent] = useState(false)
   const [nonce, setNonce] = useState('')
   const [areYouSure, setAreYouSure] = useState(false)
-  const [avatar, setAvatar] = useLocalStorage('avatar', defaultAvatarValue)
 
   useEffect(() => {
     async function UpdateWithToken() {
       const userAccount = await accountContext.loginEmail(email, Number(router.query.token))
       if (userAccount) {
-        setAvatar(defaultAvatarValue)
         setEmail(userAccount.email ?? '')
         setError('Email address updated.')
         router.push('/')
@@ -75,7 +71,6 @@ export default function EmailSettings() {
 
     const userAccount = await accountContext.loginEmail(email, nonceNr)
     if (userAccount) {
-      setAvatar(defaultAvatarValue)
       router.push('/')
     }
     if (!userAccount) {

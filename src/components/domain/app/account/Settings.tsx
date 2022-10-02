@@ -201,7 +201,7 @@ export default function SettingsPage() {
                       <>
                         <Button className={`black ${css['button']}`} onClick={() => setAreYouSure(false)}>
                           No, keep my account
-                        </Button>
+                        </Button>&nbsp;
                         <Button className={`red ${css['button']}`} onClick={deleteAccount}>
                           Yes, delete my account
                         </Button>

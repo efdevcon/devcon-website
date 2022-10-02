@@ -24,9 +24,10 @@ type SocialMediaProps = {
   onShare?: () => void
   url?: string
   className?: string
+  linkClassName?: string
 }
 
-const ModalLink = (props: { children: any; title: string }) => {
+export const ModalLink = (props: { children: any; title: string, linkClassName?: string }) => {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -35,7 +36,7 @@ const ModalLink = (props: { children: any; title: string }) => {
         {props.children}
       </Modal>
       <a
-        className="bold font-xs text-uppercase hover-underline"
+        className={props.linkClassName ?? "bold font-xs text-uppercase hover-underline"}
         style={{ cursor: 'pointer' }}
         target="_blank"
         onClick={() => setOpen(true)}

@@ -89,6 +89,9 @@ export const Home = (props: any) => {
               <button className="label error plain" onClick={() => router.push('/settings/username')}>
                 MANAGE USERNAME
               </button>
+              <button className="label error plain" onClick={() => router.push('/settings#delete')}>
+                DELETE ACCOUNT
+              </button>
             </div>
 
             <div className={css['dropdown']}>
