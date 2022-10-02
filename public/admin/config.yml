@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: efdevcon/devcon-website
-  branch: '${HEAD}'
+  branch: '%BRANCH_PLACEHOLDER%'
   accept_roles:
     - admin
     - editor
