@@ -24,7 +24,6 @@ Tuesday Oct 11-14: 9 AM — 11PM
 
 Getting There\
 \
-\
 BY CAB
 
 Always request the service to any of the following telephone numbers:
