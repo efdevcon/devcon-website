@@ -2,6 +2,7 @@ import React from 'react'
 import Page from 'components/common/layouts/page'
 import { PageHero } from 'components/common/page-hero'
 import themes from './themes.module.scss'
+import templates from './templates.module.scss'
 import { pageHOC } from 'context/pageHOC'
 import { getGlobalData } from 'services/global'
 import { GetPage, GetFAQ, GetContentSections } from 'services/page'
@@ -14,6 +15,7 @@ import ArrowRight from 'assets/icons/arrow_right.svg'
 import { FAQ } from 'components/domain/faq'
 import css from './devcon-week.module.scss'
 import { isAfterDate } from './tickets'
+import { toHtml } from 'utils/markdown'
 
 export default pageHOC(function DevconWeek(props: any) {
   const intl = useTranslations()
@@ -36,6 +38,10 @@ export default pageHOC(function DevconWeek(props: any) {
             to: '#post-devcon',
           },
           {
+            title: props.sections['local-tours'].title,
+            to: '#tours',
+          },
+          {
             title: 'FAQ',
             to: '#faq',
           },
@@ -54,12 +60,12 @@ export default pageHOC(function DevconWeek(props: any) {
             </div>
 
             <div className="links">
-              {/* <Link to="/tickets" className="text-uppercase hover-underline font-lg bold">
-                {intl('devcon_week_bogota_blockchain_week')}
+              <Link to="https://colombiablockchain.xyz/" className="text-uppercase hover-underline font-lg bold">
+                Colombia Blockchain Week(s)
                 <ArrowRight />
-              </Link> */}
-              <Link to="/continuous-devcon" className="text-uppercase hover-underline font-lg bold">
-                {intl('cd_title')}
+              </Link>
+              <Link to="#tours" className="text-uppercase hover-underline font-lg bold">
+                {props.sections['local-tours'].title}
                 <ArrowRight />
               </Link>
 
@@ -223,6 +229,29 @@ export default pageHOC(function DevconWeek(props: any) {
         </div>
       </div>
 
+      {props.sections['local-tours'] && (
+        <div className="section padding-top margin-bottom">
+          <h2 id="tours" className="spaced clear-top border-top">
+            {props.sections['local-tours'].title}
+          </h2>
+
+          <div className={`${templates['tours']} two-columns clear-bottom border-bottom`}>
+            <div className={`${templates['left']} left section-markdown`}>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{ __html: toHtml(props.sections['local-tours'].data.left) }}
+              />
+            </div>
+            <div className={`${templates['right']} left section-markdown`}>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{ __html: toHtml(props.sections['local-tours'].data.right) }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       <div id="faq" className="section">
         <FAQ
           data={[{ id: 'something', title: 'Frequently Asked Questions', questions: props.faq }]}
@@ -240,7 +269,7 @@ export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/devcon-week', context.locale)
   const faq = await GetFAQ(context.locale)
-  const sections = await GetContentSections(['post-devcon-events'], context.locale)
+  const sections = await GetContentSections(['post-devcon-events', 'local-tours'], context.locale)
 
   return {
     props: {

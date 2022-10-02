@@ -6,7 +6,7 @@
   scroll-margin-top: 120px;
   scroll-snap-margin-top: 120px; // safari
 
-  > p {
+  >p {
     @include fonts-xl;
 
     margin-bottom: $gaps-gap-8;
@@ -81,5 +81,26 @@
 .location {
   a {
     color: $colors-track-red;
+  }
+}
+
+.tours {
+  display: flex;
+  gap: 32px;
+
+  @media (max-width: $breakpoints-lg) {
+    flex-direction: row;
+  }
+  @media (max-width: $breakpoints-md) {
+    flex-direction: column;
+  }
+
+  .left {
+    flex-basis: auto !important;
+    flex-shrink: 0;
+  }
+
+  .right {
+    flex-basis: auto !important;
   }
 }

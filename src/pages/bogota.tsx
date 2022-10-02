@@ -3,6 +3,7 @@ import { PageHero } from 'components/common/page-hero'
 import { FAQ } from 'components/domain/faq'
 import Page from 'components/common/layouts/page'
 import themes from './themes.module.scss'
+import css from './templates.module.scss'
 import { Carousel } from 'components/common/carousel'
 import { Snapshot } from 'components/common/snapshot'
 import { pageHOC } from 'context/pageHOC'
@@ -37,6 +38,13 @@ export const CityGuideContent = (props: any) => {
           <div className="left section-markdown">
             <h2 className="spaced">{props.page.title}</h2>
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.page.body }} />
+
+            <div className="links">
+              <Link to="https://colombiablockchain.xyz/" className="text-uppercase hover-underline font-lg bold">
+                Colombia Blockchain Week(s)
+                <ArrowRight />
+              </Link>
+            </div>
           </div>
         )}
 
@@ -135,6 +143,29 @@ export const CityGuideContent = (props: any) => {
             </div>
             <div className="right">
               <div dangerouslySetInnerHTML={{ __html: toHtml(props.sections['things-to-do'].data.right) }} />
+            </div>
+          </div>
+        </>
+      )}
+
+      {props.sections['local-tours'] && (
+        <>
+          <h2 id="tours" className="spaced clear-top border-top">
+            {props.sections['local-tours'].title}
+          </h2>
+
+          <div className={`${css['tours']} two-columns clear-bottom border-bottom`}>
+            <div className={`${css['left']} left section-markdown`}>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{ __html: toHtml(props.sections['local-tours'].data.left) }}
+              />
+            </div>
+            <div className={`${css['right']} left section-markdown`}>
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{ __html: toHtml(props.sections['local-tours'].data.right) }}
+              />
             </div>
           </div>
         </>
@@ -280,7 +311,7 @@ export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/bogota', context.locale)
   const sections = await GetContentSections(
-    ['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe', 'what-areas-to-stay'],
+    ['things-to-do', 'why-devcon-in-bogota', 'is-bogota-safe', 'what-areas-to-stay', 'local-tours'],
     context.locale
   )
 
