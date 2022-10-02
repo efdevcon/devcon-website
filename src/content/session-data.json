@@ -1839,8 +1839,8 @@
       {
         "id": "MJJN9F",
         "name": "Jordan Sutcliffe",
-        "description": null,
-        "avatar": ""
+        "description": "BizDev Lead at StakeWise",
+        "avatar": "http://speak.devcon.org/media/avatars/Tree_of_life_rrS51mp.jpeg"
       }
     ],
     "title": "Promoting Small and Independent Stakers: Q&A with the Ethereum Staking Protocols",
@@ -4563,9 +4563,9 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "Give a presentation about private-exchange application on zkopru which consists of three different zero knowledge protocols including socialist millionaire problem, blind find, and zkopru itself. The presentation includes a demo part to show how the application actually works and dives deep into the technical detail of the cryptographic protocols.",
+    "description": "Give a presentation about private-exchange application on zkopru which consists of three different zero knowledge protocols including socialist millionaire problem, blind find, and zkopru. In the presentation, I will show how the private exchange works and explains the technical details behind the application.",
     "abstract": "",
-    "expertise": "Intermediate",
+    "expertise": "Beginner",
     "tags": [
       "Privacy",
       "ZKP",
