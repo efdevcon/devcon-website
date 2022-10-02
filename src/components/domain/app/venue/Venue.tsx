@@ -17,6 +17,7 @@ import { getFloorImage } from './Floor'
 import { defaultSlugify } from 'utils/formatting'
 import { RoomList } from './roomlist'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
+import { useIsStandalone } from 'utils/pwa-link'
 
 interface Props {
   rooms: Array<Room>
@@ -87,22 +88,30 @@ export const usePanzoom = () => {
 }
 
 export const Venue = (props: Props) => {
+  const isStandalone = useIsStandalone()
   const [openFloors, setOpenFloors] = React.useState({} as { [key: string]: boolean })
   const [listView, setListView] = React.useState(false)
   const [search, setSearch] = React.useState('')
 
-  const filteredFloors = (search
-    ? props.floors.filter(floor => {
-      if (floor.toLowerCase().includes(search.toLowerCase())) return true
+  const filteredFloors = (
+    search
+      ? props.floors.filter(floor => {
+          if (floor.toLowerCase().includes(search.toLowerCase())) return true
 
-      const roomsByFloor = props.rooms.filter(i => i.info === floor)
+          const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
-      return roomsByFloor.some(room => room.name.toLowerCase().includes(search) ||
-        room.description.toLowerCase().includes(search))
-    })
-    : props.floors).sort().reverse()
+          return roomsByFloor.some(
+            room => room.name.toLowerCase().includes(search) || room.description.toLowerCase().includes(search)
+          )
+        })
+      : props.floors
+  )
+    .sort()
+    .reverse()
 
-  const reorderedFloors = filteredFloors.find(i => i === 'S1') ? [...filteredFloors.filter(i => i !== 'S1'), 'S1'] : filteredFloors
+  const reorderedFloors = filteredFloors.find(i => i === 'S1')
+    ? [...filteredFloors.filter(i => i !== 'S1'), 'S1']
+    : filteredFloors
 
   function onSearch(nextVal: any) {
     setSearch(nextVal)
@@ -164,41 +173,51 @@ export const Venue = (props: Props) => {
       <div className="section clear-top-less">
         {/* <h2 className="app-header clear-bottom-less">Floors</h2> */}
 
-        {listView && reorderedFloors.map(floor => {
-          const roomsByFloor = props.rooms.filter(i => i.info === floor)
+        {listView &&
+          reorderedFloors.map(floor => {
+            const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
-          return <CollapsedSection key={floor}
-            open={openFloors[floor]}
-            setOpen={() => {
-              const isOpen = openFloors[floor]
-              const nextOpenState = {
-                ...openFloors,
-                [floor]: true,
-              }
+            return (
+              <CollapsedSection
+                key={floor}
+                open={openFloors[floor]}
+                setOpen={() => {
+                  const isOpen = openFloors[floor]
+                  const nextOpenState = {
+                    ...openFloors,
+                    [floor]: true,
+                  }
 
-              if (isOpen) {
-                delete nextOpenState[floor]
-              }
+                  if (isOpen) {
+                    delete nextOpenState[floor]
+                  }
 
-              setOpenFloors(nextOpenState)
-            }}>
-            <CollapsedSectionHeader>
-              <p className="app-header">{floor}</p>
-            </CollapsedSectionHeader>
-            <CollapsedSectionContent dontAnimate>
-              <RoomList rooms={roomsByFloor} />
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        })}
+                  setOpenFloors(nextOpenState)
+                }}
+              >
+                <CollapsedSectionHeader>
+                  <p className="app-header">{floor}</p>
+                </CollapsedSectionHeader>
+                <CollapsedSectionContent dontAnimate>
+                  <RoomList rooms={roomsByFloor} />
+                </CollapsedSectionContent>
+              </CollapsedSection>
+            )
+          })}
 
-        {!listView && reorderedFloors.sort().map(floor => {
-          return (
-            <Link to={`/venue/floor/${defaultSlugify(floor)}`} className={`${css['list-item']} clear-top-less`} key={floor}>
-              <div className={`padded bold app-header`}>{floor}</div>
-              <div className={css['floor-image']}>{getFloorImage(floor, 'fill')}</div>
-            </Link>
-          )
-        })}
+        {!listView &&
+          reorderedFloors.sort().map(floor => {
+            return (
+              <Link
+                to={isStandalone ? `/venue?floor=${defaultSlugify(floor)}` : `/venue/floor/${defaultSlugify(floor)}`}
+                className={`${css['list-item']} clear-top-less`}
+                key={floor}
+              >
+                <div className={`padded bold app-header`}>{floor}</div>
+                <div className={css['floor-image']}>{getFloorImage(floor, 'fill')}</div>
+              </Link>
+            )
+          })}
       </div>
     </>
   )

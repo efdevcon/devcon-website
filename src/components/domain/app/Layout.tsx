@@ -28,7 +28,7 @@ export const AppLayout = (props: LayoutProps) => {
           style={
             {
               '--header-height': `${headerHeight}px`,
-              '--app-nav-upper-height': `${upperNavHeight}px`,
+              '--app-nav-upper-height': `${upperNavHeight || 49}px`,
               '--app-nav-lower-height': `${lowerNavHeight}px`,
             } as any
           }

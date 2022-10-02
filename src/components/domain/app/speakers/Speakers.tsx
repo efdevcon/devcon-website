@@ -22,6 +22,7 @@ import { ButtonOverlay } from 'components/domain/app/button-overlay'
 import ChevronUp from 'assets/icons/chevron-up.svg'
 import { Room } from 'types/Room'
 import { multiSelectFilter } from '../schedule/Schedule'
+import { useIsStandalone } from 'utils/pwa-link'
 
 export const extractTwitterUsername = (twitter: string) => {
   if (!twitter) return
@@ -67,6 +68,7 @@ type CardProps = {
 
 export const SpeakerCard = ({ speaker }: CardProps) => {
   const { account, setSpeakerFavorite } = useAccountContext()
+  const isStandalone = useIsStandalone()
   const isSpeakerFavorited = account?.appState?.speakers?.some(i => i === speaker.id)
 
   const iconProps = {
@@ -82,10 +84,12 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
 
   if (isSpeakerFavorited) className += ` ${css['favorited']}`
 
+  const speakerLink = isStandalone ? `/speakers?speaker=${speaker.id}` : `/speakers/${speaker.id}`
+
   return (
     <div className={className}>
       <>
-        <Link to={`/speakers/${speaker.id}`} className={css['thumbnail']}>
+        <Link to={speakerLink} className={css['thumbnail']}>
           <div className={css['wrapper']}>
             <Image
               src={speaker.avatar || makeBlockie(speaker.name)}
@@ -99,7 +103,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
         </Link>
 
         <div className={css['details']}>
-          <Link to={`/speakers/${speaker.id}`} className={css['name']}>
+          <Link to={speakerLink} className={css['name']}>
             {speaker.name}
           </Link>
           <p className={css['role']}>{speaker.role}</p>
@@ -521,12 +525,14 @@ export const Speakers = (props: any) => {
 
                           setSelectedRooms(nextState)
                         }}
-                        options={props.rooms.filter((i: Room) => i.capacity && i.capacity > 0).map((i: Room) => {
-                          return {
-                            text: i.name,
-                            value: i.name,
-                          }
-                        })}
+                        options={props.rooms
+                          .filter((i: Room) => i.capacity && i.capacity > 0)
+                          .map((i: Room) => {
+                            return {
+                              text: i.name,
+                              value: i.name,
+                            }
+                          })}
                       />
                     </div>
 

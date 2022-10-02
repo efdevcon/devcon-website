@@ -41,6 +41,7 @@ export async function getStaticProps(context: any) {
   }
 
   const sessions = await GetSessionsBySpeaker(speaker.id)
+
   return {
     props: {
       ...(await getGlobalData(context.locale, true)),

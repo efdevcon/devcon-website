@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app'
 import { NextIntlProvider } from 'next-intl'
 import Head from 'next/head'
 import { PWAPrompt } from 'components/domain/app/pwa-prompt'
-
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'assets/css/index.scss'
@@ -20,8 +19,8 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <SEO />
       </Head>
+      <SEO />
 
       <NextIntlProvider locale="en" messages={pageProps.messages}>
         <PWAPrompt />

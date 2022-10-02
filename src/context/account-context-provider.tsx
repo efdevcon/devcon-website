@@ -221,7 +221,11 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ account }),
+    }).catch(e => {
+      alert('An error occurred. You may be offline, try again later.')
     })
+
+    if (!response) return Promise.resolve(false)
 
     if (response.status === 200) {
       setContext({ ...context, account: account })

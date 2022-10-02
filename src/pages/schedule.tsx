@@ -9,6 +9,7 @@ import { getGlobalData } from 'services/global'
 import { Session } from 'components/domain/app/session'
 import { Session as SessionType } from 'types/Session'
 import { SEO } from 'components/domain/seo'
+import { GetRelatedSessions } from './schedule/[id]'
 // import Fuse from 'fuse.js'
 
 // const options = {
@@ -49,25 +50,25 @@ import { SEO } from 'components/domain/seo'
 // }
 
 export default pageHOC((props: any) => {
-  // const { query } = useRouter()
-  // const sessionID = query.session
-  // const session = props.sessions.find((session: SessionType) => session.id === sessionID)
-  // const related = session ? GetRelatedSessions(String(sessionID), props.sessions) : []
+  const { query } = useRouter()
+  const sessionID = query.session
+  const session = props.sessions.find((session: SessionType) => session.id === sessionID)
+  const related = session ? GetRelatedSessions(String(sessionID), props.sessions) : []
 
   return (
     <AppLayout>
-      {/* {session ? (
+      {session ? (
         <>
           <SEO
             title={session.title}
             description={session.description}
             imageUrl={`${API_URL}api/image/og?id=${session.id}`}
           />
-          <Session session={session} {...props} relatedSessions={related} />
+          <Session session={session} {...props} relatedSessions={related} sessionID={sessionID} />
         </>
-      ) : ( */}
-      <Schedule {...props} />
-      {/* )} */}
+      ) : (
+        <Schedule {...props} />
+      )}
     </AppLayout>
   )
 })

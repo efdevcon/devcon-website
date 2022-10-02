@@ -3,6 +3,7 @@ import { Room as RoomType } from 'types/Room'
 import css from './roomlist.module.scss'
 import { Link, LinkList } from 'components/common/link'
 import { RoomInfo } from './RoomInfo'
+import { useIsStandalone } from 'utils/pwa-link'
 
 interface Props {
   rooms: RoomType[]
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export const RoomList = (props: Props) => {
+  const isStandalone = useIsStandalone()
   let className = `${css['container']}`
   if (props.className) className += ` ${props.className}`
 
@@ -24,7 +26,11 @@ export const RoomList = (props: Props) => {
           <LinkList noIndicator>
             {sessionRooms.map((room: RoomType) => {
               return (
-                <Link className={`font-md ${css['floor-link']}`} key={room.id} to={`/venue/${room.id}`}>
+                <Link
+                  className={`font-md ${css['floor-link']}`}
+                  key={room.id}
+                  to={isStandalone ? `/venue?room=${room.id}` : `/venue/${room.id}`}
+                >
                   <RoomInfo room={room} />
                 </Link>
               )

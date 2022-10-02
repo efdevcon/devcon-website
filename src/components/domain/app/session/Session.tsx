@@ -23,6 +23,7 @@ import AddToCalendar from 'components/domain/index/add-to-calendar/AddToCalendar
 import { useAppContext } from 'context/app-context'
 import { LivestreamCard } from './LivestreamCard'
 import { APP_URL } from 'utils/constants'
+import { useIsStandalone } from 'utils/pwa-link'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -54,6 +55,7 @@ export const Session = (props: SessionProps) => {
   const duration = moment.duration(moment(props.session.end).diff(start))
   const mins = duration.asMinutes()
   const [relativeTime, setRelativeTime] = React.useState<any>(null)
+  const isStandalone = useIsStandalone()
 
   const interested = account?.appState?.sessions?.some(i => i.level === 'interested' && i.id === props.session.id)
   const attending = account?.appState?.sessions?.some(i => i.level === 'attending' && i.id === props.session.id)
@@ -196,7 +198,7 @@ export const Session = (props: SessionProps) => {
             </div>
           </AddToCalendar>
 
-          <Link to={`/venue/${props.session.room?.id}`}>
+          <Link to={isStandalone ? `/venue?room=${props.session.room?.id}` : `/venue/${props.session.room?.id}`}>
             <p>Room Details</p> <PinIcon />
           </Link>
         </div>

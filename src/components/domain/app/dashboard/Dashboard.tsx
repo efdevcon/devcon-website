@@ -59,7 +59,7 @@ export const Dashboard = (props: any) => {
 
   const sliderSettings = {
     infinite: true,
-    touchThreshold: 100,
+    touchThreshold: 50,
     speed: 500,
     slidesToShow: 3,
     arrows: false,
@@ -127,6 +127,7 @@ export const Dashboard = (props: any) => {
     .sort((a, b) => {
       return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
     })
+    .slice(0, 5)
     .map(i => <SessionCard key={i.id} session={i} />)
 
   return (

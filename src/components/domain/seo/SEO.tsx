@@ -35,7 +35,8 @@ export function SEO(props: SEOProps) {
   }
 
   const globalTitle = 'Devcon Bogotá, Oct 11 → 14'
-  const globalDescription = 'Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.'
+  const globalDescription =
+    'Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.'
   const globalImage = 'https://www.devcon.org/assets/images/og-graph.png'
   const canonical = props.canonicalUrl || ''
 
@@ -87,8 +88,8 @@ export function SEO(props: SEOProps) {
             </span>
           ))}
         <Twitter title={title} description={description} image={image} />
-        <PWA />
       </Head>
+      <PWA />
       <EventMetadata title={globalTitle} description={globalDescription} image={globalImage} />
     </>
   )
