@@ -8,22 +8,20 @@ import { isEmail } from "utils/validators"
 import { useLocalStorage } from "./useLocalStorage"
 
 export const defaultAvatarValue = { connection: '', name: '', url: defaultImage.src, ens: false, status: 'Loading' }
+const isBrowser = typeof window !== 'undefined'
 
 export function useAvatar() {
     const context = useAccountContext()
     const activeAddress = useActiveAddress()
-    const [avatar, setAvatar] = useLocalStorage('avatar', defaultAvatarValue)
+    const [avatar, setAvatar] = useLocalStorage(activeAddress, defaultAvatarValue)
 
     useEffect(() => {
         async function getAvatar() {
-            if (avatar.connection && avatar.name && avatar.status != defaultAvatarValue.status) {            
-                // Return avatar from session storage
-                return
-            }
-
-            if (!activeAddress) {
-                setAvatar({ ...defaultAvatarValue, status: 'Loading' })
-                return
+            if (!activeAddress) return
+            if (activeAddress && isBrowser) {
+                // TODO: unable to return from useLocalStorage?
+                const item = window.localStorage.getItem(activeAddress)
+                if (item) return setAvatar(JSON.parse(item))
             }
 
             if (isEmail(activeAddress)) {
