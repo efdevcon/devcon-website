@@ -274,6 +274,10 @@ export default pageHOC(function CityGuide(props: any) {
             to: '#location',
           },
           {
+            title: props.sections['local-tours'].title,
+            to: '#tours',
+          },
+          {
             title: intl('city_guide_things_todo'),
             to: '#things-to-do',
           },
