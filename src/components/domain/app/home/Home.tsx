@@ -130,7 +130,7 @@ export const Home = (props: any) => {
                   Log in to personalize your schedule, track your favorite speakers, and more.
                 </span>
               </span>
-              <Link to="/login" style={{ marginLeft: '8px' }} className="button red sm">
+              <Link to="/login" style={{ marginLeft: '8px', flexShrink: '0' }} className="button red sm">
                 LOGIN
               </Link>
             </p>
