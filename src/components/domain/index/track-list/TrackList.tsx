@@ -12,7 +12,7 @@ import Security from 'assets/images/tracks/big-icons/Security.png'
 import Staking from 'assets/images/tracks/big-icons/Staking-Validator-Experience.png'
 import UXDesign from 'assets/images/tracks/big-icons/UX-Design.png'
 import ZKPs from 'assets/images/tracks/big-icons/ZKPs-Privacy.png'
-import TriangleBackground from 'assets/images/background-triangles.png'
+// import TriangleBackground from 'assets/images/background-triangles.png'
 import { Track } from 'types/Track'
 import { Card } from 'components/common/card'
 import { Slider, useSlider } from 'components/common/slider'
@@ -119,9 +119,7 @@ const Tracks = (props: Props) => {
 
   return (
     <div className={`section ${css['container']}`} id="tracks">
-      <div className={`${css['background']} expand`}>
-        <Image src={TriangleBackground} alt="Triangles" />
-      </div>
+      <div className={`${css['background']} expand`}>{/* <Image src={TriangleBackground} alt="Triangles" /> */}</div>
       {/* <h2 className="border-top clear-top">Tracks</h2> */}
 
       <div className={css['tracks']}>

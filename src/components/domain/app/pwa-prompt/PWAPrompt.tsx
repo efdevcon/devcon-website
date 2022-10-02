@@ -41,12 +41,9 @@ export const PWAPrompt = () => {
 
   useEffect(() => {
     if (requiresManualInstall) {
-      console.log(requiresManualInstall, 'manual install prompt')
       promptIfNotLocked()
     }
   }, [requiresManualInstall, promptIfNotLocked])
-
-  console.log(requiresManualInstall, 'req manual install')
 
   return (
     <Modal open={open} close={() => setOpen(!open)} className={css['modal']}>

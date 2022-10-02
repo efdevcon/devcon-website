@@ -58,7 +58,7 @@ export const Dashboard = (props: any) => {
   const { now } = useAppContext()
 
   const sliderSettings = {
-    infinite: false,
+    infinite: true,
     touchThreshold: 100,
     speed: 500,
     slidesToShow: 3,
@@ -126,7 +126,8 @@ export const Dashboard = (props: any) => {
     .filter(session => !!session)
     .sort((a, b) => {
       return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
-    }).map(i => <SessionCard key={i.id} session={i} />)
+    })
+    .map(i => <SessionCard key={i.id} session={i} />)
 
   return (
     <>
@@ -139,7 +140,7 @@ export const Dashboard = (props: any) => {
             <div className={css['dropdown']}>
               <DropdownVariationDots
                 value="Quicklinks"
-                onChange={() => { }}
+                onChange={() => {}}
                 options={[
                   {
                     text: 'Schedule',

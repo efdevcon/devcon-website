@@ -66,7 +66,6 @@ export const pwaUtilities = {
     return { deferredEvent, setDeferredEvent, requiresManualInstall } as any
   },
   installPwa: async ({ togglePrompt, deferredEvent, setDeferredEvent }: InstallArgs) => {
-    console.log('trying to install ')
     if (deferredEvent === null) return
 
     // Hide the app provided install promotion
