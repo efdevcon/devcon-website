@@ -77,15 +77,15 @@
     "capacity": null
   },
   {
-    "id": "main-stage-oc",
-    "name": "Main Stage - OC",
-    "description": "Main Stage for Opening Day",
+    "id": "talk-5-opening-ceremonies",
+    "name": "Talk 5 - Opening Ceremonies",
+    "description": "On Top of the Mountain",
     "info": "Floor 5",
     "capacity": 3060
   },
   {
-    "id": "main-stage",
-    "name": "Main Stage",
+    "id": "talk-5",
+    "name": "Talk 5",
     "description": "On Top of the Mountain",
     "info": "Floor 5",
     "capacity": 1140

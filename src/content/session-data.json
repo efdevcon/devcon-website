@@ -46,8 +46,8 @@
     "start": 1665669600000,
     "end": 1665671400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -99,9 +99,9 @@
     "start": 1665480600000,
     "end": 1665489600000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -137,9 +137,9 @@
     "start": 1665489600000,
     "end": 1665491400000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -375,9 +375,9 @@
     "start": 1665491400000,
     "end": 1665493200000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -583,9 +583,9 @@
     "start": 1665493200000,
     "end": 1665495000000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -680,9 +680,9 @@
     "start": 1665495000000,
     "end": 1665496800000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -907,9 +907,9 @@
     "start": 1665496800000,
     "end": 1665498600000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -1177,9 +1177,9 @@
     "start": 1665498600000,
     "end": 1665500400000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -1398,9 +1398,9 @@
     "start": 1665500400000,
     "end": 1665504000000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -1785,9 +1785,9 @@
     "start": 1665504000000,
     "end": 1665505800000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -1835,6 +1835,12 @@
         "name": "Ariel Zimroni",
         "description": "VP Product @ BloxStaking, developing ssv.network decentralized infrastructure for Ethereum staking.",
         "avatar": "http://speak.devcon.org/media/avatars/Capture_gan96Vd.PNG"
+      },
+      {
+        "id": "MJJN9F",
+        "name": "Jordan Sutcliffe",
+        "description": "BizDev Lead at StakeWise",
+        "avatar": "http://speak.devcon.org/media/avatars/Tree_of_life_rrS51mp.jpeg"
       }
     ],
     "title": "Promoting Small and Independent Stakers: Q&A with the Ethereum Staking Protocols",
@@ -1850,7 +1856,7 @@
       "capacity": 110
     },
     "type": "Panel",
-    "description": "The Node Operator Association presents a roundtable discussion with Darren Langley (Rocket Pool), Vasiliy Shapovalov (Lido), Oisin Kyne (Obol), and Ariel Zimroni (SSV Network) to discuss how small businesses and solo stakers can partner with the various staking protocols to increase revenue.\r\n\r\nTopics include operator qualifications, application processes, costs, risks, and each protocol's unique advantages.",
+    "description": "The Node Operator Association presents a roundtable discussion with Darren Langley (Rocket Pool), Vasiliy Shapovalov (Lido), Oisin Kyne (Obol), Jordan Sutcliffe (Stakewise), and Ariel Zimroni (SSV Network) to discuss how small businesses and solo stakers can partner with the various staking protocols to increase revenue.\r\n\r\nTopics include operator qualifications, application processes, costs, risks, and each protocol's unique advantages.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -1875,9 +1881,9 @@
     "start": 1665505800000,
     "end": 1665507600000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -2084,9 +2090,9 @@
     "start": 1665507600000,
     "end": 1665509400000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -2448,9 +2454,9 @@
     "start": 1665509400000,
     "end": 1665511200000,
     "room": {
-      "id": "main-stage-oc",
-      "name": "Main Stage - OC",
-      "description": "Main Stage for Opening Day",
+      "id": "talk-5-opening-ceremonies",
+      "name": "Talk 5 - Opening Ceremonies",
+      "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 3060
     },
@@ -2751,8 +2757,8 @@
     "start": 1665568800000,
     "end": 1665570600000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -2950,8 +2956,8 @@
     "start": 1665570600000,
     "end": 1665572400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -3113,8 +3119,8 @@
     "start": 1665572400000,
     "end": 1665574200000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -3313,14 +3319,14 @@
         "avatar": ""
       }
     ],
-    "title": "Nosy Neighbor - Automated fuzz harness generation for Golang projects",
+    "title": "Nosy Neighbor - Automated Fuzz Harness Generation for Golang Projects",
     "track": "Security",
     "duration": 25,
     "start": 1665574200000,
     "end": 1665576000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -3486,7 +3492,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "Pluralism — the understanding that diversity of people, beliefs, opinions, mechanisms, approaches, implementations, etc within a given context generally results in better outcomes than in the absence of such diversity. \r\n\r\nIn this lightning talk, Regen Web3 Founders Trent Van Epps, Abbey Titcomb, Karl Flouresch, Kevin Owocki, and Auryn MacMillan will talk about how they're baking pluralism into their projects + building a more pluralistic world by doing so.",
+    "description": "Pluralism — the understanding that diversity of people, beliefs, opinions, mechanisms, approaches, implementations, etc within a given context generally results in better outcomes than in the absence of such diversity. \r\n\r\nIn this lightning talk, Regen Web3 Founders Trent Van Epps, Abbey Titcomb, Karl Flouresch, Kevin Owocki, Griff Green, and Auryn MacMillan will talk about how they're baking pluralism into their projects + building a more pluralistic world by doing so.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -3681,8 +3687,8 @@
     "start": 1665664200000,
     "end": 1665666000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -4011,8 +4017,8 @@
     "start": 1665583200000,
     "end": 1665585000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -4282,8 +4288,8 @@
     "start": 1665585000000,
     "end": 1665586800000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -4348,8 +4354,8 @@
     "start": 1665586800000,
     "end": 1665588600000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -4486,8 +4492,8 @@
     "start": 1665588600000,
     "end": 1665590400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -4557,9 +4563,9 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "Give a presentation about private-exchange application on zkopru which consists of three different zero knowledge protocols including socialist millionaire problem, blind find, and zkopru itself. The presentation includes a demo part to show how the application actually works and dives deep into the technical detail of the cryptographic protocols.",
+    "description": "Give a presentation about private-exchange application on zkopru which consists of three different zero knowledge protocols including socialist millionaire problem, blind find, and zkopru. In the presentation, I will show how the private exchange works and explains the technical details behind the application.",
     "abstract": "",
-    "expertise": "Intermediate",
+    "expertise": "Beginner",
     "tags": [
       "Privacy",
       "ZKP",
@@ -4724,8 +4730,8 @@
     "start": 1665590400000,
     "end": 1665592200000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -4967,8 +4973,8 @@
     "start": 1665592200000,
     "end": 1665594000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -5098,8 +5104,8 @@
     "start": 1665594000000,
     "end": 1665595800000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -5309,8 +5315,8 @@
     "start": 1665595800000,
     "end": 1665597600000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -5583,8 +5589,8 @@
     "start": 1665655200000,
     "end": 1665657000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -5907,8 +5913,8 @@
     "start": 1665662400000,
     "end": 1665664200000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -5940,8 +5946,8 @@
     "start": 1665657000000,
     "end": 1665658800000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -6171,8 +6177,8 @@
     "start": 1665658800000,
     "end": 1665662400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -6378,8 +6384,8 @@
     "start": 1665576000000,
     "end": 1665577800000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -6582,8 +6588,8 @@
     "start": 1665577800000,
     "end": 1665579600000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -7203,8 +7209,8 @@
     "start": 1665671400000,
     "end": 1665673200000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -7229,7 +7235,7 @@
         "avatar": ""
       }
     ],
-    "title": "Nomic Foundation",
+    "title": "Nomic Foundation: the creation of an Ethereum non-profit",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665671400000,
@@ -7242,12 +7248,13 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": ".",
+    "description": "Origin story behind Hardhat and Nomic Foundation",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "developer",
-      "infrastructure"
+      "developer experience",
+      "hardhat",
+      "nomic"
     ]
   },
   {
@@ -7408,8 +7415,8 @@
     "start": 1665673200000,
     "end": 1665675000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -7611,8 +7618,8 @@
     "start": 1665675000000,
     "end": 1665676800000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -7710,7 +7717,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/06_Hart_011-cropped-tight_WlIkhn9.jpg"
       }
     ],
-    "title": "Battle of the bridges: Untangling the tradeoffs of various bridge designs",
+    "title": "Battle of the Bridges: Untangling the Tradeoffs of Various Bridge Designs",
     "track": "Security",
     "duration": 50,
     "start": 1665676800000,
@@ -7814,8 +7821,8 @@
     "start": 1665676800000,
     "end": 1665678600000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -7880,8 +7887,8 @@
     "start": 1665678600000,
     "end": 1665680400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -8081,8 +8088,8 @@
     "start": 1665680400000,
     "end": 1665684000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -8473,8 +8480,8 @@
     "start": 1665741600000,
     "end": 1665743400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -8776,8 +8783,8 @@
     "start": 1665743400000,
     "end": 1665745200000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -8882,8 +8889,8 @@
     "start": 1665745200000,
     "end": 1665747000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -9086,8 +9093,8 @@
     "start": 1665747000000,
     "end": 1665748800000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -9286,8 +9293,8 @@
     "start": 1665748800000,
     "end": 1665750600000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -9454,8 +9461,8 @@
     "start": 1665750600000,
     "end": 1665752400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -9903,8 +9910,8 @@
     "start": 1665756000000,
     "end": 1665757800000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -9928,7 +9935,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg"
       }
     ],
-    "title": "Superchain: Path to the Monolithic Multi-Chain",
+    "title": "OP Stack: Building the Open Source Superchain",
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665756000000,
@@ -9941,7 +9948,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Traditional mono-chain and multi-chain narratives do not capture the inevitable evolution of blockchain architecture. Over time we will see the multi-chain backend infrastructure become unified with atomic sequencing and frontends that provide the experience of interacting with a single chain. This is the Superchian future.\r\n\r\nThis talk will paint the Superchain vision and lay out the practical engineering challenges which we need to overcome in Ethereum to realize it.",
+    "description": "Introducing the OP Stack — a standardized tech stack for L2 chains.\r\n\r\nIntroducing the Superchain vision — the inevitable unification of the distinct L2 chains into a single, horizontally scalable, super-sequenced, Superchain!\r\n\r\nThe OP Stack is how we realize the Superchain vision.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -9999,8 +10006,8 @@
     "start": 1665757800000,
     "end": 1665759600000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -10293,8 +10300,8 @@
     "start": 1665759600000,
     "end": 1665761400000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -10424,8 +10431,8 @@
     "start": 1665761400000,
     "end": 1665762000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -10456,8 +10463,8 @@
     "start": 1665762000000,
     "end": 1665765000000,
     "room": {
-      "id": "main-stage",
-      "name": "Main Stage",
+      "id": "talk-5",
+      "name": "Talk 5",
       "description": "On Top of the Mountain",
       "info": "Floor 5",
       "capacity": 1140
@@ -10515,13 +10522,6 @@
     "id": "D8PG7L",
     "speakers": [
       {
-        "id": "YVARFY",
-        "name": "Karl Floersch",
-        "description": "Ethereum optimist. Worked at the Ethereum Foundation on PoS & Eth2, then co-founded Plasma Group & Optimism to build Ethereum L2 technology which funds public goods. Currently optimistically scaling Ethereum and making impact=profit.",
-        "twitter": "karl_dot_tech",
-        "avatar": "http://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg"
-      },
-      {
         "id": "KFAEPV",
         "name": "Justin Glibert",
         "description": "cyberspace vintner and digital physicist.",
@@ -10534,7 +10534,7 @@
         "avatar": ""
       }
     ],
-    "title": "MUD: The fabric of Autonomous Worlds w Intro by Karl Floresch",
+    "title": "MUD: The fabric of Autonomous Worlds w Intro by Kelvin Fichter",
     "track": "Developer Infrastructure",
     "duration": 60,
     "start": 1665570600000,
@@ -10945,7 +10945,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": ".aa",
+    "description": "Wallets, decentralized identity, distributed storage, and naming services are the backbone of a new, data-ownership-first application stack for decentralized and Web3 apps. But, how do they all fit together to build performant, usable, and private applications? We’ll walk through how distributed storage, decentralized identity, crypto wallets, and naming services all fit together to build modern, private, and data ownership focused applications.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
