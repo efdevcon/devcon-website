@@ -30,7 +30,7 @@ export const SideEventCard = (props: CardProps) => {
 
   if (!props.event.url) return null
   if (props.event.type && typeof props.event.type === 'string') {
-    const normalized = props.event.type.replaceAll('/', '').replaceAll(' ', '').toLowerCase()
+    const normalized = props.event.type.replace('/', '').replace(' ', '').toLowerCase()
 
     thumbnailClassName += ` ${css[normalized]}`
   }
