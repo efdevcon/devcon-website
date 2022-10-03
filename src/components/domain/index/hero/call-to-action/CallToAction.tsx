@@ -33,7 +33,7 @@ export const CallToAction = (props: CTAProps) => {
         <p className="bold">Devcon Week —</p>
         <p className="font-sm">Devcon is more than just a conference</p>
       </Link>
-    </>
+    </div>
   )
 
   return (

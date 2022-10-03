@@ -17,7 +17,6 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { AppNav } from 'components/domain/app/navigation'
 import { InfoIcon } from 'components/common/info-icon'
-import Info from 'pages/app/info'
 
 export default function LoginPage() {
   const router = useRouter()
