@@ -1939,12 +1939,6 @@
         "name": "Paula",
         "description": null,
         "avatar": ""
-      },
-      {
-        "id": "VTWZNC",
-        "name": "Steven Gilbert",
-        "description": null,
-        "avatar": ""
       }
     ],
     "title": "Local Engagement - Panel",
@@ -3668,12 +3662,6 @@
   {
     "id": "RJQZFR",
     "speakers": [
-      {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
       {
         "id": "PRM7AM",
         "name": "Bruno Macaes",
@@ -8060,12 +8048,6 @@
     "id": "9MVQCE",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
-      {
         "id": "BAKZ9F",
         "name": "Yoav Weiss",
         "description": null,
@@ -10277,12 +10259,6 @@
   {
     "id": "ZC9D8N",
     "speakers": [
-      {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
       {
         "id": "ZUMDMJ",
         "name": "Pia Mancini",
