@@ -4121,8 +4121,8 @@
     "avatar": null,
     "description": "Holding for others",
     "tracks": [
-      "Opportunity & Global Impact",
-      "Developer Infrastructure"
+      "Developer Infrastructure",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665446400000,
@@ -4936,19 +4936,6 @@
       1665705600000
     ],
     "twitter": "https://twitter.com/piamancini"
-  },
-  {
-    "id": "KYRM3C",
-    "name": "Brewster Kahle",
-    "avatar": "https://speak.devcon.org/media/avatars/Brewster_Kahle_Headshot_GBcqZZP.jpeg",
-    "description": "Brewster Kahle is the founder and Digital Librarian of the Internet Archive, which now preserves 99+ unique petabytes of data - the books, Web pages, music, television, and software of our cultural heritage, working with more than 950 library and university partners to create a digital library, accessible to all.",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "twitter": "https://twitter.com/brewster_kahle"
   },
   {
     "id": "ADH9HF",
