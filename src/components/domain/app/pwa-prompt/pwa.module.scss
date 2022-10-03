@@ -63,7 +63,12 @@
     // height: 569px;
     max-width: 386px;
     width: 386px;
+  }
 
+  display: none;
+
+  @media (display-mode: browser) {
+    display: block;
   }
 
   // .add-to-calendar-modal-content {
