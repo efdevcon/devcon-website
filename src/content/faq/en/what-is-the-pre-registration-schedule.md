@@ -31,4 +31,4 @@ You can also get the wrist bands from the Registration desk on all event days. <
 
 **We'll begin registration on Oct. 11-14 at 8am.** <br>
 H﻿ead to the front of the Ágora Bogotá Convention Center, where you'll see 4 doors with designated lines. <br>
-O﻿nce you reach the desk, show us your ticket QR (and if you've got a Discounted ticket, we'll need your ID), and you'll get your conference wristband placed on your wrist, a POAP, and a SIM card (if we've got 'em!)
+O﻿nce you reach the desk, show us your ticket QR (and if you've got a Discounted ticket, we'll need your ID), and you'll get your conference wristband placed on your wrist, a POAP, and a SIM card (while we've got 'em!)
