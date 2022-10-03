@@ -4777,6 +4777,7 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
+      1665446400000,
       1665619200000
     ]
   },
@@ -4990,6 +4991,30 @@
   {
     "id": "QJMMFZ",
     "name": "Paula",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "XXLWA9",
+    "name": "Mauricio Tovar",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "FURT7F",
+    "name": "Irais Reyes",
     "avatar": null,
     "description": "",
     "tracks": [
