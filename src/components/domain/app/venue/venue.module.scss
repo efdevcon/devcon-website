@@ -129,3 +129,22 @@
   height: 110px;
   flex-shrink: 0;
 }
+
+.agora { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $gaps-gap-4;
+  padding-bottom: 8px;
+  border-bottom: 1px solid $colors-monochrome-5;
+
+  .info p {
+    margin-bottom: $gaps-gap-2;
+  } 
+
+  .image { 
+    position: relative;
+    flex-shrink: 0;
+    width: 60px;
+  }
+}

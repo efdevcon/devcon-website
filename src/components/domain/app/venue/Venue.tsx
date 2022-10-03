@@ -1,5 +1,5 @@
 import React from 'react'
-import { LinkList, Link } from 'components/common/link'
+import { Link } from 'components/common/link'
 import css from './venue.module.scss'
 import { Room } from 'types/Room'
 import { AppNav } from 'components/domain/app/navigation'
@@ -12,12 +12,14 @@ import IconPlus from 'assets/icons/plus.svg'
 import IconMinus from 'assets/icons/minus.svg'
 import ListIcon from 'assets/icons/list.svg'
 import TileIcon from 'assets/icons/layers.svg'
-import { RoomInfo } from './RoomInfo'
 import { getFloorImage } from './Floor'
 import { defaultSlugify } from 'utils/formatting'
 import { RoomList } from './roomlist'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 import { useIsStandalone } from 'utils/pwa-link'
+import imageAgora from './agora.png'
+import { Button } from 'components/common/button'
+import { useRouter } from 'next/router'
 
 interface Props {
   rooms: Array<Room>
@@ -88,6 +90,7 @@ export const usePanzoom = () => {
 }
 
 export const Venue = (props: Props) => {
+  const router = useRouter()
   const isStandalone = useIsStandalone()
   const [openFloors, setOpenFloors] = React.useState({} as { [key: string]: boolean })
   const [listView, setListView] = React.useState(false)
@@ -96,22 +99,17 @@ export const Venue = (props: Props) => {
   const filteredFloors = (
     search
       ? props.floors.filter(floor => {
-          if (floor.toLowerCase().includes(search.toLowerCase())) return true
+        if (floor.toLowerCase().includes(search.toLowerCase())) return true
 
-          const roomsByFloor = props.rooms.filter(i => i.info === floor)
+        const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
-          return roomsByFloor.some(
-            room => room.name.toLowerCase().includes(search) || room.description.toLowerCase().includes(search)
-          )
-        })
+        return roomsByFloor.some(
+          room => room.name.toLowerCase().includes(search) || room.description.toLowerCase().includes(search)
+        )
+      })
       : props.floors
-  )
-    .sort()
-    .reverse()
-
-  const reorderedFloors = filteredFloors.find(i => i === 'S1')
-    ? [...filteredFloors.filter(i => i !== 'S1'), 'S1']
-    : filteredFloors
+  ).sort((a, b) => b.localeCompare(a))
+  filteredFloors.push(filteredFloors.shift())
 
   function onSearch(nextVal: any) {
     setSearch(nextVal)
@@ -119,7 +117,7 @@ export const Venue = (props: Props) => {
     if (!nextVal) {
       setOpenFloors({})
     } else {
-      reorderedFloors.forEach(floor =>
+      filteredFloors.forEach(floor =>
         setOpenFloors(openFloors => {
           return {
             ...openFloors,
@@ -173,8 +171,20 @@ export const Venue = (props: Props) => {
       <div className="section clear-top-less">
         {/* <h2 className="app-header clear-bottom-less">Floors</h2> */}
 
+        <div className={`${css['agora']}`}>
+          <div className={css['info']}>
+            <p className='app-header'>Agora Bogotá Convention Center</p>
+            <Button className='red sm' onClick={() => router.push('/info#venue')}>
+              Info
+            </Button>
+          </div>
+          <div className={css['image']}>
+            <Image alt="Agora Bogotá Convention Center" objectFit="cover" src={imageAgora} />
+          </div>
+        </div>
+
         {listView &&
-          reorderedFloors.map(floor => {
+          filteredFloors.map(floor => {
             const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
             return (
@@ -206,7 +216,7 @@ export const Venue = (props: Props) => {
           })}
 
         {!listView &&
-          reorderedFloors.sort().map(floor => {
+          filteredFloors.map(floor => {
             return (
               <Link
                 to={isStandalone ? `/venue?floor=${defaultSlugify(floor)}` : `/venue/floor/${defaultSlugify(floor)}`}
