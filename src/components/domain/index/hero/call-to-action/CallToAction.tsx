@@ -15,8 +15,8 @@ export const CallToAction = (props: CTAProps) => {
 
   let className = `${css['positional-wrapper']}`
 
-  const callsToAction = (
-    <div className={css['items']}>
+  const callsToAction = props.items || (
+    <>
       {/* <Link key="1" to="/tickets" allowDrag className={`no-select ${css['item']}`}>
         <p className="bold">Waitlist & Builder Ticket Applications Open —</p>
         <p className="font-sm">Read more</p>
@@ -33,7 +33,7 @@ export const CallToAction = (props: CTAProps) => {
         <p className="bold">Devcon Week —</p>
         <p className="font-sm">Devcon is more than just a conference</p>
       </Link>
-    </div>
+    </>
   )
 
   return (
