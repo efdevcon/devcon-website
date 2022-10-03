@@ -4315,7 +4315,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/-IlNT4nV_400x400_X2wzWMp.jpg"
       }
     ],
-    "title": "Public Goods and Experiments, Sunsetting Zkopru V1",
+    "title": "Public Goods and Experiments, the journey of Zkopru",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665586800000,
@@ -6378,7 +6378,7 @@
         "avatar": ""
       }
     ],
-    "title": "Bartek - Title TBD",
+    "title": "Rollups are the most secure bridges",
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665576000000,
@@ -6391,11 +6391,14 @@
       "capacity": 1140
     },
     "type": "Talk",
-    "description": "tbd",
+    "description": "l2beat.com has established itself as the most trusted community resource assessing security assumptions of different Ethereum scaling solutions. Each such solution has a \"native\" bridge allowing users to move tokens to L2, but there is a plethora of other bridges available to end users. How do they compare to \"native\" bridges ? What risks users face sending tokens across these bridges ?",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
-      "geth"
+      "bridges",
+      "l2beat",
+      "rollups",
+      "multichain"
     ]
   },
   {
@@ -10092,6 +10095,13 @@
   {
     "id": "NNTKKY",
     "speakers": [
+      {
+        "id": "TKWW8K",
+        "name": "Eugene Leventhal",
+        "description": "Eugene Leventhal is the Head of Operations and Outreach at the Smart Contract Research Forum (SCRF), which is a granted org focused on advancing web3 research. Prior to joining SCRF, Eugene worked at Carnegie Mellon University as a Project Manager, supporting a blockchain research initiative and a podcast amongst other projects.",
+        "twitter": "@bbeats1",
+        "avatar": "http://speak.devcon.org/media/avatars/headshot_L77RZZk.jpg"
+      },
       {
         "id": "MPXDXL",
         "name": "Juan",
