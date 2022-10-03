@@ -186,7 +186,7 @@ export const Session = (props: SessionProps) => {
           <AddToCalendar
             event={{
               id: props.session.id,
-              title: props.session.title,
+              title: `${props.session.title}${props.session.room ? ` / Room: ${props.session.room.name}` : ''}`,
               description: props.session.description,
               location: 'Agora Bogotá Convention Center',
               startDate: moment.utc(props.session.start),
