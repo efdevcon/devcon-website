@@ -109,7 +109,8 @@ export const Venue = (props: Props) => {
       })
       : props.floors
   ).sort((a, b) => b.localeCompare(a))
-  filteredFloors.push(filteredFloors.shift())
+  const basement = filteredFloors.shift()
+  if (basement) filteredFloors.push(basement)
 
   function onSearch(nextVal: any) {
     setSearch(nextVal)
