@@ -59,7 +59,7 @@ export function SEO(props: SEOProps) {
   }
 
   const siteUrl = SITE_URL
-  const url = `${siteUrl}${router?.pathname || '/'}`.replace(/\/$/, '')
+  const url = `${siteUrl.replace(/\/$/, '')}${router?.asPath}`
 
   return (
     <>
