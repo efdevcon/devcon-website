@@ -31,4 +31,4 @@ También puede obtener las muñequeras en el mostrador de registro todos los dí
 
 **Comenzaremos a registrarse del 11 al 14 de octubre a las 8 a.m.** <br>
 Dirígete al frente del Centro de Convenciones Ágora Bogotá, donde verás 4 puertas con filas designadas. <br>
-Una vez que llegue al escritorio, muéstrenos el QR de su boleto (y si tiene un boleto con descuento, necesitaremos su identificación), y le colocaremos su pulsera de conferencia en su muñeca, un POAP y un Tarjeta SIM (¡si las tenemos!)
+Una vez que llegue al escritorio, muéstrenos el QR de su boleto (y si tiene un boleto con descuento, necesitaremos su identificación), y le colocaremos su pulsera de conferencia en su muñeca, un POAP y un Tarjeta SIM (¡mientras los tenemos!)
