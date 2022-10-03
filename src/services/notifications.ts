@@ -7,7 +7,7 @@ import moment from 'moment'
 import cacheData from "memory-cache"
 
 const CACHE_KEY = 'TWITTER.NOTIFICATIONS'
-const TWITTER_HASHTAG = 'notice'
+const TWITTER_HASHTAG = 'DevconVI'
 
 export function GetNotificationStrip(lang: string = 'en') {
   if (lang !== 'es') lang = 'en'

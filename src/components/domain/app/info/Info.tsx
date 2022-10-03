@@ -10,8 +10,8 @@ import { ContentSectionRow } from 'components/common/sections/ContentSection'
 import { Search } from 'components/common/filter/Filter'
 import { CodeOfConduct, TermsOfService } from 'components/common/layouts/footer/Legal'
 import { ModalLink } from 'components/common/layouts/footer/Footer'
-import { Modal } from 'components/common/modal'
 import { Link } from 'components/common/link'
+import { useRouter } from 'next/router'
 
 type InfoProps = {
   faqs: Category[]
@@ -20,9 +20,10 @@ type InfoProps = {
 }
 
 export const Info = (props: InfoProps) => {
+  const router = useRouter()
   const [openFaq, setOpenFaq] = React.useState({} as { [key: string]: boolean })
-  const [cocOpen, setCocOpen] = useState(false)
-  const [tosOpen, setTosOpen] = useState(false)
+  const [openTabs, setOpenTabs] = React.useState<any>(
+    router.asPath.split('#')[1] ? { [router.asPath.split('#')[1]]: true } : {})
   const [search, setSearch] = useState('')
   const cityGuideSections = { ...props.sections }
   delete cityGuideSections['is-bogota-safe']
@@ -134,7 +135,22 @@ export const Info = (props: InfoProps) => {
           </CollapsedSection>
         }
         {venueSection &&
-          <CollapsedSection>
+          <CollapsedSection
+            open={openTabs['venue']}
+            setOpen={() => {
+              const isOpen = openTabs['venue']
+
+              const nextOpenState = {
+                ...openTabs,
+                ['venue']: true,
+              }
+
+              if (isOpen) {
+                delete nextOpenState['venue']
+              }
+
+              setOpenTabs(nextOpenState)
+            }}>
             <CollapsedSectionHeader>
               <p className="app-header">Venue Guide</p>
             </CollapsedSectionHeader>
@@ -176,7 +192,7 @@ export const Info = (props: InfoProps) => {
             <p className="app-header">App Feedback</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p className={`${css['github']} clear-bottom`}>If you have any (technical) issues, feedback or questions about the App, feel free to reach out on our <Link to='https://github.com/efdevcon/devcon-website/'>Github</Link>.</p>
+            <p className={`${css['github']} clear-bottom`}>If you have any (technical) issues, feedback or questions about the App, please connect with us on <Link to='https://github.com/efdevcon/devcon-website/'>Github</Link>.</p>
           </CollapsedSectionContent>
         </CollapsedSection>
 

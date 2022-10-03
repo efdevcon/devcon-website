@@ -118,12 +118,6 @@
     "id": "B3UQM7",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
-      {
         "id": "Z93KWP",
         "name": "Venkatesh Rao",
         "description": "Venkatesh Rao is a writer and consultant. He writes the Ribbonfarm blog, and is the author of Tempo, a book on decision-making. He holds a PhD in Aerospace Engineering (2003) from the University of Michigan. He is currently based in Los Angeles",
@@ -370,7 +364,7 @@
       }
     ],
     "title": "Hold",
-    "track": "",
+    "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665491400000,
     "end": 1665493200000,
@@ -3113,7 +3107,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/-1LUYnWJ_400x400_X4rPXAE.jpg"
       }
     ],
-    "title": "Stateless Ethereum: how verkle trees make Ethereum lean and mean",
+    "title": "Stateless Ethereum: How Verkle Trees Make Ethereum Lean and Mean",
     "track": "Layer 1 Protocol",
     "duration": 25,
     "start": 1665572400000,
@@ -3946,7 +3940,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Marina_Profile_N5vwWCA.jpg"
       }
     ],
-    "title": "The influence of crypto regulation on open blockchains: opportunities and challenges",
+    "title": "The Influence of Crypto Regulation on Open Blockchains: Opportunities and Challenges",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665583200000,
@@ -6570,21 +6564,7 @@
   },
   {
     "id": "HFPLPD",
-    "speakers": [
-      {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
-      {
-        "id": "KYRM3C",
-        "name": "Brewster Kahle",
-        "description": "Brewster Kahle is the founder and Digital Librarian of the Internet Archive, which now preserves 99+ unique petabytes of data - the books, Web pages, music, television, and software of our cultural heritage, working with more than 950 library and university partners to create a digital library, accessible to all.",
-        "twitter": "https://twitter.com/brewster_kahle",
-        "avatar": "http://speak.devcon.org/media/avatars/Brewster_Kahle_Headshot_GBcqZZP.jpeg"
-      }
-    ],
+    "speakers": [],
     "title": "Brewster Kahle",
     "track": "Opportunity & Global Impact",
     "duration": 25,
@@ -7238,7 +7218,7 @@
         "avatar": ""
       }
     ],
-    "title": "Nomic Foundation: the creation of an Ethereum non-profit",
+    "title": "Hardhat & Nomic Foundation: the creation of an Ethereum non-profit",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665671400000,
@@ -7251,7 +7231,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Origin story behind Hardhat and Nomic Foundation",
+    "description": "Origin story behind Hardhat and Nomic Foundation.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -9562,7 +9542,7 @@
         "avatar": ""
       }
     ],
-    "title": "Building secure contracts: Use Echidna like a pro",
+    "title": "Building Secure Contracts: Use Echidna Like a Pro",
     "track": "Security",
     "duration": 110,
     "start": 1665752400000,
