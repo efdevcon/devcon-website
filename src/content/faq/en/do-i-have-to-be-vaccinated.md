@@ -1,6 +1,6 @@
 ---
 title: Do I have to be vaccinated?
-category: general
+category: location
 ---
 **Yellow Fever**:
 

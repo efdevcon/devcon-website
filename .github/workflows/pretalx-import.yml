@@ -2,11 +2,10 @@ name: Import Pretalx schedule
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
   push:
     branches:
-      - next
       - app
 
 jobs:
