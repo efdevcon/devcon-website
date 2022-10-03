@@ -17,8 +17,8 @@ export const useIsStandalone = () => {
     const offlineHandler = () => setOffline(true);
 
     window
-    .matchMedia('(display-mode: standalone)')
-    .addEventListener('change', handler);
+      .matchMedia('(display-mode: standalone)')
+      .addEventListener('change', handler);
 
     window.addEventListener('online', onlineHandler);
     window.addEventListener('offline', offlineHandler);
@@ -40,7 +40,7 @@ export const useIsStandalone = () => {
     }
   }, [])
   
-  console.log(standalone || offline, 'standalone/offline')
+  console.log(standalone, offline, 'standalone/offline')
 
   return standalone || offline;
 

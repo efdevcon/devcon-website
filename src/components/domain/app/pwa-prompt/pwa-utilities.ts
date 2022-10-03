@@ -20,7 +20,11 @@ export const pwaUtilities = {
     // When app launches, determine if PWA prompt is possible in browser/OS combination, otherwise trigger the manual prompt with install instructions:
     React.useEffect(() => {
       // Don't prompt if already installed
-      if (pwaUtilities.isStandalone()) return; 
+      if (pwaUtilities.isStandalone()) {
+        console.log('is stand alone preventing open modal')
+       
+        return; 
+      }
 
       if (pwaUtilities.isIOS()) {
         setRequiresManualInstall('ios');
