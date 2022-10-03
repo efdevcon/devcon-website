@@ -85,11 +85,11 @@ export const pwaUtilities = {
   },
 
   isStandalone: () => {
-    // const isStandalone = !window.matchMedia("(display-mode: standalone)").matches;
+    const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
 
     if (document.referrer.startsWith("android-app://")) {
       return true; // Trusted web app
-    } else if ("standalone" in navigator/* || isStandalone*/) {
+    } else if (isStandalone) {
       return true;
     }
 
