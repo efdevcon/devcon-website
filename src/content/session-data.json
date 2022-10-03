@@ -1943,8 +1943,9 @@
       {
         "id": "XXLWA9",
         "name": "Mauricio Tovar",
-        "description": null,
-        "avatar": ""
+        "description": "Co-Founder at Tropykus.com, CEO at TRU. Co-director of the InTIColombia research group at Universidad Nacional de Colombia. Leader of the Colombia node for the Iberoamerican Blockchain Alliance. Electronic Engineer from the Universidad Nacional de Colombia. Master's Degree in Creation of Innovative and Tech Based Companies from the Universidad de Barcelona",
+        "twitter": "@maurotov",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg"
       },
       {
         "id": "FURT7F",
@@ -10919,7 +10920,7 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "I’ll start with the importance of users running nodes in the context of blockchain decentralization and heavily reference Vitalik’s blogs. Next, I’ll cover the system requirements to run a node (computer, internet) and an EIP or two which will reduce these requirements in the future. I’ll then talk about the current software options (DappNode, command line, NiceNode) and their pros/cons. I’ll finish the talk with a brief vision and roadmap of NiceNode.",
+    "description": "The foundation of Ethereum is a resilient and decentralized network of nodes. You’ll learn how nodes defend the network, the easiest ways to run a node, about the upcoming upgrades to Ethereum which make it easier to run a node, and more.",
     "abstract": "",
     "expertise": "",
     "tags": [

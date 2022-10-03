@@ -5006,14 +5006,16 @@
   {
     "id": "XXLWA9",
     "name": "Mauricio Tovar",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg",
+    "description": "Co-Founder at Tropykus.com, CEO at TRU. Co-director of the InTIColombia research group at Universidad Nacional de Colombia. Leader of the Colombia node for the Iberoamerican Blockchain Alliance. Electronic Engineer from the Universidad Nacional de Colombia. Master's Degree in Creation of Innovative and Tech Based Companies from the Universidad de Barcelona",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665446400000
-    ]
+    ],
+    "website": "https://www.linkedin.com/in/mauricio-tovar-gutierrez/",
+    "twitter": "@maurotov"
   },
   {
     "id": "FURT7F",
