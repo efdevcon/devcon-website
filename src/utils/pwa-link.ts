@@ -23,7 +23,7 @@ export const useIsStandalone = () => {
     window.addEventListener('online', onlineHandler);
     window.addEventListener('offline', offlineHandler);
 
-    const matches = window.matchMedia('(display-mode: standalone)')
+    const matches = window.matchMedia('(display-mode: standalone)').matches;
 
     if (matches) {
       setStandalone(true);
@@ -39,8 +39,6 @@ export const useIsStandalone = () => {
       window.removeEventListener('offline', offlineHandler);
     }
   }, [])
-  
-  console.log(standalone, offline, 'standalone/offline')
 
   return standalone || offline;
 
