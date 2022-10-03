@@ -22,6 +22,7 @@ export const AppLayout = (props: LayoutProps) => {
 
   return (
     <AppContext>
+      <SEO />
       <AccountContextProvider>
         <div
           className={css['app']}

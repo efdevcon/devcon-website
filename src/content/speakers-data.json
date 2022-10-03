@@ -4772,11 +4772,12 @@
     "id": "DZVDNL",
     "name": "Diego Fernandez",
     "avatar": null,
-    "description": ".",
+    "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
+      1665446400000,
       1665619200000
     ]
   },
@@ -4988,10 +4989,34 @@
     ]
   },
   {
-    "id": "QJMMFZ",
-    "name": "Paula",
+    "id": "XXLWA9",
+    "name": "Mauricio Tovar",
     "avatar": null,
     "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "FURT7F",
+    "name": "Irais Reyes",
+    "avatar": null,
+    "description": "Diputada del H. Congreso del Estado de Nuevo León, Monterrey",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "ZCF8JW",
+    "name": "Alfredo Bateman",
+    "avatar": null,
+    "description": "Secretario de Desarrollo Económico de Bogotá",
     "tracks": [
       "Opportunity & Global Impact"
     ],

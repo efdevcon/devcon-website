@@ -98,10 +98,9 @@ export default function LoginPage() {
       setError('')
     }
 
+    setEmailSent(true)
     const token = await accountContext.getToken(email, false)
-    if (token) {
-      setEmailSent(true)
-    } else {
+    if (!token) {
       setEmailSent(false)
       setError('Unable to create verification token')
     }

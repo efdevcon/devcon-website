@@ -10,44 +10,6 @@ import { Session } from 'components/domain/app/session'
 import { Session as SessionType } from 'types/Session'
 import { SEO } from 'components/domain/seo'
 import { GetRelatedSessions } from './schedule/[id]'
-// import Fuse from 'fuse.js'
-
-// const options = {
-//   includeScore: true,
-//   useExtendedSearch: true,
-//   shouldSort: true,
-//   ignoreLocation: true,
-//   keys: [
-//     {
-//       name: 'speakers.name',
-//       weight: 1,
-//     },
-//     {
-//       name: 'track',
-//       weight: 0.5,
-//     },
-//     {
-//       name: 'tags',
-//       weight: 0.2,
-//     },
-//   ],
-// }
-
-// export function GetRelatedSessions(id: string, sessions: SessionType[]): Array<SessionType> {
-//   const session = sessions.find(i => i.id === id)
-//   if (!session) return []
-
-//   const fuse = new Fuse(sessions, options)
-//   const query = `${session.speakers.map(i => `"${i.name}"`).join(' | ')} | "${session.track}" | ${session.tags
-//     ?.map(i => `"${i}"`)
-//     .join(' | ')}`
-//   const result = fuse.search(query)
-
-//   return result
-//     .map(i => i.item)
-//     .filter(i => i.id !== id)
-//     .slice(0, 5)
-// }
 
 export default pageHOC((props: any) => {
   const { query } = useRouter()
@@ -67,7 +29,10 @@ export default pageHOC((props: any) => {
           <Session session={session} {...props} relatedSessions={related} sessionID={sessionID} />
         </>
       ) : (
+        <>
+        <SEO title='Schedule' />
         <Schedule {...props} />
+        </>
       )}
     </AppLayout>
   )

@@ -5,11 +5,15 @@ import React from 'react'
 import { GetCategories, GetContentSections, GetFAQ } from 'services/page'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   return (
     <AppLayout>
-      <Info {...props} />
+      <>
+        <SEO title='Info' />
+        <Info {...props} />
+      </>
     </AppLayout>
   )
 })

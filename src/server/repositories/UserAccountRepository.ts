@@ -16,7 +16,7 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
 
   public async findUserAccountByEmail(email: string): Promise<UserAccount | undefined> {
     try {
-      return await this._model.findOne({ email: email })
+      return await this._model.findOne({ email: {$regex: email, $options: 'i'} })
     } catch (e) {
       console.log("Couldn't find user account by email", email)
       console.error(e)
@@ -25,7 +25,7 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
 
   public async findUserAccountByAddress(address: string): Promise<UserAccount | undefined> {
     try {
-      return await this._model.findOne({ addresses: address })
+      return await this._model.findOne({ addresses:  {$regex: address, $options: 'i'} })
     } catch (e) {
       console.log("Couldn't find user account by address", address)
       console.error(e)

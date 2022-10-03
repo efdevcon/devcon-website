@@ -1935,13 +1935,31 @@
     "id": "NESKMJ",
     "speakers": [
       {
-        "id": "QJMMFZ",
-        "name": "Paula",
+        "id": "DZVDNL",
+        "name": "Diego Fernandez",
+        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
+        "avatar": ""
+      },
+      {
+        "id": "XXLWA9",
+        "name": "Mauricio Tovar",
         "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "FURT7F",
+        "name": "Irais Reyes",
+        "description": "Diputada del H. Congreso del Estado de Nuevo León, Monterrey",
+        "avatar": ""
+      },
+      {
+        "id": "ZCF8JW",
+        "name": "Alfredo Bateman",
+        "description": "Secretario de Desarrollo Económico de Bogotá",
         "avatar": ""
       }
     ],
-    "title": "Local Engagement - Panel",
+    "title": "How Latam cities are thinking about blockchain solutions.",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665505800000,
@@ -1954,12 +1972,12 @@
       "capacity": 414
     },
     "type": "Panel",
-    "description": ".",
+    "description": "Mayors or Innovation Ministers/Secretaries to discuss and share their blockchain projects and impact in citizens.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "local",
-      "government"
+      "latam",
+      "cities"
     ]
   },
   {
@@ -10700,7 +10718,7 @@
       {
         "id": "DZVDNL",
         "name": "Diego Fernandez",
-        "description": ".",
+        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
         "avatar": ""
       }
     ],

@@ -11,6 +11,7 @@ import { Session as SessionType } from 'types/Session'
 import { defaultSlugify } from 'utils/formatting'
 import { Room } from 'components/domain/app/venue/Room'
 import { Floor } from 'components/domain/app/venue/Floor'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC(({ sessions, ...props }: any) => {
   const { query } = useRouter()
@@ -39,7 +40,10 @@ export default pageHOC(({ sessions, ...props }: any) => {
 
   return (
     <AppLayout>
-      <Venue {...props} />
+      <>
+        <SEO title='Agora Convention Center' />
+        <Venue {...props} />
+      </>
     </AppLayout>
   )
 })
