@@ -73,6 +73,13 @@
         "avatar": "http://speak.devcon.org/media/avatars/Danny_Ryan_Headshot_RlA2Arp.jpg"
       },
       {
+        "id": "VYQT8X",
+        "name": "trent",
+        "description": "- ethereum ecosystem work & All Core Devs call\r\n- creating with @StatefulWorks\r\n- one of many building the @ProtocolGuild",
+        "twitter": "trent_vanepps",
+        "avatar": "http://speak.devcon.org/media/avatars/van_epps_picture_OE5pxB3.png"
+      },
+      {
         "id": "7BSSFC",
         "name": "Tim Beiko",
         "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
@@ -84,13 +91,7 @@
         "name": "Aya Miyaguchi",
         "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
         "twitter": "https://twitter.com/AyaMiyagotchi",
-        "avatar": ""
-      },
-      {
-        "id": "QVD933",
-        "name": "Trent Van Epps",
-        "description": null,
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Aya_Miyaguchi_Headshot_KnTdjlZ.jpg"
       }
     ],
     "title": "Opening Ceremonies",
@@ -117,12 +118,6 @@
   {
     "id": "B3UQM7",
     "speakers": [
-      {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
       {
         "id": "Z93KWP",
         "name": "Venkatesh Rao",
@@ -370,7 +365,7 @@
       }
     ],
     "title": "Hold",
-    "track": "",
+    "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665491400000,
     "end": 1665493200000,
@@ -1940,9 +1935,15 @@
     "id": "NESKMJ",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
+        "id": "QJMMFZ",
+        "name": "Paula",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "VTWZNC",
+        "name": "Steven Gilbert",
+        "description": null,
         "avatar": ""
       }
     ],
@@ -3113,7 +3114,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/-1LUYnWJ_400x400_X4rPXAE.jpg"
       }
     ],
-    "title": "Stateless Ethereum: how verkle trees make Ethereum lean and mean",
+    "title": "Stateless Ethereum: How Verkle Trees Make Ethereum Lean and Mean",
     "track": "Layer 1 Protocol",
     "duration": 25,
     "start": 1665572400000,
@@ -3946,7 +3947,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Marina_Profile_N5vwWCA.jpg"
       }
     ],
-    "title": "The influence of crypto regulation on open blockchains: opportunities and challenges",
+    "title": "The Influence of Crypto Regulation on Open Blockchains: Opportunities and Challenges",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665583200000,
@@ -4315,7 +4316,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/-IlNT4nV_400x400_X2wzWMp.jpg"
       }
     ],
-    "title": "Public Goods and Experiments, Sunsetting Zkopru V1",
+    "title": "Public Goods and Experiments, the journey of Zkopru",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665586800000,
@@ -4563,7 +4564,7 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "Give a presentation about private-exchange application on zkopru which consists of three different zero knowledge protocols including socialist millionaire problem, blind find, and zkopru. In the presentation, I will show how the private exchange works and explains the technical details behind the application.",
+    "description": "Give a presentation about private-exchange application on zkopru which consists of three different zero knowledge protocols including socialist millionaire problem, blind find, and zkopru. In the presentation, I will show how the private exchange works.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -5064,7 +5065,7 @@
         "avatar": ""
       }
     ],
-    "title": "Fossil Workshop",
+    "title": "Herodotus Workshop",
     "track": "Developer Infrastructure",
     "duration": 50,
     "start": 1665594000000,
@@ -6378,7 +6379,7 @@
         "avatar": ""
       }
     ],
-    "title": "Bartek - Title TBD",
+    "title": "Rollups are the most secure bridges",
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665576000000,
@@ -6391,11 +6392,14 @@
       "capacity": 1140
     },
     "type": "Talk",
-    "description": "tbd",
+    "description": "l2beat.com has established itself as the most trusted community resource assessing security assumptions of different Ethereum scaling solutions. Each such solution has a \"native\" bridge allowing users to move tokens to L2, but there is a plethora of other bridges available to end users. How do they compare to \"native\" bridges ? What risks users face sending tokens across these bridges ?",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
-      "geth"
+      "bridges",
+      "l2beat",
+      "rollups",
+      "multichain"
     ]
   },
   {
@@ -6567,21 +6571,7 @@
   },
   {
     "id": "HFPLPD",
-    "speakers": [
-      {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
-      {
-        "id": "KYRM3C",
-        "name": "Brewster Kahle",
-        "description": "Brewster Kahle is the founder and Digital Librarian of the Internet Archive, which now preserves 99+ unique petabytes of data - the books, Web pages, music, television, and software of our cultural heritage, working with more than 950 library and university partners to create a digital library, accessible to all.",
-        "twitter": "https://twitter.com/brewster_kahle",
-        "avatar": "http://speak.devcon.org/media/avatars/Brewster_Kahle_Headshot_GBcqZZP.jpeg"
-      }
-    ],
+    "speakers": [],
     "title": "Brewster Kahle",
     "track": "Opportunity & Global Impact",
     "duration": 25,
@@ -7235,7 +7225,7 @@
         "avatar": ""
       }
     ],
-    "title": "Nomic Foundation: the creation of an Ethereum non-profit",
+    "title": "Hardhat & Nomic Foundation: the creation of an Ethereum non-profit",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665671400000,
@@ -7248,7 +7238,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Origin story behind Hardhat and Nomic Foundation",
+    "description": "Origin story behind Hardhat and Nomic Foundation.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -9559,7 +9549,7 @@
         "avatar": ""
       }
     ],
-    "title": "Building secure contracts: Use Echidna like a pro",
+    "title": "Building Secure Contracts: Use Echidna Like a Pro",
     "track": "Security",
     "duration": 110,
     "start": 1665752400000,
@@ -9917,7 +9907,7 @@
       "capacity": 1140
     },
     "type": "Talk",
-    "description": "Deva Awards",
+    "description": "DEVA Awards",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -10092,6 +10082,13 @@
   {
     "id": "NNTKKY",
     "speakers": [
+      {
+        "id": "TKWW8K",
+        "name": "Eugene Leventhal",
+        "description": "Eugene Leventhal is the Head of Operations and Outreach at the Smart Contract Research Forum (SCRF), which is a granted org focused on advancing web3 research. Prior to joining SCRF, Eugene worked at Carnegie Mellon University as a Project Manager, supporting a blockchain research initiative and a podcast amongst other projects.",
+        "twitter": "@bbeats1",
+        "avatar": "http://speak.devcon.org/media/avatars/headshot_L77RZZk.jpg"
+      },
       {
         "id": "MPXDXL",
         "name": "Juan",
