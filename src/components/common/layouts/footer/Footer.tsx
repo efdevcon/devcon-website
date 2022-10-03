@@ -163,12 +163,12 @@ export const Footer = () => {
               <Link className="bold font-xs text-uppercase hover-underline" to="https://ethereum.org/en/cookie-policy/">
                 {intl('cookie_policy')}
               </Link>
-              <ModalLink title={intl('code_of_conduct')}>
-                <CodeOfConduct />
-              </ModalLink>
-              <ModalLink title={intl('terms_of_service')}>
-                <TermsOfService />
-              </ModalLink>
+              <Link className="bold font-xs text-uppercase hover-underline" to="/code-of-conduct">
+                {intl('code_of_conduct')}
+              </Link>
+              <Link className="bold font-xs text-uppercase hover-underline" to="/terms-of-service">
+                {intl('terms_of_service')}
+              </Link>
             </div>
           </div>
         </div>
