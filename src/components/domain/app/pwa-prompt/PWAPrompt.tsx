@@ -15,6 +15,10 @@ const howOftenToPrompt = [8, 'hours'] // [30, 'seconds']
 export const PWAPrompt = () => {
   const [open, setOpen] = React.useState(false)
 
+  useEffect(() => {
+    setOpen(true)
+  }, [])
+
   const promptIfNotLocked = React.useMemo(
     () => () => {
       const lastRejectionTimestamp = localStorage.getItem(lastSeenKey)
@@ -50,7 +54,7 @@ export const PWAPrompt = () => {
       <Image alt="Devcon wizard" objectFit="cover" className={css['background']} src={imagePWA} />
       <div className={css['content']}>
         <div className={css['tag']}>
-          <p className="font-xs bold">DEVCON WEB APP</p>
+          <p className="font-xs bold">DEVCON PASSPORT APP</p>
         </div>
 
         <div className={css['info']}>
