@@ -31,7 +31,10 @@ export default pageHOC((props: any) => {
           <SpeakerDetails speaker={speaker} {...props} />
         </>
       ) : (
-        <Speakers {...props} />
+        <>
+          <SEO title='Speakers' />
+          <Speakers {...props} />
+        </>
       )}
     </AppLayout>
   )

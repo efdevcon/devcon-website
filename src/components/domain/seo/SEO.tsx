@@ -27,16 +27,15 @@ export function SEO(props: SEOProps) {
   const pageContext = usePageContext()
   const separator = props.separator ?? '—'
 
-  let title = 'Devcon Bogotá, Oct 11 → 14'
+  let title = 'Devcon Bogotá App'
   if (pageContext?.current?.title && pageContext?.current?.title !== title) {
     title = `${pageContext?.current.title} ${separator} ${title}`
   } else if (props.title) {
     title = `${props.title} ${separator} ${title}`
   }
 
-  const globalTitle = 'Devcon Bogotá, Oct 11 → 14'
-  const globalDescription =
-    'Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.'
+  const globalTitle = 'Devcon Bogotá App'
+  const globalDescription = 'Customize your Devcon experience.'
   const globalImage = 'https://www.devcon.org/assets/images/og-graph.png'
   const canonical = props.canonicalUrl || ''
 

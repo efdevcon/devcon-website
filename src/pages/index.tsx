@@ -4,12 +4,16 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
-import { GetRooms, GetSessions, GetSpeakers } from 'services/programming'
+import { GetSessions, GetSpeakers } from 'services/programming'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   return (
     <AppLayout>
-      <Home {...props} />
+      <>
+        <SEO title='Dashboard' />
+        <Home {...props} />
+      </>
     </AppLayout>
   )
 })
