@@ -17,3 +17,7 @@ Tienes diferentes opciones para contribuir a Devcon VI:
 1. **Envíe una propuesta de mejora de Devcon (DIP)**
 
      ¿Tienes una idea para Devcon? ¿Un evento organizado por la comunidad? ¿Una experiencia interactiva genial? ¿Algo fuera de lo común? ¡Déjanos escuchar tu idea! ¡Participe en nuestro foro de Devcon y/o envíe una propuesta de mejora de Devcon!
+
+1. **Organizar un evento satélite de Devcon**
+     
+     Los eventos satelitales de Devcon son un experimento para descentralizar Devcon VI, para brindar la oportunidad de fomentar una comunidad entre aquellos que no pueden llegar a Bogotá debido a la distancia, el tiempo, los costos, el espacio limitado u otras limitaciones, y para impulsar las comunidades locales de Ethereum. . Puede obtener más información sobre los eventos de Devcon Satellite aquí
