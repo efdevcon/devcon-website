@@ -1,5 +1,4 @@
 ---
-title: Waitlist & Discount Apps open
+title: Ticket sales have ended
 ---
-
-Ticket sale waves have concluded, but sign up on our waiting list, or submit an application for a Discounted Ticket!
+T﻿icket sales have ended. We look forward to seeing you all in Bogotá!

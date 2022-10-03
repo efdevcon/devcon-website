@@ -32,7 +32,7 @@ const Speaker = (props: SpeakerProps) => {
             return <p key={partOfName}>{partOfName}</p>
           })}
         </div>
-        <Image src={props.image} layout="raw" alt={props.name} />
+        <Image src={props.image} layout="raw" alt={props.name} priority />
       </div>
     </div>
   )
@@ -51,7 +51,7 @@ const FeaturedSpeakers = () => {
         {/* <div className={css['background-logo']}>
           <Image src={Background} layout="raw" alt="Keynote speakers logo" />
         </div> */}
-        <div className={css['background-title']}>Featured Speakers</div>
+        <div className={css['background-title']}>{intl('featured_speakers')}</div>
         <SwipeToScroll noBounds scrollIndicatorDirections={{ left: true, right: true }}>
           <div className={css['speakers']}>
             <Speaker name="Brewster Kahle" image={BrewsterKahle} />
@@ -68,14 +68,7 @@ const FeaturedSpeakers = () => {
       </div>
 
       <div className="border-bottom clear-bottom margin-bottom">
-        <p className={`${css['description']} clear-bottom-less clear-top`}>
-          Devcon is geared toward Ethereum&apos;s builders, creators, and thinkers who wish to improve this world.
-          Programming at Devcon takes a holistic approach and aims to engage all attendees through talks, panels,
-          workshops, lightning talks, and freeform learning sessions.
-        </p>
-        <Link to="https://app.devcon.org/schedule">
-          <Button className="red bold">View Full Schedule →</Button>
-        </Link>
+        <p className={`${css['description']} clear-bottom-less clear-top`}>{intl('keynote_subtext')}</p>
       </div>
     </div>
   )
