@@ -4989,18 +4989,6 @@
     ]
   },
   {
-    "id": "QJMMFZ",
-    "name": "Paula",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665446400000
-    ]
-  },
-  {
     "id": "XXLWA9",
     "name": "Mauricio Tovar",
     "avatar": null,
@@ -5017,6 +5005,18 @@
     "name": "Irais Reyes",
     "avatar": null,
     "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "ZCF8JW",
+    "name": "Alfredo Bateman",
+    "avatar": null,
+    "description": "Secretario de Desarrollo Económico de Bogotá",
     "tracks": [
       "Opportunity & Global Impact"
     ],

@@ -1935,12 +1935,6 @@
     "id": "NESKMJ",
     "speakers": [
       {
-        "id": "QJMMFZ",
-        "name": "Paula",
-        "description": null,
-        "avatar": ""
-      },
-      {
         "id": "DZVDNL",
         "name": "Diego Fernandez",
         "description": ".",
@@ -1955,6 +1949,12 @@
       {
         "id": "FURT7F",
         "name": "Irais Reyes",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "ZCF8JW",
+        "name": "Alfredo Bateman",
         "description": null,
         "avatar": ""
       }
