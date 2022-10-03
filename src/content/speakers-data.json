@@ -3738,7 +3738,7 @@
   {
     "id": "MYNS3X",
     "name": "Lakshman Sankar",
-    "avatar": "https://www.gravatar.com/avatar/1a11d69480053e4b2a8fbe16babd300d",
+    "avatar": null,
     "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
