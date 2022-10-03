@@ -2,7 +2,7 @@
 title: ¿Qué es el Calendario de Preinscripción?
 category: general
 ---
-## ***Pre-registro:*** <br>
+## **Pre-registro:** <br>
 ¡Reclama tus Pulseras con Anticipación!
 
 ¿Quiere ir directamente a las celebraciones en Devcon Bogotá y no perderse las Ceremonias de Apertura? Reclama tus muñequeras con anticipación. En serio, valdrá la pena. <br>
