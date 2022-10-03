@@ -39,9 +39,9 @@ export const CallToAction = (props: CTAProps) => {
   return (
     <div className={className}>
       <div className={css['content']}>
-        <div className={css['icon']}>
+        {/* <div className={css['icon']}>
           <CtaSrc />
-        </div>
+        </div> */}
 
         <div className={css['swipe-wrapper']}>
           <SwipeToScroll scrollIndicatorDirections={{ right: true }}>

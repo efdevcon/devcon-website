@@ -16,6 +16,7 @@ import LogoVideo from 'assets/images/pages/archive-1.svg'
 import LogoGetInvolved from 'assets/images/pages/get-involved.svg'
 import LogoPassport from 'assets/images/pages/devcon-passport.svg'
 import Image from 'next/image'
+import { Router, useRouter } from 'next/router'
 
 const useDraggableLink = () => {
   const dragging = React.useRef(false)
@@ -95,6 +96,7 @@ const usePages = () => {
 }
 
 export const Hero = () => {
+  const router = useRouter()
   const intl = useTranslations()
   const draggableLinkAttributes = useDraggableLink()
   const heroEl = React.useRef(null)
@@ -170,9 +172,9 @@ export const Hero = () => {
           <div className={css['page']}>
             <div
               className={css['date']}
-              onClick={() => {
-                setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
-              }}
+              // onClick={() => {
+              //   setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
+              // }}
             >
               <p>Oct 2021</p>
               <p>11 → 14</p>
@@ -184,8 +186,8 @@ export const Hero = () => {
                 <page.titlePrefix className={css['title-prefix']} />
                 <p className={css['title']}>{page.title} —</p>
               </div>
-              <Button className="red bold lg hover">
-                <Link to={page.button.url}>{page.button.text} →</Link>
+              <Button className="red bold lg hover" to={page.button.url}>
+                {page.button.text} →
               </Button>
             </div>
 
