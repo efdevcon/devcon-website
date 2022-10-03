@@ -15,10 +15,6 @@ const howOftenToPrompt = [8, 'hours'] // [30, 'seconds']
 export const PWAPrompt = () => {
   const [open, setOpen] = React.useState(false)
 
-  useEffect(() => {
-    setOpen(true)
-  }, [])
-
   const promptIfNotLocked = React.useMemo(
     () => () => {
       const lastRejectionTimestamp = localStorage.getItem(lastSeenKey)
