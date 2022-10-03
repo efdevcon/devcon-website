@@ -10,6 +10,10 @@ import { VerificationToken } from 'types/VerificationToken'
 import { Session } from 'types/Session'
 import { Modal } from 'components/common/modal'
 import { Link } from 'components/common/link'
+import HeaderLogo from 'components/common/layouts/header/HeaderLogo'
+import AppLogoColor from 'assets/images/app-logo-color.png'
+import Image from 'next/image'
+import css from 'components/domain/app/login-modal.module.scss'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -351,11 +355,17 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
         {showLoginRequired && (
           <Modal autoHeight open close={() => setShowLoginRequired(false)}>
             <div>
+              <div className={css['background']}>
+                <HeaderLogo />
+
+                <Image src={AppLogoColor} layout="raw" alt="App logo" />
+              </div>
               <p className="bold clear-bottom-less clear-top-less">
-                You need to be logged in to personalize your schedule, track your favorite speakers, and more.
+                You need to be logged in to personalize (and share) your schedule, track your favorite speakers, and
+                more.
               </p>
               <Link to="/login" className="button red">
-                Go to login
+                Login
               </Link>
             </div>
           </Modal>

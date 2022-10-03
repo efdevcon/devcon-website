@@ -54,7 +54,7 @@ export const Header = React.memo(({ withStrip, withHero, className, isApp }: Hea
         <div className="section">
           <div className={`${css['menu-container']} ${isApp ? css['no-overflow'] : ''}`}>
             <div className={css['links']}>
-              <Link className={css['logo']} to={`https://devcon.org`}>
+              <Link className={css['logo']} to={`/`}>
                 <HeaderLogo />
               </Link>
 
