@@ -73,6 +73,13 @@
         "avatar": "http://speak.devcon.org/media/avatars/Danny_Ryan_Headshot_RlA2Arp.jpg"
       },
       {
+        "id": "VYQT8X",
+        "name": "trent",
+        "description": "- ethereum ecosystem work & All Core Devs call\r\n- creating with @StatefulWorks\r\n- one of many building the @ProtocolGuild",
+        "twitter": "trent_vanepps",
+        "avatar": "http://speak.devcon.org/media/avatars/van_epps_picture_OE5pxB3.png"
+      },
+      {
         "id": "7BSSFC",
         "name": "Tim Beiko",
         "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
@@ -84,13 +91,7 @@
         "name": "Aya Miyaguchi",
         "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
         "twitter": "https://twitter.com/AyaMiyagotchi",
-        "avatar": ""
-      },
-      {
-        "id": "QVD933",
-        "name": "Trent Van Epps",
-        "description": null,
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Aya_Miyaguchi_Headshot_KnTdjlZ.jpg"
       }
     ],
     "title": "Opening Ceremonies",
@@ -1934,9 +1935,9 @@
     "id": "NESKMJ",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
+        "id": "QJMMFZ",
+        "name": "Paula",
+        "description": null,
         "avatar": ""
       }
     ],
@@ -3662,12 +3663,6 @@
     "id": "RJQZFR",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
-      {
         "id": "PRM7AM",
         "name": "Bruno Macaes",
         "description": "Bruno Maçães is a senior advisor at Flint Global and a columnist for the New Statesman. The author of 'Belt and Road'; 'History Has Begun'; and 'The Dawn of Eurasia', he advises some of the world's leading companies on geopolitics and technology. His latest book is 'Geopolitics for the End Time.'",
@@ -5058,7 +5053,7 @@
         "avatar": ""
       }
     ],
-    "title": "Fossil Workshop",
+    "title": "Herodotus Workshop",
     "track": "Developer Infrastructure",
     "duration": 50,
     "start": 1665594000000,
@@ -8053,12 +8048,6 @@
     "id": "9MVQCE",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
-      {
         "id": "BAKZ9F",
         "name": "Yoav Weiss",
         "description": null,
@@ -10270,12 +10259,6 @@
   {
     "id": "ZC9D8N",
     "speakers": [
-      {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
-        "avatar": ""
-      },
       {
         "id": "ZUMDMJ",
         "name": "Pia Mancini",
