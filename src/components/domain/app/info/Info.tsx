@@ -222,12 +222,12 @@ export const Info = (props: InfoProps) => {
           </CollapsedSectionContent>
         </CollapsedSection>
 
-        <ModalLink title="Code of Conduct" linkClassName={`${css['modal-link']} app-header`}>
-          <CodeOfConduct />
-        </ModalLink>
-        <ModalLink title="Terms of Service" linkClassName={`${css['modal-link']} app-header`}>
-          <TermsOfService />
-        </ModalLink>
+        <Link to='https://devcon.org/en/code-of-conduct/' title="Code of Conduct" className={`${css['modal-link']} app-header`}>
+          Code of Conduct
+        </Link>
+        <Link to='https://devcon.org/en/terms-of-service/' title="Terms of Service" className={`${css['modal-link']} app-header`}>
+          Terms of Service
+        </Link>
       </div>
     </>
   )
