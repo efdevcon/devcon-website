@@ -53,10 +53,9 @@ export default function EmailSettings() {
       setError('')
     }
 
+    setEmailSent(true)
     const token = await accountContext.getToken(email, true)
-    if (token) {
-      setEmailSent(true)
-    } else {
+    if (!token) {
       setEmailSent(false)
       setError('Unable to create verification token')
     }
@@ -85,6 +84,15 @@ export default function EmailSettings() {
 
     setAreYouSure(false)
     setEmail('')
+  }
+
+  const resendVerificationEmail = async () => {
+    setEmailSent(true)
+    const token = await accountContext.getToken(email, false)
+    if (!token) {
+      setEmailSent(false)
+      setError('Unable to create verification token')
+    }
   }
 
   return (
@@ -128,6 +136,9 @@ export default function EmailSettings() {
                     <Button className={`red`} onClick={verifyEmail}>
                       Verify your email
                     </Button>
+                    <span className={css['resend']} role="button" onClick={resendVerificationEmail}>
+                      Re-send verification code
+                    </span>
                   </>
                 )}
 
