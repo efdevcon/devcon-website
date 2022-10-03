@@ -5,6 +5,7 @@ import { PWAPrompt } from 'components/domain/app/pwa-prompt'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'assets/css/index.scss'
+// import { HistoryTracker } from 'components/domain/app/history-tracker'
 import { SEO } from 'components/domain/seo'
 
 function App({ Component, pageProps }: AppProps) {
@@ -24,7 +25,9 @@ function App({ Component, pageProps }: AppProps) {
 
       <NextIntlProvider locale="en" messages={pageProps.messages}>
         <PWAPrompt />
+        {/* <HistoryTracker> */}
         <Component {...pageProps} />
+        {/* </HistoryTracker> */}
       </NextIntlProvider>
     </>
   )

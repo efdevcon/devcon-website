@@ -57,8 +57,7 @@ export const AppContext = (props: AppContextProps) => {
         if (seen) {
           seenNotifications[notification.id] = true
         }
-      }
-      catch (error) {
+      } catch (error) {
         console.log(error)
       }
     })
