@@ -3677,6 +3677,7 @@
     ],
     "eventDays": [
       1665446400000,
+      1665619200000,
       1665705600000
     ],
     "twitter": "@qnou",
@@ -3733,6 +3734,21 @@
     "website": "https://yisun.io/",
     "twitter": "theyisun",
     "github": "yi-sun"
+  },
+  {
+    "id": "MYNS3X",
+    "name": "Lakshman Sankar",
+    "avatar": "https://www.gravatar.com/avatar/1a11d69480053e4b2a8fbe16babd300d",
+    "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "lakshmansankar.com",
+    "twitter": "lakshmansankar",
+    "github": "lsankar4033"
   },
   {
     "id": "ZYXBSK",
@@ -4594,7 +4610,6 @@
     "eventDays": [
       1665446400000,
       1665532800000,
-      1665619200000,
       1665705600000
     ]
   },
@@ -5022,6 +5037,18 @@
     ],
     "eventDays": [
       1665446400000
+    ]
+  },
+  {
+    "id": "3EBRJY",
+    "name": "Kelvin",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
     ]
   }
 ]
