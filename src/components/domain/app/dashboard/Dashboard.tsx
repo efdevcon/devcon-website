@@ -40,13 +40,13 @@ const galleryEvents = [
     url: 'https://devcon.org/continuous-devcon/#hacker-basement',
     image: HighlightChivas,
   },
-  {
-    title: 'Side Events',
-    description: 'Check out Side Events happening in Bogotá!',
-    // TODO: Update URL
-    url: '/side-events',
-    image: HighlightChivas,
-  },
+  // {
+  //   title: 'Side Events',
+  //   description: 'Check out Side Events happening in Bogotá!',
+  //   // TODO: Update URL
+  //   url: '/side-events',
+  //   image: HighlightChivas,
+  // },
 ]
 
 export const Dashboard = (props: any) => {
@@ -59,27 +59,29 @@ export const Dashboard = (props: any) => {
 
   const sliderSettings = {
     infinite: true,
-    touchThreshold: 50,
+    touchThreshold: 100,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
     // slidesToScroll: 3,
     swipeToSlide: true,
     mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2.1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1.1,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 2.1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 1.1,
+    //     },
+    //   },
+    // ],
   }
 
   const sliderProps = useSlider(sliderSettings)
@@ -144,33 +146,28 @@ export const Dashboard = (props: any) => {
                 onChange={() => {}}
                 options={[
                   {
-                    text: 'Schedule',
+                    text: 'Devcon Manual',
                     value: 'schedule',
+                    // TODO: Update before deploy
                     url: '/schedule',
                     // onClick: (close: any) => close(),
                   },
                   {
-                    text: 'Guides',
+                    text: 'Bogota City Guide',
                     value: 'guides',
                     url: '/info',
                     // onClick: (close: any) => close(),
                   },
                   {
-                    text: 'Venue Map',
-                    value: 'venue map',
-                    url: '/venue',
-                    // onClick: (close: any) => close(),
-                  },
-                  {
-                    text: 'Speakers',
-                    value: 'speakers',
-                    url: '/speakers',
-                    // onClick: (close: any) => close(),
-                  },
-                  {
                     text: 'Side Events',
-                    value: 'side-events',
+                    value: 'venue map',
                     url: '/side-events',
+                    // onClick: (close: any) => close(),
+                  },
+                  {
+                    text: 'Devcon Week',
+                    value: 'speakers',
+                    url: 'https://devcon.org/devcon-week',
                     // onClick: (close: any) => close(),
                   },
                 ]}
@@ -181,34 +178,29 @@ export const Dashboard = (props: any) => {
           <SliderStickyNotes
             cards={[
               {
-                title: 'Schedule',
-                description: 'View & manage your devcon schedule.',
+                title: 'Devcon Manual',
+                description: 'Learn all things related to the Devcon Experience!',
+                // TODO: Update before deploy
                 url: '/schedule',
                 color: 'pink',
               },
               {
-                title: 'Guides',
+                title: 'Bogota City Guide',
                 description: 'Access Devcon Bogota local guides.',
                 url: '/info',
                 color: 'yellow',
               },
               {
-                title: 'Venue Map',
-                description: 'Find your way around the Conference.',
-                url: '/venue',
+                title: 'Side Events',
+                description: 'Access all the other community events happening around Devcon.',
+                url: '/side-events',
                 color: 'green',
               },
               {
-                title: 'Speakers',
-                description: 'View speakers presenting at Devcon.',
-                url: '/speakers',
+                title: 'Devcon Week',
+                description: 'Learn more about what is happening during Devcon Week.',
+                url: 'https://devcon.org/devcon-week',
                 color: 'blue',
-              },
-              {
-                title: 'Side Events',
-                description: 'Check out Side Events happening in Bogotá!',
-                url: '/side-events',
-                color: 'grey',
               },
             ]}
           />
