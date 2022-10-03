@@ -11,6 +11,54 @@ import { AppNav } from 'components/domain/app/navigation'
 import { useMediaQuery } from 'hooks/useMediaQuery'
 import { TruncateMiddle } from 'utils/formatting'
 import { Dashboard } from 'components/domain/app/dashboard'
+import AppPhones from 'assets/images/app-phones.png'
+import AppLogoColor from 'assets/images/app-logo-color.png'
+import Image from 'next/image'
+
+type PageIntroduction = {
+  background: any
+  title?: string
+  backgroundAlt: string
+  bodyLeftTitle: string
+  bodyLeftText: string
+  bodyRightRender?: any
+  ctaText: string
+  button: {
+    text: string
+    url: string
+  }
+}
+
+export const PageIntroduction = (props: PageIntroduction) => {
+  return (
+    <div className={css['page-intro']}>
+      <div className={css['background']}>
+        <Image src={props.background} layout="raw" alt={props.backgroundAlt} />
+      </div>
+
+      {props.title && <div className="app-header clear-bottom-less">{props.title}</div>}
+
+      <div className={css['body']}>
+        <div className={css['left']}>
+          <p className={css['subheader']}>{props.bodyLeftTitle}</p>
+          <p className={css['subtext']}>{props.bodyLeftText}</p>
+        </div>
+        {props.bodyRightRender && <div className={css['right']}>{props.bodyRightRender()}</div>}
+      </div>
+
+      <div className={css['cta']}>
+        <p className={css['left']}>{props.ctaText}</p>
+        <Link
+          to={props.button.url}
+          style={{ marginLeft: '8px', flexShrink: '0' }}
+          className="button red sm text-uppercase"
+        >
+          {props.button.text} →
+        </Link>
+      </div>
+    </div>
+  )
+}
 
 export const Home = (props: any) => {
   const router = useRouter()
@@ -124,49 +172,35 @@ export const Home = (props: any) => {
         )}
 
         {!loggedIn && (
-          <div className={css['slider-container']}>
-            <p className={`${css['header']} font-lg bold`}>
-              <span>
-                Welcome to the Devcon app!
-                <br />
-                <span className="font-xs">
-                  Log in to personalize your schedule, track your favorite speakers, and more.
-                </span>
-              </span>
-              <Link to="/login" style={{ marginLeft: '8px', flexShrink: '0' }} className="button red sm">
-                LOGIN
-              </Link>
-            </p>
-
-            {/* <SliderStickyNotes
-            cards={[
-              {
-                title: 'Schedule',
-                description: 'View & manage your devcon schedule.',
-                url: '/schedule',
-                color: 'pink',
-              },
-              {
-                title: 'Guides',
-                description: 'Access Devcon Bogota local guides.',
-                url: '/bogota',
-                color: 'yellow',
-              },
-              {
-                title: 'Venue Map',
-                description: 'Find your way around the Conference.',
-                url: '/venue',
-                color: 'green',
-              },
-              {
-                title: 'Speakers',
-                description: 'View speakers presenting at Devcon.',
-                url: '/speakers',
-                color: 'blue',
-              },
-            ]}
-          /> */}
-          </div>
+          <>
+            <PageIntroduction
+              title="Welcome to the Devcon Passport"
+              bodyLeftTitle="Mobile First PWA"
+              bodyLeftText="Devcon Passport App is designed to be utilized on a mobile device for best user experience, please install as a PWA on your device for best performance."
+              bodyRightRender={() => {
+                return (
+                  <div className={css['app-phones']}>
+                    <Image
+                      src={AppPhones}
+                      layout="fill"
+                      objectFit="contain"
+                      objectPosition="right"
+                      width="100%"
+                      height="100%"
+                      alt="Phones showing app preview"
+                    />
+                  </div>
+                )
+              }}
+              backgroundAlt="Devcon passport logo"
+              background={AppLogoColor}
+              ctaText="Log in to personalize your schedule, track your favorite speakers, share schedule, and more."
+              button={{
+                text: 'Login',
+                url: '/login',
+              }}
+            />
+          </>
         )}
       </div>
 

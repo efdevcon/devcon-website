@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function AccountFooter() {
   return (
     <div className="section">
-      <div className='content'>
+      <div className="clear-top">
         <div className={css['footer']}>
           <div className={css['text']}>
             <p className={css['description']}>
@@ -25,10 +25,14 @@ export default function AccountFooter() {
               Cookie Policy
             </Link>
           </div>
-          <div className={css['img']}>
+          {/* <div className={css['img']}>
             <Image className={css['image']} src={footerRoad} alt="Man and dog on road" />
-          </div>
+          </div> */}
         </div>
+      </div>
+
+      <div className={css['background-footer']}>
+        <Image className={css['image']} src={footerRoad} alt="Man and dog on road" />
       </div>
     </div>
   )

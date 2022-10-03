@@ -169,7 +169,7 @@
 
 .footer {
   position: relative;
-  min-height: 180px;
+  margin-top: 16px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -179,17 +179,30 @@
   .text {
     .description {
       margin-bottom: $gaps-gap-4;
+      margin-right: 16px;
     }
 
     .link {
       @include fonts-bold;
-      margin-right: $gaps-gap-8;
+      margin-right: 16px;
       text-decoration: underline;
     }
   }
 
   .img {
     flex-shrink: 0;
+  }
+}
+
+.background-footer {
+  position: absolute;
+  // background: yellow;
+  bottom: 40px;
+  right: 0px;
+  height: 200px;
+
+  @media (min-width: $breakpoints-sm) {
+    display: none;
   }
 }
 

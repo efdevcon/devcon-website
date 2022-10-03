@@ -169,7 +169,7 @@ export default function LoginPage() {
                 </p>
               </div>
 
-              <div className={css['alert']}>{error && <Alert type="info" title='Info' message={error} />}</div>
+              <div className={css['alert']}>{error && <Alert type="info" title="Info" message={error} />}</div>
 
               {emailSent && (
                 <div className={css['email']}>
