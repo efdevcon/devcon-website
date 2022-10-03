@@ -2,7 +2,7 @@
 title: What is the Pre-Registration Schedule?
 category: general
 ---
-## ***P﻿re-Registration:*** <br>
+## **P﻿re-Registration:** <br>
 Claim your Wristbands in Advance!
 
 Want to get straight to the celebrations at Devcon Bogota and not miss the Opening Ceremonies? Claim your wrist bands in advance. Seriously, it’s going to be worth it. <br>
