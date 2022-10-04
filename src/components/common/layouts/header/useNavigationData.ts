@@ -160,11 +160,6 @@ const useNavigationData = () => {
             type: 'page',
           },
           {
-            title: 'Devcon Satellites',
-            url: '/satellites',
-            type: 'page',
-          },
-          {
             title: 'Devcon',
             url: '#',
             type: 'header',
@@ -172,6 +167,11 @@ const useNavigationData = () => {
           {
             title: intl('cd_title'),
             url: '/continuous-devcon',
+            type: 'page',
+          },
+          {
+            title: 'Devcon Satellites',
+            url: '/satellites',
             type: 'page',
           },
         ],

@@ -49,7 +49,7 @@
       position: relative;
       display: flex;
       justify-content: center;
-      max-height: 475px;
+      max-height: 350px;
       margin-top: 32px;
 
       @media (min-width: $breakpoints-sm) {
@@ -61,8 +61,6 @@
       .image-container {
         display: flex;
         justify-content: center;
-
-
 
         img {
           object-fit: contain;
