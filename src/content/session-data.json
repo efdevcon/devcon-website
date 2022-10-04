@@ -2034,7 +2034,7 @@
       {
         "id": "UFALYU",
         "name": "Potuz",
-        "description": "I am a professional mathematicial that temporarily happen to be a core developer at prysmaticlabs. I enjoy the types of puzzles that arise when trying to hack the protocol.",
+        "description": "I am a professional mathematician that temporarily happen to be a core developer at prysmaticlabs. I enjoy the types of puzzles that arise when trying to hack the protocol.",
         "twitter": "N/A",
         "avatar": "http://speak.devcon.org/media/avatars/trippy-0_rxbGWWE.jpg"
       }
@@ -9276,7 +9276,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "This talk will dive through how to build the subgraph infrastructure that is consistent across the board in order to enable the transformation of raw blockchain data into meaningful metrics.",
+    "description": "This session will explore how we can build subgraph infrastructures that are consistent across the board in order to enable the transformation of raw blockchain data into meaningful metrics.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
