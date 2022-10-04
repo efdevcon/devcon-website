@@ -169,10 +169,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/IMG_1520_o3tqJoW.jpeg",
     "description": "Connor Spelliscy is a crypto researcher and advocate, primarily focused on DAOs.  He runs the DAO Research Collective, which accelerates DAO functionality by supporting and curating research foundational to effective DAO operation. \r\n\r\nHe helps run the Gitcoin advocacy ecosystem round and previously co-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto.",
     "tracks": [
-      "Governance & Coordination"
+      "Governance & Coordination",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "https://www.connorspelliscy.com/about",
     "twitter": "https://twitter.com/c_spelliscy"
@@ -1542,7 +1544,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665619200000
+      1665446400000
     ],
     "website": "https://medium.com/@george.gontikas",
     "twitter": "https://twitter.com/geogont",
@@ -2310,7 +2312,7 @@
       "Cryptoeconomics"
     ],
     "eventDays": [
-      1665619200000
+      1665705600000
     ],
     "twitter": "wjvill",
     "github": "villanuevawill"
@@ -2320,8 +2322,12 @@
     "name": "Jennifer Parak",
     "avatar": null,
     "description": "Jennifer currently works as a Software Engineer at Chorus One. Having started her career working with Microservices in a Java/Spring Boot environment, she's had the chance of working in the smart ecosystems/iOT space and is keen to branch out to emerging technologies such as blockchain tech, following her passion to solve hard technical challenges in a constraint environment.",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
     "website": "www.jennifer-codes.com",
     "twitter": "jenpaff",
     "github": "jenpaff"
@@ -2540,8 +2546,12 @@
     "name": "Tony Olendo",
     "avatar": "https://speak.devcon.org/media/avatars/Tony_Olendo_-_Graphic_White_ASh4KEO.png",
     "description": "Tony Olendo is a Developer Education Evangelist at Polygon. He has a passion for Ethereum Developer Education and specifically helping developers in their Solidity journey. He is also a core team member of Afrofuture DAO, Africa's largest community of NFT artists and also a co-founder of Web3Afrika, Africa's largest community of Web3 builders.",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
     "twitter": "https://twitter.com/tonyolendo",
     "github": "https://github.com/teeolendo"
   },
@@ -2627,7 +2637,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665532800000
+      1665446400000
     ],
     "website": "https://fuel.network",
     "twitter": "jadler0"
@@ -3050,8 +3060,12 @@
     "name": "Gabriella",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
     "twitter": "gabriellassh"
   },
   {
@@ -3079,8 +3093,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665532800000,
-      1665705600000
+      1665532800000
     ],
     "website": "http://karl.tech/",
     "twitter": "karl_dot_tech",
@@ -3423,7 +3436,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665705600000
     ],
     "website": "https://www.linkedin.com/in/yosephayele/",
     "twitter": "@yosephayele"
@@ -3437,7 +3451,7 @@
       "Staking & Validator Experience"
     ],
     "eventDays": [
-      1665705600000
+      1665532800000
     ],
     "twitter": "https://twitter.com/MaraSchmiedt",
     "github": "https://github.com/mara-schmiedt"
@@ -3690,7 +3704,6 @@
     "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
     "tracks": [
       "Staking & Validator Experience",
-      "Developer Infrastructure",
       "UX & Design"
     ],
     "eventDays": [
@@ -3962,9 +3975,9 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000,
+      1665705600000,
       1665619200000,
-      1665705600000
+      1665532800000
     ],
     "twitter": "alexberegszaszi",
     "github": "axic"
@@ -4177,7 +4190,6 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000,
       1665705600000
     ]
   },
@@ -4243,8 +4255,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000,
-      1665705600000
+      1665705600000,
+      1665532800000
     ]
   },
   {
@@ -4639,11 +4651,12 @@
     "description": "",
     "tracks": [
       "Developer Infrastructure",
-      "UX & Design",
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "UX & Design"
     ],
     "eventDays": [
       1665446400000,
+      1665619200000,
       1665532800000,
       1665705600000
     ]
@@ -4828,7 +4841,7 @@
     ],
     "eventDays": [
       1665446400000,
-      1665619200000
+      1665705600000
     ]
   },
   {
@@ -4904,10 +4917,12 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "Developer Infrastructure"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665446400000
     ]
   },
   {
@@ -5023,16 +5038,20 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665446400000
+      1665619200000
     ]
   },
   {
     "id": "PCUMSY",
     "name": "Agustín Matteri",
     "avatar": "https://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg",
-    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust green strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
-    "tracks": [],
-    "eventDays": []
+    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
   },
   {
     "id": "MJJN9F",
@@ -5051,16 +5070,25 @@
     "name": "Naroa",
     "avatar": null,
     "description": "Naroa Zurutuza leads the Mapping and Tech work for Giga, UNICEF. Prior to joining UNICEF, she lived and worked in various companies in Kenya; from a startup that is trying to change the way the world understands agriculture to a non-profit empowering local entrepreneurs through access to finance. Naroa holds a MS in Electrical Engineering from Stanford University and a MS in Telecommunications Engineering from EHU-UPV.",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000,
+      1665619200000
+    ]
   },
   {
     "id": "PWYUEB",
     "name": "Wanseob Lim",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
   },
   {
     "id": "XXLWA9",
@@ -5117,8 +5145,12 @@
     "name": "Ethereum Foundation",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
   },
   {
     "id": "WVASD9",

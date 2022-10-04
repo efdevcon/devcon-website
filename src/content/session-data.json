@@ -666,6 +666,7 @@
         "id": "NX3U8K",
         "name": "Afri Schoedon",
         "description": "Head of Protocol Engineering and Managing Director (Germany) at ChainSafe Systems. Initiator of the Goerli Testnet Initiative and organizer of ETHBerlin. Maintainer of the open-source Ethereum Ruby and Crystal libraries.",
+        "twitter": "https://twitter.com/ETHBerlin",
         "avatar": "http://speak.devcon.org/media/avatars/signal-photo-conference_BYatomu.jpeg"
       }
     ],
@@ -1072,6 +1073,7 @@
         "id": "XVV8AE",
         "name": "Rachel",
         "description": "Design strategy for Privacy & Scaling Explorations",
+        "twitter": "@rachel_aux",
         "avatar": "http://speak.devcon.org/media/avatars/light_copy_wK1gC94.png"
       },
       {
@@ -1848,6 +1850,7 @@
         "id": "XVV8AE",
         "name": "Rachel",
         "description": "Design strategy for Privacy & Scaling Explorations",
+        "twitter": "@rachel_aux",
         "avatar": "http://speak.devcon.org/media/avatars/light_copy_wK1gC94.png"
       }
     ],
@@ -1925,6 +1928,7 @@
         "id": "XXLWA9",
         "name": "Mauricio Tovar",
         "description": "Co-Founder at Tropykus.com, CEO at TRU. Co-director of the InTIColombia research group at Universidad Nacional de Colombia. Leader of the Colombia node for the Iberoamerican Blockchain Alliance. Electronic Engineer from the Universidad Nacional de Colombia. Master's Degree in Creation of Innovative and Tech Based Companies from the Universidad de Barcelona",
+        "twitter": "@maurotov",
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg"
       },
       {
@@ -3356,7 +3360,7 @@
         "avatar": ""
       }
     ],
-    "title": "Roadrunner Polynomial Commitments: Record Transparent Proof Size with Applications to EIP4444 and SNARKs",
+    "title": "A SNARKs Tale: A Story of Building SNARK Solutions on Main-net",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665574200000,
@@ -3369,12 +3373,12 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "We present Roadrunner Polynomial Commitments, Transparent Polynomial Commitments with record proof size. We illuminate some technical innovations which make our construction possible.\r\n\r\nWe then explore applications of Roadrunner to solving EIP4444 (historical state expiry and offloading of historical queries for Full Nodes), and synthesizing new SNARKs.\r\n\r\nWe announce our open source Rust implementation, benchmarks, and also our paper detailing our construction and its proofs of security.",
+    "description": "We focus on a specific, real-world application of SNARKs to demonstrate the exciting process of conducting cutting edge research and applying it to deploy real-world solutions and to inspire other creative solutions using SNARKs as a key enabler. \r\nWe highlight many cutting edge SNARKs and their limitations in the hope to identify opportunities for the community to make Ethereum more SNARK friendly, creating a diverse ecosystem where SNARKs built upon a variety of unique primitives can thrive.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
       "SNARK",
-      "polynomial",
+      "applications",
       "EIP"
     ]
   },
@@ -4279,6 +4283,7 @@
         "id": "HGMDTU",
         "name": "John Kane",
         "description": ".",
+        "twitter": "@john_kane",
         "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
       }
     ],
@@ -7999,6 +8004,7 @@
         "id": "MYNS3X",
         "name": "Lakshman Sankar",
         "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
+        "twitter": "lakshmansankar",
         "avatar": ""
       },
       {
@@ -8044,6 +8050,7 @@
         "id": "DNB3MY",
         "name": "Chris Whinfrey",
         "description": "Co-founder of Hop Protocol\r\nAuthor of the Hop Whitepaper: https://hop.exchange/whitepaper.pdf\r\nPreviously co-founder of Authereum and Level K\r\nAudited Open Zeppelin, dYdX, Augur, Decentraland, and more\r\nStarted the first Ethereum meetup in Boston",
+        "twitter": "WhinfreyChris",
         "avatar": "http://speak.devcon.org/media/avatars/AshAvatar_TS6pQfP.png"
       }
     ],
@@ -8719,6 +8726,7 @@
         "id": "N9FFYG",
         "name": "Jannik Luhn",
         "description": "Hello!",
+        "twitter": "@anotherjannik",
         "avatar": ""
       }
     ],
@@ -9754,6 +9762,7 @@
         "id": "VAL7DC",
         "name": "Agustina Aldasoro",
         "description": "I'm a **Computer Scientist** from University of Buenos Aires, where I'm also a former teaching assistant of Algorithms and Data Structures II. I've been working as a Software Engineer since 2015 in different companies, such as Wolox, Flimper and Medallia, with a large experience in Backend and Infrastructure. Currently, I'm **Tech Lead** in the Platform team in **Decentraland**, where we build the decentralized Services network to support the Metaverse backend functionalities.",
+        "twitter": "https://twitter.com/agusaldasoro",
         "avatar": "http://speak.devcon.org/media/avatars/IMG_4646_KP0ItcP.jpg"
       }
     ],
@@ -10832,7 +10841,7 @@
       {
         "id": "PCUMSY",
         "name": "Agustín Matteri",
-        "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust green strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+        "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
         "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
       }
     ],
@@ -10989,6 +10998,7 @@
         "id": "EXXLEW",
         "name": "Tony Olendo",
         "description": "Tony Olendo is a Developer Education Evangelist at Polygon. He has a passion for Ethereum Developer Education and specifically helping developers in their Solidity journey. He is also a core team member of Afrofuture DAO, Africa's largest community of NFT artists and also a co-founder of Web3Afrika, Africa's largest community of Web3 builders.",
+        "twitter": "https://twitter.com/tonyolendo",
         "avatar": "http://speak.devcon.org/media/avatars/Tony_Olendo_-_Graphic_White_ASh4KEO.png"
       },
       {
@@ -11028,12 +11038,14 @@
         "id": "A7RKE9",
         "name": "Jennifer Parak",
         "description": "Jennifer currently works as a Software Engineer at Chorus One. Having started her career working with Microservices in a Java/Spring Boot environment, she's had the chance of working in the smart ecosystems/iOT space and is keen to branch out to emerging technologies such as blockchain tech, following her passion to solve hard technical challenges in a constraint environment.",
+        "twitter": "jenpaff",
         "avatar": ""
       },
       {
         "id": "QZWEKG",
         "name": "Gabriella",
         "description": null,
+        "twitter": "gabriellassh",
         "avatar": ""
       }
     ],
