@@ -99,14 +99,14 @@ export const Venue = (props: Props) => {
   const filteredFloors = (
     search
       ? props.floors.filter(floor => {
-        if (floor.toLowerCase().includes(search.toLowerCase())) return true
+          if (floor.toLowerCase().includes(search.toLowerCase())) return true
 
-        const roomsByFloor = props.rooms.filter(i => i.info === floor)
+          const roomsByFloor = props.rooms.filter(i => i.info === floor)
 
-        return roomsByFloor.some(
-          room => room.name.toLowerCase().includes(search) || room.description.toLowerCase().includes(search)
-        )
-      })
+          return roomsByFloor.some(
+            room => room.name.toLowerCase().includes(search) || room.description.toLowerCase().includes(search)
+          )
+        })
       : props.floors
   ).sort((a, b) => b.localeCompare(a))
   const basement = filteredFloors.shift()
@@ -174,8 +174,8 @@ export const Venue = (props: Props) => {
 
         <div className={`${css['agora']}`}>
           <div className={css['info']}>
-            <p className='app-header'>Agora Bogotá Convention Center</p>
-            <Button className='red sm' onClick={() => router.push('/info#venue')}>
+            <p className="app-header">Agora Bogotá Convention Center</p>
+            <Button className="red sm" onClick={() => router.push('/info#venue')}>
               Info
             </Button>
           </div>
@@ -210,7 +210,9 @@ export const Venue = (props: Props) => {
                   <p className="app-header">{floor}</p>
                 </CollapsedSectionHeader>
                 <CollapsedSectionContent dontAnimate>
-                  <RoomList rooms={roomsByFloor} />
+                  <div className="clear-top-less">
+                    <RoomList rooms={roomsByFloor} />
+                  </div>
                 </CollapsedSectionContent>
               </CollapsedSection>
             )
