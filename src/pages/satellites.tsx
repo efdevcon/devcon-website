@@ -19,7 +19,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
   const faqs = props.faqs.filter((faq: any) => faq.category.id === 'satellite')
 
   return (
-    <Page theme={themes['program']}>
+    <Page theme={themes['bogota']}>
       <PageHero
         path={[{ text: <span className="bold">Event</span> }, { text: props.page.header }]}
         navigation={[
@@ -52,7 +52,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
         </div>
 
         {props.sections['organize-a-satellite-event'] && (
-          <div id='how-to-organize'>
+          <div id="how-to-organize">
             <h2 className="spaced" id="specs">
               {props.sections['organize-a-satellite-event'].title}
             </h2>
@@ -63,10 +63,8 @@ export default pageHOC(function SatelliteEvents(props: any) {
             />
 
             <div className={`clear-bottom`}>
-              <Link to='https://forum.devcon.org/t/launching-devcon-satellites/1364'>
-                <Button className={`black`}>
-                  Learn More
-                </Button>
+              <Link to="https://forum.devcon.org/t/launching-devcon-satellites/1364">
+                <Button className={`black`}>Learn More</Button>
               </Link>
             </div>
           </div>
