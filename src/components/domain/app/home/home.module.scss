@@ -256,6 +256,9 @@
 
 .app-phones {
   @media (min-width: $breakpoints-sm) {
-    display: none;
+    margin-left: 32px;
+    img {
+      object-position: 16px !important;
+    }
   }
 }
