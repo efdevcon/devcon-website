@@ -102,7 +102,7 @@ export const AppNav = React.memo((props: NavProps) => {
   const router = useRouter()
   const canBack = useHistory()
 
-  console.log(canBack, 'hello')
+  // console.log(canBack, 'hello')
   // const previousRouteWasInApp = previousRoute?.startsWith('/app')
 
   // const parentRoute = (() => {

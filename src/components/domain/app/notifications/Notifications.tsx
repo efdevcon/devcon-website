@@ -10,11 +10,12 @@ import moment from 'moment'
 import { Button } from 'components/common/button'
 import { useAppContext } from 'context/app-context'
 import Image from 'next/image'
-import EthBackground from 'assets/images/eth-diamond-rainbow.png'
-import { useLocalStorage } from "hooks/useLocalStorage"
+// import EthBackground from 'assets/images/eth-diamond-rainbow.png'
+// import AppLogoColor from 'assets/images/app-logo-color.png'
+import AppLogo from 'assets/images/app-logo.svg'
+import { useLocalStorage } from 'hooks/useLocalStorage'
 import { Link } from 'components/common/link'
-
-
+import App from 'next/app'
 
 const filters = [
   {
@@ -37,7 +38,10 @@ const filters = [
 
 export const NotificationCard = React.forwardRef((props: any, ref: any) => {
   const { seenNotifications, setSeenNotifications } = useAppContext()
-  const [notificationSeen, setNotificationSeen] = useLocalStorage(`notification-seen-${props.notification.id}`, seenNotifications?.[props.notification.id])
+  const [notificationSeen, setNotificationSeen] = useLocalStorage(
+    `notification-seen-${props.notification.id}`,
+    seenNotifications?.[props.notification.id]
+  )
 
   const markAsSeen = () => {
     setSeenNotifications((seenNotifications: any) => {
@@ -75,7 +79,11 @@ export const NotificationCard = React.forwardRef((props: any, ref: any) => {
         {notificationSeen ? <IconCheck /> : <div className="label sm error bold">New</div>}
       </div>
       <div className={css['details']}>
-        {notification.label === 'Twitter' && <p className={`bold ${css['title']}`}><Link to={notification.url}>{notification.title}</Link></p>}
+        {notification.label === 'Twitter' && (
+          <p className={`bold ${css['title']}`}>
+            <Link to={notification.url}>{notification.title}</Link>
+          </p>
+        )}
         {notification.label !== 'Twitter' && <p className={`bold ${css['title']}`}>{notification.title}</p>}
         <p>{notification.body}</p>
       </div>
@@ -140,7 +148,8 @@ export const Notifications = (props: any) => {
       })}
 
       <div className={css['background']}>
-        <Image src={EthBackground} layout="fill" objectFit="contain" objectPosition="right" alt="Ether" />
+        <AppLogo />
+        {/* <Image src={AppLogoColor} layout="fill" objectFit="contain" objectPosition="right" alt="Ether" /> */}
       </div>
     </div>
   )

@@ -127,5 +127,10 @@
   height: 80vh;
   width: 100%;
   z-index: -1;
-  opacity: 0.15;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  // opacity: 0.15;
 }

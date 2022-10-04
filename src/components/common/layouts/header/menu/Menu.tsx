@@ -54,35 +54,37 @@ export const Left = (props: any) => {
 }
 
 const Buttons = (props: ButtonProps) => {
+  const router = useRouter()
+
   return (
     <div className={css['buttons']}>
       {props.buttons.map(button => {
         let body
 
-        if (button.url) {
-          body = (
-            <Link key={button.key} to={button.url}>
-              {button.icon}
-            </Link>
-          )
-        } else {
-          body = (
-            <button
-              key={button.key}
-              aria-label={button.key}
-              className={`plain ${button.className}`}
-              onClick={button.onClick}
-            >
-              {button.icon}
-            </button>
-          )
-        }
+        // if (button.url) {
+        //   body = (
+        //     <Link key={button.key} to={button.url}>
+        //       {button.icon}
+        //     </Link>
+        //   )
+        // } else {
+        body = (
+          <button
+            key={button.key}
+            aria-label={button.key}
+            className={`plain ${button.className}`}
+            onClick={button.url ? () => router.push(button.url as any) : button.onClick}
+          >
+            {button.icon}
+          </button>
+        )
+        // }
 
         if (button.tooltip) {
           return (
             <Tooltip key={button.key} {...button.tooltip} touch={false}>
               {/* Need the wrapping div due to Link and Tooltip not interacting well together */}
-              <div>{body}</div>
+              {body}
             </Tooltip>
           )
         }

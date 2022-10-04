@@ -379,7 +379,7 @@ export const Speakers = (props: any) => {
           if (favoritesOnly) {
             return <IconAdded {...starProps} className="icon fill-red" />
           } else {
-            return <IconAdded2 {...starProps} className="icon" style={{ opacity: 0.8 }} />
+            return <IconAdded2 {...starProps} className="icon" style={{ ...starProps.style, opacity: 0.8 }} />
           }
         }}
       />
