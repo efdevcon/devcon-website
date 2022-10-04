@@ -89,9 +89,9 @@ export const Dashboard = (props: any) => {
   const upcomingSessions = (() => {
     const bookmarkedSessions = account?.appState?.sessions
     const sessions: SessionType[] = props.sessions
-    const nowPlusThreshold = now && now.clone().add(24, 'hours')
+    // const nowPlusThreshold = now && now.clone().add(24, 'hours')
 
-    if (!now) return null
+    // if (!now) return null
 
     return sessions
       .sort((a, b) => {
@@ -102,10 +102,10 @@ export const Dashboard = (props: any) => {
 
         if (!attending) return null
 
-        const isUpcoming =
-          moment.utc(session.start).isAfter(now) && moment.utc(session.start).isBefore(nowPlusThreshold)
+        // const isUpcoming =
+        //   moment.utc(session.start).isAfter(now) && moment.utc(session.start).isBefore(nowPlusThreshold)
 
-        if (!isUpcoming) return null
+        // if (!isUpcoming) return null
 
         return <SessionCard key={session.id} session={session} />
       })
