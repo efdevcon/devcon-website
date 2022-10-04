@@ -179,7 +179,7 @@
   flex-direction: column;
   border-bottom: 1px solid $colors-standard-border-color;
   position: relative;
-  @include fonts-sm;
+  @include fonts-sm-fixed;
   overflow: hidden;
 
   .background {
@@ -248,7 +248,7 @@
 
     .left {
       @include fonts-bold;
-      @include fonts-sm;
+      // @include fonts-sm;
       margin-right: 30px;
     }
   }

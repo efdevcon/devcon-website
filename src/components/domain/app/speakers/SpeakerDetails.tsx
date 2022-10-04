@@ -13,6 +13,8 @@ import { extractTwitterUsername, extractGithubUsername } from './Speakers'
 import Star from 'assets/icons/star.svg'
 import StarFill from 'assets/icons/star-fill.svg'
 import { AppNav } from 'components/domain/app/navigation'
+import IconAdd from 'assets/icons/person-add.svg'
+import IconAdded from 'assets/icons/person-added.svg'
 
 export const SpeakerDetails = (props: any) => {
   const { account, setSpeakerFavorite } = useAccountContext()
@@ -46,9 +48,9 @@ export const SpeakerDetails = (props: any) => {
           }
 
           if (isSpeakerFavorited) {
-            return <StarFill {...starProps} className="icon fill-red" />
+            return <IconAdded {...starProps} className="icon fill-red" />
           } else {
-            return <Star {...starProps} />
+            return <IconAdd {...starProps} style={{ opacity: 0.8 }} />
           }
         }}
       />

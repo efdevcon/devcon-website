@@ -2,6 +2,8 @@ import React from 'react'
 import css from './session-card.module.scss'
 import IconClock from 'assets/icons/icon_clock.svg'
 import IconCalendar from 'assets/icons/schedule-plus.svg'
+import IconAdded from 'assets/icons/calendar-added.svg'
+import IconAdd from 'assets/icons/calendar-add.svg'
 import IconMarker from 'assets/icons/icon_marker.svg'
 import IconPeople from 'assets/icons/icon_people.svg'
 import IconSpeaker from 'assets/icons/icon_speaker.svg'
@@ -83,7 +85,7 @@ export const SessionCard = (props: CardProps) => {
           {sessionIsLive && <div className="label red bold sm">Happening now!</div>}
           {isSoon && <div className="label bold sm">Starts in {relativeTime}</div>}
 
-          {sessionIsBookmarked ? <IconCheck {...iconProps} /> : <IconCalendar {...iconProps} />}
+          {sessionIsBookmarked ? <IconAdded {...iconProps} /> : <IconAdd {...iconProps} style={{ opacity: '0.5' }} />}
         </div>
 
         <div className={css['bottom']}>
@@ -99,18 +101,6 @@ export const SessionCard = (props: CardProps) => {
               )}
             </div>
           )}
-
-          <div className={css['time']}>
-            <IconClock />
-            <p>
-              {(() => {
-                const startTime = moment.utc(props.session.start)
-                const endTime = startTime.clone().add(props.session.duration, 'minutes')
-
-                return `${startTime.format('MMM Do')} — ${startTime.format('h:mm A')} - ${endTime.format('h:mm A')}`
-              })()}
-            </p>
-          </div>
 
           {props.session.speakers.length > 0 && (
             <div className={css['speakers']}>
@@ -132,6 +122,18 @@ export const SessionCard = (props: CardProps) => {
               })}
             </div>
           )}
+
+          <div className={css['time']}>
+            <IconClock />
+            <p>
+              {(() => {
+                const startTime = moment.utc(props.session.start)
+                const endTime = startTime.clone().add(props.session.duration, 'minutes')
+
+                return `${startTime.format('MMM Do')} — ${startTime.format('h:mm A')} - ${endTime.format('h:mm A')}`
+              })()}
+            </p>
+          </div>
         </div>
       </div>
     </ThumbnailBlock>

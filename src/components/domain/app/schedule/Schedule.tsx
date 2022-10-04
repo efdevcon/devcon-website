@@ -14,6 +14,8 @@ import filterCss from 'components/domain/app/app-filter.module.scss'
 import { useAppContext } from 'context/app-context'
 import { Room } from 'types/Room'
 import { ShareScheduleModal } from './ShareScheduleModal'
+import IconAdded from 'assets/icons/person-added.svg'
+import IconAdded2 from 'assets/icons/person-added-2.svg'
 
 type Timeslot = {
   time: number
@@ -284,7 +286,7 @@ export const Schedule = (props: any) => {
           },
         ]}
         renderRight={() => {
-          if (!account) return null
+          // if (!account) return null
 
           const starProps = {
             onClick: () => setFavoritesOnly(!favoritesOnly),
@@ -295,11 +297,17 @@ export const Schedule = (props: any) => {
 
           return (
             <>
-              <ShareScheduleModal />
+              {account && <ShareScheduleModal />}
 
-              {account && (
-                <>{favoritesOnly ? <StarFill {...starProps} className="icon fill-red" /> : <Star {...starProps} />}</>
-              )}
+              {/* {account && ( */}
+              <>
+                {favoritesOnly ? (
+                  <IconAdded {...starProps} className="icon fill-red" />
+                ) : (
+                  <IconAdded2 {...starProps} style={{ opacity: 0.8 }} />
+                )}
+              </>
+              {/* )} */}
             </>
           )
         }}
@@ -505,12 +513,14 @@ export const Schedule = (props: any) => {
 
                             setSelectedRooms(nextState)
                           }}
-                          options={props.rooms.filter((i: Room) => i.capacity && i.capacity > 0).map((i: Room) => {
-                            return {
-                              text: i.name,
-                              value: i.name,
-                            }
-                          })}
+                          options={props.rooms
+                            .filter((i: Room) => i.capacity && i.capacity > 0)
+                            .map((i: Room) => {
+                              return {
+                                text: i.name,
+                                value: i.name,
+                              }
+                            })}
                         />
                       </div>
 

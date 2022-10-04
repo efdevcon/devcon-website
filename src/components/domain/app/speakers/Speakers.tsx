@@ -11,8 +11,11 @@ import { AppSearch } from 'components/domain/app/app-search'
 import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import { useAccountContext } from 'context/account-context'
 import Image from 'next/image'
-import Star from 'assets/icons/star.svg'
-import StarFill from 'assets/icons/star-fill.svg'
+// import Star from 'assets/icons/star.svg'
+// import StarFill from 'assets/icons/star-fill.svg'
+import IconAdd from 'assets/icons/person-add.svg'
+import IconAdded from 'assets/icons/person-added.svg'
+import IconAdded2 from 'assets/icons/person-added-2.svg'
 import makeBlockie from 'ethereum-blockies-base64'
 import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
@@ -122,7 +125,7 @@ export const SpeakerCard = ({ speaker }: CardProps) => {
         </div>
 
         <div className={css['icon']}>
-          {isSpeakerFavorited ? <IconStarFill {...iconProps} /> : <IconStar {...iconProps} />}
+          {isSpeakerFavorited ? <IconAdded {...iconProps} /> : <IconAdd style={{ opacity: 0.5 }} {...iconProps} />}
         </div>
       </>
     </div>
@@ -374,9 +377,9 @@ export const Speakers = (props: any) => {
           }
 
           if (favoritesOnly) {
-            return <StarFill {...starProps} className="icon fill-red" />
+            return <IconAdded {...starProps} className="icon fill-red" />
           } else {
-            return <Star {...starProps} />
+            return <IconAdded2 {...starProps} className="icon" style={{ opacity: 0.8 }} />
           }
         }}
       />

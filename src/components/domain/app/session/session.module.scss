@@ -20,8 +20,8 @@
     }
 
     img {
-      height: 65%;
-      width: 65%;
+      height: 80%;
+      width: 80%;
     }
   }
 }
@@ -84,7 +84,7 @@
       @include fonts-xxl;
       @include fonts-primary;
       width: min(700px, 70%);
-      margin-top: $gaps-gap-4;
+      margin-top: $gaps-gap-2;
       margin-bottom: $gaps-gap-4;
 
       span {

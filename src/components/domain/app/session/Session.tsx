@@ -5,6 +5,8 @@ import IconStarFill from 'assets/icons/star-fill.svg'
 import IconCalendarAdd from 'assets/icons/schedule-plus.svg'
 import IconMarker from 'assets/icons/icon_marker.svg'
 import IconPeople from 'assets/icons/icon_people.svg'
+import IconAdded from 'assets/icons/calendar-added.svg'
+import IconAdd from 'assets/icons/calendar-add.svg'
 import { SpeakerCard } from 'components/domain/app/speakers'
 import { SessionCard } from './SessionCard'
 import css from './session.module.scss'
@@ -96,13 +98,13 @@ export const Session = (props: SessionProps) => {
 
             <>
               {attending ? (
-                <IconCheck
+                <IconAdded
                   style={{ cursor: 'pointer' }}
                   className="icon fill-red"
                   onClick={() => bookmarkSession('attending')}
                 />
               ) : (
-                <IconCalendarAdd style={{ cursor: 'pointer' }} onClick={() => bookmarkSession('attending')} />
+                <IconAdd style={{ cursor: 'pointer' }} onClick={() => bookmarkSession('attending')} />
               )}
             </>
           </>
@@ -112,14 +114,6 @@ export const Session = (props: SessionProps) => {
       <Hero track={props.session.track} className={css['session-hero']}>
         <div className="section">
           <div className={css['container']}>
-            <div className={css['info-line']}>
-              <IconClock />
-              <p className="bold">
-                {GetDevconDay(props.session.start)} - {moment.utc(props.session.start).format('MMM DD')},&nbsp;
-                {moment.utc(props.session.start).format('HH:mm')} - {moment.utc(props.session.end).format('HH:mm')}{' '}
-                <span style={{ marginLeft: '12px' }}> {mins} Mins</span>
-              </p>
-            </div>
             {props.session.room && (
               <div className={css['info-line']}>
                 <IconMarker />
@@ -150,6 +144,20 @@ export const Session = (props: SessionProps) => {
               <div className="label white bold">{props.session.track || 'No specific track'}</div>
             </div>
 
+            <div className={css['info-line']} style={{ marginTop: '12px' }}>
+              <IconClock />
+              <p>
+                {GetDevconDay(props.session.start)} —
+                <span style={{ marginLeft: '6px', fontWeight: 400 }}>
+                  {moment.utc(props.session.start).format('ddd, MMM DD')}
+                </span>
+                <span style={{ marginLeft: '12px' }}>
+                  {moment.utc(props.session.start).format('HH:mm')} - {moment.utc(props.session.end).format('HH:mm')}
+                </span>
+                <span style={{ marginLeft: '12px', fontWeight: 400 }}>{mins} Mins</span>
+              </p>
+            </div>
+
             {relativeTime && (
               <p className={css['relative-time']}>
                 {(() => {
@@ -164,9 +172,9 @@ export const Session = (props: SessionProps) => {
               </p>
             )}
 
-            <div className={css['calendar-icon-in-circle']}>
+            {/* <div className={css['calendar-icon-in-circle']}>
               <IconCalendar />
-            </div>
+            </div> */}
           </div>
         </div>
       </Hero>
@@ -179,7 +187,7 @@ export const Session = (props: SessionProps) => {
               <p>Mark as interesting</p> {interested ? <IconStarFill /> : <IconStar />}
             </div>
             <div onClick={() => bookmarkSession('attending')} className={css[attending ? 'active' : '']}>
-              <p>Attend Session</p> <> {attending ? <IconCheck /> : <IconCalendarAdd />}</>
+              <p>Attend Session</p> <> {attending ? <IconAdded /> : <IconAdd />}</>
             </div>
           </>
           {/* )} */}
