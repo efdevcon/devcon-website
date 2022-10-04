@@ -4137,7 +4137,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
       }
     ],
-    "title": "Hardhat Talk",
+    "title": "Better Solidity Support in VSCode",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665583200000,
@@ -4150,7 +4150,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Tbd",
+    "description": "A jaunt through the current state of the art in Solidity editor tooling and how we take it to the next level.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
