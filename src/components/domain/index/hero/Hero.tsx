@@ -176,7 +176,7 @@ export const Hero = () => {
               //   setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
               // }}
             >
-              <p>Oct 2021</p>
+              <p>Oct 2022</p>
               <p>11 → 14</p>
             </div>
 
