@@ -144,10 +144,16 @@
   border: 1px solid $colors-standard-border-color;
   max-width: 600px;
 
+  @media (min-width: $breakpoints-md) {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: none;
+  }
+
   > * {
     // height: 52px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: $colors-monochrome-1;
     padding: $gaps-gap-2;
     cursor: pointer;
@@ -158,12 +164,14 @@
     }
 
     > p {
-      @include fonts-bold;
-      align-self: flex-end;
+      font-size: 13px;
+      // @include fonts-bold;
+      // color: $colors-monochrome-8;
+      // align-self: flex-end;
     }
 
     > svg {
-      font-size: 32px;
+      font-size: 20px;
     }
   }
 
