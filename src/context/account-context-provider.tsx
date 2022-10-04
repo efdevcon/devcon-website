@@ -229,7 +229,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       alert('An error occurred. You may be offline, try again later.')
     })
 
-    if (!response) return Promise.resolve(false)
+    if (!response) return false
 
     if (response.status === 200) {
       setContext({ ...context, account: account })
@@ -278,7 +278,10 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       },
     }
 
-    await updateAccount(account._id, newAccountState)
+    const success = await updateAccount(account._id, newAccountState)
+
+    if (!success) return
+
     setContext({
       ...context,
       account: newAccountState,
@@ -321,7 +324,9 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       },
     }
 
-    await updateAccount(account._id, newAccountState)
+    const success = await updateAccount(account._id, newAccountState)
+
+    if (!success) return
 
     setContext({
       ...context,
@@ -338,7 +343,9 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       },
     }
 
-    await updateAccount(account._id, newAccountState)
+    const success = await updateAccount(account._id, newAccountState)
+
+    if (!success) return
 
     setContext({
       ...context,

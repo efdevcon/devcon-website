@@ -102,7 +102,7 @@ export const Dashboard = (props: any) => {
 
         if (!attending) return null
 
-        const isUpcoming = moment.utc(session.end).isBefore(now) // && moment.utc(session.start).isBefore(nowPlusThreshold)
+        const isUpcoming = moment.utc(now).isBefore(session.end) // && moment.utc(session.start).isBefore(nowPlusThreshold)
 
         if (!isUpcoming) return null
 
@@ -239,21 +239,25 @@ export const Dashboard = (props: any) => {
             open={openNotifications}
             setOpen={() => setOpenNotifications(!openNotifications)}
           >
-            <CollapsedSectionHeader>
+            <CollapsedSectionHeader styleOpened>
               <p className="app-header">Latest Notification</p>
             </CollapsedSectionHeader>
             <CollapsedSectionContent>
-              <NotificationCard notification={pageContext?.appNotifications[0]} />
+              <div className={css['notification-spacing']}>
+                <NotificationCard notification={pageContext?.appNotifications[0]} />
+              </div>
             </CollapsedSectionContent>
           </CollapsedSection>
         )}
 
         {upcomingSessions && upcomingSessions.length > 0 && (
           <CollapsedSection open={openUpcomingSessions} setOpen={() => setOpenUpcomingSessions(!openUpcomingSessions)}>
-            <CollapsedSectionHeader>
+            <CollapsedSectionHeader styleOpened>
               <p className="app-header">Your Next Sessions</p>
             </CollapsedSectionHeader>
-            <CollapsedSectionContent>{upcomingSessions}</CollapsedSectionContent>
+            <CollapsedSectionContent>
+              <div className="clear-top-less">{upcomingSessions}</div>
+            </CollapsedSectionContent>
           </CollapsedSection>
         )}
 
@@ -262,10 +266,12 @@ export const Dashboard = (props: any) => {
             open={openSuggestedSessions}
             setOpen={() => setOpenSuggestedSessions(!openSuggestedSessions)}
           >
-            <CollapsedSectionHeader>
+            <CollapsedSectionHeader styleOpened>
               <p className="app-header">Suggested Sessions</p>
             </CollapsedSectionHeader>
-            <CollapsedSectionContent>{suggestedSessions}</CollapsedSectionContent>
+            <CollapsedSectionContent>
+              <div className="clear-top-less">{suggestedSessions}</div>
+            </CollapsedSectionContent>
           </CollapsedSection>
         )}
 

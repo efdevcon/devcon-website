@@ -12,6 +12,8 @@ import { useAppContext } from 'context/app-context'
 import moment from 'moment'
 import { NoResults } from 'components/common/filter'
 import { ButtonOverlay } from '../button-overlay'
+import { PageIntroduction } from 'components/domain/app/home/Home'
+import SideEventsBackground from 'assets/images/side-events-background.png'
 
 const getDates = (sideEvents: SideEvent[]): Date[] => {
   const dates = {} as { [key: Date['readable']]: Date }
@@ -78,8 +80,21 @@ export const SideEvents = (props: any) => {
         ]}
       />
       <div className="section">
+        <PageIntroduction
+          // title="Welcome to the Devcon Passport"
+          bodyLeftTitle="Community Curated Side Events"
+          bodyLeftText="Note: These events are not organized or endorsed by Devcon in any capacity beyond listings and schedule integration for ease of access."
+          backgroundAlt="Side events logo"
+          background={SideEventsBackground}
+          ctaText="Created by COLOMBIA BLOCKCHAIN WEEK"
+          button={{
+            text: 'Submit Event',
+            url: 'https://notionforms.io/forms/colombia-blockchain-week',
+          }}
+        />
+
         <div className="content">
-          <p className="font-lg clear-bottom clear-top-less">
+          {/* <p className="font-lg clear-bottom clear-top-less">
             <b>Note:</b> These events are not organized or endorsed by Devcon in any capacity beyond listings and
             schedule integration for ease of access.
           </p>
@@ -92,13 +107,15 @@ export const SideEvents = (props: any) => {
             <div className={`${css['submit-event']} label neutral bold`}>
               <Link to="https://notionforms.io/forms/colombia-blockchain-week">Submit Event</Link>
             </div>
-          </div>
+          </div> */}
 
           <CollapsedSection>
             <CollapsedSectionHeader title="Additional Resources" />
             <CollapsedSectionContent>
               <LinkList>
-                <Link to="https://devcon.org/devcon-week/">Devcon Week</Link>
+                <Link style={{ borderTop: 'none' }} to="https://devcon.org/devcon-week/">
+                  Devcon Week
+                </Link>
                 <Link to="https://colombiablockchain.xyz/">Colombia Blockchain Week</Link>
                 <Link to="https://docs.google.com/spreadsheets/d/1KtyFTb_W282bQ1xoVA5rlTwTDz3QfhswWIVpXhpbQIc/edit#gid=1286053629">
                   Crypto Nomads Club

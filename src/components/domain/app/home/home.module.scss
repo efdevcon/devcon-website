@@ -229,8 +229,9 @@
 
     .right {
       position: relative;
-      flex-basis: 45%;
-      height: 110%;
+      flex-basis: 40%;
+      height: 100%;
+      margin-left: 16px;
       flex-grow: 1;
       flex-shrink: 0;
     }
@@ -242,23 +243,19 @@
     justify-content: space-between;
     margin-top: 16px;
 
-    @media (min-width: $breakpoints-sm) {
-      justify-content: start;
-    }
+    // @media (min-width: $breakpoints-sm) {
+    //   // justify-content: start;
+    // }
 
     .left {
       @include fonts-bold;
-      // @include fonts-sm;
-      margin-right: 30px;
+      margin-right: 32px;
     }
   }
 }
 
 .app-phones {
   @media (min-width: $breakpoints-sm) {
-    margin-left: 32px;
-    img {
-      object-position: 16px !important;
-    }
+    height: 100px;
   }
 }

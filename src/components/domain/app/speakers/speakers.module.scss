@@ -10,7 +10,7 @@
 
   &.favorited {
     --color-icon: #{$colors-track-red};
-    border: 1px solid $colors-track-red;
+    border: 1px solid $colors-track-red !important;
   }
   
   &:hover {
