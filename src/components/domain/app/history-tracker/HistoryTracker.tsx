@@ -140,5 +140,5 @@ export const HistoryTracker = (props: HistoryTrackerProps) => {
 
   // console.log(depth, 'depth')
 
-  return <Context.Provider value={canBack}>{props.children}</Context.Provider>
+  return <Context.Provider value={canBack || true}>{props.children}</Context.Provider>
 }
