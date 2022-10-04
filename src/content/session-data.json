@@ -1101,6 +1101,12 @@
         "name": "Althea Allen",
         "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
         "avatar": ""
+      },
+      {
+        "id": "WVASD9",
+        "name": "Scott Moore",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Participant Experience Design",
@@ -2475,7 +2481,7 @@
       "capacity": 3060
     },
     "type": "Talk",
-    "description": "Since the inception of Quadratic Funding, the mechanism has been used to fund open source and public goods primarily in Web3. Recently, Gitcoin and others have begun experimenting with QF in new ways to address real-world issues (climate change, health, policy), for specific ecosystems, and localized communities. What other use cases can leverage Ethereum and QF to distribute funding more democratically? Perhaps within governments, charities, as DAO tooling, for semi-public goods, and more.",
+    "description": "Since the inception of Quadratic Funding, the mechanism has mainly been used to fund open source software and public goods in a Web3-centric context. Recently, Gitcoin and others have experimented with QF in new ways to empower specific ecosystems, fund localized communities, and tackle real-world issues (climate change, health, policy). As adoption grows so do barriers and scalability challenges, but many promising advancements could be the key to breaking out of the blockchain bubble.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -4239,7 +4245,7 @@
       "capacity": 110
     },
     "type": "Talk",
-    "description": "At Polygon-Hermez we have bet for the zero-knowledge EVM to solve Ethereum scalability. In this talk, will be explained if our zkEVM is 100% compatible with the current EVM and why.\r\nAlso the main challenges, tricks, tech decisions and differences we had to apply to achieve it will be explained",
+    "description": "At Polygon-Hermez we have bet for the zero-knowledge EVM to solve Ethereum scalability. \r\nWe will talk about what is the ZK-EVM and how are we dealing with it at Polygon.\r\nWe will explain the differences between zkEVM and EVM,\r\nAlso the main challenges, tricks, tech decisions and differences we had to apply to achieve EVM compatibility will be explained.",
     "abstract": "",
     "expertise": "Advanced",
     "tags": [
@@ -6727,7 +6733,7 @@
       {
         "id": "CCVCAZ",
         "name": "Melanie Davis",
-        "description": "Contributor Experience @DXdao_ I DAO and DeFi enthusiast",
+        "description": "Contributor Experience Lead @DXdao_ I DAO and DeFi enthusiast",
         "twitter": "@melanie__davis",
         "avatar": "http://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg"
       },
@@ -8180,7 +8186,7 @@
         "avatar": ""
       }
     ],
-    "title": "EF Security Research",
+    "title": "Ethereum Foundation's Bug Bounty Program",
     "track": "Security",
     "duration": 7,
     "start": 1665681600000,
@@ -8193,12 +8199,13 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "A look at the history and future of the EF security research team.",
+    "description": "The Ethereum Foundation's Bug Bounty program is one of the longest running bounty programs for blockchains. This talk focus on its history, reported vulnerabilities, where it's heading and why having a bug bounty program is important.",
     "abstract": "",
     "expertise": "",
     "tags": [
       "security",
-      "research"
+      "bug bounty",
+      "vulnerabilities"
     ]
   },
   {
@@ -8404,7 +8411,7 @@
       {
         "id": "MZDPKB",
         "name": "Alim Khamisa",
-        "description": "Alim is a Product Manager at Element Finance. In 2019, he co-founded the DeFi Toronto meetup which has grown to over 1,800 members worldwide. In 2017, he helped to launch one of Canada's first industrial-scale crypto-mining companies. On the academic front, he teaches part-time as an Adjunct Professor in the Blockchain Development Program at George Brown College. He recently authored a chapter titled 'Token Economies' in The Emerald Handbook of Blockchain for Business (published March 2021).",
+        "description": "Alim is a Product Manager at Element Finance. In 2019, he co-founded the DeFi Toronto meetup which has grown to over 2,000 members worldwide. In 2017, he helped to launch one of Canada's first industrial-scale crypto-mining companies. On the academic front, he teaches part-time as an Adjunct Professor in the Blockchain Development Program at George Brown College. He recently authored a chapter titled 'Token Economies' in The Emerald Handbook of Blockchain for Business (published March 2021).",
         "twitter": "https://twitter.com/alimkhamisa",
         "avatar": "http://speak.devcon.org/media/avatars/Alim_pic3_Nx5MHax.jpg"
       }
