@@ -1,6 +1,7 @@
 @use 'assets/css/partials/index' as *;
 
 .hero {
+  position: relative;
   margin-top: $gaps-gap-4;
   padding-bottom: $gaps-gap-4;
 
@@ -21,6 +22,10 @@
     .description {
       color: $colors-monochrome-6;
     }
+  }
+
+  &:global(.slick-track) {
+    margin-left: 0px;
   }
 }
 

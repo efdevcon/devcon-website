@@ -61,27 +61,27 @@ export const Dashboard = (props: any) => {
     infinite: true,
     touchThreshold: 100,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
     // slidesToScroll: 3,
     swipeToSlide: true,
     mobileFirst: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2.1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 1.1,
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   }
 
   const sliderProps = useSlider(sliderSettings)
