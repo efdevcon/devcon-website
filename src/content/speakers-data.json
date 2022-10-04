@@ -1965,6 +1965,20 @@
     "twitter": "@dnsvckvc"
   },
   {
+    "id": "N9FFYG",
+    "name": "Jannik Luhn",
+    "avatar": null,
+    "description": "Hello!",
+    "tracks": [
+      "Governance & Coordination"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "twitter": "@anotherjannik",
+    "github": "jannikluhn"
+  },
+  {
     "id": "ARTED7",
     "name": "Ioannis Sachinoglou",
     "avatar": "https://speak.devcon.org/media/avatars/linkedin_pic_Ihb4qpG.jpg",
@@ -3715,11 +3729,13 @@
     "avatar": "https://speak.devcon.org/media/avatars/light_copy_wK1gC94.png",
     "description": "Design strategy for Privacy & Scaling Explorations",
     "tracks": [
+      "UX & Design",
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665446400000
     ],
+    "twitter": "@rachel_aux",
     "github": "https://github.com/rachelaux"
   },
   {
