@@ -330,7 +330,7 @@ export const Speakers = (props: any) => {
     }
 
     // Filter by tracks
-    const match = (speaker.sessions || []).every((session: any) => {
+    const match = (speaker.sessions || []).some((session: any) => {
       const trackMatches = multiSelectFilter(selectedTracks, session.track)
       const roomMatches = multiSelectFilter(selectedRooms, session.room?.name)
       const difficultyMatches = multiSelectFilter(selectedExpertise, session.expertise)
