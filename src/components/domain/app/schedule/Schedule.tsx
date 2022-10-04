@@ -204,13 +204,17 @@ export const Schedule = (props: any) => {
 
     // Filter by attending/past/upcoming
     if (basicFilter === 'attending') {
-      const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
+      const bookmarkedSession = bookmarkedSessions?.find(
+        bookmark => bookmark.id === session.id && bookmark.level === 'attending'
+      )
 
-      if (bookmarkedSession?.level !== 'attending') return false
+      if (!bookmarkedSession) return false
     } else if (basicFilter === 'interested') {
-      const bookmarkedSession = bookmarkedSessions?.find(bookmark => bookmark.id === session.id)
+      const bookmarkedSession = bookmarkedSessions?.find(
+        bookmark => bookmark.id === session.id && bookmark.level === 'interested'
+      )
 
-      if (bookmarkedSession?.level !== 'interested') return false
+      if (!bookmarkedSession) return false
     } else if (basicFilter === 'past') {
       const sessionHasHappened = now && now.isAfter(session.endTimeAsMoment)
 
