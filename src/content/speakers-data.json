@@ -166,8 +166,8 @@
   {
     "id": "ZR3DL7",
     "name": "Connor Spelliscy",
-    "avatar": null,
-    "description": "Run the DAO Research Collective, which accelerates DAO functionality by procuring and open sourcing targeted research foundational to effective DAO operation. We’ve received grants from the Ethereum Foundation, Uniswap, Compound, and Aave for our work.\r\n\r\nCo-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto, focused on building better regulatory outcomes for the industry.",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_1520_o3tqJoW.jpeg",
+    "description": "Connor Spelliscy is a crypto researcher and advocate, primarily focused on DAOs.  He runs the DAO Research Collective, which accelerates DAO functionality by supporting and curating research foundational to effective DAO operation. \r\n\r\nHe helps run the Gitcoin advocacy ecosystem round and previously co-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -1488,6 +1488,7 @@
       1665705600000
     ],
     "website": "https://www.linkedin.com/in/agusaldasoro/",
+    "twitter": "https://twitter.com/agusaldasoro",
     "github": "https://github.com/agusaldasoro"
   },
   {
@@ -2412,7 +2413,7 @@
   },
   {
     "id": "LGTVTW",
-    "name": "Dominic Horn",
+    "name": "Dominic Emanuel Horn",
     "avatar": "https://speak.devcon.org/media/avatars/fe9200c4-2241-40ef-b853-eaebab8b39f8_rw_1200_photos_v2_x4_3MjzB9c.jpg",
     "description": "Dominic Emanuel Horn is a freelance product designer building digital products with clients like motius, siemens, zeiss and others. I care about designing products with emotion, that look & feel great to the point that people will post on social media about it.",
     "tracks": [
