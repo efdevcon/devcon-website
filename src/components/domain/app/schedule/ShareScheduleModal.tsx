@@ -78,7 +78,7 @@ export const ShareScheduleModal = () => {
         </p>
       </Modal>
 
-      <ShareIcon style={{ cursor: 'pointer' }} onClick={() => setInfoOpen(true)} />
+      <ShareIcon style={{ cursor: 'pointer', fontSize: '18px' }} onClick={() => setInfoOpen(true)} />
     </>
   )
 }

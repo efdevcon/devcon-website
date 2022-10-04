@@ -80,7 +80,7 @@ export const NotificationCard = React.forwardRef((props: any, ref: any) => {
       </div>
       <div className={css['details']}>
         {notification.label === 'Twitter' && (
-          <p className={`bold ${css['title']}`}>
+          <p className={`bold hover-underline ${css['title']}`}>
             <Link to={notification.url}>{notification.title}</Link>
           </p>
         )}

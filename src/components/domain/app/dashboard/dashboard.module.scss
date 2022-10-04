@@ -55,10 +55,19 @@
 .cards {
   display: flex;
   flex-direction: column;
+
   position: relative;
   height: 100%;
   width: 100%;
   margin-bottom: 16px;
+
+  @media (min-width: $breakpoints-lg) {
+    overflow: hidden;
+    width: calc(100% + 12px);
+    left: -6px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
 
   .card {
     height: 100%;

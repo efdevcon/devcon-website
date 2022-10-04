@@ -65,8 +65,9 @@ export const PWAPrompt = () => {
                 if (requiresManualInstall === 'ios') {
                   return (
                     <p className="font-xs bold text-uppercase">
-                      Instructions: Press <IconAppleShare style={{ fontSize: '2em', transform: 'translateY(3px) ' }} />{' '}
-                      then &quot;Add to home screen&quot;
+                      Instructions: Open page in Safari, then press{' '}
+                      <IconAppleShare style={{ fontSize: '2em', transform: 'translateY(3px) ' }} /> then &quot;Add to
+                      home screen&quot;
                     </p>
                   )
                 } else if (requiresManualInstall === 'samsung') {

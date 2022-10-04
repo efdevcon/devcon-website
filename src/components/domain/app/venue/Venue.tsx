@@ -209,7 +209,7 @@ export const Venue = (props: Props) => {
                 <CollapsedSectionHeader>
                   <p className="app-header">{floor}</p>
                 </CollapsedSectionHeader>
-                <CollapsedSectionContent dontAnimate>
+                <CollapsedSectionContent>
                   <div className="clear-top-less">
                     <RoomList rooms={roomsByFloor} />
                   </div>

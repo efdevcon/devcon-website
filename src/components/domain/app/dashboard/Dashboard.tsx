@@ -9,6 +9,7 @@ import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
 import HighlightChivas from 'assets/images/highlight-chivas-sound.png'
 import HighlightHackerBasement from 'assets/images/highlight-hacker-basement.png'
 import HighlightCommunityHubs from 'assets/images/highlight-hub.png'
+import HighlightManual from 'assets/images/manual-highlight.png'
 import { Card } from 'components/common/card'
 import { Slider, useSlider } from 'components/common/slider'
 import { usePageContext } from 'context/page-context'
@@ -29,7 +30,7 @@ const galleryEvents = [
     description:
       'Want to engage and learn about the core communities that make Ethereum and Devcon the truly special place that it is? Be sure to find the community hubs on Floor 1.',
     // TODO: Update URL
-    url: 'https://devcon.org/continuous-devcon/#hacker-basement',
+    url: 'https://devcon.org/continuous-devcon',
     image: HighlightCommunityHubs,
   },
   {
@@ -37,8 +38,16 @@ const galleryEvents = [
     description:
       'Brought an instrument, or just musically inclined? come jam with the community at the traditional CHIVAS sound stage.',
     // TODO: Update URL
-    url: 'https://devcon.org/continuous-devcon/#hacker-basement',
+    url: 'https://devcon.org/continuous-devcon',
     image: HighlightChivas,
+  },
+  {
+    title: 'Devcon Manual',
+    description:
+      'Welcome to Devcon! This is your Devcon VI Manual, and it includes everything you need to know about Devcon, the surroundings and more.',
+    // TODO: Update URL
+    url: 'https://blog.ethereum.org/2022/10/04/devcon-manual',
+    image: HighlightManual,
   },
   // {
   //   title: 'Side Events',
@@ -64,7 +73,7 @@ export const Dashboard = (props: any) => {
     slidesToShow: 3,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 8000,
     // slidesToScroll: 3,
     swipeToSlide: true,
     mobileFirst: true,
@@ -98,7 +107,9 @@ export const Dashboard = (props: any) => {
         return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
       })
       .map(session => {
-        const attending = bookmarkedSessions?.some(bookmarkedSession => bookmarkedSession.id === session.id)
+        const attending = bookmarkedSessions?.some(
+          bookmarkedSession => bookmarkedSession.id === session.id && bookmarkedSession.level === 'attending'
+        )
 
         if (!attending) return null
 
