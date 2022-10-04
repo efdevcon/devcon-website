@@ -5,19 +5,19 @@ type HistoryTrackerProps = {
   children?: any
 }
 
-const Context = createContext<number>(0)
+const Context = createContext<boolean>(false)
 
 export const useHistory = () => {
   return useContext(Context)
 }
 
 export const HistoryTracker = (props: HistoryTrackerProps) => {
-  const [prevRoute, setPrevRoute] = useState<string | null>(null)
+  // const [currentRoute, setCurrentRoute] = useState<string | null>(null)
+  // const [initialHistoryState, setInitialHistoryState] = useState<number>(0)
+  const [canBack, setCanBack] = useState(false)
   // We count depth once we are inside /app, adding and subtracting as we go forward or backwards in history
   // When depth is 1 and we pop state, it means we are at the initial route, and there is nothing to go back to within the context of the app, meaning we can set the history to null
-  const [depth, setDepth] = useState(0)
   const router = useRouter()
-  const initialPage = useRef()
 
   // console.log(depth, 'depthe')
 
@@ -44,14 +44,47 @@ export const HistoryTracker = (props: HistoryTrackerProps) => {
   //     window.removeEventListener('hashchange', handler)
   //   }
   // }, [])
-  useEffect(() => {
-    history.replaceState({ page: history.length, href: location.href }, 'foo')
-    // initialPage.current = history.length
-  }, [])
+  // useEffect(() => {
+  //   history.replaceState({ page: history.length, href: location.href }, 'foo')
+  //   // initialPage.current = history.length
+  // }, [])
+
+  // useEffect(() => {
+  //   if (!initialHistoryState && currentRoute) {
+  //     console.log('replacing state')
+  //     const timeOfNav = Date.now()
+  //     console.log(history.state, 'before')
+  //     history.replaceState({ ...history.state, initialState: timeOfNav }, 'foo')
+  //     setInitialHistoryState(timeOfNav)
+  //     setCanBack(false)
+
+  //     console.log(history.state, 'state')
+  //   }
+  // }, [initialHistoryState, currentRoute])
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      const isBackNavigation = url.includes(prevRoute || 'aæ.æeaæ.') // === router.pathname
+      // const isBackNavigation = url.includes(prevRoute || 'aæ.æeaæ.') // === router.pathname
+
+      // console.log(history.state, initialHistoryState, 'hello x2')
+
+      if (history.state.idx === 0) {
+        setCanBack(false)
+      } else {
+        setCanBack(true)
+      }
+
+      // if (history.state.initialState === initialHistoryState) {
+      //   setCanBack(false)
+      // } else {
+      //   setCanBack(true)
+      // }
+
+      // setCurrentRoute(url)
+
+      // setCurrentHistoryState(timeOfNav)
+
+      // initialHistoryState === history.state.initialState;
 
       // console.log(url)
 
@@ -61,14 +94,14 @@ export const HistoryTracker = (props: HistoryTrackerProps) => {
       //   console.log(history.length, 'length')
       // }
 
-      // console.log(window.state.page === 1, 'length of hist')
-      if (isBackNavigation) {
-        setDepth(depth => depth - 1)
-      } else {
-        setDepth(depth => depth + 1)
-      }
+      // // console.log(window.state.page === 1, 'length of hist')
+      // if (isBackNavigation) {
+      //   setDepth(depth => depth - 1)
+      // } else {
+      //   setDepth(depth => depth + 1)
+      // }
 
-      setPrevRoute(url)
+      // setPrevRoute(url)
 
       // console.log(isBackNavigation, 'is back nav')
 
@@ -99,9 +132,13 @@ export const HistoryTracker = (props: HistoryTrackerProps) => {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [prevRoute, router.events, router.pathname])
+  }, [router.events])
+
+  // const cantNavigate = initialHistoryState === history.state.initialState
+
+  // console.log(canBack, 'cant navigate')
 
   // console.log(depth, 'depth')
 
-  return <Context.Provider value={depth}>{props.children}</Context.Provider>
+  return <Context.Provider value={canBack}>{props.children}</Context.Provider>
 }

@@ -5,7 +5,7 @@ import { Link } from 'components/common/link'
 import IconSwirl from 'assets/icons/swirl.svg'
 import { useRouter } from 'next/router'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
-// import { useHistory } from '../history-tracker'
+import { useHistory } from '../history-tracker'
 
 export type NavLink = {
   title: string
@@ -100,7 +100,9 @@ const defaultLinks = [
 
 export const AppNav = React.memo((props: NavProps) => {
   const router = useRouter()
-  // const historyDepth = useHistory()
+  const canBack = useHistory()
+
+  console.log(canBack, 'hello')
   // const previousRouteWasInApp = previousRoute?.startsWith('/app')
 
   // const parentRoute = (() => {
@@ -118,13 +120,17 @@ export const AppNav = React.memo((props: NavProps) => {
     <div id="inline-nav" className={`${css['container']} section no-overflow`}>
       <div className={`${props.renderRight ? css['has-right'] : ''} ${css['nav-content']}`}>
         <div className={css['left']}>
-          <IconBack
-            className={`${css['icon']} icon`}
-            style={{ cursor: 'pointer' }}
-            onClick={() => {
-              router.back()
-            }}
-          />
+          {canBack ? (
+            <IconBack
+              className={`${css['icon']} icon`}
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                router.back()
+              }}
+            />
+          ) : (
+            <IconSwirl className={`${css['icon']} icon`} />
+          )}
 
           {/* {historyDepth > 0 ? (
             <IconBack
