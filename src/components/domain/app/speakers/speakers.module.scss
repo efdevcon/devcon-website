@@ -12,6 +12,12 @@
     --color-icon: #{$colors-track-red};
     border: 1px solid $colors-track-red;
   }
+  
+  &:hover {
+    cursor: pointer;
+    border: 1px solid darken($colors-standard-border-color, 20%);
+  }
+
 
   .name, .twitter {
     &:hover {

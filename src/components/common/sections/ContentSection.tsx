@@ -17,12 +17,12 @@ export const ContentSectionRow = (props: Props) => {
         </h2>
       )}
       {props.section.body && (
-        <div className="clear-bottom border-bottom">
+        <div className="clear-bottom-less">
           <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.section.body) }} />
         </div>
       )}
       {(props.section.data.left || props.section.data.right) && (
-        <div className="two-columns clear-bottom border-bottom">
+        <div className="two-columns clear-bottom">
           <div className="left section-markdown">
             <div className="markdown" dangerouslySetInnerHTML={{ __html: toHtml(props.section.data.left) }} />
           </div>

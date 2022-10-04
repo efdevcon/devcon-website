@@ -14,7 +14,7 @@
   }
 
   &:last-child {
-    .header {
+    > .header {
       border-bottom: 1px solid $colors-standard-border-color;
     }
   }

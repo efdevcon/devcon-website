@@ -209,13 +209,13 @@ export const CityGuideContent = (props: any) => {
         </>
       )}
 
-      <section id="FAQ" className="clear-top">
+      {/* <section id="FAQ" className="clear-top">
         <FAQ
           data={[{ id: 'something', title: 'Frequently Asked Questions', questions: faqs }]}
           customCategoryTitle="FAQ"
           noSearch
         />
-      </section>
+      </section> */}
 
       <Tags items={pageContext?.current?.tags} viewOnly />
 

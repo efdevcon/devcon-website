@@ -87,20 +87,20 @@ export const Info = (props: InfoProps) => {
           }}
         />
 
-        <CollapsedSection className={css['no-border']}>
-          <CollapsedSectionHeader styleOpened className="border-bottom">
+        <CollapsedSection /*className={css['no-border']}*/>
+          <CollapsedSectionHeader styleOpened>
             <p className="app-header">FAQ</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <div className={css['filter']}>
               <Search className={css['search']} placeholder="Search FAQ" onChange={onSearch} value={search} />
             </div>
-            <div className={css['faq']}>
+            <div className={`${css['faq']} clear-bottom`}>
               {filteredFaq.map(({ questions, title }) => {
                 return (
                   <CollapsedSection
                     key={title}
-                    className={css['no-border']}
+                    // className={css['no-border']}
                     open={openFaq[title]}
                     setOpen={() => {
                       const isOpen = openFaq[title]
@@ -116,7 +116,7 @@ export const Info = (props: InfoProps) => {
                       setOpenFaq(nextOpenState)
                     }}
                   >
-                    <CollapsedSectionHeader styleOpened className={`${css['subheader']} border-bottom`}>
+                    <CollapsedSectionHeader styleOpened className={`${css['subheader']}`}>
                       <p className="font-sm-fixed bold">{title}</p>
                     </CollapsedSectionHeader>
                     <CollapsedSectionContent dontAnimate>
@@ -197,6 +197,7 @@ export const Info = (props: InfoProps) => {
             <p className="app-header">City Guide</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
+            <div className="clear-top-less"></div>
             <CityGuideContent {...props} faqs={props.cityGuideFaqs} sections={cityGuideSections} insideApp />
           </CollapsedSectionContent>
         </CollapsedSection>
