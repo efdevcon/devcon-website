@@ -566,13 +566,13 @@
     "id": "FWQDXE",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
+        "id": "PQLDN3",
+        "name": "Andrew Milich",
+        "description": null,
         "avatar": ""
       }
     ],
-    "title": "Hold",
+    "title": "Skiff",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665493200000,
@@ -585,11 +585,11 @@
       "capacity": 3060
     },
     "type": "Talk",
-    "description": "TBD",
+    "description": ".",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "Payments"
+      "Privacy"
     ]
   },
   {
@@ -1247,7 +1247,7 @@
     ],
     "title": "ELI5 Workshops",
     "track": "Developer Infrastructure",
-    "duration": 270,
+    "duration": 90,
     "start": 1665495000000,
     "end": 1665507600000,
     "room": {
@@ -3058,7 +3058,7 @@
         "name": "Matt Deible",
         "description": "Coming from a background in artificial intelligence and reinforcement learning, Matt now leads development of the order routing algorithm and smart contracts for odos.xyz",
         "twitter": "mattdeible",
-        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_20220604-005501_MMeEtID.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/profile_picture_gLd5qva.jpg"
       }
     ],
     "title": "An Overview of AMM Mechanisms",
@@ -3728,7 +3728,7 @@
     ],
     "title": "EVM Panel",
     "track": "Developer Infrastructure",
-    "duration": 30,
+    "duration": 50,
     "start": 1665579600000,
     "end": 1665581400000,
     "room": {
@@ -5982,9 +5982,9 @@
         "avatar": ""
       }
     ],
-    "title": "The Lens Protocol Reputation System: How to Integrate Diverse Sources of Reputational Evidence",
+    "title": "How to Integrate Diverse Sources of Reputational Evidence: Learnings from the Lens Protocol Reputation System",
     "track": "Developer Infrastructure",
-    "duration": 25,
+    "duration": 7,
     "start": 1665657000000,
     "end": 1665658800000,
     "room": {
@@ -5994,7 +5994,7 @@
       "info": "Floor 3",
       "capacity": 110
     },
-    "type": "Talk",
+    "type": "Lightning Talk",
     "description": "Machine learning is typically a compute-intensive task that is prohibitively expensive to do on-chain. In this talk I’ll discuss strategies that Aave and the Lens API have used for training and deploying machine learning models in a way that maintains the transparent and trustless ethos of web3. I’ll also cover how we developed some of the models used in the Lens API and how to contribute your own models to the Lens ecosystem.",
     "abstract": "",
     "expertise": "Intermediate",
@@ -7573,7 +7573,7 @@
       {
         "id": "L7TWAB",
         "name": "Charles St. Louis",
-        "description": "Charles St. Louis is the COO and Head of Governance at Element Finance. Previously, he was the Decentralized Governance Architecture at the Maker Foundation and the first mandated member of MakerDAO elected by MKR Holders. \r\n\r\nHe's been an active contributor to Ethereum / Ethereum Cat Herders, helping with improving the EIP process, coordination of hardforks, advising of Ethereum.org, and working on Ethereum developer growth strategy.",
+        "description": "Charles St. Louis is the COO and Head of Governance at Element Finance. Previously, he was the Decentralized Governance Architect at the Maker Foundation and one of the first mandated members of MakerDAO elected by MKR Holders. \r\n\r\nHe's been an active contributor to Ethereum and the Ethereum Cat Herders, helping with improving the EIP process, coordination of hardforks, advising Ethereum.org, and working on Ethereum developer growth strategy.",
         "twitter": "https://twitter.com/CharlieStLouis",
         "avatar": "http://speak.devcon.org/media/avatars/profile-photo_GwQvxrq.jpeg"
       }
@@ -10830,7 +10830,7 @@
       {
         "id": "7UPFQY",
         "name": "Carlos",
-        "description": "Builder on Ethereum. I'm a core member of the BuidlGuidl where I build tools and public goods for the ecosystem, like SpeedRunEthereum and ABI Ninja. Previously worked for more than 10 years as a freelance web developer.",
+        "description": "Builder on Ethereum. Core member of the BuidlGuidl where he builds tools and public goods for the ecosystem, like SpeedRunEthereum and ABI Ninja. Previously worked for more than 10 years as a freelance software developer.",
         "twitter": "_carletex_",
         "avatar": "http://speak.devcon.org/media/avatars/2486142_vAT00yx.jpeg"
       }
@@ -10933,13 +10933,13 @@
     "id": "CQ9FY9",
     "speakers": [
       {
-        "id": "PQLDN3",
-        "name": "Andrew Milich",
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
         "description": null,
         "avatar": ""
       }
     ],
-    "title": "Skiff",
+    "title": "Hold",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665504000000,
@@ -10974,7 +10974,7 @@
     ],
     "title": "Hold",
     "track": "Opportunity & Global Impact",
-    "duration": 50,
+    "duration": 25,
     "start": 1665741600000,
     "end": 1665744600000,
     "room": {
@@ -10984,7 +10984,7 @@
       "info": "Floor 2",
       "capacity": 414
     },
-    "type": "Panel",
+    "type": "Talk",
     "description": ".",
     "abstract": "",
     "expertise": "Beginner",
