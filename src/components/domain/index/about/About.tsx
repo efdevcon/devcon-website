@@ -39,9 +39,9 @@ const About = (props: Props) => {
           </Link>
         </div>
         <div className={css['right']}>
-          <div className={css['image-container']}>
+          <Link to="https://blog.ethereum.org/2022/10/04/devcon-manual" className={css['image-container']}>
             <Image src={DevconManual} alt="Devcon images" priority />
-          </div>
+          </Link>
         </div>
         {/* <div className={css['right']}>
           <SwipeToScroll scrollIndicatorDirections={{ left: true }} alwaysShowscrollIndicators>
