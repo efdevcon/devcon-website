@@ -13,6 +13,7 @@ export async function GetBlogs(maxItems: number = defaultMaxItems): Promise<Arra
 
     const feed = await parser.parseURL('https://blog.ethereum.org/feed/category/devcon.xml')
     const blogs = feed.items.map(i => {
+        const isManual = slugify(i.title ?? '') === 'The-Devcon-VI-Manual'
         return {
             id: slugify(i.title ?? ''),
             title: i.title,
@@ -22,7 +23,7 @@ export async function GetBlogs(maxItems: number = defaultMaxItems): Promise<Arra
             body: i['content:encoded'] || i.description,
             slug: slugify(i.title ?? ''),
             permaLink: i.link,
-            imageUrl: i.enclosure ? i['enclosure'].url : '',
+            imageUrl: isManual ? '/assets/images/manual.webp' : i.enclosure ? i['enclosure'].url : '',
         } as BlogPost
     })
 
