@@ -148,7 +148,7 @@ export const Dashboard = (props: any) => {
                     text: 'Devcon Manual',
                     value: 'schedule',
                     // TODO: Update before deploy
-                    url: '/schedule',
+                    url: 'https://blog.ethereum.org/2022/10/04/devcon-manual',
                     // onClick: (close: any) => close(),
                   },
                   {
@@ -180,7 +180,7 @@ export const Dashboard = (props: any) => {
                 title: 'Devcon Manual',
                 description: 'Learn all things related to the Devcon Experience!',
                 // TODO: Update before deploy
-                url: '/schedule',
+                url: 'https://blog.ethereum.org/2022/10/04/devcon-manual',
                 color: 'pink',
               },
               {
