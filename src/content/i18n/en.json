@@ -5,6 +5,7 @@
     "description": "Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.",
     "footer": "Crafted with passion ❤️ at the Ethereum Foundation"
   },
+  "experience_devcon": "Experience Devcon",
   "keynote_subtext": "Devcon is geared toward Ethereum's builders, creators, and thinkers who wish to improve this world. Programming at Devcon takes a holistic approach and aims to engage all attendees through talks, panels, workshops, lightning talks, and freeform learning sessions.",
   "keynote_speakers": "Keynote Speakers",
   "featured_speakers": "Featured Speakers",
@@ -100,8 +101,11 @@
     "blog": "Blog",
     "news": "News",
     "about": "About",
+    "event": "Event",
     "about_devcon": "About Devcon",
     "past_events": "Past events",
+    "live": "Live",
+    "devcon_app": "Devcon App",
     "faq": "FAQ",
     "get_involved": "Get Involved",
     "city_guide": "City Guide",
@@ -111,6 +115,7 @@
     "program": "Program",
     "program_overview": "Overview",
     "program_apply_to_speak": "Apply to speak",
+    "program_schedule": "Event Schedule",
     "get_tickets": "Get Tickets",
     "tickets_raffle": "Auction & Raffle",
     "participate": "Participate",
@@ -265,5 +270,23 @@
     "location": "Location",
     "multi_day_event": "Multi-Day Event",
     "bogota_blockchain_week": "BOGOTA BLOCKCHAIN WEEK"
+  },
+  "hero": {
+    "passport_title": "Passport",
+    "passport_cta": "Launch Devcon App",
+    "passport": "Devcon Passport App",
+    "passport_subtext": "Customize your Devcon experience",
+    "city_guide_title": "City Guide",
+    "city_guide_cta": "Discover Bogotá",
+    "city_guide": "Bogotá City Guide",
+    "city_guide_subtext": "Discover the wonders of Bogotá",
+    "devcon_week_title": "Week",
+    "devcon_week_cta": "Devcon Week",
+    "devcon_week": "Devcon Week",
+    "devcon_week_subtext": "Participate in all devcon week",
+    "live_title": "Live",
+    "live_cta": "Stream Now",
+    "live": "Devcon Live",
+    "live_subtext": "Stream Devcon"
   }
 }

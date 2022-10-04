@@ -7,7 +7,7 @@ import defaultImage from 'assets/images/account_circle.png'
 import { useSessionStorage } from "./useSessionStorage"
 import { isEmail } from "utils/validators"
 
-const defaultValue = { connection: '', name: '', url: defaultImage, ens: false, status: 'Loading' }
+const defaultValue = { connection: '', name: '', url: defaultImage.src, ens: false, status: 'Loading' }
 
 export function useAvatar() {
     const context = useAccountContext()

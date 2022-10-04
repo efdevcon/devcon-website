@@ -5,6 +5,7 @@
     "description": "Devcon es una introducción intensiva para los nuevos exploradores de Ethereum, una reunión familiar global para aquellos que ya forman parte de nuestro ecosistema y una fuente de energía y creatividad para todos.",
     "footer": "Crafted with passion ❤️ at the Ethereum Foundation"
   },
+  "experience_devcon": "Experiencia Devcon",
   "keynote_subtext": "Devcon está dirigido a los constructores, creadores y pensadores de Ethereum que desean mejorar este mundo. La programación en Devcon adopta un enfoque holístico y tiene como objetivo involucrar a todos los asistentes a través de charlas, paneles, talleres, charlas relámpago y sesiones de aprendizaje de forma libre.",
   "keynote_speakers": "Oradores Principales",
   "featured_speakers": "Oradoras destacadas",
@@ -100,8 +101,11 @@
     "blog": "Blog",
     "news": "Noticias",
     "about": "Acerca de",
+    "event": "Evento",
     "about_devcon": "Acerca de Devcon",
     "past_events": "Eventos pasados",
+    "live": "Live",
+    "devcon_app": "Devcon App",
     "faq": "FAQ",
     "get_involved": "Involucrarse",
     "city_guide": "Guía de la ciudad",
@@ -111,6 +115,7 @@
     "program": "Programa",
     "program_overview": "Visión general",
     "program_apply_to_speak": "Aplicar para hablar",
+    "program_schedule": "Horario de eventos",
     "get_tickets": "Conseguir Entradas",
     "tickets_raffle": "SORTEO+SUBASTA",
     "participate": "Participar",
@@ -265,6 +270,24 @@
     "location": "Ubicación",
     "multi_day_event": "Evento de varios días",
     "bogota_blockchain_week": "EMANA BLOCKCHAIN DE BOGOTÁ"
+  },
+  "hero": {
+    "passport_title": "Pasaporte",
+    "passport_cta": "Aplicación Devcon",
+    "passport": "Aplicación de pasaporte Devcon",
+    "passport_subtext": "Personaliza tu experiencia Devcon",
+    "city_guide_title": "Guía de la ciudad",
+    "city_guide_cta": "Descubre Bogotá",
+    "city_guide": "Guía de la ciudad de Bogotá",
+    "city_guide_subtext": "Descubre las maravillas de Bogotá",
+    "devcon_week_title": "Semana",
+    "devcon_week_cta": "Semana Devcon",
+    "devcon_week": "Semana Devcon",
+    "devcon_week_subtext": "Participa en toda la semana devcon",
+    "live_title": "Live",
+    "live_cta": "Stream Ahora",
+    "live": "Devcon Live",
+    "live_subtext": "Stream Devcon"
   }
 }
 

@@ -104,10 +104,11 @@ $logo-offset: 50px;
   position: relative;
   height: calc(100vh - env(safe-area-inset-bottom));
   width: 100%;
-  background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #d529c6, #f25c37);
+  background: linear-gradient(45deg, #f17c58, #f374a4, #24aadb);
   background-size: 600% 100%;
   animation: gradient 16s linear infinite;
   animation-direction: alternate;
+  // transition: background-color 0.5s linear;
 
   // Using 100vh on mobile devices often doesn't account for the navigation bar at the bottom
   // Could use "safe-area-inset-bottom" but it becomes extremely janky since that value is dynamic; as the notch goes away on scroll the hero changes size
@@ -165,6 +166,7 @@ $logo-offset: 50px;
     display: flex;
     width: 100%;
     height: 100%;
+    // left: 10%;
     top: -75px;
     justify-content: center;
     align-items: center;
@@ -447,5 +449,218 @@ $logo-offset: 50px;
     text-transform: uppercase;
     margin-right: 0.5em;
     font-size: 12px;
+  }
+}
+
+.hero {
+  &.bogota {
+    img {
+      @media (max-width: $breakpoints-md) {
+        height: 70%;
+        object-position: 30%;
+      }
+    }
+  }
+
+  &.devcon-week {
+    background: linear-gradient(45deg, #f4734c, #f39e74, #d37840);
+    
+    img {
+      width: 60%;
+      left: 30%;
+      height: auto;
+      object-position: right;
+      object-fit: cover;
+
+      @media (max-width: $breakpoints-md) {
+        width: 120%;
+        left: 0%;
+      }
+    }
+  }
+
+  &.passport {
+    background: linear-gradient(45deg, #1b1b1b, #282828, #212121);
+
+    img {
+      width: 40%;
+      left: 50%;
+      height: auto;
+      object-position: right;
+      object-fit: cover;
+
+      @media (max-width: $breakpoints-md) {
+        width: 80%;
+        left: 30%;
+      }
+    }
+  }
+
+  &.livestream {
+    background: linear-gradient(45deg, #5865f1, #74abf3, #4bb5b3);
+
+    img {
+      width: 60%;
+      left: 30%;
+      height: auto;
+      object-position: right;
+      object-fit: cover;
+
+      @media (max-width: $breakpoints-md) {
+        width: 130%;
+        left: 0%;
+      }
+    }
+  }
+}
+
+.page-container {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 16px;
+
+    @media (min-width: $breakpoints-lg) {
+      padding-bottom: 48px;
+      padding-top: 105px;
+    }
+
+    .date {
+      @include fonts-secondary;
+      @include fonts-xxl;
+      // margin-top: calc(var(--header-height, 64px) + 38px);
+    }
+  
+    .content {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+
+      @media (max-width: $breakpoints-md) {
+        flex-grow: 1;
+        margin-top: 32px;
+        // order: -1;
+      }
+
+      .logo {
+        height: 83px;
+        width: auto;
+
+        @media (max-width: $breakpoints-md) {
+          display: none;
+          flex-grow: 1;
+          margin-top: 32px;
+          // order: -1;
+        }
+
+        * {
+          fill: white;
+        }
+
+        margin-bottom: 8px;
+      }
+
+      .title-prefix {
+        margin: 12px 0px;
+        height: 20px;
+        font-weight: bold;
+      }
+
+      .title {
+        font-size: 60px;
+        margin-bottom: 48px;
+        transform: translateX(-5px);
+      }
+    }
+  
+    .cta {
+
+    }
+  }
+}
+
+.page-background {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  img {
+    opacity: 0;
+    display: none;
+
+    &.active {
+      display: block;
+      opacity: 1;
+    }
+
+    position: relative;
+    animation: in-up-opacity 3s;
+    width: 100%;
+    object-fit: cover;
+
+    @media (max-width: $breakpoints-md) {
+      height: 70%;
+    }
+  }
+}
+
+// .mobile {
+//   display: block;
+
+//   @media (min-width: $breakpoints-md) {
+//     display: none;
+//   }
+// }
+
+// .cta {
+//   // display: none;
+
+//   @media (min-width: $breakpoints-md) {
+//     display: block;
+//   }
+// }
+
+@keyframes roundtime {
+  to {
+    /* More performant than animating `width` */
+    transform: scaleX(100%);
+  }
+}
+
+.cta-item {
+  cursor: pointer;
+  position: relative;
+
+  &.active {
+    .timer {
+      position: absolute;
+      bottom: -3px;
+      width: 100%;
+      height: 3px;
+      background: black;
+      transform: scaleX(0%);
+      animation: roundtime calc(16 * 1s) linear forwards;
+      transform-origin: left center;
+    }
+
+    &:hover {
+      border-color: transparent !important;
+
+      .timer {
+        animation-play-state: paused;
+      }
+    }
   }
 }

@@ -4,6 +4,7 @@ import css from './dropdown.module.scss'
 import VerticalDotsIcon from 'assets/icons/vertical-dots.svg'
 import ChevronDown from 'assets/icons/arrow_desc.svg'
 import ChevronUp from 'assets/icons/arrow_asc.svg'
+import { Link } from 'components/common/link'
 
 export interface DropdownProps {
   value: any
@@ -85,8 +86,18 @@ export const Dropdown = React.forwardRef((props: DropdownProps, externalRef: any
 
   const foldoutContent = (
     <ul className={foldoutClassName} ref={foldoutRef} onClick={e => e.stopPropagation()}>
-      {props.options.map(({ text, value, onClick }) => {
+      {props.options.map(({ text, value, url, onClick }) => {
         const selected = value === props.value
+
+        if (url) {
+          return (
+            <li key={value}>
+              <Link to={url} className={selected ? css['active-filter'] : undefined}>
+                {text}
+              </Link>
+            </li>
+          )
+        }
 
         return (
           <li

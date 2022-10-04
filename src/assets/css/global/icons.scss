@@ -11,3 +11,7 @@ svg.icon {
     fill: inherit;
   }
 }
+
+.fill-red {
+  --color-icon: #{$colors-track-red};
+}

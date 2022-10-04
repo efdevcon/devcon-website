@@ -8,6 +8,8 @@ import { useRouter } from 'next/router'
 import { Web3Provider } from '@ethersproject/providers'
 import { VerificationToken } from 'types/VerificationToken'
 import { Session } from 'types/Session'
+import { Modal } from 'components/common/modal'
+import { Link } from 'components/common/link'
 
 interface AccountContextProviderProps {
   children: ReactNode
@@ -15,7 +17,9 @@ interface AccountContextProviderProps {
 
 export const AccountContextProvider = ({ children }: AccountContextProviderProps) => {
   const router = useRouter()
+  const [showLoginRequired, setShowLoginRequired] = useState(false)
   const [context, setContext] = useState<AccountContextType>({
+    edit: false,
     loading: true,
     provider: undefined,
     account: undefined,
@@ -29,7 +33,10 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     updateAccount,
     deleteAccount,
     setSpeakerFavorite,
-    setSessionBookmark
+    setSessionBookmark,
+    toggleScheduleSharing,
+    showLoginRequired,
+    setShowLoginRequired,
   })
 
   useEffect(() => {
@@ -51,7 +58,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       web3Modal.clearCachedProvider()
       const web3 = await web3Modal.connect()
       const provider = new providers.Web3Provider(web3)
-      setContext({ ...context, provider: provider })
+      // setContext({ ...context, provider: provider })
       return provider
     } catch (e) {
       console.log('Unable to connect to web3')
@@ -109,7 +116,12 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     }
   }
 
-  async function loginWeb3(address: string, nonce: number, message: string, signature: string): Promise<UserAccount | undefined> {
+  async function loginWeb3(
+    address: string,
+    nonce: number,
+    message: string,
+    signature: string
+  ): Promise<UserAccount | undefined> {
     const response = await fetch('/api/account/login/web3', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -173,8 +185,10 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
 
     if (response.status === 200) {
       const body = await response.json()
-      setContext({ ...context, account: body.data, loading: false })
-      return body.data
+      if (body.data) {
+        setContext({ ...context, account: body.data, loading: false })
+        return body.data
+      }
     }
 
     setContext({ ...context, account: undefined, loading: false })
@@ -211,7 +225,13 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     return false
   }
 
-  async function setSpeakerFavorite(account: UserAccount, speakerId: string, remove: boolean) {
+  async function setSpeakerFavorite(speakerId: string, remove: boolean, account?: UserAccount) {
+    if (!account) {
+      setShowLoginRequired(true)
+
+      return
+    }
+
     let favorites = account.appState?.speakers ?? []
 
     if (remove) {
@@ -224,7 +244,7 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
       ...account,
       appState: {
         ...account.appState,
-        speakers: favorites
+        speakers: favorites,
       },
     }
 
@@ -235,34 +255,86 @@ export const AccountContextProvider = ({ children }: AccountContextProviderProps
     })
   }
 
-  async function setSessionBookmark(account: UserAccount, session: Session, level: 'interested' | 'attending', remove: boolean) {
+  async function setSessionBookmark(
+    session: Session,
+    level: 'interested' | 'attending',
+    account?: UserAccount,
+    remove?: boolean
+  ) {
+    if (!account) {
+      setShowLoginRequired(true)
+
+      return
+    }
+
     let sessions = account.appState?.sessions ?? []
 
     if (remove) {
-      sessions = sessions.filter(i => i.id !== session.id)
+      sessions = sessions.filter(i => i.id !== session.id || level !== i.level)
     } else {
-      sessions.push({
-        id: session.id,
-        level: level,
-        start: new Date(session.start),
-        end: new Date(session.end)
-      })
+      sessions = [
+        ...sessions,
+        {
+          id: session.id,
+          level: level,
+          start: new Date(session.start),
+          end: new Date(session.end),
+        },
+      ]
     }
 
     const newAccountState = {
       ...account,
       appState: {
         ...account.appState,
-        sessions: sessions
+        sessions: sessions,
       },
     }
 
     await updateAccount(account._id, newAccountState)
+
     setContext({
       ...context,
       account: newAccountState,
     })
   }
 
-  return <AccountContext.Provider value={context}>{children}</AccountContext.Provider>
+  async function toggleScheduleSharing(account: UserAccount) {
+    const newAccountState = {
+      ...account,
+      appState: {
+        ...account.appState,
+        publicSchedule: !account.appState.publicSchedule ? true : false,
+      },
+    }
+
+    await updateAccount(account._id, newAccountState)
+
+    setContext({
+      ...context,
+      edit: true,
+      account: newAccountState,
+    })
+  }
+
+  return (
+    <AccountContext.Provider value={context}>
+      <>
+        {children}
+
+        {showLoginRequired && (
+          <Modal autoHeight open close={() => setShowLoginRequired(false)}>
+            <div>
+              <p className="bold clear-bottom-less clear-top-less">
+                You need to be logged in to personalize your schedule, track your favorite speakers, and more.
+              </p>
+              <Link to="/app/login" className="button red">
+                Go to login
+              </Link>
+            </div>
+          </Modal>
+        )}
+      </>
+    </AccountContext.Provider>
+  )
 }

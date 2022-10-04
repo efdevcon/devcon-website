@@ -5,4 +5,5 @@ export interface Link {
   logo?: string
   noLocale?: boolean
   links?: Link[]
+  highlight?: string
 }

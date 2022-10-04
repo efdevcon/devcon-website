@@ -29,7 +29,7 @@ $secondary: 'Space Mono', monospace;
 }
 
 @mixin lg {
-  font-size: sizes.$size-9;
+  font-size: max(sizes.$size-9, 15px);
   line-height: 125%;
 }
 

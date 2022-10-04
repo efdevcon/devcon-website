@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
     const shouldHandleLocale =
         !PUBLIC_FILE.test(request.nextUrl.pathname) &&
         !request.nextUrl.pathname.includes('/api/') &&
-        // !request.nextUrl.pathname.includes('/app') &&
+        !request.nextUrl.pathname.includes('/app/') &&
         request.nextUrl.locale === 'default'
 
     const url = request.nextUrl.clone()

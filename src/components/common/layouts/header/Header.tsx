@@ -11,11 +11,12 @@ import { useOnOutsideClick } from 'hooks/useOnOutsideClick'
 
 type HeaderProps = {
   withStrip?: boolean
+  isApp?: boolean
   withHero?: boolean
   className?: string
 }
 
-export const Header = React.memo(({ withStrip, withHero, className }: HeaderProps) => {
+export const Header = React.memo(({ withStrip, withHero, className, isApp }: HeaderProps) => {
   const ref = useRef(null)
   const router = useRouter()
   const isScrolled = useIsScrolled()
@@ -28,6 +29,7 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
   // Prevent page scroll when menu is open
   useEffect(() => {
     if (foldoutOpen) {
+      if (isApp) window.scrollTo(0, 0) // Header isn't sticky in the app so we have to scroll to the top to align the foldout content properly
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
@@ -36,32 +38,33 @@ export const Header = React.memo(({ withStrip, withHero, className }: HeaderProp
     return () => {
       document.body.style.overflow = ''
     }
-  }, [foldoutOpen])
+  }, [foldoutOpen, isApp])
 
   let headerContainerClass = `${css['header-container']}`
   let headerClass = `${css['header']}`
 
   if (foldoutOpen) headerContainerClass += ` ${css['foldout-open']}`
   if (className) headerContainerClass += ` ${className}`
+  if (isApp) headerContainerClass += ` ${css['app']}`
 
   const body = (
     <header id="header-container" className={headerContainerClass}>
       {withStrip && <Strip withHero={withHero} />}
       <div id="header" className={headerClass} ref={ref}>
         <div className="section">
-          <div className={`${css['menu-container']}`}>
+          <div className={`${css['menu-container']} ${isApp ? css['no-overflow'] : ''}`}>
             <Link to={`/${router.locale}`}>
               <HeaderLogo />
             </Link>
 
             <Menu
+              isApp={isApp}
               searchOpen={searchOpen}
               setSearchOpen={setSearchOpen}
               foldoutOpen={foldoutOpen}
               setFoldoutOpen={setFoldoutOpen}
             />
           </div>
-          {/* {isArchive && <Search open={searchActive} />} */}
         </div>
       </div>
     </header>

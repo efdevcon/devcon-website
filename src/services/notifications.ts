@@ -4,10 +4,36 @@ import matter from 'gray-matter'
 import { Notification } from 'types/Notification'
 import { BASE_CONTENT_FOLDER } from 'utils/constants'
 
-export function GetLatestNotification(lang: string = 'en') {
+export function GetNotificationStrip(lang: string = 'en') {
   if (lang !== 'es') lang = 'en'
 
   return GetNotifications(lang).shift() || null
+}
+
+export function GetAppNotifications(): Array<Notification> {
+  const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'app-notifications');
+  const exists = fs.existsSync(dir);
+
+  if (!exists) return [];
+
+  const notifications = fs.readdirSync(dir).map(i => {
+    const content = fs.readFileSync(join(dir, i), 'utf8')
+
+    const doc = matter(content)
+
+    return {
+      id: i,
+      title: doc.data.title || null,
+      body: doc.content || null,
+      date: doc.data.date?.valueOf() || null,
+      url: doc.data.url || null,
+      label: doc.data.label || null,
+      labelType: doc.data.labelType || null,
+      active: doc.data.active || null,
+    } as Notification
+  })
+
+  return notifications //.filter(i => i && i.active) as Array<Notification>
 }
 
 export function GetNotifications(lang: string = 'en'): Array<Notification> {

@@ -31,7 +31,7 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
 
         let data = await tokenRepo.create(token)
         if (!data) {
-            return res.status(500).send({ code: 500, message: 'Unable to login with email account.' })
+            return res.status(500).send({ code: 500, message: 'Unable to create verification token.' })
         }
 
         if (isEmail) {

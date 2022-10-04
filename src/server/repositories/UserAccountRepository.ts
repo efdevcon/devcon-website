@@ -1,8 +1,12 @@
-import { UserAccount } from 'types/UserAccount'
+import { GetSessions } from 'services/programming'
+import { UserAccount, UserSchedule } from 'types/UserAccount'
+import { getRandomUsername, getUsername } from 'utils/account'
+import dbConnect from 'utils/dbConnect'
+import { isEmail } from 'utils/validators'
+import { getDefaultProvider } from 'utils/web3'
 import { BaseRepository } from './BaseRepository'
 import { IUserAccountRepository } from './interfaces/IUserAccountRepository'
 
-console.log('registering data models')
 require('server/models/UserAccountModel')
 
 export class UserAccountRepository extends BaseRepository<UserAccount> implements IUserAccountRepository {
@@ -26,5 +30,54 @@ export class UserAccountRepository extends BaseRepository<UserAccount> implement
       console.log("Couldn't find user account by address", address)
       console.error(e)
     }
+  }
+
+  public async findPersonalizedAgenda(userId: string): Promise<UserSchedule | undefined> {
+    console.log('Find personalized schedule', userId)
+
+    await dbConnect()
+
+    try {
+      const user = await this._model.findOne({ _id: userId }) as UserAccount
+      if (!user) return
+
+      const sessions = await GetSessions()
+      // username above all
+      if (user.username) {
+        return {
+          userId: String(user._id),
+          username: user.username,
+          publicSchedule: user.appState.publicSchedule,
+          sessions: sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+        }
+      }
+
+      // check if ENS exists
+      const username = getUsername(user)
+      let name = getRandomUsername(String(user._id))
+      
+      if (!isEmail(username)) {
+        try {
+          const provider = getDefaultProvider()
+          const ens = await provider.lookupAddress(username)
+          if (ens) name = ens
+        }
+        catch (e) {
+          console.log('ENS not found for', username)
+        }
+      }
+
+      return {
+        userId: String(user._id),
+        username: name,
+        publicSchedule: user.appState.publicSchedule,
+        sessions: sessions.filter(i => user.appState.sessions.map(x => x.id).includes(i.id))
+      }
+    } catch (e) {
+      console.log("Couldn't find user account", userId)
+      console.error(e)
+    }
+
+    return
   }
 }

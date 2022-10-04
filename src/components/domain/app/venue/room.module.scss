@@ -1,5 +1,17 @@
 @use 'assets/css/partials/index' as *;
 
+.panzoom {
+  overflow: hidden;
+
+  .image {
+    width: 100%;
+    height: min(50vh, 300px);
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+
 .gallery {
   margin-top: $gaps-gap-4;
 }

@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link, LinkList } from 'components/common/link'
-import {
-  CollapsedSection,
-  CollapsedSectionContent,
-  CollapsedSectionHeader,
-} from 'components/common/collapsed-section'
-import { InputForm } from 'components/common/input-form'
+import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 import { Form, FormTextArea, FormInput, FormDropdown } from 'components/common/form'
 import { Dropdown } from 'components/common/dropdown'
 import { Button } from 'components/common/button'
 import css from './info.module.scss'
+import { AppNav } from 'components/domain/app/navigation'
+import { Category } from 'types/Category'
+import { CityGuideContent } from 'pages/bogota'
+import { FAQ } from 'types/FAQ'
 
 const ProvideFeedbackForm = () => {
   return (
@@ -48,61 +47,65 @@ const ProvideFeedbackForm = () => {
   )
 }
 
-export const Info = (props: any) => {
-  return (
-    <div className="section">
-      <div className="content">
-        <CollapsedSection>
-          <CollapsedSectionHeader title="FAQ" />
-          <CollapsedSectionContent>
-            <InputForm id="input-form_search_header" placeholder="Filter by Keywords" type="search" />
+type InfoProps = {
+  faqs: Category[]
+  cityGuideFaqs: FAQ[]
+}
 
+export const Info = (props: InfoProps) => {
+  return (
+    <>
+      <AppNav
+        nested
+        links={[
+          {
+            title: 'Information',
+            to: '/app/info',
+          },
+        ]}
+      />
+      <div className="section">
+        <CollapsedSection className={css['no-border']}>
+          <CollapsedSectionHeader className="border-bottom">
+            <p className="app-header">FAQ</p>
+          </CollapsedSectionHeader>
+          <CollapsedSectionContent>
             <div className={css['faq']}>
-              <h4 className="app-header">General</h4>
-              <CollapsedSection>
-                <CollapsedSectionHeader
-                  className={css['subheader']}
-                  title="What time will the conference start and end?"
-                />
-                <CollapsedSectionContent>
-                  <div className={css['subheader-content']}>
-                    <p>What time will the conference start and end?</p>
-                    <p>What time will the conference start and end?</p>
-                    <p>What time will the conference start and end?</p>
-                  </div>
-                </CollapsedSectionContent>
-              </CollapsedSection>
-              <CollapsedSection>
-                <CollapsedSectionHeader
-                  className={css['subheader']}
-                  title="What time will the conference start and end?"
-                />
-                <CollapsedSectionContent>
-                  <div className={css['subheader-content']}>
-                    <p>What time will the conference start and end?</p>
-                    <p>What time will the conference start and end?</p>
-                    <p>What time will the conference start and end?</p>
-                  </div>
-                </CollapsedSectionContent>
-              </CollapsedSection>
-              <CollapsedSection>
-                <CollapsedSectionHeader
-                  className={css['subheader']}
-                  title="What time will the conference start and end?"
-                />
-                <CollapsedSectionContent>
-                  <div className={css['subheader-content']}>
-                    <p>What time will the conference start and end?</p>
-                    <p>What time will the conference start and end?</p>
-                    <p>What time will the conference start and end?</p>
-                  </div>
-                </CollapsedSectionContent>
-              </CollapsedSection>
+              {props.faqs.map(({ questions, title }) => {
+                return (
+                  <CollapsedSection key={title} className={css['no-border']}>
+                    <CollapsedSectionHeader className={`${css['subheader']} border-bottom`}>
+                      <p className="font-sm-fixed bold">{title}</p>
+                    </CollapsedSectionHeader>
+                    <CollapsedSectionContent>
+                      <div className={css['faq-inner']}>
+                        {questions.map(({ body, title }) => {
+                          return (
+                            <CollapsedSection key={title}>
+                              <CollapsedSectionHeader className={`${css['subheader']}`}>
+                                <p className="font-sm bold">{title}</p>
+                              </CollapsedSectionHeader>
+                              <CollapsedSectionContent className={css['faq-inner-content']}>
+                                <div
+                                  className="markdown font-sm clear-bottom-less"
+                                  dangerouslySetInnerHTML={{ __html: body }}
+                                />
+                              </CollapsedSectionContent>
+                            </CollapsedSection>
+                          )
+                        })}
+                      </div>
+                    </CollapsedSectionContent>
+                  </CollapsedSection>
+                )
+              })}
             </div>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Registration / Check-in Info" />
+          <CollapsedSectionHeader>
+            <p className="app-header">Registration / Check-in Info</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <p>
               Machine learning is being adopted more and more broadly in technology. Such success is largely due to a
@@ -122,36 +125,54 @@ export const Info = (props: any) => {
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Health and Safety Guides" />
+          <CollapsedSectionHeader>
+            <p className="app-header">City Guide</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p>Nothing here</p>
+            <CityGuideContent {...props} faqs={props.cityGuideFaqs} insideApp />
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Venue Guide" />
+          <CollapsedSectionHeader>
+            <p className="app-header">Health and Safety Guides</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p>Nothing here</p>
+            <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Local Guides" />
+          <CollapsedSectionHeader>
+            <p className="app-header">Venue Guide</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p>Nothing here</p>
+            <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Food & Drink" />
+          <CollapsedSectionHeader>
+            <p className="app-header">Local Guides</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p>Nothing here</p>
+            <p className="clear-bottom-less">Nothing here</p>
           </CollapsedSectionContent>
         </CollapsedSection>
         <CollapsedSection>
-          <CollapsedSectionHeader title="Provide Feedback" />
+          <CollapsedSectionHeader>
+            <p className="app-header">Food & Drink</p>
+          </CollapsedSectionHeader>
+          <CollapsedSectionContent>
+            <p className="clear-bottom-less">Nothing here</p>
+          </CollapsedSectionContent>
+        </CollapsedSection>
+        {/* <CollapsedSection>
+          <CollapsedSectionHeader>
+            <p className="app-header">Provide Feedback</p>
+          </CollapsedSectionHeader>
           <CollapsedSectionContent>
             <ProvideFeedbackForm />
           </CollapsedSectionContent>
-        </CollapsedSection>
+        </CollapsedSection> */}
       </div>
-    </div>
+    </>
   )
 }

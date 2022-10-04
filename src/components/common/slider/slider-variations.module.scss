@@ -33,6 +33,10 @@
       background: $colors-ef-blue;
     }
 
+    &.grey {
+      background: $colors-monochrome-4;
+    }      
+
     .title {
       @include fonts-sm-fixed;
       @include fonts-bold;

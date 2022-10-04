@@ -1,6 +1,16 @@
+// const withPWA = require('next-pwa')
+const webpack = require('webpack')
+const { withSentryConfig } = require('@sentry/nextjs')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // pwa: {
+  //   dest: '/public',
+  //   cacheOnFrontEndNav: true,
+  //   customWorkerDir: 'workbox',
+  // },
   reactStrictMode: true,
+  staticPageGenerationTimeout: 300,
   images: {
     domains: [
       'speak.devcon.org',
@@ -9,6 +19,7 @@ const nextConfig = {
       'camo.githubusercontent.com',
       'blog.ethereum.org',
       'img.youtube.com',
+      'www.gravatar.com',
     ],
   },
   experimental: {
@@ -16,15 +27,24 @@ const nextConfig = {
       layoutRaw: true,
     },
   },
+  sentry: {
+    hideSourceMaps: true,
+  },
   i18n: {
     locales: ['default', 'en', 'es'],
     defaultLocale: 'default',
     localeDetection: false,
   },
   trailingSlash: true,
-  webpack: config => {
+  webpack: (config, { buildId }) => {
     return {
       ...config,
+      plugins: [
+        ...config.plugins,
+        new webpack.DefinePlugin({
+          'process.env.CONFIG_BUILD_ID': JSON.stringify(buildId),
+        }),
+      ],
       module: {
         ...config.module,
         rules: [
@@ -81,6 +101,11 @@ const nextConfig = {
                 },
               },
             ],
+          },
+          {
+            test: /\.(glsl|vs|fs|vert|frag)$/,
+            exclude: /node_modules/,
+            use: ['raw-loader', 'glslify-loader'],
           },
           ...config.module.rules,
         ],
@@ -200,4 +225,6 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withSentryConfig(nextConfig, {
+  silent: true, // Suppresses all Sentry logs
+})

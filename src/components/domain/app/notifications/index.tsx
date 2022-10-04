@@ -1,1 +1,1 @@
-export { Notifications, Notification } from './Notifications'
+export { Notifications, NotificationCard } from './Notifications'

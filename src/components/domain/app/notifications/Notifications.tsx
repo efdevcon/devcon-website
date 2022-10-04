@@ -1,79 +1,87 @@
 import React from 'react'
 import { PushNotification } from 'types/PushNotification'
 import { ThumbnailBlock } from 'components/common/thumbnail-block'
-import IconCalendar from 'assets/icons/schedule-plus.svg'
 import IconCheck from 'assets/icons/check_circle.svg'
 import css from './notifications.module.scss'
+// import { useFilter, Filter } from 'components/common/filter'
+import { usePageContext } from 'context/page-context'
+// import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
+import moment from 'moment'
+import { Button } from 'components/common/button'
+import { useAppContext } from 'context/app-context'
+import Image from 'next/image'
+import EthBackground from 'assets/images/eth-diamond-rainbow.png'
+// import notifications from 'pages/app/notifications'
 
 // Copied from the web-push documentation
-const urlBase64ToUint8Array = (base64String: string) => {
-  const padding = '='.repeat((4 - (base64String.length % 4)) % 4)
-  const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/')
+// const urlBase64ToUint8Array = (base64String: string) => {
+//   const padding = '='.repeat((4 - (base64String.length % 4)) % 4)
+//   const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/')
 
-  const rawData = window.atob(base64)
-  const outputArray = new Uint8Array(rawData.length)
+//   const rawData = window.atob(base64)
+//   const outputArray = new Uint8Array(rawData.length)
 
-  for (let i = 0; i < rawData.length; ++i) {
-    outputArray[i] = rawData.charCodeAt(i)
-  }
-  return outputArray
-}
+//   for (let i = 0; i < rawData.length; ++i) {
+//     outputArray[i] = rawData.charCodeAt(i)
+//   }
+//   return outputArray
+// }
 
-const host = 'http://localhost:9000'
+// const host = 'http://localhost:9000'
 
-const saveSubscription = async (subscription: any) => {
-  await fetch(`${host}/api/pwa/push_subscription`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      endpoint: subscription.endpoint,
-      keys: subscription.toJSON().keys,
-    }),
-  })
-}
+// const saveSubscription = async (subscription: any) => {
+//   await fetch(`${host}/api/pwa/push_subscription`, {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify({
+//       endpoint: subscription.endpoint,
+//       keys: subscription.toJSON().keys,
+//     }),
+//   })
+// }
 
-const subscribePushService = async () => {
-  try {
-    const reg = await navigator.serviceWorker.getRegistration()
+// const subscribePushService = async () => {
+//   try {
+//     const reg = await navigator.serviceWorker.getRegistration()
 
-    if (reg && reg.pushManager) {
-      const subscription = await reg.pushManager.getSubscription()
+//     if (reg && reg.pushManager) {
+//       const subscription = await reg.pushManager.getSubscription()
 
-      if (!subscription) {
-        const key = await fetch(`${host}/api/pwa/vapid`)
-        const keyData = await key.text()
+//       if (!subscription) {
+//         const key = await fetch(`${host}/api/pwa/vapid`)
+//         const keyData = await key.text()
 
-        console.log(key, keyData)
+//         console.log(key, keyData)
 
-        const newSubscription = await reg.pushManager.subscribe({
-          applicationServerKey: urlBase64ToUint8Array(keyData),
-          userVisibleOnly: true,
-        })
+//         const newSubscription = await reg.pushManager.subscribe({
+//           applicationServerKey: urlBase64ToUint8Array(keyData),
+//           userVisibleOnly: true,
+//         })
 
-        await saveSubscription(newSubscription)
-      } else {
-        // Syncing with backend even if subscription already exists (just in case it didn't get persisted when it was created; should keep us edge case free)
-        await saveSubscription(subscription)
-      }
-    }
-  } catch (e) {
-    console.log('Error creating/saving subscription:')
-    console.error(e)
+//         await saveSubscription(newSubscription)
+//       } else {
+//         // Syncing with backend even if subscription already exists (just in case it didn't get persisted when it was created; should keep us edge case free)
+//         await saveSubscription(subscription)
+//       }
+//     }
+//   } catch (e) {
+//     console.log('Error creating/saving subscription:')
+//     console.error(e)
 
-    alert(
-      'Your browser may have automatically blocked push notifications. Refer to your browser documentation to enable push notifications.'
-    )
+//     alert(
+//       'Your browser may have automatically blocked push notifications. Refer to your browser documentation to enable push notifications.'
+//     )
 
-    throw e
-  }
-}
+//     throw e
+//   }
+// }
 
-const unsubscribePushService = async () => {
-  await fetch(`${host}/api/pwa/push_subscription`, {
-    method: 'DELETE',
-    headers: { 'Content-Type': 'application/json' },
-  })
-}
+// const unsubscribePushService = async () => {
+//   await fetch(`${host}/api/pwa/push_subscription`, {
+//     method: 'DELETE',
+//     headers: { 'Content-Type': 'application/json' },
+//   })
+// }
 
 // TODO: Disabled because of build errors. Seemed only used for testing purposes..
 // const useNotifications = () => {
@@ -99,8 +107,8 @@ const unsubscribePushService = async () => {
 //       setPermissionStatus(status)
 
 //       /*
-//         Since this request for permission was triggered by a user action (toggling notifications back on) it would be weird if the status becomes denied; 
-//         when that's the case, it's probable that the browser itself is blocking push notifications - we warn the user that this may be the case so they can take 
+//         Since this request for permission was triggered by a user action (toggling notifications back on) it would be weird if the status becomes denied;
+//         when that's the case, it's probable that the browser itself is blocking push notifications - we warn the user that this may be the case so they can take
 //         further action
 //       */
 //       if (status !== 'granted') {
@@ -248,61 +256,112 @@ const filters = [
   },
 ]
 
-export const Notification = (props: any) => {
+export const NotificationCard = React.forwardRef((props: any, ref: any) => {
+  const { seenNotifications, setSeenNotifications } = useAppContext()
+  const seen = seenNotifications?.[props.notification.id]
+
+  const markAsSeen = () => {
+    setSeenNotifications((seenNotifications: any) => {
+      return {
+        ...seenNotifications,
+        [props.notification.id]: true,
+      }
+    })
+
+    window.localStorage.setItem(`notification-seen-${props.notification.id}`, 'yes')
+  }
+
+  React.useImperativeHandle(ref, () => ({
+    seen,
+    markAsSeen,
+  }))
+
+  let className = css['notification-block']
+
+  if (!seen) className += ` ${css['highlight']}`
+
+  const notification = props.notification
+  const dateAsMoment = moment.utc(notification.date)
+
   return (
-    <ThumbnailBlock className={css['notification-block']}>
+    <ThumbnailBlock key={notification.id} className={className}>
       <div className={css['top']}>
         <div className={css['time']}>
-          <p>05/12/2022</p>
-          <p>8:50 AM</p>
+          <p>{dateAsMoment.format('MM/DD/YY')}</p>
+          <p>{dateAsMoment.format('HH:mm A')}</p>
+          {/* TODO: Why the fook doesn't this work? */}
+          {/* <p>{dateAsMoment.from(moment.utc())}</p> */}
         </div>
 
-        {true ? <IconCheck /> : <IconCalendar />}
+        {seen ? <IconCheck /> : <div className="label sm error bold">New</div>}
       </div>
       <div className={css['details']}>
-        <p className={`bold ${css['title']}`}> Keynote Delayed</p>
-        <p>Ethereum unlocked scheduled for 12:50 PM is now changed to 1:20 PM.</p>
+        <p className={`bold ${css['title']}`}>{notification.title}</p>
+        <p>{notification.body}</p>
       </div>
-      <div className={css['labels']}>
-        <div className="label sm error">Devcon</div>
-        <div className="label sm error">Travel</div>
-      </div>
+      {notification.label && (
+        <div className={css['labels']}>
+          <div className={`label sm bold ${notification.labelType}`}>{notification.label}</div>
+        </div>
+      )}
     </ThumbnailBlock>
   )
-}
+})
 
 export const Notifications = (props: any) => {
-  const [currentFilter, setCurrentFilter] = React.useState('inbox')
+  const pageContext = usePageContext()
+  const notificationRefs = React.useRef<any>({})
+  const { seenNotifications, setSeenNotifications } = useAppContext()
+  // const [basicFilter, setBasicFilter] = React.useState('all')
+
+  const unseenNotifications =
+    pageContext && Object.values(seenNotifications).length < pageContext.appNotifications?.length
 
   return (
-    <div className="section">
-      <div className="content">
-        <div className={css['filter']}>
-          {filters.map(filter => {
-            const selected = currentFilter === filter.value
+    <div className={css['container']}>
+      <div className={css['header']}>
+        <h2 className="font-lg-fixed">Notifications</h2>
+        {unseenNotifications && (
+          <Button
+            className="red sm"
+            onClick={() => {
+              Object.values(notificationRefs.current).forEach((notification: any) => notification.markAsSeen())
+            }}
+          >
+            Mark all as read
+          </Button>
+        )}
+      </div>
 
-            let className = 'plain'
+      {/* <Basic
+        className={css['filter']}
+        value={basicFilter}
+        onChange={setBasicFilter}
+        options={[
+          {
+            text: 'All',
+            value: 'all',
+          },
+          {
+            text: 'New',
+            value: 'new',
+          },
+        ]}
+      /> */}
 
-            if (selected) className += ` ${css['selected']}`
+      {pageContext?.appNotifications.map(notification => {
+        return (
+          <NotificationCard
+            key={notification.id}
+            notification={notification}
+            ref={(ref: any) => (notificationRefs.current[notification.id] = ref)}
+          />
+        )
+      })}
 
-            return (
-              <button onClick={() => setCurrentFilter(filter.value)} key={filter.value} className={className}>
-                <p className="hover-underline">{filter.text}</p>
-                {selected && <div className="label sm error">4</div>}
-              </button>
-            )
-          })}
-        </div>
-
-        <Notification />
-        <Notification />
-        <Notification />
+      <div className={css['background']}>
+        <Image src={EthBackground} layout="fill" objectFit="contain" objectPosition="right" alt="Ether" />
       </div>
     </div>
   )
 }
-
-/*
-  Too many requests error?
-  Browser blocking notifications error?
-*/

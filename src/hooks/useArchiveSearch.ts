@@ -1,10 +1,9 @@
-import { SearchParams } from 'server/services/search-client'
 import { ArchiveVideo } from 'types/ArchiveVideo'
 import { FetchedResult } from 'types/FetchedResult'
 import { PagedResult } from 'types/PagedResult'
 import { usePagedSearch } from './usePagedSearch'
 
-export const useArchiveSearch = (qs: string, params?: SearchParams): FetchedResult<PagedResult<ArchiveVideo>> => {
+export const useArchiveSearch = (qs: string, params?: any): FetchedResult<PagedResult<ArchiveVideo>> => {
   let uri = `/api/archive/search${qs}`
   if (!qs) uri += '?'
   if (params?.q) uri += `&q=${params.q}`

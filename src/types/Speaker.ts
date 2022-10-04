@@ -1,3 +1,5 @@
+import { Session } from "./Session"
+
 export interface Speaker {
   id: string,
   name: string,
@@ -10,4 +12,5 @@ export interface Speaker {
   description?: string
   tracks?: string[]
   eventDays?: number[]
+  sessions?: Session[]
 }

@@ -3,7 +3,7 @@
 .hero {
   margin-top: $gaps-gap-3;
   margin-bottom: $gaps-gap-3;
-  max-width: 800px;
+  // max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -57,4 +57,18 @@
 
 .search-section {
   margin-bottom: $gaps-gap-4;
+}
+
+.search {
+  padding-bottom: 12px;
+}
+
+.header-today-indicator {
+  @include fonts-xs-fixed;
+  margin-left: 12px;
+  color: $colors-track-red;
+}
+
+.collapse {
+  background: #585858 !important; 
 }

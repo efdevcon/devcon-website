@@ -5,7 +5,7 @@ interface InputFormProps {
   id?: string
   type?: string
   label?: string
-  placeholder: string
+  placeholder?: string
   transparentMode?: boolean
   timeout?: number
   icon?: React.ComponentType<any>

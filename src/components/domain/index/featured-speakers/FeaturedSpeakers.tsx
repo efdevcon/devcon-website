@@ -59,7 +59,7 @@ const FeaturedSpeakers = () => {
             <Speaker name="Aya Miyaguchi" image={AyaMiyaguchi} />
             <Speaker name="Pia Mancini" image={PiaMancini} />
             <Speaker name="Bruno Macaes" image={BrunoMacaes} />
-            <Speaker name="Vekatesh Rao" image={VekateshRao} />
+            <Speaker name="Venkatesh Rao" image={VekateshRao} />
             <Speaker name="Tim Beiko" image={TimBeiko} />
             <Speaker name="Eric Wall" image={EricWall} />
             <Speaker name="Max Semenchuk" image={MaxSemenchuk} />

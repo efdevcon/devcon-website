@@ -16,12 +16,13 @@ const sessionSchema: Schema = new Schema(
 )
 const appStateSchema: Schema = new Schema(
   {
-    speakers: { type: [String] },
-    sessions: [sessionSchema],
+    speakers: { type: [String], default: [] },
+    sessions: { type: [sessionSchema], default: [] },
+    publicSchedule: { type: Boolean, default: false }
   },
   {
     _id: false,
-    timestamps: true
+    timestamps: false
   }
 )
 
@@ -31,7 +32,7 @@ const schema: Schema = new Schema(
     email: { type: String, match: /.+@.+\..+/ },
     addresses: { type: [String] },
     disabled: { type: Boolean, required: false, default: false },
-    appState: appStateSchema,
+    appState: { type: appStateSchema, required: true, default: {}},
     pushSubscription: 'Mixed'
   },
   { timestamps: true }

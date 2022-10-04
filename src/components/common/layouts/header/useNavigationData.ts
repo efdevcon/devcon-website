@@ -58,14 +58,6 @@ const useNavigationData = () => {
             url: '/faq',
             type: 'page',
           },
-        ],
-      },
-      {
-        title: intl('navigation_tickets'),
-        url: '#',
-        type: 'links',
-        logo: LogoTickets,
-        links: [
           {
             title: intl('navigation_tickets'),
             url: '#',
@@ -81,14 +73,6 @@ const useNavigationData = () => {
             url: '/raffle-auction',
             type: 'page',
           },
-        ],
-      },
-      {
-        title: intl('navigation_program'),
-        url: '#',
-        type: 'links',
-        logo: LogoProgram,
-        links: [
           {
             title: intl('navigation_program'),
             url: '#',
@@ -102,16 +86,6 @@ const useNavigationData = () => {
           {
             title: intl('navigation_program_apply_to_speak'),
             url: '/applications',
-            type: 'page',
-          },
-          {
-            title: 'Event',
-            url: '#',
-            type: 'header',
-          },
-          {
-            title: intl('devcon_week_title'),
-            url: '/devcon-week',
             type: 'page',
           },
         ],
@@ -130,11 +104,6 @@ const useNavigationData = () => {
           {
             title: 'DIPs',
             url: '/dips',
-            type: 'page',
-          },
-          {
-            title: intl('cd_title'),
-            url: '/continuous-devcon',
             type: 'page',
           },
           {
@@ -170,9 +139,54 @@ const useNavigationData = () => {
         ],
       },
       {
-        title: 'Bogotá',
-        url: '/bogota',
+        title: intl('navigation_event'),
+        url: '#',
+        type: 'links',
+        logo: LogoBogota,
+        links: [
+          {
+            title: 'Bogotá',
+            url: '#',
+            type: 'header',
+          },
+          {
+            title: intl('navigation_city_guide'),
+            url: '/bogota',
+            type: 'page',
+          },
+          {
+            title: intl('devcon_week_title'),
+            url: '/devcon-week',
+            type: 'page',
+          },
+          {
+            title: 'Devcon',
+            url: '#',
+            type: 'header',
+          },
+          {
+            title: intl('cd_title'),
+            url: '/continuous-devcon',
+            type: 'page',
+          },
+          {
+            title: 'Devcon Satellites',
+            url: '/satellites',
+            type: 'page',
+          },
+        ],
+      },
+      {
+        title: intl('navigation_live'),
+        url: 'https://live.devcon.org',
         type: 'page',
+        highlight: 'livestream'
+      },
+      {
+        title: intl('navigation_devcon_app'),
+        url: 'https://app.devcon.org',
+        type: 'page',
+        highlight: 'app'
       }
     ],
     footer: {

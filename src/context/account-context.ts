@@ -6,6 +6,7 @@ import { Session } from 'types/Session'
 import { VerificationToken } from 'types/VerificationToken'
 
 export interface AccountContextType {
+  edit: boolean
   loading: boolean
   provider: providers.Web3Provider | undefined
   account: UserAccount | undefined
@@ -18,12 +19,16 @@ export interface AccountContextType {
   getAccount: () => Promise<UserAccount | undefined>
   updateAccount: (id: string, account: UserAccount) => Promise<boolean>
   deleteAccount: (id: string) => Promise<boolean>,
-  setSpeakerFavorite: (account: UserAccount, speakerId: string, remove: boolean) => void,
-  setSessionBookmark: (account: UserAccount, session: Session, level: 'attending' | 'interested', remove: boolean) => void,
+  setSpeakerFavorite: (speakerId: string, remove: boolean, account?: UserAccount) => void,
+  setSessionBookmark: (session: Session, level: 'attending' | 'interested', account?: UserAccount, remove?: boolean) => void,
+  toggleScheduleSharing: (account: UserAccount) => void,
+  showLoginRequired?: boolean
+  setShowLoginRequired?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const useAccountContext = () => useContext<AccountContextType>(AccountContext)
 export const AccountContext = createContext<AccountContextType>({
+  edit: false,
   loading: false,
   provider: undefined,
   account: undefined,
@@ -38,4 +43,5 @@ export const AccountContext = createContext<AccountContextType>({
   deleteAccount: async () => false,
   setSpeakerFavorite: () => {},
   setSessionBookmark: () => {},
+  toggleScheduleSharing: () => {}
 })

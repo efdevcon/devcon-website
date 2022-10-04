@@ -8,55 +8,105 @@ import makeBlockie from 'ethereum-blockies-base64'
 import { SessionCard } from '../session'
 import { Session } from 'types/Session'
 import { Link } from 'components/common/link'
+import { useAccountContext } from 'context/account-context'
+import { extractTwitterUsername, extractGithubUsername } from './Speakers'
+import Star from 'assets/icons/star.svg'
+import StarFill from 'assets/icons/star-fill.svg'
+import { AppNav } from 'components/domain/app/navigation'
 
 export const SpeakerDetails = (props: any) => {
+  const { account, setSpeakerFavorite } = useAccountContext()
+  const isSpeakerFavorited = account?.appState?.speakers?.some((speaker: any) => speaker === props.speaker.id)
   const splitName = props.speaker.name.split(' ') as string[]
   const firstName = splitName.shift()
   const lastName = splitName.join(' ')
+  const twitterUrl = extractTwitterUsername(props.speaker.twitter)
+  const githubUrl = extractGithubUsername(props.speaker.github)
 
   return (
     <>
-      <div className="aspect">
-        <Image src={props.speaker.avatar ?? makeBlockie(props.speaker.name)} alt={props.speaker.name}
-          objectFit='contain' layout='fill' />
+      <AppNav
+        nested
+        links={[
+          {
+            title: props.speaker.name,
+            // to: '/app/schedule',
+          },
+        ]}
+        renderRight={() => {
+          const starProps = {
+            style: {
+              cursor: 'pointer',
+            },
+            onClick: (e: React.SyntheticEvent) => {
+              e.preventDefault()
+              // if (account) {
+              setSpeakerFavorite(props.speaker.id, !!isSpeakerFavorited, account)
+              // }
+            },
+          }
+
+          if (isSpeakerFavorited) {
+            return <StarFill {...starProps} className="icon fill-red" />
+          } else {
+            return <Star {...starProps} />
+          }
+        }}
+      />
+
+      <div className={css['image']}>
+        <Image
+          src={props.speaker.avatar ?? makeBlockie(props.speaker.name)}
+          alt={props.speaker.name}
+          objectFit="contain"
+          layout="fill"
+        />
       </div>
 
       <div className="section">
-        <div className="content">
-          <h1 className={css['header']}>
-            {firstName}
-            <br /> {lastName}
-          </h1>
+        <h1 className={css['speaker-title']}>
+          {firstName} {lastName}
+        </h1>
 
-          <div className={css['meta']}>
-            <div className={css['details']}>
-              {props.speaker.role && <p className={css['role']}>{props.speaker.role}</p>}
-              {props.speaker.company && <p className={css['company']}>{props.speaker.company}</p>}
-            </div>
-            <div className={css['socials']}>
-              {props.speaker.website && <Link to={props.speaker.website}><IconGlobe /></Link>}
-              {props.speaker.twitter && <Link to={props.speaker.twitter}><IconTwitter /></Link>}
-              {props.speaker.github && <Link to={props.speaker.github}><IconGithub /></Link>}
-            </div>
+        <div className={css['meta']}>
+          <div className={css['details']}>
+            {props.speaker.role && <p className={css['role']}>{props.speaker.role}</p>}
+            {props.speaker.company && <p className={css['company']}>{props.speaker.company}</p>}
           </div>
-
-          <div className={css['description']}>
-            <p className={css['header']}>Profile</p>
-            <p className={css['body']}>
-              {props.speaker.description}
-            </p>
+          <div className={css['socials']}>
+            {props.speaker.website && (
+              <Link to={props.speaker.website}>
+                <IconGlobe />
+              </Link>
+            )}
+            {twitterUrl && (
+              <Link to={`https://twitter.com/${twitterUrl}`}>
+                <IconTwitter />
+              </Link>
+            )}
+            {githubUrl && (
+              <Link to={githubUrl}>
+                <IconGithub />
+              </Link>
+            )}
           </div>
+        </div>
 
-          {props.sessions.length > 0 &&
-            <div className={css['sessions']}>
-              <p className={css['header']}>Sessions</p>
-              {props.sessions.map((i: Session) => {
-                return <SessionCard key={i.id} session={i} />
-              })}
-            </div>
-          }
+        <div className={css['description']}>
+          <p className="font-lg bold margin-top-less margin-bottom-less">Profile</p>
+          <p className={css['body']}>{props.speaker.description}</p>
+        </div>
 
-          {/* <div className={css['videos']}>
+        {props.sessions.length > 0 && (
+          <div className={css['sessions']}>
+            <p className="font-lg bold margin-top-less margin-bottom-less">Sessions</p>
+            {props.sessions.map((i: Session) => {
+              return <SessionCard key={i.id} session={i} />
+            })}
+          </div>
+        )}
+
+        {/* <div className={css['videos']}>
             <p className={css['header']}>Archive</p>
 
             <VideoCard
@@ -99,7 +149,6 @@ export const SpeakerDetails = (props: any) => {
               }}
             />
           </div> */}
-        </div>
       </div>
     </>
   )

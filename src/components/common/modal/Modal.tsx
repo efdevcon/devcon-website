@@ -10,6 +10,7 @@ import Image from 'next/image'
 type ModalProps = {
   open: boolean
   unstyled?: boolean
+  autoHeight?: boolean
   className?: string
   close: () => void
   children: React.ReactNode
@@ -150,6 +151,10 @@ export const Modal = (props: ModalProps) => {
   if (!props.open) return null
 
   let className = css['modal']
+
+  if (props.autoHeight) {
+    className += ` ${css['auto-height']}`
+  }
 
   if (props.className) {
     className += ` ${props.className}`

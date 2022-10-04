@@ -12,10 +12,12 @@ export default function NotFound(props: Props) {
   if (props.className) className += ` ${props.className}`
 
   const emailTitle = 'No Email Found'
-  const emailDescription = 'Connect your email to the Devcon Account to create a recoverability mechanism via OTP and have access without the need for a web3 wallet.'
+  const emailDescription =
+    'Connect your email to the Devcon Account to create a recoverability mechanism via OTP and have access without the need for a web3 wallet.'
 
   const walletTitle = 'No Wallet Found'
-  const walletDescription = 'Connect to the Devcon Account using a wallet to gain access to web3 functionality and ensure that your data is controlled based on your preferences.'
+  const walletDescription =
+    'Connect to the Devcon Account using a wallet to gain access to web3 functionality and ensure that your data is controlled based on your preferences.'
 
   return (
     <div className={className}>
@@ -23,7 +25,7 @@ export default function NotFound(props: Props) {
         <NotFoundIcon />
       </div>
       <div className={css['content']}>
-        <p className='semi-bold'>
+        <p className="semi-bold">
           {props.type === 'email' && emailTitle}
           {props.type === 'wallet' && walletTitle}
         </p>

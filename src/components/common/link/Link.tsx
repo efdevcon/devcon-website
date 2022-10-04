@@ -36,6 +36,8 @@ const Link = React.forwardRef(
         if (dragging.current) {
           e.preventDefault()
         }
+
+        if (rest.onClick) rest.onClick(e)
       }
 
       linkAttributes.draggable = false

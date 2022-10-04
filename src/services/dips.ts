@@ -10,57 +10,69 @@ const repo = 'DIPs'
 const path = 'DIPs'
 
 export async function GetContributors(): Promise<Array<Contributor>> {
-    const cacheKey = `dips.GetContributors`
-    if (cache.has(cacheKey)) {
-        return cache.get(cacheKey)
-    }
+  const cacheKey = `dips.GetContributors`
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey)
+  }
 
-    const octokit = new Octokit({
-        auth: process.env.GITHUB_TOKEN,
-    })
-    
+  const octokit = new Octokit({
+    auth: process.env.GITHUB_TOKEN,
+  })
+  try {
     const files = await getGithubFile(owner, repo, path)
     if (!Array.isArray(files.data)) return []
 
-    const allContributors = Array.from(files.data).map(async i => {
+    const allContributors = Array.from(files.data)
+      .map(async i => {
         const commits = await octokit.repos.listCommits({ owner, repo, path: i.path })
 
         if (Array.isArray(commits.data)) {
-            const arr = Array.from(commits.data)
-            return arr.map(c => {
-                return {
-                    name: c.author ? c.author.login : c.commit.author?.name,
-                    url: c.author && c.author.url,
-                    avatarUrl: c.author ? c.author.avatar_url : 'https://camo.githubusercontent.com/6e2f6de0032f63dd90d46812bcc47c1519ee78c4e095733ec35a964901b1274d/68747470733a2f2f302e67726176617461722e636f6d2f6176617461722f35316334663761346261326430393962326261396630343830333264643734613f643d68747470732533412532462532466769746875622e6769746875626173736574732e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d6726733d3634'
-                } as Contributor
-            })
+          const arr = Array.from(commits.data)
+          return arr.map(c => {
+            return {
+              name: c.author ? c.author.login : c.commit.author?.name,
+              url: c.author && c.author.url,
+              avatarUrl: c.author
+                ? c.author.avatar_url
+                : 'https://camo.githubusercontent.com/6e2f6de0032f63dd90d46812bcc47c1519ee78c4e095733ec35a964901b1274d/68747470733a2f2f302e67726176617461722e636f6d2f6176617461722f35316334663761346261326430393962326261396630343830333264643734613f643d68747470732533412532462532466769746875622e6769746875626173736574732e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d6726733d3634',
+            } as Contributor
+          })
         }
 
         return []
-    }).filter(i => !!i)
+      })
+      .filter(i => !!i)
 
     const result = (await Promise.all(allContributors)).flat()
-    const dips = [...new Set(result.map(i => i.name))].map(i => {
+    const dips = [...new Set(result.map(i => i.name))]
+      .map(i => {
         return result.find(x => x.name === i)
-    }).filter(i => i !== undefined) as Array<Contributor>
+      })
+      .filter(i => i !== undefined) as Array<Contributor>
 
     cache.set(cacheKey, dips)
     return dips
+  } catch (e) {
+    console.log('Error during contributor fetch')
+
+    return []
+  }
 }
 
 export async function GetDIPs(): Promise<Array<DIP>> {
-    const cacheKey = `dips.GetDIPs`
-    if (cache.has(cacheKey)) {
-        return cache.get(cacheKey)
-    }
+  const cacheKey = `dips.GetDIPs`
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey)
+  }
 
+  try {
     const files = await getGithubFile(owner, repo, path)
     if (!Array.isArray(files.data)) return []
 
     const dipNumbers = Array.from(files.data)
-        .filter(i => i.name.endsWith('.md'))
-        .map(i => Number(i.name.replace('.md', '').replace('DIP-', '')))
-        .sort((a, b) => a - b)
+      .filter(i => i.name.endsWith('.md'))
+      .map(i => Number(i.name.replace('.md', '').replace('DIP-', '')))
+      .sort((a, b) => a - b)
 
     const dips = Array.from(files.data).map(async i => {
         const file: any = await getGithubFile(owner, repo, i.path)
@@ -104,21 +116,27 @@ export async function GetDIPs(): Promise<Array<DIP>> {
 
     cache.set(cacheKey, result)
     return result
+  } catch (e) {
+    console.log('Error during dip fetch')
+
+    return []
+  }
 }
 
 async function getGithubFile(owner: string, repo: string, path: string): Promise<OctokitResponse<any>> {
-    const cacheKey = `dips.getGithubFile.${owner}.${repo}.${path}`
-    if (cache.has(cacheKey)) {
-        return cache.get(cacheKey)
-    }
+  const cacheKey = `dips.getGithubFile.${owner}.${repo}.${path}`
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey)
+  }
 
-    const octokit = new Octokit({
-        auth: process.env.GITHUB_TOKEN,
-    })
-    const result: any = await octokit.repos.getContent({ owner, repo, path })
-    if (result) {
-        cache.set(cacheKey, result)
-    }
+  const octokit = new Octokit({
+    auth: process.env.GITHUB_TOKEN,
+  })
 
-    return result
+  const result: any = await octokit.repos.getContent({ owner, repo, path })
+  if (result) {
+    cache.set(cacheKey, result)
+  }
+
+  return result
 }

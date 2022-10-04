@@ -1,3 +1,4 @@
+import { Session } from "./Session"
 
 export interface UserAccount {
   _id?: any
@@ -22,4 +23,12 @@ export interface AppState {
     start: Date
     end: Date
   }>
+  publicSchedule?: boolean
+}
+
+export interface UserSchedule {
+  userId: string,
+  username: string,
+  publicSchedule?: boolean,
+  sessions: Session[]
 }

@@ -36,8 +36,14 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 20px;
     position: relative;
+
+    .app, .livestream {
+      svg {
+        margin-right: 8px;
+      }
+    }
 
     &:last-child {
       // margin-right: 0px;
@@ -219,15 +225,16 @@
   }
 
   &.highlight {
-    height: 100%;
-    padding-left: $gaps-gap-4;
-    padding-right: $gaps-gap-4;
-    border-left: 1px solid $colors-monochrome-5;
-    border-right: 1px solid $colors-monochrome-5;
+    // height: 100%;
+    // // padding-left: $gaps-gap-4;
+    // // padding-right: $gaps-gap-4;
+    // // border-left: 1px solid $colors-monochrome-5;
+    // // border-right: 1px solid $colors-monochrome-5;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $colors-monochrome-2;
+    // background: $colors-monochrome-2;
+
 
     >svg {
       margin-left: $gaps-gap-2;

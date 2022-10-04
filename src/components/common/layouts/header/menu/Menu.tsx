@@ -10,10 +10,15 @@ import IconMenu from 'assets/icons/menu.svg'
 import AccountIcon from 'assets/icons/account.svg'
 import IconCross from 'assets/icons/cross.svg'
 import SearchIcon from 'assets/icons/search.svg'
-// import BellIcon from 'assets/icons/bell.svg'
+import { Tooltip } from 'components/common/tooltip'
+import BackIcon from 'assets/icons/subdirectory-left.svg'
 import BellIcon from 'assets/icons/bell-simple.svg'
 import { LanguageToggle } from 'components/common/layouts/header/strip/language-toggle'
 import useNavigationData from '../useNavigationData'
+import { TippyProps } from '@tippyjs/react'
+import { Notifications } from 'components/domain/app/notifications'
+import { useAppContext } from 'context/app-context'
+import { useAccountContext } from 'context/account-context'
 
 type ButtonProps = {
   buttons: {
@@ -22,6 +27,7 @@ type ButtonProps = {
     url?: string
     className?: string
     onClick?: any
+    tooltip?: TippyProps
   }[]
 }
 
@@ -51,26 +57,37 @@ const Buttons = (props: ButtonProps) => {
   return (
     <div className={css['buttons']}>
       {props.buttons.map(button => {
-        let className = css['button']
+        let body
 
         if (button.url) {
-          return (
-            <Link key={button.key} to={button.url} className={className}>
+          body = (
+            <Link key={button.key} to={button.url}>
               {button.icon}
             </Link>
           )
+        } else {
+          body = (
+            <button
+              key={button.key}
+              aria-label={button.key}
+              className={`plain ${button.className}`}
+              onClick={button.onClick}
+            >
+              {button.icon}
+            </button>
+          )
         }
 
-        return (
-          <button
-            key={button.key}
-            aria-label={button.key}
-            className={`${className} plain ${button.className}`}
-            onClick={button.onClick}
-          >
-            {button.icon}
-          </button>
-        )
+        if (button.tooltip) {
+          return (
+            <Tooltip key={button.key} {...button.tooltip} touch={false}>
+              {/* Need the wrapping div due to Link and Tooltip not interacting well together */}
+              <div>{body}</div>
+            </Tooltip>
+          )
+        }
+
+        return body
       })}
     </div>
   )
@@ -79,13 +96,18 @@ const Buttons = (props: ButtonProps) => {
 export const Menu = (props: any) => {
   const router = useRouter()
   const context = usePageContext()
+  const appContext = useAppContext()
+  const accountContext = useAccountContext()
 
   let buttons: ButtonProps['buttons'] = [
-    // {
-    //   key: 'account',
-    //   icon: <AccountIcon />,
-    //   url: '/app',
-    // },
+    {
+      key: 'account',
+      tooltip: {
+        content: 'Account',
+      },
+      icon: <AccountIcon />,
+      url: 'https://app.devcon.org/login',
+    },
     {
       key: 'mobile-menu-toggle',
       icon: props.foldoutOpen ? <IconCross style={{ width: '0.8em' }} /> : <IconMenu />,
@@ -94,60 +116,83 @@ export const Menu = (props: any) => {
     },
   ]
 
-  // if (router.pathname.startsWith('/archive')) {
-  //   buttons = [
-  //     {
-  //       key: 'search',
-  //       icon: <SearchIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />,
-  //       onClick: () => props.setSearchOpen(!props.searchOpen),
-  //     },
-  //     ...buttons,
-  //   ]
-  // }
+  if (props.isApp) {
+    const notifications = context?.appNotifications
+    const seenNotifications = appContext.seenNotifications
 
-  if (router.pathname.startsWith('/app/')) {
+    const countUnreadNotifications = notifications ? notifications.length - Object.values(seenNotifications).length : 0
+
     buttons = [
-      ...buttons.slice(0, 1),
       {
         key: 'notifications',
+        tooltip: {
+          content: 'Notifications',
+        },
         icon: (
           <div className={css['app-notifications']}>
-            <BellIcon style={props.searchOpen ? { opacity: 0.5 } : undefined} />
-            <div className={css['counter']}>3</div>
+            <BellIcon style={props.foldoutOpen ? { opacity: 0.7 } : {}} />
+            {countUnreadNotifications > 0 && <div className={css['counter']}>{countUnreadNotifications}</div>}
           </div>
         ),
-        url: '/app/notifications',
-        // onClick: () => alert('Not done'),
+        onClick: () => props.setFoldoutOpen(!props.foldoutOpen),
       },
-      ...buttons.slice(1),
+      {
+        key: 'account',
+        tooltip: {
+          content: 'Account',
+        },
+        icon: <AccountIcon />,
+        url: accountContext.account ? '/app' : '/app/login',
+      },
+      {
+        key: 'back-button',
+        tooltip: {
+          content: 'Leave App',
+        },
+        icon: <BackIcon style={{ fontSize: '1.2em', transform: 'translateX(-2px)' }} />,
+        url: '/',
+      },
     ]
   }
 
-  return (
-    <div className={css['menu']}>
-      <Left navigationData={context?.navigation} />
+  let className = css['menu']
 
-      <div className={css['right']}>
-        <Navigation navigationData={context?.navigation} />
-        <div className={css['language-toggle-container']}>
-          <LanguageToggle />
-        </div>
-      </div>
+  if (props.isApp) className += ` ${css['is-app']}`
+
+  return (
+    <div className={className}>
+      {!props.isApp && (
+        <>
+          <Left navigationData={context?.navigation} />
+
+          <div className={css['right']}>
+            <Navigation navigationData={context?.navigation} />
+
+            <div className={css['language-toggle-container']}>
+              <LanguageToggle />
+            </div>
+          </div>
+
+          <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
+            <div className={css['foldout-top']}>
+              <Left navigationData={context?.navigation} />
+              <LanguageToggle />
+            </div>
+            <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
+          </Foldout>
+        </>
+      )}
 
       <Buttons buttons={buttons} />
 
-      {/* <Account /> */}
       {/* <Search open={props.setSearchOpen} /> */}
-      {/* </Buttons> */}
 
       {/* Mobile */}
-      <Foldout foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
-        <div className={css['foldout-top']}>
-          <Left navigationData={context?.navigation} />
-          <LanguageToggle />
-        </div>
-        <Navigation setFoldoutOpen={props.setFoldoutOpen} navigationData={context?.navigation} mobile={true} />
-      </Foldout>
+      {props.isApp && (
+        <Foldout isApp foldoutOpen={props.foldoutOpen} setFoldoutOpen={props.setFoldoutOpen}>
+          <Notifications />
+        </Foldout>
+      )}
     </div>
   )
 }

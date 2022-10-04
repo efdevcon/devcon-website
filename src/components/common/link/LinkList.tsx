@@ -11,7 +11,7 @@ export const LinkList = (props: any) => {
     <div className={props.className}>
       {React.Children.map(props.children, child => {
         return React.cloneElement(child, {
-          className: 'list-item',
+          className: child.props.className ? `${child.props.className} list-item` : 'list-item',
           children: (() => {
             const isGoogleDrive = child.props.to.includes('drive.google.com')
             const isExternal = child.props.to.match(/^([a-z0-9]*:|.{0})\/\/.*$/)

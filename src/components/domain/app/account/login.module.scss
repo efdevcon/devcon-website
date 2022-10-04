@@ -93,6 +93,17 @@
     margin-top: $gaps-gap-4;
     margin-bottom: $gaps-gap-2;
   }
+
+  .actions {
+    display: flex;
+    gap: $gaps-gap-2;
+    align-items: center;
+
+    .resend {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
 }
 
 .profile { 
@@ -117,6 +128,8 @@
     }
 
     img { 
+      height: auto;
+      width: 100%;
       border-radius: 50px;
     }
   }
@@ -139,19 +152,24 @@
   }
 }
 
+.wallet, .email {
+  button {
+    align-self: flex-start;
+  }
+}
+
 .wallet {
   padding-top: $gaps-gap-4;
   padding-bottom: $gaps-gap-4;
 
   .button {
-    margin-top: $gaps-gap-4;
-    width: 100%;
+    margin-top: 8px;
   }
 }
 
 .footer {
   position: relative;
-  height: 180px;
+  min-height: 180px;
   display: flex;
   align-items: flex-end;
   padding-bottom: $gaps-gap-4;
@@ -163,8 +181,11 @@
   .text {
     width: 75%;
 
+    @media (min-width: $breakpoints-sm) {
+      width: auto;
+    }
+
     .description {
-      opacity: 0.7;
       margin-bottom: $gaps-gap-4;
     }
 
@@ -181,5 +202,15 @@
     bottom: 0px;
     max-height: 100%;
     z-index: -1;
+  }
+}
+
+.share { 
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+
+  .toggle {
+    margin-right: 4px;
   }
 }

@@ -5,12 +5,13 @@
   flex-direction: column;
   border-bottom: 1px solid $colors-standard-border-color;
 
-  &:last-child {
-    border-bottom: none;
+  &.indent {
+    margin-left: 1em;
   }
 
-  // padding-left: $gaps-gap-2;
-  // padding-right: $gaps-gap-2;
+  &:last-child, &.sticky {
+    border-bottom: none;
+  }
 
   .header {
     user-select: none;
@@ -21,18 +22,28 @@
     padding-bottom: $gaps-gap-4;
     padding-top: $gaps-gap-4;
 
+    &.sticky {
+      position: sticky;
+      z-index: 2;
+      background: white;
+      transform: translateY(-1px);
+      top: var(--app-nav-upper-height);
+      border-bottom: 1px solid $colors-standard-border-color;
+    }
+
     .title {
       @include fonts-bold;
-      @include fonts-lg;
+      @include fonts-sm;
     }
 
     .icon {
       margin-right: $gaps-gap-2;
+      display: flex;
+    align-items: center;
     }
 
     &:hover {
       cursor: pointer;
-      // background: $colors-monochrome-2;
     }
   }
 

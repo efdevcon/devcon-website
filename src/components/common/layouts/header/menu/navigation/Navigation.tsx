@@ -5,9 +5,10 @@ import css from './navigation.module.scss'
 import { Link as LinkType } from 'types/Link'
 import ArrowCollapse from 'assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'assets/icons/arrow_drop_down.svg'
-import OnDemandVideoIcon from 'assets/icons/on_demand_video.svg'
 import Image from 'next/image'
 import useNavigationData from '../../useNavigationData'
+import IconCalendar from 'assets/icons/calendar.svg'
+import IconWatch from 'assets/icons/on_demand_video.svg'
 
 const Mobile = (props: any) => {
   const [openItem, setOpenItem] = React.useState<string | undefined>()
@@ -46,10 +47,15 @@ const Mobile = (props: any) => {
               ) : (
                 <div className={`${css['accordion-toggle']} ${css['no-children']}`}>
                   <Link
-                    className={`plain hover-underline`}
+                    className={`plain hover-underline button ${css[i.highlight as any]}`}
                     style={
-                      i.title === 'Watch'
-                        ? { display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }
+                      i.highlight
+                        ? {
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            width: '100%',
+                          }
                         : undefined
                     }
                     to={i.url}
@@ -57,7 +63,8 @@ const Mobile = (props: any) => {
                   >
                     <>
                       {i.title}
-                      {i.title === 'Watch' && <OnDemandVideoIcon style={{ fontSize: '1em' }} />}
+                      {i.highlight === 'app' && <IconCalendar style={{ fontSize: '1em' }} />}
+                      {i.highlight === 'livestream' && <IconWatch style={{ fontSize: '1em' }} />}
                     </>
                   </Link>
                 </div>
@@ -118,20 +125,21 @@ export const Navigation = (props: any) => {
           const link = (() => {
             let className = `${css['foldout-link']} bold`
 
-            const isWatch = i.title === 'Watch'
+            const isApp = i.highlight === 'app' // i.title === 'Devcon App + Schedule'
 
             // Just keeping it simple since this is possibly a one-off thing - can generalize later if needed
-            if (isWatch) {
-              className += ` ${css['highlight']}`
+            if (i.highlight) {
+              className += ` button ${css[i.highlight as any]} ${i.highlight === 'app' ? 'red' : 'black'}`
             } else {
               className += ` plain`
             }
 
             return (
-              <Link className={className} to={i.url} indicateExternal>
+              <Link className={className} to={i.url}>
                 <>
+                  {i.highlight === 'app' && <IconCalendar />}
+                  {i.highlight === 'livestream' && <IconWatch />}
                   {i.title}
-                  {isWatch && <OnDemandVideoIcon />}
                 </>
               </Link>
             )

@@ -6,7 +6,7 @@ import floorplan from './mall-floor-plan.png'
 const Layer = (props: any) => {
   return (
     <div {...props}>
-      <Image src={floorplan} alt="floorplan" />
+      <Image src={floorplan} layout="raw" alt="floorplan" />
       <p className={css['label']}>L{props['data-floor']}</p>
       <div className={css['pin-container']} style={{ '--x': '100%', '--y': '100%' } as any}>
         <div className={css['pin']}>PIN</div>
@@ -32,22 +32,23 @@ export const CSS3D = () => {
   const [rotateX, setRotateX] = React.useState(55)
   const [translateY, setTranslateY] = React.useState(0)
   const [translateX, setTranslateX] = React.useState(0)
-  const [[currentFloor, setCurrentFloor], [hoveredFloor, setHoveredFloor]] = useFloor()
+  const [currentFloor, setCurrentFloor] = React.useState<undefined | number>()
+  // const [[currentFloor, setCurrentFloor], [hoveredFloor, setHoveredFloor]] = useFloor()
 
-  const style = {}
+  const style = {} as any
 
-  // if (translateX !== '') style['--translate-x'] = `${translateX}%`
-  // if (translateY !== '') style['--translate-y'] = `${translateY}%`
-  // if (rotateX !== '') style['--rotate-x'] = `${rotateX}deg`
-  // if (rotateZ !== '') style['--rotate-z'] = `${rotateZ}deg`
-  // if (rotateY !== '') style['--rotate-y'] = `${rotateY}deg`
+  if (translateX) style['--translate-x'] = `${translateX}%`
+  if (translateY) style['--translate-y'] = `${translateY}%`
+  if (rotateX) style['--rotate-x'] = `${rotateX}deg`
+  if (rotateZ) style['--rotate-z'] = `${rotateZ}deg`
+  if (rotateY) style['--rotate-y'] = `${rotateY}deg`
 
   return (
     <div className={css['container']}>
       <div
         className={(() => {
           let className = css['scene']
-          const selectionActive = false // !isNaN(currentFloor)
+          const selectionActive = currentFloor !== undefined
 
           if (selectionActive) className += ` ${css['selection-active']}`
 
@@ -55,14 +56,14 @@ export const CSS3D = () => {
         })()}
       >
         {floors.map((floor, index) => {
-          const selected = false // index === currentFloor
+          const selected = index === currentFloor
 
           return (
             <Layer
               key={index}
               style={style}
               data-floor={index}
-              // onClick={() => setCurrentFloor(selected ? undefined : index)}
+              onClick={() => setCurrentFloor(selected ? undefined : index)}
               // onMouseEnter={() => {
               //   setHoveredFloor(index)
               // }}

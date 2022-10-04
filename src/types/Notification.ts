@@ -4,5 +4,6 @@ export interface Notification {
   label: string
   labelType: string
   url: string
+  date?: string
   active?: boolean
 }

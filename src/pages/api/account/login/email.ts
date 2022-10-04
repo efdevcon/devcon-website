@@ -51,6 +51,13 @@ export default withSessionRoute(async function route(req: NextApiRequest, res: N
 
     // else; create new user account based on email address
     let userAccount = await repo.findUserAccountByEmail(address)
+    if (userAccount) {
+        req.session.userId = userAccount._id
+
+        await req.session.save()
+        return res.status(200).send({ code: 200, message: '', data: userAccount })
+    }
+
     if (!userAccount) {
         const model = new UserAccountModel()
         model.email = address

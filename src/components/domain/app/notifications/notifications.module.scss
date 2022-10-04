@@ -16,7 +16,7 @@
 .filter {
   display: flex;
   align-items: center;
-  margin-top: $gaps-gap-4;
+  // margin-top: $gaps-gap-4;
   margin-bottom: $gaps-gap-4;
 
   > button {
@@ -50,9 +50,18 @@
 }
 
 .notification-block {
-  [data-type='thumbnail-block-image'] {
-    background: $colors-ef-pink;
+  background: white;
+
+  &.highlight {
+    box-shadow: 0px 0px 4px 2px #f1f1f1;
   }
+
+  // &:hover {
+  //   cursor: pointer;
+  //   border: 1px solid darken($colors-standard-border-color, 20%);
+  // }
+
+  border: 2px solid $colors-standard-border-color; 
 
   [data-type='thumbnail-block-content'] {
     padding: $gaps-gap-2;
@@ -61,11 +70,12 @@
   .top {
     display: flex;
     justify-content: space-between;
+    --color-icon: #{$colors-track-red};
 
     .time {
       display: flex;
       @include fonts-bold;
-      @include fonts-sm;
+      @include fonts-xs;
       color: $colors-monochrome-6;
 
       > * {
@@ -78,12 +88,12 @@
 
   .details {
     .title {
-      @include fonts-md;
+      @include fonts-sm-fixed;
       margin-top: $gaps-gap-2;
       margin-bottom: $gaps-gap-1;
     }
 
-    @include fonts-sm;
+    @include fonts-xs-fixed;
   }
 
   .labels {
@@ -93,4 +103,29 @@
       margin-right: $gaps-gap-2;
     }
   }
+}
+
+.filter {
+  margin-top: 0px !important;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  @include fonts-bold;
+}
+
+.container {
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  height: 80vh;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
 }

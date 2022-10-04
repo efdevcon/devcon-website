@@ -8,6 +8,8 @@ interface SectionProps {
   children?: any
   className?: string
   open?: boolean
+  sticky?: boolean
+  indent?: boolean
   setOpen?: (open: boolean) => void
 }
 
@@ -16,6 +18,7 @@ interface CollapsedSectionHeaderProps {
   children?: any
   className?: string
   open?: boolean
+  sticky?: boolean
   setOpen?: (open: boolean) => void
 }
 
@@ -23,9 +26,10 @@ const CollapsedSectionHeader = (props: CollapsedSectionHeaderProps) => {
   let className = css['header']
 
   if (props.className) className += ` ${props.className}`
+  if (props.sticky) className += ` ${css['sticky']}`
 
   return (
-    <div className={className} onClick={() => props.setOpen ? props.setOpen(!props.open) : ''}>
+    <div className={className} onClick={() => (props.setOpen ? props.setOpen(!props.open) : '')}>
       {/* Optional default title to help with consistency */}
       {props.title && <p className={css['title']}>{props.title}</p>}
       {props.children}
@@ -102,10 +106,10 @@ export const CollapsedSectionContent = (props: any) => {
 
   let className = css['content']
 
-  // if (props.className) className += ` ${props.className}`
+  if (props.className) className += ` ${props.className}`
 
   return (
-    <div ref={ref} className={className} style={{ '--contentHeight': contentHeight } as any}> 
+    <div ref={ref} className={className} style={{ '--contentHeight': contentHeight } as any}>
       {props.children}
     </div>
   )
@@ -117,6 +121,8 @@ export function CollapsedSection(props: SectionProps) {
   let className = css['container']
 
   if (props.className) className += ` ${props.className}`
+  if (props.indent) className += ` ${css['indent']}`
+  if (props.sticky) className += ` ${css['sticky']}`
 
   return (
     <div className={className}>
@@ -125,6 +131,7 @@ export function CollapsedSection(props: SectionProps) {
           return React.cloneElement(child, {
             open: isControlled ? props.open : open,
             setOpen: isControlled ? props.setOpen : setOpen,
+            sticky: props.sticky,
           })
 
         return React.cloneElement(child, { open: isControlled ? props.open : open })

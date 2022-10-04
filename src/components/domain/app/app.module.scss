@@ -5,9 +5,11 @@
 }
 
 .app {
-  overflow-x: hidden;
-  min-height: calc(var(--viewport-height) - 65px - 54px - 54px);
-  padding-bottom: 64px; // Adjustin½g for fixed bottom nav overlaying content
+  // overflow-x: hidden;
+  width: 100vw;
+  min-height: calc(var(--viewport-height) - var(--header-height) - var(--app-nav-upper-height) - var(--app-nav-lower-height));
+  padding-bottom: 120px; // Adjusting for fixed bottom nav overlaying content, and adding a bit of white space to indicate bottom was reached
+  @include fonts-sm-fixed;   
 
   > h3,
   > button,

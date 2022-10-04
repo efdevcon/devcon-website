@@ -147,7 +147,7 @@ export const SortButton = (props: { index: number; field: Field; sortState: Sort
 
   return (
     <div key={field.key} className={className} onClick={e => setSortBy(index)}>
-      <p className="font-lg">{field.intl ? intl(field.intl) : field.title}</p>
+      <p className="font-md">{field.intl ? intl(field.intl) : field.title}</p>
 
       <div className={css['sort-arrows']}>
         {shouldRenderAsc && <ArrowAsc />}

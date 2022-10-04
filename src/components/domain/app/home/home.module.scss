@@ -45,6 +45,8 @@
     margin-right: $gaps-gap-4;
     
     img {
+      height: auto;
+      width: 100%;
       border-radius: 50px;
     }
   }
@@ -90,6 +92,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  button {
+    flex-shrink: 0;
+  }
 }
 
 .slider-container {
