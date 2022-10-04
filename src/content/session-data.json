@@ -10998,6 +10998,7 @@
         "id": "EXXLEW",
         "name": "Tony Olendo",
         "description": "Tony Olendo is a Developer Education Evangelist at Polygon. He has a passion for Ethereum Developer Education and specifically helping developers in their Solidity journey. He is also a core team member of Afrofuture DAO, Africa's largest community of NFT artists and also a co-founder of Web3Afrika, Africa's largest community of Web3 builders.",
+        "twitter": "https://twitter.com/tonyolendo",
         "avatar": "http://speak.devcon.org/media/avatars/Tony_Olendo_-_Graphic_White_ASh4KEO.png"
       },
       {
@@ -11037,12 +11038,14 @@
         "id": "A7RKE9",
         "name": "Jennifer Parak",
         "description": "Jennifer currently works as a Software Engineer at Chorus One. Having started her career working with Microservices in a Java/Spring Boot environment, she's had the chance of working in the smart ecosystems/iOT space and is keen to branch out to emerging technologies such as blockchain tech, following her passion to solve hard technical challenges in a constraint environment.",
+        "twitter": "jenpaff",
         "avatar": ""
       },
       {
         "id": "QZWEKG",
         "name": "Gabriella",
         "description": null,
+        "twitter": "gabriellassh",
         "avatar": ""
       }
     ],
