@@ -1354,7 +1354,7 @@
     "id": "93NEDS",
     "name": "Sergey Nazarov",
     "avatar": "https://speak.devcon.org/media/avatars/Sergey_Nazarov_Photo_3_814OIT5.jpg",
-    "description": "Sergey Nazarov is co-founder of Chainlink, the leading decentralized oracle network used by global enterprises and leading Web3 projects at the forefront of the blockchain industry. Chainlink is unlocking a world powered by cryptographic truth by enabling smart contracts on any blockchain to reliably connect to real-world data and off-chain computation and currently secures tens of billions of dollars in value for smart contracts across decentralized finance (DeFi), insurance, gaming, and other",
+    "description": "Sergey Nazarov is co-founder of Chainlink, the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -3171,7 +3171,7 @@
   },
   {
     "id": "VYQT8X",
-    "name": "trent",
+    "name": "Trent Van Epps",
     "avatar": "https://speak.devcon.org/media/avatars/van_epps_picture_OE5pxB3.png",
     "description": "- ethereum ecosystem work & All Core Devs call\r\n- creating with @StatefulWorks\r\n- one of many building the @ProtocolGuild",
     "tracks": [
@@ -3371,8 +3371,8 @@
   },
   {
     "id": "MQ3YLE",
-    "name": "Igor",
-    "avatar": "https://www.gravatar.com/avatar/d621490fdb0c2413a188e3ce9368bd9f",
+    "name": "Igor Yalovoy",
+    "avatar": "https://speak.devcon.org/media/avatars/igor-small_GTVW3KX.png",
     "description": "Igor Yalovoy is cofounder and CTO at fintech startup Babylon Finance. Babylon Finance has grown from zero to 30 million dollars in assets under management in less than a year. Previously, he was the core developer at OpenZeppelin securing billions of dollars in funds for leading crypto organizations including Coinbase, Ethereum Foundation, Compound, Aave, TheGraph.",
     "tracks": [
       "Developer Infrastructure"
@@ -3736,6 +3736,21 @@
     "website": "https://yisun.io/",
     "twitter": "theyisun",
     "github": "yi-sun"
+  },
+  {
+    "id": "DNB3MY",
+    "name": "Chris Whinfrey",
+    "avatar": "https://speak.devcon.org/media/avatars/AshAvatar_TS6pQfP.png",
+    "description": "Co-founder of Hop Protocol\r\nAuthor of the Hop Whitepaper: https://hop.exchange/whitepaper.pdf\r\nPreviously co-founder of Authereum and Level K\r\nAudited Open Zeppelin, dYdX, Augur, Decentraland, and more\r\nStarted the first Ethereum meetup in Boston",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://hop.exchange/",
+    "twitter": "WhinfreyChris",
+    "github": "cwhinfrey"
   },
   {
     "id": "MYNS3X",
@@ -4352,8 +4367,8 @@
   {
     "id": "KDZVCN",
     "name": "Josh Stark",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/target_QfgTl32.jpeg",
+    "description": "Josh Stark works for Ethereum at the Ethereum Foundation.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -4544,7 +4559,9 @@
     ],
     "eventDays": [
       1665532800000
-    ]
+    ],
+    "twitter": "@john_kane",
+    "github": "kanej"
   },
   {
     "id": "LQULX7",

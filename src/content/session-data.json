@@ -40,7 +40,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/avsa_profile_picture_avatar_L28vXUh.png"
       }
     ],
-    "title": "How to talk to g̵i̵r̵l̵s̵ users at p̵a̵r̵t̵i̵e̵s̵ your app: how to do user research in a remote environment",
+    "title": "How to Talk to g̵i̵r̵l̵s̵ Users at p̵a̵r̵t̵i̵e̵s̵ Your App: How to Do User Research in a Remote Environment",
     "track": "UX & Design",
     "duration": 25,
     "start": 1665669600000,
@@ -74,7 +74,7 @@
       },
       {
         "id": "VYQT8X",
-        "name": "trent",
+        "name": "Trent Van Epps",
         "description": "- ethereum ecosystem work & All Core Devs call\r\n- creating with @StatefulWorks\r\n- one of many building the @ProtocolGuild",
         "twitter": "trent_vanepps",
         "avatar": "http://speak.devcon.org/media/avatars/van_epps_picture_OE5pxB3.png"
@@ -360,8 +360,8 @@
       {
         "id": "KDZVCN",
         "name": "Josh Stark",
-        "description": null,
-        "avatar": ""
+        "description": "Josh Stark works for Ethereum at the Ethereum Foundation.",
+        "avatar": "http://speak.devcon.org/media/avatars/target_QfgTl32.jpeg"
       }
     ],
     "title": "Making Sense of the Ethereum Foundation",
@@ -428,7 +428,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/moritz_QurLEza.png"
       }
     ],
-    "title": "Remix intro workshop in Spanish",
+    "title": "Remix intro workshop - EN ESPAÑOL",
     "track": "Developer Infrastructure",
     "duration": 110,
     "start": 1665568800000,
@@ -630,10 +630,10 @@
     "speakers": [
       {
         "id": "MQ3YLE",
-        "name": "Igor",
+        "name": "Igor Yalovoy",
         "description": "Igor Yalovoy is cofounder and CTO at fintech startup Babylon Finance. Babylon Finance has grown from zero to 30 million dollars in assets under management in less than a year. Previously, he was the core developer at OpenZeppelin securing billions of dollars in funds for leading crypto organizations including Coinbase, Ethereum Foundation, Compound, Aave, TheGraph.",
         "twitter": "https://twitter.com/ylv_io",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/igor-small_GTVW3KX.png"
       }
     ],
     "title": "Unlimited Size Contracts Using Solidity",
@@ -649,7 +649,7 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "Ethereum currently have a limit of 24KB for a contract size which cause a major pain for many Solidity devs. I would present all available options to address this issue using Solidity language during the workshop and provide cons and pros of them.\r\n* External libs\r\n* Transparent and uups proxies\r\n* EIP-2535\r\n* Static precompiled router proxy \r\nI will also provide gas optimization tricks for above methods.",
+    "description": "Ethereum currently have a limit of 24KB for a contract size which cause a major pain for many Solidity devs. I would present all available options to address this issue using Solidity language during the workshop and provide cons and pros of them.\r\n* External libs\r\n* Transparent and uups proxies\r\n* EIP-2535\r\n* Static precompiled router proxy \r\n* Dynamic router\r\nI will also provide gas optimization tricks for above methods and a novel method to reduce a gas cost for unlimited size contracts.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -1748,7 +1748,7 @@
         "avatar": ""
       }
     ],
-    "title": "Ethers: What's new in v6?",
+    "title": "Ethers: What's New in v6?",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665504000000,
@@ -2739,7 +2739,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/GloriaKimbwala_Portrait_2035_TB_01_sRGB_j0rWHqS.jpg"
       }
     ],
-    "title": "Be a superhero!  Tangible actions to support diverse builders and show allyship in web3 communities.",
+    "title": "Be a Superhero!  Tangible Actions to Support Diverse Builders and Show Allyship in Web3 Communities",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665586800000,
@@ -3373,7 +3373,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/isaac-headshot_5gzsDsV.jpg"
       }
     ],
-    "title": "Exploiting inattention & optimism in DAOs",
+    "title": "Exploiting Inattention & Optimism in DAOs",
     "track": "Governance & Coordination",
     "duration": 25,
     "start": 1665574200000,
@@ -3494,7 +3494,7 @@
       },
       {
         "id": "VYQT8X",
-        "name": "trent",
+        "name": "Trent Van Epps",
         "description": "- ethereum ecosystem work & All Core Devs call\r\n- creating with @StatefulWorks\r\n- one of many building the @ProtocolGuild",
         "twitter": "trent_vanepps",
         "avatar": "http://speak.devcon.org/media/avatars/van_epps_picture_OE5pxB3.png"
@@ -3665,7 +3665,7 @@
     ],
     "title": "Fuel: Scaling Ethereum with the Fastest Modular Execution Layer",
     "track": "Layer 2s",
-    "duration": 7,
+    "duration": 25,
     "start": 1665577200000,
     "end": 1665577800000,
     "room": {
@@ -3675,7 +3675,7 @@
       "info": "Floor 3",
       "capacity": 110
     },
-    "type": "Lightning Talk",
+    "type": "Talk",
     "description": "Fuel is the fastest modular execution layer. It brings UTXO-based parallel transaction execution, a more flexible transaction format, a more efficient virtual machine, and a superior vertically-integrated developer stack to Ethereum.\r\n\r\nFrom the creator of optimistic rollups, this exclusive talk will discuss how users and developers will be able to leverage Fuel for global scale, without having to sacrifice decentralization or the security of Ethereum.",
     "abstract": "",
     "expertise": "Intermediate",
@@ -3921,7 +3921,7 @@
         "avatar": ""
       }
     ],
-    "title": "New paradigms by non EVM compatible L2s!",
+    "title": "New Paradigms by Non EVM Compatible L2s!",
     "track": "Layer 2s",
     "duration": 50,
     "start": 1665581400000,
@@ -4134,6 +4134,7 @@
         "id": "HGMDTU",
         "name": "John Kane",
         "description": ".",
+        "twitter": "@john_kane",
         "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
       }
     ],
@@ -4291,7 +4292,7 @@
     "speakers": [
       {
         "id": "VYQT8X",
-        "name": "trent",
+        "name": "Trent Van Epps",
         "description": "- ethereum ecosystem work & All Core Devs call\r\n- creating with @StatefulWorks\r\n- one of many building the @ProtocolGuild",
         "twitter": "trent_vanepps",
         "avatar": "http://speak.devcon.org/media/avatars/van_epps_picture_OE5pxB3.png"
@@ -4457,7 +4458,7 @@
       {
         "id": "93NEDS",
         "name": "Sergey Nazarov",
-        "description": "Sergey Nazarov is co-founder of Chainlink, the leading decentralized oracle network used by global enterprises and leading Web3 projects at the forefront of the blockchain industry. Chainlink is unlocking a world powered by cryptographic truth by enabling smart contracts on any blockchain to reliably connect to real-world data and off-chain computation and currently secures tens of billions of dollars in value for smart contracts across decentralized finance (DeFi), insurance, gaming, and other",
+        "description": "Sergey Nazarov is co-founder of Chainlink, the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.",
         "twitter": "@SergeyNazarov",
         "avatar": "http://speak.devcon.org/media/avatars/Sergey_Nazarov_Photo_3_814OIT5.jpg"
       }
@@ -4706,7 +4707,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3405_3RYCYV9.jpg"
       }
     ],
-    "title": "How to Build Bigger and Stronger ETH Communities in Latam",
+    "title": "How to Build Bigger and Stronger ETH Communities in Latam - EN ESPAÑOL",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665590400000,
@@ -5257,7 +5258,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "Web3 tech provides features that have been practically unexplored by game designers. Games use DeFi mechanics, or self-custody and P2P marketplace mechanics, but few have used composability to create new game experiences for incentivization.\r\n\r\nThis presentation by PhD in gaming Andy Boyan will explore composable Web3 mechanics that designers and developers can think about in gamification design using examples from Loot, Dark Forest, Infinity Keys, and more.",
+    "description": "Web3 tech provides features that have been practically unexplored by game designers. Games use DeFi mechanics, or self-custody and P2P marketplace mechanics, but few have used composability to create new game experiences for incentivization.\r\n\r\nThis presentation by PhD in gaming Andy Boyan will explore composable Web3 mechanics that designers and developers can think about in gamification design, featuring Infinity Keys, an achievements game built on composable assets across Web3.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -5526,7 +5527,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/3FeDe54c_400x400_3bmEmhN.jpg"
       }
     ],
-    "title": "Building Parallel Economy using Ethereum",
+    "title": "Building Parallel Economy Using Ethereum",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665655200000,
@@ -7728,6 +7729,13 @@
         "description": "Hart is the Co-Founder of Risk Labs, the foundation supporting the UMA and Across protocols. UMA is an optimistic oracle (OO) that can provide and verify arbitrary data on-chain. Across is a cross-chain bridge that is secured by UMA's optimistic oracle.\r\n\r\nHart studied computer science before working as an interest rate trader at Goldman Sachs through the financial crisis. In 2013. He now leads a team of researchers at Risk Labs.",
         "twitter": "hal2001",
         "avatar": "http://speak.devcon.org/media/avatars/06_Hart_011-cropped-tight_WlIkhn9.jpg"
+      },
+      {
+        "id": "DNB3MY",
+        "name": "Chris Whinfrey",
+        "description": "Co-founder of Hop Protocol\r\nAuthor of the Hop Whitepaper: https://hop.exchange/whitepaper.pdf\r\nPreviously co-founder of Authereum and Level K\r\nAudited Open Zeppelin, dYdX, Augur, Decentraland, and more\r\nStarted the first Ethereum meetup in Boston",
+        "twitter": "WhinfreyChris",
+        "avatar": "http://speak.devcon.org/media/avatars/AshAvatar_TS6pQfP.png"
       }
     ],
     "title": "Battle of the Bridges: Untangling the Tradeoffs of Various Bridge Designs",
@@ -8285,7 +8293,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/diego_tw_perfil_UsR3vLY.png"
       }
     ],
-    "title": "Understanding Latinamericans to design a local flavour DeFi platform",
+    "title": "Understanding Latinamericans to Design a Local Flavour DeFi Platform",
     "track": "UX & Design",
     "duration": 7,
     "start": 1665682200000,
@@ -9464,7 +9472,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/phil_uXI7JYz.jpg"
       }
     ],
-    "title": "MEV for the Next Billion: It's time to get serious...",
+    "title": "MEV for the Next Billion: It's Time to Get Serious...",
     "track": "Layer 1 Protocol",
     "duration": 25,
     "start": 1665750600000,
