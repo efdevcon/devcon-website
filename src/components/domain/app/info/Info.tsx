@@ -88,7 +88,7 @@ export const Info = (props: InfoProps) => {
         />
 
         <CollapsedSection className={css['no-border']}>
-          <CollapsedSectionHeader className="border-bottom">
+          <CollapsedSectionHeader styleOpened className="border-bottom">
             <p className="app-header">FAQ</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
@@ -116,7 +116,7 @@ export const Info = (props: InfoProps) => {
                       setOpenFaq(nextOpenState)
                     }}
                   >
-                    <CollapsedSectionHeader className={`${css['subheader']} border-bottom`}>
+                    <CollapsedSectionHeader styleOpened className={`${css['subheader']} border-bottom`}>
                       <p className="font-sm-fixed bold">{title}</p>
                     </CollapsedSectionHeader>
                     <CollapsedSectionContent dontAnimate>
@@ -126,12 +126,12 @@ export const Info = (props: InfoProps) => {
                           .map(({ body, title }) => {
                             return (
                               <CollapsedSection key={title}>
-                                <CollapsedSectionHeader className={`${css['subheader']}`}>
+                                <CollapsedSectionHeader styleOpened className={`${css['subheader']}`}>
                                   <p className="font-sm bold">{title}</p>
                                 </CollapsedSectionHeader>
                                 <CollapsedSectionContent className={css['faq-inner-content']}>
                                   <div
-                                    className="markdown font-sm clear-bottom-less"
+                                    className={`${css['markdown-body']} markdown font-sm clear-bottom-less`}
                                     dangerouslySetInnerHTML={{ __html: body }}
                                   />
                                 </CollapsedSectionContent>
@@ -148,11 +148,11 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         {registrationSection && (
           <CollapsedSection>
-            <CollapsedSectionHeader>
+            <CollapsedSectionHeader styleOpened>
               <p className="app-header">Registration &amp; Check-in Info</p>
             </CollapsedSectionHeader>
             <CollapsedSectionContent>
-              <ContentSectionRow section={registrationSection} />
+              <ContentSectionRow className="clear-top-less clear-bottom-less" section={registrationSection} />
             </CollapsedSectionContent>
           </CollapsedSection>
         )}
@@ -174,26 +174,26 @@ export const Info = (props: InfoProps) => {
               setOpenTabs(nextOpenState)
             }}
           >
-            <CollapsedSectionHeader>
+            <CollapsedSectionHeader styleOpened>
               <p className="app-header">Venue Guide</p>
             </CollapsedSectionHeader>
             <CollapsedSectionContent>
-              <ContentSectionRow section={venueSection} />
+              <ContentSectionRow className="clear-top-less" section={venueSection} />
             </CollapsedSectionContent>
           </CollapsedSection>
         )}
         {foodSection && (
           <CollapsedSection>
-            <CollapsedSectionHeader>
+            <CollapsedSectionHeader styleOpened>
               <p className="app-header">Food &amp; Drinks</p>
             </CollapsedSectionHeader>
             <CollapsedSectionContent>
-              <ContentSectionRow section={foodSection} />
+              <ContentSectionRow className="clear-top-less" section={foodSection} />
             </CollapsedSectionContent>
           </CollapsedSection>
         )}
         <CollapsedSection>
-          <CollapsedSectionHeader>
+          <CollapsedSectionHeader styleOpened>
             <p className="app-header">City Guide</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
@@ -202,30 +202,38 @@ export const Info = (props: InfoProps) => {
         </CollapsedSection>
         {safetySection && (
           <CollapsedSection>
-            <CollapsedSectionHeader>
+            <CollapsedSectionHeader styleOpened>
               <p className="app-header">Safety</p>
             </CollapsedSectionHeader>
             <CollapsedSectionContent>
-              <ContentSectionRow section={safetySection} />
+              <ContentSectionRow className="clear-top-less" section={safetySection} />
             </CollapsedSectionContent>
           </CollapsedSection>
         )}
         <CollapsedSection>
-          <CollapsedSectionHeader>
+          <CollapsedSectionHeader styleOpened>
             <p className="app-header">App Feedback</p>
           </CollapsedSectionHeader>
           <CollapsedSectionContent>
-            <p className={`${css['github']} clear-bottom`}>
+            <p className={`${css['github']} clear-bottom clear-top-less`}>
               If you have any (technical) issues, feedback or questions about the App, please connect with us on{' '}
               <Link to="https://github.com/efdevcon/devcon-website/">Github</Link>.
             </p>
           </CollapsedSectionContent>
         </CollapsedSection>
 
-        <Link to='https://devcon.org/en/code-of-conduct/' title="Code of Conduct" className={`${css['modal-link']} app-header`}>
+        <Link
+          to="https://devcon.org/en/code-of-conduct/"
+          title="Code of Conduct"
+          className={`${css['modal-link']} app-header`}
+        >
           Code of Conduct
         </Link>
-        <Link to='https://devcon.org/en/terms-of-service/' title="Terms of Service" className={`${css['modal-link']} app-header`}>
+        <Link
+          to="https://devcon.org/en/terms-of-service/"
+          title="Terms of Service"
+          className={`${css['modal-link']} app-header`}
+        >
           Terms of Service
         </Link>
       </div>

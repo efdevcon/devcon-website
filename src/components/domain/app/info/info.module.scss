@@ -1,7 +1,8 @@
 @use 'assets/css/partials/index' as *;
 
 .filter {
-  margin-top: $gaps-gap-4;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
 
 .faq,
@@ -14,6 +15,14 @@
   // }
   margin-left: 8px;
 }
+
+.markdown-body {
+  padding-top: 12px;
+}
+
+// .faq-inner-content {
+  
+// }
 
 .links {
   padding: $gaps-gap-4 0px;

@@ -18,6 +18,7 @@ interface CollapsedSectionHeaderProps {
   children?: any
   className?: string
   open?: boolean
+  styleOpened?: boolean
   sticky?: boolean
   setOpen?: (open: boolean) => void
 }
@@ -27,6 +28,7 @@ const CollapsedSectionHeader = (props: CollapsedSectionHeaderProps) => {
 
   if (props.className) className += ` ${props.className}`
   if (props.sticky) className += ` ${css['sticky']}`
+  if (props.open && props.styleOpened) className += ` ${css['open']}`
 
   return (
     <div className={className} onClick={() => (props.setOpen ? props.setOpen(!props.open) : '')}>
