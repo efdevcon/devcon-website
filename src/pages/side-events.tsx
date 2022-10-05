@@ -21,5 +21,6 @@ export async function getStaticProps(context: any) {
       page: DEFAULT_APP_PAGE,
       scheduleData: await getNotionDatabase(context.locale || 'en', 'cc11ba1c0daa40359710c0958da7739c'),
     },
+    revalidate: 1 * 60 * 60,
   }
 }
