@@ -169,10 +169,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/IMG_1520_o3tqJoW.jpeg",
     "description": "Connor Spelliscy is a crypto researcher and advocate, primarily focused on DAOs.  He runs the DAO Research Collective, which accelerates DAO functionality by supporting and curating research foundational to effective DAO operation. \r\n\r\nHe helps run the Gitcoin advocacy ecosystem round and previously co-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto.",
     "tracks": [
-      "Governance & Coordination"
+      "Governance & Coordination",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "https://www.connorspelliscy.com/about",
     "twitter": "https://twitter.com/c_spelliscy"
@@ -593,20 +595,6 @@
     ],
     "twitter": "https://twitter.com/LKropec",
     "github": "https://github.com/lukassim"
-  },
-  {
-    "id": "TT97JW",
-    "name": "lightclient",
-    "avatar": "https://speak.devcon.org/media/avatars/lightclient_wMTa1JC.jpg",
-    "description": "Member of the go-ethereum team. Maintains several specifications, including `ethereum/execution-apis`. Co-author of EIP-3074.",
-    "tracks": [
-      "Developer Infrastructure"
-    ],
-    "eventDays": [
-      1665619200000
-    ],
-    "twitter": "lightclients",
-    "github": "lightclient"
   },
   {
     "id": "CVWVJP",
@@ -1556,7 +1544,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665619200000
+      1665446400000
     ],
     "website": "https://medium.com/@george.gontikas",
     "twitter": "https://twitter.com/geogont",
@@ -2324,10 +2312,25 @@
       "Cryptoeconomics"
     ],
     "eventDays": [
-      1665619200000
+      1665705600000
     ],
     "twitter": "wjvill",
     "github": "villanuevawill"
+  },
+  {
+    "id": "A7RKE9",
+    "name": "Jennifer Parak",
+    "avatar": null,
+    "description": "Jennifer currently works as a Software Engineer at Chorus One. Having started her career working with Microservices in a Java/Spring Boot environment, she's had the chance of working in the smart ecosystems/iOT space and is keen to branch out to emerging technologies such as blockchain tech, following her passion to solve hard technical challenges in a constraint environment.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "website": "www.jennifer-codes.com",
+    "twitter": "jenpaff",
+    "github": "jenpaff"
   },
   {
     "id": "XVNSBE",
@@ -2483,21 +2486,6 @@
     "github": "OisinKyne"
   },
   {
-    "id": "LZZKHE",
-    "name": "David Chaum",
-    "avatar": "https://speak.devcon.org/media/avatars/8bb5b0fae440b537014081c33a7d2959_kr8ERPu.jpg",
-    "description": "David Chaum is a pioneer in cryptography and privacy-preserving technologies, and is widely recognized as the inventor of digital cash. His work on cryptographic “vault systems” contains the 1st proposal for a blockchain, containing all but 1 element detailed 26 years later in the Bitcoin white-paper. He is credited with creating the first digital currency, eCash, in 1995. David founded the International Association for Cryptologic Research and has a Ph.D. in computer science from UC Berkeley.",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "website": "https://chaum.com/",
-    "twitter": "https://twitter.com/chaumdotcom",
-    "github": "https://git.xx.network/xx_network"
-  },
-  {
     "id": "GJBJK7",
     "name": "Josef J",
     "avatar": null,
@@ -2552,6 +2540,20 @@
     "website": "https://scholar.google.com/citations?user=8GvdbjwAAAAJ&hl=en&oi=ao",
     "twitter": "phildaian",
     "github": "pdaian"
+  },
+  {
+    "id": "EXXLEW",
+    "name": "Tony Olendo",
+    "avatar": "https://speak.devcon.org/media/avatars/Tony_Olendo_-_Graphic_White_ASh4KEO.png",
+    "description": "Tony Olendo is a Developer Education Evangelist at Polygon. He has a passion for Ethereum Developer Education and specifically helping developers in their Solidity journey. He is also a core team member of Afrofuture DAO, Africa's largest community of NFT artists and also a co-founder of Web3Afrika, Africa's largest community of Web3 builders.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "https://twitter.com/tonyolendo",
+    "github": "https://github.com/teeolendo"
   },
   {
     "id": "MPXDXL",
@@ -2635,7 +2637,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665532800000
+      1665446400000
     ],
     "website": "https://fuel.network",
     "twitter": "jadler0"
@@ -3054,6 +3056,19 @@
     "github": "ashhanai"
   },
   {
+    "id": "QZWEKG",
+    "name": "Gabriella",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "gabriellassh"
+  },
+  {
     "id": "9DZ7Q7",
     "name": "E.G. Galano",
     "avatar": "https://speak.devcon.org/media/avatars/eg-headshot_zVCzdsI.jpeg",
@@ -3078,8 +3093,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665532800000,
-      1665705600000
+      1665532800000
     ],
     "website": "http://karl.tech/",
     "twitter": "karl_dot_tech",
@@ -3422,7 +3436,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665705600000
     ],
     "website": "https://www.linkedin.com/in/yosephayele/",
     "twitter": "@yosephayele"
@@ -3436,7 +3451,7 @@
       "Staking & Validator Experience"
     ],
     "eventDays": [
-      1665705600000
+      1665532800000
     ],
     "twitter": "https://twitter.com/MaraSchmiedt",
     "github": "https://github.com/mara-schmiedt"
@@ -3960,9 +3975,9 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000,
+      1665705600000,
       1665619200000,
-      1665705600000
+      1665532800000
     ],
     "twitter": "alexberegszaszi",
     "github": "axic"
@@ -4175,7 +4190,6 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000,
       1665705600000
     ]
   },
@@ -4241,8 +4255,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000,
-      1665705600000
+      1665705600000,
+      1665532800000
     ]
   },
   {
@@ -4637,11 +4651,12 @@
     "description": "",
     "tracks": [
       "Developer Infrastructure",
-      "UX & Design",
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "UX & Design"
     ],
     "eventDays": [
       1665446400000,
+      1665619200000,
       1665532800000,
       1665705600000
     ]
@@ -4826,7 +4841,7 @@
     ],
     "eventDays": [
       1665446400000,
-      1665619200000
+      1665705600000
     ]
   },
   {
@@ -4902,10 +4917,12 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "Developer Infrastructure"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665446400000
     ]
   },
   {
@@ -5021,6 +5038,18 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "PCUMSY",
+    "name": "Agustín Matteri",
+    "avatar": "https://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg",
+    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
       1665446400000
     ]
   },
@@ -5031,6 +5060,31 @@
     "description": "BizDev Lead at StakeWise",
     "tracks": [
       "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "ZCGXDJ",
+    "name": "Naroa",
+    "avatar": null,
+    "description": "Naroa Zurutuza leads the Mapping and Tech work for Giga, UNICEF. Prior to joining UNICEF, she lived and worked in various companies in Kenya; from a startup that is trying to change the way the world understands agriculture to a non-profit empowering local entrepreneurs through access to finance. Naroa holds a MS in Electrical Engineering from Stanford University and a MS in Telecommunications Engineering from EHU-UPV.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000,
+      1665619200000
+    ]
+  },
+  {
+    "id": "PWYUEB",
+    "name": "Wanseob Lim",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665446400000
@@ -5084,6 +5138,18 @@
     ],
     "eventDays": [
       1665532800000
+    ]
+  },
+  {
+    "id": "JTXY88",
+    "name": "Ethereum Foundation",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665446400000
     ]
   },
   {
