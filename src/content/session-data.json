@@ -29,6 +29,12 @@
         "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
         "twitter": "https://twitter.com/AyaMiyagotchi",
         "avatar": "http://speak.devcon.org/media/avatars/Aya_Miyaguchi_Headshot_KnTdjlZ.jpg"
+      },
+      {
+        "id": "FLKFV8",
+        "name": "Vitalik Buterin",
+        "description": "Chief Scientist @ Ethereum Foundation",
+        "avatar": "http://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg"
       }
     ],
     "title": "Opening Ceremonies",
@@ -1335,6 +1341,12 @@
         "name": "Barry Whitehat",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "FLKFV8",
+        "name": "Vitalik Buterin",
+        "description": "Chief Scientist @ Ethereum Foundation",
+        "avatar": "http://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg"
       }
     ],
     "title": "What to know about Zero Knowledge",
@@ -1393,7 +1405,7 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": "Join us for a conversation with protocol developers, researchers and more covering learnings from The Merge, potential future changes to the Ethereum protocol & its governance process, and lightning talks on proposed Core EIPs. Here is an overview of the agenda:\r\n\r\n15:00-15:45: Introduction & Merge Retrospective\r\n15:45-16:45: Potential Upcoming Protocol Changes\r\n16:45-17:00: Break\r\n17:00-17:30: Potential Process Changes",
+    "description": "Join us for a conversation with protocol developers, researchers and more covering learnings from The Merge, potential future changes to the Ethereum protocol & its governance process, and lightning talks on proposed Core EIPs. Find overview agenda in ETH Magicians post https://ethereum-magicians.org/t/ethereum-magicians-protocol-roadmap-session-devcon-vi/10866",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -3302,7 +3314,7 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "Runtime Verification is known for formal methods, but you don't need a PhD to make your code better by thinking like a prover. Here we want to show you how you as a developer or auditor can apply fairly simple mathematical thinking to make your code more robust and your security work simpler. By thinking “invariants first” you can get stronger tests, better docs, and reduce the risk of introducing bugs in your future coding.",
+    "description": "Lecture notes: https://bit.ly/3RFwvBx\r\n\r\nRuntime Verification is known for formal methods, but you don't need a PhD to make your code better by thinking like a prover. Here we want to show you how you as a developer or auditor can apply fairly simple mathematical thinking to make your code more robust and your security work simpler. By thinking “invariants first” you can get stronger tests, better docs, and reduce the risk of introducing bugs in your future coding.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -3361,7 +3373,7 @@
         "avatar": ""
       }
     ],
-    "title": "A SNARKs Tale: A Story of Building SNARK Solutions on Main-net",
+    "title": "A SNARKs Tale: A Story of Building SNARK Solutions on Mainnet",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665574200000,
@@ -3989,15 +4001,35 @@
     "id": "7JJFFH",
     "speakers": [
       {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
+        "id": "NBJJXC",
+        "name": "Marius van der Wijden",
+        "description": "Marius joined the Ethereum Foundation in 2020 to work on go-ethereum. He's interested in fuzzing, testing and shipping The Merge. He wrote his master thesis on differential fuzzing of EVMs where he found 3 critical consensus issues.",
+        "twitter": "vdWijden",
+        "avatar": "http://speak.devcon.org/media/avatars/cat_rgTRJM9.jpg"
+      },
+      {
+        "id": "TT97JW",
+        "name": "lightclient",
+        "description": "Member of the go-ethereum team. Maintains several specifications, including `ethereum/execution-apis`. Co-author of EIP-3074.",
+        "avatar": "http://speak.devcon.org/media/avatars/lightclient_wMTa1JC.jpg"
+      },
+      {
+        "id": "9RRCA7",
+        "name": "Guillaume Ballet",
+        "description": "Geth team, interfacing between research and engineering. Interested in evolutions to the Ethereum protocol.",
+        "twitter": "gballet",
+        "avatar": "http://speak.devcon.org/media/avatars/-1LUYnWJ_400x400_X4rPXAE.jpg"
+      },
+      {
+        "id": "EFUNFY",
+        "name": "Péter Szilágyi",
+        "description": "GETH Team Lead",
+        "avatar": "http://speak.devcon.org/media/avatars/Peter_7omyW8z.jpeg"
       }
     ],
     "title": "Geth Team AMA",
     "track": "Developer Infrastructure",
-    "duration": 25,
+    "duration": 50,
     "start": 1665581400000,
     "end": 1665582900000,
     "room": {
@@ -5348,14 +5380,13 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "Fossil is a set of smart contracts on both Starknet and Ethereum L1 that allow Starknet smart contracts to read anything ever committed to Ethereum L1 and any of it’s EVM based L2s.",
+    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
     "abstract": "",
     "expertise": "",
     "tags": [
-      "L1",
-      "historical",
-      "state",
-      "access"
+      "State expiry",
+      "SNARKS",
+      "L2s"
     ]
   },
   {
@@ -8874,7 +8905,7 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "taking someone through every step of provisioning their own RPC and validator nodes. Go from independent 1 server deployments to multi-server deployments in the workshop. Attendees will be able to spin up and manage their own nodes with easy to use open source software.",
+    "description": "taking someone through every step of provisioning their own nodes. Go from independent 1 server deployments to multi-server deployments in the workshop. Attendees will be able to spin up and manage their own nodes with easy to use open source software.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -10187,9 +10218,9 @@
       {
         "id": "G9FTMN",
         "name": "Oliver JL Renwick",
-        "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, where he helps maintain the MetaMask Knowledge Base and, in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
+        "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, creating and maintaining support documentation for MetaMask, Infura, and other products, and in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
         "twitter": "mapachurro",
-        "avatar": "http://speak.devcon.org/media/avatars/flpfp_m1w5lTh.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/2021headshot_T7gutSm.jpg"
       }
     ],
     "title": "Positive Framing and Communication for Web3",

@@ -125,10 +125,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/cat_rgTRJM9.jpg",
     "description": "Marius joined the Ethereum Foundation in 2020 to work on go-ethereum. He's interested in fuzzing, testing and shipping The Merge. He wrote his master thesis on differential fuzzing of EVMs where he found 3 critical consensus issues.",
     "tracks": [
-      "Layer 1 Protocol"
+      "Layer 1 Protocol",
+      "Developer Infrastructure"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665532800000
     ],
     "twitter": "vdWijden",
     "github": "MariusVanDerWijden"
@@ -595,6 +597,20 @@
     ],
     "twitter": "https://twitter.com/LKropec",
     "github": "https://github.com/lukassim"
+  },
+  {
+    "id": "TT97JW",
+    "name": "lightclient",
+    "avatar": "https://speak.devcon.org/media/avatars/lightclient_wMTa1JC.jpg",
+    "description": "Member of the go-ethereum team. Maintains several specifications, including `ethereum/execution-apis`. Co-author of EIP-3074.",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "lightclients",
+    "github": "lightclient"
   },
   {
     "id": "CVWVJP",
@@ -1355,8 +1371,8 @@
   {
     "id": "G9FTMN",
     "name": "Oliver JL Renwick",
-    "avatar": "https://speak.devcon.org/media/avatars/flpfp_m1w5lTh.jpg",
-    "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, where he helps maintain the MetaMask Knowledge Base and, in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
+    "avatar": "https://speak.devcon.org/media/avatars/2021headshot_T7gutSm.jpg",
+    "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, creating and maintaining support documentation for MetaMask, Infura, and other products, and in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
     "tracks": [
       "UX & Design"
     ],
@@ -1428,7 +1444,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/-1LUYnWJ_400x400_X4rPXAE.jpg",
     "description": "Geth team, interfacing between research and engineering. Interested in evolutions to the Ethereum protocol.",
     "tracks": [
-      "Layer 1 Protocol"
+      "Layer 1 Protocol",
+      "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000
@@ -5057,7 +5074,9 @@
     ],
     "eventDays": [
       1665446400000
-    ]
+    ],
+    "website": "www.linkedin.com/in/agustín-matteri",
+    "twitter": "@agustin_matteri"
   },
   {
     "id": "MJJN9F",
@@ -5169,5 +5188,32 @@
     "eventDays": [
       1665446400000
     ]
+  },
+  {
+    "id": "FLKFV8",
+    "name": "Vitalik Buterin",
+    "avatar": "https://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg",
+    "description": "Chief Scientist @ Ethereum Foundation",
+    "tracks": [
+      "Opportunity & Global Impact",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "https://twitter.com/VitalikButerin"
+  },
+  {
+    "id": "EFUNFY",
+    "name": "Péter Szilágyi",
+    "avatar": "https://speak.devcon.org/media/avatars/Peter_7omyW8z.jpeg",
+    "description": "GETH Team Lead",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "https://twitter.com/peter_szilagyi"
   }
 ]
