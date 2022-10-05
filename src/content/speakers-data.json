@@ -710,7 +710,7 @@
     "id": "XR3YHS",
     "name": "Jonathan Alexander",
     "avatar": "https://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png",
-    "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder and council member of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
+    "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
     "tracks": [
       "Security"
     ],
@@ -2145,7 +2145,7 @@
     "id": "EEB9GU",
     "name": "Severiano Sisneros",
     "avatar": null,
-    "description": "",
+    "description": "I'm a Senior Cryptographer at Semiotic Labs currently working with The SNARKForce, developing cryptography solutions for The Graph protocol. Before that I was a Senior Principal Anti-Tamper Security Engineer at Northrop Grumman and before that I was doing cyber security R&D at Sandia National Labs. I have an MSEE from the University of Illinois at Urbana-Champaign, where I studied cryptography.",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -3567,7 +3567,9 @@
     "eventDays": [
       1665619200000,
       1665705600000
-    ]
+    ],
+    "twitter": "icebearhww",
+    "github": "hwwhww"
   },
   {
     "id": "BCPCGN",
@@ -4566,7 +4568,9 @@
     ],
     "eventDays": [
       1665446400000
-    ]
+    ],
+    "website": "https://www.planett.xyz/",
+    "twitter": "https://twitter.com/AnettRolikova"
   },
   {
     "id": "C3RARC",

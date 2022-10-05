@@ -1392,7 +1392,7 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": "Join us for a conversation with protocol developers, researchers and more covering learnings from The Merge, potential future changes to the Ethereum protocol & its governance process, and lightning talks on proposed Core EIPs.\r\n\r\nAs in previous Ethereum Magicians gathering, this session is designed to engage attendees to participate in these conversations.",
+    "description": "Join us for a conversation with protocol developers, researchers and more covering learnings from The Merge, potential future changes to the Ethereum protocol & its governance process, and lightning talks on proposed Core EIPs. Here is an overview of the agenda:\r\n\r\n15:00-15:45: Introduction & Merge Retrospective\r\n15:45-16:45: Potential Upcoming Protocol Changes\r\n16:45-17:00: Break\r\n17:00-17:30: Potential Process Changes",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -3356,7 +3356,7 @@
       {
         "id": "EEB9GU",
         "name": "Severiano Sisneros",
-        "description": null,
+        "description": "I'm a Senior Cryptographer at Semiotic Labs currently working with The SNARKForce, developing cryptography solutions for The Graph protocol. Before that I was a Senior Principal Anti-Tamper Security Engineer at Northrop Grumman and before that I was doing cyber security R&D at Sandia National Labs. I have an MSEE from the University of Illinois at Urbana-Champaign, where I studied cryptography.",
         "avatar": ""
       }
     ],
@@ -5134,7 +5134,7 @@
       {
         "id": "XR3YHS",
         "name": "Jonathan Alexander",
-        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder and council member of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
+        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
         "twitter": "https://twitter.com/jalex206",
         "avatar": "http://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png"
       }
@@ -7226,7 +7226,7 @@
       {
         "id": "XR3YHS",
         "name": "Jonathan Alexander",
-        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder and council member of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
+        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
         "twitter": "https://twitter.com/jalex206",
         "avatar": "http://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png"
       },
@@ -8859,7 +8859,7 @@
         "avatar": ""
       }
     ],
-    "title": "Zero to Node Hero: Run An Independent Validator Node Across Chains",
+    "title": "Launch Your Own Validator Node",
     "track": "Staking & Validator Experience",
     "duration": 50,
     "start": 1665741600000,
@@ -8872,7 +8872,7 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "Zero to node hero workshop: taking someone through every step of provisioning their own RPC and validator nodes. Go from independent 1 server deployments to multi-server deployments in the workshop. Attendees will be able to spin up and manage their own nodes with easy to use open source software.",
+    "description": "taking someone through every step of provisioning their own RPC and validator nodes. Go from independent 1 server deployments to multi-server deployments in the workshop. Attendees will be able to spin up and manage their own nodes with easy to use open source software.",
     "abstract": "",
     "expertise": "",
     "tags": [
