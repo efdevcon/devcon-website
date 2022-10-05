@@ -3373,7 +3373,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "We focus on a specific, real-world application of SNARKs to demonstrate the exciting process of conducting cutting edge research and applying it to deploy real-world solutions and to inspire other creative solutions using SNARKs as a key enabler. \r\nWe highlight many cutting edge SNARKs and their limitations in the hope to identify opportunities for the community to make Ethereum more SNARK friendly, creating a diverse ecosystem where SNARKs built upon a variety of unique primitives can thrive.",
+    "description": "We tell the story of deploying a real-world solution using SNARKs as a core primitive; highlighting many cutting edge SNARKs and their limitations in the hope to identify opportunities for the community to make Ethereum more SNARK friendly, creating a diverse ecosystem where SNARKs built upon a variety of unique primitives can thrive.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -10937,7 +10937,7 @@
         "avatar": ""
       }
     ],
-    "title": "A deep-dive into the OP Stack",
+    "title": "A deep-dive into Optimism's OP Stack",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665581400000,
