@@ -2802,14 +2802,15 @@
   {
     "id": "LWEFBZ",
     "name": "Mike Connor",
-    "avatar": null,
-    "description": "Mike Connor is an applied cryptographer at Aztec Network, the privacy layer for web3. He received his MMath Mathematical Sciences from the University of Bath, and spent three years designing and building tools for private smart contracts on Ethereum.",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_3373_U65nzzo.jpg",
+    "description": "Mike Connor is an applied cryptographer at Aztec Network, the privacy layer for web3. He's focussed on designing the L2 architecture for fully programmable and composable private smart contracts.\r\nFor the last 4 years he's been designing and building tools for private smart contracts on Ethereum.\r\nBefore then, he was doing something to do with actuarial modelling.",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "twitter": "@mike_connor"
   },
   {
     "id": "GDL8AJ",
