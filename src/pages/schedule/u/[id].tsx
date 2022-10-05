@@ -8,6 +8,7 @@ import { Schedule } from 'components/domain/app/schedule'
 import { GetTracks } from 'services/page'
 import { GetEvent } from 'services/programming'
 import { NoResults } from 'components/common/filter'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   if (!props.userSchedule) {
@@ -24,6 +25,7 @@ export default pageHOC((props: any) => {
 
   return (
     <AppLayout>
+      <SEO title={`${props.userSchedule.username}'s schedule`} />
       <Schedule {...props} sessions={props.userSchedule.sessions} />
     </AppLayout>
   )

@@ -4,10 +4,12 @@ import { pageHOC } from 'context/pageHOC'
 import React from 'react'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   return (
     <AppLayout>
+      <SEO title='Passport' description='Your personalized passport to the Devcon experience.' />
       <LoginPage {...props} />
     </AppLayout>
   )

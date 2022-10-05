@@ -5,10 +5,12 @@ import React from 'react'
 import { GetEvent, GetRooms, GetSessionsByRoom } from 'services/programming'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   return (
     <AppLayout>
+      <SEO title={props.room.name} />
       <Room {...props} />
     </AppLayout>
   )

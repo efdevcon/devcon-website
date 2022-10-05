@@ -9,7 +9,7 @@ import useGetElementHeight from 'hooks/useGetElementHeight'
 import { AppContext } from 'context/app-context'
 
 type LayoutProps = {
-  children: React.ReactChild
+  children: React.ReactChild | React.ReactChild[]
 }
 
 export const AppLayout = (props: LayoutProps) => {
@@ -22,7 +22,6 @@ export const AppLayout = (props: LayoutProps) => {
 
   return (
     <AppContext>
-      <SEO />
       <AccountContextProvider>
         <div
           className={css['app']}

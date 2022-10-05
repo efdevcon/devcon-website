@@ -1,5 +1,6 @@
 import { AppLayout } from 'components/domain/app/Layout'
 import { Floor } from 'components/domain/app/venue/Floor'
+import { SEO } from 'components/domain/seo'
 import { pageHOC } from 'context/pageHOC'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
@@ -22,6 +23,7 @@ interface Params extends ParsedUrlQuery {
 export default pageHOC(({ sessions, ...props }: any) => {
   return (
     <AppLayout>
+      <SEO title={props.floor} />
       <Floor floor={props.floor} rooms={props.rooms} />
     </AppLayout>
   )

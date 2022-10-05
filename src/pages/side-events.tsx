@@ -5,10 +5,12 @@ import React from 'react'
 import { DEFAULT_APP_PAGE } from 'utils/constants'
 import { getGlobalData } from 'services/global'
 import getNotionDatabase from 'components/domain/devcon-week/getNotionDatabase'
+import { SEO } from 'components/domain/seo'
 
 export default pageHOC((props: any) => {
   return (
     <AppLayout>
+      <SEO title='Community Curated Side Events' />
       <SideEvents {...props} />
     </AppLayout>
   )
