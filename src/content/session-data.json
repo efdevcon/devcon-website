@@ -2595,7 +2595,7 @@
         "avatar": ""
       }
     ],
-    "title": "UNICEF CryptoFund: exploring blockchain and how it could change futures for the most vulnerable",
+    "title": "UNICEF CryptoFund: Exploring Blockchain and How it Could Change Futures for the Most Vulnerable",
     "track": "Opportunity & Global Impact",
     "duration": 7,
     "start": 1665510000000,
@@ -5594,13 +5594,6 @@
     "id": "BDMNRC",
     "speakers": [
       {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "twitter": "gubsheep",
-        "avatar": ""
-      },
-      {
         "id": "DKZWNJ",
         "name": "Ying Tong",
         "description": "Core Developer at Electric Coin Company",
@@ -6432,7 +6425,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/8F411BAC-BC3B-4817-B151-4B66566E5E7D_cETvPVG.jpeg"
       }
     ],
-    "title": "Sign in with Ethereum: the most powerful protocol in #Web3?",
+    "title": "Sign in With Ethereum: the Most Powerful Protocol in #Web3?",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665658800000,
@@ -8044,13 +8037,6 @@
         "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
         "twitter": "lakshmansankar",
         "avatar": ""
-      },
-      {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "twitter": "gubsheep",
-        "avatar": ""
       }
     ],
     "title": "ZK Application Design Patterns",
@@ -9478,7 +9464,7 @@
         "avatar": ""
       }
     ],
-    "title": "0xPARC's vision for ZK: \"Programmable Cryptography\"",
+    "title": "ZKPs as \"Programmable Cryptography\"",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665747000000,
@@ -9491,12 +9477,13 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Historically, cryptographic protocols have been built special-purpose for specific kinds of claims or information hiding mechanisms. zkSNARKs and other new cryptographic tools move us to a world of \"general-purpose\" cryptography, where we have expressive languages to express claims about digital identity, reputation, and more. We discuss a high-level framework for thinking about where and why ZK might (or might not) be useful for digital applications.",
+    "description": "Historically, cryptographic protocols have been built special-purpose for specific kinds of claims or information hiding mechanisms. zkSNARKs and other new cryptographic tools move us to a world of \"general-purpose\" cryptography, where we have expressive languages to express claims about digital identity, reputation, and more. We discuss a high-level framework for thinking about where and why ZK and related technologies might (or might not) be useful for digital applications.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
       "ZK",
-      "Zero Knowledge"
+      "Zero Knowledge",
+      "Programmable Cryptography"
     ]
   },
   {
@@ -10851,9 +10838,15 @@
         "name": "Ethereum Foundation",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "JS9FQP",
+        "name": "Kurt Opsahl",
+        "description": "Kurt Opsahl is the Deputy Executive Director and General Counsel of the Electronic Frontier Foundation. In addition to representing clients on civil liberties, free speech and privacy law, Opsahl counsels on EFF projects and initiatives, and is the lead attorney on the Coders' Rights Project. Before joining EFF, Opsahl worked at Perkins Coie, where he represented technology clients with respect to intellectual property, privacy, defamation, and other online liability matters. Prior to Perkins, O",
+        "avatar": "http://speak.devcon.org/media/avatars/Kurt_Opsahl_Headshop_BIqsq4s.jpg"
       }
     ],
-    "title": "Closing Ceremonies",
+    "title": "Closing Ceremonies featuring Kurt Opsahl",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665762000000,
