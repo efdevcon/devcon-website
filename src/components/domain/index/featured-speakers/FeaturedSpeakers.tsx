@@ -16,24 +16,29 @@ import TimBeiko from './speaker-images/tim-beiko.png'
 import MaxSemenchuk from './speaker-images/max-semenchuk.png'
 import Background from './speaker-images/background.png'
 import { useTranslations } from 'next-intl'
+import { useDraggableLink } from 'components/domain/devcon-week/schedule'
+// import { useDr}
 // import Background from 'assets/images/pages/program.svg'
 
 type SpeakerProps = {
   name: string
   image: any
+  appLink: string
 }
 
 const Speaker = (props: SpeakerProps) => {
+  const dragAttributes = useDraggableLink()
+
   return (
     <div className={css['speaker']}>
-      <div className={css['alignment']}>
+      <Link {...dragAttributes} to={props.appLink} className={css['alignment']}>
         <div className={css['text']}>
           {props.name.split(' ').map(partOfName => {
             return <p key={partOfName}>{partOfName}</p>
           })}
         </div>
-        <Image src={props.image} layout="raw" alt={props.name} priority />
-      </div>
+        <Image src={props.image} layout="raw" alt={props.name} priority quality="100" />
+      </Link>
     </div>
   )
 }
@@ -54,21 +59,25 @@ const FeaturedSpeakers = () => {
         <div className={css['background-title']}>{intl('featured_speakers')}</div>
         <SwipeToScroll noBounds scrollIndicatorDirections={{ left: true, right: true }}>
           <div className={css['speakers']}>
-            <Speaker name="Brewster Kahle" image={BrewsterKahle} />
-            <Speaker name="Danny Ryan" image={DannyRyan} />
-            <Speaker name="Aya Miyaguchi" image={AyaMiyaguchi} />
-            <Speaker name="Pia Mancini" image={PiaMancini} />
-            <Speaker name="Bruno Macaes" image={BrunoMacaes} />
-            <Speaker name="Venkatesh Rao" image={VekateshRao} />
-            <Speaker name="Tim Beiko" image={TimBeiko} />
-            <Speaker name="Eric Wall" image={EricWall} />
-            <Speaker name="Max Semenchuk" image={MaxSemenchuk} />
+            <Speaker appLink="https://app.devcon.org/schedule/HFPLPD" name="Brewster Kahle" image={BrewsterKahle} />
+            <Speaker appLink="https://app.devcon.org/speakers/J7DTZN" name="Danny Ryan" image={DannyRyan} />
+            <Speaker appLink="https://app.devcon.org/speakers/ADH9HF" name="Aya Miyaguchi" image={AyaMiyaguchi} />
+            <Speaker appLink="https://app.devcon.org/speakers/ZUMDMJ" name="Pia Mancini" image={PiaMancini} />
+            <Speaker appLink="https://app.devcon.org/speakers/PRM7AM" name="Bruno Macaes" image={BrunoMacaes} />
+            <Speaker appLink="https://app.devcon.org/speakers/Z93KWP" name="Venkatesh Rao" image={VekateshRao} />
+            <Speaker appLink="https://app.devcon.org/speakers/7BSSFC" name="Tim Beiko" image={TimBeiko} />
+            <Speaker appLink="https://app.devcon.org/speakers/3NSWV9" name="Eric Wall" image={EricWall} />
+            <Speaker appLink="https://app.devcon.org/speakers" name="Max Semenchuk" image={MaxSemenchuk} />
           </div>
         </SwipeToScroll>
       </div>
 
       <div className="border-bottom clear-bottom margin-bottom">
         <p className={`${css['description']} clear-bottom-less clear-top`}>{intl('keynote_subtext')}</p>
+
+        <Button className="red lg bold" to="https://app.devcon.org/schedule">
+          {intl('keynote_view_schedule')} →
+        </Button>
       </div>
     </div>
   )

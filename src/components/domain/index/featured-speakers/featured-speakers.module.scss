@@ -17,6 +17,20 @@
   position: relative;
   padding: 0px 12px;
 
+  .text {
+    z-index: 1;
+  }
+
+  img {
+    transition: .2s ease;
+  }
+
+  &:hover {
+    img {
+      transform: perspective(1000px) scale(0.95) rotateX(1deg) rotateY(-4deg);
+    }
+  }
+
   &:nth-child(1) {
     padding-top: 90px;
 

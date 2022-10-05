@@ -242,6 +242,26 @@ export default pageHOC(function ContinuousDevcon(props: any) {
               ></div>
             </div>
           </div>
+
+          <h2 className="clear-bottom border-top clear-top">{props.sections['devcon-after-dark'].title}</h2>
+          <div className="two-columns margin-bottom" id="after-dark">
+            <div className="left">
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['devcon-after-dark'].data.left,
+                }}
+              ></div>
+            </div>
+            <div className="right">
+              <div
+                className="markdown"
+                dangerouslySetInnerHTML={{
+                  __html: props.sections['devcon-after-dark'].data.right,
+                }}
+              ></div>
+            </div>
+          </div>
         </section>
 
         <section className={`${css['hacker-basement']} expand`}>
@@ -317,6 +337,7 @@ export async function getStaticProps(context: any) {
       'community-and-ecosystem-hubs-at-devcon-bogota-2',
       'community-and-ecosystem-hubs-at-devcon-bogota',
       'hacker-basement',
+      'devcon-after-dark',
     ],
     context.locale
   )
