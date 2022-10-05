@@ -1844,9 +1844,9 @@
   },
   {
     "id": "VXMHCZ",
-    "name": "Oskar Thoren",
+    "name": "Oskar Thorén",
     "avatar": "https://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg",
-    "description": "Oskar Thoren is the protocol research lead at Vac, an R&D org creating modular p2p protocols for private, secure, censorship resistant communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
+    "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
