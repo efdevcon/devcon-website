@@ -2391,7 +2391,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
       }
     ],
-    "title": "How Traditional Industries are Adopting Web3 to Solve Problems in Latam",
+    "title": "Climate collapse or Social transformation?",
     "track": "Opportunity & Global Impact",
     "duration": 7,
     "start": 1665508800000,
@@ -2404,7 +2404,7 @@
       "capacity": 414
     },
     "type": "Lightning Talk",
-    "description": ".",
+    "description": "The Paris Agreement was built over the biggest scientific consensus in the history of Humankind.\r\n\r\nWe are reaching its threshold faster than expected: already 1.1 degrees above pre-industrial levels and counting.\r\n\r\n2030 forecast: 1.5 disasters a day (earthquakes, tsunamis, electricity infrastructure loss: no internet- no blockchain)\r\n\r\nMore than 1.5 degrees means massive migrations, civilization collapse and potential extinction….",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -2746,8 +2746,8 @@
     "speakers": [
       {
         "id": "ZRAAAQ",
-        "name": "yaoqi",
-        "description": "Dr. Yaoqi Jia is the founder of Alt Research and AltLayer Network, an elastic and versatile scaling protocol for Web3. Before 2022, he was the director of Parity Asia, which provides blockchain infrastructure (say OpenEthereum) for the decentralised Web. He’s selected to the Forbes 30 Under 30 Asia list, 2019. Prior to that, he was the co-founder and CTO of Zilliqa, leading the efforts of design and delivery of the very first public sharding blockchain platform.",
+        "name": "Yaoqi",
+        "description": "Dr. Yaoqi Jia is the founder of AltLayer, an elastic and versatile scaling protocol for Web3. Before 2022, he was the director of Parity Asia, which provides blockchain infrastructure (say OpenEthereum) for the decentralised Web. He’s selected to the Forbes 30 Under 30 Asia list, 2019. Prior to that, he was the co-founder and CTO of Zilliqa. He got his Ph.D. in 2017 and his work was published in CCS, Usenix Security and other top-tier conferences.",
         "twitter": "@jiayaoqi",
         "avatar": "http://speak.devcon.org/media/avatars/profile_photo_Rxkc3P2.jpg"
       }
@@ -6320,7 +6320,7 @@
       "info": "Floor 3",
       "capacity": 112
     },
-    "type": "Workshop 2h",
+    "type": "Workshop",
     "description": ".",
     "abstract": "",
     "expertise": "Beginner",
@@ -9881,7 +9881,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile_ZaXbJ6x.png"
       }
     ],
-    "title": "How to Stay Up to Sate with All the Movements and the Rise of New Technologies",
+    "title": "How to Stay Up to Date with All the Movements and the Rise of New Technologies",
     "track": "Developer Infrastructure",
     "duration": 7,
     "start": 1665747600000,
