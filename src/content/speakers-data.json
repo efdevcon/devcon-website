@@ -3699,7 +3699,7 @@
       "UX & Design"
     ],
     "eventDays": [
-      1665446400000
+      1665532800000
     ],
     "github": "@catsnackattack"
   },
@@ -3769,6 +3769,7 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
+      1665532800000,
       1665446400000
     ],
     "twitter": "@rachel_aux",
@@ -3994,9 +3995,9 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665705600000,
+      1665532800000,
       1665619200000,
-      1665532800000
+      1665705600000
     ],
     "twitter": "alexberegszaszi",
     "github": "axic"
@@ -4138,7 +4139,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665705600000
     ],
     "website": "opensea.io",
     "twitter": "z0age",
@@ -4274,8 +4275,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665705600000,
-      1665532800000
+      1665532800000,
+      1665705600000
     ]
   },
   {
@@ -4672,14 +4673,13 @@
     "description": "",
     "tracks": [
       "Developer Infrastructure",
-      "Opportunity & Global Impact",
-      "UX & Design"
+      "UX & Design",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
+      1665705600000,
       1665446400000,
-      1665619200000,
-      1665532800000,
-      1665705600000
+      1665619200000
     ]
   },
   {
@@ -4938,12 +4938,12 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Opportunity & Global Impact",
-      "Developer Infrastructure"
+      "Developer Infrastructure",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000,
-      1665446400000
+      1665446400000,
+      1665619200000
     ]
   },
   {
@@ -5097,8 +5097,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000,
-      1665619200000
+      1665619200000,
+      1665446400000
     ]
   },
   {
@@ -5184,7 +5184,7 @@
       "UX & Design"
     ],
     "eventDays": [
-      1665446400000
+      1665532800000
     ]
   },
   {
@@ -5192,8 +5192,12 @@
     "name": "Pablo Voorvaart",
     "avatar": null,
     "description": "Freelance software engineer, supporting the decentralized future.\r\nCurrently building open source web3 video tools: streameth | LiveNFTs",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
     "website": "https://github.com/efdevcon/streameth",
     "twitter": "@streameth"
   },
