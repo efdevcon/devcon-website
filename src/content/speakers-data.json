@@ -3319,7 +3319,7 @@
     "id": "WB8KEZ",
     "name": "Odysseas",
     "avatar": "https://speak.devcon.org/media/avatars/twitter-profile-01_7v56gU2.png",
-    "description": "℣ibes ℯngineer  @nomadxyz_ | sovereign individual 𓀀 ⋃ shitposter 𓁀 ⋃ system design, rust, solidity (🔥,⚒️) ⋃⛓",
+    "description": "Protocol engineer in Nomad. Used to work as a protocol consultant in the web3 space, and in a previous life, he worked in web2 in the area of DevOps and IoT.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -3905,15 +3905,17 @@
   },
   {
     "id": "ZX3BNQ",
-    "name": "Team Next Billion",
+    "name": "Ethereum Foundation Fellows",
     "avatar": null,
-    "description": "placeholder text\r\n[the Ethereum expanded universe comprises millions of people, but there are billions of us here on earth, and it's our ambitious vision for Ethereum to have a positive impact on all of them. To reach the next billion, we must overcome many gaps in representation across cultures, nationalities, and economic classes.]",
+    "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "website": "https://fellowship.ethereum.foundation/",
+    "twitter": "twitter.com/efnextbillion"
   },
   {
     "id": "WJBH9R",

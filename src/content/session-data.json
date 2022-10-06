@@ -6556,8 +6556,8 @@
     "speakers": [
       {
         "id": "ZX3BNQ",
-        "name": "Team Next Billion",
-        "description": "placeholder text\r\n[the Ethereum expanded universe comprises millions of people, but there are billions of us here on earth, and it's our ambitious vision for Ethereum to have a positive impact on all of them. To reach the next billion, we must overcome many gaps in representation across cultures, nationalities, and economic classes.]",
+        "name": "Ethereum Foundation Fellows",
+        "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
         "avatar": ""
       }
     ],
@@ -6574,7 +6574,7 @@
       "capacity": 414
     },
     "type": "Panel",
-    "description": "Ethereum Foundation Fellows come together to discuss DeFi for the unbanked/underbanked. Panelists include Abhishek Bhattacharya, Benson Njuguna, Gabriela Guerra, and Marcus Alburez Myers with Karam Alhamad as moderator.",
+    "description": "The term 'public good', which has been adopted by many in the Ethereum community, should apply to the whole public, including those without access to traditional systems. This panel is about how blockchains actually make it to the un/under-banked -- the pragmatic considerations, and the inspirational possibilities.\r\n\r\nPanelists include Abhishek Bhattacharya, Benson Njuguna, Gabriela Guerra, and Marcus Alburez Myers with Karam Alhamad as moderator.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -7182,8 +7182,8 @@
     "speakers": [
       {
         "id": "ZX3BNQ",
-        "name": "Team Next Billion",
-        "description": "placeholder text\r\n[the Ethereum expanded universe comprises millions of people, but there are billions of us here on earth, and it's our ambitious vision for Ethereum to have a positive impact on all of them. To reach the next billion, we must overcome many gaps in representation across cultures, nationalities, and economic classes.]",
+        "name": "Ethereum Foundation Fellows",
+        "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
         "avatar": ""
       }
     ],
@@ -7200,7 +7200,7 @@
       "capacity": 414
     },
     "type": "Panel",
-    "description": "placeholder text\r\n[A team Next Billion member to present about the Fellows’ work and then invite selected (cohort 2) Fellows to have a panel discussion]",
+    "description": "Ethereum needs to overcome many gaps in representation across cultures, languages, ages, and more. This panel explores the question: \"Who are the people that you consider to be the 'next billion' Ethereum users, and how will Ethereum make an impact on their lives?”\r\n\r\nPanelists include Geoffrey See, Mary Davies, and Mihajlo Atanackovic with Chuy Cepeda as moderator.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -9279,7 +9279,7 @@
       {
         "id": "WB8KEZ",
         "name": "Odysseas",
-        "description": "℣ibes ℯngineer  @nomadxyz_ | sovereign individual 𓀀 ⋃ shitposter 𓁀 ⋃ system design, rust, solidity (🔥,⚒️) ⋃⛓",
+        "description": "Protocol engineer in Nomad. Used to work as a protocol consultant in the web3 space, and in a previous life, he worked in web2 in the area of DevOps and IoT.",
         "twitter": "odysseas_eth",
         "avatar": "http://speak.devcon.org/media/avatars/twitter-profile-01_7v56gU2.png"
       }
@@ -9297,7 +9297,7 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "- Introduction to Foundry\r\n- Mental models for testing with Foundry\r\n- Mental models for developing cross-chain applications\r\n- How to unit  & fuzz test with Foundry\r\n- How to do cross-chain fork tests with Foundry\r\n- How to debug with Foundry\r\n- How to deploy cross-chain apps with Foundry",
+    "description": "The Nomad Bridge suffered an incident in early August, resulting in about $190M in cryptocurrencies lost. We will see how the Nomad Bridge was able to get hacked and how it relates to the Nomad Protocol. Finally, we will share learnings and insights we got from this incident, actionable tips that all protocols should take into serious consideration in order to reduce the probability of a potential hack.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
