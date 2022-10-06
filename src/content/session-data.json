@@ -608,7 +608,7 @@
         "id": "NBJJXC",
         "name": "Marius van der Wijden",
         "description": "Marius joined the Ethereum Foundation in 2020 to work on go-ethereum. He's interested in fuzzing, testing and shipping The Merge. He wrote his master thesis on differential fuzzing of EVMs where he found 3 critical consensus issues.",
-        "twitter": "vdWijden",
+        "twitter": "@vdwijden",
         "avatar": "http://speak.devcon.org/media/avatars/cat_rgTRJM9.jpg"
       }
     ],
@@ -1089,6 +1089,12 @@
         "name": "Scott Moore",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "RD3FWQ",
+        "name": "Hester",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Participant Experience Design",
@@ -1123,7 +1129,7 @@
         "avatar": ""
       }
     ],
-    "title": "Technical details of the Solidity compiler, details TBA, maybe typed Yul IR",
+    "title": "Technical details of the Solidity compiler",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665498600000,
@@ -1136,7 +1142,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "We hit some limitations with the Yul IR and plan to introduce a higher-level typed intermediate language to the Solidity compiler.",
+    "description": "Recent updates about Solidity and plans for the future.",
     "abstract": "",
     "expertise": "Advanced",
     "tags": [
@@ -4189,7 +4195,7 @@
         "id": "NBJJXC",
         "name": "Marius van der Wijden",
         "description": "Marius joined the Ethereum Foundation in 2020 to work on go-ethereum. He's interested in fuzzing, testing and shipping The Merge. He wrote his master thesis on differential fuzzing of EVMs where he found 3 critical consensus issues.",
-        "twitter": "vdWijden",
+        "twitter": "@vdwijden",
         "avatar": "http://speak.devcon.org/media/avatars/cat_rgTRJM9.jpg"
       },
       {
@@ -4940,7 +4946,7 @@
         "id": "9N3L3K",
         "name": "Guillermo Angeris",
         "description": null,
-        "twitter": "tarunchitra",
+        "twitter": "guilleangeris",
         "avatar": ""
       }
     ],
@@ -6558,6 +6564,7 @@
         "id": "ZX3BNQ",
         "name": "Ethereum Foundation Fellows",
         "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
+        "twitter": "twitter.com/efnextbillion",
         "avatar": ""
       }
     ],
@@ -7184,6 +7191,7 @@
         "id": "ZX3BNQ",
         "name": "Ethereum Foundation Fellows",
         "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
+        "twitter": "twitter.com/efnextbillion",
         "avatar": ""
       }
     ],
@@ -7270,7 +7278,7 @@
       {
         "id": "CCVCAZ",
         "name": "Melanie Davis",
-        "description": "Contributor Experience Lead @DXdao_ I DAO and DeFi enthusiast",
+        "description": "Melanie leads the Contributor Experience at DXdao. She has over 8 years of professional experience in People Operations and transforming communities through strategic innovation. As a passionate Web3 and DAO contributor, she constantly pushes the boundaries of traditional Human Resources to help her build a resilient and scalable decentralized ecosystem at DXdao.",
         "twitter": "@melanie__davis",
         "avatar": "http://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg"
       },
@@ -9861,7 +9869,7 @@
       {
         "id": "XREBWJ",
         "name": "Milos Novitovic",
-        "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped each 3327 experiment (https://3327.io/projects/) and worked on the most of MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
+        "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped most of the 3327 experiment (https://3327.io/projects/) and worked on the most of MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
         "avatar": "http://speak.devcon.org/media/avatars/milos-novitovic_jp5tivH.jpeg"
       },
       {
@@ -10683,7 +10691,7 @@
         "id": "J9HBR7",
         "name": "Konstantinos Paparas",
         "description": "Open-source software developer",
-        "twitter": "lefterisjp",
+        "twitter": "https://twitter.com/kelsos86/",
         "avatar": ""
       }
     ],
@@ -11147,6 +11155,7 @@
         "id": "VACMRY",
         "name": "Pablo Voorvaart",
         "description": "Freelance software engineer, supporting the decentralized future.\r\nCurrently building open source web3 video tools: streameth | LiveNFTs",
+        "twitter": "@streameth",
         "avatar": ""
       }
     ],
