@@ -29,6 +29,12 @@
         "description": "Aya originally became fascinated in the blockchain space for its potential to impact financial inclusion in emerging economies. In early 2013, she joined Kraken and educated the public, regulators, and media on cryptocurrencies and blockchain innovation globally as Managing Director of Japan. Her passion for creating lasting sustainable impact led her to join the Ethereum Foundation as Executive Director. There, she leads the Foundation’s work to support the Ethereum ecosystem through core resea",
         "twitter": "https://twitter.com/AyaMiyagotchi",
         "avatar": "http://speak.devcon.org/media/avatars/Aya_Miyaguchi_Headshot_KnTdjlZ.jpg"
+      },
+      {
+        "id": "FLKFV8",
+        "name": "Vitalik Buterin",
+        "description": "Chief Scientist @ Ethereum Foundation",
+        "avatar": "http://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg"
       }
     ],
     "title": "Opening Ceremonies",
@@ -1335,6 +1341,12 @@
         "name": "Barry Whitehat",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "FLKFV8",
+        "name": "Vitalik Buterin",
+        "description": "Chief Scientist @ Ethereum Foundation",
+        "avatar": "http://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg"
       }
     ],
     "title": "What to know about Zero Knowledge",
@@ -1392,7 +1404,7 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": "Join us for a conversation with protocol developers, researchers and more covering learnings from The Merge, potential future changes to the Ethereum protocol & its governance process, and lightning talks on proposed Core EIPs.\r\n\r\nAs in previous Ethereum Magicians gathering, this session is designed to engage attendees to participate in these conversations.",
+    "description": "Join us for a conversation with protocol developers, researchers and more covering learnings from The Merge, potential future changes to the Ethereum protocol & its governance process, and lightning talks on proposed Core EIPs. Find overview agenda in ETH Magicians post https://ethereum-magicians.org/t/ethereum-magicians-protocol-roadmap-session-devcon-vi/10866",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -1854,7 +1866,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/light_copy_wK1gC94.png"
       }
     ],
-    "title": "Designing public goods using ZKPs",
+    "title": "Designing Public Goods Using ZKPs",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665505800000,
@@ -2580,7 +2592,7 @@
         "avatar": ""
       }
     ],
-    "title": "UNICEF CryptoFund: exploring blockchain and how it could change futures for the most vulnerable",
+    "title": "UNICEF CryptoFund: Exploring Blockchain and How it Could Change Futures for the Most Vulnerable",
     "track": "Opportunity & Global Impact",
     "duration": 7,
     "start": 1665510000000,
@@ -3216,13 +3228,13 @@
     "speakers": [
       {
         "id": "VXMHCZ",
-        "name": "Oskar Thoren",
-        "description": "Oskar Thoren is the protocol research lead at Vac, an R&D org creating modular p2p protocols for private, secure, censorship resistant communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
+        "name": "Oskar Thorén",
+        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
         "twitter": "oskarth",
         "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
       }
     ],
-    "title": "Private and Incentivized P2P Messaging with Waku Using ZKPs",
+    "title": "Building Privacy-Protecting Infrastructure",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665572400000,
@@ -3235,7 +3247,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "In this talk we'll look at Waku, the communication layer for Web3, and how it uses ZK for its service network. We cover topics such as:\r\n\r\n- Using RLN to provide private, economic spam protection\r\n- Incentivizing costly services, such as storing messages, while protecting users' privacy with ZKPs\r\n- How these can be deployed in a p2p network\r\n- How we we get the best of both worlds with Rust and Circom using ark-circom and Zerokit\r\n- Briefly on how we plan to use Halo 2 in the future",
+    "description": "In this talk we'll go over how to build privacy-protecting infrastructure. What is it, why do we need it and how can we build it?\r\n\r\nWe'll look at Waku, the communication layer for Web3. We'll see how it uses ZKPs to incentivize and protect the Waku network. We'll also look at Zerokit, a library that makes it easier to use ZKPs in different environments.\r\n\r\nAfter this talk, I hope you'll better understand the importance of privacy-protecting infrastructure and how we can build it.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -3301,7 +3313,7 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "Runtime Verification is known for formal methods, but you don't need a PhD to make your code better by thinking like a prover. Here we want to show you how you as a developer or auditor can apply fairly simple mathematical thinking to make your code more robust and your security work simpler. By thinking “invariants first” you can get stronger tests, better docs, and reduce the risk of introducing bugs in your future coding.",
+    "description": "Lecture notes: https://bit.ly/3RFwvBx\r\n\r\nRuntime Verification is known for formal methods, but you don't need a PhD to make your code better by thinking like a prover. Here we want to show you how you as a developer or auditor can apply fairly simple mathematical thinking to make your code more robust and your security work simpler. By thinking “invariants first” you can get stronger tests, better docs, and reduce the risk of introducing bugs in your future coding.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -3356,11 +3368,11 @@
       {
         "id": "EEB9GU",
         "name": "Severiano Sisneros",
-        "description": null,
+        "description": "I'm a Senior Cryptographer at Semiotic Labs currently working with The SNARKForce, developing cryptography solutions for The Graph protocol. Before that I was a Senior Principal Anti-Tamper Security Engineer at Northrop Grumman and before that I was doing cyber security R&D at Sandia National Labs. I have an MSEE from the University of Illinois at Urbana-Champaign, where I studied cryptography.",
         "avatar": ""
       }
     ],
-    "title": "Roadrunner Polynomial Commitments: Record Transparent Proof Size with Applications to EIP4444 and SNARKs",
+    "title": "A SNARKs Tale: A Story of Building SNARK Solutions on Mainnet",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665574200000,
@@ -3373,12 +3385,12 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "We present Roadrunner Polynomial Commitments, Transparent Polynomial Commitments with record proof size. We illuminate some technical innovations which make our construction possible.\r\n\r\nWe then explore applications of Roadrunner to solving EIP4444 (historical state expiry and offloading of historical queries for Full Nodes), and synthesizing new SNARKs.\r\n\r\nWe announce our open source Rust implementation, benchmarks, and also our paper detailing our construction and its proofs of security.",
+    "description": "We tell the story of deploying a real-world solution using SNARKs as a core primitive; highlighting many cutting edge SNARKs and their limitations in the hope to identify opportunities for the community to make Ethereum more SNARK friendly, creating a diverse ecosystem where SNARKs built upon a variety of unique primitives can thrive.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
       "SNARK",
-      "polynomial",
+      "applications",
       "EIP"
     ]
   },
@@ -3394,8 +3406,8 @@
       {
         "id": "QERDVF",
         "name": "Bryan Moreno",
-        "description": null,
-        "avatar": ""
+        "description": "Born in Brazil but currently based in Berlin. I've been writing software for over 10 years, both on the backend and on the frontend. Almost a year ago, I started working at Shopify on their blockchain team. I've been helping them tap into blockchain technologies and use NFTs to unlock new commerce experiences for their customers.",
+        "avatar": "http://speak.devcon.org/media/avatars/photo_IVtZcHa.jpg"
       }
     ],
     "title": "The Challenges and Learnings of Implementing Wallet Connection on Mobile",
@@ -3988,15 +4000,35 @@
     "id": "7JJFFH",
     "speakers": [
       {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
+        "id": "NBJJXC",
+        "name": "Marius van der Wijden",
+        "description": "Marius joined the Ethereum Foundation in 2020 to work on go-ethereum. He's interested in fuzzing, testing and shipping The Merge. He wrote his master thesis on differential fuzzing of EVMs where he found 3 critical consensus issues.",
+        "twitter": "vdWijden",
+        "avatar": "http://speak.devcon.org/media/avatars/cat_rgTRJM9.jpg"
+      },
+      {
+        "id": "TT97JW",
+        "name": "lightclient",
+        "description": "Member of the go-ethereum team. Maintains several specifications, including `ethereum/execution-apis`. Co-author of EIP-3074.",
+        "avatar": "http://speak.devcon.org/media/avatars/lightclient_wMTa1JC.jpg"
+      },
+      {
+        "id": "9RRCA7",
+        "name": "Guillaume Ballet",
+        "description": "Geth team, interfacing between research and engineering. Interested in evolutions to the Ethereum protocol.",
+        "twitter": "gballet",
+        "avatar": "http://speak.devcon.org/media/avatars/-1LUYnWJ_400x400_X4rPXAE.jpg"
+      },
+      {
+        "id": "EFUNFY",
+        "name": "Péter Szilágyi",
+        "description": "GETH Team Lead",
+        "avatar": "http://speak.devcon.org/media/avatars/Peter_7omyW8z.jpeg"
       }
     ],
     "title": "Geth Team AMA",
     "track": "Developer Infrastructure",
-    "duration": 25,
+    "duration": 50,
     "start": 1665581400000,
     "end": 1665582900000,
     "room": {
@@ -4184,7 +4216,7 @@
       {
         "id": "3EBXMM",
         "name": "Brian Wilkes, CFA",
-        "description": "I am a data scientist and financial analyst currently working on a grant from the EF PSE team.  I am fascinated by a future enabled by zero knowledge technology, including both scalability and privacy.   Outside of web 3 work, I am a husband and father of a 2 year old I like to carry up mountains in Colorado.  I am generally interested in everything, but you will catch my attention with music (I play bass), skiing, and anything Ethereum related :)",
+        "description": "I am a data scientist and financial analyst currently working on a grant from the EF PSE team.  I am fascinated by a future enabled by zero-knowledge technology, including both scalability and privacy.   Outside of Ethereum work, I am a husband and father of a 2-year-old I like to carry up mountains in Colorado.  I am generally interested in everything, but you will catch my attention with music (I play bass), skiing, and anything Ethereum related :)",
         "avatar": "http://speak.devcon.org/media/avatars/Profile_Pic_kqK2pZx.PNG"
       }
     ],
@@ -4282,7 +4314,7 @@
       {
         "id": "HGMDTU",
         "name": "John Kane",
-        "description": ".",
+        "description": "Programmer and team lead at the Nomic Foundation.",
         "twitter": "@john_kane",
         "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
       }
@@ -4300,7 +4332,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "A jaunt through the current state of the art in Solidity editor tooling and how we take it to the next level.",
+    "description": "A brisk jaunt through the state of the art in Solidity editor tooling, a tour of Nomic's Solidity Language Server and how we can take Solidity editor support to the next level.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -5134,7 +5166,7 @@
       {
         "id": "XR3YHS",
         "name": "Jonathan Alexander",
-        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder and council member of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
+        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
         "twitter": "https://twitter.com/jalex206",
         "avatar": "http://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png"
       }
@@ -5347,14 +5379,13 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "Fossil is a set of smart contracts on both Starknet and Ethereum L1 that allow Starknet smart contracts to read anything ever committed to Ethereum L1 and any of it’s EVM based L2s.",
+    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
     "abstract": "",
     "expertise": "",
     "tags": [
-      "L1",
-      "historical",
-      "state",
-      "access"
+      "State expiry",
+      "SNARKS",
+      "L2s"
     ]
   },
   {
@@ -5557,13 +5588,6 @@
   {
     "id": "BDMNRC",
     "speakers": [
-      {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "twitter": "gubsheep",
-        "avatar": ""
-      },
       {
         "id": "DKZWNJ",
         "name": "Ying Tong",
@@ -6052,7 +6076,7 @@
     ],
     "title": "Adoption Day",
     "track": "UX & Design",
-    "duration": 120,
+    "duration": 480,
     "start": 1665655200000,
     "end": 1665662400000,
     "room": {
@@ -6309,7 +6333,7 @@
         "avatar": ""
       }
     ],
-    "title": "Ethereum for the Next Billion, with EF Fellows Cohort #1",
+    "title": "Ethereum for the next billion: DeFi for the unbanked/underbanked",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665658800000,
@@ -6322,7 +6346,7 @@
       "capacity": 414
     },
     "type": "Panel",
-    "description": "A team Next Billion member to present about the Fellows’ work and then invite selected Fellows to have a panel discussion",
+    "description": "Ethereum Foundation Fellows come together to discuss DeFi for the unbanked/underbanked. Panelists include Abhishek Bhattacharya, Benson Njuguna, Gabriela Guerra, and Marcus Alburez Myers with Karam Alhamad as moderator.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -6395,7 +6419,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/8F411BAC-BC3B-4817-B151-4B66566E5E7D_cETvPVG.jpeg"
       }
     ],
-    "title": "Sign in with Ethereum: the most powerful protocol in #Web3?",
+    "title": "Sign in With Ethereum: the Most Powerful Protocol in #Web3?",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665658800000,
@@ -6968,7 +6992,7 @@
         "avatar": ""
       }
     ],
-    "title": "Ethereum for the Next Billion, with EF Fellows Cohort #2",
+    "title": "Ethereum for the next billion: who are your next billion?",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665666000000,
@@ -7226,7 +7250,7 @@
       {
         "id": "XR3YHS",
         "name": "Jonathan Alexander",
-        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder and council member of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
+        "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
         "twitter": "https://twitter.com/jalex206",
         "avatar": "http://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png"
       },
@@ -7492,8 +7516,8 @@
       {
         "id": "LWEFBZ",
         "name": "Mike Connor",
-        "description": "Mike Connor is an applied cryptographer at Aztec Network, the privacy layer for web3. He received his MMath Mathematical Sciences from the University of Bath, and spent three years designing and building tools for private smart contracts on Ethereum.",
-        "avatar": ""
+        "description": "Mike Connor is an applied cryptographer at Aztec Network, the privacy layer for web3. He's focussed on designing the L2 architecture for fully programmable and composable private smart contracts.\r\nFor the last 4 years he's been designing and building tools for private smart contracts on Ethereum.\r\nBefore then, he was doing something to do with actuarial modelling.",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_3373_U65nzzo.jpg"
       }
     ],
     "title": "Public-Private Composability",
@@ -7593,7 +7617,7 @@
         "avatar": ""
       }
     ],
-    "title": "Improving PBS: Lessons Learned from MEV-Boost and Builder API",
+    "title": "Evaluating the PBS Experiment: Early insights from MEV-Boost and the Builder Market",
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665671400000,
@@ -7606,7 +7630,7 @@
       "capacity": 110
     },
     "type": "Talk",
-    "description": "PBS is a major change to the core Ethereum protocol. It attempts to minimise negative effects of MEV by delegating block building to a market of block builders, via the builder API. This talk would cover what we have learned from the rollout of mev-boost, focusing on what the real-world builder dynamics look like, and what this means for in-protocol PBS. What are the main improvements that we can make to the PBS design in response to how mev-boost is performing?",
+    "description": "PBS is a major change to the core Ethereum protocol. It attempts to minimise negative effects of MEV by delegating block building to a market of block builders. This talk would cover what we have learned from the rollout of mev-boost, focusing on what is happening in the builder market, and what this means for the future of in-protocol PBS. What are the main improvements that we can make to the PBS design in response to how this prototype version is performing?",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -8005,13 +8029,6 @@
         "name": "Lakshman Sankar",
         "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
         "twitter": "lakshmansankar",
-        "avatar": ""
-      },
-      {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "twitter": "gubsheep",
         "avatar": ""
       }
     ],
@@ -8858,7 +8875,7 @@
         "avatar": ""
       }
     ],
-    "title": "Zero to Node Hero: Run An Independent Validator Node Across Chains",
+    "title": "Launch Your Own Validator Node",
     "track": "Staking & Validator Experience",
     "duration": 50,
     "start": 1665741600000,
@@ -8871,7 +8888,7 @@
       "capacity": 112
     },
     "type": "Workshop 1h",
-    "description": "Zero to node hero workshop: taking someone through every step of provisioning their own RPC and validator nodes. Go from independent 1 server deployments to multi-server deployments in the workshop. Attendees will be able to spin up and manage their own nodes with easy to use open source software.",
+    "description": "taking someone through every step of provisioning their own nodes. Go from independent 1 server deployments to multi-server deployments in the workshop. Attendees will be able to spin up and manage their own nodes with easy to use open source software.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -9333,7 +9350,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/pfp_yE7VWik.jpg"
       }
     ],
-    "title": "Wen Yul FV",
+    "title": "Building an End-to-End EVM Symbolic Execution Engine in Solidity",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665745200000,
@@ -9346,13 +9363,13 @@
       "capacity": 110
     },
     "type": "Talk",
-    "description": "Yul is the IR language used by the Solidity and Fe compilers. Besides its IR role, it is also widely used by the optimizooors - remarkable creatures that feed off gas units. However, there are not many code analysis tools that target Yul. Most formal verification (FV) tools for Ethereum target EVM bytecode, and a few analyze high-level Solidity invariants. In this talk we will discuss the advantages of analyzing Yul over EVM/Solidity, and go through a range of existing tools.",
+    "description": "Symbolic execution is a widely used approach to formally verify/analyze EVM bytecode. But what exactly is it? What are constraints, and solvers?? Why do you need symbols anyway?? In this talk we will go through a symbolic execution engine for EVM bytecode fully written in Solidity, hopefully demonstrating how beautiful and simple these techniques are, and incentivizing developers to contribute to or write their own formal methods tools.",
     "abstract": "",
     "expertise": "Advanced",
     "tags": [
-      "Formal verification",
-      "Yul",
-      "Solidity"
+      "Solidity",
+      "Symbolic Execution",
+      "Formal Verification"
     ]
   },
   {
@@ -9439,7 +9456,7 @@
         "avatar": ""
       }
     ],
-    "title": "0xPARC's vision for ZK: \"Programmable Cryptography\"",
+    "title": "ZKPs as \"Programmable Cryptography\"",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665747000000,
@@ -9452,12 +9469,13 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Historically, cryptographic protocols have been built special-purpose for specific kinds of claims or information hiding mechanisms. zkSNARKs and other new cryptographic tools move us to a world of \"general-purpose\" cryptography, where we have expressive languages to express claims about digital identity, reputation, and more. We discuss a high-level framework for thinking about where and why ZK might (or might not) be useful for digital applications.",
+    "description": "Historically, cryptographic protocols have been built special-purpose for specific kinds of claims or information hiding mechanisms. zkSNARKs and other new cryptographic tools move us to a world of \"general-purpose\" cryptography, where we have expressive languages to express claims about digital identity, reputation, and more. We discuss a high-level framework for thinking about where and why ZK and related technologies might (or might not) be useful for digital applications.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
       "ZK",
-      "Zero Knowledge"
+      "Zero Knowledge",
+      "Programmable Cryptography"
     ]
   },
   {
@@ -10117,9 +10135,9 @@
       {
         "id": "CZTSR9",
         "name": "Chang-Wu Chen",
-        "description": "Dr. Chang-Wu Chen is the head of imToken labs, leading wallet, contract development and crypto research. Prior to joining imToken, he worked for AMIS as a chief scientist from 2018 to 2020, and Ethereum Foundation as a researcher from 2017 to 2018. He served as an adjunct assistant professor, teaching Ethereum DApp development, at the National Chengchi University from 2018 to 2021. He is currently also a Taipei Ethereum Meetup co-organizer.",
+        "description": "Dr. Chang-Wu Chen is the head of imToken labs, leading wallet, contract development and crypto research. Prior to joining imToken, he worked for AMIS as a chief scientist from 2018 to 2020, and Ethereum Foundation as a researcher from 2017 to 2018. He served as an adjunct assistant professor, teaching Ethereum DApp development, at the National Chengchi University from 2018 to 2021.",
         "twitter": "changwu_tw",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/CleanShot_2022-10-05_at_02.03.072x_irUNwS8.png"
       }
     ],
     "title": "Post-Merge Wallet",
@@ -10183,9 +10201,9 @@
       {
         "id": "G9FTMN",
         "name": "Oliver JL Renwick",
-        "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, where he helps maintain the MetaMask Knowledge Base and, in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
+        "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, creating and maintaining support documentation for MetaMask, Infura, and other products, and in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
         "twitter": "mapachurro",
-        "avatar": "http://speak.devcon.org/media/avatars/flpfp_m1w5lTh.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/2021headshot_T7gutSm.jpg"
       }
     ],
     "title": "Positive Framing and Communication for Web3",
@@ -10291,7 +10309,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg"
       }
     ],
-    "title": "OP Stack: Building the Open Source Superchain",
+    "title": "Optimism’s OP Stack",
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665579600000,
@@ -10812,9 +10830,15 @@
         "name": "Ethereum Foundation",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "JS9FQP",
+        "name": "Kurt Opsahl",
+        "description": "Kurt Opsahl is the Deputy Executive Director and General Counsel of the Electronic Frontier Foundation. In addition to representing clients on civil liberties, free speech and privacy law, Opsahl counsels on EFF projects and initiatives, and is the lead attorney on the Coders' Rights Project. Before joining EFF, Opsahl worked at Perkins Coie, where he represented technology clients with respect to intellectual property, privacy, defamation, and other online liability matters. Prior to Perkins, O",
+        "avatar": "http://speak.devcon.org/media/avatars/Kurt_Opsahl_Headshop_BIqsq4s.jpg"
       }
     ],
-    "title": "Closing Ceremonies",
+    "title": "Closing Ceremonies featuring Kurt Opsahl",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665762000000,
@@ -10937,7 +10961,7 @@
         "avatar": ""
       }
     ],
-    "title": "A deep-dive into the OP Stack",
+    "title": "A deep-dive into Optimism's OP Stack",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665581400000,
@@ -11043,10 +11067,10 @@
       },
       {
         "id": "QZWEKG",
-        "name": "Gabriella",
-        "description": null,
+        "name": "Gabriella Sofia",
+        "description": "research, ethereum @chorusone",
         "twitter": "gabriellassh",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/k7nS6oz7_400x400_Zg8d3ff.jpeg"
       }
     ],
     "title": "Spin it up - spin up your own eth2 validator on testnet",
@@ -11114,7 +11138,7 @@
     ],
     "title": "Building blockchain products for UNICEF. How to get involved.",
     "track": "Opportunity & Global Impact",
-    "duration": 110,
+    "duration": 50,
     "start": 1665752400000,
     "end": 1665759000000,
     "room": {
@@ -11124,7 +11148,7 @@
       "info": "Floor 3",
       "capacity": 112
     },
-    "type": "Workshop 2h",
+    "type": "Workshop 1h",
     "description": "UNICEF has been experimenting with Ethereum and blockchain for several years. Examples of the solutions they've built include the UNICEF cryptofund (the first crypto denominated fund in the UN), Patchwork kingdoms (the largest UN's NFT for good collection) or staking as financing tool. Do you want be part of this journey? Come to the session and learn more about the solutions (architecture, tech stack, deployment process) and understand how you can help.",
     "abstract": "",
     "expertise": "",
