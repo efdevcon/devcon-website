@@ -5118,9 +5118,9 @@
       {
         "id": "8DSTCX",
         "name": "Omar Espejel",
-        "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Winner of the Miami Activate X Wormhole Hackathon 2022 thanks to the creation of [functions to provide numerical operations to Cairo](https://twitter.com/galronx/status/1528472289054175232).",
+        "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Previously worked at Hugging Face, the powerhouse of open-source AI.",
         "twitter": "https://twitter.com/espejelomar",
-        "avatar": "http://speak.devcon.org/media/avatars/badBunny_Bw16cyu.png"
+        "avatar": "http://speak.devcon.org/media/avatars/espejel_foto_mqtggGh.jpeg"
       },
       {
         "id": "T9E8UR",
@@ -5226,7 +5226,7 @@
         "name": "Ansgar Dietrichs",
         "description": "Researcher at the Ethereum Foundation",
         "twitter": "adietrichs",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/starship-1_OrtNLyK.jpg"
       }
     ],
     "title": "Multidimensional Resource Pricing OR L2EVM OR tbd",
@@ -9110,6 +9110,13 @@
     "id": "ZPHEXR",
     "speakers": [
       {
+        "id": "JCPY8H",
+        "name": "Ansgar Dietrichs",
+        "description": "Researcher at the Ethereum Foundation",
+        "twitter": "adietrichs",
+        "avatar": "http://speak.devcon.org/media/avatars/starship-1_OrtNLyK.jpg"
+      },
+      {
         "id": "SQCFEX",
         "name": "Hsiao-Wei Wang",
         "description": "Ethereum Foundation - Consensus R&D Team",
@@ -9211,18 +9218,6 @@
         "id": "NULY9Z",
         "name": "Chaitanya Konda",
         "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "EBVPHE",
-        "name": "Swati Rawal",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "C3RARC",
-        "name": "Swati Rawal",
-        "description": "She received her B.Sc.(Hons) degree from the University of Delhi, Delhi, India in 2014 and her Master’s degree in Mathematics and Scientific Computing from NIT Allahabad, India in 2016. She did her Ph.D. from NIT Allahabad, India. Her area of research is Lattice-based Digital Signatures. She joined the blockchain team of Ernst & Young early this  year and working on the project Starlight",
         "avatar": ""
       }
     ],

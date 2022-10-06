@@ -628,13 +628,14 @@
   {
     "id": "JCPY8H",
     "name": "Ansgar Dietrichs",
-    "avatar": "https://www.gravatar.com/avatar/9d6c69f129b9423e22677625168ca10b",
+    "avatar": "https://speak.devcon.org/media/avatars/starship-1_OrtNLyK.jpg",
     "description": "Researcher at the Ethereum Foundation",
     "tracks": [
       "Layer 1 Protocol"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665705600000
     ],
     "twitter": "adietrichs",
     "github": "adietrichs"
@@ -670,18 +671,6 @@
   {
     "id": "NULY9Z",
     "name": "Chaitanya Konda",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665705600000
-    ]
-  },
-  {
-    "id": "EBVPHE",
-    "name": "Swati Rawal",
     "avatar": null,
     "description": "",
     "tracks": [
@@ -1657,8 +1646,8 @@
   {
     "id": "8DSTCX",
     "name": "Omar Espejel",
-    "avatar": "https://speak.devcon.org/media/avatars/badBunny_Bw16cyu.png",
-    "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Winner of the Miami Activate X Wormhole Hackathon 2022 thanks to the creation of [functions to provide numerical operations to Cairo](https://twitter.com/galronx/status/1528472289054175232).",
+    "avatar": "https://speak.devcon.org/media/avatars/espejel_foto_mqtggGh.jpeg",
+    "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Previously worked at Hugging Face, the powerhouse of open-source AI.",
     "tracks": [
       "Layer 2s"
     ],
@@ -4588,19 +4577,6 @@
     ],
     "website": "https://www.planett.xyz/",
     "twitter": "https://twitter.com/AnettRolikova"
-  },
-  {
-    "id": "C3RARC",
-    "name": "Swati Rawal",
-    "avatar": null,
-    "description": "She received her B.Sc.(Hons) degree from the University of Delhi, Delhi, India in 2014 and her Master’s degree in Mathematics and Scientific Computing from NIT Allahabad, India in 2016. She did her Ph.D. from NIT Allahabad, India. Her area of research is Lattice-based Digital Signatures. She joined the blockchain team of Ernst & Young early this  year and working on the project Starlight",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "github": "SwatiEY"
   },
   {
     "id": "HGMDTU",
