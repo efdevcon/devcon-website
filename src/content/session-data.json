@@ -453,7 +453,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "The Ethereum merge is a high-stakes event for the entire industry, and requires several large, stateful, distributed software systems to behave flawlessly in order for it to succeed. Unfortunately, it’s very difficult to develop distributed stateful systems like a blockchain with high confidence. Many of the worst bugs in these systems don’t show up in the happy case, but require particular network, hardware, or timing conditions in order to manifest. This means your unit tests probably have no",
+    "description": "The Ethereum merge is a high-stakes event for the entire industry, and requires several large, stateful, distributed software systems to behave flawlessly in order for it to succeed. Unfortunately, it’s very difficult to develop distributed stateful systems like a blockchain with high confidence. Many of the worst bugs in these systems don’t show up in the happy case, but require particular network, hardware, or timing conditions in order to manifest.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -2183,9 +2183,9 @@
       {
         "id": "BHUHRV",
         "name": "Thibaut Schaeffer",
-        "description": "ZoKrates @ Ethereum Foudation",
+        "description": "ZoKrates @ Ethereum Foundation",
         "twitter": "@vanderkriek",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/bordeaux_headshot_0922_82OMs7d.jpeg"
       }
     ],
     "title": "A ZoKrates update",
