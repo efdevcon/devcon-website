@@ -2228,7 +2228,7 @@
     "id": "XREBWJ",
     "name": "Milos Novitovic",
     "avatar": "https://speak.devcon.org/media/avatars/milos-novitovic_jp5tivH.jpeg",
-    "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped each 3327 experiment (https://3327.io/projects/) and worked on the most of MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
+    "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped most of the 3327 experiment (https://3327.io/projects/) and worked on the most of MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -2268,7 +2268,7 @@
     "id": "CCVCAZ",
     "name": "Melanie Davis",
     "avatar": "https://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg",
-    "description": "Contributor Experience Lead @DXdao_ I DAO and DeFi enthusiast",
+    "description": "Melanie leads the Contributor Experience at DXdao. She has over 8 years of professional experience in People Operations and transforming communities through strategic innovation. As a passionate Web3 and DAO contributor, she constantly pushes the boundaries of traditional Human Resources to help her build a resilient and scalable decentralized ecosystem at DXdao.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -5242,5 +5242,17 @@
       1665705600000
     ],
     "twitter": "https://twitter.com/kurtopsahl"
+  },
+  {
+    "id": "RD3FWQ",
+    "name": "Hester",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "UX & Design"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   }
 ]
