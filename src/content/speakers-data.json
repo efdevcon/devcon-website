@@ -2051,7 +2051,7 @@
       "Staking & Validator Experience"
     ],
     "eventDays": [
-      1665532800000
+      1665619200000
     ],
     "website": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/",
     "twitter": "https://twitter.com/EthereumOnARM",
@@ -4811,7 +4811,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665619200000
+      1665532800000
     ],
     "twitter": "agazso",
     "github": "agazso"
