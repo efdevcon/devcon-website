@@ -240,11 +240,11 @@ export async function GetSpeakers(fromCache = true): Promise<Array<Speaker>> {
   const speakersData = await exhaustResource(`/events/${eventName}/speakers`)
   const speakers = speakersData.map((i: any) => {
     const speakerSessions = sessions.filter((s: SessionType) => i.submissions.find((x: string) => x === s.id))
-    const organization = i.answers?.find((i: any) => i.question.id === organizationQuestionId)?.answer
-    const role = i.answers?.find((i: any) => i.question.id === roleQuestionId)?.answer
-    const website = i.answers?.find((i: any) => i.question.id === websiteQuestionId)?.answer
-    const twitter = i.answers?.find((i: any) => i.question.id === twitterQuestionId)?.answer
-    const github = i.answers?.find((i: any) => i.question.id === githubQuestionId)?.answer
+    const organization = i.answers?.filter((i: any) => i.question.id === organizationQuestionId).reverse()[0]?.answer
+    const role = i.answers?.filter((i: any) => i.question.id === roleQuestionId).reverse()[0]?.answer
+    const website = i.answers?.filter((i: any) => i.question.id === websiteQuestionId).reverse()[0]?.answer
+    const twitter = i.answers?.filter((i: any) => i.question.id === twitterQuestionId).reverse()[0]?.answer
+    const github = i.answers?.filter((i: any) => i.question.id === githubQuestionId).reverse()[0]?.answer
 
     let speaker: any = {
       id: i.code,

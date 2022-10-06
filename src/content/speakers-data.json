@@ -12,7 +12,7 @@
       1665446400000,
       1665532800000
     ],
-    "website": "https://owocki.com/public-speaking/",
+    "website": "www.owocki.com",
     "twitter": "owocki",
     "github": "owocki"
   },
@@ -132,7 +132,7 @@
       1665446400000,
       1665532800000
     ],
-    "twitter": "vdWijden",
+    "twitter": "@vdwijden",
     "github": "MariusVanDerWijden"
   },
   {
@@ -2268,7 +2268,7 @@
     "id": "CCVCAZ",
     "name": "Melanie Davis",
     "avatar": "https://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg",
-    "description": "Contributor Experience Lead @DXdao_ I DAO and DeFi enthusiast",
+    "description": "Melanie leads the Contributor Experience at DXdao. She has over 8 years of professional experience in People Operations and transforming communities through strategic innovation. As a passionate Web3 and DAO contributor, she constantly pushes the boundaries of traditional Human Resources to help her build a resilient and scalable decentralized ecosystem at DXdao.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -3699,7 +3699,7 @@
       "UX & Design"
     ],
     "eventDays": [
-      1665446400000
+      1665532800000
     ],
     "github": "@catsnackattack"
   },
@@ -3769,6 +3769,7 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
+      1665532800000,
       1665446400000
     ],
     "twitter": "@rachel_aux",
@@ -3996,9 +3997,9 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665705600000,
+      1665532800000,
       1665619200000,
-      1665532800000
+      1665705600000
     ],
     "twitter": "alexberegszaszi",
     "github": "axic"
@@ -4140,7 +4141,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665705600000
     ],
     "website": "opensea.io",
     "twitter": "z0age",
@@ -4238,9 +4239,9 @@
     "eventDays": [
       1665705600000
     ],
-    "website": "rotki.com",
-    "twitter": "lefterisjp",
-    "github": "lefterisjp"
+    "website": "https://kelsos.net",
+    "twitter": "https://twitter.com/kelsos86/",
+    "github": "https://github.com/kelsos"
   },
   {
     "id": "9CAHC7",
@@ -4276,8 +4277,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665705600000,
-      1665532800000
+      1665532800000,
+      1665705600000
     ]
   },
   {
@@ -4674,14 +4675,13 @@
     "description": "",
     "tracks": [
       "Developer Infrastructure",
-      "Opportunity & Global Impact",
-      "UX & Design"
+      "UX & Design",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
+      1665705600000,
       1665446400000,
-      1665619200000,
-      1665532800000,
-      1665705600000
+      1665619200000
     ]
   },
   {
@@ -4940,12 +4940,12 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Opportunity & Global Impact",
-      "Developer Infrastructure"
+      "Developer Infrastructure",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000,
-      1665446400000
+      1665446400000,
+      1665619200000
     ]
   },
   {
@@ -4959,9 +4959,9 @@
     "eventDays": [
       1665532800000
     ],
-    "website": "tarunchitra.com [but it is very outdated -_-]",
-    "twitter": "tarunchitra",
-    "github": "pluriholonomic"
+    "website": "angeris.github.io",
+    "twitter": "guilleangeris",
+    "github": "angeris"
   },
   {
     "id": "8WNXVV",
@@ -5099,8 +5099,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000,
-      1665619200000
+      1665619200000,
+      1665446400000
     ]
   },
   {
@@ -5186,7 +5186,73 @@
       "UX & Design"
     ],
     "eventDays": [
+      1665532800000
+    ]
+  },
+  {
+    "id": "VACMRY",
+    "name": "Pablo Voorvaart",
+    "avatar": null,
+    "description": "Freelance software engineer, supporting the decentralized future.\r\nCurrently building open source web3 video tools: streameth | LiveNFTs",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://github.com/efdevcon/streameth",
+    "twitter": "@streameth"
+  },
+  {
+    "id": "FLKFV8",
+    "name": "Vitalik Buterin",
+    "avatar": "https://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg",
+    "description": "Chief Scientist @ Ethereum Foundation",
+    "tracks": [
+      "Opportunity & Global Impact",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
       1665446400000
+    ],
+    "twitter": "https://twitter.com/VitalikButerin"
+  },
+  {
+    "id": "EFUNFY",
+    "name": "Péter Szilágyi",
+    "avatar": "https://speak.devcon.org/media/avatars/Peter_7omyW8z.jpeg",
+    "description": "GETH Team Lead",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "https://twitter.com/peter_szilagyi"
+  },
+  {
+    "id": "JS9FQP",
+    "name": "Kurt Opsahl",
+    "avatar": "https://speak.devcon.org/media/avatars/Kurt_Opsahl_Headshop_BIqsq4s.jpg",
+    "description": "Kurt Opsahl is the Deputy Executive Director and General Counsel of the Electronic Frontier Foundation. In addition to representing clients on civil liberties, free speech and privacy law, Opsahl counsels on EFF projects and initiatives, and is the lead attorney on the Coders' Rights Project. Before joining EFF, Opsahl worked at Perkins Coie, where he represented technology clients with respect to intellectual property, privacy, defamation, and other online liability matters. Prior to Perkins, O",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "https://twitter.com/kurtopsahl"
+  },
+  {
+    "id": "RD3FWQ",
+    "name": "Hester",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "UX & Design"
+    ],
+    "eventDays": [
+      1665532800000
     ]
   },
   {
