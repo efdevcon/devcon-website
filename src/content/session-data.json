@@ -1,35 +1,5 @@
 [
   {
-    "id": "SFFEVV",
-    "speakers": [
-      {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Workshops",
-    "track": "Developer Infrastructure",
-    "duration": 110,
-    "start": 1665752400000,
-    "end": 1665759000000,
-    "room": {
-      "id": "workshop-3",
-      "name": "Workshop 3",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 2h",
-    "description": ".",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "engineering"
-    ]
-  },
-  {
     "id": "7LHLPB",
     "speakers": [
       {
@@ -713,14 +683,14 @@
     "title": "Let's start a RAI-ot!",
     "track": "Opportunity & Global Impact",
     "duration": 25,
-    "start": 1665495000000,
-    "end": 1665496800000,
+    "start": 1665657000000,
+    "end": 1665658500000,
     "room": {
-      "id": "talk-1",
-      "name": "Talk 1",
-      "description": "Tropical Sunset",
-      "info": "Floor 2",
-      "capacity": 414
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
+      "info": "Floor 3",
+      "capacity": 110
     },
     "type": "Talk",
     "description": "Launched Feb 2020, RAI—a fork of DAI—is an ETH backed stable-ish coin that uses an onchain PI controller to set interest rates automatically and emphasizes “ungovernance”.\r\n\r\nIf you’ve ever looked at a central bank and thought about replacing it with a computer, this talk is for you!\r\n\r\nCome listen to the RAI story so far, what we’ve learned, where we’re going, and why we think the RAI model of controlled, floating exchange rates are going to be the future of DeFi and beyond.",
@@ -1069,57 +1039,6 @@
     ]
   },
   {
-    "id": "U8GHK9",
-    "speakers": [
-      {
-        "id": "77HGTH",
-        "name": "Althea Allen",
-        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
-        "avatar": ""
-      },
-      {
-        "id": "XVV8AE",
-        "name": "Rachel",
-        "description": "Design strategy for Privacy & Scaling Explorations",
-        "twitter": "@rachel_aux",
-        "avatar": "http://speak.devcon.org/media/avatars/light_copy_wK1gC94.png"
-      },
-      {
-        "id": "WVASD9",
-        "name": "Scott Moore",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "RD3FWQ",
-        "name": "Hester",
-        "description": "Hester helps projects better meet user needs. Between 2018 and 2022 she worked as core contributor to https://status.im/, helping design and ship a privacy first messenger, wallet and dapp browser. Soon to be your Web3 Discord alternative. She's the founder and boardmember of Web3 Creatives. A foundation that connects and enables creatives in Web3. Offscript and Web3UX panel are key initiatives.\r\n\r\nShe has a background and 12 years of experience in Psychology and User-System Interaction Design.",
-        "twitter": "@hesterbruikman",
-        "avatar": "http://speak.devcon.org/media/avatars/Hester-Bruikman-400x400_High_eMWlhW0.jpg"
-      }
-    ],
-    "title": "Participant Experience Design",
-    "track": "UX & Design",
-    "duration": 50,
-    "start": 1665579600000,
-    "end": 1665582600000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Panel",
-    "description": "User experience design is traditionally focused on driving user engagement and behaviors that serve business goals. How do goals and processes change when designing for commons or public goods? How does conventional design wisdom help us, and when can it lead us astray? What new patterns, strategies or challenges emerge when we consider the user as a participant rather than a customer?",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "user experience",
-      "public goods"
-    ]
-  },
-  {
     "id": "A87BGA",
     "speakers": [
       {
@@ -1259,6 +1178,38 @@
     "tags": [
       "account",
       "abstraction"
+    ]
+  },
+  {
+    "id": "NHWBJH",
+    "speakers": [
+      {
+        "id": "ZCGXDJ",
+        "name": "Naroa",
+        "description": "Naroa Zurutuza leads the Mapping and Tech work for Giga, UNICEF. Prior to joining UNICEF, she lived and worked in various companies in Kenya; from a startup that is trying to change the way the world understands agriculture to a non-profit empowering local entrepreneurs through access to finance. Naroa holds a MS in Electrical Engineering from Stanford University and a MS in Telecommunications Engineering from EHU-UPV.",
+        "avatar": ""
+      }
+    ],
+    "title": "Building blockchain products for UNICEF. How to get involved.",
+    "track": "Opportunity & Global Impact",
+    "duration": 50,
+    "start": 1665498600000,
+    "end": 1665501600000,
+    "room": {
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "UNICEF has been experimenting with Ethereum and blockchain for several years. Examples of the solutions they've built include the UNICEF cryptofund (the first crypto denominated fund in the UN), Patchwork kingdoms (the largest UN's NFT for good collection) or staking as financing tool. Do you want be part of this journey? Come to the session and learn more about the solutions (architecture, tech stack, deployment process) and understand how you can help.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "innovation",
+      "development",
+      "blockchain for good"
     ]
   },
   {
@@ -3231,9 +3182,9 @@
       },
       {
         "id": "3EBRJY",
-        "name": "Kelvin",
-        "description": null,
-        "avatar": ""
+        "name": "Kelvin Fichter",
+        "description": "Building the Optimism Collective",
+        "avatar": "http://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif"
       }
     ],
     "title": "MUD: The fabric of Autonomous Worlds w Intro by Kelvin Fichter",
@@ -4014,6 +3965,57 @@
     ]
   },
   {
+    "id": "U8GHK9",
+    "speakers": [
+      {
+        "id": "77HGTH",
+        "name": "Althea Allen",
+        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
+        "avatar": ""
+      },
+      {
+        "id": "XVV8AE",
+        "name": "Rachel",
+        "description": "Design strategy for Privacy & Scaling Explorations",
+        "twitter": "@rachel_aux",
+        "avatar": "http://speak.devcon.org/media/avatars/light_copy_wK1gC94.png"
+      },
+      {
+        "id": "WVASD9",
+        "name": "Scott Moore",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "RD3FWQ",
+        "name": "Hester",
+        "description": "Hester helps projects better meet user needs. Between 2018 and 2022 she worked as core contributor to https://status.im/, helping design and ship a privacy first messenger, wallet and dapp browser. Soon to be your Web3 Discord alternative. She's the founder and boardmember of Web3 Creatives. A foundation that connects and enables creatives in Web3. Offscript and Web3UX panel are key initiatives.\r\n\r\nShe has a background and 12 years of experience in Psychology and User-System Interaction Design.",
+        "twitter": "@hesterbruikman",
+        "avatar": "http://speak.devcon.org/media/avatars/Hester-Bruikman-400x400_High_eMWlhW0.jpg"
+      }
+    ],
+    "title": "Participant Experience Design",
+    "track": "UX & Design",
+    "duration": 50,
+    "start": 1665579600000,
+    "end": 1665582600000,
+    "room": {
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "User experience design is traditionally focused on driving user engagement and behaviors that serve business goals. How do goals and processes change when designing for commons or public goods? How does conventional design wisdom help us, and when can it lead us astray? What new patterns, strategies or challenges emerge when we consider the user as a participant rather than a customer?",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "user experience",
+      "public goods"
+    ]
+  },
+  {
     "id": "QZMLVJ",
     "speakers": [
       {
@@ -4044,39 +4046,6 @@
       "scalability",
       "multi-chain",
       "superchain"
-    ]
-  },
-  {
-    "id": "XPHSYR",
-    "speakers": [
-      {
-        "id": "3GSD8J",
-        "name": "Zero Age",
-        "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
-        "twitter": "z0age",
-        "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
-      }
-    ],
-    "title": "Advanced Seaport Techniques",
-    "track": "Developer Infrastructure",
-    "duration": 50,
-    "start": 1665745200000,
-    "end": 1665748200000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "Seaport is a marketplace protocol for buying and selling NFTs. While it powers OpenSea in a horizontal capacity, Seaport is open source and allows marketplaces to share a pool of liquidity – enabling project-specific, bespoke vertical marketplaces. Since launch, it’s helped spur innovation across emerging NFT verticals, including ENS names, in-game purchases, etc. This workshop will explore advanced techniques and use cases for the Seaport protocol.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Seaport",
-      "Marketplace",
-      "EVM"
     ]
   },
   {
@@ -4158,38 +4127,6 @@
     ]
   },
   {
-    "id": "RCEEUM",
-    "speakers": [
-      {
-        "id": "3EBRJY",
-        "name": "Kelvin",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "A deep-dive into Optimism's OP Stack",
-    "track": "Developer Infrastructure",
-    "duration": 25,
-    "start": 1665581400000,
-    "end": 1665582900000,
-    "room": {
-      "id": "talk-1",
-      "name": "Talk 1",
-      "description": "Tropical Sunset",
-      "info": "Floor 2",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "Uh oh, an iceberg talk!\r\n\r\nWe've got 25 minutes to go as deep as we can possibly go into the architecture of modern rollups like Optimism's upcoming Bedrock upgrade. Where do you think we are, 2019? It's 2022 y'all, and rollups are getting really, really cool.\r\n\r\nThis talk will cover a lot of technical detail in a short amount of time, so come prepared and chug a lot of coffee beforehand.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "bedrock",
-      "rollup",
-      "optimism"
-    ]
-  },
-  {
     "id": "7JJFFH",
     "speakers": [
       {
@@ -4239,6 +4176,38 @@
     "expertise": "Beginner",
     "tags": [
       "geth"
+    ]
+  },
+  {
+    "id": "RCEEUM",
+    "speakers": [
+      {
+        "id": "3EBRJY",
+        "name": "Kelvin Fichter",
+        "description": "Building the Optimism Collective",
+        "avatar": "http://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif"
+      }
+    ],
+    "title": "A deep-dive into Optimism's OP Stack",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665581400000,
+    "end": 1665582900000,
+    "room": {
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
+      "info": "Floor 2",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "Uh oh, an iceberg talk!\r\n\r\nWe've got 25 minutes to go as deep as we can possibly go into the architecture of modern rollups like Optimism's upcoming Bedrock upgrade. Where do you think we are, 2019? It's 2022 y'all, and rollups are getting really, really cool.\r\n\r\nThis talk will cover a lot of technical detail in a short amount of time, so come prepared and chug a lot of coffee beforehand.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "bedrock",
+      "rollup",
+      "optimism"
     ]
   },
   {
@@ -4426,7 +4395,7 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "ZK tech seems to get almost mystifying treatment from both regular users & even builders using different zk compilers and libraries.  Beyond the moon math, there are quantifiable differences between the circuits deployed in the Ethereum ecosystem that can help users and builders understand what they are interacting with.  Join us as we explain our methodology for collecting and quantifying these differences in a format digestible for the non-math professor.",
+    "description": "ZK tech gets almost mystifying treatment from both regular users & devs. However, beyond the moon math, quantifiable differences between the zkps deployed in the Ethereum ecosystem can help users and builders understand what they are interacting with. Join me as I explain our methodology for collecting and quantifying these differences in a format digestible for the non-math professor.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -5113,6 +5082,39 @@
     ]
   },
   {
+    "id": "9QYTX3",
+    "speakers": [
+      {
+        "id": "VACMRY",
+        "name": "Pablo Voorvaart",
+        "description": "Freelance software engineer, supporting the decentralized future.\r\nCurrently building open source web3 video tools: streameth | LiveNFTs",
+        "twitter": "@streameth",
+        "avatar": ""
+      }
+    ],
+    "title": "Streameth: decentralized video CMS",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665590400000,
+    "end": 1665591900000,
+    "room": {
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
+      "info": "Floor 3",
+      "capacity": 110
+    },
+    "type": "Talk",
+    "description": "Streameth is an open source video CMS that allows event organizers to distribute decentralized, censorship resistant video content.\r\nThis project comes out of a collaboration between Livepeer and Ethereum foundation to help web3 communities decouple themselves from centralized video platforms.\r\n\r\nIn this talk, we will explore why streameth was created, its early usage in various  community events and how we plan to evolve the tool.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "content distribution",
+      "opensource",
+      ""
+    ]
+  },
+  {
     "id": "JPJTZS",
     "speakers": [
       {
@@ -5495,38 +5497,6 @@
     ]
   },
   {
-    "id": "8XLQUG",
-    "speakers": [
-      {
-        "id": "98Z3HG",
-        "name": "Mara Schmiedt",
-        "description": "Mara is the Head of Business at Coinbase Cloud, the leading developer platform for blockchain infrastructure services and APIs. Prior to joining Coinbase, Mara managed Business Development at Bison Trails and served as Strategy Manager at ConsenSys. She is passionate about open source technology and has led various initiatives including the development of the eth2 launchpad and distributed validator technology (DVT). She is an active angel investor and serves as an advisor to various projects.",
-        "twitter": "https://twitter.com/MaraSchmiedt",
-        "avatar": "http://speak.devcon.org/media/avatars/E01HRQM32TX-U01MY7HFNA3-70b2d4e413d5-512_gSUmJAj.jpg"
-      }
-    ],
-    "title": "[Panel] The Staking Economy: From Monolith to Modularity",
-    "track": "Staking & Validator Experience",
-    "duration": 50,
-    "start": 1665594000000,
-    "end": 1665597000000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Panel",
-    "description": "The staking industry is on the verge of a new and exciting innovation cycle. The modularization of the staking technology stack, led by advances in middleware solutions such as DVT and MEV Boost as well as ancillary components including on-chain validator rating systems, will create a new playing field for existing operators, product builders and solo stakers.\r\n\r\nThis panel seeks to discuss key trends and developments driving the growth of the staking economy and what lies ahead.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Staking",
-      "Validators"
-    ]
-  },
-  {
     "id": "WVPYNS",
     "speakers": [
       {
@@ -5719,6 +5689,38 @@
       "erigon",
       "L1",
       "database"
+    ]
+  },
+  {
+    "id": "8XLQUG",
+    "speakers": [
+      {
+        "id": "98Z3HG",
+        "name": "Mara Schmiedt",
+        "description": "Mara is the Head of Business at Coinbase Cloud, the leading developer platform for blockchain infrastructure services and APIs. Prior to joining Coinbase, Mara managed Business Development at Bison Trails and served as Strategy Manager at ConsenSys. She is passionate about open source technology and has led various initiatives including the development of the eth2 launchpad and distributed validator technology (DVT). She is an active angel investor and serves as an advisor to various projects.",
+        "twitter": "https://twitter.com/MaraSchmiedt",
+        "avatar": "http://speak.devcon.org/media/avatars/E01HRQM32TX-U01MY7HFNA3-70b2d4e413d5-512_gSUmJAj.jpg"
+      }
+    ],
+    "title": "[Panel] The Staking Economy: From Monolith to Modularity",
+    "track": "Staking & Validator Experience",
+    "duration": 50,
+    "start": 1665594000000,
+    "end": 1665597000000,
+    "room": {
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "The staking industry is on the verge of a new and exciting innovation cycle. The modularization of the staking technology stack, led by advances in middleware solutions such as DVT and MEV Boost as well as ancillary components including on-chain validator rating systems, will create a new playing field for existing operators, product builders and solo stakers.\r\n\r\nThis panel seeks to discuss key trends and developments driving the growth of the staking economy and what lies ahead.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Staking",
+      "Validators"
     ]
   },
   {
@@ -6392,39 +6394,6 @@
       "pyspec",
       "consensus",
       "beacon chain"
-    ]
-  },
-  {
-    "id": "CQ9FY9",
-    "speakers": [
-      {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Hold",
-    "track": "Developer Infrastructure",
-    "duration": 25,
-    "start": 1665657000000,
-    "end": 1665658500000,
-    "room": {
-      "id": "talk-4",
-      "name": "Talk 4",
-      "description": "River",
-      "info": "Floor 3",
-      "capacity": 110
-    },
-    "type": "Talk",
-    "description": "Wallets, decentralized identity, distributed storage, and naming services are the backbone of a new, data-ownership-first application stack for decentralized and Web3 apps. But, how do they all fit together to build performant, usable, and private applications? We’ll walk through how distributed storage, decentralized identity, crypto wallets, and naming services all fit together to build modern, private, and data ownership focused applications.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "skiff",
-      "encryption",
-      "privacy",
-      "web3"
     ]
   },
   {
@@ -9696,6 +9665,39 @@
     ]
   },
   {
+    "id": "XPHSYR",
+    "speakers": [
+      {
+        "id": "3GSD8J",
+        "name": "Zero Age",
+        "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
+        "twitter": "z0age",
+        "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
+      }
+    ],
+    "title": "Advanced Seaport Techniques",
+    "track": "Developer Infrastructure",
+    "duration": 50,
+    "start": 1665745200000,
+    "end": 1665748200000,
+    "room": {
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "Seaport is a marketplace protocol for buying and selling NFTs. While it powers OpenSea in a horizontal capacity, Seaport is open source and allows marketplaces to share a pool of liquidity – enabling project-specific, bespoke vertical marketplaces. Since launch, it’s helped spur innovation across emerging NFT verticals, including ENS names, in-game purchases, etc. This workshop will explore advanced techniques and use cases for the Seaport protocol.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Seaport",
+      "Marketplace",
+      "EVM"
+    ]
+  },
+  {
     "id": "A9TGP7",
     "speakers": [
       {
@@ -10127,6 +10129,36 @@
     ]
   },
   {
+    "id": "SFFEVV",
+    "speakers": [
+      {
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Workshops",
+    "track": "Developer Infrastructure",
+    "duration": 110,
+    "start": 1665752400000,
+    "end": 1665759000000,
+    "room": {
+      "id": "workshop-3",
+      "name": "Workshop 3",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 2h",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "engineering"
+    ]
+  },
+  {
     "id": "NENCP9",
     "speakers": [
       {
@@ -10268,38 +10300,6 @@
       "Validation",
       "Infrastructure",
       "Engineering"
-    ]
-  },
-  {
-    "id": "NHWBJH",
-    "speakers": [
-      {
-        "id": "ZCGXDJ",
-        "name": "Naroa",
-        "description": "Naroa Zurutuza leads the Mapping and Tech work for Giga, UNICEF. Prior to joining UNICEF, she lived and worked in various companies in Kenya; from a startup that is trying to change the way the world understands agriculture to a non-profit empowering local entrepreneurs through access to finance. Naroa holds a MS in Electrical Engineering from Stanford University and a MS in Telecommunications Engineering from EHU-UPV.",
-        "avatar": ""
-      }
-    ],
-    "title": "Building blockchain products for UNICEF. How to get involved.",
-    "track": "Opportunity & Global Impact",
-    "duration": 50,
-    "start": 1665498600000,
-    "end": 1665501600000,
-    "room": {
-      "id": "workshop-2",
-      "name": "Workshop 2",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "UNICEF has been experimenting with Ethereum and blockchain for several years. Examples of the solutions they've built include the UNICEF cryptofund (the first crypto denominated fund in the UN), Patchwork kingdoms (the largest UN's NFT for good collection) or staking as financing tool. Do you want be part of this journey? Come to the session and learn more about the solutions (architecture, tech stack, deployment process) and understand how you can help.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "innovation",
-      "development",
-      "blockchain for good"
     ]
   },
   {
@@ -11145,36 +11145,34 @@
     ]
   },
   {
-    "id": "9QYTX3",
+    "id": "DNEG8Y",
     "speakers": [
       {
-        "id": "VACMRY",
-        "name": "Pablo Voorvaart",
-        "description": "Freelance software engineer, supporting the decentralized future.\r\nCurrently building open source web3 video tools: streameth | LiveNFTs",
-        "twitter": "@streameth",
-        "avatar": ""
+        "id": "A9WCWN",
+        "name": "Max Semenchuk",
+        "description": "Deputy Head Of The Virtual Assets Project Office Ministry Of The Digital Transformation Of Ukraine, Board Member Trusted Seed Association.\r\nMax shares the ideas of Decentralization, Lean/Agile, Teal Culture, DAO, Lean Startup and Community Leadership. More at https://maxsemenchuk.com/",
+        "avatar": "http://speak.devcon.org/media/avatars/Max_Semenchuk_Headshot_Slm4WdK.jpg"
       }
     ],
-    "title": "Streameth: decentralized video CMS",
+    "title": "Web3 in the Ukraine government: integration & impact",
     "track": "Opportunity & Global Impact",
     "duration": 25,
-    "start": 1665590400000,
-    "end": 1665591900000,
+    "start": 1665495000000,
+    "end": 1665496500000,
     "room": {
-      "id": "talk-4",
-      "name": "Talk 4",
-      "description": "River",
-      "info": "Floor 3",
-      "capacity": 110
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
+      "info": "Floor 2",
+      "capacity": 414
     },
     "type": "Talk",
-    "description": "Streameth is an open source video CMS that allows event organizers to distribute decentralized, censorship resistant video content.\r\nThis project comes out of a collaboration between Livepeer and Ethereum foundation to help web3 communities decouple themselves from centralized video platforms.\r\n\r\nIn this talk, we will explore why streameth was created, its early usage in various  community events and how we plan to evolve the tool.",
+    "description": ".",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "content distribution",
-      "opensource",
-      ""
+      "ukraine",
+      "web3"
     ]
   }
 ]

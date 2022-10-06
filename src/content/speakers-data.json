@@ -5130,9 +5130,9 @@
   },
   {
     "id": "3EBRJY",
-    "name": "Kelvin",
-    "avatar": null,
-    "description": "",
+    "name": "Kelvin Fichter",
+    "avatar": "https://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif",
+    "description": "Building the Optimism Collective",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -5231,5 +5231,14 @@
     ],
     "twitter": "@hesterbruikman",
     "github": "@hesterbruikman"
+  },
+  {
+    "id": "A9WCWN",
+    "name": "Max Semenchuk",
+    "avatar": "https://speak.devcon.org/media/avatars/Max_Semenchuk_Headshot_Slm4WdK.jpg",
+    "description": "Deputy Head Of The Virtual Assets Project Office Ministry Of The Digital Transformation Of Ukraine, Board Member Trusted Seed Association.\r\nMax shares the ideas of Decentralization, Lean/Agile, Teal Culture, DAO, Lean Startup and Community Leadership. More at https://maxsemenchuk.com/",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "https://twitter.com/maxsemenchuk"
   }
 ]
