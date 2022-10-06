@@ -3753,12 +3753,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/light_copy_wK1gC94.png",
     "description": "Design strategy for Privacy & Scaling Explorations",
     "tracks": [
-      "UX & Design",
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
+      "UX & Design"
     ],
     "eventDays": [
-      1665532800000,
-      1665446400000
+      1665446400000,
+      1665532800000
     ],
     "twitter": "@rachel_aux",
     "github": "https://github.com/rachelaux"
@@ -4073,7 +4073,7 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665446400000
+      1665619200000
     ],
     "twitter": "ameensol",
     "github": "https://github.com/ameensol"
@@ -4654,9 +4654,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000,
       1665446400000,
-      1665619200000
+      1665705600000
     ]
   },
   {
@@ -5074,8 +5073,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000,
-      1665446400000
+      1665446400000,
+      1665619200000
     ]
   },
   {
@@ -5237,8 +5236,12 @@
     "name": "Max Semenchuk",
     "avatar": "https://speak.devcon.org/media/avatars/Max_Semenchuk_Headshot_Slm4WdK.jpg",
     "description": "Deputy Head Of The Virtual Assets Project Office Ministry Of The Digital Transformation Of Ukraine, Board Member Trusted Seed Association.\r\nMax shares the ideas of Decentralization, Lean/Agile, Teal Culture, DAO, Lean Startup and Community Leadership. More at https://maxsemenchuk.com/",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
     "twitter": "https://twitter.com/maxsemenchuk"
   }
 ]
