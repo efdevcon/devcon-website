@@ -7624,7 +7624,7 @@
         "avatar": ""
       }
     ],
-    "title": "Improving PBS: Lessons Learned from MEV-Boost and Builder API",
+    "title": "Evaluating the PBS Experiment: Early insights from MEV-Boost and the Builder Market",
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665671400000,
@@ -7637,7 +7637,7 @@
       "capacity": 110
     },
     "type": "Talk",
-    "description": "PBS is a major change to the core Ethereum protocol. It attempts to minimise negative effects of MEV by delegating block building to a market of block builders, via the builder API. This talk would cover what we have learned from the rollout of mev-boost, focusing on what the real-world builder dynamics look like, and what this means for in-protocol PBS. What are the main improvements that we can make to the PBS design in response to how mev-boost is performing?",
+    "description": "PBS is a major change to the core Ethereum protocol. It attempts to minimise negative effects of MEV by delegating block building to a market of block builders. This talk would cover what we have learned from the rollout of mev-boost, focusing on what is happening in the builder market, and what this means for the future of in-protocol PBS. What are the main improvements that we can make to the PBS design in response to how this prototype version is performing?",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -11077,10 +11077,10 @@
       },
       {
         "id": "QZWEKG",
-        "name": "Gabriella",
-        "description": null,
+        "name": "Gabriella Sofia",
+        "description": "research, ethereum @chorusone",
         "twitter": "gabriellassh",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/k7nS6oz7_400x400_Zg8d3ff.jpeg"
       }
     ],
     "title": "Spin it up - spin up your own eth2 validator on testnet",
