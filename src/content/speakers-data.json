@@ -5188,6 +5188,16 @@
     ]
   },
   {
+    "id": "VACMRY",
+    "name": "Pablo Voorvaart",
+    "avatar": null,
+    "description": "Freelance software engineer, supporting the decentralized future.\r\nCurrently building open source web3 video tools: streameth | LiveNFTs",
+    "tracks": [],
+    "eventDays": [],
+    "website": "https://github.com/efdevcon/streameth",
+    "twitter": "@streameth"
+  },
+  {
     "id": "FLKFV8",
     "name": "Vitalik Buterin",
     "avatar": "https://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg",
