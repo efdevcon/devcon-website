@@ -25,7 +25,7 @@ export const ShareScheduleModal = () => {
 
   if (!accountContext.account) return <>Need to login first</>
 
-  const scheduleUri = `${origin}/app/schedule/u/${accountContext.account._id}/`
+  const scheduleUri = `${origin}/schedule/u/${accountContext.account._id}/`
 
   return (
     <>

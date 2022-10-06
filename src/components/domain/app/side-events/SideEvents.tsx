@@ -50,7 +50,7 @@ export const SideEvents = (props: any) => {
       capacity: event['Capacity'],
       type: event['Type of event'],
       url: event['Registration Link'],
-      image: event['Cover image'] && event['Cover image'][0] && event['Cover image'][0].file.url,
+      image: event['Cover image'] && event['Cover image'][0] && event['Cover image'][0].file?.url || '',
     }
   })
 
