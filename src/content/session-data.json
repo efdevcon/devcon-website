@@ -2112,7 +2112,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-06-20_at_11.02.30_zjSYe6i.png"
       }
     ],
-    "title": "How Bridges Can Improve L2 Interoperability",
+    "title": "How Bridges Improve L2 Composability",
     "track": "Layer 2s",
     "duration": 7,
     "start": 1665507000000,
@@ -7005,10 +7005,9 @@
     "id": "LJZT7Y",
     "speakers": [
       {
-        "id": "WCVEHL",
-        "name": "Alex Herrmann",
-        "description": "coder, mathematician and philosopher",
-        "twitter": "https://twitter.com/Herrmann_A_",
+        "id": "URPEPX",
+        "name": "Federico Giacon",
+        "description": null,
         "avatar": ""
       }
     ],

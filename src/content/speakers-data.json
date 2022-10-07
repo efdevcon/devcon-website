@@ -1284,20 +1284,6 @@
     "github": "JustynaBroniszewska"
   },
   {
-    "id": "WCVEHL",
-    "name": "Alex Herrmann",
-    "avatar": null,
-    "description": "coder, mathematician and philosopher",
-    "tracks": [
-      "Layer 2s"
-    ],
-    "eventDays": [
-      1665619200000
-    ],
-    "twitter": "https://twitter.com/Herrmann_A_",
-    "github": "https://github.com/josojo"
-  },
-  {
     "id": "LMKARD",
     "name": "Makoto Inoue",
     "avatar": "https://speak.devcon.org/media/avatars/Screenshot_2022-06-24_at_16.20.20_WizzJQr.png",
@@ -4146,12 +4132,8 @@
     "name": "Ethereum Foundation",
     "avatar": null,
     "description": "Holding for others",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665705600000
-    ]
+    "tracks": [],
+    "eventDays": []
   },
   {
     "id": "CWRAHR",
@@ -5270,6 +5252,18 @@
     "description": "",
     "tracks": [
       "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "URPEPX",
+    "name": "Federico Giacon",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Layer 2s"
     ],
     "eventDays": [
       1665619200000
