@@ -132,11 +132,10 @@
     "id": "K8MWNB",
     "speakers": [
       {
-        "id": "7CB9LT",
-        "name": "Jim McDonald",
-        "description": "Jim has worked on internet infrastructure for over 30 years, including running one of the first public access internet services. He has worked on hardware and software, in startups and multinationals, in technical, management and leadership roles. His current focus is on Ethereum staking, decentralized infrastructure, and advanced validator strategies.",
-        "twitter": "jgm",
-        "avatar": "http://speak.devcon.org/media/avatars/Headshot_2015_round_ed5uguf.png"
+        "id": "FGVQA7",
+        "name": "Steve Berryman",
+        "description": "A highly motivated professional with over 25 years' software engineering experience within the financial industry, Steve has a degree and a Ph.D in Computer Science. He has worked for tier one investment banks across the globe, where his main focus has been on cutting edge derivatives and software to price and manage their risk. Steve is responsible for running one of the largest Ethereum validating infrastructures in the world, and is working with institutional financial firms to make Ethereum",
+        "avatar": "http://speak.devcon.org/media/avatars/Image_20221006_094242_STXwrMU.jpeg"
       }
     ],
     "title": "Validator Receipts: an Alternative to Liquid Staking Derivatives",
@@ -1048,10 +1047,9 @@
     "id": "A87BGA",
     "speakers": [
       {
-        "id": "DWZ7BX",
-        "name": "Christian Reitwiessner",
-        "description": ".",
-        "twitter": "ethchris",
+        "id": "SWQHSM",
+        "name": "Daniel Kirchner",
+        "description": null,
         "avatar": ""
       }
     ],
@@ -3524,6 +3522,7 @@
         "id": "EEB9GU",
         "name": "Severiano Sisneros",
         "description": "I'm a Senior Cryptographer at Semiotic Labs. I am currently developing cryptography solutions for The Graph protocol as a core dev. Before that I was a Senior Principal Anti-Tamper Security Engineer at Northrop Grumman and before that I was doing cyber security R&D at Sandia National Labs. I have an MSEE from the University of Illinois at Urbana-Champaign, where I studied cryptography.",
+        "twitter": "@SeveSisneros",
         "avatar": ""
       }
     ],
@@ -10185,10 +10184,18 @@
     "id": "SFFEVV",
     "speakers": [
       {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
+        "id": "7BSSFC",
+        "name": "Tim Beiko",
+        "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
+        "twitter": "timbeiko",
+        "avatar": "http://speak.devcon.org/media/avatars/Tim_Beiko_Headshot_UkavMoT.jpeg"
+      },
+      {
+        "id": "XE8PTP",
+        "name": "Anett Rolikova",
+        "description": "Internship Program Manager at Nethermind.io",
+        "twitter": "https://twitter.com/AnettRolikova",
+        "avatar": "http://speak.devcon.org/media/avatars/twheadshottupdate_zFYunPz.jpeg"
       }
     ],
     "title": "Workshops",

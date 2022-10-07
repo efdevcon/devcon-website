@@ -850,20 +850,6 @@
     "github": "https://github.com/ignasirv"
   },
   {
-    "id": "7CB9LT",
-    "name": "Jim McDonald",
-    "avatar": "https://speak.devcon.org/media/avatars/Headshot_2015_round_ed5uguf.png",
-    "description": "Jim has worked on internet infrastructure for over 30 years, including running one of the first public access internet services. He has worked on hardware and software, in startups and multinationals, in technical, management and leadership roles. His current focus is on Ethereum staking, decentralized infrastructure, and advanced validator strategies.",
-    "tracks": [
-      "Cryptoeconomics"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "twitter": "jgm",
-    "github": "mcdee"
-  },
-  {
     "id": "PBFQHB",
     "name": "Jesus Ligero",
     "avatar": "https://speak.devcon.org/media/avatars/image_5CN5sav.png",
@@ -3228,10 +3214,12 @@
     "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
     "tracks": [
       "Opportunity & Global Impact",
-      "Layer 1 Protocol"
+      "Layer 1 Protocol",
+      "Developer Infrastructure"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665705600000
     ],
     "twitter": "timbeiko",
     "github": "timbeiko"
@@ -3374,20 +3362,6 @@
     "website": "web3auth.io",
     "twitter": "bluzuli",
     "github": "tetratorus"
-  },
-  {
-    "id": "DWZ7BX",
-    "name": "Christian Reitwiessner",
-    "avatar": null,
-    "description": ".",
-    "tracks": [
-      "Developer Infrastructure"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "twitter": "ethchris",
-    "github": "chriseth"
   },
   {
     "id": "HCDJMW",
@@ -4586,10 +4560,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/twheadshottupdate_zFYunPz.jpeg",
     "description": "Internship Program Manager at Nethermind.io",
     "tracks": [
-      "Layer 1 Protocol"
+      "Layer 1 Protocol",
+      "Developer Infrastructure"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665705600000
     ],
     "website": "https://www.planett.xyz/",
     "twitter": "https://twitter.com/AnettRolikova"
@@ -5296,6 +5272,30 @@
     "description": "",
     "tracks": [
       "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "FGVQA7",
+    "name": "Steve Berryman",
+    "avatar": "https://speak.devcon.org/media/avatars/Image_20221006_094242_STXwrMU.jpeg",
+    "description": "A highly motivated professional with over 25 years' software engineering experience within the financial industry, Steve has a degree and a Ph.D in Computer Science. He has worked for tier one investment banks across the globe, where his main focus has been on cutting edge derivatives and software to price and manage their risk. Steve is responsible for running one of the largest Ethereum validating infrastructures in the world, and is working with institutional financial firms to make Ethereum",
+    "tracks": [
+      "Cryptoeconomics"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "SWQHSM",
+    "name": "Daniel Kirchner",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
     ],
     "eventDays": [
       1665446400000
