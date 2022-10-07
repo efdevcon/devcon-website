@@ -2222,6 +2222,7 @@
     "eventDays": [
       1665705600000
     ],
+    "twitter": "https://twitter.com/m_novitovic",
     "github": "milosnovitovic"
   },
   {
@@ -4752,9 +4753,9 @@
   },
   {
     "id": "3ZAZ97",
-    "name": "Vanessa Koh",
+    "name": "Madison Adams",
     "avatar": null,
-    "description": "",
+    "description": "TBD",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -5272,5 +5273,19 @@
     "website": "https://mirror.xyz/crisgarner.eth",
     "twitter": "https://twitter.com/crisgarner",
     "github": "https://github.com/crisgarner"
+  },
+  {
+    "id": "ETFXWM",
+    "name": "Paul Hauner",
+    "avatar": null,
+    "description": "Co-founder of Sigma Prime and Lighthouse. Proud contributor to Ethereum Proof-of-Stake.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "paulhauner",
+    "github": "paulhauner"
   }
 ]
