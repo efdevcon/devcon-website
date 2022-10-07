@@ -1764,7 +1764,7 @@
       "capacity": 110
     },
     "type": "Panel",
-    "description": "The Node Operator Association presents a roundtable discussion with Darren Langley (Rocket Pool), Vasiliy Shapovalov (Lido), Oisin Kyne (Obol), Jordan Sutcliffe (Stakewise), and Ariel Zimroni (SSV Network) to discuss how small businesses and solo stakers can partner with the various staking protocols to increase revenue.\r\n\r\nTopics include operator qualifications, application processes, costs, risks, and each protocol's unique advantages.",
+    "description": "The Node Operator Association presents a roundtable discussion on promoting small and independent professional stakers. Topics include operator qualifications, application processes, costs, risks, each platform's unique advantages, and their vision for the future of Ethereum staking.\r\n\r\nPanelists: \r\nDarren Langley (Rocket Pool)\r\nVasiliy Shapovalov (Lido)\r\nOisin Kyne (Obol)\r\nJordan Sutcliffe (Stakewise)\r\nAriel Zimroni (SSV Network)",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -9747,7 +9747,7 @@
         "avatar": ""
       }
     ],
-    "title": "ZKPs as \"Programmable Cryptography\"",
+    "title": "ZKPs and \"Programmable Cryptography\"",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665747000000,
