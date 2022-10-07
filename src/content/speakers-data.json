@@ -696,21 +696,6 @@
     "github": "EthWarrior"
   },
   {
-    "id": "TTTM7Q",
-    "name": "Pranav Garg",
-    "avatar": "https://speak.devcon.org/media/avatars/BrandBird_-_PFP_Maker_copy_cjNkEg0.png",
-    "description": "Blockchain Dev 🧑‍💻 | Security 🛡 | \r\n@routerprotocol\r\n & \r\n@_DFyn\r\n | \r\n@thesecureum\r\n Alumni",
-    "tracks": [
-      "Security"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "website": "https://www.linkedin.com/in/pranav-garg022/",
-    "twitter": "pranav__garg_",
-    "github": "PranavGarg01"
-  },
-  {
     "id": "XR3YHS",
     "name": "Jonathan Alexander",
     "avatar": "https://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png",
@@ -3961,6 +3946,7 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
+      1665446400000,
       1665532800000
     ],
     "twitter": "wanseoblim",
@@ -4055,20 +4041,6 @@
     "github": "pipermerriam"
   },
   {
-    "id": "UHQDGB",
-    "name": "Ameen Soleimani",
-    "avatar": "https://speak.devcon.org/media/avatars/ameen_ncYrtcm.png",
-    "description": "Summoned MolochDAO and all I got was this lousy T-shirt 👹 \r\n\r\nReflexer Labs (RAI) cofounder, CEO at SpankChain",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665619200000
-    ],
-    "twitter": "ameensol",
-    "github": "https://github.com/ameensol"
-  },
-  {
     "id": "88UESV",
     "name": "Barnabé Monnot",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_6111_square_8bGFuHG.jpeg",
@@ -4124,18 +4096,6 @@
     "website": "opensea.io",
     "twitter": "z0age",
     "github": "0age"
-  },
-  {
-    "id": "ZXKVGH",
-    "name": "Shubham",
-    "avatar": "https://speak.devcon.org/media/avatars/5ECA3EE9-A09A-4810-ABF7-070E0CBBB8D8_gO2w1JF.jpeg",
-    "description": "CTO at Routerprotocol",
-    "tracks": [
-      "Security"
-    ],
-    "eventDays": [
-      1665446400000
-    ]
   },
   {
     "id": "WHNHUQ",
@@ -5070,18 +5030,6 @@
     ]
   },
   {
-    "id": "PWYUEB",
-    "name": "Wanseob Lim",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665446400000
-    ]
-  },
-  {
     "id": "XXLWA9",
     "name": "Mauricio Tovar",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg",
@@ -5301,6 +5249,30 @@
     ],
     "eventDays": [
       1665446400000
+    ]
+  },
+  {
+    "id": "VNVCRB",
+    "name": "Nithin Eappen",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "ZQA8DA",
+    "name": "Fabio",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
     ]
   }
 ]

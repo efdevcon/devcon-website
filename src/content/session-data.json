@@ -744,10 +744,11 @@
     "id": "CTBFSQ",
     "speakers": [
       {
-        "id": "PWYUEB",
+        "id": "A3PLVW",
         "name": "Wanseob Lim",
-        "description": null,
-        "avatar": ""
+        "description": "Tech lead @ EF PSE, Author of Zkopru",
+        "twitter": "wanseoblim",
+        "avatar": "http://speak.devcon.org/media/avatars/-IlNT4nV_400x400_X2wzWMp.jpg"
       }
     ],
     "title": "ELI5: Zero Knowledge",
@@ -1999,17 +2000,10 @@
     "id": "MXPZDV",
     "speakers": [
       {
-        "id": "TTTM7Q",
-        "name": "Pranav Garg",
-        "description": "Blockchain Dev 🧑‍💻 | Security 🛡 | \r\n@routerprotocol\r\n & \r\n@_DFyn\r\n | \r\n@thesecureum\r\n Alumni",
-        "twitter": "pranav__garg_",
-        "avatar": "http://speak.devcon.org/media/avatars/BrandBird_-_PFP_Maker_copy_cjNkEg0.png"
-      },
-      {
-        "id": "ZXKVGH",
-        "name": "Shubham",
-        "description": "CTO at Routerprotocol",
-        "avatar": "http://speak.devcon.org/media/avatars/5ECA3EE9-A09A-4810-ABF7-070E0CBBB8D8_gO2w1JF.jpeg"
+        "id": "VNVCRB",
+        "name": "Nithin Eappen",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Securing Cross-chain Communication",
@@ -6551,11 +6545,10 @@
     "id": "AYZX8E",
     "speakers": [
       {
-        "id": "UHQDGB",
-        "name": "Ameen Soleimani",
-        "description": "Summoned MolochDAO and all I got was this lousy T-shirt 👹 \r\n\r\nReflexer Labs (RAI) cofounder, CEO at SpankChain",
-        "twitter": "ameensol",
-        "avatar": "http://speak.devcon.org/media/avatars/ameen_ncYrtcm.png"
+        "id": "ZQA8DA",
+        "name": "Fabio",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Let's start a RAI-ot!",
@@ -10201,7 +10194,7 @@
     ],
     "title": "Workshops",
     "track": "Developer Infrastructure",
-    "duration": 110,
+    "duration": 150,
     "start": 1665752400000,
     "end": 1665759000000,
     "room": {
