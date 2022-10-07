@@ -401,7 +401,7 @@
         "name": "David Searle",
         "description": "Data nerd turned crypto enthusiast working at Antithesis to push the boundaries of finding bugs in distributed architectures.",
         "twitter": "dsearle",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/David-Searle-2_zqyjc3U.jpg"
       },
       {
         "id": "9CAHC7",
@@ -772,6 +772,7 @@
         "id": "A9WCWN",
         "name": "Max Semenchuk",
         "description": "Deputy Head Of The Virtual Assets Project Office Ministry Of The Digital Transformation Of Ukraine, Board Member Trusted Seed Association.\r\nMax shares the ideas of Decentralization, Lean/Agile, Teal Culture, DAO, Lean Startup and Community Leadership. More at https://maxsemenchuk.com/",
+        "twitter": "https://twitter.com/maxsemenchuk",
         "avatar": "http://speak.devcon.org/media/avatars/Max_Semenchuk_Headshot_Slm4WdK.jpg"
       }
     ],
@@ -968,18 +969,17 @@
         "avatar": "http://speak.devcon.org/media/avatars/me-square_PW5fzae.jpg"
       },
       {
-        "id": "7CB9LT",
-        "name": "Jim McDonald",
-        "description": "Jim has worked on internet infrastructure for over 30 years, including running one of the first public access internet services. He has worked on hardware and software, in startups and multinationals, in technical, management and leadership roles. His current focus is on Ethereum staking, decentralized infrastructure, and advanced validator strategies.",
-        "twitter": "jgm",
-        "avatar": "http://speak.devcon.org/media/avatars/Headshot_2015_round_ed5uguf.png"
-      },
-      {
         "id": "UFYGRK",
         "name": "Oisín Kyne",
         "description": "Co-founder of Obol Labs and building Distributed Validator Technology for Ethereum.",
         "twitter": "OisinKyne",
         "avatar": "http://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg"
+      },
+      {
+        "id": "ETFXWM",
+        "name": "Paul Hauner",
+        "description": "Co-founder of Sigma Prime and Lighthouse. Proud contributor to Ethereum Proof-of-Stake.",
+        "avatar": ""
       }
     ],
     "title": "\"It's 10pm, do you know where your mnemonic is?\"",
@@ -1770,7 +1770,7 @@
       "capacity": 110
     },
     "type": "Panel",
-    "description": "The Node Operator Association presents a roundtable discussion with Darren Langley (Rocket Pool), Vasiliy Shapovalov (Lido), Oisin Kyne (Obol), Jordan Sutcliffe (Stakewise), and Ariel Zimroni (SSV Network) to discuss how small businesses and solo stakers can partner with the various staking protocols to increase revenue.\r\n\r\nTopics include operator qualifications, application processes, costs, risks, and each protocol's unique advantages.",
+    "description": "The Node Operator Association presents a roundtable discussion on promoting small and independent professional stakers. Topics include operator qualifications, application processes, costs, risks, each platform's unique advantages, and their vision for the future of Ethereum staking.\r\n\r\nPanelists: \r\nDarren Langley (Rocket Pool)\r\nVasiliy Shapovalov (Lido)\r\nOisin Kyne (Obol)\r\nJordan Sutcliffe (Stakewise)\r\nAriel Zimroni (SSV Network)",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -2941,8 +2941,8 @@
       },
       {
         "id": "3ZAZ97",
-        "name": "Vanessa Koh",
-        "description": null,
+        "name": "Madison Adams",
+        "description": "TBD",
         "avatar": ""
       }
     ],
@@ -3989,6 +3989,7 @@
         "id": "RD3FWQ",
         "name": "Hester",
         "description": "Hester helps projects better meet user needs. Between 2018 and 2022 she worked as core contributor to https://status.im/, helping design and ship a privacy first messenger, wallet and dapp browser. Soon to be your Web3 Discord alternative. She's the founder and boardmember of Web3 Creatives. A foundation that connects and enables creatives in Web3. Offscript and Web3UX panel are key initiatives.\r\n\r\nShe has a background and 12 years of experience in Psychology and User-System Interaction Design.",
+        "twitter": "@hesterbruikman",
         "avatar": "http://speak.devcon.org/media/avatars/Hester-Bruikman-400x400_High_eMWlhW0.jpg"
       }
     ],
@@ -4186,7 +4187,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif"
       }
     ],
-    "title": "A deep-dive into Optimism's OP Stack",
+    "title": "Modular rollup theory through the lens of the OP Stack",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665581400000,
@@ -4199,7 +4200,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Uh oh, an iceberg talk!\r\n\r\nWe've got 25 minutes to go as deep as we can possibly go into the architecture of modern rollups like Optimism's upcoming Bedrock upgrade. Where do you think we are, 2019? It's 2022 y'all, and rollups are getting really, really cool.\r\n\r\nThis talk will cover a lot of technical detail in a short amount of time, so come prepared and chug a lot of coffee beforehand.",
+    "description": "We've got 25 minutes to go as deep as we can possibly go into the architecture of modern (modular) rollups. We'll be looking at the theory behind the components of these rollups and we'll be grounding this theory in the concrete components of the OP Stack.\r\n\r\nCmon, where do you think we are, 2019? It's 2022 y'all, and rollups are getting really, really cool.\r\n\r\nThis talk will cover a lot of technical detail in a short amount of time, so come prepared and chug a lot of coffee beforehand.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -4479,7 +4480,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
       }
     ],
-    "title": "Better Solidity Support in VSCode",
+    "title": "Better Solidity Support in VSCode by Hardhat",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665583200000,
@@ -5194,6 +5195,18 @@
         "description": "ETHLima Community Leader\r\nBlockchain enthusiast\r\nFinancial Executive with more than 20 years of experience in telcos\r\nSystems Engineering and Finance studies",
         "twitter": "@cadenadbloques",
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3405_3RYCYV9.jpg"
+      },
+      {
+        "id": "XKC3Q9",
+        "name": "Solange Gueiros",
+        "description": "Blockchain developer focused on Ethereum and smart contracts. MSc in digital currencies. She has been working with technology for over 20 years. Speaker in world conferences since 2018, also she won awards at Ethereum hackathons. She was listed in Cointelegraph Brazil top 50.",
+        "avatar": "http://speak.devcon.org/media/avatars/SolangeGueiros-Azul02_cVZbuAz.jpg"
+      },
+      {
+        "id": "RWSUU9",
+        "name": "Crisgarner",
+        "description": "- Smart Contracts at Cryptex Finance 👾\r\n- Devcon V Scholar ⛓️\r\n- Founder at Ethereum Honduras 🇭🇳\r\n- Collector of illiquid jpgs 🎨\r\n- Generative artist wanna be 👨‍🎨",
+        "avatar": "http://speak.devcon.org/media/avatars/Untitled_design_12_rawjdQK.png"
       }
     ],
     "title": "How to Build Bigger and Stronger ETH Communities in Latam - EN ESPAÑOL",
@@ -9738,7 +9751,7 @@
         "avatar": ""
       }
     ],
-    "title": "ZKPs as \"Programmable Cryptography\"",
+    "title": "ZKPs and \"Programmable Cryptography\"",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665747000000,
@@ -9908,7 +9921,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/profile_ZaXbJ6x.png"
       }
     ],
-    "title": "How to Stay Up to Date with All the Movements and the Rise of New Technologies",
+    "title": "How to Stay Up To Date With Web3 Technologies",
     "track": "Developer Infrastructure",
     "duration": 7,
     "start": 1665747600000,
@@ -9921,7 +9934,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "Following a vast technology field with thousands of projects, protocols, tools, and frameworks is complex. Inspired by ThoughtWorks, we decided to map all these Web3 technologies, present them using a radar metaphor, and give them as a public good. This initiative helps developers understand different ecosystems and technology stacks in the Web3 universe. It further allows them to create their radars. This talk will introduce this methodology framework to help tech teams make better decisions.",
+    "description": "Following a vast technology field with thousands of projects, protocols, tools, and frameworks is complex. Inspired by ThoughtWorks, we decided to map all these Web3 technologies, present them using a radar metaphor, and give them as a public good. This initiative helps developers understand ecosystems and technology stacks in the Web3 universe. It further allows them to create their radars. This talk will introduce this methodology framework to help tech teams make better decisions.",
     "abstract": "",
     "expertise": "",
     "tags": [

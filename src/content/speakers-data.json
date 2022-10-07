@@ -855,8 +855,7 @@
     "avatar": "https://speak.devcon.org/media/avatars/Headshot_2015_round_ed5uguf.png",
     "description": "Jim has worked on internet infrastructure for over 30 years, including running one of the first public access internet services. He has worked on hardware and software, in startups and multinationals, in technical, management and leadership roles. His current focus is on Ethereum staking, decentralized infrastructure, and advanced validator strategies.",
     "tracks": [
-      "Cryptoeconomics",
-      "Staking & Validator Experience"
+      "Cryptoeconomics"
     ],
     "eventDays": [
       1665446400000
@@ -2051,7 +2050,7 @@
       "Staking & Validator Experience"
     ],
     "eventDays": [
-      1665532800000
+      1665619200000
     ],
     "website": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/",
     "twitter": "https://twitter.com/EthereumOnARM",
@@ -2223,6 +2222,7 @@
     "eventDays": [
       1665705600000
     ],
+    "twitter": "https://twitter.com/m_novitovic",
     "github": "milosnovitovic"
   },
   {
@@ -3463,6 +3463,21 @@
     "github": "https://github.com/mara-schmiedt"
   },
   {
+    "id": "XKC3Q9",
+    "name": "Solange Gueiros",
+    "avatar": "https://speak.devcon.org/media/avatars/SolangeGueiros-Azul02_cVZbuAz.jpg",
+    "description": "Blockchain developer focused on Ethereum and smart contracts. MSc in digital currencies. She has been working with technology for over 20 years. Speaker in world conferences since 2018, also she won awards at Ethereum hackathons. She was listed in Cointelegraph Brazil top 50.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://solange.dev/",
+    "twitter": "https://twitter.com/solangegueiros",
+    "github": "https://github.com/solangegueiros"
+  },
+  {
     "id": "P8UUKZ",
     "name": "Andy Boyan",
     "avatar": "https://speak.devcon.org/media/avatars/qwBczxzc_400x400_rI3coTX.jpg",
@@ -3753,12 +3768,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/light_copy_wK1gC94.png",
     "description": "Design strategy for Privacy & Scaling Explorations",
     "tracks": [
-      "UX & Design",
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
+      "UX & Design"
     ],
     "eventDays": [
-      1665532800000,
-      1665446400000
+      1665446400000,
+      1665532800000
     ],
     "twitter": "@rachel_aux",
     "github": "https://github.com/rachelaux"
@@ -4073,7 +4088,7 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665446400000
+      1665619200000
     ],
     "twitter": "ameensol",
     "github": "https://github.com/ameensol"
@@ -4180,7 +4195,7 @@
   {
     "id": "Y7A3AV",
     "name": "David Searle",
-    "avatar": null,
+    "avatar": "https://speak.devcon.org/media/avatars/David-Searle-2_zqyjc3U.jpg",
     "description": "Data nerd turned crypto enthusiast working at Antithesis to push the boundaries of finding bugs in distributed architectures.",
     "tracks": [
       "Layer 1 Protocol"
@@ -4188,7 +4203,7 @@
     "eventDays": [
       1665446400000
     ],
-    "website": "www.antithesis.com",
+    "website": "https://www.antithesis.com",
     "twitter": "dsearle"
   },
   {
@@ -4654,9 +4669,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000,
       1665446400000,
-      1665619200000
+      1665705600000
     ]
   },
   {
@@ -4739,9 +4753,9 @@
   },
   {
     "id": "3ZAZ97",
-    "name": "Vanessa Koh",
+    "name": "Madison Adams",
     "avatar": null,
-    "description": "",
+    "description": "TBD",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -4812,7 +4826,7 @@
       "Layer 2s"
     ],
     "eventDays": [
-      1665619200000
+      1665532800000
     ],
     "twitter": "agazso",
     "github": "agazso"
@@ -5074,8 +5088,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000,
-      1665446400000
+      1665446400000,
+      1665619200000
     ]
   },
   {
@@ -5237,8 +5251,41 @@
     "name": "Max Semenchuk",
     "avatar": "https://speak.devcon.org/media/avatars/Max_Semenchuk_Headshot_Slm4WdK.jpg",
     "description": "Deputy Head Of The Virtual Assets Project Office Ministry Of The Digital Transformation Of Ukraine, Board Member Trusted Seed Association.\r\nMax shares the ideas of Decentralization, Lean/Agile, Teal Culture, DAO, Lean Startup and Community Leadership. More at https://maxsemenchuk.com/",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
     "twitter": "https://twitter.com/maxsemenchuk"
+  },
+  {
+    "id": "RWSUU9",
+    "name": "Crisgarner",
+    "avatar": "https://speak.devcon.org/media/avatars/Untitled_design_12_rawjdQK.png",
+    "description": "- Smart Contracts at Cryptex Finance 👾\r\n- Devcon V Scholar ⛓️\r\n- Founder at Ethereum Honduras 🇭🇳\r\n- Collector of illiquid jpgs 🎨\r\n- Generative artist wanna be 👨‍🎨",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://mirror.xyz/crisgarner.eth",
+    "twitter": "https://twitter.com/crisgarner",
+    "github": "https://github.com/crisgarner"
+  },
+  {
+    "id": "ETFXWM",
+    "name": "Paul Hauner",
+    "avatar": null,
+    "description": "Co-founder of Sigma Prime and Lighthouse. Proud contributor to Ethereum Proof-of-Stake.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "paulhauner",
+    "github": "paulhauner"
   }
 ]
