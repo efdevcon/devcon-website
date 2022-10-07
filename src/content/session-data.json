@@ -6,6 +6,7 @@
         "id": "9K7YCA",
         "name": "Skylar Weaver",
         "description": "Skylar works with the Ethereum Foundation leading the Devcon team, with a strong focus on community education around Ethereum. Having started developing applications around Bitcoin back in 2013, Skylar is now most passionate about Ethereum, its community, and the positive impact it can bring to the world. And yeah also its memes.",
+        "twitter": "@skylar_eth",
         "avatar": "http://speak.devcon.org/media/avatars/DUHeadshotCroppedCompressed_copy_6msakIH.jpg"
       },
       {
@@ -6622,7 +6623,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg"
       }
     ],
-    "title": "Scroll - zkEVM Testnet Launch Demo",
+    "title": "Scroll Pre-Alpha Testnet Upgrade",
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665658800000,
@@ -7791,7 +7792,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Origin story behind Hardhat and Nomic Foundation.",
+    "description": "Learn about the creation of the Nomic Foundation and what's coming next from the creators of Hardhat.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
