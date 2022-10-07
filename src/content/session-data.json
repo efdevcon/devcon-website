@@ -3,6 +3,12 @@
     "id": "7LHLPB",
     "speakers": [
       {
+        "id": "9K7YCA",
+        "name": "Skylar Weaver",
+        "description": null,
+        "avatar": ""
+      },
+      {
         "id": "J7DTZN",
         "name": "Danny Ryan",
         "description": "Danny Ryan is a Researcher at the Ethereum Foundation, focused on a series of core protocol upgrades aimed to make Ethereum more secure, sustainable, and scalable while retaining decentralization. He is involved with research, spec writing, client development, and general coordination around the project.",
