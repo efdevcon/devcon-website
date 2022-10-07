@@ -5,6 +5,8 @@ import speakerData from 'content/speakers-data.json'
 
 Run()
 
+const defaultCount = 25
+
 async function Run() {
     console.log('Get account stats..')
     await dbConnect()
@@ -39,7 +41,7 @@ async function Run() {
 
     const sorted = Object.keys(favoritedSpeakers).map(i => favoritedSpeakers[i]).sort((a: any, b: any) => {
         return b.count - a.count
-    }).slice(0, 10)
+    }).slice(0, defaultCount)
     console.log('# of Speakers favorited', Object.keys(favoritedSpeakers).length)
     sorted.forEach(i => console.log(`- ${i.speaker} (count: ${i.count})`))
     console.log()
@@ -64,7 +66,7 @@ function sessionInfo(type: string, sessions: string[]) {
 
     const sorted = Object.keys(grouped).map(i => grouped[i]).sort((a: any, b: any) => {
         return b.count - a.count
-    }).slice(0, 10)
+    }).slice(0, defaultCount)
 
     console.log('# of sessions', type, Object.keys(grouped).length)
     console.log('Total # sessions', type, sessions.length)

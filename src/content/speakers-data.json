@@ -242,9 +242,9 @@
   },
   {
     "id": "ZRAAAQ",
-    "name": "yaoqi",
+    "name": "Yaoqi",
     "avatar": "https://speak.devcon.org/media/avatars/profile_photo_Rxkc3P2.jpg",
-    "description": "Dr. Yaoqi Jia is the founder of Alt Research and AltLayer Network, an elastic and versatile scaling protocol for Web3. Before 2022, he was the director of Parity Asia, which provides blockchain infrastructure (say OpenEthereum) for the decentralised Web. He’s selected to the Forbes 30 Under 30 Asia list, 2019. Prior to that, he was the co-founder and CTO of Zilliqa, leading the efforts of design and delivery of the very first public sharding blockchain platform.",
+    "description": "Dr. Yaoqi Jia is the founder of AltLayer, an elastic and versatile scaling protocol for Web3. Before 2022, he was the director of Parity Asia, which provides blockchain infrastructure (say OpenEthereum) for the decentralised Web. He’s selected to the Forbes 30 Under 30 Asia list, 2019. Prior to that, he was the co-founder and CTO of Zilliqa. He got his Ph.D. in 2017 and his work was published in CCS, Usenix Security and other top-tier conferences.",
     "tracks": [
       "Layer 2s"
     ],
@@ -252,8 +252,7 @@
       1665446400000
     ],
     "website": "https://jiayaoqi.com/",
-    "twitter": "@jiayaoqi",
-    "github": "@jiayaoqijia"
+    "twitter": "@jiayaoqi"
   },
   {
     "id": "ZYTPZR",
@@ -629,13 +628,14 @@
   {
     "id": "JCPY8H",
     "name": "Ansgar Dietrichs",
-    "avatar": "https://www.gravatar.com/avatar/9d6c69f129b9423e22677625168ca10b",
+    "avatar": "https://speak.devcon.org/media/avatars/starship-1_OrtNLyK.jpg",
     "description": "Researcher at the Ethereum Foundation",
     "tracks": [
       "Layer 1 Protocol"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665705600000
     ],
     "twitter": "adietrichs",
     "github": "adietrichs"
@@ -671,18 +671,6 @@
   {
     "id": "NULY9Z",
     "name": "Chaitanya Konda",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665705600000
-    ]
-  },
-  {
-    "id": "EBVPHE",
-    "name": "Swati Rawal",
     "avatar": null,
     "description": "",
     "tracks": [
@@ -1658,8 +1646,8 @@
   {
     "id": "8DSTCX",
     "name": "Omar Espejel",
-    "avatar": "https://speak.devcon.org/media/avatars/badBunny_Bw16cyu.png",
-    "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Winner of the Miami Activate X Wormhole Hackathon 2022 thanks to the creation of [functions to provide numerical operations to Cairo](https://twitter.com/galronx/status/1528472289054175232).",
+    "avatar": "https://speak.devcon.org/media/avatars/espejel_foto_mqtggGh.jpeg",
+    "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Previously worked at Hugging Face, the powerhouse of open-source AI.",
     "tracks": [
       "Layer 2s"
     ],
@@ -2228,7 +2216,7 @@
     "id": "XREBWJ",
     "name": "Milos Novitovic",
     "avatar": "https://speak.devcon.org/media/avatars/milos-novitovic_jp5tivH.jpeg",
-    "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped most of the 3327 experiment (https://3327.io/projects/) and worked on the most of MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
+    "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped most of the 3327 experiment (https://3327.io/projects/) and worked on MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -2619,8 +2607,8 @@
   {
     "id": "8KJFF7",
     "name": "Safder Raza",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/Safder_Twit_2_RxJ1xUp.jpg",
+    "description": "Saf is curious about everything that has to do with pushing people to be the best versions of themselves. After spending a previous life as a mechanical engineer, Saf has worked in education, career coaching, mentorship and now leads People Operations at Gitcoin. You can also find him catherding the brightest Gen Z-ers at Dream DAO. Outside of work, Saf loves to spend time in the mountains, and is an avid trail ultra-runner and skier.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -4591,19 +4579,6 @@
     "twitter": "https://twitter.com/AnettRolikova"
   },
   {
-    "id": "C3RARC",
-    "name": "Swati Rawal",
-    "avatar": null,
-    "description": "She received her B.Sc.(Hons) degree from the University of Delhi, Delhi, India in 2014 and her Master’s degree in Mathematics and Scientific Computing from NIT Allahabad, India in 2016. She did her Ph.D. from NIT Allahabad, India. Her area of research is Lattice-based Digital Signatures. She joined the blockchain team of Ernst & Young early this  year and working on the project Starlight",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "github": "SwatiEY"
-  },
-  {
     "id": "HGMDTU",
     "name": "John Kane",
     "avatar": "https://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg",
@@ -5155,9 +5130,9 @@
   },
   {
     "id": "3EBRJY",
-    "name": "Kelvin",
-    "avatar": null,
-    "description": "",
+    "name": "Kelvin Fichter",
+    "avatar": "https://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif",
+    "description": "Building the Optimism Collective",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -5246,13 +5221,24 @@
   {
     "id": "RD3FWQ",
     "name": "Hester",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/Hester-Bruikman-400x400_High_eMWlhW0.jpg",
+    "description": "Hester helps projects better meet user needs. Between 2018 and 2022 she worked as core contributor to https://status.im/, helping design and ship a privacy first messenger, wallet and dapp browser. Soon to be your Web3 Discord alternative. She's the founder and boardmember of Web3 Creatives. A foundation that connects and enables creatives in Web3. Offscript and Web3UX panel are key initiatives.\r\n\r\nShe has a background and 12 years of experience in Psychology and User-System Interaction Design.",
     "tracks": [
       "UX & Design"
     ],
     "eventDays": [
       1665532800000
-    ]
+    ],
+    "twitter": "@hesterbruikman",
+    "github": "@hesterbruikman"
+  },
+  {
+    "id": "A9WCWN",
+    "name": "Max Semenchuk",
+    "avatar": "https://speak.devcon.org/media/avatars/Max_Semenchuk_Headshot_Slm4WdK.jpg",
+    "description": "Deputy Head Of The Virtual Assets Project Office Ministry Of The Digital Transformation Of Ukraine, Board Member Trusted Seed Association.\r\nMax shares the ideas of Decentralization, Lean/Agile, Teal Culture, DAO, Lean Startup and Community Leadership. More at https://maxsemenchuk.com/",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "https://twitter.com/maxsemenchuk"
   }
 ]
