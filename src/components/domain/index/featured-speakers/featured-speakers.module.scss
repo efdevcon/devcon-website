@@ -22,6 +22,8 @@
   }
 
   img {
+    height: 280px;
+    width: auto;
     transition: .2s ease;
   }
 
@@ -46,7 +48,7 @@
   }
 
   &:nth-child(3) {
-    padding-top: 40px;
+    padding-top: 80px;
 
     .text {
       left: 16px;
@@ -94,6 +96,10 @@
       left: 0px;
       bottom: 16px;
     }
+  }
+
+  &:nth-child(11) {
+    padding-top: 70px;
   }
 
   .text {

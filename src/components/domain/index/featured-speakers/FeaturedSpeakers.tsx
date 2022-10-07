@@ -14,6 +14,9 @@ import PiaMancini from './speaker-images/pia-mancini.png'
 import VekateshRao from './speaker-images/vekatesh-rao.png'
 import TimBeiko from './speaker-images/tim-beiko.png'
 import MaxSemenchuk from './speaker-images/max-semenchuk.png'
+import VitalikButerin from './speaker-images/vitalik-buterin.png'
+import KurtOpsahl from './speaker-images/kurt-opsahl.png'
+import IXShells from './speaker-images/ix-shells.png'
 import Background from './speaker-images/background.png'
 import { useTranslations } from 'next-intl'
 import { useDraggableLink } from 'components/domain/devcon-week/schedule'
@@ -23,22 +26,32 @@ import { useDraggableLink } from 'components/domain/devcon-week/schedule'
 type SpeakerProps = {
   name: string
   image: any
-  appLink: string
+  appLink?: string
 }
 
 const Speaker = (props: SpeakerProps) => {
   const dragAttributes = useDraggableLink()
 
+  const body = (
+    <>
+      <div className={css['text']}>
+        {props.name.split(' ').map(partOfName => {
+          return <p key={partOfName}>{partOfName}</p>
+        })}
+      </div>
+      <Image src={props.image} layout="raw" alt={props.name} priority quality="100" />
+    </>
+  )
+
   return (
     <div className={css['speaker']}>
-      <Link {...dragAttributes} to={props.appLink} className={css['alignment']}>
-        <div className={css['text']}>
-          {props.name.split(' ').map(partOfName => {
-            return <p key={partOfName}>{partOfName}</p>
-          })}
-        </div>
-        <Image src={props.image} layout="raw" alt={props.name} priority quality="100" />
-      </Link>
+      {props.appLink ? (
+        <Link {...dragAttributes} to={props.appLink} className={css['alignment']}>
+          {body}
+        </Link>
+      ) : (
+        <div className={css['alignment']}>{body}</div>
+      )}
     </div>
   )
 }
@@ -62,12 +75,15 @@ const FeaturedSpeakers = () => {
             <Speaker appLink="https://app.devcon.org/schedule/HFPLPD" name="Brewster Kahle" image={BrewsterKahle} />
             <Speaker appLink="https://app.devcon.org/speakers/J7DTZN" name="Danny Ryan" image={DannyRyan} />
             <Speaker appLink="https://app.devcon.org/speakers/ADH9HF" name="Aya Miyaguchi" image={AyaMiyaguchi} />
+            <Speaker appLink="https://app.devcon.org/speakers/FLKFV8" name="Vitalik Buterin" image={VitalikButerin} />
             <Speaker appLink="https://app.devcon.org/speakers/ZUMDMJ" name="Pia Mancini" image={PiaMancini} />
             <Speaker appLink="https://app.devcon.org/speakers/PRM7AM" name="Bruno Macaes" image={BrunoMacaes} />
+            <Speaker name="IXShells" image={IXShells} />
+            <Speaker appLink="https://app.devcon.org/speakers/JS9FQP" name="Kurt Opsahl" image={KurtOpsahl} />
             <Speaker appLink="https://app.devcon.org/speakers/Z93KWP" name="Venkatesh Rao" image={VekateshRao} />
             <Speaker appLink="https://app.devcon.org/speakers/7BSSFC" name="Tim Beiko" image={TimBeiko} />
             <Speaker appLink="https://app.devcon.org/speakers/3NSWV9" name="Eric Wall" image={EricWall} />
-            <Speaker appLink="https://app.devcon.org/speakers" name="Max Semenchuk" image={MaxSemenchuk} />
+            <Speaker appLink="https://app.devcon.org/speakers/A9WCWN" name="Max Semenchuk" image={MaxSemenchuk} />
           </div>
         </SwipeToScroll>
       </div>
