@@ -4128,14 +4128,6 @@
     "twitter": "dsearle"
   },
   {
-    "id": "WQ3EN9",
-    "name": "Ethereum Foundation",
-    "avatar": null,
-    "description": "Holding for others",
-    "tracks": [],
-    "eventDays": []
-  },
-  {
     "id": "CWRAHR",
     "name": "Mike Leach",
     "avatar": "https://speak.devcon.org/media/avatars/Casual_headshot_-_cropped_TZRo4Y4.png",
@@ -5267,6 +5259,18 @@
     ],
     "eventDays": [
       1665619200000
+    ]
+  },
+  {
+    "id": "VQMDYU",
+    "name": "Juan David",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
     ]
   }
 ]
