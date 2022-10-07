@@ -20,3 +20,5 @@ jobs:
         run: yarn install
       - name: Cleanup database
         run: yarn scripts:db-cleanup
+        env:
+          DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
