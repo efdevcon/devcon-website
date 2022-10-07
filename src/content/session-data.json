@@ -8635,7 +8635,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/baz_CMug4q6.jpeg"
       }
     ],
-    "title": "EVM Assembly - A First Look",
+    "title": "EVM - Some Assembly Required",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665680400000,
@@ -8650,7 +8650,7 @@
     "type": "Talk",
     "description": "EVM assembly can be quite opaque and intimidating at first glance.  In this talk we'll take a look at exactly how EVM assembly works under the hood while dissecting (and implementing) some common functionality we see in smart contracts - as well as showing some optimization techniques you can use by jumping down to assembly in your solidity contracts.",
     "abstract": "",
-    "expertise": "Advanced",
+    "expertise": "Intermediate",
     "tags": [
       "Solidity",
       "Assembly",
