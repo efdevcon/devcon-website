@@ -12,6 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
         with:
+          ref: 'next'
           token: ${{secrets.GH_ACCESS_TOKEN}}
 
       - name: Use Node.js
