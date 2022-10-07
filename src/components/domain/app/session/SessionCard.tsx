@@ -16,6 +16,7 @@ import { Link } from 'components/common/link'
 import { useAppContext } from 'context/app-context'
 import { RoomInfo } from '../venue/RoomInfo'
 import { useIsStandalone } from 'utils/pwa-link'
+import { Speaker } from 'types/Speaker'
 
 type CardProps = {
   session: Session
@@ -105,7 +106,9 @@ export const SessionCard = (props: CardProps) => {
           {props.session.speakers.length > 0 && (
             <div className={css['speakers']}>
               <IconSpeaker />
-              {props.session.speakers.map((speaker, index) => {
+              {props.session.speakers.sort((a: Speaker, b: Speaker) => {
+                return a.name.localeCompare(b.name)
+              }).map((speaker, index) => {
                 const isLast = props.session.speakers.length - 1 === index
                 const isFirst = index === 0
 

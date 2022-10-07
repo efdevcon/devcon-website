@@ -26,6 +26,7 @@ import { useAppContext } from 'context/app-context'
 import { LivestreamCard } from './LivestreamCard'
 import { APP_URL } from 'utils/constants'
 import { useIsStandalone } from 'utils/pwa-link'
+import { Speaker } from 'types/Speaker'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -214,7 +215,9 @@ export const Session = (props: SessionProps) => {
         {props.session.speakers.length > 0 && (
           <div className={css['speakers']}>
             <h3 className="app-header clear-bottom-less">Speakers</h3>
-            {props.session.speakers.map(i => {
+            {props.session.speakers.sort((a: Speaker, b: Speaker) => {
+              return a.name.localeCompare(b.name)
+            }).map(i => {
               return <SpeakerCard key={i.id} speaker={i} />
             })}
           </div>
