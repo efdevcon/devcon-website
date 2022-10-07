@@ -125,10 +125,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/cat_rgTRJM9.jpg",
     "description": "Marius joined the Ethereum Foundation in 2020 to work on go-ethereum. He's interested in fuzzing, testing and shipping The Merge. He wrote his master thesis on differential fuzzing of EVMs where he found 3 critical consensus issues.",
     "tracks": [
-      "Layer 1 Protocol"
+      "Layer 1 Protocol",
+      "Developer Infrastructure"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665532800000
     ],
     "twitter": "vdWijden",
     "github": "MariusVanDerWijden"
@@ -166,8 +168,8 @@
   {
     "id": "ZR3DL7",
     "name": "Connor Spelliscy",
-    "avatar": null,
-    "description": "Run the DAO Research Collective, which accelerates DAO functionality by procuring and open sourcing targeted research foundational to effective DAO operation. We’ve received grants from the Ethereum Foundation, Uniswap, Compound, and Aave for our work.\r\n\r\nCo-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto, focused on building better regulatory outcomes for the industry.",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_1520_o3tqJoW.jpeg",
+    "description": "Connor Spelliscy is a crypto researcher and advocate, primarily focused on DAOs.  He runs the DAO Research Collective, which accelerates DAO functionality by supporting and curating research foundational to effective DAO operation. \r\n\r\nHe helps run the Gitcoin advocacy ecosystem round and previously co-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -238,9 +240,9 @@
   },
   {
     "id": "ZRAAAQ",
-    "name": "yaoqi",
+    "name": "Yaoqi",
     "avatar": "https://speak.devcon.org/media/avatars/profile_photo_Rxkc3P2.jpg",
-    "description": "Dr. Yaoqi Jia is the founder of Alt Research and AltLayer Network, an elastic and versatile scaling protocol for Web3. Before 2022, he was the director of Parity Asia, which provides blockchain infrastructure (say OpenEthereum) for the decentralised Web. He’s selected to the Forbes 30 Under 30 Asia list, 2019. Prior to that, he was the co-founder and CTO of Zilliqa, leading the efforts of design and delivery of the very first public sharding blockchain platform.",
+    "description": "Dr. Yaoqi Jia is the founder of AltLayer, an elastic and versatile scaling protocol for Web3. Before 2022, he was the director of Parity Asia, which provides blockchain infrastructure (say OpenEthereum) for the decentralised Web. He’s selected to the Forbes 30 Under 30 Asia list, 2019. Prior to that, he was the co-founder and CTO of Zilliqa. He got his Ph.D. in 2017 and his work was published in CCS, Usenix Security and other top-tier conferences.",
     "tracks": [
       "Layer 2s"
     ],
@@ -248,8 +250,7 @@
       1665446400000
     ],
     "website": "https://jiayaoqi.com/",
-    "twitter": "@jiayaoqi",
-    "github": "@jiayaoqijia"
+    "twitter": "@jiayaoqi"
   },
   {
     "id": "ZYTPZR",
@@ -364,6 +365,7 @@
       1665446400000
     ],
     "website": "https://ethereum.stackexchange.com/users/87/q9f",
+    "twitter": "https://twitter.com/ETHBerlin",
     "github": "https://github.com/q9f"
   },
   {
@@ -602,7 +604,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665532800000
     ],
     "twitter": "lightclients",
     "github": "lightclient"
@@ -624,13 +627,14 @@
   {
     "id": "JCPY8H",
     "name": "Ansgar Dietrichs",
-    "avatar": "https://www.gravatar.com/avatar/9d6c69f129b9423e22677625168ca10b",
+    "avatar": "https://speak.devcon.org/media/avatars/starship-1_OrtNLyK.jpg",
     "description": "Researcher at the Ethereum Foundation",
     "tracks": [
       "Layer 1 Protocol"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665705600000
     ],
     "twitter": "adietrichs",
     "github": "adietrichs"
@@ -676,18 +680,6 @@
     ]
   },
   {
-    "id": "EBVPHE",
-    "name": "Swati Rawal",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665705600000
-    ]
-  },
-  {
     "id": "Z8QHWS",
     "name": "Stanis Kulechov",
     "avatar": "https://speak.devcon.org/media/avatars/Stani_BW_nIqYqbL.jpeg",
@@ -721,7 +713,7 @@
     "id": "XR3YHS",
     "name": "Jonathan Alexander",
     "avatar": "https://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png",
-    "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder and council member of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
+    "description": "Jonathan Alexander is CTO of OpenZeppelin and co-founder of Forta. He leads the global development team at OpenZeppelin that works on OpenZeppelin Contracts, Wizard, Defender, and Forta. Formerly he was CTO at Tricentis and Vonage Business. When not working on software he likes spending time with his family, reading, tennis, and mountain hiking.",
     "tracks": [
       "Security"
     ],
@@ -1353,7 +1345,7 @@
     "id": "93NEDS",
     "name": "Sergey Nazarov",
     "avatar": "https://speak.devcon.org/media/avatars/Sergey_Nazarov_Photo_3_814OIT5.jpg",
-    "description": "Sergey Nazarov is co-founder of Chainlink, the leading decentralized oracle network used by global enterprises and leading Web3 projects at the forefront of the blockchain industry. Chainlink is unlocking a world powered by cryptographic truth by enabling smart contracts on any blockchain to reliably connect to real-world data and off-chain computation and currently secures tens of billions of dollars in value for smart contracts across decentralized finance (DeFi), insurance, gaming, and other",
+    "description": "Sergey Nazarov is co-founder of Chainlink, the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -1366,8 +1358,8 @@
   {
     "id": "G9FTMN",
     "name": "Oliver JL Renwick",
-    "avatar": "https://speak.devcon.org/media/avatars/flpfp_m1w5lTh.jpg",
-    "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, where he helps maintain the MetaMask Knowledge Base and, in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
+    "avatar": "https://speak.devcon.org/media/avatars/2021headshot_T7gutSm.jpg",
+    "description": "Oliver is a terminologist, SBC enthusiast, and translator. He currently lives near Cleveland, Ohio, USA, with his wife and two kids. He works at ConsenSys, creating and maintaining support documentation for MetaMask, Infura, and other products, and in general, tries to explain the madness of web3 to those who want to know more. He speaks Spanish and English fluently, and can get himself into trouble in Italian, Arabic, Catalan and French.",
     "tracks": [
       "UX & Design"
     ],
@@ -1439,7 +1431,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/-1LUYnWJ_400x400_X4rPXAE.jpg",
     "description": "Geth team, interfacing between research and engineering. Interested in evolutions to the Ethereum protocol.",
     "tracks": [
-      "Layer 1 Protocol"
+      "Layer 1 Protocol",
+      "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000
@@ -1464,7 +1457,7 @@
     "id": "LJRUBS",
     "name": "Santiago Palladino",
     "avatar": "https://speak.devcon.org/media/avatars/spalladino-elysium_CPqFm27.jpg",
-    "description": "Santiago, aka Palla, currently leads the Defender development team at OpenZeppelin. He joined the Ethereum space in 2017, has contributed to multiple open source projects, wrote the book \"Ethereum for Web Developers\", and is also a council member for TheGraph. Before getting into web3, he worked for over 10 years on software development, focusing on disease surveillance and disaster response. He was also a TA at University of Buenos Aires, where he got his Masters in Computer Science.",
+    "description": "Santiago joined the Ethereum dev space in 2017. He has worked as Director of Development and Security Reseacher at OpenZeppelin, has contributed to multiple open source projects, and wrote the book \"Ethereum for Web Developers\". He's also a councilmember for TheGraph. \r\n\r\nPrior to web3, he worked for over 10 years on software development, focusing on disease surveillance and disaster response. He was also a TA at University of Buenos Aires, where he got his Masters in Computer Science.",
     "tracks": [
       "Security"
     ],
@@ -1487,6 +1480,7 @@
       1665705600000
     ],
     "website": "https://www.linkedin.com/in/agusaldasoro/",
+    "twitter": "https://twitter.com/agusaldasoro",
     "github": "https://github.com/agusaldasoro"
   },
   {
@@ -1607,7 +1601,7 @@
     "id": "UFALYU",
     "name": "Potuz",
     "avatar": "https://speak.devcon.org/media/avatars/trippy-0_rxbGWWE.jpg",
-    "description": "I am a professional mathematicial that temporarily happen to be a core developer at prysmaticlabs. I enjoy the types of puzzles that arise when trying to hack the protocol.",
+    "description": "I am a professional mathematician that temporarily happen to be a core developer at prysmaticlabs. I enjoy the types of puzzles that arise when trying to hack the protocol.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -1651,8 +1645,8 @@
   {
     "id": "8DSTCX",
     "name": "Omar Espejel",
-    "avatar": "https://speak.devcon.org/media/avatars/badBunny_Bw16cyu.png",
-    "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Winner of the Miami Activate X Wormhole Hackathon 2022 thanks to the creation of [functions to provide numerical operations to Cairo](https://twitter.com/galronx/status/1528472289054175232).",
+    "avatar": "https://speak.devcon.org/media/avatars/espejel_foto_mqtggGh.jpeg",
+    "description": "Machine Learning engineer turned StarkNet Developer Advocate. Leader of the [Spanish](https://twitter.com/StarkNetEs) and Portuguese StarkNet communities. Previously worked at Hugging Face, the powerhouse of open-source AI.",
     "tracks": [
       "Layer 2s"
     ],
@@ -1823,8 +1817,8 @@
   {
     "id": "CZTSR9",
     "name": "Chang-Wu Chen",
-    "avatar": "https://www.gravatar.com/avatar/a5b21045b379279439b2acab19a33eb8",
-    "description": "Dr. Chang-Wu Chen is the head of imToken labs, leading wallet, contract development and crypto research. Prior to joining imToken, he worked for AMIS as a chief scientist from 2018 to 2020, and Ethereum Foundation as a researcher from 2017 to 2018. He served as an adjunct assistant professor, teaching Ethereum DApp development, at the National Chengchi University from 2018 to 2021. He is currently also a Taipei Ethereum Meetup co-organizer.",
+    "avatar": "https://speak.devcon.org/media/avatars/CleanShot_2022-10-05_at_02.03.072x_irUNwS8.png",
+    "description": "Dr. Chang-Wu Chen is the head of imToken labs, leading wallet, contract development and crypto research. Prior to joining imToken, he worked for AMIS as a chief scientist from 2018 to 2020, and Ethereum Foundation as a researcher from 2017 to 2018. He served as an adjunct assistant professor, teaching Ethereum DApp development, at the National Chengchi University from 2018 to 2021.",
     "tracks": [
       "Security"
     ],
@@ -1837,9 +1831,9 @@
   },
   {
     "id": "VXMHCZ",
-    "name": "Oskar Thoren",
+    "name": "Oskar Thorén",
     "avatar": "https://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg",
-    "description": "Oskar Thoren is the protocol research lead at Vac, an R&D org creating modular p2p protocols for private, secure, censorship resistant communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
+    "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -1961,6 +1955,20 @@
     ],
     "website": "https://inat.io/scholarship/",
     "twitter": "@dnsvckvc"
+  },
+  {
+    "id": "N9FFYG",
+    "name": "Jannik Luhn",
+    "avatar": null,
+    "description": "Hello!",
+    "tracks": [
+      "Governance & Coordination"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "twitter": "@anotherjannik",
+    "github": "jannikluhn"
   },
   {
     "id": "ARTED7",
@@ -2141,7 +2149,7 @@
     "id": "EEB9GU",
     "name": "Severiano Sisneros",
     "avatar": null,
-    "description": "",
+    "description": "I'm a Senior Cryptographer at Semiotic Labs currently working with The SNARKForce, developing cryptography solutions for The Graph protocol. Before that I was a Senior Principal Anti-Tamper Security Engineer at Northrop Grumman and before that I was doing cyber security R&D at Sandia National Labs. I have an MSEE from the University of Illinois at Urbana-Champaign, where I studied cryptography.",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -2207,7 +2215,7 @@
     "id": "XREBWJ",
     "name": "Milos Novitovic",
     "avatar": "https://speak.devcon.org/media/avatars/milos-novitovic_jp5tivH.jpeg",
-    "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped each 3327 experiment (https://3327.io/projects/) and worked on the most of MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
+    "description": "For the last three years since I joined the Web3 industry, I mainly worked as a product manager, discovering, shaping, and developing different Web3 projects.\r\nFor the last year and a half, I joined our R&D department and focused on generating and validating early-stage ideas while focusing on cutting-edge technology.\r\nI worked and shaped most of the 3327 experiment (https://3327.io/projects/) and worked on MVPW’s products (https://mvpworkshop.co/portfolio/)\r\nhttps://bit.ly/3AbLPAC",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -2247,7 +2255,7 @@
     "id": "CCVCAZ",
     "name": "Melanie Davis",
     "avatar": "https://speak.devcon.org/media/avatars/Devcon_PP_BoO0GAs.jpg",
-    "description": "Contributor Experience @DXdao_ I DAO and DeFi enthusiast",
+    "description": "Melanie leads the Contributor Experience at DXdao. She has over 8 years of professional experience in People Operations and transforming communities through strategic innovation. As a passionate Web3 and DAO contributor, she constantly pushes the boundaries of traditional Human Resources to help her build a resilient and scalable decentralized ecosystem at DXdao.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -2314,6 +2322,17 @@
     "github": "villanuevawill"
   },
   {
+    "id": "A7RKE9",
+    "name": "Jennifer Parak",
+    "avatar": null,
+    "description": "Jennifer currently works as a Software Engineer at Chorus One. Having started her career working with Microservices in a Java/Spring Boot environment, she's had the chance of working in the smart ecosystems/iOT space and is keen to branch out to emerging technologies such as blockchain tech, following her passion to solve hard technical challenges in a constraint environment.",
+    "tracks": [],
+    "eventDays": [],
+    "website": "www.jennifer-codes.com",
+    "twitter": "jenpaff",
+    "github": "jenpaff"
+  },
+  {
     "id": "XVNSBE",
     "name": "James Beck",
     "avatar": "https://speak.devcon.org/media/avatars/James_Beck_ConsenSys_gk7zQyf.JPG",
@@ -2374,7 +2393,7 @@
   {
     "id": "TRWSKH",
     "name": "Matt Deible",
-    "avatar": "https://speak.devcon.org/media/avatars/Screenshot_20220604-005501_MMeEtID.jpg",
+    "avatar": "https://speak.devcon.org/media/avatars/profile_picture_gLd5qva.jpg",
     "description": "Coming from a background in artificial intelligence and reinforcement learning, Matt now leads development of the order routing algorithm and smart contracts for odos.xyz",
     "tracks": [
       "Cryptoeconomics"
@@ -2411,7 +2430,7 @@
   },
   {
     "id": "LGTVTW",
-    "name": "Dominic Horn",
+    "name": "Dominic Emanuel Horn",
     "avatar": "https://speak.devcon.org/media/avatars/fe9200c4-2241-40ef-b853-eaebab8b39f8_rw_1200_photos_v2_x4_3MjzB9c.jpg",
     "description": "Dominic Emanuel Horn is a freelance product designer building digital products with clients like motius, siemens, zeiss and others. I care about designing products with emotion, that look & feel great to the point that people will post on social media about it.",
     "tracks": [
@@ -2465,21 +2484,6 @@
     ],
     "twitter": "OisinKyne",
     "github": "OisinKyne"
-  },
-  {
-    "id": "LZZKHE",
-    "name": "David Chaum",
-    "avatar": "https://speak.devcon.org/media/avatars/8bb5b0fae440b537014081c33a7d2959_kr8ERPu.jpg",
-    "description": "David Chaum is a pioneer in cryptography and privacy-preserving technologies, and is widely recognized as the inventor of digital cash. His work on cryptographic “vault systems” contains the 1st proposal for a blockchain, containing all but 1 element detailed 26 years later in the Bitcoin white-paper. He is credited with creating the first digital currency, eCash, in 1995. David founded the International Association for Cryptologic Research and has a Ph.D. in computer science from UC Berkeley.",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "website": "https://chaum.com/",
-    "twitter": "https://twitter.com/chaumdotcom",
-    "github": "https://git.xx.network/xx_network"
   },
   {
     "id": "GJBJK7",
@@ -2538,6 +2542,16 @@
     "github": "pdaian"
   },
   {
+    "id": "EXXLEW",
+    "name": "Tony Olendo",
+    "avatar": "https://speak.devcon.org/media/avatars/Tony_Olendo_-_Graphic_White_ASh4KEO.png",
+    "description": "Tony Olendo is a Developer Education Evangelist at Polygon. He has a passion for Ethereum Developer Education and specifically helping developers in their Solidity journey. He is also a core team member of Afrofuture DAO, Africa's largest community of NFT artists and also a co-founder of Web3Afrika, Africa's largest community of Web3 builders.",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "https://twitter.com/tonyolendo",
+    "github": "https://github.com/teeolendo"
+  },
+  {
     "id": "MPXDXL",
     "name": "Juan",
     "avatar": "https://speak.devcon.org/media/avatars/photo_2022-06-27_17.10.30_5v7gxsv.jpeg",
@@ -2584,8 +2598,8 @@
   {
     "id": "8KJFF7",
     "name": "Safder Raza",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/Safder_Twit_2_RxJ1xUp.jpg",
+    "description": "Saf is curious about everything that has to do with pushing people to be the best versions of themselves. After spending a previous life as a mechanical engineer, Saf has worked in education, career coaching, mentorship and now leads People Operations at Gitcoin. You can also find him catherding the brightest Gen Z-ers at Dream DAO. Outside of work, Saf loves to spend time in the mountains, and is an avid trail ultra-runner and skier.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -2784,14 +2798,15 @@
   {
     "id": "LWEFBZ",
     "name": "Mike Connor",
-    "avatar": null,
-    "description": "Mike Connor is an applied cryptographer at Aztec Network, the privacy layer for web3. He received his MMath Mathematical Sciences from the University of Bath, and spent three years designing and building tools for private smart contracts on Ethereum.",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_3373_U65nzzo.jpg",
+    "description": "Mike Connor is an applied cryptographer at Aztec Network, the privacy layer for web3. He's focussed on designing the L2 architecture for fully programmable and composable private smart contracts.\r\nFor the last 4 years he's been designing and building tools for private smart contracts on Ethereum.\r\nBefore then, he was doing something to do with actuarial modelling.",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "twitter": "@mike_connor"
   },
   {
     "id": "GDL8AJ",
@@ -2839,7 +2854,7 @@
     "id": "L7TWAB",
     "name": "Charles St. Louis",
     "avatar": "https://speak.devcon.org/media/avatars/profile-photo_GwQvxrq.jpeg",
-    "description": "Charles St. Louis is the COO and Head of Governance at Element Finance. Previously, he was the Decentralized Governance Architecture at the Maker Foundation and the first mandated member of MakerDAO elected by MKR Holders. \r\n\r\nHe's been an active contributor to Ethereum / Ethereum Cat Herders, helping with improving the EIP process, coordination of hardforks, advising of Ethereum.org, and working on Ethereum developer growth strategy.",
+    "description": "Charles St. Louis is the COO and Head of Governance at Element Finance. Previously, he was the Decentralized Governance Architect at the Maker Foundation and one of the first mandated members of MakerDAO elected by MKR Holders. \r\n\r\nHe's been an active contributor to Ethereum and the Ethereum Cat Herders, helping with improving the EIP process, coordination of hardforks, advising Ethereum.org, and working on Ethereum developer growth strategy.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -2884,7 +2899,7 @@
     "id": "MZDPKB",
     "name": "Alim Khamisa",
     "avatar": "https://speak.devcon.org/media/avatars/Alim_pic3_Nx5MHax.jpg",
-    "description": "Alim is a Product Manager at Element Finance. In 2019, he co-founded the DeFi Toronto meetup which has grown to over 1,800 members worldwide. In 2017, he helped to launch one of Canada's first industrial-scale crypto-mining companies. On the academic front, he teaches part-time as an Adjunct Professor in the Blockchain Development Program at George Brown College. He recently authored a chapter titled 'Token Economies' in The Emerald Handbook of Blockchain for Business (published March 2021).",
+    "description": "Alim is a Product Manager at Element Finance. In 2019, he co-founded the DeFi Toronto meetup which has grown to over 2,000 members worldwide. In 2017, he helped to launch one of Canada's first industrial-scale crypto-mining companies. On the academic front, he teaches part-time as an Adjunct Professor in the Blockchain Development Program at George Brown College. He recently authored a chapter titled 'Token Economies' in The Emerald Handbook of Blockchain for Business (published March 2021).",
     "tracks": [
       "UX & Design"
     ],
@@ -3038,6 +3053,15 @@
     "github": "ashhanai"
   },
   {
+    "id": "QZWEKG",
+    "name": "Gabriella Sofia",
+    "avatar": "https://speak.devcon.org/media/avatars/k7nS6oz7_400x400_Zg8d3ff.jpeg",
+    "description": "research, ethereum @chorusone",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "gabriellassh"
+  },
+  {
     "id": "9DZ7Q7",
     "name": "E.G. Galano",
     "avatar": "https://speak.devcon.org/media/avatars/eg-headshot_zVCzdsI.jpeg",
@@ -3169,7 +3193,7 @@
   },
   {
     "id": "VYQT8X",
-    "name": "trent",
+    "name": "Trent Van Epps",
     "avatar": "https://speak.devcon.org/media/avatars/van_epps_picture_OE5pxB3.png",
     "description": "- ethereum ecosystem work & All Core Devs call\r\n- creating with @StatefulWorks\r\n- one of many building the @ProtocolGuild",
     "tracks": [
@@ -3258,7 +3282,7 @@
     "id": "3EBXMM",
     "name": "Brian Wilkes, CFA",
     "avatar": "https://speak.devcon.org/media/avatars/Profile_Pic_kqK2pZx.PNG",
-    "description": "I am a data scientist and financial analyst currently working on a grant from the EF PSE team.  I am fascinated by a future enabled by zero knowledge technology, including both scalability and privacy.   Outside of web 3 work, I am a husband and father of a 2 year old I like to carry up mountains in Colorado.  I am generally interested in everything, but you will catch my attention with music (I play bass), skiing, and anything Ethereum related :)",
+    "description": "I am a data scientist and financial analyst currently working on a grant from the EF PSE team.  I am fascinated by a future enabled by zero-knowledge technology, including both scalability and privacy.   Outside of Ethereum work, I am a husband and father of a 2-year-old I like to carry up mountains in Colorado.  I am generally interested in everything, but you will catch my attention with music (I play bass), skiing, and anything Ethereum related :)",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -3271,7 +3295,7 @@
     "id": "WB8KEZ",
     "name": "Odysseas",
     "avatar": "https://speak.devcon.org/media/avatars/twitter-profile-01_7v56gU2.png",
-    "description": "℣ibes ℯngineer  @nomadxyz_ | sovereign individual 𓀀 ⋃ shitposter 𓁀 ⋃ system design, rust, solidity (🔥,⚒️) ⋃⛓",
+    "description": "Protocol engineer in Nomad. Used to work as a protocol consultant in the web3 space, and in a previous life, he worked in web2 in the area of DevOps and IoT.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -3369,8 +3393,8 @@
   },
   {
     "id": "MQ3YLE",
-    "name": "Igor",
-    "avatar": "https://www.gravatar.com/avatar/d621490fdb0c2413a188e3ce9368bd9f",
+    "name": "Igor Yalovoy",
+    "avatar": "https://speak.devcon.org/media/avatars/igor-small_GTVW3KX.png",
     "description": "Igor Yalovoy is cofounder and CTO at fintech startup Babylon Finance. Babylon Finance has grown from zero to 30 million dollars in assets under management in less than a year. Previously, he was the core developer at OpenZeppelin securing billions of dollars in funds for leading crypto organizations including Coinbase, Ethereum Foundation, Compound, Aave, TheGraph.",
     "tracks": [
       "Developer Infrastructure"
@@ -3400,15 +3424,15 @@
   {
     "id": "XZSKJX",
     "name": "Yoseph Ayele",
-    "avatar": null,
-    "description": "Yoseph is an entrepreneur building at the intersection of Web3 and Africa. He is a contributor to the Ethereum Foundation, Wildfire DAO, and Soul Aether amongst others. \r\n\r\nHe co-founded and was CEO of the Edmund Hillary Fellowship (ehf.org), a community of 500+ top tier entrepreneurs and investors from 68 countries. He built a new immigration program for entrepreneurs with the New Zealand government, and ran it as a public-private partnership. He is from Ethiopia, and grew up in East Africa.",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_AD01D80B7C94-1_18dsIDZ.jpeg",
+    "description": "Yoseph is an entrepreneur building at the intersection of Web3 and Africa, and focused on growing the borderless economy on the continent.\r\n\r\nHe co-founded and was CEO of the Edmund Hillary Fellowship (ehf.org), a community of 500+ top tier entrepreneurs and investors from 68 countries. He built a new immigration program with the New Zealand government, and ran it as a public-private partnership. Yoseph is from Ethiopia, and grew up in East Africa.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
     ],
-    "website": "https://www.linkedin.com/in/yosephayele/ (not much web3 there).",
+    "website": "https://www.linkedin.com/in/yosephayele/",
     "twitter": "@yosephayele"
   },
   {
@@ -3424,6 +3448,21 @@
     ],
     "twitter": "https://twitter.com/MaraSchmiedt",
     "github": "https://github.com/mara-schmiedt"
+  },
+  {
+    "id": "XKC3Q9",
+    "name": "Solange Gueiros",
+    "avatar": "https://speak.devcon.org/media/avatars/SolangeGueiros-Azul02_cVZbuAz.jpg",
+    "description": "Blockchain developer focused on Ethereum and smart contracts. MSc in digital currencies. She has been working with technology for over 20 years. Speaker in world conferences since 2018, also she won awards at Ethereum hackathons. She was listed in Cointelegraph Brazil top 50.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://solange.dev/",
+    "twitter": "https://twitter.com/solangegueiros",
+    "github": "https://github.com/solangegueiros"
   },
   {
     "id": "P8UUKZ",
@@ -3535,7 +3574,9 @@
     "eventDays": [
       1665619200000,
       1665705600000
-    ]
+    ],
+    "twitter": "icebearhww",
+    "github": "hwwhww"
   },
   {
     "id": "BCPCGN",
@@ -3673,10 +3714,12 @@
     "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
     "tracks": [
       "Staking & Validator Experience",
+      "Developer Infrastructure",
       "UX & Design"
     ],
     "eventDays": [
       1665446400000,
+      1665619200000,
       1665705600000
     ],
     "twitter": "@qnou",
@@ -3685,14 +3728,15 @@
   {
     "id": "QERDVF",
     "name": "Bryan Moreno",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/photo_IVtZcHa.jpg",
+    "description": "Born in Brazil but currently based in Berlin. I've been writing software for over 10 years, both on the backend and on the frontend. Almost a year ago, I started working at Shopify on their blockchain team. I've been helping them tap into blockchain technologies and use NFTs to unlock new commerce experiences for their customers.",
     "tracks": [
       "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000
-    ]
+    ],
+    "github": "morenobryan"
   },
   {
     "id": "KFAEPV",
@@ -3712,11 +3756,13 @@
     "avatar": "https://speak.devcon.org/media/avatars/light_copy_wK1gC94.png",
     "description": "Design strategy for Privacy & Scaling Explorations",
     "tracks": [
+      "UX & Design",
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665446400000
     ],
+    "twitter": "@rachel_aux",
     "github": "https://github.com/rachelaux"
   },
   {
@@ -3735,6 +3781,36 @@
     "github": "yi-sun"
   },
   {
+    "id": "DNB3MY",
+    "name": "Chris Whinfrey",
+    "avatar": "https://speak.devcon.org/media/avatars/AshAvatar_TS6pQfP.png",
+    "description": "Co-founder of Hop Protocol\r\nAuthor of the Hop Whitepaper: https://hop.exchange/whitepaper.pdf\r\nPreviously co-founder of Authereum and Level K\r\nAudited Open Zeppelin, dYdX, Augur, Decentraland, and more\r\nStarted the first Ethereum meetup in Boston",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://hop.exchange/",
+    "twitter": "WhinfreyChris",
+    "github": "cwhinfrey"
+  },
+  {
+    "id": "MYNS3X",
+    "name": "Lakshman Sankar",
+    "avatar": null,
+    "description": "Previous Ethereum Foundation Research. Now working on new primitives for identity at Personae Labs and 0xPARC.",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "lakshmansankar.com",
+    "twitter": "lakshmansankar",
+    "github": "lsankar4033"
+  },
+  {
     "id": "ZYXBSK",
     "name": "gubsheep",
     "avatar": null,
@@ -3745,8 +3821,6 @@
     ],
     "eventDays": [
       1665446400000,
-      1665532800000,
-      1665619200000,
       1665705600000
     ],
     "twitter": "gubsheep",
@@ -3821,15 +3895,17 @@
   },
   {
     "id": "ZX3BNQ",
-    "name": "Team Next Billion",
+    "name": "Ethereum Foundation Fellows",
     "avatar": null,
-    "description": "placeholder text\r\n[the Ethereum expanded universe comprises millions of people, but there are billions of us here on earth, and it's our ambitious vision for Ethereum to have a positive impact on all of them. To reach the next billion, we must overcome many gaps in representation across cultures, nationalities, and economic classes.]",
+    "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "website": "https://fellowship.ethereum.foundation/",
+    "twitter": "twitter.com/efnextbillion"
   },
   {
     "id": "WJBH9R",
@@ -3964,8 +4040,8 @@
   {
     "id": "BHUHRV",
     "name": "Thibaut Schaeffer",
-    "avatar": null,
-    "description": "ZoKrates @ Ethereum Foudation",
+    "avatar": "https://speak.devcon.org/media/avatars/bordeaux_headshot_0922_82OMs7d.jpeg",
+    "description": "ZoKrates @ Ethereum Foundation",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -4123,11 +4199,9 @@
     "avatar": null,
     "description": "Holding for others",
     "tracks": [
-      "Developer Infrastructure",
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665446400000,
       1665532800000,
       1665705600000
     ]
@@ -4336,8 +4410,8 @@
   {
     "id": "KDZVCN",
     "name": "Josh Stark",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/target_QfgTl32.jpeg",
+    "description": "Josh Stark works for Ethereum at the Ethereum Foundation.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -4503,32 +4577,23 @@
     ],
     "eventDays": [
       1665446400000
-    ]
-  },
-  {
-    "id": "C3RARC",
-    "name": "Swati Rawal",
-    "avatar": null,
-    "description": "She received her B.Sc.(Hons) degree from the University of Delhi, Delhi, India in 2014 and her Master’s degree in Mathematics and Scientific Computing from NIT Allahabad, India in 2016. She did her Ph.D. from NIT Allahabad, India. Her area of research is Lattice-based Digital Signatures. She joined the blockchain team of Ernst & Young early this  year and working on the project Starlight",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
-    "eventDays": [
-      1665705600000
-    ],
-    "github": "SwatiEY"
+    "website": "https://www.planett.xyz/",
+    "twitter": "https://twitter.com/AnettRolikova"
   },
   {
     "id": "HGMDTU",
     "name": "John Kane",
     "avatar": "https://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg",
-    "description": ".",
+    "description": "Programmer and team lead at the Nomic Foundation.",
     "tracks": [
       "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000
-    ]
+    ],
+    "twitter": "@john_kane",
+    "github": "kanej"
   },
   {
     "id": "LQULX7",
@@ -4594,7 +4659,6 @@
     "eventDays": [
       1665446400000,
       1665532800000,
-      1665619200000,
       1665705600000
     ]
   },
@@ -4809,7 +4873,7 @@
     "id": "7UPFQY",
     "name": "Carlos",
     "avatar": "https://speak.devcon.org/media/avatars/2486142_vAT00yx.jpeg",
-    "description": "Builder on Ethereum. I'm a core member of the BuidlGuidl where I build tools and public goods for the ecosystem, like SpeedRunEthereum and ABI Ninja. Previously worked for more than 10 years as a freelance web developer.",
+    "description": "Builder on Ethereum. Core member of the BuidlGuidl where he builds tools and public goods for the ecosystem, like SpeedRunEthereum and ABI Ninja. Previously worked for more than 10 years as a freelance software developer.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -4977,6 +5041,16 @@
     ]
   },
   {
+    "id": "PCUMSY",
+    "name": "Agustín Matteri",
+    "avatar": "https://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg",
+    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+    "tracks": [],
+    "eventDays": [],
+    "website": "www.linkedin.com/in/agustín-matteri",
+    "twitter": "@agustin_matteri"
+  },
+  {
     "id": "MJJN9F",
     "name": "Jordan Sutcliffe",
     "avatar": "https://speak.devcon.org/media/avatars/Tree_of_life_rrS51mp.jpeg",
@@ -4989,16 +5063,34 @@
     ]
   },
   {
-    "id": "XXLWA9",
-    "name": "Mauricio Tovar",
+    "id": "ZCGXDJ",
+    "name": "Naroa",
+    "avatar": null,
+    "description": "Naroa Zurutuza leads the Mapping and Tech work for Giga, UNICEF. Prior to joining UNICEF, she lived and worked in various companies in Kenya; from a startup that is trying to change the way the world understands agriculture to a non-profit empowering local entrepreneurs through access to finance. Naroa holds a MS in Electrical Engineering from Stanford University and a MS in Telecommunications Engineering from EHU-UPV.",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "PWYUEB",
+    "name": "Wanseob Lim",
     "avatar": null,
     "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "XXLWA9",
+    "name": "Mauricio Tovar",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg",
+    "description": "Co-Founder at Tropykus.com, CEO at TRU. Co-director of the InTIColombia research group at Universidad Nacional de Colombia. Leader of the Colombia node for the Iberoamerican Blockchain Alliance. Electronic Engineer from the Universidad Nacional de Colombia. Master's Degree in Creation of Innovative and Tech Based Companies from the Universidad de Barcelona",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665446400000
-    ]
+    ],
+    "website": "https://www.linkedin.com/in/mauricio-tovar-gutierrez/",
+    "twitter": "@maurotov"
   },
   {
     "id": "FURT7F",
@@ -5026,14 +5118,122 @@
   },
   {
     "id": "3EBRJY",
-    "name": "Kelvin",
-    "avatar": null,
-    "description": "",
+    "name": "Kelvin Fichter",
+    "avatar": "https://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif",
+    "description": "Building the Optimism Collective",
     "tracks": [
       "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000
     ]
+  },
+  {
+    "id": "JTXY88",
+    "name": "Ethereum Foundation",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "WVASD9",
+    "name": "Scott Moore",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "UX & Design"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "VACMRY",
+    "name": "Pablo Voorvaart",
+    "avatar": null,
+    "description": "Freelance software engineer, supporting the decentralized future.\r\nCurrently building open source web3 video tools: streameth | LiveNFTs",
+    "tracks": [],
+    "eventDays": [],
+    "website": "https://github.com/efdevcon/streameth",
+    "twitter": "@streameth"
+  },
+  {
+    "id": "FLKFV8",
+    "name": "Vitalik Buterin",
+    "avatar": "https://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg",
+    "description": "Chief Scientist @ Ethereum Foundation",
+    "tracks": [
+      "Opportunity & Global Impact",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "https://twitter.com/VitalikButerin"
+  },
+  {
+    "id": "EFUNFY",
+    "name": "Péter Szilágyi",
+    "avatar": "https://speak.devcon.org/media/avatars/Peter_7omyW8z.jpeg",
+    "description": "GETH Team Lead",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "https://twitter.com/peter_szilagyi"
+  },
+  {
+    "id": "JS9FQP",
+    "name": "Kurt Opsahl",
+    "avatar": "https://speak.devcon.org/media/avatars/Kurt_Opsahl_Headshop_BIqsq4s.jpg",
+    "description": "Kurt Opsahl is the Deputy Executive Director and General Counsel of the Electronic Frontier Foundation. In addition to representing clients on civil liberties, free speech and privacy law, Opsahl counsels on EFF projects and initiatives, and is the lead attorney on the Coders' Rights Project. Before joining EFF, Opsahl worked at Perkins Coie, where he represented technology clients with respect to intellectual property, privacy, defamation, and other online liability matters. Prior to Perkins, O",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "https://twitter.com/kurtopsahl"
+  },
+  {
+    "id": "RD3FWQ",
+    "name": "Hester",
+    "avatar": "https://speak.devcon.org/media/avatars/Hester-Bruikman-400x400_High_eMWlhW0.jpg",
+    "description": "Hester helps projects better meet user needs. Between 2018 and 2022 she worked as core contributor to https://status.im/, helping design and ship a privacy first messenger, wallet and dapp browser. Soon to be your Web3 Discord alternative. She's the founder and boardmember of Web3 Creatives. A foundation that connects and enables creatives in Web3. Offscript and Web3UX panel are key initiatives.\r\n\r\nShe has a background and 12 years of experience in Psychology and User-System Interaction Design.",
+    "tracks": [
+      "UX & Design"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "@hesterbruikman",
+    "github": "@hesterbruikman"
+  },
+  {
+    "id": "A9WCWN",
+    "name": "Max Semenchuk",
+    "avatar": "https://speak.devcon.org/media/avatars/Max_Semenchuk_Headshot_Slm4WdK.jpg",
+    "description": "Deputy Head Of The Virtual Assets Project Office Ministry Of The Digital Transformation Of Ukraine, Board Member Trusted Seed Association.\r\nMax shares the ideas of Decentralization, Lean/Agile, Teal Culture, DAO, Lean Startup and Community Leadership. More at https://maxsemenchuk.com/",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "https://twitter.com/maxsemenchuk"
+  },
+  {
+    "id": "RWSUU9",
+    "name": "Crisgarner",
+    "avatar": "https://speak.devcon.org/media/avatars/Untitled_design_12_rawjdQK.png",
+    "description": "- Smart Contracts at Cryptex Finance 👾\r\n- Devcon V Scholar ⛓️\r\n- Founder at Ethereum Honduras 🇭🇳\r\n- Collector of illiquid jpgs 🎨\r\n- Generative artist wanna be 👨‍🎨",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://mirror.xyz/crisgarner.eth",
+    "twitter": "https://twitter.com/crisgarner",
+    "github": "https://github.com/crisgarner"
   }
 ]
