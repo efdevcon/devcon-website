@@ -4996,6 +4996,19 @@
     ]
   },
   {
+    "id": "QJMMFZ",
+    "name": "Jaime Pumarejo",
+    "avatar": "https://speak.devcon.org/media/avatars/jaime_WMU9awU.jpg",
+    "description": "Alcalde de Barranquilla",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "https://twitter.com/jaimepumarejo"
+  },
+  {
     "id": "XXLWA9",
     "name": "Mauricio Tovar",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg",
@@ -5245,7 +5258,7 @@
     "id": "URPEPX",
     "name": "Federico Giacon",
     "avatar": null,
-    "description": "",
+    "description": "Software engineer and smart contract developer at CoW Swap (onchain token exchange: orders are collected offchain and executed in batches; focus on MEV protection). Academic background in cryptography.",
     "tracks": [
       "Layer 2s"
     ],

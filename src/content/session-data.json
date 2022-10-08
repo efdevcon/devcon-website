@@ -1917,6 +1917,12 @@
     "id": "NESKMJ",
     "speakers": [
       {
+        "id": "QJMMFZ",
+        "name": "Jaime Pumarejo",
+        "description": "Alcalde de Barranquilla",
+        "avatar": "http://speak.devcon.org/media/avatars/jaime_WMU9awU.jpg"
+      },
+      {
         "id": "DZVDNL",
         "name": "Diego Fernandez",
         "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
@@ -2341,9 +2347,9 @@
         "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
       }
     ],
-    "title": "Climate collapse or Social transformation?",
+    "title": "Climate change or social change? The role of blockchain",
     "track": "Opportunity & Global Impact",
-    "duration": 7,
+    "duration": 25,
     "start": 1665508800000,
     "end": 1665509220000,
     "room": {
@@ -2353,7 +2359,7 @@
       "info": "Floor 2",
       "capacity": 414
     },
-    "type": "Lightning Talk",
+    "type": "Talk",
     "description": "The Paris Agreement was built over the biggest scientific consensus in the history of Humankind.\r\n\r\nWe are reaching its threshold faster than expected: already 1.1 degrees above pre-industrial levels and counting.\r\n\r\n2030 forecast: 1.5 disasters a day (earthquakes, tsunamis, electricity infrastructure loss: no internet- no blockchain)\r\n\r\nMore than 1.5 degrees means massive migrations, civilization collapse and potential extinction….",
     "abstract": "",
     "expertise": "Beginner",
@@ -7008,7 +7014,7 @@
       {
         "id": "URPEPX",
         "name": "Federico Giacon",
-        "description": null,
+        "description": "Software engineer and smart contract developer at CoW Swap (onchain token exchange: orders are collected offchain and executed in batches; focus on MEV protection). Academic background in cryptography.",
         "avatar": ""
       }
     ],
