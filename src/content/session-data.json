@@ -58,7 +58,7 @@
       "capacity": 3060
     },
     "type": "Talk",
-    "description": "tbd",
+    "description": "LIVESTREAMED TO ALL ROOMS IN THE VENUE. Devcon Opening Ceremonies featuring Aya Miyaguchi, Danny Ryan, Tim Beiko, Trent Van Epps, Jonathan Mann, & Skylar Weaver.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -3435,7 +3435,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Often cited virtues of blockchains are immutability, transparency, decentralization, openness, and trustlessness. Many also think of their most natural applications as financial. Yet a critical affordance of such systems is often missed: the way they are uniquely suited to facilitate cooperation. We don’t yet have the interface nor the tooling to understand this.",
+    "description": "Often cited virtues of blockchains are immutability, transparency, decentralization, openness, and trustlessness. Many also think of their most natural applications as financial. Yet a critical affordance of such systems is often missed: the way they are uniquely suited to facilitate cooperation. Here I show how via CK and DVPs.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
