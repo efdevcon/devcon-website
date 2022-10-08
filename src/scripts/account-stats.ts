@@ -47,7 +47,7 @@ async function Run() {
     console.log()
 
     sessionInfo('attending', all.map(i => i.appState.sessions.filter(x => x.level === 'attending').map(x => x.id)).flat())
-    sessionInfo('interested', all.map(i => i.appState.sessions.filter(x => x.level === 'interested').map(x => x.id)).flat())
+    // sessionInfo('interested', all.map(i => i.appState.sessions.filter(x => x.level === 'interested').map(x => x.id)).flat())
 }
 
 function sessionInfo(type: string, sessions: string[]) {

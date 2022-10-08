@@ -1,6 +1,5 @@
 ---
 title: Devcon Manual
-left: Manual
-right: test
+left: ''
+right: ''
 ---
-test

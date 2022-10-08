@@ -175,7 +175,7 @@ export const Venue = (props: Props) => {
         <div className={`${css['agora']}`}>
           <div className={css['info']}>
             <p className="app-header">Agora Bogotá Convention Center</p>
-            <Button className="red sm" onClick={() => router.push('/info#venue')}>
+            <Button className="red sm" onClick={() => router.push('/info#venue-guide')}>
               Info
             </Button>
           </div>

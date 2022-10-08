@@ -3,13 +3,10 @@ import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } fro
 import css from './info.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
 import { Category } from 'types/Category'
-import { CityGuideContent } from 'pages/bogota'
 import { FAQ } from 'types/FAQ'
 import { ContentSections } from 'types/ContentSection'
 import { ContentSectionRow } from 'components/common/sections/ContentSection'
 import { Search } from 'components/common/filter/Filter'
-import { CodeOfConduct, TermsOfService } from 'components/common/layouts/footer/Legal'
-import { ModalLink } from 'components/common/layouts/footer/Footer'
 import { Link } from 'components/common/link'
 import { useRouter } from 'next/router'
 import { PageIntroduction } from 'components/domain/app/home/Home'
@@ -38,12 +35,12 @@ export const Info = (props: InfoProps) => {
 
   const filteredFaq = search
     ? props.faqs.filter(category => {
-        if (category.title.toLowerCase().includes(search.toLowerCase())) return true
+      if (category.title.toLowerCase().includes(search.toLowerCase())) return true
 
-        return category.questions.some(
-          q => q.title.toLowerCase().includes(search) || q.body.toLowerCase().includes(search)
-        )
-      })
+      return category.questions.some(
+        q => q.title.toLowerCase().includes(search) || q.body.toLowerCase().includes(search)
+      )
+    })
     : props.faqs
 
   function onSearch(nextVal: any) {
@@ -146,71 +143,38 @@ export const Info = (props: InfoProps) => {
             </div>
           </CollapsedSectionContent>
         </CollapsedSection>
-        {registrationSection && (
-          <CollapsedSection>
-            <CollapsedSectionHeader styleOpened>
-              <p className="app-header">Registration &amp; Check-in Info</p>
-            </CollapsedSectionHeader>
-            <CollapsedSectionContent>
-              <ContentSectionRow className="clear-top-less clear-bottom-less" section={registrationSection} />
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        )}
-        {venueSection && (
-          <CollapsedSection
-            open={openTabs['venue']}
-            setOpen={() => {
-              const isOpen = openTabs['venue']
 
-              const nextOpenState = {
-                ...openTabs,
-                ['venue']: true,
-              }
+        {Object.keys(props.sections).map(i => {
+          const section = props.sections[i]
+          if (section.body || (section.data.left || section.data.right)) {
+            return (
+              <CollapsedSection key={i}
+                open={openTabs[i]}
+                setOpen={() => {
+                  const isOpen = openTabs[i]
 
-              if (isOpen) {
-                delete nextOpenState['venue']
-              }
+                  const nextOpenState = {
+                    ...openTabs,
+                    [i]: true,
+                  }
 
-              setOpenTabs(nextOpenState)
-            }}
-          >
-            <CollapsedSectionHeader styleOpened>
-              <p className="app-header">Venue Guide</p>
-            </CollapsedSectionHeader>
-            <CollapsedSectionContent>
-              <ContentSectionRow className="clear-top-less" section={venueSection} />
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        )}
-        {foodSection && (
-          <CollapsedSection>
-            <CollapsedSectionHeader styleOpened>
-              <p className="app-header">Food &amp; Drinks</p>
-            </CollapsedSectionHeader>
-            <CollapsedSectionContent>
-              <ContentSectionRow className="clear-top-less" section={foodSection} />
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        )}
-        <CollapsedSection>
-          <CollapsedSectionHeader styleOpened>
-            <p className="app-header">City Guide</p>
-          </CollapsedSectionHeader>
-          <CollapsedSectionContent>
-            <div className="clear-top-less"></div>
-            <CityGuideContent {...props} faqs={props.cityGuideFaqs} sections={cityGuideSections} insideApp />
-          </CollapsedSectionContent>
-        </CollapsedSection>
-        {safetySection && (
-          <CollapsedSection>
-            <CollapsedSectionHeader styleOpened>
-              <p className="app-header">Safety</p>
-            </CollapsedSectionHeader>
-            <CollapsedSectionContent>
-              <ContentSectionRow className="clear-top-less" section={safetySection} />
-            </CollapsedSectionContent>
-          </CollapsedSection>
-        )}
+                  if (isOpen) {
+                    delete nextOpenState[i]
+                  }
+
+                  setOpenTabs(nextOpenState)
+                }}>
+                <CollapsedSectionHeader styleOpened>
+                  <p className="app-header">{section.title}</p>
+                </CollapsedSectionHeader>
+                <CollapsedSectionContent>
+                  <ContentSectionRow className="clear-top-less" section={section} />
+                </CollapsedSectionContent>
+              </CollapsedSection>
+            )
+          }
+        })}
+
         <CollapsedSection>
           <CollapsedSectionHeader styleOpened>
             <p className="app-header">App Feedback</p>
