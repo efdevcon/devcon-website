@@ -3,8 +3,6 @@ import css from './schedule.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
 import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import { NoResults } from 'components/common/filter'
-import Star from 'assets/icons/star.svg'
-import StarFill from 'assets/icons/star-fill.svg'
 import { List } from './views/List'
 import { Session } from 'types/Session'
 import moment, { Moment } from 'moment'
@@ -16,6 +14,7 @@ import { Room } from 'types/Room'
 import { ShareScheduleModal } from './ShareScheduleModal'
 import IconAdded from 'assets/icons/person-added.svg'
 import IconAdded2 from 'assets/icons/person-added-2.svg'
+import { DownloadScheduleModal } from './DownloadScheduleModal'
 
 type Timeslot = {
   time: number
@@ -187,6 +186,7 @@ export const Schedule = (props: any) => {
       if (session.speakers.some(speaker => speaker.name.toLowerCase().includes(lowerCaseSearch)))
         matchesAnySearch = true
       if (session.description && session.description.toLowerCase().includes(lowerCaseSearch)) matchesAnySearch = true
+      if (session.tags?.some(tag => tag.toLowerCase().includes(lowerCaseSearch))) matchesAnySearch = true
 
       if (!matchesAnySearch) return false
     }
@@ -291,7 +291,6 @@ export const Schedule = (props: any) => {
         ]}
         renderRight={() => {
           // if (!account) return null
-
           const starProps = {
             onClick: () => setFavoritesOnly(!favoritesOnly),
             style: {
@@ -302,8 +301,9 @@ export const Schedule = (props: any) => {
           return (
             <>
               {account && <ShareScheduleModal />}
-
-              {/* {account && ( */}
+              {account && <DownloadScheduleModal sessions={bookmarkedSessions.map(i => sessionsBeforeFormatting.find((x: Session) => {
+                return x.id === i.id
+              })).filter(i => !!i).sort((a, b) => a.start - b.start)} />}
               <>
                 {favoritesOnly ? (
                   <IconAdded {...starProps} className="icon fill-red" />
@@ -311,7 +311,6 @@ export const Schedule = (props: any) => {
                   <IconAdded2 {...starProps} style={{ opacity: 0.8 }} />
                 )}
               </>
-              {/* )} */}
             </>
           )
         }}
@@ -327,38 +326,38 @@ export const Schedule = (props: any) => {
                 options={
                   personalAgenda
                     ? [
-                        {
-                          text: 'Personalized Schedule',
-                          value: 'personal',
-                        },
-                      ]
+                      {
+                        text: 'Personalized Schedule',
+                        value: 'personal',
+                      },
+                    ]
                     : [
-                        {
-                          text: 'Upcoming',
-                          value: 'upcoming',
-                        },
+                      {
+                        text: 'Upcoming',
+                        value: 'upcoming',
+                      },
 
-                        {
-                          text: 'Live',
-                          value: 'live',
-                        },
-                        {
-                          text: 'Attending',
-                          value: 'attending',
-                        },
-                        {
-                          text: 'Interested',
-                          value: 'interested',
-                        },
-                        {
-                          text: 'Past',
-                          value: 'past',
-                        },
-                        {
-                          text: 'All',
-                          value: 'all',
-                        },
-                      ]
+                      {
+                        text: 'Live',
+                        value: 'live',
+                      },
+                      {
+                        text: 'Attending',
+                        value: 'attending',
+                      },
+                      {
+                        text: 'Interested',
+                        value: 'interested',
+                      },
+                      {
+                        text: 'Past',
+                        value: 'past',
+                      },
+                      {
+                        text: 'All',
+                        value: 'all',
+                      },
+                    ]
                 }
               />
             </div>
