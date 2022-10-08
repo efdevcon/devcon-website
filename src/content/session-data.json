@@ -451,9 +451,9 @@
       {
         "id": "8BM8LS",
         "name": "Naim",
-        "description": null,
+        "description": ".",
         "twitter": "NaimAshhab",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/NaimAshhab_v14trzm.jpeg"
       }
     ],
     "title": "Asset Rights Abstractions - a Case for Smart Contract Wallets",
@@ -1083,7 +1083,7 @@
         "name": "Parithosh Jayanthi",
         "description": "I am an Ethereum enthusiast with a deep love for all things servers. I incorporated Ethereum into my Master’s thesis and loved the experience so much as to make it my full time job. I currently work in the DevOps team of the Ethereum Foundation and I mainly focus on the Ethereum Merge.\r\n\r\nI’m also an avid photographer with a specific interest in Landscape and Travel photography. I’m a casual game",
         "twitter": "parithosh_j",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Parithosh_Jayanthi_N7LrQwv.jpeg"
       }
     ],
     "title": "Quest for the Best Tests, a Retrospective on #TestingTheMerge",
@@ -1330,8 +1330,8 @@
       {
         "id": "8WNXVV",
         "name": "Albert Ni",
-        "description": null,
-        "avatar": ""
+        "description": ".",
+        "avatar": "http://speak.devcon.org/media/avatars/Albert_Ni_DaTrClG.png"
       },
       {
         "id": "ZRNNVV",
@@ -2348,7 +2348,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
       }
     ],
-    "title": "Climate change or social change? The role of blockchain",
+    "title": "Climate Change or Social Change? The Role of Blockchain",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665508800000,
@@ -2777,7 +2777,7 @@
         "name": "Rob Stupay",
         "description": "Rob Stupay is managing communications at Remix.",
         "twitter": "ryestew",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Rob_Stupay_iWdwTDz.jpeg"
       }
     ],
     "title": "Remix Rewards",
@@ -4550,7 +4550,7 @@
         "name": "Rob Stupay",
         "description": "Rob Stupay is managing communications at Remix.",
         "twitter": "ryestew",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Rob_Stupay_iWdwTDz.jpeg"
       }
     ],
     "title": "What's new in Remix",
@@ -4691,7 +4691,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg"
       }
     ],
-    "title": "Why and how to run a node! No ETH required :)",
+    "title": "Why and how to run a node! (No ETH required)",
     "track": "Staking & Validator Experience",
     "duration": 50,
     "start": 1665583200000,
@@ -5209,6 +5209,7 @@
         "id": "XNLXWN",
         "name": "Ana Belén || AnaTech",
         "description": "Ana Belén is Mexican and is currently leading the Ethereum Mexico community, she is Governor at H.E.R. DAO LATAM and SMM for Espacio Cripto.\r\nContributor at BanklessDAO.\r\nShe loves marketing and community building and the impact of technology on people's lives.\r\nGoals: Get more builders and founders from Latin America into Web3.",
+        "twitter": "anatech_eth",
         "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2022-10-03_at_10.17.29_b88bSuX.png"
       },
       {
@@ -5771,12 +5772,13 @@
         "name": "Emilie Raffo",
         "description": "Emilie Raffo is a founding partner and the sales director of ChainSecurity, a top-tier blockchain security company specialized in smart contract audits. ChainSecurity served many large DeFi protocols such as MakerDAO, Compound, Curve and others.\r\n\r\nShe is also a 2021 best-selling author in Switzerland. Her book \"le Futur des Espèces\" explains blockchain, cryptocurrency and smart contracts to the novice, and explores how these technologies  can foster innovations in monetary policy & governance.",
         "twitter": "https://twitter.com/EmilieRaffo",
-        "avatar": "http://speak.devcon.org/media/avatars/Emilie_Raffo_portrait_jpeg_yikIFel.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/Emilie_Raffo_5yh3TWf.jpeg"
       },
       {
         "id": "BSY7JU",
         "name": "Tadeo",
         "description": "Facilitator of the Data Insights Core Unit at MakerDAO & organiser of ETHGathering",
+        "twitter": "tadeo_dao",
         "avatar": "http://speak.devcon.org/media/avatars/tadeo_maker_FS7wtjR.jpeg"
       }
     ],
@@ -6320,8 +6322,8 @@
       {
         "id": "8DMBJM",
         "name": "Remy",
-        "description": null,
-        "avatar": ""
+        "description": "Ops, startups, higher ed + tech, outdoor activities.",
+        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
       }
     ],
     "title": "0xParc Self Led Session",
@@ -6837,7 +6839,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/ethberlin-color-square-small_nqb25rn.jpg"
       }
     ],
-    "title": "How to design DVT while ensuring non-correlation",
+    "title": "How to Design DVT While Ensuring Non-Correlation",
     "track": "Staking & Validator Experience",
     "duration": 25,
     "start": 1665660600000,
@@ -9304,8 +9306,8 @@
       {
         "id": "8DMBJM",
         "name": "Remy",
-        "description": null,
-        "avatar": ""
+        "description": "Ops, startups, higher ed + tech, outdoor activities.",
+        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
       }
     ],
     "title": "Autonomous Worlds Self Led Session",
@@ -10058,7 +10060,7 @@
         "avatar": ""
       }
     ],
-    "title": "headlong: A Contract ABI and RLP library for the JVM",
+    "title": "headlong: A Contract ABI and RLP Library for the JVM",
     "track": "Developer Infrastructure",
     "duration": 7,
     "start": 1665748800000,
