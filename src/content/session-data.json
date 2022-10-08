@@ -1050,9 +1050,9 @@
     "speakers": [
       {
         "id": "SWQHSM",
-        "name": "Daniel Kirchner",
-        "description": null,
-        "avatar": ""
+        "name": "Daniel",
+        "description": "Solidity Compiler Team",
+        "avatar": "http://speak.devcon.org/media/avatars/identicon_UAZrZUE.png"
       }
     ],
     "title": "Technical details of the Solidity compiler",
@@ -1917,6 +1917,13 @@
     "id": "NESKMJ",
     "speakers": [
       {
+        "id": "QJMMFZ",
+        "name": "Jaime Pumarejo",
+        "description": "Alcalde de Barranquilla",
+        "twitter": "https://twitter.com/jaimepumarejo",
+        "avatar": "http://speak.devcon.org/media/avatars/jaime_WMU9awU.jpg"
+      },
+      {
         "id": "DZVDNL",
         "name": "Diego Fernandez",
         "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
@@ -1939,7 +1946,7 @@
         "id": "ZCF8JW",
         "name": "Alfredo Bateman",
         "description": "Secretario de Desarrollo Económico de Bogotá",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/WhatsApp_Image_2022-10-08_at_9.32.57_AM_pdFVbRv.jpeg"
       }
     ],
     "title": "How Latam cities are thinking about blockchain solutions.",
@@ -2112,7 +2119,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-06-20_at_11.02.30_zjSYe6i.png"
       }
     ],
-    "title": "How Bridges Can Improve L2 Interoperability",
+    "title": "How Bridges Improve L2 Composability",
     "track": "Layer 2s",
     "duration": 7,
     "start": 1665507000000,
@@ -2341,9 +2348,9 @@
         "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
       }
     ],
-    "title": "Climate collapse or Social transformation?",
+    "title": "Climate change or social change? The role of blockchain",
     "track": "Opportunity & Global Impact",
-    "duration": 7,
+    "duration": 25,
     "start": 1665508800000,
     "end": 1665509220000,
     "room": {
@@ -2353,7 +2360,7 @@
       "info": "Floor 2",
       "capacity": 414
     },
-    "type": "Lightning Talk",
+    "type": "Talk",
     "description": "The Paris Agreement was built over the biggest scientific consensus in the history of Humankind.\r\n\r\nWe are reaching its threshold faster than expected: already 1.1 degrees above pre-industrial levels and counting.\r\n\r\n2030 forecast: 1.5 disasters a day (earthquakes, tsunamis, electricity infrastructure loss: no internet- no blockchain)\r\n\r\nMore than 1.5 degrees means massive migrations, civilization collapse and potential extinction….",
     "abstract": "",
     "expertise": "Beginner",
@@ -3410,12 +3417,12 @@
       {
         "id": "USFN9L",
         "name": "Shrey Jain",
-        "description": "Shrey works on identity research with a focus on coordination and common knowledge. Shrey studied at the University of Toronto, and did machine learning research at the Vector Institute of Technology and MIT CSAIL. Shrey currently works at Microsoft under Glen Weyl.",
+        "description": "Shrey Jain is a Web3 researcher at Microsoft under Glen Weyl where he focuses his research on identity, coordination, and machine learning.",
         "twitter": "https://twitter.com/shreyjaineth",
-        "avatar": "http://speak.devcon.org/media/avatars/standing_IPeAnuh.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/Bvg9ataa_400x400_4fAbECe.jpeg"
       }
     ],
-    "title": "How to Build a Plural Publics via Common Knowledge and Boundaries?",
+    "title": "Working Towards a Plural Public via Common Knowledge and Designated Verifier Proofs",
     "track": "Governance & Coordination",
     "duration": 25,
     "start": 1665572400000,
@@ -3428,7 +3435,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Common knowledge is the one of the most important properties of a blockchain. Blockchains provide a way to guarantee a deterministic, sequential, shared knowledge that has yet to be realized by its users. The \"non-financial applications\" of a blockchain for identity, recovery, and coordination are not well discussed. Extending from a blog I wrote with Vitalik, l will focus on commenting on formalizing common knowledge and the other key non financial properties of the blockchain.",
+    "description": "Often cited virtues of blockchains are immutability, transparency, decentralization, openness, and trustlessness. Many also think of their most natural applications as financial. Yet a critical affordance of such systems is often missed: the way they are uniquely suited to facilitate cooperation. We don’t yet have the interface nor the tooling to understand this.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -3915,8 +3922,9 @@
       {
         "id": "HYVQ8L",
         "name": "Paweł Bylica",
-        "description": null,
-        "avatar": ""
+        "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
+        "twitter": "chfast",
+        "avatar": "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
       }
     ],
     "title": "What's next in EVM",
@@ -5714,6 +5722,18 @@
         "description": "Mara is the Head of Business at Coinbase Cloud, the leading developer platform for blockchain infrastructure services and APIs. Prior to joining Coinbase, Mara managed Business Development at Bison Trails and served as Strategy Manager at ConsenSys. She is passionate about open source technology and has led various initiatives including the development of the eth2 launchpad and distributed validator technology (DVT). She is an active angel investor and serves as an advisor to various projects.",
         "twitter": "https://twitter.com/MaraSchmiedt",
         "avatar": "http://speak.devcon.org/media/avatars/E01HRQM32TX-U01MY7HFNA3-70b2d4e413d5-512_gSUmJAj.jpg"
+      },
+      {
+        "id": "BCDDEU",
+        "name": "Mark",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "EQ9MRS",
+        "name": "Viktor",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "[Panel] The Staking Economy: From Monolith to Modularity",
@@ -5947,7 +5967,7 @@
       {
         "id": "LGTVTW",
         "name": "Dominic Emanuel Horn",
-        "description": "Dominic Emanuel Horn is a freelance product designer building digital products with clients like motius, siemens, zeiss and others. I care about designing products with emotion, that look & feel great to the point that people will post on social media about it.",
+        "description": "Dominic Emanuel Horn is the Lead Product Designer (UX/UI) of Common Ground, a web3-native communication platform. Freelancing as a UX and product designer for clients such as Siemens, Mercedes, and more, he cares deeply about designing products with emotion, that look & feel great and push the boundaries of user experience forward.",
         "twitter": "https://twitter.com/dmnc_eu",
         "avatar": "http://speak.devcon.org/media/avatars/fe9200c4-2241-40ef-b853-eaebab8b39f8_rw_1200_photos_v2_x4_3MjzB9c.jpg"
       }
@@ -5965,7 +5985,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Effective communication is a strategic advantage that DAOs are failing to leverage due to a fragmented and inefficiently designed tool landscape. Let's look at how the new communication platform Common Ground aims to establish a collaborative network effect. Coupled with a sophisticated social graph, it could herald a new age of work where you know the reputation of new members, and quickly outpace traditional companies",
+    "description": "Effective communication is a strategic advantage that DAOs are failing to leverage due to a fragmented and inefficiently designed tool landscape. Let's explore how social web3 primitives may unlock collaborative network effects. Imagine knowing if you can trust someone at a glance, without knowing anything else about them. We'll tie social theory of Bourdieu together with User Experience Design into a neat little package and see how it can herald a new era in working together.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -7005,10 +7025,9 @@
     "id": "LJZT7Y",
     "speakers": [
       {
-        "id": "WCVEHL",
-        "name": "Alex Herrmann",
-        "description": "coder, mathematician and philosopher",
-        "twitter": "https://twitter.com/Herrmann_A_",
+        "id": "URPEPX",
+        "name": "Federico Giacon",
+        "description": "Software engineer and smart contract developer at CoW Swap (onchain token exchange: orders are collected offchain and executed in batches; focus on MEV protection). Academic background in cryptography.",
         "avatar": ""
       }
     ],
@@ -7604,9 +7623,9 @@
     "id": "8QFEHB",
     "speakers": [
       {
-        "id": "QNMFZQ",
+        "id": "77HGTH",
         "name": "Althea Allen",
-        "description": null,
+        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
         "avatar": ""
       }
     ],
@@ -9377,8 +9396,9 @@
       {
         "id": "HYVQ8L",
         "name": "Paweł Bylica",
-        "description": null,
-        "avatar": ""
+        "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
+        "twitter": "chfast",
+        "avatar": "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
       }
     ],
     "title": "EVM Panel",
@@ -10178,11 +10198,10 @@
     "id": "SFFEVV",
     "speakers": [
       {
-        "id": "7BSSFC",
-        "name": "Tim Beiko",
-        "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
-        "twitter": "timbeiko",
-        "avatar": "http://speak.devcon.org/media/avatars/Tim_Beiko_Headshot_UkavMoT.jpeg"
+        "id": "3RXUZH",
+        "name": "timdaub",
+        "description": "Tim has focused on developing blockchain & media applications at Ascribe, BigchainDB, COALA IP, Ocean Protocol, and is now working on an implementation for Soulbound token within the EIP process: EIP-4973 (Account-bound tokens).",
+        "avatar": "http://speak.devcon.org/media/avatars/me_GtIJ931.jpg"
       },
       {
         "id": "XE8PTP",
@@ -10192,7 +10211,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/twheadshottupdate_zFYunPz.jpeg"
       }
     ],
-    "title": "Workshops",
+    "title": "ERC lightning talks",
     "track": "Developer Infrastructure",
     "duration": 150,
     "start": 1665752400000,
@@ -10205,11 +10224,16 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": ".",
+    "description": "15mins lightning talks about ERCs, mainly focused on following topics: \r\nNFTs/SBTs/ABTs/Token-gating/Curation\r\nMusic NFT metadata\r\nPrivacy and self-sovereign identity\r\nOther Radical Exchange topics e.g. Plural Property",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "engineering"
+      "engineering",
+      "soulbound",
+      "erc",
+      "lightning talks",
+      "nft",
+      "privacy"
     ]
   },
   {
@@ -10255,7 +10279,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Stani_BW_nIqYqbL.jpeg"
       }
     ],
-    "title": "The web3 Social Layer -- Building Exciting, New Experiences",
+    "title": "The web3 Social Layer - Web3 Social: the Next Wave of Innovation",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665752400000,
@@ -10507,13 +10531,13 @@
     "id": "XUVZTP",
     "speakers": [
       {
-        "id": "WQ3EN9",
-        "name": "Ethereum Foundation",
-        "description": "Holding for others",
+        "id": "VQMDYU",
+        "name": "Juan David",
+        "description": null,
         "avatar": ""
       }
     ],
-    "title": "Hold",
+    "title": "Ethereum Event Showcase",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665756000000,

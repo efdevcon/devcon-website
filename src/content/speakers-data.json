@@ -1021,8 +1021,8 @@
   {
     "id": "USFN9L",
     "name": "Shrey Jain",
-    "avatar": "https://speak.devcon.org/media/avatars/standing_IPeAnuh.jpg",
-    "description": "Shrey works on identity research with a focus on coordination and common knowledge. Shrey studied at the University of Toronto, and did machine learning research at the Vector Institute of Technology and MIT CSAIL. Shrey currently works at Microsoft under Glen Weyl.",
+    "avatar": "https://speak.devcon.org/media/avatars/Bvg9ataa_400x400_4fAbECe.jpeg",
+    "description": "Shrey Jain is a Web3 researcher at Microsoft under Glen Weyl where he focuses his research on identity, coordination, and machine learning.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -1282,20 +1282,6 @@
     ],
     "twitter": "@jusbroni",
     "github": "JustynaBroniszewska"
-  },
-  {
-    "id": "WCVEHL",
-    "name": "Alex Herrmann",
-    "avatar": null,
-    "description": "coder, mathematician and philosopher",
-    "tracks": [
-      "Layer 2s"
-    ],
-    "eventDays": [
-      1665619200000
-    ],
-    "twitter": "https://twitter.com/Herrmann_A_",
-    "github": "https://github.com/josojo"
   },
   {
     "id": "LMKARD",
@@ -2239,6 +2225,21 @@
     "twitter": "@melanie__davis"
   },
   {
+    "id": "3RXUZH",
+    "name": "timdaub",
+    "avatar": "https://speak.devcon.org/media/avatars/me_GtIJ931.jpg",
+    "description": "Tim has focused on developing blockchain & media applications at Ascribe, BigchainDB, COALA IP, Ocean Protocol, and is now working on an implementation for Soulbound token within the EIP process: EIP-4973 (Account-bound tokens).",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "website": "https://timdaub.github.io/",
+    "twitter": "timdaub",
+    "github": "timdaub"
+  },
+  {
     "id": "7XPUDW",
     "name": "Erik Marks",
     "avatar": "https://speak.devcon.org/media/avatars/25517051_Auuy6kZ.png",
@@ -2409,7 +2410,7 @@
     "id": "LGTVTW",
     "name": "Dominic Emanuel Horn",
     "avatar": "https://speak.devcon.org/media/avatars/fe9200c4-2241-40ef-b853-eaebab8b39f8_rw_1200_photos_v2_x4_3MjzB9c.jpg",
-    "description": "Dominic Emanuel Horn is a freelance product designer building digital products with clients like motius, siemens, zeiss and others. I care about designing products with emotion, that look & feel great to the point that people will post on social media about it.",
+    "description": "Dominic Emanuel Horn is the Lead Product Designer (UX/UI) of Common Ground, a web3-native communication platform. Freelancing as a UX and product designer for clients such as Siemens, Mercedes, and more, he cares deeply about designing products with emotion, that look & feel great and push the boundaries of user experience forward.",
     "tracks": [
       "UX & Design"
     ],
@@ -3199,12 +3200,10 @@
     "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
     "tracks": [
       "Opportunity & Global Impact",
-      "Layer 1 Protocol",
-      "Developer Infrastructure"
+      "Layer 1 Protocol"
     ],
     "eventDays": [
-      1665446400000,
-      1665705600000
+      1665446400000
     ],
     "twitter": "timbeiko",
     "github": "timbeiko"
@@ -3659,10 +3658,12 @@
     "avatar": null,
     "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
     "tracks": [
-      "UX & Design"
+      "UX & Design",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "github": "@catsnackattack"
   },
@@ -4142,18 +4143,6 @@
     "twitter": "dsearle"
   },
   {
-    "id": "WQ3EN9",
-    "name": "Ethereum Foundation",
-    "avatar": null,
-    "description": "Holding for others",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665705600000
-    ]
-  },
-  {
     "id": "CWRAHR",
     "name": "Mike Leach",
     "avatar": "https://speak.devcon.org/media/avatars/Casual_headshot_-_cropped_TZRo4Y4.png",
@@ -4209,15 +4198,17 @@
   {
     "id": "HYVQ8L",
     "name": "Paweł Bylica",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg",
+    "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
     "tracks": [
       "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000,
       1665705600000
-    ]
+    ],
+    "twitter": "chfast",
+    "github": "chfast"
   },
   {
     "id": "DLDW8M",
@@ -4608,18 +4599,6 @@
     "eventDays": [
       1665446400000,
       1665705600000
-    ]
-  },
-  {
-    "id": "QNMFZQ",
-    "name": "Althea Allen",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
     ]
   },
   {
@@ -5030,6 +5009,19 @@
     ]
   },
   {
+    "id": "QJMMFZ",
+    "name": "Jaime Pumarejo",
+    "avatar": "https://speak.devcon.org/media/avatars/jaime_WMU9awU.jpg",
+    "description": "Alcalde de Barranquilla",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "https://twitter.com/jaimepumarejo"
+  },
+  {
     "id": "XXLWA9",
     "name": "Mauricio Tovar",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_3632_b2_6BWvRch.jpg",
@@ -5058,7 +5050,7 @@
   {
     "id": "ZCF8JW",
     "name": "Alfredo Bateman",
-    "avatar": null,
+    "avatar": "https://speak.devcon.org/media/avatars/WhatsApp_Image_2022-10-08_at_9.32.57_AM_pdFVbRv.jpeg",
     "description": "Secretario de Desarrollo Económico de Bogotá",
     "tracks": [
       "Opportunity & Global Impact"
@@ -5241,9 +5233,9 @@
   },
   {
     "id": "SWQHSM",
-    "name": "Daniel Kirchner",
-    "avatar": null,
-    "description": "",
+    "name": "Daniel",
+    "avatar": "https://speak.devcon.org/media/avatars/identicon_UAZrZUE.png",
+    "description": "Solidity Compiler Team",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -5273,6 +5265,54 @@
     ],
     "eventDays": [
       1665619200000
+    ]
+  },
+  {
+    "id": "URPEPX",
+    "name": "Federico Giacon",
+    "avatar": null,
+    "description": "Software engineer and smart contract developer at CoW Swap (onchain token exchange: orders are collected offchain and executed in batches; focus on MEV protection). Academic background in cryptography.",
+    "tracks": [
+      "Layer 2s"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "VQMDYU",
+    "name": "Juan David",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ]
+  },
+  {
+    "id": "BCDDEU",
+    "name": "Mark",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
+  },
+  {
+    "id": "EQ9MRS",
+    "name": "Viktor",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
     ]
   }
 ]
