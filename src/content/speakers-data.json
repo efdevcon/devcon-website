@@ -2225,6 +2225,21 @@
     "twitter": "@melanie__davis"
   },
   {
+    "id": "3RXUZH",
+    "name": "timdaub",
+    "avatar": "https://speak.devcon.org/media/avatars/me_GtIJ931.jpg",
+    "description": "Tim has focused on developing blockchain & media applications at Ascribe, BigchainDB, COALA IP, Ocean Protocol, and is now working on an implementation for Soulbound token within the EIP process: EIP-4973 (Account-bound tokens).",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "website": "https://timdaub.github.io/",
+    "twitter": "timdaub",
+    "github": "timdaub"
+  },
+  {
     "id": "7XPUDW",
     "name": "Erik Marks",
     "avatar": "https://speak.devcon.org/media/avatars/25517051_Auuy6kZ.png",
@@ -3185,12 +3200,10 @@
     "description": "Tim Beiko runs the AllCoreDevs calls for Ethereum.",
     "tracks": [
       "Opportunity & Global Impact",
-      "Layer 1 Protocol",
-      "Developer Infrastructure"
+      "Layer 1 Protocol"
     ],
     "eventDays": [
-      1665446400000,
-      1665705600000
+      1665446400000
     ],
     "twitter": "timbeiko",
     "github": "timbeiko"
@@ -5220,9 +5233,9 @@
   },
   {
     "id": "SWQHSM",
-    "name": "Daniel Kirchner",
-    "avatar": null,
-    "description": "",
+    "name": "Daniel",
+    "avatar": "https://speak.devcon.org/media/avatars/identicon_UAZrZUE.png",
+    "description": "Solidity Compiler Team",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -5276,6 +5289,30 @@
     ],
     "eventDays": [
       1665705600000
+    ]
+  },
+  {
+    "id": "BCDDEU",
+    "name": "Mark",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
+  },
+  {
+    "id": "EQ9MRS",
+    "name": "Viktor",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
     ]
   }
 ]
