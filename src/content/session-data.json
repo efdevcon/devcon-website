@@ -3410,12 +3410,12 @@
       {
         "id": "USFN9L",
         "name": "Shrey Jain",
-        "description": "Shrey works on identity research with a focus on coordination and common knowledge. Shrey studied at the University of Toronto, and did machine learning research at the Vector Institute of Technology and MIT CSAIL. Shrey currently works at Microsoft under Glen Weyl.",
+        "description": "Shrey Jain is a Web3 researcher at Microsoft under Glen Weyl where he focuses his research on identity, coordination, and machine learning.",
         "twitter": "https://twitter.com/shreyjaineth",
-        "avatar": "http://speak.devcon.org/media/avatars/standing_IPeAnuh.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/Bvg9ataa_400x400_4fAbECe.jpeg"
       }
     ],
-    "title": "How to Build a Plural Publics via Common Knowledge and Boundaries?",
+    "title": "Working Towards a Plural Public via Common Knowledge and Designated Verifier Proofs",
     "track": "Governance & Coordination",
     "duration": 25,
     "start": 1665572400000,
@@ -3428,7 +3428,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Common knowledge is the one of the most important properties of a blockchain. Blockchains provide a way to guarantee a deterministic, sequential, shared knowledge that has yet to be realized by its users. The \"non-financial applications\" of a blockchain for identity, recovery, and coordination are not well discussed. Extending from a blog I wrote with Vitalik, l will focus on commenting on formalizing common knowledge and the other key non financial properties of the blockchain.",
+    "description": "Often cited virtues of blockchains are immutability, transparency, decentralization, openness, and trustlessness. Many also think of their most natural applications as financial. Yet a critical affordance of such systems is often missed: the way they are uniquely suited to facilitate cooperation. We don’t yet have the interface nor the tooling to understand this.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -3915,8 +3915,8 @@
       {
         "id": "HYVQ8L",
         "name": "Paweł Bylica",
-        "description": null,
-        "avatar": ""
+        "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
+        "avatar": "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
       }
     ],
     "title": "What's next in EVM",
@@ -9376,8 +9376,8 @@
       {
         "id": "HYVQ8L",
         "name": "Paweł Bylica",
-        "description": null,
-        "avatar": ""
+        "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
+        "avatar": "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
       }
     ],
     "title": "EVM Panel",

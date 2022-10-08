@@ -1021,8 +1021,8 @@
   {
     "id": "USFN9L",
     "name": "Shrey Jain",
-    "avatar": "https://speak.devcon.org/media/avatars/standing_IPeAnuh.jpg",
-    "description": "Shrey works on identity research with a focus on coordination and common knowledge. Shrey studied at the University of Toronto, and did machine learning research at the Vector Institute of Technology and MIT CSAIL. Shrey currently works at Microsoft under Glen Weyl.",
+    "avatar": "https://speak.devcon.org/media/avatars/Bvg9ataa_400x400_4fAbECe.jpeg",
+    "description": "Shrey Jain is a Web3 researcher at Microsoft under Glen Weyl where he focuses his research on identity, coordination, and machine learning.",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -4183,15 +4183,17 @@
   {
     "id": "HYVQ8L",
     "name": "Paweł Bylica",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg",
+    "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
     "tracks": [
       "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000,
       1665705600000
-    ]
+    ],
+    "twitter": "chfast",
+    "github": "chfast"
   },
   {
     "id": "DLDW8M",
