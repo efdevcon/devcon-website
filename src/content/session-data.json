@@ -686,7 +686,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/RggqWPpK_400x400_zYfBTuw.jpg"
       }
     ],
-    "title": "Beyond Stake: Implementing diversity policies on PoS",
+    "title": "Beyond Stake: Implementing Diversity Policies on PoS",
     "track": "Staking & Validator Experience",
     "duration": 25,
     "start": 1665495000000,
@@ -2152,7 +2152,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/bordeaux_headshot_0922_82OMs7d.jpeg"
       }
     ],
-    "title": "A ZoKrates update",
+    "title": "A ZoKrates Update",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665507600000,
@@ -2363,7 +2363,7 @@
     "type": "Talk",
     "description": "The Paris Agreement was built over the biggest scientific consensus in the history of Humankind.\r\n\r\nWe are reaching its threshold faster than expected: already 1.1 degrees above pre-industrial levels and counting.\r\n\r\n2030 forecast: 1.5 disasters a day (earthquakes, tsunamis, electricity infrastructure loss: no internet- no blockchain)\r\n\r\nMore than 1.5 degrees means massive migrations, civilization collapse and potential extinction….",
     "abstract": "",
-    "expertise": "Beginner",
+    "expertise": "Intermediate",
     "tags": [
       "web3"
     ]
@@ -5206,6 +5206,12 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3405_3RYCYV9.jpg"
       },
       {
+        "id": "XNLXWN",
+        "name": "Ana Belén || AnaTech",
+        "description": "Ana Belén is Mexican and is currently leading the Ethereum Mexico community, she is Governor at H.E.R. DAO LATAM and SMM for Espacio Cripto.\r\nContributor at BanklessDAO.\r\nShe loves marketing and community building and the impact of technology on people's lives.\r\nGoals: Get more builders and founders from Latin America into Web3.",
+        "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2022-10-03_at_10.17.29_b88bSuX.png"
+      },
+      {
         "id": "XKC3Q9",
         "name": "Solange Gueiros",
         "description": "Blockchain developer focused on Ethereum and smart contracts. MSc in digital currencies. She has been working with technology for over 20 years. Speaker in world conferences since 2018, also she won awards at Ethereum hackathons. She was listed in Cointelegraph Brazil top 50.",
@@ -5460,7 +5466,7 @@
         "name": "Caspar Schwarz-Schilling",
         "description": "Researcher @ Ethereum Foundation, Robust Incentives Group",
         "twitter": "casparschwa",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/css_headshot_kXEZuWT.jpg"
       }
     ],
     "title": "Time in PoS Ethereum",
@@ -5765,10 +5771,16 @@
         "name": "Emilie Raffo",
         "description": "Emilie Raffo is a founding partner and the sales director of ChainSecurity, a top-tier blockchain security company specialized in smart contract audits. ChainSecurity served many large DeFi protocols such as MakerDAO, Compound, Curve and others.\r\n\r\nShe is also a 2021 best-selling author in Switzerland. Her book \"le Futur des Espèces\" explains blockchain, cryptocurrency and smart contracts to the novice, and explores how these technologies  can foster innovations in monetary policy & governance.",
         "twitter": "https://twitter.com/EmilieRaffo",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Emilie_Raffo_portrait_jpeg_yikIFel.jpg"
+      },
+      {
+        "id": "BSY7JU",
+        "name": "Tadeo",
+        "description": "Facilitator of the Data Insights Core Unit at MakerDAO & organiser of ETHGathering",
+        "avatar": "http://speak.devcon.org/media/avatars/tadeo_maker_FS7wtjR.jpeg"
       }
     ],
-    "title": "2022 Statistics on DAO Governance",
+    "title": "2022 statistics on MakerDAO voter delegation",
     "track": "Governance & Coordination",
     "duration": 7,
     "start": 1665594600000,
@@ -5781,7 +5793,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "A quick recap of 2022 governance statistics for DAOs: Who holds voting power in the largest DAOs? What are the average participation levels? How have the participation levels evolved in light of new governance incentivization mechanisms? In which large DAOs can we find the highest participation levels and what are they doing right?",
+    "description": "In the summer 2021, MakerDAO implemented voting delegation. How does it work and how did it affect their governance?",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -6506,7 +6518,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_AD01D80B7C94-1_18dsIDZ.jpeg"
       }
     ],
-    "title": "Borderless Africa - a new narrative",
+    "title": "Borderless Africa - a New Narrative",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665657000000,
@@ -7483,8 +7495,8 @@
       {
         "id": "3PMBEA",
         "name": "Chandrakana Nandi",
-        "description": null,
-        "avatar": ""
+        "description": "Senior Researcher, Certora Inc.",
+        "avatar": "http://speak.devcon.org/media/avatars/Chandrakana_Nandi_OjbFOMN.jpeg"
       },
       {
         "id": "7AGF99",
@@ -8297,6 +8309,13 @@
     "id": "CLUZBW",
     "speakers": [
       {
+        "id": "C87UFR",
+        "name": "Tarun Chitra",
+        "description": "Floating through the Ether, reading math papers, writing DeFi research @GauntletNetwork, techno lover.",
+        "twitter": "tarunchitra",
+        "avatar": "http://speak.devcon.org/media/avatars/hilbert_6PfDp4t.jpeg"
+      },
+      {
         "id": "BMNTVH",
         "name": "Hart Lambur",
         "description": "Hart is the Co-Founder of Risk Labs, the foundation supporting the UMA and Across protocols. UMA is an optimistic oracle (OO) that can provide and verify arbitrary data on-chain. Across is a cross-chain bridge that is secured by UMA's optimistic oracle.\r\n\r\nHart studied computer science before working as an interest rate trader at Goldman Sachs through the financial crisis. In 2013. He now leads a team of researchers at Risk Labs.",
@@ -8812,7 +8831,7 @@
         "name": "Fredrik Svantes",
         "description": "Security Researcher at the Ethereum Foundation",
         "twitter": "fredriksvantes",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/Fredrik_Svantes_uXlF6b0.jpeg"
       }
     ],
     "title": "Ethereum Foundation's Bug Bounty Program",
@@ -10201,6 +10220,7 @@
         "id": "3RXUZH",
         "name": "timdaub",
         "description": "Tim has focused on developing blockchain & media applications at Ascribe, BigchainDB, COALA IP, Ocean Protocol, and is now working on an implementation for Soulbound token within the EIP process: EIP-4973 (Account-bound tokens).",
+        "twitter": "timdaub",
         "avatar": "http://speak.devcon.org/media/avatars/me_GtIJ931.jpg"
       },
       {

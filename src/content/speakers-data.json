@@ -37,10 +37,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/hilbert_6PfDp4t.jpeg",
     "description": "Floating through the Ether, reading math papers, writing DeFi research @GauntletNetwork, techno lover.",
     "tracks": [
-      "Cryptoeconomics"
+      "Cryptoeconomics",
+      "Security"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "tarunchitra.com [but it is very outdated -_-]",
     "twitter": "tarunchitra",
@@ -614,7 +616,7 @@
   {
     "id": "CVWVJP",
     "name": "Caspar Schwarz-Schilling",
-    "avatar": null,
+    "avatar": "https://speak.devcon.org/media/avatars/css_headshot_kXEZuWT.jpg",
     "description": "Researcher @ Ethereum Foundation, Robust Incentives Group",
     "tracks": [
       "Layer 1 Protocol"
@@ -2060,7 +2062,7 @@
   {
     "id": "7GZSZT",
     "name": "Emilie Raffo",
-    "avatar": null,
+    "avatar": "https://speak.devcon.org/media/avatars/Emilie_Raffo_portrait_jpeg_yikIFel.jpg",
     "description": "Emilie Raffo is a founding partner and the sales director of ChainSecurity, a top-tier blockchain security company specialized in smart contract audits. ChainSecurity served many large DeFi protocols such as MakerDAO, Compound, Curve and others.\r\n\r\nShe is also a 2021 best-selling author in Switzerland. Her book \"le Futur des Espèces\" explains blockchain, cryptocurrency and smart contracts to the novice, and explores how these technologies  can foster innovations in monetary policy & governance.",
     "tracks": [
       "Governance & Coordination"
@@ -2977,6 +2979,19 @@
     "website": "https://gnsps.com",
     "twitter": "@GNSPS",
     "github": "@GNSPS"
+  },
+  {
+    "id": "XNLXWN",
+    "name": "Ana Belén || AnaTech",
+    "avatar": "https://speak.devcon.org/media/avatars/Screen_Shot_2022-10-03_at_10.17.29_b88bSuX.png",
+    "description": "Ana Belén is Mexican and is currently leading the Ethereum Mexico community, she is Governor at H.E.R. DAO LATAM and SMM for Espacio Cripto.\r\nContributor at BanklessDAO.\r\nShe loves marketing and community building and the impact of technology on people's lives.\r\nGoals: Get more builders and founders from Latin America into Web3.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "anatech_eth"
   },
   {
     "id": "W79WXS",
@@ -3896,7 +3911,7 @@
   {
     "id": "3RVPMV",
     "name": "Fredrik Svantes",
-    "avatar": null,
+    "avatar": "https://speak.devcon.org/media/avatars/Fredrik_Svantes_uXlF6b0.jpeg",
     "description": "Security Researcher at the Ethereum Foundation",
     "tracks": [
       "Security"
@@ -4458,8 +4473,8 @@
   {
     "id": "3PMBEA",
     "name": "Chandrakana Nandi",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/Chandrakana_Nandi_OjbFOMN.jpeg",
+    "description": "Senior Researcher, Certora Inc.",
     "tracks": [
       "Security"
     ],
@@ -5314,5 +5329,18 @@
     "eventDays": [
       1665532800000
     ]
+  },
+  {
+    "id": "BSY7JU",
+    "name": "Tadeo",
+    "avatar": "https://speak.devcon.org/media/avatars/tadeo_maker_FS7wtjR.jpeg",
+    "description": "Facilitator of the Data Insights Core Unit at MakerDAO & organiser of ETHGathering",
+    "tracks": [
+      "Governance & Coordination"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "tadeo_dao"
   }
 ]
