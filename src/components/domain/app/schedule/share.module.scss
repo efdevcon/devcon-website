@@ -40,4 +40,16 @@
             padding: 8px;
         }
     }
+
+    .download {
+        margin-top: 16px;
+        
+        p { 
+            margin-bottom: 16px;
+            
+            &:last-child { 
+                margin-bottom: 0;
+            }
+        }
+    }
 }
