@@ -46,6 +46,7 @@ const markdownUtils = (() => {
 
 export function toHtml(markdown: string, slice?: number) {
   let raw = markdown
+  if (!raw) return ''
 
   if (slice && raw.length > 255) raw = `${raw.slice(0, slice)}...`
 
