@@ -8,6 +8,8 @@ import IconSchedule from 'assets/icons/schedule.svg'
 import { Link } from 'components/common/link'
 import { useRouter } from 'next/router'
 import { NavLink, isSelected } from './AppNav'
+// import { pwaUtilities } from 'components/domain/app/pwa-prompt/pwa-utilities'
+// import { useIsStandalone } from 'utils/pwa-link'
 
 interface NavLinkWithIcon extends NavLink {
   icon: any
@@ -46,6 +48,22 @@ const navItems = [
 
 export const BottomNav = () => {
   const router = useRouter()
+  // const isStandalone = useIsStandalone()
+  // const [extraPadding, setExtraPadding] = React.useState(true)
+
+  // React.useEffect(() => {})
+  // window.matchMedia('(display-mode: standalone)').addEventListener('change', handler)
+
+  // console.log(isStandalone, extraPadding, 'extra pdding', 'is stand alone')
+
+  // React.useEffect(() => {
+  //   // console.log(isStandalone, pwaUtilities.isIOS(), 'standaloneios')
+  //   if (isStandalone /*&& pwaUtilities.isIOS()*/) {
+  //     setExtraPadding(true)
+  //   } else {
+  //     setExtraPadding(false)
+  //   }
+  // }, [isStandalone])
   // const [didScrollDown, setDidScrollDown] = React.useState(false)
   // const lastScrollDistance = React.useRef(0)
 
@@ -89,6 +107,8 @@ export const BottomNav = () => {
   let className = css['bottom-nav']
 
   // if (didScrollDown) className += ` ${css['hide']}`
+
+  // if (extraPadding) className += ` ${css['extra-padding']}`
 
   return (
     <div id="bottom-nav" className={className}>

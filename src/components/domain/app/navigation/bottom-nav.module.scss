@@ -5,7 +5,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  // height: 65px;
   z-index: 18;
   background: $colors-monochrome-9;
   color: white;
@@ -16,6 +15,12 @@
   transition: transform 0.3s linear;
   transform: translateY(0%);
   @include fonts-sm;   
+
+  &.extra-padding {
+    .nav-item {
+     padding-bottom: 14px !important;
+    }
+  }
 
   // &.hide {
   //   transform: translateY(100%);
@@ -39,10 +44,12 @@
       flex: 1;
       padding: $gaps-gap-2;
       padding-top: $gaps-gap-3;
+      padding-bottom: 12px;
 
       &.selected {
-        // color: $colors-track-red;
-        --color-icon: #{$colors-track-red};
+        background: $colors-track-red;
+        color: white;
+        // --color-icon: #{$colors-track-red};
       }
 
       svg {
