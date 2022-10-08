@@ -134,13 +134,13 @@ module.exports = withSentryConfig(
         ...config,
         pwa: {
           dest: '/public',
-          additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId), ...getStaticPrecacheEntries({})],
+          additionalManifestEntries: [...getGeneratedPrecacheEntries(buildId) /*, ...getStaticPrecacheEntries({})*/],
           mode: 'production',
           dynamicStartUrl: false,
           customWorkerDir: 'workbox',
           cacheOnFrontEndNav: true,
           ignoreURLParametersMatching: [/^session/, /^speaker/, /^room/, /^floor/],
-          buildExcludes: [/chunks\/media\/.*$/],
+          buildExcludes: [/media\/.*$/, /\.map$/],
           // fallbacks: {
           //   image:
           //     'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
