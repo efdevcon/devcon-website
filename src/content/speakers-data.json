@@ -3645,10 +3645,12 @@
     "avatar": null,
     "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
     "tracks": [
-      "UX & Design"
+      "UX & Design",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "github": "@catsnackattack"
   },
@@ -4584,18 +4586,6 @@
     "eventDays": [
       1665446400000,
       1665705600000
-    ]
-  },
-  {
-    "id": "QNMFZQ",
-    "name": "Althea Allen",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
     ]
   },
   {
