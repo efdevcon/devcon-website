@@ -1920,6 +1920,7 @@
         "id": "QJMMFZ",
         "name": "Jaime Pumarejo",
         "description": "Alcalde de Barranquilla",
+        "twitter": "https://twitter.com/jaimepumarejo",
         "avatar": "http://speak.devcon.org/media/avatars/jaime_WMU9awU.jpg"
       },
       {
@@ -1945,7 +1946,7 @@
         "id": "ZCF8JW",
         "name": "Alfredo Bateman",
         "description": "Secretario de Desarrollo Económico de Bogotá",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/WhatsApp_Image_2022-10-08_at_9.32.57_AM_pdFVbRv.jpeg"
       }
     ],
     "title": "How Latam cities are thinking about blockchain solutions.",
@@ -5954,7 +5955,7 @@
       {
         "id": "LGTVTW",
         "name": "Dominic Emanuel Horn",
-        "description": "Dominic Emanuel Horn is a freelance product designer building digital products with clients like motius, siemens, zeiss and others. I care about designing products with emotion, that look & feel great to the point that people will post on social media about it.",
+        "description": "Dominic Emanuel Horn is the Lead Product Designer (UX/UI) of Common Ground, a web3-native communication platform. Freelancing as a UX and product designer for clients such as Siemens, Mercedes, and more, he cares deeply about designing products with emotion, that look & feel great and push the boundaries of user experience forward.",
         "twitter": "https://twitter.com/dmnc_eu",
         "avatar": "http://speak.devcon.org/media/avatars/fe9200c4-2241-40ef-b853-eaebab8b39f8_rw_1200_photos_v2_x4_3MjzB9c.jpg"
       }
@@ -5972,7 +5973,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Effective communication is a strategic advantage that DAOs are failing to leverage due to a fragmented and inefficiently designed tool landscape. Let's look at how the new communication platform Common Ground aims to establish a collaborative network effect. Coupled with a sophisticated social graph, it could herald a new age of work where you know the reputation of new members, and quickly outpace traditional companies",
+    "description": "Effective communication is a strategic advantage that DAOs are failing to leverage due to a fragmented and inefficiently designed tool landscape. Let's explore how social web3 primitives may unlock collaborative network effects. Imagine knowing if you can trust someone at a glance, without knowing anything else about them. We'll tie social theory of Bourdieu together with User Experience Design into a neat little package and see how it can herald a new era in working together.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
