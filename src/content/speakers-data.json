@@ -276,9 +276,11 @@
     "avatar": null,
     "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
     "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
       "Layer 2s"
     ],
     "eventDays": [
+      1665619200000,
       1665705600000
     ],
     "website": "https://www.linkedin.com/in/jbaylina/",
@@ -409,7 +411,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "www.veridise.com",
     "twitter": "@VeridiseInc"
@@ -2705,6 +2708,7 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
+      1665619200000,
       1665705600000
     ],
     "twitter": "kcharb0",
@@ -3741,6 +3745,7 @@
     ],
     "eventDays": [
       1665446400000,
+      1665619200000,
       1665705600000
     ],
     "twitter": "gubsheep",
@@ -4233,10 +4238,12 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Security"
+      "Security",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ]
   },
   {
@@ -4902,7 +4909,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665619200000
     ]
   },
   {
@@ -5362,6 +5370,30 @@
     ],
     "eventDays": [
       1665446400000
+    ]
+  },
+  {
+    "id": "9RKGBT",
+    "name": "",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "KQNENU",
+    "name": "Lucas",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
     ]
   }
 ]

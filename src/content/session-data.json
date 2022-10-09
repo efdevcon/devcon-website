@@ -3064,7 +3064,7 @@
         "id": "DLDW8M",
         "name": "Tomasz Kornuta",
         "description": "I am an applied research scientist, able to drive research into novel directions.\r\n\r\nWith over 20 years in academia and industry, I have developed strong analytical & problem solving skills along with deep expertise in software engineering, robotics, visual perception and machine learning.\r\n\r\nI am a fan of robotics, AI, design patterns and MOOCs.",
-        "twitter": "tomasz.kornuta",
+        "twitter": "tomaszkornuta",
         "avatar": ""
       }
     ],
@@ -6245,10 +6245,62 @@
     "id": "XMHCA7",
     "speakers": [
       {
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "twitter": "jbaylina",
+        "avatar": ""
+      },
+      {
+        "id": "TZGGNW",
+        "name": "Jon Stephens",
+        "description": "I am a current PhD student at UT Austin as well as the CTO and a co-founder of Veridise. My work focuses on developing automated techniques to verify and identify bugs in various locations in the blockchain stack.",
+        "twitter": "@VeridiseInc",
+        "avatar": "http://speak.devcon.org/media/avatars/jon1_UiU1u9V.jpeg"
+      },
+      {
+        "id": "LSGVGP",
+        "name": "Kyle Charbonnet",
+        "description": "Software Security Engineer at the Privacy & Scaling Explorations Team",
+        "twitter": "kcharb0",
+        "avatar": ""
+      },
+      {
+        "id": "ZYXBSK",
+        "name": "gubsheep",
+        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
+        "twitter": "gubsheep",
+        "avatar": ""
+      },
+      {
+        "id": "CMSZNX",
+        "name": "David Theodore",
+        "description": null,
+        "avatar": ""
+      },
+      {
         "id": "8DMBJM",
         "name": "Remy",
         "description": "Ops, startups, higher ed + tech, outdoor activities.",
         "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
+      },
+      {
+        "id": "ZRNNVV",
+        "name": "Barry Whitehat",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "KQNENU",
+        "name": "Lucas",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "ZK Security Self Led Session",
