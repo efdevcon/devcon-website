@@ -1775,7 +1775,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "https://oskarth.com/",
     "twitter": "oskarth",
@@ -2857,6 +2858,21 @@
     "twitter": "@liftlines"
   },
   {
+    "id": "JN83LR",
+    "name": "Shumo Chu",
+    "avatar": "https://www.gravatar.com/avatar/249254fce41046359eef46d97f30bdb0",
+    "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://shumochu.com/",
+    "twitter": "https://twitter.com/shumochu",
+    "github": "https://github.com/stechu/"
+  },
+  {
     "id": "AJMUSU",
     "name": "Ian Miers",
     "avatar": null,
@@ -3415,6 +3431,21 @@
     "github": "yahgwai"
   },
   {
+    "id": "8MUK7D",
+    "name": "Remco Bloemen",
+    "avatar": null,
+    "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "2π.com",
+    "twitter": "recmo",
+    "github": "recmo"
+  },
+  {
     "id": "SDXR33",
     "name": "Corey Petty",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_20190918_130908_475_dmLZppk.jpg",
@@ -3670,7 +3701,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665705600000
     ]
   },
   {
@@ -3779,6 +3811,22 @@
     ],
     "twitter": "therealyingtong",
     "github": "therealyingtong"
+  },
+  {
+    "id": "KGGWEZ",
+    "name": "Uma Roy",
+    "avatar": "https://www.gravatar.com/avatar/ab03f143ea58b6c18755d1530e61f6c6",
+    "description": "Building proof of consensus at succinct.xyz",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
+      "Security"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "succinct.xyz",
+    "twitter": "pumatheuma",
+    "github": "puma314"
   },
   {
     "id": "CZMY7Z",
@@ -5374,9 +5422,9 @@
   },
   {
     "id": "9RKGBT",
-    "name": "",
+    "name": "Jason Morton",
     "avatar": null,
-    "description": "",
+    "description": "ZKonduit & 0xPARC",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -5387,6 +5435,30 @@
   {
     "id": "KQNENU",
     "name": "Lucas",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "S8R9ND",
+    "name": "Ya-wen Jeng",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "7N9ZJE",
+    "name": "Vivek",
     "avatar": null,
     "description": "",
     "tracks": [

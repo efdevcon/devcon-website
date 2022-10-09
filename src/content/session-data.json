@@ -1775,6 +1775,13 @@
         "name": "Jordan Sutcliffe",
         "description": "BizDev Lead at StakeWise",
         "avatar": "http://speak.devcon.org/media/avatars/Tree_of_life_rrS51mp.jpeg"
+      },
+      {
+        "id": "BJQV8Z",
+        "name": "Vasiliy Shapovalov",
+        "description": "Tech guy at Lido",
+        "twitter": "_vshapovalov",
+        "avatar": "http://speak.devcon.org/media/avatars/ava_dSVKajv.jpg"
       }
     ],
     "title": "Promoting Small and Independent Stakers: Q&A with the Ethereum Staking Protocols",
@@ -6292,8 +6299,8 @@
       },
       {
         "id": "9RKGBT",
-        "name": "",
-        "description": null,
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
         "avatar": ""
       },
       {
@@ -7619,11 +7626,75 @@
         "name": "Althea Allen",
         "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
         "avatar": ""
+      },
+      {
+        "id": "VXMHCZ",
+        "name": "Oskar Thorén",
+        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
+        "twitter": "oskarth",
+        "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
+      },
+      {
+        "id": "JN83LR",
+        "name": "Shumo Chu",
+        "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
+        "avatar": ""
+      },
+      {
+        "id": "RGKJGA",
+        "name": "AtHeartEngineer",
+        "description": "Aspiring polymath doing R&D on the privacy and scaling team",
+        "twitter": "AtHeartEngineer",
+        "avatar": "http://speak.devcon.org/media/avatars/AtHeartEngineerLogo_small_F6ZbKfj.png"
+      },
+      {
+        "id": "LVC7MN",
+        "name": "Aayush Gupta",
+        "description": "0xPARC",
+        "twitter": "yush_g",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_5176_5BsafLR.jpg"
+      },
+      {
+        "id": "8MUK7D",
+        "name": "Remco Bloemen",
+        "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
+        "avatar": ""
+      },
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "twitter": "theyisun",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      },
+      {
+        "id": "KGGWEZ",
+        "name": "Uma Roy",
+        "description": "Building proof of consensus at succinct.xyz",
+        "avatar": ""
+      },
+      {
+        "id": "S8R9ND",
+        "name": "Ya-wen Jeng",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "7N9ZJE",
+        "name": "Vivek",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "title": "Applied ZK Self Led Session",
+    "title": "Applied ZK Showcase",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 240,
+    "duration": 180,
     "start": 1665669600000,
     "end": 1665684000000,
     "room": {
@@ -7634,7 +7705,7 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": "Applied ZK Self Led Session",
+    "description": "Demos and presentations covering a wide range of applications of zero knowledge proofs, from light clients to machine learning to spam-resistant messaging and anonymous social media. Focusing more on the application layer than deep technical details, this session will provide an overview of the applied ZK landscape for people at any level of technical knowledge. \r\nFull schedule here: https://www.notion.so/0xparc/Applied-ZK-SLS-360fcd3f2a824759b1373ddeef5bf564",
     "abstract": "",
     "expertise": "Advanced",
     "tags": [
@@ -8308,6 +8379,12 @@
         "description": "Co-founder of Hop Protocol\r\nAuthor of the Hop Whitepaper: https://hop.exchange/whitepaper.pdf\r\nPreviously co-founder of Authereum and Level K\r\nAudited Open Zeppelin, dYdX, Augur, Decentraland, and more\r\nStarted the first Ethereum meetup in Boston",
         "twitter": "WhinfreyChris",
         "avatar": "http://speak.devcon.org/media/avatars/AshAvatar_TS6pQfP.png"
+      },
+      {
+        "id": "KGGWEZ",
+        "name": "Uma Roy",
+        "description": "Building proof of consensus at succinct.xyz",
+        "avatar": ""
       }
     ],
     "title": "Battle of the Bridges: Untangling the Tradeoffs of Various Bridge Designs",
@@ -9390,6 +9467,12 @@
   {
     "id": "8UNNBN",
     "speakers": [
+      {
+        "id": "KFAEPV",
+        "name": "Justin Glibert",
+        "description": "cyberspace vintner and digital physicist.",
+        "avatar": "http://speak.devcon.org/media/avatars/IOhWHC7W_400x400_1gfjsrI.jpg"
+      },
       {
         "id": "8DMBJM",
         "name": "Remy",
