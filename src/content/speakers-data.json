@@ -5336,13 +5336,15 @@
   {
     "id": "BJQV8Z",
     "name": "Vasiliy Shapovalov",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/ava_dSVKajv.jpg",
+    "description": "Tech guy at Lido",
     "tracks": [
       "Staking & Validator Experience"
     ],
     "eventDays": [
       1665532800000
-    ]
+    ],
+    "twitter": "_vshapovalov",
+    "github": "vshvsh"
   }
 ]
