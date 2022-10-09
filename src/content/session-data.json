@@ -1902,15 +1902,15 @@
     "id": "RAPTXZ",
     "speakers": [
       {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
+        "id": "G8STKM",
+        "name": "Julian Ma",
         "description": null,
         "avatar": ""
       }
     ],
-    "title": "ELI5 Workshops",
+    "title": "ELI5: Cryptoeconomics",
     "track": "Developer Infrastructure",
-    "duration": 90,
+    "duration": 50,
     "start": 1665505500000,
     "end": 1665510900000,
     "room": {
@@ -1920,7 +1920,7 @@
       "info": "Floor 3",
       "capacity": 112
     },
-    "type": "Workshop 2h",
+    "type": "Workshop 1h",
     "description": ".",
     "abstract": "",
     "expertise": "Beginner",
@@ -9345,7 +9345,7 @@
       }
     ],
     "title": "Autonomous Worlds Self Led Session",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "track": "Developer Infrastructure",
     "duration": 330,
     "start": 1665741600000,
     "end": 1665761400000,
