@@ -8,7 +8,7 @@ type SliderStickyNotesProps = {
     title: string
     description: string
     url: string
-    color: 'pink' | 'yellow' | 'green' | 'blue' | 'grey'
+    color: 'pink' | 'yellow' | 'green' | 'blue' | 'grey' | 'red'
   }[]
 }
 

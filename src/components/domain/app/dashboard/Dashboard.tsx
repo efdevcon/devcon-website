@@ -156,29 +156,29 @@ export const Dashboard = (props: any) => {
                 onChange={() => {}}
                 options={[
                   {
+                    text: 'Schedule',
+                    value: 'schedule',
+                    url: '/schedule',
+                  },
+                  {
                     text: 'Devcon Manual',
                     value: 'schedule',
-                    // TODO: Update before deploy
                     url: 'https://blog.ethereum.org/2022/10/04/devcon-manual',
-                    // onClick: (close: any) => close(),
                   },
                   {
                     text: 'Bogota City Guide',
                     value: 'guides',
                     url: '/info',
-                    // onClick: (close: any) => close(),
                   },
                   {
                     text: 'Side Events',
                     value: 'venue map',
                     url: '/side-events',
-                    // onClick: (close: any) => close(),
                   },
                   {
                     text: 'Devcon Week',
                     value: 'speakers',
                     url: 'https://devcon.org/devcon-week',
-                    // onClick: (close: any) => close(),
                   },
                 ]}
               />
@@ -188,9 +188,14 @@ export const Dashboard = (props: any) => {
           <SliderStickyNotes
             cards={[
               {
+                title: 'Schedule',
+                description: 'View and manage your schedule.',
+                url: '/schedule',
+                color: 'red',
+              },
+              {
                 title: 'Devcon Manual',
                 description: 'Learn all things related to the Devcon Experience!',
-                // TODO: Update before deploy
                 url: 'https://blog.ethereum.org/2022/10/04/devcon-manual',
                 color: 'pink',
               },

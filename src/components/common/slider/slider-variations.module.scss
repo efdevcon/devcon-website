@@ -37,6 +37,10 @@
       background: $colors-monochrome-4;
     }      
 
+    &.red {
+      background: #fddade;
+    }
+
     .title {
       @include fonts-sm-fixed;
       @include fonts-bold;

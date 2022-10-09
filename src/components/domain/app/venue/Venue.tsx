@@ -20,6 +20,8 @@ import { useIsStandalone } from 'utils/pwa-link'
 import imageAgora from './agora.png'
 import { Button } from 'components/common/button'
 import { useRouter } from 'next/router'
+import IconInformation from 'assets/icons/info.svg'
+import IconDirections from 'assets/icons/directions.svg'
 
 interface Props {
   rooms: Array<Room>
@@ -138,13 +140,29 @@ export const Venue = (props: Props) => {
             title: 'Venue Map',
           },
         ]}
+        renderRight={() => {
+          return (
+            <>
+              <Link
+                style={{ display: 'flex' }}
+                to="https://www.google.com/maps/place/Agora+Bogot%C3%A1+Convention+Center/@4.6299916,-74.0945735,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3f9bd91908ed1d:0x23880f62017a68ac!8m2!3d4.6299916!4d-74.0923848"
+              >
+                <IconDirections />
+              </Link>
+
+              <Link style={{ display: 'flex' }} to="/info#venue-guide">
+                <IconInformation />
+              </Link>
+            </>
+          )
+        }}
       />
 
-      <div className={css['panzoom-cover']}>
+      {/* <div className={css['panzoom-cover']}>
         <div className={css['image']} id="image-container">
           <Image src={VenueMap} alt="venue map" layout="raw" />
         </div>
-      </div>
+      </div> */}
 
       <div className={`${filterCss['filter']} border-top`}>
         <div className="section clear-bottom-less">

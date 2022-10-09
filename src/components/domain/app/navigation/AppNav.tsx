@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './app-nav.module.scss'
-import IconBack from 'assets/icons/arrow_left.svg'
+import IconBack from 'assets/icons/app-back.svg'
 import { Link } from 'components/common/link'
 import IconSwirl from 'assets/icons/swirl.svg'
 import { useRouter } from 'next/router'
