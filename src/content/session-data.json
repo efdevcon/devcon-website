@@ -6308,6 +6308,12 @@
         "name": "Lucas",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "UHSVVC",
+        "name": "Haichen Shen",
+        "description": "",
+        "avatar": ""
       }
     ],
     "title": "ZK Security Self Led Session",
@@ -7226,6 +7232,12 @@
         "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
         "twitter": "twitter.com/efnextbillion",
         "avatar": ""
+      },
+      {
+        "id": "KKBMLR",
+        "name": "Mihajlo Atanackovic",
+        "description": "Mihajlo is leading the digital transformation journey of one of the world's biggest non-formal educational youth movements - the World Organization of the Scout Movement, with 57+ million members from around the globe. \r\n\r\nTo get the Scout Movement ready for W3, he is embarking on an ambitious project involving digitalising badges, exploring DAOs for different levels of the Movement and more.",
+        "avatar": "http://speak.devcon.org/media/avatars/Avatar_lgpO5aH.jpg"
       }
     ],
     "title": "Ethereum for the next billion: who are your next billion?",
@@ -7638,6 +7650,7 @@
         "id": "JN83LR",
         "name": "Shumo Chu",
         "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
+        "twitter": "https://twitter.com/shumochu",
         "avatar": ""
       },
       {
@@ -7658,6 +7671,7 @@
         "id": "8MUK7D",
         "name": "Remco Bloemen",
         "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
+        "twitter": "recmo",
         "avatar": ""
       },
       {
@@ -7671,6 +7685,7 @@
         "id": "KGGWEZ",
         "name": "Uma Roy",
         "description": "Building proof of consensus at succinct.xyz",
+        "twitter": "pumatheuma",
         "avatar": ""
       },
       {
@@ -8384,6 +8399,7 @@
         "id": "KGGWEZ",
         "name": "Uma Roy",
         "description": "Building proof of consensus at succinct.xyz",
+        "twitter": "pumatheuma",
         "avatar": ""
       }
     ],

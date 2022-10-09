@@ -5467,5 +5467,17 @@
     "eventDays": [
       1665619200000
     ]
+  },
+  {
+    "id": "KKBMLR",
+    "name": "Mihajlo Atanackovic",
+    "avatar": "https://speak.devcon.org/media/avatars/Avatar_lgpO5aH.jpg",
+    "description": "Mihajlo is leading the digital transformation journey of one of the world's biggest non-formal educational youth movements - the World Organization of the Scout Movement, with 57+ million members from around the globe. \r\n\r\nTo get the Scout Movement ready for W3, he is embarking on an ambitious project involving digitalising badges, exploring DAOs for different levels of the Movement and more.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   }
 ]
