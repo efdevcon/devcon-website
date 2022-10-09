@@ -89,7 +89,7 @@ export const SideEvents = (props: any) => {
           ctaText="Created by COLOMBIA BLOCKCHAIN WEEK"
           button={{
             text: 'Submit Event',
-            url: 'https://notionforms.io/forms/colombia-blockchain-week',
+            url: 'https://notionforms.io/forms/devcon-side-events-1',
           }}
         />
 
