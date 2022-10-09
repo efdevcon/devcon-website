@@ -138,6 +138,7 @@ const AddToCalendar = (props: any) => {
                 <Button className="black ghost">Google Calendar</Button>
               </Link>
             </div>
+            <p className='clear-top'>*Warning session changes and updates will not be reflected. We advise you export on day of or when you have fully compiled your schedule.</p>
           </div>
         </Modal>
       )}

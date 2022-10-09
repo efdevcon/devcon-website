@@ -276,9 +276,11 @@
     "avatar": null,
     "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
     "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
       "Layer 2s"
     ],
     "eventDays": [
+      1665619200000,
       1665705600000
     ],
     "website": "https://www.linkedin.com/in/jbaylina/",
@@ -409,7 +411,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "www.veridise.com",
     "twitter": "@VeridiseInc"
@@ -797,19 +800,6 @@
     "twitter": "https://twitter.com/LenklaH"
   },
   {
-    "id": "NHCK3Z",
-    "name": "Alexey Akhunov",
-    "avatar": "https://speak.devcon.org/media/avatars/Alexey_Face_NoDK4ty.png",
-    "description": "Alexey is a software engineer with 25 years of professional experience of coding in Java, C++, Python and Go. His main areas of expertise are data structures, database systems, reverse engineering, and systems architecture. Follows Ethereum since the publication of the white paper, and works on Ethereum related projects since 2016.",
-    "tracks": [
-      "Layer 1 Protocol"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "github": "https://github.com/AlexeyAkhunov"
-  },
-  {
     "id": "MYK7HL",
     "name": "Qi Zhou",
     "avatar": "https://speak.devcon.org/media/avatars/Qi_Profile_IANkou7.png",
@@ -1063,18 +1053,6 @@
     "website": "https://www.symphonious.net/",
     "twitter": "ajsutton",
     "github": "ajsutton"
-  },
-  {
-    "id": "Z88M3V",
-    "name": "AD",
-    "avatar": null,
-    "description": "The proposed speaker is Vasiliy Shapovalov, Technical C-Ffounder of Lido DAO with a background in infosec, blockchain development, and staking. If Visa or travel restrictions make this impossible, Lido DAO will find the next best replacement to deliver the talk.",
-    "tracks": [
-      "Staking & Validator Experience"
-    ],
-    "eventDays": [
-      1665532800000
-    ]
   },
   {
     "id": "Q8RDKR",
@@ -1797,7 +1775,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "https://oskarth.com/",
     "twitter": "oskarth",
@@ -2075,21 +2054,6 @@
     "github": "/"
   },
   {
-    "id": "DBEDPK",
-    "name": "Adrian Hamelink",
-    "avatar": null,
-    "description": "Cryptography engineer @ Aztec",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "website": "https://adrianhamelink.com",
-    "twitter": "adr1anh",
-    "github": "adr1anh"
-  },
-  {
     "id": "AG8LDK",
     "name": "Josselin Feist",
     "avatar": null,
@@ -2157,19 +2121,6 @@
     "website": "https://nanexcool.com/",
     "twitter": "nanexcool",
     "github": "nanexcool"
-  },
-  {
-    "id": "KJSVPB",
-    "name": "Juan Benet",
-    "avatar": "https://speak.devcon.org/media/avatars/Juan_Benet_zOQ5zwz.png",
-    "description": "Juan Benet is founder and CEO of Protocol Labs, a research, development, and deployment lab driving breakthroughs in computing to push humanity forward. Benet studied Computer Science at Stanford University and is passionate about knowledge, science, and technology. In 2018, Benet was named one of Fortune magazine's \"40 under 40,\" recognized for his work creating IPFS.",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "twitter": "@juanbenet"
   },
   {
     "id": "XREBWJ",
@@ -2328,21 +2279,6 @@
     "github": "@jamesjohnbeck"
   },
   {
-    "id": "W3P8KF",
-    "name": "Thibault Meunier",
-    "avatar": "https://speak.devcon.org/media/avatars/profile_picture_aSl6YFA.png",
-    "description": "Thibault is a research engineer working on distributed systems. He is focused on making emerging technologies interoperable with current web standards. At Cloudflare, he works on IPFS, Ethereum, and alternatives to CAPTCHA systems.",
-    "tracks": [
-      "Security"
-    ],
-    "eventDays": [
-      1665446400000
-    ],
-    "website": "https://blog.cloudflare.com/author/thibault/",
-    "twitter": "thibmeu",
-    "github": "thibmeu"
-  },
-  {
     "id": "8LRFTL",
     "name": "dhadrien",
     "avatar": "https://speak.devcon.org/media/avatars/pfp_dhadrien_jjSZvKL.png",
@@ -2379,7 +2315,7 @@
       "Cryptoeconomics"
     ],
     "eventDays": [
-      1665446400000
+      1665532800000
     ],
     "twitter": "mattdeible",
     "github": "mdeib"
@@ -2423,25 +2359,10 @@
     "twitter": "https://twitter.com/dmnc_eu"
   },
   {
-    "id": "7HJSPW",
-    "name": "Shawki Sukkar",
-    "avatar": "https://www.gravatar.com/avatar/2540ea7cdcaa2669b2042853184386c0",
-    "description": "I like to build stuff. I previously worked on layer 1 oracles, a cross-chain DeFi dashboard, a protocols engineering course, and web2 products.\r\n\r\nI am interested in decentralized social networks and I am building some new stuff there.\r\n\r\nshawkisukkar.com",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665619200000
-    ],
-    "website": "https://shawkisukkar.com/",
-    "twitter": "@shawkisukkar",
-    "github": "https://github.com/ShawkiS"
-  },
-  {
     "id": "JTLSDW",
     "name": "0xdeniz",
-    "avatar": null,
-    "description": "🦆  Core unit facilitator of DUX team @MakerDAO, working on governance UX and tooling\r\n🧠  PM & creative facilitation, 5y of crypto\r\n💙  wagmi",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_0095_2_gKF0UTS.jpg",
+    "description": "Deniz Yilmaz\r\n🦆  Core unit facilitator of DUX team @MakerDAO, working on governance UX and tooling\r\n🧠  PM & creative facilitation, crypto class of '17\r\n💙  wagmi",
     "tracks": [
       "Governance & Coordination"
     ],
@@ -2464,6 +2385,20 @@
     ],
     "twitter": "OisinKyne",
     "github": "OisinKyne"
+  },
+  {
+    "id": "QVABZH",
+    "name": "Pablo Larguia",
+    "avatar": "https://speak.devcon.org/media/avatars/804EC2C7-5A85-422B-BFC0-5936CA597917_mj2UEXl.jpeg",
+    "description": "Co-Founder & CEO SenseiNode, the first node and staking as a service provider in Latin America. \r\nSingularity University GSP14 Alumni, NASA campus in Mountain View CA. Founder of Red Innova\r\nthe largest community on innovation, technology and entrepreneurship in Latin America. Founder of Bumeran, biggest online recruitment company in the region.\r\n Board Member Universidad Di Tella, Argentina.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://www.linkedin.com/in/pablolarguia/",
+    "twitter": "@pablolarguia"
   },
   {
     "id": "GJBJK7",
@@ -2774,6 +2709,7 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
+      1665619200000,
       1665705600000
     ],
     "twitter": "kcharb0",
@@ -2920,6 +2856,21 @@
       1665619200000
     ],
     "twitter": "@liftlines"
+  },
+  {
+    "id": "JN83LR",
+    "name": "Shumo Chu",
+    "avatar": "https://www.gravatar.com/avatar/249254fce41046359eef46d97f30bdb0",
+    "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://shumochu.com/",
+    "twitter": "https://twitter.com/shumochu",
+    "github": "https://github.com/stechu/"
   },
   {
     "id": "AJMUSU",
@@ -3480,6 +3431,21 @@
     "github": "yahgwai"
   },
   {
+    "id": "8MUK7D",
+    "name": "Remco Bloemen",
+    "avatar": null,
+    "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "2π.com",
+    "twitter": "recmo",
+    "github": "recmo"
+  },
+  {
     "id": "SDXR33",
     "name": "Corey Petty",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_20190918_130908_475_dmLZppk.jpg",
@@ -3735,7 +3701,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665705600000
     ]
   },
   {
@@ -3810,6 +3777,7 @@
     ],
     "eventDays": [
       1665446400000,
+      1665619200000,
       1665705600000
     ],
     "twitter": "gubsheep",
@@ -3843,6 +3811,22 @@
     ],
     "twitter": "therealyingtong",
     "github": "therealyingtong"
+  },
+  {
+    "id": "KGGWEZ",
+    "name": "Uma Roy",
+    "avatar": "https://www.gravatar.com/avatar/ab03f143ea58b6c18755d1530e61f6c6",
+    "description": "Building proof of consensus at succinct.xyz",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
+      "Security"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "succinct.xyz",
+    "twitter": "pumatheuma",
+    "github": "puma314"
   },
   {
     "id": "CZMY7Z",
@@ -4237,7 +4221,7 @@
       1665532800000
     ],
     "website": "tomaszkornuta.com",
-    "twitter": "tomasz.kornuta",
+    "twitter": "tomaszkornuta",
     "github": "tkornuta-semiotic"
   },
   {
@@ -4302,10 +4286,12 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Security"
+      "Security",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ]
   },
   {
@@ -4607,12 +4593,11 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Developer Infrastructure",
-      "UX & Design",
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "UX & Design"
     ],
     "eventDays": [
-      1665446400000,
+      1665532800000,
       1665705600000
     ]
   },
@@ -4622,7 +4607,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg",
     "description": "Ops, startups, higher ed + tech, outdoor activities.",
     "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
+      "Developer Infrastructure"
     ],
     "eventDays": [
       1665619200000,
@@ -4712,14 +4698,16 @@
   {
     "id": "QGZZN7",
     "name": "George",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/asn_9xyEWy7.jpeg",
+    "description": "Ethereum R&D",
     "tracks": [
       "Layer 1 Protocol"
     ],
     "eventDays": [
       1665705600000
-    ]
+    ],
+    "twitter": "https://twitter.com/asn_d6",
+    "github": "https://github.com/asn-d6"
   },
   {
     "id": "7PH9MT",
@@ -4969,7 +4957,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665619200000
     ]
   },
   {
@@ -4993,7 +4982,7 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665446400000
+      1665705600000
     ],
     "website": "www.linkedin.com/in/agustín-matteri",
     "twitter": "@agustin_matteri"
@@ -5084,18 +5073,6 @@
     ],
     "eventDays": [
       1665532800000
-    ]
-  },
-  {
-    "id": "JTXY88",
-    "name": "Ethereum Foundation",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Developer Infrastructure"
-    ],
-    "eventDays": [
-      1665446400000
     ]
   },
   {
@@ -5272,15 +5249,18 @@
   },
   {
     "id": "ZQA8DA",
-    "name": "Fabio",
-    "avatar": null,
-    "description": "",
+    "name": "Fabio Hildebrand",
+    "avatar": "https://speak.devcon.org/media/avatars/shyguy_TPgWuG9.jpeg",
+    "description": "Dev @ RAI",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "website": "reflexer.finance",
+    "twitter": "fabiohild",
+    "github": "fabiohild"
   },
   {
     "id": "URPEPX",
@@ -5296,15 +5276,17 @@
   },
   {
     "id": "VQMDYU",
-    "name": "Juan David",
-    "avatar": null,
-    "description": "",
+    "name": "Juan David Reyes",
+    "avatar": "https://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg",
+    "description": "Leader of EthColombia and Community Supporter at Devcon.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
+      1665532800000,
       1665705600000
-    ]
+    ],
+    "twitter": "0xjuandavid"
   },
   {
     "id": "BCDDEU",
@@ -5344,6 +5326,19 @@
     "twitter": "tadeo_dao"
   },
   {
+    "id": "QREVHX",
+    "name": "Vlad Zamfir",
+    "avatar": "https://speak.devcon.org/media/avatars/Screenshot_2022-10-08_at_19.47.52_TuQAHJp.png",
+    "description": "Vlad Zamfir is a proof-of-stake and consensus protocol designer, also known in Ethereum and cryptocurrency expert communities for pioneering research on cryptoeconomics, blockchain governance and crypto law.\r\n\r\nLow-key, Vlad’s contributed to the DAO hard fork, to the latest message fork driven choice rule, and to many arguments against on-chain governance and blockchain immutability.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
+    "twitter": "@VladZamfir"
+  },
+  {
     "id": "LR7HVL",
     "name": "Paul Gadi",
     "avatar": "https://speak.devcon.org/media/avatars/paul_gadi_TlhzmP2.jpg",
@@ -5357,5 +5352,120 @@
     "website": "polats.com",
     "twitter": "polats",
     "github": "polats"
+  },
+  {
+    "id": "3VQEST",
+    "name": "Ixshells",
+    "avatar": null,
+    "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+    "tracks": [
+      ""
+    ],
+    "eventDays": [
+      1665446400000,
+      1665532800000,
+      1665619200000
+    ]
+  },
+  {
+    "id": "QEYVKV",
+    "name": "AstroMel",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      ""
+    ],
+    "eventDays": [
+      1665532800000,
+      1665446400000,
+      1665705600000
+    ]
+  },
+  {
+    "id": "8SLFHM",
+    "name": "Atractor Estudio",
+    "avatar": "https://speak.devcon.org/media/avatars/277579879_394370306025953_2445270446240223678_n_2k7qYfK.jpeg",
+    "description": "We are a group of artists who work with mechanical, electronic and computer engineering techniques from the field of the arts. We focus on the visualization of natural phenomena, mathematical and scientific paradigms related to sociocultural phenomena not only of the western hegemonic culture, but also of other ways of knowing and understanding the scientific, through the interaction of the viewer with a digital and analog substrate.",
+    "tracks": [
+      ""
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "BJQV8Z",
+    "name": "Vasiliy Shapovalov",
+    "avatar": "https://speak.devcon.org/media/avatars/ava_dSVKajv.jpg",
+    "description": "Tech guy at Lido",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665446400000,
+      1665532800000
+    ],
+    "twitter": "_vshapovalov",
+    "github": "vshvsh"
+  },
+  {
+    "id": "G8STKM",
+    "name": "Julian Ma",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
+  },
+  {
+    "id": "9RKGBT",
+    "name": "Jason Morton",
+    "avatar": null,
+    "description": "ZKonduit & 0xPARC",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "KQNENU",
+    "name": "Lucas",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "S8R9ND",
+    "name": "Ya-wen Jeng",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "7N9ZJE",
+    "name": "Vivek",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   }
 ]
