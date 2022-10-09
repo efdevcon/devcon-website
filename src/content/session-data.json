@@ -962,6 +962,13 @@
         "description": "Co-founder of Sigma Prime and Lighthouse. Proud contributor to Ethereum Proof-of-Stake.",
         "twitter": "paulhauner",
         "avatar": ""
+      },
+      {
+        "id": "BJQV8Z",
+        "name": "Vasiliy Shapovalov",
+        "description": "Tech guy at Lido",
+        "twitter": "_vshapovalov",
+        "avatar": "http://speak.devcon.org/media/avatars/ava_dSVKajv.jpg"
       }
     ],
     "title": "\"It's 10pm, do you know where your mnemonic is?\"",
@@ -5134,6 +5141,12 @@
         "description": "- Smart Contracts at Cryptex Finance 👾\r\n- Devcon V Scholar ⛓️\r\n- Founder at Ethereum Honduras 🇭🇳\r\n- Collector of illiquid jpgs 🎨\r\n- Generative artist wanna be 👨‍🎨",
         "twitter": "https://twitter.com/crisgarner",
         "avatar": "http://speak.devcon.org/media/avatars/Untitled_design_12_rawjdQK.png"
+      },
+      {
+        "id": "VQMDYU",
+        "name": "Juan David Reyes",
+        "description": "Leader of EthColombia and Community Supporter at Devcon.",
+        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
       }
     ],
     "title": "How to Build Bigger and Stronger ETH Communities in Latam - EN ESPAÑOL",
@@ -10464,9 +10477,9 @@
     "speakers": [
       {
         "id": "VQMDYU",
-        "name": "Juan David",
-        "description": null,
-        "avatar": ""
+        "name": "Juan David Reyes",
+        "description": "Leader of EthColombia and Community Supporter at Devcon.",
+        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
       }
     ],
     "title": "Ethereum Event Showcase",
