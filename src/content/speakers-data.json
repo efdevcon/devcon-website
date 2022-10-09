@@ -4552,7 +4552,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg",
     "description": "Ops, startups, higher ed + tech, outdoor activities.",
     "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
+      "Developer Infrastructure"
     ],
     "eventDays": [
       1665619200000,
@@ -5192,15 +5193,18 @@
   },
   {
     "id": "ZQA8DA",
-    "name": "Fabio",
-    "avatar": null,
-    "description": "",
+    "name": "Fabio Hildebrand",
+    "avatar": "https://speak.devcon.org/media/avatars/shyguy_TPgWuG9.jpeg",
+    "description": "Dev @ RAI",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "website": "reflexer.finance",
+    "twitter": "fabiohild",
+    "github": "fabiohild"
   },
   {
     "id": "URPEPX",
