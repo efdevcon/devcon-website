@@ -77,7 +77,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Venkatesh_Rao_Headshot_cV4sr57.jpeg"
       }
     ],
-    "title": "Venkatesh Rao",
+    "title": "There Are Many Alternatives: Unlocking Civilizational Hypercomplexity with Ethereum",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665491400000,
@@ -213,6 +213,7 @@
         "id": "LR7HVL",
         "name": "Paul Gadi",
         "description": "Paul currently stewards the KERNEL Gaming Guild, a community of the most talented individuals in the web3 space. He has been developing games since 2004, and has always been interested in the intersection of game design and new tech.  \r\n\r\nHe is CTO / Co-Founder of OP Games, a game platform company building Arcadia.fun.  Arcadia is built using open-source game legos, helping game developers create more sustainable economies in the coming metaverse.",
+        "twitter": "polats",
         "avatar": "http://speak.devcon.org/media/avatars/paul_gadi_TlhzmP2.jpg"
       }
     ],
@@ -811,39 +812,6 @@
     ]
   },
   {
-    "id": "UXMBLR",
-    "speakers": [
-      {
-        "id": "TRWSKH",
-        "name": "Matt Deible",
-        "description": "Coming from a background in artificial intelligence and reinforcement learning, Matt now leads development of the order routing algorithm and smart contracts for odos.xyz",
-        "twitter": "mattdeible",
-        "avatar": "http://speak.devcon.org/media/avatars/profile_picture_gLd5qva.jpg"
-      }
-    ],
-    "title": "An Overview of AMM Mechanisms",
-    "track": "Cryptoeconomics",
-    "duration": 25,
-    "start": 1665496800000,
-    "end": 1665498600000,
-    "room": {
-      "id": "talk-4",
-      "name": "Talk 4",
-      "description": "River",
-      "info": "Floor 3",
-      "capacity": 110
-    },
-    "type": "Talk",
-    "description": "The talk will give an exhaustive overview of the different AMM algorithms currently deployed on major distributed ledgers, as well as the underlying intuition behind their design. Building up from the basic principles of AMM design, the talk will then cover the algorithmic mechanisms used in the various different algorithms including Constant Sum, Constant Product (Uniswap V2), Uniswap V3, KyberSwap, StableSwap (Curve), CryptoSwap (Curve V2), Solidly Stable pairs, Clipper, Dodo, and RFQ systems.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "AMM",
-      "DeFi",
-      "DEX"
-    ]
-  },
-  {
     "id": "EWZLCP",
     "speakers": [
       {
@@ -1016,6 +984,38 @@
       "staking",
       "withdrawals",
       "security"
+    ]
+  },
+  {
+    "id": "MXF9PW",
+    "speakers": [
+      {
+        "id": "R3XSH3",
+        "name": "Pol",
+        "description": "Pol Lanski is the COO of DAppNode and builder at dOrg.\r\nAfter mining dogecoin in 2014, fell in love with the political possibilities of blockchains - starting with the dependency of political sovereignty from economic sovereignty. \r\nHe spends most of the time thinking about economics, incentives, ecosystems and outcomes.",
+        "twitter": "@Pol-Lanski",
+        "avatar": "http://speak.devcon.org/media/avatars/twitter400x400_EXR808Z.jpg"
+      }
+    ],
+    "title": "Everything a Solo Staker should know for the next phase of Ethereum",
+    "track": "Staking & Validator Experience",
+    "duration": 25,
+    "start": 1665496800000,
+    "end": 1665498300000,
+    "room": {
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
+      "info": "Floor 3",
+      "capacity": 110
+    },
+    "type": "Talk",
+    "description": "Solo stakers have a lot on their plate. Keeping up with every single change, how it will affect them and what steps they need to take to ensure their operation runs smoothly is a full time job! In this talk we are going to detail very clearly everything that they should be doing, everything that's coming, what tools and projects are coming to the rescue and what they are expected to do.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "validators",
+      "staking"
     ]
   },
   {
@@ -1366,7 +1366,7 @@
       "capacity": 3060
     },
     "type": "Panel",
-    "description": "A discussion about ZK -- how it will affect and complement Ethereum in the future, and how people should think about it in general.",
+    "description": "Zero Knowledge, aka ZK, has become a catch-all term to represent much of \"modern\" or \"advanced\" cryptography -- especially cryptography that's relevant to the future of blockchains. \r\n\r\nIn this panel, we will share our perspectives on ZK -- how to think about it, what to look out for, and what to focus in on. We'll also discuss how ZK may alter and complement Ethereum's own future.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -1859,17 +1859,17 @@
     ]
   },
   {
-    "id": "F9RJVX",
+    "id": "AWNWYV",
     "speakers": [
       {
-        "id": "JTXY88",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
+        "id": "QREVHX",
+        "name": "Vlad Zamfir",
+        "description": "Vlad Zamfir is a proof-of-stake and consensus protocol designer, also known in Ethereum and cryptocurrency expert communities for pioneering research on cryptoeconomics, blockchain governance and crypto law.\r\n\r\nLow-key, Vlad’s contributed to the DAO hard fork, to the latest message fork driven choice rule, and to many arguments against on-chain governance and blockchain immutability.",
+        "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-08_at_19.47.52_TuQAHJp.png"
       }
     ],
-    "title": "Hold",
-    "track": "Developer Infrastructure",
+    "title": "Smart Transactions",
+    "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665504000000,
     "end": 1665505500000,
@@ -1881,12 +1881,13 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": ".",
+    "description": "Smart Transactions act as if they know how they are being situated and whether they are being treated fairly. \r\n\r\nWith context dependent semantics, uncanny awareness of the future, and mid-execution access to actual and virtual services, smart transactions challenge us to elaborate on Ethereum’s transactional semantics.",
     "abstract": "",
-    "expertise": "Beginner",
+    "expertise": "Intermediate",
     "tags": [
-      "Ethereum",
-      "Foundation"
+      "Transactions",
+      "MEV",
+      "time"
     ]
   },
   {
@@ -1958,8 +1959,8 @@
     "title": "How Latam cities are thinking about blockchain solutions.",
     "track": "Opportunity & Global Impact",
     "duration": 50,
-    "start": 1665505500000,
-    "end": 1665508500000,
+    "start": 1665505800000,
+    "end": 1665508800000,
     "room": {
       "id": "talk-1",
       "name": "Talk 1",
@@ -2007,38 +2008,6 @@
       "public goods",
       "approachability",
       "design patterns"
-    ]
-  },
-  {
-    "id": "MXPZDV",
-    "speakers": [
-      {
-        "id": "VNVCRB",
-        "name": "Nithin Eappen",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Securing Cross-chain Communication",
-    "track": "Security",
-    "duration": 25,
-    "start": 1665505800000,
-    "end": 1665507600000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "The last year witnessed several cross-chain bridges being hacked and millions of dollars stolen by hackers. Despite the bridges having gone through several audits, we still see them getting exploited because hackers were able to get access to authorized private keys, signature replay attacks, etc. Let us see what a secure cross-chain bridge architecture should look like and what are the possible attack vectors and mitigation techniques.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "cross-chain",
-      "bridge",
-      "security"
     ]
   },
   {
@@ -2112,6 +2081,38 @@
       "Assembly",
       "sha256",
       "vectorization"
+    ]
+  },
+  {
+    "id": "MXPZDV",
+    "speakers": [
+      {
+        "id": "VNVCRB",
+        "name": "Nithin Eappen",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Securing Cross-chain Communication",
+    "track": "Security",
+    "duration": 25,
+    "start": 1665505800000,
+    "end": 1665507300000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "The last year witnessed several cross-chain bridges being hacked and millions of dollars stolen by hackers. Despite the bridges having gone through several audits, we still see them getting exploited because hackers were able to get access to authorized private keys, signature replay attacks, etc. Let us see what a secure cross-chain bridge architecture should look like and what are the possible attack vectors and mitigation techniques.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "cross-chain",
+      "bridge",
+      "security"
     ]
   },
   {
@@ -2344,37 +2345,6 @@
     ]
   },
   {
-    "id": "BEPJ3A",
-    "speakers": [
-      {
-        "id": "PCUMSY",
-        "name": "Agustín Matteri",
-        "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
-        "twitter": "@agustin_matteri",
-        "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
-      }
-    ],
-    "title": "Climate Change or Social Change? The Role of Blockchain",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665508800000,
-    "end": 1665509220000,
-    "room": {
-      "id": "talk-1",
-      "name": "Talk 1",
-      "description": "Tropical Sunset",
-      "info": "Floor 2",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "The Paris Agreement was built over the biggest scientific consensus in the history of Humankind.\r\n\r\nWe are reaching its threshold faster than expected: already 1.1 degrees above pre-industrial levels and counting.\r\n\r\n2030 forecast: 1.5 disasters a day (earthquakes, tsunamis, electricity infrastructure loss: no internet- no blockchain)\r\n\r\nMore than 1.5 degrees means massive migrations, civilization collapse and potential extinction….",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "web3"
-    ]
-  },
-  {
     "id": "BBCK7D",
     "speakers": [
       {
@@ -2413,71 +2383,6 @@
     ]
   },
   {
-    "id": "ZJ8UWK",
-    "speakers": [
-      {
-        "id": "W3P8KF",
-        "name": "Thibault Meunier",
-        "description": "Thibault is a research engineer working on distributed systems. He is focused on making emerging technologies interoperable with current web standards. At Cloudflare, he works on IPFS, Ethereum, and alternatives to CAPTCHA systems.",
-        "twitter": "thibmeu",
-        "avatar": "http://speak.devcon.org/media/avatars/profile_picture_aSl6YFA.png"
-      }
-    ],
-    "title": "Secure HTTP for your Ethereum application",
-    "track": "Security",
-    "duration": 7,
-    "start": 1665508800000,
-    "end": 1665509400000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Lightning Talk",
-    "description": "For wallets, decentralized exchanges, DeFi insurer, or DAO management, most Ethereum applications are relying on HTTP. This setup allows applications to be accessible by current web users, with minimal modifications. It also enables developers to leverage common web engineering practice. However, these HTTP endpoints have to be secured, and trust provided by the decentralized-network has to be carried to end-users. HTTPS is not enough. This talk will present the setup of a browser based Ethereum",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "HTTP",
-      "Web",
-      "Dapp"
-    ]
-  },
-  {
-    "id": "MXF9PW",
-    "speakers": [
-      {
-        "id": "R3XSH3",
-        "name": "Pol",
-        "description": "Pol Lanski is the COO of DAppNode and builder at dOrg.\r\nAfter mining dogecoin in 2014, fell in love with the political possibilities of blockchains - starting with the dependency of political sovereignty from economic sovereignty. \r\nHe spends most of the time thinking about economics, incentives, ecosystems and outcomes.",
-        "twitter": "@Pol-Lanski",
-        "avatar": "http://speak.devcon.org/media/avatars/twitter400x400_EXR808Z.jpg"
-      }
-    ],
-    "title": "Everything a Solo Staker should know for the next phase of Ethereum",
-    "track": "Staking & Validator Experience",
-    "duration": 25,
-    "start": 1665509400000,
-    "end": 1665511200000,
-    "room": {
-      "id": "workshop-2",
-      "name": "Workshop 2",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "Solo stakers have a lot on their plate. Keeping up with every single change, how it will affect them and what steps they need to take to ensure their operation runs smoothly is a full time job! In this talk we are going to detail very clearly everything that they should be doing, everything that's coming, what tools and projects are coming to the rescue and what they are expected to do.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "validators",
-      "staking"
-    ]
-  },
-  {
     "id": "ZANTJE",
     "speakers": [
       {
@@ -2491,8 +2396,8 @@
     "title": "Underhanded Solidity",
     "track": "Security",
     "duration": 7,
-    "start": 1665509400000,
-    "end": 1665510000000,
+    "start": 1665508800000,
+    "end": 1665509220000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -2685,8 +2590,8 @@
     "title": "Shamir Secret Sharing with No ID Numbers!",
     "track": "Security",
     "duration": 7,
-    "start": 1665510000000,
-    "end": 1665510600000,
+    "start": 1665509400000,
+    "end": 1665509820000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -2789,8 +2694,8 @@
     "title": "Remix Rewards",
     "track": "Developer Infrastructure",
     "duration": 7,
-    "start": 1665510600000,
-    "end": 1665511200000,
+    "start": 1665510000000,
+    "end": 1665510420000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -2875,6 +2780,39 @@
     "tags": [
       "standards",
       "enterprise"
+    ]
+  },
+  {
+    "id": "UXMBLR",
+    "speakers": [
+      {
+        "id": "TRWSKH",
+        "name": "Matt Deible",
+        "description": "Coming from a background in artificial intelligence and reinforcement learning, Matt now leads development of the order routing algorithm and smart contracts for odos.xyz",
+        "twitter": "mattdeible",
+        "avatar": "http://speak.devcon.org/media/avatars/profile_picture_gLd5qva.jpg"
+      }
+    ],
+    "title": "An Overview of AMM Mechanisms",
+    "track": "Cryptoeconomics",
+    "duration": 25,
+    "start": 1665568800000,
+    "end": 1665570300000,
+    "room": {
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
+      "info": "Floor 2",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "The talk will give an exhaustive overview of the different AMM algorithms currently deployed on major distributed ledgers, as well as the underlying intuition behind their design. Building up from the basic principles of AMM design, the talk will then cover the algorithmic mechanisms used in the various different algorithms including Constant Sum, Constant Product (Uniswap V2), Uniswap V3, KyberSwap, StableSwap (Curve), CryptoSwap (Curve V2), Solidly Stable pairs, Clipper, Dodo, and RFQ systems.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "AMM",
+      "DeFi",
+      "DEX"
     ]
   },
   {
@@ -3014,39 +2952,6 @@
     ]
   },
   {
-    "id": "3Y8WP3",
-    "speakers": [
-      {
-        "id": "LBUHBF",
-        "name": "Henry de Valence",
-        "description": "Henry de Valence is the founder of Penumbra, a fully shielded cross-chain DEX and proof-of-stake network.  Previously, he worked at the Zcash Foundation building Zebra, a modular Zcash fullnode implementation, and at Chain, Inc, building ZK proof infrastructure: Bulletproofs, the Ristretto group, Merlin transcripts, and curve25519-dalek.",
-        "twitter": "@hdevalence",
-        "avatar": "http://speak.devcon.org/media/avatars/TRUnbKar_400x400_4t65dwc.jpg"
-      }
-    ],
-    "title": "Penumbra: Building a Private DEX with ZKPs and Threshold Cryptography",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 25,
-    "start": 1665568800000,
-    "end": 1665570300000,
-    "room": {
-      "id": "talk-1",
-      "name": "Talk 1",
-      "description": "Tropical Sunset",
-      "info": "Floor 2",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "ZKPs allow transactions to prove their state transition was valid, without revealing anything about what it was.  But this isn't enough, because useful applications require shared state, which ZKPs can't provide.  In this talk, we'll describe how to break this barrier by combining ZKPs with flow encryption, a new threshold crypto primitive, to allow private interaction with public shared state, and how Penumbra uses this technique to build a private DEX.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "ZKP",
-      "threshold crypto",
-      "DEX"
-    ]
-  },
-  {
     "id": "MLAUUV",
     "speakers": [
       {
@@ -3178,6 +3083,39 @@
     ]
   },
   {
+    "id": "3Y8WP3",
+    "speakers": [
+      {
+        "id": "LBUHBF",
+        "name": "Henry de Valence",
+        "description": "Henry de Valence is the founder of Penumbra, a fully shielded cross-chain DEX and proof-of-stake network.  Previously, he worked at the Zcash Foundation building Zebra, a modular Zcash fullnode implementation, and at Chain, Inc, building ZK proof infrastructure: Bulletproofs, the Ristretto group, Merlin transcripts, and curve25519-dalek.",
+        "twitter": "@hdevalence",
+        "avatar": "http://speak.devcon.org/media/avatars/TRUnbKar_400x400_4t65dwc.jpg"
+      }
+    ],
+    "title": "Penumbra: Building a Private DEX with ZKPs and Threshold Cryptography",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665570600000,
+    "end": 1665572100000,
+    "room": {
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
+      "info": "Floor 2",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "ZKPs allow transactions to prove their state transition was valid, without revealing anything about what it was.  But this isn't enough, because useful applications require shared state, which ZKPs can't provide.  In this talk, we'll describe how to break this barrier by combining ZKPs with flow encryption, a new threshold crypto primitive, to allow private interaction with public shared state, and how Penumbra uses this technique to build a private DEX.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "ZKP",
+      "threshold crypto",
+      "DEX"
+    ]
+  },
+  {
     "id": "D8PG7L",
     "speakers": [
       {
@@ -3283,39 +3221,6 @@
     "tags": [
       "decentralized",
       "staking"
-    ]
-  },
-  {
-    "id": "GGPAUD",
-    "speakers": [
-      {
-        "id": "DBEDPK",
-        "name": "Adrian Hamelink",
-        "description": "Cryptography engineer @ Aztec",
-        "twitter": "adr1anh",
-        "avatar": ""
-      }
-    ],
-    "title": "Survey of Aggregation and Batching Techniques for SNARKs",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 25,
-    "start": 1665570600000,
-    "end": 1665572100000,
-    "room": {
-      "id": "talk-1",
-      "name": "Talk 1",
-      "description": "Tropical Sunset",
-      "info": "Floor 2",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "In the last few years, many techniques have been discovered to speed up SNARKs using proof aggregation and batching. This talk is a survey of some of these primitives, which are described using a framework for designing modular and recursive SNARKs.",
-    "abstract": "",
-    "expertise": "Advanced",
-    "tags": [
-      "SNARK",
-      "recursion",
-      "aggregation"
     ]
   },
   {
@@ -3788,9 +3693,9 @@
     "id": "PTCYPQ",
     "speakers": [
       {
-        "id": "Z88M3V",
-        "name": "AD",
-        "description": "The proposed speaker is Vasiliy Shapovalov, Technical C-Ffounder of Lido DAO with a background in infosec, blockchain development, and staking. If Visa or travel restrictions make this impossible, Lido DAO will find the next best replacement to deliver the talk.",
+        "id": "BJQV8Z",
+        "name": "Vasiliy Shapovalov",
+        "description": null,
         "avatar": ""
       }
     ],
@@ -3863,7 +3768,7 @@
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665576000000,
-    "end": 1665577800000,
+    "end": 1665577500000,
     "room": {
       "id": "talk-5",
       "name": "Talk 5",
@@ -4293,7 +4198,7 @@
     "track": "Layer 2s",
     "duration": 50,
     "start": 1665581400000,
-    "end": 1665585000000,
+    "end": 1665584400000,
     "room": {
       "id": "talk-4",
       "name": "Talk 4",
@@ -4347,43 +4252,6 @@
       "Opensource",
       "Real-world",
       "Business model"
-    ]
-  },
-  {
-    "id": "KVMVBU",
-    "speakers": [
-      {
-        "id": "Y9NMJJ",
-        "name": "Diego Losada",
-        "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
-        "twitter": "https://twitter.com/EthereumOnARM",
-        "avatar": "http://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg"
-      }
-    ],
-    "title": "How to run a validator from zero on resource-constrained and low powered devices.",
-    "track": "Staking & Validator Experience",
-    "duration": 50,
-    "start": 1665655200000,
-    "end": 1665658200000,
-    "room": {
-      "id": "workshop-3",
-      "name": "Workshop 3",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "Our main goal is to contribute to the network decentralization by making it easier and affordable for regular users to run nodes (and staking) on resource-constrained devices as well as helping to test the next major Ethereum upgrade (The Merge).\r\n\r\nIn this workshop we will show from scratch how to install and set up an Ethereum validator node, from running the Execution Layer + Consensus Layer combo to creating the keys and setup for the validator in order to get it up and running.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "node",
-      "decentralization",
-      "arm boards",
-      "raspberry pi",
-      "staking",
-      "validators",
-      "stake at home"
     ]
   },
   {
@@ -4514,6 +4382,39 @@
     "tags": [
       "developer",
       "infrastructure"
+    ]
+  },
+  {
+    "id": "CVJSUW",
+    "speakers": [
+      {
+        "id": "83KGXF",
+        "name": "Johns Gresham",
+        "description": "Working on NiceNode https://nicenode.xyz",
+        "twitter": "sirjohnsgresham",
+        "avatar": "http://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg"
+      }
+    ],
+    "title": "Why and how to run a node! (No ETH required)",
+    "track": "Staking & Validator Experience",
+    "duration": 50,
+    "start": 1665583200000,
+    "end": 1665586200000,
+    "room": {
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "The foundation of Ethereum is a resilient and decentralized network of nodes. You’ll learn how nodes defend the network, the easiest ways to run a node, about the upcoming upgrades to Ethereum which make it easier to run a node, and more.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "node",
+      "decentralization",
+      "ethereum"
     ]
   },
   {
@@ -4684,39 +4585,6 @@
       "Regulation",
       "DAOs",
       "decentrlization"
-    ]
-  },
-  {
-    "id": "CVJSUW",
-    "speakers": [
-      {
-        "id": "83KGXF",
-        "name": "Johns Gresham",
-        "description": "Working on NiceNode https://nicenode.xyz",
-        "twitter": "sirjohnsgresham",
-        "avatar": "http://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg"
-      }
-    ],
-    "title": "Why and how to run a node! (No ETH required)",
-    "track": "Staking & Validator Experience",
-    "duration": 50,
-    "start": 1665583200000,
-    "end": 1665586200000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "The foundation of Ethereum is a resilient and decentralized network of nodes. You’ll learn how nodes defend the network, the easiest ways to run a node, about the upcoming upgrades to Ethereum which make it easier to run a node, and more.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "node",
-      "decentralization",
-      "ethereum"
     ]
   },
   {
@@ -4914,6 +4782,39 @@
     "tags": [
       "Smart contracts",
       "oracles"
+    ]
+  },
+  {
+    "id": "DWE3SM",
+    "speakers": [
+      {
+        "id": "JWVEXT",
+        "name": "Attila Gazso",
+        "description": "Attila has a background in distributed systems engineering and currently works on Swarm, where he wears many hats. His current interests are cryptography, CRDTs and designing incentivised markets. In his free time he likes to herd cats, collect herbs and visit remote places.",
+        "twitter": "agazso",
+        "avatar": ""
+      }
+    ],
+    "title": "Join the Swarm: how to run a light node or full node",
+    "track": "Layer 2s",
+    "duration": 50,
+    "start": 1665586800000,
+    "end": 1665589800000,
+    "room": {
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "Swarm is a decentralised data storage and distribution technology. In this workshop you can learn how to use Swarm, including running light node or a full node. Also there will be a demo for node operators looking to profit from storage incentives and they will be able to join the network.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "decentralized",
+      "censorship-resistant",
+      "storage"
     ]
   },
   {
@@ -5401,6 +5302,36 @@
     ]
   },
   {
+    "id": "ERDPUV",
+    "speakers": [
+      {
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Hold",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665592200000,
+    "end": 1665593700000,
+    "room": {
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
+      "info": "Floor 3",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "ethereum"
+    ]
+  },
+  {
     "id": "EL7FFV",
     "speakers": [
       {
@@ -5466,39 +5397,6 @@
     ]
   },
   {
-    "id": "MACJT8",
-    "speakers": [
-      {
-        "id": "CVWVJP",
-        "name": "Caspar Schwarz-Schilling",
-        "description": "Researcher @ Ethereum Foundation, Robust Incentives Group",
-        "twitter": "casparschwa",
-        "avatar": "http://speak.devcon.org/media/avatars/css_headshot_kXEZuWT.jpg"
-      }
-    ],
-    "title": "Time in PoS Ethereum",
-    "track": "Layer 1 Protocol",
-    "duration": 25,
-    "start": 1665592200000,
-    "end": 1665594000000,
-    "room": {
-      "id": "talk-2",
-      "name": "Talk 2",
-      "description": "Cold Forest",
-      "info": "Floor 3",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "Time in PoW is a random process, whereas in PoS we make progress in fixed time intervals. This has far reaching implications and incentivizing timely behavior by validators is non-trivial - especially in the context of MEV.",
-    "abstract": "",
-    "expertise": "Advanced",
-    "tags": [
-      "L1 research",
-      "reorgs",
-      "fork choice"
-    ]
-  },
-  {
     "id": "JUJXLJ",
     "speakers": [
       {
@@ -5529,6 +5427,39 @@
       "ENS",
       "Governance",
       "L2"
+    ]
+  },
+  {
+    "id": "MACJT8",
+    "speakers": [
+      {
+        "id": "CVWVJP",
+        "name": "Caspar Schwarz-Schilling",
+        "description": "Researcher @ Ethereum Foundation, Robust Incentives Group",
+        "twitter": "casparschwa",
+        "avatar": "http://speak.devcon.org/media/avatars/css_headshot_kXEZuWT.jpg"
+      }
+    ],
+    "title": "Time in PoS Ethereum",
+    "track": "Layer 1 Protocol",
+    "duration": 25,
+    "start": 1665594000000,
+    "end": 1665595500000,
+    "room": {
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
+      "info": "Floor 3",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "Time in PoW is a random process, whereas in PoS we make progress in fixed time intervals. This has far reaching implications and incentivizing timely behavior by validators is non-trivial - especially in the context of MEV.",
+    "abstract": "",
+    "expertise": "Advanced",
+    "tags": [
+      "L1 research",
+      "reorgs",
+      "fork choice"
     ]
   },
   {
@@ -5695,38 +5626,6 @@
     ]
   },
   {
-    "id": "EGJSSU",
-    "speakers": [
-      {
-        "id": "NHCK3Z",
-        "name": "Alexey Akhunov",
-        "description": "Alexey is a software engineer with 25 years of professional experience of coding in Java, C++, Python and Go. His main areas of expertise are data structures, database systems, reverse engineering, and systems architecture. Follows Ethereum since the publication of the white paper, and works on Ethereum related projects since 2016.",
-        "avatar": "http://speak.devcon.org/media/avatars/Alexey_Face_NoDK4ty.png"
-      }
-    ],
-    "title": "Erigon 2 as a Distributed Database Technology",
-    "track": "Layer 1 Protocol",
-    "duration": 25,
-    "start": 1665594000000,
-    "end": 1665595800000,
-    "room": {
-      "id": "talk-2",
-      "name": "Talk 2",
-      "description": "Cold Forest",
-      "info": "Floor 3",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "Erigon 2 is a major upgrade to Erigon (one of the Execution Layer implementations). In this talk, it is being looked at as a hybrid database technology. Starting from the requirements of read performance, ease of  distribution, maintaining data integrity, and fit into Ethereum roadmap, it combines the strongest features from B-tree and LSM (Log Structured Merge) databases. Using some relatively novel but simple data encoding schemes, Erigon 2 gets even closer than Erigon to efficiency frontier.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "erigon",
-      "L1",
-      "database"
-    ]
-  },
-  {
     "id": "8XLQUG",
     "speakers": [
       {
@@ -5858,7 +5757,7 @@
     "track": "Layer 1 Protocol",
     "duration": 25,
     "start": 1665595800000,
-    "end": 1665597600000,
+    "end": 1665597300000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -6087,6 +5986,43 @@
     ]
   },
   {
+    "id": "KVMVBU",
+    "speakers": [
+      {
+        "id": "Y9NMJJ",
+        "name": "Diego Losada",
+        "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
+        "twitter": "https://twitter.com/EthereumOnARM",
+        "avatar": "http://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg"
+      }
+    ],
+    "title": "How to run a validator from zero on resource-constrained and low powered devices.",
+    "track": "Staking & Validator Experience",
+    "duration": 50,
+    "start": 1665655200000,
+    "end": 1665658200000,
+    "room": {
+      "id": "workshop-3",
+      "name": "Workshop 3",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "Our main goal is to contribute to the network decentralization by making it easier and affordable for regular users to run nodes (and staking) on resource-constrained devices as well as helping to test the next major Ethereum upgrade (The Merge).\r\n\r\nIn this workshop we will show from scratch how to install and set up an Ethereum validator node, from running the Execution Layer + Consensus Layer combo to creating the keys and setup for the validator in order to get it up and running.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "node",
+      "decentralization",
+      "arm boards",
+      "raspberry pi",
+      "staking",
+      "validators",
+      "stake at home"
+    ]
+  },
+  {
     "id": "FWQDXE",
     "speakers": [
       {
@@ -6114,39 +6050,6 @@
     "expertise": "Beginner",
     "tags": [
       "Privacy"
-    ]
-  },
-  {
-    "id": "DWE3SM",
-    "speakers": [
-      {
-        "id": "JWVEXT",
-        "name": "Attila Gazso",
-        "description": "Attila has a background in distributed systems engineering and currently works on Swarm, where he wears many hats. His current interests are cryptography, CRDTs and designing incentivised markets. In his free time he likes to herd cats, collect herbs and visit remote places.",
-        "twitter": "agazso",
-        "avatar": ""
-      }
-    ],
-    "title": "Join the Swarm: how to run a light node or full node",
-    "track": "Layer 2s",
-    "duration": 50,
-    "start": 1665586800000,
-    "end": 1665589800000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "Swarm is a decentralised data storage and distribution technology. In this workshop you can learn how to use Swarm, including running light node or a full node. Also there will be a demo for node operators looking to profit from storage incentives and they will be able to join the network.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "decentralized",
-      "censorship-resistant",
-      "storage"
     ]
   },
   {
@@ -8897,39 +8800,6 @@
     ]
   },
   {
-    "id": "3QUDHU",
-    "speakers": [
-      {
-        "id": "7HJSPW",
-        "name": "Shawki Sukkar",
-        "description": "I like to build stuff. I previously worked on layer 1 oracles, a cross-chain DeFi dashboard, a protocols engineering course, and web2 products.\r\n\r\nI am interested in decentralized social networks and I am building some new stuff there.\r\n\r\nshawkisukkar.com",
-        "twitter": "@shawkisukkar",
-        "avatar": ""
-      }
-    ],
-    "title": "Product-Driven Protocols",
-    "track": "Opportunity & Global Impact",
-    "duration": 7,
-    "start": 1665682200000,
-    "end": 1665682800000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Lightning Talk",
-    "description": "What, why, and how to build a product-driven protocol.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Social",
-      "protocols",
-      "and decentralization."
-    ]
-  },
-  {
     "id": "PTFAR3",
     "speakers": [
       {
@@ -8996,6 +8866,46 @@
     ]
   },
   {
+    "id": "MEN3QV",
+    "speakers": [
+      {
+        "id": "WVSDNV",
+        "name": "Luis Bezzenberger",
+        "description": "Luis has a background in finance and works in the Ethereum space since 2015, mainly as a product manager on protocol-level infrastructure and payment systems. Since 2021 he's the product manager at Shutter Network which is an open source project that uses threshold encryption to combat MEV and malicious front-running, as well as voter misbehavior in governance systems.",
+        "twitter": "bezzenberger",
+        "avatar": "http://speak.devcon.org/media/avatars/iZcf9EwP_400x400_dufKyho.jpg"
+      },
+      {
+        "id": "N9FFYG",
+        "name": "Jannik Luhn",
+        "description": "Hello!",
+        "twitter": "@anotherjannik",
+        "avatar": ""
+      }
+    ],
+    "title": "Shielded Voting Using Threshold Encryption",
+    "track": "Governance & Coordination",
+    "duration": 7,
+    "start": 1665682200000,
+    "end": 1665682620000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Lightning Talk",
+    "description": "Shutter Governance is a tool for governance platforms to introduce shielded voting for their users. It uses threshold encryption and is designed to fix issues with misbehavior, voter apathy, and voting incentive.\r\n\r\nSimply put, with Shutter Governance, votes are encrypted during the voting period. The votes are decrypted and thereby only revealed after the poll closes.\r\n\r\nThe talk will include a live demo of Shielded Voting as developed in partnership with Snapshot.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "privacy",
+      "encryption",
+      "snapshot"
+    ]
+  },
+  {
     "id": "XFTSSQ",
     "speakers": [
       {
@@ -9029,28 +8939,21 @@
     ]
   },
   {
-    "id": "MEN3QV",
+    "id": "JEU9YR",
     "speakers": [
       {
-        "id": "WVSDNV",
-        "name": "Luis Bezzenberger",
-        "description": "Luis has a background in finance and works in the Ethereum space since 2015, mainly as a product manager on protocol-level infrastructure and payment systems. Since 2021 he's the product manager at Shutter Network which is an open source project that uses threshold encryption to combat MEV and malicious front-running, as well as voter misbehavior in governance systems.",
-        "twitter": "bezzenberger",
-        "avatar": "http://speak.devcon.org/media/avatars/iZcf9EwP_400x400_dufKyho.jpg"
-      },
-      {
-        "id": "N9FFYG",
-        "name": "Jannik Luhn",
-        "description": "Hello!",
-        "twitter": "@anotherjannik",
-        "avatar": ""
+        "id": "L9FPZR",
+        "name": "Gabriela Chang",
+        "description": "Gabriela Chang\r\nCSO and Co-founder of EthicHub.\r\nBuilder of win/win regenerative economic models for the Unbanked farmers.\r\n\r\nIndustrial designer, artist and writer. She worked at the Secretary of Economic Development in Chiapas, Mexico and was an organic coffee producer. Involved in Blockchain since 2017, she promotes its enormous potential as a catalyst for the SDGs. Frequent speaker and panelist in both crypto and impact forums.",
+        "twitter": "https://twitter.com/GabrielaChang17",
+        "avatar": "http://speak.devcon.org/media/avatars/Gabriela_Chang_EthicHub_MKxiMDX.png"
       }
     ],
-    "title": "Shielded Voting Using Threshold Encryption",
-    "track": "Governance & Coordination",
+    "title": "The Unbanked, A Real Blue Ocean Opportunity for Crypto",
+    "track": "Opportunity & Global Impact",
     "duration": 7,
     "start": 1665682800000,
-    "end": 1665683400000,
+    "end": 1665683220000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -9059,13 +8962,13 @@
       "capacity": 260
     },
     "type": "Lightning Talk",
-    "description": "Shutter Governance is a tool for governance platforms to introduce shielded voting for their users. It uses threshold encryption and is designed to fix issues with misbehavior, voter apathy, and voting incentive.\r\n\r\nSimply put, with Shutter Governance, votes are encrypted during the voting period. The votes are decrypted and thereby only revealed after the poll closes.\r\n\r\nThe talk will include a live demo of Shielded Voting as developed in partnership with Snapshot.",
+    "description": "1/4 of the global population is excluded from the current financial system. Financial exclusion stems from the belief that a population is too high risk to receive funding. Sadly, this factor preeminently causes these same people to never be able to break out of poverty.\r\n\r\nUnbanked farmers fall in the same boat. Due to their lack of collateral and credit history, they can only access loans starting at 100% interest rate. Crypto and blockchain has an opportunity to change that for the better.",
     "abstract": "",
     "expertise": "",
     "tags": [
-      "privacy",
-      "encryption",
-      "snapshot"
+      "refi",
+      "regenerative agriculture",
+      "financial inclusion"
     ]
   },
   {
@@ -9101,21 +9004,20 @@
     ]
   },
   {
-    "id": "JEU9YR",
+    "id": "BTZZDM",
     "speakers": [
       {
-        "id": "L9FPZR",
-        "name": "Gabriela Chang",
-        "description": "Gabriela Chang\r\nCSO and Co-founder of EthicHub.\r\nBuilder of win/win regenerative economic models for the Unbanked farmers.\r\n\r\nIndustrial designer, artist and writer. She worked at the Secretary of Economic Development in Chiapas, Mexico and was an organic coffee producer. Involved in Blockchain since 2017, she promotes its enormous potential as a catalyst for the SDGs. Frequent speaker and panelist in both crypto and impact forums.",
-        "twitter": "https://twitter.com/GabrielaChang17",
-        "avatar": "http://speak.devcon.org/media/avatars/Gabriela_Chang_EthicHub_MKxiMDX.png"
+        "id": "QVABZH",
+        "name": "Pablo Larguia",
+        "description": "Co-Founder & CEO SenseiNode, the first node and staking as a service provider in Latin America. \r\nSingularity University GSP14 Alumni, NASA campus in Mountain View CA. Founder of Red Innova\r\nthe largest community on innovation, technology and entrepreneurship in Latin America. Founder of Bumeran, biggest online recruitment company in the region.\r\n Board Member Universidad Di Tella, Argentina.",
+        "avatar": "http://speak.devcon.org/media/avatars/804EC2C7-5A85-422B-BFC0-5936CA597917_mj2UEXl.jpeg"
       }
     ],
-    "title": "The Unbanked, A Real Blue Ocean Opportunity for Crypto",
-    "track": "Opportunity & Global Impact",
+    "title": "Client diversity matters: thinking independently, together",
+    "track": "Staking & Validator Experience",
     "duration": 7,
     "start": 1665683400000,
-    "end": 1665684000000,
+    "end": 1665683820000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -9124,13 +9026,121 @@
       "capacity": 260
     },
     "type": "Lightning Talk",
-    "description": "1/4 of the global population is excluded from the current financial system. Financial exclusion stems from the belief that a population is too high risk to receive funding. Sadly, this factor preeminently causes these same people to never be able to break out of poverty.\r\n\r\nUnbanked farmers fall in the same boat. Due to their lack of collateral and credit history, they can only access loans starting at 100% interest rate. Crypto and blockchain has an opportunity to change that for the better.",
+    "description": "There is an ongoing conversation about the increased centralization of the Ethereum ecosystem following the migration to Proof of Stake. Clients deployed, nodes location, hosting services as well as liquid staking providers that have significant relevance that could potentially reduce the resilience of the network as a whole. We will dive into the state of the network post-merge and share specific actions related to how we can collaborate for a better outcome for the Network.",
     "abstract": "",
     "expertise": "",
     "tags": [
-      "refi",
-      "regenerative agriculture",
-      "financial inclusion"
+      "Staking",
+      "decentralization",
+      "nodes"
+    ]
+  },
+  {
+    "id": "8UDYZP",
+    "speakers": [
+      {
+        "id": "EXXLEW",
+        "name": "Tony Olendo",
+        "description": "Tony Olendo is a Developer Education Evangelist at Polygon. He has a passion for Ethereum Developer Education and specifically helping developers in their Solidity journey. He is also a core team member of Afrofuture DAO, Africa's largest community of NFT artists and also a co-founder of Web3Afrika, Africa's largest community of Web3 builders.",
+        "twitter": "https://twitter.com/tonyolendo",
+        "avatar": "http://speak.devcon.org/media/avatars/Tony_Olendo_-_Graphic_White_ASh4KEO.png"
+      },
+      {
+        "id": "XZSKJX",
+        "name": "Yoseph Ayele",
+        "description": "Yoseph is an entrepreneur building at the intersection of Web3 and Africa, and focused on growing the borderless economy on the continent.\r\n\r\nHe co-founded and was CEO of the Edmund Hillary Fellowship (ehf.org), a community of 500+ top tier entrepreneurs and investors from 68 countries. He built a new immigration program with the New Zealand government, and ran it as a public-private partnership. Yoseph is from Ethiopia, and grew up in East Africa.",
+        "twitter": "@yosephayele",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_AD01D80B7C94-1_18dsIDZ.jpeg"
+      }
+    ],
+    "title": "Web3 adoption in Africa",
+    "track": "Opportunity & Global Impact",
+    "duration": 50,
+    "start": 1665741600000,
+    "end": 1665744600000,
+    "room": {
+      "id": "talk-1",
+      "name": "Talk 1",
+      "description": "Tropical Sunset",
+      "info": "Floor 2",
+      "capacity": 414
+    },
+    "type": "Panel",
+    "description": "Join to immerse yourself in the current realities and trajectories of Africa and Web3. Let’s talk about Africa from the perspective of Africans, the opportunities Africans see for our continent, and what the state of adoption is. Discussion themes include education and talent, DeFi, regulation landscape, culture and art, and the funding landscape for Web3 startups.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Africa",
+      "adoption",
+      "impact"
+    ]
+  },
+  {
+    "id": "ADVND7",
+    "speakers": [
+      {
+        "id": "7BYJ78",
+        "name": "Alex Beregszaszi",
+        "description": "Alex is the team lead of Ipsilon at the Ethereum Foundation, a group focused on improving the EVM.  Alex has been an early contributor and co-lead of the Solidity team.",
+        "twitter": "alexberegszaszi",
+        "avatar": "http://speak.devcon.org/media/avatars/alex_400x400_2Ng7QeP.jpeg"
+      },
+      {
+        "id": "HYVQ8L",
+        "name": "Paweł Bylica",
+        "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
+        "twitter": "chfast",
+        "avatar": "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
+      }
+    ],
+    "title": "EVM Panel",
+    "track": "Developer Infrastructure",
+    "duration": 50,
+    "start": 1665741600000,
+    "end": 1665743400000,
+    "room": {
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
+      "info": "Floor 3",
+      "capacity": 110
+    },
+    "type": "Panel",
+    "description": "This is a panel discussion about the EVM.\r\n\r\nWe want to be a bit more unconventional and would like to transform the room into a \"live voting space\" where attendees can fight for their favourite new EVM feature.\r\n\r\nDifferent proposals will be listed and discussed for 3-5 minutes each, where invited panelists give a short opinion followed by loud interaction from the audience.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "evm"
+    ]
+  },
+  {
+    "id": "QGGX9G",
+    "speakers": [
+      {
+        "id": "DZVDNL",
+        "name": "Diego Fernandez",
+        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
+        "avatar": ""
+      }
+    ],
+    "title": "Self-Sovereign Digital Identity",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665741600000,
+    "end": 1665743100000,
+    "room": {
+      "id": "talk-5",
+      "name": "Talk 5",
+      "description": "On Top of the Mountain",
+      "info": "Floor 5",
+      "capacity": 1140
+    },
+    "type": "Talk",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "identity"
     ]
   },
   {
@@ -9192,8 +9202,8 @@
       {
         "id": "QGZZN7",
         "name": "George",
-        "description": null,
-        "avatar": ""
+        "description": "Ethereum R&D",
+        "avatar": "http://speak.devcon.org/media/avatars/asn_9xyEWy7.jpeg"
       },
       {
         "id": "7PH9MT",
@@ -9371,114 +9381,6 @@
     ]
   },
   {
-    "id": "8UDYZP",
-    "speakers": [
-      {
-        "id": "EXXLEW",
-        "name": "Tony Olendo",
-        "description": "Tony Olendo is a Developer Education Evangelist at Polygon. He has a passion for Ethereum Developer Education and specifically helping developers in their Solidity journey. He is also a core team member of Afrofuture DAO, Africa's largest community of NFT artists and also a co-founder of Web3Afrika, Africa's largest community of Web3 builders.",
-        "twitter": "https://twitter.com/tonyolendo",
-        "avatar": "http://speak.devcon.org/media/avatars/Tony_Olendo_-_Graphic_White_ASh4KEO.png"
-      },
-      {
-        "id": "XZSKJX",
-        "name": "Yoseph Ayele",
-        "description": "Yoseph is an entrepreneur building at the intersection of Web3 and Africa, and focused on growing the borderless economy on the continent.\r\n\r\nHe co-founded and was CEO of the Edmund Hillary Fellowship (ehf.org), a community of 500+ top tier entrepreneurs and investors from 68 countries. He built a new immigration program with the New Zealand government, and ran it as a public-private partnership. Yoseph is from Ethiopia, and grew up in East Africa.",
-        "twitter": "@yosephayele",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_AD01D80B7C94-1_18dsIDZ.jpeg"
-      }
-    ],
-    "title": "Web3 adoption in Africa",
-    "track": "Opportunity & Global Impact",
-    "duration": 50,
-    "start": 1665741600000,
-    "end": 1665744600000,
-    "room": {
-      "id": "talk-1",
-      "name": "Talk 1",
-      "description": "Tropical Sunset",
-      "info": "Floor 2",
-      "capacity": 414
-    },
-    "type": "Panel",
-    "description": "Join to immerse yourself in the current realities and trajectories of Africa and Web3. Let’s talk about Africa from the perspective of Africans, the opportunities Africans see for our continent, and what the state of adoption is. Discussion themes include education and talent, DeFi, regulation landscape, culture and art, and the funding landscape for Web3 startups.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Africa",
-      "adoption",
-      "impact"
-    ]
-  },
-  {
-    "id": "ADVND7",
-    "speakers": [
-      {
-        "id": "7BYJ78",
-        "name": "Alex Beregszaszi",
-        "description": "Alex is the team lead of Ipsilon at the Ethereum Foundation, a group focused on improving the EVM.  Alex has been an early contributor and co-lead of the Solidity team.",
-        "twitter": "alexberegszaszi",
-        "avatar": "http://speak.devcon.org/media/avatars/alex_400x400_2Ng7QeP.jpeg"
-      },
-      {
-        "id": "HYVQ8L",
-        "name": "Paweł Bylica",
-        "description": "Working on EVM in Ipsilon team (Ethereum Foundation)",
-        "twitter": "chfast",
-        "avatar": "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
-      }
-    ],
-    "title": "EVM Panel",
-    "track": "Developer Infrastructure",
-    "duration": 50,
-    "start": 1665741600000,
-    "end": 1665743400000,
-    "room": {
-      "id": "talk-4",
-      "name": "Talk 4",
-      "description": "River",
-      "info": "Floor 3",
-      "capacity": 110
-    },
-    "type": "Panel",
-    "description": "This is a panel discussion about the EVM.\r\n\r\nWe want to be a bit more unconventional and would like to transform the room into a \"live voting space\" where attendees can fight for their favourite new EVM feature.\r\n\r\nDifferent proposals will be listed and discussed for 3-5 minutes each, where invited panelists give a short opinion followed by loud interaction from the audience.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "evm"
-    ]
-  },
-  {
-    "id": "QGGX9G",
-    "speakers": [
-      {
-        "id": "DZVDNL",
-        "name": "Diego Fernandez",
-        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
-        "avatar": ""
-      }
-    ],
-    "title": "Self-Sovereign Digital Identity",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665741600000,
-    "end": 1665743100000,
-    "room": {
-      "id": "talk-5",
-      "name": "Talk 5",
-      "description": "On Top of the Mountain",
-      "info": "Floor 5",
-      "capacity": 1140
-    },
-    "type": "Talk",
-    "description": ".",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "identity"
-    ]
-  },
-  {
     "id": "ZCNBYS",
     "speakers": [
       {
@@ -9582,39 +9484,6 @@
       "api",
       "infura",
       "infrastructure"
-    ]
-  },
-  {
-    "id": "XYFKKL",
-    "speakers": [
-      {
-        "id": "KJSVPB",
-        "name": "Juan Benet",
-        "description": "Juan Benet is founder and CEO of Protocol Labs, a research, development, and deployment lab driving breakthroughs in computing to push humanity forward. Benet studied Computer Science at Stanford University and is passionate about knowledge, science, and technology. In 2018, Benet was named one of Fortune magazine's \"40 under 40,\" recognized for his work creating IPFS.",
-        "twitter": "@juanbenet",
-        "avatar": "http://speak.devcon.org/media/avatars/Juan_Benet_zOQ5zwz.png"
-      }
-    ],
-    "title": "What will the internet look like in 2050?",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665745200000,
-    "end": 1665747000000,
-    "room": {
-      "id": "talk-5",
-      "name": "Talk 5",
-      "description": "On Top of the Mountain",
-      "info": "Floor 5",
-      "capacity": 1140
-    },
-    "type": "Talk",
-    "description": "A global computer-based communication network has fundamentally changed our social, cultural, and political landscape over the past 30 years. There has been no previous communication revolution of this speed or intensity. This communication tool gives us the power to completely restructure our entire existence, both on an individual and collective level. , Juan will situate its emergence within the context of our  technological evolution, and try to pontificate its potential development.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Forward-thinking",
-      "technological emergence",
-      "development"
     ]
   },
   {
@@ -9787,6 +9656,37 @@
       "Seaport",
       "Marketplace",
       "EVM"
+    ]
+  },
+  {
+    "id": "BEPJ3A",
+    "speakers": [
+      {
+        "id": "PCUMSY",
+        "name": "Agustín Matteri",
+        "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+        "twitter": "@agustin_matteri",
+        "avatar": "http://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg"
+      }
+    ],
+    "title": "Climate Change or Social Change? The Role of Blockchain",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665745200000,
+    "end": 1665746700000,
+    "room": {
+      "id": "talk-5",
+      "name": "Talk 5",
+      "description": "On Top of the Mountain",
+      "info": "Floor 5",
+      "capacity": 1140
+    },
+    "type": "Talk",
+    "description": "The Paris Agreement was built over the biggest scientific consensus in the history of Humankind.\r\n\r\nWe are reaching its threshold faster than expected: already 1.1 degrees above pre-industrial levels and counting.\r\n\r\n2030 forecast: 1.5 disasters a day (earthquakes, tsunamis, electricity infrastructure loss: no internet- no blockchain)\r\n\r\nMore than 1.5 degrees means massive migrations, civilization collapse and potential extinction….",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "web3"
     ]
   },
   {
@@ -11248,6 +11148,217 @@
     "tags": [
       "Ethereum",
       "Foundation"
+    ]
+  },
+  {
+    "id": "7ABC89",
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ixshells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665505800000,
+    "end": 1665508800000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Livecoding & art by Ixshells",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "art"
+    ]
+  },
+  {
+    "id": "PAPEE8",
+    "speakers": [
+      {
+        "id": "QEYVKV",
+        "name": "AstroMel",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665592200000,
+    "end": 1665595200000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "art"
+    ]
+  },
+  {
+    "id": "DER8FW",
+    "speakers": [
+      {
+        "id": "QEYVKV",
+        "name": "AstroMel",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665502200000,
+    "end": 1665505200000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "astromel"
+    ]
+  },
+  {
+    "id": "TAM9F7",
+    "speakers": [
+      {
+        "id": "QEYVKV",
+        "name": "AstroMel",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665765000000,
+    "end": 1665768000000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "astromel"
+    ]
+  },
+  {
+    "id": "MTLQFS",
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ixshells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665601200000,
+    "end": 1665604200000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Livecoding & art by Ixshells",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "ixshells"
+    ]
+  },
+  {
+    "id": "8WD3CV",
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ixshells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665678600000,
+    "end": 1665681600000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Livecoding & art by Ixshells",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "ixshells"
+    ]
+  },
+  {
+    "id": "NXXHPC",
+    "speakers": [
+      {
+        "id": "8SLFHM",
+        "name": "Atractor Estudio",
+        "description": "We are a group of artists who work with mechanical, electronic and computer engineering techniques from the field of the arts. We focus on the visualization of natural phenomena, mathematical and scientific paradigms related to sociocultural phenomena not only of the western hegemonic culture, but also of other ways of knowing and understanding the scientific, through the interaction of the viewer with a digital and analog substrate.",
+        "avatar": "http://speak.devcon.org/media/avatars/277579879_394370306025953_2445270446240223678_n_2k7qYfK.jpeg"
+      }
+    ],
+    "title": "ATRACTOR-LP-MIGRANTS",
+    "track": "",
+    "duration": 50,
+    "start": 1665691200000,
+    "end": 1665694800000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Colombian electronic arts collective Atractor understands technology as a field of struggle from their Latin American context. In this scenario, assimilating and experiencing technology always as active users implies that electronic arts and creation have the power to spark conversations and create spaces for community dialogue.\r\nThey will be performing a video game live performance *The Migrants* and launch their NFT Botánica transgénica, come discover RITUALES in the hacker basement.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "atractor",
+      "migrants"
     ]
   }
 ]
