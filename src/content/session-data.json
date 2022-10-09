@@ -3152,7 +3152,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif"
       }
     ],
-    "title": "MUD: The fabric of Autonomous Worlds w Intro by Kelvin Fichter",
+    "title": "MUD: an engine for on-chain games",
     "track": "Developer Infrastructure",
     "duration": 60,
     "start": 1665570600000,
@@ -3165,7 +3165,7 @@
       "capacity": 110
     },
     "type": "Talk",
-    "description": "0xPARC Autonomous World's division has been working on MUD: a framework to build Autonomous Worlds on top of Ethereum.\r\nMUD solves the hard problems we have encountered building on-chain games: Dark Forest, zkDungeon, Ember, and more. MUD can be thought of as an operating system on top of the EVM: it is a set of software running next to full-nodes, in a game client, on the EVM, and in zkSnarks that enables rapid development of on-chain games.",
+    "description": "For the past year and a half, 0xPARC and Lattice have been hard at work building MUD — an open-source engine for building on-chain games. \r\nIn this talk, Justin and Alvarius from Lattice will be joined by Kelvin Fichter from Optimism, to talk about on-chain games, MUD, and an exciting new collaboration with Optimism to be unveiled on the day.",
     "abstract": "",
     "expertise": "Advanced",
     "tags": [
@@ -6606,6 +6606,12 @@
         "description": "Fellows are leaders committed to projects that help Ethereum become a tool of and for the next billion. Some projects might be part of a lifelong quest of the Fellow; others are brand new ideas that are just getting started. Fellows and their projects focus on public goods that enable the flourishing of communities or individuals under-represented in the Ethereum ecosystem today.",
         "twitter": "twitter.com/efnextbillion",
         "avatar": ""
+      },
+      {
+        "id": "SXW7FL",
+        "name": "Benson Njuguna",
+        "description": "Benson is an Ethereum Foundation fellow, working with ACRE Africa and Etherisc to deliver insurance to smallholder farmers in Africa. He is on a mission to elevate his local community financially, through technological innovation. He is currently working on real life application of Ethereum network to solve transparency and efficiency problems in traditional insurance. So far the project has reached over 50,000 smallholder farmers in Africa ,de-risking them from adverse weather events.",
+        "avatar": "http://speak.devcon.org/media/avatars/Passport_photo_1_3imYXj6.jpg"
       }
     ],
     "title": "Ethereum for the next billion: DeFi for the unbanked/underbanked",
@@ -7238,6 +7244,18 @@
         "name": "Mihajlo Atanackovic",
         "description": "Mihajlo is leading the digital transformation journey of one of the world's biggest non-formal educational youth movements - the World Organization of the Scout Movement, with 57+ million members from around the globe. \r\n\r\nTo get the Scout Movement ready for W3, he is embarking on an ambitious project involving digitalising badges, exploring DAOs for different levels of the Movement and more.",
         "avatar": "http://speak.devcon.org/media/avatars/Avatar_lgpO5aH.jpg"
+      },
+      {
+        "id": "XTMDLQ",
+        "name": "Mary P. Davies",
+        "description": "Mary P. Davies is the founder of the Perpetuity Foundation.  She is a legal technologist and researcher based in the Cayman Islands.   Her research focus is perpetuity, in the context of what makes projects and ecosystems last.  Mary’s  Ethereum Fellowship research project, the Digital Asset Perpetuity Project,  is focused on harmonizing Ethereum with the law, specifically the requirements of property law, and will answer the question “What happens to your Eth when you die?”",
+        "avatar": "http://speak.devcon.org/media/avatars/Mary_photo_from_linkedin_6l78dtS.jpg"
+      },
+      {
+        "id": "U9FVN9",
+        "name": "Chuy Cepeda",
+        "description": "Chuy, PhD, Monterrey, uses blockchain technology to digitize government services and give citizens their digital identity.",
+        "avatar": "http://speak.devcon.org/media/avatars/goohuv_WxlrVuQ.jpg"
       }
     ],
     "title": "Ethereum for the next billion: who are your next billion?",
@@ -9509,7 +9527,7 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": "Autonomous Worlds Self Led Session",
+    "description": "A session for those interested in the latest developments in Autonomous Worlds and fully on-chain games, including demos of cutting-edge projects, a panel with Optimism co-founder Kevin Ho and Dark Forest creator gubsheep, and an introduction to MUD — the open-source engine for building Autonomous Worlds.\r\nMore info here: https://0xparc.notion.site/Autonomous-Worlds-SLS-612ff18a99f54594806776971b5a8ec6",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
