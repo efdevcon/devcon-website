@@ -30,7 +30,7 @@ const galleryEvents = [
     description:
       'Want to engage and learn about the core communities that make Ethereum and Devcon the truly special place that it is? Be sure to find the community hubs on Floor 1.',
     // TODO: Update URL
-    url: 'https://devcon.org/continuous-devcon',
+    url: 'https://devcon.org/continuous-devcon#hubs',
     image: HighlightCommunityHubs,
   },
   {
