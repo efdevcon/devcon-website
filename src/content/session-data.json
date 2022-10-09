@@ -529,7 +529,7 @@
         "avatar": ""
       }
     ],
-    "title": "One Block, One Batch: Examining the potential of frequent batch auctions in Ethereum",
+    "title": "One Block, One Batch: Examining the Potential of Frequent Batch Auctions in Ethereum",
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665493200000,
@@ -1865,6 +1865,7 @@
         "id": "QREVHX",
         "name": "Vlad Zamfir",
         "description": "Vlad Zamfir is a proof-of-stake and consensus protocol designer, also known in Ethereum and cryptocurrency expert communities for pioneering research on cryptoeconomics, blockchain governance and crypto law.\r\n\r\nLow-key, Vlad’s contributed to the DAO hard fork, to the latest message fork driven choice rule, and to many arguments against on-chain governance and blockchain immutability.",
+        "twitter": "@VladZamfir",
         "avatar": "http://speak.devcon.org/media/avatars/Screenshot_2022-10-08_at_19.47.52_TuQAHJp.png"
       }
     ],
@@ -9010,6 +9011,7 @@
         "id": "QVABZH",
         "name": "Pablo Larguia",
         "description": "Co-Founder & CEO SenseiNode, the first node and staking as a service provider in Latin America. \r\nSingularity University GSP14 Alumni, NASA campus in Mountain View CA. Founder of Red Innova\r\nthe largest community on innovation, technology and entrepreneurship in Latin America. Founder of Bumeran, biggest online recruitment company in the region.\r\n Board Member Universidad Di Tella, Argentina.",
+        "twitter": "@pablolarguia",
         "avatar": "http://speak.devcon.org/media/avatars/804EC2C7-5A85-422B-BFC0-5936CA597917_mj2UEXl.jpeg"
       }
     ],
@@ -9203,6 +9205,7 @@
         "id": "QGZZN7",
         "name": "George",
         "description": "Ethereum R&D",
+        "twitter": "https://twitter.com/asn_d6",
         "avatar": "http://speak.devcon.org/media/avatars/asn_9xyEWy7.jpeg"
       },
       {
@@ -10562,7 +10565,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/WgZMHBaj_400x400_JRq95GG.jpg"
       }
     ],
-    "title": "Universal Access to All Knowledge: decentralization experiments at the Internet Archive",
+    "title": "Universal Access to All Knowledge: Decentralization Experiments at the Internet Archive",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665756000000,

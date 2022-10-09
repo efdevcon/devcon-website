@@ -2311,7 +2311,7 @@
       "Cryptoeconomics"
     ],
     "eventDays": [
-      1665446400000
+      1665532800000
     ],
     "twitter": "mattdeible",
     "github": "mdeib"
@@ -2387,8 +2387,12 @@
     "name": "Pablo Larguia",
     "avatar": "https://speak.devcon.org/media/avatars/804EC2C7-5A85-422B-BFC0-5936CA597917_mj2UEXl.jpeg",
     "description": "Co-Founder & CEO SenseiNode, the first node and staking as a service provider in Latin America. \r\nSingularity University GSP14 Alumni, NASA campus in Mountain View CA. Founder of Red Innova\r\nthe largest community on innovation, technology and entrepreneurship in Latin America. Founder of Bumeran, biggest online recruitment company in the region.\r\n Board Member Universidad Di Tella, Argentina.",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
     "website": "https://www.linkedin.com/in/pablolarguia/",
     "twitter": "@pablolarguia"
   },
@@ -4535,11 +4539,12 @@
     "description": "",
     "tracks": [
       "Developer Infrastructure",
-      "UX & Design",
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "UX & Design"
     ],
     "eventDays": [
       1665446400000,
+      1665532800000,
       1665705600000
     ]
   },
@@ -4922,7 +4927,7 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665446400000
+      1665705600000
     ],
     "website": "www.linkedin.com/in/agustín-matteri",
     "twitter": "@agustin_matteri"
@@ -5265,8 +5270,12 @@
     "name": "Vlad Zamfir",
     "avatar": "https://speak.devcon.org/media/avatars/Screenshot_2022-10-08_at_19.47.52_TuQAHJp.png",
     "description": "Vlad Zamfir is a proof-of-stake and consensus protocol designer, also known in Ethereum and cryptocurrency expert communities for pioneering research on cryptoeconomics, blockchain governance and crypto law.\r\n\r\nLow-key, Vlad’s contributed to the DAO hard fork, to the latest message fork driven choice rule, and to many arguments against on-chain governance and blockchain immutability.",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665446400000
+    ],
     "twitter": "@VladZamfir"
   },
   {
@@ -5289,24 +5298,40 @@
     "name": "Ixshells",
     "avatar": null,
     "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      ""
+    ],
+    "eventDays": [
+      1665446400000,
+      1665532800000,
+      1665619200000
+    ]
   },
   {
     "id": "QEYVKV",
     "name": "AstroMel",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      ""
+    ],
+    "eventDays": [
+      1665532800000,
+      1665446400000,
+      1665705600000
+    ]
   },
   {
     "id": "8SLFHM",
     "name": "Atractor Estudio",
     "avatar": "https://speak.devcon.org/media/avatars/277579879_394370306025953_2445270446240223678_n_2k7qYfK.jpeg",
     "description": "We are a group of artists who work with mechanical, electronic and computer engineering techniques from the field of the arts. We focus on the visualization of natural phenomena, mathematical and scientific paradigms related to sociocultural phenomena not only of the western hegemonic culture, but also of other ways of knowing and understanding the scientific, through the interaction of the viewer with a digital and analog substrate.",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      ""
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   },
   {
     "id": "BJQV8Z",
