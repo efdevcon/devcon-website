@@ -4116,7 +4116,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif"
       }
     ],
-    "title": "Modular rollup theory through the lens of the OP Stack",
+    "title": "Modular Rollup Theory Through the Lens of the OP Stack",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665581400000,
@@ -4241,7 +4241,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/DC-BW-22_stysXir.jpg"
       }
     ],
-    "title": "The role UNICEF plays in encouraging the “impact trinity” – Real world usecases, Open-source software and for-profit business models",
+    "title": "The Role UNICEF Plays in Encouraging the “Impact Trinity” – Real world Use-cases, Open-source Software and For-Profit Business models",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665583200000,
@@ -5456,7 +5456,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/css_headshot_kXEZuWT.jpg"
       }
     ],
-    "title": "Time in PoS Ethereum",
+    "title": "Time in Ethereum",
     "track": "Layer 1 Protocol",
     "duration": 25,
     "start": 1665594000000,
@@ -6507,6 +6507,7 @@
         "id": "ZQA8DA",
         "name": "Fabio Hildebrand",
         "description": "Dev @ RAI",
+        "twitter": "fabiohild",
         "avatar": "http://speak.devcon.org/media/avatars/shyguy_TPgWuG9.jpeg"
       }
     ],
