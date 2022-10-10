@@ -10,7 +10,7 @@ import { TruncateMiddle } from 'src/utils/formatting'
 import { useStaticQuery, graphql } from 'gatsby'
 
 interface Props {
-  hash: string
+  hash?: string
   learnMore?: boolean
   cta?: string
   className?: string

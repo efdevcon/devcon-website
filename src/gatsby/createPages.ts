@@ -365,6 +365,8 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
             description
             youtubeUrl
             ipfsHash
+            ethernaIndex
+            ethernaPermalink
             duration
             expertise
             type

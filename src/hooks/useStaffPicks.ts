@@ -43,6 +43,8 @@ export const useStaffPicks = (): Playlist => {
               }
             }
             ipfsHash
+            ethernaIndex
+            ethernaPermalink
             duration
             expertise
             type

@@ -73,6 +73,8 @@ export const query = graphql`
           edition
           youtubeUrl
           ipfsHash
+          ethernaIndex
+          ethernaPermalink
           duration
           expertise
           type

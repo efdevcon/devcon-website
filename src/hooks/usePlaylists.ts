@@ -40,6 +40,8 @@ export const usePlaylists = (): Array<Playlist> => {
                 }
               }
               ipfsHash
+              ethernaIndex
+              ethernaPermalink
               duration
               expertise
               type

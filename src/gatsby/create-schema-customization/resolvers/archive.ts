@@ -36,6 +36,8 @@ export const videoResolver = {
             image: source.fields.image,
             imageUrl: source.frontmatter.imageUrl,
             ipfsHash: source.frontmatter.ipfsHash,
+            ethernaIndex: source.frontmatter.ethernaIndex,
+            ethernaPermalink: source.frontmatter.ethernaPermalink,
             duration: source.frontmatter.duration,
             expertise: source.frontmatter.expertise,
             type: source.frontmatter.type,

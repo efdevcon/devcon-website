@@ -7,6 +7,7 @@ interface TabsProps {
   children: any
   useQuerystring?: boolean
   tabContentClassName?: string
+  onSelectTab?: (tab: string) => void
 }
 
 const isValidTab = (children: React.ReactChildren, tab: string) => {
@@ -26,13 +27,18 @@ export const Tabs = React.forwardRef((props: TabsProps, ref: any) => {
   // Sync active tab on mount if query string is defined
   React.useLayoutEffect(() => {
     if (tabFromQueryString && props.children && isValidTab(props.children, tabFromQueryString)) {
-      setActiveTab(tabFromQueryString)
+      onSelectTab(tabFromQueryString)
     }
   }, [])
 
   useImperativeHandle(ref, () => ({
     setActiveTab,
   }))
+
+  async function onSelectTab(tab: string) {
+    setActiveTab(tab)
+    if (props.onSelectTab) props.onSelectTab(tab)
+  }
 
   useQueryStringer(props.useQuerystring ? { tab: activeTab } : {}, props.useQuerystring, true)
 
@@ -50,7 +56,7 @@ export const Tabs = React.forwardRef((props: TabsProps, ref: any) => {
             const className = childProps.title === activeTab ? 'active' : ''
 
             return (
-              <li key={childProps.title} className={css[className]} onClick={() => setActiveTab(childProps.title)}>
+              <li key={childProps.title} className={css[className]} onClick={() => onSelectTab(childProps.title)}>
                 {childProps.title}
               </li>
             )

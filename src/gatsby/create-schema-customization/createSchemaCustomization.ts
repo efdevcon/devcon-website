@@ -34,6 +34,8 @@ const baseTypes = `
     image: File,
     imageUrl: String,
     ipfsHash: String,
+    ethernaIndex: String,
+    ethernaPermalink: String,
     duration: Int,
     expertise: String,
     type: String,

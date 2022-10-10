@@ -10,7 +10,9 @@ export interface ArchiveVideo {
   youtubeUrl: string
   image?: any
   imageUrl?: string
-  ipfsHash: string
+  ipfsHash?: string
+  ethernaIndex?: string
+  ethernaPermalink?: string
   duration: number
   expertise: string
   type: string
@@ -32,6 +34,8 @@ export function mapToArchiveVideo(source: any) {
     image: source.frontmatter.image,
     imageUrl: source.frontmatter.imageUrl,
     ipfsHash: source.frontmatter.ipfsHash,
+    ethernaIndex: source.frontmatter.ethernaIndex,
+    ethernaPermalink: source.frontmatter.ethernaPermalink,    
     duration: source.frontmatter.duration,
     expertise: source.frontmatter.expertise,
     type: source.frontmatter.type,

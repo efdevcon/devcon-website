@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PageHero } from 'src/components/common/page-hero'
 import { Header } from 'src/components/common/layouts/header'
 import { Footer } from 'src/components/common/layouts/footer'
@@ -143,6 +143,7 @@ const Labels = ({ tags, playlists }: any) => {
 }
 
 export const Video = (props: VideoProps) => {
+  const [activeTab, setActiveTab] = useState('')
   const video = props.video
   const imageUrl = `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`
 
@@ -165,7 +166,7 @@ export const Video = (props: VideoProps) => {
         <div className={css['container']}>
           <div className={css['video']}>
             <div className={css['player']}>
-              <Tabs useQuerystring>
+              <Tabs onSelectTab={setActiveTab} useQuerystring>
                 <Tab title="YouTube">
                   <div className="aspect">
                     <iframe
@@ -187,11 +188,25 @@ export const Video = (props: VideoProps) => {
                     </div>
                   </Tab>
                 )}
+
+                {props.video.ethernaPermalink && (
+                  <Tab title="Swarm">
+                    <div className="aspect">
+                      <iframe
+                        src={props.video.ethernaPermalink}
+                        title="Etherna video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  </Tab>
+                )}
               </Tabs>
             </div>
 
             <div className={css['tabs-video']}>
-              <Banner className={css['ipfs-banner']} cta="Access on IPFS" hash={props.video.ipfsHash} learnMore />
+              {activeTab === 'IPFS' && <Banner className={css['ipfs-banner']} cta="Access on IPFS" hash={props.video.ipfsHash} learnMore />}
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>

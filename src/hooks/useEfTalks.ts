@@ -35,6 +35,8 @@ export const useEfTalks = (): Playlist => {
             edition
             youtubeUrl
             ipfsHash
+            ethernaIndex
+            ethernaPermalink
             duration
             expertise
             type

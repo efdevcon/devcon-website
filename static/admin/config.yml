@@ -408,6 +408,8 @@ collections:
       - { name: 'youtubeUrl', label: 'Youtube URL', widget: 'string' }
       - { name: 'image', label: 'Image', widget: 'string', required: false }
       - { name: 'ipfsHash', label: 'IPFS hash', widget: 'string' }
+      - { name: 'ethernaIndex', label: 'Etherna Index', widget: 'string' }
+      - { name: 'ethernaPermalink', label: 'Etherna Permalink', widget: 'string' }
       - { name: 'duration', label: 'Duration', widget: 'number' }
       - { name: 'expertise', label: 'Expertise level', widget: 'string' }
       - { name: 'type', label: 'Type', widget: 'string' }

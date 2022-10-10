@@ -17,6 +17,8 @@ export const useArchiveVideos = (): Array<ArchiveVideo> => {
             description
             youtubeUrl
             ipfsHash
+            ethernaIndex
+            ethernaPermalink
             duration
             expertise
             type
@@ -50,6 +52,8 @@ export function mapToArchiveVideo(source: any): ArchiveVideo {
     description: source.frontmatter.description,
     youtubeUrl: source.frontmatter.youtubeUrl,
     ipfsHash: source.frontmatter.ipfsHash,
+    ethernaIndex: source.frontmatter.ethernaIndex,
+    ethernaPermalink: source.frontmatter.ethernaPermalink,
     duration: source.frontmatter.duration,
     expertise: source.frontmatter.expertise,
     relatedVideos: source.frontmatter.relatedVideos,

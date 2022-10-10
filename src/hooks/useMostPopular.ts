@@ -35,6 +35,8 @@ export const useMostPopular = (): Playlist => {
             edition
             youtubeUrl
             ipfsHash
+            ethernaIndex
+            ethernaPermalink
             duration
             expertise
             type
