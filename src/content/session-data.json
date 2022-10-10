@@ -2927,11 +2927,23 @@
     "id": "A8CXG8",
     "speakers": [
       {
+        "id": "TZDPN7",
+        "name": "Lane Rettig",
+        "description": "Lane Rettig is a writer, hacker, entrepreneur, and investor deeply fascinated by the intersection of technological and social systems, and committed to architecting and building human-centric software. He's been working full time on blockchain R&D since 2017. He was formerly an Ethereum core developer, and now focuses his efforts on Spacemesh, a  a next-generation smart contract platform based on a novel consensus mechanism.",
+        "avatar": "http://speak.devcon.org/media/avatars/051619-0354_kgeeWql.jpg"
+      },
+      {
         "id": "8J3NRZ",
         "name": "Ryan Lackey",
         "description": "Ryan Lackey has been a cypherpunk since the early 1990s. After working on anonymous Chaumian blinded electronic cash and dropping out of MIT, he moved to the Caribbean to build his first startup. Co-founder of the world's first offshore datahaven, HavenCo, he also has worked as a war-zone defense contractor, founded a YC-funded startup to Cloudflare, and is now Chief Security Officer of Evertas, the first dedicated cryptoasset insurance company.",
         "twitter": "octal",
         "avatar": "http://speak.devcon.org/media/avatars/b25ccdc0-bf1e-11e7-bf74-4f13248dd59f-marked_pVzXLYx.jpg"
+      },
+      {
+        "id": "TCL7RA",
+        "name": "Tom Howard",
+        "description": "Investing in the infrastructure and tools needed to build the Network State. Previously co-founded Mosendo DAI wallet, PowerTrade options exchange, and DeFi Nation community. DAOs: MetaCartel, RaidGuild, Synthetix, UMA",
+        "avatar": "http://speak.devcon.org/media/avatars/Tom_Bookshelf_Square_6XfOusL.jpg"
       }
     ],
     "title": "Notable security incidents since Devcon V",
@@ -4374,7 +4386,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_2079_jbxAak6.JPG"
       }
     ],
-    "title": "Workshop: Smart-contract testing using Waffle framework",
+    "title": "Smart-contract Testing Using Waffle Framework",
     "track": "Developer Infrastructure",
     "duration": 50,
     "start": 1665583200000,
@@ -4472,7 +4484,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/20220422_141434_1_wFoRz11.jpg"
       }
     ],
-    "title": "zkEVM Vs EVM: Full Compatibility?",
+    "title": "zkEVM Vs EVM: Full Equivalence?",
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665585000000,
@@ -6204,7 +6216,7 @@
         "name": "Julien Niset",
         "description": "Julien is co-Founder and Chief Science Officer of Argent. He holds a PhD in Physics with a focus on Quantum Information and Quantum Cryptography. Julien is the author of three patents: for quantum random number generation, distribution and use in novel cryptographic schemes. He previously founded  a startup working on Ultra-Fast Quantum Random Number Generators, then worked in the security in IoT.",
         "twitter": "https://twitter.com/jniset",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/picture_profesional_VRbaFe8.jpg"
       },
       {
         "id": "7BLAMK",
@@ -7841,6 +7853,12 @@
         "name": "Vivek",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "NLKC7B",
+        "name": "Iskander",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Applied ZK Showcase",
@@ -8974,7 +8992,7 @@
         "avatar": ""
       }
     ],
-    "title": "Giga, how can blockchain help connect the next billion",
+    "title": "Giga: How Can Blockchain Help Connect the Next Billion",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665680400000,
@@ -9040,7 +9058,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/b25ccdc0-bf1e-11e7-bf74-4f13248dd59f-marked_pVzXLYx.jpg"
       }
     ],
-    "title": "How to not be worth kidnapping",
+    "title": "How to Not Be Worth Kidnapping",
     "track": "Security",
     "duration": 7,
     "start": 1665681000000,

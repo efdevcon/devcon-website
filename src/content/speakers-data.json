@@ -701,6 +701,21 @@
     "github": "EthWarrior"
   },
   {
+    "id": "TZDPN7",
+    "name": "Lane Rettig",
+    "avatar": "https://speak.devcon.org/media/avatars/051619-0354_kgeeWql.jpg",
+    "description": "Lane Rettig is a writer, hacker, entrepreneur, and investor deeply fascinated by the intersection of technological and social systems, and committed to architecting and building human-centric software. He's been working full time on blockchain R&D since 2017. He was formerly an Ethereum core developer, and now focuses his efforts on Spacemesh, a  a next-generation smart contract platform based on a novel consensus mechanism.",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://www.etherean.org/",
+    "twitter": "lrettig",
+    "github": "lrettig"
+  },
+  {
     "id": "XR3YHS",
     "name": "Jonathan Alexander",
     "avatar": "https://speak.devcon.org/media/avatars/JA_headshot_2_yn5mPfT.png",
@@ -1954,7 +1969,7 @@
   {
     "id": "XWTKNK",
     "name": "Julien Niset",
-    "avatar": null,
+    "avatar": "https://speak.devcon.org/media/avatars/picture_profesional_VRbaFe8.jpg",
     "description": "Julien is co-Founder and Chief Science Officer of Argent. He holds a PhD in Physics with a focus on Quantum Information and Quantum Cryptography. Julien is the author of three patents: for quantum random number generation, distribution and use in novel cryptographic schemes. He previously founded  a startup working on Ultra-Fast Quantum Random Number Generators, then worked in the security in IoT.",
     "tracks": [
       "UX & Design"
@@ -5665,5 +5680,32 @@
     "eventDays": [
       1665705600000
     ]
+  },
+  {
+    "id": "NLKC7B",
+    "name": "Iskander",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "TCL7RA",
+    "name": "Tom Howard",
+    "avatar": "https://speak.devcon.org/media/avatars/Tom_Bookshelf_Square_6XfOusL.jpg",
+    "description": "Investing in the infrastructure and tools needed to build the Network State. Previously co-founded Mosendo DAI wallet, PowerTrade options exchange, and DeFi Nation community. DAOs: MetaCartel, RaidGuild, Synthetix, UMA",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "network0.vc",
+    "twitter": "@_TomHoward",
+    "github": "thowar2"
   }
 ]
