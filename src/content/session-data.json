@@ -6400,13 +6400,13 @@
       {
         "id": "UHSVVC",
         "name": "Haichen Shen",
-        "description": "",
+        "description": null,
         "avatar": ""
       }
     ],
     "title": "ZK Security Self Led Session",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 120,
+    "duration": 180,
     "start": 1665676800000,
     "end": 1665684000000,
     "room": {
@@ -11629,7 +11629,7 @@
     ],
     "title": "Future of ZK Proving Systems Self Led Session",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 180,
+    "duration": 120,
     "start": 1665655200000,
     "end": 1665666000000,
     "room": {

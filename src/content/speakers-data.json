@@ -5629,5 +5629,17 @@
     "eventDays": [
       1665619200000
     ]
+  },
+  {
+    "id": "UHSVVC",
+    "name": "Haichen Shen",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   }
 ]
