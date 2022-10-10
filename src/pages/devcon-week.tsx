@@ -77,9 +77,9 @@ export default pageHOC(function DevconWeek(props: any) {
           </div>
 
           <div className={`right ${css['space-between']} ${css['snapshot-container']}`}>
-            <h2 className="spaced">{intl('devcon_week_pre_devcon_events')}</h2>
+            {/* <h2 className="spaced">{intl('devcon_week_pre_devcon_events')}</h2> */}
 
-            <Snapshot
+            {/* <Snapshot
               items={[
                 {
                   Icon: () => <></>,
@@ -159,7 +159,7 @@ export default pageHOC(function DevconWeek(props: any) {
                   right: 'OCT 10',
                 },
               ].filter(item => item.title !== 'event passed')}
-            />
+            /> */}
 
             {/* <div className={`spaced ${css['devcon-separator']}`}>
               <h2>Devcon - Oct 11-14</h2>

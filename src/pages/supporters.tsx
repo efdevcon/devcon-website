@@ -339,7 +339,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
       <div className={`section clear-bottom ${css['thanks']}`}>
         <h2 className="clear-bottom">{intl('supporters_announcing')}</h2>
         <div className={`${css['grid-images']} clear-bottom`}>
-          <Link to="https://twitter.com/AaveAave" className={css['grid-image-wrapper']}>
+          <Link to="https://twitter.com/AaveAave" className={`${css['grid-image-wrapper']} ${css['smaller']}`}>
             <Image src={aavegrants} alt="Supporter graphic" />
           </Link>
           <Link to="https://twitter.com/chainlink" className={css['grid-image-wrapper']}>
