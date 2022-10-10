@@ -761,8 +761,8 @@
     "title": "ELI5: Zero Knowledge",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 50,
-    "start": 1665495000000,
-    "end": 1665498000000,
+    "start": 1665505800000,
+    "end": 1665508800000,
     "room": {
       "id": "workshop-4",
       "name": "Workshop 4",
@@ -1068,7 +1068,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/identicon_UAZrZUE.png"
       }
     ],
-    "title": "Technical details of the Solidity compiler",
+    "title": "Technical Details of the Solidity Compiler",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665498600000,
@@ -1181,8 +1181,8 @@
     "title": "ELI5: Account Abstraction",
     "track": "Developer Infrastructure",
     "duration": 50,
-    "start": 1665498600000,
-    "end": 1665501600000,
+    "start": 1665495000000,
+    "end": 1665498000000,
     "room": {
       "id": "workshop-4",
       "name": "Workshop 4",
@@ -1703,6 +1703,36 @@
     ]
   },
   {
+    "id": "DER8FW",
+    "speakers": [
+      {
+        "id": "QEYVKV",
+        "name": "AstroMel",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665502200000,
+    "end": 1665505200000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "astromel"
+    ]
+  },
+  {
     "id": "JZWPCS",
     "speakers": [
       {
@@ -1918,8 +1948,8 @@
     "title": "ELI5: Cryptoeconomics",
     "track": "Developer Infrastructure",
     "duration": 50,
-    "start": 1665505500000,
-    "end": 1665510900000,
+    "start": 1665498600000,
+    "end": 1665501600000,
     "room": {
       "id": "workshop-4",
       "name": "Workshop 4",
@@ -2047,7 +2077,7 @@
     "track": "Staking & Validator Experience",
     "duration": 50,
     "start": 1665505800000,
-    "end": 1665509400000,
+    "end": 1665508800000,
     "room": {
       "id": "workshop-2",
       "name": "Workshop 2",
@@ -2128,6 +2158,36 @@
       "cross-chain",
       "bridge",
       "security"
+    ]
+  },
+  {
+    "id": "7ABC89",
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ixshells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665505800000,
+    "end": 1665508800000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Livecoding & art by Ixshells",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "art"
     ]
   },
   {
@@ -3172,38 +3232,6 @@
       "games",
       "evm",
       "on-chain"
-    ]
-  },
-  {
-    "id": "9YCACJ",
-    "speakers": [
-      {
-        "id": "L7UKGN",
-        "name": "Mariano Conti",
-        "description": "Mariano Conti saw the birth of Defi up close and is one of its first real world users. During his time at MakerDAO, he helped build the Maker Protocol and Dai Stablecoin, the first decentralized stablecoin built on Ethereum. He's currently an angel investor, NFT collector, and friend of Ethereum.",
-        "twitter": "nanexcool",
-        "avatar": ""
-      }
-    ],
-    "title": "Living on Defi: 3 years later",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665570600000,
-    "end": 1665572100000,
-    "room": {
-      "id": "talk-5",
-      "name": "Talk 5",
-      "description": "On Top of the Mountain",
-      "info": "Floor 5",
-      "capacity": 1140
-    },
-    "type": "Talk",
-    "description": "Join Mariano Conti as he gives an update to his widely shared 2019 Devcon V talk which covered living exclusively on Defi.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "defi",
-      "impact"
     ]
   },
   {
@@ -4411,7 +4439,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg"
       }
     ],
-    "title": "Why and how to run a node! (No ETH required)",
+    "title": "Why and How to Run a Node! (No ETH Required)",
     "track": "Staking & Validator Experience",
     "duration": 50,
     "start": 1665583200000,
@@ -4431,70 +4459,6 @@
       "node",
       "decentralization",
       "ethereum"
-    ]
-  },
-  {
-    "id": "XADPAV",
-    "speakers": [
-      {
-        "id": "WT9CXV",
-        "name": "Chance Hudson",
-        "description": "Engineer on the Privacy and Scalability Explorations team at the EF.",
-        "avatar": ""
-      }
-    ],
-    "title": "Building a Unirep ecosystem",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 25,
-    "start": 1665585000000,
-    "end": 1665586800000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "What does an identity ecosystem built on top of Unirep look like? Learn how reputation works in a system where participants are anonymous and how it can be used to build applications.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "identity",
-      "reputation",
-      "privacy"
-    ]
-  },
-  {
-    "id": "QLNUV9",
-    "speakers": [
-      {
-        "id": "8V9HA3",
-        "name": "Rob Stupay",
-        "description": "Rob Stupay is managing communications at Remix.",
-        "twitter": "ryestew",
-        "avatar": "http://speak.devcon.org/media/avatars/Rob_Stupay_iWdwTDz.jpeg"
-      }
-    ],
-    "title": "What's new in Remix",
-    "track": "Developer Infrastructure",
-    "duration": 25,
-    "start": 1665585000000,
-    "end": 1665586800000,
-    "room": {
-      "id": "talk-2",
-      "name": "Talk 2",
-      "description": "Cold Forest",
-      "info": "Floor 3",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "We’ve been pumping up Remix with new tools & features for users of all levels.  Come learn the latest Remix tricks & techniques.  We'll cue up editor improvements, tool integrations (including Git), Remix shortcuts, and our new workflows. We’ll also demo our new interface for using Remix with proxy contracts.  This talk will take your scratchings on Remix to 11.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "Remix IDE",
-      "Smart Contract Development"
     ]
   },
   {
@@ -4561,6 +4525,70 @@
       "Public Goods",
       "Ethereum",
       "core devs"
+    ]
+  },
+  {
+    "id": "XADPAV",
+    "speakers": [
+      {
+        "id": "WT9CXV",
+        "name": "Chance Hudson",
+        "description": "Engineer on the Privacy and Scalability Explorations team at the EF.",
+        "avatar": ""
+      }
+    ],
+    "title": "Building a Unirep ecosystem",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665585000000,
+    "end": 1665586800000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "What does an identity ecosystem built on top of Unirep look like? Learn how reputation works in a system where participants are anonymous and how it can be used to build applications.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "identity",
+      "reputation",
+      "privacy"
+    ]
+  },
+  {
+    "id": "QLNUV9",
+    "speakers": [
+      {
+        "id": "8V9HA3",
+        "name": "Rob Stupay",
+        "description": "Rob Stupay is managing communications at Remix.",
+        "twitter": "ryestew",
+        "avatar": "http://speak.devcon.org/media/avatars/Rob_Stupay_iWdwTDz.jpeg"
+      }
+    ],
+    "title": "What's new in Remix",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665585000000,
+    "end": 1665586800000,
+    "room": {
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
+      "info": "Floor 3",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "We’ve been pumping up Remix with new tools & features for users of all levels.  Come learn the latest Remix tricks & techniques.  We'll cue up editor improvements, tool integrations (including Git), Remix shortcuts, and our new workflows. We’ll also demo our new interface for using Remix with proxy contracts.  This talk will take your scratchings on Remix to 11.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "Remix IDE",
+      "Smart Contract Development"
     ]
   },
   {
@@ -5334,11 +5362,11 @@
         "avatar": ""
       }
     ],
-    "title": "Hold",
+    "title": "Hold - Temporary",
     "track": "Opportunity & Global Impact",
     "duration": 25,
-    "start": 1665592200000,
-    "end": 1665593700000,
+    "start": 1665595800000,
+    "end": 1665597300000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -5453,6 +5481,36 @@
     ]
   },
   {
+    "id": "PAPEE8",
+    "speakers": [
+      {
+        "id": "QEYVKV",
+        "name": "AstroMel",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665592200000,
+    "end": 1665595200000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "art"
+    ]
+  },
+  {
     "id": "MACJT8",
     "speakers": [
       {
@@ -5466,8 +5524,8 @@
     "title": "Time in Ethereum",
     "track": "Layer 1 Protocol",
     "duration": 25,
-    "start": 1665594000000,
-    "end": 1665595500000,
+    "start": 1665592200000,
+    "end": 1665593700000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -5779,8 +5837,8 @@
     "title": "How to Ethically Build Public Good Infrastructure",
     "track": "Layer 1 Protocol",
     "duration": 25,
-    "start": 1665595800000,
-    "end": 1665597300000,
+    "start": 1665594000000,
+    "end": 1665595500000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -6006,6 +6064,36 @@
       "music",
       "coordination",
       "culture"
+    ]
+  },
+  {
+    "id": "MTLQFS",
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ixshells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665601200000,
+    "end": 1665604200000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Livecoding & art by Ixshells",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "ixshells"
     ]
   },
   {
@@ -6319,8 +6407,8 @@
     "title": "ZK Security Self Led Session",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 120,
-    "start": 1665655200000,
-    "end": 1665669600000,
+    "start": 1665676800000,
+    "end": 1665684000000,
     "room": {
       "id": "workshop-1",
       "name": "Workshop 1",
@@ -6613,6 +6701,24 @@
         "description": "Benson is an Ethereum Foundation fellow, working with ACRE Africa and Etherisc to deliver insurance to smallholder farmers in Africa. He is on a mission to elevate his local community financially, through technological innovation. He is currently working on real life application of Ethereum network to solve transparency and efficiency problems in traditional insurance. So far the project has reached over 50,000 smallholder farmers in Africa ,de-risking them from adverse weather events.",
         "twitter": "@benson_njuguna",
         "avatar": "http://speak.devcon.org/media/avatars/Passport_photo_1_3imYXj6.jpg"
+      },
+      {
+        "id": "UQR8TJ",
+        "name": "Abhishek Bhattacharya",
+        "description": "Abhishek is a Co-founder at Whrrl - India's only blockchain native fintech platform. He's a Forbes 30 under 30 honoree and a 3-times Entrepreneur, Author, and a regular Speaker of Blockchain Tech. At Whrrl, he's bringing Blockchain to farmers to save their income, covering 1,400 warehouses & 18,000+ farmers and US $300 Million in committed TVL and now connecting them to global DeFi lenders, supported by United Nations Development Programme, IIM Ahmedabad and MassC",
+        "avatar": "http://speak.devcon.org/media/avatars/4C189F53-A6C7-42B6-84C5-BB3DC8569EE0_tdDNCY9.JPG"
+      },
+      {
+        "id": "SAHNJW",
+        "name": "Marcus AM",
+        "description": "Marcus is exploring how DeFi can be used to reduce barriers to enhanced livelihoods in disenfranchised communities in Guatemala. His research focuses on how we can leverage web3 as a tool to unlock value for communities that are systematically marginalized throughout Guatemala. Marcus is conducting with a variety of stakeholders ranging from rural communities through to leading DeFi protocols and dApps in order to uncover the missing infrastructure to enable more equitable futures for all.",
+        "avatar": "http://speak.devcon.org/media/avatars/394AC870-2709-47E7-87A0-DF5FA33ADA99_Oamd1O4.jpeg"
+      },
+      {
+        "id": "Y3LMKT",
+        "name": "Gabriela Guerra",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Ethereum for the next billion: DeFi for the unbanked/underbanked",
@@ -7259,9 +7365,15 @@
         "description": "Chuy, PhD, Monterrey, uses blockchain technology to digitize government services and give citizens their digital identity.",
         "twitter": "chuycepeda",
         "avatar": "http://speak.devcon.org/media/avatars/goohuv_WxlrVuQ.jpg"
+      },
+      {
+        "id": "GVFZJY",
+        "name": "Geoffrey See",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "title": "Ethereum for the next billion: who are your next billion?",
+    "title": "Ethereum for the Next Billion: Who Are Your Next Billion?",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665666000000,
@@ -7731,8 +7843,8 @@
     "title": "Applied ZK Showcase",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 180,
-    "start": 1665669600000,
-    "end": 1665684000000,
+    "start": 1665666000000,
+    "end": 1665676800000,
     "room": {
       "id": "workshop-1",
       "name": "Workshop 1",
@@ -8644,6 +8756,36 @@
     ]
   },
   {
+    "id": "8WD3CV",
+    "speakers": [
+      {
+        "id": "3VQEST",
+        "name": "Ixshells",
+        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "avatar": ""
+      }
+    ],
+    "title": "Livecoding Performance",
+    "track": "",
+    "duration": 50,
+    "start": 1665678600000,
+    "end": 1665681600000,
+    "room": {
+      "id": "ethlatam-chiva-chillout",
+      "name": "ETHLatam Chiva Chillout",
+      "description": "",
+      "info": "Floor 1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Livecoding & art by Ixshells",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "ixshells"
+    ]
+  },
+  {
     "id": "U9BVUS",
     "speakers": [
       {
@@ -9026,7 +9168,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/MugShot-Square-Alexandre-Bourget-1024_cM2Joy1.jpg"
       }
     ],
-    "title": "Introducing Substreams",
+    "title": "Introducing The Graph Substreams for high-performance indexing",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665682200000,
@@ -9039,13 +9181,15 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Substreams is a powerful blockchain indexing technology, developed for The Graph Network, to supercharge Subgraphs.\r\nIt enables you to write Rust modules and to compose and reuse community data streams. It provides extremely high performance indexing by virtue of parallelization, in a streaming-first fashion.\r\nIn this session we'll uncover how you can benefit from them.",
+    "description": "Substreams is a powerful, parallelizable, blockchain data indexing technology, developed within The Graph.\r\nIt enables truly composable indexing, with shared modules written in Rust, both in batch and in streaming. It reaches unbeforeseen performances by virtue of its parallel design that supports both mappers and stateful store modules.\r\nIn this session, we will see how Substreams solve indexing for all blockchain protocols.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
       "thegraph",
       "data",
-      "indexing"
+      "indexing",
+      "subgraphs",
+      "substreams"
     ]
   },
   {
@@ -9220,6 +9364,37 @@
     ]
   },
   {
+    "id": "NXXHPC",
+    "speakers": [
+      {
+        "id": "8SLFHM",
+        "name": "Atractor Estudio",
+        "description": "We are a group of artists who work with mechanical, electronic and computer engineering techniques from the field of the arts. We focus on the visualization of natural phenomena, mathematical and scientific paradigms related to sociocultural phenomena not only of the western hegemonic culture, but also of other ways of knowing and understanding the scientific, through the interaction of the viewer with a digital and analog substrate.",
+        "avatar": "http://speak.devcon.org/media/avatars/277579879_394370306025953_2445270446240223678_n_2k7qYfK.jpeg"
+      }
+    ],
+    "title": "ATRACTOR-LP-MIGRANTS",
+    "track": "",
+    "duration": 50,
+    "start": 1665691200000,
+    "end": 1665694800000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Workshop 1h",
+    "description": "Colombian electronic arts collective Atractor understands technology as a field of struggle from their Latin American context. In this scenario, assimilating and experiencing technology always as active users implies that electronic arts and creation have the power to spark conversations and create spaces for community dialogue.\r\nThey will be performing a video game live performance *The Migrants* and launch their NFT Botánica transgénica, come discover RITUALES in the hacker basement.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "atractor",
+      "migrants"
+    ]
+  },
+  {
     "id": "8UDYZP",
     "speakers": [
       {
@@ -9237,7 +9412,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/IMG_AD01D80B7C94-1_18dsIDZ.jpeg"
       }
     ],
-    "title": "Web3 adoption in Africa",
+    "title": "Web3 Adoption in Africa",
     "track": "Opportunity & Global Impact",
     "duration": 50,
     "start": 1665741600000,
@@ -10465,9 +10640,9 @@
       {
         "id": "A7RKE9",
         "name": "Jennifer Parak",
-        "description": "Jennifer currently works as a Software Engineer at Chorus One. Having started her career working with Microservices in a Java/Spring Boot environment, she's had the chance of working in the smart ecosystems/iOT space and is keen to branch out to emerging technologies such as blockchain tech, following her passion to solve hard technical challenges in a constraint environment.",
+        "description": "👩‍💻 Software Enginer at Chorus One \r\n\r\n📚 Zero Knowledge Programming \r\n\r\n🔥 Diversity, Privacy, Decentralisation \r\n\r\n@jenpaff on Twitter",
         "twitter": "jenpaff",
-        "avatar": ""
+        "avatar": "http://speak.devcon.org/media/avatars/BE6285FD-234D-4666-92FD-80A7AE76EE7F_4awK2i7.jpeg"
       },
       {
         "id": "QZWEKG",
@@ -10477,7 +10652,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/k7nS6oz7_400x400_Zg8d3ff.jpeg"
       }
     ],
-    "title": "Spin it up - spin up your own eth2 validator on testnet",
+    "title": "Spin it up - spin up your own Ethereum validator on testnet",
     "track": "Staking & Validator Experience",
     "duration": 110,
     "start": 1665752400000,
@@ -10490,7 +10665,7 @@
       "capacity": 112
     },
     "type": "Workshop 2h",
-    "description": "Outline: \r\n1) Intro \r\n-necessary components of a eth2 validator setup\r\n-steps involved in spinning up a validator on testnet\r\n-common terms (eth2 clients, beacon node, remote signer, slashing)\r\n\r\n2) Embark the journey of becoming an eth2 validator \r\n-generate keys \r\n-make a deposit \r\n-spin up a remote signer \r\n-start the eth2 validator client connected to an already synched beacon node\r\n\r\n3) Experiment with the setup \r\n-Query from the beacon node\r\n-Spin up two validator\r\n-Exit the validator",
+    "description": "This workshop aims to be an essential introduction to Ethereum PoS consensus by inspecting its underlying infrastructure.\r\n\r\nWe will first demystify concepts such as Execution + Consensus layer, PoS validation, Keys and Signatures, and Slashing. \r\n\r\nYou will learn by watching when we demo how to spin up a validator using the Lighthouse validator client. \r\n\r\nYou will learn by doing when we give you some time to spin up a validator yourself and experiment with the setup.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -10860,7 +11035,7 @@
     "track": "Governance & Coordination",
     "duration": 25,
     "start": 1665757800000,
-    "end": 1665759600000,
+    "end": 1665759300000,
     "room": {
       "id": "talk-5",
       "name": "Talk 5",
@@ -11343,96 +11518,6 @@
     ]
   },
   {
-    "id": "7ABC89",
-    "speakers": [
-      {
-        "id": "3VQEST",
-        "name": "Ixshells",
-        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-        "avatar": ""
-      }
-    ],
-    "title": "Livecoding Performance",
-    "track": "",
-    "duration": 50,
-    "start": 1665505800000,
-    "end": 1665508800000,
-    "room": {
-      "id": "ethlatam-chiva-chillout",
-      "name": "ETHLatam Chiva Chillout",
-      "description": "",
-      "info": "Floor 1",
-      "capacity": null
-    },
-    "type": "Workshop 1h",
-    "description": "Livecoding & art by Ixshells",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "art"
-    ]
-  },
-  {
-    "id": "PAPEE8",
-    "speakers": [
-      {
-        "id": "QEYVKV",
-        "name": "AstroMel",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Livecoding Performance",
-    "track": "",
-    "duration": 50,
-    "start": 1665592200000,
-    "end": 1665595200000,
-    "room": {
-      "id": "ethlatam-chiva-chillout",
-      "name": "ETHLatam Chiva Chillout",
-      "description": "",
-      "info": "Floor 1",
-      "capacity": null
-    },
-    "type": "Workshop 1h",
-    "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "art"
-    ]
-  },
-  {
-    "id": "DER8FW",
-    "speakers": [
-      {
-        "id": "QEYVKV",
-        "name": "AstroMel",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Livecoding Performance",
-    "track": "",
-    "duration": 50,
-    "start": 1665502200000,
-    "end": 1665505200000,
-    "room": {
-      "id": "ethlatam-chiva-chillout",
-      "name": "ETHLatam Chiva Chillout",
-      "description": "",
-      "info": "Floor 1",
-      "capacity": null
-    },
-    "type": "Workshop 1h",
-    "description": "LIVECODING is a way to music composition, a performance where the artist plays with digital synthesis to “code” / programming instruments on the go while producing rythm, noise, sound & silence, representations of electronic vibrations, an energy",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "astromel"
-    ]
-  },
-  {
     "id": "TAM9F7",
     "speakers": [
       {
@@ -11463,94 +11548,100 @@
     ]
   },
   {
-    "id": "MTLQFS",
+    "id": "KPR8CL",
     "speakers": [
       {
-        "id": "3VQEST",
-        "name": "Ixshells",
-        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "twitter": "jbaylina",
+        "avatar": ""
+      },
+      {
+        "id": "A7VEH7",
+        "name": "Ye Zhang",
+        "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
+        "twitter": "yezhang1998",
+        "avatar": "http://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg"
+      },
+      {
+        "id": "WVSWJD",
+        "name": "Youssef El Housni",
+        "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
+        "avatar": "http://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg"
+      },
+      {
+        "id": "DBEDPK",
+        "name": "Adrian Hamelink",
+        "description": "Cryptography engineer @ Aztec",
+        "avatar": ""
+      },
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "twitter": "theyisun",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      },
+      {
+        "id": "DKZWNJ",
+        "name": "Ying Tong",
+        "description": "Core Developer at Electric Coin Company",
+        "twitter": "therealyingtong",
+        "avatar": ""
+      },
+      {
+        "id": "XPGGMQ",
+        "name": "Louis Guthmann",
+        "description": null,
+        "twitter": "Guthl",
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "9Q9ZTE",
+        "name": "Janmajaya Mall",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9DUZUZ",
+        "name": "Brandon Kase",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "LJJQBM",
+        "name": "Kev",
+        "description": null,
         "avatar": ""
       }
     ],
-    "title": "Livecoding Performance",
-    "track": "",
-    "duration": 50,
-    "start": 1665601200000,
-    "end": 1665604200000,
+    "title": "Future of ZK Proving Systems Self Led Session",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 180,
+    "start": 1665655200000,
+    "end": 1665666000000,
     "room": {
-      "id": "hacker-basement",
-      "name": "Hacker Basement",
-      "description": "",
-      "info": "S1",
-      "capacity": null
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
     },
-    "type": "Workshop 1h",
-    "description": "Livecoding & art by Ixshells",
+    "type": "Workshop 2h",
+    "description": "Modern proof systems are informed by modular and composable designs. This self led session hosted by 0xPARC and Privacy and Scaling Explorations explores the techniques, tools, and applications enabling the interoperable and efficient proof systems of the future. \r\nFull agenda here: https://0xparc.notion.site/Future-of-Proving-Systems-SLS-Schedule-c030e251ffaf4f10bfd3389195f6cb28",
     "abstract": "",
-    "expertise": "Beginner",
+    "expertise": "Advanced",
     "tags": [
-      "ixshells"
-    ]
-  },
-  {
-    "id": "8WD3CV",
-    "speakers": [
-      {
-        "id": "3VQEST",
-        "name": "Ixshells",
-        "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
-        "avatar": ""
-      }
-    ],
-    "title": "Livecoding Performance",
-    "track": "",
-    "duration": 50,
-    "start": 1665678600000,
-    "end": 1665681600000,
-    "room": {
-      "id": "ethlatam-chiva-chillout",
-      "name": "ETHLatam Chiva Chillout",
-      "description": "",
-      "info": "Floor 1",
-      "capacity": null
-    },
-    "type": "Workshop 1h",
-    "description": "Livecoding & art by Ixshells",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "ixshells"
-    ]
-  },
-  {
-    "id": "NXXHPC",
-    "speakers": [
-      {
-        "id": "8SLFHM",
-        "name": "Atractor Estudio",
-        "description": "We are a group of artists who work with mechanical, electronic and computer engineering techniques from the field of the arts. We focus on the visualization of natural phenomena, mathematical and scientific paradigms related to sociocultural phenomena not only of the western hegemonic culture, but also of other ways of knowing and understanding the scientific, through the interaction of the viewer with a digital and analog substrate.",
-        "avatar": "http://speak.devcon.org/media/avatars/277579879_394370306025953_2445270446240223678_n_2k7qYfK.jpeg"
-      }
-    ],
-    "title": "ATRACTOR-LP-MIGRANTS",
-    "track": "",
-    "duration": 50,
-    "start": 1665691200000,
-    "end": 1665694800000,
-    "room": {
-      "id": "hacker-basement",
-      "name": "Hacker Basement",
-      "description": "",
-      "info": "S1",
-      "capacity": null
-    },
-    "type": "Workshop 1h",
-    "description": "Colombian electronic arts collective Atractor understands technology as a field of struggle from their Latin American context. In this scenario, assimilating and experiencing technology always as active users implies that electronic arts and creation have the power to spark conversations and create spaces for community dialogue.\r\nThey will be performing a video game live performance *The Migrants* and launch their NFT Botánica transgénica, come discover RITUALES in the hacker basement.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "atractor",
-      "migrants"
+      "Halo2",
+      "Circom",
+      "PLONK"
     ]
   }
 ]

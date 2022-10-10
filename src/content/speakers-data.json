@@ -1767,6 +1767,17 @@
     "github": "changwu-tw"
   },
   {
+    "id": "WVSWJD",
+    "name": "Youssef El Housni",
+    "avatar": "https://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg",
+    "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
+    "tracks": [],
+    "eventDays": [],
+    "website": "https://yelhousni.github.io/",
+    "twitter": "YoussefElHousn3",
+    "github": "yelhousni"
+  },
+  {
     "id": "VXMHCZ",
     "name": "Oskar Thorén",
     "avatar": "https://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg",
@@ -2054,6 +2065,17 @@
     "github": "/"
   },
   {
+    "id": "DBEDPK",
+    "name": "Adrian Hamelink",
+    "avatar": null,
+    "description": "Cryptography engineer @ Aztec",
+    "tracks": [],
+    "eventDays": [],
+    "website": "https://adrianhamelink.com",
+    "twitter": "adr1anh",
+    "github": "adr1anh"
+  },
+  {
     "id": "AG8LDK",
     "name": "Josselin Feist",
     "avatar": null,
@@ -2106,21 +2128,6 @@
     ],
     "twitter": "tzann_",
     "github": "tzann"
-  },
-  {
-    "id": "L7UKGN",
-    "name": "Mariano Conti",
-    "avatar": "https://www.gravatar.com/avatar/af24b98919d6df4fc133efa2207e1fcc",
-    "description": "Mariano Conti saw the birth of Defi up close and is one of its first real world users. During his time at MakerDAO, he helped build the Maker Protocol and Dai Stablecoin, the first decentralized stablecoin built on Ethereum. He's currently an angel investor, NFT collector, and friend of Ethereum.",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "website": "https://nanexcool.com/",
-    "twitter": "nanexcool",
-    "github": "nanexcool"
   },
   {
     "id": "XREBWJ",
@@ -2251,8 +2258,8 @@
   {
     "id": "A7RKE9",
     "name": "Jennifer Parak",
-    "avatar": null,
-    "description": "Jennifer currently works as a Software Engineer at Chorus One. Having started her career working with Microservices in a Java/Spring Boot environment, she's had the chance of working in the smart ecosystems/iOT space and is keen to branch out to emerging technologies such as blockchain tech, following her passion to solve hard technical challenges in a constraint environment.",
+    "avatar": "https://speak.devcon.org/media/avatars/BE6285FD-234D-4666-92FD-80A7AE76EE7F_4awK2i7.jpeg",
+    "description": "👩‍💻 Software Enginer at Chorus One \r\n\r\n📚 Zero Knowledge Programming \r\n\r\n🔥 Diversity, Privacy, Decentralisation \r\n\r\n@jenpaff on Twitter",
     "tracks": [
       "Staking & Validator Experience"
     ],
@@ -5445,6 +5452,30 @@
     ]
   },
   {
+    "id": "9Q9ZTE",
+    "name": "Janmajaya Mall",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "9DUZUZ",
+    "name": "Brandon Kase",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "LJJQBM",
+    "name": "Kev",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
     "id": "S8R9ND",
     "name": "Ya-wen Jeng",
     "avatar": null,
@@ -5520,5 +5551,57 @@
       1665619200000
     ],
     "twitter": "chuycepeda"
+  },
+  {
+    "id": "UQR8TJ",
+    "name": "Abhishek Bhattacharya",
+    "avatar": "https://speak.devcon.org/media/avatars/4C189F53-A6C7-42B6-84C5-BB3DC8569EE0_tdDNCY9.JPG",
+    "description": "Abhishek is a Co-founder at Whrrl - India's only blockchain native fintech platform. He's a Forbes 30 under 30 honoree and a 3-times Entrepreneur, Author, and a regular Speaker of Blockchain Tech. At Whrrl, he's bringing Blockchain to farmers to save their income, covering 1,400 warehouses & 18,000+ farmers and US $300 Million in committed TVL and now connecting them to global DeFi lenders, supported by United Nations Development Programme, IIM Ahmedabad and MassC",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "https://www.linkedin.com/in/abhib3012",
+    "twitter": "https://www.twitter.com/abhib3012"
+  },
+  {
+    "id": "SAHNJW",
+    "name": "Marcus AM",
+    "avatar": "https://speak.devcon.org/media/avatars/394AC870-2709-47E7-87A0-DF5FA33ADA99_Oamd1O4.jpeg",
+    "description": "Marcus is exploring how DeFi can be used to reduce barriers to enhanced livelihoods in disenfranchised communities in Guatemala. His research focuses on how we can leverage web3 as a tool to unlock value for communities that are systematically marginalized throughout Guatemala. Marcus is conducting with a variety of stakeholders ranging from rural communities through to leading DeFi protocols and dApps in order to uncover the missing infrastructure to enable more equitable futures for all.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
+    "website": "marcus.am",
+    "twitter": "marcusdotam"
+  },
+  {
+    "id": "GVFZJY",
+    "name": "Geoffrey See",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "Y3LMKT",
+    "name": "Gabriela Guerra",
+    "avatar": "https://speak.devcon.org/media/avatars/ggpp_9pde4HS.jpg",
+    "description": "Founder of Bloinx, a blockchain app that manages saving circles. She has experience managing international projects and is convinced that blockchain can benefit the unbanked population.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   }
 ]
