@@ -1283,7 +1283,7 @@
     "id": "93NEDS",
     "name": "Lorenz Breidenbach",
     "avatar": "https://speak.devcon.org/media/avatars/Lorenz_C349y5O.jpeg",
-    "description": "Lorenz Breidenbach is the Head of R&D at Chainlink Labs. He is a security researcher and former BRIDGE fellow from ETH Zürich and IC3. He previously conducted research at Cornell Tech and spent time in industry at Google and Open Systems.",
+    "description": "Lorenz Breidenbach is the Head of R&D at Chainlink Labs. He is a security researcher and former BRIDGE fellow from ETH Zürich and IC3.  He's been working on Ethereum-adjacent research since 2017 on projects such as Flashboys 2.0, libsubmarine, GasToken.io, and \"Enter the Hydra\".",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -1291,7 +1291,7 @@
       1665532800000
     ],
     "website": "https://chain.link",
-    "twitter": "@SergeyNazarov"
+    "twitter": "@ethlorenz"
   },
   {
     "id": "G9FTMN",
@@ -1598,7 +1598,7 @@
     "id": "7A8YTK",
     "name": "Toño Romero",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_3405_3RYCYV9.jpg",
-    "description": "ETHLima Community Leader\r\nBlockchain enthusiast\r\nFinancial Executive with more than 20 years of experience in telcos\r\nSystems Engineering and Finance studies",
+    "description": "ETHLima Community Leader.\r\nBlockchain enthusiast.\r\nFinancial Executive with more than 20 years of experience in telcos.\r\nSystems Engineering and Finance studies.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -5640,6 +5640,30 @@
     ],
     "eventDays": [
       1665619200000
+    ]
+  },
+  {
+    "id": "T3HDFA",
+    "name": "Andy",
+    "avatar": "https://speak.devcon.org/media/avatars/4297920_jtflyyD.jpeg",
+    "description": "Game developer at @latticexyz working on Sky Strife.\r\n\r\nPreviously game developer at @darkforest_eth.",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ]
+  },
+  {
+    "id": "FZ9BAS",
+    "name": "Francesco",
+    "avatar": "https://speak.devcon.org/media/avatars/4BD65556-C52A-4445-AD27-EF0EA24B6569_Lwys6xX.jpeg",
+    "description": "Consensus researcher",
+    "tracks": [
+      "Layer 1 Protocol"
+    ],
+    "eventDays": [
+      1665705600000
     ]
   }
 ]

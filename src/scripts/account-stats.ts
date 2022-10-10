@@ -72,4 +72,9 @@ function sessionInfo(type: string, sessions: string[]) {
     console.log('Total # sessions', type, sessions.length)
     sorted.forEach(i => console.log(`- ${i.session} (count: ${i.count})`))
     console.log()
+
+    const desc = Object.keys(grouped).map(i => grouped[i]).sort((a: any, b: any) => {
+        return a.count - b.count
+    }).slice(0, defaultCount)
+    desc.forEach(i => console.log(`- ${i.session} (count: ${i.count})`))
 }

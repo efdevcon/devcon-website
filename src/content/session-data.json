@@ -4802,7 +4802,7 @@
       {
         "id": "93NEDS",
         "name": "Lorenz Breidenbach",
-        "description": "Lorenz Breidenbach is the Head of R&D at Chainlink Labs. He is a security researcher and former BRIDGE fellow from ETH Zürich and IC3. He previously conducted research at Cornell Tech and spent time in industry at Google and Open Systems.",
+        "description": "Lorenz Breidenbach is the Head of R&D at Chainlink Labs. He is a security researcher and former BRIDGE fellow from ETH Zürich and IC3.  He's been working on Ethereum-adjacent research since 2017 on projects such as Flashboys 2.0, libsubmarine, GasToken.io, and \"Enter the Hydra\".",
         "twitter": "@SergeyNazarov",
         "avatar": "http://speak.devcon.org/media/avatars/Lorenz_C349y5O.jpeg"
       }
@@ -5152,7 +5152,7 @@
       {
         "id": "7A8YTK",
         "name": "Toño Romero",
-        "description": "ETHLima Community Leader\r\nBlockchain enthusiast\r\nFinancial Executive with more than 20 years of experience in telcos\r\nSystems Engineering and Finance studies",
+        "description": "ETHLima Community Leader.\r\nBlockchain enthusiast.\r\nFinancial Executive with more than 20 years of experience in telcos.\r\nSystems Engineering and Finance studies.",
         "twitter": "@cadenadbloques",
         "avatar": "http://speak.devcon.org/media/avatars/IMG_3405_3RYCYV9.jpg"
       },
@@ -5585,7 +5585,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/heidi_wilder_profile_BmRmVh9.jpg"
       }
     ],
-    "title": "Rug Life: Using Blockchain Analytics to Detect Illicit Activity and Protect Yourself",
+    "title": "Rug Life: Using Blockchain Analytics to Detect Illicit Activity, Track Stolen Funds, and Stay Safe",
     "track": "Security",
     "duration": 25,
     "start": 1665594000000,
@@ -7745,7 +7745,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/Evan_Miyazono_IPqfCk1.jpeg"
       }
     ],
-    "title": "Impact Certificates Powering Regenerative Cryptoeconomics",
+    "title": "HyperCerts for Regenerative Cryptoeconomics",
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665669600000,
@@ -9574,6 +9574,12 @@
         "description": "Ethereum R&D at OP Labs, EIP-4844 co-author, eth2 dev.",
         "twitter": "protolambda",
         "avatar": "http://speak.devcon.org/media/avatars/pineapple_social_7XNfiXn.png"
+      },
+      {
+        "id": "FZ9BAS",
+        "name": "Francesco",
+        "description": "Consensus researcher",
+        "avatar": "http://speak.devcon.org/media/avatars/4BD65556-C52A-4445-AD27-EF0EA24B6569_Lwys6xX.jpeg"
       }
     ],
     "title": "Danksharding + Data Availability Sampling (DAS) Workshop",
@@ -9693,6 +9699,12 @@
         "name": "Remy",
         "description": "Ops, startups, higher ed + tech, outdoor activities.",
         "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
+      },
+      {
+        "id": "T3HDFA",
+        "name": "Andy",
+        "description": "Game developer at @latticexyz working on Sky Strife.\r\n\r\nPreviously game developer at @darkforest_eth.",
+        "avatar": "http://speak.devcon.org/media/avatars/4297920_jtflyyD.jpeg"
       }
     ],
     "title": "Autonomous Worlds Self Led Session",
