@@ -3212,7 +3212,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/0fbae2bd3a0bd45b0d6a25f6459d95a3_0ID1knM.gif"
       }
     ],
-    "title": "MUD: an engine for on-chain games",
+    "title": "MUD: an Engine for On-chain Games",
     "track": "Developer Infrastructure",
     "duration": 60,
     "start": 1665570600000,
@@ -4801,10 +4801,10 @@
     "speakers": [
       {
         "id": "93NEDS",
-        "name": "Sergey Nazarov",
-        "description": "Sergey Nazarov is co-founder of Chainlink, the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.",
+        "name": "Lorenz Breidenbach",
+        "description": "Lorenz Breidenbach is the Head of R&D at Chainlink Labs. He is a security researcher and former BRIDGE fellow from ETH Zürich and IC3. He previously conducted research at Cornell Tech and spent time in industry at Google and Open Systems.",
         "twitter": "@SergeyNazarov",
-        "avatar": "http://speak.devcon.org/media/avatars/Sergey_Nazarov_Photo_3_814OIT5.jpg"
+        "avatar": "http://speak.devcon.org/media/avatars/Lorenz_C349y5O.jpeg"
       }
     ],
     "title": "Improving Oracle Infrastructure on Ethereum",
@@ -4820,7 +4820,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Oracles continue to fuel the growth of the Ethereum and layer-2 ecosystem. To build dApps that serve real-world use cases, from DeFi and DAOs to NFTs and beyond, Ethereum developers need access to secure oracle networks. In this session, Sergey Nazarov will dive into the latest oracle innovations and showcase new capabilities that enable Ethereum developers to build the scalable, secure, and feature-rich applications that can achieve widespread adoption.",
+    "description": "Oracles continue to fuel the growth of the Ethereum and layer-2 ecosystem. To build dApps that serve real-world use cases, from DeFi and DAOs to NFTs and beyond, Ethereum developers need access to secure oracle networks. In this session, we will dive into the latest oracle innovations and showcase new capabilities that enable Ethereum developers to build the scalable, secure, and feature-rich applications that can achieve widespread adoption.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -6706,19 +6706,21 @@
         "id": "UQR8TJ",
         "name": "Abhishek Bhattacharya",
         "description": "Abhishek is a Co-founder at Whrrl - India's only blockchain native fintech platform. He's a Forbes 30 under 30 honoree and a 3-times Entrepreneur, Author, and a regular Speaker of Blockchain Tech. At Whrrl, he's bringing Blockchain to farmers to save their income, covering 1,400 warehouses & 18,000+ farmers and US $300 Million in committed TVL and now connecting them to global DeFi lenders, supported by United Nations Development Programme, IIM Ahmedabad and MassC",
+        "twitter": "https://www.twitter.com/abhib3012",
         "avatar": "http://speak.devcon.org/media/avatars/4C189F53-A6C7-42B6-84C5-BB3DC8569EE0_tdDNCY9.JPG"
       },
       {
         "id": "SAHNJW",
         "name": "Marcus AM",
         "description": "Marcus is exploring how DeFi can be used to reduce barriers to enhanced livelihoods in disenfranchised communities in Guatemala. His research focuses on how we can leverage web3 as a tool to unlock value for communities that are systematically marginalized throughout Guatemala. Marcus is conducting with a variety of stakeholders ranging from rural communities through to leading DeFi protocols and dApps in order to uncover the missing infrastructure to enable more equitable futures for all.",
+        "twitter": "marcusdotam",
         "avatar": "http://speak.devcon.org/media/avatars/394AC870-2709-47E7-87A0-DF5FA33ADA99_Oamd1O4.jpeg"
       },
       {
         "id": "Y3LMKT",
         "name": "Gabriela Guerra",
-        "description": null,
-        "avatar": ""
+        "description": "Founder of Bloinx, a blockchain app that manages saving circles. She has experience managing international projects and is convinced that blockchain can benefit the unbanked population.",
+        "avatar": "http://speak.devcon.org/media/avatars/ggpp_9pde4HS.jpg"
       }
     ],
     "title": "Ethereum for the next billion: DeFi for the unbanked/underbanked",
@@ -8313,7 +8315,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/13174375_R7IteYY.png"
       }
     ],
-    "title": "Symbolic computation for fun and for profit",
+    "title": "Symbolic Computation for Fun and for Profit",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665675000000,
@@ -9168,7 +9170,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/MugShot-Square-Alexandre-Bourget-1024_cM2Joy1.jpg"
       }
     ],
-    "title": "Introducing The Graph Substreams for high-performance indexing",
+    "title": "Introducing The Graph Substreams for High-Performance Indexing",
     "track": "Developer Infrastructure",
     "duration": 25,
     "start": 1665682200000,
@@ -9341,7 +9343,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/804EC2C7-5A85-422B-BFC0-5936CA597917_mj2UEXl.jpeg"
       }
     ],
-    "title": "Client diversity matters: thinking independently, together",
+    "title": "Client Diversity Matters: Thinking Independently, Together",
     "track": "Staking & Validator Experience",
     "duration": 7,
     "start": 1665683400000,
@@ -10365,7 +10367,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/-IfDBgS-_400x400_QLrcogp.png"
       }
     ],
-    "title": "Cryptoeconomics Dive: LP volatility harvesting across yield rates",
+    "title": "Cryptoeconomics Dive: LP Volatility Harvesting Across Yield Rates",
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665748800000,
@@ -11568,12 +11570,14 @@
         "id": "WVSWJD",
         "name": "Youssef El Housni",
         "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
+        "twitter": "YoussefElHousn3",
         "avatar": "http://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg"
       },
       {
         "id": "DBEDPK",
         "name": "Adrian Hamelink",
         "description": "Cryptography engineer @ Aztec",
+        "twitter": "adr1anh",
         "avatar": ""
       },
       {

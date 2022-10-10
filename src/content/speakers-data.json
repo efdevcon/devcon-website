@@ -944,7 +944,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg",
     "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
     "tracks": [
-      "Layer 2s"
+      "Layer 2s",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665619200000
@@ -1280,9 +1281,9 @@
   },
   {
     "id": "93NEDS",
-    "name": "Sergey Nazarov",
-    "avatar": "https://speak.devcon.org/media/avatars/Sergey_Nazarov_Photo_3_814OIT5.jpg",
-    "description": "Sergey Nazarov is co-founder of Chainlink, the industry-standard Web3 services platform that has enabled trillions of dollars in transaction volume across DeFi, insurance, gaming, NFTs, and other major industries. As the leading decentralized oracle network, Chainlink enables developers to build feature-rich Web3 applications with seamless access to real-world data and off-chain computation across any blockchain and provides global enterprises with a universal gateway to all blockchains.",
+    "name": "Lorenz Breidenbach",
+    "avatar": "https://speak.devcon.org/media/avatars/Lorenz_C349y5O.jpeg",
+    "description": "Lorenz Breidenbach is the Head of R&D at Chainlink Labs. He is a security researcher and former BRIDGE fellow from ETH Zürich and IC3. He previously conducted research at Cornell Tech and spent time in industry at Google and Open Systems.",
     "tracks": [
       "Developer Infrastructure"
     ],
@@ -1771,8 +1772,12 @@
     "name": "Youssef El Housni",
     "avatar": "https://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg",
     "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
     "website": "https://yelhousni.github.io/",
     "twitter": "YoussefElHousn3",
     "github": "yelhousni"
@@ -2069,8 +2074,12 @@
     "name": "Adrian Hamelink",
     "avatar": null,
     "description": "Cryptography engineer @ Aztec",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ],
     "website": "https://adrianhamelink.com",
     "twitter": "adr1anh",
     "github": "adr1anh"
@@ -3814,7 +3823,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "twitter": "therealyingtong",
     "github": "therealyingtong"
@@ -4307,10 +4317,12 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Layer 2s"
+      "Layer 2s",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "twitter": "Guthl"
   },
@@ -5383,8 +5395,8 @@
       ""
     ],
     "eventDays": [
-      1665532800000,
       1665446400000,
+      1665532800000,
       1665705600000
     ]
   },
@@ -5456,24 +5468,36 @@
     "name": "Janmajaya Mall",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   },
   {
     "id": "9DUZUZ",
     "name": "Brandon Kase",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   },
   {
     "id": "LJJQBM",
     "name": "Kev",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   },
   {
     "id": "S8R9ND",
