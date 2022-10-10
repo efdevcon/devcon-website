@@ -1203,6 +1203,12 @@
     "id": "NHWBJH",
     "speakers": [
       {
+        "id": "N3AGLW",
+        "name": "Shane O'Connor",
+        "description": "Shane O’Connor is an Innovation Manager at UNICEF’s Office of Innovation, exploring how technologies, like blockchain, drones, virtual and augmented reality, AI and data science can intersect with the needs of a billion people to accelerate UNICEF’s impact for children.  \r\nPreviously, Shane led Technology for Development (T4D) and Innovation efforts for UNICEF in Sierra Leone. \r\nBefore joining UNICEF, Shane was CTO, Deputy MD, and Co-Founder of a mobile financial services platform.",
+        "avatar": "http://speak.devcon.org/media/avatars/DC-BW-22_stysXir.jpg"
+      },
+      {
         "id": "ZCGXDJ",
         "name": "Naroa",
         "description": "Naroa Zurutuza leads the Mapping and Tech work for Giga, UNICEF. Prior to joining UNICEF, she lived and worked in various companies in Kenya; from a startup that is trying to change the way the world understands agriculture to a non-profit empowering local entrepreneurs through access to finance. Naroa holds a MS in Electrical Engineering from Stanford University and a MS in Telecommunications Engineering from EHU-UPV.",
@@ -5746,6 +5752,7 @@
         "id": "EQ9MRS",
         "name": "Viktor Bunin | Coinbase Cloud",
         "description": "Viktor Bunin leads the Protocol Operations team at Coinbase Cloud. He is the industry’s first Protocol Specialist, a role he created as an early employee of Bison Trails that has now become an industry staple at orgs like a16z, Blockdaemon, and Figment. Viktor leads Coinbase Cloud to define Cloud’s protocol roadmap, initiate strategic initiatives, and support crypto-native Coinbase products. He's also an active angel investor, specializing in protocols, infrastructure, and crypto SaaS.",
+        "twitter": "@viktorbunin",
         "avatar": "http://speak.devcon.org/media/avatars/Smiling_headshot_cropped_zZuWa1u.png"
       }
     ],
@@ -5762,7 +5769,7 @@
       "capacity": 112
     },
     "type": "Panel",
-    "description": "The staking industry is on the verge of a new and exciting innovation cycle. The modularization of the staking technology stack, led by advances in middleware solutions such as DVT and MEV Boost as well as ancillary components including on-chain validator rating systems, will create a new playing field for existing operators, product builders and solo stakers.\r\n\r\nThis panel seeks to discuss key trends and developments driving the growth of the staking economy and what lies ahead.",
+    "description": "The staking industry is on the verge of a new and exciting innovation cycle. The modularization of the staking tech stack, led by advances in middleware solutions such as Obol Network (Distributed Validator Technology), Flashbots (MEV Boost), Liquid Collective (liquid staking), and EigenLayer will create a new playing field for existing operators, product builders and solo stakers.\r\n\r\nThis panel seeks to discuss these important developments and the new benefits and risks they bring to Ethereum.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -7518,7 +7525,7 @@
     "speakers": [
       {
         "id": "T8Q3YB",
-        "name": "Maxim",
+        "name": "Maxim Vezenov",
         "description": "Software Engineer / Language Designer at Aztec Network on the Noir team",
         "avatar": "http://speak.devcon.org/media/avatars/Screen_Shot_2021-05-17_at_10.39.25_AM_j9qiSbk.png"
       }
@@ -9003,6 +9010,12 @@
         "id": "ZCGXDJ",
         "name": "Naroa",
         "description": "Naroa Zurutuza leads the Mapping and Tech work for Giga, UNICEF. Prior to joining UNICEF, she lived and worked in various companies in Kenya; from a startup that is trying to change the way the world understands agriculture to a non-profit empowering local entrepreneurs through access to finance. Naroa holds a MS in Electrical Engineering from Stanford University and a MS in Telecommunications Engineering from EHU-UPV.",
+        "avatar": ""
+      },
+      {
+        "id": "7JUCAG",
+        "name": "Gerben Kijne",
+        "description": null,
         "avatar": ""
       }
     ],

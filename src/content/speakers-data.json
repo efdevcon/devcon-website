@@ -4593,6 +4593,7 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
+      1665446400000,
       1665532800000
     ]
   },
@@ -4813,7 +4814,7 @@
   },
   {
     "id": "T8Q3YB",
-    "name": "Maxim",
+    "name": "Maxim Vezenov",
     "avatar": "https://speak.devcon.org/media/avatars/Screen_Shot_2021-05-17_at_10.39.25_AM_j9qiSbk.png",
     "description": "Software Engineer / Language Designer at Aztec Network on the Noir team",
     "tracks": [
@@ -5347,7 +5348,7 @@
     "eventDays": [
       1665532800000
     ],
-    "twitter": "@viktorbunin"
+    "twitter": "viktorbunin"
   },
   {
     "id": "BSY7JU",
@@ -5761,6 +5762,18 @@
     ],
     "website": "@gvn908",
     "twitter": "@gvn908"
+  },
+  {
+    "id": "7JUCAG",
+    "name": "Gerben Kijne",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   },
   {
     "id": "TG3HCZ",
