@@ -1004,7 +1004,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/twitter400x400_EXR808Z.jpg"
       }
     ],
-    "title": "Everything a Solo Staker should know for the next phase of Ethereum",
+    "title": "Everything a Solo Staker Should Know for the Next Phase of Ethereum",
     "track": "Staking & Validator Experience",
     "duration": 25,
     "start": 1665496800000,
@@ -2944,7 +2944,7 @@
         "id": "TCL7RA",
         "name": "Tom Howard",
         "description": "Investing in the infrastructure and tools needed to build the Network State. Previously co-founded Mosendo DAI wallet, PowerTrade options exchange, and DeFi Nation community. DAOs: MetaCartel, RaidGuild, Synthetix, UMA",
-        "twitter": "@_TomHoward",
+        "twitter": "https://twitter.com/_TomHoward",
         "avatar": "http://speak.devcon.org/media/avatars/Tom_Bookshelf_Square_6XfOusL.jpg"
       }
     ],
@@ -5065,7 +5065,7 @@
         "avatar": ""
       }
     ],
-    "title": "Streameth: decentralized video CMS",
+    "title": "Streameth: Decentralized Video CMS",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665590400000,
@@ -6121,7 +6121,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg"
       }
     ],
-    "title": "How to run a validator from zero on resource-constrained and low powered devices.",
+    "title": "How to Run a Validator From Zero on Resource-Constrained and Low Powered Devices",
     "track": "Staking & Validator Experience",
     "duration": 50,
     "start": 1665655200000,
@@ -9736,6 +9736,7 @@
         "id": "VN7GWW",
         "name": "Lethe",
         "description": "Commercial lead at Asphodel. Working on economic design and mechanisms for Autonomous Worlds.",
+        "twitter": "https://mobile.twitter.com/asphodel_lethe",
         "avatar": "http://speak.devcon.org/media/avatars/lethe_4x_NA0J28h.png"
       },
       {
@@ -9743,6 +9744,12 @@
         "name": "Arthur Baer",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "UEE38D",
+        "name": "GVN",
+        "description": "Co-founder and dungeon designer @movingcastles_",
+        "avatar": "http://speak.devcon.org/media/avatars/206017_gfIoYao.jpg"
       }
     ],
     "title": "Autonomous Worlds Self Led Session",

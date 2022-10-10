@@ -5744,5 +5744,19 @@
     "eventDays": [
       1665705600000
     ]
+  },
+  {
+    "id": "UEE38D",
+    "name": "GVN",
+    "avatar": "https://www.gravatar.com/avatar/42ffc3abfaa0fca60a1853ad09ea7a8b",
+    "description": "Co-founder and dungeon designer @movingcastles_",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "website": "@gvn908",
+    "twitter": "@gvn908"
   }
 ]
