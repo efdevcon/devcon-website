@@ -11,8 +11,8 @@ ipfsHash: "QmZ8wUWGcrdYazwD4QU83WWGoRbPwZGuorY1N9wSLhsMFp"
 duration: 1141
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['whisper','messaging','technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Dean Eigenmann','Oskar Thoren']
 ---

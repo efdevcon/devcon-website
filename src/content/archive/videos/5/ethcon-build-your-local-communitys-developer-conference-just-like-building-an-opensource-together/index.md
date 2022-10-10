@@ -11,8 +11,8 @@ ipfsHash: "QmXjJYa9UkCv9keC1p689ypxTW9GARKqHeNhBWGWMEJ3vW"
 duration: 307
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Brian Cheong','Tiger Kim','Wanseob Lim']
 ---

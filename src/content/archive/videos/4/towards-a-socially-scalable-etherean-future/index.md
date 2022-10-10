@@ -7,8 +7,8 @@ ipfsHash: "QmcX5jzUhz6MaLbCKJybRtXwW51g9eceKq7mHBJSj8U8qA"
 duration: 1523
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['scaling']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Lane Rettig']
 ---

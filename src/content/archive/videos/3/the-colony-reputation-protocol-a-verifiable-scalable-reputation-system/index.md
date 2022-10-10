@@ -7,8 +7,8 @@ ipfsHash: "QmQitgHjhPqMqVBpmPHtLdKjAi5kK6JaHDpmtRPcsvfw8e"
 duration: 1163
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Aron Fischer']
 ---

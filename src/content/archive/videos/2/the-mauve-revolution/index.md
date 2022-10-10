@@ -7,8 +7,8 @@ ipfsHash: "QmWhBc3ZoFWDRYGC8oFu3BS7RpcpKnFyXF6HhbAhDf8U8C"
 duration: 1601
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['sharding','casper','pos','zcash','scalability','cost','latency','pos','mining','pow','validators','miners','casper','epoch','node','incentives','proofs','bittorrent']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Vitalik Buterin']
 ---

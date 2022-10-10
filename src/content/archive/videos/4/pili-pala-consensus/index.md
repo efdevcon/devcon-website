@@ -7,8 +7,8 @@ ipfsHash: "QmURpBmHuRfQKzaN1uSmhjDko8LkijDkBkHPKZN8yGVSwJ"
 duration: 1584
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['consistency','speed','voting','thunder']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Elaine Shi']
 ---

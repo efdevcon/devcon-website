@@ -7,8 +7,8 @@ ipfsHash: "QmedrcveHVsFZGNva4MtVf6dUAGdUitoB6R4NNTroPAXnr"
 duration: 1722
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['governance','ecosystem']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Will Warren','Peter Zeitz']
 ---

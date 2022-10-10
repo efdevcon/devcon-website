@@ -7,8 +7,8 @@ ipfsHash: "QmUNmFioKVghQ2N6esNMEegPDMaUg8SGzpjp9HjqEaHBfj"
 duration: 731
 expertise: "Advanced"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','developers','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Gregory Markou']
 ---

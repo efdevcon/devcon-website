@@ -7,8 +7,8 @@ ipfsHash: "QmSqBv6JKDQuv1Qa5aM4rBST3JDzpBTyzJqYrSFeg1Acin"
 duration: 580
 expertise: "Advanced"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Casey Detrio']
 ---

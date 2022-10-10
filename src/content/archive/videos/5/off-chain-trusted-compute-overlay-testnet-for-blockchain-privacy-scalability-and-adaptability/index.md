@@ -7,8 +7,8 @@ ipfsHash: "QmTSwDSp13YCGgEYzNWSCvXbd2C5gkpK4ovJyBoiyPNCWJ"
 duration: 5950
 expertise: "Advanced"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Sanjay Bakshi','Jean-charles Cabelguen','Andreas Freund','Marley Gray','Anand Pashupathy','Yevgeniy Yarmosh','Lei Zhang','Jim Zhang']
 ---

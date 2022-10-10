@@ -7,8 +7,8 @@ ipfsHash: "QmZhnEsY2ZM6X4wVkY5GSWToMNoqMQBoPN9Ng1GNNHWDte"
 duration: 955
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['Chainalysis','trust','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Mikkel Jensen','Surya Rastogi']
 ---

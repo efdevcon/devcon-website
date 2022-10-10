@@ -8,8 +8,8 @@ ipfsHash: "QmQANU3xaMm91tfxN1oAGG19tte879M14HnSUp1J13uPZk"
 duration: 1912
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Rob Mulholand']
 ---

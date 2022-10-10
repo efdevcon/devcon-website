@@ -7,8 +7,8 @@ ipfsHash: "QmTKLLrwm7VrjtLW89Zc3uBywGLTp3JWrRCFaVgJUToPi8"
 duration: 956
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['history','UN','global']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Katherine Wu']
 ---

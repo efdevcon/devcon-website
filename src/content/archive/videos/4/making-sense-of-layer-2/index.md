@@ -11,8 +11,8 @@ ipfsHash: "QmQMMkrDNEdBtetXrhnefv4jQDQ5Y52ZD9pF8Wv67VNn5D"
 duration: 1831
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['l2','layer2']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Josh Stark']
 ---

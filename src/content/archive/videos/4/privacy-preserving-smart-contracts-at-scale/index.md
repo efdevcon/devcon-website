@@ -7,8 +7,8 @@ ipfsHash: "QmW8uzeHy7aXwzc5ki1AnErDS7oJE18uiTCg9qmCcg8Scd"
 duration: 1812
 expertise: "Beginner"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['oasis','contracts','scalability']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Noah Johnson']
 ---

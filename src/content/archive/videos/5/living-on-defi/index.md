@@ -7,8 +7,8 @@ ipfsHash: "QmZwoszpv2V5BoWR4RLseB2nhHH5uqz8NQybaULLfM9ZjJ"
 duration: 1177
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['DeFi','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Mariano Conti']
 ---

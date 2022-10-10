@@ -7,8 +7,8 @@ ipfsHash: "QmPD82tUDcZWNTKGsBQaodVbg5FnxpKmzsoK6iJ1TJDZos"
 duration: 2487
 expertise: "Intermediate"
 type: "Panel"
-track: "Scalability"
+track: "Layer 2s"
 keywords: []
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Vinay Gupta','Gavin Wood','Joseph Lubin','William Mougayar']
 ---

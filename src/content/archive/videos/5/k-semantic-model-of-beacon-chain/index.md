@@ -7,8 +7,8 @@ ipfsHash: "QmPwLrmbgvBCS8t5EFT12JPttTutdRcaJLhNLfgoyLv7uM"
 duration: 715
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['beacon','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Daejun Park']
 ---

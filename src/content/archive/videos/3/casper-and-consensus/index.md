@@ -7,8 +7,8 @@ ipfsHash: "QmPJ8Fy6dNC5ALSjFxbhkBJxxg2Ftx5Eh1wDK5rvWwG1KE"
 duration: 1915
 expertise: "Advanced"
 type: "Panel"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Emin Gün Sirer','Peter Czaban','Vitalik Buterin','Vlad Zamfir','Elaine Shi']
 ---

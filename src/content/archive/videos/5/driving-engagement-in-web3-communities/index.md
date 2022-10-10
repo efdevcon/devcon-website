@@ -7,8 +7,8 @@ ipfsHash: "QmYVjwTXbNV6EQFtkacK9ofkWgpUexk3Ra3us1Q1zQh3vR"
 duration: 661
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['developers','devs','grants','ESP','devrel','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Andreas Wallendahl']
 ---

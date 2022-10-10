@@ -7,8 +7,8 @@ ipfsHash: "QmVykQ6hxgSgPcByTJDVEUTnVgYx9BYDVswEc35mgEGZWM"
 duration: 1605
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['melon','updates']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Jenna Zenk']
 ---

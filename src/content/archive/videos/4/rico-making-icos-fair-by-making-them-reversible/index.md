@@ -7,8 +7,8 @@ ipfsHash: "QmbRdCp6MSuJpoZjotRYh5KDMLmm3CZ3J7UiCtzfgubJL2"
 duration: 1259
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['ICO','initial coin offering']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Fabian Vogelsteller']
 ---

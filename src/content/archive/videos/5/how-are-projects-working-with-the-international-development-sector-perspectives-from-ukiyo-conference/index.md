@@ -7,8 +7,8 @@ ipfsHash: "QmSUEQJGCXiHpMY5wwaKe4CcUiwLrH2maw6YW85AZt6LBc"
 duration: 570
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Kelsie Naben','Anna George','Mayato Hattori','Asuka Uesaka']
 ---

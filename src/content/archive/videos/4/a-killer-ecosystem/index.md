@@ -7,8 +7,8 @@ ipfsHash: "QmTDXrnHHhRZJLeyzgZmk5HUtahmMsmYFKpUu1hoVFgwfQ"
 duration: 1810
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['trust','governance']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Joseph Lubin']
 ---

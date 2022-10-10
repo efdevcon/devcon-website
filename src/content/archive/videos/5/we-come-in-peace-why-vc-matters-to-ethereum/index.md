@@ -7,8 +7,8 @@ ipfsHash: "QmUAuZs7e9MNjwQSk6RNtpris9giuDpWTxAp6AhsrXJWGZ"
 duration: 1319
 expertise: "Beginner"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: ['VC','venture','capital','funding','investing','general']
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Jehan Chu']
 ---

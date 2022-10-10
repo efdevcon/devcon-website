@@ -7,8 +7,8 @@ ipfsHash: "QmUGvyskbkHf25qRJgKHEHZtAaRNBS67ALmUDzWV8Jf5UF"
 duration: 924
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['polkadot','dot','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Alistair Stewart']
 ---

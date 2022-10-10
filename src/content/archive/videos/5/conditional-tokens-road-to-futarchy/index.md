@@ -7,8 +7,8 @@ ipfsHash: "QmXYas29fWbgKdDA5uwz7hX6LGxZTPA2TLFtRgD9CdWb8q"
 duration: 1398
 expertise: "Intermediate"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Friederike Ernst','Stefan George']
 ---

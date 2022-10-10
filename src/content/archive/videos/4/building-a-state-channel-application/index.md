@@ -7,8 +7,8 @@ ipfsHash: "QmbRy11PNFcvtycG7dStfSBRAdm1n7MsT1J9enDfT3u3Ev"
 duration: 640
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['state','channels']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Tom Close']
 ---

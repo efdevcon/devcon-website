@@ -7,8 +7,8 @@ ipfsHash: "QmdrbJ8m49vx895xcfAFzcrbxVzRRBHjASUR4rcnwPaNg6"
 duration: 1543
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['wealth','hyperinflation','economics','policy','store of value','currency']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Alejandro Machado','Eduardo Gomez']
 ---

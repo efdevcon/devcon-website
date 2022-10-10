@@ -7,8 +7,8 @@ ipfsHash: "QmXJbwsPMDyo3u3EVtdom7ik9ms2bsRZMdyDKj5xoWoURN"
 duration: 1552
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['cryptoeconomics','society','digitalisation','democratisation','insurance','lending','trust','assets']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['David Lee Kuo Chuen']
 ---

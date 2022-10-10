@@ -7,8 +7,8 @@ ipfsHash: "QmQhrrzPPbErXYdswaEsRoMjHnGrY8yfR9rf1v6CYXipWh"
 duration: 6462
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['EEA','enterprise','alliance','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Paul DiMarzio','Ronald Resnick']
 ---

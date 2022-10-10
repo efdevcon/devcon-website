@@ -7,8 +7,8 @@ ipfsHash: "QmVYNQbDgWMBxhvz4ofEDD7Zv475jam8X4yaHbRs1Q37mU"
 duration: 1741
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['global','democracy']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Santiago Siri']
 ---

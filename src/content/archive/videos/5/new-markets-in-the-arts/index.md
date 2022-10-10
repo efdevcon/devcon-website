@@ -7,8 +7,8 @@ ipfsHash: "Qmc3Zk3YLxE6rN45c4MbaV4TDhSyFPnmg9V8d2wBP58zmd"
 duration: 1440
 expertise: "General"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Simon de la Rouviere']
 ---

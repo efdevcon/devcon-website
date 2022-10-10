@@ -8,8 +8,8 @@ ipfsHash: "QmbSNzRnEaiKR5PDDAdkZPjkgPththyh3EoMjy4tENXgnL"
 duration: 421
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['LayerX','ESP','grants','zerochain','cbc','verification','R&D','Japan','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Ryuya Nakamura']
 ---

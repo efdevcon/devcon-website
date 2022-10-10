@@ -7,8 +7,8 @@ ipfsHash: "QmW6JULHY1rxm4uvYLyfcoVEpgY8WcLGJXTvfXaWNgH93v"
 duration: 1815
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['privacy']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Sanjay Bakshi','Andreas Freund']
 ---

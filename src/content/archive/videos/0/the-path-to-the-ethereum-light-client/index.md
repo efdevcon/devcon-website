@@ -7,8 +7,8 @@ ipfsHash: "Qmdg8onnP9bxCN6x8bAjz4mLYHzyA5bY4rff3bqJArNY93"
 duration: 1153
 expertise: "Advanced"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['consensus','node','txn','state','merkle','proof','transition','validity','events','dapps','logs','opcode','API','roadmap','archive','receipt','dht','']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Vitalik Buterin','Gavin Wood']
 ---

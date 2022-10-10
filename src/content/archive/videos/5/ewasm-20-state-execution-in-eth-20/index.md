@@ -14,8 +14,8 @@ ipfsHash: "QmPV4Ynr9jMSrFnChSfaK2pnEHoBDEWNv7bjDHAAdyX1YF"
 duration: 7030
 expertise: "Advanced"
 type: "Breakout"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Guillaume Ballet','Alex Beregszaszi','Paweł Bylica','Casey Detrio','Paul Dworzanski','Sina Mahmoodi']
 ---

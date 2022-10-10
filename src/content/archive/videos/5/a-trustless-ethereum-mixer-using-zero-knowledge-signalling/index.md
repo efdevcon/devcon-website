@@ -8,8 +8,8 @@ ipfsHash: "QmexzfCyLca4XwjstsJ9cqEVVkjzzzvXmdK73DUww9hWrU"
 duration: 1148
 expertise: "intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Kobi Gurkan','Wei Jie Koh','Barry WhiteHat']
 ---

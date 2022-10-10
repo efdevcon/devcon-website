@@ -10,8 +10,8 @@ ipfsHash: "QmRPAZ6kpnRMRoNsovU1my53GhSSTE2FQM39E4DkwdQajc"
 duration: 1130
 expertise: "intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Wanseob Lim']
 ---

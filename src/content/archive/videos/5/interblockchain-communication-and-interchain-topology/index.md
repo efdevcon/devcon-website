@@ -7,8 +7,8 @@ ipfsHash: "QmUnnCNF9FUYQ1ATkRejEDtmasy4TzDA2RXECkwMUaEfj4"
 duration: 860
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['interchain','interblockchain','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Christopher Goes']
 ---

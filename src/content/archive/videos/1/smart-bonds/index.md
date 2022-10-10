@@ -7,8 +7,8 @@ ipfsHash: "Qmc1qwDX9jiExRu74yEU9R1mRdsx6V6kfRpMg9kPtCyS6d"
 duration: 821
 expertise: "Intermediate"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Stephan Karpischek','Ian Cusden']
 ---

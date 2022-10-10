@@ -7,8 +7,8 @@ ipfsHash: "QmQoz347y2fHhUFTAQCG33TtZqJ3pgcLwVg9aPAXWccQUp"
 duration: 1336
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['state channels']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Jeremy Longley']
 ---

@@ -10,8 +10,8 @@ ipfsHash: "QmSA6g4yyeUK1regygtH3xbfawC4KNiE5dykoKD7QcvQdp"
 duration: 1240
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['DeFi','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Rune Christensen']
 ---

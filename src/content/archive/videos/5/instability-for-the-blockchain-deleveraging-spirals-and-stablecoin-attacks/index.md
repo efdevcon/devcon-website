@@ -7,8 +7,8 @@ ipfsHash: "QmbyXixmb8FxruUg8pkn3t2hAaoKPGiiCu6p8cC1ppemMg"
 duration: 1232
 expertise: "Advanced"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['academic']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Ariah Klages-Mundt','Andreea Minca']
 ---

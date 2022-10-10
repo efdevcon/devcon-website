@@ -7,8 +7,8 @@ ipfsHash: "QmSJMCFR5QXP2ddKaz3kvtRjHgJRAh24RZjPoGBeCPWjvL"
 duration: 1418
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['OVM','optimism','academic']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Karl Floersch','Ben Jones']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmVDNdth25EgNqsWAByFH5D7nZVY1TYYeBxC8TXHrg89MH"
 duration: 1216
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['sharding','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Hsiao-Wei Wang']
 ---

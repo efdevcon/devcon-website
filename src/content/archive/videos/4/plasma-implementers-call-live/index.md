@@ -10,8 +10,8 @@ ipfsHash: "QmdjK3UFSpCAH2ZeZvBjF5gf4m83CTH8Vb4FVzYuYyqfg4"
 duration: 3221
 expertise: "Intermediate"
 type: "Panel"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['research','applications','payments','exchange','gas']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Karl Floersch']
 ---

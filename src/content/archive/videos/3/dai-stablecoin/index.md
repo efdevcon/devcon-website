@@ -7,8 +7,8 @@ ipfsHash: "QmZDFKUZeRP95D8msCrdeseKF2KjzPZgy3A63Bxk96f7q5"
 duration: 1158
 expertise: "Intermediate"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Andy Milenius']
 ---

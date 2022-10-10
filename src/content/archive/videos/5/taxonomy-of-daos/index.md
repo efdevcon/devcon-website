@@ -8,8 +8,8 @@ ipfsHash: "QmQQ5oRWeYuUq7scg2JLnYhkC6zHEktfeFyan6onBfbm7a"
 duration: 2281
 expertise: "Intermediate"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Kei Kreutler','Yalda Mousavinia']
 ---

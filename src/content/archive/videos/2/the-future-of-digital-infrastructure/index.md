@@ -7,8 +7,8 @@ ipfsHash: "QmYgCjBtJazezxtpaurNqtuUk22xmSCS525nLrV312XnLm"
 duration: 894
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['enterprise','adoption','consensus','scalability','cloud','latency','performance']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Matthew Spoke']
 ---

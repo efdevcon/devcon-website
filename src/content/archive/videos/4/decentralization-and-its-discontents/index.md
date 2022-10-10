@@ -7,8 +7,8 @@ ipfsHash: "QmbLu9B7MuCzUQyYSoMuVgC11BvwFAqP5BPLLxgLh6a9jh"
 duration: 582
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['web','censorship','POW','DPOS','']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Sarah Friend']
 ---

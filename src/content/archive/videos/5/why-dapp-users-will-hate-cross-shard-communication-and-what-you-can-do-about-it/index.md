@@ -7,8 +7,8 @@ ipfsHash: "QmPm8xWLE4ih2Va8cBgXmZm2CESB3cR8LUQgyJBnhtc3Wv"
 duration: 563
 expertise: "Intermediate"
 type: "Breakout"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['James Prestwich']
 ---

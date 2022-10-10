@@ -9,8 +9,8 @@ ipfsHash: "QmQ4b2ybk3F7NSqxVPMKN4wi43ShNMNwBSL31LNrUfc1jh"
 duration: 1186
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Eduardo Antuña Díez','Pol Bordas']
 ---

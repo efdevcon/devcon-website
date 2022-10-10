@@ -7,8 +7,8 @@ ipfsHash: "QmWs8HBXAtzt45mrfdrnzkF8CCrQMZXQxeWfpjcr9Rfvci"
 duration: 3688
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['scaling','dapps']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Barry Whitehat']
 ---

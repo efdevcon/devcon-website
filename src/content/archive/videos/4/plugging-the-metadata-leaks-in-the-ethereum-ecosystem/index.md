@@ -7,8 +7,8 @@ ipfsHash: "QmVRmU99z1o9Viyo4V4ekGRXpLN7XhjrmdCeHfy1MaUN4n"
 duration: 1554
 expertise: "Expert"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['metadata','dapps','nodes','aggregators','safety']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Péter Szilágyi']
 ---

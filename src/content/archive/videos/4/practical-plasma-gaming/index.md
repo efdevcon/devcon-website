@@ -7,8 +7,8 @@ ipfsHash: "QmXTVE4Eauru47oKPt1eHB7c8NQwJV1TqZkoibohno3DZ4"
 duration: 1772
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['games','sidechains','UI','UX','L2']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Matthew Campbell']
 ---

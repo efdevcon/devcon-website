@@ -7,8 +7,8 @@ ipfsHash: "QmXKaeMTJVsmmT6QA7VzocMt81R1YDzzyfJJ7SbPMdzFbY"
 duration: 1025
 expertise: "Advanced"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Piotr Janiuk']
 ---

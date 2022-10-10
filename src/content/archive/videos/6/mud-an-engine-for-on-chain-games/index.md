@@ -1,0 +1,18 @@
+---
+edition: 6
+sourceId: "D8PG7L"
+title: "MUD: an Engine for On-chain Games"
+description: "For the past year and a half, 0xPARC and Lattice have been hard at work building MUD — an open-source engine for building on-chain games. 
+In this talk, Justin and Alvarius from Lattice will be joined by Kelvin Fichter from Optimism, to talk about on-chain games, MUD, and an exciting new collaboration with Optimism to be unveiled on the day."
+youtubeUrl: ""
+ipfsHash: ""
+ethernaIndex: ""
+ethernaPermalink: ""
+duration: 0
+expertise: "Advanced"
+type: "Talk"
+track: "Developer Infrastructure"
+tags: ["Developer Infrastructure"]
+keywords: ["games","evm","on-chain"]
+speakers: ["Justin Glibert","Alvarius","Kelvin Fichter"]
+---

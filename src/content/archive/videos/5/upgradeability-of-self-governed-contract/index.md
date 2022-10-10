@@ -7,8 +7,8 @@ ipfsHash: "QmS8Zk5AnKg5JqJDqxe8723Bsb5LJwrjj8ed4UX8tCfy6P"
 duration: 336
 expertise: "Intermediate"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Hadrien Croubois']
 ---

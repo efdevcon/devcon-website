@@ -7,8 +7,8 @@ ipfsHash: "QmbLAzXr5KjsWSpAyoyzVrzFvzoSHVaHA5GnvoFmCCoh5t"
 duration: 1086
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: []
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Jan Xie']
 ---

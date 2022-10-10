@@ -7,8 +7,8 @@ ipfsHash: "QmScrkbpimHJkPM77yWtNMyBhvymXm7ugCSmzuPvABmXo6"
 duration: 1135
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Dr. Greg Colvin']
 ---

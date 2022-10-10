@@ -7,8 +7,8 @@ ipfsHash: "QmfAsEYHuqDdQJ5bU1tCLpNQhNwQ5DUAvTUAqK5wpgBaUp"
 duration: 3496
 expertise: "Beginner"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Dave Hrycyszyn','Jedrzej Stuczynski']
 ---

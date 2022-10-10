@@ -8,8 +8,8 @@ ipfsHash: "QmQqmKPxNF81bwxeARQguty3bLF7UzXYrKz9ckdkBGWxCF"
 duration: 1395
 expertise: "intermediate"
 type: "Breakout"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Raúl Kripalani']
 ---

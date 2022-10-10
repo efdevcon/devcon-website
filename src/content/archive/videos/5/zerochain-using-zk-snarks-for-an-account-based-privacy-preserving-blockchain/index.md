@@ -10,8 +10,8 @@ ipfsHash: "QmXcWUMDhtseNCk1uj3PrnEpiQ5kM6WwEiqENhpr2DvLZR"
 duration: 1372
 expertise: "Intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Osuke Sudo']
 ---

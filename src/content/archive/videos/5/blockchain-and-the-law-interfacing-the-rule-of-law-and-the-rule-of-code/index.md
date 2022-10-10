@@ -7,8 +7,8 @@ ipfsHash: "QmNpwDR1pMbbQeTUVMYBJpdDJwDNvR3ZuyKh5PxokLTF2q"
 duration: 5025
 expertise: "Beginner"
 type: "Panel"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Constance Choi','Rick Dudley','Silke Noa Elrifai','Maria Gomez','Kei Kreutler','Carla Reyes','Fennie Wang']
 ---

@@ -8,8 +8,8 @@ ipfsHash: "QmRBGCtktV7gXjhU3yU49qsgkx6qitL28e5Zo8yPg1P39W"
 duration: 1702
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['sovereignty','dignity','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Martin Diaz']
 ---

@@ -10,8 +10,8 @@ ipfsHash: "QmZ7jsJsn69RXXc2QxFPuXsM18yxV1wdZDbHYNEqD3RUbW"
 duration: 635
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['machine learning','AI','data','bounties','distribution','philanthropy']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Julien Bouteloup']
 ---

@@ -9,8 +9,8 @@ ipfsHash: "QmdbH5Vo4czcHYCWxNReWbrYQUz2XLN4YGf7qCL5aFhMkj"
 duration: 1281
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['akasha','ecosystem','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Mihai Alisie']
 ---

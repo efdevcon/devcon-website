@@ -7,7 +7,7 @@ ipfsHash: "QmNsdPLVwp9Wa6MaNA3TjJCZ2MWc2sLpLHfTdf3g3oTtjt"
 duration: 395
 expertise: "Beginner"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['data','monetization','commodification']
 tags: ['Privacy ']
 speakers: ['Jesse Leimgruber']

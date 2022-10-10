@@ -7,8 +7,8 @@ ipfsHash: "QmWXFK4AiFvDBCNhYQ3soZbgyzHrtQTrJt1nn4Qq3Tpbp6"
 duration: 5638
 expertise: "Beginner"
 type: "Breakout"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Amanda Gutterman','Riley Kim']
 ---

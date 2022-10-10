@@ -9,8 +9,8 @@ ipfsHash: "QmR9qQdX8AL2YwkrMPaPMenQEHuFPAZ8c9jcT2ZE5fWT7c"
 duration: 1146
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Brandon Ramirez']
 ---

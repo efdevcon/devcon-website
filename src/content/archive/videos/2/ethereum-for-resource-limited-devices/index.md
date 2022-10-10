@@ -7,8 +7,8 @@ ipfsHash: "Qmbwk7H2fGw4bTgREN75XueyHS5DkTZKtHgvARtDCU1U1x"
 duration: 1129
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['updates','roadmap','wearables','iot','mobile','resource','constraint','devices','security','java','c++','raiden','raspberry','pi','light','client']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Bob Summerwill']
 ---

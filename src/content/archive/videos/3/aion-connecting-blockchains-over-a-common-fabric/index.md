@@ -7,8 +7,8 @@ ipfsHash: "Qma9Ryqq7ypkqmbSzGxvAmxKKHKAtHJH7FHnmLNJZajuAy"
 duration: 1245
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Matt Spoke']
 ---

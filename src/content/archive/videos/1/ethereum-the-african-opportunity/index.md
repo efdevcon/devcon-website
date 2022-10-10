@@ -7,8 +7,8 @@ ipfsHash: "QmNkr2vDxU3pxKJwr9vwPHGrMw7xaqa6E2hobATX294ZEg"
 duration: 790
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Wayne Hennessy-Barrett']
 ---

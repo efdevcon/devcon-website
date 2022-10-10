@@ -7,8 +7,8 @@ ipfsHash: "QmNcNUwcTWGNsw9ceXHbkDy1XJKe1WTAkZ3HX6Jy9tWaex"
 duration: 938
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Everett Hildenbrandt','Phil Daian','Loi Luu','Nate Rush','Haseeb Qureshi']
 ---

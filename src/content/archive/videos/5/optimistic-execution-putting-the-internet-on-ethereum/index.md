@@ -8,8 +8,8 @@ ipfsHash: "QmSJMCFR5QXP2ddKaz3kvtRjHgJRAh24RZjPoGBeCPWjvL"
 duration: 5476
 expertise: "beginner"
 type: "Breakout"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['technical']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Karl Floersch']
 ---

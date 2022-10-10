@@ -7,8 +7,8 @@ ipfsHash: "QmaKwmnJ7QXf7JJiaHa7Ms1NNnFTyDTZyyEckefCTTgtaL"
 duration: 1130
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['legalese','lawyers','dapps','solidity','sql','language','code','syntax','semantics','trace','sequence']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Dr. Virgil Griffith & Vikram Verma']
 ---

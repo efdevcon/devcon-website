@@ -7,8 +7,8 @@ ipfsHash: "QmWZKCAxddcrj37FViEmqHAnXikVLmFq2yeaR2SRjgWYuj"
 duration: 3290
 expertise: "beginner"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Wei Jie Koh']
 ---

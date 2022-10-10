@@ -8,8 +8,8 @@ ipfsHash: "QmdwYkxgFNkeukg7Br15veYJeQaR7GjoGJzbs64TkfVLLz"
 duration: 1460
 expertise: "Beginner"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['security']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Ian Miers']
 ---

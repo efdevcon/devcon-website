@@ -7,8 +7,8 @@ ipfsHash: "QmTYEP6qJYNqdv5Nz6b5HCbE4WepreGNPjukByFfikcsBg"
 duration: 943
 expertise: "Advanced"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: []
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Patrick McCorry']
 ---

@@ -13,8 +13,8 @@ ipfsHash: "QmaswQpvpxxCdJGpcCMALzoevE3w71W4VPbJsppHow8V3o"
 duration: 331
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Hiroyuki Hara']
 ---

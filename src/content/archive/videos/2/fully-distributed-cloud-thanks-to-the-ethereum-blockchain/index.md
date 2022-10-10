@@ -7,8 +7,8 @@ ipfsHash: "QmcvZTn796P3qoiQ7SgiSQsSahpd2KsQfyj49dyPJVg5zu"
 duration: 767
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['fully','distributed','cloud','blockchain','infrastructure','dapps','security','resilience','miners','computing','power','iexec','offchain','cpu','servers','HEP','scheduling','resource','management','autonomous','sidechain','energy']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Gilles Fedak']
 ---

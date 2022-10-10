@@ -7,8 +7,8 @@ ipfsHash: "QmNX9nn33Uu6DsshXN1PKdngmui5LNmjA6DKtvRQj7NCsD"
 duration: 1209
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Henning Diedrich']
 ---

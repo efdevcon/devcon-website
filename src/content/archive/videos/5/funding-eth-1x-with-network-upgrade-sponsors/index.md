@@ -7,8 +7,8 @@ ipfsHash: "QmWG3ayrFzXqS2VNDwVg6bHzZCkHHBYfGDFGMVCYKM5Jw6"
 duration: 1333
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['funding','network','upgrade','sponsors','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Tim Beiko']
 ---

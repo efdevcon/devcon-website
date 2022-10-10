@@ -7,8 +7,8 @@ ipfsHash: "Qmbahw7npjzcHk4mMEUgdzVC5gCMb4MsTt67632d2f8aZ4"
 duration: 16651
 expertise: "Intermediate"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Swarm Team']
 ---

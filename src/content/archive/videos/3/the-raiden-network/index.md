@@ -7,8 +7,8 @@ ipfsHash: "QmXN9kWXytHoYVWWTBTXCUSG6UWWF3fKyGbzP8wSfgn2x5"
 duration: 1151
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: []
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Augusto Hack','Loredana Cirstea']
 ---

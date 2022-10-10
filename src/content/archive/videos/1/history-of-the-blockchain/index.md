@@ -7,8 +7,8 @@ ipfsHash: "QmZVfB16PgRAZ81qYTWtQQZw56Bu53dAYYGhvGDu5CXJ88"
 duration: 1105
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Nick Szabo']
 ---

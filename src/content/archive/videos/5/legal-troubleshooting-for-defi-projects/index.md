@@ -7,8 +7,8 @@ ipfsHash: "QmZrCg31gcTZEUbkuaW6eAE4Wkt7TP7eMX4odWSw635pYw"
 duration: 3640
 expertise: "Intermediate"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Jacek Czarnecki']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmQJFGQaaYY5qHZL1nmVQCyiR7hKoK27wcXu9LqupLkwBC"
 duration: 2298
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Vitalik Buterin']
 ---

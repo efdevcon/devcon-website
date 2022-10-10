@@ -9,8 +9,8 @@ ipfsHash: "QmWwiFPoJq9ZRxj34xRDZC9q23mhG4TsbE7qPBed7dJoDV"
 duration: 425
 expertise: "Beginner"
 type: "Lightning Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['James Beck']
 ---

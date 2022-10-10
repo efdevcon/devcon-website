@@ -7,8 +7,8 @@ ipfsHash: "QmdRNW52Mk8BeftLCPv2oL9aaCW4qLnqCAyXUHaXZo3YnQ"
 duration: 2359
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['humanitarian','global finance','finance initiatives','philanthropy','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Natalie Cargill','Will Ruddick','Adam Bornstein','Lucas Geiger']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmVwn6rigS1Sq5ghkM72PtQrEwSBZ9ZHtUc89KiYncFHBQ"
 duration: 1357
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['William Mougayar']
 ---

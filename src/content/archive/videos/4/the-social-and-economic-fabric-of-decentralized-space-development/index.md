@@ -8,8 +8,8 @@ ipfsHash: "QmYqYj3r5WPqyLsBa7PPoY9eSEX83XLmCQsvr5CP3mfKrL"
 duration: 1387
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['space','exploration','economics']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Yalda Mousavinia']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmRMKFyYKrNsjHvamuopHGutMnVhTgH44JP1t3pp6rTc19"
 duration: 769
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Andres Junge']
 ---

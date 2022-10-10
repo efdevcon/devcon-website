@@ -9,8 +9,8 @@ ipfsHash: "QmdGyJnCmH6KEzqtBC5Mzab9Kr5RkRN7ABWjB6pVrjiwkt"
 duration: 1469
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['dapps','build']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Mo Dong','Junda Liu','Xiaozhou Li','Qingkai Liang']
 ---

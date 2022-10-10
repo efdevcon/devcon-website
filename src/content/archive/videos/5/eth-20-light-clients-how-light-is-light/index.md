@@ -7,8 +7,8 @@ ipfsHash: "QmSUei7ck6zxzHeJfreq1Kj2DgZtKto4qHDfCLJujrnoab"
 duration: 1308
 expertise: "intermediate"
 type: "Breakout"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Greg Markou','Cayman Nava']
 ---

@@ -10,8 +10,8 @@ ipfsHash: "QmVKKdbkrE8EEzYfJ1Y85GttLiC1iGQ5XQSEwRCnMdGyZ4"
 duration: 2711
 expertise: "advanced"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Constance Choi','Anuj Das Gupta']
 ---

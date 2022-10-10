@@ -7,8 +7,8 @@ ipfsHash: "QmdB2voVfmZaFyvgU89gryEEx7vGAGqXJNmRtxBDxpfaNd"
 duration: 382
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Gregg Dourgarian']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmaRmUHTtDcjuYF2rUenMMvNenntVbiUKGqarZsceCeqNA"
 duration: 1399
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['coincenter','education','policy','legal','securities','assets','tokens','regulations']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Ming Chan','Peter Van Valkenburgh']
 ---

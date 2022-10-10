@@ -14,8 +14,8 @@ ipfsHash: "QmY4QCLmTwNDw67EzSibT537L2HUWwfbzhxbCFoX83Vhwa"
 duration: 3771
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Abigael Titcomb']
 ---

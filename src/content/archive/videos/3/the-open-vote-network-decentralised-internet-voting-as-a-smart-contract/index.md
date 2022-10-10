@@ -7,8 +7,8 @@ ipfsHash: "QmV7BMqStTgkTbEgajL4F8HJM9aVTctCpUKgqiz1ySgwjU"
 duration: 954
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Patrick McCorry']
 ---

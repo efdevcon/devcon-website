@@ -7,8 +7,8 @@ ipfsHash: "QmbP4UY2ivenb1rtuQFkBXCE3NfYtmgfGEhB2zZTWss7n2"
 duration: 715
 expertise: "Advanced"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Michael Sproul']
 ---

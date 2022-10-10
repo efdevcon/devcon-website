@@ -7,8 +7,8 @@ ipfsHash: "QmVTsNVwJ7CtrQZvMcDEn8cxA92x4oFsYSszcxWg1vvaYi"
 duration: 1342
 expertise: "Intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Sebastian Buergel']
 ---

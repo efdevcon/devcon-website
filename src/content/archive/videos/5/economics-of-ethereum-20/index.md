@@ -7,8 +7,8 @@ ipfsHash: "QmTJUVptmSVtqSCkxxEszJRnNpseonzKN6W3XNFQwPUAbp"
 duration: 1276
 expertise: "Beginner"
 type: "Breakout"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Collin Myers']
 ---

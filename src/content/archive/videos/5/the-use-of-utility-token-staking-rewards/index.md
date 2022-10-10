@@ -8,8 +8,8 @@ ipfsHash: "QmUyQsU1WtcDeJuVAF114xnXt7qt9YLPpazdZr5zWYBvQ1"
 duration: 1379
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['staking','rewards','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Peter Zeitz','Will Warren']
 ---

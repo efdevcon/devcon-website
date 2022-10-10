@@ -7,8 +7,8 @@ ipfsHash: "QmbbYFSGyaWHHfCX4ofy8tQoWxbzYrrn9Tz9HLSXRSLNuh"
 duration: 915
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Elias Haase']
 ---

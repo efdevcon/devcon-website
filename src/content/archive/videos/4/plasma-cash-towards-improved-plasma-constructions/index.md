@@ -7,8 +7,8 @@ ipfsHash: "QmayNG1zpma6QssScMzjW1Lx6vmhrQsuhWcQC1MJk1JfaH"
 duration: 1935
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['speed','security','sidechains','UI','developer experience','NFTs','liquidity','R&D']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Georgios Konstantopoulos']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmX3KPbaa5GMGd5KtqGomEna5VhgfEGJacGZiTLVWz7imG"
 duration: 245
 expertise: "Intermediate"
 type: "Breakout"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: ['technical']
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Paul Razvan Berg']
 ---

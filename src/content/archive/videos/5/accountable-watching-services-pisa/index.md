@@ -7,8 +7,8 @@ ipfsHash: "QmdYDufSX3MAEy51FoH5spoArWY65tNyMxFzqNAewv2wnZ"
 duration: 993
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['finance','accountability','network','dapps','developers','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Patrick McCorry']
 ---

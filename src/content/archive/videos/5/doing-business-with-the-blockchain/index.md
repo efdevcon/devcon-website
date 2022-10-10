@@ -7,8 +7,8 @@ ipfsHash: "QmaoHq86pgijR18sDDL7tqaFNjdy5jVeHrcYSoxgp9ZsDZ"
 duration: 506
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Enrico Talin']
 ---

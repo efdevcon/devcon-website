@@ -7,8 +7,8 @@ ipfsHash: "QmPdBtVLFAYU9mNwexp4usXpNitW8LinK7Gbym5okvXJaY"
 duration: 1133
 expertise: "Beginner"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['Szabo','contracts','general']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Ian Miers']
 ---

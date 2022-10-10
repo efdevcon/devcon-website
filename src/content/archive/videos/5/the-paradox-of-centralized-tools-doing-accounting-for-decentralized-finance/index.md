@@ -9,8 +9,8 @@ ipfsHash: "QmPAf98enNKhxa9R3csQkfiSBa81tJWs9Pire5zFDCbrRC"
 duration: 477
 expertise: ""
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['Beginner']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Lefteris Karapetsas']
 ---

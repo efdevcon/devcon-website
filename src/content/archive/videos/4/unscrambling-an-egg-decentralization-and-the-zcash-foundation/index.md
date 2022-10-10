@@ -7,8 +7,8 @@ ipfsHash: "QmVJ1RzF73u1M2qkvDpkA8hQDudb9qyDTyYB8iZgnoVr4s"
 duration: 1847
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['governance','dapps']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Josh Cincinnati']
 ---

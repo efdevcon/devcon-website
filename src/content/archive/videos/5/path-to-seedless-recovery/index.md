@@ -7,8 +7,8 @@ ipfsHash: "QmbFw1KnsAjYQ7QfYpy2R72E4mWVkR2FFME9GaHgGsL8HD"
 duration: 404
 expertise: "Intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Stefan George']
 ---

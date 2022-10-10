@@ -17,8 +17,8 @@ ipfsHash: "QmTtKoFX9WcQJC41qdjptSCxN2DuZP6RbKqSu5rT82Rkof"
 duration: 729
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Matt Luongo']
 ---

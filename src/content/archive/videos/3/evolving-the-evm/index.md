@@ -7,8 +7,8 @@ ipfsHash: "QmZJEdD2WYN5xqPfn8t8uvKWKSBN1588Q1xn3JcmVYBLDN"
 duration: 1494
 expertise: "Advanced"
 type: "Panel"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Martin Becze','Alex Beregszaszi','Pawel Bylica','Dr. Greg Colvin','Dr. Christian Reitwiessner','Casey Detrio']
 ---

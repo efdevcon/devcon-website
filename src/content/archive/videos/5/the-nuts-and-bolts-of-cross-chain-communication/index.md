@@ -7,8 +7,8 @@ ipfsHash: "QmcFK6pDFusLGpyCxUcEspYRt2puFXLvfHGX66SRBSsXr8"
 duration: 3125
 expertise: "intermediate"
 type: "Breakout"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Mustafa Al-Bassam','Dominik Harz','Alexei Zamyatin']
 ---

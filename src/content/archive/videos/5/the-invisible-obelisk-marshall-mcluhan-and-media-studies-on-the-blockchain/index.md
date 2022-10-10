@@ -10,8 +10,8 @@ ipfsHash: "QmRx69kM8zrDS8mDL9FnpZFyCwCCUtqCCBbdyZt5dYaxrW"
 duration: 1190
 expertise: "Advanced"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['academic']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['David Morris']
 ---

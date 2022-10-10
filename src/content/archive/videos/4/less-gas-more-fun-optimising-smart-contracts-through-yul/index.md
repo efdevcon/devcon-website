@@ -7,8 +7,8 @@ ipfsHash: "QmcpGRbhEN1TqMJZNQo5B3Ad5uaq3TKUc5QtVpNXJ7ignK"
 duration: 1522
 expertise: "Expert"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['gas','gwei','fees']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Christian Reitwiessner']
 ---

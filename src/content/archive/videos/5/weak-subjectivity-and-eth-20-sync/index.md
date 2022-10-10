@@ -7,8 +7,8 @@ ipfsHash: "QmRegNZE3zdNXN12pxNncVodUHCmTT5rhVMj22U5RZTWwS"
 duration: 702
 expertise: "Advanced"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','fork choice rule','PoS','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Hsiu-Ping Lin']
 ---

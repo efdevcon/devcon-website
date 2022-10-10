@@ -7,8 +7,8 @@ ipfsHash: "QmYHhptBRv2sRTLzMqKAFZdmvXWE8SJBZCW5sQJx2c5unv"
 duration: 1056
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['governance']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Boris Mann','Greg Colvin','Jamie Pitts']
 ---

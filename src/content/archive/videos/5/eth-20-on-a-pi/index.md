@@ -7,8 +7,8 @@ ipfsHash: "QmU5CrDSsDUa1Pxs2S5xWT1ayxmeFD1KLjknNmZ9qVDLPA"
 duration: 1064
 expertise: "Beginner"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['raspberry','eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Mamy Ratsimbazafy']
 ---

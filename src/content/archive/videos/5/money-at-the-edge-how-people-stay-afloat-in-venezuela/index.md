@@ -7,8 +7,8 @@ ipfsHash: "QmcptKr3evwmNKX6NKECoS3V6HfrLn2miB3RofCGfHTvMX"
 duration: 1255
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['open money initiative','venezuela','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Alejandro Machado']
 ---

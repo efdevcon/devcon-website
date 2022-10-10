@@ -7,8 +7,8 @@ ipfsHash: "QmXZHJQfXUxvyRHV2fcMW8M983gfjzPVUVQtyKLwrpmPDJ"
 duration: 1203
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Dominic Williams']
 ---

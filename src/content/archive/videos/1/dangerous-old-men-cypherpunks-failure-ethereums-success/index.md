@@ -7,8 +7,8 @@ ipfsHash: "Qme5521ku6vBRHbz5po4tvbcMUHS4VK5dwNou7TUhYo8DY"
 duration: 2944
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Vinay Gupta','Imogen Heap']
 ---

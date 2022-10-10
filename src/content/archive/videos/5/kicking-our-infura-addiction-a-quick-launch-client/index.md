@@ -8,8 +8,8 @@ ipfsHash: "QmTKxgBaWVQFUcyYbS4FhKFnihhz5ZXSKicU2sL7qyHUZa"
 duration: 1278
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['Infura','mainnet','launch time','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Jason Carver']
 ---

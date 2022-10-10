@@ -7,8 +7,8 @@ ipfsHash: "QmTfqvJX8YvZRcL2xyoKBdY7ai6PvUTftyhsxirfykoi3N"
 duration: 2016
 expertise: "Intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Samuel Walker']
 ---

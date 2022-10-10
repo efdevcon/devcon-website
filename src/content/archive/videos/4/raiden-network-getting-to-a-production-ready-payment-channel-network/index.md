@@ -7,8 +7,8 @@ ipfsHash: "QmX2L3zjUjjWsibqv33RtJh8ATzifyxocZBfQfBkKtZryy"
 duration: 1333
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['payment','scaling','dapps']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Lefteris Karapetsas']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "Qmafcbd34fpr2SxZKZqP5WjRgKGWdZemZfFj8VyMPRDoJt"
 duration: 646
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['security','sandboxing','UX','light clients','incentives']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Marcus Ligi']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmV1etQXq2yWBDt2Afn8B4gNUPMsWs2kVe8JYDN8jYKLeo"
 duration: 1299
 expertise: "Advanced"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Karl Floersch']
 ---

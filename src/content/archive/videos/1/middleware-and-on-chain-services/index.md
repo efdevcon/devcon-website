@@ -7,8 +7,8 @@ ipfsHash: "QmTzpJi6JPnVTnY897KuxzqbRWQxu8Q9uLiQFkVdcnXrUg"
 duration: 3510
 expertise: "Advanced"
 type: "Panel"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Roman Mandeleil','Piper Merriam','Christian Lundkvist','Joseph Chow','Nikolai Mushegian','George Hallam']
 ---

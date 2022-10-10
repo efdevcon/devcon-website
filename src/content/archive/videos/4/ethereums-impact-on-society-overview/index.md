@@ -7,8 +7,8 @@ ipfsHash: "QmWYFU1Fu5Tva2VgCHuchgwJEzWcMuBQNEjdpauDBAvKFY"
 duration: 1112
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['islamic','finance','venezuela','sexuality','international','law','identity']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Rhys Lindmark']
 ---

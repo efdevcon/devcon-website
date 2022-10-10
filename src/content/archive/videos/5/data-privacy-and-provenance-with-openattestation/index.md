@@ -12,8 +12,8 @@ ipfsHash: "QmQ7iPBTyQMv58sRCz1CZniZPhxeaJ8j2ApJhtrXqudmFx"
 duration: 1082
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['Technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Raymond Yeh']
 ---

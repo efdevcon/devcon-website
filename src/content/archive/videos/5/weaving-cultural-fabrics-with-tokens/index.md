@@ -7,8 +7,8 @@ ipfsHash: "QmSjymhRB7GpoJVaMfJSu5JxgAnk3rc5QGSdGf3BKrPCAJ"
 duration: 1086
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['tokens','culture','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Mark Beylin']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmPHnoqMWatzwLTBU5PuQYeBApA8S97qX6uSBRnxHFffuz"
 duration: 2430
 expertise: "Intermediate"
 type: "Panel"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['interoperability','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['James Prestwich','Brian Behlendorf','Justin Drake','Joseph Schweitzer']
 ---

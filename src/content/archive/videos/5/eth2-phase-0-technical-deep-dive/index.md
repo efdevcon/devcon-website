@@ -7,8 +7,8 @@ ipfsHash: "Qmb8k7EEVUnJfa5gPzPb5XeCo4tbwjLfpWMEnw6vpDDWbr"
 duration: 6679
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Danny Ryan','Alex Stokes','Chihcheng Liang']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmVxLRNifUcGhQ2MSw1U3e8URuKFAPQCGSA6HrhinqrDca"
 duration: 820
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['education','adoption','onboarding','training','growth','industry','enterprise','scalability','fintech','privacy','security','data']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Taylor Gerring']
 ---

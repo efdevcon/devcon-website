@@ -10,8 +10,8 @@ ipfsHash: "QmQkwRrxzXsTbux9rgyup7Aa1eKQxMFQWnE3EMEsQRzqEv"
 duration: 1359
 expertise: "Expert"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['state channels']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Liam Horne']
 ---

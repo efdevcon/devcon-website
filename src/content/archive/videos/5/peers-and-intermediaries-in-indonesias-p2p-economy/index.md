@@ -10,8 +10,8 @@ ipfsHash: "QmQVYPeefAZ2oXA3BUrCGeAys7x8HnEY6jxzZ4DGoiaDNt"
 duration: 1231
 expertise: "Advanced"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['academic']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Sunniva Sandbukt']
 ---

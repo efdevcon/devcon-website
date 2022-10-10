@@ -7,8 +7,8 @@ ipfsHash: "QmNnpwbMsKURMMGDUvP47LWDpXUxrS6M21FZU3K9jwbV3E"
 duration: 1214
 expertise: "Beginner"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['classic','etc','general']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Terry Culver']
 ---

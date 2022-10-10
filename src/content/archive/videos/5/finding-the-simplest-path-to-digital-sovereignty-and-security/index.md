@@ -7,8 +7,8 @@ ipfsHash: "QmRNCsF3FnjucsVsCoKqrFAkaS1vW5cqegWY2FQSdysLzG"
 duration: 1250
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['digital','winter','democracy','security','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Paul Gardnerstephen']
 ---

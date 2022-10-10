@@ -7,8 +7,8 @@ ipfsHash: "Qmcv4av5mm6KkBz5QKE5gofyTtD45j18r67b3L2ZGkfMzN"
 duration: 978
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Bill Marino']
 ---

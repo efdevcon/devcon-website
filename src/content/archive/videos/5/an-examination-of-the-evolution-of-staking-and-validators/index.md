@@ -7,8 +7,8 @@ ipfsHash: "QmTGaZrv8NSaVLCB8UCXK8AXkDuzCYcBhWmGnfmqCvyVck"
 duration: 1046
 expertise: "Beginner"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['staking','eth2','general']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Jun Soo JK Kim']
 ---

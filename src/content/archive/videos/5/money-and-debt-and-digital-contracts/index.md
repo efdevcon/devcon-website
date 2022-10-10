@@ -7,8 +7,8 @@ ipfsHash: "QmZqewA3uph5mR42W5EqUzmNP4Nmf3LjgWcmtWeZKixn8S"
 duration: 1359
 expertise: "Beginner"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: ['internet archive','wayback machine','interest','history','general']
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Brewster Kahle']
 ---

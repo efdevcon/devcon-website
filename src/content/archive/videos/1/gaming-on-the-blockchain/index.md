@@ -7,8 +7,8 @@ ipfsHash: "QmSMoyadxWXnjaycMpPER2LK97dCqRpdHogJJmESnyK6Vu"
 duration: 2298
 expertise: "Intermediate"
 type: "Panel"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Wendel Davis','Peter Borah','Julian Pittleman','Jim Berry','Tyler Smith']
 ---

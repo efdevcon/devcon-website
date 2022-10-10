@@ -7,8 +7,8 @@ ipfsHash: "QmXjzZLi4TmhqEwLzWBnykNKTunfqEYk8C6kVW6mVZqEQr"
 duration: 1456
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['development','devex','plasma']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Ameen Soleimani','Arjun Bhupati']
 ---

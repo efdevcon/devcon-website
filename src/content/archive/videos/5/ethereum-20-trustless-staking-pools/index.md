@@ -7,8 +7,8 @@ ipfsHash: "QmNnzMS8YciybE92BE45X7kSdj6VDUSXtZ9PPkyRQTXUrb"
 duration: 1246
 expertise: "Advanced"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Carl Beekhuizen','Dankrad Feist']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmYJQYhhY3xmzkXrDMD7rsK1xMhqWN5RQEnR1WCzBAmZMw"
 duration: 1809
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['magicians','community','schedule','core devs','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Ethereum Magicians']
 ---

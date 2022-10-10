@@ -7,8 +7,8 @@ ipfsHash: "Qma73SZ4Lm5ewJCEsmrDY1E8oGRMNu6zeUQPcEgHyvwkkf"
 duration: 1391
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Raphaël Mazet','Jakub Wojciechowski']
 ---

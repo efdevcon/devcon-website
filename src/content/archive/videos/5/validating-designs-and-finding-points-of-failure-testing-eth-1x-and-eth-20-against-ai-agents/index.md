@@ -7,8 +7,8 @@ ipfsHash: "QmYbHSzr2rn2c8KyNJNGNxSVW288JHPhzEG68wojHPacDo"
 duration: 1070
 expertise: "Intermediate"
 type: "Breakout"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Olivier Bégassat','Vanessa Bridge']
 ---

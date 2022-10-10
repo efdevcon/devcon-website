@@ -7,8 +7,8 @@ ipfsHash: "QmaBWyv1YkVSswx8VfiweNFvgroRgoy8Hn2MDCG8RFHW42"
 duration: 2305
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Aleksandr Krupenkin','Sergei Lonshakov']
 ---

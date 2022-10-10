@@ -7,8 +7,8 @@ ipfsHash: "QmSJr9SwWbZdKYETp9xSRv2nmPu4FTzFx9SUJTir5rgsLx"
 duration: 2064
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['marketing','selling','behavior','adoption','psychology','users','public','communication','collaboration']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Vinay Gupta']
 ---

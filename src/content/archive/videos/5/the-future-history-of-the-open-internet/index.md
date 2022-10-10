@@ -7,8 +7,8 @@ ipfsHash: "QmYpDTx7ATaRXvzZKsaohFcEnWNw78b2v5a5rmQVzEiAw2"
 duration: 1213
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['open internet','future','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Kevin Owocki']
 ---

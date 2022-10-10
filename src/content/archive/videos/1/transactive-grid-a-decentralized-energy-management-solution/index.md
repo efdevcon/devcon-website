@@ -7,8 +7,8 @@ ipfsHash: "QmdBxaYquRcQNF357LrHFJVYf1zWs8RMSM7LWi9BAYKZeA"
 duration: 974
 expertise: "Intermediate"
 type: "Panel"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Lawrence Orisini']
 ---

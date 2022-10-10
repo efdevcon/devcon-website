@@ -7,8 +7,8 @@ ipfsHash: "QmYeMnnC7qNpKAmBYwrhGCTWTw2euYmWzUTaSdJe4Wn6fq"
 duration: 1259
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['p2p','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Rich Burdon','Chris Waclawek']
 ---

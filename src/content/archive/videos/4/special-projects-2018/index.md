@@ -7,8 +7,8 @@ ipfsHash: "QmfJZJpQSh2iepUCnUkoLoJxkxsR9GWCKgsGYSejLatCJe"
 duration: 783
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['virgil','projects','updates']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Virgil Griffith']
 ---

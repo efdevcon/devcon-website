@@ -7,8 +7,8 @@ ipfsHash: "QmPxkaeJCB2Z7cnf6ZVvbHVwrNngVsv3hLnBCpHJWg76fT"
 duration: 954
 expertise: "Advanced"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['proof','existence','ads','root','hash','tick','signature','state','channels','time']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Jeff Coleman']
 ---

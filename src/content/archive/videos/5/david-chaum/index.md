@@ -7,8 +7,8 @@ ipfsHash: "QmbPVEgDSeCdDFWMLA43L2toW5xLz85WnCx4T8ekSFzBJ3"
 duration: 1251
 expertise: "Beginner"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['cryptography','IACR','metadata','elixxir','praxxis','anonymity','general']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['David Chaum']
 ---

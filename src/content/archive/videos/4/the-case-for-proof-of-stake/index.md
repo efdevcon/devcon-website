@@ -7,8 +7,8 @@ ipfsHash: "QmfXYa7UZk152Q5GFd7KPKmXzunDFZUpXcxzWZSwaUq8pd"
 duration: 1810
 expertise: "Beginner"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['POS','eth2']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Emin Gün Sirer']
 ---

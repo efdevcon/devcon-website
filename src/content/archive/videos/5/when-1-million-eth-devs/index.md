@@ -9,8 +9,8 @@ ipfsHash: "QmPVYdWiFD59RJqsxqWCfXVeTnje1z7zYJ4eFJeimUabZv"
 duration: 1550
 expertise: "Beginner"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['million','devs','developers','general']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Joseph Lubin']
 ---

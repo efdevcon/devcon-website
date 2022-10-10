@@ -7,8 +7,8 @@ ipfsHash: "QmRBGCtktV7gXjhU3yU49qsgkx6qitL28e5Zo8yPg1P39W"
 duration: 1702
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['separation','decentralization','money','state','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Paul	Almasi']
 ---

@@ -8,8 +8,8 @@ ipfsHash: "Qmc8aqcwE8o1qpurhe4sP8FShtUnmAuWosbNXuV98PkihQ"
 duration: 1705
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['dapps','secret contracts','zkproofs','voting','governance','auctions']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Guy Zyskind','Isan Rivkin']
 ---

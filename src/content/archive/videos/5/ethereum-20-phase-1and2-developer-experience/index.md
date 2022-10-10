@@ -9,8 +9,8 @@ ipfsHash: "QmVYWcqQeWbBteVxQkYSBpcQGGmKGJgQ4pyrd162NXEYpz"
 duration: 6906
 expertise: "Intermediate"
 type: "Breakout"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: []
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Jacek Sieka','Hsiao-Wei Wang']
 ---

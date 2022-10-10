@@ -7,8 +7,8 @@ ipfsHash: "QmSdm6C8WtzH4yv8keqqRPTzsDsgFWY5aaiUq5Zvb7b4ea"
 duration: 1872
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['philanthropy','charity']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['E. Glen Weyl']
 ---

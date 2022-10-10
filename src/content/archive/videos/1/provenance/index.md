@@ -7,8 +7,8 @@ ipfsHash: "Qmc68wy4LVNjUHUxDtWaxXX8dKQPjA7xx4BG9Q2DaE9z99"
 duration: 528
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Jessi Baker']
 ---

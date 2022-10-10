@@ -7,8 +7,8 @@ ipfsHash: "QmQX5L75gyX1yyVKatCCDE5EYtQ6PmPdfAZ3uVwCxAdkHL"
 duration: 528
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['governance','carbon','developers','machine','layer','pow','pos','fork','voting','community','etc']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Bin Lu']
 ---

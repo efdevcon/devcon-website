@@ -7,8 +7,8 @@ ipfsHash: "QmQ1Zfi3eKuEgWRGkS9YKZDPP5e6jS5wMqzAy5kgdgUUUq"
 duration: 357
 expertise: "advanced"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Mudit Gupta']
 ---

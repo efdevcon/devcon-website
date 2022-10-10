@@ -9,8 +9,8 @@ ipfsHash: "QmbAwg3o9dRmpUPeroekBUVSSKewTKZzc8ujp2uHyHghJS"
 duration: 5344
 expertise: "Beginner"
 type: "Workshop"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Anja Blaj','Marina Markezic']
 ---

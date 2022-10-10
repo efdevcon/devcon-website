@@ -13,8 +13,8 @@ ipfsHash: "QmShZtz3hPYyTfe9uZgxJvq4iRUfRJ2sgcE6b944ggrS5x"
 duration: 2465
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['swarm','developers']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Aron Fischer & Swarm Team']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmaRpPXyc1VhwFGdXjnCiNumCyZS9SUXyzAkoYHQN38DU3"
 duration: 3028
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['democracy']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Cory Doctorow']
 ---

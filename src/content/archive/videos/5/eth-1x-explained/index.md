@@ -7,8 +7,8 @@ ipfsHash: "QmY3LmfLPPbtu6buxLm8QW62XYBaEQ6CSM7xc4WLQSMV8T"
 duration: 1074
 expertise: "Beginner"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['suschainability','EWASM','simulation','state rent','chain pruning','core devs','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Hudson Jameson']
 ---

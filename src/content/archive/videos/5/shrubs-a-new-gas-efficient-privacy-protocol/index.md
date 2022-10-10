@@ -9,8 +9,8 @@ ipfsHash: "QmS9PgsiNqUY7bbeYMPxmCAJq4zWy8vpyLqhqeL5Vz3ybr"
 duration: 1464
 expertise: "advanced"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Alex Gluchowski','Kobi Gurkan','Marek Olszewski','Eran Tromer','Alexander Vlasov']
 ---

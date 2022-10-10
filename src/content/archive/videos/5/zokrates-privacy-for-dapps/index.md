@@ -9,8 +9,8 @@ ipfsHash: "QmPijdc5ABT4CERC4r6bW7bRhE1TZMV4A6tDT3fbEHMxWb"
 duration: 1374
 expertise: "Beginner"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: []
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Jacob Eberhardt','Thibaut Schaeffer']
 ---

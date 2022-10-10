@@ -9,8 +9,8 @@ ipfsHash: "QmcxLK8NHE8CZjqXBgXJSQEXqp7eKb35tpShob2FYwxRCv"
 duration: 1487
 expertise: "Beginner"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: []
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Zachary Williamson']
 ---

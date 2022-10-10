@@ -13,8 +13,8 @@ ipfsHash: "QmSxQW5fdiErURx18t9Sy3fFBmoVKFeRZzmccU29oRPijP"
 duration: 1648
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['zcash','hash functions','merkle']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Dmitry Khovratovich']
 ---

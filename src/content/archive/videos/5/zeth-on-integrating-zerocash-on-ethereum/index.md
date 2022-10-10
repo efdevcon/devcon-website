@@ -7,8 +7,8 @@ ipfsHash: "QmYe5i53Zsohw6rs6RdERSmXQeQvNskZSGyrBnVG8ELQFi"
 duration: 1221
 expertise: "Beginner"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: []
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Antoine Rondelet','Michal Zajac']
 ---

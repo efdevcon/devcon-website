@@ -7,8 +7,8 @@ ipfsHash: "Qmcdzh9CE12TLERBQbDo8g3xGjiA6XKsPLHz4iLjDRRXSH"
 duration: 2747
 expertise: "Beginner"
 type: "Panel"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: []
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Liz Steininger']
 ---

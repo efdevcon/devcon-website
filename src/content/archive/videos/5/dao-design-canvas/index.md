@@ -7,8 +7,8 @@ ipfsHash: "QmPPwxntbFbsdT2skntp6BPxXAsRTBzpM6p1VU6iDbuyor"
 duration: 1016
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Felipe Duarte']
 ---

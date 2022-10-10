@@ -7,8 +7,8 @@ ipfsHash: "Qmdk9Zrpr1xDHrGb1BNvsgAYWLhvNMQ6RJmpAeEiFA7VGV"
 duration: 3638
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['trust','ethash','algorithms','asic','mining','cpus','fnv']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Kristy-Leigh Minehan']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmWCYAFbykCcDtUgZnTVd2GUQtpnCzU3EzSJDid531eXuN"
 duration: 1088
 expertise: "Beginner"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: ['UBI','demurrage','currency','ecology','value','debt','rewards','contracts','tokens','general']
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Sep Kamvar']
 ---

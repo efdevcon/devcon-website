@@ -9,8 +9,8 @@ ipfsHash: "Qmc3udcq1x845HKtgT2xNJmt2unGRLwihQ8QS5qiWDvFDY"
 duration: 1255
 expertise: "Advanced"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['academic']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Mally Anderson','Everett Muzzy']
 ---

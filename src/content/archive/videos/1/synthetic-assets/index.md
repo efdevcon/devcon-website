@@ -7,8 +7,8 @@ ipfsHash: "QmNgbvjJEaYWPYHyXz8s3p5DTsLWWkgBrKaqzz4qfwHJJ5"
 duration: 821
 expertise: "Intermediate"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Dominic Williams']
 ---

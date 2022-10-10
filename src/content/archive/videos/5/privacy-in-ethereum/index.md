@@ -7,8 +7,8 @@ ipfsHash: "QmW4588uWqyVvtcnN7eZH7i37hpNTmYNh8NTpc8MTjsXQW"
 duration: 1264
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['barry','whitehat','security','technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Barry WhiteHat']
 ---

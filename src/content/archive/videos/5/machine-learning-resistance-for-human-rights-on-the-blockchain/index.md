@@ -25,8 +25,8 @@ ipfsHash: "QmY4XoSutfP8C54GWBA1cYfChmsBNQa4ck3n3rWkpgz6mH"
 duration: 1945
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Santiago Siri']
 ---

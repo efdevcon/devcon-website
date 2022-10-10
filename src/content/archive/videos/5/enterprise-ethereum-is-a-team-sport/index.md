@@ -8,8 +8,8 @@ ipfsHash: "QmYSCNg7RPW7S26GXu3xcb82wDQjS66J1o6kqyta95Vkgb"
 duration: 1275
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['WEF','RFPs','scalability','consortium','blockchain','ROI','value','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Nadia Hewett']
 ---

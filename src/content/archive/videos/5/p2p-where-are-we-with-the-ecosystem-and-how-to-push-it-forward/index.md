@@ -9,8 +9,8 @@ ipfsHash: "QmTeu1XcHwjCajVkudSpE6fWiGRgvMmgxbRyJZUiyVKUwe"
 duration: 13982
 expertise: "Advanced"
 type: "Breakout"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: []
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Chris Waclawek']
 ---

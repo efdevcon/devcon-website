@@ -7,8 +7,8 @@ ipfsHash: "Qmf91dRz6tnq1xrEjf1k3QC1NytJ1QtC1gTTzq12MXrK4U"
 duration: 1300
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['sharding','casper','security','node','gossip']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Jannik Luhn','Kevin Mai-Hsuan Chia']
 ---

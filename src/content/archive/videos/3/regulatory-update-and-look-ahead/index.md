@@ -7,8 +7,8 @@ ipfsHash: "QmZ3v7gKduG4iz9NhJnmETcugBMzGPyqmqwpmfnZaXt21F"
 duration: 1126
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Peter Van Valkenburgh','Jerry Brito']
 ---

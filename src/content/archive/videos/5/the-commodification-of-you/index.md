@@ -9,8 +9,8 @@ ipfsHash: "QmUGgv5Z5WQE54To57TA58vVB15phwbmYWs7TXsBUArDEp"
 duration: 700
 expertise: "Beginner"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['commodification','data','monetization','general']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Seven Waterhouse']
 ---

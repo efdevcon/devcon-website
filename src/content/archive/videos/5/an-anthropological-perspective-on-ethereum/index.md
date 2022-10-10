@@ -7,8 +7,8 @@ ipfsHash: "QmaykJBBf6MEYYQo5qbU17Be9Rd3vtCauYmxAvQQbSLKn6"
 duration: 1273
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Ann Brody']
 ---

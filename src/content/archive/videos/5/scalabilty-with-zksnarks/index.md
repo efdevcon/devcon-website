@@ -7,8 +7,8 @@ ipfsHash: "QmeXYJKHkUhVubjtwfwK3dyAUNbhPyNT1kDzGuMd5U13Yc"
 duration: 1506
 expertise: "Advanced"
 type: "Breakout"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['technical']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Jordi Baylina']
 ---

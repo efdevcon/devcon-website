@@ -10,8 +10,8 @@ ipfsHash: "Qmf9zHkZmXCt9bDrDfHbRMCvgN4wZgzhaL4TwZbzYjasms"
 duration: 1608
 expertise: "intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Lakshman Sankar']
 ---

@@ -9,8 +9,8 @@ ipfsHash: "QmTvnttGahCyiJLJ8gJiSh5ikGSRL97mo8ccmL6M9GuU8J"
 duration: 1271
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Sascha Hanse']
 ---

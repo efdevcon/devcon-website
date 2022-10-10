@@ -7,8 +7,8 @@ ipfsHash: "QmaZzJqfgqwgZh43aeiVrqHMxcxf1GEUx68s6jjPC81Uh4"
 duration: 363
 expertise: "beginner"
 type: "Breakout"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Akash Patel']
 ---

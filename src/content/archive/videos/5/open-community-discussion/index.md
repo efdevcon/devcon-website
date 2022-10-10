@@ -7,8 +7,8 @@ ipfsHash: "Qma5zEYJNyjYd5YNBQg6qkY9xXSP7QcxXAAuirM5RJmszc"
 duration: 3573
 expertise: "Intermediate"
 type: "Panel"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['ecosystem','feedback','floor','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Various']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "Qmd5S8CRJHjCKL2gURzQzNm3jFDvEJkrVtG9mxDM6jgBJo"
 duration: 1560
 expertise: "Expert"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['community','assets','fiat','legal']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Vinay Gupta']
 ---

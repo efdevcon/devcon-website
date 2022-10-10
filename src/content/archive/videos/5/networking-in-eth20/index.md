@@ -11,8 +11,8 @@ ipfsHash: "QmQGQPyaBKLpQuDxF6wiLLAiWNvy1Az8irphMTwFh51Nad"
 duration: 1308
 expertise: "Advanced"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['networking','eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Antoine Toulme','Rene Nayman']
 ---

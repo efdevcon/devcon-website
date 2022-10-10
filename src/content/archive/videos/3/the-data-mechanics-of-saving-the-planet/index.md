@@ -7,8 +7,8 @@ ipfsHash: "QmWzoyutXP61vnA3yhX6tNBMK5gPbCcmsWCmm84iwg9DLc"
 duration: 950
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Gregory Landua','Risto Karjalainen']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmfNG4FCuREvxqkyLwy8b6k3rExxXwfQ2SybTnNBwv1FSg"
 duration: 280
 expertise: "Intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Kendrick Tan']
 ---

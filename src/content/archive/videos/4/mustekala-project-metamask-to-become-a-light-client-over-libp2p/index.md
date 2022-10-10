@@ -10,8 +10,8 @@ ipfsHash: "QmNY267Vj4EuUYxYcEsyi4uVGQGSRgkgdmBWTHFueQ8aaj"
 duration: 538
 expertise: "Expert"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['clients','network','peers','nodes','MM']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Dmitriy Ryajov','Frankie Pangilinan']
 ---

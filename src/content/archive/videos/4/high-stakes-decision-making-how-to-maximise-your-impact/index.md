@@ -7,8 +7,8 @@ ipfsHash: "QmYP5H4dXze6yNUZW1vcif1wEP38tAgUutB2FXLYuRnXVN"
 duration: 1434
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['impact']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Liv Boeree','Natalie Cargill']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmRJLnr6JAaC5RM1BXRj4ksyFHzCvikapG9QNW1LcZ43tZ"
 duration: 1016
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Andrei Maiboroda']
 ---

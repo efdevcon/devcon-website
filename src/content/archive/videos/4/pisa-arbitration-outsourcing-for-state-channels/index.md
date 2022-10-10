@@ -7,8 +7,8 @@ ipfsHash: "QmXi8pScLckmsRhDYbu3hfQDSbjanNxpKKEL3QHQ43GVUR"
 duration: 1432
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['state channels']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Patrick McCorry']
 ---

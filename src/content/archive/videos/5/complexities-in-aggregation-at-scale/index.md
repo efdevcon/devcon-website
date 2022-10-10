@@ -7,8 +7,8 @@ ipfsHash: "QmX5bj47C8m2S2ZjFonuYxkXzMjPsJ1CBjoSLzbQzpgxT1"
 duration: 856
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['Scaling','aggregation','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Mikhail Kalinin']
 ---

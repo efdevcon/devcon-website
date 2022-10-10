@@ -7,8 +7,8 @@ ipfsHash: "QmSfjLMWA3DTxeZMAb7wNWmXY4DEEcy144QyurWSwD5FmP"
 duration: 4831
 expertise: "Advanced"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['Technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Konstantin Panarin','Alexander Vlasov']
 ---

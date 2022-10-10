@@ -10,8 +10,8 @@ ipfsHash: "QmVRJQwmY8x786VSPetPAfNUx5u5SQHUUK26bRRrvm6wGT"
 duration: 1565
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['validating','consensus','trust']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Mustafa Al-Bassam']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmY3ZxJQQeUwqj78HxeTSzqfKenHpUL8RTjzyZNYk8csFN"
 duration: 1522
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: []
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Vlad Gluhovsky','Guillaume Ballet']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmR9XD62xHs7viixfagXmmKjeQqWKCCbZFaVtNcFnJksnM"
 duration: 1570
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['incentives','nonprofits','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Griff Green']
 ---

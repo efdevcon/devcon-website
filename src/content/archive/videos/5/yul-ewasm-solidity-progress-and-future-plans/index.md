@@ -10,8 +10,8 @@ ipfsHash: "QmS7Jmcp5bibia7UC31TPdEtbVGxjgTaWQBcbxbk6RCmir"
 duration: 1171
 expertise: "Advanced"
 type: "Breakout"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Christian Reitwiessner']
 ---

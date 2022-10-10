@@ -8,8 +8,8 @@ ipfsHash: "QmT48zpVJpovSwFoaorXhazxhbStMRWZsxP1LgHn8aukdz"
 duration: 1363
 expertise: "Intermediate"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['John Pacific','Ravital Solomon']
 ---

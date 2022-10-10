@@ -11,8 +11,8 @@ ipfsHash: "QmcbnvAfW2kXywYnytEZWwvuN449PqiJkupAvBNkgjzhvt"
 duration: 1220
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Guillaume Ballet','Maurice von Glasenapp','Eseoghene Mentie','Benjamin Onuoha','Rob Stupay']
 ---

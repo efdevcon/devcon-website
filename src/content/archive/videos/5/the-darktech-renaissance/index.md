@@ -7,8 +7,8 @@ ipfsHash: "QmaJQUqenNkanT9MEpo74s999RS4ocmboepbRWBUTCa5pS"
 duration: 1290
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['mixers','anonymity','academy','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Amir Taaki']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmbnnSE8MHGGPa4ZPLDge7ZAAv3r8Sx2REsnN1Ko6vt2uB"
 duration: 2103
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['legal','law']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Primavera De Filippi']
 ---

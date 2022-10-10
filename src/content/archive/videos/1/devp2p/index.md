@@ -7,8 +7,8 @@ ipfsHash: "QmSdx5UoPduiiTn6zvMSZ2cTQ4Uwqge7jEXrj12ijSsKDL"
 duration: 1000
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Alex Leverington']
 ---

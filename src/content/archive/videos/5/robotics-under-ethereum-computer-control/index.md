@@ -7,8 +7,8 @@ ipfsHash: "QmPdFpVMuEkbhqqGycZGXgXEnET1PkgKvW189nwPVTk4Km"
 duration: 336
 expertise: "Intermediate"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Sergei Lonshakov']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmbrjQWgzZzRJ95G3QudurBTMEiMeHGmrFux9GJyGp1C1f"
 duration: 1901
 expertise: "Beginner"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['cryptoeconomics','incentives','equality']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Karl Floersch']
 ---

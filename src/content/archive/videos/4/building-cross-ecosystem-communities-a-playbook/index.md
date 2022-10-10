@@ -7,8 +7,8 @@ ipfsHash: "QmSyDKw5nuZRDw3zWcY3EpwHDfJGMEunQHi9ZXHJ6mHw2n"
 duration: 618
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['community','goals','web3','ethprize','ethsecurity']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Robbie Bent']
 ---

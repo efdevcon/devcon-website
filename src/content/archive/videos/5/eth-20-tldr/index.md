@@ -7,8 +7,8 @@ ipfsHash: "QmRbUGCi52nYdxTJLpVNKVkj5oXCPF7BCnFkYB4GL2tgUF"
 duration: 1194
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','updates','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Danny Ryan']
 ---

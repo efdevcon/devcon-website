@@ -9,8 +9,8 @@ ipfsHash: "QmfGMijtwp5gqsTmdEGNeyNUcBuV8QAf67nU3D3qyRxHeJ"
 duration: 1952
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['sharding','python','eth2','casper','developers']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Hsiao-Wei Wang','Raul Jordan']
 ---

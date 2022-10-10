@@ -7,8 +7,8 @@ ipfsHash: "QmYc3z2KZxQw7AymGpQwBoUSAQCD1ZQGw787DG5oGkQRqV"
 duration: 1216
 expertise: "Advanced"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Yoichi Hirai']
 ---

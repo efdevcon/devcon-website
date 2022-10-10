@@ -7,8 +7,8 @@ ipfsHash: "QmfRUDidSRQTVa8zLkWPZ2J29QuX645NJSvemzeKBQknQ9"
 duration: 979
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Peter McBurney']
 ---

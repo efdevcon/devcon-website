@@ -7,8 +7,8 @@ ipfsHash: "QmfFkwpCQe2XEfpuvRetdUiFkZtV7Y5CywZixBzrwRAxse"
 duration: 638
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['governance']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Hudson Jameson']
 ---

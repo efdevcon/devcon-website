@@ -7,8 +7,8 @@ ipfsHash: "QmSCfihcYBhJa6Pex31mkJ55ZHcbprrdHuTuNeWMKepCRd"
 duration: 1194
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Houman Haddad']
 ---

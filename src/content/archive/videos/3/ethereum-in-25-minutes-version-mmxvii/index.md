@@ -7,8 +7,8 @@ ipfsHash: "QmUHDWqfLu81pDX74kz3WYAxDmMsE2m8BCbp2eXsuehFAv"
 duration: 1493
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Vitalik Buterin']
 ---

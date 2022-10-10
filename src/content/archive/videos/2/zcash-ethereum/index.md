@@ -7,8 +7,8 @@ ipfsHash: "Qmb9NWsEKDase7EDsoNzBsRmk9qV6wAduGxw6fo2NDwHPo"
 duration: 1258
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['immutability','encryption','communication','selective','dicslosure','human rights','society','fungibility','data','security','bitcoin','zksnarks','zkproofs','validators','programmability','alchemy','btcrelay']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Zooko Wilcox']
 ---

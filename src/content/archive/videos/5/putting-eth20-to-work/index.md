@@ -7,8 +7,8 @@ ipfsHash: "Qmf7tnNY9PhDzU2g1kcFcFDhaikHcnHGmzdVqDNZkmuoyP"
 duration: 1184
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Alex Stokes']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmQdwDvAmxbajsKN2rgUV5icNUA2PCGL3XW1hJ92wYAGm1"
 duration: 2552
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['panel','zcash','tendermint','cosmos','etc','classic','coexist','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Vitalik Buterin','Terry Culver','Josh Swihart','Jae Kwon']
 ---

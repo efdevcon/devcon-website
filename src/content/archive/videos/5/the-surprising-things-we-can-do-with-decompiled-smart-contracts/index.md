@@ -12,8 +12,8 @@ ipfsHash: "QmRBGCtktV7gXjhU3yU49qsgkx6qitL28e5Zo8yPg1P39W"
 duration: 1702
 expertise: "Beginner"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['decompiled','smart contracts','general']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Tomasz Kolinko']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmbyZXsBscnnoHtpK4JUa93PEoDd1nRn2kr28oMsFPduaH"
 duration: 453
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['TEE','ZKP','zkproofs','sMPC']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Julian Koh']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmSzPJpNhYPhFCcPTe5F9mYaDsA1dXyCzeTHoTfjTCYBGS"
 duration: 1320
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['religion','halal','islam']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Wan Hafizi Wan Halim','Mohd Daud Bakar']
 ---

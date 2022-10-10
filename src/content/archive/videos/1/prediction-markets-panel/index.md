@@ -7,8 +7,8 @@ ipfsHash: "QmQheKGXFPDgX24X31MaNgJcuwMcNm9nbtdjffCEeGDJmg"
 duration: 1797
 expertise: "Advanced"
 type: "Panel"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Edmund Edgar','Vitalik Buterin','Jack Peterson','Martin Koppelmann','Stefano Bertolo']
 ---

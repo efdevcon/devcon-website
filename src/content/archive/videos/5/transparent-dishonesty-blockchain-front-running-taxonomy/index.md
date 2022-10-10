@@ -8,8 +8,8 @@ ipfsHash: "QmRRERdpVFwoPbLfuCdBDDoXisKFz1toaBhquNUwzoTzhN"
 duration: 307
 expertise: "Advanced"
 type: "Breakout"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: ['academic']
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Shayan Eskandari']
 ---

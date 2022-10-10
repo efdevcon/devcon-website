@@ -7,8 +7,8 @@ ipfsHash: "QmT4UcQoeiNCtK3wKS317foECzxNgaEUsqKLVAaidHgKg2"
 duration: 853
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['evolution','libp2p','eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Zahary Karadjov']
 ---

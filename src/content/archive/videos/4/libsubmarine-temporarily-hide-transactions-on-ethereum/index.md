@@ -7,8 +7,8 @@ ipfsHash: "QmeQ9wEvYe52EX79D8irWom2iSN2ziAY7EM6wkfjDoCgfV"
 duration: 344
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['frontrunning','auctions','voting','open-source','gas']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Stephane Gosselin','Shayan Eskandari','Tyler Kell','Lorenz Breidenbach']
 ---

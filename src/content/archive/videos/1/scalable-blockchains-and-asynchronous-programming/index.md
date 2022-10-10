@@ -7,8 +7,8 @@ ipfsHash: "QmaENQpTcWTXaMYcJ3qYEJYTmGNisGm853if4p6qumdjSd"
 duration: 1252
 expertise: "Advanced"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: []
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Vitalik Buterin']
 ---

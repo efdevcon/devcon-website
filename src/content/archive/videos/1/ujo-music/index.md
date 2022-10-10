@@ -7,8 +7,8 @@ ipfsHash: "QmZctQQxbfBdikEUXQyh6raSzRdTUgH51duhC381vqDpQJ"
 duration: 978
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Phil Barry']
 ---

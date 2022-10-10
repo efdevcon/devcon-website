@@ -7,8 +7,8 @@ ipfsHash: "QmeMGJT762sg2gMXvq3Y8fu4hm8C2WZoTzyLuq9R1UgfSv"
 duration: 1298
 expertise: "Beginner"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','general']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Justin Drake']
 ---

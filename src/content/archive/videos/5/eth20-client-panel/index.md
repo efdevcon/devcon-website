@@ -7,8 +7,8 @@ ipfsHash: "QmPhjPYXsHHvqSUtcxQXpLvGZyJMQ1v7exb6YTA235NUHH"
 duration: 2160
 expertise: "Advanced"
 type: "Panel"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Various']
 ---

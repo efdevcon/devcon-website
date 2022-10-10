@@ -9,8 +9,8 @@ ipfsHash: "QmXWsp5fxbdJShPUxxWWMujR886hsjYCkjp1GkoudfXC9N"
 duration: 1177
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['privacy','nightfall','technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Duncan Westland','Chaitanya Konda','Michael Connor','Paul Brody']
 ---

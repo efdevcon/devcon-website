@@ -7,8 +7,8 @@ ipfsHash: "QmW8YYTyKqpARTQUcKHj9KiMvirvj5CNjrGsFPdnDfayYg"
 duration: 1417
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['global','economy']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Kaspar Korjus']
 ---

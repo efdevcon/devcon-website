@@ -7,8 +7,8 @@ ipfsHash: "QmQgPdUp3tZ1eKS5mnv8GaaMbDEWSEENC7q1VPyV1Vs8dH"
 duration: 1267
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Giuseppe Bertone']
 ---

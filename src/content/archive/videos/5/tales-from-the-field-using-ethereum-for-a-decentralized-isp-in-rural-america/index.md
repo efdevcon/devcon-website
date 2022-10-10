@@ -7,8 +7,8 @@ ipfsHash: "QmNP53hLjbFYUWAgUvrWwaRo1ciWKHeCREQKorBSgZuXgR"
 duration: 1609
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Deborah Simpier']
 ---

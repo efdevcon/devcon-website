@@ -7,8 +7,8 @@ ipfsHash: "QmcdFbNsLi4zuNc2sYp8BDe9z48ZeVh56NgbQdJuhXq4Rf"
 duration: 1603
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['client','optimisation']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Alexey Akhunov']
 ---

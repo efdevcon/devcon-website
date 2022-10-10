@@ -7,8 +7,8 @@ ipfsHash: "QmWRChsvSAwK3GJDvZX9dJVSyjU9is78WWXDnctJMVusW1"
 duration: 964
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Taylor Gerring']
 ---

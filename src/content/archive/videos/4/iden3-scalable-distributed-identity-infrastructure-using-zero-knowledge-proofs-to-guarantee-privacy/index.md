@@ -9,8 +9,8 @@ ipfsHash: "QmRGGiS8EHdhE9X7jtu15ZT4CNSqdEEKuupboSjnNSY7TU"
 duration: 2054
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['identity','zkproofs','proofs']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Jordi Baylina']
 ---

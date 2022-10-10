@@ -11,8 +11,8 @@ ipfsHash: "Qmf85LQpg5dTAd5S8aC1ZkJmcyQSL4qRRHtaQwwbpqTByT"
 duration: 1107
 expertise: "Advanced"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Julien Niset']
 ---

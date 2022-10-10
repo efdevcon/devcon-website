@@ -7,8 +7,8 @@ ipfsHash: "QmY3oyakXpMHHEZzKwPJex597B6j81Q67iTFouEwxxpifw"
 duration: 787
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['storage','wallets','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Cameron Robertson']
 ---

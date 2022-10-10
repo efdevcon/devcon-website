@@ -7,8 +7,8 @@ ipfsHash: "QmR4skZUMmmfBEVGkSFUN2KtFGXjuHtugueBWs7R7r9JBH"
 duration: 623
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['whisper']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Guilaume Ballet']
 ---

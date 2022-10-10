@@ -7,8 +7,8 @@ ipfsHash: "QmY1JXiqBr1kewrFwNaxWKFmPTLJNN6dsRjxJ2jS7qFFUQ"
 duration: 1785
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['maker','defi']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Andy Milenius']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmdeefZBoGcgkYsfiqscHfD5YdgB17uQCzJsCko7pkheM1"
 duration: 1128
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['Libra','facebook','governance','compatibility','technical']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Lucas Geiger']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmYQcuHPPxQA3dq14v9iBtrySiWRcFx7SxZPKu7rFezygY"
 duration: 531
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['node','incentives','IoT']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Christoph Jentzsch']
 ---

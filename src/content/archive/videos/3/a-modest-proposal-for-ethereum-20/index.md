@@ -7,8 +7,8 @@ ipfsHash: "QmNbJJgLDsuVYyk9kmxHm9DML6yfHPAkHJ3YFGzc7WWEGN"
 duration: 1833
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: []
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Vitalik Buterin']
 ---

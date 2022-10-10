@@ -9,8 +9,8 @@ ipfsHash: "QmX24ufrdQXA3KTen58nVzfBAXft7YXZ7Nu9Sbe3RCBJnF"
 duration: 1576
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['governance','social media','privacy']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Sina Habibian']
 ---

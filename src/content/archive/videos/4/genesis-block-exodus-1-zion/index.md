@@ -7,8 +7,8 @@ ipfsHash: "QmVT6AGtYN5FFMVPcCr4F5gLxV8LQ1A3ZKhyNDceJGGyDe"
 duration: 416
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['HTC','phone','keys','data','security']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Lisa Chu']
 ---

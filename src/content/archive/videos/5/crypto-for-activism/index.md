@@ -7,8 +7,8 @@ ipfsHash: "QmX92kdDaivGUFaX1tVCYvsq8yvZU4h8RPkEshpND6mk1d"
 duration: 2478
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['activist','occupy','satoshi','economics','logics','governance','funding mechanisms','adversarial','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Micah White','Amir Taaki']
 ---

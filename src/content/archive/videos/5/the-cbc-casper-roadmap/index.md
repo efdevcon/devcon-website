@@ -7,8 +7,8 @@ ipfsHash: "QmTrKqHtpKEhERjoSSMrmHL3zHKkhpEB1QF34tMuyn77GD"
 duration: 1836
 expertise: "Intermediate"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['vlad','casper','CBC','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Vlad Zamfir']
 ---

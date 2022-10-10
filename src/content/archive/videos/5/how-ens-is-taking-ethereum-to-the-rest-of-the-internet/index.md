@@ -9,8 +9,8 @@ ipfsHash: "QmPtBUEkRTb1xEu1sZAtjPsYnJJDR2m47pTvDB83UqpTHU"
 duration: 1211
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['ENS','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Brantly Millegan']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmdZb5jxKsJudYnUK4QcVjgksCQMpWQSBbozuTC42prYRf"
 duration: 834
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['legal','enterprise','financial','risk','tax','accounting','eikon','governments','IP','science','tools','databases','access','KYC','dapps','block','delegated','identity','ID','oracle','due','diligence','elektron','otc','data','news','zkproofs','solidity','hackathon','security','entitlement']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Tim Nugent']
 ---

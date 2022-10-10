@@ -7,8 +7,8 @@ ipfsHash: "QmPRxA3Vb9UGnosDtsFo8WcJX2i3RKoCTmpha9nLaaFRZN"
 duration: 2003
 expertise: "Intermediate"
 type: "Panel"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Lee Braine','Ian Cusden','Rex Maudsley','Andrew Keys','James Slazas']
 ---

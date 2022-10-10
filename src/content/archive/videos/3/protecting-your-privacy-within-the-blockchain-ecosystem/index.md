@@ -7,8 +7,8 @@ ipfsHash: "QmdqzuCjggy495sWrj8dWWXugmEQqC8PCwFuZsEVCEephU"
 duration: 665
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: []
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Robertas Visinskis']
 ---

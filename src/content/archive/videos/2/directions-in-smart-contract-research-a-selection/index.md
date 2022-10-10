@@ -7,8 +7,8 @@ ipfsHash: "QmZDT8JEdMnDk5qnC6PVs7HtSrZRjkVFe26pmbWxNVKtQX"
 duration: 972
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['academia','industry','ic3','correctness','security','formal','verification','escape','hatches','bug','bounties','semantics','evm','trustless']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Philip Daian']
 ---

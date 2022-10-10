@@ -7,8 +7,8 @@ ipfsHash: "Qmc5h9Bw8wuL5p38KcCacUpmY7YX6krCED8gGdKmTpnUdk"
 duration: 1318
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['state channels','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Liam Horne','Tom Close']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmfJEFZFpyaRb6JxuUaApNKxpWmtYfd8GCRfwj9oWjP6Ys"
 duration: 841
 expertise: "Intermediate"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['quadratic','voting','academic']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Sota Ishii','Masahiro Yasu']
 ---

@@ -7,8 +7,8 @@ ipfsHash: "QmSedYEEjiEToTukbN7EzQWjYDNJS3zHwxTqrWRZ7d9PHb"
 duration: 1743
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['SW','sex work','censorship','privacy','banking']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Ameen Soleimani & Chelsea Palmer']
 ---

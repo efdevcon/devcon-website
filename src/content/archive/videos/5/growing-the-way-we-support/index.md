@@ -7,8 +7,8 @@ ipfsHash: "QmSFQcB7jATCzuEGfxCFj5BrNTHJYfDUwR3Q9rErxYT7p3"
 duration: 1068
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['EF','foundation','general']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Aya Miyaguchi']
 ---

@@ -22,8 +22,8 @@ ipfsHash: "QmXeCbxdqSP4dbcUV8Bxqpq31AFV4GE4aXe8p2fdnQyDJJ"
 duration: 3081
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Henning Diedrich']
 ---

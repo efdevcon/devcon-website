@@ -7,8 +7,8 @@ ipfsHash: "QmaSTkfTMCBBZzbrkzaLtxHVxmp9KgALeMn5zqa6ArgZSo"
 duration: 880
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Matan Field']
 ---

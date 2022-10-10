@@ -8,8 +8,8 @@ ipfsHash: "QmYK3vGSXD1TyvpvMfXvF28ngRsARrkpYbqRrTx856Mync"
 duration: 7140
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Paul Kohlhaas']
 ---

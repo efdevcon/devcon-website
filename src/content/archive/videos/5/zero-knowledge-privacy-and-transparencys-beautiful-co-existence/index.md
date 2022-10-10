@@ -7,8 +7,8 @@ ipfsHash: "QmWL89A4AanGZbPfTR2cwxPdJgT1ubwXWEX1TVzfBAHyvW"
 duration: 1069
 expertise: "beginner"
 type: "Breakout"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['technical']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Anna ROSE']
 ---

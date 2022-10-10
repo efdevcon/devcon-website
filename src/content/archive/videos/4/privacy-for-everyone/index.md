@@ -7,8 +7,8 @@ ipfsHash: "QmcMXsfGkYhLqLNnxnxjfkn1GsAq8ruBFJMXxLhT2SJdAr"
 duration: 2469
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['zcash','cryptography','regulations']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Zooko Wilcox']
 ---

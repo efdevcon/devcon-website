@@ -7,8 +7,8 @@ ipfsHash: "QmWNVLatjJ6YgR7nMMF9wefbGQnbbcJJKk8iAfbopRspys"
 duration: 1081
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: []
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Matt Tan','Wee Chuan Tan']
 ---

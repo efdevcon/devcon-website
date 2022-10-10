@@ -7,8 +7,8 @@ ipfsHash: "QmXmfHDUTEUWWyVeqwmV1JvKmK8qkfcdEeyMmNc1rVfTUu"
 duration: 1254
 expertise: "Intermediate"
 type: "Talk"
-track: "Economics"
+track: "Cryptoeconomics"
 keywords: []
-tags: ['Economics']
+tags: ["Cryptoeconomics"]
 speakers: ['Christoph Mussenbrock']
 ---

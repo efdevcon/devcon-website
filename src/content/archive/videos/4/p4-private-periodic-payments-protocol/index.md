@@ -7,8 +7,8 @@ ipfsHash: "QmYohjBZVAZtWDEYZi8HqUcuX4s9XCz9c5iWBEobz8Nmyd"
 duration: 1395
 expertise: "Intermediate"
 type: "Talk"
-track: "Privacy"
+track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 keywords: ['payments']
-tags: ['Privacy']
+tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
 speakers: ['Liz Steininger']
 ---

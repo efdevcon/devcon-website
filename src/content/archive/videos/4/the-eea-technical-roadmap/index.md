@@ -7,8 +7,8 @@ ipfsHash: "QmSRnHdq9ShdywuqMN5R1i4hjKw7ytGdiV52jsU5MUWpn7"
 duration: 1485
 expertise: "Beginner"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['enterprise','foundation','developers','library','stack','permissions','json-rpc','impact']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Ron Resnick','Conor Svensson']
 ---

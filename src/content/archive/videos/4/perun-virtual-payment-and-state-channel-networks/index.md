@@ -9,8 +9,8 @@ ipfsHash: "Qmamk2oJo4UebEZcTzdDYwxRJFanzg87rhbW7bmbpQYAsU"
 duration: 1489
 expertise: "Intermediate"
 type: "Talk"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['payment','state channels','L2','layer 2','']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Sebastian Faust','Stefan Dziembowski','Lisa Eckey','Kristina Hostakova']
 ---

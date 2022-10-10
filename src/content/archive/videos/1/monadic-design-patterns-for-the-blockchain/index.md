@@ -7,8 +7,8 @@ ipfsHash: "QmP3rsdet6eMHSt9tNQHEe4Tpa2TYqwyV5WXQmfefr2ZgB"
 duration: 1185
 expertise: "Advanced"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['formal','verification','casper','pos','scaling','commitment','adoption','reliability','compositionality','monad','metering']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Lucius Greg Meredith']
 ---

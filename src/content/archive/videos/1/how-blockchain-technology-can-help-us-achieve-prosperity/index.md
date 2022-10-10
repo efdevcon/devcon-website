@@ -7,8 +7,8 @@ ipfsHash: "QmbdyrP7Rx21mKgBVNK8b6eARJiu4N3GDxNWDjCiMH8xnE"
 duration: 1790
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Don Tapscott']
 ---

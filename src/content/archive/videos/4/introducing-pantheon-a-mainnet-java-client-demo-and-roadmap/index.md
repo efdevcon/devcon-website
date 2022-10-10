@@ -7,8 +7,8 @@ ipfsHash: "QmNSx1C8N4NNE8xChbPwjB9h25e8faC1KDkkK2NqLgKhNp"
 duration: 1547
 expertise: "Intermediate"
 type: "Workshop"
-track: "Scalability"
+track: "Layer 2s"
 keywords: ['java','client','mainnet']
-tags: ['Scalability']
+tags: ['Layer 2s']
 speakers: ['Shahan Khatchadourian','Rob Dawson','Daniel Heyman']
 ---

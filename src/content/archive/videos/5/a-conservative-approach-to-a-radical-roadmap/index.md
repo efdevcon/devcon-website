@@ -14,8 +14,8 @@ ipfsHash: "QmdUXfzHVB7VsNBLP9CHjz1MT7TCaXT97E87RjAEXBXXBx"
 duration: 1341
 expertise: "Beginner"
 type: "Breakout"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: []
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Sunny Aggarwal']
 ---

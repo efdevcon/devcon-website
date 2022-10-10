@@ -8,8 +8,8 @@ ipfsHash: "QmfQRqETLNNCntakXt493Xb6kQF3pUbriUAmwrCGViKYK9"
 duration: 10188
 expertise: "Intermediate"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Jacob Arluck','Federico Ast','Adrian Brink','Joshua Buirski','Josh Cincinnati','Meltem Demirors','Hudson Jameson','John Light','Jack Platts','Illia Polosukhin','Lane Rettig','Ryan Selkis']
 ---

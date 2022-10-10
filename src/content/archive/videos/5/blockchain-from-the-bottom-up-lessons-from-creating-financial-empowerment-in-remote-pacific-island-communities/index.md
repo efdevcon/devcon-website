@@ -10,8 +10,8 @@ ipfsHash: "QmTKyP7USfgwRjCSyk1Mw4G1RDYbwPXAC7Fo2zNx6APXnH"
 duration: 1344
 expertise: "Beginner"
 type: "Breakout"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: []
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Sandra Uwantege Hart','Nick Williams']
 ---

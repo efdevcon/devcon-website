@@ -7,8 +7,8 @@ ipfsHash: "QmPHHhsBadvDsJ3rd7zyG7oshUfxe1hyRJa8W5ATTku5bL"
 duration: 2765
 expertise: "Intermediate"
 type: "Panel"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['history','updates','mist','casper','pos','adoption','zksnark','privacy','scalability','zkproofs','evm','geth','whisper','swarm','dapps','client','browser']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Vitalik Buterin','Jeffrey Wilcke','Alex van de Sande','Gavin Wood']
 ---

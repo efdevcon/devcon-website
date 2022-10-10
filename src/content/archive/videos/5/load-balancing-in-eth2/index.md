@@ -7,8 +7,8 @@ ipfsHash: "QmU4nKvxn4N17bpdJ2xwMe9G9NgN1VPZJgq9kX3M1cU2ux"
 duration: 724
 expertise: "Advanced"
 type: "Talk"
-track: "Consensus layer"
+track: "Staking & Validator Experience"
 keywords: ['eth2','technical']
-tags: ['Consensus layer']
+tags: ['Staking & Validator Experience']
 speakers: ['Joe Delong']
 ---

@@ -9,8 +9,8 @@ imageUrl: /assets/uploads/videos/brewster-kahle.png
 duration: 2265
 expertise: "Beginner"
 type: "Talk"
-track: "Society and Systems"
+track: "Governance & Coordination"
 keywords: ['web3','internet','privacy']
-tags: ['Society and Systems']
+tags: ['Governance & Coordination']
 speakers: ['Brewster Kahle']
 ---

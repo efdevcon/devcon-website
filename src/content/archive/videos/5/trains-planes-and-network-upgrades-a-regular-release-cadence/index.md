@@ -7,8 +7,8 @@ ipfsHash: "QmNQUwu7twByWV25sJKrbaB6465ou4Q1ZWc85VdwPnbMxC"
 duration: 1001
 expertise: "Intermediate"
 type: "Talk"
-track: "Execution layer"
+track: "Layer 1 Protocol"
 keywords: ['EIP','upgrades','implementation','technical']
-tags: ['Execution layer']
+tags: ['Layer 1 Protocol']
 speakers: ['Danno Ferrin','Tim Beiko']
 ---
