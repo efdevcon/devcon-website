@@ -137,9 +137,9 @@ import upshot from 'assets/images/supporters-page/supporters/upshot.png'
 const Images = () => {
   return (
     <div className={css['horizontal-scroller-images']}>
-      {/* <Link to="abc" className={css['image-wrapper']}>
+      <Link to="https://twitter.com/ProtocolGuild" className={css['image-wrapper']}>
         <Image src={wat} alt="Supporter graphic" />
-      </Link> */}
+      </Link>
       <Link to="https://twitter.com/l2beat" className={css['image-wrapper']}>
         <Image src={l2beat} alt="Supporter graphic" />
       </Link>
