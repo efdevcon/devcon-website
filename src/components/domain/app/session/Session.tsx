@@ -95,7 +95,7 @@ export const Session = (props: SessionProps) => {
         ]}
         renderRight={() => (
           <>
-            <CopyToClipboardLegacy url={`${APP_URL}/schedule/${props.session.id}`} />
+            <CopyToClipboardLegacy url={`${APP_URL}schedule/${props.session.id}`} />
 
             <>
               {attending ? (
