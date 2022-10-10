@@ -1218,6 +1218,7 @@
         "id": "7JUCAG",
         "name": "Gerben Kijne",
         "description": "Gerben has focussed on building digital products that solve global problems for over a decade. From designing games that reward players for saving energy to building web applications that support entrepreneurs with their administration, he currently serves as the blockchain lead for Giga at UNICEF.",
+        "twitter": "GKijne",
         "avatar": "http://speak.devcon.org/media/avatars/BB1A379E-5303-45E7-998F-29B38A8E2861_q0gawy0.jpeg"
       }
     ],
@@ -2961,9 +2962,10 @@
       },
       {
         "id": "VCEKKL",
-        "name": "ARUN DEVABHAKTUNI",
-        "description": null,
-        "avatar": ""
+        "name": "Arun Devabhaktuni",
+        "description": "Lead Researcher at Mirana",
+        "twitter": "Feynyman",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_20221010_172540_681_klQLPLj.jpg"
       }
     ],
     "title": "Notable security incidents since Devcon V",
@@ -3746,6 +3748,7 @@
         "id": "TG3HCZ",
         "name": "abbey",
         "description": "Abbey is a technologist, governance researcher, product strategist, and community developer/leader. She spends her time building decentralized technologies and growing open-source communities around them.\r\n\r\nSince 2019, she’s run all things community & governance at Radicle, building decentralized collaboration tools for developers. She is currently stewarding the projects transition to the DAO. Additionally, she sits on the Board of the Radicle Foundation and Optimism Foundation.",
+        "twitter": "@abbey_titcomb",
         "avatar": "http://speak.devcon.org/media/avatars/C667F0DA-B7DF-469D-9247-BE2102FB7F80_yAADqci.jpeg"
       }
     ],
@@ -5747,6 +5750,12 @@
   {
     "id": "8XLQUG",
     "speakers": [
+      {
+        "id": "JATNLE",
+        "name": "Collin Myers",
+        "description": "Hi I am Collin Myers, founder of Obol Labs and project lead of the Obol Network. I have been working on lower layer Ethereum technologies since 2017 historically working at ConsenSys. I have spent the better part of the last 4 years working on the enablement of Eth2 in various capacities. I built the Eth2 calculator, Eth2 launchpad, internet bonds, and a co-creator of DVT.\r\n\r\nI have spoken at Devcon before and would to do it again! Thank You for putting this on!!!",
+        "avatar": ""
+      },
       {
         "id": "98Z3HG",
         "name": "Mara Schmiedt",
@@ -9028,6 +9037,7 @@
         "id": "7JUCAG",
         "name": "Gerben Kijne",
         "description": "Gerben has focussed on building digital products that solve global problems for over a decade. From designing games that reward players for saving energy to building web applications that support entrepreneurs with their administration, he currently serves as the blockchain lead for Giga at UNICEF.",
+        "twitter": "GKijne",
         "avatar": "http://speak.devcon.org/media/avatars/BB1A379E-5303-45E7-998F-29B38A8E2861_q0gawy0.jpeg"
       }
     ],

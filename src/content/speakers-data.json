@@ -433,6 +433,21 @@
     "github": "https://github.com/jgorzny"
   },
   {
+    "id": "JATNLE",
+    "name": "Collin Myers",
+    "avatar": "https://www.gravatar.com/avatar/1cd31fbf98a1cc7127f1b7723c218ab3",
+    "description": "Hi I am Collin Myers, founder of Obol Labs and project lead of the Obol Network. I have been working on lower layer Ethereum technologies since 2017 historically working at ConsenSys. I have spent the better part of the last 4 years working on the enablement of Eth2 in various capacities. I built the Eth2 calculator, Eth2 launchpad, internet bonds, and a co-creator of DVT.\r\n\r\nI have spoken at Devcon before and would to do it again! Thank You for putting this on!!!",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://obol.dev/",
+    "twitter": "@stakeeth",
+    "github": "https://github.com/ObolNetwork"
+  },
+  {
     "id": "SYG3JB",
     "name": "Cayman Nava",
     "avatar": "https://speak.devcon.org/media/avatars/aE4FTs5F_400x400_Hi7pyrw.png",
@@ -5793,7 +5808,7 @@
   },
   {
     "id": "VCEKKL",
-    "name": "ARUN DEVABHAKTUNI",
+    "name": "Arun Devabhaktuni",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_20221010_172540_681_klQLPLj.jpg",
     "description": "Lead Researcher at Mirana",
     "tracks": [
@@ -5802,6 +5817,6 @@
     "eventDays": [
       1665532800000
     ],
-    "twitter": "Feynyman"
+    "twitter": "https://twitter.com/feynyman"
   }
 ]
