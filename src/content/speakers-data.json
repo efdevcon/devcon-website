@@ -5766,25 +5766,42 @@
   {
     "id": "7JUCAG",
     "name": "Gerben Kijne",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/BB1A379E-5303-45E7-998F-29B38A8E2861_q0gawy0.jpeg",
+    "description": "Gerben has focussed on building digital products that solve global problems for over a decade. From designing games that reward players for saving energy to building web applications that support entrepreneurs with their administration, he currently serves as the blockchain lead for Giga at UNICEF.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
+      1665446400000,
       1665619200000
-    ]
+    ],
+    "twitter": "GKijne"
   },
   {
     "id": "TG3HCZ",
     "name": "abbey",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/C667F0DA-B7DF-469D-9247-BE2102FB7F80_yAADqci.jpeg",
+    "description": "Abbey is a technologist, governance researcher, product strategist, and community developer/leader. She spends her time building decentralized technologies and growing open-source communities around them.\r\n\r\nSince 2019, she’s run all things community & governance at Radicle, building decentralized collaboration tools for developers. She is currently stewarding the projects transition to the DAO. Additionally, she sits on the Board of the Radicle Foundation and Optimism Foundation.",
     "tracks": [
       "Developer Infrastructure"
     ],
     "eventDays": [
       1665532800000
-    ]
+    ],
+    "website": "digital alchemy.xyz",
+    "twitter": "@abbey_titcomb"
+  },
+  {
+    "id": "VCEKKL",
+    "name": "ARUN DEVABHAKTUNI",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_20221010_172540_681_klQLPLj.jpg",
+    "description": "Lead Researcher at Mirana",
+    "tracks": [
+      "Security"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "Feynyman"
   }
 ]
