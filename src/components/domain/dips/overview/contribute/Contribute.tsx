@@ -46,7 +46,7 @@ const Thumbnail = ({ contributor }: ThumbnailProps) => {
 /*
   TO FIX: on safari the animated tracks "flash" when they reset their animation (happens every 50 seconds so not that significant)
 */
-const AutoScroller = (props: { contributors: Array<Contributor> }) => {
+export const AutoScroller = (props: { contributors: Array<Contributor> }) => {
   const [containerSize, setContainerSize] = React.useState(0)
   const cleanupRef = React.useRef<any>()
 

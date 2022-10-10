@@ -97,6 +97,7 @@
     "ticket_sales": "Ticket Sales"
   },
   "navigation": {
+    "supporters": "Supporters",
     "archive": "Archive",
     "forum": "Forum",
     "blog": "Blog",
@@ -289,5 +290,16 @@
     "live_cta": "Stream Now",
     "live": "Devcon Live",
     "live_subtext": "Stream Devcon"
+  },
+  "supporters": {
+    "quadratic_funding": "Quadratic Funding Rounds",
+    "impact_booths": "Impact Booths",
+    "program": "Supporters Program",
+    "overview": "Overview",
+    "announcing": "Announcing Devcon VI Supporters",
+    "with_thanks": "With Thanks to",
+    "also_thanks": "We'd also like to recognize",
+    "rest": "And All Other Participating teams",
+    "join_us": "Please join us in thanking each of these incredible teams for their support of and dedication to the Ethereum ecosystem! 👏👏👏"
   }
 }

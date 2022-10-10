@@ -107,6 +107,11 @@ const useNavigationData = () => {
             type: 'page',
           },
           {
+            title: intl('navigation_supporters'),
+            url: '/supporters',
+            type: 'page',
+          },
+          {
             title: intl('navigation_participate'),
             url: '#',
             type: 'header',
@@ -180,14 +185,14 @@ const useNavigationData = () => {
         title: intl('navigation_live'),
         url: 'https://live.devcon.org',
         type: 'page',
-        highlight: 'livestream'
+        highlight: 'livestream',
       },
       {
         title: intl('navigation_devcon_app'),
         url: 'https://app.devcon.org',
         type: 'page',
-        highlight: 'app'
-      }
+        highlight: 'app',
+      },
     ],
     footer: {
       bottom: [
