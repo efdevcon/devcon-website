@@ -2930,6 +2930,7 @@
         "id": "TZDPN7",
         "name": "Lane Rettig",
         "description": "Lane Rettig is a writer, hacker, entrepreneur, and investor deeply fascinated by the intersection of technological and social systems, and committed to architecting and building human-centric software. He's been working full time on blockchain R&D since 2017. He was formerly an Ethereum core developer, and now focuses his efforts on Spacemesh, a  a next-generation smart contract platform based on a novel consensus mechanism.",
+        "twitter": "lrettig",
         "avatar": "http://speak.devcon.org/media/avatars/051619-0354_kgeeWql.jpg"
       },
       {
@@ -2943,6 +2944,7 @@
         "id": "TCL7RA",
         "name": "Tom Howard",
         "description": "Investing in the infrastructure and tools needed to build the Network State. Previously co-founded Mosendo DAI wallet, PowerTrade options exchange, and DeFi Nation community. DAOs: MetaCartel, RaidGuild, Synthetix, UMA",
+        "twitter": "@_TomHoward",
         "avatar": "http://speak.devcon.org/media/avatars/Tom_Bookshelf_Square_6XfOusL.jpg"
       }
     ],
@@ -7859,9 +7861,15 @@
         "name": "Iskander",
         "description": null,
         "avatar": ""
+      },
+      {
+        "id": "URAKDD",
+        "name": "Sampriti Panda",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "title": "Applied ZK Showcase",
+    "title": "ZK Application Showcase",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 180,
     "start": 1665666000000,
@@ -9723,6 +9731,18 @@
         "name": "Andy",
         "description": "Game developer at @latticexyz working on Sky Strife.\r\n\r\nPreviously game developer at @darkforest_eth.",
         "avatar": "http://speak.devcon.org/media/avatars/4297920_jtflyyD.jpeg"
+      },
+      {
+        "id": "VN7GWW",
+        "name": "Lethe",
+        "description": "Commercial lead at Asphodel. Working on economic design and mechanisms for Autonomous Worlds.",
+        "avatar": "http://speak.devcon.org/media/avatars/lethe_4x_NA0J28h.png"
+      },
+      {
+        "id": "HW7ZMT",
+        "name": "Arthur Baer",
+        "description": null,
+        "avatar": ""
       }
     ],
     "title": "Autonomous Worlds Self Led Session",

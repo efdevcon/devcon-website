@@ -5704,8 +5704,45 @@
     "eventDays": [
       1665532800000
     ],
-    "website": "network0.vc",
-    "twitter": "@_TomHoward",
-    "github": "thowar2"
+    "website": "https://network0.vc/",
+    "twitter": "https://twitter.com/_TomHoward",
+    "github": "https://github.com/thowar2"
+  },
+  {
+    "id": "URAKDD",
+    "name": "Sampriti Panda",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "VN7GWW",
+    "name": "Lethe",
+    "avatar": "https://speak.devcon.org/media/avatars/lethe_4x_NA0J28h.png",
+    "description": "Commercial lead at Asphodel. Working on economic design and mechanisms for Autonomous Worlds.",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "https://mobile.twitter.com/asphodel_lethe"
+  },
+  {
+    "id": "HW7ZMT",
+    "name": "Arthur Baer",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ]
   }
 ]
