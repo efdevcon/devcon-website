@@ -61,6 +61,7 @@ import openzeppelin from 'assets/images/supporters-page/supporters/open-zeppelin
 // import polygon from 'assets/images/supporters-page/supporters/polygon.png'
 // import starkware from 'assets/images/supporters-page/supporters/starkware.png'
 import push from 'assets/images/supporters-page/supporters/push.png'
+import eea from 'assets/images/supporters-page/supporters/eea.png'
 import radicle from 'assets/images/supporters-page/supporters/radicle.png'
 import safe from 'assets/images/supporters-page/supporters/safe.png'
 import santiment from 'assets/images/supporters-page/supporters/santiment.png'
@@ -350,13 +351,13 @@ export default pageHOC(function SatelliteEvents(props: any) {
           <Link to="https://twitter.com/element_fi" className={css['grid-image-wrapper']}>
             <Image src={element} alt="Supporter graphic" />
           </Link>
-          <Link to="https://twitter.com/EYnews" className={css['grid-image-wrapper']}>
+          <Link to="https://twitter.com/EYnews" className={`${css['grid-image-wrapper']} ${css['smaller']}`}>
             <Image src={ey} alt="Supporter graphic" />
           </Link>
-          <Link to="https://twitter.com/LensProtocol" className={css['grid-image-wrapper']}>
+          <Link to="https://twitter.com/LensProtocol" className={`${css['grid-image-wrapper']} ${css['smaller']}`}>
             <Image src={lens} alt="Supporter graphic" />
           </Link>
-          <Link to="https://twitter.com/OPLabsPBC" className={css['grid-image-wrapper']}>
+          <Link to="https://twitter.com/OPLabsPBC" className={`${css['grid-image-wrapper']} ${css['smaller']}`}>
             <Image src={optimism} alt="Supporter graphic" />
           </Link>
           <Link to="https://twitter.com/0xPolygon" className={css['grid-image-wrapper']}>
@@ -371,13 +372,6 @@ export default pageHOC(function SatelliteEvents(props: any) {
           <Link to="https://twitter.com/ethswarm" className={css['grid-image-wrapper']}>
             <Image src={swarm} alt="Supporter graphic" />
           </Link>
-
-          {/* [Aave](https://twitter.com/AaveAave), [Chainlink (Smartcontract)](https://twitter.com/chainlink),
-          [ConsenSys](https://twitter.com/ConsenSys), [Element Finance](https://twitter.com/element_fi),
-          [EY](https://twitter.com/EYnews), [Lens](https://twitter.com/LensProtocol), [OP Labs
-          PBC](https://twitter.com/OPLabsPBC), [Polygon](https://twitter.com/0xPolygon), [Smart Token
-          Labs](https://twitter.com/TokenScript), [Status](https://twitter.com/ethstatus), and [Swarm
-          Foundation](https://twitter.com/ethswarm) */}
         </div>
 
         <h2 className="clear-bottom">{intl('supporters_with_thanks')}</h2>
@@ -394,7 +388,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
           <Link to="https://twitter.com/HashKeyGroup" className={css['grid-image-wrapper']}>
             <Image src={hashkey} alt="Supporter Graphic" />
           </Link>
-          <Link to="https://twitter.com/imTokenOfficial" className={css['grid-image-wrapper']}>
+          <Link to="https://twitter.com/imTokenOfficial" className={`${css['grid-image-wrapper']} ${css['smaller']}`}>
             <Image src={imtoken} alt="Supporter Graphic" />
           </Link>
           <Link to="https://twitter.com/LidoFinance" className={css['grid-image-wrapper']}>
@@ -403,7 +397,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
           <Link to="https://twitter.com/myetherwallet" className={css['grid-image-wrapper']}>
             <Image src={mew} alt="Supporter Graphic" />
           </Link>
-          <Link to="https://twitter.com/safe" className={css['grid-image-wrapper']}>
+          <Link to="https://twitter.com/safe" className={`${css['grid-image-wrapper']} ${css['smaller']}`}>
             <Image src={safe} alt="Supporter Graphic" />
           </Link>
           <Link to="https://twitter.com/santimentfeed" className={css['grid-image-wrapper']}>
@@ -421,16 +415,34 @@ export default pageHOC(function SatelliteEvents(props: any) {
           <Link to="https://twitter.com/OpenZeppelin" className={css['grid-image-wrapper']}>
             <Image src={openzeppelin} alt="Supporter Graphic" />
           </Link>
-          {/* [Ambire](https://twitter.com/AmbireAdEx), [Anoma](https://twitter.com/anomanetwork),
-          [Blockdaemon](https://twitter.com/BlockdaemonHQ), [Hashkey](https://twitter.com/HashKeyGroup),
-          [imToken](https://twitter.com/imTokenOfficial), [Lido](https://twitter.com/LidoFinance),
-          [MyEtherWallet](https://twitter.com/myetherwallet), [Safe (formerly Gnosis Safe)](https://twitter.com/safe),
-          [Santiment](https://twitter.com/santimentfeed), [Starkware](https://twitter.com/StarkWareLtd), [Tenderly
-          Technologies Inc.](https://twitter.com/TenderlyApp), and [Thesis](https://twitter.com/thesis_co) */}
         </div>
         <h2 className="clear-bottom">{intl('supporters_also_thanks')}</h2>
-        <div className={`${css['grid-text']} clear-bottom`}>
-          <div>
+        <div className={`${css['grid-images']} clear-bottom`}>
+          <Link to="https://twitter.com/OffchainLabs" className={css['grid-image-wrapper']}>
+            <Image src={arbitrum} alt="Supporter graphic" />
+          </Link>
+          <Link to="https://twitter.com/ChainSafeth" className={css['grid-image-wrapper']}>
+            <Image src={chainsafe} alt="Supporter graphic" />
+          </Link>
+          <Link to="https://twitter.com/EntEthAlliance" className={css['grid-image-wrapper']}>
+            <Image src={eea} alt="Supporter graphic" />
+          </Link>
+          <Link to="https://twitter.com/Livepeer" className={css['grid-image-wrapper']}>
+            <Image src={livepeer} alt="Supporter graphic" />
+          </Link>
+          <Link to="https://twitter.com/NetworkMeson" className={css['grid-image-wrapper']}>
+            <Image src={meson} alt="Supporter graphic" />
+          </Link>
+          <Link to="https://twitter.com/pushprotocol" className={css['grid-image-wrapper']}>
+            <Image src={push} alt="Supporter graphic" />
+          </Link>
+          <Link to="https://twitter.com/radicle" className={css['grid-image-wrapper']}>
+            <Image src={radicle} alt="Supporter graphic" />
+          </Link>
+          <Link to="https://twitter.com/UpshotHQ" className={css['grid-image-wrapper']}>
+            <Image src={upshot} alt="Supporter graphic" />
+          </Link>
+          {/* <div>
             <Link to="https://twitter.com/OffchainLabs">Arbitrum/Offchain Labs</Link>
           </div>
           <div>
@@ -445,14 +457,9 @@ export default pageHOC(function SatelliteEvents(props: any) {
           <div>
             <Link to="https://twitter.com/NetworkMeson">Meson Network</Link>
           </div>
-          {/* 
-          <div>
-            <Link to="https://twitter.com/OpenZeppelin">OpenZeppelin</Link>
-          </div> 
-          */}
           <div>
             <Link to="https://twitter.com/pushprotocol">
-              Push Protocol {/*formerly Ethereum Push Notification Service)*/}
+              Push Protocol
             </Link>
           </div>
           <div>
@@ -460,15 +467,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
           </div>
           <div>
             <Link to="https://twitter.com/UpshotHQ">Upshot</Link>
-          </div>
-          {/* <div>Arbitrum/Offchain Labs</div>
-          <div>Arbitrum/Offchain Labs</div>
-          [Arbitrum/Offchain Labs](https://twitter.com/OffchainLabs), [ChainSafe](https://twitter.com/ChainSafeth),
-          [Enterprise Ethereum Alliance (EEA)](https://twitter.com/EntEthAlliance),
-          [Livepeer](https://twitter.com/Livepeer), [Meson Network](https://twitter.com/NetworkMeson),
-          [OpenZeppelin](https://twitter.com/OpenZeppelin), [Push Protocol (formerly Ethereum Push Notification
-          Service)](https://twitter.com/pushprotocol), [Radicle](https://twitter.com/radicle), and
-          [Upshot](https://twitter.com/UpshotHQ) */}
+          </div> */}
         </div>
         <h2 className="clear-bottom">{intl('supporters_rest')}</h2>
         <div className={`${css['grid-text']} clear-bottom`}>

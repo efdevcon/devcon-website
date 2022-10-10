@@ -22,36 +22,21 @@
 
 
 .grid-images {
-  // display: grid;
-  // column-gap: 40px;
-  // grid-template-columns: repeat(6, minmax(150px, 1fr));
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 
-  // @media (max-width: 500px) {
-  //   grid-template-columns: repeat(5, 1fr);
-  // }
-
-  // @media (max-width: 700px) {
-  //   grid-template-columns: repeat(6, 1fr);
-  // }
-
-  // @media (max-width: 1000px) {
-  //   grid-template-columns: repeat(7, 1fr);
-  // }
-
-  // go flex here and cneter
-
   .grid-image-wrapper {
-    flex-basis: min(150px, 25%);
+    flex-basis: 150px;
     position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.smaller {
+      flex-basis: 100px;
+    }
   }
 }
 
