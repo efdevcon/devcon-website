@@ -69,7 +69,7 @@ export const Archive = (props: ArchiveProps) => {
         })}
         title="Archive"
         titleClassName={css['white-title']}
-        // titleSubtext="Devcon"
+      // titleSubtext="Devcon"
       />
 
       <div className={css['content']}>
@@ -82,6 +82,7 @@ export const Archive = (props: ArchiveProps) => {
         <CuratedPlaylists title="Curated Playlists" items={curated} viewMore />
 
         <Playlists />
+
         <Footer />
       </div>
     </div>

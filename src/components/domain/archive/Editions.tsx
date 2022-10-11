@@ -144,8 +144,8 @@ export const Editions = (props: Props) => {
             </div>
             <div className={css['buttons-container']}>
               <div className={css['buttons']}>
-                {/* Only show watch now button after the event has happened */}
-                {moment().unix() > moment(selectedEdition.endDate).unix() && (
+                {/* Only show watch now button after the event has started */}
+                {moment().unix() > moment(selectedEdition.startDate).unix() && (
                   <Button
                     to={`/archive/watch?edition=${selectedEdition.number}`}
                     className={`${css['button']} red ghost sm`}

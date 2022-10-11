@@ -79,7 +79,7 @@ export const useVideoFilter = () => {
   const [___, tagsFilterState] = useFilter({
     tags: true,
     multiSelect: true,
-    filters: pageContext.data.distinctVideoTags.map(tag => {
+    filters: pageContext.data.distinctVideoTags.filter((i: string) => !!i).map((tag: string) => {
       return {
         text: tag,
         value: tag,

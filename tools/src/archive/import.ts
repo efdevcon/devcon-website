@@ -16,7 +16,7 @@ const generatePlaylist = false
 const generateYoutubeTemplates = false
 const archiveDir = '../src/content/archive/videos'
 const sheet = process.env.SHEET_ID
-const edition: number = 5 // 
+const edition: number = 6 // 
 const sheetName = 'Devcon ' + edition // 
 const baseArchiveUrl = 'https://www.devcon.org/archive/watch/'
 const devconLocation = () => {
@@ -53,7 +53,7 @@ async function ImportArchiveVideos() {
 
   await GSheetReader(
     {
-      apiKey: process.env.YOUTUBE_API_KEY,
+      apiKey: process.env.GOOGLE_API_KEY,
       sheetId: sheet,
       sheetName: sheetName,
     },
@@ -164,14 +164,14 @@ Devcon is organized and presented by the Ethereum Foundation, with the support o
   }
 }
 
-async function getVideoDuration(id: string): Promise<number> { 
+export async function getVideoDuration(id: string): Promise<number> { 
   const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&part=contentDetails&key=${process.env.YOUTUBE_API_KEY}`);
   const body = await response.json();
   const duration = body?.items?.length > 0 ? body.items[0].contentDetails.duration : 0
   return moment.duration(duration).asSeconds();
 }
 
-function writeToFile(video: ArchiveVideo) { 
+export function writeToFile(video: ArchiveVideo) { 
     const editionDir = archiveDir + '/' + video.edition
     if (!fs.existsSync(editionDir)) {
         console.log('Create dir', editionDir)
@@ -197,7 +197,7 @@ function writeToFile(video: ArchiveVideo) {
           return acc += `\n${key}: "${stringValue}"`
         }
         if (typeof value === 'object' && Array.isArray(value)) {
-          return acc += `\n${key}: [${value.map(item => `'${item}'`)}]`
+          return acc += `\n${key}: [${value.map(item => `"${item}"`)}]`
         } 
 
         return acc += `\n${key}: '${value}'`;

@@ -2,6 +2,7 @@ import { UserProfile } from './UserProfile'
 
 export interface ArchiveVideo {
   id: string
+  sourceId?: string
   slug: string
   edition: number
   title: string
@@ -34,8 +35,8 @@ export function mapToArchiveVideo(source: any) {
     image: source.frontmatter.image,
     imageUrl: source.frontmatter.imageUrl,
     ipfsHash: source.frontmatter.ipfsHash,
-    ethernaIndex: source.frontmatter.ethernaIndex,
-    ethernaPermalink: source.frontmatter.ethernaPermalink,    
+    ethernaIndex: source.frontmatter.ethernaIndex ?? '',
+    ethernaPermalink: source.frontmatter.ethernaPermalink ?? '',    
     duration: source.frontmatter.duration,
     expertise: source.frontmatter.expertise,
     type: source.frontmatter.type,

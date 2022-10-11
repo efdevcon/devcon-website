@@ -24,7 +24,7 @@ export function ToNavigationData(nodes: any, videoTags?: any[], type?: 'default'
 export function ToArchiveNavigation(videoTags?: any[]): Array<Link> {
   const links = new Array<Link>()
   links.push({ title: 'Watch', url: '/archive/watch', type: 'page' })
-  const eventLinks = [5, 4, 3, 2, 1, 0].map(
+  const eventLinks = [6, 5, 4, 3, 2, 1, 0].map(
     event =>
       ({
         title: `Devcon ${event}`,

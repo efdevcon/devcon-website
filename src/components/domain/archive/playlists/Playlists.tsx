@@ -8,6 +8,7 @@ import { VideoCard } from './VideoCard'
 import { Slider, useSlider } from 'src/components/common/slider'
 import { PlaylistCard } from './Curated'
 import { Playlist } from 'src/types/Playlist'
+import { useDevcon6 } from 'src/hooks/useDevcon6'
 
 function getSliderSettings(nItems: number) {
   return {
@@ -53,10 +54,12 @@ export const Playlists = () => {
   const mostPopular = useMostPopular()
   const latest = useLatest()
   const efTalks = useEfTalks()
+  const devcon6 = useDevcon6()
 
   const sliderPropsMostPopular = useSlider(getSliderSettings(mostPopular.videoCount))
   const sliderPropsLatest = useSlider(getSliderSettings(latest.videoCount))
   const sliderPropsEFTalks = useSlider(getSliderSettings(efTalks.videoCount))
+  const sliderDevcon6 = useSlider(getSliderSettings(devcon6.videoCount))
 
   return (
     <div className="section">
@@ -85,6 +88,30 @@ export const Playlists = () => {
               )}
             </Slider>
           </div>
+
+          {devcon6.videoCount > 0 &&
+            <div className="border-top padding-bottom">
+              <Slider className={css['slider']} sliderProps={sliderDevcon6} title="Devcon 6">
+                {limit15(devcon6.videos, devcon6, sliderDevcon6[1].canSlide).map((item: any, i: number) => {
+                  if (item.playlist) return item.render()
+
+                  const first = i === 0
+                  let className = first ? css['first'] : ''
+
+                  return (
+                    <VideoCard
+                      playlist={devcon6}
+                      slide
+                      canSlide={sliderDevcon6[1].canSlide}
+                      key={i}
+                      className={className}
+                      video={item}
+                    />
+                  )
+                })}
+              </Slider>
+            </div>
+          }
 
           <div className="border-top padding-bottom">
             <Slider className={css['slider']} sliderProps={sliderPropsLatest} title="Devcon 5">

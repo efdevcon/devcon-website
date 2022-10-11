@@ -12,7 +12,7 @@ import { Link } from 'src/components/common/link'
 
 export const Interests = (props: any) => {
   const [selectedTags, setSelectedTags] = React.useState({} as { [key: string]: any })
-  const tags = usePageContext()?.data.distinctVideoTags
+  const tags = usePageContext()?.data.distinctVideoTags.filter((i: string) => !!i)
   const tagRows = chunkArray(tags, 1 /*2*/) // Accounts currently missing, so we'll wait with chunking the array to take up more horizontal space in the meantime
   const queryString = useQueryStringer({ tags: selectedTags }, false)
 
