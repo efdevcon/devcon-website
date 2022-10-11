@@ -13,5 +13,5 @@ type: "Workshop"
 track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["innovation","development","blockchain for good"]
-speakers: ["Naroa"]
+speakers: ["Shane O'Connor","Naroa","Gerben Kijne"]
 ---

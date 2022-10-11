@@ -13,5 +13,5 @@ type: "Panel"
 track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["blockchain for good","connectivity","innovation"]
-speakers: ["Naroa"]
+speakers: ["Naroa","Gerben Kijne"]
 ---

@@ -13,5 +13,5 @@ type: "Panel"
 track: "Security"
 tags: ["Security"]
 keywords: ["security","lessons learned","countermeasures"]
-speakers: ["Lane Rettig","Ryan Lackey","Tom Howard"]
+speakers: ["Lane Rettig","Ryan Lackey","Tom Howard","Arun Devabhaktuni"]
 ---

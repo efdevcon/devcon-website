@@ -15,5 +15,5 @@ type: "Talk"
 track: "ZKPs: Privacy, Identity, Infrastructure, & More"
 tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
 keywords: ["zero knowledge","languages","scaling"]
-speakers: ["Maxim"]
+speakers: ["Maxim Vezenov"]
 ---
