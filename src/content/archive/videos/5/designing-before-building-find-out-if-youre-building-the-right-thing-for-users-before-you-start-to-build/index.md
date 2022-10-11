@@ -10,6 +10,8 @@ Too often we've seen extensively build products launch to little user or market 
 With real user feedback in days not years!"
 youtubeUrl: "https://www.youtube.com/embed/TcZpkmw5ABU"
 ipfsHash: "QmSbVu8YvaLADuzmKPCnmvWzfwSD2Dq71pQ1Y8gWpTw5i3"
+ethernaIndex: "https://etherna.io/embed/6344d1aa080a54f6d733eaa3"
+ethernaPermalink: "https://etherna.io/embed/27d8e311e7b89a386636303a5579b41b89a578b0c8a30dad889a94774084eb50"
 duration: 1437
 expertise: "Beginner"
 type: "Breakout"

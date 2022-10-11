@@ -6,6 +6,8 @@ https://blog.ethereum.org/2015/03/20/ethereum-builders-experiment/
 https://blog.ethereum.org/2015/04/06/ethereum-builders-supercharging-github/What about now?"
 youtubeUrl: "https://youtu.be/-xu3FnVPAS4"
 ipfsHash: "QmdbH5Vo4czcHYCWxNReWbrYQUz2XLN4YGf7qCL5aFhMkj"
+ethernaIndex: "https://etherna.io/embed/63446600c42a10b8427094e4"
+ethernaPermalink: "https://etherna.io/embed/0d5e6be490ba73182b400b7272a65a3bccfea0946cdae2e7a6d6fedea386521a"
 duration: 1281
 expertise: "Beginner"
 type: "Talk"

@@ -9,6 +9,8 @@ On-boarding new usersSmart contract interactionTransaction statusAddress explora
 Important aspects we will be considering are accessibility, color contrast, and error handling. Specific criteria will be posted on each bounty for participants to fulfill. The challenge doesn't end during the workshop. The workshop bounties will be active for the duration of the conference, and possibly beyond. At the conclusion of each bounty deadline we will determine winners and/or submissions to award based on criteria that we define, and based on the quality of execution and content of each submission."
 youtubeUrl: "https://www.youtube.com/embed/msKKgHlIPfU"
 ipfsHash: "QmZw9RmicNQGm4tSMui1Ye6ZvHpA7iCJNXzz5NTFh9GyfQ"
+ethernaIndex: "https://etherna.io/embed/6344cb30080a54f6d733ea9d"
+ethernaPermalink: "https://etherna.io/embed/de3be3cd005ecdbdbaeb122d35e7d8b37f84d2b6897f7954fbf5ccd8dad5e6f1"
 duration: 3090
 expertise: "intermediate"
 type: "Breakout"

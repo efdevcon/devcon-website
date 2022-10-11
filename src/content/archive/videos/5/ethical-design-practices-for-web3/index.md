@@ -7,6 +7,8 @@ Web3 has attempted to address some of these issues, but so far our user research
 We'll share applied design practices that help keep users in-charge (e.g., design suggestions for informed consent, aid decision making, privacy & security by default, etc.), without interfering in enjoyable browsing experiences."
 youtubeUrl: "https://www.youtube.com/embed/9jutZF9gENg"
 ipfsHash: "QmQ8wDcm7FR93ZwQiioAYc2H234SvF4e9gBPszv8PJXL2S"
+ethernaIndex: "https://etherna.io/embed/6344ef6cc02259b06a2ffa08"
+ethernaPermalink: "https://etherna.io/embed/1329f04ce9fa24cec24317918b3143d586f99540c3459df94e83b548bc5e1c48"
 duration: 1405
 expertise: "Beginner"
 type: "Breakout"

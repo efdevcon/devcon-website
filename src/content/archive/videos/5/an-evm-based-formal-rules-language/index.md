@@ -8,6 +8,8 @@ Enterprise software developers have long relied on Business Rules Engines (BREs)
 The Open Source Lity project developed extensions to Solidity so that the EVM could support BRE for smart contracts. In this presentation, I will discuss the benefits and use cases of rules language and engine for smart contracts especially in the context of financial services and e-commerce applications. I will further describe how the rules language extension for Solidity, modeled after Drools,  is designed and implemented, including compiler and runtime support."
 youtubeUrl: "https://www.youtube.com/embed/eSMyt8ceW2k"
 ipfsHash: "QmSwjhHGM4ozGfEQcwmEFZ323oJvRduxKQzfJnVA2SAMBM"
+ethernaIndex: "https://etherna.io/embed/634495cbc42a10b8427094e6"
+ethernaPermalink: "https://etherna.io/embed/920d4e6a7200f46fc144323c48fb4f6c3026b9ee8317bd7d2f09d0cc72e13070"
 duration: 2408
 expertise: "Intermediate"
 type: "Breakout"

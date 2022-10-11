@@ -11,6 +11,8 @@ The pool of ETH deposited into the mixer and awaiting withdrawal is supplied int
 [5] https://eprint.iacr.org/2019/455.pdf"
 youtubeUrl: "https://www.youtube.com/embed/qNGskbgOY-E"
 ipfsHash: "QmUdsXy8F4AhKckGm6h2ub3Xwqj7WFgtuSws2PPfrBBcdJ"
+ethernaIndex: "https://etherna.io/embed/63449c28c42a10b8427094f0"
+ethernaPermalink: "https://etherna.io/embed/e43687ddfd9af03292d176deab700a1a5a3c38cae64be6508d857787e7cd16dd"
 duration: 388
 expertise: "intermediate"
 type: "Breakout"

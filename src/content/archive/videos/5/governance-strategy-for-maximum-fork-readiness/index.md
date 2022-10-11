@@ -6,6 +6,8 @@ We will present all the known facts of the case, important stakeholders, relevan
 Attendees will be asked to form argumentation for both sides, analyzing and applying current customs, norms, and protocols with respect to crypto law and already existing practice in the blockchain community. The objective of the workshop is to form an interdisciplinary cooperation and practice combinations of expertise needed to create persuasive and complex argumentation. They will take into account practicalities, e.g. protocol design, the politics and efforts of stakeholders as well as the usual scenarios, communication management, expected public relation management, intellectual property hacks, and standard business ethics."
 youtubeUrl: "https://www.youtube.com/embed/gqgnFs0buFo"
 ipfsHash: "QmbAwg3o9dRmpUPeroekBUVSSKewTKZzc8ujp2uHyHghJS"
+ethernaIndex: "https://etherna.io/embed/6345094b080a54f6d733ead1"
+ethernaPermalink: "https://etherna.io/embed/2ad27a2d55d30e30dcf49cb8e216dd4336c7e57c34247416c07a6b8891831219"
 duration: 5344
 expertise: "Beginner"
 type: "Workshop"

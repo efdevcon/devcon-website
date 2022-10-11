@@ -5,6 +5,8 @@ description: "Since the Solidity programming language does not have a formal spe
 The approach adopted by us is to define a grammar for the Solidity programming language and automatically generate inputs based on this grammar. Grammar based fuzzing ensures that generated programs are successfully parsed by the front-end parser. We make use of libProtobuf and libProtobufMutator for defining the grammar and performing grammar-based mutations, and libFuzzer as the underlying fuzzing engine."
 youtubeUrl: "https://www.youtube.com/embed/cAU5NbrXst0"
 ipfsHash: "Qme8CQB8zvviWQJhmY3GhSLkTapmny7EMfFrzUZ3mnRx7a"
+ethernaIndex: "https://etherna.io/embed/634505bcc02259b06a2ffa12"
+ethernaPermalink: "https://etherna.io/embed/7dfadc35b26b5a616ccb3b1d98d0a41639467c55dd96da8de000e65ffc7e5778"
 duration: 1105
 expertise: "Intermediate"
 type: "Breakout"

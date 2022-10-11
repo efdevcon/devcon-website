@@ -7,6 +7,8 @@ In early 2019, international NGO Oxfam and social impact startup Sempo collabora
 This talk is a joint presentation between Oxfam and Sempo. We will cover how we addressed the challenges we faced working in such an extreme environment, what the project meant for the people participating, and our vision for the future of financial inclusion."
 youtubeUrl: "https://www.youtube.com/embed/ZpPk53h0fsE"
 ipfsHash: "QmTKyP7USfgwRjCSyk1Mw4G1RDYbwPXAC7Fo2zNx6APXnH"
+ethernaIndex: "https://etherna.io/embed/6344b5a2080a54f6d733ea8b"
+ethernaPermalink: "https://etherna.io/embed/2fce5d6f435548895108cfad8fdee68f5aad6c76cb606d43aa67f69e20e74b1d"
 duration: 1344
 expertise: "Beginner"
 type: "Breakout"

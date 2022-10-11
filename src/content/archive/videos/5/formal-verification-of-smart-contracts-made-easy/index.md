@@ -7,6 +7,8 @@ Next, we will provide an overview of existing testing tools, such as tools based
 Finally, we will learn how formal verifiers go beyond testing and can provide unbounded formal guarantees (for any sequence of transactions). We will take a closer look at the specification language used by VerX and its automated verification method, which is easy to use and does not require in-depth knowledge in formal verification."
 youtubeUrl: "https://www.youtube.com/embed/tq5XH3JedqM"
 ipfsHash: "QmPuX9NV1Yvv927pCaxjY5qWYpBTU6Bysph6XLx6LnegEg"
+ethernaIndex: "https://etherna.io/embed/6344fc76080a54f6d733eac7"
+ethernaPermalink: "https://etherna.io/embed/786ac5072ed758aaa24c57d4aad00059c72dd722f6c8d0137942d2a1a01a931e"
 duration: 4261
 expertise: "intermediate"
 type: "Breakout"

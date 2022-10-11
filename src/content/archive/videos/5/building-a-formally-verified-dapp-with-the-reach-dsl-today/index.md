@@ -8,6 +8,8 @@ Participants will then work through a series of exercises implementing a differe
 Prerequisites: Experience programming in JavaScript, have Docker installed on their machines to install the image of the Reach compiler and demo. It is recommended participants download and install this image before the workshop at:  https://bit.ly/ReachIsTotallyAwesome. Experience with formal verification or stating DApp properties is NOT required."
 youtubeUrl: "https://www.youtube.com/embed/WR50p7LXQ9M"
 ipfsHash: "QmcyQ8HaSb3nuQmCmtbWxuJ1SX2rVVnj2nHAwFma5h7Ywk"
+ethernaIndex: "https://etherna.io/embed/6344a9cdc42a10b842709500"
+ethernaPermalink: "https://etherna.io/embed/283c23685167cbc8e474a2a6ec63c37378c847fd09f4a4adb9379847f4dcab7a"
 duration: 2708
 expertise: "Intermediate"
 type: "Breakout"

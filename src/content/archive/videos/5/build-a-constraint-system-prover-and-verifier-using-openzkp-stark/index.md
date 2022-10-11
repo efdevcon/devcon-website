@@ -8,6 +8,8 @@ In this workshop we will
 * implement a Stark constraint system."
 youtubeUrl: "https://www.youtube.com/embed/WxW1IEUWFHY"
 ipfsHash: "QmZtqKYiRGvkXz82ejuKbooDCf9HaiXxSBT7bQtT5JVJKG"
+ethernaIndex: "https://etherna.io/embed/6344a7fbd64b3ecacdc0020b"
+ethernaPermalink: "https://etherna.io/embed/d9e389519b0b36d2a79879c65e063fe507867a402767e2c7933fc25e8ed8e058"
 duration: 1818
 expertise: "advanced"
 type: "Breakout"

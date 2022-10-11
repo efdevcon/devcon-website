@@ -8,6 +8,8 @@ One of the fruits of the African community effort is the Ribbon Blockchain built
 We believe that many more impactful projects in the energy space and more areas will emerge from this concept which we will keep supporting in solving some of the world’s most pressing challenges."
 youtubeUrl: "https://www.youtube.com/embed/oQ60o-PP6t8"
 ipfsHash: "QmcbnvAfW2kXywYnytEZWwvuN449PqiJkupAvBNkgjzhvt"
+ethernaIndex: "https://etherna.io/embed/6344f092080a54f6d733eac1"
+ethernaPermalink: "https://etherna.io/embed/1ebd6d955f2d6a758ea87ddc77821d1a2fe0cd9ba79cff00bae808d8b754b0d5"
 duration: 1220
 expertise: "Beginner"
 type: "Breakout"

@@ -6,6 +6,8 @@ This talk will discuss how Uniswap was designed to favor composability, includi
 The talk will also preview some future features of Uniswap—ERC20-ERC20 pairs and Uniswap-based price oracles—and show how they would expand Uniswap’s usefulness as a building block of decentralized finance."
 youtubeUrl: "https://www.youtube.com/embed/sc1FKlhX1FM"
 ipfsHash: "QmfZmYAmDFB9taPz5Cpgbv4631KkWusGGMDZPxaNhyf8Ft"
+ethernaIndex: "https://etherna.io/embed/6344ad51d64b3ecacdc00211"
+ethernaPermalink: "https://etherna.io/embed/0fc982779b59b9b3c371b7f3dab69910c547cab2fa3ee915858c6dfd9ac6fda3"
 duration: 1368
 expertise: "beginner"
 type: "Breakout"

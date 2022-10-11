@@ -11,6 +11,8 @@ description: "The current Ethereum 2.0 roadmap is doing a lot of great work on m
 - Why sharding doesn't solve social scalability."
 youtubeUrl: "https://www.youtube.com/embed/pSCeTOgkzE0"
 ipfsHash: "QmdUXfzHVB7VsNBLP9CHjz1MT7TCaXT97E87RjAEXBXXBx"
+ethernaIndex: "https://etherna.io/embed/634461adc42a10b8427094dc"
+ethernaPermalink: "https://etherna.io/embed/715096da08eccd005edaf2ca0772259195fcea2800d4d22edd988573df831da7"
 duration: 1341
 expertise: "Beginner"
 type: "Breakout"

@@ -11,6 +11,8 @@ This workshop aims to:
 - Workshop common frameworks and visions for new organizational models to eliminate project silos, form counter-hegemonic strategies, and move the whole ecosystem forwards."
 youtubeUrl: "https://www.youtube.com/embed/gvlxxkiZNDw"
 ipfsHash: "QmY4QCLmTwNDw67EzSibT537L2HUWwfbzhxbCFoX83Vhwa"
+ethernaIndex: "https://etherna.io/embed/6344a0f6d64b3ecacdc00206"
+ethernaPermalink: "https://etherna.io/embed/23758e38a840811974ab9e80c9451953b87b96eff9f5cc82865f7e494e377a39"
 duration: 3771
 expertise: "Beginner"
 type: "Breakout"

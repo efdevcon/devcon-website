@@ -8,6 +8,8 @@ Much makeshift work has been down for this underdesigned infrastructure. For exa
 The speaker presents a design which abstracts token interface away from low-level Eth-node interface, remodels the basic web code trust inheritance for practicality and security. It involves high-level API for web applications and a secure, WebAssembly based sandbox running signed code designed to embed in the Web itself."
 youtubeUrl: "https://www.youtube.com/embed/caBSufgaj4Q"
 ipfsHash: "QmWTPm4om3narsoEw8hi97SAvzTm8QrJJv2Rvu7tcLCt13"
+ethernaIndex: "https://etherna.io/embed/63451710c02259b06a2ffa22"
+ethernaPermalink: "https://etherna.io/embed/64f6bc8da032dc95d0ab5adf6c030443a195bda651b46fc07e086d4bc3bf5a6f"
 duration: 1222
 expertise: "intermediate"
 type: "Breakout"
