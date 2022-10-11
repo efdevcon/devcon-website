@@ -13,7 +13,7 @@ import { VideoCard } from '../archive/playlists'
 
 export default pageHOC(function PlaylistTemplate(data: any) {
   const playlist = mapToPlaylist(data.data.playlist)
-
+console.log('PLAYLIST PAGE', playlist)
   return (
     <div className={css['container']}>
       <SEO title={playlist.title} description={playlist.description} imageUrl={playlist.imageUrl} />
