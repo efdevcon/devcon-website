@@ -2558,7 +2558,7 @@
       "capacity": 110
     },
     "type": "Lightning Talk",
-    "description": "While layer 2s have seen widescale adoption, they are often less accessible for those users that don't have crypto yet. \r\n\r\nIn this talk, Thijs Maas, the CEO of Onramper, shall share unique insights into the fiat on-ramp market for layer 2s, using unique insights we get as aggregator. We shall demonstrate the gaps in current layer 2 on-ramp coverage (and it's impact), and give insight into the actual performance of layer 2 on-ramps. Spoiler: things are less rosy than they might seem...",
+    "description": "In this talk, Thijs Maas, the CEO of Onramper, shall share unique insights into the fiat on-ramp market for layer 2s, using data on fiat on-ramps. We shall demonstrate the gaps in current layer 2 on-ramp coverage.",
     "abstract": "",
     "expertise": "",
     "tags": [
@@ -2964,7 +2964,7 @@
         "id": "VCEKKL",
         "name": "Arun Devabhaktuni",
         "description": "Lead Researcher at Mirana",
-        "twitter": "Feynyman",
+        "twitter": "https://twitter.com/feynyman",
         "avatar": "http://speak.devcon.org/media/avatars/IMG_20221010_172540_681_klQLPLj.jpg"
       }
     ],
@@ -3001,9 +3001,9 @@
       },
       {
         "id": "3ZAZ97",
-        "name": "Madison Adams",
-        "description": "TBD",
-        "avatar": ""
+        "name": "Vanessa Koh",
+        "description": "-",
+        "avatar": "http://speak.devcon.org/media/avatars/ESP_Graphic_4-removebg-preview_1_pc7Xh0R.png"
       }
     ],
     "title": "Ecosystem Support Program Day",
@@ -5754,6 +5754,7 @@
         "id": "JATNLE",
         "name": "Collin Myers",
         "description": "Hi I am Collin Myers, founder of Obol Labs and project lead of the Obol Network. I have been working on lower layer Ethereum technologies since 2017 historically working at ConsenSys. I have spent the better part of the last 4 years working on the enablement of Eth2 in various capacities. I built the Eth2 calculator, Eth2 launchpad, internet bonds, and a co-creator of DVT.\r\n\r\nI have spoken at Devcon before and would to do it again! Thank You for putting this on!!!",
+        "twitter": "@stakeeth",
         "avatar": ""
       },
       {
@@ -6484,7 +6485,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
       }
     ],
-    "title": "Adoption Day",
+    "title": "Adoption Day — UX Unconference",
     "track": "UX & Design",
     "duration": 480,
     "start": 1665655200000,
@@ -6497,7 +6498,7 @@
       "capacity": 112
     },
     "type": "Workshop",
-    "description": ".",
+    "description": "Open-source design unconference and working groups helping to drive improved User Experience and usability standards forward for the decentralized eco-system.\r\n\r\nEnable cross pollination of fresh perspectives and emerging UX methodologies. Bringing together developers and designers in the ecosystem working at the various layers of the Web3 Tech Stack to share their unique solutions and encourage interoperability amongst various systems.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
