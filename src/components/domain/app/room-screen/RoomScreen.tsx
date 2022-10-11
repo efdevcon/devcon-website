@@ -145,11 +145,11 @@ export const RoomScreen = (props: ScreenProps) => {
   if (!currentSession && upcomingSessions.length > 0) currentSession = upcomingSessions[0]
 
   /*
-    If no current session, fall back to the first upcoming session
-    Indicate time of session
+    // If no current session, fall back to the first upcoming session
+    // Indicate time of session
     Room background color
     Room picture zoom 
-    Responsive
+    Check mega long
   */
 
   // console.log(currentSession, 'current session')
@@ -224,7 +224,7 @@ export const RoomScreen = (props: ScreenProps) => {
             </div>
 
             <div className={css['second-row']}>
-              <p className="text-3">{currentSession.title}</p>
+              <p className="text-3 clamp-2">{currentSession.title}</p>
             </div>
 
             <div className={css['speakers']}>
