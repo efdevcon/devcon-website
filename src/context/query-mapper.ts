@@ -32,7 +32,7 @@ export function ToArchiveNavigation(videoTags?: any[]): Array<Link> {
         type: 'page',
       } as Link)
   )
-  const tagLinks = videoTags?.map(i => {
+  const tagLinks = videoTags?.filter((i: string) => !!i).map(i => {
     return { title: i, url: `/archive/watch?tags=${encodeURIComponent(i)}`, type: 'page' } as Link
   })
   links.push({ title: 'Event', url: '', type: 'links', logo: '/assets/images/menu/bogota.svg', links: eventLinks })
