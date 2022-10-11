@@ -14,12 +14,14 @@ type ThumbnailBlock = {
   thumbnailUrl?: string
   thumbnailSubtext?: string
   onMouseEnter?: any
+  scalePercentages?: boolean
 }
 
 export const ThumbnailBlock = (props: ThumbnailBlock) => {
   let className = css['container']
 
   if (props.className) className += ` ${props.className}`
+  if (props.scalePercentages) className += ` ${css['scale-percentages']}`
 
   if (props.thumbnailSubtext) className += ` ${css['with-subtext']}`
 

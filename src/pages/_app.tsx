@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import React from 'react'
 import { NextIntlProvider } from 'next-intl'
 import Head from 'next/head'
 import { PWAPrompt } from 'components/domain/app/pwa-prompt'
@@ -7,8 +8,13 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'assets/css/index.scss'
 import { HistoryTracker } from 'components/domain/app/history-tracker'
 import { SEO } from 'components/domain/seo'
+// import { ScheduleState } from 'components/domain/app/schedule/Schedule'
 
 function App({ Component, pageProps }: AppProps) {
+  // const ComponentWithSchedule = React.useMemo(() => {
+  //   return ScheduleState(Component)
+  // }, [Component])
+
   return (
     <>
       <Head>
@@ -27,6 +33,7 @@ function App({ Component, pageProps }: AppProps) {
         <PWAPrompt />
         <HistoryTracker>
           <Component {...pageProps} />
+          {/* <ComponentWithSchedule {...pageProps} /> */}
         </HistoryTracker>
       </NextIntlProvider>
     </>

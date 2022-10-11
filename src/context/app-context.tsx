@@ -31,15 +31,12 @@ export const AppContext = (props: AppContextProps) => {
 
   // Sync current time periodically to keep time related functionality up to date
   useEffect(() => {
-    const now = process.env.NODE_ENV === 'development' ? moment.utc() : moment.utc()
-
-    const syncTime = () => setCurrentTime(now)
-
     const clear = setInterval(() => {
-      syncTime()
+      setCurrentTime(moment.utc().subtract(5, 'hours'))
     }, 1000 * 60)
 
-    syncTime()
+    setCurrentTime(moment.utc('2022-10-11T12:30'))
+    // setCurrentTime(moment.utc().subtract(5, 'hours'))
 
     return () => clearInterval(clear)
   }, [])

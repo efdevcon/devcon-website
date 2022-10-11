@@ -22,6 +22,7 @@ type CardProps = {
   session: Session
   className?: string
   compact?: boolean
+  scalePercentages?: boolean
 }
 
 export const SessionCard = (props: CardProps) => {
@@ -55,6 +56,7 @@ export const SessionCard = (props: CardProps) => {
   }
 
   let thumbnailClassName = css['thumbnail-container']
+  let detailsClassName = css['details']
 
   if (props.compact) thumbnailClassName += ` ${css['compact']}`
   if (props.className) thumbnailClassName += ` ${props.className}`
@@ -64,6 +66,10 @@ export const SessionCard = (props: CardProps) => {
 
   if (sessionIsLive) {
     thumbnailClassName += ` ${css['ongoing']}`
+  }
+
+  if (props.scalePercentages) {
+    detailsClassName += ` ${css['scale-percentages']}`
   }
 
   const isStandalone = useIsStandalone()
@@ -76,17 +82,26 @@ export const SessionCard = (props: CardProps) => {
       thumbnailSubtext={props.session.track}
       track={props.session.track}
       thumbnailUrl={sessionUrl}
+      scalePercentages={props.scalePercentages}
     >
-      <div className={css['details']}>
+      <div className={detailsClassName}>
         <div className={css['top']}>
           <Link to={sessionUrl} className={css['title']}>
             {props.session.title}
           </Link>
 
           {sessionIsLive && <div className="label red bold sm">Happening now!</div>}
-          {isSoon && <div className="label bold sm">Starts in {relativeTime}</div>}
+          {isSoon && <div className="label bold sm">Starts {relativeTime}</div>}
 
-          {sessionIsBookmarked ? <IconAdded {...iconProps} /> : <IconAdd {...iconProps} style={{ opacity: '0.5' }} />}
+          {!props.scalePercentages && (
+            <>
+              {sessionIsBookmarked ? (
+                <IconAdded {...iconProps} />
+              ) : (
+                <IconAdd {...iconProps} style={{ opacity: '0.5' }} />
+              )}
+            </>
+          )}
         </div>
 
         <div className={css['bottom']}>
@@ -106,23 +121,25 @@ export const SessionCard = (props: CardProps) => {
           {props.session.speakers.length > 0 && (
             <div className={css['speakers']}>
               <IconSpeaker />
-              {props.session.speakers.sort((a: Speaker, b: Speaker) => {
-                return a.name.localeCompare(b.name)
-              }).map((speaker, index) => {
-                const isLast = props.session.speakers.length - 1 === index
-                const isFirst = index === 0
+              {props.session.speakers
+                .sort((a: Speaker, b: Speaker) => {
+                  return a.name.localeCompare(b.name)
+                })
+                .map((speaker, index) => {
+                  const isLast = props.session.speakers.length - 1 === index
+                  const isFirst = index === 0
 
-                return (
-                  <Link
-                    key={speaker.id}
-                    className={`${css['speaker']} ${isFirst ? css['is-first'] : ''}`}
-                    to={isStandalone ? `/speakers?speaker=${speaker.id}` : `/speakers/${speaker.id}`}
-                  >
-                    {speaker.name}
-                    {!isLast && <>,&nbsp;</>}
-                  </Link>
-                )
-              })}
+                  return (
+                    <Link
+                      key={speaker.id}
+                      className={`${css['speaker']} ${isFirst ? css['is-first'] : ''}`}
+                      to={isStandalone ? `/speakers?speaker=${speaker.id}` : `/speakers/${speaker.id}`}
+                    >
+                      {speaker.name}
+                      {!isLast && <>,&nbsp;</>}
+                    </Link>
+                  )
+                })}
             </div>
           )}
 

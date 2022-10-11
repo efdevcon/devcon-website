@@ -107,9 +107,99 @@ export const multiSelectFilter = (selectedFilter: { [key: string]: boolean }, ke
   return true
 }
 
-export const Schedule = (props: any) => {
+const ScheduleContext: any = React.createContext({})
+
+export const useScheduleContext = () => {
+  return React.useContext(ScheduleContext)
+}
+
+// const usePersistedState = (initialState: any, key: string) => {
+//   const scheduleContext: any = React.useContext(ScheduleContext)
+
+//   const [state, setState]: any = React.useEffect(() => {
+//     const restoredState = scheduleContext[key] || initialState
+
+//     return restoredState
+//   })
+
+//   useEffect(() => {}, [])
+
+//   return [state, setState]
+// }
+
+export const ScheduleState = (Component: any) => {
+  const ScheduleGlobalState = (props: any) => {
+    const { sessions: sessionsBeforeFormatting, userSchedule, tracks, event } = props
+    const personalAgenda = !!userSchedule
+    const [search, setSearch] = React.useState('')
+    const [view, setView] = React.useState('list')
+    const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'upcoming')
+    const [favoritesOnly, setFavoritesOnly] = React.useState(false)
+    const [selectedTracks, setSelectedTracks] = React.useState({} as { [key: string]: boolean })
+    const [selectedRooms, setSelectedRooms] = React.useState({} as { [key: string]: boolean })
+    const [selectedSessionTypes, setSelectedSessionTypes] = React.useState({} as { [key: string]: boolean })
+    const [selectedExpertise, setSelectedExpertise] = React.useState({} as { [key: string]: boolean })
+    const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({
+      readable: 'all',
+    })
+
+    return (
+      <ScheduleContext.Provider
+        value={{
+          search,
+          setSearch,
+          view,
+          setView,
+          basicFilter,
+          setBasicFilter,
+          favoritesOnly,
+          setFavoritesOnly,
+          selectedTracks,
+          setSelectedTracks,
+          selectedSessionTypes,
+          setSelectedSessionTypes,
+          selectedRooms,
+          setSelectedRooms,
+          selectedExpertise,
+          setSelectedExpertise,
+          dateFilter,
+          setDateFilter,
+        }}
+      >
+        <Component {...props} />
+      </ScheduleContext.Provider>
+    )
+  }
+
+  ScheduleGlobalState.displayName = 'SchedulePersistedState'
+
+  return ScheduleGlobalState
+}
+
+export const Schedule = ScheduleState((props: any) => {
   const { sessions: sessionsBeforeFormatting, userSchedule, tracks, event } = props
   const personalAgenda = !!userSchedule
+
+  // const {
+  //   search,
+  //   setSearch,
+  //   view,
+  //   basicFilter,
+  //   setBasicFilter,
+  //   favoritesOnly,
+  //   setFavoritesOnly,
+  //   selectedTracks,
+  //   setSelectedTracks,
+  //   selectedSessionTypes,
+  //   setSelectedSessionTypes,
+  //   selectedRooms,
+  //   setSelectedRooms,
+  //   selectedExpertise,
+  //   setSelectedExpertise,
+  //   dateFilter,
+  //   setDateFilter,
+  // }: any = useScheduleContext()
+
   const { account } = useAccountContext()
   const { now } = useAppContext()
   const [search, setSearch] = React.useState('')
@@ -121,6 +211,7 @@ export const Schedule = (props: any) => {
   const [selectedSessionTypes, setSelectedSessionTypes] = React.useState({} as { [key: string]: boolean })
   const [selectedExpertise, setSelectedExpertise] = React.useState({} as { [key: string]: boolean })
   const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
+
   const listRef = useRef<any>()
 
   const eventDates = React.useMemo(() => {
@@ -301,9 +392,18 @@ export const Schedule = (props: any) => {
           return (
             <>
               {account && <ShareScheduleModal />}
-              {account && <DownloadScheduleModal sessions={bookmarkedSessions.map(i => sessionsBeforeFormatting.find((x: Session) => {
-                return x.id === i.id
-              })).filter(i => !!i).sort((a, b) => a.start - b.start)} />}
+              {account && (
+                <DownloadScheduleModal
+                  sessions={bookmarkedSessions
+                    .map(i =>
+                      sessionsBeforeFormatting.find((x: Session) => {
+                        return x.id === i.id
+                      })
+                    )
+                    .filter(i => !!i)
+                    .sort((a, b) => a.start - b.start)}
+                />
+              )}
               <>
                 {favoritesOnly ? (
                   <IconAdded {...starProps} className="icon fill-red" />
@@ -326,38 +426,38 @@ export const Schedule = (props: any) => {
                 options={
                   personalAgenda
                     ? [
-                      {
-                        text: 'Personalized Schedule',
-                        value: 'personal',
-                      },
-                    ]
+                        {
+                          text: 'Personalized Schedule',
+                          value: 'personal',
+                        },
+                      ]
                     : [
-                      {
-                        text: 'Upcoming',
-                        value: 'upcoming',
-                      },
+                        {
+                          text: 'Upcoming',
+                          value: 'upcoming',
+                        },
 
-                      {
-                        text: 'Live',
-                        value: 'live',
-                      },
-                      {
-                        text: 'Attending',
-                        value: 'attending',
-                      },
-                      {
-                        text: 'Interested',
-                        value: 'interested',
-                      },
-                      {
-                        text: 'Past',
-                        value: 'past',
-                      },
-                      {
-                        text: 'All',
-                        value: 'all',
-                      },
-                    ]
+                        {
+                          text: 'Live',
+                          value: 'live',
+                        },
+                        {
+                          text: 'Attending',
+                          value: 'attending',
+                        },
+                        {
+                          text: 'Interested',
+                          value: 'interested',
+                        },
+                        {
+                          text: 'Past',
+                          value: 'past',
+                        },
+                        {
+                          text: 'All',
+                          value: 'all',
+                        },
+                      ]
                 }
               />
             </div>
@@ -637,4 +737,4 @@ export const Schedule = (props: any) => {
       </div>
     </>
   )
-}
+})

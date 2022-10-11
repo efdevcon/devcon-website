@@ -56,6 +56,60 @@
 }
 
 .details {
+  &.scale-percentages {
+    padding: 0.5vw !important;
+
+    :global {
+      .label {
+        font-size: 0.5vw !important;
+        padding: 0.25vw 0.175vw !important;
+      }
+    }
+
+    .top {
+      padding-bottom: 0.5vw !important;
+  
+      .title {
+        font-size: 1vw !important;
+        padding-right: 2vw !important;
+      }
+  
+      .save-session {
+        font-size: 1.25vw !important;
+        right: 0.5vw !important;
+        top: 0.5vw !important;
+      }
+    }
+
+    .bottom {
+      padding-top: 0.5vw !important;
+      font-size: 0.5vw !important;
+
+      div, p, svg {
+        font-size: 0.8vw !important;
+      }
+  
+      p, a {
+        margin-left: 0.5vw !important;
+      }
+
+      .room {
+        .n-seats {
+          margin-right: 1vw !important;
+          margin-right: 0.5vw !important;
+        }
+      }
+  
+      .speakers {
+        .speaker {
+          &.is-first {
+            margin-left: 0.5vw !important;
+          }
+        }
+      }
+    }
+  }
+
   padding: $gaps-gap-2;
 
   .title, .speaker {

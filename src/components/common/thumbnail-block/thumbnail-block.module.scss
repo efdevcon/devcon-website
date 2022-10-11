@@ -5,6 +5,35 @@
   position: relative;
   margin-bottom: 8px;
 
+  &.scale-percentages {
+    margin-bottom: 0.5vw !important;
+
+    .thumbnail-svg {
+      width: 4vw;
+      height: 4vw;
+    }
+
+    .thumbnail-container {
+      padding: 0.75vw 0.5vw !important;
+      padding-bottom: 0.5vw !important;
+  
+      width: 5.5vw !important; 
+  
+      img {
+        width: 3.5vw !important;
+        height: 3.5vw !important;
+      }
+  
+      .thumbnail-text {
+        margin-top: 0.5vw !important;
+        font-size: 0.75vw !important;
+        // @include fonts-xxs-fixed;
+        @include fonts-bold;
+        line-height: 1vw !important;
+      }
+    }
+  }
+
   .thumbnail-svg {
     width: 56px;
     height: 56px;
