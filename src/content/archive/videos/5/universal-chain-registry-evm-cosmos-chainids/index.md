@@ -6,6 +6,8 @@ Github: https://github.com/UCRegistry
 Telegram: https://t.me/UCRegistry"
 youtubeUrl: "https://www.youtube.com/embed/4oie4MmfG_s"
 ipfsHash: "QmfB4XdzvyYQSHWetTe5eTyet6YKPcQx4VvtaM3152qNKa"
+ethernaIndex: "https://etherna.io/embed/6345ab5a080a54f6d733eb5d"
+ethernaPermalink: "https://etherna.io/embed/da4e61d11c8b9ff4a1e02b4308132dc80e48c355a30f571f483dd45c693e6831"
 duration: 226
 expertise: "intermediate"
 type: "Breakout"

@@ -11,6 +11,8 @@ Our A/B test of the prototype showed a significant improvement in the amount of 
 *Given that the user has already installed a wallet and have acquired Livepeer token."
 youtubeUrl: "https://youtu.be/miGj_-Cf_Z8"
 ipfsHash: "QmaJ7AUAb3UZJnrduLozJcseFgtw9RDcSzaK5V1pbqrKyH"
+ethernaIndex: "https://etherna.io/embed/63452043c02259b06a2ffa26"
+ethernaPermalink: "https://etherna.io/embed/8aa0f8f1344cd539e6f2ec52750be219d5a3848610338105424ca9ee89bc3713"
 duration: 1189
 expertise: "Beginner"
 type: "Talk"

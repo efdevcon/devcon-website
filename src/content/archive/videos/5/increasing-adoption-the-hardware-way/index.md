@@ -6,6 +6,8 @@ The mass market is already buying and running, of their own volition, hardware t
 Can we leverage the hardware people are already accepting into their homes and give them more functionality? Can we equip these devices with nodes and increase node count? What needs to happen for this to become a reality? An incentivization layer, a more data-conscious cyber-culture and direct value to the user would get us there. This talk will explore how to put a node in every home."
 youtubeUrl: "https://www.youtube.com/embed/CGAGZhRr7is"
 ipfsHash: "QmTEbBPshpA5i67nyBG8jWkxGnrPuacGnXAPjSUCGJtVJw"
+ethernaIndex: "https://etherna.io/embed/634522f4080a54f6d733eaef"
+ethernaPermalink: "https://etherna.io/embed/99d40d18daae8ff2f8b9ce767e2d41c18a65fe8f5f1c9c15e9072e65e3de40ae"
 duration: 1296
 expertise: "Beginner"
 type: "Breakout"

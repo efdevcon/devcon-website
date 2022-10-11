@@ -7,6 +7,8 @@ This talk unpacks these questions, by drawing on ethnographic research on the us
 The talk shows how ‘access’ to financial services and technologies is neither a binary nor static category. Rather, providing a viable technological alternative to conventional financial services means supporting people’s ability to transition flexibly between forms of digital and tangible money."
 youtubeUrl: "https://www.youtube.com/embed/CVA9069rO4I"
 ipfsHash: "QmQVYPeefAZ2oXA3BUrCGeAys7x8HnEY6jxzZ4DGoiaDNt"
+ethernaIndex: "https://etherna.io/embed/6345564dc02259b06a2ffa60"
+ethernaPermalink: "https://etherna.io/embed/05b3bdfd5ff44755bd39885bf86e11a7c7eef86ede55ad945eb3a70601f28c66"
 duration: 1231
 expertise: "Advanced"
 type: "Breakout"

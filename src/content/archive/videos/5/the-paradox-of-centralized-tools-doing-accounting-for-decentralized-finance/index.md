@@ -6,6 +6,8 @@ The talk will present multiple examples of this paradox in the world around us, 
 Finally potential solutions to this problem will be presented, showing how a tool that performs decentralized financial analytics, accounting and tax reporting should look like in order to respect user's privacy and fit in this new era of decentralized finance we are now entering."
 youtubeUrl: "https://www.youtube.com/embed/hEwcDjjcUhk"
 ipfsHash: "QmPAf98enNKhxa9R3csQkfiSBa81tJWs9Pire5zFDCbrRC"
+ethernaIndex: "https://etherna.io/embed/6345a274080a54f6d733eb4f"
+ethernaPermalink: "https://etherna.io/embed/a762635d37df9fca35afe2aa16da4a4df4492583461b51b7a39d7acf22113186"
 duration: 477
 expertise: ""
 type: "Breakout"

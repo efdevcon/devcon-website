@@ -6,6 +6,8 @@ In this work, we introduce a new Merkle tree variant, which is defined not by th
 We use this new data structure to create ShrubsToken, a new gas efficient privacy token, with Zcash-like privacy. Based on our experiments, we estimate that Shrubs will use around 500,000 gas per transaction, after the next Ethereum hard fork."
 youtubeUrl: "https://www.youtube.com/embed/_tqwCBrw1Xc"
 ipfsHash: "QmS9PgsiNqUY7bbeYMPxmCAJq4zWy8vpyLqhqeL5Vz3ybr"
+ethernaIndex: "https://etherna.io/embed/63457326080a54f6d733eb35"
+ethernaPermalink: "https://etherna.io/embed/ff7c82affa56de482ca12b8d9566c3d7f7261ad3711be2b6ce7c1c0b14892fd3"
 duration: 1464
 expertise: "advanced"
 type: "Breakout"

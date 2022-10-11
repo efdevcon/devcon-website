@@ -7,6 +7,8 @@ This is intended to be the database layer of snark-dapp (snaps) where the layers
 Rollup does not make any rules about what happens in a leaf, what kind of leaves can be created and destroyed."
 youtubeUrl: "https://www.youtube.com/embed/PB6dtY_cbRI"
 ipfsHash: "QmSMbfexLgWXvKVuDQvLnc5U5H1UJNScBBRbxU7rSZ5SDZ"
+ethernaIndex: "https://etherna.io/embed/63456d03c02259b06a2ffa74"
+ethernaPermalink: "https://etherna.io/embed/2e8b977ee136ecf05c9daaabf77c4862596864262b811d6a8236d518c4839fc5"
 duration: 3794
 expertise: "Intermediate"
 type: "Talk"

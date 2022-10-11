@@ -6,6 +6,8 @@ In this talk, we’ll examine what makes a secure oracle mechanism reliable enou
 Finally, we will show the design patterns which leading smart contracts use to remain reliable and provide high levels of overall security while connecting to external systems."
 youtubeUrl: "https://youtu.be/ibqokbe-PxA"
 ipfsHash: "QmZzzB9uB7dgyeYna7kmoWaPbB53vTgYHjeg7q3JWw2B2D"
+ethernaIndex: "https://etherna.io/embed/63456db1c02259b06a2ffa76"
+ethernaPermalink: "https://etherna.io/embed/78aee73082a89d768f12f4ac79c728dcb354a7333291c98d6bc5070bcdb54fcf"
 duration: 1317
 expertise: "Beginner"
 type: "Talk"

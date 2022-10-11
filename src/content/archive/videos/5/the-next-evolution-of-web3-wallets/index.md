@@ -11,6 +11,8 @@ What you can expect from this workshop:
 - Build a simple application that is made possible with these new APIs."
 youtubeUrl: "https://www.youtube.com/embed/8c2q9pBkqFU"
 ipfsHash: "Qmbh2shRMwyaM7inLR5ysXxVJJX9T4rPf83NPjAAE3nGfd"
+ethernaIndex: "https://etherna.io/embed/63459e62080a54f6d733eb4d"
+ethernaPermalink: "https://etherna.io/embed/07096d8e41fe5524de65b874deb50b454c09903d05999390a7a8868ab0861879"
 duration: 3824
 expertise: "Intermediate"
 type: "Breakout"

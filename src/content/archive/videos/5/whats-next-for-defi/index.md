@@ -7,6 +7,8 @@ MakerDAO is one of the oldest projects in the Ethereum space that has, aside fro
 Look ahead with the project founder Rune Christensen – he has a major revelation planned to finish off the keynote - more on this TBD."
 youtubeUrl: "https://youtu.be/NR5LhdIjxzg"
 ipfsHash: "QmSA6g4yyeUK1regygtH3xbfawC4KNiE5dykoKD7QcvQdp"
+ethernaIndex: "https://etherna.io/embed/6345b8ecc02259b06a2ffabe"
+ethernaPermalink: "https://etherna.io/embed/f5016c387986d885ff1c6f9db07dda5badadb7263d8ea27d0601ecf689caa8ac"
 duration: 1240
 expertise: "Beginner"
 type: "Talk"

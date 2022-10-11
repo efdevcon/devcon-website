@@ -8,6 +8,8 @@ Attending the workshop will give you the tools and knowledge to tackle our white
 To fully experience hands-on experience in the workshop, please install the docker on your machine and do `docker pull golemfactory/gwasm-tutorial`beforehand."
 youtubeUrl: "https://www.youtube.com/embed/RQ5etKM1ACs"
 ipfsHash: "QmbwMqgo1sofcLyatkkBgaL1NpwbtcWLTdcty9bJh5XJ6z"
+ethernaIndex: "https://etherna.io/embed/6345bdd8080a54f6d733eb73"
+ethernaPermalink: "https://etherna.io/embed/8baae1c93569556754623b8376511640a2ef59a3a9893040c3a6d762b3ae38c5"
 duration: 2595
 expertise: "Intermediate"
 type: "Breakout"

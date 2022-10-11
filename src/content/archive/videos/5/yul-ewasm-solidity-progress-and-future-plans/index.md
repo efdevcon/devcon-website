@@ -7,6 +7,8 @@ The introduction of memory area types will help optimizing memory allocation.
 Finally, a super-optimizer could prove useful, since it is worth spending extra time on compilation to save gas."
 youtubeUrl: "https://www.youtube.com/embed/xThLb7I-bhg"
 ipfsHash: "QmS7Jmcp5bibia7UC31TPdEtbVGxjgTaWQBcbxbk6RCmir"
+ethernaIndex: "https://etherna.io/embed/6345bf2ac02259b06a2ffac4"
+ethernaPermalink: "https://etherna.io/embed/4530eb8d274086fc51466308720c7b9d6e42bbb8ae727c55ebc64185997faa1e"
 duration: 1171
 expertise: "Advanced"
 type: "Breakout"

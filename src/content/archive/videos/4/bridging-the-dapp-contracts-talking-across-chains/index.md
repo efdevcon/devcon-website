@@ -10,6 +10,8 @@ description: "\"A year ago Parity Tech published an initial PoC of Parity Bridge
 - Which tooling is needed and what's available today?\""
 youtubeUrl: "https://youtu.be/89EDHTH1g8I"
 ipfsHash: "QmUVC9LoBQVVXtKE4wx5yPujgehPXVG1UtJDg9727dYJGf"
+ethernaIndex: "https://etherna.io/embed/6345cb15080a54f6d733eb7f"
+ethernaPermalink: "https://etherna.io/embed/ef1c873eeeac75c10b8737981293117d8fbdceafbde6fecbcb361c53f0999d8b"
 duration: 1941
 expertise: "Intermediate"
 type: "Talk"

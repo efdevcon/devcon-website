@@ -5,6 +5,8 @@ description: "Debugging is an unavoidable phase of the software development cycl
 In this presentation, we'll shed some light on how stack traces work in other platforms and the challenges we had to solve for building them for Solidity in Buidler. These include identifying the code behind each contract address, identifying the functions in the stack, recognizing Solidity's compilation patterns to improve error messages, and how to display them from your JavaScript tests."
 youtubeUrl: "https://www.youtube.com/embed/24O8cDDGDQI"
 ipfsHash: "Qmb94tZ5ViHmUajyfYZMfzU5GFuKXvDfLVUPxsECYfsTer"
+ethernaIndex: "https://etherna.io/embed/63458d39c02259b06a2ffa96"
+ethernaPermalink: "https://etherna.io/embed/420519c7c7f1602d210c8264fe8f6739c3302b665bb90254880e46be7d9c80b2"
 duration: 1470
 expertise: "Advanced"
 type: "Breakout"

@@ -7,6 +7,8 @@ a clean, minimal intermediate language (IL) that serves as an effective compiler
 Axoni is developing AxLang because the ability to write verifiable smart contracts is critical to our clients' broad adoption of this technology. AxLang Backend is the underlying structure that makes it possible for AxLang and other high-level languages to efficiently target the EVM."
 youtubeUrl: "https://youtu.be/0LaGkVX0p4M"
 ipfsHash: "QmU1yjTKfRotn5uFULghTQoVw7gbmU1H5JceedUrmkoHRU"
+ethernaIndex: "https://etherna.io/embed/6345c812080a54f6d733eb7d"
+ethernaPermalink: "https://etherna.io/embed/5ba906534b6d37aebfb11c299dfe3d6c0c98a92e169cb1e2a33853936eaa496f"
 duration: 357
 expertise: "Intermediate"
 type: "Talk"

@@ -11,6 +11,8 @@ Let's invent the “Third Layer” of the design stack: A systems-first approach
 Seeing in systems won't only help us. It may even enable today's legacy online platforms to solve their major challenges: against attention hijacking, mass data collection, state propaganda, racial violence, radicalization, harassment & exploitation."
 youtubeUrl: "https://www.youtube.com/embed/X7tAzLm6_QA"
 ipfsHash: "QmdWcbuUUF24BnxuyN9oexkmmcicEhYKrPz1Zkz2SyPvad"
+ethernaIndex: "https://etherna.io/embed/63456f9dc02259b06a2ffa78"
+ethernaPermalink: "https://etherna.io/embed/64d927c94e4aec33d074ff450df6dcc2861c20c7f667264575bdb71733ffa851"
 duration: 1106
 expertise: "Beginner"
 type: "Breakout"
