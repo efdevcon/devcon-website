@@ -5834,5 +5834,30 @@
     "eventDays": [
       1665446400000
     ]
+  },
+  {
+    "id": "RESDSC",
+    "name": "Anda Ngcaba",
+    "avatar": "https://speak.devcon.org/media/avatars/F366CD12-4796-4A27-AEA6-4DA336E98FCB_pngZhXE.jpeg",
+    "description": "Chief of Operations at UCT Financial Innovation Hub.",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "LGMDLB",
+    "name": "Romina Ayelén Sejas",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "@cryptochica_arg"
   }
 ]
