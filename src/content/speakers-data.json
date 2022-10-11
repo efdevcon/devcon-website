@@ -433,6 +433,21 @@
     "github": "https://github.com/jgorzny"
   },
   {
+    "id": "JATNLE",
+    "name": "Collin Myers",
+    "avatar": "https://www.gravatar.com/avatar/1cd31fbf98a1cc7127f1b7723c218ab3",
+    "description": "Hi I am Collin Myers, founder of Obol Labs and project lead of the Obol Network. I have been working on lower layer Ethereum technologies since 2017 historically working at ConsenSys. I have spent the better part of the last 4 years working on the enablement of Eth2 in various capacities. I built the Eth2 calculator, Eth2 launchpad, internet bonds, and a co-creator of DVT.\r\n\r\nI have spoken at Devcon before and would to do it again! Thank You for putting this on!!!",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "https://obol.dev/",
+    "twitter": "@stakeeth",
+    "github": "https://github.com/ObolNetwork"
+  },
+  {
     "id": "SYG3JB",
     "name": "Cayman Nava",
     "avatar": "https://speak.devcon.org/media/avatars/aE4FTs5F_400x400_Hi7pyrw.png",
@@ -4707,9 +4722,9 @@
   },
   {
     "id": "3ZAZ97",
-    "name": "Madison Adams",
-    "avatar": null,
-    "description": "TBD",
+    "name": "Vanessa Koh",
+    "avatar": "https://speak.devcon.org/media/avatars/ESP_Graphic_4-removebg-preview_1_pc7Xh0R.png",
+    "description": "-",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -4885,11 +4900,9 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Developer Infrastructure",
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665446400000,
       1665619200000
     ]
   },
@@ -5393,8 +5406,8 @@
   },
   {
     "id": "3VQEST",
-    "name": "Ixshells",
-    "avatar": null,
+    "name": "Ix-shells",
+    "avatar": "https://speak.devcon.org/media/avatars/Screenshot_2022-10-10_at_22.14.15_45brP3Q.png",
     "description": "IX Shells (Itzel Yard) is a self-taught coder from Panama City with a glitchy and architectural generative style that has garnered acclaim both within and beyond the crypto ecosystem. She has been featured in several high profile auctions and exhibitions in the traditional art world, as well as created a piece for the Tor Project",
     "tracks": [
       ""
@@ -5403,13 +5416,15 @@
       1665446400000,
       1665532800000,
       1665619200000
-    ]
+    ],
+    "website": "https://y.at/%E2%9B%93%EF%B8%8F%F0%9F%95%B3%EF%B8%8F%E2%9C%A8",
+    "twitter": "@ix_shells"
   },
   {
     "id": "QEYVKV",
     "name": "AstroMel",
-    "avatar": null,
-    "description": "",
+    "avatar": "https://speak.devcon.org/media/avatars/AstroMelou_livecoder_Z8K5atN.jpeg",
+    "description": "**AstroMelou**\r\nDj. Producer. Livecoder. Trans artist from Cali, Colombia. \r\n\r\nPacemaker for sound and visual journeys through acid, tropical, electric, fiery, rebellious and diverse frequencies of world music. Their sets denote the fluidity of musical genres,  daydreams of tropical fever.",
     "tracks": [
       ""
     ],
@@ -5417,19 +5432,23 @@
       1665446400000,
       1665532800000,
       1665705600000
-    ]
+    ],
+    "website": "https://astromelou.wordpress.com/",
+    "twitter": "@astromelou"
   },
   {
     "id": "8SLFHM",
     "name": "Atractor Estudio",
     "avatar": "https://speak.devcon.org/media/avatars/277579879_394370306025953_2445270446240223678_n_2k7qYfK.jpeg",
-    "description": "We are a group of artists who work with mechanical, electronic and computer engineering techniques from the field of the arts. We focus on the visualization of natural phenomena, mathematical and scientific paradigms related to sociocultural phenomena not only of the western hegemonic culture, but also of other ways of knowing and understanding the scientific, through the interaction of the viewer with a digital and analog substrate.",
+    "description": "**ATRACTOR STUDIO**\r\nColombian electronic arts collective Atractor understands technology as a field of struggle from their Latin American context. In this scenario, assimilating and experiencing technology always as active users implies that electronic arts and creation have the power to spark conversations and create spaces for community dialogue\r\n\r\nFor DEVCON they will be performing a video game live performance **The Migrants** and launch their NFT Botánica Transgénica.",
     "tracks": [
       ""
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "website": "https://atractor.org/en/proyectos/",
+    "twitter": "@atractorestudio"
   },
   {
     "id": "BJQV8Z",
@@ -5793,7 +5812,7 @@
   },
   {
     "id": "VCEKKL",
-    "name": "ARUN DEVABHAKTUNI",
+    "name": "Arun Devabhaktuni",
     "avatar": "https://speak.devcon.org/media/avatars/IMG_20221010_172540_681_klQLPLj.jpg",
     "description": "Lead Researcher at Mirana",
     "tracks": [
@@ -5802,6 +5821,18 @@
     "eventDays": [
       1665532800000
     ],
-    "twitter": "Feynyman"
+    "twitter": "https://twitter.com/feynyman"
+  },
+  {
+    "id": "VCBAZX",
+    "name": "Liraz",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665446400000
+    ]
   }
 ]
