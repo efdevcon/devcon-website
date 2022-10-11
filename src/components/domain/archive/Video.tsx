@@ -169,13 +169,23 @@ export const Video = (props: VideoProps) => {
               <Tabs onSelectTab={setActiveTab} useQuerystring>
                 <Tab title="YouTube">
                   <div className="aspect">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    {props.video.youtubeUrl &&
+                      <iframe
+                        src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    }
+
+                    {!props.video.youtubeUrl &&
+                      <img
+                        src={'/assets/images/video-soon.png'}
+                        alt={`${props.video.title} preview`}
+                        placeholder="blurred"
+                      />
+                    }
                   </div>
                 </Tab>
 
@@ -213,11 +223,9 @@ export const Video = (props: VideoProps) => {
                     <h1 className="font-xxl title">{video.title}</h1>
 
                     <div className={css['descriptors']}>
-                      {video.duration && (
-                        <p className={css['descriptor']}>
-                          <span>Duration:</span> {moment.utc(video.duration * 1000).format('HH:mm:ss')}
-                        </p>
-                      )}
+                      <p className={css['descriptor']}>
+                        <span>Duration:</span> {moment.utc(video.duration * 1000).format('HH:mm:ss')}
+                      </p>
                       <p className={css['descriptor']}>
                         <span>Speaker:</span> {video.speakers.join(', ')}
                       </p>
@@ -252,7 +260,7 @@ export const Video = (props: VideoProps) => {
                             <div className={css['text']}>
                               <div className={css['title']}>
                                 <p className="bold">{i.name}</p>
-                                <p className="font-xs"> {i.role}</p>
+                                {i.role && <p className="font-xs"> {i.role}</p>}
                               </div>
                               <p className="font-sm">{i.description}</p>
                             </div>

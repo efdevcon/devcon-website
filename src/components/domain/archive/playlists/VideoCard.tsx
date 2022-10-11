@@ -42,7 +42,9 @@ export const VideoCard = (props: Props) => {
       <div className={css['aspect-wrapper']}>
         <div className="aspect">
           <img
-            src={`https://img.youtube.com/vi/${getVideoId(props.video.youtubeUrl)}/hqdefault.jpg`}
+            src={props.video.youtubeUrl ?
+              `https://img.youtube.com/vi/${getVideoId(props.video.youtubeUrl)}/hqdefault.jpg` :
+              '/assets/images/video-soon.png'}
             alt={`${props.video.title} preview`}
             placeholder="blurred"
           />
