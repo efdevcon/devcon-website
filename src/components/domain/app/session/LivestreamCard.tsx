@@ -23,8 +23,8 @@ export const LivestreamCard = (props: Props) => {
   const sessionEnded = now.isAfter(end)
   const isOngoing = !sessionUpcoming && !sessionEnded
 
-  const eventStartTime = moment('09:45:00', 'hh:mm:ss')
-  const eventEndTime = moment('18:15:00', 'hh:mm:ss')
+  const eventStartTime = moment.utc('09:30:00', 'hh:mm:ss')
+  const eventEndTime = moment.utc('18:30:00', 'hh:mm:ss')
   const isStreamActive = now.isBetween(eventStartTime, eventEndTime) && EVENT_DAYS.includes(now.date())
 
   return (
