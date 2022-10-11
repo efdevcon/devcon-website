@@ -35,8 +35,8 @@ export const AppContext = (props: AppContextProps) => {
       setCurrentTime(moment.utc().subtract(5, 'hours'))
     }, 1000 * 60)
 
-    setCurrentTime(moment.utc('2022-10-11T12:30'))
-    // setCurrentTime(moment.utc().subtract(5, 'hours'))
+    // setCurrentTime(moment.utc())
+    setCurrentTime(moment.utc().subtract(5, 'hours'))
 
     return () => clearInterval(clear)
   }, [])
