@@ -177,7 +177,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 50%;
+      width: 70%;
     }
 
     .second-row {
@@ -242,7 +242,11 @@
       }
 
       .upcoming {
-        padding-top: 0.4vw;
+        > * {
+          &:nth-child(2) {
+            margin-top: 0.6vw !important;
+          }
+        }
       }
 
       .livestreams {

@@ -128,7 +128,7 @@ export const RoomScreen = (props: ScreenProps) => {
     // Get upcoming sessions
   })()
 
-  const currentSession = (() => {
+  let currentSession = (() => {
     return props.sessions.find(session => {
       const start = moment.utc(session.start)
       const end = moment.utc(session.end)
@@ -141,6 +141,16 @@ export const RoomScreen = (props: ScreenProps) => {
 
     // return props.sessions.find(session => session.id.toLowerCase() === 'knphbz') || props.sessions[0]
   })()
+
+  if (!currentSession && upcomingSessions.length > 0) currentSession = upcomingSessions[0]
+
+  /*
+    If no current session, fall back to the first upcoming session
+    Indicate time of session
+    Room background color
+    Room picture zoom 
+    Responsive
+  */
 
   // console.log(currentSession, 'current session')
 
@@ -204,7 +214,13 @@ export const RoomScreen = (props: ScreenProps) => {
             <div className={css['first-row']}>
               <p className="text-1">Session</p>
               <p className="text-1 bold">{currentSession.type}</p>
-              <div className="label sm white bold">{currentSession.track}</div>
+              <p className="text-1 bold">{currentSession.track}</p>
+              {(() => {
+                const startTime = moment.utc(currentSession.start)
+                const endTime = startTime.clone().add(currentSession.duration, 'minutes')
+
+                return `${startTime.format('MMM Do')} — ${startTime.format('h:mm A')} - ${endTime.format('h:mm A')}`
+              })()}
             </div>
 
             <div className={css['second-row']}>

@@ -12,13 +12,17 @@ const RoomList = (props: any) => {
   return (
     <AppContext>
       <div>
-        {props.rooms.map((room: any) => {
-          return (
-            <Link key={room.id} to={`/venue/room-screen/${room.id}`} style={{ display: 'block' }}>
-              {room.name}
-            </Link>
-          )
-        })}
+        {props.rooms
+          .sort((a: any, b: any) => a.name.localeCompare(b.name))
+          .map((room: any) => {
+            if (room.capacity === null) return null
+
+            return (
+              <Link key={room.id} to={`/venue/room-screen/${room.id}`} style={{ display: 'block', padding: '24px' }}>
+                {room.name}
+              </Link>
+            )
+          })}
       </div>
     </AppContext>
   )
