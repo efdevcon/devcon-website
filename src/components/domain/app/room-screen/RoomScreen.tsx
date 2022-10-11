@@ -144,6 +144,14 @@ export const RoomScreen = (props: ScreenProps) => {
 
   if (!currentSession && upcomingSessions.length > 0) currentSession = upcomingSessions[0]
 
+  let sessionIsLive = false
+
+  if (currentSession) {
+    const sessionHasPassed = now?.isAfter(currentSession.end)
+    const sessionIsUpcoming = now?.isBefore(currentSession.start)
+    sessionIsLive = !sessionHasPassed && !sessionIsUpcoming
+  }
+
   /*
     // If no current session, fall back to the first upcoming session
     // Indicate time of session
@@ -221,6 +229,7 @@ export const RoomScreen = (props: ScreenProps) => {
 
                 return `${startTime.format('MMM Do')} — ${startTime.format('h:mm A')} - ${endTime.format('h:mm A')}`
               })()}
+              {sessionIsLive && <p className="text-1 live bold">Happening Now</p>}
             </div>
 
             <div className={css['second-row']}>
@@ -266,9 +275,9 @@ export const RoomScreen = (props: ScreenProps) => {
 
                 <p>If room capacity is full, please watch the session on live stream.</p>
                 <p>
-                  Network Name: DevconBogota
+                  Network Name: <b>DevconBogota</b>
                   <br />
-                  Wifi Password: runafullnode
+                  Wifi Password: <b>runafullnode</b>
                 </p>
 
                 <div className={css['session-link']}>app.devcon.org/schedule/{currentSession.id}</div>
