@@ -119,7 +119,8 @@ export const Session = (props: SessionProps) => {
               <div className={css['info-line']}>
                 <IconMarker />
                 <p>
-                  {props.session.room.name} {props.session.room.description && ` — ${props.session.room.description}`}
+                  {props.session.room.name} {props.session.room.description && ` — ${props.session.room.description}`},{' '}
+                  {props.session.room.info}
                 </p>
               </div>
             )}
@@ -215,11 +216,13 @@ export const Session = (props: SessionProps) => {
         {props.session.speakers.length > 0 && (
           <div className={css['speakers']}>
             <h3 className="app-header clear-bottom-less">Speakers</h3>
-            {props.session.speakers.sort((a: Speaker, b: Speaker) => {
-              return a.name.localeCompare(b.name)
-            }).map(i => {
-              return <SpeakerCard key={i.id} speaker={i} />
-            })}
+            {props.session.speakers
+              .sort((a: Speaker, b: Speaker) => {
+                return a.name.localeCompare(b.name)
+              })
+              .map(i => {
+                return <SpeakerCard key={i.id} speaker={i} />
+              })}
           </div>
         )}
 

@@ -152,18 +152,6 @@ export const RoomScreen = (props: ScreenProps) => {
     sessionIsLive = !sessionHasPassed && !sessionIsUpcoming
   }
 
-  /*
-    // If no current session, fall back to the first upcoming session
-    // Indicate time of session
-    Room background color
-    Room picture zoom 
-    Check mega long
-  */
-
-  // console.log(currentSession, 'current session')
-
-  // const
-
   return (
     <div className={css['room-screen']}>
       <div className={css['left']}>
@@ -174,7 +162,9 @@ export const RoomScreen = (props: ScreenProps) => {
 
           <div className={css['title']}>
             <p className="text-1">{props.room.info}</p>
-            <p className="text-2 bold">{props.room.name}</p>
+            <p className="text-2 bold">
+              {props.room.name} - {props.room.description}
+            </p>
           </div>
 
           <div className={css['image-wrapper']}>{getFloorImage(props.room.info)}</div>

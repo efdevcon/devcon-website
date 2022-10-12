@@ -148,9 +148,9 @@ export const SessionCard = (props: CardProps) => {
             <p>
               {(() => {
                 const startTime = moment.utc(props.session.start)
-                const endTime = startTime.clone().add(props.session.duration, 'minutes')
+                const endTime = moment.utc(props.session.end)
 
-                return `${startTime.format('MMM Do')} — ${startTime.format('h:mm A')} - ${endTime.format('h:mm A')}`
+                return `${startTime.format('MMM Do')} — ${startTime.format('HH:mm A')} - ${endTime.format('HH:mm A')}`
               })()}
             </p>
           </div>
