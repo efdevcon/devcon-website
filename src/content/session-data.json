@@ -73,6 +73,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -439,6 +440,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -471,6 +473,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -938,6 +941,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -1994,6 +1998,7 @@
         "id": "MJJN9F",
         "name": "Jordan Sutcliffe",
         "description": "BizDev Lead at StakeWise",
+        "twitter": "@JstarCS",
         "avatar": "http://speak.devcon.org/media/avatars/Speaker_Profile_Square_Fuknipw.jpg"
       },
       {
@@ -3253,43 +3258,6 @@
     ]
   },
   {
-    "id": "PTRGTA",
-    "speakers": [
-      {
-        "id": "HXVBSW",
-        "name": "Monet du Plessis",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "3ZAZ97",
-        "name": "Vanessa Koh",
-        "description": "-",
-        "avatar": "http://speak.devcon.org/media/avatars/ESP_Graphic_4-removebg-preview_1_pc7Xh0R.png"
-      }
-    ],
-    "title": "Ecosystem Support Program Day",
-    "track": "Opportunity & Global Impact",
-    "duration": 480,
-    "start": 1665568800000,
-    "end": 1665597600000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Workshop 2h",
-    "description": "ESP Day is a full day of talks and panel discussions with the purpose of exploring topics or projects pertinent to ecosystem development while highlighting the EF's grantees. Join us for wide-ranging conversations on building a post-Merge world, supporting education initiatives across cultures to reach our next billion, game development to achieve ZK scaling, and more!",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "ecosystem",
-      "support"
-    ]
-  },
-  {
     "id": "FTUUF3",
     "speakers": [
       {
@@ -3569,6 +3537,7 @@
         "id": "XLEESP",
         "name": "Andrew",
         "description": "Andrew Vaziri is a technical lead in GiveDirectly's Innovation Team. He works primarily on geospatial data, machine learning, and blockchain projects. He graduated with an MS in Electrical Engineering from Georgia Tech and has worked for Apple, Microsoft, and multiple successful startups as a software and machine learning engineer.",
+        "twitter": "@AndrewVaziri",
         "avatar": "http://speak.devcon.org/media/avatars/headshot_tWNSyJP.png"
       }
     ],
@@ -3855,43 +3824,6 @@
       "SNARK",
       "applications",
       "EIP"
-    ]
-  },
-  {
-    "id": "CWDXZU",
-    "speakers": [
-      {
-        "id": "PHUK3Q",
-        "name": "Carolina Pinzon",
-        "description": "Carolina is a Senior Frontend Developer at Shopify. She is part of the Blockchain team, where she combines her passion for Frontend development and decentralized applications. Originally from Colombia, Carolina is currently living in Vancouver, Canada.",
-        "avatar": "http://speak.devcon.org/media/avatars/pinzon_EfU2DJg.jpeg"
-      },
-      {
-        "id": "QERDVF",
-        "name": "Bryan Moreno",
-        "description": "Born in Brazil but currently based in Berlin. I've been writing software for over 10 years, both on the backend and on the frontend. Almost a year ago, I started working at Shopify on their blockchain team. I've been helping them tap into blockchain technologies and use NFTs to unlock new commerce experiences for their customers.",
-        "avatar": "http://speak.devcon.org/media/avatars/photo_IVtZcHa.jpg"
-      }
-    ],
-    "title": "The Challenges and Learnings of Implementing Wallet Connection on Mobile",
-    "track": "Developer Infrastructure",
-    "duration": 7,
-    "start": 1665574200000,
-    "end": 1665574800000,
-    "room": {
-      "id": "talk-4",
-      "name": "Talk 4",
-      "description": "River",
-      "info": "Floor 3",
-      "capacity": 110
-    },
-    "type": "Lightning Talk",
-    "description": "Web3 is mostly a desktop experience, but we spend most of our time on mobile devices. How can we bridge the gap between Dapps and Mobile, especially in such a crucial step as the wallet connection? In this talk, we want to share the failures and learnings we had while developing GM Shop, the first tokengated experience built for mobile that partnered with the biggest NFT brands such as Doodles, Invisible Friends, and Cool Cats.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "Mobile",
-      "wallet connect"
     ]
   },
   {
@@ -4319,6 +4251,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -4565,6 +4498,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -4710,6 +4644,71 @@
     ]
   },
   {
+    "id": "NVGJZL",
+    "speakers": [
+      {
+        "id": "HGMDTU",
+        "name": "John Kane",
+        "description": "Programmer and team lead at the Nomic Foundation.",
+        "twitter": "@john_kane",
+        "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
+      }
+    ],
+    "title": "Better Solidity Support in VSCode by Hardhat",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665583200000,
+    "end": 1665585000000,
+    "room": {
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
+      "info": "Floor 3",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "A brisk jaunt through the state of the art in Solidity editor tooling, a tour of Nomic's Solidity Language Server and how we can take Solidity editor support to the next level.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "developer",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "CVJSUW",
+    "speakers": [
+      {
+        "id": "83KGXF",
+        "name": "Johns Gresham",
+        "description": "Working on NiceNode https://nicenode.xyz",
+        "twitter": "sirjohnsgresham",
+        "avatar": "http://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg"
+      }
+    ],
+    "title": "Why and How to Run a Node! (No ETH Required)",
+    "track": "Staking & Validator Experience",
+    "duration": 50,
+    "start": 1665583200000,
+    "end": 1665586200000,
+    "room": {
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "The foundation of Ethereum is a resilient and decentralized network of nodes. You’ll learn how nodes defend the network, the easiest ways to run a node, about the upcoming upgrades to Ethereum which make it easier to run a node, and more.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "node",
+      "decentralization",
+      "ethereum"
+    ]
+  },
+  {
     "id": "THFEMU",
     "speakers": [
       {
@@ -4846,71 +4845,6 @@
     ]
   },
   {
-    "id": "NVGJZL",
-    "speakers": [
-      {
-        "id": "HGMDTU",
-        "name": "John Kane",
-        "description": "Programmer and team lead at the Nomic Foundation.",
-        "twitter": "@john_kane",
-        "avatar": "http://speak.devcon.org/media/avatars/portrait_jOQmz9r.jpg"
-      }
-    ],
-    "title": "Better Solidity Support in VSCode by Hardhat",
-    "track": "Developer Infrastructure",
-    "duration": 25,
-    "start": 1665583200000,
-    "end": 1665585000000,
-    "room": {
-      "id": "talk-2",
-      "name": "Talk 2",
-      "description": "Cold Forest",
-      "info": "Floor 3",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "A brisk jaunt through the state of the art in Solidity editor tooling, a tour of Nomic's Solidity Language Server and how we can take Solidity editor support to the next level.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "developer",
-      "infrastructure"
-    ]
-  },
-  {
-    "id": "CVJSUW",
-    "speakers": [
-      {
-        "id": "83KGXF",
-        "name": "Johns Gresham",
-        "description": "Working on NiceNode https://nicenode.xyz",
-        "twitter": "sirjohnsgresham",
-        "avatar": "http://speak.devcon.org/media/avatars/prof_4uMqpfU.jpg"
-      }
-    ],
-    "title": "Why and How to Run a Node! (No ETH Required)",
-    "track": "Staking & Validator Experience",
-    "duration": 50,
-    "start": 1665583200000,
-    "end": 1665586200000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "The foundation of Ethereum is a resilient and decentralized network of nodes. You’ll learn how nodes defend the network, the easiest ways to run a node, about the upcoming upgrades to Ethereum which make it easier to run a node, and more.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "node",
-      "decentralization",
-      "ethereum"
-    ]
-  },
-  {
     "id": "US7CFH",
     "speakers": [],
     "title": "ENREDO LOFI SAMPLE ARTIST",
@@ -4942,7 +4876,7 @@
         "id": "L9UJLL",
         "name": "Ignasi Ramos",
         "description": "Blockchain Engineer at Polygon-Hermez",
-        "twitter": "https://twitter.com/ignatiusrv",
+        "twitter": "https://twitter.com/0xignasi",
         "avatar": "http://speak.devcon.org/media/avatars/20220422_141434_1_wFoRz11.jpg"
       }
     ],
@@ -5086,6 +5020,7 @@
         "id": "H3VZ9D",
         "name": "Simon Polrot",
         "description": "Educating on crypto and public blockchains since 2015",
+        "twitter": "@simonpolrot",
         "avatar": "http://speak.devcon.org/media/avatars/IMG_0203_bJUzIOG.jpeg"
       }
     ],
@@ -6207,23 +6142,11 @@
         "avatar": ""
       },
       {
-        "id": "98Z3HG",
-        "name": "Mara Schmiedt",
-        "description": "Mara is the Head of Business at Coinbase Cloud, the leading developer platform for blockchain infrastructure services and APIs. Prior to joining Coinbase, Mara managed Business Development at Bison Trails and served as Strategy Manager at ConsenSys. She is passionate about open source technology and has led various initiatives including the development of the eth2 launchpad and distributed validator technology (DVT). She is an active angel investor and serves as an advisor to various projects.",
-        "twitter": "https://twitter.com/MaraSchmiedt",
-        "avatar": "http://speak.devcon.org/media/avatars/E01HRQM32TX-U01MY7HFNA3-70b2d4e413d5-512_gSUmJAj.jpg"
-      },
-      {
         "id": "GNJMSB",
         "name": "Sreeram Kannan",
         "description": "Sreeram Kannan is Founder of EigenLayer and an associate professor at the Department of Electrical & Computer Engineering at the University of Washington, Seattle, where he leads the UW Blockchain Lab. He was a postdoctoral scholar at University of California, Berkeley and a visiting postdoc at Stanford between 2012-2014 before which he received his Ph.D. in Electrical and Computer Engineering and M.S. in mathematics from the University of Illinois Urbana Champaign.",
+        "twitter": "sreeramkannan",
         "avatar": "http://speak.devcon.org/media/avatars/sk_fuNT6By.jpeg"
-      },
-      {
-        "id": "BCDDEU",
-        "name": "Mark",
-        "description": null,
-        "avatar": ""
       },
       {
         "id": "EQ9MRS",
@@ -6688,6 +6611,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -8038,6 +7962,43 @@
       "rollup",
       "escape hatch",
       "layer two"
+    ]
+  },
+  {
+    "id": "CWDXZU",
+    "speakers": [
+      {
+        "id": "PHUK3Q",
+        "name": "Carolina Pinzon",
+        "description": "Carolina is a Senior Frontend Developer at Shopify. She is part of the Blockchain team, where she combines her passion for Frontend development and decentralized applications. Originally from Colombia, Carolina is currently living in Vancouver, Canada.",
+        "avatar": "http://speak.devcon.org/media/avatars/pinzon_EfU2DJg.jpeg"
+      },
+      {
+        "id": "QERDVF",
+        "name": "Bryan Moreno",
+        "description": "Born in Brazil but currently based in Berlin. I've been writing software for over 10 years, both on the backend and on the frontend. Almost a year ago, I started working at Shopify on their blockchain team. I've been helping them tap into blockchain technologies and use NFTs to unlock new commerce experiences for their customers.",
+        "avatar": "http://speak.devcon.org/media/avatars/photo_IVtZcHa.jpg"
+      }
+    ],
+    "title": "The Challenges and Learnings of Implementing Wallet Connection on Mobile",
+    "track": "Developer Infrastructure",
+    "duration": 7,
+    "start": 1665664200000,
+    "end": 1665664620000,
+    "room": {
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
+      "info": "Floor 3",
+      "capacity": 110
+    },
+    "type": "Lightning Talk",
+    "description": "Web3 is mostly a desktop experience, but we spend most of our time on mobile devices. How can we bridge the gap between Dapps and Mobile, especially in such a crucial step as the wallet connection? In this talk, we want to share the failures and learnings we had while developing GM Shop, the first tokengated experience built for mobile that partnered with the biggest NFT brands such as Doodles, Invisible Friends, and Cool Cats.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "Mobile",
+      "wallet connect"
     ]
   },
   {
@@ -10291,6 +10252,102 @@
     ]
   },
   {
+    "id": "8UNNBN",
+    "speakers": [
+      {
+        "id": "KFAEPV",
+        "name": "Justin Glibert",
+        "description": "cyberspace vintner and digital physicist.",
+        "avatar": "http://speak.devcon.org/media/avatars/IOhWHC7W_400x400_1gfjsrI.jpg"
+      },
+      {
+        "id": "8DMBJM",
+        "name": "Remy",
+        "description": "Ops, startups, higher ed + tech, outdoor activities.",
+        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
+      },
+      {
+        "id": "T3HDFA",
+        "name": "Andy",
+        "description": "Game developer at @latticexyz working on Sky Strife.\r\n\r\nPreviously game developer at @darkforest_eth.",
+        "avatar": "http://speak.devcon.org/media/avatars/4297920_jtflyyD.jpeg"
+      },
+      {
+        "id": "VN7GWW",
+        "name": "Lethe",
+        "description": "Commercial lead at Asphodel. Working on economic design and mechanisms for Autonomous Worlds.",
+        "twitter": "https://mobile.twitter.com/asphodel_lethe",
+        "avatar": "http://speak.devcon.org/media/avatars/lethe_4x_NA0J28h.png"
+      },
+      {
+        "id": "HW7ZMT",
+        "name": "Arthur Baer",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "UEE38D",
+        "name": "GVN",
+        "description": "Co-founder and dungeon designer @movingcastles_",
+        "twitter": "@gvn908",
+        "avatar": "http://speak.devcon.org/media/avatars/206017_gfIoYao.jpg"
+      }
+    ],
+    "title": "Autonomous Worlds Self Led Session",
+    "track": "Developer Infrastructure",
+    "duration": 330,
+    "start": 1665741600000,
+    "end": 1665761400000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Workshop 2h",
+    "description": "A session for those interested in the latest developments in Autonomous Worlds and fully on-chain games, including demos of cutting-edge projects, a panel with Optimism co-founder Kevin Ho and Dark Forest creator gubsheep, and an introduction to MUD — the open-source engine for building Autonomous Worlds.\r\nMore info here: https://0xparc.notion.site/Autonomous-Worlds-SLS-612ff18a99f54594806776971b5a8ec6",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "Autonomous",
+      "Worlds"
+    ]
+  },
+  {
+    "id": "XSRJCU",
+    "speakers": [
+      {
+        "id": "WB8KEZ",
+        "name": "Odysseas",
+        "description": "Protocol engineer in Nomad. Used to work as a protocol consultant in the web3 space, and in a previous life, he worked in web2 in the area of DevOps and IoT.",
+        "twitter": "odysseas_eth",
+        "avatar": "http://speak.devcon.org/media/avatars/twitter-profile-01_7v56gU2.png"
+      }
+    ],
+    "title": "Lessons from the Nomad Hack",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665741600000,
+    "end": 1665743400000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "The Nomad Bridge suffered an incident in early August, resulting in about $190M in cryptocurrencies lost. We will see how the Nomad Bridge was able to get hacked and how it relates to the Nomad Protocol. Finally, we will share learnings and insights we got from this incident, actionable tips that all protocols should take into serious consideration in order to reduce the probability of a potential hack.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "Solidity",
+      "Foundry",
+      "cross-chain applications (xapps)"
+    ]
+  },
+  {
     "id": "8UDYZP",
     "speakers": [
       {
@@ -10577,102 +10634,6 @@
       "2",
       ";",
       "applications"
-    ]
-  },
-  {
-    "id": "8UNNBN",
-    "speakers": [
-      {
-        "id": "KFAEPV",
-        "name": "Justin Glibert",
-        "description": "cyberspace vintner and digital physicist.",
-        "avatar": "http://speak.devcon.org/media/avatars/IOhWHC7W_400x400_1gfjsrI.jpg"
-      },
-      {
-        "id": "8DMBJM",
-        "name": "Remy",
-        "description": "Ops, startups, higher ed + tech, outdoor activities.",
-        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
-      },
-      {
-        "id": "T3HDFA",
-        "name": "Andy",
-        "description": "Game developer at @latticexyz working on Sky Strife.\r\n\r\nPreviously game developer at @darkforest_eth.",
-        "avatar": "http://speak.devcon.org/media/avatars/4297920_jtflyyD.jpeg"
-      },
-      {
-        "id": "VN7GWW",
-        "name": "Lethe",
-        "description": "Commercial lead at Asphodel. Working on economic design and mechanisms for Autonomous Worlds.",
-        "twitter": "https://mobile.twitter.com/asphodel_lethe",
-        "avatar": "http://speak.devcon.org/media/avatars/lethe_4x_NA0J28h.png"
-      },
-      {
-        "id": "HW7ZMT",
-        "name": "Arthur Baer",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "UEE38D",
-        "name": "GVN",
-        "description": "Co-founder and dungeon designer @movingcastles_",
-        "twitter": "@gvn908",
-        "avatar": "http://speak.devcon.org/media/avatars/206017_gfIoYao.jpg"
-      }
-    ],
-    "title": "Autonomous Worlds Self Led Session",
-    "track": "Developer Infrastructure",
-    "duration": 330,
-    "start": 1665741600000,
-    "end": 1665761400000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Workshop 2h",
-    "description": "A session for those interested in the latest developments in Autonomous Worlds and fully on-chain games, including demos of cutting-edge projects, a panel with Optimism co-founder Kevin Ho and Dark Forest creator gubsheep, and an introduction to MUD — the open-source engine for building Autonomous Worlds.\r\nMore info here: https://0xparc.notion.site/Autonomous-Worlds-SLS-612ff18a99f54594806776971b5a8ec6",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "Autonomous",
-      "Worlds"
-    ]
-  },
-  {
-    "id": "XSRJCU",
-    "speakers": [
-      {
-        "id": "WB8KEZ",
-        "name": "Odysseas",
-        "description": "Protocol engineer in Nomad. Used to work as a protocol consultant in the web3 space, and in a previous life, he worked in web2 in the area of DevOps and IoT.",
-        "twitter": "odysseas_eth",
-        "avatar": "http://speak.devcon.org/media/avatars/twitter-profile-01_7v56gU2.png"
-      }
-    ],
-    "title": "Lessons from the Nomad Hack",
-    "track": "Developer Infrastructure",
-    "duration": 25,
-    "start": 1665741600000,
-    "end": 1665743400000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "The Nomad Bridge suffered an incident in early August, resulting in about $190M in cryptocurrencies lost. We will see how the Nomad Bridge was able to get hacked and how it relates to the Nomad Protocol. Finally, we will share learnings and insights we got from this incident, actionable tips that all protocols should take into serious consideration in order to reduce the probability of a potential hack.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "Solidity",
-      "Foundry",
-      "cross-chain applications (xapps)"
     ]
   },
   {
@@ -11470,6 +11431,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -12003,6 +11965,7 @@
         "id": "GTUCY9",
         "name": "SHAKA LEI KAUMAKA",
         "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
         "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
       }
     ],
@@ -12586,6 +12549,621 @@
     "expertise": "Beginner",
     "tags": [
       "astromel"
+    ]
+  },
+  {
+    "id": "V9ET3R",
+    "speakers": [
+      {
+        "id": "YMJVHQ",
+        "name": "",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Chess Tournament",
+    "track": "",
+    "duration": 210,
+    "start": 1665604800000,
+    "end": 1665615600000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Chess tournament coordination group: https://t.me/+viuV6PIw45wwYWFh",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "chess",
+      "meetup",
+      "community"
+    ]
+  },
+  {
+    "id": "WRNXTQ",
+    "speakers": [],
+    "title": "Devcon Happy Hour 😊",
+    "track": "",
+    "duration": 120,
+    "start": 1665684000000,
+    "end": 1665691200000,
+    "room": {
+      "id": "food-and-beverages",
+      "name": "Food and Beverages",
+      "description": "",
+      "info": "Floor 4",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Join us on the first floor for drinks at the happy hour!",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "drink",
+      "friends",
+      "fun"
+    ]
+  },
+  {
+    "id": "7MUHSE",
+    "speakers": [],
+    "title": "Old People Party",
+    "track": "",
+    "duration": 210,
+    "start": 1665601200000,
+    "end": 1665613800000,
+    "room": {
+      "id": "temporary-anonymous-zone",
+      "name": "Temporary Anonymous Zone",
+      "description": "Temporary Anonymous Zone in the Community Hub area on the first floor",
+      "info": "",
+      "capacity": 50
+    },
+    "type": "Meetup",
+    "description": "Old People Party with Patrick Mccorry, Anish Mohd: General community meetup, ZK people working in/with Ethereum or Opensource",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "opensource",
+      "party",
+      "old"
+    ]
+  },
+  {
+    "id": "7M9W8S",
+    "speakers": [],
+    "title": "Swarm's Freedom of Speech Corner",
+    "track": "",
+    "duration": 120,
+    "start": 1665597600000,
+    "end": 1665604800000,
+    "room": {
+      "id": "cowork-space-2",
+      "name": "Cowork Space 2",
+      "description": "",
+      "info": "Floor 5",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Our goal is to raise awareness for Freedom of Speech. The Freedom of Speech corner is part of Swarm's ongoing campaign for making Wikipedia censorship resistant by hosting a searchable version on Swarm.  https://bzzwiki.bzz.link/",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "freedom",
+      "censorship",
+      "wikipedia"
+    ]
+  },
+  {
+    "id": "EQKQ9U",
+    "speakers": [],
+    "title": "Otterscan/Erigon/Sourcify Demo & Chat",
+    "track": "Developer Infrastructure",
+    "duration": 90,
+    "start": 1665597600000,
+    "end": 1665603000000,
+    "room": {
+      "id": "zk-community-hub",
+      "name": "ZK Community Hub",
+      "description": "ZK Community Hub in the Community Hub area on the first floor",
+      "info": "",
+      "capacity": 50
+    },
+    "type": "Workshop 1h",
+    "description": "Short demo and workshop on otterscan, Erigon, archive nodes, Sourcify integration, etc.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "node",
+      "blockexplorer",
+      "erigon"
+    ]
+  },
+  {
+    "id": "3MKUP7",
+    "speakers": [],
+    "title": "How to be a Crypto Nomad - CryptoNomads Meetup",
+    "track": "",
+    "duration": 210,
+    "start": 1665597600000,
+    "end": 1665610200000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Meetup",
+    "description": "Meet up for all CryptoNomads and all future Nomads. We bring awareness to the CryptoNomad community and the digital nomad lifestyle. To show a way of life that optimizes for location independence, remote web3 work, and international web3 friendships.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "nomad",
+      "lifestyle",
+      "friendships"
+    ]
+  },
+  {
+    "id": "PCTG8M",
+    "speakers": [],
+    "title": "Devcon Happy Hour 😊",
+    "track": "",
+    "duration": 120,
+    "start": 1665597600000,
+    "end": 1665604800000,
+    "room": {
+      "id": "food-and-beverages",
+      "name": "Food and Beverages",
+      "description": "",
+      "info": "Floor 4",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Join us on the first floor for drinks at the happy hour!",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "drinks",
+      "friends",
+      "fun"
+    ]
+  },
+  {
+    "id": "JWPANU",
+    "speakers": [],
+    "title": "Devcon Happy Hour 😊",
+    "track": "",
+    "duration": 120,
+    "start": 1665765000000,
+    "end": 1665772200000,
+    "room": {
+      "id": "food-and-beverages",
+      "name": "Food and Beverages",
+      "description": "",
+      "info": "Floor 4",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Join us on the first floor for drinks at the happy hour!",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "drinks",
+      "friends",
+      "fun"
+    ]
+  },
+  {
+    "id": "JFBUAL",
+    "speakers": [],
+    "title": "Chess Tournament",
+    "track": "",
+    "duration": 150,
+    "start": 1665768600000,
+    "end": 1665777600000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Chess tournament coordination group: https://t.me/+viuV6PIw45wwYWFh",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "chess",
+      "meetup",
+      "community"
+    ]
+  },
+  {
+    "id": "NQHE7W",
+    "speakers": [
+      {
+        "id": "DJE7ME",
+        "name": "Thore Hildebrandt",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Privacy & Scaling Exploration — What We Do and How to Collaborate",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665568800000,
+    "end": 1665570300000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "TBD",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Zero Knowledge Proofs",
+      "Privacy",
+      "Cryptographic research"
+    ]
+  },
+  {
+    "id": "STYC97",
+    "speakers": [
+      {
+        "id": "DF3X3D",
+        "name": "Luc Lamarche",
+        "description": "Ethereum Ecosystem Support Program",
+        "avatar": "http://speak.devcon.org/media/avatars/Luc_Lamarche_HRMS_95112_0PtqjHt.jpg"
+      }
+    ],
+    "title": "Ecosystem Support Program",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665573000000,
+    "end": 1665574500000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "As the public facing allocation arm of the Ethereum Foundation, ESP provides funding and support to eligible projects working to strengthen Ethereum's foundations and enable future builders. This talk details our goals and the different forms of support we offer.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Support",
+      "Grants",
+      "Ecosystem Development"
+    ]
+  },
+  {
+    "id": "9T9KTT",
+    "speakers": [
+      {
+        "id": "MPECSR",
+        "name": "Anukriti Kunwar",
+        "description": "Anukriti is a product manager at SpruceID. She is currently trying to find a perfect product management tool that encapsulates CR, customer feedback, and feature requests. \r\nShe loves travelling and planning to explore more of South America next year!",
+        "avatar": "http://speak.devcon.org/media/avatars/Anukriti_Kunwar_sAkKOKt.png"
+      }
+    ],
+    "title": "Sign-in with Ethereum",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665581400000,
+    "end": 1665582900000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "The talk sheds insight on Sign-in with Ethereum, a new form of authentication that enables users to control their digital identity with their Ethereum account and ENS profile instead of relying on a traditional intermediary.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Developer tooling",
+      "Developer infrastructure",
+      "Developer experience"
+    ]
+  },
+  {
+    "id": "NZ3PYP",
+    "speakers": [
+      {
+        "id": "VCBAZX",
+        "name": "Liraz",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "3VCGXV",
+        "name": "Dror Tirosh",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Account Abstraction: Making Accounts Smarter",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665586200000,
+    "end": 1665587700000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "This talk discusses the limitations of externally owned accounts (EOAs), use cases for account abstraction, and how to join the account abstraction revolution.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Account Abstraction",
+      "ERC 4337",
+      "Developer infrastructure"
+    ]
+  },
+  {
+    "id": "ET8AZV",
+    "speakers": [
+      {
+        "id": "Y9NMJJ",
+        "name": "Diego Losada",
+        "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
+        "twitter": "https://twitter.com/EthereumOnARM",
+        "avatar": "http://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg"
+      },
+      {
+        "id": "GKXRUD",
+        "name": "Nixorokish",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "Y7P8FA",
+        "name": "Kris Kaczor",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "RSFLEP",
+        "name": "Paul Hauner",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Building a Post-Merge World",
+    "track": "Opportunity & Global Impact",
+    "duration": 35,
+    "start": 1665583500000,
+    "end": 1665585600000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "This panel seeks to motivate builders to develop post-Merge tools and infrastructure in various domains (e.g. staking, consensus clients, Layer 2s, hardware), discuss the gaps in the ecosystem, and explore how we can move forward after The Merge.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "The Merge",
+      "Developer infrastructure",
+      "Staking"
+    ]
+  },
+  {
+    "id": "VKZPEB",
+    "speakers": [
+      {
+        "id": "MNCWP9",
+        "name": "Jack Gilcrest",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "GHSLKW",
+        "name": "Ian Brighton",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Solidity Dev to ZK Dev: Why and How You Should Start ZK Dev Now",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665590400000,
+    "end": 1665591900000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "This talk discusses why working on zero knowledge (ZK) cryptography is important.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Zero Knowledge Cryptography",
+      "Circom",
+      "EVM"
+    ]
+  },
+  {
+    "id": "VPU7V8",
+    "speakers": [
+      {
+        "id": "CUNSE9",
+        "name": "Camila Garzon",
+        "description": "Camila is an engineer and educator who is passionate about making it easier for developers to build in web3. Camila works as a Developer Relations Engineer at Edge & Node where she helps devs build performant, decentralized APIs. She is core team at Women Build Web3, an accelerator for developing top woman engineering talent and fund for projects led by women.",
+        "twitter": "@camiinthisthang",
+        "avatar": "http://speak.devcon.org/media/avatars/cami_wxd6kZv.jpeg"
+      },
+      {
+        "id": "T89AAP",
+        "name": "Yanyan Ho",
+        "description": "Dapp-Learning Founder.  Faithful of Austrian economics, Interested in DEFI, ZK, DAO",
+        "twitter": "https://twitter.com/Dapp_Learning",
+        "avatar": ""
+      },
+      {
+        "id": "DE8U8N",
+        "name": "Divyanshu Dagar",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "N7CEA7",
+        "name": "Ulaş Erdoğan",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "C3MPDU",
+        "name": "Luka",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Education across Cultures",
+    "track": "Opportunity & Global Impact",
+    "duration": 35,
+    "start": 1665592500000,
+    "end": 1665594600000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "This panel seeks to motivate individuals/teams to develop culturally sensitive educational materials in various languages and discuss gaps in the education ecosystem.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Education",
+      "Culture",
+      "Language"
+    ]
+  },
+  {
+    "id": "XMHS3E",
+    "speakers": [
+      {
+        "id": "ZYXBSK",
+        "name": "gubsheep",
+        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
+        "twitter": "gubsheep",
+        "avatar": ""
+      },
+      {
+        "id": "XV79MM",
+        "name": "Jacob Willemsma",
+        "description": "Jacob is VP of Partnerships at ETHGlobal and has been part of the ETHGlobal team since before there was an ETHGlobal!",
+        "avatar": "http://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png"
+      },
+      {
+        "id": "LGMDLB",
+        "name": "Romina Ayelén Sejas",
+        "description": null,
+        "twitter": "@cryptochica_arg",
+        "avatar": ""
+      },
+      {
+        "id": "TPWTC7",
+        "name": "Auryn Macmillan",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "7PHXHS",
+        "name": "Eda",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "WSUXPB",
+        "name": "Mauricio Tovar (Moderator)",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Web3 is Going Great",
+    "track": "Opportunity & Global Impact",
+    "duration": 35,
+    "start": 1665575100000,
+    "end": 1665577200000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "This panel celebrates the Ethereum ecosystem’s global impact thus far, but also look towards the future to answer the questions: What’s missing in the ecosystem? What would we like people to work on? What are Ethereum’s priorities?",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Impact",
+      "Global Opportunity"
+    ]
+  },
+  {
+    "id": "FTSC9Y",
+    "speakers": [
+      {
+        "id": "8SGNZT",
+        "name": "Madison Adams",
+        "description": ".",
+        "avatar": ""
+      },
+      {
+        "id": "8KJFF7",
+        "name": "Safder Raza",
+        "description": "Saf is curious about everything that has to do with pushing people to be the best versions of themselves. After spending a previous life as a mechanical engineer, Saf has worked in education, career coaching, mentorship and now leads People Operations at Gitcoin. You can also find him catherding the brightest Gen Z-ers at Dream DAO. Outside of work, Saf loves to spend time in the mountains, and is an avid trail ultra-runner and skier.",
+        "twitter": "@safderwords",
+        "avatar": "http://speak.devcon.org/media/avatars/Safder_Twit_2_RxJ1xUp.jpg"
+      }
+    ],
+    "title": "What Can DAOs Learn From",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665570900000,
+    "end": 1665572400000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "What can DAOs learn from governments, companies, communities and more? \r\n\r\nThe ultimate vision of DAOs promises us better ways to organize humans. But we are just scratching the surface in discovering how to optimally structure and operate DAOs. As a result, many DAOs are not serving their mission or members as effectively as they could be.\r\n\r\nThe good news? We don’t have to reinvent everything.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "DAOs",
+      "Impact",
+      "Governance"
     ]
   }
 ]

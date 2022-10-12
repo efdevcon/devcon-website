@@ -84,6 +84,20 @@
     "capacity": 100
   },
   {
+    "id": "zk-community-hub",
+    "name": "ZK Community Hub",
+    "description": "ZK Community Hub in the Community Hub area on the first floor",
+    "info": "",
+    "capacity": 50
+  },
+  {
+    "id": "temporary-anonymous-zone",
+    "name": "Temporary Anonymous Zone",
+    "description": "Temporary Anonymous Zone in the Community Hub area on the first floor",
+    "info": "",
+    "capacity": 50
+  },
+  {
     "id": "talk-5-opening-ceremonies",
     "name": "Talk 5 - Opening Ceremonies",
     "description": "On Top of the Mountain",

@@ -345,6 +345,14 @@
     "github": "mahsamoosavi"
   },
   {
+    "id": "8SGNZT",
+    "name": "Madison Adams",
+    "avatar": null,
+    "description": ".",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
     "id": "TKWW8K",
     "name": "Eugene Leventhal",
     "avatar": "https://speak.devcon.org/media/avatars/headshot_L77RZZk.jpg",
@@ -976,8 +984,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg",
     "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
     "tracks": [
-      "Layer 2s",
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
+      "Layer 2s"
     ],
     "eventDays": [
       1665619200000
@@ -3409,20 +3417,6 @@
     "twitter": "@yosephayele"
   },
   {
-    "id": "98Z3HG",
-    "name": "Mara Schmiedt",
-    "avatar": "https://speak.devcon.org/media/avatars/E01HRQM32TX-U01MY7HFNA3-70b2d4e413d5-512_gSUmJAj.jpg",
-    "description": "Mara is the Head of Business at Coinbase Cloud, the leading developer platform for blockchain infrastructure services and APIs. Prior to joining Coinbase, Mara managed Business Development at Bison Trails and served as Strategy Manager at ConsenSys. She is passionate about open source technology and has led various initiatives including the development of the eth2 launchpad and distributed validator technology (DVT). She is an active angel investor and serves as an advisor to various projects.",
-    "tracks": [
-      "Staking & Validator Experience"
-    ],
-    "eventDays": [
-      1665532800000
-    ],
-    "twitter": "https://twitter.com/MaraSchmiedt",
-    "github": "https://github.com/mara-schmiedt"
-  },
-  {
     "id": "XKC3Q9",
     "name": "Solange Gueiros",
     "avatar": "https://speak.devcon.org/media/avatars/SolangeGueiros-Azul02_cVZbuAz.jpg",
@@ -3747,9 +3741,11 @@
     "avatar": "https://speak.devcon.org/media/avatars/IOhWHC7W_400x400_1gfjsrI.jpg",
     "description": "cyberspace vintner and digital physicist.",
     "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More",
       "Developer Infrastructure"
     ],
     "eventDays": [
+      1665446400000,
       1665532800000,
       1665705600000
     ]
@@ -4141,11 +4137,21 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665705600000
+      1665532800000
     ],
     "website": "opensea.io",
     "twitter": "z0age",
     "github": "0age"
+  },
+  {
+    "id": "XV79MM",
+    "name": "Jacob Willemsma",
+    "avatar": "https://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png",
+    "description": "Jacob is VP of Partnerships at ETHGlobal and has been part of the ETHGlobal team since before there was an ETHGlobal!",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "https://twitter.com/jacobwillemsma",
+    "github": "https://github.com/jacobwillemsma"
   },
   {
     "id": "WHNHUQ",
@@ -4171,7 +4177,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665705600000
     ],
     "website": "fossil.dev",
     "twitter": "@0xMarcello",
@@ -4647,6 +4653,7 @@
     "description": "",
     "tracks": [
       "Opportunity & Global Impact",
+      "Developer Infrastructure",
       "UX & Design"
     ],
     "eventDays": [
@@ -4666,18 +4673,6 @@
     "eventDays": [
       1665619200000,
       1665705600000
-    ]
-  },
-  {
-    "id": "HXVBSW",
-    "name": "Monet du Plessis",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665532800000
     ]
   },
   {
@@ -4720,18 +4715,6 @@
     ],
     "twitter": "https://twitter.com/moritzfelipe",
     "github": "https://github.com/moritzfelipe"
-  },
-  {
-    "id": "3ZAZ97",
-    "name": "Vanessa Koh",
-    "avatar": "https://speak.devcon.org/media/avatars/ESP_Graphic_4-removebg-preview_1_pc7Xh0R.png",
-    "description": "-",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665532800000
-    ]
   },
   {
     "id": "9CRGTY",
@@ -5158,8 +5141,12 @@
     "name": "Andrew",
     "avatar": "https://speak.devcon.org/media/avatars/headshot_tWNSyJP.png",
     "description": "Andrew Vaziri is a technical lead in GiveDirectly's Innovation Team. He works primarily on geospatial data, machine learning, and blockchain projects. He graduated with an MS in Electrical Engineering from Georgia Tech and has worked for Apple, Microsoft, and multiple successful startups as a software and machine learning engineer.",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
     "twitter": "@AndrewVaziri",
     "github": "https://github.com/avaziri"
   },
@@ -5351,18 +5338,6 @@
     "twitter": "0xjuandavid"
   },
   {
-    "id": "BCDDEU",
-    "name": "Mark",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Staking & Validator Experience"
-    ],
-    "eventDays": [
-      1665532800000
-    ]
-  },
-  {
     "id": "EQ9MRS",
     "name": "Viktor Bunin | Coinbase Cloud",
     "avatar": "https://speak.devcon.org/media/avatars/Smiling_headshot_cropped_zZuWa1u.png",
@@ -5482,8 +5457,15 @@
     "name": "SHAKA LEI KAUMAKA",
     "avatar": "https://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg",
     "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact",
+      ""
+    ],
+    "eventDays": [
+      1665446400000,
+      1665532800000,
+      1665705600000
+    ],
     "twitter": "@SHAKALEIKAUMAKA"
   },
   {
@@ -5857,6 +5839,24 @@
     ]
   },
   {
+    "id": "MPECSR",
+    "name": "Anukriti Kunwar",
+    "avatar": "https://speak.devcon.org/media/avatars/Anukriti_Kunwar_sAkKOKt.png",
+    "description": "Anukriti is a product manager at SpruceID. She is currently trying to find a perfect product management tool that encapsulates CR, customer feedback, and feature requests. \r\nShe loves travelling and planning to explore more of South America next year!",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "bebaakbeyou"
+  },
+  {
+    "id": "DF3X3D",
+    "name": "Luc Lamarche",
+    "avatar": "https://speak.devcon.org/media/avatars/Luc_Lamarche_HRMS_95112_0PtqjHt.jpg",
+    "description": "Ethereum Ecosystem Support Program",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "0aLucL"
+  },
+  {
     "id": "RESDSC",
     "name": "Anda Ngcaba",
     "avatar": "https://speak.devcon.org/media/avatars/F366CD12-4796-4A27-AEA6-4DA336E98FCB_pngZhXE.jpeg",
@@ -5893,5 +5893,117 @@
       1665532800000
     ],
     "twitter": "@simonpolrot"
+  },
+  {
+    "id": "YMJVHQ",
+    "name": "",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "DJE7ME",
+    "name": "Thore Hildebrandt",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "TPWTC7",
+    "name": "Auryn Macmillan",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "7PHXHS",
+    "name": "Eda",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "WSUXPB",
+    "name": "Mauricio Tovar (Moderator)",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "GKXRUD",
+    "name": "Nixorokish",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "Y7P8FA",
+    "name": "Kris Kaczor",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "RSFLEP",
+    "name": "Paul Hauner",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "3VCGXV",
+    "name": "Dror Tirosh",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "MNCWP9",
+    "name": "Jack Gilcrest",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "GHSLKW",
+    "name": "Ian Brighton",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "DE8U8N",
+    "name": "Divyanshu Dagar",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "N7CEA7",
+    "name": "Ulaş Erdoğan",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "C3MPDU",
+    "name": "Luka",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
   }
 ]
