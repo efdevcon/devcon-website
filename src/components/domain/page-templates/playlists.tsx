@@ -9,7 +9,7 @@ import { CuratedPlaylists } from '../archive/playlists'
 import { ARCHIVE_DESCRIPTION, ARCHIVE_IMAGE_URL, ARCHIVE_TITLE } from 'src/utils/constants'
 
 export const Playlists = () => {
-  const playlists = usePlaylists()
+  const playlists = usePlaylists().filter(i => i.id !== 'most-popular')
   const categories = [...new Set(playlists.map(i => i.categories).flat())]
 
   return (
