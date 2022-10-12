@@ -29,7 +29,7 @@ export const LivestreamCard = (props: Props) => {
 
   const sessionRooms = ['talk-1', 'talk-2', 'talk-3', 'talk-4', 'talk-5', 'talk-5-opening-ceremonies',
     'workshop-1', 'workshop-2', 'workshop-3', 'workshop-4']
-  if (!sessionRooms.some(i => props.session.id === i)) {
+  if (!sessionRooms.some(i => props.session.room?.id === i)) {
     return <></>
   }
 
