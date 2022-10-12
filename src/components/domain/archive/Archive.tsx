@@ -79,9 +79,9 @@ export const Archive = (props: ArchiveProps) => {
 
         <StaffPicks />
 
-        <CuratedPlaylists title="Curated Playlists" items={curated} viewMore />
-
         <Playlists />
+
+        <CuratedPlaylists title="Curated Playlists" items={curated} viewMore />
 
         <Footer />
       </div>
