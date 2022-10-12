@@ -10,6 +10,7 @@ import { TruncateMiddle } from 'src/utils/formatting'
 import { useStaticQuery, graphql } from 'gatsby'
 
 interface Props {
+  type: 'IPFS' | 'Swarm'
   hash?: string
   learnMore?: boolean
   cta?: string
@@ -18,7 +19,7 @@ interface Props {
 
 export const Banner = (props: Props) => {
   const [copied, setCopied] = useState(false)
-  const [ipfsModal, setIpfsModal] = useState(false)
+  const [infoModal, setInfoModal] = useState(false)
   const [ipfsPinModal, setIpfsPinModal] = useState(false)
 
   const data = useStaticQuery(graphql`
@@ -38,16 +39,25 @@ export const Banner = (props: Props) => {
 
   if (!props.hash) return null
 
+  let ctaLink = ''
+  if (props.type === 'IPFS') {
+    ctaLink = `https://ipfs.io/ipfs/${props.hash}`
+  }
+  if (props.type === 'Swarm') {
+    ctaLink = `https://gateway.ethswarm.org/access/${props.hash}`
+  }
+
   return (
     <div className={className}>
       <div className={css['top']}>
         <div className={css['cta']}>
-          <Link to={`https://ipfs.io/ipfs/${props.hash}`}>{props.cta ?? 'IPFS'}</Link>
+
+          <Link to={ctaLink}>{props.cta ?? props.type}</Link>
           <span
             className={css['learn-more']}
             role="button"
-            aria-label="Learn more about IPFS"
-            onClick={() => setIpfsModal(true)}
+            aria-label={`Learn more about ${props.type}`}
+            onClick={() => setInfoModal(true)}
           >
             <InfoIcon />
           </span>
@@ -81,27 +91,42 @@ export const Banner = (props: Props) => {
           </p>
         </div>
 
-        {/* <Modal image={data.allFile.nodes[0]} open close={() => setIpfsModal(false)} title="Fallback">
-          <p> Testing </p>
-        </Modal> */}
-
-        <Modal image={data.allFile.nodes[0]} open={ipfsModal} close={() => setIpfsModal(false)} title="What is IPFS">
+        <Modal image={data.allFile.nodes[0]} open={infoModal} close={() => setInfoModal(false)} title={`What is ${props.type}`}>
           <div className={css['modal-content']}>
-            <p>Let's just start with a one-line definition of IPFS:</p>
-            <p className={css['lead']}>
-              IPFS is a distributed system for storing and accessing files, websites, applications, and data.
-            </p>
-            <p className="semi-bold">Why Distribute Content?</p>
-            <p>
-              Help make devcon content less reliant on centralized platforms that may not be accessible by users around
-              the world. Utilizing decentralized systems we can ensure that devcon content is always available to those
-              interested in learning more about Ethereum regardless of intermediaries.
-            </p>
-            <p>
-              <Link to="https://docs.ipfs.io/" indicateExternal>
-                Learn more about IPFS
-              </Link>
-            </p>
+            {props.type === 'IPFS' && <>
+              <p>Let's just start with a one-line definition of IPFS:</p>
+              <p className={css['lead']}>
+                IPFS is a distributed system for storing and accessing files, websites, applications, and data.
+              </p>
+              <p className="semi-bold">Why Distribute Content?</p>
+              <p>
+                Help make devcon content less reliant on centralized platforms that may not be accessible by users around
+                the world. Utilizing decentralized systems we can ensure that devcon content is always available to those
+                interested in learning more about Ethereum regardless of intermediaries.
+              </p>
+              <p>
+                <Link to="https://docs.ipfs.io/" indicateExternal>
+                  Learn more about IPFS
+                </Link>
+              </p>
+            </>
+            }
+            {props.type === 'Swarm' && <>
+              <p className={css['lead']}>What is Swarm</p>
+
+              <p>
+                Swarm is a decentralized data storage and distribution technology. Ready to power the next generation of censorship-resistant, unstoppable, serverless dapps.
+                If Ethereum is considered the world’s CPU, Swarm is the world’s Hard Drive.
+                Find more info about Swarm on <Link to='https://www.ethswarm.org/'>https://www.ethswarm.org/</Link>
+              </p>
+
+              <p className={css['lead']}>What is Etherna</p>
+              <p>
+                Etherna provides a public accessible Swarm gateway to permits everyone to access contents on the Swarm network in a easy way.
+                Built on this, Etherna offers a decentralized and transparent video platform, free from censorship, where freedom of speech is incentivized, not convicted.
+                Visit Etherna platform at <Link to='https://etherna.io/'>https://etherna.io/</Link> and find more info about it at <Link to='https://info.etherna.io/'>https://info.etherna.io/</Link>.
+              </p>
+            </>}
           </div>
         </Modal>
 
@@ -187,7 +212,7 @@ export const Banner = (props: Props) => {
       {props.learnMore && (
         <div className={css['bottom']}>
           <p>
-            Help decentralize Devcon content by pinning this video on IPFS.
+            Help decentralize Devcon content by pinning this video on ${props.type}.
             <span className={css['learn-more']} role="button" onClick={() => setIpfsPinModal(true)}>
               Learn More
             </span>
