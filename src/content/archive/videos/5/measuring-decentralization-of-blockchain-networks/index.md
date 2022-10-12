@@ -6,6 +6,8 @@ Decentralization is a fundamental blockchain concept, but how to actually determ
 In Balaji Srinvasan’s 2017 \"Quantifying Decentralization,\" he proposed the use of the Gini and Nakamoto coefficients to attach an objective measure of decentralization to a blockchain. By applying Srinvasan’s logic of measuring comparable blockchain characteristics (i.e. node decentralization) and representing it numerically, we propose a measurement we can call DTPS, or decentralized transactions per second. The purpose of DTPS is to factor a blockchain’s decentralization into the ecosystem debate of judging one blockchain’s transaction throughput against another’s. There does not exist, however, a way to factor all that information into a single comparable statistic that factors in near-objective decentralization with objective TPS."
 youtubeUrl: "https://www.youtube.com/embed/a55JLF0uEaA"
 ipfsHash: "Qmc3udcq1x845HKtgT2xNJmt2unGRLwihQ8QS5qiWDvFDY"
+ethernaIndex: "https://etherna.io/embed/63453dff080a54f6d733eb09"
+ethernaPermalink: "https://etherna.io/embed/9589da69219d8b33c4801fbbf175c2c74e87e39f14b033c2475d740d59b5b5ee"
 duration: 1255
 expertise: "Advanced"
 type: "Breakout"

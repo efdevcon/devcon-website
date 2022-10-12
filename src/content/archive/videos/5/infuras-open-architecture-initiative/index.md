@@ -6,6 +6,8 @@ We first launched at Devcon2 as a handful of nodes and a simple architecture. We
 Infura makes it easier for developers to build on Ethereum. During this talk, we’ll share our findings on scaling access to blockchain data. We’ll also discuss ways on how to efficiently cache blockchain data for the JSON-RPC API. We’ll talk about what worked and what didn’t so that others can learn from our applied research."
 youtubeUrl: "https://www.youtube.com/embed/6h4vR-Uw5-8"
 ipfsHash: "QmU1YsUNhfcAiK1oFPkVcxY2vKvZeqRfYuX45oovaHkjrw"
+ethernaIndex: "https://etherna.io/embed/63452409080a54f6d733eaf1"
+ethernaPermalink: "https://etherna.io/embed/52801d76ac81baf7d316d3ce590570d1cb7dcdcff34872be64e7d90fdd597a9c"
 duration: 1094
 expertise: "Intermediate"
 type: "Breakout"

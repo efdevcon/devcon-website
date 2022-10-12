@@ -7,6 +7,8 @@ The presented Piet plugin queries existing pattern registries, categorizes them 
 The curated comments are way to inform the developer regarding issues related to this pattern which are not included in the original description."
 youtubeUrl: "https://www.youtube.com/embed/7aCfo3vTp1s"
 ipfsHash: "QmRMZ5WsGonRYNSc8jKe66VAeGKnBvZRvoJxHXE1K8Fgos"
+ethernaIndex: "https://etherna.io/embed/63457680080a54f6d733eb37"
+ethernaPermalink: "https://etherna.io/embed/908c9d765be721e5c4f6373e4afe459fc50638a8c363b91ba4dbf97b8ef6f131"
 duration: 293
 expertise: "Intermediate"
 type: "Breakout"

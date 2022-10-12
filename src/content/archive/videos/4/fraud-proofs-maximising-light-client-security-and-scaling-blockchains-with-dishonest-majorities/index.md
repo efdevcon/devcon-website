@@ -7,6 +7,8 @@ Data availability code: https://github.com/musalbas/rsmt2d
 Fraud proofs prototype (work-in-progress): https://github.com/asonnino/fraudproofs-prototype"
 youtubeUrl: "https://youtu.be/niqAo4dSLWw"
 ipfsHash: "QmVRJQwmY8x786VSPetPAfNUx5u5SQHUUK26bRRrvm6wGT"
+ethernaIndex: "https://etherna.io/embed/6345f587080a54f6d733ebad"
+ethernaPermalink: "https://etherna.io/embed/9b0a532fd212a0ca09bdbbab15d70043f53e340751c47e20445fc2afc86ca703"
 duration: 1565
 expertise: "Intermediate"
 type: "Talk"

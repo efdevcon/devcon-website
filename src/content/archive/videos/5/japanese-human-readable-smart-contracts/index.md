@@ -19,6 +19,8 @@ and afterwards return the remainder of the escrow to the Payer.
 The enclosed paper draft explains the concept in-depth and has longer examples. Lexon is an Open Source project by the Lexon Foundation. It was created by the presenter and implemented by Marcelo Alaniz, Nicolas Guzzo and him."
 youtubeUrl: "https://www.youtube.com/embed/H4s91y8UzsQ"
 ipfsHash: "QmXeCbxdqSP4dbcUV8Bxqpq31AFV4GE4aXe8p2fdnQyDJJ"
+ethernaIndex: "https://etherna.io/embed/63452963c02259b06a2ffa2c"
+ethernaPermalink: "https://etherna.io/embed/e31035fa8224314c810068c60ceef1678e7cb68fc0a575e210f73bc007537d85"
 duration: 3081
 expertise: "Beginner"
 type: "Breakout"

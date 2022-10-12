@@ -7,6 +7,8 @@ Tech paper: https://drive.google.com/open?id=10TM6bN6excBePftD6l4AoWEfZe484POp
 Website: https://www.flyingcarpet.network/"
 youtubeUrl: "https://youtu.be/OT6sgOqMV_s"
 ipfsHash: "QmZ7jsJsn69RXXc2QxFPuXsM18yxV1wdZDbHYNEqD3RUbW"
+ethernaIndex: "https://etherna.io/embed/6345f451c02259b06a2ffafc"
+ethernaPermalink: "https://etherna.io/embed/3d80a14cf67027409aaf181db36ae0a7e64fedc49c0988661fba704543b766a1"
 duration: 635
 expertise: "Intermediate"
 type: "Talk"

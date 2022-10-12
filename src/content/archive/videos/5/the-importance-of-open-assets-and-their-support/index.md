@@ -10,6 +10,8 @@ For assets that previously had no opportunity to be evaluated economically, Ethe
 I want to talk about the importance of the many assets where goodwill are considered to be a single point of failure and our solutions to them."
 youtubeUrl: "https://www.youtube.com/embed/qLt3N30kouI"
 ipfsHash: "QmaswQpvpxxCdJGpcCMALzoevE3w71W4VPbJsppHow8V3o"
+ethernaIndex: "https://etherna.io/embed/6345950fc02259b06a2ffaa2"
+ethernaPermalink: "https://etherna.io/embed/f357f056f49e784915f96b0dbdf813d1b46c95179ba70aeb13dd69978912c65a"
 duration: 331
 expertise: "Beginner"
 type: "Breakout"

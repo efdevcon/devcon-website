@@ -10,6 +10,8 @@ description: "Traditional cryptographic hash functions such as SHA-256 are well 
 We will also present other directions and potential research bounties that can be offered to motivate the hash research, crucial for SNARKs, STARKs, and Ethereum."
 youtubeUrl: "https://youtu.be/j14L5wjq9pk"
 ipfsHash: "QmSxQW5fdiErURx18t9Sy3fFBmoVKFeRZzmccU29oRPijP"
+ethernaIndex: "https://etherna.io/embed/63461937c02259b06a2ffb16"
+ethernaPermalink: "https://etherna.io/embed/d6371bb8596b6f9c186fe540a956729e0318ca4f98b29e2ca8a9f4196c1d5950"
 duration: 1648
 expertise: "Intermediate"
 type: "Talk"

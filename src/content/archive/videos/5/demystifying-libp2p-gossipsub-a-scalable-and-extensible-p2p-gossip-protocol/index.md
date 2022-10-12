@@ -7,6 +7,8 @@ Gossipsub was incubated in the libp2p project as a replacement for the naïve f
 Come to learn more about how gossipsub works, and to hear about the state of the art of p2p pubsub protocols!"
 youtubeUrl: "https://www.youtube.com/embed/b8AZBVdrCC0"
 ipfsHash: "QmW573KHSccTou96QAtPwJSEhfVgC1hzkPog8jnFLcTuD9"
+ethernaIndex: "https://etherna.io/embed/6344cfb4080a54f6d733eaa1"
+ethernaPermalink: "https://etherna.io/embed/b9fefca926d54e09c5d813678476421bec152f6008a69a2b443e6bd6f55630bd"
 duration: 1527
 expertise: "intermediate"
 type: "Breakout"

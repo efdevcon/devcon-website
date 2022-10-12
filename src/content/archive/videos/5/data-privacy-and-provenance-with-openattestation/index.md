@@ -9,6 +9,8 @@ Decentralized document templating and rendering
 Demo: https://opencerts.io"
 youtubeUrl: "https://www.youtube.com/embed/_AdGdbfYOMU"
 ipfsHash: "QmQ7iPBTyQMv58sRCz1CZniZPhxeaJ8j2ApJhtrXqudmFx"
+ethernaIndex: "https://etherna.io/embed/6344c69b080a54f6d733ea99"
+ethernaPermalink: "https://etherna.io/embed/17a4288f977dbd9e8e1fd075e713497c4a3efcbbe4501152b71f62fbb107ec5c"
 duration: 1082
 expertise: "Intermediate"
 type: "Talk"

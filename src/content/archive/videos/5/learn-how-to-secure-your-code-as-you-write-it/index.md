@@ -9,6 +9,8 @@ By attending to this workshop you will go through the journey of using Solhint. 
 I will close the workshop sharing best practices that are hard to port - and are still yet to be implemented into Solhint."
 youtubeUrl: "https://www.youtube.com/embed/JDyewm3skew"
 ipfsHash: "QmdM7buoXAnWdc2QwDcHzYADHuofHctEcD6GW4CpJfpibW"
+ethernaIndex: "https://etherna.io/embed/63453026080a54f6d733eaff"
+ethernaPermalink: "https://etherna.io/embed/9d3c89ec16503733827ee9273588c9e6dd2f860493d3c87e050256a7cbdaca9f"
 duration: 1180
 expertise: "Beginner"
 type: "Breakout"

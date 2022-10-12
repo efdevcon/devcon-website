@@ -7,6 +7,8 @@ The only company I’m partially affiliated with, Abridged, will launch 7 apps b
 Even so, this talk will allow viewers to quickly learn about all Layer2 UX patterns in one session, learning about the differences between the UX mechanics of payment channels, Plasma, (Generalized) State Channels, maybe sidechains, their pros-and-cons, how users enter and exit these systems, how and what they understand about decentralization, what are the open design problems of the space, and accelerating their knowledge of Layer2 solutions which hold the promise to onboard real users onto the decentralized web"
 youtubeUrl: "https://www.youtube.com/embed/Q8j5LdydSUs"
 ipfsHash: "QmQKYH5MfL2QBsTArwxYwGAXftMiWMmF4owJRGK17F6Vjk"
+ethernaIndex: "https://etherna.io/embed/63452f41080a54f6d733eafd"
+ethernaPermalink: "https://etherna.io/embed/cfe170ab5b22c3cc4373aff6b9539481ad5eb0d545d26c2e43bae09ba369e31e"
 duration: 1303
 expertise: "Intermediate"
 type: "Breakout"

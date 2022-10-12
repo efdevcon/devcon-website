@@ -8,6 +8,8 @@ What do users want to know? What are they thinking after 2 minutes and it looks 
 Then we interviewed, designed, tested, demoed, iterated and repeated in order to get the answers you and every dApp developer needs. At this talk, we'll share everything we've learned and show you how you can turn these user insights into great user experiences for your own projects."
 youtubeUrl: "https://www.youtube.com/embed/ZDaTl8PI7CQ"
 ipfsHash: "QmU6cMxLmKMHeUBRD1WsCJCpF57yaTGSQwnNkBmfPbTqA6"
+ethernaIndex: "https://etherna.io/embed/634566ed080a54f6d733eb25"
+ethernaPermalink: "https://etherna.io/embed/e8e79389ed90cbffe4d743ca764b039bed4272335f35dc41daf7f61d6d69817a"
 duration: 1290
 expertise: "Beginner"
 type: "Breakout"

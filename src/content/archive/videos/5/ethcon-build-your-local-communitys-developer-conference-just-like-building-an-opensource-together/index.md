@@ -8,6 +8,8 @@ What happened so
 How to make a community's own 'Ethcon'?"
 youtubeUrl: "https://www.youtube.com/embed/s7cI6nmYFlM"
 ipfsHash: "QmXjJYa9UkCv9keC1p689ypxTW9GARKqHeNhBWGWMEJ3vW"
+ethernaIndex: "https://etherna.io/embed/6344e158080a54f6d733eab5"
+ethernaPermalink: "https://etherna.io/embed/a88a010c522a4f45dc058a937e8b6c77cae605972de30b94258e27a4d85c48a6"
 duration: 307
 expertise: "Beginner"
 type: "Talk"

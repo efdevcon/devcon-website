@@ -7,6 +7,8 @@ In this talk, I'll:present the design space of transaction abstraction and some 
 and finally, share software that you can run today to be a relayer on our network."
 youtubeUrl: "https://www.youtube.com/embed/FNiv9xs3YXg"
 ipfsHash: "Qmf9zHkZmXCt9bDrDfHbRMCvgN4wZgzhaL4TwZbzYjasms"
+ethernaIndex: "https://etherna.io/embed/6344ccd9c02259b06a2ff9ea"
+ethernaPermalink: "https://etherna.io/embed/cb952b1b3c52a7da9f7256fbaaf5a0d872be9745c9a706bdda16231610983c51"
 duration: 1608
 expertise: "intermediate"
 type: "Breakout"

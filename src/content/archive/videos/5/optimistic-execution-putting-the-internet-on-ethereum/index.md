@@ -5,6 +5,8 @@ description: "Ethereum can serve as an arbiter of trust for the entire internet.
 These are exciting times for blockchain infrastructure. Now we just need to solve identity & UBI -- easy!"
 youtubeUrl: "https://www.youtube.com/embed/EWgsv1cvNz0"
 ipfsHash: "QmSJMCFR5QXP2ddKaz3kvtRjHgJRAh24RZjPoGBeCPWjvL"
+ethernaIndex: "https://etherna.io/embed/63468897080a54f6d733ec0c"
+ethernaPermalink: "https://etherna.io/embed/8779d1479f7941a746e8c869243788014b300e85ec3dd438e99c0ce6ecc47a95"
 duration: 5476
 expertise: "beginner"
 type: "Breakout"

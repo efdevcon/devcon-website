@@ -7,6 +7,8 @@ I would like to talk about how it works, how we can integrate privacy into the a
 Here is our GitHub page: https://github.com/LayerXcom/zero-chainand blog post: https://medium.com/layerx/announcing-zerochain-5b08e158355d"
 youtubeUrl: "https://www.youtube.com/embed/G92_kfZHWq0"
 ipfsHash: "QmXcWUMDhtseNCk1uj3PrnEpiQ5kM6WwEiqENhpr2DvLZR"
+ethernaIndex: "https://etherna.io/embed/6345c0d0080a54f6d733eb79"
+ethernaPermalink: "https://etherna.io/embed/b6ea272cb5e6427bedcf99b4da54a55fe51ac3911e4298dcbf555cf80b98fc3e"
 duration: 1372
 expertise: "Intermediate"
 type: "Breakout"

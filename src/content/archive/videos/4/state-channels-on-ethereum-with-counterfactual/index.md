@@ -7,6 +7,8 @@ description: "State channels are a critical \"layer 2\" scaling technology for e
 - How developers can get started using Counterfactual today"
 youtubeUrl: "https://youtu.be/tfrd_e_8RbY"
 ipfsHash: "QmQkwRrxzXsTbux9rgyup7Aa1eKQxMFQWnE3EMEsQRzqEv"
+ethernaIndex: "https://etherna.io/embed/6346335cc02259b06a2ffb3c"
+ethernaPermalink: "https://etherna.io/embed/52258df85d4216835e3989bc519572e58c3c6a453ff2859f507cfe7edec64243"
 duration: 1359
 expertise: "Expert"
 type: "Talk"

@@ -8,6 +8,8 @@ description: "This talk will be a high level overview of the state-of-the-art in
 -Distinguishing between \"safety net preserving\" techniques (plasma, state channels) and others (sidechains)"
 youtubeUrl: "https://youtu.be/RghzB4C9aSg"
 ipfsHash: "QmQMMkrDNEdBtetXrhnefv4jQDQ5Y52ZD9pF8Wv67VNn5D"
+ethernaIndex: "https://etherna.io/embed/6346115d080a54f6d733ebc9"
+ethernaPermalink: "https://etherna.io/embed/ed8c362ca1aa81eae5c2f6b6cd5d043a91ad8ef295fb9342e2f8888532ced97c"
 duration: 1831
 expertise: "Intermediate"
 type: "Talk"

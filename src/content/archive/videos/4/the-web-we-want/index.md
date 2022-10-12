@@ -6,6 +6,8 @@ youtubeUrl: "https://youtu.be/rkdFko6wNuc"
 ipfsHash: "QmaG5FABdzx7F1FYvUKc47QSVs3L33WrUCXopY5KFwV9Eq"
 image: ../../../../../../static/assets/uploads/videos/brewster-kahle.png
 imageUrl: /assets/uploads/videos/brewster-kahle.png
+ethernaIndex: "https://etherna.io/embed/6346aa7dc02259b06a2ffb95"
+ethernaPermalink: "https://etherna.io/embed/64ae9cdc8351609dcc62beeff63716d8ea007cd0ee73219b9aef5b3371753fa4"
 duration: 2265
 expertise: "Beginner"
 type: "Talk"

@@ -10,6 +10,8 @@ This part will explain the changes (if any) needed for Wasm, questions relevant 
 4. Roadmap"
 youtubeUrl: "https://www.youtube.com/embed/8H1TCbW0LJQ"
 ipfsHash: "QmWxfDqxjjwM146jboxL7t2TS8uGuzgeyMf8X6QUkrEuYD"
+ethernaIndex: "https://etherna.io/embed/634677c9c02259b06a2ffb7d"
+ethernaPermalink: "https://etherna.io/embed/9d109772bf525e8054d519add50dc742b130ccc045b9d578b0b467295f2cdb8f"
 duration: 7030
 expertise: "intermediate"
 type: "Breakout"

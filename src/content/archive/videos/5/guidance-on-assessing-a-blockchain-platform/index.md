@@ -4,6 +4,8 @@ title: "Guidance on Assessing a Blockchain Platform"
 description: "Blockchain platforms are maturing to enable decentralized architecture but vary in design depending on deployment environments, such as open digital ecosystems or contained multiparty environments. In this session we provide a summary of Gartner's observations on blockchain platforms adoption, a functional framework for assessing blockchain platforms, and future projections on blockchain platforms technical evolution."
 youtubeUrl: "https://youtu.be/oW63ghqQO_8"
 ipfsHash: "QmWG3ayrFzXqS2VNDwVg6bHzZCkHHBYfGDFGMVCYKM5Jw6"
+ethernaIndex: "https://etherna.io/embed/63469078080a54f6d733ec12"
+ethernaPermalink: "https://etherna.io/embed/02b3ea2efc2bbb0f77e004861884dd1f03e15d08f94ff67b2a3c17fcdeba29b7"
 duration: 1333
 expertise: "Intermediate"
 type: "Talk"

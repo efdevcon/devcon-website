@@ -12,6 +12,8 @@ The main things that we will touch in the workshop will be:
 The workshop will start with a bit more of theory around testing and then we will move to a practical exercise where we will set up the architecture needed to properly test our decentralized app."
 youtubeUrl: "https://www.youtube.com/embed/dX9YZZxQXsM"
 ipfsHash: "QmQWFsSfENM72bmLpDxYXvkLEjVyaNtrky7EEK3r1gcuTx"
+ethernaIndex: "https://etherna.io/embed/63468451080a54f6d733ec0a"
+ethernaPermalink: "https://etherna.io/embed/92fba1577407e0f8ab70bd1cfb69ee886fa906e271939bd010b33cd3af3186ad"
 duration: 2093
 expertise: "Beginner"
 type: "Breakout"

@@ -6,6 +6,8 @@ In this breakout session, we will present the current state of debugging support
 The goal of this session is to lay the groundwork for a new data format, including its high-level design and a clear understanding of the path forward for this effort."
 youtubeUrl: "https://www.youtube.com/embed/oz5_SyouLt4"
 ipfsHash: "QmcVtCvoD6BXztggLeAmyire8gg6GGGZydhRBgxMaRsfeB"
+ethernaIndex: "https://etherna.io/embed/6345a8fdc02259b06a2ffab0"
+ethernaPermalink: "https://etherna.io/embed/448a5f9fda9f37c4fae455efea24d09c2cfa0bf057709be1e70521468396361b"
 duration: 1621
 expertise: "Intermediate"
 type: "Breakout"

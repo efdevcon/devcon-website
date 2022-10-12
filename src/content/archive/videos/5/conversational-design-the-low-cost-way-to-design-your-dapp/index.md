@@ -14,6 +14,8 @@ We'll go through the entire process: from some quick guerrilla research through 
 You'll leave this workshop with both a new way of thinking about products and a powerful new tool for designing and building one."
 youtubeUrl: "https://www.youtube.com/embed/dXrPDSoQ8TQ"
 ipfsHash: "QmbXZrWG1nqVyfT2XCJ9sJMwiV2GskhFsfUgr2WJRFou1M"
+ethernaIndex: "https://etherna.io/embed/6344bf9ac02259b06a2ff9de"
+ethernaPermalink: "https://etherna.io/embed/6071f32b22c662f2ed36bfa1230955afb57231d79bbd5e1f015a212bba189d7a"
 duration: 2937
 expertise: "Beginner"
 type: "Breakout"

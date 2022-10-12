@@ -7,6 +7,8 @@ The contract only accepts MW spells which include an unlinkable spent tag, resul
 Or the user can go back to the muggle world anonymously and withdraw ERC20s by providing an unlinkable spent tag and a ZK proof. Because MimbleWimble doesn't reveal the value during transactions and we also don't know which output has been spent, it becomes hard to link the deposit and withdrawal."
 youtubeUrl: "https://www.youtube.com/embed/5LRh9iDb1sw"
 ipfsHash: "QmRPAZ6kpnRMRoNsovU1my53GhSSTE2FQM39E4DkwdQajc"
+ethernaIndex: "https://etherna.io/embed/6344e9a3080a54f6d733eabb"
+ethernaPermalink: "https://etherna.io/embed/f1660512f61de715363ef66bfd567eb50d84e9e122c46ee5c76aec845630d8f1"
 duration: 1130
 expertise: "intermediate"
 type: "Breakout"

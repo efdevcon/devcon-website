@@ -11,6 +11,8 @@ The talk covers the following topics:
 - a quick demo of how you can already use micropayments with LES"
 youtubeUrl: "https://www.youtube.com/embed/ipoApuPzjm0"
 ipfsHash: "QmZqBh286sXqBA99M1kXWXwPksfXMVtfSzg888TZNs8PTA"
+ethernaIndex: "https://etherna.io/embed/6345373bc02259b06a2ffa3a"
+ethernaPermalink: "https://etherna.io/embed/7b374f24be8dce3c0ef6de5d0d318eaee5bffb61fe76a07c304835facb8310e6"
 duration: 1240
 expertise: "Beginner"
 type: "Breakout"

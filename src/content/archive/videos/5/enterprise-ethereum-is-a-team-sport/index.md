@@ -5,6 +5,8 @@ description: "The World Economic Forum's Centre for the Fourth Industrial Revolu
 While the rewards from collaboration can be high, agreeing on what constitutes a fair and well-designed consortia governance system, let alone a joint blockchain platform, can be challenging. This is where many industry collaboration efforts have fallen apart. The presentation will focus on insights to foster industry- and ecosystem-wide blockchain collaboration - to increase the likelihood of success of Enterprise Ethereum adoption and thereby maximize the benefits of blockchain."
 youtubeUrl: "https://youtu.be/e-CNFgwq24k"
 ipfsHash: "QmYSCNg7RPW7S26GXu3xcb82wDQjS66J1o6kqyta95Vkgb"
+ethernaIndex: "https://etherna.io/embed/6344d719080a54f6d733eaab"
+ethernaPermalink: "https://etherna.io/embed/c84d9a9f0bfb768ff6943def948303d784d10a3d0f0af147bd561691d5982639"
 duration: 1275
 expertise: "Beginner"
 type: "Talk"

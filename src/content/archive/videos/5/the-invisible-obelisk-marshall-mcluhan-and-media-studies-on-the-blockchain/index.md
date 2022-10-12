@@ -7,6 +7,8 @@ This presentation will be based on this chapter draft: https://medium.com/@dzane
 This application was solicited by Maria Paula."
 youtubeUrl: "https://www.youtube.com/embed/jp5JF7h1O2c"
 ipfsHash: "QmRx69kM8zrDS8mDL9FnpZFyCwCCUtqCCBbdyZt5dYaxrW"
+ethernaIndex: "https://etherna.io/embed/634597dfc02259b06a2ffaa4"
+ethernaPermalink: "https://etherna.io/embed/beb7af6049d42e01564cd176ee02360492f10c47dff4d31457c3a04390a43881"
 duration: 1190
 expertise: "Advanced"
 type: "Breakout"

@@ -8,6 +8,8 @@ Funding requests: users can request for a wallet to be funded by calling the sma
 Payouts: users can request payouts by calling the smart contract and attaching a payment instruction string. https://emoneytokenstandard.org/"
 youtubeUrl: "https://www.youtube.com/embed/aqy1u3hRtsY"
 ipfsHash: "QmdJEPb2YWq9sKgKcTYEtchyEmfxHpxciR2mPmeDoVEqVw"
+ethernaIndex: "https://etherna.io/embed/6344d5a5c02259b06a2ff9f2"
+ethernaPermalink: "https://etherna.io/embed/b696ad10f92e8ff9c6562670f4c80a2d7813d1503f481e7a4415e2862d58eff5"
 duration: 364
 expertise: "Intermediate"
 type: "Breakout"

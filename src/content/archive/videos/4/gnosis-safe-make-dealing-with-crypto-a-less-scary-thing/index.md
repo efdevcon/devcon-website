@@ -6,6 +6,8 @@ The presentation will give a detailed overview about the Safe implementation of
 https://blog.gnosis.pm/announcing-the-gnosis-safe-beta-personal-edition-19a69a4453e8"
 youtubeUrl: "https://youtu.be/9gyZRq162A8"
 ipfsHash: "QmPGVnqUHuUgnmfCYxMgX6Cn8iSEkxqZGs29398fYnvW8Q"
+ethernaIndex: "https://etherna.io/embed/6345fa04c02259b06a2ffb06"
+ethernaPermalink: "https://etherna.io/embed/6a9c9564ee05e1443deff3f4609d28a90b1447282af84ac3225c809b49363f9f"
 duration: 1577
 expertise: "Intermediate"
 type: "Talk"

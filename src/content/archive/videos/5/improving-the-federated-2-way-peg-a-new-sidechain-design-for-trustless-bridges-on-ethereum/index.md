@@ -14,6 +14,8 @@ These centralized projects have a few custodians that can be convinced by govern
 We propose a new approach-- the *bonded, multi-federated peg*. We believe this is the best candidate for a sufficiently trust-minimized alternative, unlocking Bitcoin for use in DeFi."
 youtubeUrl: "https://youtu.be/NHTuLnrDaUA"
 ipfsHash: "QmTtKoFX9WcQJC41qdjptSCxN2DuZP6RbKqSu5rT82Rkof"
+ethernaIndex: "https://etherna.io/embed/6345219ac02259b06a2ffa28"
+ethernaPermalink: "https://etherna.io/embed/53e82db33c73c222aa891363d19996ef8b8a1979e887126db6efc4fcba25c5bb"
 duration: 729
 expertise: "Intermediate"
 type: "Talk"

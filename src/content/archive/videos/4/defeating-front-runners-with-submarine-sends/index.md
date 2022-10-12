@@ -5,6 +5,8 @@ description: "Front-running is a fundamental problem in blockchain-based markets
 In this talk, I will introduce: a freshly discovered, practical Submarine Send construction that works on the Ethereum  mainnet today.LibSubmarine, an open source project implementing it."
 youtubeUrl: "https://youtu.be/JxAgNeFg6QM"
 ipfsHash: "QmUH7SF5dpgdF3mpuaxoJY6QN8GpLYisG87vke49sjAYMe"
+ethernaIndex: "https://etherna.io/embed/6345de6fc02259b06a2ffae2"
+ethernaPermalink: "https://etherna.io/embed/2cd6764c96ad47021ff5d3780662ccc4bfa50606402d7fa134946dc40d39601b"
 duration: 369
 expertise: "Intermediate"
 type: "Talk"

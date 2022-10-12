@@ -6,6 +6,8 @@ In the context of Ethereum, this allows for transactions to be broadcasted and s
 This workshop aims to show how a developer could integrate Ultralight Beam into their application to allow for offline interactions as described above."
 youtubeUrl: "https://www.youtube.com/embed/_8B0sy5fqYs"
 ipfsHash: "QmfAghxY9R13XV8VcBEGdAhwkfTgkjFBCD46XdVx42mK46"
+ethernaIndex: "https://etherna.io/embed/63451e4cc02259b06a2ffa24"
+ethernaPermalink: "https://etherna.io/embed/279af616f6fdaae56ce740dba72b4058d73ce7edad3270a85ce7cd69a9038f8d"
 duration: 2804
 expertise: "Intermediate"
 type: "Talk"

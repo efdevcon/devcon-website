@@ -22,6 +22,8 @@ providing protocol specifications able to serve as a source of legitimacy in the
 of digital networks and strategies that can keep these protocols free from AI."
 youtubeUrl: "https://www.youtube.com/embed/tZ_76AZtOf8"
 ipfsHash: "QmY4XoSutfP8C54GWBA1cYfChmsBNQa4ck3n3rWkpgz6mH"
+ethernaIndex: "https://etherna.io/embed/634539e9c02259b06a2ffa3e"
+ethernaPermalink: "https://etherna.io/embed/1a983fdd9ad524f79e0752d5cadd7e4d14ff05aaed3eb598a224f0a92fbec38b"
 duration: 1945
 expertise: "Beginner"
 type: "Breakout"

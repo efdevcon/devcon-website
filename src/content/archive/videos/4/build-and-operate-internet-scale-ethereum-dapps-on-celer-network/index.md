@@ -6,6 +6,8 @@ Despite its high potentials, off-chain scaling is still in its infancy with chal
 In this talk, we will describe how Celer Network meets these challenges. Celer embraces a layered architecture with clean abstractions that enable rapid evolution of each individual component, including generalized state channels that supports fast and generic off-chain state transitions; a provably optimal payment routing algorithm that achieves orders of magnitude higher throughput compared to state-of-the-art solutions; a powerful development framework and runtime for off-chain dApps; and an incentive-aligned mechanism that provides stable liquidity and high off-chain state availability."
 youtubeUrl: "https://youtu.be/jhjGj-i3tOU"
 ipfsHash: "QmdGyJnCmH6KEzqtBC5Mzab9Kr5RkRN7ABWjB6pVrjiwkt"
+ethernaIndex: "https://etherna.io/embed/6345cd7ac02259b06a2ffad2"
+ethernaPermalink: "https://etherna.io/embed/db45684fec38b447c8e4ff60949e937ae3f695d38fd85c20d0a87c05a83f2072"
 duration: 1469
 expertise: "Intermediate"
 type: "Talk"

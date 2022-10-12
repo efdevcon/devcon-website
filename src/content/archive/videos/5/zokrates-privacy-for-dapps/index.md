@@ -6,6 +6,8 @@ We describe the evolution of the ZoKrates language, standard library, and toolin
 To support this vision, we share insights gained from use case implementations where we enhanced the privacy of decentralized applications with ZoKrates."
 youtubeUrl: "https://www.youtube.com/embed/pB3Hh1pwMaI"
 ipfsHash: "QmPijdc5ABT4CERC4r6bW7bRhE1TZMV4A6tDT3fbEHMxWb"
+ethernaIndex: "https://etherna.io/embed/6345c2f5c02259b06a2ffac8"
+ethernaPermalink: "https://etherna.io/embed/04aace7de6f07ba16515079db35bdc8fc0952670749e6ecd880780af1ac51837"
 duration: 1374
 expertise: "Beginner"
 type: "Breakout"
