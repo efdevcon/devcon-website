@@ -5885,13 +5885,14 @@
     "id": "RESDSC",
     "name": "Anda Ngcaba",
     "avatar": "https://speak.devcon.org/media/avatars/F366CD12-4796-4A27-AEA6-4DA336E98FCB_pngZhXE.jpeg",
-    "description": "Chief of Operations at UCT Financial Innovation Hub.",
+    "description": "Anda Ngcaba serves as the Chief of Operations (COO) at the University of Cape Town Financial Innovation Hub. At the financial innovation hub, Anda oversees day to day operations, partnerships and business development. Through his work at the Financial Innovation Hub Anda also serves as COO of Axone, a platform for content creators to collaborate in a unique way.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
-    ]
+    ],
+    "twitter": "Andangcaba_"
   },
   {
     "id": "LGMDLB",
@@ -5918,6 +5919,15 @@
       1665532800000
     ],
     "twitter": "@simonpolrot"
+  },
+  {
+    "id": "EE3GXS",
+    "name": "Luis Carlos",
+    "avatar": "https://www.gravatar.com/avatar/f673bdc802bc7867a5fb78ceab74d975",
+    "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "@luiscrh"
   },
   {
     "id": "YMJVHQ",
@@ -6086,5 +6096,18 @@
     "eventDays": [
       1665532800000
     ]
+  },
+  {
+    "id": "RYSMYU",
+    "name": "Stephane Gosselin",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_7825_f7exDv2.jpg",
+    "description": "MEV boost architect !",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "thegostep"
   }
 ]

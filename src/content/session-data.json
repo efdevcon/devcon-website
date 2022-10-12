@@ -1,5 +1,80 @@
 [
   {
+    "id": "YASTRX",
+    "speakers": [],
+    "title": "Web3 Developer Relations Gathering",
+    "track": "",
+    "duration": 150,
+    "start": 1665685800000,
+    "end": 1665694800000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Meetup",
+    "description": "This is your change to meet up with other DevRel folks, to cross-pollinate ideas on creating amazing developer experiences and building vibrant developer communities.\r\nhttps://lu.ma/2uh25943",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "devrel",
+      "community",
+      "building"
+    ]
+  },
+  {
+    "id": "7XGQQB",
+    "speakers": [],
+    "title": "Meditation & Public Goods Workshop",
+    "track": "",
+    "duration": 120,
+    "start": 1665684000000,
+    "end": 1665691200000,
+    "room": {
+      "id": "ethereum-jungle",
+      "name": "Ethereum Jungle",
+      "description": "Relaxation Zone",
+      "info": "Floor 2",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "-",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "meditation",
+      "workshop",
+      "health"
+    ]
+  },
+  {
+    "id": "NERSUP",
+    "speakers": [],
+    "title": "Token Engineering Approach to Building Communities & Membership",
+    "track": "",
+    "duration": 120,
+    "start": 1665684000000,
+    "end": 1665691200000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Workshop by Eduardo Vega",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "community",
+      "building",
+      "workshop"
+    ]
+  },
+  {
     "id": "7LHLPB",
     "speakers": [
       {
@@ -2454,39 +2529,6 @@
     ]
   },
   {
-    "id": "9BDUZU",
-    "speakers": [
-      {
-        "id": "BHUHRV",
-        "name": "Thibaut Schaeffer",
-        "description": "ZoKrates @ Ethereum Foundation",
-        "twitter": "@vanderkriek",
-        "avatar": "http://speak.devcon.org/media/avatars/bordeaux_headshot_0922_82OMs7d.jpeg"
-      }
-    ],
-    "title": "A ZoKrates Update",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 25,
-    "start": 1665507600000,
-    "end": 1665509400000,
-    "room": {
-      "id": "talk-2",
-      "name": "Talk 2",
-      "description": "Cold Forest",
-      "info": "Floor 3",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "zkSNARKs are becoming a cornerstone of decentralised technologies. Yet they are often considered impenetrable to newcomers. We will present an update on the ZoKrates toolbox, a set of tools aimed at making developing zkSNARK applications easier using a high-level language instead of handcrafted circuits.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "language",
-      "zksnark",
-      "zokrates"
-    ]
-  },
-  {
     "id": "JC3H3A",
     "speakers": [
       {
@@ -2582,6 +2624,39 @@
       "read-only",
       "reentrency",
       "security"
+    ]
+  },
+  {
+    "id": "9BDUZU",
+    "speakers": [
+      {
+        "id": "BHUHRV",
+        "name": "Thibaut Schaeffer",
+        "description": "ZoKrates @ Ethereum Foundation",
+        "twitter": "@vanderkriek",
+        "avatar": "http://speak.devcon.org/media/avatars/bordeaux_headshot_0922_82OMs7d.jpeg"
+      }
+    ],
+    "title": "A ZoKrates Update",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665507600000,
+    "end": 1665509400000,
+    "room": {
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
+      "info": "Floor 3",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "zkSNARKs are becoming a cornerstone of decentralised technologies. Yet they are often considered impenetrable to newcomers. We will present an update on the ZoKrates toolbox, a set of tools aimed at making developing zkSNARK applications easier using a high-level language instead of handcrafted circuits.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "language",
+      "zksnark",
+      "zokrates"
     ]
   },
   {
@@ -3422,6 +3497,38 @@
     ]
   },
   {
+    "id": "NQHE7W",
+    "speakers": [
+      {
+        "id": "DJE7ME",
+        "name": "Thore Hildebrandt",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Privacy & Scaling Exploration — What We Do and How to Collaborate",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665568800000,
+    "end": 1665570300000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "TBD",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Zero Knowledge Proofs",
+      "Privacy",
+      "Cryptographic research"
+    ]
+  },
+  {
     "id": "3Y8WP3",
     "speakers": [
       {
@@ -3561,6 +3668,45 @@
       "Privacy",
       "Charity",
       "Impact"
+    ]
+  },
+  {
+    "id": "FTSC9Y",
+    "speakers": [
+      {
+        "id": "8SGNZT",
+        "name": "Madison Adams",
+        "description": ".",
+        "avatar": ""
+      },
+      {
+        "id": "8KJFF7",
+        "name": "Safder Raza",
+        "description": "Saf is curious about everything that has to do with pushing people to be the best versions of themselves. After spending a previous life as a mechanical engineer, Saf has worked in education, career coaching, mentorship and now leads People Operations at Gitcoin. You can also find him catherding the brightest Gen Z-ers at Dream DAO. Outside of work, Saf loves to spend time in the mountains, and is an avid trail ultra-runner and skier.",
+        "twitter": "@safderwords",
+        "avatar": "http://speak.devcon.org/media/avatars/Safder_Twit_2_RxJ1xUp.jpg"
+      }
+    ],
+    "title": "What Can DAOs Learn From",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665570900000,
+    "end": 1665572400000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "What can DAOs learn from governments, companies, communities and more? \r\n\r\nThe ultimate vision of DAOs promises us better ways to organize humans. But we are just scratching the surface in discovering how to optimally structure and operate DAOs. As a result, many DAOs are not serving their mission or members as effectively as they could be.\r\n\r\nThe good news? We don’t have to reinvent everything.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "DAOs",
+      "Impact",
+      "Governance"
     ]
   },
   {
@@ -3787,6 +3933,39 @@
     ]
   },
   {
+    "id": "STYC97",
+    "speakers": [
+      {
+        "id": "DF3X3D",
+        "name": "Luc Lamarche",
+        "description": "Ethereum Ecosystem Support Program",
+        "twitter": "0aLucL",
+        "avatar": "http://speak.devcon.org/media/avatars/Luc_Lamarche_HRMS_95112_0PtqjHt.jpg"
+      }
+    ],
+    "title": "Ecosystem Support Program",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665573000000,
+    "end": 1665574500000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "As the public facing allocation arm of the Ethereum Foundation, ESP provides funding and support to eligible projects working to strengthen Ethereum's foundations and enable future builders. This talk details our goals and the different forms of support we offer.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Support",
+      "Grants",
+      "Ecosystem Development"
+    ]
+  },
+  {
     "id": "LDYYDR",
     "speakers": [
       {
@@ -3955,6 +4134,70 @@
       "Solidity",
       "ERC",
       "tricks"
+    ]
+  },
+  {
+    "id": "XMHS3E",
+    "speakers": [
+      {
+        "id": "ZYXBSK",
+        "name": "gubsheep",
+        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
+        "twitter": "gubsheep",
+        "avatar": ""
+      },
+      {
+        "id": "XV79MM",
+        "name": "Jacob Willemsma",
+        "description": "Jacob is VP of Partnerships at ETHGlobal and has been part of the ETHGlobal team since before there was an ETHGlobal!",
+        "twitter": "https://twitter.com/jacobwillemsma",
+        "avatar": "http://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png"
+      },
+      {
+        "id": "LGMDLB",
+        "name": "Romina Ayelén Sejas",
+        "description": null,
+        "twitter": "@cryptochica_arg",
+        "avatar": ""
+      },
+      {
+        "id": "TPWTC7",
+        "name": "Auryn Macmillan",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "7PHXHS",
+        "name": "Eda",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "WSUXPB",
+        "name": "Mauricio Tovar (Moderator)",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Web3 is Going Great",
+    "track": "Opportunity & Global Impact",
+    "duration": 35,
+    "start": 1665575100000,
+    "end": 1665577200000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "This panel celebrates the Ethereum ecosystem’s global impact thus far, but also look towards the future to answer the questions: What’s missing in the ecosystem? What would we like people to work on? What are Ethereum’s priorities?",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Impact",
+      "Global Opportunity"
     ]
   },
   {
@@ -4492,6 +4735,39 @@
     ]
   },
   {
+    "id": "9T9KTT",
+    "speakers": [
+      {
+        "id": "MPECSR",
+        "name": "Anukriti Kunwar",
+        "description": "Anukriti is a product manager at SpruceID. She is currently trying to find a perfect product management tool that encapsulates CR, customer feedback, and feature requests. \r\nShe loves travelling and planning to explore more of South America next year!",
+        "twitter": "bebaakbeyou",
+        "avatar": "http://speak.devcon.org/media/avatars/Anukriti_Kunwar_sAkKOKt.png"
+      }
+    ],
+    "title": "Sign-in with Ethereum",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665581400000,
+    "end": 1665582900000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "The talk sheds insight on Sign-in with Ethereum, a new form of authentication that enables users to control their digital identity with their Ethereum account and ENS profile instead of relying on a traditional intermediary.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Developer tooling",
+      "Developer infrastructure",
+      "Developer experience"
+    ]
+  },
+  {
     "id": "8JGQU8",
     "speakers": [
       {
@@ -4845,6 +5121,57 @@
     ]
   },
   {
+    "id": "ET8AZV",
+    "speakers": [
+      {
+        "id": "Y9NMJJ",
+        "name": "Diego Losada",
+        "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
+        "twitter": "https://twitter.com/EthereumOnARM",
+        "avatar": "http://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg"
+      },
+      {
+        "id": "GKXRUD",
+        "name": "Nixorokish",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "Y7P8FA",
+        "name": "Kris Kaczor",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "RSFLEP",
+        "name": "Paul Hauner",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Building a Post-Merge World",
+    "track": "Opportunity & Global Impact",
+    "duration": 35,
+    "start": 1665583500000,
+    "end": 1665585600000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "This panel seeks to motivate builders to develop post-Merge tools and infrastructure in various domains (e.g. staking, consensus clients, Layer 2s, hardware), discuss the gaps in the ecosystem, and explore how we can move forward after The Merge.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "The Merge",
+      "Developer infrastructure",
+      "Staking"
+    ]
+  },
+  {
     "id": "US7CFH",
     "speakers": [],
     "title": "ENREDO LOFI SAMPLE ARTIST",
@@ -4997,6 +5324,44 @@
     "tags": [
       "Remix IDE",
       "Smart Contract Development"
+    ]
+  },
+  {
+    "id": "NZ3PYP",
+    "speakers": [
+      {
+        "id": "VCBAZX",
+        "name": "Liraz",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "3VCGXV",
+        "name": "Dror Tirosh",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Account Abstraction: Making Accounts Smarter",
+    "track": "Developer Infrastructure",
+    "duration": 25,
+    "start": 1665586200000,
+    "end": 1665587700000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "This talk discusses the limitations of externally owned accounts (EOAs), use cases for account abstraction, and how to join the account abstraction revolution.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Account Abstraction",
+      "ERC 4337",
+      "Developer infrastructure"
     ]
   },
   {
@@ -5453,6 +5818,44 @@
       "layer 2 scaling solutions",
       "Arbitrum",
       "instant finality"
+    ]
+  },
+  {
+    "id": "VKZPEB",
+    "speakers": [
+      {
+        "id": "MNCWP9",
+        "name": "Jack Gilcrest",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "GHSLKW",
+        "name": "Ian Brighton",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Solidity Dev to ZK Dev: Why and How You Should Start ZK Dev Now",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665590400000,
+    "end": 1665591900000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "This talk discusses why working on zero knowledge (ZK) cryptography is important.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Zero Knowledge Cryptography",
+      "Circom",
+      "EVM"
     ]
   },
   {
@@ -5969,36 +6372,61 @@
     ]
   },
   {
-    "id": "XPHSYR",
+    "id": "VPU7V8",
     "speakers": [
       {
-        "id": "3GSD8J",
-        "name": "Zero Age",
-        "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
-        "twitter": "z0age",
-        "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
+        "id": "CUNSE9",
+        "name": "Camila Garzon",
+        "description": "Camila is an engineer and educator who is passionate about making it easier for developers to build in web3. Camila works as a Developer Relations Engineer at Edge & Node where she helps devs build performant, decentralized APIs. She is core team at Women Build Web3, an accelerator for developing top woman engineering talent and fund for projects led by women.",
+        "twitter": "@camiinthisthang",
+        "avatar": "http://speak.devcon.org/media/avatars/cami_wxd6kZv.jpeg"
+      },
+      {
+        "id": "T89AAP",
+        "name": "Yanyan Ho",
+        "description": "Dapp-Learning Founder.  Faithful of Austrian economics, Interested in DEFI, ZK, DAO",
+        "twitter": "https://twitter.com/Dapp_Learning",
+        "avatar": ""
+      },
+      {
+        "id": "DE8U8N",
+        "name": "Divyanshu Dagar",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "N7CEA7",
+        "name": "Ulaş Erdoğan",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "C3MPDU",
+        "name": "Luka",
+        "description": null,
+        "avatar": ""
       }
     ],
-    "title": "Advanced Seaport Techniques",
-    "track": "Developer Infrastructure",
-    "duration": 50,
-    "start": 1665594000000,
-    "end": 1665597000000,
+    "title": "Education across Cultures",
+    "track": "Opportunity & Global Impact",
+    "duration": 35,
+    "start": 1665592500000,
+    "end": 1665594600000,
     "room": {
-      "id": "workshop-2",
-      "name": "Workshop 2",
-      "description": "",
-      "info": "Floor 3",
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
       "capacity": 112
     },
-    "type": "Workshop 1h",
-    "description": "Seaport is a marketplace protocol for buying and selling NFTs. While it powers OpenSea in a horizontal capacity, Seaport is open source and allows marketplaces to share a pool of liquidity – enabling project-specific, bespoke vertical marketplaces. Since launch, it’s helped spur innovation across emerging NFT verticals, including ENS names, in-game purchases, etc. This workshop will explore advanced techniques and use cases for the Seaport protocol.",
+    "type": "Panel",
+    "description": "This panel seeks to motivate individuals/teams to develop culturally sensitive educational materials in various languages and discuss gaps in the education ecosystem.",
     "abstract": "",
     "expertise": "",
     "tags": [
-      "Seaport",
-      "Marketplace",
-      "EVM"
+      "Education",
+      "Culture",
+      "Language"
     ]
   },
   {
@@ -6154,6 +6582,12 @@
         "description": "Viktor Bunin leads the Protocol Operations team at Coinbase Cloud. He is the industry’s first Protocol Specialist, a role he created as an early employee of Bison Trails that has now become an industry staple at orgs like a16z, Blockdaemon, and Figment. Viktor leads Coinbase Cloud to define Cloud’s protocol roadmap, initiate strategic initiatives, and support crypto-native Coinbase products. He's also an active angel investor, specializing in protocols, infrastructure, and crypto SaaS.",
         "twitter": "viktorbunin",
         "avatar": "http://speak.devcon.org/media/avatars/Smiling_headshot_cropped_zZuWa1u.png"
+      },
+      {
+        "id": "RYSMYU",
+        "name": "Stephane Gosselin",
+        "description": "MEV boost architect !",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_7825_f7exDv2.jpg"
       }
     ],
     "title": "[Panel] The Staking Economy: From Monolith to Modularity",
@@ -6208,6 +6642,39 @@
       "infrastructure",
       "community",
       "ethical"
+    ]
+  },
+  {
+    "id": "TLHM7N",
+    "speakers": [
+      {
+        "id": "BAU3ZE",
+        "name": "Marcello Bardus",
+        "description": null,
+        "twitter": "@0xMarcello",
+        "avatar": ""
+      }
+    ],
+    "title": "Herodotus Workshop",
+    "track": "Developer Infrastructure",
+    "duration": 50,
+    "start": 1665594000000,
+    "end": 1665597000000,
+    "room": {
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "State expiry",
+      "SNARKS",
+      "L2s"
     ]
   },
   {
@@ -6549,6 +7016,131 @@
     ]
   },
   {
+    "id": "7M9W8S",
+    "speakers": [],
+    "title": "Swarm's Freedom of Speech Corner",
+    "track": "",
+    "duration": 120,
+    "start": 1665597600000,
+    "end": 1665604800000,
+    "room": {
+      "id": "cowork-space-2",
+      "name": "Cowork Space 2",
+      "description": "",
+      "info": "Floor 5",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Our goal is to raise awareness for Freedom of Speech. The Freedom of Speech corner is part of Swarm's ongoing campaign for making Wikipedia censorship resistant by hosting a searchable version on Swarm.  https://bzzwiki.bzz.link/",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "freedom",
+      "censorship",
+      "wikipedia"
+    ]
+  },
+  {
+    "id": "EQKQ9U",
+    "speakers": [],
+    "title": "Otterscan/Erigon/Sourcify Demo & Chat",
+    "track": "Developer Infrastructure",
+    "duration": 90,
+    "start": 1665597600000,
+    "end": 1665603000000,
+    "room": {
+      "id": "zk-community-hub",
+      "name": "ZK Community Hub",
+      "description": "ZK Community Hub in the Community Hub area on the first floor",
+      "info": "",
+      "capacity": 50
+    },
+    "type": "Workshop 1h",
+    "description": "Short demo and workshop on otterscan, Erigon, archive nodes, Sourcify integration, etc. by Willian Mitsuda",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "node",
+      "blockexplorer",
+      "erigon"
+    ]
+  },
+  {
+    "id": "3MKUP7",
+    "speakers": [],
+    "title": "How to be a Crypto Nomad - CryptoNomads Meetup",
+    "track": "",
+    "duration": 210,
+    "start": 1665597600000,
+    "end": 1665610200000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Meetup",
+    "description": "Meet up for all CryptoNomads and all future Nomads. We bring awareness to the CryptoNomad community and the digital nomad lifestyle. To show a way of life that optimizes for location independence, remote web3 work, and international web3 friendships.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "nomad",
+      "lifestyle",
+      "friendships"
+    ]
+  },
+  {
+    "id": "PCTG8M",
+    "speakers": [],
+    "title": "Devcon Happy Hour 😊",
+    "track": "",
+    "duration": 120,
+    "start": 1665597600000,
+    "end": 1665604800000,
+    "room": {
+      "id": "food-and-beverages",
+      "name": "Food and Beverages",
+      "description": "",
+      "info": "Floor 4",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Join us on the first floor for drinks at the happy hour!",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "drinks",
+      "friends",
+      "fun"
+    ]
+  },
+  {
+    "id": "7MUHSE",
+    "speakers": [],
+    "title": "Old People Party",
+    "track": "",
+    "duration": 210,
+    "start": 1665601200000,
+    "end": 1665613800000,
+    "room": {
+      "id": "temporary-anonymous-zone",
+      "name": "Temporary Anonymous Zone",
+      "description": "Temporary Anonymous Zone in the Community Hub area on the first floor",
+      "info": "",
+      "capacity": 50
+    },
+    "type": "Meetup",
+    "description": "Old People Party with Patrick Mccorry, Anish Mohd: General community meetup, ZK people working in/with Ethereum or Opensource",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "opensource",
+      "party",
+      "old"
+    ]
+  },
+  {
     "id": "A8GWNA",
     "speakers": [],
     "title": "Justin Holmes and Friends",
@@ -6602,6 +7194,38 @@
     "expertise": "Beginner",
     "tags": [
       "ixshells"
+    ]
+  },
+  {
+    "id": "V9ET3R",
+    "speakers": [
+      {
+        "id": "YMJVHQ",
+        "name": "Chess Tournament",
+        "description": "Chess Tournament",
+        "avatar": ""
+      }
+    ],
+    "title": "Chess Tournament",
+    "track": "",
+    "duration": 210,
+    "start": 1665604800000,
+    "end": 1665615600000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Chess tournament coordination group: https://t.me/+viuV6PIw45wwYWFh",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "chess",
+      "meetup",
+      "community"
     ]
   },
   {
@@ -6707,9 +7331,9 @@
     ],
     "title": "ZK Security Self Led Session",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 180,
-    "start": 1665651600000,
-    "end": 1665658800000,
+    "duration": 105,
+    "start": 1665677700000,
+    "end": 1665684000000,
     "room": {
       "id": "workshop-1",
       "name": "Workshop 1",
@@ -6724,6 +7348,104 @@
     "tags": [
       "Zero",
       "Knowledge"
+    ]
+  },
+  {
+    "id": "W9R3C3",
+    "speakers": [
+      {
+        "id": "VVDXE3",
+        "name": "matt shams",
+        "description": "Ethereum Proof of stake Fanboy \r\n\r\nhttps://blog.blockswap.network/eth2stakinganddaovalidators-ce7e72bbe63f",
+        "twitter": "daoboymatt",
+        "avatar": "http://speak.devcon.org/media/avatars/blueprofile_pp0Mjfp.jpg"
+      }
+    ],
+    "title": "Under 2 Min - Become an Etheruem Staker and Set Up Node",
+    "track": "Staking & Validator Experience",
+    "duration": 7,
+    "start": 1665655200000,
+    "end": 1665655800000,
+    "room": {
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
+      "info": "Floor 3",
+      "capacity": 414
+    },
+    "type": "Lightning Talk",
+    "description": "We need more mainstream users to partake in Etheruem PoS activity, \r\n\r\nA brief talk showcasing stake tooling for Etheruem deposit contract that allows a normal user to safely stake 32 ETH and have his/her Ethereum Validator from 0, this includes generating credentials and processing deposit, another 60 seconds will allow them to have a node up and running using DVT techstack.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Easy",
+      "Mode",
+      "ETH",
+      "staking"
+    ]
+  },
+  {
+    "id": "MHQPSG",
+    "speakers": [
+      {
+        "id": "8FPGKW",
+        "name": "norswap",
+        "description": "Norswap works for Optimism where he does research & development. He used to work on and teach about compilers. On his spare time he likes to lift weights, watch anime, and research DeFi protocols.",
+        "twitter": "twitter.com/norswap",
+        "avatar": "http://speak.devcon.org/media/avatars/boss_noirblanc_2k_opti_OQ0uyjN.jpg"
+      }
+    ],
+    "title": "Rollups, Shards & Fractals: The Dream of Atomically Composable Horizontal Scaling",
+    "track": "Layer 2s",
+    "duration": 25,
+    "start": 1665655200000,
+    "end": 1665657000000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "Rollups allow blockchain to scale vertically, while preserving their trust properties. But what do we do when we reach the limits of vertical scalability? It might also be desirable to accomodate multiple rollups with different operating rules, virtual machines, or security trade-offs. Horizontal scaling solves these issues, but doesn't allow atomic composability. In this talk, we review approaches to horizontal scalability & ways to get as close to atomic composability as possible.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "sharding",
+      "scaling",
+      "atomicity"
+    ]
+  },
+  {
+    "id": "8DGJYP",
+    "speakers": [
+      {
+        "id": "V33CZQ",
+        "name": "Aqeel Mohammad",
+        "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
+        "twitter": "@qnou",
+        "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
+      }
+    ],
+    "title": "Adoption Day — UX Unconference",
+    "track": "UX & Design",
+    "duration": 480,
+    "start": 1665655200000,
+    "end": 1665684000000,
+    "room": {
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop",
+    "description": "Open-source design unconference and working groups helping to drive improved User Experience and usability standards forward for the decentralized eco-system.\r\n\r\nEnable cross pollination of fresh perspectives and emerging UX methodologies. Bringing together developers and designers in the ecosystem working at the various layers of the Web3 Tech Stack to share their unique solutions and encourage interoperability amongst various systems.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "adoption"
     ]
   },
   {
@@ -6996,104 +7718,6 @@
       "blockchain",
       "tokens",
       "web3"
-    ]
-  },
-  {
-    "id": "W9R3C3",
-    "speakers": [
-      {
-        "id": "VVDXE3",
-        "name": "matt shams",
-        "description": "Ethereum Proof of stake Fanboy \r\n\r\nhttps://blog.blockswap.network/eth2stakinganddaovalidators-ce7e72bbe63f",
-        "twitter": "daoboymatt",
-        "avatar": "http://speak.devcon.org/media/avatars/blueprofile_pp0Mjfp.jpg"
-      }
-    ],
-    "title": "Under 2 Min - Become an Etheruem Staker and Set Up Node",
-    "track": "Staking & Validator Experience",
-    "duration": 7,
-    "start": 1665655200000,
-    "end": 1665655800000,
-    "room": {
-      "id": "talk-2",
-      "name": "Talk 2",
-      "description": "Cold Forest",
-      "info": "Floor 3",
-      "capacity": 414
-    },
-    "type": "Lightning Talk",
-    "description": "We need more mainstream users to partake in Etheruem PoS activity, \r\n\r\nA brief talk showcasing stake tooling for Etheruem deposit contract that allows a normal user to safely stake 32 ETH and have his/her Ethereum Validator from 0, this includes generating credentials and processing deposit, another 60 seconds will allow them to have a node up and running using DVT techstack.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Easy",
-      "Mode",
-      "ETH",
-      "staking"
-    ]
-  },
-  {
-    "id": "MHQPSG",
-    "speakers": [
-      {
-        "id": "8FPGKW",
-        "name": "norswap",
-        "description": "Norswap works for Optimism where he does research & development. He used to work on and teach about compilers. On his spare time he likes to lift weights, watch anime, and research DeFi protocols.",
-        "twitter": "twitter.com/norswap",
-        "avatar": "http://speak.devcon.org/media/avatars/boss_noirblanc_2k_opti_OQ0uyjN.jpg"
-      }
-    ],
-    "title": "Rollups, Shards & Fractals: The Dream of Atomically Composable Horizontal Scaling",
-    "track": "Layer 2s",
-    "duration": 25,
-    "start": 1665655200000,
-    "end": 1665657000000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "Rollups allow blockchain to scale vertically, while preserving their trust properties. But what do we do when we reach the limits of vertical scalability? It might also be desirable to accomodate multiple rollups with different operating rules, virtual machines, or security trade-offs. Horizontal scaling solves these issues, but doesn't allow atomic composability. In this talk, we review approaches to horizontal scalability & ways to get as close to atomic composability as possible.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "sharding",
-      "scaling",
-      "atomicity"
-    ]
-  },
-  {
-    "id": "8DGJYP",
-    "speakers": [
-      {
-        "id": "V33CZQ",
-        "name": "Aqeel Mohammad",
-        "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
-        "twitter": "@qnou",
-        "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
-      }
-    ],
-    "title": "Adoption Day — UX Unconference",
-    "track": "UX & Design",
-    "duration": 480,
-    "start": 1665655200000,
-    "end": 1665684000000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop",
-    "description": "Open-source design unconference and working groups helping to drive improved User Experience and usability standards forward for the decentralized eco-system.\r\n\r\nEnable cross pollination of fresh perspectives and emerging UX methodologies. Bringing together developers and designers in the ecosystem working at the various layers of the Web3 Tech Stack to share their unique solutions and encourage interoperability amongst various systems.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "adoption"
     ]
   },
   {
@@ -9721,7 +10345,7 @@
       "capacity": 1140
     },
     "type": "Panel",
-    "description": ".",
+    "description": "Account Abstraction: Experts agree, if we don't have Account Abstraction, then Ethereum is at stake!\r\n\r\nYour private key wallet will soon be a thing of the past. Account Abstraction promises to put programmability into every Ethereum wallet, and unlock new frontiers for both developers and users. \r\n\r\nHow will Ethereum be different, when every wallet upgrades to a smart wallet?\r\nWhat will it take to get there? \r\nWhat commercial use-cases emerge? \r\nWhat other parts of Ethereum does AA touch?",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -9748,7 +10372,7 @@
       {
         "id": "RESDSC",
         "name": "Anda Ngcaba",
-        "description": "Chief of Operations at UCT Financial Innovation Hub.",
+        "description": "Anda Ngcaba serves as the Chief of Operations (COO) at the University of Cape Town Financial Innovation Hub. At the financial innovation hub, Anda oversees day to day operations, partnerships and business development. Through his work at the Financial Innovation Hub Anda also serves as COO of Axone, a platform for content creators to collaborate in a unique way.",
         "avatar": "http://speak.devcon.org/media/avatars/F366CD12-4796-4A27-AEA6-4DA336E98FCB_pngZhXE.jpeg"
       }
     ],
@@ -10170,6 +10794,31 @@
     ]
   },
   {
+    "id": "WRNXTQ",
+    "speakers": [],
+    "title": "Devcon Happy Hour 😊",
+    "track": "",
+    "duration": 120,
+    "start": 1665684000000,
+    "end": 1665691200000,
+    "room": {
+      "id": "food-and-beverages",
+      "name": "Food and Beverages",
+      "description": "",
+      "info": "Floor 4",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Join us on the first floor for drinks at the happy hour!",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "drink",
+      "friends",
+      "fun"
+    ]
+  },
+  {
     "id": "8YLUG3",
     "speakers": [],
     "title": "Justin Holmes and Friends",
@@ -10426,36 +11075,6 @@
     ]
   },
   {
-    "id": "QGGX9G",
-    "speakers": [
-      {
-        "id": "DZVDNL",
-        "name": "Diego Fernandez",
-        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
-        "avatar": ""
-      }
-    ],
-    "title": "Self-Sovereign Digital Identity",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665741600000,
-    "end": 1665743100000,
-    "room": {
-      "id": "talk-5",
-      "name": "Talk 5",
-      "description": "On Top of the Mountain",
-      "info": "Floor 5",
-      "capacity": 1140
-    },
-    "type": "Talk",
-    "description": ".",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "identity"
-    ]
-  },
-  {
     "id": "YXANLZ",
     "speakers": [
       {
@@ -10637,6 +11256,69 @@
     ]
   },
   {
+    "id": "BQHN3R",
+    "speakers": [
+      {
+        "id": "HZNCPA",
+        "name": "William George",
+        "description": "William George has a PhD in mathematics from the University of Toronto. His thesis was on number theory problems related to elliptic curve cryptography. During postdoctoral fellowships at the University of Toronto and at École Polytechnique (Palaiseau, France), he has done research on applications of blockchains, particularly in the use of blockchains in identity management systems. William is currently research lead for the blockchain-based dispute resolution platform Kleros.",
+        "twitter": "https://twitter.com/williamhwgeorge",
+        "avatar": "http://speak.devcon.org/media/avatars/IvJEm0J2_400x400_swIJn6A.jpeg"
+      }
+    ],
+    "title": "Economic Incentives and Souls in Schelling-point Based Oracles",
+    "track": "Cryptoeconomics",
+    "duration": 25,
+    "start": 1665741600000,
+    "end": 1665743100000,
+    "room": {
+      "id": "talk-5",
+      "name": "Talk 5",
+      "description": "On Top of the Mountain",
+      "info": "Floor 5",
+      "capacity": 1140
+    },
+    "type": "Talk",
+    "description": "Schelling-point based oracles, such as Kleros, can be used to attribute soulbound tokens (SBTs) to individuals based on subjective evaluations of their backgrounds and expertise. Moreover, mechanisms using SBTs can complement economic incentives in such oracles; for example, an SBT-conscious random selection process can determine the voters on a given question. We will focus on how the interplay of economic and social elements in such systems can be designed to maximize resistance to attacks.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "oracles",
+      "soulbound",
+      "incentives"
+    ]
+  },
+  {
+    "id": "QGGX9G",
+    "speakers": [
+      {
+        "id": "DZVDNL",
+        "name": "Diego Fernandez",
+        "description": "Secretario de Innovación y Transformación Digital de la Ciudad de Buenos Aires",
+        "avatar": ""
+      }
+    ],
+    "title": "Self-Sovereign Digital Identity",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665743400000,
+    "end": 1665744900000,
+    "room": {
+      "id": "talk-5",
+      "name": "Talk 5",
+      "description": "On Top of the Mountain",
+      "info": "Floor 5",
+      "capacity": 1140
+    },
+    "type": "Talk",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "identity"
+    ]
+  },
+  {
     "id": "BMU3GS",
     "speakers": [
       {
@@ -10651,7 +11333,7 @@
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665743400000,
-    "end": 1665745200000,
+    "end": 1665744900000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -10710,33 +11392,36 @@
     ]
   },
   {
-    "id": "WWDVQA",
+    "id": "XPHSYR",
     "speakers": [
       {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
+        "id": "3GSD8J",
+        "name": "Zero Age",
+        "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
+        "twitter": "z0age",
+        "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
       }
     ],
-    "title": "Hold",
+    "title": "Advanced Seaport Techniques",
     "track": "Developer Infrastructure",
-    "duration": 30,
-    "start": 1665743400000,
-    "end": 1665745200000,
+    "duration": 50,
+    "start": 1665745200000,
+    "end": 1665748200000,
     "room": {
-      "id": "talk-5",
-      "name": "Talk 5",
-      "description": "On Top of the Mountain",
-      "info": "Floor 5",
-      "capacity": 1140
+      "id": "workshop-4",
+      "name": "Workshop 4",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
     },
-    "type": "Workshop 2h",
-    "description": ".",
+    "type": "Workshop 1h",
+    "description": "Seaport is a marketplace protocol for buying and selling NFTs. While it powers OpenSea in a horizontal capacity, Seaport is open source and allows marketplaces to share a pool of liquidity – enabling project-specific, bespoke vertical marketplaces. Since launch, it’s helped spur innovation across emerging NFT verticals, including ENS names, in-game purchases, etc. This workshop will explore advanced techniques and use cases for the Seaport protocol.",
     "abstract": "",
-    "expertise": "Beginner",
+    "expertise": "",
     "tags": [
-      "engineering"
+      "Seaport",
+      "Marketplace",
+      "EVM"
     ]
   },
   {
@@ -10860,7 +11545,7 @@
     "track": "Layer 2s",
     "duration": 25,
     "start": 1665745200000,
-    "end": 1665747000000,
+    "end": 1665746700000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -10935,36 +11620,36 @@
     ]
   },
   {
-    "id": "TLHM7N",
+    "id": "QTWR7K",
     "speakers": [
       {
-        "id": "BAU3ZE",
-        "name": "Marcello Bardus",
-        "description": null,
-        "twitter": "@0xMarcello",
+        "id": "KDEFR7",
+        "name": "Harry Kalodner",
+        "description": "Harry Kalodner is Co-Founder and Chief Technology Officer at Offchain Labs where he leads the engineering team. Before the company he attended Princeton as a PhD candidate where his research explored economics, anonymity, and incentive compatibility of cryptocurrencies. When not up at 3:00am writing code, Harry occasionally sleeps.",
+        "twitter": "hkalodner",
         "avatar": ""
       }
     ],
-    "title": "Herodotus Workshop",
-    "track": "Developer Infrastructure",
-    "duration": 50,
-    "start": 1665745200000,
-    "end": 1665748200000,
+    "title": "On the Path to a Rollup-Centric Future",
+    "track": "Layer 2s",
+    "duration": 25,
+    "start": 1665747000000,
+    "end": 1665748500000,
     "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
       "info": "Floor 3",
-      "capacity": 112
+      "capacity": 260
     },
-    "type": "Workshop 1h",
-    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
+    "type": "Talk",
+    "description": "It’s only been slightly over a year since Arbitrum launched as the first optimistic rollup that supported general EVM contract deployment. In that time many components have shifted, many users have migrated, and an entirely new generation of technology has shipped with Nitro. Now we look towards tackling the next set of challenges in working towards Ethereum’s rollup centric future, where using Ethereum will mean using a rollup.",
     "abstract": "",
-    "expertise": "",
+    "expertise": "Beginner",
     "tags": [
-      "State expiry",
-      "SNARKS",
-      "L2s"
+      "Layer-2",
+      "Rollup",
+      "Scaling"
     ]
   },
   {
@@ -11066,54 +11751,21 @@
     ]
   },
   {
-    "id": "QTWR7K",
+    "id": "QAFZTQ",
     "speakers": [
       {
-        "id": "KDEFR7",
-        "name": "Harry Kalodner",
-        "description": "Harry Kalodner is Co-Founder and Chief Technology Officer at Offchain Labs where he leads the engineering team. Before the company he attended Princeton as a PhD candidate where his research explored economics, anonymity, and incentive compatibility of cryptocurrencies. When not up at 3:00am writing code, Harry occasionally sleeps.",
-        "twitter": "hkalodner",
-        "avatar": ""
+        "id": "KHF33Q",
+        "name": "Luka Kropec",
+        "description": "I work on the Translation Program at ethereum.org and ecosystem development at the Ethereum Foundation.",
+        "twitter": "https://twitter.com/LKropec",
+        "avatar": "http://speak.devcon.org/media/avatars/37338979_RK5MaNn.jpeg"
       }
     ],
-    "title": "On the Path to a Rollup-Centric Future",
-    "track": "Layer 2s",
+    "title": "Growing the Global Ethereum Community Through Localization",
+    "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665747000000,
-    "end": 1665748800000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "It’s only been slightly over a year since Arbitrum launched as the first optimistic rollup that supported general EVM contract deployment. In that time many components have shifted, many users have migrated, and an entirely new generation of technology has shipped with Nitro. Now we look towards tackling the next set of challenges in working towards Ethereum’s rollup centric future, where using Ethereum will mean using a rollup.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Layer-2",
-      "Rollup",
-      "Scaling"
-    ]
-  },
-  {
-    "id": "W9UCBZ",
-    "speakers": [
-      {
-        "id": "XFMW9P",
-        "name": "Wouter Kampmann",
-        "description": "Wouter Kampmann is currently working as team lead of the Sustainable Ecosystem Scaling Core Unit (SES) at MakerDAO. The SES team performs research, analysis, and bootstrapping work on the challenges and solutions for scaling up MakerDAO. Its mission is to remove the barriers between decentralized workforce, capital and work. Previously, Wouter worked as the Head of Engineering at the Maker Foundation.",
-        "twitter": "wkampmann",
-        "avatar": "http://speak.devcon.org/media/avatars/profile-picture-2_I4y0GRy.jpg"
-      }
-    ],
-    "title": "The History and Future of Decentralized Operations at MakerDAO",
-    "track": "Governance & Coordination",
-    "duration": 25,
-    "start": 1665747000000,
-    "end": 1665748800000,
+    "end": 1665748500000,
     "room": {
       "id": "talk-1",
       "name": "Talk 1",
@@ -11122,13 +11774,13 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "MakerDAO is one of the foundational projects in Ethereum that originally created DeFi. The project has a rich history of gradual decentralization and, today, is one of the largest and most advanced DAOs in the space.\r\nIn this talk I will outline the evolution of decentralized operations and governance at MakerDAO. We will have a look at a few of the most recent scaling challenges, how they developed, and how MakerDAO is dealing with them.",
+    "description": "Over 6 billion people in the world do not speak English at all.\r\nBy localizing and providing Ethereum content (user interfaces, documentation, educational content, etc.) in different languages, we can dramatically increase our target audience and onboard more people to Ethereum, as well as make Ethereum education more accessible.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "MakerDAO",
-      "scalability",
-      "decentralization"
+      "Community",
+      "accessibility",
+      "translation"
     ]
   },
   {
@@ -11202,6 +11854,39 @@
     ]
   },
   {
+    "id": "W9UCBZ",
+    "speakers": [
+      {
+        "id": "XFMW9P",
+        "name": "Wouter Kampmann",
+        "description": "Wouter Kampmann is currently working as team lead of the Sustainable Ecosystem Scaling Core Unit (SES) at MakerDAO. The SES team performs research, analysis, and bootstrapping work on the challenges and solutions for scaling up MakerDAO. Its mission is to remove the barriers between decentralized workforce, capital and work. Previously, Wouter worked as the Head of Engineering at the Maker Foundation.",
+        "twitter": "wkampmann",
+        "avatar": "http://speak.devcon.org/media/avatars/profile-picture-2_I4y0GRy.jpg"
+      }
+    ],
+    "title": "The History and Future of Decentralized Operations at MakerDAO",
+    "track": "Governance & Coordination",
+    "duration": 25,
+    "start": 1665748800000,
+    "end": 1665750300000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "MakerDAO is one of the foundational projects in Ethereum that originally created DeFi. The project has a rich history of gradual decentralization and, today, is one of the largest and most advanced DAOs in the space.\r\nIn this talk I will outline the evolution of decentralized operations and governance at MakerDAO. We will have a look at a few of the most recent scaling challenges, how they developed, and how MakerDAO is dealing with them.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "MakerDAO",
+      "scalability",
+      "decentralization"
+    ]
+  },
+  {
     "id": "ZMWNR8",
     "speakers": [
       {
@@ -11264,39 +11949,6 @@
       "developers",
       "developers",
       "developers"
-    ]
-  },
-  {
-    "id": "UHL78G",
-    "speakers": [
-      {
-        "id": "LLNFVN",
-        "name": "Will Villanueva",
-        "description": "A former eth2 core researcher, Will Villanueva is currently the CEO and Cofounder of Element Finance.",
-        "twitter": "wjvill",
-        "avatar": "http://speak.devcon.org/media/avatars/-IfDBgS-_400x400_QLrcogp.png"
-      }
-    ],
-    "title": "Cryptoeconomics Dive: LP Volatility Harvesting Across Yield Rates",
-    "track": "Cryptoeconomics",
-    "duration": 25,
-    "start": 1665748800000,
-    "end": 1665750300000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "This talk furthers the concept of volatility harvesting. Currently, Uniswap and other major dexes see a huge part of their trading volume consist of the result of volatility in the market. Value changes and as a result, trading volume spikes and LPs profit.\r\n\r\nWhen extending yield, which is also quite a volatile concept, to AMMs, volatility harvesting is increased further to not only affect value but also the yield that value creates.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "DeFi",
-      "AMM",
-      "Cryptoeconomics"
     ]
   },
   {
@@ -11501,38 +12153,6 @@
     ]
   },
   {
-    "id": "NENCP9",
-    "speakers": [
-      {
-        "id": "ZNCFBC",
-        "name": "Etan Kissling",
-        "description": "🐼",
-        "avatar": ""
-      }
-    ],
-    "title": "Light Clients After the Merge",
-    "track": "Layer 1 Protocol",
-    "duration": 25,
-    "start": 1665752400000,
-    "end": 1665754200000,
-    "room": {
-      "id": "talk-2",
-      "name": "Talk 2",
-      "description": "Cold Forest",
-      "info": "Floor 3",
-      "capacity": 414
-    },
-    "type": "Talk",
-    "description": "The merge unlocks a new era of truly light clients that can stay in sync with the Ethereum network using just 20 bytes / second. All obtained data can be verified in a trust-minimized manner, reducing the risk of a rogue centralized API provider serving incorrect data. This talk describes the latest advancements in CL light client protocols.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "light-client",
-      "trust-minimized",
-      "wallet"
-    ]
-  },
-  {
     "id": "9NZVUX",
     "speakers": [
       {
@@ -11547,7 +12167,7 @@
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665752400000,
-    "end": 1665754200000,
+    "end": 1665753900000,
     "room": {
       "id": "talk-1",
       "name": "Talk 1",
@@ -11645,21 +12265,20 @@
     ]
   },
   {
-    "id": "CZRWES",
+    "id": "XMNKDU",
     "speakers": [
       {
-        "id": "W7YZ9C",
-        "name": "Danno Ferrin",
-        "description": "Danno Ferrin is Principal Software Engineer at Hedera Hashgraph, where he spearheads the smart contract environment in the Hedera network. Previously he was Lead Protocol Engineer at ConsenSys Software Inc on their Ethereum Mainnet team, where he chose to go \"full crypto\" after leaving Google.\r\n\r\nDanno is a maintainer for the Hyperledger Besu project, and sits on the Hyperledger Technical Steering Committee, where he is Vice Chair.",
-        "twitter": "shemnon",
-        "avatar": "http://speak.devcon.org/media/avatars/Danno-Ferrin_EO864vt.png"
+        "id": "EE3GXS",
+        "name": "Luis Carlos",
+        "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
+        "avatar": ""
       }
     ],
-    "title": "What Alternative Blockchains Compatibility with Ethereum Tooling Can Teach Us About Ethereum's Future",
-    "track": "Layer 1 Protocol",
+    "title": "Taxing Crypto in Colombia",
+    "track": "Opportunity & Global Impact",
     "duration": 25,
-    "start": 1665754200000,
-    "end": 1665756000000,
+    "start": 1665752400000,
+    "end": 1665753900000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -11668,41 +12287,25 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "In this talk the various techniques that some L1s and L2s use to provide EVM and RPC compatibility with end user and developer tooling will be examined. Special attention will be paid to features (address aliasing and expansion, RPC handing of system contracts, account abstraction) of other blockchains that Ethereum developers have discussed with an eye towards the compatibility issues they introduce.",
+    "description": "The director of the Colombian Tax and Customs Administration will present a document unifying the current rules about the taxation of digital assets in Colombia and will discuss gaps in the current normative framework. He will also invite feedback from the community on how to address these gaps.",
     "abstract": "",
-    "expertise": "Advanced",
+    "expertise": "Beginner",
     "tags": [
-      "EVM",
-      "JSON-RPC",
-      "COMPATIBILITY"
+      "Taxation"
     ]
   },
   {
-    "id": "YSH9RQ",
+    "id": "UHL78G",
     "speakers": [
       {
-        "id": "WCS9KR",
-        "name": "Daniel Perez",
-        "description": "Software engineer with 10+ years of experience and open-source advocate with over 3,000 GitHub stars. Currently Daniel is finishing up his PhD at Imperial College London, where his research is on the security of blockchain systems and applications.  \r\nDaniel is also a co-founder at [Backd](https://backd.fund) and [Gyroscope](https://gyro.finance).",
-        "twitter": "danhper",
-        "avatar": "http://speak.devcon.org/media/avatars/sbc-2020_kQXFPWa.jpg"
-      },
-      {
-        "id": "C7PAZD",
-        "name": "Ariah Klages-Mundt",
-        "description": "Ariah is a DeFi researcher with a track record of predicting design problems in stablecoins, including the design issues in Dai that contributed to Black Thursday. He has designed and built a large part of Gyroscope, including new AMMs and stablecoin markets. He is an Applied Math PhD student at Cornell University, for which he was a Bloomberg Fellow and Commercialization Fellow. He worked previously in the financial technology sector.",
-        "twitter": "aklamun",
-        "avatar": "http://speak.devcon.org/media/avatars/Ariah-Klages-Mundt1566-preferred_c1sD4VP.jpg"
-      },
-      {
-        "id": "UVXR9W",
-        "name": "Lewis Gudgeon",
-        "description": "Lewis is a Computer Science PhD candidate at Imperial College London, publishing mainly on DeFi risks. Prior to this he worked as an economics consultant. He holds an MPhil in Economics Research from the University of Cambridge and a BA in Philosophy, Politics and Economics from Warwick University.",
-        "twitter": "ljfgudgeon",
-        "avatar": ""
+        "id": "LLNFVN",
+        "name": "Will Villanueva",
+        "description": "A former eth2 core researcher, Will Villanueva is currently the CEO and Cofounder of Element Finance.",
+        "twitter": "wjvill",
+        "avatar": "http://speak.devcon.org/media/avatars/-IfDBgS-_400x400_QLrcogp.png"
       }
     ],
-    "title": "Security Risks in DeFi: Delineating Technical and Economic Security",
+    "title": "Cryptoeconomics Dive: LP Volatility Harvesting Across Yield Rates",
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665754200000,
@@ -11715,13 +12318,45 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "The frenetic evolution of DeFi makes it hard to understand its principles and risks. In our talk, We delineate DeFi along the axes of primitives, protocol types and security risks. We distinguish technical security, which has a healthy literature, from economic security, which is largely unexplored, connecting the latter with new models and thereby synthesizing insights from computer science and economics. Finally, we outline the open research challenges across these security types.",
+    "description": "This talk furthers the concept of volatility harvesting. Currently, Uniswap and other major dexes see a huge part of their trading volume consist of the result of volatility in the market. Value changes and as a result, trading volume spikes and LPs profit.\r\n\r\nWhen extending yield, which is also quite a volatile concept, to AMMs, volatility harvesting is increased further to not only affect value but also the yield that value creates.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
       "DeFi",
-      "Security Risk",
-      "Incentives"
+      "AMM",
+      "Cryptoeconomics"
+    ]
+  },
+  {
+    "id": "NENCP9",
+    "speakers": [
+      {
+        "id": "ZNCFBC",
+        "name": "Etan Kissling",
+        "description": "🐼",
+        "avatar": ""
+      }
+    ],
+    "title": "Light Clients After the Merge",
+    "track": "Layer 1 Protocol",
+    "duration": 25,
+    "start": 1665754200000,
+    "end": 1665755700000,
+    "room": {
+      "id": "talk-2",
+      "name": "Talk 2",
+      "description": "Cold Forest",
+      "info": "Floor 3",
+      "capacity": 414
+    },
+    "type": "Talk",
+    "description": "The merge unlocks a new era of truly light clients that can stay in sync with the Ethereum network using just 20 bytes / second. All obtained data can be verified in a trust-minimized manner, reducing the risk of a rogue centralized API provider serving incorrect data. This talk describes the latest advancements in CL light client protocols.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "light-client",
+      "trust-minimized",
+      "wallet"
     ]
   },
   {
@@ -11792,18 +12427,18 @@
     ]
   },
   {
-    "id": "XUVZTP",
+    "id": "CZRWES",
     "speakers": [
       {
-        "id": "VQMDYU",
-        "name": "Juan David Reyes",
-        "description": "Leader of EthColombia and Community Supporter at Devcon.",
-        "twitter": "0xjuandavid",
-        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
+        "id": "W7YZ9C",
+        "name": "Danno Ferrin",
+        "description": "Danno Ferrin is Principal Software Engineer at Hedera Hashgraph, where he spearheads the smart contract environment in the Hedera network. Previously he was Lead Protocol Engineer at ConsenSys Software Inc on their Ethereum Mainnet team, where he chose to go \"full crypto\" after leaving Google.\r\n\r\nDanno is a maintainer for the Hyperledger Besu project, and sits on the Hyperledger Technical Steering Committee, where he is Vice Chair.",
+        "twitter": "shemnon",
+        "avatar": "http://speak.devcon.org/media/avatars/Danno-Ferrin_EO864vt.png"
       }
     ],
-    "title": "Ethereum Event Showcase",
-    "track": "Opportunity & Global Impact",
+    "title": "What Alternative Blockchains Compatibility with Ethereum Tooling Can Teach Us About Ethereum's Future",
+    "track": "Layer 1 Protocol",
     "duration": 25,
     "start": 1665756000000,
     "end": 1665757500000,
@@ -11815,29 +12450,45 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "tbd",
+    "description": "In this talk the various techniques that some L1s and L2s use to provide EVM and RPC compatibility with end user and developer tooling will be examined. Special attention will be paid to features (address aliasing and expansion, RPC handing of system contracts, account abstraction) of other blockchains that Ethereum developers have discussed with an eye towards the compatibility issues they introduce.",
     "abstract": "",
-    "expertise": "Beginner",
+    "expertise": "Advanced",
     "tags": [
-      "democracy"
+      "EVM",
+      "JSON-RPC",
+      "COMPATIBILITY"
     ]
   },
   {
-    "id": "BQHN3R",
+    "id": "YSH9RQ",
     "speakers": [
       {
-        "id": "HZNCPA",
-        "name": "William George",
-        "description": "William George has a PhD in mathematics from the University of Toronto. His thesis was on number theory problems related to elliptic curve cryptography. During postdoctoral fellowships at the University of Toronto and at École Polytechnique (Palaiseau, France), he has done research on applications of blockchains, particularly in the use of blockchains in identity management systems. William is currently research lead for the blockchain-based dispute resolution platform Kleros.",
-        "twitter": "https://twitter.com/williamhwgeorge",
-        "avatar": "http://speak.devcon.org/media/avatars/IvJEm0J2_400x400_swIJn6A.jpeg"
+        "id": "WCS9KR",
+        "name": "Daniel Perez",
+        "description": "Software engineer with 10+ years of experience and open-source advocate with over 3,000 GitHub stars. Currently Daniel is finishing up his PhD at Imperial College London, where his research is on the security of blockchain systems and applications.  \r\nDaniel is also a co-founder at [Backd](https://backd.fund) and [Gyroscope](https://gyro.finance).",
+        "twitter": "danhper",
+        "avatar": "http://speak.devcon.org/media/avatars/sbc-2020_kQXFPWa.jpg"
+      },
+      {
+        "id": "C7PAZD",
+        "name": "Ariah Klages-Mundt",
+        "description": "Ariah is a DeFi researcher with a track record of predicting design problems in stablecoins, including the design issues in Dai that contributed to Black Thursday. He has designed and built a large part of Gyroscope, including new AMMs and stablecoin markets. He is an Applied Math PhD student at Cornell University, for which he was a Bloomberg Fellow and Commercialization Fellow. He worked previously in the financial technology sector.",
+        "twitter": "aklamun",
+        "avatar": "http://speak.devcon.org/media/avatars/Ariah-Klages-Mundt1566-preferred_c1sD4VP.jpg"
+      },
+      {
+        "id": "UVXR9W",
+        "name": "Lewis Gudgeon",
+        "description": "Lewis is a Computer Science PhD candidate at Imperial College London, publishing mainly on DeFi risks. Prior to this he worked as an economics consultant. He holds an MPhil in Economics Research from the University of Cambridge and a BA in Philosophy, Politics and Economics from Warwick University.",
+        "twitter": "ljfgudgeon",
+        "avatar": ""
       }
     ],
-    "title": "Economic Incentives and Souls in Schelling-point Based Oracles",
+    "title": "Security Risks in DeFi: Delineating Technical and Economic Security",
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665756000000,
-    "end": 1665757800000,
+    "end": 1665757500000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -11846,13 +12497,13 @@
       "capacity": 260
     },
     "type": "Talk",
-    "description": "Schelling-point based oracles, such as Kleros, can be used to attribute soulbound tokens (SBTs) to individuals based on subjective evaluations of their backgrounds and expertise. Moreover, mechanisms using SBTs can complement economic incentives in such oracles; for example, an SBT-conscious random selection process can determine the voters on a given question. We will focus on how the interplay of economic and social elements in such systems can be designed to maximize resistance to attacks.",
+    "description": "The frenetic evolution of DeFi makes it hard to understand its principles and risks. In our talk, We delineate DeFi along the axes of primitives, protocol types and security risks. We distinguish technical security, which has a healthy literature, from economic security, which is largely unexplored, connecting the latter with new models and thereby synthesizing insights from computer science and economics. Finally, we outline the open research challenges across these security types.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
-      "oracles",
-      "soulbound",
-      "incentives"
+      "DeFi",
+      "Security Risk",
+      "Incentives"
     ]
   },
   {
@@ -12006,7 +12657,7 @@
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665757800000,
-    "end": 1665759600000,
+    "end": 1665759300000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -12163,7 +12814,7 @@
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665757800000,
-    "end": 1665759600000,
+    "end": 1665759300000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -12253,21 +12904,21 @@
     ]
   },
   {
-    "id": "QAFZTQ",
+    "id": "XUVZTP",
     "speakers": [
       {
-        "id": "KHF33Q",
-        "name": "Luka Kropec",
-        "description": "I work on the Translation Program at ethereum.org and ecosystem development at the Ethereum Foundation.",
-        "twitter": "https://twitter.com/LKropec",
-        "avatar": "http://speak.devcon.org/media/avatars/37338979_RK5MaNn.jpeg"
+        "id": "VQMDYU",
+        "name": "Juan David Reyes",
+        "description": "Leader of EthColombia and Community Supporter at Devcon.",
+        "twitter": "0xjuandavid",
+        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
       }
     ],
-    "title": "Growing the Global Ethereum Community Through Localization",
+    "title": "Ethereum Event Showcase",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665759600000,
-    "end": 1665761400000,
+    "end": 1665761100000,
     "room": {
       "id": "talk-2",
       "name": "Talk 2",
@@ -12276,13 +12927,11 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "Over 6 billion people in the world do not speak English at all.\r\nBy localizing and providing Ethereum content (user interfaces, documentation, educational content, etc.) in different languages, we can dramatically increase our target audience and onboard more people to Ethereum, as well as make Ethereum education more accessible.",
+    "description": "tbd",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "Community",
-      "accessibility",
-      "translation"
+      "democracy"
     ]
   },
   {
@@ -12365,7 +13014,7 @@
     "track": "Cryptoeconomics",
     "duration": 25,
     "start": 1665759600000,
-    "end": 1665761400000,
+    "end": 1665761100000,
     "room": {
       "id": "talk-3",
       "name": "Talk 3",
@@ -12552,188 +13201,6 @@
     ]
   },
   {
-    "id": "V9ET3R",
-    "speakers": [
-      {
-        "id": "YMJVHQ",
-        "name": "Chess Tournament",
-        "description": "Chess Tournament",
-        "avatar": ""
-      }
-    ],
-    "title": "Chess Tournament",
-    "track": "",
-    "duration": 210,
-    "start": 1665604800000,
-    "end": 1665615600000,
-    "room": {
-      "id": "hacker-basement",
-      "name": "Hacker Basement",
-      "description": "",
-      "info": "S1",
-      "capacity": null
-    },
-    "type": "Meetup",
-    "description": "Chess tournament coordination group: https://t.me/+viuV6PIw45wwYWFh",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "chess",
-      "meetup",
-      "community"
-    ]
-  },
-  {
-    "id": "WRNXTQ",
-    "speakers": [],
-    "title": "Devcon Happy Hour 😊",
-    "track": "",
-    "duration": 120,
-    "start": 1665684000000,
-    "end": 1665691200000,
-    "room": {
-      "id": "food-and-beverages",
-      "name": "Food and Beverages",
-      "description": "",
-      "info": "Floor 4",
-      "capacity": null
-    },
-    "type": "Meetup",
-    "description": "Join us on the first floor for drinks at the happy hour!",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "drink",
-      "friends",
-      "fun"
-    ]
-  },
-  {
-    "id": "7MUHSE",
-    "speakers": [],
-    "title": "Old People Party",
-    "track": "",
-    "duration": 210,
-    "start": 1665601200000,
-    "end": 1665613800000,
-    "room": {
-      "id": "temporary-anonymous-zone",
-      "name": "Temporary Anonymous Zone",
-      "description": "Temporary Anonymous Zone in the Community Hub area on the first floor",
-      "info": "",
-      "capacity": 50
-    },
-    "type": "Meetup",
-    "description": "Old People Party with Patrick Mccorry, Anish Mohd: General community meetup, ZK people working in/with Ethereum or Opensource",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "opensource",
-      "party",
-      "old"
-    ]
-  },
-  {
-    "id": "7M9W8S",
-    "speakers": [],
-    "title": "Swarm's Freedom of Speech Corner",
-    "track": "",
-    "duration": 120,
-    "start": 1665597600000,
-    "end": 1665604800000,
-    "room": {
-      "id": "cowork-space-2",
-      "name": "Cowork Space 2",
-      "description": "",
-      "info": "Floor 5",
-      "capacity": null
-    },
-    "type": "Meetup",
-    "description": "Our goal is to raise awareness for Freedom of Speech. The Freedom of Speech corner is part of Swarm's ongoing campaign for making Wikipedia censorship resistant by hosting a searchable version on Swarm.  https://bzzwiki.bzz.link/",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "freedom",
-      "censorship",
-      "wikipedia"
-    ]
-  },
-  {
-    "id": "EQKQ9U",
-    "speakers": [],
-    "title": "Otterscan/Erigon/Sourcify Demo & Chat",
-    "track": "Developer Infrastructure",
-    "duration": 90,
-    "start": 1665597600000,
-    "end": 1665603000000,
-    "room": {
-      "id": "zk-community-hub",
-      "name": "ZK Community Hub",
-      "description": "ZK Community Hub in the Community Hub area on the first floor",
-      "info": "",
-      "capacity": 50
-    },
-    "type": "Workshop 1h",
-    "description": "Short demo and workshop on otterscan, Erigon, archive nodes, Sourcify integration, etc.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "node",
-      "blockexplorer",
-      "erigon"
-    ]
-  },
-  {
-    "id": "3MKUP7",
-    "speakers": [],
-    "title": "How to be a Crypto Nomad - CryptoNomads Meetup",
-    "track": "",
-    "duration": 210,
-    "start": 1665597600000,
-    "end": 1665610200000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Meetup",
-    "description": "Meet up for all CryptoNomads and all future Nomads. We bring awareness to the CryptoNomad community and the digital nomad lifestyle. To show a way of life that optimizes for location independence, remote web3 work, and international web3 friendships.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "nomad",
-      "lifestyle",
-      "friendships"
-    ]
-  },
-  {
-    "id": "PCTG8M",
-    "speakers": [],
-    "title": "Devcon Happy Hour 😊",
-    "track": "",
-    "duration": 120,
-    "start": 1665597600000,
-    "end": 1665604800000,
-    "room": {
-      "id": "food-and-beverages",
-      "name": "Food and Beverages",
-      "description": "",
-      "info": "Floor 4",
-      "capacity": null
-    },
-    "type": "Meetup",
-    "description": "Join us on the first floor for drinks at the happy hour!",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "drinks",
-      "friends",
-      "fun"
-    ]
-  },
-  {
     "id": "JWPANU",
     "speakers": [],
     "title": "Devcon Happy Hour 😊",
@@ -12781,392 +13248,6 @@
       "chess",
       "meetup",
       "community"
-    ]
-  },
-  {
-    "id": "NQHE7W",
-    "speakers": [
-      {
-        "id": "DJE7ME",
-        "name": "Thore Hildebrandt",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Privacy & Scaling Exploration — What We Do and How to Collaborate",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 25,
-    "start": 1665568800000,
-    "end": 1665570300000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "TBD",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Zero Knowledge Proofs",
-      "Privacy",
-      "Cryptographic research"
-    ]
-  },
-  {
-    "id": "STYC97",
-    "speakers": [
-      {
-        "id": "DF3X3D",
-        "name": "Luc Lamarche",
-        "description": "Ethereum Ecosystem Support Program",
-        "twitter": "0aLucL",
-        "avatar": "http://speak.devcon.org/media/avatars/Luc_Lamarche_HRMS_95112_0PtqjHt.jpg"
-      }
-    ],
-    "title": "Ecosystem Support Program",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665573000000,
-    "end": 1665574500000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "As the public facing allocation arm of the Ethereum Foundation, ESP provides funding and support to eligible projects working to strengthen Ethereum's foundations and enable future builders. This talk details our goals and the different forms of support we offer.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Support",
-      "Grants",
-      "Ecosystem Development"
-    ]
-  },
-  {
-    "id": "9T9KTT",
-    "speakers": [
-      {
-        "id": "MPECSR",
-        "name": "Anukriti Kunwar",
-        "description": "Anukriti is a product manager at SpruceID. She is currently trying to find a perfect product management tool that encapsulates CR, customer feedback, and feature requests. \r\nShe loves travelling and planning to explore more of South America next year!",
-        "twitter": "bebaakbeyou",
-        "avatar": "http://speak.devcon.org/media/avatars/Anukriti_Kunwar_sAkKOKt.png"
-      }
-    ],
-    "title": "Sign-in with Ethereum",
-    "track": "Developer Infrastructure",
-    "duration": 25,
-    "start": 1665581400000,
-    "end": 1665582900000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "The talk sheds insight on Sign-in with Ethereum, a new form of authentication that enables users to control their digital identity with their Ethereum account and ENS profile instead of relying on a traditional intermediary.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Developer tooling",
-      "Developer infrastructure",
-      "Developer experience"
-    ]
-  },
-  {
-    "id": "NZ3PYP",
-    "speakers": [
-      {
-        "id": "VCBAZX",
-        "name": "Liraz",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "3VCGXV",
-        "name": "Dror Tirosh",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Account Abstraction: Making Accounts Smarter",
-    "track": "Developer Infrastructure",
-    "duration": 25,
-    "start": 1665586200000,
-    "end": 1665587700000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "This talk discusses the limitations of externally owned accounts (EOAs), use cases for account abstraction, and how to join the account abstraction revolution.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Account Abstraction",
-      "ERC 4337",
-      "Developer infrastructure"
-    ]
-  },
-  {
-    "id": "ET8AZV",
-    "speakers": [
-      {
-        "id": "Y9NMJJ",
-        "name": "Diego Losada",
-        "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
-        "twitter": "https://twitter.com/EthereumOnARM",
-        "avatar": "http://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg"
-      },
-      {
-        "id": "GKXRUD",
-        "name": "Nixorokish",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "Y7P8FA",
-        "name": "Kris Kaczor",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "RSFLEP",
-        "name": "Paul Hauner",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Building a Post-Merge World",
-    "track": "Opportunity & Global Impact",
-    "duration": 35,
-    "start": 1665583500000,
-    "end": 1665585600000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Panel",
-    "description": "This panel seeks to motivate builders to develop post-Merge tools and infrastructure in various domains (e.g. staking, consensus clients, Layer 2s, hardware), discuss the gaps in the ecosystem, and explore how we can move forward after The Merge.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "The Merge",
-      "Developer infrastructure",
-      "Staking"
-    ]
-  },
-  {
-    "id": "VKZPEB",
-    "speakers": [
-      {
-        "id": "MNCWP9",
-        "name": "Jack Gilcrest",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "GHSLKW",
-        "name": "Ian Brighton",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Solidity Dev to ZK Dev: Why and How You Should Start ZK Dev Now",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 25,
-    "start": 1665590400000,
-    "end": 1665591900000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "This talk discusses why working on zero knowledge (ZK) cryptography is important.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Zero Knowledge Cryptography",
-      "Circom",
-      "EVM"
-    ]
-  },
-  {
-    "id": "VPU7V8",
-    "speakers": [
-      {
-        "id": "CUNSE9",
-        "name": "Camila Garzon",
-        "description": "Camila is an engineer and educator who is passionate about making it easier for developers to build in web3. Camila works as a Developer Relations Engineer at Edge & Node where she helps devs build performant, decentralized APIs. She is core team at Women Build Web3, an accelerator for developing top woman engineering talent and fund for projects led by women.",
-        "twitter": "@camiinthisthang",
-        "avatar": "http://speak.devcon.org/media/avatars/cami_wxd6kZv.jpeg"
-      },
-      {
-        "id": "T89AAP",
-        "name": "Yanyan Ho",
-        "description": "Dapp-Learning Founder.  Faithful of Austrian economics, Interested in DEFI, ZK, DAO",
-        "twitter": "https://twitter.com/Dapp_Learning",
-        "avatar": ""
-      },
-      {
-        "id": "DE8U8N",
-        "name": "Divyanshu Dagar",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "N7CEA7",
-        "name": "Ulaş Erdoğan",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "C3MPDU",
-        "name": "Luka",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Education across Cultures",
-    "track": "Opportunity & Global Impact",
-    "duration": 35,
-    "start": 1665592500000,
-    "end": 1665594600000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Panel",
-    "description": "This panel seeks to motivate individuals/teams to develop culturally sensitive educational materials in various languages and discuss gaps in the education ecosystem.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Education",
-      "Culture",
-      "Language"
-    ]
-  },
-  {
-    "id": "XMHS3E",
-    "speakers": [
-      {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "twitter": "gubsheep",
-        "avatar": ""
-      },
-      {
-        "id": "XV79MM",
-        "name": "Jacob Willemsma",
-        "description": "Jacob is VP of Partnerships at ETHGlobal and has been part of the ETHGlobal team since before there was an ETHGlobal!",
-        "twitter": "https://twitter.com/jacobwillemsma",
-        "avatar": "http://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png"
-      },
-      {
-        "id": "LGMDLB",
-        "name": "Romina Ayelén Sejas",
-        "description": null,
-        "twitter": "@cryptochica_arg",
-        "avatar": ""
-      },
-      {
-        "id": "TPWTC7",
-        "name": "Auryn Macmillan",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "7PHXHS",
-        "name": "Eda",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "WSUXPB",
-        "name": "Mauricio Tovar (Moderator)",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Web3 is Going Great",
-    "track": "Opportunity & Global Impact",
-    "duration": 35,
-    "start": 1665575100000,
-    "end": 1665577200000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Panel",
-    "description": "This panel celebrates the Ethereum ecosystem’s global impact thus far, but also look towards the future to answer the questions: What’s missing in the ecosystem? What would we like people to work on? What are Ethereum’s priorities?",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Impact",
-      "Global Opportunity"
-    ]
-  },
-  {
-    "id": "FTSC9Y",
-    "speakers": [
-      {
-        "id": "8SGNZT",
-        "name": "Madison Adams",
-        "description": ".",
-        "avatar": ""
-      },
-      {
-        "id": "8KJFF7",
-        "name": "Safder Raza",
-        "description": "Saf is curious about everything that has to do with pushing people to be the best versions of themselves. After spending a previous life as a mechanical engineer, Saf has worked in education, career coaching, mentorship and now leads People Operations at Gitcoin. You can also find him catherding the brightest Gen Z-ers at Dream DAO. Outside of work, Saf loves to spend time in the mountains, and is an avid trail ultra-runner and skier.",
-        "twitter": "@safderwords",
-        "avatar": "http://speak.devcon.org/media/avatars/Safder_Twit_2_RxJ1xUp.jpg"
-      }
-    ],
-    "title": "What Can DAOs Learn From",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665570900000,
-    "end": 1665572400000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "What can DAOs learn from governments, companies, communities and more? \r\n\r\nThe ultimate vision of DAOs promises us better ways to organize humans. But we are just scratching the surface in discovering how to optimally structure and operate DAOs. As a result, many DAOs are not serving their mission or members as effectively as they could be.\r\n\r\nThe good news? We don’t have to reinvent everything.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "DAOs",
-      "Impact",
-      "Governance"
     ]
   }
 ]
