@@ -855,7 +855,7 @@
     "eventDays": [
       1665532800000
     ],
-    "twitter": "https://twitter.com/ignatiusrv",
+    "twitter": "https://twitter.com/0xignasi",
     "github": "https://github.com/ignasirv"
   },
   {
@@ -3124,19 +3124,6 @@
     "github": "griffgreen"
   },
   {
-    "id": "TS3DE7",
-    "name": "Awosika Ayodeji",
-    "avatar": "https://speak.devcon.org/media/avatars/IMG_3935_xZiNqlX.jpeg",
-    "description": "Founder, Web3bridge",
-    "tracks": [
-      "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "twitter": "https://twitter.com/Ebunayo08"
-  },
-  {
     "id": "YVHUPN",
     "name": "Alp Ergin",
     "avatar": null,
@@ -3709,6 +3696,20 @@
     ],
     "website": "http://caropinzonsilva.me/",
     "github": "caropinzonsilva"
+  },
+  {
+    "id": "GNJMSB",
+    "name": "Sreeram Kannan",
+    "avatar": "https://speak.devcon.org/media/avatars/sk_fuNT6By.jpeg",
+    "description": "Sreeram Kannan is Founder of EigenLayer and an associate professor at the Department of Electrical & Computer Engineering at the University of Washington, Seattle, where he leads the UW Blockchain Lab. He was a postdoctoral scholar at University of California, Berkeley and a visiting postdoc at Stanford between 2012-2014 before which he received his Ph.D. in Electrical and Computer Engineering and M.S. in mathematics from the University of Illinois Urbana Champaign.",
+    "tracks": [
+      "Staking & Validator Experience"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "website": "blockchain.ece.uw.edu",
+    "twitter": "sreeramkannan"
   },
   {
     "id": "V33CZQ",
@@ -5040,14 +5041,15 @@
   {
     "id": "MJJN9F",
     "name": "Jordan Sutcliffe",
-    "avatar": "https://speak.devcon.org/media/avatars/Tree_of_life_rrS51mp.jpeg",
+    "avatar": "https://speak.devcon.org/media/avatars/Speaker_Profile_Square_Fuknipw.jpg",
     "description": "BizDev Lead at StakeWise",
     "tracks": [
       "Staking & Validator Experience"
     ],
     "eventDays": [
       1665446400000
-    ]
+    ],
+    "twitter": "@JstarCS"
   },
   {
     "id": "ZCGXDJ",
@@ -5150,6 +5152,16 @@
     ],
     "website": "https://github.com/efdevcon/streameth",
     "twitter": "@streameth"
+  },
+  {
+    "id": "XLEESP",
+    "name": "Andrew",
+    "avatar": "https://speak.devcon.org/media/avatars/headshot_tWNSyJP.png",
+    "description": "Andrew Vaziri is a technical lead in GiveDirectly's Innovation Team. He works primarily on geospatial data, machine learning, and blockchain projects. He graduated with an MS in Electrical Engineering from Georgia Tech and has worked for Apple, Microsoft, and multiple successful startups as a software and machine learning engineer.",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "@AndrewVaziri",
+    "github": "https://github.com/avaziri"
   },
   {
     "id": "FLKFV8",
@@ -5464,6 +5476,15 @@
     ],
     "twitter": "_vshapovalov",
     "github": "vshvsh"
+  },
+  {
+    "id": "GTUCY9",
+    "name": "SHAKA LEI KAUMAKA",
+    "avatar": "https://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg",
+    "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+    "tracks": [],
+    "eventDays": [],
+    "twitter": "@SHAKALEIKAUMAKA"
   },
   {
     "id": "G8STKM",
@@ -5859,5 +5880,18 @@
       1665532800000
     ],
     "twitter": "@cryptochica_arg"
+  },
+  {
+    "id": "H3VZ9D",
+    "name": "Simon Polrot",
+    "avatar": "https://speak.devcon.org/media/avatars/IMG_0203_bJUzIOG.jpeg",
+    "description": "Educating on crypto and public blockchains since 2015",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
+    "twitter": "@simonpolrot"
   }
 ]
