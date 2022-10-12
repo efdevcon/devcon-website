@@ -22,7 +22,6 @@ export const SESSION_CONFIG = {
   cookieName: "Devcon App",
   password: SERVER_CONFIG.SESSION_SECRET,
   cookieOptions: {
-    maxAge: undefined,
     secure: process.env.NODE_ENV === "production",
   }
 }
