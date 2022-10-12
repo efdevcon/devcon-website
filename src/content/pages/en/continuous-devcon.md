@@ -4,6 +4,6 @@ header: Continuous Devcon
 tags:
   - devcon
 ---
-Continuous Devcon is the umbrella term for initiatives that will contribute towards making Devcon a more holistic experience, complementing the main programming.
+Continuous Devcon is the umbrella for initiatives that contribute towards making Devcon a more holistic experience, complementing the main programming.
 
-CD will allow for new formats and will be a testbed for initiatives like **community hubs**, **extended opening hours** and other **surprises**!
+CD allows for new formats and is a testbed for initiatives like **Community Hubs, extended opening hours, the hacker basement and Devcon After Dark!**

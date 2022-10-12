@@ -10,6 +10,7 @@ import { GetPage, GetFAQ, GetContentSections } from 'services/page'
 import { FAQ } from 'components/domain/faq'
 import { useTranslations } from 'next-intl'
 import { Snapshot } from 'components/common/snapshot'
+import CalendarIcon from 'assets/icons/calendar.svg'
 import TicketIcon from 'assets/icons/ticket.svg'
 import AuctionIcon from 'assets/icons/auction.svg'
 import NoteIcon from 'assets/icons/note.svg'
@@ -206,12 +207,21 @@ export default pageHOC(function Tickets(props: any) {
                   right: intl('tickets_raffle_auction_dates'),
                 },
                 {
-                  Icon: TicketIcon,
+                  Icon: CalendarIcon,
                   title: intl('tickets_raffle_ticket_sale_waves'),
                   right: (
                     // <Link to="#waves" style={{ textTransform: 'none' }}>
                     <span className="bold">{intl('tickets_raffle_ticket_sale_waves_dates')}</span>
                     // </Link>
+                  ),
+                },
+                {
+                  Icon: TicketIcon,
+                  title: 'Tickets Sold out',
+                  right: (
+                    <Link to="https://tickets.devcon.org/" style={{ textTransform: 'none' }}>
+                      <span className="bold">Ticket shop</span>
+                    </Link>
                   ),
                 },
               ]}

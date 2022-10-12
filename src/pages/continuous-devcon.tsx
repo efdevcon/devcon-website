@@ -90,9 +90,9 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                 },
                 {
                   Icon: IconPeople,
-                  title: intl('cd_community_curation'),
+                  title: 'Devcon after Dark',
                   right: (
-                    <Link indicateExternal className="theme-color" to="https://forum.devcon.org">
+                    <Link indicateExternal className="theme-color" to="https://forum.devcon.org/t/introducing-devcon-after-dark/1375">
                       {intl('cd_devcon_forum')}
                     </Link>
                   ),
@@ -110,8 +110,8 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   Icon: IconTransactions,
                   title: intl('cd_community_hubs'),
                   right: (
-                    <Link to="https://forum.devcon.org/t/rfp-5-community-hubs/454" className="theme-color">
-                      {intl('cd_apply_now')}
+                    <Link to="#hubs" className="theme-color">
+                      {intl('cd_learn_more')}
                     </Link>
                   ),
                 },

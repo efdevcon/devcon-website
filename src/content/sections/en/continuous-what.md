@@ -7,14 +7,14 @@ left: "### Continuous Devcon brings together a variety of opportunities for the
   concluded for the day, **turning Devcon into a truly continuous and more
   holistic and collaboration-focused experience.**"
 right: >-
-  The venue and space will be open, available, and welcoming until 11pm — much
-  later than you might be used to from other Devcons. This means you can
-  smoothly transition into the evening and have more time to explore the
-  initiatives besides the main program!
+  The venue and space is open, available, and welcoming until 11pm — much later than you might be used to from other Devcons. This means you can smoothly transition into the evening and have more time to explore the initiatives besides the main program!
 
 
-  The venue will foster collaboration, networking, exchange, creativity, creation, experimentation and relaxation through various spaces dedicated especially to that.
+  The venue fosters collaboration, networking, exchange, creativity, creation, experimentation and relaxation through various spaces dedicated especially to that.
 
 
-  You can get hands-on involved and shape Devcon by hosting (or contributing to) a Community Hub! Learn more about the concept of Community Hubs and how to apply for one below.
+  Make sure to check out the Community Hubs area and the Devcon after Dark program.
+
+  [COMMUNITY HUBS](https://devcon.org/continuous-devcon/#hubs) 
+  [DEVCON AFTER DARK](https://forum.devcon.org/t/introducing-devcon-after-dark/1375)
 ---
