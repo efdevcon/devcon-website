@@ -10,6 +10,8 @@ description: "Swarm aims to be the native data storage and content distribution 
 -Databases in Swarm (Viktor)"
 youtubeUrl: "https://youtu.be/VDIW81BrgBA"
 ipfsHash: "QmShZtz3hPYyTfe9uZgxJvq4iRUfRJ2sgcE6b944ggrS5x"
+ethernaIndex: "https://etherna.io/embed/6346372ec02259b06a2ffb42"
+ethernaPermalink: "https://etherna.io/embed/ea1b284713b86ba3d6b8ae56aff02f66cabd38305e4d26dc03d5f7f87a537d8c"
 duration: 2465
 expertise: "Intermediate"
 type: "Talk"

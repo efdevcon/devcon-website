@@ -6,6 +6,8 @@ I would like to give a 20 minute presentation on our research into identity and 
 Our recent breakout session in San Francisco (with engineers from Metamask, Dharma, Protocol Labs, and Google Brain) demonstrates some of our latest thinking on this topic! – https://twitter.com/sinahab/status/1027639769910525952"
 youtubeUrl: "https://youtu.be/DlZFWkzEfyI"
 ipfsHash: "QmX24ufrdQXA3KTen58nVzfBAXft7YXZ7Nu9Sbe3RCBJnF"
+ethernaIndex: "https://etherna.io/embed/6345dd14080a54f6d733eb95"
+ethernaPermalink: "https://etherna.io/embed/1715cb246585d2b6d6535d15cd5dd0b0ddfe8ad531344c2de240bb39d0f2f008"
 duration: 1576
 expertise: "Intermediate"
 type: "Talk"

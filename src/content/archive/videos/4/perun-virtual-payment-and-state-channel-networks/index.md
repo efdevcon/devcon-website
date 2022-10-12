@@ -6,6 +6,8 @@ One distinctive feature of Perun is that its channels can be virtual, meaning th
 Further information available at https://perun.network/"
 youtubeUrl: "https://youtu.be/cgeELCtqE2s"
 ipfsHash: "Qmamk2oJo4UebEZcTzdDYwxRJFanzg87rhbW7bmbpQYAsU"
+ethernaIndex: "https://etherna.io/embed/63461bee080a54f6d733ebd1"
+ethernaPermalink: "https://etherna.io/embed/fdf28e7af451ba6dea8745f4c0d04a5442daaae83cdf3eae7cd75aeaf516a4c3"
 duration: 1489
 expertise: "Intermediate"
 type: "Talk"
