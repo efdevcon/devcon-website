@@ -53,8 +53,22 @@ export const Room = (props: Props) => {
     return moment.utc(a.start).isBefore(moment.utc(b.start)) ? -1 : 1
   })
   const bookmarkedSessions = account?.appState?.sessions
-  const upcomingSessions = sortedSessions.filter(i => sessionSearch(search, i)).filter(i => !moment.utc(i.start).isBefore(now))
-  const attendingSessions = sortedSessions.filter(i => sessionSearch(search, i)).filter(i => bookmarkedSessions?.find(bookmark => bookmark.id === i.id))
+  const upcomingSessions = sortedSessions
+    .filter(i => sessionSearch(search, i))
+    .filter(i => {
+      const sessionIsUpcoming = now && now.isBefore(i.startTimeAsMoment)
+      const sessionHasHappened = now && now.isAfter(i.endTimeAsMoment)
+      const sessionIsNow = !sessionHasHappened && !sessionIsUpcoming
+
+      return sessionIsUpcoming || sessionIsNow
+
+      // if (!sessionIsUpcoming && !sessionIsNow) return false
+
+      // return !moment.utc(i.start).isBefore(now)
+    })
+  const attendingSessions = sortedSessions
+    .filter(i => sessionSearch(search, i))
+    .filter(i => bookmarkedSessions?.find(bookmark => bookmark.id === i.id))
   const pastSessions = sortedSessions.filter(i => sessionSearch(search, i)).filter(i => !moment.utc(i.end).isAfter(now))
 
   const eventDates = React.useMemo(() => {
@@ -143,13 +157,15 @@ export const Room = (props: Props) => {
               title: 'Upcoming',
               content: (
                 <div>
-                  {upcomingSessions && <List
-                    now={now}
-                    sessionTimeslots={upcomingSessionsData.sessionTimeslots}
-                    timeslotOrder={upcomingSessionsData.timeslotOrder}
-                    sessionsByTime={upcomingSessionsData.sessionsByTime}
-                    ref={listRef1}
-                  />}
+                  {upcomingSessions && (
+                    <List
+                      now={now}
+                      sessionTimeslots={upcomingSessionsData.sessionTimeslots}
+                      timeslotOrder={upcomingSessionsData.timeslotOrder}
+                      sessionsByTime={upcomingSessionsData.sessionsByTime}
+                      ref={listRef1}
+                    />
+                  )}
                   {upcomingSessions.length === 0 && <NoResults />}
                 </div>
               ),
@@ -158,13 +174,15 @@ export const Room = (props: Props) => {
               title: 'Attending',
               content: (
                 <div>
-                  {attendingSessions && <List
-                    now={now}
-                    sessionTimeslots={attendingSessionsData.sessionTimeslots}
-                    timeslotOrder={attendingSessionsData.timeslotOrder}
-                    sessionsByTime={attendingSessionsData.sessionsByTime}
-                    ref={listRef2}
-                  />}
+                  {attendingSessions && (
+                    <List
+                      now={now}
+                      sessionTimeslots={attendingSessionsData.sessionTimeslots}
+                      timeslotOrder={attendingSessionsData.timeslotOrder}
+                      sessionsByTime={attendingSessionsData.sessionsByTime}
+                      ref={listRef2}
+                    />
+                  )}
                   {attendingSessions.length === 0 && <NoResults />}
                 </div>
               ),
@@ -173,13 +191,15 @@ export const Room = (props: Props) => {
               title: 'Past',
               content: (
                 <div>
-                  {pastSessions && <List
-                    now={now}
-                    sessionTimeslots={pastSessionsData.sessionTimeslots}
-                    timeslotOrder={pastSessionsData.timeslotOrder}
-                    sessionsByTime={pastSessionsData.sessionsByTime}
-                    ref={listRef3}
-                  />}
+                  {pastSessions && (
+                    <List
+                      now={now}
+                      sessionTimeslots={pastSessionsData.sessionTimeslots}
+                      timeslotOrder={pastSessionsData.timeslotOrder}
+                      sessionsByTime={pastSessionsData.sessionsByTime}
+                      ref={listRef3}
+                    />
+                  )}
                   {pastSessions.length === 0 && <NoResults />}
                 </div>
               ),

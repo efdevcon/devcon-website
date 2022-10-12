@@ -312,8 +312,10 @@ export const Schedule = ScheduleState((props: any) => {
       if (!sessionHasHappened) return false
     } else if (basicFilter === 'upcoming') {
       const sessionIsUpcoming = now && now.isBefore(session.startTimeAsMoment)
+      const sessionHasHappened = now && now.isAfter(session.endTimeAsMoment)
+      const sessionIsNow = !sessionHasHappened && !sessionIsUpcoming
 
-      if (!sessionIsUpcoming) return false
+      if (!sessionIsUpcoming && !sessionIsNow) return false
     } else if (basicFilter === 'live') {
       const sessionHasHappened = now && now.isAfter(session.endTimeAsMoment)
       const sessionIsUpcoming = now && now.isBefore(session.startTimeAsMoment)
@@ -436,14 +438,13 @@ export const Schedule = ScheduleState((props: any) => {
                           text: 'Upcoming',
                           value: 'upcoming',
                         },
-
-                        {
-                          text: 'Live',
-                          value: 'live',
-                        },
                         {
                           text: 'Attending',
                           value: 'attending',
+                        },
+                        {
+                          text: 'Live',
+                          value: 'live',
                         },
                         {
                           text: 'Interested',
