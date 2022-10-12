@@ -51,7 +51,7 @@ export const LivestreamCard = (props: Props) => {
         <ThumbnailBlock className={css['banner']} thumbnail={LivestreamIcon.src}>
           <div className={css['content']}>
             <p className="font-xs-fixed">
-              {isStreamActive && 'Livestream is currently active.'}
+              {isStreamActive && <span>Watch at <Link to="https://live.devcon.org/">live.devcon.org</Link>.</span>}
               {!isStreamActive && sessionUpcoming && 'Waiting for scheduled Livestream to begin.'}
               {!isStreamActive && sessionEnded && (
                 <>
