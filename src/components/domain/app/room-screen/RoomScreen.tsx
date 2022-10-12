@@ -235,7 +235,7 @@ export const RoomScreen = (props: ScreenProps) => {
                     <div className={css['thumbnail']}>
                       <div className={css['wrapper']}>
                         <Image
-                          src={speaker.avatar || makeBlockie(speaker.name)}
+                          src={speaker.avatar || makeBlockie(speaker.name ?? speaker.id)}
                           alt={speaker.name}
                           objectFit="cover"
                           layout="fill"
