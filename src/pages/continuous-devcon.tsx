@@ -138,13 +138,6 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   __html: props.sections['continuous-what'].data.right,
                 }}
               ></div>
-
-              <div className={css['links']}>
-                <Link to="#hubs" className="text-uppercase hover-underline font-lg bold">
-                  {intl('cd_community_hubs')}
-                  <ArrowRight />
-                </Link>
-              </div>
             </div>
           </div>
         </section>

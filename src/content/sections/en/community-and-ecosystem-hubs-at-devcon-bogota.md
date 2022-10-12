@@ -7,7 +7,7 @@ left: >-
   By enabling a handful of communities to create and display content of their choice we pave the way for a more decentralized Devcon.
 
 
-  Communities, initiatives, interest groups and collectives can apply via the DIP process for their chance to get one of the available hub areas.Once allocated a space, the selected organizing group will be solely responsible for the space and what happens in it throughout the course of the whole conference.
+  This year, we invited communities, initiatives, interest groups and collectives to apply for their chance to get one of the available hub areas. The selected organizing groups are solely responsible for the space and what happens in it throughout the course of the whole conference.
 right: >-
   ## Guidelines
 

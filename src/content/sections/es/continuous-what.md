@@ -17,4 +17,10 @@ right: >-
 
 
   ¡Puede involucrarse y dar forma a Devcon al hospedar (o contribuir a) un Community Hub! Obtenga más información sobre el concepto de Community Hubs y cómo solicitar uno a continuación.
+
+
+  Asegúrese de revisar el área de Community Hubs y el programa Devcon after Dark.
+
+
+  [CENTROS COMUNITARIOS](https://devcon.org/continuous-devcon/#hubs) • [DEVCON DESPUÉS DEL OSCURIDAD](https://forum.devcon.org/t/introducing-devcon-after-dark/1375)
 ---

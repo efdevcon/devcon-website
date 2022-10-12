@@ -15,6 +15,6 @@ right: >-
 
   Make sure to check out the Community Hubs area and the Devcon after Dark program.
 
-  [COMMUNITY HUBS](https://devcon.org/continuous-devcon/#hubs) 
-  [DEVCON AFTER DARK](https://forum.devcon.org/t/introducing-devcon-after-dark/1375)
+
+  [COMMUNITY HUBS](https://devcon.org/continuous-devcon/#hubs) • [DEVCON AFTER DARK](https://forum.devcon.org/t/introducing-devcon-after-dark/1375)
 ---
