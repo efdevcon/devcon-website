@@ -27,6 +27,12 @@ export const LivestreamCard = (props: Props) => {
   const eventEndTime = moment.utc('18:30:00', 'hh:mm:ss')
   const isStreamActive = now.isBetween(eventStartTime, eventEndTime) && EVENT_DAYS.includes(now.date())
 
+  const sessionRooms = ['talk-1', 'talk-2', 'talk-3', 'talk-4', 'talk-5', 'talk-5-opening-ceremonies',
+    'workshop-1', 'workshop-2', 'workshop-3', 'workshop-4']
+  if (!sessionRooms.some(i => props.session.id === i)) {
+    return <></>
+  }
+
   return (
     <div className={css['container']}>
       <h4 className="app-header">Livestream {isOngoing && <div className="label red sm">Session is live</div>}</h4>

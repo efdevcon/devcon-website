@@ -349,8 +349,12 @@
     "name": "Madison Adams",
     "avatar": null,
     "description": ".",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "TKWW8K",
@@ -404,7 +408,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000
+      1665705600000,
+      1665532800000
     ],
     "website": "https://camiinthisthang.dev/",
     "twitter": "@camiinthisthang",
@@ -2041,10 +2046,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg",
     "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
     "tracks": [
-      "Staking & Validator Experience"
+      "Staking & Validator Experience",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665532800000
     ],
     "website": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/",
     "twitter": "https://twitter.com/EthereumOnARM",
@@ -2576,10 +2583,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/Safder_Twit_2_RxJ1xUp.jpg",
     "description": "Saf is curious about everything that has to do with pushing people to be the best versions of themselves. After spending a previous life as a mechanical engineer, Saf has worked in education, career coaching, mentorship and now leads People Operations at Gitcoin. You can also find him catherding the brightest Gen Z-ers at Dream DAO. Outside of work, Saf loves to spend time in the mountains, and is an avid trail ultra-runner and skier.",
     "tracks": [
-      "Governance & Coordination"
+      "Governance & Coordination",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665619200000
+      1665619200000,
+      1665532800000
     ],
     "website": "safder.medium.com",
     "twitter": "@safderwords"
@@ -3686,7 +3695,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665619200000
     ],
     "website": "http://caropinzonsilva.me/",
     "github": "caropinzonsilva"
@@ -3731,7 +3740,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665619200000
     ],
     "github": "morenobryan"
   },
@@ -3818,12 +3827,14 @@
     "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More",
-      "UX & Design"
+      "UX & Design",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665446400000,
       1665619200000,
-      1665705600000
+      1665705600000,
+      1665532800000
     ],
     "twitter": "gubsheep",
     "github": "gubsheep"
@@ -4148,8 +4159,12 @@
     "name": "Jacob Willemsma",
     "avatar": "https://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png",
     "description": "Jacob is VP of Partnerships at ETHGlobal and has been part of the ETHGlobal team since before there was an ETHGlobal!",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
     "twitter": "https://twitter.com/jacobwillemsma",
     "github": "https://github.com/jacobwillemsma"
   },
@@ -4387,7 +4402,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000
+      1665705600000,
+      1665532800000
     ],
     "twitter": "https://twitter.com/Dapp_Learning",
     "github": "https://github.com/liberhe"
@@ -5835,7 +5851,8 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665532800000
     ]
   },
   {
@@ -5843,8 +5860,12 @@
     "name": "Anukriti Kunwar",
     "avatar": "https://speak.devcon.org/media/avatars/Anukriti_Kunwar_sAkKOKt.png",
     "description": "Anukriti is a product manager at SpruceID. She is currently trying to find a perfect product management tool that encapsulates CR, customer feedback, and feature requests. \r\nShe loves travelling and planning to explore more of South America next year!",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
     "twitter": "bebaakbeyou"
   },
   {
@@ -5852,8 +5873,12 @@
     "name": "Luc Lamarche",
     "avatar": "https://speak.devcon.org/media/avatars/Luc_Lamarche_HRMS_95112_0PtqjHt.jpg",
     "description": "Ethereum Ecosystem Support Program",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ],
     "twitter": "0aLucL"
   },
   {
@@ -5896,114 +5921,170 @@
   },
   {
     "id": "YMJVHQ",
-    "name": "",
+    "name": "Chess Tournament",
     "avatar": null,
-    "description": "",
-    "tracks": [],
-    "eventDays": []
+    "description": "Chess Tournament",
+    "tracks": [
+      ""
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "DJE7ME",
     "name": "Thore Hildebrandt",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "TPWTC7",
     "name": "Auryn Macmillan",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "7PHXHS",
     "name": "Eda",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "WSUXPB",
     "name": "Mauricio Tovar (Moderator)",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "GKXRUD",
     "name": "Nixorokish",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "Y7P8FA",
     "name": "Kris Kaczor",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "RSFLEP",
     "name": "Paul Hauner",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "3VCGXV",
     "name": "Dror Tirosh",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "MNCWP9",
     "name": "Jack Gilcrest",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "GHSLKW",
     "name": "Ian Brighton",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "DE8U8N",
     "name": "Divyanshu Dagar",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "N7CEA7",
     "name": "Ulaş Erdoğan",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "C3MPDU",
     "name": "Luka",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   }
 ]
