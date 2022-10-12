@@ -80,29 +80,12 @@ export const CuratedPlaylists = (props: PlaylistProps) => {
   return (
     <div className="section">
       <div className="content">
-        <div className={`${css['curated-playlists']} ${props.borderless ? '' : 'border-top'}`}>
+        <div className={`${css['curated-playlists']} ${props.borderless ? '' : 'border-top'} margin-bottom`}>
           <Slider
             sliderProps={sliderProps}
             className={css['slider']}
             style={props.borderless ? { marginTop: '0px' } : undefined}
             title={props.title}
-            // custom={
-            //   props.viewMore
-            //     ? () => {
-            //         return (
-            //           <div className={css['view-more']}>
-            //             <Button to={'/archive/playlists'} className={`${css['button']} sm`}>
-            //               View more <ArrowRight />
-            //             </Button>
-
-            //             <Link to="/archive/playlists" className={css['view-more-mobile']}>
-            //               View More
-            //             </Link>
-            //           </div>
-            //         )
-            //       }
-            //     : undefined
-            // }
           >
             {props.items.map((i: Playlist) => {
               return <PlaylistCard key={i.id} playlist={i} canSlide={sliderProps[1].canSlide} />
