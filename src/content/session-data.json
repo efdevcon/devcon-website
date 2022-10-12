@@ -12556,8 +12556,8 @@
     "speakers": [
       {
         "id": "YMJVHQ",
-        "name": "",
-        "description": null,
+        "name": "Chess Tournament",
+        "description": "Chess Tournament",
         "avatar": ""
       }
     ],
@@ -12822,6 +12822,7 @@
         "id": "DF3X3D",
         "name": "Luc Lamarche",
         "description": "Ethereum Ecosystem Support Program",
+        "twitter": "0aLucL",
         "avatar": "http://speak.devcon.org/media/avatars/Luc_Lamarche_HRMS_95112_0PtqjHt.jpg"
       }
     ],
@@ -12854,6 +12855,7 @@
         "id": "MPECSR",
         "name": "Anukriti Kunwar",
         "description": "Anukriti is a product manager at SpruceID. She is currently trying to find a perfect product management tool that encapsulates CR, customer feedback, and feature requests. \r\nShe loves travelling and planning to explore more of South America next year!",
+        "twitter": "bebaakbeyou",
         "avatar": "http://speak.devcon.org/media/avatars/Anukriti_Kunwar_sAkKOKt.png"
       }
     ],
@@ -13078,6 +13080,7 @@
         "id": "XV79MM",
         "name": "Jacob Willemsma",
         "description": "Jacob is VP of Partnerships at ETHGlobal and has been part of the ETHGlobal team since before there was an ETHGlobal!",
+        "twitter": "https://twitter.com/jacobwillemsma",
         "avatar": "http://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png"
       },
       {

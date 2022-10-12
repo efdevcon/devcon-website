@@ -57,7 +57,7 @@ export const SpeakerDetails = (props: any) => {
 
       <div className={css['image']}>
         <Image
-          src={props.speaker.avatar ?? makeBlockie(props.speaker.name ?? props.speaker.id)}
+          src={props.speaker.avatar ?? makeBlockie(props.speaker.name || props.speaker.id)}
           alt={props.speaker.name}
           objectFit="contain"
           layout="fill"
