@@ -11,8 +11,8 @@ We will cover:
 If you are interested in stateless contracts and Merkle proofs, this is the session to attend."
 youtubeUrl: "https://www.youtube.com/embed/8H1TCbW0LJQ"
 ipfsHash: "QmPV4Ynr9jMSrFnChSfaK2pnEHoBDEWNv7bjDHAAdyX1YF"
-ethernaIndex: "https://etherna.io/embed/634677c9c02259b06a2ffb7d"
-ethernaPermalink: "https://etherna.io/embed/9d109772bf525e8054d519add50dc742b130ccc045b9d578b0b467295f2cdb8f"
+ethernaIndex: "https://etherna.io/embed/6348a19cc02259b06a2ffc89"
+ethernaPermalink: "https://etherna.io/embed/52ca2476dcd8a57a392b8081bcf9c4907f6e9c0d0161c50b6b7e5a1cb57c6f9b"
 duration: 7030
 expertise: "Advanced"
 type: "Breakout"

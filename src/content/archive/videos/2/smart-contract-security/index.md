@@ -4,6 +4,8 @@ title: "Smart Contract Security"
 description: "Christoph Jentzsch"
 youtubeUrl: "https://youtu.be/466bmp6bs9g"
 ipfsHash: "QmT9CexFZrhdti3HVmUioygpKB48gmi5aLeBRWLCPVJH99"
+ethernaIndex: "https://etherna.io/embed/6347fdb5080a54f6d733ecd0"
+ethernaPermalink: "https://etherna.io/embed/328dc136a13d6e410f14b49eb4c5b2f16c765e2069cec0078926413934c2ec95"
 duration: 724
 expertise: "Intermediate"
 type: "Talk"
