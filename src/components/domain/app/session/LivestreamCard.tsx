@@ -27,8 +27,18 @@ export const LivestreamCard = (props: Props) => {
   const eventEndTime = moment.utc('18:30:00', 'hh:mm:ss')
   const isStreamActive = now.isBetween(eventStartTime, eventEndTime) && EVENT_DAYS.includes(now.date())
 
-  const sessionRooms = ['talk-1', 'talk-2', 'talk-3', 'talk-4', 'talk-5', 'talk-5-opening-ceremonies',
-    'workshop-1', 'workshop-2', 'workshop-3', 'workshop-4']
+  const sessionRooms = [
+    'talk-1',
+    'talk-2',
+    'talk-3',
+    'talk-4',
+    'talk-5',
+    'talk-5-opening-ceremonies',
+    'workshop-1',
+    'workshop-2',
+    'workshop-3',
+    'workshop-4',
+  ]
   if (!sessionRooms.some(i => props.session.room?.id === i)) {
     return <></>
   }
@@ -50,8 +60,12 @@ export const LivestreamCard = (props: Props) => {
         )}
         <ThumbnailBlock className={css['banner']} thumbnail={LivestreamIcon.src}>
           <div className={css['content']}>
-            <p className="font-xs-fixed">
-              {isStreamActive && <span>Watch at <Link to="https://live.devcon.org/">live.devcon.org</Link>.</span>}
+            <p className="font-md">
+              {isStreamActive && (
+                <span>
+                  Watch at <Link to="https://live.devcon.org/">live.devcon.org</Link>.
+                </span>
+              )}
               {!isStreamActive && sessionUpcoming && 'Waiting for scheduled Livestream to begin.'}
               {!isStreamActive && sessionEnded && (
                 <>

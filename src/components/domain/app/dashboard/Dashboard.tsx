@@ -9,6 +9,7 @@ import { DropdownVariationDots } from 'components/common/dropdown/Dropdown'
 import HighlightChivas from 'assets/images/highlight-chivas-sound.png'
 import HighlightHackerBasement from 'assets/images/highlight-hacker-basement.png'
 import HighlightCommunityHubs from 'assets/images/highlight-hub.png'
+import HighlightDeva from 'assets/images/highlight-deva.png'
 import HighlightManual from 'assets/images/manual-highlight.png'
 import HighlightDevaAwards from 'assets/images/highlight-deva-awards.png'
 import HighlightNFT from 'assets/images/nft.gif'
@@ -27,6 +28,14 @@ const galleryEvents = [
     // TODO: Update URL
     url: 'https://devcon-vi.attest.tickets/nfts',
     image: HighlightNFT,
+  },
+  {
+    title: 'Go Carbon Neutral at Devcon 🌳🌲  [POAP inside] 🦄 🏅',
+    description:
+      'Help make Devcon VI climate neutral and get a beautiful Deva POAP with the Climate Friendly Devcon VI Dapp. The Dapp enables you to compensate your air travel and event carbon emissions entirely on-chain.',
+    // TODO: Update URL
+    url: 'https://devcon.discarbon.earth/index.html',
+    image: HighlightDeva,
   },
   {
     title: 'Deva Awards',
@@ -58,14 +67,6 @@ const galleryEvents = [
     // TODO: Update URL
     url: 'https://devcon.org/continuous-devcon',
     image: HighlightChivas,
-  },
-  {
-    title: 'Devcon Manual',
-    description:
-      'Welcome to Devcon! This is your Devcon VI Manual, and it includes everything you need to know about Devcon, the surroundings and more.',
-    // TODO: Update URL
-    url: 'https://blog.ethereum.org/2022/10/04/devcon-manual',
-    image: HighlightManual,
   },
 
   // {
