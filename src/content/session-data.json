@@ -6212,7 +6212,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/blueprofile_pp0Mjfp.jpg"
       }
     ],
-    "title": "Under 2 Min - Become an Etheruem Staker and Set Up Node",
+    "title": "Under 2 Min - Become an Ethereum Staker and Set Up Node",
     "track": "Staking & Validator Experience",
     "duration": 7,
     "start": 1665655200000,
@@ -6225,7 +6225,7 @@
       "capacity": 414
     },
     "type": "Lightning Talk",
-    "description": "We need more mainstream users to partake in Etheruem PoS activity, \r\n\r\nA brief talk showcasing stake tooling for Etheruem deposit contract that allows a normal user to safely stake 32 ETH and have his/her Ethereum Validator from 0, this includes generating credentials and processing deposit, another 60 seconds will allow them to have a node up and running using DVT techstack.",
+    "description": "We need more mainstream users to partake in Ethereum PoS activity, \r\n\r\nA brief talk showcasing stake tooling for Ethereum deposit contract that allows a normal user to safely stake 32 ETH and have his/her Ethereum Validator from 0, this includes generating credentials and processing deposit, another 60 seconds will allow them to have a node up and running using DVT techstack.",
     "abstract": "",
     "expertise": "",
     "tags": [
