@@ -17,11 +17,11 @@ export default pageHOC(function PlaylistTemplate(data: any) {
   const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : ''
   const og = playlist.id.startsWith('devcon-6') ?
     `${origin}/assets/uploads/og/devcon-6.png` :
-    `${origin}${getSrc(playlist.image)}`
+    ''
 
   return (
     <div className={css['container']}>
-      <SEO title={playlist.title} description={playlist.description} />
+      <SEO title={playlist.title} description={playlist.description} imageUrl={og} />
       <Header withStrip={false} />
 
       <PageHero path={[{ text: 'playlists', url: '/archive/playlists' }, { text: playlist.title }]}>
