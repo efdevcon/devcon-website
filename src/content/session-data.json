@@ -1,5 +1,30 @@
 [
   {
+    "id": "ETFNAH",
+    "speakers": [],
+    "title": "Hands-On NFT Workshop by web3beach",
+    "track": "",
+    "duration": 90,
+    "start": 1665765000000,
+    "end": 1665770400000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Meetup",
+    "description": "We'll explore multiples uses of NFT across various industries. We'll have art supplies and also help attendees mint their Devcon photos or videos as NFTs.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "NFT",
+      "minting",
+      "workshop"
+    ]
+  },
+  {
     "id": "7LHLPB",
     "speakers": [
       {
@@ -3138,6 +3163,71 @@
     ]
   },
   {
+    "id": "PBH9DE",
+    "speakers": [
+      {
+        "id": "DLDW8M",
+        "name": "Tomasz Kornuta",
+        "description": "I am an applied research scientist, able to drive research into novel directions.\r\n\r\nWith over 20 years in academia and industry, I have developed strong analytical & problem solving skills along with deep expertise in software engineering, robotics, visual perception and machine learning.\r\n\r\nI am a fan of robotics, AI, design patterns and MOOCs.",
+        "twitter": "tomaszkornuta",
+        "avatar": ""
+      }
+    ],
+    "title": "Reinforcement Learning for Query Pricing in The Graph",
+    "track": "Cryptoeconomics",
+    "duration": 25,
+    "start": 1665568800000,
+    "end": 1665570600000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "Indexers​​ in The Graph protocol use a DSL called Agora​ to map query shapes to prices. However, manually populating and updating Agora models for each query is a tedious task, and, as a consequence, most indexers default to a flat pricing model. We have created and deployed reinforcement learning agents for Indexers to automatically compete on pricing. This talk will focus on our development process and our study of the market effects of multiple competing pricing agents.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "reinforcement learning",
+      "dynamic pricing",
+      "automation"
+    ]
+  },
+  {
+    "id": "NQHE7W",
+    "speakers": [
+      {
+        "id": "DJE7ME",
+        "name": "Thore Hildebrandt",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Privacy & Scaling Exploration — What We Do and How to Collaborate",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665568800000,
+    "end": 1665570300000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "TBD",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Zero Knowledge Proofs",
+      "Privacy",
+      "Cryptographic research"
+    ]
+  },
+  {
     "id": "UXMBLR",
     "speakers": [
       {
@@ -3386,71 +3476,6 @@
       "Ethereum Roadmap",
       "The Graph",
       "Web3 Infrastructure"
-    ]
-  },
-  {
-    "id": "PBH9DE",
-    "speakers": [
-      {
-        "id": "DLDW8M",
-        "name": "Tomasz Kornuta",
-        "description": "I am an applied research scientist, able to drive research into novel directions.\r\n\r\nWith over 20 years in academia and industry, I have developed strong analytical & problem solving skills along with deep expertise in software engineering, robotics, visual perception and machine learning.\r\n\r\nI am a fan of robotics, AI, design patterns and MOOCs.",
-        "twitter": "tomaszkornuta",
-        "avatar": ""
-      }
-    ],
-    "title": "Reinforcement Learning for Query Pricing in The Graph",
-    "track": "Cryptoeconomics",
-    "duration": 25,
-    "start": 1665568800000,
-    "end": 1665570600000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "Indexers​​ in The Graph protocol use a DSL called Agora​ to map query shapes to prices. However, manually populating and updating Agora models for each query is a tedious task, and, as a consequence, most indexers default to a flat pricing model. We have created and deployed reinforcement learning agents for Indexers to automatically compete on pricing. This talk will focus on our development process and our study of the market effects of multiple competing pricing agents.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "reinforcement learning",
-      "dynamic pricing",
-      "automation"
-    ]
-  },
-  {
-    "id": "NQHE7W",
-    "speakers": [
-      {
-        "id": "DJE7ME",
-        "name": "Thore Hildebrandt",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Privacy & Scaling Exploration — What We Do and How to Collaborate",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 25,
-    "start": 1665568800000,
-    "end": 1665570300000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Talk",
-    "description": "TBD",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Zero Knowledge Proofs",
-      "Privacy",
-      "Cryptographic research"
     ]
   },
   {
@@ -6568,39 +6593,6 @@
       "infrastructure",
       "community",
       "ethical"
-    ]
-  },
-  {
-    "id": "TLHM7N",
-    "speakers": [
-      {
-        "id": "BAU3ZE",
-        "name": "Marcello Bardus",
-        "description": null,
-        "twitter": "@0xMarcello",
-        "avatar": ""
-      }
-    ],
-    "title": "Herodotus Workshop",
-    "track": "Developer Infrastructure",
-    "duration": 50,
-    "start": 1665594000000,
-    "end": 1665597000000,
-    "room": {
-      "id": "workshop-2",
-      "name": "Workshop 2",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "State expiry",
-      "SNARKS",
-      "L2s"
     ]
   },
   {
@@ -10245,7 +10237,7 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "EVM assembly can be quite opaque and intimidating at first glance.  In this talk we'll take a look at exactly how EVM assembly works under the hood while dissecting (and implementing) some common functionality we see in smart contracts - as well as showing some optimization techniques you can use by jumping down to assembly in your solidity contracts.",
+    "description": "EVM assembly can be quite opaque and intimidating at first glance.  In this talk we'll take a look at exactly how EVM assembly works under the hood while analyzing some common functionality we see in smart contracts - as well as showing some optimization techniques you can use by jumping down to assembly in your solidity contracts.",
     "abstract": "",
     "expertise": "Intermediate",
     "tags": [
@@ -10731,7 +10723,7 @@
   {
     "id": "7XGQQB",
     "speakers": [],
-    "title": "Meditation & Public Goods Workshop",
+    "title": "Decompressing & Social Impact",
     "track": "",
     "duration": 120,
     "start": 1665684000000,
@@ -10744,7 +10736,7 @@
       "capacity": null
     },
     "type": "Meetup",
-    "description": "-",
+    "description": "Join DoinGud for a workshop on social impact in the Ethereum Jungle on the 2nd floor!",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -10980,6 +10972,7 @@
         "id": "FAC9CX",
         "name": "Flynn Calcutt",
         "description": "Interested in building virtual worlds.",
+        "twitter": "@FlynnCalcutt",
         "avatar": "http://speak.devcon.org/media/avatars/profile_pic_i9963IS.jpg"
       }
     ],
@@ -12306,17 +12299,17 @@
     ]
   },
   {
-    "id": "XMNKDU",
+    "id": "XUVZTP",
     "speakers": [
       {
-        "id": "EE3GXS",
-        "name": "Luis Carlos",
-        "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
-        "twitter": "@luiscrh",
-        "avatar": ""
+        "id": "VQMDYU",
+        "name": "Juan David Reyes",
+        "description": "Leader of EthColombia and Community Supporter at Devcon.",
+        "twitter": "0xjuandavid",
+        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
       }
     ],
-    "title": "Taxing Crypto in Colombia",
+    "title": "Ethereum Event Showcase",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665752400000,
@@ -12329,11 +12322,11 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "The director of the Colombian Tax and Customs Administration will present a document unifying the current rules about the taxation of digital assets in Colombia and will discuss gaps in the current normative framework. He will also invite feedback from the community on how to address these gaps.",
+    "description": "tbd",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "Taxation"
+      "democracy"
     ]
   },
   {
@@ -12469,6 +12462,109 @@
     ]
   },
   {
+    "id": "HLLCLF",
+    "speakers": [
+      {
+        "id": "KDUATR",
+        "name": "Arkadiy Kukarkin",
+        "description": "Arkadiy is currently the Decentralization Lead at the Internet Archive. Previously he was an IPFS integrations/grants coordinator at Protocol Labs, CTO at Mediachain, and worked on supporting independent music (Hype Machine, Ampled) and cartography (Foursquare)",
+        "twitter": "parkan",
+        "avatar": "http://speak.devcon.org/media/avatars/WgZMHBaj_400x400_JRq95GG.jpg"
+      }
+    ],
+    "title": "Universal Access to All Knowledge: Decentralization Experiments at the Internet Archive",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665756000000,
+    "end": 1665757800000,
+    "room": {
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
+      "info": "Floor 3",
+      "capacity": 110
+    },
+    "type": "Talk",
+    "description": "The Internet Archive holds over 100PB of data, spanning the Wayback Machine, films, scientific publications, vintage video games, and more. What is it like to try to decentalize at this scale?\r\n\r\nWe'll share our experience with networks like Filecoin, Storj, and arweave, discuss design trade-offs, offer recommendations for both builders and those curious about storing large amounts of data, and maybe even muse about how institutions could \"disappear from sight... and become all of us\"",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "storage",
+      "knowledge",
+      "scale"
+    ]
+  },
+  {
+    "id": "R9QRVK",
+    "speakers": [
+      {
+        "id": "V33CZQ",
+        "name": "Aqeel Mohammad",
+        "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
+        "twitter": "@qnou",
+        "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
+      },
+      {
+        "id": "3RRW9H",
+        "name": "Ethereum Foundation",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "DEVA Awards",
+    "track": "UX & Design",
+    "duration": 25,
+    "start": 1665756000000,
+    "end": 1665757800000,
+    "room": {
+      "id": "talk-5",
+      "name": "Talk 5",
+      "description": "On Top of the Mountain",
+      "info": "Floor 5",
+      "capacity": 1140
+    },
+    "type": "Talk",
+    "description": "DEVA awards are simply a fun way to come together to celebrate and allow the community to signal their appreciation for the amazing work that has been done in the ecosystem since last Devcon to drastically improve the utility and usability of Web 3 technologies for the masses. Come celebrate community achievements!\r\n\r\nThese awards are not meant to be taken seriously in any regard, Project nominations were gathered through community input of over 2000 unique nominations.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "Awards"
+    ]
+  },
+  {
+    "id": "JZZBST",
+    "speakers": [
+      {
+        "id": "GTUCY9",
+        "name": "SHAKA LEI KAUMAKA",
+        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
+        "twitter": "@SHAKALEIKAUMAKA",
+        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
+      }
+    ],
+    "title": "OPEN SOURCE JAM",
+    "track": "",
+    "duration": 90,
+    "start": 1665756000000,
+    "end": 1665761400000,
+    "room": {
+      "id": "chiva-lounge",
+      "name": "Chiva Lounge",
+      "description": "",
+      "info": "",
+      "capacity": 100
+    },
+    "type": "Music",
+    "description": "The open source rhythms, chords, and melodies are open to be jammed on by everybody.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "MUSIC",
+      "ART",
+      "COMMUNITY"
+    ]
+  },
+  {
     "id": "CZRWES",
     "speakers": [
       {
@@ -12579,109 +12675,6 @@
       "terminology",
       "communication",
       "education"
-    ]
-  },
-  {
-    "id": "HLLCLF",
-    "speakers": [
-      {
-        "id": "KDUATR",
-        "name": "Arkadiy Kukarkin",
-        "description": "Arkadiy is currently the Decentralization Lead at the Internet Archive. Previously he was an IPFS integrations/grants coordinator at Protocol Labs, CTO at Mediachain, and worked on supporting independent music (Hype Machine, Ampled) and cartography (Foursquare)",
-        "twitter": "parkan",
-        "avatar": "http://speak.devcon.org/media/avatars/WgZMHBaj_400x400_JRq95GG.jpg"
-      }
-    ],
-    "title": "Universal Access to All Knowledge: Decentralization Experiments at the Internet Archive",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665756000000,
-    "end": 1665757800000,
-    "room": {
-      "id": "talk-4",
-      "name": "Talk 4",
-      "description": "River",
-      "info": "Floor 3",
-      "capacity": 110
-    },
-    "type": "Talk",
-    "description": "The Internet Archive holds over 100PB of data, spanning the Wayback Machine, films, scientific publications, vintage video games, and more. What is it like to try to decentalize at this scale?\r\n\r\nWe'll share our experience with networks like Filecoin, Storj, and arweave, discuss design trade-offs, offer recommendations for both builders and those curious about storing large amounts of data, and maybe even muse about how institutions could \"disappear from sight... and become all of us\"",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "storage",
-      "knowledge",
-      "scale"
-    ]
-  },
-  {
-    "id": "R9QRVK",
-    "speakers": [
-      {
-        "id": "V33CZQ",
-        "name": "Aqeel Mohammad",
-        "description": "Aqeel Mohammad is a Product Strategist, and Design specialist focused on leading market adoption and consistent user experiences across Web 3. He has extensive experience leading human centered design organizations with a focus on strategy, product definition, and business transformation. Notable projects include leading design and product efforts for the Lighthouse and Nimbus consensus clients along with community development efforts including Devcon, Devconnect, and Web3 UX Unconference.",
-        "twitter": "@qnou",
-        "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
-      },
-      {
-        "id": "3RRW9H",
-        "name": "Ethereum Foundation",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "DEVA Awards",
-    "track": "UX & Design",
-    "duration": 25,
-    "start": 1665756000000,
-    "end": 1665757800000,
-    "room": {
-      "id": "talk-5",
-      "name": "Talk 5",
-      "description": "On Top of the Mountain",
-      "info": "Floor 5",
-      "capacity": 1140
-    },
-    "type": "Talk",
-    "description": "DEVA awards are simply a fun way to come together to celebrate and allow the community to signal their appreciation for the amazing work that has been done in the ecosystem since last Devcon to drastically improve the utility and usability of Web 3 technologies for the masses. Come celebrate community achievements!\r\n\r\nThese awards are not meant to be taken seriously in any regard, Project nominations were gathered through community input of over 2000 unique nominations.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "Awards"
-    ]
-  },
-  {
-    "id": "JZZBST",
-    "speakers": [
-      {
-        "id": "GTUCY9",
-        "name": "SHAKA LEI KAUMAKA",
-        "description": "ALOHA FRENS! My docs name is Jordan Ham. Kaleikaumaka is my Hawaiian name:)\r\n\r\nHawaiian+Chinese+Portuguese+ Dutch. Music is my first language. My new favorite hobby is pulling all night hangathons jamming at hackathons and volunteering!",
-        "twitter": "@SHAKALEIKAUMAKA",
-        "avatar": "http://speak.devcon.org/media/avatars/FiX6_UiM_x4Bokbp.jpg"
-      }
-    ],
-    "title": "OPEN SOURCE JAM",
-    "track": "",
-    "duration": 90,
-    "start": 1665756000000,
-    "end": 1665761400000,
-    "room": {
-      "id": "chiva-lounge",
-      "name": "Chiva Lounge",
-      "description": "",
-      "info": "",
-      "capacity": 100
-    },
-    "type": "Music",
-    "description": "The open source rhythms, chords, and melodies are open to be jammed on by everybody.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "MUSIC",
-      "ART",
-      "COMMUNITY"
     ]
   },
   {
@@ -12946,17 +12939,50 @@
     ]
   },
   {
-    "id": "XUVZTP",
+    "id": "TLHM7N",
     "speakers": [
       {
-        "id": "VQMDYU",
-        "name": "Juan David Reyes",
-        "description": "Leader of EthColombia and Community Supporter at Devcon.",
-        "twitter": "0xjuandavid",
-        "avatar": "http://speak.devcon.org/media/avatars/E2E5893B-0D43-4806-B651-B3F27A11032D_YcFF1r6.jpeg"
+        "id": "BAU3ZE",
+        "name": "Marcello Bardus",
+        "description": null,
+        "twitter": "@0xMarcello",
+        "avatar": ""
       }
     ],
-    "title": "Ethereum Event Showcase",
+    "title": "Herodotus Workshop",
+    "track": "Developer Infrastructure",
+    "duration": 50,
+    "start": 1665759300000,
+    "end": 1665762300000,
+    "room": {
+      "id": "workshop-2",
+      "name": "Workshop 2",
+      "description": "",
+      "info": "Floor 3",
+      "capacity": 112
+    },
+    "type": "Workshop 1h",
+    "description": "In this workshop, we will cover how you can leverage the power of Storage Proofs to enable your applications to read the current and historical state of another blockchain in a secure and verifiable manner.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "State expiry",
+      "SNARKS",
+      "L2s"
+    ]
+  },
+  {
+    "id": "XMNKDU",
+    "speakers": [
+      {
+        "id": "EE3GXS",
+        "name": "Luis Carlos",
+        "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
+        "twitter": "@luiscrh",
+        "avatar": ""
+      }
+    ],
+    "title": "Taxing Crypto in Colombia",
     "track": "Opportunity & Global Impact",
     "duration": 25,
     "start": 1665759600000,
@@ -12969,11 +12995,11 @@
       "capacity": 414
     },
     "type": "Talk",
-    "description": "tbd",
+    "description": "The director of the Colombian Tax and Customs Administration will present a document unifying the current rules about the taxation of digital assets in Colombia and will discuss gaps in the current normative framework. He will also invite feedback from the community on how to address these gaps.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
-      "democracy"
+      "Taxation"
     ]
   },
   {
