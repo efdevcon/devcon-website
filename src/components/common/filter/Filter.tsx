@@ -188,6 +188,7 @@ export const Search = (props: SearchProps) => {
       className={className}
       placeholder={props.placeholder}
       onChange={props.onChange}
+      defaultValue={props.value}
       icon={IconSearch}
     />
   )

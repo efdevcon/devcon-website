@@ -10,6 +10,8 @@ import HighlightChivas from 'assets/images/highlight-chivas-sound.png'
 import HighlightHackerBasement from 'assets/images/highlight-hacker-basement.png'
 import HighlightCommunityHubs from 'assets/images/highlight-hub.png'
 import HighlightManual from 'assets/images/manual-highlight.png'
+import HighlightDevaAwards from 'assets/images/highlight-deva-awards.png'
+import HighlightNFT from 'assets/images/nft.gif'
 import { Card } from 'components/common/card'
 import { Slider, useSlider } from 'components/common/slider'
 import { usePageContext } from 'context/page-context'
@@ -18,6 +20,22 @@ import { useAccountContext } from 'context/account-context'
 import moment from 'moment'
 
 const galleryEvents = [
+  {
+    title: 'Devcon Souvenir NFT',
+    description:
+      'Mint your official Devcon souvenir on Arbitrum, Polygon, & Optimism Today! Mainnet minting goes live on Friday!',
+    // TODO: Update URL
+    url: 'https://devcon-vi.attest.tickets/nfts',
+    image: HighlightNFT,
+  },
+  {
+    title: 'Deva Awards',
+    description:
+      'Come join the closing ceremonies and celebration of community and light hearted look back at achievement in the ecoystem when it comes to adoption and progress.',
+    // TODO: Update URL
+    url: 'https://app.devcon.org/schedule/r9qrvk',
+    image: HighlightDevaAwards,
+  },
   {
     title: 'Continuous Devcon - Hacker Basement',
     description:
@@ -49,6 +67,7 @@ const galleryEvents = [
     url: 'https://blog.ethereum.org/2022/10/04/devcon-manual',
     image: HighlightManual,
   },
+
   // {
   //   title: 'Side Events',
   //   description: 'Check out Side Events happening in Bogotá!',

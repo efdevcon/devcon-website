@@ -6140,5 +6140,19 @@
     "eventDays": [
       1665619200000
     ]
+  },
+  {
+    "id": "FAC9CX",
+    "name": "Flynn Calcutt",
+    "avatar": "https://speak.devcon.org/media/avatars/profile_pic_i9963IS.jpg",
+    "description": "Interested in building virtual worlds.",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "@FlynnCalcutt",
+    "github": "@FlynnSC"
   }
 ]

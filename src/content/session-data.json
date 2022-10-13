@@ -7265,7 +7265,7 @@
         "avatar": "http://speak.devcon.org/media/avatars/unknown_CF5enPL.png"
       }
     ],
-    "title": "Adoption Day — UX Unconference",
+    "title": "Adoption Day — UX Unconference 🚀👩‍🚀",
     "track": "UX & Design",
     "duration": 480,
     "start": 1665655200000,
@@ -7278,7 +7278,7 @@
       "capacity": 112
     },
     "type": "Workshop",
-    "description": "Open-source design unconference and working groups helping to drive improved User Experience and usability standards forward for the decentralized eco-system.\r\n\r\nEnable cross pollination of fresh perspectives and emerging UX methodologies. Bringing together developers and designers in the ecosystem working at the various layers of the Web3 Tech Stack to share their unique solutions and encourage interoperability amongst various systems.",
+    "description": "View schedule at: https://adoption.web3.design  🚀👩‍🚀\r\n\r\nOpen-source design unconference and working groups helping to drive improved User Experience and usability standards forward for the decentralized eco-system.\r\n\r\nEnable cross pollination of fresh perspectives and emerging UX methodologies. Bringing together developers and designers in the ecosystem working at the various layers of the Web3 Tech Stack to share their unique solutions and encourage interoperability amongst various systems.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [
@@ -7624,6 +7624,71 @@
     ]
   },
   {
+    "id": "9FGG8B",
+    "speakers": [
+      {
+        "id": "VBRGXP",
+        "name": "Bobbin Threadbare",
+        "description": "Bobbin is a project lead of Polygon Miden - a STARK-based ZK-rollup being developed at Polygon. Prior to joining Polygon, Bobbin was ZK researcher at Facebook's Novi, where he led the development of Winterfell, as highly-performant general-purpose STARK prover. Besides Winterfell, Bobbin has made multiple contributions to the field of STARK-based proving systems, including a STARK-based virtual machine (Distaff) and AirScript/AirAssembly languages (work supported by the Ethereum Foundation).",
+        "twitter": "bobbinth",
+        "avatar": "http://speak.devcon.org/media/avatars/bobbin_hc_npGQXVA.png"
+      }
+    ],
+    "title": "Using a Hybrid UTXO and Account-based State Model in a ZK Rollup",
+    "track": "Layer 2s",
+    "duration": 25,
+    "start": 1665657000000,
+    "end": 1665658800000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "Many rollups choose to follow Ethereum’s account-based state model. We explore an alternative approach: a hybrid of a UTXO and an account-based model, specifically in a context of a ZK rollup. This approach offers a number of interesting properties including local transaction execution, support for privacy-preserving smart contracts, and reduced state bloat. In this talk we describe tradeoffs between different state models and cover the specific design choices we’ve made with Polygon Miden.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "zk-rollup",
+      "utxo",
+      "privacy"
+    ]
+  },
+  {
+    "id": "AYZX8E",
+    "speakers": [
+      {
+        "id": "ZQA8DA",
+        "name": "Fabio Hildebrand",
+        "description": "Dev @ RAI",
+        "twitter": "fabiohild",
+        "avatar": "http://speak.devcon.org/media/avatars/shyguy_TPgWuG9.jpeg"
+      }
+    ],
+    "title": "Let's start a RAI-ot!",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665657000000,
+    "end": 1665658500000,
+    "room": {
+      "id": "talk-4",
+      "name": "Talk 4",
+      "description": "River",
+      "info": "Floor 3",
+      "capacity": 110
+    },
+    "type": "Talk",
+    "description": "Launched Feb 2020, RAI—a fork of DAI—is an ETH backed stable-ish coin that uses an onchain PI controller to set interest rates automatically and emphasizes “ungovernance”.\r\n\r\nIf you’ve ever looked at a central bank and thought about replacing it with a computer, this talk is for you!\r\n\r\nCome listen to the RAI story so far, what we’ve learned, where we’re going, and why we think the RAI model of controlled, floating exchange rates are going to be the future of DeFi and beyond.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "Stablecoins",
+      "DeFi"
+    ]
+  },
+  {
     "id": "WZYHYE",
     "speakers": [
       {
@@ -7719,71 +7784,6 @@
       "Africa",
       "borderless",
       "permissionless"
-    ]
-  },
-  {
-    "id": "9FGG8B",
-    "speakers": [
-      {
-        "id": "VBRGXP",
-        "name": "Bobbin Threadbare",
-        "description": "Bobbin is a project lead of Polygon Miden - a STARK-based ZK-rollup being developed at Polygon. Prior to joining Polygon, Bobbin was ZK researcher at Facebook's Novi, where he led the development of Winterfell, as highly-performant general-purpose STARK prover. Besides Winterfell, Bobbin has made multiple contributions to the field of STARK-based proving systems, including a STARK-based virtual machine (Distaff) and AirScript/AirAssembly languages (work supported by the Ethereum Foundation).",
-        "twitter": "bobbinth",
-        "avatar": "http://speak.devcon.org/media/avatars/bobbin_hc_npGQXVA.png"
-      }
-    ],
-    "title": "Using a Hybrid UTXO and Account-based State Model in a ZK Rollup",
-    "track": "Layer 2s",
-    "duration": 25,
-    "start": 1665657000000,
-    "end": 1665658800000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "Many rollups choose to follow Ethereum’s account-based state model. We explore an alternative approach: a hybrid of a UTXO and an account-based model, specifically in a context of a ZK rollup. This approach offers a number of interesting properties including local transaction execution, support for privacy-preserving smart contracts, and reduced state bloat. In this talk we describe tradeoffs between different state models and cover the specific design choices we’ve made with Polygon Miden.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "zk-rollup",
-      "utxo",
-      "privacy"
-    ]
-  },
-  {
-    "id": "AYZX8E",
-    "speakers": [
-      {
-        "id": "ZQA8DA",
-        "name": "Fabio Hildebrand",
-        "description": "Dev @ RAI",
-        "twitter": "fabiohild",
-        "avatar": "http://speak.devcon.org/media/avatars/shyguy_TPgWuG9.jpeg"
-      }
-    ],
-    "title": "Let's start a RAI-ot!",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665657000000,
-    "end": 1665658500000,
-    "room": {
-      "id": "talk-4",
-      "name": "Talk 4",
-      "description": "River",
-      "info": "Floor 3",
-      "capacity": 110
-    },
-    "type": "Talk",
-    "description": "Launched Feb 2020, RAI—a fork of DAI—is an ETH backed stable-ish coin that uses an onchain PI controller to set interest rates automatically and emphasizes “ungovernance”.\r\n\r\nIf you’ve ever looked at a central bank and thought about replacing it with a computer, this talk is for you!\r\n\r\nCome listen to the RAI story so far, what we’ve learned, where we’re going, and why we think the RAI model of controlled, floating exchange rates are going to be the future of DeFi and beyond.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "Stablecoins",
-      "DeFi"
     ]
   },
   {
@@ -10095,10 +10095,10 @@
     "start": 1665678600000,
     "end": 1665681600000,
     "room": {
-      "id": "ethlatam-chiva-chillout",
-      "name": "ETHLatam Chiva Chillout",
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
       "description": "",
-      "info": "Floor 1",
+      "info": "S1",
       "capacity": null
     },
     "type": "Workshop 1h",
@@ -10975,6 +10975,12 @@
         "description": "Co-founder and dungeon designer @movingcastles_",
         "twitter": "@gvn908",
         "avatar": "http://speak.devcon.org/media/avatars/206017_gfIoYao.jpg"
+      },
+      {
+        "id": "FAC9CX",
+        "name": "Flynn Calcutt",
+        "description": "Interested in building virtual worlds.",
+        "avatar": "http://speak.devcon.org/media/avatars/profile_pic_i9963IS.jpg"
       }
     ],
     "title": "Autonomous Worlds Self Led Session",
@@ -12638,7 +12644,7 @@
       "capacity": 1140
     },
     "type": "Talk",
-    "description": "DEVA Awards",
+    "description": "DEVA awards are simply a fun way to come together to celebrate and allow the community to signal their appreciation for the amazing work that has been done in the ecosystem since last Devcon to drastically improve the utility and usability of Web 3 technologies for the masses. Come celebrate community achievements!\r\n\r\nThese awards are not meant to be taken seriously in any regard, Project nominations were gathered through community input of over 2000 unique nominations.",
     "abstract": "",
     "expertise": "Beginner",
     "tags": [

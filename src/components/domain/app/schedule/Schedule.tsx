@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import css from './schedule.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
 import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
@@ -113,104 +113,84 @@ export const useScheduleContext = () => {
   return React.useContext(ScheduleContext)
 }
 
-// const usePersistedState = (initialState: any, key: string) => {
-//   const scheduleContext: any = React.useContext(ScheduleContext)
+export const ScheduleState = (props: any) => {
+  const { sessions: sessionsBeforeFormatting, userSchedule, tracks, event } = props
+  const personalAgenda = !!userSchedule
+  const [search, setSearch] = useState('')
+  const [view, setView] = useState('list')
+  const [basicFilter, setBasicFilter] = useState(personalAgenda ? 'personal' : 'upcoming')
+  const [favoritesOnly, setFavoritesOnly] = useState(false)
+  const [selectedTracks, setSelectedTracks] = useState({} as { [key: string]: boolean })
+  const [selectedRooms, setSelectedRooms] = useState({} as { [key: string]: boolean })
+  const [selectedSessionTypes, setSelectedSessionTypes] = useState({} as { [key: string]: boolean })
+  const [selectedExpertise, setSelectedExpertise] = useState({} as { [key: string]: boolean })
+  const [dateFilter, setDateFilter] = useState<{ readable: string; moment?: Moment | null }>({
+    readable: 'all',
+  })
 
-//   const [state, setState]: any = React.useEffect(() => {
-//     const restoredState = scheduleContext[key] || initialState
-
-//     return restoredState
-//   })
-
-//   useEffect(() => {}, [])
-
-//   return [state, setState]
-// }
-
-export const ScheduleState = (Component: any) => {
-  const ScheduleGlobalState = (props: any) => {
-    const { sessions: sessionsBeforeFormatting, userSchedule, tracks, event } = props
-    const personalAgenda = !!userSchedule
-    const [search, setSearch] = React.useState('')
-    const [view, setView] = React.useState('list')
-    const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'upcoming')
-    const [favoritesOnly, setFavoritesOnly] = React.useState(false)
-    const [selectedTracks, setSelectedTracks] = React.useState({} as { [key: string]: boolean })
-    const [selectedRooms, setSelectedRooms] = React.useState({} as { [key: string]: boolean })
-    const [selectedSessionTypes, setSelectedSessionTypes] = React.useState({} as { [key: string]: boolean })
-    const [selectedExpertise, setSelectedExpertise] = React.useState({} as { [key: string]: boolean })
-    const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({
-      readable: 'all',
-    })
-
-    return (
-      <ScheduleContext.Provider
-        value={{
-          search,
-          setSearch,
-          view,
-          setView,
-          basicFilter,
-          setBasicFilter,
-          favoritesOnly,
-          setFavoritesOnly,
-          selectedTracks,
-          setSelectedTracks,
-          selectedSessionTypes,
-          setSelectedSessionTypes,
-          selectedRooms,
-          setSelectedRooms,
-          selectedExpertise,
-          setSelectedExpertise,
-          dateFilter,
-          setDateFilter,
-        }}
-      >
-        <Component {...props} />
-      </ScheduleContext.Provider>
-    )
-  }
-
-  ScheduleGlobalState.displayName = 'SchedulePersistedState'
-
-  return ScheduleGlobalState
+  return (
+    <ScheduleContext.Provider
+      value={{
+        search,
+        setSearch,
+        view,
+        setView,
+        basicFilter,
+        setBasicFilter,
+        favoritesOnly,
+        setFavoritesOnly,
+        selectedTracks,
+        setSelectedTracks,
+        selectedSessionTypes,
+        setSelectedSessionTypes,
+        selectedRooms,
+        setSelectedRooms,
+        selectedExpertise,
+        setSelectedExpertise,
+        dateFilter,
+        setDateFilter,
+      }}
+    >
+      {props.children}
+    </ScheduleContext.Provider>
+  )
 }
 
-export const Schedule = ScheduleState((props: any) => {
+export const Schedule = (props: any) => {
   const { sessions: sessionsBeforeFormatting, userSchedule, tracks, event } = props
   const personalAgenda = !!userSchedule
 
-  // const {
-  //   search,
-  //   setSearch,
-  //   view,
-  //   basicFilter,
-  //   setBasicFilter,
-  //   favoritesOnly,
-  //   setFavoritesOnly,
-  //   selectedTracks,
-  //   setSelectedTracks,
-  //   selectedSessionTypes,
-  //   setSelectedSessionTypes,
-  //   selectedRooms,
-  //   setSelectedRooms,
-  //   selectedExpertise,
-  //   setSelectedExpertise,
-  //   dateFilter,
-  //   setDateFilter,
-  // }: any = useScheduleContext()
+  const {
+    search,
+    setSearch,
+    view,
+    basicFilter,
+    setBasicFilter,
+    favoritesOnly,
+    setFavoritesOnly,
+    selectedTracks,
+    setSelectedTracks,
+    selectedSessionTypes,
+    setSelectedSessionTypes,
+    selectedRooms,
+    setSelectedRooms,
+    selectedExpertise,
+    setSelectedExpertise,
+    dateFilter,
+    setDateFilter,
+  }: any = useScheduleContext()
 
   const { account } = useAccountContext()
   const { now } = useAppContext()
-  const [search, setSearch] = React.useState('')
-  const [view, setView] = React.useState('list')
-  const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'upcoming')
-  const [favoritesOnly, setFavoritesOnly] = React.useState(false)
-  const [selectedTracks, setSelectedTracks] = React.useState({} as { [key: string]: boolean })
-  const [selectedRooms, setSelectedRooms] = React.useState({} as { [key: string]: boolean })
-  const [selectedSessionTypes, setSelectedSessionTypes] = React.useState({} as { [key: string]: boolean })
-  const [selectedExpertise, setSelectedExpertise] = React.useState({} as { [key: string]: boolean })
-  const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
+  // const [search, setSearch] = React.useState('')
+  // const [view, setView] = React.useState('list')
+  // const [basicFilter, setBasicFilter] = React.useState(personalAgenda ? 'personal' : 'upcoming')
+  // const [favoritesOnly, setFavoritesOnly] = React.useState(false)
+  // const [selectedTracks, setSelectedTracks] = React.useState({} as { [key: string]: boolean })
+  // const [selectedRooms, setSelectedRooms] = React.useState({} as { [key: string]: boolean })
+  // const [selectedSessionTypes, setSelectedSessionTypes] = React.useState({} as { [key: string]: boolean })
+  // const [selectedExpertise, setSelectedExpertise] = React.useState({} as { [key: string]: boolean })
+  // const [dateFilter, setDateFilter] = React.useState<{ readable: string; moment?: Moment | null }>({ readable: 'all' })
 
   const listRef = useRef<any>()
 
@@ -738,4 +718,4 @@ export const Schedule = ScheduleState((props: any) => {
       </div>
     </>
   )
-})
+}

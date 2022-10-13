@@ -8,13 +8,9 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'assets/css/index.scss'
 import { HistoryTracker } from 'components/domain/app/history-tracker'
 import { SEO } from 'components/domain/seo'
-// import { ScheduleState } from 'components/domain/app/schedule/Schedule'
+import { ScheduleState } from 'components/domain/app/schedule/Schedule'
 
 function App({ Component, pageProps }: AppProps) {
-  // const ComponentWithSchedule = React.useMemo(() => {
-  //   return ScheduleState(Component)
-  // }, [Component])
-
   return (
     <>
       <Head>
@@ -32,8 +28,10 @@ function App({ Component, pageProps }: AppProps) {
       <NextIntlProvider locale="en" messages={pageProps.messages}>
         <PWAPrompt />
         <HistoryTracker>
-          <Component {...pageProps} />
-          {/* <ComponentWithSchedule {...pageProps} /> */}
+          <ScheduleState {...pageProps}>
+            <Component {...pageProps} />
+            {/* <ComponentWithSchedule {...pageProps} /> */}
+          </ScheduleState>
         </HistoryTracker>
       </NextIntlProvider>
     </>
