@@ -14,10 +14,11 @@ import { getSrc } from 'gatsby-plugin-image'
 
 export default pageHOC(function PlaylistTemplate(data: any) {
   const playlist = mapToPlaylist(data.data.playlist)
+  const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : ''
 
   return (
     <div className={css['container']}>
-      <SEO title={playlist.title} description={playlist.description} imageUrl={getSrc(playlist.image)} />
+      <SEO title={playlist.title} description={playlist.description} imageUrl={`${origin}${getSrc(playlist.image)}`} />
       <Header withStrip={false} />
 
       <PageHero path={[{ text: 'playlists', url: '/archive/playlists' }, { text: playlist.title }]}>
