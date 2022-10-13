@@ -12,6 +12,7 @@ import Security from 'assets/images/tracks/big-icons/Security.png'
 import Staking from 'assets/images/tracks/big-icons/Staking-Validator-Experience.png'
 import UXDesign from 'assets/images/tracks/big-icons/UX-Design.png'
 import ZKPs from 'assets/images/tracks/big-icons/ZKPs-Privacy.png'
+import Activities from 'assets/images/tracks/big-icons/Activities.png'
 // import TriangleBackground from 'assets/images/background-triangles.png'
 import { Track } from 'types/Track'
 import { Card } from 'components/common/card'
@@ -33,8 +34,9 @@ const settings = {
 }
 
 export const getTrackID = (trackName?: string) => {
-  let trackID
+  if (!trackName) return 'activities'
 
+  let trackID
   switch (trackName) {
     case 'Layer 1 Protocol': {
       trackID = 'layer-1'
@@ -110,6 +112,7 @@ export function getTrackImage(id?: string, className?: string) {
   if (id === 'zkps') return <Image layout="raw" src={ZKPs} alt="ZKPs" />
   if (id === 'opportunity-global-impact') return <Image layout="raw" src={GlobalImpact} alt="Global impact" />
   if (id === 'cryptoeconomics') return <Image layout="raw" src={Cryptoeconomics} alt="Cryptoecon" />
+  if (id === 'activities') return <Image layout="raw" src={Activities} alt="Activities" />
 
   return null
 }

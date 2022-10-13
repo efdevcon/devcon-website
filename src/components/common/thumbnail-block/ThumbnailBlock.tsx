@@ -42,7 +42,7 @@ export const ThumbnailBlock = (props: ThumbnailBlock) => {
   })()
 
   const thumbnail = (() => {
-    if (trackID) {
+    if (trackID && props.thumbnailUrl) {
       return (
         <Link to={props.thumbnailUrl} data-type="thumbnail-block-image" className={css['thumbnail-container']}>
           {getTrackImage(trackID, css['thumbnail-svg'])}
