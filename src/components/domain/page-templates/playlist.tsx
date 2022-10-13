@@ -10,13 +10,14 @@ import { PlaylistHeader } from '../archive/playlists/Header'
 import { mapToPlaylist } from 'src/hooks/usePlaylists'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { VideoCard } from '../archive/playlists'
+import { getSrc } from 'gatsby-plugin-image'
 
 export default pageHOC(function PlaylistTemplate(data: any) {
   const playlist = mapToPlaylist(data.data.playlist)
-console.log('PLAYLIST PAGE', playlist)
+
   return (
     <div className={css['container']}>
-      <SEO title={playlist.title} description={playlist.description} imageUrl={playlist.imageUrl} />
+      <SEO title={playlist.title} description={playlist.description} imageUrl={getSrc(playlist.image)} />
       <Header withStrip={false} />
 
       <PageHero path={[{ text: 'playlists', url: '/archive/playlists' }, { text: playlist.title }]}>

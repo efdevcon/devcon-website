@@ -146,6 +146,7 @@ export const Video = (props: VideoProps) => {
   const [activeTab, setActiveTab] = useState('')
   const video = props.video
   const imageUrl = `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`
+  const swarmHash = video.ethernaPermalink?.split('/').pop() ?? ''
 
   return (
     <div className={archiveCss['container']}>
@@ -216,7 +217,8 @@ export const Video = (props: VideoProps) => {
             </div>
 
             <div className={css['tabs-video']}>
-              {activeTab === 'IPFS' && <Banner className={css['ipfs-banner']} cta="Access on IPFS" hash={props.video.ipfsHash} learnMore />}
+              {activeTab === 'IPFS' && <Banner type='IPFS' className={css['banner']} cta="Access on IPFS" hash={props.video.ipfsHash} learnMore />}
+              {activeTab === 'Swarm' && <Banner type='Swarm' className={css['banner']} cta="Access on Swarm" hash={swarmHash} />}
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>

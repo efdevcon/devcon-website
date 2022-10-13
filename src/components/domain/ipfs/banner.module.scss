@@ -75,7 +75,7 @@
     .truncated {
       display: none;
 
-      @media (max-width: $breakpoints-sm) {
+      @media (max-width: $breakpoints-md) {
         @include fonts-semi-bold;
         display: flex;
       }

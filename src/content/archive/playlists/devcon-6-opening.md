@@ -1,7 +1,7 @@
 ---
 title: Devcon 6 Opening
 description:  Devcon Opening Ceremonies featuring Aya Miyaguchi, Danny Ryan, Tim Beiko, Carl Beekhuizen, Jonathan Mann, & Skylar Weaver.
-image: ../../../../static/assets/uploads/playlists/buidl.png
+image: ../../../../static/assets/uploads/editions/devcon6.png
 categories: []
 curators:
   - Devcon Team
