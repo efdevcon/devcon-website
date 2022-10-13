@@ -1,80 +1,5 @@
 [
   {
-    "id": "YASTRX",
-    "speakers": [],
-    "title": "Web3 Developer Relations Gathering",
-    "track": "",
-    "duration": 150,
-    "start": 1665685800000,
-    "end": 1665694800000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Meetup",
-    "description": "This is your change to meet up with other DevRel folks, to cross-pollinate ideas on creating amazing developer experiences and building vibrant developer communities.\r\nhttps://lu.ma/2uh25943",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "devrel",
-      "community",
-      "building"
-    ]
-  },
-  {
-    "id": "7XGQQB",
-    "speakers": [],
-    "title": "Meditation & Public Goods Workshop",
-    "track": "",
-    "duration": 120,
-    "start": 1665684000000,
-    "end": 1665691200000,
-    "room": {
-      "id": "ethereum-jungle",
-      "name": "Ethereum Jungle",
-      "description": "Relaxation Zone",
-      "info": "Floor 2",
-      "capacity": null
-    },
-    "type": "Meetup",
-    "description": "-",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "meditation",
-      "workshop",
-      "health"
-    ]
-  },
-  {
-    "id": "NERSUP",
-    "speakers": [],
-    "title": "Token Engineering Approach to Building Communities & Membership",
-    "track": "",
-    "duration": 120,
-    "start": 1665684000000,
-    "end": 1665691200000,
-    "room": {
-      "id": "hacker-basement",
-      "name": "Hacker Basement",
-      "description": "",
-      "info": "S1",
-      "capacity": null
-    },
-    "type": "Meetup",
-    "description": "Workshop by Eduardo Vega",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "community",
-      "building",
-      "workshop"
-    ]
-  },
-  {
     "id": "7LHLPB",
     "speakers": [
       {
@@ -2796,6 +2721,38 @@
     ]
   },
   {
+    "id": "BZZCRG",
+    "speakers": [
+      {
+        "id": "EA9YVR",
+        "name": "Jorge Arce-Garro",
+        "description": "I am a blockchain and cryptography researcher from Costa Rica, currently working at Nethermind. I look into all kinds of tools related to Ethereum scalability questions, such as layer 2s, liquid staking, and zero-knowledge proofs. Besides Ethereum, I am working on a PhD in mathematical physics at the University of Michigan.  In my free time I enjoy memes and dancing.",
+        "avatar": "http://speak.devcon.org/media/avatars/jorgeportrait-1_-_Copy_2_hcLahr9.jpg"
+      }
+    ],
+    "title": "Shamir Secret Sharing with No ID Numbers!",
+    "track": "Security",
+    "duration": 7,
+    "start": 1665509400000,
+    "end": 1665509820000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Lightning Talk",
+    "description": "Recall that, when splitting a seedphrase via Shamir Secret Sharing into n shares, each share is numbered (from 1 to n). These ID numbers are necessary for reconstruction—if they are lost, reconstruction may be impossible or require brute force.\r\n\r\nWe will quickly review Shamir Secret Sharing and show a trick that can be used to encode the ID numbers into each share for BIP-39 compliant seeds, so that users only need to store the share mnemonic.",
+    "abstract": "",
+    "expertise": "",
+    "tags": [
+      "Seedphrase",
+      "security",
+      "cryptography."
+    ]
+  },
+  {
     "id": "FMLKJF",
     "speakers": [
       {
@@ -2955,38 +2912,6 @@
       "Fuel",
       "Modular Execution Layer",
       "Rollup"
-    ]
-  },
-  {
-    "id": "BZZCRG",
-    "speakers": [
-      {
-        "id": "EA9YVR",
-        "name": "Jorge Arce-Garro",
-        "description": "I am a blockchain and cryptography researcher from Costa Rica, currently working at Nethermind. I look into all kinds of tools related to Ethereum scalability questions, such as layer 2s, liquid staking, and zero-knowledge proofs. Besides Ethereum, I am working on a PhD in mathematical physics at the University of Michigan.  In my free time I enjoy memes and dancing.",
-        "avatar": "http://speak.devcon.org/media/avatars/jorgeportrait-1_-_Copy_2_hcLahr9.jpg"
-      }
-    ],
-    "title": "Shamir Secret Sharing with No ID Numbers!",
-    "track": "Security",
-    "duration": 7,
-    "start": 1665509400000,
-    "end": 1665509820000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Lightning Talk",
-    "description": "Recall that, when splitting a seedphrase via Shamir Secret Sharing into n shares, each share is numbered (from 1 to n). These ID numbers are necessary for reconstruction—if they are lost, reconstruction may be impossible or require brute force.\r\n\r\nWe will quickly review Shamir Secret Sharing and show a trick that can be used to encode the ID numbers into each share for BIP-39 compliant seeds, so that users only need to store the share mnemonic.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Seedphrase",
-      "security",
-      "cryptography."
     ]
   },
   {
@@ -6587,6 +6512,7 @@
         "id": "RYSMYU",
         "name": "Stephane Gosselin",
         "description": "MEV boost architect !",
+        "twitter": "thegostep",
         "avatar": "http://speak.devcon.org/media/avatars/IMG_7825_f7exDv2.jpg"
       }
     ],
@@ -7259,95 +7185,6 @@
       "MUSIC",
       "ART",
       "COMMUNITY"
-    ]
-  },
-  {
-    "id": "XMHCA7",
-    "speakers": [
-      {
-        "id": "CJ9RVC",
-        "name": "Jordi Baylina",
-        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
-        "twitter": "jbaylina",
-        "avatar": ""
-      },
-      {
-        "id": "TZGGNW",
-        "name": "Jon Stephens",
-        "description": "I am a current PhD student at UT Austin as well as the CTO and a co-founder of Veridise. My work focuses on developing automated techniques to verify and identify bugs in various locations in the blockchain stack.",
-        "twitter": "@VeridiseInc",
-        "avatar": "http://speak.devcon.org/media/avatars/jon1_UiU1u9V.jpeg"
-      },
-      {
-        "id": "LSGVGP",
-        "name": "Kyle Charbonnet",
-        "description": "Software Security Engineer at the Privacy & Scaling Explorations Team",
-        "twitter": "kcharb0",
-        "avatar": ""
-      },
-      {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "twitter": "gubsheep",
-        "avatar": ""
-      },
-      {
-        "id": "CMSZNX",
-        "name": "David Theodore",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "8DMBJM",
-        "name": "Remy",
-        "description": "Ops, startups, higher ed + tech, outdoor activities.",
-        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
-      },
-      {
-        "id": "ZRNNVV",
-        "name": "Barry Whitehat",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "KQNENU",
-        "name": "Lucas",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "UHSVVC",
-        "name": "Haichen Shen",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "ZK Security Self Led Session",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 105,
-    "start": 1665677700000,
-    "end": 1665684000000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Workshop 2h",
-    "description": "As more ZK-enabled applications come online, we'll need to build a robust security ecosystem and new techniques to ensure that our ZK apps aren't vulnerable to attackers. In this session hosted by 0xPARC and Privacy and Scaling Explorations, specialists in ZK, formal verification, and assurance discuss new approaches to securing these next-generation decentralized apps. \r\n\r\nFull schedule here: https://0xparc.notion.site/ZK-Security-SLS-Schedule-df4675aa9ad04f49a2836191ec44f8d8",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "Zero",
-      "Knowledge"
     ]
   },
   {
@@ -9735,9 +9572,15 @@
         "description": "Cofounder @ aztec",
         "twitter": "Jaosef",
         "avatar": ""
+      },
+      {
+        "id": "KH9LE9",
+        "name": "Jan Beneš",
+        "description": "Solidity developer at Aztec",
+        "avatar": ""
       }
     ],
-    "title": "A new DeFi Primitive - Private DCA Trading with Aztec Connect",
+    "title": "A new DeFi Primitive - Private Trading with Aztec Connect",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 25,
     "start": 1665675000000,
@@ -10048,6 +9891,95 @@
     ]
   },
   {
+    "id": "XMHCA7",
+    "speakers": [
+      {
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "twitter": "jbaylina",
+        "avatar": ""
+      },
+      {
+        "id": "TZGGNW",
+        "name": "Jon Stephens",
+        "description": "I am a current PhD student at UT Austin as well as the CTO and a co-founder of Veridise. My work focuses on developing automated techniques to verify and identify bugs in various locations in the blockchain stack.",
+        "twitter": "@VeridiseInc",
+        "avatar": "http://speak.devcon.org/media/avatars/jon1_UiU1u9V.jpeg"
+      },
+      {
+        "id": "LSGVGP",
+        "name": "Kyle Charbonnet",
+        "description": "Software Security Engineer at the Privacy & Scaling Explorations Team",
+        "twitter": "kcharb0",
+        "avatar": ""
+      },
+      {
+        "id": "ZYXBSK",
+        "name": "gubsheep",
+        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
+        "twitter": "gubsheep",
+        "avatar": ""
+      },
+      {
+        "id": "CMSZNX",
+        "name": "David Theodore",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "8DMBJM",
+        "name": "Remy",
+        "description": "Ops, startups, higher ed + tech, outdoor activities.",
+        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
+      },
+      {
+        "id": "ZRNNVV",
+        "name": "Barry Whitehat",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "KQNENU",
+        "name": "Lucas",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "UHSVVC",
+        "name": "Haichen Shen",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "ZK Security Self Led Session",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 105,
+    "start": 1665677700000,
+    "end": 1665684000000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Workshop 2h",
+    "description": "As more ZK-enabled applications come online, we'll need to build a robust security ecosystem and new techniques to ensure that our ZK apps aren't vulnerable to attackers. In this session hosted by 0xPARC and Privacy and Scaling Explorations, specialists in ZK, formal verification, and assurance discuss new approaches to securing these next-generation decentralized apps. \r\n\r\nFull schedule here: https://0xparc.notion.site/ZK-Security-SLS-Schedule-df4675aa9ad04f49a2836191ec44f8d8",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "Zero",
+      "Knowledge"
+    ]
+  },
+  {
     "id": "7GP9EF",
     "speakers": [
       {
@@ -10326,8 +10258,35 @@
     "id": "9MVQCE",
     "speakers": [
       {
+        "id": "TT97JW",
+        "name": "lightclient",
+        "description": "Member of the go-ethereum team. Maintains several specifications, including `ethereum/execution-apis`. Co-author of EIP-3074.",
+        "twitter": "lightclients",
+        "avatar": "http://speak.devcon.org/media/avatars/lightclient_wMTa1JC.jpg"
+      },
+      {
+        "id": "XWTKNK",
+        "name": "Julien Niset",
+        "description": "Julien is co-Founder and Chief Science Officer of Argent. He holds a PhD in Physics with a focus on Quantum Information and Quantum Cryptography. Julien is the author of three patents: for quantum random number generation, distribution and use in novel cryptographic schemes. He previously founded  a startup working on Ultra-Fast Quantum Random Number Generators, then worked in the security in IoT.",
+        "twitter": "https://twitter.com/jniset",
+        "avatar": "http://speak.devcon.org/media/avatars/picture_profesional_VRbaFe8.jpg"
+      },
+      {
         "id": "BAKZ9F",
         "name": "Yoav Weiss",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "FLKFV8",
+        "name": "Vitalik Buterin",
+        "description": "Chief Scientist @ Ethereum Foundation",
+        "twitter": "https://twitter.com/VitalikButerin",
+        "avatar": "http://speak.devcon.org/media/avatars/Vitalik_Headshot_1_kWIW5OC.jpeg"
+      },
+      {
+        "id": "SSNBPD",
+        "name": "David Hoffman",
         "description": null,
         "avatar": ""
       }
@@ -10373,6 +10332,7 @@
         "id": "RESDSC",
         "name": "Anda Ngcaba",
         "description": "Anda Ngcaba serves as the Chief of Operations (COO) at the University of Cape Town Financial Innovation Hub. At the financial innovation hub, Anda oversees day to day operations, partnerships and business development. Through his work at the Financial Innovation Hub Anda also serves as COO of Axone, a platform for content creators to collaborate in a unique way.",
+        "twitter": "Andangcaba_",
         "avatar": "http://speak.devcon.org/media/avatars/F366CD12-4796-4A27-AEA6-4DA336E98FCB_pngZhXE.jpeg"
       }
     ],
@@ -10769,6 +10729,56 @@
     ]
   },
   {
+    "id": "7XGQQB",
+    "speakers": [],
+    "title": "Meditation & Public Goods Workshop",
+    "track": "",
+    "duration": 120,
+    "start": 1665684000000,
+    "end": 1665691200000,
+    "room": {
+      "id": "ethereum-jungle",
+      "name": "Ethereum Jungle",
+      "description": "Relaxation Zone",
+      "info": "Floor 2",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "-",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "meditation",
+      "workshop",
+      "health"
+    ]
+  },
+  {
+    "id": "NERSUP",
+    "speakers": [],
+    "title": "Token Engineering Approach to Building Communities & Membership",
+    "track": "",
+    "duration": 120,
+    "start": 1665684000000,
+    "end": 1665691200000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Meetup",
+    "description": "Workshop by Eduardo Vega",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "community",
+      "building",
+      "workshop"
+    ]
+  },
+  {
     "id": "Z3CKLW",
     "speakers": [],
     "title": "Tomosaito DJ SESSION",
@@ -10816,6 +10826,31 @@
       "drink",
       "friends",
       "fun"
+    ]
+  },
+  {
+    "id": "YASTRX",
+    "speakers": [],
+    "title": "Web3 Developer Relations Gathering",
+    "track": "",
+    "duration": 150,
+    "start": 1665685800000,
+    "end": 1665694800000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Meetup",
+    "description": "This is your change to meet up with other DevRel folks, to cross-pollinate ideas on creating amazing developer experiences and building vibrant developer communities.\r\nhttps://lu.ma/2uh25943",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "devrel",
+      "community",
+      "building"
     ]
   },
   {
@@ -12271,6 +12306,7 @@
         "id": "EE3GXS",
         "name": "Luis Carlos",
         "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
+        "twitter": "@luiscrh",
         "avatar": ""
       }
     ],

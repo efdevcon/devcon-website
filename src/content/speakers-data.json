@@ -408,8 +408,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000,
-      1665532800000
+      1665532800000,
+      1665705600000
     ],
     "website": "https://camiinthisthang.dev/",
     "twitter": "@camiinthisthang",
@@ -636,10 +636,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/lightclient_wMTa1JC.jpg",
     "description": "Member of the go-ethereum team. Maintains several specifications, including `ethereum/execution-apis`. Co-author of EIP-3074.",
     "tracks": [
-      "Developer Infrastructure"
+      "Developer Infrastructure",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "twitter": "lightclients",
     "github": "lightclient"
@@ -2002,7 +2004,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/picture_profesional_VRbaFe8.jpg",
     "description": "Julien is co-Founder and Chief Science Officer of Argent. He holds a PhD in Physics with a focus on Quantum Information and Quantum Cryptography. Julien is the author of three patents: for quantum random number generation, distribution and use in novel cryptographic schemes. He previously founded  a startup working on Ultra-Fast Quantum Random Number Generators, then worked in the security in IoT.",
     "tracks": [
-      "UX & Design"
+      "UX & Design",
+      "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665619200000
@@ -2046,12 +2049,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/168207602_1734437620089115_5375466467924400665_n_iKgqYOj.jpg",
     "description": "Diego Losada holds a Degree in Economics and Business Administration at Universidade de A Coruña (Spain) and has over 15 years of experience in IT Consultancy. His specific expertise in the management area relies on consulting services in Linux administration.\r\n\r\nHe is the co-founder of EOA Blockchain Labs Spanish company and founder of the \"Ethereum on ARM\" project in late 2016.",
     "tracks": [
-      "Staking & Validator Experience",
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "Staking & Validator Experience"
     ],
     "eventDays": [
-      1665619200000,
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/",
     "twitter": "https://twitter.com/EthereumOnARM",
@@ -2583,12 +2586,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/Safder_Twit_2_RxJ1xUp.jpg",
     "description": "Saf is curious about everything that has to do with pushing people to be the best versions of themselves. After spending a previous life as a mechanical engineer, Saf has worked in education, career coaching, mentorship and now leads People Operations at Gitcoin. You can also find him catherding the brightest Gen Z-ers at Dream DAO. Outside of work, Saf loves to spend time in the mountains, and is an avid trail ultra-runner and skier.",
     "tracks": [
-      "Governance & Coordination",
-      "Opportunity & Global Impact"
+      "Opportunity & Global Impact",
+      "Governance & Coordination"
     ],
     "eventDays": [
-      1665619200000,
-      1665532800000
+      1665532800000,
+      1665619200000
     ],
     "website": "safder.medium.com",
     "twitter": "@safderwords"
@@ -3832,9 +3835,9 @@
     ],
     "eventDays": [
       1665446400000,
+      1665532800000,
       1665619200000,
-      1665705600000,
-      1665532800000
+      1665705600000
     ],
     "twitter": "gubsheep",
     "github": "gubsheep"
@@ -4148,7 +4151,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665705600000
     ],
     "website": "opensea.io",
     "twitter": "z0age",
@@ -4192,7 +4195,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665705600000
+      1665532800000
     ],
     "website": "fossil.dev",
     "twitter": "@0xMarcello",
@@ -4402,8 +4405,8 @@
       "Opportunity & Global Impact"
     ],
     "eventDays": [
-      1665705600000,
-      1665532800000
+      1665532800000,
+      1665705600000
     ],
     "twitter": "https://twitter.com/Dapp_Learning",
     "github": "https://github.com/liberhe"
@@ -4669,7 +4672,6 @@
     "description": "",
     "tracks": [
       "Opportunity & Global Impact",
-      "Developer Infrastructure",
       "UX & Design"
     ],
     "eventDays": [
@@ -5176,7 +5178,8 @@
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
-      1665446400000
+      1665446400000,
+      1665619200000
     ],
     "twitter": "https://twitter.com/VitalikButerin"
   },
@@ -5925,8 +5928,12 @@
     "name": "Luis Carlos",
     "avatar": "https://www.gravatar.com/avatar/f673bdc802bc7867a5fb78ceab74d975",
     "description": "Luis Carlos holds a B.A. in Economics and History from Florida International University (2005), with Magna Cum Laude distinction. Master in Economics and Ph.D in Economics from Michigan State University. Professor and researcher, co-founder and first director of the Fiscal Observatory of the Pontificia Universidad Javeriana.  He has also served as an economist for the FCC during the Obama administration. He was appointed as the director general of DIAN by President Gustavo Petro on July 11,2022",
-    "tracks": [],
-    "eventDays": [],
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
     "twitter": "@luiscrh"
   },
   {
@@ -6109,5 +6116,29 @@
       1665532800000
     ],
     "twitter": "thegostep"
+  },
+  {
+    "id": "SSNBPD",
+    "name": "David Hoffman",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Opportunity & Global Impact"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "KH9LE9",
+    "name": "Jan Beneš",
+    "avatar": null,
+    "description": "Solidity developer at Aztec",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   }
 ]
