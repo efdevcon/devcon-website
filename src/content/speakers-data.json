@@ -4120,12 +4120,8 @@
     "name": "Alvarius",
     "avatar": null,
     "description": "",
-    "tracks": [
-      "Developer Infrastructure"
-    ],
-    "eventDays": [
-      1665532800000
-    ]
+    "tracks": [],
+    "eventDays": []
   },
   {
     "id": "LVQDUE",
@@ -4195,7 +4191,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665705600000
     ],
     "website": "fossil.dev",
     "twitter": "@0xMarcello",
