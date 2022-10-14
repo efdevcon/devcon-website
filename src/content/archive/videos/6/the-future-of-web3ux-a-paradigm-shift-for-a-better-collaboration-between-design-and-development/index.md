@@ -7,7 +7,7 @@ description: "70% of UX design on Ethereum is defined within the Smart Contracts
 The future of a better web3 UX will rely heavily on a paradigm shift. The necessity of change in the way we work and the way we look at how products are designed and planned is more and more needed. 
 
 So are you ready to embrace the change?"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/gOiHwmL0VUgg"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""

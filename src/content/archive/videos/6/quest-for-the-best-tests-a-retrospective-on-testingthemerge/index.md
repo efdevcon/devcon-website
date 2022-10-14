@@ -3,7 +3,7 @@ edition: 6
 sourceId: "AFMSYE"
 title: "Quest for the Best Tests, a Retrospective on #TestingTheMerge"
 description: "A retrospective on #TestingTheMerge and all the various testing avenues we explored. I'd also give  a brief summary of what went right and wrong in our approach."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/pIlRYW5HQgAA"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""

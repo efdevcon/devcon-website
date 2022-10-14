@@ -3,7 +3,7 @@ edition: 6
 sourceId: "9BTCHC"
 title: "Stateless Ethereum: How Verkle Trees Make Ethereum Lean and Mean"
 description: "This talk goes over the changes brought by verkle trees. It will give a high-level overview of the technical changes, an update on the implementation of verkle trees, and paint a picture of a stateless Ethereum."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/Q7rStTKwuYs"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""

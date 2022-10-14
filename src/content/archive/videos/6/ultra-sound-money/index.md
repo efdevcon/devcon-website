@@ -8,7 +8,7 @@ description: "This talks paints a big picture for ETH the asset and its macro ca
 * **issuance** (ETH for validator incentivisation)
 * **staking** (ETH for economic security)
 * **defi collateral** (ETH for economic bandwidth)"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/2ZuGVLhhxQo"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
