@@ -6,6 +6,8 @@ youtubeUrl: "https://youtu.be/oLGZdLpHl1w"
 image: ../../../../../../static/assets/uploads/videos/stewart-brand.png
 imageUrl: /assets/uploads/videos/stewart-brand.png
 ipfsHash: "QmNdYkjrya3DWTGxoyyeB751phmfkESyMRnoQZHezbZktm"
+ethernaIndex: "https://etherna.io/embed/6348a9bac02259b06a2ffc8b"
+ethernaPermalink: "https://etherna.io/embed/fcb72c55b03fa10e5463b01ae9700eebc8135eb62be2c492f2c641e8315fdc69"
 duration: 3034
 expertise: "Intermediate"
 type: "Panel"
