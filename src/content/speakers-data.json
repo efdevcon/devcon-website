@@ -4120,8 +4120,12 @@
     "name": "Alvarius",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665532800000
+    ]
   },
   {
     "id": "LVQDUE",
@@ -5025,7 +5029,7 @@
     "id": "PCUMSY",
     "name": "Agustín Matteri",
     "avatar": "https://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg",
-    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with more than 12 years of experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current leader of the Regional Hub for Blockchain at the Service of Nature.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -6150,5 +6154,31 @@
     ],
     "twitter": "@FlynnCalcutt",
     "github": "@FlynnSC"
+  },
+  {
+    "id": "T9MUGF",
+    "name": "Fraser",
+    "avatar": "https://speak.devcon.org/media/avatars/6DB7F382-63EA-40DA-96BE-D294DC50F4E7_5DvKsJb.png",
+    "description": "building ZK rollups for games at the 0xPARC AW Residency",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "fraserd_eth",
+    "github": "fraserdscott"
+  },
+  {
+    "id": "FATTF3",
+    "name": "Omar Mezenner",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ]
   }
 ]
