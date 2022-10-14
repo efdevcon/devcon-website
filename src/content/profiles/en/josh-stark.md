@@ -1,7 +1,6 @@
 ---
+id: "KDZVCN"
 name: "Josh Stark"
-role: "Co-founder"
-description: "Josh works for Ethereum at the Ethereum Foundation"
-organization: "Ethereum Foundation"
-country: "Canada"
+description: "Josh Stark works for Ethereum at the Ethereum Foundation."
+avatar: "http://speak.devcon.org/media/avatars/target_QfgTl32.jpeg"
 ---

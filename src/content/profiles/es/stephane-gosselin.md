@@ -1,7 +1,7 @@
 ---
+id: "RYSMYU"
 name: "Stephane Gosselin"
-role: "Founder and Lead Developer"
-description: "Solidity Developer - Researching advanced token standards and token bridge."
-organization: "Kordina Solutions"
-country: "Canada"
+description: "MEV boost architect !"
+twitter: "thegostep"
+avatar: "http://speak.devcon.org/media/avatars/IMG_7825_f7exDv2.jpg"
 ---

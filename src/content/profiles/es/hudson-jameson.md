@@ -1,7 +1,7 @@
 ---
+id: "SMXW9P"
 name: "Hudson Jameson"
-role: ""
-description: "Hudson Jameson is an Ethereum enthusiast and smart contract developer. He co-founded the blockchain IoT start-up Oaken Innovations and works at the Ethereum Foundation. Currently he spends his time managing the Ethererum community, organizing the Ethereum core developer meetings, and editing the Ethereum Improvement Proposals repository."
-organization: "Ethereum Foundation"
-country: "United States"
+description: "Hudson is a long time Ethereum contributor having previously worked in the Ethereum Foundation for 5 years on numerous efforts including protocol dev coordination, specifications, and co-running Devcon2-4. He co-founded the Ethereum educational and coordination group Ethereum Cat Herders. He has 3 cats and 5 chickens and lives in Texas with his spouse."
+twitter: "@hudsonjameson"
+avatar: "http://speak.devcon.org/media/avatars/8KsDpiie_200x200_7P80MPz.jpg"
 ---

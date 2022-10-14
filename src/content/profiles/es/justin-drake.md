@@ -1,7 +1,7 @@
 ---
+id: "3SWDYT"
 name: "Justin Drake"
-role: "Researcher"
-description: "Justin is a sharding researcher at the Ethereum Foundation helping design Ethereum 2.0 :)"
-organization: "Ethereum Foundation"
-country: "United Kingdom"
+description: "Ethereum researcher"
+twitter: "drakefjustin"
+avatar: "http://speak.devcon.org/media/avatars/OwT0LdXU_400x400_8drFhaa.jpeg"
 ---

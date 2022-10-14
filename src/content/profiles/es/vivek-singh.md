@@ -1,7 +1,7 @@
 ---
+id: "T39AXQ"
 name: "Vivek Singh"
-role: "Co-founder"
-description: "Bio: Vivek is a co-founder of Gitcoin, a marketplace connecting open source software contributors with web3 projects. Vivek also works in the Ethereum open source community, mostly on grants and new programming to bring developers and researchers into our world."
-organization: "Gitcoin"
-country: "Colombia"
+description: "co-founder at Gitcoin. currently focused on KERNEL, a web3 educational web which brings together 200 incredible peers, 3 times a year for a unique experience. the primary orientation is around deepening generative relationships amongst incredible peers."
+twitter: "vsinghdothings"
+avatar: "http://speak.devcon.org/media/avatars/Sig_Eco_KERNEL_pIbmmgt.png"
 ---

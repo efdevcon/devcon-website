@@ -1,7 +1,7 @@
 ---
+id: "G9JPKV"
 name: "Adrian Manning"
-role: "Director"
-description: "Completed his PhD in theoretical particle physics before co-founding a startup, Sigma Prime, which focuses in blockchain technology and cybersecurity. His particular interests lie in the technology underpinning most blockchains, specifically, cryptography, finite field mathematics and cybersecurity."
-organization: "Sigma Prime"
-country: "British Indian Ocean Territory"
+description: "Adrian is a co-founder and director of Sigma Prime. He has a background in physics but has spent the last few years working on the Ethereum consensus protocol, building the Lighthouse client. He is primarily focused in the networking aspects of the client and the protocol."
+twitter: "@agemanning"
+avatar: "http://speak.devcon.org/media/avatars/hs_c5ewoBI.jpg"
 ---

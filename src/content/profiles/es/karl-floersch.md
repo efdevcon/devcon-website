@@ -1,7 +1,7 @@
 ---
+id: "YVARFY"
 name: "Karl Floersch"
-role: "Researcher"
-description: "Karl is an EF researcher working on Casper, Sharding and Plasma. He is also communicating the design patterns this technology is based on in a FOSS course called cryptoeconomics.study . Contributing to both the means and memes of decentralization."
-organization: "Ethereum Foundation"
-country: "United States"
+description: "Ethereum optimist. Worked at the Ethereum Foundation on PoS & Eth2, then co-founded Plasma Group & Optimism to build Ethereum L2 technology which funds public goods. Currently optimistically scaling Ethereum and making impact=profit."
+twitter: "karl_dot_tech"
+avatar: "http://speak.devcon.org/media/avatars/1517268137181_7FLw6Rs.jpeg"
 ---

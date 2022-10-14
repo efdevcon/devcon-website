@@ -1,6 +1,7 @@
 ---
+id: "7BYJ78"
 name: "Alex Beregszaszi"
-role: ""
-description: "Alex works with the Ethereum Foundation as Solidity co-lead, ewasm team lead and ethereumjs contributor. He is really interested in virtual machine and language design."
-country: "Ireland"
+description: "Alex is the team lead of Ipsilon at the Ethereum Foundation, a group focused on improving the EVM.  Alex has been an early contributor and co-lead of the Solidity team."
+twitter: "alexberegszaszi"
+avatar: "http://speak.devcon.org/media/avatars/alex_400x400_2Ng7QeP.jpeg"
 ---

@@ -1,7 +1,7 @@
 ---
+id: "93NEDS"
 name: "Lorenz Breidenbach"
-role: "SNF BRIDGE Fellow"
-description: "Lorenz Breidenbach is an SNF BRIDGE fellow in the System Security Group at ETH Zürich working to transfer technology from academia to industry. His current research is on blockchain security with a particular focus on trading and exchanges. Previously, he was at Cornell Tech and IC3 in New York, where he co-created thehydra.io and gastoken.io. Lorenz holds a Master’s degree in Computer Science from ETH Zürich and spent time in industry at Google and Open Systems."
-organization: "ETH Zürich, IC3"
-country: "Switzerland"
+description: "Lorenz Breidenbach is the Head of R&D at Chainlink Labs. He is a security researcher and former BRIDGE fellow from ETH Zürich and IC3.  He's been working on Ethereum-adjacent research since 2017 on projects such as Flashboys 2.0, libsubmarine, GasToken.io, and \"Enter the Hydra\"."
+twitter: "@ethlorenz"
+avatar: "http://speak.devcon.org/media/avatars/Lorenz_C349y5O.jpeg"
 ---

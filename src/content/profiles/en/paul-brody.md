@@ -1,7 +1,7 @@
 ---
+id: "3DFYAZ"
 name: "Paul Brody"
-role: "Global Innovation Leader - Blockchain"
-description: "EY Global Innovation Blockchain Leader  Serial entrepreneur and relentless builder of EY global blockchain services.  Champion of new ideas and technologies that reshape industry.Paul is responsible for driving EY’s initiatives and investments in blockchain worldwide.  With blockchain services teams in the Americas, Europe and Asia, Paul’s team works with service lines to build a portfolio of services across tax, audit, and business transformation.  He has extensive experience in the areas of IoT, supply chain and operations and business strategy, developed over 20 years at multiple start-ups, McKinsey, and at IBM."
-organization: "EY"
-country: "United States"
+description: "Paul Brody is the global blockchain leader at EY (Ernst & Young).  For the last seven years, he has championed the use of public blockchains and open systems for enterprise users and the need for privacy.  EY is the only major professional services company focused on the Ethereum ecosystem and committed to public blockchains."
+twitter: "@pbrody"
+avatar: "http://speak.devcon.org/media/avatars/7667A146-AD82-49AD-B245-96FD8D48FF23_IU5xNhA.jpeg"
 ---

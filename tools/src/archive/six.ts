@@ -4,13 +4,14 @@ import fetch from 'cross-fetch'
 import { google } from 'googleapis'
 import { ArchiveVideo } from '../../../src/types/ArchiveVideo'
 import { getVideoDuration, writeToFile } from './import'
+import { writeProfileToFile } from './profiles'
 require('dotenv').config()
 
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
 const sheetIndex = 1
 
-ImportRos()
+ImportSpeakers()
 
 const tracks = ['Cryptoeconomics', 'Developer Infrastructure', 'Governance & Coordination',
     'Layer 1 Protocol', 'Layer 2s', 'Opportunity & Global Impact', 'Security', 'Staking & Validator Experience',
@@ -56,6 +57,20 @@ function GeneratePlaylist(sessions: any[], type: string) {
     const dirName = `../src/content/archive/generation`
     fs.mkdir(dirName, { recursive: true }, () => '')
     fs.writeFileSync(`${dirName}/${type}.md`, '- ' + videoPaths.join('\n- '))
+}
+
+async function ImportSpeakers() { 
+    console.log('Fetch schedule info')
+    const res = await fetch(`https://app.devcon.org/api/schedule`)
+    const body = await res.json()
+    const sessions = body.data
+    console.log(sessions.length, 'sessions')
+
+    const speakers = Array.from(new Set(sessions.map((i: any) => i.speakers).flat()))
+    console.log(speakers.length)
+    speakers.forEach(i => {
+      writeProfileToFile(i)
+    })
 }
 
 async function ImportRos() {
