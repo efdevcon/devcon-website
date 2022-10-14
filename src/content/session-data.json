@@ -10954,6 +10954,7 @@
         "id": "T9MUGF",
         "name": "Fraser",
         "description": "building ZK rollups for games at the 0xPARC AW Residency",
+        "twitter": "fraserd_eth",
         "avatar": "http://speak.devcon.org/media/avatars/6DB7F382-63EA-40DA-96BE-D294DC50F4E7_5DvKsJb.png"
       },
       {
@@ -11410,39 +11411,6 @@
       "api",
       "infura",
       "infrastructure"
-    ]
-  },
-  {
-    "id": "XPHSYR",
-    "speakers": [
-      {
-        "id": "3GSD8J",
-        "name": "Zero Age",
-        "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
-        "twitter": "z0age",
-        "avatar": "http://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif"
-      }
-    ],
-    "title": "Advanced Seaport Techniques",
-    "track": "Developer Infrastructure",
-    "duration": 50,
-    "start": 1665745200000,
-    "end": 1665748200000,
-    "room": {
-      "id": "workshop-4",
-      "name": "Workshop 4",
-      "description": "",
-      "info": "Floor 3",
-      "capacity": 112
-    },
-    "type": "Workshop 1h",
-    "description": "Seaport is a marketplace protocol for buying and selling NFTs. While it powers OpenSea in a horizontal capacity, Seaport is open source and allows marketplaces to share a pool of liquidity – enabling project-specific, bespoke vertical marketplaces. Since launch, it’s helped spur innovation across emerging NFT verticals, including ENS names, in-game purchases, etc. This workshop will explore advanced techniques and use cases for the Seaport protocol.",
-    "abstract": "",
-    "expertise": "",
-    "tags": [
-      "Seaport",
-      "Marketplace",
-      "EVM"
     ]
   },
   {
@@ -12152,7 +12120,7 @@
     "track": "Developer Infrastructure",
     "duration": 150,
     "start": 1665752400000,
-    "end": 1665759000000,
+    "end": 1665761400000,
     "room": {
       "id": "workshop-3",
       "name": "Workshop 3",
@@ -12697,13 +12665,6 @@
     "id": "NNTKKY",
     "speakers": [
       {
-        "id": "TKWW8K",
-        "name": "Eugene Leventhal",
-        "description": "Eugene Leventhal is the Head of Operations and Outreach at the Smart Contract Research Forum (SCRF), which is a granted org focused on advancing web3 research. Prior to joining SCRF, Eugene worked at Carnegie Mellon University as a Project Manager, supporting a blockchain research initiative and a podcast amongst other projects.",
-        "twitter": "@bbeats1",
-        "avatar": "http://speak.devcon.org/media/avatars/headshot_L77RZZk.jpg"
-      },
-      {
         "id": "MPXDXL",
         "name": "Juan",
         "description": "After scaling fintech startups for several years in Product and Sales Operations, Juan discovered DeFi through a beautiful accident. He has ever since been involved in scaling DAOs through governance design, improving frameworks, and connecting great teams together.\r\n\r\nJuan is also a proud dad.",
@@ -12724,10 +12685,11 @@
         "avatar": ""
       },
       {
-        "id": "Y8FYJ3",
-        "name": "Alejandra Borda",
-        "description": null,
-        "avatar": ""
+        "id": "TG3HCZ",
+        "name": "abbey",
+        "description": "Abbey is a technologist, governance researcher, product strategist, and community developer/leader. She spends her time building decentralized technologies and growing open-source communities around them.\r\n\r\nSince 2019, she’s run all things community & governance at Radicle, building decentralized collaboration tools for developers. She is currently stewarding the projects transition to the DAO. Additionally, she sits on the Board of the Radicle Foundation and Optimism Foundation.",
+        "twitter": "@abbey_titcomb",
+        "avatar": "http://speak.devcon.org/media/avatars/C667F0DA-B7DF-469D-9247-BE2102FB7F80_yAADqci.jpeg"
       }
     ],
     "title": "Sustainable Ecosystem Scaling: How Do We Fund Community And Ecosystem Growth",
@@ -12887,8 +12849,8 @@
     "speakers": [
       {
         "id": "VEDWYZ",
-        "name": "Haoyun",
-        "description": "Based in Shanghai China｜ETHPlanet TEAM ｜ EDCON TEAM ｜ Member of togETHer",
+        "name": "GUO Haoyun",
+        "description": "Based in Shanghai China｜ETHPlanet - Community Support Team | EDCON Team｜ Member of togETHer",
         "avatar": ""
       },
       {

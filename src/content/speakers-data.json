@@ -365,8 +365,7 @@
       "Governance & Coordination"
     ],
     "eventDays": [
-      1665446400000,
-      1665705600000
+      1665446400000
     ],
     "twitter": "@bbeats1",
     "github": "https://github.com/eleventh19"
@@ -1498,15 +1497,18 @@
   },
   {
     "id": "VEDWYZ",
-    "name": "Haoyun",
+    "name": "GUO Haoyun",
     "avatar": null,
-    "description": "Based in Shanghai China｜ETHPlanet TEAM ｜ EDCON TEAM ｜ Member of togETHer",
+    "description": "Based in Shanghai China｜ETHPlanet - Community Support Team | EDCON Team｜ Member of togETHer",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665705600000
-    ]
+    ],
+    "website": "https://t.me/guohaoyun",
+    "twitter": "https://twitter.com/guohaoyun",
+    "github": "https://github.com/0x68616f79756e"
   },
   {
     "id": "GP3TNP",
@@ -4143,21 +4145,6 @@
     "github": "ricmoo"
   },
   {
-    "id": "3GSD8J",
-    "name": "Zero Age",
-    "avatar": "https://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif",
-    "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
-    "tracks": [
-      "Developer Infrastructure"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "website": "opensea.io",
-    "twitter": "z0age",
-    "github": "0age"
-  },
-  {
     "id": "XV79MM",
     "name": "Jacob Willemsma",
     "avatar": "https://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png",
@@ -4839,18 +4826,6 @@
     ],
     "eventDays": [
       1665619200000
-    ]
-  },
-  {
-    "id": "Y8FYJ3",
-    "name": "Alejandra Borda",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Governance & Coordination"
-    ],
-    "eventDays": [
-      1665705600000
     ]
   },
   {
@@ -5824,10 +5799,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/C667F0DA-B7DF-469D-9247-BE2102FB7F80_yAADqci.jpeg",
     "description": "Abbey is a technologist, governance researcher, product strategist, and community developer/leader. She spends her time building decentralized technologies and growing open-source communities around them.\r\n\r\nSince 2019, she’s run all things community & governance at Radicle, building decentralized collaboration tools for developers. She is currently stewarding the projects transition to the DAO. Additionally, she sits on the Board of the Radicle Foundation and Optimism Foundation.",
     "tracks": [
-      "Developer Infrastructure"
+      "Developer Infrastructure",
+      "Governance & Coordination"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665705600000
     ],
     "website": "digital alchemy.xyz",
     "twitter": "@abbey_titcomb"
