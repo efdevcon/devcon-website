@@ -42,7 +42,7 @@ export const useVideoFilter = () => {
   const location = useLocation()
   const pageContext = usePageContext()
 
-  const nrOfEditions = 5
+  const nrOfEditions = 6
   const editionFilters = Array.from(Array(nrOfEditions + 1).keys()).sort((a, b) => b - a)
   const [_, editionFilterState] = useFilter({
     tags: true,

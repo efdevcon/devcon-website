@@ -3,7 +3,7 @@ edition: 6
 sourceId: "ETHXDV"
 title: "Making Sense of the Ethereum Foundation"
 description: "."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/3NHgwgra3yM"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""

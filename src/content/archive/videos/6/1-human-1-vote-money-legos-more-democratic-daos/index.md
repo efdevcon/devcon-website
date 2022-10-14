@@ -16,7 +16,7 @@ With strong sybil resistence, the ecosystem could move to DAOs built on one-huma
 + more
 
 Learn about the current landscape of sybil resistance techniques in web3."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/TRoO5fD7TI4"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""

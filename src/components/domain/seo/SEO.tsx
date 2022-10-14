@@ -56,7 +56,7 @@ export function SEO(props: SEOProps) {
   const titleTemplate = props.title || pageContext?.current?.title ? `%s · ${globalTitle}` : globalTitle
   const canonical = props.canonicalUrl || ''
 
-  let image = 'https://www.devcon.org/assets/images/rtd-social.png'
+  let image = 'https://www.devcon.org/assets/images/archive-social.png'
   if (props.imageUrl) {
     image = props.imageUrl
   }
