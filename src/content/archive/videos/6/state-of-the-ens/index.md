@@ -7,7 +7,7 @@ youtubeUrl: "https://youtu.be/Pta198KJTaw"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1769
 expertise: "Intermediate"
 type: "Talk"
 track: "Governance & Coordination"

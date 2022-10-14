@@ -12,7 +12,7 @@ youtubeUrl: "https://youtu.be/2ZuGVLhhxQo"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1718
 expertise: "Beginner"
 type: "Talk"
 track: "Cryptoeconomics"

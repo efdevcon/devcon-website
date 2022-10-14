@@ -2,7 +2,7 @@
   "scripts": {
     "prestart": "yarn install",
     "dips": "ts-node src/dips",
-    "archive:six": "ts-node src/archive/six",
+    "six": "ts-node src/archive/six",
     "archive:import": "ts-node src/archive/import",
     "archive:profiles": "ts-node src/archive/profiles",
     "archive:query": "ts-node src/archive/query",
@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.13.0",
+    "@google-cloud/local-auth": "^2.1.1",
     "@octokit/rest": "^18.0.9",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
+    "googleapis": "^108.0.0",
     "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "rss-parser": "^3.12.0",

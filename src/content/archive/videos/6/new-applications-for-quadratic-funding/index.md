@@ -7,7 +7,7 @@ youtubeUrl: "https://youtu.be/Ijs_cAr_Yqs"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1546
 expertise: "Beginner"
 type: "Talk"
 track: "Opportunity & Global Impact"

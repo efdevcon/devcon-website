@@ -6,11 +6,11 @@ description: "At Polygon-Hermez we have bet for the zero-knowledge EVM to solve 
 We will talk about what is the ZK-EVM and how are we dealing with it at Polygon.
 We will explain the differences between zkEVM and EVM,
 Also the main challenges, tricks, tech decisions and differences we had to apply to achieve EVM compatibility will be explained."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/BEo4F9IlK70"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1165
 expertise: "Advanced"
 type: "Talk"
 track: "Layer 2s"

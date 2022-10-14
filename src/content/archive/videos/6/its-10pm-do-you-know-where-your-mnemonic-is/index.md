@@ -7,11 +7,11 @@ description: "Many stakers set up their validators nearly two years ago, and wil
 This panel provides a refresher for what stakers did, and why they did it.  It discusses protecting mnemonics and keys, and what can be done if they are misplaced or compromised.
 
 Bringing together experts on validating key creation, protection and use, this is a wide-ranging discussion that will be useful for all stakers and potential stakers."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/zf7HJT_DMFw"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 2991
 expertise: ""
 type: "Panel"
 track: "Staking & Validator Experience"

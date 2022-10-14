@@ -6,11 +6,11 @@ description: "Transactions are stored in the blockchain as hexadecimal data. Tha
 If there are no tools that allow decoding of those transactions then the potential of web3 can not be realized
 
 Its crucial such tools are developed in the open, as opensource code since decoding events for different chains and protocols scale faster than what any team of developers can maintain alone"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/rD3Vr8pThcc"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1711
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Infrastructure"

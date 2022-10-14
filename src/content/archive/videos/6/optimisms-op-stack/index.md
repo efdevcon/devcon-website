@@ -7,11 +7,11 @@ description: "Introducing the OP Stack — a standardized tech stack for L2 chai
 Introducing the Superchain vision — the inevitable unification of the distinct L2 chains into a single, horizontally scalable, super-sequenced, Superchain!
 
 The OP Stack is how we realize the Superchain vision."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/HiU-g8XHi5s"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1571
 expertise: "Intermediate"
 type: "Talk"
 track: "Layer 2s"

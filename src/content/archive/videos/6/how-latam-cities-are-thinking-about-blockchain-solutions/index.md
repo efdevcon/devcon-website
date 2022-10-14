@@ -3,11 +3,11 @@ edition: 6
 sourceId: "NESKMJ"
 title: "How Latam cities are thinking about blockchain solutions."
 description: "Mayors or Innovation Ministers/Secretaries to discuss and share their blockchain projects and impact in citizens."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/ynEjmvdB_gY"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 3164
 expertise: "Beginner"
 type: "Panel"
 track: "Opportunity & Global Impact"

@@ -7,7 +7,7 @@ youtubeUrl: "https://youtu.be/pIlRYW5HQgA"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1053
 expertise: "Intermediate"
 type: "Talk"
 track: "Layer 1 Protocol"

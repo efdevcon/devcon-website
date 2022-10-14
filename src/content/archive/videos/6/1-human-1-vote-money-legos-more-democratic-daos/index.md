@@ -20,7 +20,7 @@ youtubeUrl: "https://youtu.be/TRoO5fD7TI4"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 3065
 expertise: ""
 type: "Workshop"
 track: "Developer Infrastructure"

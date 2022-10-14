@@ -3,11 +3,11 @@ edition: 6
 sourceId: "WTJ7RT"
 title: "Working Towards a Plural Public via Common Knowledge and Designated Verifier Proofs"
 description: "Often cited virtues of blockchains are immutability, transparency, decentralization, openness, and trustlessness. Many also think of their most natural applications as financial. Yet a critical affordance of such systems is often missed: the way they are uniquely suited to facilitate cooperation. Here I show how via CK and DVPs."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/363W8KpCcBg"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1573
 expertise: "Intermediate"
 type: "Talk"
 track: "Governance & Coordination"

@@ -3,11 +3,11 @@ edition: 6
 sourceId: "PVR79L"
 title: "Open Problems in DAO Science Workshop"
 description: "This workshop will bring together practitioners and researchers to discuss and collaborate on open problems pertaining to DAO Science. This session will be run by the DAO Research Hub, organized by the DAO Research Collective, Metagov, and SCRF."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/c3JjYCUSaac"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1066
 expertise: ""
 type: "Workshop"
 track: "Governance & Coordination"

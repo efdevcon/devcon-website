@@ -3,11 +3,11 @@ edition: 6
 sourceId: "FWQDXE"
 title: "Skiff"
 description: "."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/VmYpbFxBdtM"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1487
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Infrastructure"

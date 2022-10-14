@@ -7,11 +7,11 @@ description: "Smart contract wallets (SCW) have a potential to streaml UX and in
 Well positioned SCW can overcome needs for devs to integrate increasing number of standards. Instead SCWs can improve composability between dapps and decrease the amount of TXs needed, enabling dev to focus on core features rather than handling custom or niche cases of asset contracts. 
 
 PWN Safe is an example of such wallet enabling selfcustody of lending collateral."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/LPTivpZncuw"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1506
 expertise: "Intermediate"
 type: "Talk"
 track: "UX & Design"

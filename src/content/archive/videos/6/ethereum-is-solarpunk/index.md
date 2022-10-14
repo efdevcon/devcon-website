@@ -7,11 +7,11 @@ description: "Solarpunk is an art movement that envisions how the future might l
 Solarpunk is our alternative to doomerism. … We just need a key that unlocks the building of new institutions -- Humanity Coordinating at Webscale.
 
 Ethereum is Solarpunk - a key to coordinating humanity through it's coordination failures."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/AF2B6SsjoDQ"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 480
 expertise: ""
 type: "Lightning Talk"
 track: "Opportunity & Global Impact"

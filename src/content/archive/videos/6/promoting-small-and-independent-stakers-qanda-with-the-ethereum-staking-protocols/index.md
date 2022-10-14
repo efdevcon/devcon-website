@@ -10,11 +10,11 @@ Vasiliy Shapovalov (Lido)
 Oisin Kyne (Obol)
 Jordan Sutcliffe (Stakewise)
 Ariel Zimroni (SSV Network)"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/Exh-hQOV8kE"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 694
 expertise: ""
 type: "Panel"
 track: "Staking & Validator Experience"
