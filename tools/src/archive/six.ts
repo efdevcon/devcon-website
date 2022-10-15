@@ -12,9 +12,9 @@ require('dotenv').config()
 
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
-const sheetIndex = 4
+const sheetIndex = 5
 const writeToArchive = true
-const writeToYoutube = false
+const writeToYoutube = true
 
 const scopes = [
     'https://www.googleapis.com/auth/youtube',

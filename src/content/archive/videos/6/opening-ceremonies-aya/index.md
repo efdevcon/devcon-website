@@ -4,6 +4,7 @@ sourceId: "7LHLPB"
 title: "Executing with subtraction in the Infinite Garden"
 description: "LIVESTREAMED TO ALL ROOMS IN THE VENUE. Devcon Opening Ceremonies featuring Aya Miyaguchi, Danny Ryan, Tim Beiko, Carl Beekhuizen, Jonathan Mann, & Skylar Weaver."
 youtubeUrl: "https://youtu.be/noXPewi5qOk"
+imageUrl: /assets/uploads/videos/aya-miyaguchi.png
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
