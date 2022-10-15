@@ -1,17 +1,28 @@
 import slugify from 'slugify'
 import fs from 'fs'
 import fetch from 'cross-fetch'
-import { google } from 'googleapis'
+import { google, youtube_v3 } from 'googleapis'
+import { authenticate } from '@google-cloud/local-auth'
 import { ArchiveVideo } from '../../../src/types/ArchiveVideo'
 import { getVideoDuration, writeToFile } from './import'
 import { writeProfileToFile } from './profiles'
+import path from 'path'
+
 require('dotenv').config()
 
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
-const sheetIndex = 1
+const sheetIndex = 4
+const writeToArchive = true
+const writeToYoutube = false
 
-ImportSpeakers()
+const scopes = [
+    'https://www.googleapis.com/auth/youtube',
+    'https://www.googleapis.com/auth/youtube.readonly',
+    'https://www.googleapis.com/auth/youtube.upload'
+]
+
+ImportRos()
 
 const tracks = ['Cryptoeconomics', 'Developer Infrastructure', 'Governance & Coordination',
     'Layer 1 Protocol', 'Layer 2s', 'Opportunity & Global Impact', 'Security', 'Staking & Validator Experience',
@@ -59,7 +70,7 @@ function GeneratePlaylist(sessions: any[], type: string) {
     fs.writeFileSync(`${dirName}/${type}.md`, '- ' + videoPaths.join('\n- '))
 }
 
-async function ImportSpeakers() { 
+async function ImportSpeakers() {
     console.log('Fetch schedule info')
     const res = await fetch(`https://app.devcon.org/api/schedule`)
     const body = await res.json()
@@ -69,7 +80,7 @@ async function ImportSpeakers() {
     const speakers = Array.from(new Set(sessions.map((i: any) => i.speakers).flat()))
     console.log(speakers.length)
     speakers.forEach(i => {
-      writeProfileToFile(i)
+        writeProfileToFile(i)
     })
 }
 
@@ -103,32 +114,81 @@ async function ImportRos() {
         return
     }
 
-    for (let i = 0; i < data.length; i++) {
+    let youtube: youtube_v3.Youtube
+    if (writeToYoutube) {
+        const auth = await authenticate({
+            keyfilePath: path.join(__dirname, '../../credentials/keys.json'),
+            scopes
+        })
+        google.options({ auth })
+    }
+
+    for (let i = 0; i < sessions.length; i++) {
         const info = data[i]
-        if (!info[0] || !info[7]) {
+        console.log(i)
+        if (!info || !info[0] || !info[7]) {
             console.log('No sessionId/YouTube', info)
             continue // skip
         }
 
         const sessionId = info[0]
-        console.log('Processing session', sessionId)
+        console.log(i, 'Processing session', sessionId)
         const session = sessions.find((i: any) => sessionId === i.id)
         if (!session) {
-            console.log('Session not found', sessionId)
+            console.log('Session not found', sessionId, session)
             continue // skip
         }
 
         const youtubeUrl = info[7]
         const youtubeId = getVideoId(youtubeUrl)
-        const duration = await getVideoDuration(youtubeId)
-        let video = mapArchiveVideo(session)
-        video.duration = duration ?? 0
-        video.youtubeUrl = youtubeUrl
 
-        writeToFile(video)
+        if (writeToArchive) {
+            const duration = await getVideoDuration(youtubeId)
+            let video = mapArchiveVideo(session)
+            video.duration = duration ?? 0
+            video.youtubeUrl = youtubeUrl
 
-        // if success -> push to YouTube 
-        // thumbnail / description 
+            writeToFile(video)
+        }
+
+        if (writeToYoutube) {
+            console.log('Update YouTube', sessionId)
+
+            try {
+                youtube = google.youtube('v3')
+                const res1 = await youtube.videos.update({
+                    part: [
+                        "id", "snippet"
+                    ],
+                    requestBody: {
+                        id: youtubeId,
+                        snippet: {
+                            title: session.title,
+                            description: getSessionDescription(session),
+                            categoryId: '28'
+                        },
+                    }
+                })
+                if (res1.status !== 200) {
+                    console.log(res1.statusText)
+                }
+
+                console.log('Add thumbnail..')
+                const fileName = path.join(__dirname, `../../data/${session.id}_1080.png`) // TODO: Add file images
+                const res2 = await youtube.thumbnails.set({
+                    videoId: youtubeId,
+                    media: {
+                        body: fs.createReadStream(fileName),
+                    }
+                })
+                if (res2.status !== 200) {
+                    console.log(res.statusText)
+                }
+            }
+            catch (e) {
+                console.error(e)
+            }
+        }
     }
 }
 
@@ -162,4 +222,23 @@ function mapArchiveVideo(session: any): ArchiveVideo {
         keywords: session.tags,
         speakers: session.speakers.map((i: any) => i.name)
     } as ArchiveVideo
+}
+
+function getSessionDescription(session: any) {
+    return `Visit the https://archive.devcon.org/ to gain access to the entire library of Devcon talks with the ease of filtering, playlists, personalized suggestions, decentralized access on IPFS and more.
+https://archive.devcon.org/archive/watch/6/${slugify(session.title.toLowerCase(), { strict: true })}/index
+
+${session.description}
+
+Speaker(s): ${session.speakers.map((i: any) => i.name).join(', ')}
+${session.expertise ? `Skill level: ${session.expertise}\n` : ''}Track: ${session.track}
+Keywords: ${session.tags}
+
+Follow us: https://twitter.com/efdevcon, https://twitter.com/ethereum
+Learn more about devcon: https://www.devcon.org/
+Learn more about ethereum: https://ethereum.org/ 
+
+Devcon is the Ethereum conference for developers, researchers, thinkers, and makers. 
+Devcon 6 was held in Bogotá, Colombia on Oct 11 - 14, 2022.
+Devcon is organized and presented by the Ethereum Foundation, with the support of our sponsors. To find out more, please visit https://ethereum.foundation/`
 }
