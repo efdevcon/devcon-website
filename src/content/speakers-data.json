@@ -365,8 +365,7 @@
       "Governance & Coordination"
     ],
     "eventDays": [
-      1665446400000,
-      1665705600000
+      1665446400000
     ],
     "twitter": "@bbeats1",
     "github": "https://github.com/eleventh19"
@@ -719,7 +718,7 @@
   },
   {
     "id": "Z8QHWS",
-    "name": "Stanis Kulechov",
+    "name": "Stani Kulechov",
     "avatar": "https://speak.devcon.org/media/avatars/Stani_BW_nIqYqbL.jpeg",
     "description": "Stani Kulechov, founder and CEO of the Aave Companies, was studying law at the University of Helsinki when he first began learning about smart contracts and thus, about the Ethereum blockchain network.  This lead to an exploration of how blockchain technology could impact the traditional financial system. In 2017, Stani released ETHLend, one of the first DeFi DApps which allowed for peer-to-peer digital asset transactions. Stani has made it his mission to create tools for an open, transparent, a",
     "tracks": [
@@ -1498,15 +1497,18 @@
   },
   {
     "id": "VEDWYZ",
-    "name": "Haoyun",
+    "name": "GUO Haoyun",
     "avatar": null,
-    "description": "Based in Shanghai China｜ETHPlanet TEAM ｜ EDCON TEAM ｜ Member of togETHer",
+    "description": "Based in Shanghai China｜ETHPlanet - Community Support Team | EDCON Team｜ Member of togETHer",
     "tracks": [
       "Opportunity & Global Impact"
     ],
     "eventDays": [
       1665705600000
-    ]
+    ],
+    "website": "https://t.me/guohaoyun",
+    "twitter": "https://twitter.com/guohaoyun",
+    "github": "https://github.com/0x68616f79756e"
   },
   {
     "id": "GP3TNP",
@@ -4143,21 +4145,6 @@
     "github": "ricmoo"
   },
   {
-    "id": "3GSD8J",
-    "name": "Zero Age",
-    "avatar": "https://speak.devcon.org/media/avatars/0age_xAs7IHQ.gif",
-    "description": "0age is the Head of Protocol Development at OpenSea, where he oversees the protocol development of the entire OpenSea platform. He is the author of Seaport, a new open-source protocol powering NFT marketplaces like OpenSea. Prior to OpenSea, 0age was the CTO of Dharma Labs (acquired by OpenSea).",
-    "tracks": [
-      "Developer Infrastructure"
-    ],
-    "eventDays": [
-      1665705600000
-    ],
-    "website": "opensea.io",
-    "twitter": "z0age",
-    "github": "0age"
-  },
-  {
     "id": "XV79MM",
     "name": "Jacob Willemsma",
     "avatar": "https://speak.devcon.org/media/avatars/sIWQFp02_400x400_pfah0Ha.png",
@@ -4195,7 +4182,7 @@
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665532800000
+      1665705600000
     ],
     "website": "fossil.dev",
     "twitter": "@0xMarcello",
@@ -4842,18 +4829,6 @@
     ]
   },
   {
-    "id": "Y8FYJ3",
-    "name": "Alejandra Borda",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "Governance & Coordination"
-    ],
-    "eventDays": [
-      1665705600000
-    ]
-  },
-  {
     "id": "7UPFQY",
     "name": "Carlos",
     "avatar": "https://speak.devcon.org/media/avatars/2486142_vAT00yx.jpeg",
@@ -5029,7 +5004,7 @@
     "id": "PCUMSY",
     "name": "Agustín Matteri",
     "avatar": "https://speak.devcon.org/media/avatars/DSC_0233_9p7UVjz.jpg",
-    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with relevant experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current coordinator for the UN led Regional Hub for Blockchain at the Service of Nature.",
+    "description": "Agustin Matteri, is an expert in Environmental Law and Policy, with proven sound capacities to integrate donors and beneficiary countries interests in order to develop robust climate action strategies and financing portfolios. He counts with more than 12 years of experience working for the UNEP Climate Change Unit of the Latin America and the Caribbean Office and the Ministry of Environment of Argentina. He is the current leader of the Regional Hub for Blockchain at the Service of Nature.",
     "tracks": [
       "Opportunity & Global Impact"
     ],
@@ -5824,10 +5799,12 @@
     "avatar": "https://speak.devcon.org/media/avatars/C667F0DA-B7DF-469D-9247-BE2102FB7F80_yAADqci.jpeg",
     "description": "Abbey is a technologist, governance researcher, product strategist, and community developer/leader. She spends her time building decentralized technologies and growing open-source communities around them.\r\n\r\nSince 2019, she’s run all things community & governance at Radicle, building decentralized collaboration tools for developers. She is currently stewarding the projects transition to the DAO. Additionally, she sits on the Board of the Radicle Foundation and Optimism Foundation.",
     "tracks": [
-      "Developer Infrastructure"
+      "Developer Infrastructure",
+      "Governance & Coordination"
     ],
     "eventDays": [
-      1665532800000
+      1665532800000,
+      1665705600000
     ],
     "website": "digital alchemy.xyz",
     "twitter": "@abbey_titcomb"
@@ -6154,5 +6131,31 @@
     ],
     "twitter": "@FlynnCalcutt",
     "github": "@FlynnSC"
+  },
+  {
+    "id": "T9MUGF",
+    "name": "Fraser",
+    "avatar": "https://speak.devcon.org/media/avatars/6DB7F382-63EA-40DA-96BE-D294DC50F4E7_5DvKsJb.png",
+    "description": "building ZK rollups for games at the 0xPARC AW Residency",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ],
+    "twitter": "fraserd_eth",
+    "github": "fraserdscott"
+  },
+  {
+    "id": "FATTF3",
+    "name": "Omar Mezenner",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "Developer Infrastructure"
+    ],
+    "eventDays": [
+      1665705600000
+    ]
   }
 ]
