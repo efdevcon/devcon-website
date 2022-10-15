@@ -7,8 +7,8 @@ description: "(1) Multi-VM Support: AltLayer enables Ethereum with on-demand EVM
 (3) Ubiquitous Verification: To embrace decentralization, AltLayer runs multiple block producers/verifiers including commodity machines, browsers for users."
 youtubeUrl: "https://youtu.be/kpjnu198Btc"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a0330080a54f6d733ed81"
+ethernaPermalink: "https://etherna.io/embed/56a4ab2911eaa30f001a5d481c5730cf8fc9353ad0fb3a810c32c8001693d56b"
 duration: 519
 expertise: ""
 type: "Lightning Talk"

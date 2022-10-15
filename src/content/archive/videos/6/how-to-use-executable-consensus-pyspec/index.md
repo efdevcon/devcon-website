@@ -7,8 +7,8 @@ description: "Ethereum consensus pyspec (https://github.com/ethereum/consensus-s
 In this lightning talk, we will have a tutorial on how to run the Ethereum consensus pyspec. And bonus, learn how to write a test by yourself!"
 youtubeUrl: "https://youtu.be/ZDUfYJkTeYw"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a2f05c02259b06a2ffcfd"
+ethernaPermalink: "https://etherna.io/embed/2a147e985274f920484a80265d5625de37a4c7acf33ed3ff4aa9dc037ebea41c"
 duration: 493
 expertise: ""
 type: "Lightning Talk"

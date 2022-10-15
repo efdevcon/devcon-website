@@ -9,8 +9,8 @@ Solarpunk is our alternative to doomerism. … We just need a key that unlocks t
 Ethereum is Solarpunk - a key to coordinating humanity through it's coordination failures."
 youtubeUrl: "https://youtu.be/AF2B6SsjoDQ"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a1e2cc02259b06a2ffceb"
+ethernaPermalink: "https://etherna.io/embed/14f9075042af4839918b1f2cae6ada39a343c4832e23e978304ceebec5fa2199"
 duration: 480
 expertise: ""
 type: "Lightning Talk"

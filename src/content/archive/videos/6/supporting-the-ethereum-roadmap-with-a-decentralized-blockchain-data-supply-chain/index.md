@@ -9,8 +9,8 @@ Decentralizing the blockchain data supply chain is more important now than ever,
 Join us to learn about decentralizing this core part of the Web3 stack."
 youtubeUrl: "https://youtu.be/PTYqnHdsK9k"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a5a08080a54f6d733edc2"
+ethernaPermalink: "https://etherna.io/embed/ca3b7761cde4f699dd814616299e3d4fae7109dad451a0649113b03dcdc6570b"
 duration: 1641
 expertise: "Intermediate"
 type: "Talk"

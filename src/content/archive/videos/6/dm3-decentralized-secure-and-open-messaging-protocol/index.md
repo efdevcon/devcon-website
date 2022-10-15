@@ -6,8 +6,8 @@ description: "dm3 is a protocol enabling decentralized, open, and secure messagi
 dm3 comes with a reference implementation for a standalone web application, a widget, and a delivery service."
 youtubeUrl: "https://youtu.be/APDzKmjmrfU"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a15c0080a54f6d733ed91"
+ethernaPermalink: "https://etherna.io/embed/32e39393c682f7c9d3a1e6c8cc05cc68a0fe3df93a7a5f5659fd6f03eba28479"
 duration: 318
 expertise: ""
 type: "Lightning Talk"

@@ -9,8 +9,8 @@ description: "Bringing non-web3 native users into a dApp is always a fraught, fr
  - Pay for your user's transactions."
 youtubeUrl: "https://youtu.be/1pHDHhQ6Ip4"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a43f5080a54f6d733edb0"
+ethernaPermalink: "https://etherna.io/embed/9b7869b17b9224268018c11c5380d00649e6304e8c8a5731c33d4c08c60c868d"
 duration: 1729
 expertise: "Intermediate"
 type: "Talk"

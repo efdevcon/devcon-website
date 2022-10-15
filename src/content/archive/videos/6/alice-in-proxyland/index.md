@@ -9,8 +9,8 @@ She starts with a very naive approach, and quickly bumps into the fundamental pr
 As her system grows in complexity, her proxy architecture iterates and becomes more and more sophisticated, finally arriving to a very powerful, elegant and easy to use architecture: The Router Proxy."
 youtubeUrl: "https://youtu.be/UFAhRjnagmM"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a0290080a54f6d733ed7f"
+ethernaPermalink: "https://etherna.io/embed/5ebc926e22d8e50b136edea1e421fcd6ba2006c4dd5b13cff9585bc68f942f07"
 duration: 1881
 expertise: "Intermediate"
 type: "Talk"

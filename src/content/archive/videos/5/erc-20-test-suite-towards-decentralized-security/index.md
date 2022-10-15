@@ -7,8 +7,8 @@ SmartDec ERC20 Test Suite is open source: https://github.com/smartdec/testsuite
 Also, we have deployed our centralized instance of the tool here: http://testsuite.net/ropsten/"
 youtubeUrl: "https://youtu.be/oW63ghqQO_8"
 ipfsHash: "QmWG3ayrFzXqS2VNDwVg6bHzZCkHHBYfGDFGMVCYKM5Jw6"
-ethernaIndex: "https://etherna.io/embed/6347a56bc02259b06a2ffbdf"
-ethernaPermalink: "https://etherna.io/embed/409c7499363af7cf4db600bfc6cb82c071392d00d12f25c084af47633b173e78"
+ethernaIndex: "https://etherna.io/embed/634a7ff0080a54f6d733ede2"
+ethernaPermalink: "https://etherna.io/embed/8bface5e2071dae473cfba59ee96ca390e776846c3f7a868aa89858dbebfc0a7"
 duration: 1333
 expertise: "Intermediate"
 type: "Talk"

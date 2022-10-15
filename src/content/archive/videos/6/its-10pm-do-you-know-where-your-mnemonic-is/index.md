@@ -9,8 +9,8 @@ This panel provides a refresher for what stakers did, and why they did it.  It d
 Bringing together experts on validating key creation, protection and use, this is a wide-ranging discussion that will be useful for all stakers and potential stakers."
 youtubeUrl: "https://youtu.be/zf7HJT_DMFw"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a3702c02259b06a2ffd03"
+ethernaPermalink: "https://etherna.io/embed/55eb9ef78548d2d02a820244ebe1c479b63d11ac28a9fed7761e1197aed953e5"
 duration: 2991
 expertise: ""
 type: "Panel"
