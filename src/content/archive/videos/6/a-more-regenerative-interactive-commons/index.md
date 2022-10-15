@@ -7,11 +7,11 @@ description: "\"The concept of the commons is not that of a resource; a commons 
 At KERNEL, we've spent 2 years establishing customs which embody regenerative ways of living, both internally and in web3 projects. 
 
 We'd welcome sharing KERNEL customs in an interactive workshop, where we get to know each other & our commons through 4 words: trust, value, freedom, and giving."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/u2c_W6FvG1Y"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1031
 expertise: ""
 type: "Workshop"
 track: "Governance & Coordination"

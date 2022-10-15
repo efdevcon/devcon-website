@@ -3,11 +3,11 @@ edition: 6
 sourceId: "RAPTXZ"
 title: "ELI5: Cryptoeconomics"
 description: "."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/gMiykGwPDSI"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1758
 expertise: "Beginner"
 type: "Workshop"
 track: "Developer Infrastructure"

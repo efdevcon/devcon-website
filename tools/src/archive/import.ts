@@ -9,6 +9,8 @@ const slugify = require('slugify')
 const fs = require('fs');
 require('dotenv').config()
 
+const apiKey = process.env.GOOGLE_API_KEY
+
 // for profile generation - need to update the async/duration call
 const fetchProfiles = false
 const writeToDisk = true
@@ -53,7 +55,7 @@ async function ImportArchiveVideos() {
 
   await GSheetReader(
     {
-      apiKey: process.env.GOOGLE_API_KEY,
+      apiKey: apiKey,
       sheetId: sheet,
       sheetName: sheetName,
     },
@@ -165,8 +167,8 @@ Devcon is organized and presented by the Ethereum Foundation, with the support o
 }
 
 export async function getVideoDuration(id: string): Promise<number> { 
-  const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&part=contentDetails&key=${process.env.YOUTUBE_API_KEY}`);
-  const body = await response.json();
+  const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&part=contentDetails&key=${apiKey}`)
+  const body = await response.json()
   const duration = body?.items?.length > 0 ? body.items[0].contentDetails.duration : 0
   return moment.duration(duration).asSeconds();
 }

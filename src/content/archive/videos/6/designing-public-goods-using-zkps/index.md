@@ -7,7 +7,7 @@ youtubeUrl: "https://youtu.be/qWcU2saOlw4"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1477
 expertise: "Beginner"
 type: "Talk"
 track: "ZKPs: Privacy, Identity, Infrastructure, & More"

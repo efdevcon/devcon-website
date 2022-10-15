@@ -1,7 +1,7 @@
 ---
+id: "JPT3FG"
 name: "Kevin Owocki"
-role: "Working Group Member"
-description: "Kevin Owocki is the founder of Gitcoin.co -- An Ethereum-based network for growing open source software with incentivization mechanics.  He has a BS in Computer Science, 10 years of engineering leadership experience in startups and Open Source Software, and is a community organizer in the Boulder Colorado Tech Scene.Kevin believes strongly that the future of work is unbundled; the future of knowledge work will be driven by decentralization, community, and emergent collaboration.  Gitcoin a one-stop shop that gives Software Developers the skills &amp; connections to survive and thrive in this new blockchain ecosystem."
-organization: "Gitcoin.co"
-country: "Colombia"
+description: "Kevin Owocki is the founder of Gitcoin.co — Where builders & funders come together to build the open web.  Gitcoin has delivered $60mm worth of value to OSS devs in the last several years. He has a BS in Computer Science, 15 years of engineering leadership experience in Open Source Software and Web Startups. Kevin is a community organizer in the Boulder Colorado Tech Scene."
+twitter: "owocki"
+avatar: "http://speak.devcon.org/media/avatars/zpLPRpbS_400x400_o9leGA6.jpg"
 ---

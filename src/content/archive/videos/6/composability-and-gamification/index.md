@@ -5,11 +5,11 @@ title: "Composability and Gamification"
 description: "Web3 tech provides features that have been practically unexplored by game designers. Games use DeFi mechanics, or self-custody and P2P marketplace mechanics, but few have used composability to create new game experiences for incentivization.
 
 This presentation by PhD in gaming Andy Boyan will explore how composable Web3 standards enable a revolution in gaming far beyond ownership and collection, featuring Infinity Keys, an achievements game built on composable assets across Web3."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/GH_lm3grWDY"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 586
 expertise: ""
 type: "Lightning Talk"
 track: "Governance & Coordination"

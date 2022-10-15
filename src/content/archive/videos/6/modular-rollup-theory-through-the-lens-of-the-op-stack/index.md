@@ -7,11 +7,11 @@ description: "We've got 25 minutes to go as deep as we can possibly go into the 
 Cmon, where do you think we are, 2019? It's 2022 y'all, and rollups are getting really, really cool.
 
 This talk will cover a lot of technical detail in a short amount of time, so come prepared and chug a lot of coffee beforehand."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/jnVjhp41pcc"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1651
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Infrastructure"

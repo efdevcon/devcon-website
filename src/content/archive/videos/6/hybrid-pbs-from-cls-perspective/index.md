@@ -9,11 +9,11 @@ description: "The talk seeks to address the following questions:
 - What do they look like in code?
 - What are the gotchas and the trade-offs?
 - What are the remaining questions we shall seek before moving to full PBS?"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/mXGA-u-sH_w"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1824
 expertise: "Beginner"
 type: "Talk"
 track: "Layer 1 Protocol"

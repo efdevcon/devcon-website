@@ -1,7 +1,9 @@
 ---
+id: "LJRUBS"
 name: "Santiago Palladino"
-role: ""
-description: "Santiago has been working as a professional software developer since 2005, working extensively in web applications for the past 10 years, and focusing in Ethereum since 2017. He is part of the Zeppelin team, which focuses on security and building open source infrastructure for Ethereum devs, and he is currently working on smart contract upgradeability tools.He has an MSc in Computer Science from University of Buenos Aires, where he also worked as a teacher for 7 years."
-organization: "Zeppelin"
-country: "Argentina"
+description: "Santiago joined the Ethereum dev space in 2017. He has worked as Director of Development and Security Reseacher at OpenZeppelin, has contributed to multiple open source projects, and wrote the book \"Ethereum for Web Developers\". He's also a councilmember for TheGraph. 
+
+Prior to web3, he worked for over 10 years on software development, focusing on disease surveillance and disaster response. He was also a TA at University of Buenos Aires, where he got his Masters in Computer Science."
+twitter: "https://twitter.com/smpalladino"
+avatar: "http://speak.devcon.org/media/avatars/spalladino-elysium_CPqFm27.jpg"
 ---

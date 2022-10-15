@@ -7,11 +7,11 @@ description: "Bringing non-web3 native users into a dApp is always a fraught, fr
  - Embed a wallet directly in your dApp, and allow users to eject by swapping its public key.
  - Bundle multiple transactions into one and submit to an aggregator to lower friction & save on gas.
  - Pay for your user's transactions."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/1pHDHhQ6Ip4"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1729
 expertise: "Intermediate"
 type: "Talk"
 track: "Layer 2s"

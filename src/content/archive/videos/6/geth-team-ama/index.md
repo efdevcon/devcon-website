@@ -3,11 +3,11 @@ edition: 6
 sourceId: "7JJFFH"
 title: "Geth Team AMA"
 description: "."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/yNxbIb3d4KY"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 3296
 expertise: "Beginner"
 type: "Talk"
 track: "Developer Infrastructure"

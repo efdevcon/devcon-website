@@ -7,11 +7,11 @@ description: "The original Ethereum vision was for users to run full or light cl
 Decentralizing the blockchain data supply chain is more important now than ever, as it supports key parts of the Ethereum roadmap, such as Stateless Clients and “The Purge”, which unlock major gains in security, scalability, and decentralization.
 
 Join us to learn about decentralizing this core part of the Web3 stack."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/PTYqnHdsK9k"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1641
 expertise: "Intermediate"
 type: "Talk"
 track: "Developer Infrastructure"

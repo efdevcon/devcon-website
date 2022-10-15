@@ -1,7 +1,7 @@
 ---
+id: "HYVQ8L"
 name: "Paweł Bylica"
-role: "Team member"
-description: "Paweł is a contributing member of the Ewasm team, focused on Hera and EVMC, and also a member of the cpp-ethereum team, focused on the aleth client."
-organization: "EF/Ewasm"
-country: "Poland"
+description: "Working on EVM in Ipsilon team (Ethereum Foundation)"
+twitter: "chfast"
+avatar: "http://speak.devcon.org/media/avatars/Pawe%C5%82_Bylica_600x600_zGLQgDH.jpg"
 ---

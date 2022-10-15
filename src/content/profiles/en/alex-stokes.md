@@ -1,8 +1,7 @@
 ---
+id: "HKSRQB"
 name: "Alex Stokes"
-role: "Founder"
-description: "Alex Stokes (@ralexstokes on all the things) is a cryptoeconomist who has been studying blockchains since 2011 while at Princeton University. He thinks that governance is the biggest challenge blocking the widespread adoption of these systems and spends his time leading the discourse on how we can best collectively use the \"decentralized commons\". He gives frequent talks on the subject to help spur the conversation with recent engagements at DISCON 2018 and RChain's Devcon RCon3.
-Outside of his work on governance, Alex is an active open source contributor to projects like Casper and Vyper. He believes that token markets and AI ethics have more in common than it may at first appear ;)"
-organization: "Polaris"
-country: "United States"
+description: "Alex Stokes is a researcher at the Ethereum Foundation who believes deeply in the Ethereum vision. To achieve this vision, he has been working on scaling R&D to make the core protocol more secure and accessible to everyone. This includes tooling and testing work for the Merge, exploratory prototyping for sharding work like EIP-4844 and EIP-4895 to enable validator withdrawals after the Merge. When he is not working on Ethereum, you can find him at the nearest mountaintop."
+twitter: "ralexstokes"
+avatar: "http://speak.devcon.org/media/avatars/IMG_4885-small_C9i5SDl.jpg"
 ---

@@ -1,7 +1,7 @@
 ---
+id: "NRUCXB"
 name: "Taylor Monahan"
-role: "Founder + CEO"
-description: "Taylor is the founder and CEO of MyCrypto. Previously she founded MyEtherWallet. She is dedicated to making the Ethereum ecosystem safer and easier to access for everyone."
-organization: "MyCrypto"
-country: "United States"
+description: "Building MetaMask."
+twitter: "tayvano_"
+avatar: "http://speak.devcon.org/media/avatars/TAY_20210819_221431_Q784YHj.jpg"
 ---

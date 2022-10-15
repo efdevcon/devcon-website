@@ -11,7 +11,7 @@ youtubeUrl: "https://youtu.be/gOiHwmL0VUg"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1138
 expertise: "Beginner"
 type: "Talk"
 track: "UX & Design"

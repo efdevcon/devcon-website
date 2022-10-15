@@ -9,11 +9,11 @@ description: "Ethereum currently have a limit of 24KB for a contract size which 
 * Static precompiled router proxy 
 * Dynamic router
 I will also provide gas optimization tricks for above methods and a novel method to reduce a gas cost for unlimited size contracts."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/XA19iX2J_4g"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1886
 expertise: ""
 type: "Workshop"
 track: "Developer Infrastructure"

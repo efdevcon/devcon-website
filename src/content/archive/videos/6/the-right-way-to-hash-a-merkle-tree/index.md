@@ -9,11 +9,11 @@ description: "We shill an assembly SHA256 library that is optimized to compute t
 Initial benchmarks show up to 1200% improvement on hashing of large lists on AVX512. 
 
 A GoAssembly version is used by prysm."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/NfK4np15E64"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1426
 expertise: "Advanced"
 type: "Talk"
 track: "Developer Infrastructure"
