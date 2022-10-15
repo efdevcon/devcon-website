@@ -5,11 +5,11 @@ title: "How to Design DVT While Ensuring Non-Correlation"
 description: "The proof of stake Ethereum specs are designed to encourage decentralization by punishing centralization. 
 
 In this session, we will discuss how to design Distributed Validator Technology in a way that minimizes correlation risk by using design choices across distributed key generation, middleware, networking topology, and versioning. We'll also describe why creating a trust-minimized, non-custodial, and non-correlated architecture is the most healthy way to enable multi-operator staking."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/ZbTerJXs23E"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1386
 expertise: "Intermediate"
 type: "Talk"
 track: "Staking & Validator Experience"

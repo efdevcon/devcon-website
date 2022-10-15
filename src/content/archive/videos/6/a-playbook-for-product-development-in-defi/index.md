@@ -9,11 +9,11 @@ description: "I’ll cover frameworks and useful tools to help emerging DeFi pro
 3. conduct 'what if' analyses – using simulation-based modeling to optimize incentives
 4. use a data-driven approach to understand product market fit – tracking the right on/off-chain metrics to identify growth levers
 5. understand common web3 nuances that can impact UX"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/fBg8S2x0YmM"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 740
 expertise: ""
 type: "Lightning Talk"
 track: "UX & Design"
