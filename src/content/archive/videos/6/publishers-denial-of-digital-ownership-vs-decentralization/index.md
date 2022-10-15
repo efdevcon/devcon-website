@@ -2,7 +2,7 @@
 edition: 6
 sourceId: "HFPLPD"
 title: "Publisher’s Denial of Digital Ownership vs Decentralization"
-description: "Brewster Kahle"
+description: "Brewster is a Digital Librarian @ the Internet Archive, a non-profit digital library offering millions of free books, movies, & audio files."
 youtubeUrl: "https://youtu.be/-AEnRzzFpBE"
 imageUrl: /assets/uploads/videos/brewster-kahle.png
 ipfsHash: ""
