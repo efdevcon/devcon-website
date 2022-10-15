@@ -5,6 +5,7 @@ import ChevronUp from 'assets/icons/chevron-up.svg'
 
 interface SectionProps {
   title?: string
+  id?: string
   children?: any
   className?: string
   open?: boolean
@@ -15,6 +16,7 @@ interface SectionProps {
 
 interface CollapsedSectionHeaderProps {
   title?: string
+  id?: string
   children?: any
   className?: string
   open?: boolean
@@ -31,7 +33,7 @@ const CollapsedSectionHeader = (props: CollapsedSectionHeaderProps) => {
   if (props.open /*props.styleOpened*/) className += ` ${css['open']}`
 
   return (
-    <div className={className} onClick={() => (props.setOpen ? props.setOpen(!props.open) : '')}>
+    <div id={props.id} className={className} onClick={() => (props.setOpen ? props.setOpen(!props.open) : '')}>
       {/* Optional default title to help with consistency */}
       {props.title && <p className={css['title']}>{props.title}</p>}
       {props.children}
@@ -127,7 +129,7 @@ export function CollapsedSection(props: SectionProps) {
   if (props.sticky) className += ` ${css['sticky']}`
 
   return (
-    <div className={className}>
+    <div className={className} id={props.id}>
       {React.Children.map(props.children, child => {
         if (child && child.type.displayName === 'CollapsedSectionHeader')
           return React.cloneElement(child, {

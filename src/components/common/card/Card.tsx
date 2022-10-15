@@ -85,13 +85,19 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
   const image = (() => {
     if (!props.imageUrl) return null
 
+    const isGif = props.imageUrl.src.endsWith('.gif')
+
     const isOptimized = typeof props.imageUrl !== 'string'
 
     if (isOptimized) {
       return (
         <div className="aspect">
           <div className={css['img-wrapper']}>
-            <Image className={css['img']} src={props.imageUrl} alt={props.title} />
+            {isGif ? (
+              <img src={props.imageUrl.src} alt={props.title} />
+            ) : (
+              <Image className={css['img']} src={props.imageUrl} alt={props.title} />
+            )}
           </div>
         </div>
       )
@@ -100,13 +106,17 @@ export const Card = React.forwardRef((props: CardProps, ref: any) => {
     return (
       <div className="aspect">
         <div className={css['img-wrapper']}>
-          <Image
-            alt={props.title}
-            className={`${css['img']} ${css['not-gatsby']}`}
-            src={props.imageUrl}
-            objectFit="cover"
-            layout="fill"
-          />
+          {isGif ? (
+            <img src={props.imageUrl.src} alt={props.title} />
+          ) : (
+            <Image
+              alt={props.title}
+              className={`${css['img']} ${css['not-gatsby']}`}
+              src={props.imageUrl}
+              objectFit="cover"
+              layout="fill"
+            />
+          )}
         </div>
       </div>
     )

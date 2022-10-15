@@ -11,6 +11,7 @@ import HighlightHackerBasement from 'assets/images/highlight-hacker-basement.png
 import HighlightCommunityHubs from 'assets/images/highlight-hub.png'
 import HighlightDeva from 'assets/images/highlight-deva.png'
 import HighlightManual from 'assets/images/manual-highlight.png'
+import HighlightCoworking from 'assets/images/highlight-coworking.png'
 import HighlightDevaAwards from 'assets/images/highlight-deva-awards.png'
 import HighlightNFT from 'assets/images/nft.gif'
 import { Card } from 'components/common/card'
@@ -22,10 +23,16 @@ import moment from 'moment'
 
 const galleryEvents = [
   {
+    title: 'Agora Coworking Sat 15/Sun 16 9-6PM',
+    description:
+      'Devcon might be over, but doesn’t mean you can’t make the most out of your time in Bogota. Be sure to make use of the co-working space all weekend at Agora after Devcon.',
+    // url: '/info#coworking',
+    image: HighlightCoworking,
+  },
+  {
     title: 'Devcon Souvenir NFT',
     description:
       'Mint your official Devcon souvenir on Arbitrum, Polygon, & Optimism Today! Mainnet minting goes live on Friday!',
-    // TODO: Update URL
     url: 'https://devcon-vi.attest.tickets/nfts',
     image: HighlightNFT,
   },
@@ -33,7 +40,6 @@ const galleryEvents = [
     title: 'Go Carbon Neutral at Devcon 🌳🌲  [POAP inside] 🦄 🏅',
     description:
       'Help make Devcon VI climate neutral and get a beautiful Deva POAP with the Climate Friendly Devcon VI Dapp. The Dapp enables you to compensate your air travel and event carbon emissions entirely on-chain.',
-    // TODO: Update URL
     url: 'https://devcon.discarbon.earth/index.html',
     image: HighlightDeva,
   },
@@ -41,8 +47,7 @@ const galleryEvents = [
     title: 'Deva Awards',
     description:
       'Come join the closing ceremonies and celebration of community and light hearted look back at achievement in the ecoystem when it comes to adoption and progress.',
-    // TODO: Update URL
-    url: 'https://app.devcon.org/schedule/r9qrvk',
+    url: 'https://app.devcon.org/schedule/R9QRVK',
     image: HighlightDevaAwards,
   },
   {
@@ -56,26 +61,16 @@ const galleryEvents = [
     title: 'Community Hubs',
     description:
       'Want to engage and learn about the core communities that make Ethereum and Devcon the truly special place that it is? Be sure to find the community hubs on Floor 1.',
-    // TODO: Update URL
-    url: 'https://devcon.org/continuous-devcon#hubs',
+    url: 'info#community-hubs',
     image: HighlightCommunityHubs,
   },
   {
     title: 'CHIVAS Sound Stage',
     description:
       'Brought an instrument, or just musically inclined? come jam with the community at the traditional CHIVAS sound stage.',
-    // TODO: Update URL
     url: 'https://devcon.org/continuous-devcon',
     image: HighlightChivas,
   },
-
-  // {
-  //   title: 'Side Events',
-  //   description: 'Check out Side Events happening in Bogotá!',
-  //   // TODO: Update URL
-  //   url: '/side-events',
-  //   image: HighlightChivas,
-  // },
 ]
 
 export const Dashboard = (props: any) => {

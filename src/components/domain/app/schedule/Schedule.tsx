@@ -599,6 +599,7 @@ export const Schedule = (props: any) => {
                           }}
                           options={props.rooms
                             .filter((i: Room) => i.capacity && i.capacity > 0)
+                            .sort((a: Room, b: Room) => ((a.capacity || 0) > (b.capacity || 0) ? -1 : 1))
                             .map((i: Room) => {
                               return {
                                 text: i.name,

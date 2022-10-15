@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } from 'components/common/collapsed-section'
 import css from './info.module.scss'
 import { AppNav } from 'components/domain/app/navigation'
@@ -21,9 +21,8 @@ type InfoProps = {
 export const Info = (props: InfoProps) => {
   const router = useRouter()
   const [openFaq, setOpenFaq] = React.useState({} as { [key: string]: boolean })
-  const [openTabs, setOpenTabs] = React.useState<any>(
-    router.asPath.split('#')[1] ? { [router.asPath.split('#')[1]]: true } : {}
-  )
+  const anchor = router.asPath.split('#')[1]
+  const [openTabs, setOpenTabs] = React.useState<any>(anchor ? { [anchor]: true } : {})
   const [search, setSearch] = useState('')
   const cityGuideSections = { ...props.sections }
   delete cityGuideSections['is-bogota-safe']
@@ -35,12 +34,12 @@ export const Info = (props: InfoProps) => {
 
   const filteredFaq = search
     ? props.faqs.filter(category => {
-      if (category.title.toLowerCase().includes(search.toLowerCase())) return true
+        if (category.title.toLowerCase().includes(search.toLowerCase())) return true
 
-      return category.questions.some(
-        q => q.title.toLowerCase().includes(search) || q.body.toLowerCase().includes(search)
-      )
-    })
+        return category.questions.some(
+          q => q.title.toLowerCase().includes(search) || q.body.toLowerCase().includes(search)
+        )
+      })
     : props.faqs
 
   function onSearch(nextVal: any) {
@@ -146,9 +145,12 @@ export const Info = (props: InfoProps) => {
 
         {Object.keys(props.sections).map(i => {
           const section = props.sections[i]
-          if (section.body || (section.data.left || section.data.right)) {
+
+          if (section.body || section.data.left || section.data.right) {
             return (
-              <CollapsedSection key={i}
+              <CollapsedSection
+                id={section.id}
+                key={i}
                 open={openTabs[i]}
                 setOpen={() => {
                   const isOpen = openTabs[i]
@@ -163,7 +165,8 @@ export const Info = (props: InfoProps) => {
                   }
 
                   setOpenTabs(nextOpenState)
-                }}>
+                }}
+              >
                 <CollapsedSectionHeader styleOpened>
                   <p className="app-header">{section.title}</p>
                 </CollapsedSectionHeader>
