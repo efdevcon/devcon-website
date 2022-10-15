@@ -12,8 +12,8 @@ Jordan Sutcliffe (Stakewise)
 Ariel Zimroni (SSV Network)"
 youtubeUrl: "https://youtu.be/Exh-hQOV8kE"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a4d39c02259b06a2ffd13"
+ethernaPermalink: "https://etherna.io/embed/ad8496eda794da44c27917d20d1e4d02bc8cc83bb65c661fab8049af110edf77"
 duration: 694
 expertise: ""
 type: "Panel"

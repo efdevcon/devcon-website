@@ -9,8 +9,8 @@ Cmon, where do you think we are, 2019? It's 2022 y'all, and rollups are getting 
 This talk will cover a lot of technical detail in a short amount of time, so come prepared and chug a lot of coffee beforehand."
 youtubeUrl: "https://youtu.be/jnVjhp41pcc"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a3be9c02259b06a2ffd09"
+ethernaPermalink: "https://etherna.io/embed/a94df45037d0c450e172ef5e0d217d17150805aae4b5e8c18d146640fb801d42"
 duration: 1651
 expertise: "Intermediate"
 type: "Talk"

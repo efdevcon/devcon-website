@@ -9,8 +9,8 @@ At KERNEL, we've spent 2 years establishing customs which embody regenerative wa
 We'd welcome sharing KERNEL customs in an interactive workshop, where we get to know each other & our commons through 4 words: trust, value, freedom, and giving."
 youtubeUrl: "https://youtu.be/u2c_W6FvG1Y"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/6349fe3ec02259b06a2ffcd1"
+ethernaPermalink: "https://etherna.io/embed/03e04f5584a9caea089902113705f931ace40d6bc28b00a87c11076f907bc0f0"
 duration: 1031
 expertise: ""
 type: "Workshop"

@@ -11,8 +11,8 @@ description: "The talk seeks to address the following questions:
 - What are the remaining questions we shall seek before moving to full PBS?"
 youtubeUrl: "https://youtu.be/mXGA-u-sH_w"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a3157080a54f6d733eda3"
+ethernaPermalink: "https://etherna.io/embed/9fd39e686450afeac3b8452348d32f183ddfa3d1483886f4bbca85f809353d83"
 duration: 1824
 expertise: "Beginner"
 type: "Talk"

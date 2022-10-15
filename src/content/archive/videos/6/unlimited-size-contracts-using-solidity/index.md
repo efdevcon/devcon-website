@@ -11,8 +11,8 @@ description: "Ethereum currently have a limit of 24KB for a contract size which 
 I will also provide gas optimization tricks for above methods and a novel method to reduce a gas cost for unlimited size contracts."
 youtubeUrl: "https://youtu.be/XA19iX2J_4g"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a6ce7080a54f6d733edd2"
+ethernaPermalink: "https://etherna.io/embed/3c34a6d0ed38e877005a5d07ed97479961abf88c5e54243203eb1503bad8632c"
 duration: 1886
 expertise: ""
 type: "Workshop"

@@ -7,8 +7,8 @@ description: "Nosy Neighbor was developed as a breadth-first fuzzing tool for th
 Come learn about Nosy's novel approach to go-fuzzing and the issues it has uncovered!"
 youtubeUrl: "https://youtu.be/GrppANUs8zM"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a427dc02259b06a2ffd0b"
+ethernaPermalink: "https://etherna.io/embed/2be4cbd8811fe9b07c81d338e8227198ae1df5b919dee3c4c687139e1a91673b"
 duration: 1685
 expertise: "Intermediate"
 type: "Talk"

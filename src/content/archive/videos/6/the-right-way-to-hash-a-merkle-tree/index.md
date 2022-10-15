@@ -11,8 +11,8 @@ Initial benchmarks show up to 1200% improvement on hashing of large lists on AVX
 A GoAssembly version is used by prysm."
 youtubeUrl: "https://youtu.be/NfK4np15E64"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634a617ac02259b06a2ffd29"
+ethernaPermalink: "https://etherna.io/embed/e7a4f15561bbdcdb2c0071b4554ac895f0e88df53e3775bf08f08b44ff8e2a26"
 duration: 1426
 expertise: "Advanced"
 type: "Talk"

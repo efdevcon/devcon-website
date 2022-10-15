@@ -9,8 +9,8 @@ The future of a better web3 UX will rely heavily on a paradigm shift. The necess
 So are you ready to embrace the change?"
 youtubeUrl: "https://youtu.be/gOiHwmL0VUg"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/6349a309080a54f6d733ed65"
+ethernaPermalink: "https://etherna.io/embed/07d83f52dc965b3c16b1f958d7cb5363a55b622a79ee5feb410c5212914c6b97"
 duration: 1138
 expertise: "Beginner"
 type: "Talk"
