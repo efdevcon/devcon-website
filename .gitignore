@@ -104,3 +104,7 @@ yarn-error.log*
 
 # Sentry
 .sentryclirc
+
+
+**/keys.json
+**/data/

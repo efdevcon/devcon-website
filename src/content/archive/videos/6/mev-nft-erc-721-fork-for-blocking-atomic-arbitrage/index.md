@@ -8,11 +8,11 @@ MEV (miner extractable value) is an issue that often times disbenefits the small
 Let's illuminate the dark forest.
 
 In the talk we present a novel way to analyse and detect NFT arbitrage for more transparency. With that research we design a ERC-721 token that blocks malicious bots and could benefit consumers."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/eAeCGoI_z54"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 439
 expertise: ""
 type: "Lightning Talk"
 track: "Cryptoeconomics"

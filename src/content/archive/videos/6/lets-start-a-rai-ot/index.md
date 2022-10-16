@@ -7,11 +7,11 @@ description: "Launched Feb 2020, RAI—a fork of DAI—is an ETH backed stable-i
 If you’ve ever looked at a central bank and thought about replacing it with a computer, this talk is for you!
 
 Come listen to the RAI story so far, what we’ve learned, where we’re going, and why we think the RAI model of controlled, floating exchange rates are going to be the future of DeFi and beyond."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/4QIl_9mojow"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1706
 expertise: "Intermediate"
 type: "Talk"
 track: "Opportunity & Global Impact"
