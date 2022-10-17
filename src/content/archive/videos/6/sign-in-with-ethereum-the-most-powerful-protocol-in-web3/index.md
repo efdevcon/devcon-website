@@ -6,8 +6,8 @@ description: "Sign in with Ethereum is an almost accidental byproduct of #Web3, 
 Join Lang Cui (Struck Capital), Nick Johnson (ENS) Justina Petraitytė (3boxx) & Shiv Malik (Pool Data)"
 youtubeUrl: "https://youtu.be/y4Q7Y_8wjAs"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634cbd59080a54f6d733ee1d"
+ethernaPermalink: "https://etherna.io/embed/07f9a70f0db38d8d719cbffe7c617169e5b025424fa7afae82dc7657fb3fb952"
 duration: 3076
 expertise: ""
 type: "Panel"

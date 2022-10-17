@@ -9,8 +9,8 @@ This can come in the form of Yield Tokenization (e.g. Swivel, Element), blockspa
 With composable infrastructure on the capital markets layer, we can create interesting instruments such as combined staking+lending+options products, and derivative stablecoins."
 youtubeUrl: "https://youtu.be/EU_-HOLAO00"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634c2641c02259b06a2ffd54"
+ethernaPermalink: "https://etherna.io/embed/aa6d6e7ba3ef9a0a576c1e50d9bc9d281f727b159331ebfb7c5ce077666f6a92"
 duration: 1054
 expertise: "Intermediate"
 type: "Talk"

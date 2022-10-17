@@ -12,8 +12,8 @@ What commercial use-cases emerge?
 What other parts of Ethereum does AA touch?"
 youtubeUrl: "https://youtu.be/WsZBymiyT-8"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634c9a5b080a54f6d733ee05"
+ethernaPermalink: "https://etherna.io/embed/967046774ef0a17a14c9bfbe24131096f485e23ad9b4bb03f3a7653390ff78b8"
 duration: 3981
 expertise: "Beginner"
 type: "Panel"

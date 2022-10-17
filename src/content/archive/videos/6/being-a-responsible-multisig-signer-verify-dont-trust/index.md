@@ -7,8 +7,8 @@ description: "So you have been trusted with safeguarding a project along with ot
 In this talk we'll go over what you can do to verify what a transaction will actually do, and what tools you have at your disposal for this. No coding required!"
 youtubeUrl: "https://youtu.be/YKGNcQXtMhg"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634c2918080a54f6d733edf7"
+ethernaPermalink: "https://etherna.io/embed/ad62630a1f4e041b78f77e55decd341b3dbd5f892362423c056076a53d059e15"
 duration: 483
 expertise: ""
 type: "Lightning Talk"

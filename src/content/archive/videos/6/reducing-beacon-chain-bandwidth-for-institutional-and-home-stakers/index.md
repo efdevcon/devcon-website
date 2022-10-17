@@ -6,8 +6,8 @@ description: "This talk gives an overview of the networking infrastructure of be
 In particular, we will discuss the network requirements of gossipsub, how long-lived subnets can be the cause and a potential solution to high bandwidth usage as well as preliminary results from experiments with an experimental extension to the gossipsub protocol, episub."
 youtubeUrl: "https://youtu.be/u8JJh-E-VMg"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634cbb25c02259b06a2ffd76"
+ethernaPermalink: "https://etherna.io/embed/6198a02c6d733cebe5eb7c614653a8a10a7bba95950653723adc7fd6599c4e9c"
 duration: 2142
 expertise: "Intermediate"
 type: "Talk"
