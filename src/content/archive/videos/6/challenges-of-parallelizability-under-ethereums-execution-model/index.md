@@ -7,8 +7,8 @@ description: "We highlight two challenges of parallel execution on Ethereum: 1. 
 Note that this work was accepted for and presented at ICSE'22 (https://bit.ly/3HzPKZT)"
 youtubeUrl: "https://youtu.be/QaLUNUJLhNg"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634c2d87080a54f6d733edfd"
+ethernaPermalink: "https://etherna.io/embed/057b01a2e2e3d1031a7367a3706b63dd5ae82b59cf79204cf96dfcf8970da2e7"
 duration: 474
 expertise: ""
 type: "Lightning Talk"

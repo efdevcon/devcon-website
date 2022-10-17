@@ -7,8 +7,8 @@ description: "We often rely too much on our instincts about how our product work
 I've worked many years in many web3 projects, from the Ethereum Foundation Wallet, to ENS and specially a full year at the Defi protocol Balancer as a User Researcher. I would love to share what I've learned."
 youtubeUrl: "https://youtu.be/WjJJcL5wTUg"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634cac1dc02259b06a2ffd6a"
+ethernaPermalink: "https://etherna.io/embed/238a3b2f256ad207daf4e212b112c0b5e1b7698caa241d5ecc6867aa587bc3d6"
 duration: 1671
 expertise: "Intermediate"
 type: "Talk"

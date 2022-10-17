@@ -7,8 +7,8 @@ description: "Ethereum needs to overcome many gaps in representation across cult
 Panelists include Geoffrey See, Mary Davies, and Mihajlo Atanackovic with Chuy Cepeda as moderator."
 youtubeUrl: "https://youtu.be/znkAg3fVDJ4"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634c9d65c02259b06a2ffd66"
+ethernaPermalink: "https://etherna.io/embed/d9183105bf25405257dea483c5ba9a5884bbf33330e5d133a5dac9eee994ee8a"
 duration: 2894
 expertise: ""
 type: "Panel"
