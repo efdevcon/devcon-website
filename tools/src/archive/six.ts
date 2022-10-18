@@ -12,8 +12,8 @@ require('dotenv').config()
 
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
-const sheetIndex = 5
-const writeToArchive = true
+const sheetIndex = 3
+const writeToArchive = false
 const writeToYoutube = true
 
 const scopes = [
@@ -125,13 +125,12 @@ async function ImportRos() {
 
     for (let i = 0; i < sessions.length; i++) {
         const info = data[i]
-        console.log(i)
         if (!info || !info[0] || !info[7]) {
-            console.log('No sessionId/YouTube', info)
+            console.log(i, 'No sessionId/YouTube', info)
             continue // skip
         }
 
-        const sessionId = info[0]
+        const sessionId = info[0] // sessionId column (A)
         console.log(i, 'Processing session', sessionId)
         const session = sessions.find((i: any) => sessionId === i.id)
         if (!session) {
@@ -139,7 +138,7 @@ async function ImportRos() {
             continue // skip
         }
 
-        const youtubeUrl = info[7]
+        const youtubeUrl = info[7] // youtubeUrl column (H)
         const youtubeId = getVideoId(youtubeUrl)
 
         if (writeToArchive) {
@@ -225,8 +224,8 @@ function mapArchiveVideo(session: any): ArchiveVideo {
 }
 
 function getSessionDescription(session: any) {
-    return `Visit the https://archive.devcon.org/ to gain access to the entire library of Devcon talks with the ease of filtering, playlists, personalized suggestions, decentralized access on IPFS and more.
-https://archive.devcon.org/archive/watch/6/${slugify(session.title.toLowerCase(), { strict: true })}/index
+    return `Visit the https://archive.devcon.org/ to gain access to the entire library of Devcon talks with the ease of filtering, playlists, personalized suggestions, decentralized access on Swarm, IPFS and more.
+https://archive.devcon.org/archive/watch/6/${slugify(session.title.toLowerCase(), { strict: true })}/
 
 ${session.description}
 
