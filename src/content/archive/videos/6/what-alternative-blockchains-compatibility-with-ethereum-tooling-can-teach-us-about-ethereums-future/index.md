@@ -3,11 +3,11 @@ edition: 6
 sourceId: "CZRWES"
 title: "What Alternative Blockchains Compatibility with Ethereum Tooling Can Teach Us About Ethereum's Future"
 description: "In this talk the various techniques that some L1s and L2s use to provide EVM and RPC compatibility with end user and developer tooling will be examined. Special attention will be paid to features (address aliasing and expansion, RPC handing of system contracts, account abstraction) of other blockchains that Ethereum developers have discussed with an eye towards the compatibility issues they introduce."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/KqE9HN4QGpM"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1224
 expertise: "Advanced"
 type: "Talk"
 track: "Layer 1 Protocol"

@@ -13,11 +13,11 @@ But this talk isn't on scaling. It's about...
 ...the present: what we're doing to take this seriously & how it impacts our governance designs.
 
 ...the future: the path towards summoning Ether's Phoenix."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/KLk900l9P1E"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1653
 expertise: "Intermediate"
 type: "Talk"
 track: "Governance & Coordination"

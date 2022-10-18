@@ -8,11 +8,11 @@ description: "Leverage the decentralized IPFS network to scale content storage m
 - Ownership validation based on Ethereum blockchain
 - Strength the network and decentralization by fostering the community to contribute with nodes 
 - Remove the complexity to manually implement content synchronization on the network"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/ZW84OsSQBZI"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 474
 expertise: "Intermediate"
 type: "Lightning Talk"
 track: "Developer Infrastructure"
