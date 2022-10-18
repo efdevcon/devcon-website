@@ -9,11 +9,11 @@ description: "Learn how to use blockchain analytics to identify and protect your
  - Typologies of the latest rugs, hacks, and scams
  - Tracing where funds from a latest rug/hack/scam have gone
  - How to protect yourself as a dev"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/zXlvqJQjE7I"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1661
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"
