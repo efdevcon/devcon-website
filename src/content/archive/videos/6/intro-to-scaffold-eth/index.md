@@ -7,8 +7,8 @@ description: "Join Kevin Jones for a workshop on Scaffold-ETH, an off-the-shelf 
 Scaffold-ETH is everything you need to get started building decentralized applications powered by smart contracts. Learn more at https://github.com/scaffold-eth/scaffold-eth"
 youtubeUrl: "https://www.youtube.com/watch?v=WNk0uTqP3yg"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634ef569080a54f6d733ee5e"
+ethernaPermalink: "https://etherna.io/embed/0d034a4d104c930f01d36e29cae654049933e6479da1507eaf2ee65989026c66"
 duration: 2735
 expertise: ""
 type: "Workshop"

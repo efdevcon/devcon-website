@@ -12,8 +12,8 @@ Built as a new primitive, ZK Badges enable you to:
 - Aggregate your personal data from multiple accounts"
 youtubeUrl: "https://youtu.be/6vCb6XwGSOk"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634f2855c02259b06a2ffdda"
+ethernaPermalink: "https://etherna.io/embed/d864ee4bd05a569263de65b0267060010b71fe106bdc0a62a583babe7ce586b4"
 duration: 1761
 expertise: "Intermediate"
 type: "Talk"

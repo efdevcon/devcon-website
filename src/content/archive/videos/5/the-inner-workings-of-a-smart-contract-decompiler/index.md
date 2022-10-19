@@ -5,6 +5,8 @@ description: "The workshop will teach some of the most useful algorithms and tri
 Based on the experience from building Eveem.org decompiler and analysing all the bytecodes on the Ethereum blockchain."
 youtubeUrl: "https://www.youtube.com/embed/9oj5c2_EJxA"
 ipfsHash: "QmTKEL1iguaqsvq7beq2659S1CZkwVzz3M1tr9CbCLacMf"
+ethernaIndex: "https://etherna.io/embed/634f4327c02259b06a2ffdf0"
+ethernaPermalink: "https://etherna.io/embed/c13189c27870e9b5d148f998c992a9095b2dbb25027ed7fe5f5f46581132da50"
 duration: 4703
 expertise: "Intermediate"
 type: "Breakout"

@@ -7,8 +7,8 @@ Many of these problems have been discussed for a while always from centralized p
 In this talk we will explore 5 escenarios where Blockchain technology can improve quality of life for latam people."
 youtubeUrl: "https://youtu.be/E0eCFo2An04"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634f222fc02259b06a2ffdd4"
+ethernaPermalink: "https://etherna.io/embed/282882d69bf52cf2689c54593dce64f24c42b23f3afbef41fcd8189d46ca8837"
 duration: 800
 expertise: ""
 type: "Lightning Talk"

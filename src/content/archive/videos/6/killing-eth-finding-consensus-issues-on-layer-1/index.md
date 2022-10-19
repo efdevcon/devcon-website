@@ -10,8 +10,8 @@ description: "Ethereum's core protocol is highly security critical and thus need
 We will discuss a bunch of interesting issues that we found with that"
 youtubeUrl: "https://youtu.be/FS9PPDSK6wc"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634ef7bcc02259b06a2ffdaa"
+ethernaPermalink: "https://etherna.io/embed/ebcec6ca73bd1501d0d8ff9652d3edb0e638a124ec08726a2c0faf1b675d9518"
 duration: 1445
 expertise: "Beginner"
 type: "Talk"

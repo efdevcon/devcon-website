@@ -7,8 +7,8 @@ description: "I describe how I implemented the solidity Contract ABI specificati
 I also discuss how the command-line interface uses human-to-machine and machine-to-machine RLP-based serialization formats to consume arguments and produce results."
 youtubeUrl: "https://youtu.be/wifJbkY87-U"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634eedca080a54f6d733ee5a"
+ethernaPermalink: "https://etherna.io/embed/23a6aca924384b28c2517c3d1e6a6fb5bef8ee7fe4371d1afb6887a981700558"
 duration: 345
 expertise: ""
 type: "Lightning Talk"

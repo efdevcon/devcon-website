@@ -11,8 +11,8 @@ Then by using rotki as a main example show how things can and should be done dif
 Explore both benefits and drawbacks"
 youtubeUrl: "https://youtu.be/72kLanSGq00"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634f0fc2080a54f6d733ee7a"
+ethernaPermalink: "https://etherna.io/embed/e5ba1c503ecf854fc9b148e8546f09c5c848cf088dc6e106367a7fb027688d22"
 duration: 1253
 expertise: "Intermediate"
 type: "Talk"

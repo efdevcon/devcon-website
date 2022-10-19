@@ -11,8 +11,8 @@ ZKP's deployed in production allow us to implement private trading on Ethereum. 
 3. A code walkthrough and a demo"
 youtubeUrl: "https://youtu.be/6BLhbeQo29Y"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634f8477c02259b06a2ffdf3"
+ethernaPermalink: "https://etherna.io/embed/cba8020caf9161b2652958d47c35e9e4ffc66322298d1f8b396bee429af03479"
 duration: 1188
 expertise: "Intermediate"
 type: "Talk"

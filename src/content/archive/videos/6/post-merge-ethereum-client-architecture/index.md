@@ -7,8 +7,8 @@ description: "Take a look at the key components of a post-merge Ethereum \"node\
 Let's break down the knowledge silos between consensus and execution layers to get the most out of merged future of Ethereum."
 youtubeUrl: "https://youtu.be/6d4pkhL37Ao"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634f07dfc02259b06a2ffdb8"
+ethernaPermalink: "https://etherna.io/embed/e1166380c71876071f5e07c7b0cfa59f2363674988528abf8d5b8120ee402a3a"
 duration: 1608
 expertise: "Advanced"
 type: "Talk"
