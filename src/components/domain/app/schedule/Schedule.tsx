@@ -118,7 +118,7 @@ export const ScheduleState = (props: any) => {
   const personalAgenda = !!userSchedule
   const [search, setSearch] = useState('')
   const [view, setView] = useState('list')
-  const [basicFilter, setBasicFilter] = useState(personalAgenda ? 'personal' : 'upcoming')
+  const [basicFilter, setBasicFilter] = useState(personalAgenda ? 'personal' : 'all')
   const [favoritesOnly, setFavoritesOnly] = useState(false)
   const [selectedTracks, setSelectedTracks] = useState({} as { [key: string]: boolean })
   const [selectedRooms, setSelectedRooms] = useState({} as { [key: string]: boolean })
@@ -415,6 +415,10 @@ export const Schedule = (props: any) => {
                       ]
                     : [
                         {
+                          text: 'All',
+                          value: 'all',
+                        },
+                        {
                           text: 'Upcoming',
                           value: 'upcoming',
                         },
@@ -433,10 +437,6 @@ export const Schedule = (props: any) => {
                         {
                           text: 'Past',
                           value: 'past',
-                        },
-                        {
-                          text: 'All',
-                          value: 'all',
                         },
                       ]
                 }
