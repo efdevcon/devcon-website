@@ -4,11 +4,11 @@ sourceId: "AFEB8Z"
 title: "Balkanize Learn2Earn - Educating & Financing the Next Batch of Web3 Developers in the Balkans"
 description: "The next iteration of “the web” is not going to build itself - and people in developing countries are not going to participate in this (r)evolution without some guidance and financial support. 
 See what can be achieved by handing out scholarships to students in developing countries and guiding them in their learning process towards becoming proficient in the web3 ecosystem."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/1K9m_wUhdBw"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 616
 expertise: ""
 type: "Lightning Talk"
 track: "Opportunity & Global Impact"

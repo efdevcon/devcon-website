@@ -3,11 +3,11 @@ edition: 6
 sourceId: "8QL3T9"
 title: "Vampire, a Novel, Cheap to Verify, zkSNARK"
 description: "In this talk, I would like to introduce Vampire (https://eprint.iacr.org/2022/406) -- a novel zkSNARK that has the smallest communication complexity and on-chain verification cost of all known updatable zkSNARKs."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/fl5N6KCtXyI"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 505
 expertise: ""
 type: "Lightning Talk"
 track: "ZKPs: Privacy, Identity, Infrastructure, & More"

@@ -3,11 +3,11 @@ edition: 6
 sourceId: "FMLKJF"
 title: "Little Things I’ve Learned in Developing Halo2 Circuits"
 description: "We will share some Plonkish circuit designing patterns we learned during the zkevm development."
-youtubeUrl: "https://youtu.be/umLmjsi_GbY"
+youtubeUrl: "https://www.youtube.com/watch?v=wSfkpJDq8AI"
 ipfsHash: ""
-ethernaIndex: "https://etherna.io/embed/634cb016080a54f6d733ee15"
-ethernaPermalink: "https://etherna.io/embed/178fdc0cebe759a83a3cf0dd87761a259188e73243fbc24770694d9ca0122227"
-duration: 1454
+ethernaIndex: ""
+ethernaPermalink: ""
+duration: 1819
 expertise: "Intermediate"
 type: "Talk"
 track: "ZKPs: Privacy, Identity, Infrastructure, & More"

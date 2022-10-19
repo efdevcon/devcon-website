@@ -3,11 +3,11 @@ edition: 6
 sourceId: "MSSTNY"
 title: "Usable Security in Web3"
 description: "Self-custodial wallets are the most powerful expression of autonomy we can aspire to in web3, but can people actually keep their EOA accounts safe? Balancing security and usability is critical for onboarding the next billion to web3. During this talk, we will explore how both can converge to give users a usable, secure experience."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/YzgpX-scQ5I"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1444
 expertise: "Intermediate"
 type: "Talk"
 track: "Security"

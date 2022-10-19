@@ -9,11 +9,11 @@ Reiterate the benefits of opensource and the cypherphunk ethos that built the cr
 Then by using rotki as a main example show how things can and should be done differently. The opensource, local-first way.
 
 Explore both benefits and drawbacks"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/72kLanSGq00"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1253
 expertise: "Intermediate"
 type: "Talk"
 track: "Opportunity & Global Impact"

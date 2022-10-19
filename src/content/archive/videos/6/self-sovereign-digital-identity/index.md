@@ -3,11 +3,11 @@ edition: 6
 sourceId: "QGGX9G"
 title: "Self-Sovereign Digital Identity"
 description: "."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/CF3wmO-5n4M"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1699
 expertise: "Beginner"
 type: "Talk"
 track: "Opportunity & Global Impact"

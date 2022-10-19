@@ -7,11 +7,11 @@ description: "Shutter Governance is a tool for governance platforms to introduce
 Simply put, with Shutter Governance, votes are encrypted during the voting period. The votes are decrypted and thereby only revealed after the poll closes.
 
 The talk will include a live demo of Shielded Voting as developed in partnership with Snapshot."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/wxTkztd5mSc"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 482
 expertise: ""
 type: "Lightning Talk"
 track: "Governance & Coordination"
