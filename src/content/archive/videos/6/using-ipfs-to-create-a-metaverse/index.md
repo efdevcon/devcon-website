@@ -10,8 +10,8 @@ description: "Leverage the decentralized IPFS network to scale content storage m
 - Remove the complexity to manually implement content synchronization on the network"
 youtubeUrl: "https://youtu.be/ZW84OsSQBZI"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634f22fe080a54f6d733ee8e"
+ethernaPermalink: "https://etherna.io/embed/3ee0a4681bec3873cb9ab0141c86fa1f55d50cb454b9127b870ee569ae73a9f3"
 duration: 474
 expertise: "Intermediate"
 type: "Lightning Talk"

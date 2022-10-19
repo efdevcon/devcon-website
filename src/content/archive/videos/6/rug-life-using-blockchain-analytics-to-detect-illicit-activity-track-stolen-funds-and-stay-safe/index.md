@@ -11,8 +11,8 @@ description: "Learn how to use blockchain analytics to identify and protect your
  - How to protect yourself as a dev"
 youtubeUrl: "https://youtu.be/zXlvqJQjE7I"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634f10d8c02259b06a2ffdc0"
+ethernaPermalink: "https://etherna.io/embed/ee96a2515be2aaa94f81c1d5564d27b6443eaadbd0c14392145615cf7f6bdc96"
 duration: 1661
 expertise: "Intermediate"
 type: "Talk"

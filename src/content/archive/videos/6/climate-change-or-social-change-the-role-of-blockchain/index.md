@@ -11,8 +11,8 @@ We are reaching its threshold faster than expected: already 1.1 degrees above pr
 More than 1.5 degrees means massive migrations, civilization collapse and potential extinction…."
 youtubeUrl: "https://youtu.be/AsuzM5PHw4w"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634edddf080a54f6d733ee4e"
+ethernaPermalink: "https://etherna.io/embed/bf1c1180dfbf79b7744f66a09dd5672fb136ebe786654a3c094d3e65ef02beae"
 duration: 1470
 expertise: "Intermediate"
 type: "Talk"

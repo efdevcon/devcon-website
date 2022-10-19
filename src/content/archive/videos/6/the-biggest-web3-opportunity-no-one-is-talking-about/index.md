@@ -8,8 +8,8 @@ This sector has a for-loss model... the capital providers, despite creating an a
 You missed Bitcoin, you missed Ethereum, don't sleep on this."
 youtubeUrl: "https://youtu.be/DBGoX7DON54"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634d8818080a54f6d733ee43"
+ethernaPermalink: "https://etherna.io/embed/a63aeb38f2ef6ec898affd06b0c1ecb6a7b4e1386b31cf0bf71e31833b665a59"
 duration: 1589
 expertise: "Intermediate"
 type: "Talk"

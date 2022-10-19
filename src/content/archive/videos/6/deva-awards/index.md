@@ -7,8 +7,8 @@ description: "DEVA awards are simply a fun way to come together to celebrate and
 These awards are not meant to be taken seriously in any regard, Project nominations were gathered through community input of over 2000 unique nominations."
 youtubeUrl: "https://youtu.be/5jGgvXzJg1c"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634edfd5c02259b06a2ffd9a"
+ethernaPermalink: "https://etherna.io/embed/e7e4aae25f5c36e7911563f31192b2ae1d6678efd2106cce15a37e287558b2eb"
 duration: 653
 expertise: "Beginner"
 type: "Talk"

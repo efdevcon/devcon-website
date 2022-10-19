@@ -7,8 +7,8 @@ description: "We at Status have been working to enable an interface to Web3 sinc
 This talk is an overview of this journey, lessons learned, the fruits of this labor, why we're doubling down on this process, and why you should to."
 youtubeUrl: "https://youtu.be/yi7nS0g0Yno"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634ef3b5c02259b06a2ffda6"
+ethernaPermalink: "https://etherna.io/embed/68298f941f55fca1b01133a2759bf8ff3f343dfaba3a9e482f5999a15397745b"
 duration: 1797
 expertise: "Intermediate"
 type: "Talk"

@@ -7,8 +7,8 @@ description: "Liquid staked Ethereum is a reliable source of yield and is fast b
 How do you create a decentralized protocol for staking? What are some of the design trade offs in token design? What tools are available today? What challenges exist due to current L1 structures? What opportunities exist in future upgrades?"
 youtubeUrl: "https://youtu.be/CY_KnhS5Fhc"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/634eef8dc02259b06a2ffda4"
+ethernaPermalink: "https://etherna.io/embed/a5ef31ce72f776662fecdfd438f6d1f9e100c1f1484e279b0999a133c87529e5"
 duration: 1402
 expertise: "Beginner"
 type: "Talk"
