@@ -106,5 +106,5 @@ yarn-error.log*
 .sentryclirc
 
 
-**/keys.json
+**/credentials/*.json
 **/data/

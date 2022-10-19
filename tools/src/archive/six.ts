@@ -15,8 +15,8 @@ require('dotenv').config()
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
 const sheetIndex = 5
-const writeToArchive = true
-const writeToYoutube = false
+const writeToArchive = false
+const writeToYoutube = true
 const baseArchiveFolder = '../src/content/archive'
 
 const scopes = [
@@ -121,11 +121,15 @@ async function ImportRos() {
     let youtube: youtube_v3.Youtube
     if (writeToYoutube) {
         const auth = await authenticate({
-            keyfilePath: path.join(__dirname, '../../credentials/keys.json'),
+            keyfilePath: path.join(__dirname, '../../credentials/uploader.json'),
             scopes
         })
         google.options({ auth })
     }
+
+    const markdownVideos = getMarkdownVideos()
+    console.log('Amount of markdown videos', markdownVideos.length)
+    console.log('Including YT urls', markdownVideos.filter(i => !!i.youtubeUrl).length)
 
     for (let i = 0; i < sessions.length; i++) {
         const info = data[i]
@@ -143,8 +147,8 @@ async function ImportRos() {
         }
 
         const youtubeUrl = info[7] // youtubeUrl column (H)
+        const youtubeProcessed = info[10] // YT Update column (K)
         const youtubeId = getVideoId(youtubeUrl)
-        const markdownVideos = getMarkdownVideos()
         const existing = markdownVideos.find(i => i.sourceId === sessionId)
 
         if (writeToArchive && existing?.youtubeUrl !== youtubeUrl) {
@@ -156,7 +160,7 @@ async function ImportRos() {
             writeToFile(video)
         }
 
-        if (writeToYoutube) {
+        if (writeToYoutube && youtubeProcessed != 'Y') {
             console.log('Update YouTube', sessionId)
 
             try {
@@ -178,32 +182,35 @@ async function ImportRos() {
                     console.log(res1.statusText)
                 }
 
-                console.log('Add thumbnail..')
-                const fileName = path.join(__dirname, `../../data/${session.id}_1080.png`) // TODO: Add file images
-                const res2 = await youtube.thumbnails.set({
-                    videoId: youtubeId,
-                    media: {
-                        body: fs.createReadStream(fileName),
+                const fileName = path.join(__dirname, `../../data/${session.id}_1080.png`)
+                if (!fs.existsSync(fileName)) {
+                    console.log('File does NOT exists', fileName)
+                }
+                else {
+                    console.log('Adding thumbnail..')
+                    const res2 = await youtube.thumbnails.set({
+                        videoId: youtubeId,
+                        media: {
+                            body: fs.createReadStream(fileName),
+                        }
+                    })
+                    if (res2.status !== 200) {
+                        console.log(res.statusText)
                     }
-                })
-                if (res2.status !== 200) {
-                    console.log(res.statusText)
                 }
             }
-            catch (e) {
-                console.error(e)
+            catch (e: any) {
+                console.error('ERROR', e.code, e.errors)
             }
         }
     }
 }
 
 function getMarkdownVideos() {
-    console.log('Get Markdown videos..')
     const dir = join(process.cwd(), baseArchiveFolder, 'videos', '6')
     const dirs = fs
         .readdirSync(dir, { withFileTypes: true })
         .filter((i) => i.isDirectory() && fs.readdirSync(join(dir, i.name), { withFileTypes: true }).some((i) => i.isFile() && i.name.endsWith('.md')))
-    console.log('Amount of markdown videos', dirs.length)
 
     return dirs.map(i => {
         const fullPath = join(dir, i.name, 'index.md')
