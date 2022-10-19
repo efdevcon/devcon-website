@@ -1,6 +1,8 @@
 import slugify from 'slugify'
 import fs from 'fs'
 import fetch from 'cross-fetch'
+import matter from 'gray-matter'
+import { join } from 'path'
 import { google, youtube_v3 } from 'googleapis'
 import { authenticate } from '@google-cloud/local-auth'
 import { ArchiveVideo } from '../../../src/types/ArchiveVideo'
@@ -12,9 +14,10 @@ require('dotenv').config()
 
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
-const sheetIndex = 3
-const writeToArchive = false
-const writeToYoutube = true
+const sheetIndex = 5
+const writeToArchive = true
+const writeToYoutube = false
+const baseArchiveFolder = '../src/content/archive'
 
 const scopes = [
     'https://www.googleapis.com/auth/youtube',
@@ -84,6 +87,7 @@ async function ImportSpeakers() {
     })
 }
 
+
 async function ImportRos() {
     console.log('Fetch schedule info')
     const res = await fetch(`https://app.devcon.org/api/schedule`)
@@ -140,8 +144,10 @@ async function ImportRos() {
 
         const youtubeUrl = info[7] // youtubeUrl column (H)
         const youtubeId = getVideoId(youtubeUrl)
+        const markdownVideos = getMarkdownVideos()
+        const existing = markdownVideos.find(i => i.sourceId === sessionId)
 
-        if (writeToArchive) {
+        if (writeToArchive && existing?.youtubeUrl !== youtubeUrl) {
             const duration = await getVideoDuration(youtubeId)
             let video = mapArchiveVideo(session)
             video.duration = duration ?? 0
@@ -189,6 +195,22 @@ async function ImportRos() {
             }
         }
     }
+}
+
+function getMarkdownVideos() {
+    console.log('Get Markdown videos..')
+    const dir = join(process.cwd(), baseArchiveFolder, 'videos', '6')
+    const dirs = fs
+        .readdirSync(dir, { withFileTypes: true })
+        .filter((i) => i.isDirectory() && fs.readdirSync(join(dir, i.name), { withFileTypes: true }).some((i) => i.isFile() && i.name.endsWith('.md')))
+    console.log('Amount of markdown videos', dirs.length)
+
+    return dirs.map(i => {
+        const fullPath = join(dir, i.name, 'index.md')
+        const content = fs.readFileSync(fullPath, 'utf8')
+        const doc = matter(content)
+        return doc.data
+    })
 }
 
 function getVideoId(youtubeUrl: string): string {
