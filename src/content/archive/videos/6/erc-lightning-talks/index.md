@@ -7,11 +7,11 @@ NFTs/SBTs/ABTs/Token-gating/Curation
 Music NFT metadata
 Privacy and self-sovereign identity
 Other Radical Exchange topics e.g. Plural Property"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/LhUgGSzZL4Y"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 6800
 expertise: "Beginner"
 type: "Workshop"
 track: "Developer Infrastructure"

@@ -5,11 +5,11 @@ title: "Public-Private Composability"
 description: "Learn about the challenges of designing a private execution layer for Ethereum.
 Previously, smart contract execution (L1 & L2) has been fully public. Some apps provide basic private functionality for a single private state (e.g. privacy coins).
 We'll discuss ways to execute general private and public state changes across multiple smart contracts in one transaction, within a zk-rollup. This unlocks programmable private smart contracts."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/WoQt4u2ctLI"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1457
 expertise: "Intermediate"
 type: "Talk"
 track: "ZKPs: Privacy, Identity, Infrastructure, & More"

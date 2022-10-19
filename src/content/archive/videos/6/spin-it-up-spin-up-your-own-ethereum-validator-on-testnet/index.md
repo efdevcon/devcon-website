@@ -9,11 +9,11 @@ We will first demystify concepts such as Execution + Consensus layer, PoS valida
 You will learn by watching when we demo how to spin up a validator using the Lighthouse validator client. 
 
 You will learn by doing when we give you some time to spin up a validator yourself and experiment with the setup."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/dWCck2IniNc"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 4937
 expertise: ""
 type: "Workshop"
 track: "Staking & Validator Experience"

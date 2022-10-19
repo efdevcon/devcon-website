@@ -3,11 +3,11 @@ edition: 6
 sourceId: "ZVAVER"
 title: "Anonymous Signalling on Ethereum"
 description: "Semaphore is a protocol, designed to be a simple and generic privacy layer for Ethereum DApps. Using zero knowledge, Ethereum users can prove their membership of a group and send signals such as votes or endorsements without revealing their original identity. The talk will describe the protocol, the main concepts and some use cases. A simple demo will also likely be used to show how Semaphore can be used to create DApps and solve real problems in the ecosystem."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/dxAfL91Sbw4"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 931
 expertise: "Intermediate"
 type: "Talk"
 track: "ZKPs: Privacy, Identity, Infrastructure, & More"

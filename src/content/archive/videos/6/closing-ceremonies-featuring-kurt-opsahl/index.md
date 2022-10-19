@@ -3,11 +3,11 @@ edition: 6
 sourceId: "FRJHPL"
 title: "Closing Ceremonies featuring Kurt Opsahl"
 description: "Closing Ceremonies"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/9HB8telXFFc"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 3567
 expertise: "Beginner"
 type: "Talk"
 track: "Opportunity & Global Impact"
