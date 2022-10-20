@@ -60,7 +60,7 @@ export const Editions = (props: Props) => {
     <div className="section">
       <div className="content">
         <h2 className={`bold font-xl font-primary padding-top border-top padding-bottom ${css['title']}`}>
-          Past Devcons
+          All Devcons
         </h2>
         <div className={className}>
           <HorizontalScroller>

@@ -4,6 +4,7 @@ sourceId: "FRJHPL"
 title: "The Value of Cryptocurrencies in Supporting Human Rights"
 description: "Privacy and Free Expression"
 youtubeUrl: "https://youtu.be/nzeracgPYis"
+imageUrl: /assets/uploads/videos/kurt-opsahl.png
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""

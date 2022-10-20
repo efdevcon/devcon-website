@@ -2,12 +2,12 @@
 edition: 6
 sourceId: "B3UQM7"
 title: "There Are Many Alternatives: Unlocking Civilizational Hypercomplexity with Ethereum"
-description: "."
-youtubeUrl: ""
+description: "Venkatesh Rao is a consultant and writer @ Ribbonfarm. He's the author of 'Tempo' and 6 eBooks including 'Be Slightly Evil', 'Crash Early Crash Often', & more."
+youtubeUrl: "https://youtu.be/FxBA_9dm6xk"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1406
 expertise: "Beginner"
 type: "Talk"
 track: "Opportunity & Global Impact"

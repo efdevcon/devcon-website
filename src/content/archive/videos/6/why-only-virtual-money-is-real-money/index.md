@@ -2,7 +2,7 @@
 edition: 6
 sourceId: "RJQZFR"
 title: "Why Only Virtual Money is Real Money"
-description: "."
+description: "Author Dawn of Eurasia (2018) Belt and Road (2019) History Has Begun (2020) Geopolitics for the End Time (2021) and the bestseller ‘Manifesto of Virtualism’"
 youtubeUrl: "https://youtu.be/ay2h8azFCv4"
 ipfsHash: ""
 ethernaIndex: "https://etherna.io/embed/634cd672c02259b06a2ffd84"
