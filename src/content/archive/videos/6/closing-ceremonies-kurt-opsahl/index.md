@@ -3,11 +3,11 @@ edition: 6
 sourceId: "FRJHPL"
 title: "The Value of Cryptocurrencies in Supporting Human Rights"
 description: "Privacy and Free Expression"
-youtubeUrl: "https://youtu.be/OMDbD8J5cRc"
+youtubeUrl: "https://youtu.be/nzeracgPYis"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 1500
+duration: 2054
 expertise: "Beginner"
 type: "Talk"
 track: "Opportunity & Global Impact"
