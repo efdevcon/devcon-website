@@ -30,7 +30,7 @@ export const Archive = (props: ArchiveProps) => {
             image:
               video.image ||
               video.imageUrl ||
-              `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`,
+              `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/maxresdefault.jpg`,
             imageProps: {
               alt: 'Staff pick',
             },

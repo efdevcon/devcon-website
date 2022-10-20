@@ -1,6 +1,8 @@
 import slugify from 'slugify'
 import fs from 'fs'
 import fetch from 'cross-fetch'
+import matter from 'gray-matter'
+import { join } from 'path'
 import { google, youtube_v3 } from 'googleapis'
 import { authenticate } from '@google-cloud/local-auth'
 import { ArchiveVideo } from '../../../src/types/ArchiveVideo'
@@ -13,8 +15,9 @@ require('dotenv').config()
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
 const sheetIndex = 5
-const writeToArchive = true
+const writeToArchive = false
 const writeToYoutube = true
+const baseArchiveFolder = '../src/content/archive'
 
 const scopes = [
     'https://www.googleapis.com/auth/youtube',
@@ -84,6 +87,7 @@ async function ImportSpeakers() {
     })
 }
 
+
 async function ImportRos() {
     console.log('Fetch schedule info')
     const res = await fetch(`https://app.devcon.org/api/schedule`)
@@ -117,21 +121,24 @@ async function ImportRos() {
     let youtube: youtube_v3.Youtube
     if (writeToYoutube) {
         const auth = await authenticate({
-            keyfilePath: path.join(__dirname, '../../credentials/keys.json'),
+            keyfilePath: path.join(__dirname, '../../credentials/uploader.json'),
             scopes
         })
         google.options({ auth })
     }
 
+    const markdownVideos = getMarkdownVideos()
+    console.log('Amount of markdown videos', markdownVideos.length)
+    console.log('Including YT urls', markdownVideos.filter(i => !!i.youtubeUrl).length)
+
     for (let i = 0; i < sessions.length; i++) {
         const info = data[i]
-        console.log(i)
         if (!info || !info[0] || !info[7]) {
-            console.log('No sessionId/YouTube', info)
+            console.log(i, 'No sessionId/YouTube', info)
             continue // skip
         }
 
-        const sessionId = info[0]
+        const sessionId = info[0] // sessionId column (A)
         console.log(i, 'Processing session', sessionId)
         const session = sessions.find((i: any) => sessionId === i.id)
         if (!session) {
@@ -139,10 +146,12 @@ async function ImportRos() {
             continue // skip
         }
 
-        const youtubeUrl = info[7]
+        const youtubeUrl = info[7] // youtubeUrl column (H)
+        const youtubeProcessed = info[10] // YT Update column (K)
         const youtubeId = getVideoId(youtubeUrl)
+        const existing = markdownVideos.find(i => i.sourceId === sessionId)
 
-        if (writeToArchive) {
+        if (writeToArchive && existing?.youtubeUrl !== youtubeUrl) {
             const duration = await getVideoDuration(youtubeId)
             let video = mapArchiveVideo(session)
             video.duration = duration ?? 0
@@ -151,7 +160,7 @@ async function ImportRos() {
             writeToFile(video)
         }
 
-        if (writeToYoutube) {
+        if (writeToYoutube && youtubeProcessed != 'Y') {
             console.log('Update YouTube', sessionId)
 
             try {
@@ -173,23 +182,42 @@ async function ImportRos() {
                     console.log(res1.statusText)
                 }
 
-                console.log('Add thumbnail..')
-                const fileName = path.join(__dirname, `../../data/${session.id}_1080.png`) // TODO: Add file images
-                const res2 = await youtube.thumbnails.set({
-                    videoId: youtubeId,
-                    media: {
-                        body: fs.createReadStream(fileName),
+                const fileName = path.join(__dirname, `../../data/${session.id}_1080.png`)
+                if (!fs.existsSync(fileName)) {
+                    console.log('File does NOT exists', fileName)
+                }
+                else {
+                    console.log('Adding thumbnail..')
+                    const res2 = await youtube.thumbnails.set({
+                        videoId: youtubeId,
+                        media: {
+                            body: fs.createReadStream(fileName),
+                        }
+                    })
+                    if (res2.status !== 200) {
+                        console.log(res.statusText)
                     }
-                })
-                if (res2.status !== 200) {
-                    console.log(res.statusText)
                 }
             }
-            catch (e) {
-                console.error(e)
+            catch (e: any) {
+                console.error('ERROR', e.code, e.errors)
             }
         }
     }
+}
+
+function getMarkdownVideos() {
+    const dir = join(process.cwd(), baseArchiveFolder, 'videos', '6')
+    const dirs = fs
+        .readdirSync(dir, { withFileTypes: true })
+        .filter((i) => i.isDirectory() && fs.readdirSync(join(dir, i.name), { withFileTypes: true }).some((i) => i.isFile() && i.name.endsWith('.md')))
+
+    return dirs.map(i => {
+        const fullPath = join(dir, i.name, 'index.md')
+        const content = fs.readFileSync(fullPath, 'utf8')
+        const doc = matter(content)
+        return doc.data
+    })
 }
 
 function getVideoId(youtubeUrl: string): string {
@@ -225,8 +253,8 @@ function mapArchiveVideo(session: any): ArchiveVideo {
 }
 
 function getSessionDescription(session: any) {
-    return `Visit the https://archive.devcon.org/ to gain access to the entire library of Devcon talks with the ease of filtering, playlists, personalized suggestions, decentralized access on IPFS and more.
-https://archive.devcon.org/archive/watch/6/${slugify(session.title.toLowerCase(), { strict: true })}/index
+    return `Visit the https://archive.devcon.org/ to gain access to the entire library of Devcon talks with the ease of filtering, playlists, personalized suggestions, decentralized access on Swarm, IPFS and more.
+https://archive.devcon.org/archive/watch/6/${slugify(session.title.toLowerCase(), { strict: true })}/
 
 ${session.description}
 

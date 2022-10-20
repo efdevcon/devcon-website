@@ -3,11 +3,11 @@ edition: 6
 sourceId: "QTWR7K"
 title: "On the Path to a Rollup-Centric Future"
 description: "It’s only been slightly over a year since Arbitrum launched as the first optimistic rollup that supported general EVM contract deployment. In that time many components have shifted, many users have migrated, and an entirely new generation of technology has shipped with Nitro. Now we look towards tackling the next set of challenges in working towards Ethereum’s rollup centric future, where using Ethereum will mean using a rollup."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/rPjfBXhhuGo"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1490
 expertise: "Beginner"
 type: "Talk"
 track: "Layer 2s"

@@ -8,11 +8,11 @@ The EVM creates an economic incentive to minimize computation and data storage.
 This leads to extreme gas optimizations in a few different assembly languages and patterns.
 
 In this workshop, we will learn about EVM assembly through both a walkthrough of EVM basics and real-world, practical examples of assembly. This workshop assumes an intermediate level understanding of programming and at least a beginner understanding of Ethereum."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/btDOvn8pLkA"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 7168
 expertise: ""
 type: "Workshop"
 track: "Developer Infrastructure"
