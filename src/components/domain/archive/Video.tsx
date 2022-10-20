@@ -145,7 +145,7 @@ const Labels = ({ tags, playlists }: any) => {
 export const Video = (props: VideoProps) => {
   const [activeTab, setActiveTab] = useState('')
   const video = props.video
-  const imageUrl = `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/hqdefault.jpg`
+  const imageUrl = `https://img.youtube.com/vi/${video.youtubeUrl.split('/').pop()}/maxresdefault.jpg`
   const swarmHash = video.ethernaPermalink?.split('/').pop() ?? ''
 
   return (
@@ -160,7 +160,7 @@ export const Video = (props: VideoProps) => {
           url: `/archive/watch?edition=${video.edition}`,
         }}
       />
-      <Metadata type='video' data={props.video} />
+      <Metadata type="video" data={props.video} />
       <Header withStrip={false} />
 
       <PageHero path={[{ text: 'Watch', url: '/archive/watch' }, { text: props.video.title }]}>
@@ -170,7 +170,7 @@ export const Video = (props: VideoProps) => {
               <Tabs onSelectTab={setActiveTab} useQuerystring>
                 <Tab title="YouTube">
                   <div className="aspect">
-                    {props.video.youtubeUrl &&
+                    {props.video.youtubeUrl && (
                       <iframe
                         src={`https://www.youtube.com/embed/${getVideoId(props.video.youtubeUrl)}`}
                         title="YouTube video player"
@@ -178,15 +178,15 @@ export const Video = (props: VideoProps) => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                       />
-                    }
+                    )}
 
-                    {!props.video.youtubeUrl &&
+                    {!props.video.youtubeUrl && (
                       <img
                         src={'/assets/images/video-soon.png'}
                         alt={`${props.video.title} preview`}
                         placeholder="blurred"
                       />
-                    }
+                    )}
                   </div>
                 </Tab>
 
@@ -217,8 +217,18 @@ export const Video = (props: VideoProps) => {
             </div>
 
             <div className={css['tabs-video']}>
-              {activeTab === 'IPFS' && <Banner type='IPFS' className={css['banner']} cta="Access on IPFS" hash={props.video.ipfsHash} learnMore />}
-              {activeTab === 'Swarm' && <Banner type='Swarm' className={css['banner']} cta="Access on Swarm" hash={swarmHash} />}
+              {activeTab === 'IPFS' && (
+                <Banner
+                  type="IPFS"
+                  className={css['banner']}
+                  cta="Access on IPFS"
+                  hash={props.video.ipfsHash}
+                  learnMore
+                />
+              )}
+              {activeTab === 'Swarm' && (
+                <Banner type="Swarm" className={css['banner']} cta="Access on Swarm" hash={swarmHash} />
+              )}
               <Tabs>
                 <Tab title="Details">
                   <div className={css['content']}>
