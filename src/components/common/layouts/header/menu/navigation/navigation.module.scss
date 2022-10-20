@@ -45,7 +45,7 @@
   flex-wrap: wrap;
   font-family: $fonts-primary;
 
-  @media (min-width: $breakpoints-lg + 1) {
+  @media (min-width: $breakpoints-hamburger + 1) {
     display: flex;
   }
 
