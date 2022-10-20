@@ -14,7 +14,7 @@ require('dotenv').config()
 
 const apiKey = process.env.GOOGLE_API_KEY
 const sheetId = '1S4F3t1JFBRMecND9xoD3JbuHZqEy3BJ8ooTdbnMv-bE'
-const sheetIndex = 5
+const sheetIndex = 4
 const writeToArchive = false
 const writeToYoutube = true
 const baseArchiveFolder = '../src/content/archive'
@@ -121,7 +121,7 @@ async function ImportRos() {
     let youtube: youtube_v3.Youtube
     if (writeToYoutube) {
         const auth = await authenticate({
-            keyfilePath: path.join(__dirname, '../../credentials/uploader.json'),
+            keyfilePath: path.join(__dirname, '../../credentials/devtest.json'),
             scopes
         })
         google.options({ auth })
