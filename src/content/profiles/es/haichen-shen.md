@@ -1,6 +1,6 @@
 ---
 id: "UHSVVC"
 name: "Haichen Shen"
-description: 'null'
+description: ''
 avatar: ""
 ---

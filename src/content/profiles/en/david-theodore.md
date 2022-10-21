@@ -1,6 +1,6 @@
 ---
 id: "CMSZNX"
 name: "David Theodore"
-description: 'null'
+description: ''
 avatar: ""
 ---

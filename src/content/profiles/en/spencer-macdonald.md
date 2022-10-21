@@ -1,6 +1,6 @@
 ---
 id: "ZSNKAN"
 name: "Spencer Macdonald"
-description: 'null'
+description: ''
 avatar: ""
 ---

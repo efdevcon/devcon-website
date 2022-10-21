@@ -1,6 +1,6 @@
 ---
 id: "LJJQBM"
 name: "Kev"
-description: 'null'
+description: ''
 avatar: ""
 ---

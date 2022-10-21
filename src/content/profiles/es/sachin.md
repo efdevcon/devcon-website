@@ -1,6 +1,6 @@
 ---
 id: "GQ8XUY"
 name: "Sachin"
-description: 'null'
+description: ''
 avatar: ""
 ---

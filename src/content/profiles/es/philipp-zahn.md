@@ -1,6 +1,6 @@
 ---
 id: "CXHCHS"
 name: "Philipp Zahn"
-description: 'null'
+description: ''
 avatar: ""
 ---

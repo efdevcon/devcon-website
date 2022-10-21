@@ -1,6 +1,6 @@
 ---
 id: "GHSLKW"
 name: "Ian Brighton"
-description: 'null'
+description: ''
 avatar: ""
 ---

@@ -1,7 +1,7 @@
 ---
 id: "9CRGTY"
 name: "Nalin Bhardwaj"
-description: 'null'
+description: ''
 twitter: "nibnalin"
 avatar: ""
 ---

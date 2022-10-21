@@ -1,6 +1,6 @@
 ---
 id: "XNXEYH"
 name: "Bartek Kiepuszewski"
-description: 'null'
+description: ''
 avatar: ""
 ---

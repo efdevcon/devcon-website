@@ -1,6 +1,6 @@
 ---
 id: "CDQLRY"
 name: "Gustavo Grieco"
-description: 'null'
+description: ''
 avatar: ""
 ---

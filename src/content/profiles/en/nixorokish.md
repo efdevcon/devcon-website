@@ -1,6 +1,6 @@
 ---
 id: "GKXRUD"
 name: "Nixorokish"
-description: 'null'
+description: ''
 avatar: ""
 ---

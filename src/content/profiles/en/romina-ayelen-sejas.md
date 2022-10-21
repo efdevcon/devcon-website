@@ -1,7 +1,7 @@
 ---
 id: "LGMDLB"
 name: "Romina Ayelén Sejas"
-description: 'null'
+description: ''
 twitter: "@cryptochica_arg"
 avatar: ""
 ---

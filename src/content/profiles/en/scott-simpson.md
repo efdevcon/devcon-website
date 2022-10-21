@@ -1,6 +1,6 @@
 ---
 id: "WJBH9R"
 name: "Scott Simpson"
-description: 'null'
+description: ''
 avatar: ""
 ---

@@ -1,7 +1,7 @@
 ---
 id: "PLXWMC"
 name: "Tom McLean"
-description: 'null'
+description: ''
 twitter: "TomMcln"
 avatar: ""
 ---
