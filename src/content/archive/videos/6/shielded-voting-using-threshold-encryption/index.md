@@ -9,8 +9,8 @@ Simply put, with Shutter Governance, votes are encrypted during the voting perio
 The talk will include a live demo of Shielded Voting as developed in partnership with Snapshot."
 youtubeUrl: "https://youtu.be/WCPdR8txQYI"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/635191ef080a54f6d733eed3"
+ethernaPermalink: "https://etherna.io/embed/e956a6f4b738e3ee7a5945f8f3f35f3691df4852af43f6a55796aee35e337c9d"
 duration: 482
 expertise: ""
 type: "Lightning Talk"

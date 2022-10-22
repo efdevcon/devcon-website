@@ -7,8 +7,8 @@ description: "1/4 of the global population is excluded from the current financia
 Unbanked farmers fall in the same boat. Due to their lack of collateral and credit history, they can only access loans starting at 100% interest rate. Crypto and blockchain has an opportunity to change that for the better."
 youtubeUrl: "https://youtu.be/fhPdvmequaY"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/6351983ec02259b06a2ffe23"
+ethernaPermalink: "https://etherna.io/embed/ac1b4724fe3129cf8ce6269bfe08ad7a8cf1b3fb721e121671676b45d1e77193"
 duration: 440
 expertise: ""
 type: "Lightning Talk"

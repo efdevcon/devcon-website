@@ -6,8 +6,8 @@ description: "Privacy and Free Expression"
 youtubeUrl: "https://youtu.be/nzeracgPYis"
 imageUrl: /assets/uploads/videos/kurt-opsahl.png
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/635172d7c02259b06a2ffe03"
+ethernaPermalink: "https://etherna.io/embed/bdf3f7af33d7a3c6d67ffe3dadb7f199379d2b049202b8d98d0cde476236d06a"
 duration: 2054
 expertise: "Beginner"
 type: "Talk"

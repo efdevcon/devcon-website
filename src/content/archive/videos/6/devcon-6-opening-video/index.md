@@ -20,8 +20,8 @@ Music: Tomo aka MONKEYBASE, Tarante Groove Machine\n
 Creative Direction: Tomo Saito"
 youtubeUrl: "https://youtu.be/ddAxLNI1J2I"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/63517b23080a54f6d733eec3"
+ethernaPermalink: "https://etherna.io/embed/b6ac3654e4477dd016925c22270df70d6f198252035a9149fa3ab7d56e0e4547"
 duration: 238
 expertise: "Beginner"
 type: "Other"
