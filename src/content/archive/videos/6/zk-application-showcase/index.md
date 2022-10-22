@@ -6,8 +6,8 @@ description: "Demos and presentations covering a wide range of applications of z
 Full schedule here: https://www.notion.so/0xparc/Applied-ZK-SLS-360fcd3f2a824759b1373ddeef5bf564"
 youtubeUrl: "https://youtu.be/6EEyKgE2nds"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/63519c07c02259b06a2ffe25"
+ethernaPermalink: "https://etherna.io/embed/f7a87bccdc889343b8edaf3087e04affce5e5859485a0fac4ef2e727cbb4a742"
 duration: 3632
 expertise: "Advanced"
 type: "Workshop"

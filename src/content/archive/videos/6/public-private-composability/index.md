@@ -7,8 +7,8 @@ Previously, smart contract execution (L1 & L2) has been fully public. Some apps 
 We'll discuss ways to execute general private and public state changes across multiple smart contracts in one transaction, within a zk-rollup. This unlocks programmable private smart contracts."
 youtubeUrl: "https://youtu.be/WoQt4u2ctLI"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/63518ea3c02259b06a2ffe19"
+ethernaPermalink: "https://etherna.io/embed/8012099c215fd2c144e1ed42585a8a22b9586b1131523b09e75193b5abc8c90e"
 duration: 1457
 expertise: "Intermediate"
 type: "Talk"

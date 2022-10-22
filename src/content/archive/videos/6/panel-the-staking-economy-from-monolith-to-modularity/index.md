@@ -7,8 +7,8 @@ description: "The staking industry is on the verge of a new and exciting innovat
 This panel seeks to discuss these important developments and the new benefits and risks they bring to Ethereum."
 youtubeUrl: "https://youtu.be/Ee9a1VV0ygA"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/63518dca080a54f6d733eecf"
+ethernaPermalink: "https://etherna.io/embed/7854b1db07868b07c4ce7dce8ea8f7a52344d4c391f8d284e3713f4b8f5eed08"
 duration: 3087
 expertise: ""
 type: "Panel"

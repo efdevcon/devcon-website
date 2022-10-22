@@ -9,8 +9,8 @@ We had 6k attendees from 113 different countries, and 34% of them were Spanish-S
 Muchas gracias y hasta luego!"
 youtubeUrl: "https://youtu.be/7b7a1gaWv2k"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/63517a54c02259b06a2ffe0b"
+ethernaPermalink: "https://etherna.io/embed/951406394b6fc5ed26ee7015d5d1042f2abee6e11ae277e51ac4d268afa53b3a"
 duration: 144
 expertise: "Beginner"
 type: "Other"

@@ -11,8 +11,8 @@ You will learn by watching when we demo how to spin up a validator using the Lig
 You will learn by doing when we give you some time to spin up a validator yourself and experiment with the setup."
 youtubeUrl: "https://youtu.be/dWCck2IniNc"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/635194a9c02259b06a2ffe1d"
+ethernaPermalink: "https://etherna.io/embed/3873c1371e7a78f8f16343192b45c6da533aedcf840096ad79e082ab1b3b3317"
 duration: 4937
 expertise: ""
 type: "Workshop"

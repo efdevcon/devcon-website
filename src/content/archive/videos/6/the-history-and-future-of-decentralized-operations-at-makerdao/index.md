@@ -6,8 +6,8 @@ description: "MakerDAO is one of the foundational projects in Ethereum that orig
 In this talk I will outline the evolution of decentralized operations and governance at MakerDAO. We will have a look at a few of the most recent scaling challenges, how they developed, and how MakerDAO is dealing with them."
 youtubeUrl: "https://youtu.be/6UF6ASf1_X0"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/635196d3c02259b06a2ffe21"
+ethernaPermalink: "https://etherna.io/embed/f940aa92058784d72410821c121944795062b9de2c354b43d6a7676faae4c71a"
 duration: 1393
 expertise: "Beginner"
 type: "Talk"
