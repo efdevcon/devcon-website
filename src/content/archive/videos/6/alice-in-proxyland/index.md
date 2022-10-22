@@ -7,10 +7,10 @@ description: "The story of Alice in her journey of making her smart contract upg
 She starts with a very naive approach, and quickly bumps into the fundamental problems of proxies: using CALL vs DELEGATECALL, the execution context, storage collisions, the importance of tooling, etc.
 
 As her system grows in complexity, her proxy architecture iterates and becomes more and more sophisticated, finally arriving to a very powerful, elegant and easy to use architecture: The Router Proxy."
-youtubeUrl: "https://youtu.be/UFAhRjnagmM"
+youtubeUrl: ""
 ipfsHash: ""
-ethernaIndex: "https://etherna.io/embed/634a0290080a54f6d733ed7f"
-ethernaPermalink: "https://etherna.io/embed/5ebc926e22d8e50b136edea1e421fcd6ba2006c4dd5b13cff9585bc68f942f07"
+ethernaIndex: ""
+ethernaPermalink: ""
 duration: 1881
 expertise: "Intermediate"
 type: "Talk"
