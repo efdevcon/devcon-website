@@ -1,7 +1,7 @@
 ---
 id: "BAU3ZE"
 name: "Marcello Bardus"
-description: 'null'
+description: ''
 twitter: "@0xMarcello"
 avatar: ""
 ---

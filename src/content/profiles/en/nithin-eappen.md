@@ -1,6 +1,6 @@
 ---
 id: "VNVCRB"
 name: "Nithin Eappen"
-description: 'null'
+description: ''
 avatar: ""
 ---

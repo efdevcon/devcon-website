@@ -1,7 +1,7 @@
 ---
 id: "XPGGMQ"
 name: "Louis Guthmann"
-description: 'null'
+description: ''
 twitter: "Guthl"
 avatar: ""
 ---

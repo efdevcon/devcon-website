@@ -1,6 +1,6 @@
 ---
 id: "C3MPDU"
 name: "Luka"
-description: 'null'
+description: ''
 avatar: ""
 ---

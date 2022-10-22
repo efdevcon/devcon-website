@@ -1,6 +1,6 @@
 ---
 id: "VCBAZX"
 name: "Liraz"
-description: 'null'
+description: ''
 avatar: ""
 ---

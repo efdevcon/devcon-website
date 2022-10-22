@@ -14,8 +14,8 @@ ethernaPermalink: "https://etherna.io/embed/951406394b6fc5ed26ee7015d5d1042f2abe
 duration: 144
 expertise: "Beginner"
 type: "Other"
-track: "Opportunity & Global Impact"
-tags: ["Opportunity & Global Impact"]
+track: "Devcon"
+tags: ["Devcon"]
 keywords: ["Ethereum Foundation"]
 speakers: ["Ethereum Foundation"]
 ---

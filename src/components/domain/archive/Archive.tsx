@@ -77,7 +77,7 @@ export const Archive = (props: ArchiveProps) => {
 
         <Editions />
 
-        <StaffPicks />
+        {/* <StaffPicks /> */}
 
         <Playlists />
 

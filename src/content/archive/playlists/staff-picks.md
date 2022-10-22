@@ -8,6 +8,6 @@ curators:
 videos:
   - 6/publishers-denial-of-digital-ownership-vs-decentralization/index
   - 6/opening-ceremonies-aya/index
-  - 4/a-conversation-with-stewart-brand/index
-  - 5/when-1-million-eth-devs/index
+  - 6/opening-ceremonies-vitalik/index
+  - 6/closing-ceremonies-kurt-opsahl/index
 ---

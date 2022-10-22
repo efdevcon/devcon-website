@@ -1,6 +1,6 @@
 ---
 id: "9CAHC7"
 name: "Will Wilson"
-description: 'null'
+description: ''
 avatar: ""
 ---

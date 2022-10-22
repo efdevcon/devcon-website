@@ -1,6 +1,6 @@
 ---
 id: "YVHUPN"
 name: "Alp Ergin"
-description: 'null'
+description: ''
 avatar: ""
 ---

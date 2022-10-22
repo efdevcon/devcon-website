@@ -1,6 +1,6 @@
 ---
 id: "Y8FYJ3"
 name: "Alejandra Borda"
-description: 'null'
+description: ''
 avatar: ""
 ---

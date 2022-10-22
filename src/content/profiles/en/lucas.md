@@ -1,6 +1,6 @@
 ---
 id: "KQNENU"
 name: "Lucas"
-description: 'null'
+description: ''
 avatar: ""
 ---
