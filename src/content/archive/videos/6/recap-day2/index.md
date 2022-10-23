@@ -1,6 +1,6 @@
 ---
 edition: 6
-title: "Devcon 6 Recap - Day 4"
+title: "Devcon 6 Recap - Day 2"
 description: ""
 youtubeUrl: "https://youtu.be/YzSRT8S_SCg"
 ipfsHash: ""
