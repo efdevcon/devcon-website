@@ -1,8 +1,8 @@
 ---
 edition: 6
-title: "Devcon 6 Recap - Day 2"
+title: "Devcon 6 Recap - Day 4"
 description: "Devcon 6, October 11-14, 2022. Bogotá Colombia. The largest gathering of Ethereum community members from around the world."
-youtubeUrl: "https://youtu.be/YzSRT8S_SCg"
+youtubeUrl: "https://youtu.be/lgTMm7J0t7c"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
