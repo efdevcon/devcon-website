@@ -15,7 +15,7 @@ export default class AppDocument extends Document {
             rel="stylesheet"
           />
 
-          {process.env.NODE_ENV === 'production' && false && (
+          {process.env.NODE_ENV === 'production' && (
             <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
