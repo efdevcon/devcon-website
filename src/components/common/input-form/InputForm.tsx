@@ -8,7 +8,7 @@ interface InputFormProps {
   placeholder?: string
   transparentMode?: boolean
   timeout?: number
-  icon?: React.ComponentType<any>
+  icon?: any
   defaultValue?: string
   className?: string
   autoFocus?: boolean

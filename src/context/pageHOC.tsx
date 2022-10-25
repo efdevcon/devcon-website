@@ -15,7 +15,7 @@ type Props = {
 }
 
 export const pageHOC =
-  (PageContent: ComponentType<Props>, mapDataToContext?: (props: Props) => { [key: string]: any }) =>
+  (PageContent: any, mapDataToContext?: (props: Props) => { [key: string]: any }) =>
   (props: Props) => {
     const context = {
       data: props.data,

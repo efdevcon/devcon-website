@@ -78,7 +78,7 @@ const Mobile = (props: any) => {
                         const isHeader = child.type === 'header'
 
                         if (isHeader) {
-                          return <p className={css['category-header']}>{child.title}</p>
+                          return <p key={child.title} className={css['category-header']}>{child.title}</p>
                         }
 
                         return (

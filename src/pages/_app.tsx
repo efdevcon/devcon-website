@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'assets/css/index.scss'
 import { SEO } from 'components/domain/seo'
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: any) {
   return (
     <>
       <Head>
