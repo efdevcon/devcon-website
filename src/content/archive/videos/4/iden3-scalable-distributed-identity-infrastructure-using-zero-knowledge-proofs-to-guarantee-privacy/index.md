@@ -11,8 +11,8 @@ ethernaPermalink: "https://etherna.io/embed/bc6778ca57f4ed104bea349d6b789badc3b3
 duration: 2054
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['identity','zkproofs','proofs']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Jordi Baylina']
 ---

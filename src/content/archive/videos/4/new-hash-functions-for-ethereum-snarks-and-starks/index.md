@@ -15,8 +15,8 @@ ethernaPermalink: "https://etherna.io/embed/d6371bb8596b6f9c186fe540a956729e0318
 duration: 1648
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['zcash','hash functions','merkle']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Dmitry Khovratovich']
 ---

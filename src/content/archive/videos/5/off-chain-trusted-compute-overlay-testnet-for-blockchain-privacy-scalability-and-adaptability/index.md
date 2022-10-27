@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/c79b1a7a39c3733e38db8f599836a47e0e21
 duration: 5950
 expertise: "Advanced"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Sanjay Bakshi','Jean-charles Cabelguen','Andreas Freund','Marley Gray','Anand Pashupathy','Yevgeniy Yarmosh','Lei Zhang','Jim Zhang']
 ---

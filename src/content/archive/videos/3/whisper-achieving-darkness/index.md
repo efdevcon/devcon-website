@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/f905ba597e40cde8edcd1a460c18b90ca6fc
 duration: 1522
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: []
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Vlad Gluhovsky','Guillaume Ballet']
 ---

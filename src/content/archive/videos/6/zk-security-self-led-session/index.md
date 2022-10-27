@@ -12,8 +12,8 @@ ethernaPermalink: ""
 duration: 0
 expertise: "Intermediate"
 type: "Workshop"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Zero","Knowledge"]
 speakers: ["Jordi Baylina","Jon Stephens","Kyle Charbonnet","gubsheep","David Theodore","Remy","Barry Whitehat","Jason Morton","Lucas","Haichen Shen"]
 ---

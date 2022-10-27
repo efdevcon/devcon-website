@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/116356b3acb12fa6b84416b02752ca14e29e
 duration: 1487
 expertise: "Advanced"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero-knokwledge","recursion"]
 speakers: ["Ying Tong","Nalin Bhardwaj"]
 ---

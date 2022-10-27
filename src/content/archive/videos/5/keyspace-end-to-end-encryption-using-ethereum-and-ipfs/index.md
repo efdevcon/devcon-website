@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/a7d315cda169a8cfd672c62a07886fb800d6
 duration: 2016
 expertise: "Intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Samuel Walker']
 ---

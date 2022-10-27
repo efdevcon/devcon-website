@@ -12,8 +12,8 @@ ethernaPermalink: "https://etherna.io/embed/29a20d3a33d05e1ff025062704fadb176c09
 duration: 3283
 expertise: "Beginner"
 type: "Panel"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["ZKP","Zero Knowledge","Future of Ethereum","Scalability","Security","Privacy"]
 speakers: ["gubsheep","Albert Ni","Barry Whitehat","Vitalik Buterin"]
 ---

@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/3aabc5ace2f2334c55c257d89138379cc481
 duration: 404
 expertise: "Intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Stefan George']
 ---

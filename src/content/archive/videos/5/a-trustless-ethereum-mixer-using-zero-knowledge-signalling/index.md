@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/d31be1615014a5b9f0f6cece52fb5b55f206
 duration: 1148
 expertise: "intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Kobi Gurkan','Wei Jie Koh','Barry WhiteHat']
 ---

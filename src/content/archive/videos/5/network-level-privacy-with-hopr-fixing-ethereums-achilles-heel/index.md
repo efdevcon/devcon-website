@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/1170f180f65d2d9ef52dfcaa5701a5b59c4d
 duration: 1342
 expertise: "Intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Sebastian Buergel']
 ---

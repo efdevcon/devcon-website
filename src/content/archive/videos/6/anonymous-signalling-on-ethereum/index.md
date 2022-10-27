@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/36e4e383a10702815a44c38a5d3a7a98892d
 duration: 931
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero-knowledge proofs","semaphore","groups"]
 speakers: ["Cedoor"]
 ---

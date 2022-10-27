@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/d89f0154f82f1eacede341418f9a3679462f
 duration: 1819
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Halo2","Zero Knowledge","Plonk"]
 speakers: ["Chih-Cheng Liang"]
 ---

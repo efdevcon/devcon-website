@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/d283fcc4333a3654f749894008d513bbc588
 duration: 344
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['frontrunning','auctions','voting','open-source','gas']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Stephane Gosselin','Shayan Eskandari','Tyler Kell','Lorenz Breidenbach']
 ---

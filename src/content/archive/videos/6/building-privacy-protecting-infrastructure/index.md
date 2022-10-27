@@ -14,8 +14,8 @@ ethernaPermalink: "https://etherna.io/embed/8913cdb83982c7ac611643144b50e9121c2a
 duration: 1556
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["p2p","zkp","messaging"]
 speakers: ["Oskar Thorén"]
 ---

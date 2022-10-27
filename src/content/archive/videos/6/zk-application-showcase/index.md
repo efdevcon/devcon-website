@@ -11,8 +11,8 @@ ethernaPermalink: ""
 duration: 3632
 expertise: "Advanced"
 type: "Workshop"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Zero","Knowledge"]
 speakers: ["Althea Allen","Oskar Thorén","Shumo Chu","AtHeartEngineer","Aayush Gupta","Remco Bloemen","Yi Sun","Uma Roy","Ya-wen Jeng","Jason Morton","Vivek","Iskander","Sampriti Panda"]
 ---

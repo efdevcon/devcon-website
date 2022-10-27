@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/28fdd9160891f24160f8822a65acb397a219
 duration: 1477
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["public goods","approachability","design patterns"]
 speakers: ["Rachel"]
 ---

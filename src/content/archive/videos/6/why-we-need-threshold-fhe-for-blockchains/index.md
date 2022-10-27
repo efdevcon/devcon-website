@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/7fa57f5b2bf766f685c863bddf1054cfe9a4
 duration: 550
 expertise: "Advanced"
 type: "Lightning Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Threshold Cryptography","Fully Homomorphic Encryption","Privacy"]
 speakers: ["Wei Dai"]
 ---

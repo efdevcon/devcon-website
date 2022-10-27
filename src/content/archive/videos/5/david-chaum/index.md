@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/267be5c60bba8488d37224592977281c10fb
 duration: 1251
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['cryptography','IACR','metadata','elixxir','praxxis','anonymity','general']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['David Chaum']
 ---

@@ -11,8 +11,8 @@ ethernaPermalink: "https://etherna.io/embed/04aace7de6f07ba16515079db35bdc8fc095
 duration: 1374
 expertise: "Beginner"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: []
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Jacob Eberhardt','Thibaut Schaeffer']
 ---

@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/d5f0a67ec29fe6ba36b7f4e2abf0f9d3cc86
 duration: 2548
 expertise: "Beginner"
 type: "Workshop"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero","knowledge"]
 speakers: ["Wanseob Lim"]
 ---

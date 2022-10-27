@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/8e25016d3cbe89a4bb5fcf0d7b4b6beef449
 duration: 3496
 expertise: "Beginner"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Dave Hrycyszyn','Jedrzej Stuczynski']
 ---

@@ -12,8 +12,8 @@ ethernaPermalink: "https://etherna.io/embed/b6ea272cb5e6427bedcf99b4da54a55fe51a
 duration: 1372
 expertise: "Intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Osuke Sudo']
 ---

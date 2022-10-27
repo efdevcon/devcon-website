@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/c4e029c1e37c78b15b897fe2e7eebef35950
 duration: 3290
 expertise: "beginner"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Wei Jie Koh']
 ---

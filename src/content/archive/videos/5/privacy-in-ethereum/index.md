@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/1bd3d489f8357080fc18dd497ff9c13215fb
 duration: 1264
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['barry','whitehat','security','technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Barry WhiteHat']
 ---

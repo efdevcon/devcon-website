@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/c1bc74e96144de5d15ec7709424565552f96
 duration: 1363
 expertise: "Intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['John Pacific','Ravital Solomon']
 ---

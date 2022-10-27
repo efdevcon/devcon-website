@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/fa1429a0c0e8626756a6dbeecfedc979316c
 duration: 1689
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["SNARK","applications","EIP"]
 speakers: ["Jackson Blazensky","Severiano Sisneros"]
 ---

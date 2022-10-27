@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/1a460bb312459f166216db5523aaeca3cc16
 duration: 1258
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['immutability','encryption','communication','selective','dicslosure','human rights','society','fungibility','data','security','bitcoin','zksnarks','zkproofs','validators','programmability','alchemy','btcrelay']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Zooko Wilcox']
 ---

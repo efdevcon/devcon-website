@@ -12,8 +12,8 @@ ethernaPermalink: "https://etherna.io/embed/cb952b1b3c52a7da9f7256fbaaf5a0d872be
 duration: 1608
 expertise: "intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Lakshman Sankar']
 ---

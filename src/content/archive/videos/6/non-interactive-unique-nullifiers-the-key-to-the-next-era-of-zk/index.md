@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/c03386b8828a26bee4c9e214419ecc9471e7
 duration: 1390
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["nullifiers","zero knowledge","signatures"]
 speakers: ["Aayush Gupta"]
 ---

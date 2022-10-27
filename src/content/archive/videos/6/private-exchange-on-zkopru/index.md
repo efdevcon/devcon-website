@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/a9bb23ffe90fe86404f2753837c51996e0c2
 duration: 1463
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Privacy","ZKP","ZKOPRU"]
 speakers: ["Takamichi Tsutsumi"]
 ---

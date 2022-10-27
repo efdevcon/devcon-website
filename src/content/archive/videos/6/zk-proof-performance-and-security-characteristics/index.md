@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/9a8191a5c63d2d73ee59c7561f11274cedaa
 duration: 1719
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["ZKP","performance and security metrics","data analysis"]
 speakers: ["Brian Wilkes, CFA"]
 ---

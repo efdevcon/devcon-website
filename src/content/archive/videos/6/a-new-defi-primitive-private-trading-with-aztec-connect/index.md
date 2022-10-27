@@ -16,8 +16,8 @@ ethernaPermalink: "https://etherna.io/embed/cba8020caf9161b2652958d47c35e9e4ffc6
 duration: 1188
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["ZKPs"]
 speakers: ["Joe Andrews","Jan Beneš"]
 ---

@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/17f818812513f752672ca8b515fb32d3df18
 duration: 1151
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["applied zk","public goods","experiments"]
 speakers: ["Wanseob Lim"]
 ---

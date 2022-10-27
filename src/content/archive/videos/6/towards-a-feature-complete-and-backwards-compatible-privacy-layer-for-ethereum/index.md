@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/1cdff35dd7fcc653568c22330ce77e265d45
 duration: 1598
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Privacy","Anonymity","Token standards"]
 speakers: ["Wei Dai","Kyle Charbonnet"]
 ---

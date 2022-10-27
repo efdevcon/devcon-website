@@ -13,8 +13,8 @@ ethernaPermalink: "https://etherna.io/embed/93e9bc45508814c1a8ca7c4494f55e5880e2
 duration: 1107
 expertise: "Advanced"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Julien Niset']
 ---

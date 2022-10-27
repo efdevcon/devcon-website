@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/92084dbb07543bb8b3e008176af3245c4ad1
 duration: 1586
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["ZKP","threshold crypto","DEX"]
 speakers: ["Henry de Valence"]
 ---

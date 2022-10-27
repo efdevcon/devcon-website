@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/af9621122904e32006c2afaed0e9829556d1
 duration: 1918
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["ZK","Zero Knowledge","Programmable Cryptography"]
 speakers: ["gubsheep"]
 ---

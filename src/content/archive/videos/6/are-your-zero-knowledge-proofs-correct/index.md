@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/cd103900146d071a88d4667962dd4c7af17c
 duration: 1537
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Verification","Zero-Knowledge","Security"]
 speakers: ["Jon Stephens"]
 ---

@@ -12,8 +12,8 @@ ethernaPermalink: "https://etherna.io/embed/5838208451b858c5136c476dc926d06cdcf5
 duration: 1274
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero knowledge","languages","scaling"]
 speakers: ["Maxim Vezenov"]
 ---
