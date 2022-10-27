@@ -27,6 +27,7 @@ import { LivestreamCard } from './LivestreamCard'
 import { APP_URL } from 'utils/constants'
 import { useIsStandalone } from 'utils/pwa-link'
 import { Speaker } from 'types/Speaker'
+import { ArchiveCard } from './ArchiveCard'
 
 const Hero = (props: any) => {
   let className = css['hero']
@@ -231,7 +232,8 @@ export const Session = (props: SessionProps) => {
           <p>{props.session.description}</p>
         </div>
 
-        {relativeTime && <LivestreamCard session={props.session} relativeTime={relativeTime} />}
+        <ArchiveCard session={props.session} />
+        {/* {relativeTime && <LivestreamCard session={props.session} relativeTime={relativeTime} />} */}
 
         {props.relatedSessions && props.relatedSessions.length > 0 && (
           <div className={css['related-sessions']}>
