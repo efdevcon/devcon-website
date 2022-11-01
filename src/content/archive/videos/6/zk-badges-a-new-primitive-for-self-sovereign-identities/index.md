@@ -17,8 +17,8 @@ ethernaPermalink: "https://etherna.io/embed/d864ee4bd05a569263de65b0267060010b71
 duration: 1761
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["ZK","SBT","DID"]
 speakers: ["dhadrien"]
 ---

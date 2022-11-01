@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/17d6d844a49fe9cec1084398c8d4c91847bd
 duration: 357
 expertise: "advanced"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Mudit Gupta']
 ---

@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/ad5bdddd69b46cd62f09847ea783612764b4
 duration: 665
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: []
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Robertas Visinskis']
 ---

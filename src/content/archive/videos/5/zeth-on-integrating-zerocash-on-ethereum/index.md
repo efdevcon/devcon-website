@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/82db6ecd119bf3a0a6821ac0f54538760bf1
 duration: 1221
 expertise: "Beginner"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: []
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Antoine Rondelet','Michal Zajac']
 ---

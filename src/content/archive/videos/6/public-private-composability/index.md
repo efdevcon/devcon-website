@@ -12,8 +12,8 @@ ethernaPermalink: "https://etherna.io/embed/8012099c215fd2c144e1ed42585a8a22b958
 duration: 1457
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero knowledge","privacy","smart contracts"]
 speakers: ["Mike Connor"]
 ---

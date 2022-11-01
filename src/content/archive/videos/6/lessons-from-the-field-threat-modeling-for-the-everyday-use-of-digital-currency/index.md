@@ -10,8 +10,8 @@ ethernaPermalink: ""
 duration: 1415
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['Privacy', 'Charity', 'Impact']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ["Andrew"]
 ---

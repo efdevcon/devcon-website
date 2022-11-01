@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/e3947c111cd304385667b0bb85fb117f1613
 duration: 280
 expertise: "Intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Kendrick Tan']
 ---

@@ -11,8 +11,8 @@ ethernaPermalink: "https://etherna.io/embed/b23e2c8330c2a109966fe8a02067490554fa
 duration: 700
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['commodification','data','monetization','general']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Seven Waterhouse']
 ---

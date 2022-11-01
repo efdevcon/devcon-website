@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/cca8789ab2b2e519bacfebc27bffb3feae59
 duration: 2747
 expertise: "Beginner"
 type: "Panel"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: []
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Liz Steininger']
 ---

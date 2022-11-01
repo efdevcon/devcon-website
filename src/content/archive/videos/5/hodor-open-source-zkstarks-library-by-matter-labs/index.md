@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/4ce8cac6a5b7819ea026ddcbd97582de5156
 duration: 4831
 expertise: "Advanced"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['Technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Konstantin Panarin','Alexander Vlasov']
 ---

@@ -9,7 +9,7 @@ ethernaPermalink: "https://etherna.io/embed/10d29bfd9d818bf9ec6b95785ad648d2b54f
 duration: 395
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['data','monetization','commodification']
 tags: ['Privacy ']
 speakers: ['Jesse Leimgruber']

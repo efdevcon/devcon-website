@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/fc2d225cea781c0180afea6b1662a56ef2a2
 duration: 943
 expertise: "Advanced"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: []
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Patrick McCorry']
 ---

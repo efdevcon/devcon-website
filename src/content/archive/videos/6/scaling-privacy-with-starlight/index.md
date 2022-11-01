@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/69cc7115ad8cadec3a3f8096012897d5db7a
 duration: 1703
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["privacy",";","layer","2",";","applications"]
 speakers: ["Paul Brody","Chaitanya Konda"]
 ---

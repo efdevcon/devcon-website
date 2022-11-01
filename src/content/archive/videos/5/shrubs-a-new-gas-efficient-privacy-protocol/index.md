@@ -11,8 +11,8 @@ ethernaPermalink: "https://etherna.io/embed/ff7c82affa56de482ca12b8d9566c3d7f726
 duration: 1464
 expertise: "advanced"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Alex Gluchowski','Kobi Gurkan','Marek Olszewski','Eran Tromer','Alexander Vlasov']
 ---

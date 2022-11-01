@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/b76e5e30efd2237efb160a40b55c8adddfd0
 duration: 1460
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['security']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Ian Miers']
 ---

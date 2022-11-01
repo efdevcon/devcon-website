@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/9e08b282ab03b327dac7ab2a0ecf0b940c01
 duration: 1912
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Rob Mulholand']
 ---

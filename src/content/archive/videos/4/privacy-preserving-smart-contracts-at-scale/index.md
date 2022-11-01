@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/6118ccaf77f79c6718afa60d026c20794101
 duration: 1812
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['oasis','contracts','scalability']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Noah Johnson']
 ---

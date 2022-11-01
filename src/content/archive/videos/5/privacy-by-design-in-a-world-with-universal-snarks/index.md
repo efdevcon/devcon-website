@@ -11,8 +11,8 @@ ethernaPermalink: "https://etherna.io/embed/46e069624fa9361eb306927aecdcdb9306a2
 duration: 1487
 expertise: "Beginner"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: []
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Zachary Williamson']
 ---

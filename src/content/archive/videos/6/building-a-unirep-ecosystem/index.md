@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/f2bbbbf434d5237b38ec264895a0d5db1119
 duration: 1520
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["identity","reputation","privacy"]
 speakers: ["Chance Hudson"]
 ---

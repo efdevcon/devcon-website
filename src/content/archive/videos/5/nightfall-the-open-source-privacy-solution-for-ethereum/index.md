@@ -11,8 +11,8 @@ ethernaPermalink: "https://etherna.io/embed/d95b3b38b6dc5180bf34be4cec1d570c5241
 duration: 1177
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['privacy','nightfall','technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Duncan Westland','Chaitanya Konda','Michael Connor','Paul Brody']
 ---

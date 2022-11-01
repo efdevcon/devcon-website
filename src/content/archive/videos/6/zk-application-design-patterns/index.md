@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/6ff2b7ef6f0b7498f83ee13acbc1ce41553e
 duration: 1437
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero-knowledge","application"]
 speakers: ["Yi Sun","Lakshman Sankar"]
 ---

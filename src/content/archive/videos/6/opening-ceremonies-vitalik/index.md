@@ -8,7 +8,7 @@ imageUrl: /assets/uploads/videos/vitalik.png
 ipfsHash: ""
 ethernaIndex: "https://etherna.io/embed/6347959fc02259b06a2ffbd6"
 ethernaPermalink: "https://etherna.io/embed/a7c0593b870769aca8a0eb074261bcde8a473993f143dad3d1f31f6f10c8333e"
-duration: 0
+duration: 1836
 expertise: "Beginner"
 type: "Talk"
 track: "Opportunity & Global Impact"

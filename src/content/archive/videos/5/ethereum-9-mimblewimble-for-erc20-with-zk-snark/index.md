@@ -12,8 +12,8 @@ ethernaPermalink: "https://etherna.io/embed/f1660512f61de715363ef66bfd567eb50d84
 duration: 1130
 expertise: "intermediate"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Wanseob Lim']
 ---

@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/6b3212d9ab84e81ba9839431cf229048c8d1
 duration: 1514
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero-knowledge","transparency"]
 speakers: ["Ian Miers"]
 ---

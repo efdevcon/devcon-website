@@ -75,11 +75,11 @@ export const Archive = (props: ArchiveProps) => {
       <div className={css['content']}>
         <Interests />
 
-        <Editions />
-
-        {/* <StaffPicks /> */}
+        <StaffPicks />
 
         <Playlists />
+
+        <Editions />
 
         <CuratedPlaylists title="Curated Playlists" items={curated} viewMore />
 

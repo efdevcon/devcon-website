@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/a2f10c15846ac9580687bc53814fc39aa62a
 duration: 1705
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['dapps','secret contracts','zkproofs','voting','governance','auctions']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Guy Zyskind','Isan Rivkin']
 ---

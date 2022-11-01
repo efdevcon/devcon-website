@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/4eb97b0018dd5f16b5e1585d8a9b469cac05
 duration: 2469
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['zcash','cryptography','regulations']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Zooko Wilcox']
 ---

@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/35936c0fd95b41c81a150a2bb4827883f74c
 duration: 623
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['whisper']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Guilaume Ballet']
 ---

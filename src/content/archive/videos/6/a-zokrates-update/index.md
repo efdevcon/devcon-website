@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/178fdc0cebe759a83a3cf0dd87761a259188
 duration: 1454
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["language","zksnark","zokrates"]
 speakers: ["Thibaut Schaeffer"]
 ---

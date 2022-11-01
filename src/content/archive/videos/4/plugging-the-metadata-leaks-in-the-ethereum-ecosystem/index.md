@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/7e45b9f6c17a34fe38c3d751229ad6ca20fe
 duration: 1554
 expertise: "Expert"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['metadata','dapps','nodes','aggregators','safety']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Péter Szilágyi']
 ---

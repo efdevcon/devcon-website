@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/7c25e2d394418096a6254bfd2c90d55558e9
 duration: 453
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['TEE','ZKP','zkproofs','sMPC']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Julian Koh']
 ---

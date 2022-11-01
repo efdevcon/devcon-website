@@ -13,8 +13,8 @@ ethernaPermalink: "https://etherna.io/embed/d4446b2756e0944a1f80c351803839dd2cab
 duration: 1141
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['whisper','messaging','technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Dean Eigenmann','Oskar Thoren']
 ---

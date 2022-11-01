@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/fe0c709b0368b29e70a0793330a86f5b3f44
 duration: 1395
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['payments']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Liz Steininger']
 ---

@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/077ef9b71f51bde128e36dd40ea5852f94c6
 duration: 504
 expertise: ""
 type: "Lightning Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero-knowledge","zkSNARK"]
 speakers: ["Michal Zajac"]
 ---

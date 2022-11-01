@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/dbdc31c4b4605588f61b12a07787d296924b
 duration: 1393
 expertise: "Intermediate"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["privacy","identity","anti-sybil"]
 speakers: ["Geoff Lamperd"]
 ---

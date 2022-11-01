@@ -13,8 +13,8 @@ ethernaPermalink: ""
 duration: 0
 expertise: ""
 type: "Workshop"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zero-knowledge","Circom"]
 speakers: ["Jesus Ligero","Carlos Matallana"]
 ---

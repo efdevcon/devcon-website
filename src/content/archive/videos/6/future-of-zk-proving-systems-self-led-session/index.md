@@ -11,8 +11,8 @@ ethernaPermalink: ""
 duration: 0
 expertise: "Advanced"
 type: "Workshop"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["Halo2","Circom","PLONK"]
 speakers: ["Jordi Baylina","Ye Zhang","Youssef El Housni","Adrian Hamelink","Yi Sun","Ying Tong","Louis Guthmann","Jason Morton","Janmajaya Mall","Brandon Kase","Kev"]
 ---

@@ -10,8 +10,8 @@ ethernaPermalink: "https://etherna.io/embed/3f8374814be0e2043b8c84b80803e075de4d
 duration: 424
 expertise: "Intermediate"
 type: "Lightning Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zk","spam","anonymous"]
 speakers: ["AtHeartEngineer"]
 ---

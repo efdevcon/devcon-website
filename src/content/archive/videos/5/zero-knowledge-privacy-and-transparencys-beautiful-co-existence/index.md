@@ -9,8 +9,8 @@ ethernaPermalink: "https://etherna.io/embed/55606c1e756802216f3d46528332da552b5e
 duration: 1069
 expertise: "beginner"
 type: "Breakout"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
+track: "Privacy"
 keywords: ['technical']
-tags: ['ZKPs: Privacy, Identity, Infrastructure, & More']
+tags: ['Privacy']
 speakers: ['Anna ROSE']
 ---
