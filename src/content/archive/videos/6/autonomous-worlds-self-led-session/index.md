@@ -6,8 +6,8 @@ description: "A session for those interested in the latest developments in Auton
 More info here: https://0xparc.notion.site/Autonomous-Worlds-SLS-612ff18a99f54594806776971b5a8ec6"
 youtubeUrl: "https://youtu.be/cWrSpTMpx4E"
 ipfsHash: ""
-ethernaIndex: ""
-ethernaPermalink: ""
+ethernaIndex: "https://etherna.io/embed/6359b4c2080a54f6d733eef0"
+ethernaPermalink: "https://etherna.io/embed/b9f7a1bd7f8f26b989a1e3940ac2b1989f8a21384baabb12918066329efc5035"
 duration: 9629
 expertise: "Intermediate"
 type: "Workshop"
