@@ -60,9 +60,10 @@ export const SessionCard = (props: CardProps) => {
 
   if (props.compact) thumbnailClassName += ` ${css['compact']}`
   if (props.className) thumbnailClassName += ` ${props.className}`
-  if (sessionHasPassed) {
-    thumbnailClassName += ` ${css['passed']}`
-  }
+
+  // if (sessionHasPassed) {
+  //   thumbnailClassName += ` ${css['passed']}`
+  // }
 
   if (sessionIsLive) {
     thumbnailClassName += ` ${css['ongoing']}`
