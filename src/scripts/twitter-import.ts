@@ -23,8 +23,6 @@ async function Run() {
 
     const body = await response.json()
 
-    console.log(body, 'body')
-
     if (body.status !== 200) {
         fs.writeFile("./src/content/news-tweets.json", JSON.stringify(body.data, deterministicReplacer, 2), function (err) {
             if (err) {
