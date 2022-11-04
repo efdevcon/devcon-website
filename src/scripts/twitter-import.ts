@@ -5,6 +5,12 @@ require('dotenv').config()
 
 Run()
 
+// @ts-ignore
+const deterministicReplacer = (_, v) =>
+  typeof v !== 'object' || v === null || Array.isArray(v) ? v :
+    Object.fromEntries(Object.entries(v).sort(([ka], [kb]) => 
+      ka < kb ? -1 : ka > kb ? 1 : 0));
+
 async function Run() {
     console.log('Run Twitter importer..')
     //  -is:quote
@@ -16,8 +22,11 @@ async function Run() {
     })
 
     const body = await response.json()
+
+    console.log(body, 'body')
+
     if (body.status !== 200) {
-        fs.writeFile("./src/content/news-tweets.json", JSON.stringify(body.data, null, 2), function (err) {
+        fs.writeFile("./src/content/news-tweets.json", JSON.stringify(body.data, deterministicReplacer, 2), function (err) {
             if (err) {
                 console.log(err)
             }
