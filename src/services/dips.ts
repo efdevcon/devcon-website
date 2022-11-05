@@ -88,7 +88,19 @@ export async function GetDIPs(): Promise<Array<DIP>> {
         if (matchSummary && matchSummary[1]) formattedMarkdown = formattedMarkdown.replace('---', `---\nSummary: '${matchSummary[1].replace(/'/g, '"').trim()}'`)
 
         const matchTitle = formattedMarkdown.match(/(Title\:[^\n]*)/);
-        if (matchTitle && matchTitle[1]) formattedMarkdown = formattedMarkdown.replace(matchTitle[1], matchTitle[1].replace(/"/g, "'"))
+        if (matchTitle && matchTitle[1]) {
+          let titleValue = matchTitle[1].split(':').pop();
+
+          if (titleValue) {
+            // Normalize just in case title already ends and starts with '
+            if (titleValue.startsWith("'") && titleValue.endsWith("'")) {
+              titleValue = titleValue.slice(1, titleValue.length - 1);
+            }
+
+            // Wrap title in ' to prevent erroring out if quotation marks is used in title (gray-matter cries in this case)
+            formattedMarkdown = formattedMarkdown.replace(titleValue, `'${titleValue}'`)
+          }
+        }
 
         const currentIndex = dipNumbers.indexOf(Number(i.name.replace('.md', '').replace('DIP-', '')))
         const prevDip = currentIndex > 0 ? `/dips/dip-${dipNumbers[currentIndex - 1]}` : `/dips/`
