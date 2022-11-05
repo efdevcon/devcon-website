@@ -89,7 +89,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
 
         const matchTitle = formattedMarkdown.match(/(Title\:[^\n]*)/);
         if (matchTitle && matchTitle[1]) {
-          let titleValue = matchTitle[1].split(':').pop();
+          let titleValue = matchTitle[1].split(':').pop()?.trim();
 
           if (titleValue) {
             // Normalize just in case title already ends and starts with '
@@ -98,7 +98,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
             }
 
             // Wrap title in ' to prevent erroring out if quotation marks is used in title (gray-matter cries in this case)
-            formattedMarkdown = formattedMarkdown.replace(titleValue, `'${titleValue}'`)
+            formattedMarkdown = formattedMarkdown.replace(`${matchTitle[1]}\n`, `Title: '${titleValue}'\n`)
           }
         }
 
