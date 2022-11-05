@@ -87,11 +87,15 @@ export async function GetDIPs(): Promise<Array<DIP>> {
         const matchSummary = formattedMarkdown.match(/##[^\n]*([^##]*)/);
         if (matchSummary && matchSummary[1]) formattedMarkdown = formattedMarkdown.replace('---', `---\nSummary: '${matchSummary[1].replace(/'/g, '"').trim()}'`)
 
+        const matchTitle = formattedMarkdown.match(/(Title\:[^\n]*)/);
+        if (matchTitle && matchTitle[1]) formattedMarkdown = formattedMarkdown.replace(matchTitle[1], matchTitle[1].replace(/"/g, "'"))
+
         const currentIndex = dipNumbers.indexOf(Number(i.name.replace('.md', '').replace('DIP-', '')))
         const prevDip = currentIndex > 0 ? `/dips/dip-${dipNumbers[currentIndex - 1]}` : `/dips/`
         const nextDip = currentIndex < dipNumbers.length ? `/dips/dip-${dipNumbers[currentIndex + 1]}` : `/dips/`
 
         const doc = matter(formattedMarkdown)
+
         return {
             number: doc.data.DIP,
             title: doc.data.Title,
