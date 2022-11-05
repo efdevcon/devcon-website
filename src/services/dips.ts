@@ -117,6 +117,7 @@ export async function GetDIPs(): Promise<Array<DIP>> {
     cache.set(cacheKey, result)
     return result
   } catch (e) {
+    console.error(e)
     console.log('Error during dip fetch')
 
     return []
