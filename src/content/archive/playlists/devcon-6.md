@@ -1,6 +1,6 @@
 ---
 title: Devcon 6
-description: "Our search for a fitting location for Devcon VI began prior to Devcon V in 2019. After exploring venues in over ten cities across the world, and meticulously evaluating each against an extensive set of criteria, the clear winner was Bogotá, Colombia."
+description: "Devcon VI brought the Ethereum ecosystem to South America, to Bogotá, Colombia. Devcon keeps growing, and with about 6,000 attendees and contributors, around 350 speakers, and 9 talk rooms, it was the biggest Devcon yet. Rumors say it was also the best Devcon ever."
 image: ../../../../static/assets/uploads/editions/devcon6.png
 categories:
   - Devcon
