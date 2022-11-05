@@ -1,6 +1,6 @@
 // const withPWA = require('next-pwa')
 const webpack = require('webpack')
-const { withSentryConfig } = require('@sentry/nextjs')
+// const { withSentryConfig } = require('@sentry/nextjs')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -225,6 +225,8 @@ const nextConfig = {
   },
 }
 
-module.exports = withSentryConfig(nextConfig, {
-  silent: true, // Suppresses all Sentry logs
-})
+module.exports = nextConfig
+
+// module.exports = withSentryConfig(nextConfig, {
+//   silent: true, // Suppresses all Sentry logs
+// })
