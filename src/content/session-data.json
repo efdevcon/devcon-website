@@ -3567,7 +3567,7 @@
     "speakers": [
       {
         "id": "XLEESP",
-        "name": "Andrew",
+        "name": "Andrew Vaziri",
         "description": "Andrew Vaziri is a technical lead in GiveDirectly's Innovation Team. He works primarily on geospatial data, machine learning, and blockchain projects. He graduated with an MS in Electrical Engineering from Georgia Tech and has worked for Apple, Microsoft, and multiple successful startups as a software and machine learning engineer.",
         "twitter": "@AndrewVaziri",
         "avatar": "http://speak.devcon.org/media/avatars/headshot_tWNSyJP.png"
@@ -3830,7 +3830,7 @@
       {
         "id": "KGQ88F",
         "name": "Rikard Hjort",
-        "description": "Rikard Hjort is researching formal methods for developing high-assurance smart contracts for blockchains. He worked on formalizing WebAssembly in K, and now uses KWasm to verify smart contracts written in WebAssembly. He has an M.Sc. in Computer Science from the Chalmers University of Technology, Sweden. He was an intern at Google in 2016 and 2017, and studied at the University of Tokyo in 2017-2018 where he combined his research on blockchains with studying coercion-resistant voting protocols.",
+        "description": "Rikard Hjort is an auditor and developer at Runtime Verification, researching formal methods for developing high-assurance smart contracts for blockchains. He has been putting his efforts into the Ethereum, Cosmos and Rust-based ecosystems.",
         "twitter": "rikardhjort",
         "avatar": "http://speak.devcon.org/media/avatars/rikard.hjort_jeI8KMh.jpg"
       }
@@ -12851,6 +12851,7 @@
         "id": "VEDWYZ",
         "name": "GUO Haoyun",
         "description": "Based in Shanghai China｜ETHPlanet - Community Support Team | EDCON Team｜ Member of togETHer",
+        "twitter": "https://twitter.com/guohaoyun",
         "avatar": ""
       },
       {
