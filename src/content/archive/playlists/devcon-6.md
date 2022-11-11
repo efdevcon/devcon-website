@@ -1,6 +1,6 @@
 ---
 title: Devcon 6
-description: "Devcon VI brought the Ethereum ecosystem to South America, to Bogotá, Colombia. Devcon keeps growing, and with about 6,000 attendees and contributors, around 350 speakers, and 9 talk rooms, it was the biggest Devcon yet. Rumors say it was also the best Devcon ever."
+description: "Devcon VI brought the Ethereum ecosystem to South America, to Bogotá, Colombia. Devcon keeps growing, and with over 6,000 attendees and contributors, around 350 speakers, and 9 talk rooms, it was the biggest Devcon yet. Rumors has it that it was also the best Devcon ever."
 image: ../../../../static/assets/uploads/editions/devcon6.png
 categories:
   - Devcon
