@@ -13,5 +13,5 @@ type: "Talk"
 track: "Privacy"
 keywords: ['Privacy', 'Charity', 'Impact']
 tags: ['Privacy']
-speakers: ["Andrew"]
+speakers: ["Andrew Vaziri"]
 ---
