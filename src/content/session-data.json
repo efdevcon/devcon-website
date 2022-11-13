@@ -7253,105 +7253,6 @@
     ]
   },
   {
-    "id": "KPR8CL",
-    "speakers": [
-      {
-        "id": "CJ9RVC",
-        "name": "Jordi Baylina",
-        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
-        "twitter": "jbaylina",
-        "avatar": ""
-      },
-      {
-        "id": "A7VEH7",
-        "name": "Ye Zhang",
-        "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
-        "twitter": "yezhang1998",
-        "avatar": "http://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg"
-      },
-      {
-        "id": "WVSWJD",
-        "name": "Youssef El Housni",
-        "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
-        "twitter": "YoussefElHousn3",
-        "avatar": "http://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg"
-      },
-      {
-        "id": "DBEDPK",
-        "name": "Adrian Hamelink",
-        "description": "Cryptography engineer @ Aztec",
-        "twitter": "adr1anh",
-        "avatar": ""
-      },
-      {
-        "id": "LXM3XY",
-        "name": "Yi Sun",
-        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
-        "twitter": "theyisun",
-        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
-      },
-      {
-        "id": "DKZWNJ",
-        "name": "Ying Tong",
-        "description": "Core Developer at Electric Coin Company",
-        "twitter": "therealyingtong",
-        "avatar": ""
-      },
-      {
-        "id": "XPGGMQ",
-        "name": "Louis Guthmann",
-        "description": null,
-        "twitter": "Guthl",
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "9Q9ZTE",
-        "name": "Janmajaya Mall",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9DUZUZ",
-        "name": "Brandon Kase",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "LJJQBM",
-        "name": "Kev",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "Future of ZK Proving Systems Self Led Session",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 120,
-    "start": 1665655200000,
-    "end": 1665665700000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Workshop 2h",
-    "description": "Modern proof systems are informed by modular and composable designs. This self led session hosted by 0xPARC and Privacy and Scaling Explorations explores the techniques, tools, and applications enabling the interoperable and efficient proof systems of the future. \r\nFull agenda here: https://0xparc.notion.site/Future-of-Proving-Systems-SLS-Schedule-c030e251ffaf4f10bfd3389195f6cb28",
-    "abstract": "",
-    "expertise": "Advanced",
-    "tags": [
-      "Halo2",
-      "Circom",
-      "PLONK"
-    ]
-  },
-  {
     "id": "KVMVBU",
     "speakers": [
       {
@@ -8461,116 +8362,6 @@
     ]
   },
   {
-    "id": "8QFEHB",
-    "speakers": [
-      {
-        "id": "77HGTH",
-        "name": "Althea Allen",
-        "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
-        "avatar": ""
-      },
-      {
-        "id": "VXMHCZ",
-        "name": "Oskar Thorén",
-        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
-        "twitter": "oskarth",
-        "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
-      },
-      {
-        "id": "JN83LR",
-        "name": "Shumo Chu",
-        "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
-        "twitter": "https://twitter.com/shumochu",
-        "avatar": ""
-      },
-      {
-        "id": "RGKJGA",
-        "name": "AtHeartEngineer",
-        "description": "Aspiring polymath doing R&D on the privacy and scaling team",
-        "twitter": "AtHeartEngineer",
-        "avatar": "http://speak.devcon.org/media/avatars/AtHeartEngineerLogo_small_F6ZbKfj.png"
-      },
-      {
-        "id": "LVC7MN",
-        "name": "Aayush Gupta",
-        "description": "0xPARC",
-        "twitter": "yush_g",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_5176_5BsafLR.jpg"
-      },
-      {
-        "id": "8MUK7D",
-        "name": "Remco Bloemen",
-        "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
-        "twitter": "recmo",
-        "avatar": ""
-      },
-      {
-        "id": "LXM3XY",
-        "name": "Yi Sun",
-        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
-        "twitter": "theyisun",
-        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
-      },
-      {
-        "id": "KGGWEZ",
-        "name": "Uma Roy",
-        "description": "Building proof of consensus at succinct.xyz",
-        "twitter": "pumatheuma",
-        "avatar": ""
-      },
-      {
-        "id": "S8R9ND",
-        "name": "Ya-wen Jeng",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "7N9ZJE",
-        "name": "Vivek",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "NLKC7B",
-        "name": "Iskander",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "URAKDD",
-        "name": "Sampriti Panda",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "ZK Application Showcase",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 180,
-    "start": 1665666000000,
-    "end": 1665676800000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Workshop 2h",
-    "description": "Demos and presentations covering a wide range of applications of zero knowledge proofs, from light clients to machine learning to spam-resistant messaging and anonymous social media. Focusing more on the application layer than deep technical details, this session will provide an overview of the applied ZK landscape for people at any level of technical knowledge. \r\nFull schedule here: https://www.notion.so/0xparc/Applied-ZK-SLS-360fcd3f2a824759b1373ddeef5bf564",
-    "abstract": "",
-    "expertise": "Advanced",
-    "tags": [
-      "Zero",
-      "Knowledge"
-    ]
-  },
-  {
     "id": "3KQ8QX",
     "speakers": [
       {
@@ -9123,38 +8914,6 @@
     ]
   },
   {
-    "id": "AC3BAK",
-    "speakers": [
-      {
-        "id": "ZR3DL7",
-        "name": "Connor Spelliscy",
-        "description": "Connor Spelliscy is a crypto researcher and advocate, primarily focused on DAOs.  He runs the DAO Research Collective, which accelerates DAO functionality by supporting and curating research foundational to effective DAO operation. \r\n\r\nHe helps run the Gitcoin advocacy ecosystem round and previously co-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto.",
-        "twitter": "https://twitter.com/c_spelliscy",
-        "avatar": "http://speak.devcon.org/media/avatars/IMG_1520_o3tqJoW.jpeg"
-      }
-    ],
-    "title": "Fighting for Crypto's Future: The State of Regulation & Advocacy",
-    "track": "Opportunity & Global Impact",
-    "duration": 25,
-    "start": 1665671400000,
-    "end": 1665672900000,
-    "room": {
-      "id": "talk-5",
-      "name": "Talk 5",
-      "description": "On Top of the Mountain",
-      "info": "Floor 5",
-      "capacity": 1140
-    },
-    "type": "Talk",
-    "description": "An overview of the advocacy strategy for crypto and the current state of regulation.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "regulatory",
-      "landscape"
-    ]
-  },
-  {
     "id": "XANRN9",
     "speakers": [
       {
@@ -9249,6 +9008,38 @@
       "MEV",
       "PBS",
       "builder"
+    ]
+  },
+  {
+    "id": "AC3BAK",
+    "speakers": [
+      {
+        "id": "ZR3DL7",
+        "name": "Connor Spelliscy",
+        "description": "Connor Spelliscy is a crypto researcher and advocate, primarily focused on DAOs.  He runs the DAO Research Collective, which accelerates DAO functionality by supporting and curating research foundational to effective DAO operation. \r\n\r\nHe helps run the Gitcoin advocacy ecosystem round and previously co-founded the Blockchain Association and the Canadian Web3 Council, two of the leading industry associations for crypto.",
+        "twitter": "https://twitter.com/c_spelliscy",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_1520_o3tqJoW.jpeg"
+      }
+    ],
+    "title": "Fighting for Crypto's Future: The State of Regulation & Advocacy",
+    "track": "Opportunity & Global Impact",
+    "duration": 25,
+    "start": 1665671400000,
+    "end": 1665672900000,
+    "room": {
+      "id": "talk-5",
+      "name": "Talk 5",
+      "description": "On Top of the Mountain",
+      "info": "Floor 5",
+      "capacity": 1140
+    },
+    "type": "Talk",
+    "description": "An overview of the advocacy strategy for crypto and the current state of regulation.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "regulatory",
+      "landscape"
     ]
   },
   {
@@ -9855,95 +9646,6 @@
     "tags": [
       "zero-knowledge",
       "application"
-    ]
-  },
-  {
-    "id": "XMHCA7",
-    "speakers": [
-      {
-        "id": "CJ9RVC",
-        "name": "Jordi Baylina",
-        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
-        "twitter": "jbaylina",
-        "avatar": ""
-      },
-      {
-        "id": "TZGGNW",
-        "name": "Jon Stephens",
-        "description": "I am a current PhD student at UT Austin as well as the CTO and a co-founder of Veridise. My work focuses on developing automated techniques to verify and identify bugs in various locations in the blockchain stack.",
-        "twitter": "@VeridiseInc",
-        "avatar": "http://speak.devcon.org/media/avatars/jon1_UiU1u9V.jpeg"
-      },
-      {
-        "id": "LSGVGP",
-        "name": "Kyle Charbonnet",
-        "description": "Software Security Engineer at the Privacy & Scaling Explorations Team",
-        "twitter": "kcharb0",
-        "avatar": ""
-      },
-      {
-        "id": "ZYXBSK",
-        "name": "gubsheep",
-        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
-        "twitter": "gubsheep",
-        "avatar": ""
-      },
-      {
-        "id": "CMSZNX",
-        "name": "David Theodore",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "8DMBJM",
-        "name": "Remy",
-        "description": "Ops, startups, higher ed + tech, outdoor activities.",
-        "avatar": "http://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg"
-      },
-      {
-        "id": "ZRNNVV",
-        "name": "Barry Whitehat",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "9RKGBT",
-        "name": "Jason Morton",
-        "description": "ZKonduit & 0xPARC",
-        "avatar": ""
-      },
-      {
-        "id": "KQNENU",
-        "name": "Lucas",
-        "description": null,
-        "avatar": ""
-      },
-      {
-        "id": "UHSVVC",
-        "name": "Haichen Shen",
-        "description": null,
-        "avatar": ""
-      }
-    ],
-    "title": "ZK Security Self Led Session",
-    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
-    "duration": 105,
-    "start": 1665677700000,
-    "end": 1665684000000,
-    "room": {
-      "id": "workshop-1",
-      "name": "Workshop 1",
-      "description": "SLS/Community Room",
-      "info": "Floor 2",
-      "capacity": 112
-    },
-    "type": "Workshop 2h",
-    "description": "As more ZK-enabled applications come online, we'll need to build a robust security ecosystem and new techniques to ensure that our ZK apps aren't vulnerable to attackers. In this session hosted by 0xPARC and Privacy and Scaling Explorations, specialists in ZK, formal verification, and assurance discuss new approaches to securing these next-generation decentralized apps. \r\n\r\nFull schedule here: https://0xparc.notion.site/ZK-Security-SLS-Schedule-df4675aa9ad04f49a2836191ec44f8d8",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "Zero",
-      "Knowledge"
     ]
   },
   {
@@ -13291,6 +12993,889 @@
       "chess",
       "meetup",
       "community"
+    ]
+  },
+  {
+    "id": "QUKDZD",
+    "speakers": [
+      {
+        "id": "DKZWNJ",
+        "name": "Ying Tong",
+        "description": "Core Developer at Electric Coin Company",
+        "twitter": "therealyingtong",
+        "avatar": ""
+      },
+      {
+        "id": "ZRNNVV",
+        "name": "Barry Whitehat",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Future of Proving Systems - Opening Remarks",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 10,
+    "start": 1665655200000,
+    "end": 1665655800000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": ".Opening Remarks",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "TG7WDS",
+    "speakers": [
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "twitter": "theyisun",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      }
+    ],
+    "title": "ZK Circuits for Elliptic Curve Operations in Halo2",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665655800000,
+    "end": 1665657300000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We present halo2-ecc, a ZK circuit library for elliptic curve operations in halo2. Our library implements multi-scalar multiplication, optimal Ate pairing, and ECDSA verification on curves including BN254 and Secp256k1. We will show benchmarks for these operations as well as applications to recursion and aggregation of halo2 proofs. This is joint work with Jonathan Wang.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "GRNDXM",
+    "speakers": [
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      }
+    ],
+    "title": "Proving System Challenges from ZKML",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 10,
+    "start": 1665656400000,
+    "end": 1665657000000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We discuss challenges and learnings from building deep learning models on Halo2.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "XVUVWF",
+    "speakers": [
+      {
+        "id": "9Q9ZTE",
+        "name": "Janmajaya Mall",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Maze - Aggregation Tool for Circom-PLONK Proofs",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 10,
+    "start": 1665657300000,
+    "end": 1665657900000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "The session aims to demo Maze, a CLI-based tool for aggregating several circom-plonk proofs into a single aggregated proof developed using Halo2 library. The session will also include a high level explanation of aggregation of plonk proofs using Proof Carrying Data (PCD).",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "KYJ9H7",
+    "speakers": [
+      {
+        "id": "DBEDPK",
+        "name": "Adrian Hamelink",
+        "description": "Cryptography engineer @ Aztec",
+        "twitter": "adr1anh",
+        "avatar": ""
+      }
+    ],
+    "title": "Cryptographic Optimizations in Aztec",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 10,
+    "start": 1665657600000,
+    "end": 1665658200000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "9TKWWC",
+    "speakers": [
+      {
+        "id": "WVSWJD",
+        "name": "Youssef El Housni",
+        "description": "I am an applied cryptographer at ConsenSys working on cryptography and SNARK libraries in Go (see gnark and gnark-crypto). I am also a final year PhD student in cryptography at Ecole Polytechnique in Paris.",
+        "twitter": "YoussefElHousn3",
+        "avatar": "http://speak.devcon.org/media/avatars/0411D19C-9905-49E9-AFD5-2F9AE18B9B92_S9EnkOM.jpeg"
+      }
+    ],
+    "title": "Optimizing Cryptographic Algorithms used in Gnark",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 20,
+    "start": 1665658800000,
+    "end": 1665660000000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "YXEADU",
+    "speakers": [
+      {
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "twitter": "jbaylina",
+        "avatar": ""
+      },
+      {
+        "id": "DKZWNJ",
+        "name": "Ying Tong",
+        "description": "Core Developer at Electric Coin Company",
+        "twitter": "therealyingtong",
+        "avatar": ""
+      },
+      {
+        "id": "XPGGMQ",
+        "name": "Louis Guthmann",
+        "description": null,
+        "twitter": "Guthl",
+        "avatar": ""
+      },
+      {
+        "id": "9DUZUZ",
+        "name": "Brandon Kase",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "LJJQBM",
+        "name": "Kev",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Next-Generation DSLs and IRs",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 45,
+    "start": 1665660000000,
+    "end": 1665662700000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "We discuss the future of higher-level langauges and circuit representations with developers from a number of toolstacks.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "TS7VQK",
+    "speakers": [
+      {
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "twitter": "jbaylina",
+        "avatar": ""
+      }
+    ],
+    "title": "STARKs in SNARKs",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 20,
+    "start": 1665663300000,
+    "end": 1665664500000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We'll create a ZK circuit live, build a STARK, and build a SNARK that verifies the STARK.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "GDA9X7",
+    "speakers": [
+      {
+        "id": "A7VEH7",
+        "name": "Ye Zhang",
+        "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
+        "twitter": "yezhang1998",
+        "avatar": "http://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg"
+      }
+    ],
+    "title": "Proof Systems for zkRollups",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 25,
+    "start": 1665664500000,
+    "end": 1665666000000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "XXJMXK",
+    "speakers": [
+      {
+        "id": "QDWXSC",
+        "name": "Althea Allen",
+        "description": "",
+        "avatar": ""
+      }
+    ],
+    "title": "ZK Applications Showcase - Opening Remarks",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 5,
+    "start": 1665666000000,
+    "end": 1665666300000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "Opening Remarks",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "UVCTAS",
+    "speakers": [
+      {
+        "id": "KGGWEZ",
+        "name": "Uma Roy",
+        "description": "Building proof of consensus at succinct.xyz",
+        "twitter": "pumatheuma",
+        "avatar": ""
+      }
+    ],
+    "title": "SNARK Light Clients",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 17,
+    "start": 1665666300000,
+    "end": 1665667320000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "During this session, we'll go over basic components of Miden VM and describe how we've implemented them using the STARK proving system. We'll also provide a high-level overview of Miden VM features, and compare them against other ZK virtual machines.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "PYRN87",
+    "speakers": [
+      {
+        "id": "VXMHCZ",
+        "name": "Oskar Thorén",
+        "description": "Oskar Thorén is the Director of Research at Vac, an R&D org building public good protocols for the decentralized web, with a focus on privacy and communication. Before that he was Head of Engineering at Status, a mobile Ethereum client. He also organizes the Papers We Love meetup in Taipei.\r\n\r\nWebsite: oskarth.com\r\nTwitter: https://twitter.com/oskarth\r\nVac website: https://vac.dev",
+        "twitter": "oskarth",
+        "avatar": "http://speak.devcon.org/media/avatars/oskarth_TMwhcKP.jpg"
+      }
+    ],
+    "title": "Using ZKP for better p2p messaging with Waku",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 15,
+    "start": 1665667500000,
+    "end": 1665668400000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "In this short demo we'll look at Waku, the communication layer for Web3, and how it uses ZK for its service network. We'll demo using Waku with RLN for private, economic spam protection and what this means for you as a user and node operator. We'll also briefly look at how we can incentivize other services in the network in a private manner. Finally we'll show how you can actively participate in and contribute to the network yourself as a node operator, developer or end user.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "LEQ7EY",
+    "speakers": [
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      }
+    ],
+    "title": "Zero-Knowledge Machine Learning",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 15,
+    "start": 1665669600000,
+    "end": 1665670500000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "ZKML could be the key to giving the blockchain eyes, letting smart contracts exercise judgment, one-person oracles, and generally getting data on-chain in a scalable way. I'll discuss applications, how to quickly convert PyTorch models to zero-knowledge proofs, and the roadmap.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "VBE9NZ",
+    "speakers": [
+      {
+        "id": "LXM3XY",
+        "name": "Yi Sun",
+        "description": "ZKP enthusiast and open-source developer of ZK circuits for various crypto primitives (ECDSA, elliptic curve pairings).",
+        "twitter": "theyisun",
+        "avatar": "http://speak.devcon.org/media/avatars/yi.sun_J0t4FOy.jpg"
+      }
+    ],
+    "title": "Scaling up Trustless Neural Network Inference with Zero-Knowledge Proofs",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 15,
+    "start": 1665670500000,
+    "end": 1665671400000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We present the first ZK-SNARK proof of valid inference for a full resolution ImageNet model. We will describe the arithmetization and quantization optimizations enabling us to SNARK large neural networks as well as a software package enabling transpilation from off-the-shelf models to halo2 circuits. We design protocols using our circuits to verify machine learning model predictions and accuracy and present concrete estimates of overhead costs based on our circuit implementations. This is joint",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "U9GVAK",
+    "speakers": [
+      {
+        "id": "JN83LR",
+        "name": "Shumo Chu",
+        "description": "I am co-founder of Manta Network. I graduated as a PhD from University of Washington Computer Science and Engineering, where I was advised by computer scientist Dan Suciu. I obtained my bachelor degree from Wuhan University, China. Before Manta, I was a research scientist at Algorand and assistant professor at UCSB.",
+        "twitter": "https://twitter.com/shumochu",
+        "avatar": ""
+      }
+    ],
+    "title": "Poseidon VM: a zkApp friendly VM with EVM compatibility",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 13,
+    "start": 1665668400000,
+    "end": 1665669180000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We present Poseidon VM, a blockchain VM designed to support decentralized applications powered by zero-knowledge proofs (a.k.a. zkApps) with friendly programming abstractions and cheap transaction cost.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "SBEFUD",
+    "speakers": [
+      {
+        "id": "8MUK7D",
+        "name": "Remco Bloemen",
+        "description": "Designing and building protocols at Worldcoin.\r\nSeasoned gas golfer. Rustacean. Thoroughbred engineer and startup artist. Math/physics nerd. Father. Bicycle maximalist.",
+        "twitter": "recmo",
+        "avatar": ""
+      }
+    ],
+    "title": "Worldcoin",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 15,
+    "start": 1665671400000,
+    "end": 1665672300000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": ".",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "LP9T3D",
+    "speakers": [
+      {
+        "id": "RGKJGA",
+        "name": "AtHeartEngineer",
+        "description": "Aspiring polymath doing R&D on the privacy and scaling team",
+        "twitter": "AtHeartEngineer",
+        "avatar": "http://speak.devcon.org/media/avatars/AtHeartEngineerLogo_small_F6ZbKfj.png"
+      },
+      {
+        "id": "NLKC7B",
+        "name": "Iskander",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Crypt-Keeper ZK Identity Wallet",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 10,
+    "start": 1665672600000,
+    "end": 1665673200000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We demo the Crypt-Keeper identity commitment and zk proof generation wallet for semaphore, RLN, and other ZK identities.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "KW3RWB",
+    "speakers": [
+      {
+        "id": "S8R9ND",
+        "name": "Ya-wen Jeng",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Unirep Social - A demo application of Unirep protocol",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 10,
+    "start": 1665673200000,
+    "end": 1665673800000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "Unirep is a private reputation system. In this session we will use a social media app called Unirep Social to demo the Unirep protocol.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "NACHCA",
+    "speakers": [
+      {
+        "id": "GQXSZE",
+        "name": "Tsukino",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Zkitter - Anonymous Social Network",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 20,
+    "start": 1665673800000,
+    "end": 1665675000000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "A brief overview of Zkitter, an anonymous social network built using ZK technology. Learn how you can start posting and chatting anonymously while using your real life reputation.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "H9CR3F",
+    "speakers": [
+      {
+        "id": "RWM8QD",
+        "name": "Vivek Bhupatiraju",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "heyanon.xyz",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 15,
+    "start": 1665675000000,
+    "end": 1665675900000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "Demoing heyanon, an open-source app allowing you to anonymously tweet as a verified member of on and off-chain groups. We’ll talk about how you can submit your own groups, our work on improving the ECDSA group experience, and our many ideas for extensions!",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "SRRP8G",
+    "speakers": [
+      {
+        "id": "LVC7MN",
+        "name": "Aayush Gupta",
+        "description": "0xPARC",
+        "twitter": "yush_g",
+        "avatar": "http://speak.devcon.org/media/avatars/IMG_5176_5BsafLR.jpg"
+      },
+      {
+        "id": "URAKDD",
+        "name": "Sampriti Panda",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "zkemail: Decentralized ID Verification on Chain Without Servers",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 30,
+    "start": 1665675900000,
+    "end": 1665677700000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We demo zk-email, a new primitive that lets you verify emails trustlessly. We demo a simple trustless Twitter badge on chain, and show how almost any data in web2 can be turned into trustless badges or zk badges on a blockchain. Launching with Personae Labs!",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "CAZHCD",
+    "speakers": [
+      {
+        "id": "ZYXBSK",
+        "name": "gubsheep",
+        "description": "gubsheep is the creator of Dark Forest and runs applied ZK research and development at 0xPARC.",
+        "twitter": "gubsheep",
+        "avatar": ""
+      },
+      {
+        "id": "ZRNNVV",
+        "name": "Barry Whitehat",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "ZK Security SLS - Opening Remarks",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 10,
+    "start": 1665677700000,
+    "end": 1665678300000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "Opening Remarks",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "10"
+    ]
+  },
+  {
+    "id": "DBGFXE",
+    "speakers": [
+      {
+        "id": "TZGGNW",
+        "name": "Jon Stephens",
+        "description": "I am a current PhD student at UT Austin as well as the CTO and a co-founder of Veridise. My work focuses on developing automated techniques to verify and identify bugs in various locations in the blockchain stack.",
+        "twitter": "@VeridiseInc",
+        "avatar": "http://speak.devcon.org/media/avatars/jon1_UiU1u9V.jpeg"
+      }
+    ],
+    "title": "Finding bugs in ZK Circuits: An Exploration of Veridise Tools",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 30,
+    "start": 1665678300000,
+    "end": 1665680100000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "There has been increasing interest in integrating ZK Circuits into the blockchain stack to provide users with privacy. However, similar to smart contracts, it is likely that they will be high value targets for attackers as their exploitation could provide a monetary gain. It is therefore essential to develop tools and techniques to help developers increase the confidence in their circuits. In this talk, I will discuss ongoing work at Veridise capable of finding bugs in ZK circuits as well as les",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "BXZ3WC",
+    "speakers": [
+      {
+        "id": "LSGVGP",
+        "name": "Kyle Charbonnet",
+        "description": "Software Security Engineer at the Privacy & Scaling Explorations Team",
+        "twitter": "kcharb0",
+        "avatar": ""
+      }
+    ],
+    "title": "Zk Bug Tracker",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 7,
+    "start": 1665680100000,
+    "end": 1665680520000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "Short talk introducing the zk bug tracker repo on github. We'll explain how anyone can contribute.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "BYTCVP",
+    "speakers": [
+      {
+        "id": "9RKGBT",
+        "name": "Jason Morton",
+        "description": "ZKonduit & 0xPARC",
+        "avatar": ""
+      },
+      {
+        "id": "WMSSYD",
+        "name": "Michael Chu",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Benchmarks for Formal Verification",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 8,
+    "start": 1665680400000,
+    "end": 1665680880000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "We present a set of benchmarks and automated benchmarking tools for ZK formal verification practitioners.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
+    ]
+  },
+  {
+    "id": "PU9AMU",
+    "speakers": [
+      {
+        "id": "KQNENU",
+        "name": "Lucas Vella",
+        "description": ".",
+        "avatar": ""
+      }
+    ],
+    "title": "Solving Polynomial Equation Systems over Large Prime Fields: a Review",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 20,
+    "start": 1665681000000,
+    "end": 1665682200000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Talk",
+    "description": "Many ZK verification problems can be reduced to solving a system of polynomial equations over the ZK field. In this session I present the techniques I have reviewed over the past year on how to solve these kind of systems.\r\nBreak",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "20"
+    ]
+  },
+  {
+    "id": "JS98K7",
+    "speakers": [
+      {
+        "id": "ZRNNVV",
+        "name": "Barry Whitehat",
+        "description": null,
+        "avatar": ""
+      }
+    ],
+    "title": "Auditing Strategy for zkEVM",
+    "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "duration": 30,
+    "start": 1665682200000,
+    "end": 1665684000000,
+    "room": {
+      "id": "workshop-1",
+      "name": "Workshop 1",
+      "description": "SLS/Community Room",
+      "info": "Floor 2",
+      "capacity": 112
+    },
+    "type": "Panel",
+    "description": "A panel discussing approaches to auditing the zkEVM.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "zk"
     ]
   }
 ]

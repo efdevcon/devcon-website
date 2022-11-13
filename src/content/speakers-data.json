@@ -5488,9 +5488,9 @@
   },
   {
     "id": "KQNENU",
-    "name": "Lucas",
+    "name": "Lucas Vella",
     "avatar": null,
-    "description": "",
+    "description": ".",
     "tracks": [
       "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
@@ -5537,18 +5537,6 @@
   {
     "id": "S8R9ND",
     "name": "Ya-wen Jeng",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
-    ],
-    "eventDays": [
-      1665619200000
-    ]
-  },
-  {
-    "id": "7N9ZJE",
-    "name": "Vivek",
     "avatar": null,
     "description": "",
     "tracks": [
@@ -5660,18 +5648,6 @@
     "description": "Founder of Bloinx, a blockchain app that manages saving circles. She has experience managing international projects and is convinced that blockchain can benefit the unbanked population.",
     "tracks": [
       "Opportunity & Global Impact"
-    ],
-    "eventDays": [
-      1665619200000
-    ]
-  },
-  {
-    "id": "UHSVVC",
-    "name": "Haichen Shen",
-    "avatar": null,
-    "description": "",
-    "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665619200000
@@ -6157,5 +6133,29 @@
     "eventDays": [
       1665705600000
     ]
+  },
+  {
+    "id": "GQXSZE",
+    "name": "Tsukino",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "RWM8QD",
+    "name": "Vivek Bhupatiraju",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
+  },
+  {
+    "id": "WMSSYD",
+    "name": "Michael Chu",
+    "avatar": null,
+    "description": "",
+    "tracks": [],
+    "eventDays": []
   }
 ]
