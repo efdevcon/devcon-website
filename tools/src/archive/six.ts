@@ -146,6 +146,11 @@ async function ImportRos() {
             continue // skip
         }
 
+        if (!session.speakers || session.speakers.length === 0) {
+            console.log('Skip no speakers', session.speakers)
+            continue // multiple speakers, skip 
+        }
+
         const youtubeUrl = info[7] // youtubeUrl column (H)
         const youtubeProcessed = info[10] // YT Update column (K)
         const youtubeId = getVideoId(youtubeUrl)
@@ -160,9 +165,15 @@ async function ImportRos() {
             writeToFile(video)
         }
 
-        if (writeToYoutube && youtubeProcessed != 'Y') {
-            console.log('Update YouTube', sessionId)
+        if (writeToYoutube) { // && youtubeProcessed != 'Y'
+            console.log('Update YouTube', sessionId, youtubeUrl)
+            let title = session.title
+            if (session.speakers.length === 1)
+                title += ` by ${session.speakers[0].name}`
+            if (title.length < 81) 
+                title += ' | Devcon Bogotá'
 
+            // if (title === session.title) continue // no need to update
             try {
                 youtube = google.youtube('v3')
                 const res1 = await youtube.videos.update({
@@ -172,7 +183,7 @@ async function ImportRos() {
                     requestBody: {
                         id: youtubeId,
                         snippet: {
-                            title: session.title,
+                            title: title,
                             description: getSessionDescription(session),
                             categoryId: '28'
                         },
