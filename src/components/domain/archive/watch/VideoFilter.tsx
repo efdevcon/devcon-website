@@ -56,6 +56,38 @@ export const useVideoFilter = () => {
     filterFunction: () => [],
   })
 
+  const [_____, typeFilterState] = useFilter({
+    tags: true,
+    multiSelect: true,
+    filters: [
+      {
+        text: 'Talk',
+        value: 'talk',
+      },
+      {
+        text: 'Panel',
+        value: 'panel',
+      },
+      {
+        text: 'Workshop',
+        value: 'workshop',
+      },
+      {
+        text: 'Lightning Talk',
+        value: 'lightning talk',
+      },
+      {
+        text: 'Breakout',
+        value: 'breakout',
+      },
+      {
+        text: 'Other',
+        value: 'other',
+      },
+    ],
+    filterFunction: () => [],
+  })
+
   const [__, expertiseFilterState] = useFilter({
     tags: true,
     multiSelect: true,
@@ -103,33 +135,36 @@ export const useVideoFilter = () => {
     if (initialFilters.q) searchFilterState?.setActiveFilter(initialFilters.q, true)
     if (initialFilters.tags) tagsFilterState?.setActiveFilter(initialFilters.tags, true)
     if (initialFilters.expertise) expertiseFilterState?.setActiveFilter(initialFilters.expertise, true)
+    if (initialFilters.type) expertiseFilterState?.setActiveFilter(initialFilters.type, true)
   }, [])
 
   const editionFilter = editionFilterState && Object.keys(editionFilterState.activeFilter)
   const expertiseFilter = expertiseFilterState && Object.keys(expertiseFilterState.activeFilter)
   const tagsFilter = tagsFilterState && Object.keys(tagsFilterState.activeFilter)
+  const typeFilter = typeFilterState && Object.keys(typeFilterState.activeFilter)
 
   const clearFilters = () => {
     editionFilterState?.clearFilter()
     expertiseFilterState?.clearFilter()
     tagsFilterState?.clearFilter()
     searchFilterState?.clearFilter()
+    typeFilterState?.clearFilter()
   }
 
   const combinedFilter = (() => {
     // Finish this one later - the combined filter will change depending on the filtering solution (e.g. inline JS vs query a search service)
     // For now just doing a boolean to test the clear all functionality
-    const filtersActive = [editionFilter, expertiseFilter, tagsFilter].some(filter => filter && filter.length > 0)
+    const filtersActive = [editionFilter, expertiseFilter, tagsFilter, typeFilter].some(filter => filter && filter.length > 0)
     const searchActive = !!searchFilterState?.activeFilter
 
     return filtersActive || searchActive
   })()
 
-  return { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState }
+  return { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState, typeFilterState }
 }
 
 const Filters = (props: any) => {
-  const { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState } =
+  const { clearFilters, combinedFilter, editionFilterState, expertiseFilterState, tagsFilterState, searchFilterState, typeFilterState } =
     props
   const initialSearchFilter = (): string => {
     if (typeof searchFilterState.activeFilter === 'string') {
@@ -188,6 +223,13 @@ const Filters = (props: any) => {
       </div>
 
       <div className={css['expertise']}>
+        <MobileWrapper openInitially={typeFilterState && Object.keys(typeFilterState.activeFilter).length > 0}>
+          <p className="bold font-xs text-uppercase">Type:</p>
+          <Filter {...typeFilterState} />
+        </MobileWrapper>
+      </div>
+
+      <div className={css['expertise']}>
         <MobileWrapper
           openInitially={expertiseFilterState && Object.keys(expertiseFilterState.activeFilter).length > 0}
         >
@@ -196,16 +238,6 @@ const Filters = (props: any) => {
         </MobileWrapper>
 
         <div className={css['clear-container']}>
-          {/* {props.mobile && (
-            <Button
-              disabled={!combinedFilter}
-              className={`${css['continue-button']} red bold`}
-              onClick={() => document.getElementById('filter-sort')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <span className={css['text']}>Continue</span> <IconArrowRight className={`icon ${css['text-icon']}`} />
-            </Button>
-          )} */}
-
           {combinedFilter && (
             <p className={`${css['open']} ${css['clear']} bold text-underline`} onClick={clearFilters}>
               Clear all
