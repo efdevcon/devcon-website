@@ -67,7 +67,7 @@
     .hash {
       display: flex;
 
-      @media (max-width: $breakpoints-sm) {
+      @media (max-width: $breakpoints-md) {
         display: none;
       }
     }
