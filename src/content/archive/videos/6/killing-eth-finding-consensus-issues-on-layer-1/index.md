@@ -8,11 +8,11 @@ description: "Ethereum's core protocol is highly security critical and thus need
 - Devnets
 - Shadow forks
 We will discuss a bunch of interesting issues that we found with that"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/FS9PPDSK6wc"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 1445
+duration: 0
 expertise: "Beginner"
 type: "Talk"
 track: "Layer 1 Protocol"

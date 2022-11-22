@@ -3,11 +3,11 @@ edition: 6
 sourceId: "WEZFKH"
 title: "5 Smart Contract Patterns I Wish More Devs Would Use"
 description: "A few creative and undervalued smart contract design patterns that could help you build more effectivelly."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/RQVDU8L_c6Q"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 682
+duration: 702
 expertise: ""
 type: "Lightning Talk"
 track: "Developer Infrastructure"

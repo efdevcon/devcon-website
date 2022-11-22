@@ -9,7 +9,7 @@ We are reaching its threshold faster than expected: already 1.1 degrees above pr
 2030 forecast: 1.5 disasters a day (earthquakes, tsunamis, electricity infrastructure loss: no internet- no blockchain)
 
 More than 1.5 degrees means massive migrations, civilization collapse and potential extinction…."
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/GeksVaAnMzc"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""

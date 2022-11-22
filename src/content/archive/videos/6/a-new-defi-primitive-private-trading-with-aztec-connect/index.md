@@ -9,11 +9,11 @@ ZKP's deployed in production allow us to implement private trading on Ethereum. 
 1. How to uses ZKP's to give privacy on Ethereum
 2. How to build a private dollar cost averaging smart contract using Aztec Connect
 3. A code walkthrough and a demo"
-youtubeUrl: "https://youtu.be/6BLhbeQo29Y"
+youtubeUrl: "https://youtu.be/fD_M0YHBcaU"
 ipfsHash: ""
-ethernaIndex: "https://etherna.io/embed/634f8477c02259b06a2ffdf3"
-ethernaPermalink: "https://etherna.io/embed/cba8020caf9161b2652958d47c35e9e4ffc66322298d1f8b396bee429af03479"
-duration: 1188
+ethernaIndex: ""
+ethernaPermalink: ""
+duration: 1305
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
