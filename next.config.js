@@ -127,6 +127,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/surveypoap',
+        destination: 'https://www.poap.delivery/devcon-vi-attendee-feedback-survey',
+        permanent: true,
+      },
+      {
         source: '/devcon-0',
         destination: '/past-events',
         permanent: true,
