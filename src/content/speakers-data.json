@@ -990,8 +990,8 @@
     "avatar": "https://speak.devcon.org/media/avatars/Scroll_Ye_ZHANG_qBQcwVS.jpeg",
     "description": "Ye Zhang is the co-founder and zk-researcher at Scroll. He used to work on hardware acceleration for ZKP algorithms and theoretical constructions behind ZKP protocols. Now his focus is on optimizing the zkEVM.",
     "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More",
-      "Layer 2s"
+      "Layer 2s",
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
     ],
     "eventDays": [
       1665619200000
@@ -3682,12 +3682,10 @@
     "avatar": null,
     "description": "Head of comms for Privacy and Scaling Explorations, an Ethereum Foundation-supported team.",
     "tracks": [
-      "UX & Design",
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
+      "UX & Design"
     ],
     "eventDays": [
-      1665532800000,
-      1665619200000
+      1665532800000
     ],
     "github": "@catsnackattack"
   },
@@ -4347,12 +4345,10 @@
     "avatar": null,
     "description": "",
     "tracks": [
-      "Security",
-      "ZKPs: Privacy, Identity, Infrastructure, & More"
+      "Security"
     ],
     "eventDays": [
-      1665532800000,
-      1665619200000
+      1665532800000
     ]
   },
   {
@@ -4672,11 +4668,9 @@
     "avatar": "https://speak.devcon.org/media/avatars/remy_iiXZmud.jpeg",
     "description": "Ops, startups, higher ed + tech, outdoor activities.",
     "tracks": [
-      "ZKPs: Privacy, Identity, Infrastructure, & More",
       "Developer Infrastructure"
     ],
     "eventDays": [
-      1665619200000,
       1665705600000
     ]
   },
@@ -6139,23 +6133,47 @@
     "name": "Tsukino",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   },
   {
     "id": "RWM8QD",
     "name": "Vivek Bhupatiraju",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   },
   {
     "id": "WMSSYD",
     "name": "Michael Chu",
     "avatar": null,
     "description": "",
-    "tracks": [],
-    "eventDays": []
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
+  },
+  {
+    "id": "QDWXSC",
+    "name": "Althea Allen",
+    "avatar": null,
+    "description": "",
+    "tracks": [
+      "ZKPs: Privacy, Identity, Infrastructure, & More"
+    ],
+    "eventDays": [
+      1665619200000
+    ]
   }
 ]
