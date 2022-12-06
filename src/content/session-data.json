@@ -3138,39 +3138,6 @@
     ]
   },
   {
-    "id": "PBH9DE",
-    "speakers": [
-      {
-        "id": "DLDW8M",
-        "name": "Tomasz Kornuta",
-        "description": "I am an applied research scientist, able to drive research into novel directions.\r\n\r\nWith over 20 years in academia and industry, I have developed strong analytical & problem solving skills along with deep expertise in software engineering, robotics, visual perception and machine learning.\r\n\r\nI am a fan of robotics, AI, design patterns and MOOCs.",
-        "twitter": "tomaszkornuta",
-        "avatar": ""
-      }
-    ],
-    "title": "Reinforcement Learning for Query Pricing in The Graph",
-    "track": "Cryptoeconomics",
-    "duration": 25,
-    "start": 1665568800000,
-    "end": 1665570600000,
-    "room": {
-      "id": "talk-3",
-      "name": "Talk 3",
-      "description": "Flowers",
-      "info": "Floor 3",
-      "capacity": 260
-    },
-    "type": "Talk",
-    "description": "Indexers​​ in The Graph protocol use a DSL called Agora​ to map query shapes to prices. However, manually populating and updating Agora models for each query is a tedious task, and, as a consequence, most indexers default to a flat pricing model. We have created and deployed reinforcement learning agents for Indexers to automatically compete on pricing. This talk will focus on our development process and our study of the market effects of multiple competing pricing agents.",
-    "abstract": "",
-    "expertise": "Intermediate",
-    "tags": [
-      "reinforcement learning",
-      "dynamic pricing",
-      "automation"
-    ]
-  },
-  {
     "id": "NQHE7W",
     "speakers": [
       {
@@ -3451,6 +3418,39 @@
       "Ethereum Roadmap",
       "The Graph",
       "Web3 Infrastructure"
+    ]
+  },
+  {
+    "id": "PBH9DE",
+    "speakers": [
+      {
+        "id": "DLDW8M",
+        "name": "Tomasz Kornuta",
+        "description": "I am an applied research scientist, able to drive research into novel directions.\r\n\r\nWith over 20 years in academia and industry, I have developed strong analytical & problem solving skills along with deep expertise in software engineering, robotics, visual perception and machine learning.\r\n\r\nI am a fan of robotics, AI, design patterns and MOOCs.",
+        "twitter": "tomaszkornuta",
+        "avatar": ""
+      }
+    ],
+    "title": "Reinforcement Learning for Query Pricing in The Graph",
+    "track": "Cryptoeconomics",
+    "duration": 25,
+    "start": 1665568800000,
+    "end": 1665570600000,
+    "room": {
+      "id": "talk-3",
+      "name": "Talk 3",
+      "description": "Flowers",
+      "info": "Floor 3",
+      "capacity": 260
+    },
+    "type": "Talk",
+    "description": "Indexers​​ in The Graph protocol use a DSL called Agora​ to map query shapes to prices. However, manually populating and updating Agora models for each query is a tedious task, and, as a consequence, most indexers default to a flat pricing model. We have created and deployed reinforcement learning agents for Indexers to automatically compete on pricing. This talk will focus on our development process and our study of the market effects of multiple competing pricing agents.",
+    "abstract": "",
+    "expertise": "Intermediate",
+    "tags": [
+      "reinforcement learning",
+      "dynamic pricing",
+      "automation"
     ]
   },
   {
@@ -7793,7 +7793,7 @@
         "avatar": ""
       }
     ],
-    "title": "Cryptographic Optimizations in Aztec",
+    "title": "The Future of PlonK-ish Systems",
     "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
     "duration": 10,
     "start": 1665657600000,
@@ -11009,8 +11009,27 @@
     "id": "JS98K7",
     "speakers": [
       {
+        "id": "CJ9RVC",
+        "name": "Jordi Baylina",
+        "description": "Jordi Baylina Technical Lead\r\nJordi is one of the strongest Ethereum developers in the world and a high impact contributor in the Ethereum community. He leads the technical development of the Polygon Hermez zkRollup and is currently working on the implementation of the zkEVM.\r\nHe is the co-founder of the White Hat Group, which played a major role in rescuing funds from TheDAO and Parity Multisig hacks. He’s the author of the MiniMe token contract, the elliptic curves Solidity library, as well as",
+        "twitter": "jbaylina",
+        "avatar": ""
+      },
+      {
+        "id": "CMSZNX",
+        "name": "David Theodore",
+        "description": null,
+        "avatar": ""
+      },
+      {
         "id": "ZRNNVV",
         "name": "Barry Whitehat",
+        "description": null,
+        "avatar": ""
+      },
+      {
+        "id": "UHSVVC",
+        "name": "Haichen Shen",
         "description": null,
         "avatar": ""
       }
@@ -11999,6 +12018,31 @@
     ]
   },
   {
+    "id": "3NVGZE",
+    "speakers": [],
+    "title": "Healing Session by is.love",
+    "track": "",
+    "duration": 60,
+    "start": 1665745200000,
+    "end": 1665748800000,
+    "room": {
+      "id": "hacker-basement",
+      "name": "Hacker Basement",
+      "description": "",
+      "info": "S1",
+      "capacity": null
+    },
+    "type": "Music",
+    "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
+    "abstract": "",
+    "expertise": "Beginner",
+    "tags": [
+      "MUSIC",
+      "ART",
+      "COMMUNITY"
+    ]
+  },
+  {
     "id": "LMYCPX",
     "speakers": [
       {
@@ -12166,31 +12210,6 @@
     "expertise": "Intermediate",
     "tags": [
       "web3"
-    ]
-  },
-  {
-    "id": "3NVGZE",
-    "speakers": [],
-    "title": "Healing Session by is.love",
-    "track": "",
-    "duration": 60,
-    "start": 1665745200000,
-    "end": 1665748800000,
-    "room": {
-      "id": "hacker-basement",
-      "name": "Hacker Basement",
-      "description": "",
-      "info": "S1",
-      "capacity": null
-    },
-    "type": "Music",
-    "description": "is.love lead us through an electronic healing session. Ten headphones available for Silent DJ option. Enjoy meditations and a healing vibration.",
-    "abstract": "",
-    "expertise": "Beginner",
-    "tags": [
-      "MUSIC",
-      "ART",
-      "COMMUNITY"
     ]
   },
   {
