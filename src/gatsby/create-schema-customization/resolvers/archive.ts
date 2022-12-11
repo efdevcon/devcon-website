@@ -32,6 +32,7 @@ export const videoResolver = {
             edition: source.frontmatter.edition,
             title: source.frontmatter.title,
             description: source.frontmatter.description,
+            slidesUrl: source.frontmatter.slidesUrl,
             youtubeUrl: source.frontmatter.youtubeUrl,
             image: source.fields.image,
             imageUrl: source.frontmatter.imageUrl,

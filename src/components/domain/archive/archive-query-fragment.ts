@@ -12,6 +12,7 @@ export const query = graphql`
           title
           description
           edition
+          slidesUrl
           youtubeUrl
           ipfsHash
           ethernaIndex
@@ -49,6 +50,7 @@ export const query = graphql`
           title
           description
           edition
+          slidesUrl
           youtubeUrl
           ipfsHash
           ethernaIndex
@@ -94,6 +96,7 @@ export const query = graphql`
             title
             description
             edition
+            slidesUrl
             youtubeUrl
             ipfsHash
             ethernaIndex

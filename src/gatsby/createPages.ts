@@ -88,6 +88,7 @@ async function indexArchive({ actions, graphql, reporter }: CreatePagesArgs) {
             title
             edition
             description
+            slidesUrl
             youtubeUrl
             ipfsHash
             ethernaIndex

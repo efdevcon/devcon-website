@@ -10,6 +10,9 @@ import { Tab } from 'src/components/common/tabs/Tabs'
 import { VideoCard } from 'src/components/domain/archive/playlists'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 import { Playlist } from 'src/types/Playlist'
+import GoogleSlides from 'src/assets/icons/google_slides.svg'
+import OutLink from 'src/assets/icons/north_east.svg'
+import DownloadLink from 'src/assets/icons/arrow_downward.svg'
 // import ShuffleIcon from 'src/assets/icons/shuffle.svg'
 // import PlaylistIcon from 'src/assets/icons/playlist.svg'
 import { Link } from 'src/components/common/link'
@@ -262,6 +265,21 @@ export const Video = (props: VideoProps) => {
 
                   <Labels tags={video.tags} playlists={props.playlists} />
 
+                  {video.slidesUrl && (
+                    <div className={css['resources']}>
+                      <span className={`${css['title']} font-sm bold text-uppercase`}>Resources</span>
+
+                      <div className={css['list']}>
+                        {video.slidesUrl && (
+                          <a className={css['link']} href={video.slidesUrl} target='_blank' rel='noopener noreferrer'>
+                            <span className={css['type']}><GoogleSlides /></span>
+                            Presentation Slides
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
                   {video.profiles.length > 0 && (
                     <div className={css['speakers']}>
                       <span className={`${css['title']} font-sm bold text-uppercase`}>About the speakers</span>
@@ -282,7 +300,6 @@ export const Video = (props: VideoProps) => {
                     </div>
                   )}
                 </Tab>
-
                 {video.resources && <Tab title="Resources">Resources</Tab>}
               </Tabs>
             </div>

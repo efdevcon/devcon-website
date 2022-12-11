@@ -8,6 +8,7 @@ export interface ArchiveVideo {
   title: string
   relatedVideos: [ArchiveVideo]
   description: string
+  slidesUrl?: string
   youtubeUrl: string
   image?: any
   imageUrl?: string
@@ -31,6 +32,7 @@ export function mapToArchiveVideo(source: any) {
     edition: source.frontmatter.edition,
     title: source.frontmatter.title,
     description: source.frontmatter.description,
+    slidesUrl: source.frontmatter.slidesUrl,
     youtubeUrl: source.frontmatter.youtubeUrl,
     image: source.frontmatter.image,
     imageUrl: source.frontmatter.imageUrl,

@@ -15,6 +15,7 @@ export const useArchiveVideos = (): Array<ArchiveVideo> => {
             title
             edition
             description
+            slidesUrl
             youtubeUrl
             ipfsHash
             ethernaIndex
@@ -50,6 +51,7 @@ export function mapToArchiveVideo(source: any): ArchiveVideo {
     edition: source.frontmatter.edition,
     title: source.frontmatter.title,
     description: source.frontmatter.description,
+    slidesUrl: source.frontmatter.slidesUrl,
     youtubeUrl: source.frontmatter.youtubeUrl,
     ipfsHash: source.frontmatter.ipfsHash,
     ethernaIndex: source.frontmatter.ethernaIndex,

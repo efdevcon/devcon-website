@@ -30,6 +30,7 @@ const baseTypes = `
     edition: Int,
     title: String,
     description: String,
+    slidesUrl: String,
     youtubeUrl: String,
     image: File,
     imageUrl: String,
