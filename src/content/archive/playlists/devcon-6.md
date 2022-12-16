@@ -181,7 +181,6 @@ videos:
 - 6/tokenizing-brands-3-key-learnings/index
 - 6/under-2-min-become-an-ethereum-staker-and-set-up-node/index
 - 6/rollups-shards-and-fractals-the-dream-of-atomically-composable-horizontal-scaling/index
-- 6/zk-security-self-led-session/index
 - 6/adoption-day/index
 - 6/challenges-of-parallelizability-under-ethereums-execution-model/index
 - 6/how-to-use-executable-consensus-pyspec/index
@@ -321,5 +320,4 @@ videos:
 - 6/using-blockchain-to-overcome-latam-challenges/index
 - 6/music-jamboree-with-weird-eth-and-friends/index
 - 6/closing-ceremonies-featuring-kurt-opsahl/index
-- 6/future-of-zk-proving-systems-self-led-session/index
 ---

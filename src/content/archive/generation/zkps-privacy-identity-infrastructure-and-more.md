@@ -15,7 +15,6 @@
 - 6/private-exchange-on-zkopru/index
 - 6/scalability-is-boring-privacy-is-dead-zk-proofs-what-are-they-good-for/index
 - 6/recursive-zk-applications-and-affordances/index
-- 6/zk-security-self-led-session/index
 - 6/private-value-transfer-in-10-lines/index
 - 6/zk-application-showcase/index
 - 6/non-interactive-unique-nullifiers-the-key-to-the-next-era-of-zk/index
@@ -31,4 +30,3 @@
 - 6/zk-badges/index
 - 6/towards-a-feature-complete-and-backwards-compatible-privacy-layer-for-ethereum/index
 - 6/zkps-and-programmable-cryptography/index
-- 6/future-of-zk-proving-systems-self-led-session/index
