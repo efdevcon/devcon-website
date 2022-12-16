@@ -7,11 +7,11 @@ description: "Indexing protocols like The Graph and Dune analytics are great for
 1. Fetching indexed data streams from public data providers
 2. Passing streams through models to generate signals
 3. Generating and submitting transactions based on those signals"
-youtubeUrl: ""
+youtubeUrl: "https://youtu.be/nq5Om9pctFw"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1964
 expertise: ""
 type: "Workshop"
 track: "Developer Infrastructure"

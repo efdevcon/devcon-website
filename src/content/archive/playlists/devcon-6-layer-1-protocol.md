@@ -25,7 +25,7 @@ videos:
 - 6/lodestar-metrics-driven-development/index
 - 6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/index
 - 6/social-slashing/index
-- 6/danksharding-data-availability-sampling-das-workshop/index
+- 6/danksharding-workshop/index
 - 6/post-merge-ethereum-client-architecture/index
 - 6/mev-for-the-next-billion-its-time-to-get-serious/index
 - 6/light-clients-after-the-merge/index

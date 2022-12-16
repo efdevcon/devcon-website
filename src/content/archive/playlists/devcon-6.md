@@ -268,12 +268,11 @@ videos:
 - 6/the-unbanked-a-real-blue-ocean-opportunity-for-crypto/index
 - 6/a-playbook-for-product-development-in-defi/index
 - 6/client-diversity-matters-thinking-independently-together/index
-- 6/atractor-lp-migrants/index
 - 6/web3-adoption-in-africa/index
 - 6/evm-panel/index
 - 6/self-sovereign-digital-identity/index
 - 6/launch-your-own-validator-node/index
-- 6/danksharding-data-availability-sampling-das-workshop/index
+- 6/danksharding-workshop/index
 - 6/experiments-with-ethereumjs/index
 - 6/scaling-privacy-with-starlight/index
 - 6/autonomous-worlds-self-led-session/index
