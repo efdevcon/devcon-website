@@ -55,7 +55,7 @@ videos:
 - 6/the-showdown-best-ethereum-language/index
 - 6/evm-some-assembly-required/index
 - 6/introducing-the-graph-substreams-for-high-performance-indexing/index
-- 6/evm-panel/index
+- 6/evm-first-eips-workshop/index
 - 6/experiments-with-ethereumjs/index
 - 6/autonomous-worlds-self-led-session/index
 - 6/lessons-from-the-nomad-hack/index

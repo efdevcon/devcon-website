@@ -20,7 +20,7 @@ videos:
 - 6/why-and-how-to-run-a-node-no-eth-required/index
 - 6/panel-the-staking-economy-from-monolith-to-modularity/index
 - 6/how-to-run-a-validator-from-zero-on-resource-constrained-and-low-powered-devices/index
-- 6/under-2-min-become-an-etheruem-staker-and-set-up-node/index
+- 6/under-2-min-become-an-ethereum-staker-and-set-up-node/index
 - 6/how-to-design-dvt-while-ensuring-non-correlation/index
 - 6/like-a-kindergeburtstag-ethereum-node-in-under-3-minutes-with-stereum/index
 - 6/formal-specification-and-verification-of-the-distributed-validator-technology-protocol/index

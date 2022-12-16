@@ -3,7 +3,7 @@
 - 6/the-dollar10b-problem-web3-security-against-coordinated-adversaries/index
 - 6/crosschain-security-considerations-for-the-degen-in-all-of-us/index
 - 6/securing-cross-chain-communication/index
-- 6/read-only-reentrency-a-novel-vulnerability-class-responsible-for-dollar100m-funds-at-risk/index
+- 6/read-only-reentrancy-a-novel-vulnerability-class-responsible-for-100m-funds-at-risk/index
 - 6/future-block-mev-in-proof-of-stake/index
 - 6/underhanded-solidity/index
 - 6/shamir-secret-sharing-with-no-id-numbers/index

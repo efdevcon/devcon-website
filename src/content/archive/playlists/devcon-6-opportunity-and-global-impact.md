@@ -49,7 +49,6 @@ videos:
 - 6/the-unbanked-a-real-blue-ocean-opportunity-for-crypto/index
 - 6/web3-adoption-in-africa/index
 - 6/self-sovereign-digital-identity/index
-- 6/reaching-the-next-billion-users-for-ethereum-leverage-the-african-numbers/index
 - 6/climate-change-or-social-change-the-role-of-blockchain/index
 - 6/the-web3-social-layer-web3-social-the-next-wave-of-innovation/index
 - 6/ethereum-event-showcase/index
@@ -57,7 +56,7 @@ videos:
 - 6/balkanize-learn2earn-educating-and-financing-the-next-batch-of-web3-developers-in-the-balkans/index
 - 6/rotki-why-its-open-source-and-local-first-and-why-should-you-care/index
 - 6/art-reflects-what-happens-in-society/index
-- 6/the-community-support-team-in-china/index
+- 6/building-ethereum-community-together-in-china/index
 - 6/growing-the-global-ethereum-community-through-localization/index
 - 6/the-past-present-and-future-of-web3-in-latam/index
 - 6/pia-mancini/index

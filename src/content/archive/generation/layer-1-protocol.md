@@ -5,7 +5,6 @@
 - 6/quest-for-the-best-tests-a-retrospective-on-testingthemerge/index
 - 6/ethereum-magicians-protocol-roadmap-session/index
 - 6/stateless-ethereum-how-verkle-trees-make-ethereum-lean-and-mean/index
-- 6/multidimensional-resource-pricing-or-l2evm-or-tbd/index
 - 6/time-in-ethereum/index
 - 6/how-to-ethically-build-public-good-infrastructure/index
 - 6/challenges-of-parallelizability-under-ethereums-execution-model/index

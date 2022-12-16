@@ -54,7 +54,6 @@ videos:
 - 6/the-dollar10b-problem-web3-security-against-coordinated-adversaries/index
 - 6/dao-governance-design-jam/index
 - 6/eli5-scaling-ethereum/index
-- 6/livecoding-performance/index
 - 6/dark-forest-lessons-from-3-years-of-on-chain-gaming/index
 - 6/promoting-small-and-independent-stakers-qanda-with-the-ethereum-staking-protocols/index
 - 6/crosschain-security-considerations-for-the-degen-in-all-of-us/index
@@ -66,12 +65,11 @@ videos:
 - 6/run-your-own-beaconchain/index
 - 6/the-right-way-to-hash-a-merkle-tree/index
 - 6/securing-cross-chain-communication/index
-- 6/livecoding-performance/index
 - 6/how-bridges-improve-l2-composability/index
 - 6/a-zokrates-update/index
 - 6/cant-someone-else-do-it-shifting-behaviors-in-ethereum-network-participation/index
 - 6/major-trends-in-the-layer-2-ecosystem-where-we-are-and-likely-upcoming-themes/index
-- 6/read-only-reentrency-a-novel-vulnerability-class-responsible-for-dollar100m-funds-at-risk/index
+- 6/read-only-reentrancy-a-novel-vulnerability-class-responsible-for-100m-funds-at-risk/index
 - 6/ups-and-downs-onboarding-a-million-users-to-layer-2/index
 - 6/future-block-mev-in-proof-of-stake/index
 - 6/a-layer-2-standards-working-group/index
@@ -153,7 +151,6 @@ videos:
 - 6/starknet-101-workshop-getting-started-with-unlimited-scalability/index
 - 6/little-known-web3py/index
 - 6/how-to-build-bigger-and-stronger-eth-communities-in-latam-en-espanol/index
-- 6/multidimensional-resource-pricing-or-l2evm-or-tbd/index
 - 6/using-the-graph-and-dune-to-power-on-chain-actions/index
 - 6/bad-proofs-in-formal-verification/index
 - 6/bottom-up-building-pathways-towards-a-decentralized-society/index
@@ -161,7 +158,6 @@ videos:
 - 6/decentralized-threat-detection-bots/index
 - 6/scalability-is-boring-privacy-is-dead-zk-proofs-what-are-they-good-for/index
 - 6/state-of-the-ens/index
-- 6/livecoding-performance/index
 - 6/time-in-ethereum/index
 - 6/the-power-of-stories/index
 - 6/rug-life-using-blockchain-analytics-to-detect-illicit-activity-track-stolen-funds-and-stay-safe/index
@@ -178,13 +174,12 @@ videos:
 - 6/social-composability-design-how-daos-can-leverage-it-for-the-future-of-work/index
 - 6/ethereum-is-solarpunk/index
 - 6/the-coordination-song/index
-- 6/livecoding-performance/index
 - 6/how-to-run-a-validator-from-zero-on-resource-constrained-and-low-powered-devices/index
 - 6/skiff/index
 - 6/demystifying-ethereum-assembly/index
 - 6/why-account-abstraction-is-a-game-changer-for-dapps/index
 - 6/tokenizing-brands-3-key-learnings/index
-- 6/under-2-min-become-an-etheruem-staker-and-set-up-node/index
+- 6/under-2-min-become-an-ethereum-staker-and-set-up-node/index
 - 6/rollups-shards-and-fractals-the-dream-of-atomically-composable-horizontal-scaling/index
 - 6/zk-security-self-led-session/index
 - 6/adoption-day/index
@@ -250,7 +245,6 @@ videos:
 - 6/my-mother-hates-your-project-and-mine-why-we-need-more-soft-skills-in-crypto/index
 - 6/education-as-a-public-good-past-present-and-future-of-ethereumorg/index
 - 6/anonymous-signalling-on-ethereum/index
-- 6/livecoding-performance/index
 - 6/the-showdown-best-ethereum-language/index
 - 6/being-a-responsible-multisig-signer-verify-dont-trust/index
 - 6/rate-limiting-nullifier/index
@@ -269,7 +263,7 @@ videos:
 - 6/a-playbook-for-product-development-in-defi/index
 - 6/client-diversity-matters-thinking-independently-together/index
 - 6/web3-adoption-in-africa/index
-- 6/evm-panel/index
+- 6/evm-first-eips-workshop/index
 - 6/self-sovereign-digital-identity/index
 - 6/launch-your-own-validator-node/index
 - 6/danksharding-workshop/index
@@ -277,7 +271,6 @@ videos:
 - 6/scaling-privacy-with-starlight/index
 - 6/autonomous-worlds-self-led-session/index
 - 6/lessons-from-the-nomad-hack/index
-- 6/reaching-the-next-billion-users-for-ethereum-leverage-the-african-numbers/index
 - 6/zk-badges/index
 - 6/decentralizing-infura/index
 - 6/the-future-of-social-coordination-of-daos/index
@@ -319,7 +312,7 @@ videos:
 - 6/towards-fairer-dexs-on-ethereum/index
 - 6/sustainable-ecosystem-scaling-how-do-we-fund-community-and-ecosystem-growth/index
 - 6/art-reflects-what-happens-in-society/index
-- 6/the-community-support-team-in-china/index
+- 6/building-ethereum-community-together-in-china/index
 - 6/growing-the-global-ethereum-community-through-localization/index
 - 6/the-past-present-and-future-of-web3-in-latam/index
 - 6/pia-mancini/index
@@ -328,6 +321,5 @@ videos:
 - 6/using-blockchain-to-overcome-latam-challenges/index
 - 6/music-jamboree-with-weird-eth-and-friends/index
 - 6/closing-ceremonies-featuring-kurt-opsahl/index
-- 6/livecoding-performance/index
 - 6/future-of-zk-proving-systems-self-led-session/index
 ---
