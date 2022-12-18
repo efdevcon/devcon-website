@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["crypto-native","gaming"]
 speakers: ["gubsheep"]
+slidesUrl: "/resources/6/dark-forest-lessons-from-3-years-of-on-chain-gaming.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["ZKP","performance and security metrics","data analysis"]
 speakers: ["Brian Wilkes, CFA"]
+slidesUrl: "/resources/6/zk-proof-performance-and-security-characteristics.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["MEV","mechanism design"]
 speakers: ["sxysun"]
+slidesUrl: "/resources/6/this-is-mev.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["ENS","Governance","L2"]
 speakers: ["Nick Johnson"]
+slidesUrl: "/resources/6/state-of-the-ens.pdf"
 ---

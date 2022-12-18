@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["dapp","multichain","public goods","tools"]
 speakers: ["Justyna Broniszewska","Michał Sieczkowski"]
+slidesUrl: "/resources/6/how-to-build-a-multilayer-dapp-in-less-than-30-minutes.pdf"
 ---

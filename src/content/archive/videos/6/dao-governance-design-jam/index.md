@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["governance","design","jam"]
 speakers: ["0xdeniz","Tiago Varandas"]
+slidesUrl: "/resources/6/dao-governance-design-jam.pdf"
 ---

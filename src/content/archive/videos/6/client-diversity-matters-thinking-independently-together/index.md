@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["Staking","decentralization","nodes"]
 speakers: ["Pablo Larguia"]
+slidesUrl: "/resources/6/client-diversity-matters-thinking-independently-together.pdf"
 ---

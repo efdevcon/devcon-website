@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["Halo2","Zero Knowledge","Plonk"]
 speakers: ["Chih-Cheng Liang"]
+slidesUrl: "/resources/6/little-things-ive-learned-in-developing-halo2-circuits.pdf"
 ---

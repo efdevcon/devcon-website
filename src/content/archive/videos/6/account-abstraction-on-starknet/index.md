@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["accounts","abstraction","starknet"]
 speakers: ["Martin Triay"]
+slidesUrl: "/resources/6/account-abstraction-on-starknet.pdf"
 ---

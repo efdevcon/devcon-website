@@ -3,7 +3,6 @@ edition: 6
 sourceId: "FSAHLR"
 title: "The KZG Ceremony - or How I Learnt to Stop Worrying and Love Trusted Setups"
 description: "Danksharding, ProtoDanksharding, & EIP4844 make use of KZG commitments which require a trusted setup.
-
 As usual, Ethereum does this differently by having an order of magnitude more participants than previous trusted setups. I will be running through why the trusted setup is needed, how it works, and why you should trust it."
 youtubeUrl: "https://youtu.be/dTBy661ubgg"
 ipfsHash: ""
@@ -16,4 +15,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["Danksharding","KZG Ceremony","Trusted Setup"]
 speakers: ["Carl Beekhuizen"]
+slidesUrl: "/resources/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups.pdf"
 ---

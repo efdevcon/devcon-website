@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["metaverse","design","research"]
 speakers: ["Georgia Rakusen"]
+slidesUrl: "/resources/6/going-on-safari-researching-users-in-the-metaverse.pdf"
 ---

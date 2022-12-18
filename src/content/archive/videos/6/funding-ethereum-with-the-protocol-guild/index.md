@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["Public Goods","Ethereum","core devs"]
 speakers: ["Trent Van Epps"]
+slidesUrl: "/resources/6/funding-ethereum-with-the-protocol-guild.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Ethereum Foundation","what it do"]
 speakers: ["Josh Stark"]
+slidesUrl: "/resources/6/slides/making-sense-of-the-ethereum-foundation.pdf"
 ---

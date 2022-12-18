@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["zk-evm"]
 speakers: ["Olivier Bégassat","Franklin Delehelle"]
+slidesUrl: "/resources/6/proving-evm-bytecode-execution-in-the-zk-evm.pdf"
 ---

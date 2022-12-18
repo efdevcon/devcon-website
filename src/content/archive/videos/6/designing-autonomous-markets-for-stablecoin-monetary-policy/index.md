@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["Stablecoin Design","AMMs","Protocol Controlled Value"]
 speakers: ["Ariah Klages-Mundt","Steffen Schuldenzucker"]
+slidesUrl: "/resources/6/designing-autonomous-markets-for-stablecoin-monetary-policy.pdf"
 ---

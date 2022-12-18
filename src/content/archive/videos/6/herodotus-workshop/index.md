@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["State expiry","SNARKS","L2s"]
 speakers: ["Marcello Bardus"]
+slidesUrl: "/resources/6/herodotus-workshop.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Quadratic Funding","Public Goods"]
 speakers: ["Connor O'Day"]
+slidesUrl: "/resources/6/new-applications-for-quadratic-funding.pdf"
 ---

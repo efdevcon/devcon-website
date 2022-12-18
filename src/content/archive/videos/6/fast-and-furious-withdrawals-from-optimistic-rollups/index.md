@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["optimistic roll-ups","withdrawal latency","layer 2 scaling solutions","Arbitrum","instant finality"]
 speakers: ["Mahsa Moosavi"]
+slidesUrl: "/resources/6/fast-and-furious-withdrawals-from-optimistic-rollups.pdf"
 ---

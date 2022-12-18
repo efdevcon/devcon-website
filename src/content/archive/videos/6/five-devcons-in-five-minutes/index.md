@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Devcon","Meta","Modern History"]
 speakers: ["Thomas Barker"]
+slidesUrl: "/resources/6/five-devcons-in-five-minutes.pdf"
 ---

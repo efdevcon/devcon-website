@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["Onboarding","Rollups","Layer-2"]
 speakers: ["Matt Pearring"]
+slidesUrl: "/resources/6/ups-and-downs-onboarding-a-million-users-to-layer-2.pdf"
 ---

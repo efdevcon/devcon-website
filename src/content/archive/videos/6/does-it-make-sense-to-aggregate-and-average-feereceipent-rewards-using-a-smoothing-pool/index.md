@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["Staking","feeReceipent","tips"]
 speakers: ["Ken Smith"]
+slidesUrl: "/resources/6/does-it-make-sense-to-aggregate-and-average-feereceipent-rewards-using-a-smoothing-pool.pdf"
 ---

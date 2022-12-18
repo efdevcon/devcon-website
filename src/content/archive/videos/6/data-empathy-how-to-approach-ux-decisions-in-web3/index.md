@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["Empathy","User Testing","Product Design"]
 speakers: ["Drew Tozer"]
+slidesUrl: "/resources/6/data-empathy-how-to-approach-ux-decisions-in-web3.pdf"
 ---

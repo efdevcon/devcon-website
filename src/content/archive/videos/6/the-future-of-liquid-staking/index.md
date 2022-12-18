@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["Liquid Staking","DeFi","Validator"]
 speakers: ["Vasiliy Shapovalov"]
+slidesUrl: "/resources/6/the-future-of-liquid-staking.pdf"
 ---

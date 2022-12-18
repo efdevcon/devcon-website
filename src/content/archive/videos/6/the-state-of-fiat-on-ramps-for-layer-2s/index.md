@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["fiat on-ramps","fiat gateways","research"]
 speakers: ["Thijs Maas"]
+slidesUrl: "/resources/6/the-state-of-fiat-on-ramps-for-layer-2s.pdf"
 ---

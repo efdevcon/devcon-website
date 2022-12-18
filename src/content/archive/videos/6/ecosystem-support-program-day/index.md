@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["ecosystem","support"]
 speakers: ["Monet du Plessis","Madison Adams"]
+slidesUrl: "/resources/6/ecosystem-support-program-day.pdf"
 ---

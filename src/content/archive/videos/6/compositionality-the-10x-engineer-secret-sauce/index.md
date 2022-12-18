@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["Compositionality","Applied Category Theory","Open Games"]
 speakers: ["Fabrizio Romano Genovese","Philipp Zahn"]
+slidesUrl: "/resources/6/compositionality-the-10x-engineer-secret-sauce.pdf"
 ---

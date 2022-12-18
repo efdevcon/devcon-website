@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["AMMs","MEV","DEX",""]
 speakers: ["Federico Giacon"]
+slidesUrl: "/resources/6/mev-capturing-ammsmcamms.pdf"
 ---

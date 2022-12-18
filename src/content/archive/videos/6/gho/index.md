@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["stablecoin"]
 speakers: ["Steven Valeri"]
+slidesUrl: "/resources/6/gho.pdf"
 ---

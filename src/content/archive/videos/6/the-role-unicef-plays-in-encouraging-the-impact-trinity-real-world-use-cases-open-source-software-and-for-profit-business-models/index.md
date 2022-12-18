@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Opensource","Real-world","Business model"]
 speakers: ["Evelyn Casanova","Shane O'Connor"]
+slidesUrl: "/resources/6/the-role-unicef-plays-in-encouraging-the-impact-trinity-real-world-use-cases-open-source-software-and-for-profit-business-models.pdf"
 ---

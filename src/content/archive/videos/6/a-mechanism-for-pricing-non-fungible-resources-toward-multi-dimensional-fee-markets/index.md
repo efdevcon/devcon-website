@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["Gas","Pricing","Optimization"]
 speakers: ["Theo Diamandis"]
+slidesUrl: "/resources/6/a-mechanism-for-pricing-non-fungible-resources-toward-multi-dimensional-fee-markets.pdf"
 ---

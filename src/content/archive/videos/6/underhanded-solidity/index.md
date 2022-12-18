@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Security","Exploit","Underhanded"]
 speakers: ["Tynan Richards"]
+slidesUrl: "/resources/6/underhanded-solidity.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Remix IDE","Smart Contract Development"]
 speakers: ["Rob Stupay"]
+slidesUrl: "/resources/6/whats-new-in-remix.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["zero-knowledge proofs","semaphore","groups"]
 speakers: ["Cedoor"]
+slidesUrl: "/resources/6/anonymous-signalling-on-ethereum.pdf"
 ---

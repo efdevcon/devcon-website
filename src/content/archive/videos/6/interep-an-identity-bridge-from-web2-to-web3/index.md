@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["privacy","identity","anti-sybil"]
 speakers: ["Geoff Lamperd"]
+slidesUrl: "/resources/6/interep-an-identity-bridge-from-web2-to-web3.pdf"
 ---

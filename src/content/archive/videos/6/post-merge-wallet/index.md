@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Wallet;","Security;","UX"]
 speakers: ["Chang-Wu Chen"]
+slidesUrl: "/resources/6/post-merge-wallet.pdf"
 ---

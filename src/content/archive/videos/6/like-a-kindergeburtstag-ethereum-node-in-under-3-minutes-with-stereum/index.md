@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["nodes","staking","network"]
 speakers: ["Stefan Kobrc"]
+slidesUrl: "/resources/6/like-a-kindergeburtstag-ethereum-node-in-under-3-minutes-with-stereum.pdf"
 ---

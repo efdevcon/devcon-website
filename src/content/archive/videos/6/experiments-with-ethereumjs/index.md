@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Experiments","JavaScript","Execution"]
 speakers: ["Gabriel Rocheleau","Scott Simpson"]
+slidesUrl: "/resources/6/experiments-with-ethereumjs.pdf"
 ---

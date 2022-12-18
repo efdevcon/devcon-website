@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["fuzzing","vulnerability","testing"]
 speakers: ["Josselin Feist","Gustavo Grieco"]
+slidesUrl: "/resources/6/building-secure-contracts-use-echidna-like-a-pro.pdf"
 ---

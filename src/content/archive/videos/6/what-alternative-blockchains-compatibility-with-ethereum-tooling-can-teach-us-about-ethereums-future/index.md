@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["EVM","JSON-RPC","COMPATIBILITY"]
 speakers: ["Danno Ferrin"]
+slidesUrl: "/resources/6/what-alternative-blockchains-compatibility-with-ethereum-tooling-can-teach-us-about-ethereums-future.pdf"
 ---

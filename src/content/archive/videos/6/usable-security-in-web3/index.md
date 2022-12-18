@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["usable","security","human-centered design"]
 speakers: ["Antonela"]
+slidesUrl: "/resources/6/usable-security-in-web3.pdf"
 ---

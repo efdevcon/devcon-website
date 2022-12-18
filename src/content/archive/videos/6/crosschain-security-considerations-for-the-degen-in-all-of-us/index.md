@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["security","crosschain","multichain"]
 speakers: ["Layne Haber"]
+slidesUrl: "/resources/6/crosschain-security-considerations-for-the-degen-in-all-of-us.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["Distributed Validator Technology","formal verification","Dafny"]
 speakers: ["Roberto Saltini"]
+slidesUrl: "/resources/6/formal-specification-and-verification-of-the-distributed-validator-technology-protocol.pdf"
 ---

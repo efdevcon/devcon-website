@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["Decentralization","ICO","Whales"]
 speakers: ["Christine Kim"]
+slidesUrl: "/resources/6/a-breakdown-of-ethereum-supply-distribution-since-genesis.pdf"
 ---

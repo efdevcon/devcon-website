@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["rollups","bridges","layer-2"]
 speakers: ["Patrick McCorry"]
+slidesUrl: "/resources/6/a-better-mental-model-for-rollups-plasma-and-validating-bridges.pdf"
 ---

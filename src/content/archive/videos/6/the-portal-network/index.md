@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["Portal Network","Light Client","Protocol"]
 speakers: ["Piper Merriam"]
+slidesUrl: "/resources/6/the-portal-network.pdf"
 ---

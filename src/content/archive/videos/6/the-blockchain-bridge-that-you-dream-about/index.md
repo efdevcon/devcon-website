@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["Bridge","Security","L2"]
 speakers: ["Martin Derka"]
+slidesUrl: "/resources/6/the-blockchain-bridge-that-you-dream-about.pdf"
 ---

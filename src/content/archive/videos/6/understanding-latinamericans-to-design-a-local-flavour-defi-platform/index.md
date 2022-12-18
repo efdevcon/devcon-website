@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["multicultural","research","latam",""]
 speakers: ["Diego Mazo"]
+slidesUrl: "/resources/6/understanding-latinamericans-to-design-a-local-flavour-defi-platform.pdf"
 ---

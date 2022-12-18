@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["social","DAO","app"]
 speakers: ["Dominic Emanuel Horn"]
+slidesUrl: "/resources/6/social-composability-design-how-daos-can-leverage-it-for-the-future-of-work.pdf"
 ---

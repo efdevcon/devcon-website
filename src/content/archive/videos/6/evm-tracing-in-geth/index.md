@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["evm","tracing","geth"]
 speakers: ["Sina Mahmoodi"]
+slidesUrl: "/resources/6/evm-tracing-in-geth.pdf"
 ---

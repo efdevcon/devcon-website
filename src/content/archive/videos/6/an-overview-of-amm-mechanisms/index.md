@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["AMM","DeFi","DEX"]
 speakers: ["Matt Deible"]
+slidesUrl: "/resources/6/an-overview-of-amm-mechanisms.pdf"
 ---

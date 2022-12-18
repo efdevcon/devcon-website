@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["node","decentralization","ethereum"]
 speakers: ["Johns Gresham"]
+slidesUrl: "/resources/6/why-and-how-to-run-a-node-no-eth-required.pdf"
 ---

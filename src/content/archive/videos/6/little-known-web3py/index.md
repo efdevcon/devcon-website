@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Python","Web3","Ethereum"]
 speakers: ["Marc Garreau"]
+slidesUrl: "/resources/6/little-known-web3py.pdf"
 ---

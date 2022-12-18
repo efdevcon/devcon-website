@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["music","parody","weird"]
 speakers: ["Ben Jones"]
+slidesUrl: "/resources/6/music-jamboree-with-weird-eth-and-friends.pdf"
 ---

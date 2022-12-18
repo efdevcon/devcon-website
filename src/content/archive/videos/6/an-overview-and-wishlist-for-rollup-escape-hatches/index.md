@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["rollup","escape hatch","layer two"]
 speakers: ["Jan Gorzny"]
+slidesUrl: "/resources/6/an-overview-and-wishlist-for-rollup-escape-hatches.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["ZKP","threshold crypto","DEX"]
 speakers: ["Henry de Valence"]
+slidesUrl: "/resources/6/penumbra-building-a-private-dex-with-zkps-and-threshold-cryptography.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Solidity","Ethereum en español","Remix"]
 speakers: ["Moritz Stellmacher"]
+slidesUrl: "/resources/6/remix-intro-workshop-en-espanol.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["soul bound tokens","NFT certifications"]
 speakers: ["Rob Stupay"]
+slidesUrl: "/resources/6/remix-rewards.pdf"
 ---

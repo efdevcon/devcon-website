@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["Privacy","Anonymity","Token standards"]
 speakers: ["Wei Dai","Kyle Charbonnet"]
+slidesUrl: "/resources/6/towards-a-feature-complete-and-backwards-compatible-privacy-layer-for-ethereum.pdf"
 ---

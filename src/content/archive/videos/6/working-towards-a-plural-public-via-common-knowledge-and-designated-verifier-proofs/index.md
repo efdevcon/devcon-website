@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["Coordination","Non-Financial","Social"]
 speakers: ["Shrey Jain"]
+slidesUrl: "/resources/6/working-towards-a-plural-public-via-common-knowledge-and-designated-verifier-proofs.pdf"
 ---

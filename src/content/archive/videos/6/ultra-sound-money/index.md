@@ -3,11 +3,7 @@ edition: 6
 sourceId: "9CNZCW"
 title: "Ultra Sound Money"
 description: "This talks paints a big picture for ETH the asset and its macro cashflows. We discuss unique dynamics arising from:
-
-* **fee burn** (ETH for blockspace payments)
-* **issuance** (ETH for validator incentivisation)
-* **staking** (ETH for economic security)
-* **defi collateral** (ETH for economic bandwidth)"
+* **fee burn** (ETH for blockspace payments) * **issuance** (ETH for validator incentivisation) * **staking** (ETH for economic security) * **defi collateral** (ETH for economic bandwidth)"
 youtubeUrl: "https://youtu.be/2ZuGVLhhxQo"
 ipfsHash: ""
 ethernaIndex: "https://etherna.io/embed/6349a63fc02259b06a2ffcb5"
@@ -19,4 +15,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["ETH","ether","economics"]
 speakers: ["Justin Drake"]
+slidesUrl: "/resources/6/ultra-sound-money.pdf"
 ---

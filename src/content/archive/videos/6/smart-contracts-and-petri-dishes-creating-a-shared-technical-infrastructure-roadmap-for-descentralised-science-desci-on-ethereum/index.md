@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Tooling","DeSci","Data"]
 speakers: ["Paul Kohlhaas"]
+slidesUrl: "/resources/6/smart-contracts-and-petri-dishes-creating-a-shared-technical-infrastructure-roadmap-for-descentralised-science-desci-on-ethereum.pdf"
 ---

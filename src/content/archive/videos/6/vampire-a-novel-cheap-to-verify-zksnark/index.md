@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["zero-knowledge","zkSNARK"]
 speakers: ["Michal Zajac"]
+slidesUrl: "/resources/6/vampire-a-novel-cheap-to-verify-zksnark.pdf"
 ---

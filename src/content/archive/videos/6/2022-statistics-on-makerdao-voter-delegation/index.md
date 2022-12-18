@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["Governance","Fairness","DAO"]
 speakers: ["Emilie Raffo","Tadeo"]
+slidesUrl: "/resources/6/2022-statistics-on-makerdao-voter-delegation.pdf"
 ---

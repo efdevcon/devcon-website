@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["SNARK","applications","EIP"]
 speakers: ["Jackson Blazensky","Severiano Sisneros"]
+slidesUrl: "/resources/6/a-snarks-tale-a-story-of-building-snark-solutions-on-mainnet.pdf"
 ---

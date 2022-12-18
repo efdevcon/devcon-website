@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["explorer","validators","staking"]
 speakers: ["Patrick Pfeiffer","Stefan Starflinger"]
+slidesUrl: "/resources/6/run-your-own-beaconchain.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["Testing","Merge","DevOps"]
 speakers: ["Parithosh Jayanthi"]
+slidesUrl: "/resources/6/quest-for-the-best-tests-a-retrospective-on-testingthemerge.pdf"
 ---

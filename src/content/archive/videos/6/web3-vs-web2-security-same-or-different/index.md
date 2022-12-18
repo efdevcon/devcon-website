@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Security","Web3","Web2"]
 speakers: ["Mudit Gupta","Spencer Macdonald","samczsun","Cory Hardman","Nassim Eddequiouaq","Taylor Monahan"]
+slidesUrl: "/resources/6/web3-vs-web2-security-same-or-different.pdf"
 ---

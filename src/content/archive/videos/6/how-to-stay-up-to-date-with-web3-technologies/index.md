@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["web3"]
 speakers: ["Milos Novitovic","Uros Kukic"]
+slidesUrl: "/resources/6/how-to-stay-up-to-date-with-web3-technologies.pdf"
 ---

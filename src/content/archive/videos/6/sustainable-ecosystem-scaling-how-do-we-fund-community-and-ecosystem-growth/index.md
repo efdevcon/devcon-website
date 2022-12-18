@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["Community","Ecosystem","Funding"]
 speakers: ["Juan","Anna Kryukova","Alp Ergin","abbey"]
+slidesUrl: "/resources/6/sustainable-ecosystem-scaling-how-do-we-fund-community-and-ecosystem-growth.pdf"
 ---

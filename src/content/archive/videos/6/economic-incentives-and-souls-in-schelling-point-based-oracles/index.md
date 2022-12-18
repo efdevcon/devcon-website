@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["oracles","soulbound","incentives"]
 speakers: ["William George"]
+slidesUrl: "/resources/6/economic-incentives-and-souls-in-schelling-point-based-oracles.pdf"
 ---

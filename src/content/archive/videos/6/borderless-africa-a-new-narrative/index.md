@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Africa","borderless","permissionless"]
 speakers: ["Yoseph Ayele"]
+slidesUrl: "/resources/6/borderless-africa-a-new-narrative.pdf"
 ---

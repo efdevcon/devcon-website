@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["L1 research","reorgs","fork choice"]
 speakers: ["Caspar Schwarz-Schilling"]
+slidesUrl: "/resources/6/time-in-ethereum-on-the-implications-of-replacing-our-dear-friend-poisson.pdf"
 ---

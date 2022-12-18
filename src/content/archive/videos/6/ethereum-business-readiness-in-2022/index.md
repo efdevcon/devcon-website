@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["business","enterprise","case study"]
 speakers: ["Dan Shaw","Daniel Burnett"]
+slidesUrl: "/resources/6/ethereum-business-readiness-in-2022.pdf"
 ---

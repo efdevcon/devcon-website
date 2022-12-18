@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["reinforcement learning","dynamic pricing","automation"]
 speakers: ["Tomasz Kornuta"]
+slidesUrl: "/resources/6/reinforcement-learning-for-query-pricing-in-the-graph.pdf"
 ---

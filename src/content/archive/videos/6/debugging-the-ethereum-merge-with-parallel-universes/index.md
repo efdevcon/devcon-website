@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["Merge","testing","fuzzing"]
 speakers: ["David Searle","Will Wilson"]
+slidesUrl: "/resources/6/debugging-the-ethereum-merge-with-parallel-universes.pdf"
 ---

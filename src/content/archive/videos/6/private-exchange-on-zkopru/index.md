@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["Privacy","ZKP","ZKOPRU"]
 speakers: ["Takamichi Tsutsumi"]
+slidesUrl: "/resources/6/private-exchange-on-zkopru.pdf"
 ---

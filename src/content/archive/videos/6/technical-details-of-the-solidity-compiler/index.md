@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Solidity"]
 speakers: ["Daniel"]
+slidesUrl: "/resources/6/technical-details-of-the-solidity-compiler.pdf"
 ---

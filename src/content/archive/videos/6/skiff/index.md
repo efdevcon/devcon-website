@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Privacy"]
 speakers: ["Andrew Milich"]
+slidesUrl: "/resources/6/skiff.pdf"
 ---

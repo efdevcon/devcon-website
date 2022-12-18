@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["zero-knowledge","transparency"]
 speakers: ["Ian Miers"]
+slidesUrl: "/resources/6/scalability-is-boring-privacy-is-dead-zk-proofs-what-are-they-good-for.pdf"
 ---

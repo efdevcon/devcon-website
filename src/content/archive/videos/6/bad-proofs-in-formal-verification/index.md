@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Formal","Verification","Bugs"]
 speakers: ["Uri Kirstein"]
+slidesUrl: "/resources/6/bad-proofs-in-formal-verification.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["language","zksnark","zokrates"]
 speakers: ["Thibaut Schaeffer"]
+slidesUrl: "/resources/6/a-zokrates-update.pdf"
 ---

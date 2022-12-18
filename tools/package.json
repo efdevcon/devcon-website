@@ -3,6 +3,7 @@
     "prestart": "yarn install",
     "dips": "ts-node src/dips",
     "six": "ts-node src/archive/six",
+    "slides": "ts-node src/archive/slides",
     "archive:import": "ts-node src/archive/import",
     "archive:profiles": "ts-node src/archive/profiles",
     "archive:query": "ts-node src/archive/query",

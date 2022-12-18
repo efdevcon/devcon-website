@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["verkle","stateless","state"]
 speakers: ["Guillaume Ballet"]
+slidesUrl: "/resources/6/stateless-ethereum-how-verkle-trees-make-ethereum-lean-and-mean.pdf"
 ---

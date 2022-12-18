@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["burnout","mental","health","health"]
 speakers: ["Hudson Jameson"]
+slidesUrl: "/resources/6/mental-health-and-avoiding-burnout-in-your-crypto-gig.pdf"
 ---

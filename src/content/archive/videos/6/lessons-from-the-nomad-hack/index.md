@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Solidity","Foundry","cross-chain applications (xapps)"]
 speakers: ["Odysseas"]
+slidesUrl: "/resources/6/lessons-from-the-nomad-hack.pdf"
 ---

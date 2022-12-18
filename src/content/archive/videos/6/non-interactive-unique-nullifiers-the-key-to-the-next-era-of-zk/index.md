@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["nullifiers","zero knowledge","signatures"]
 speakers: ["Aayush Gupta"]
+slidesUrl: "/resources/6/non-interactive-unique-nullifiers-the-key-to-the-next-era-of-zk.pdf"
 ---

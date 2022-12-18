@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Subgraphs","on chain data"]
 speakers: ["Vincent Wen"]
+slidesUrl: "/resources/6/the-road-to-standardized-subgraphs.pdf"
 ---

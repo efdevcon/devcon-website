@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["Layer-2","Rollup","Scaling"]
 speakers: ["Harry Kalodner"]
+slidesUrl: "/resources/6/on-the-path-to-a-rollup-centric-future.pdf"
 ---

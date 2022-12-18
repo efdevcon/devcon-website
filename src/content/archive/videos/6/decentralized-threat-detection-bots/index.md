@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["security","risk","monitoring"]
 speakers: ["Jonathan Alexander"]
+slidesUrl: "/resources/6/decentralized-threat-detection-bots.pdf"
 ---

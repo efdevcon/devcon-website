@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["Layer 2","Rollups","protocol development"]
 speakers: ["Faina Shalts"]
+slidesUrl: "/resources/6/major-trends-in-the-layer-2-ecosystem-where-we-are-and-likely-upcoming-themes.pdf"
 ---

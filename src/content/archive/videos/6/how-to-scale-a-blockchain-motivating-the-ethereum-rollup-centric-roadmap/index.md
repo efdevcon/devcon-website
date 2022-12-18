@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["base layer","research"]
 speakers: ["Ansgar Dietrichs"]
+slidesUrl: "/resources/6/how-to-scale-a-blockchain-motivating-the-ethereum-rollup-centric-roadmap.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["execution","specifications"]
 speakers: ["Peter Davies"]
+slidesUrl: "/resources/6/eels-the-future-of-execution-layer-specifications.pdf"
 ---

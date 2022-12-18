@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["developer experience","hardhat","nomic"]
 speakers: ["Franco Zeoli"]
+slidesUrl: "/resources/6/hardhat-and-nomic-foundation-the-creation-of-an-ethereum-non-profit.pdf"
 ---

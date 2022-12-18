@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["MEV","Auction","DeFi"]
 speakers: ["Alex Vinyas"]
+slidesUrl: "/resources/6/the-fight-for-mev.pdf"
 ---

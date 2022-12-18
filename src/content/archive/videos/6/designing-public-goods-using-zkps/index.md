@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["public goods","approachability","design patterns"]
 speakers: ["Rachel"]
+slidesUrl: "/resources/6/designing-public-goods-using-zkps.pdf"
 ---

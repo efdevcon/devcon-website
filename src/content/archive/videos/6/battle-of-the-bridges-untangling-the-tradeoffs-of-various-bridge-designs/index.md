@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["bridges","cross-chain"]
 speakers: ["Tarun Chitra","Hart Lambur","Chris Whinfrey","Uma Roy"]
+slidesUrl: "/resources/6/battle-of-the-bridges-untangling-the-tradeoffs-of-various-bridge-designs.pdf"
 ---

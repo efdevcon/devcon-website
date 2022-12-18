@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["mev","decentralizaton","research"]
 speakers: ["Philip Daian"]
+slidesUrl: "/resources/6/mev-for-the-next-billion-its-time-to-get-serious.pdf"
 ---

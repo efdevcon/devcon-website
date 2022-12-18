@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["regulatory","landscape"]
 speakers: ["Connor Spelliscy"]
+slidesUrl: "/resources/6/fighting-for-cryptos-future-the-state-of-regulation-and-advocacy.pdf"
 ---

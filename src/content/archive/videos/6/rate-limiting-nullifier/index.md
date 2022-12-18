@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["zk","spam","anonymous"]
 speakers: ["AtHeartEngineer"]
+slidesUrl: "/resources/6/rate-limiting-nullifier.pdf"
 ---

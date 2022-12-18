@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Mobile","wallet connect"]
 speakers: ["Carolina Pinzon","Bryan Moreno"]
+slidesUrl: "/resources/6/the-challenges-and-learnings-of-implementing-wallet-connection-on-mobile.pdf"
 ---

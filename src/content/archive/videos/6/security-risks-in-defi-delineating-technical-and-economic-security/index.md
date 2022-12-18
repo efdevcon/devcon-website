@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["DeFi","Security Risk","Incentives"]
 speakers: ["Daniel Perez","Ariah Klages-Mundt","Lewis Gudgeon"]
+slidesUrl: "/resources/6/security-risks-in-defi-delineating-technical-and-economic-security.pdf"
 ---

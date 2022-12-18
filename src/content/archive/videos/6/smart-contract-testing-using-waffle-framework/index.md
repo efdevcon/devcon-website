@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["smart contract testing","waffle","security"]
 speakers: ["Bartek Rutkowski"]
+slidesUrl: "/resources/6/smart-contract-testing-using-waffle-framework.pdf"
 ---

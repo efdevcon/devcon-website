@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["security","bug bounty","vulnerabilities"]
 speakers: ["Fredrik Svantes"]
+slidesUrl: "/resources/6/ethereum-foundations-bug-bounty-program.pdf"
 ---

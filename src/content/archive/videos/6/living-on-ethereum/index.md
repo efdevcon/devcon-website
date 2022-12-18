@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["adoption","merchants","bankless"]
 speakers: ["Ale Machado"]
+slidesUrl: "/resources/6/living-on-ethereum.pdf"
 ---

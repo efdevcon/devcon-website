@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["networks"]
 speakers: ["Venkatesh Rao"]
+slidesUrl: "/resources/6/there-are-many-alternatives-unlocking-civilizational-hypercomplexity-with-ethereum.pdf"
 ---

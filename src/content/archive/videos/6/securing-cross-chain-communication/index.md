@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["cross-chain","bridge","security"]
 speakers: ["Nithin Eappen"]
+slidesUrl: "/resources/6/securing-cross-chain-communication.pdf"
 ---

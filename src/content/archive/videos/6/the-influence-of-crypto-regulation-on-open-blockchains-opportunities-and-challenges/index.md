@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Regulation","DAOs","decentrlization"]
 speakers: ["Florian Glatz","Marina Markezic","Simon Polrot"]
+slidesUrl: "/resources/6/the-influence-of-crypto-regulation-on-open-blockchains-opportunities-and-challenges.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["eips","ethmagicians"]
 speakers: ["Tim Beiko","Anett Rolikova"]
+slidesUrl: "/resources/6/ethereum-magicians-protocol-roadmap-session.pdf"
 ---

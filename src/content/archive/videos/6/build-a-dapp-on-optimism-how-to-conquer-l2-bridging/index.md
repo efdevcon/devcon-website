@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["Bridging","Optimism","L2"]
 speakers: ["Emily Lin"]
+slidesUrl: "/resources/6/build-a-dapp-on-optimism-how-to-conquer-l2-bridging.pdf"
 ---

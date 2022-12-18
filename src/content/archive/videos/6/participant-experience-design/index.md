@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["user experience","public goods"]
 speakers: ["Althea Allen","Rachel","Scott Moore","Hester"]
+slidesUrl: "/resources/6/participant-experience-design.pdf"
 ---

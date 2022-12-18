@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Security techniques","code quality","rounding errors"]
 speakers: ["Raoul Schaffranek"]
+slidesUrl: "/resources/6/tackling-rounding-errors-with-precision-analysis.pdf"
 ---

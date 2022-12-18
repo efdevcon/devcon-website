@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["validators","staking"]
 speakers: ["Pol"]
+slidesUrl: "/resources/6/everything-a-solo-staker-should-know-for-the-next-phase-of-ethereum.pdf"
 ---

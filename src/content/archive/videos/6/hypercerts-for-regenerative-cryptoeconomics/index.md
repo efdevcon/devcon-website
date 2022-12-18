@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["cryptoeconomics","infrastructure"]
 speakers: ["Evan Miyazono"]
+slidesUrl: "/resources/6/hypercerts-for-regenerative-cryptoeconomics.pdf"
 ---

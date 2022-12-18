@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Developers","DEI","community"]
 speakers: ["Gloria Kimbwala"]
+slidesUrl: "/resources/6/be-a-superhero-tangible-actions-to-support-diverse-builders-and-show-allyship-in-web3-communities.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["security","javascript","development"]
 speakers: ["Kumavis","Naugtur"]
+slidesUrl: "/resources/6/the-attacker-is-inside-javascript-supplychain-security-and-lavamoat.pdf"
 ---

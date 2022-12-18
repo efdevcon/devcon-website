@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Smart Contracts","Security","Audit"]
 speakers: ["Jonathan Alexander","Gonçalo Sá","Nick Selby","Mehdi Zerouali","Chandrakana Nandi","Maurelian"]
+slidesUrl: "/resources/6/future-of-smart-contract-security-audits-rekt-or-wagmi.pdf"
 ---

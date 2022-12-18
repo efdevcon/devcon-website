@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Secret sharing","VDF","key management"]
 speakers: ["Leonard Tan"]
+slidesUrl: "/resources/6/time-locked-recovery-factors-for-secret-sharing.pdf"
 ---

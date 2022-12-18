@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["governance","research","DAOs"]
 speakers: ["Eugene Leventhal","Joshua Tan","Ellie Rennie"]
+slidesUrl: "/resources/6/open-problems-in-dao-science-workshop.pdf"
 ---

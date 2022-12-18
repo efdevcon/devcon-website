@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["blockchain","tokens","web3"]
 speakers: ["Weiwu Zhang"]
+slidesUrl: "/resources/6/tokenizing-brands-3-key-learnings.pdf"
 ---

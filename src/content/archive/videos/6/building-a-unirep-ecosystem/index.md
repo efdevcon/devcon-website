@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["identity","reputation","privacy"]
 speakers: ["Chance Hudson"]
+slidesUrl: "/resources/6/building-a-unirep-ecosystem.pdf"
 ---

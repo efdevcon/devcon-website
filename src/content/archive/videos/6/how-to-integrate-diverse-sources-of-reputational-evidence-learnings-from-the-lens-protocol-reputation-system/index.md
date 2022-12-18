@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["machine learning","data","lens"]
 speakers: ["Pedro Alcocer"]
+slidesUrl: "/resources/6/how-to-integrate-diverse-sources-of-reputational-evidence-learnings-from-the-lens-protocol-reputation-system.pdf"
 ---

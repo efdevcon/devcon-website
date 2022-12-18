@@ -11,7 +11,8 @@ duration: 1415
 expertise: "Intermediate"
 type: "Talk"
 track: "Privacy"
-keywords: ['Privacy', 'Charity', 'Impact']
-tags: ['Privacy']
+keywords: ["Privacy","Charity","Impact"]
+tags: ["Privacy"]
 speakers: ["Andrew Vaziri"]
+slidesUrl: "/resources/6/lessons-from-the-field-threat-modeling-for-the-everyday-use-of-digital-currency.pdf"
 ---

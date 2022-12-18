@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["MEV","algorithmic game theory"]
 speakers: ["Tarun Chitra","Guillermo Angeris"]
+slidesUrl: "/resources/6/cost-of-feudalism-towards-a-theory-of-mev.pdf"
 ---

@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["Education","Community","UX & Design"]
 speakers: ["Sam Richards"]
+slidesUrl: "/resources/6/education-as-a-public-good-past-present-and-future-of-ethereumorg.pdf"
 ---

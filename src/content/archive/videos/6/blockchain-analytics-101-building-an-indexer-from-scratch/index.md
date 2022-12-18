@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Indexing","MEV","Geth"]
 speakers: ["Benjamin Memisevic"]
+slidesUrl: "/resources/6/blockchain-analytics-101-building-an-indexer-from-scratch.pdf"
 ---

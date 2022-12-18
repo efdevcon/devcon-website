@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["Threshold Cryptography","Fully Homomorphic Encryption","Privacy"]
 speakers: ["Wei Dai"]
+slidesUrl: "/resources/6/why-we-need-threshold-fhe-for-blockchains.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["MEV","formalization","security"]
 speakers: ["Alejo Salles"]
+slidesUrl: "/resources/6/this-is-not-mev.pdf"
 ---

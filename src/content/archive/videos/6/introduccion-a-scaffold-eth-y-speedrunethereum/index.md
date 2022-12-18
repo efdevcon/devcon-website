@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["tooling","education"]
 speakers: ["Carlos"]
+slidesUrl: "/resources/6/introduccion-a-scaffold-eth-y-speedrunethereum.pdf"
 ---

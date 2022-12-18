@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["sharding","scaling","atomicity"]
 speakers: ["norswap"]
+slidesUrl: "/resources/6/rollups-shards-and-fractals-the-dream-of-atomically-composable-horizontal-scaling.pdf"
 ---

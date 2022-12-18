@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["testnets","infrastructure","tooling"]
 speakers: ["Afri Schoedon"]
+slidesUrl: "/resources/6/post-merge-testnets.pdf"
 ---

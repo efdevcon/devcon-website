@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["mev","proposer-builder separation","block building"]
 speakers: ["Alex Stokes"]
+slidesUrl: "/resources/6/block-building-after-the-merge.pdf"
 ---

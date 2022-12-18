@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["UBI","Identity","DeSoc"]
 speakers: ["Santiago Siri"]
+slidesUrl: "/resources/6/universal-basic-income-for-humanity.pdf"
 ---

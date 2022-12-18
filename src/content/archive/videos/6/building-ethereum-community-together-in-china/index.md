@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["China","Community"]
 speakers: ["GUO Haoyun","Yanyan Ho"]
+slidesUrl: "/resources/6/building-ethereum-community-together-in-china.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["zk-rollup","utxo","privacy"]
 speakers: ["Bobbin Threadbare"]
+slidesUrl: "/resources/6/using-a-hybrid-utxo-and-account-based-state-model-in-a-zk-rollup.pdf"
 ---

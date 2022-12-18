@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["privacy",";","layer","2",";","applications"]
 speakers: ["Paul Brody","Chaitanya Konda"]
+slidesUrl: "/resources/6/scaling-privacy-with-starlight.pdf"
 ---

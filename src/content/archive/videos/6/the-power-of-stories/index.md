@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Depression","Story Telling","Mental Health"]
 speakers: ["Piper Merriam"]
+slidesUrl: "/resources/6/the-power-of-stories.pdf"
 ---

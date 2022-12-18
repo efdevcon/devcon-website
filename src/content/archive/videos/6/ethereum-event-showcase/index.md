@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["democracy"]
 speakers: ["Juan David Reyes"]
+slidesUrl: "/resources/6/ethereum-event-showcase.pdf"
 ---

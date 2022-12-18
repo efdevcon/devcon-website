@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["applied zk","public goods","experiments"]
 speakers: ["Wanseob Lim"]
+slidesUrl: "/resources/6/public-goods-and-experiments-the-journey-of-zkopru.pdf"
 ---

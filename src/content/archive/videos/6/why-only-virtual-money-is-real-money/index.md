@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["geopolitics"]
 speakers: ["Bruno Macaes"]
+slidesUrl: "/resources/6/why-only-virtual-money-is-real-money.pdf"
 ---

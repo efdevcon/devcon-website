@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Solidity","ERC","tricks"]
 speakers: ["Hadrien Croubois"]
+slidesUrl: "/resources/6/5-smart-contract-patterns-i-wish-more-devs-would-use.pdf"
 ---

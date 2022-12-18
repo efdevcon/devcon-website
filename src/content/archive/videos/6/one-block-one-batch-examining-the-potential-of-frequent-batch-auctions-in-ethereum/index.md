@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["P2P","DeFi","MEV"]
 speakers: ["Anna George"]
+slidesUrl: "/resources/6/one-block-one-batch-examining-the-potential-of-frequent-batch-auctions-in-ethereum.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Governance & Coordination"
 tags: ["Governance & Coordination"]
 keywords: ["incentives","community growth","smart rewards"]
 speakers: ["Chandler De Kock"]
+slidesUrl: "/resources/6/the-future-of-social-coordination-of-daos.pdf"
 ---

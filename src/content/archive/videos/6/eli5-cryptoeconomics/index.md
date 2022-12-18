@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["engineering"]
 speakers: ["Julian Ma"]
+slidesUrl: "/resources/6/eli5-cryptoeconomics.pdf"
 ---

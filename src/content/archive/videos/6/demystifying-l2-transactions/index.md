@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["rollups","transactions","gas"]
 speakers: ["Chris Buckland"]
+slidesUrl: "/resources/6/demystifying-l2-transactions.pdf"
 ---

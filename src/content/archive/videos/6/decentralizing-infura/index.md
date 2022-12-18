@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["api","infura","infrastructure"]
 speakers: ["E.G. Galano","Tim Myers"]
+slidesUrl: "/resources/6/decentralizing-infura.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["MEV","PBS","builder"]
 speakers: ["Jolene Dunne"]
+slidesUrl: "/resources/6/evaluating-the-pbs-experiment-early-insights-from-mev-boost-and-the-builder-market.pdf"
 ---

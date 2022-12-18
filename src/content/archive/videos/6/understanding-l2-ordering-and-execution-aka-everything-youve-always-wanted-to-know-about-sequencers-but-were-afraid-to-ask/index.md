@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["Layer 2","Decentralization","Ordering"]
 speakers: ["Daniel Zachary Goldman"]
+slidesUrl: "/resources/6/understanding-l2-ordering-and-execution.pdf"
 ---

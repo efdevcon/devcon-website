@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["bridges","l2beat","rollups","multichain"]
 speakers: ["Bartek Kiepuszewski"]
+slidesUrl: "/resources/6/rollups-are-the-most-secure-bridges.pdf"
 ---

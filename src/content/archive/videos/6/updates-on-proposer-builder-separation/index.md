@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["proposer builder separation","cryptoeconomics"]
 speakers: ["Barnabé Monnot"]
+slidesUrl: "/resources/6/updates-on-proposer-builder-separation.pdf"
 ---

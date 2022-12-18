@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["identity"]
 speakers: ["Diego Fernandez"]
+slidesUrl: "/resources/6/self-sovereign-digital-identity.pdf"
 ---

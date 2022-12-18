@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["security","violence","kidnapping"]
 speakers: ["Ryan Lackey"]
+slidesUrl: "/resources/6/how-to-not-be-worth-kidnapping.pdf"
 ---

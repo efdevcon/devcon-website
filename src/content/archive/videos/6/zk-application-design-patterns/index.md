@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["zero-knowledge","application"]
 speakers: ["Yi Sun","Lakshman Sankar"]
+slidesUrl: "/resources/6/zk-application-design-patterns.pdf"
 ---

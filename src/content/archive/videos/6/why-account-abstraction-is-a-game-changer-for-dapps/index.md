@@ -14,4 +14,5 @@ track: "UX & Design"
 tags: ["UX & Design"]
 keywords: ["UX","security","Dapps"]
 speakers: ["Julien Niset","Itamar Lesuisse"]
+slidesUrl: "/resources/6/why-account-abstraction-is-a-game-changer-for-dapps.pdf"
 ---

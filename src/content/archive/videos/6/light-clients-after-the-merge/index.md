@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["light-client","trust-minimized","wallet"]
 speakers: ["Etan Kissling"]
+slidesUrl: "/resources/6/light-clients-after-the-merge.pdf"
 ---

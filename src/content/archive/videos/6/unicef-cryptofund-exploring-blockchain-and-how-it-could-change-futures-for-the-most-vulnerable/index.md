@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Cryptocurrency","impact","innovation"]
 speakers: ["Evelyn Casanova","Sanna Bedi"]
+slidesUrl: "/resources/6/unicef-cryptofund-exploring-blockchain-and-how-it-could-change-futures-for-the-most-vulnerable.pdf"
 ---

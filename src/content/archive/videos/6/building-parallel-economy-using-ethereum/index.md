@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["parallel","economy"]
 speakers: ["Mario Havel"]
+slidesUrl: "/resources/6/building-parallel-economy-using-ethereum.pdf"
 ---

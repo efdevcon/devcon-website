@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["Verification","Zero-Knowledge","Security"]
 speakers: ["Jon Stephens"]
+slidesUrl: "/resources/6/are-your-zero-knowledge-proofs-correct.pdf"
 ---

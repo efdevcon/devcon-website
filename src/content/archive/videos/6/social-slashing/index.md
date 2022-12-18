@@ -14,4 +14,5 @@ track: "Layer 1 Protocol"
 tags: ["Layer 1 Protocol"]
 keywords: ["Slashing","Censorship resistance","Governance"]
 speakers: ["Eric Wall"]
+slidesUrl: "/resources/6/social-slashing.pdf"
 ---

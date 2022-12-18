@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["ukraine","web3"]
 speakers: ["Max Semenchuk"]
+slidesUrl: "/resources/6/web3-in-the-ukraine-government-integration-and-impact.pdf"
 ---

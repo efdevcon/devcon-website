@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["staking","tokenization","decentralization"]
 speakers: ["Steve Berryman"]
+slidesUrl: "/resources/6/validator-receipts-an-alternative-to-liquid-staking-derivatives.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Solidity","Symbolic Execution","Formal Verification"]
 speakers: ["Leo Alt"]
+slidesUrl: "/resources/6/building-an-end-to-end-evm-symbolic-execution-engine-in-solidity.pdf"
 ---

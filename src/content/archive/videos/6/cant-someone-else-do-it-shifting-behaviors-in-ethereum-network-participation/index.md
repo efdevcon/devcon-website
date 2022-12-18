@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["decentralization","validators","network participation"]
 speakers: ["Aqeel Mohammad"]
+slidesUrl: "/resources/6/cant-someone-else-do-it-shifting-behaviors-in-ethereum-network-participation.pdf"
 ---

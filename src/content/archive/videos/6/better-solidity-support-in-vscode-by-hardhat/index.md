@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["developer","infrastructure"]
 speakers: ["John Kane"]
+slidesUrl: "/resources/6/better-solidity-support-in-vscode-by-hardhat.pdf"
 ---

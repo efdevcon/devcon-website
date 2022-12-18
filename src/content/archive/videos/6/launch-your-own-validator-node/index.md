@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["Node ownership","Validation","Independence"]
 speakers: ["Maggie Love"]
+slidesUrl: "/resources/6/launch-your-own-validator-node.pdf"
 ---

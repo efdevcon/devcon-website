@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["open","democracy"]
 speakers: ["Pia Mancini"]
+slidesUrl: "/resources/6/the-future-is-collective.pdf"
 ---

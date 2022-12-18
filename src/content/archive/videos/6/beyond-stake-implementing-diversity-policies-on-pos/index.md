@@ -14,4 +14,5 @@ track: "Staking & Validator Experience"
 tags: ["Staking & Validator Experience"]
 keywords: ["Staking policies","consensus layer generalisation"]
 speakers: ["Klaus Kursawe"]
+slidesUrl: "/resources/6/beyond-stake-implementing-diversity-policies-on-pos.pdf"
 ---

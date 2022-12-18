@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Smart contract","Solidity","Cairo"]
 speakers: ["Hadrien Croubois"]
+slidesUrl: "/resources/6/build-your-first-contract-with-the-wizard-of-oz.pdf"
 ---

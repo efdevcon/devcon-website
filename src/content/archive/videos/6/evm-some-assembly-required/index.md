@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["Solidity","Assembly","EVM"]
 speakers: ["Alex Bazhenov"]
+slidesUrl: "/resources/6/evm-some-assembly-required.pdf"
 ---

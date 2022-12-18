@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["ethers","javascript","dapp"]
 speakers: ["Richard Moore"]
+slidesUrl: "/resources/6/ethers-whats-new-in-v6.pdf"
 ---

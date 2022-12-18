@@ -14,4 +14,5 @@ track: "Privacy"
 tags: ["Privacy"]
 keywords: ["zero-knokwledge","recursion"]
 speakers: ["Ying Tong","Nalin Bhardwaj"]
+slidesUrl: "/resources/6/recursive-zk-applications-and-affordances.pdf"
 ---

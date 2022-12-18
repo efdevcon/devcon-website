@@ -14,4 +14,5 @@ track: "Security"
 tags: ["Security"]
 keywords: ["Hack","Investigation"]
 speakers: ["Julia Hardy","Adam Hart"]
+slidesUrl: "/resources/6/the-dollar10b-problem-web3-security-against-coordinated-adversaries.pdf"
 ---

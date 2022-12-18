@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["L2s","community","latam"]
 speakers: ["Camila Garzon"]
+slidesUrl: "/resources/6/machismo-remittence-and-inflation-scaling-ethereum-for-widespread-adoption-in-latam.pdf"
 ---

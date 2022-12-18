@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["standards","enterprise"]
 speakers: ["Tas Dienes","Daniel Burnett"]
+slidesUrl: "/resources/6/eea-community-projects-a-home-for-open-standards-development-projects-managed-by-oasis.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["web3","storage"]
 speakers: ["Qi Zhou"]
+slidesUrl: "/resources/6/on-the-future-of-web3-paving-the-way-to-end-to-end-fully-decentralized-web.pdf"
 ---

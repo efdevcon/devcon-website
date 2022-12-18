@@ -14,4 +14,5 @@ track: "Layer 2s"
 tags: ["Layer 2s"]
 keywords: ["ENS","L2","cross-chain"]
 speakers: ["Makoto Inoue"]
+slidesUrl: "/resources/6/ens-cross-chain-integration-strategy.pdf"
 ---

@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["innovation","development","blockchain for good"]
 speakers: ["Shane O'Connor","Naroa","Gerben Kijne"]
+slidesUrl: "/resources/6/building-blockchain-products-for-unicef-how-to-get-involved.pdf"
 ---

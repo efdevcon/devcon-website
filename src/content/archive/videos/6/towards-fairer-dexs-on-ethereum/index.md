@@ -14,4 +14,5 @@ track: "Cryptoeconomics"
 tags: ["Cryptoeconomics"]
 keywords: ["Mechanism Design","MEV","Batch Auctions"]
 speakers: ["Felix Leupold"]
+slidesUrl: "/resources/6/towards-fairer-dexs-on-ethereum.pdf"
 ---

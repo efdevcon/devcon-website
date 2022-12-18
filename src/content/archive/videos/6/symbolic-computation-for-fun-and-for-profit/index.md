@@ -14,4 +14,5 @@ track: "Developer Infrastructure"
 tags: ["Developer Infrastructure"]
 keywords: ["solidity","optimizor","smart-contracts"]
 speakers: ["Hari"]
+slidesUrl: "/resources/6/symbolic-computation-for-fun-and-for-profit.pdf"
 ---
