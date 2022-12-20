@@ -15,4 +15,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["EFF","Privacy","Human Rights"]
 speakers: ["Kurt Opsahl"]
+slidesUrl: "/resources/6/closing-kurt-opsahl.pdf"
 ---

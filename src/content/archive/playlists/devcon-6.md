@@ -319,5 +319,5 @@ videos:
 - 6/machismo-remittence-and-inflation-scaling-ethereum-for-widespread-adoption-in-latam/index
 - 6/using-blockchain-to-overcome-latam-challenges/index
 - 6/music-jamboree-with-weird-eth-and-friends/index
-- 6/closing-ceremonies-featuring-kurt-opsahl/index
+- 6/closing-ceremonies-kurt-opsahl/index
 ---

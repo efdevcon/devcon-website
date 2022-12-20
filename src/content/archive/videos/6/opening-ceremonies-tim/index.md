@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["ethereum","foundation"]
 speakers: ["Tim Beiko"]
+slidesUrl: "/resources/6/opening-ceremonies-tim.pdf"
 ---

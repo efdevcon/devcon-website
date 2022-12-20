@@ -15,4 +15,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["ethereum","foundation"]
 speakers: ["Vitalik Buterin"]
+slidesUrl: "https://hackmd.io/@vbuterin/ethereum_in_30_minutes"
 ---

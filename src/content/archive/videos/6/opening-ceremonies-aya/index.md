@@ -15,4 +15,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["ethereum","foundation"]
 speakers: ["Aya Miyaguchi"]
+slidesUrl: "/resources/6/opening-ceremonies-aya.pdf"
 ---

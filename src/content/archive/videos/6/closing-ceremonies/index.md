@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["Ethereum","Foundation"]
 speakers: ["Aya Miyaguchi", "Natalia Madrid-Malo Latorre", "Skylar Weaver"]
+slidesUrl: "/resources/6/closing-ceremonies.pdf"
 ---

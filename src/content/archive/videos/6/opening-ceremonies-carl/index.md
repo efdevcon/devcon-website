@@ -14,4 +14,5 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["ethereum","foundation"]
 speakers: ["Carl Beekhuizen"]
+slidesUrl: "/resources/6/opening-ceremonies-carl.pdf"
 ---

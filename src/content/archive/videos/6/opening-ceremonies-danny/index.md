@@ -14,5 +14,6 @@ track: "Opportunity & Global Impact"
 tags: ["Opportunity & Global Impact"]
 keywords: ["ethereum","foundation"]
 speakers: ["Danny Ryan"]
+slidesUrl: "/resources/6/opening-ceremonies-danny.pdf"
 ---
 
