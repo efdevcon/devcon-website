@@ -133,7 +133,7 @@ $logo-offset: 50px;
     justify-content: center;
     align-items: flex-end;
 
-    > * {
+    >* {
       // transform: scale(1.2);
       // display: block !important;
       // height: 100% !important;
@@ -151,7 +151,7 @@ $logo-offset: 50px;
     // transform: translateY(var(--translateY, 0px));
     // transform: translateY(25%);
 
-    > * {
+    >* {
       display: block !important;
 
       img {
@@ -255,7 +255,7 @@ $logo-offset: 50px;
       position: relative;
       width: 100%;
 
-      > div {
+      >div {
         position: absolute;
         left: 50%;
         bottom: 0px;
@@ -282,13 +282,14 @@ $logo-offset: 50px;
 }
 
 .parallax-container-2 {
-  > * {
+  >* {
     @media (hover: none) {
       transform: translateY(0px) !important;
     }
   }
 
-  animation: in-up 2.5s ease-out forwards, sway 90s 2.5s linear infinite;
+  animation: in-up 2.5s ease-out forwards,
+  sway 90s 2.5s linear infinite;
   position: absolute;
   width: 108%;
   left: -4%;
@@ -346,7 +347,7 @@ $logo-offset: 50px;
       bottom: 15%;
     }
 
-    > p {
+    >p {
       max-width: 350px;
       font-family: $fonts-secondary;
 
@@ -381,7 +382,7 @@ $logo-offset: 50px;
         font-size: 16px;
       }
 
-      > p {
+      >p {
         flex-grow: 1;
       }
 
@@ -402,13 +403,14 @@ $logo-offset: 50px;
   background: linear-gradient(180deg, #bce2e5 0%, rgba(196, 251, 255, 0) 58.1%);
 }
 
-.nc-loop-mouse-16-icon-f > :nth-child(2) {
+.nc-loop-mouse-16-icon-f> :nth-child(2) {
   --animation-duration: 1s;
   transform-origin: 50% 50%;
   animation: nc-loop-mouse-anim var(--animation-duration) infinite;
 }
 
 @keyframes nc-loop-mouse-anim {
+
   0%,
   100% {
     transform: translateY(0);
@@ -464,7 +466,7 @@ $logo-offset: 50px;
 
   &.devcon-week {
     background: linear-gradient(45deg, #f4734c, #f39e74, #d37840);
-    
+
     img {
       width: 60%;
       left: 30%;
@@ -477,6 +479,10 @@ $logo-offset: 50px;
         left: 0%;
       }
     }
+  }
+
+  &.recap {
+    background: linear-gradient(45deg, #1b1b1b, #282828, #212121);
   }
 
   &.passport {
@@ -536,7 +542,7 @@ $logo-offset: 50px;
       @include fonts-xxl;
       // margin-top: calc(var(--header-height, 64px) + 38px);
     }
-  
+
     .content {
       display: flex;
       align-items: flex-start;
@@ -578,10 +584,8 @@ $logo-offset: 50px;
         transform: translateX(-5px);
       }
     }
-  
-    .cta {
 
-    }
+    .cta {}
   }
 }
 

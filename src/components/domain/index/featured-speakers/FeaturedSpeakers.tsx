@@ -91,8 +91,8 @@ const FeaturedSpeakers = () => {
       <div className="border-bottom clear-bottom margin-bottom">
         <p className={`${css['description']} clear-bottom-less clear-top`}>{intl('keynote_subtext')}</p>
 
-        <Button className="red lg bold" to="https://app.devcon.org/schedule">
-          {intl('keynote_view_schedule')} →
+        <Button className="red lg bold" to="https://archive.devcon.org">
+          {intl('keynote_view_archive')} →
         </Button>
       </div>
     </div>

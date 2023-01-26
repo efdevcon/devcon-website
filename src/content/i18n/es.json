@@ -9,6 +9,7 @@
   "keynote_subtext": "Devcon está dirigido a los constructores, creadores y pensadores de Ethereum que desean mejorar este mundo. La programación en Devcon adopta un enfoque holístico y tiene como objetivo involucrar a todos los asistentes a través de charlas, paneles, talleres, charlas relámpago y sesiones de aprendizaje de forma libre.",
   "keynote_speakers": "Oradores Principales",
   "keynote_view_schedule": "Ver horario completo",
+  "keynote_view_archive": "Ver archivo completo",
   "featured_speakers": "Oradoras destacadas",
   "learn_more": "Aprende más",
   "terms_of_service": "Términos de servicio",
@@ -98,6 +99,7 @@
   },
   "navigation": {
     "supporters": "Partidarias",
+    "updates": "Actualizaciones",
     "archive": "Archivo",
     "forum": "Foro",
     "blog": "Blog",
@@ -274,6 +276,8 @@
     "bogota_blockchain_week": "EMANA BLOCKCHAIN DE BOGOTÁ"
   },
   "hero": {
+    "recap_title": "Resumen",
+    "recap_relive": "Revive Devcon Bogotá",
     "passport_title": "Pasaporte",
     "passport_cta": "Aplicación Devcon",
     "passport": "Aplicación de pasaporte Devcon",
@@ -303,4 +307,3 @@
     "join_us": "¡Únase a nosotros para agradecer a cada uno de estos increíbles equipos por su apoyo y dedicación al ecosistema Ethereum! 👏👏👏"
   }
 }
-

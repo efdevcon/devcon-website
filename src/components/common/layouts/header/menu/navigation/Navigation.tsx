@@ -51,11 +51,11 @@ const Mobile = (props: any) => {
                     style={
                       i.highlight
                         ? {
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            width: '100%',
-                          }
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          width: '100%',
+                        }
                         : undefined
                     }
                     to={i.url}
@@ -64,7 +64,7 @@ const Mobile = (props: any) => {
                     <>
                       {i.title}
                       {i.highlight === 'app' && <IconCalendar style={{ fontSize: '1em' }} />}
-                      {i.highlight === 'livestream' && <IconWatch style={{ fontSize: '1em' }} />}
+                      {i.highlight === 'livestream' || i.highlight === 'archive' && <IconWatch style={{ fontSize: '1em' }} />}
                     </>
                   </Link>
                 </div>
@@ -125,11 +125,14 @@ export const Navigation = (props: any) => {
           const link = (() => {
             let className = `${css['foldout-link']} bold`
 
-            const isApp = i.highlight === 'app' // i.title === 'Devcon App + Schedule'
-
-            // Just keeping it simple since this is possibly a one-off thing - can generalize later if needed
             if (i.highlight) {
-              className += ` button ${css[i.highlight as any]} ${i.highlight === 'app' ? 'red' : 'black'}`
+              className += ` button ${css[i.highlight as any]}`
+
+              if (['app', 'archive'].includes(i.highlight)) {
+                className += ` red`;
+              } else {
+                className += ` black`
+              }
             } else {
               className += ` plain`
             }
@@ -139,6 +142,7 @@ export const Navigation = (props: any) => {
                 <>
                   {i.highlight === 'app' && <IconCalendar />}
                   {i.highlight === 'livestream' && <IconWatch />}
+                  {i.highlight === 'archive' && <IconWatch />}
                   {i.title}
                 </>
               </Link>

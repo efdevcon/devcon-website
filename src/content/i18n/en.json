@@ -9,12 +9,13 @@
   "keynote_subtext": "Devcon is geared toward Ethereum's builders, creators, and thinkers who wish to improve this world. Programming at Devcon takes a holistic approach and aims to engage all attendees through talks, panels, workshops, lightning talks, and freeform learning sessions.",
   "keynote_speakers": "Keynote Speakers",
   "keynote_view_schedule": "View Full Schedule",
+  "keynote_view_archive": "View Full Archive",
   "featured_speakers": "Featured Speakers",
   "learn_more": "Learn More",
   "terms_of_service": "Terms of Service",
   "code_of_conduct": "Code of Conduct",
   "add-to-calendar": "Add to calendar",
-  "journey": "Road to Devcon Bogota 2022",
+  "journey": "Road to Devcon",
   "getintouch": "Get in touch",
   "partnerwithus": "Partner with us",
   "readmore": "Read more",
@@ -98,6 +99,7 @@
   },
   "navigation": {
     "supporters": "Supporters",
+    "updates": "Updates",
     "archive": "Archive",
     "forum": "Forum",
     "blog": "Blog",
@@ -274,6 +276,8 @@
     "bogota_blockchain_week": "BOGOTA BLOCKCHAIN WEEK"
   },
   "hero": {
+    "recap_title": "Recap",
+    "recap_relive": "Relive Devcon Bogota",
     "passport_title": "Passport",
     "passport_cta": "Launch Devcon App",
     "passport": "Devcon Passport App",

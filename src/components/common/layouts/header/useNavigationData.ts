@@ -10,28 +10,23 @@ const useNavigationData = () => {
 
   return {
     top: [
-      {
-        title: intl('navigation_archive'),
-        url: 'https://archive.devcon.org/archive/',
-        type: 'link',
-      },
-      {
-        title: intl('navigation_forum'),
-        url: 'https://forum.devcon.org/',
-        type: 'link',
-      },
-      {
-        title: intl('navigation_blog'),
-        url: '/blogs',
-        type: 'page',
-      },
+      // {
+      //   title: intl('navigation_archive'),
+      //   url: 'https://archive.devcon.org/archive/',
+      //   type: 'link',
+      // },
+      // {
+      //   title: intl('navigation_forum'),
+      //   url: 'https://forum.devcon.org/',
+      //   type: 'link',
+      // },
+      // {
+      //   title: intl('navigation_blog'),
+      //   url: '/blogs',
+      //   type: 'page',
+      // },
     ],
     site: [
-      {
-        title: intl('news'),
-        url: '/news',
-        type: 'page',
-      },
       {
         title: intl('navigation_about'),
         url: '#',
@@ -54,40 +49,50 @@ const useNavigationData = () => {
             type: 'page',
           },
           {
-            title: intl('navigation_faq'),
-            url: '/faq',
-            type: 'page',
-          },
-          {
-            title: intl('navigation_tickets'),
+            title: intl('navigation_updates'),
             url: '#',
             type: 'header',
           },
           {
-            title: intl('navigation_get_tickets'),
-            url: '/tickets',
+            title: intl('news'),
+            url: '/news',
             type: 'page',
           },
-          {
-            title: intl('navigation_tickets_raffle'),
-            url: '/raffle-auction',
-            type: 'page',
-          },
-          {
-            title: intl('navigation_program'),
-            url: '#',
-            type: 'header',
-          },
-          {
-            title: intl('navigation_program_overview'),
-            url: '/program',
-            type: 'page',
-          },
-          {
-            title: intl('navigation_program_apply_to_speak'),
-            url: '/applications',
-            type: 'page',
-          },
+          // {
+          //   title: intl('navigation_faq'),
+          //   url: '/faq',
+          //   type: 'page',
+          // },
+          // {
+          //   title: intl('navigation_tickets'),
+          //   url: '#',
+          //   type: 'header',
+          // },
+          // {
+          //   title: intl('navigation_get_tickets'),
+          //   url: '/tickets',
+          //   type: 'page',
+          // },
+          // {
+          //   title: intl('navigation_tickets_raffle'),
+          //   url: '/raffle-auction',
+          //   type: 'page',
+          // },
+          // {
+          //   title: intl('navigation_program'),
+          //   url: '#',
+          //   type: 'header',
+          // },
+          // {
+          //   title: intl('navigation_program_overview'),
+          //   url: '/program',
+          //   type: 'page',
+          // },
+          // {
+          //   title: intl('navigation_program_apply_to_speak'),
+          //   url: '/applications',
+          //   type: 'page',
+          // },
         ],
       },
       {
@@ -111,21 +116,21 @@ const useNavigationData = () => {
             url: '/supporters',
             type: 'page',
           },
-          {
-            title: intl('navigation_participate'),
-            url: '#',
-            type: 'header',
-          },
-          {
-            title: intl('navigation_press'),
-            url: 'https://forms.gle/G4FxcQsC2Byy9NEHA',
-            type: 'link',
-          },
-          {
-            title: intl('navigation_volunteer'),
-            url: 'https://forms.gle/GnH3SyxSNnQCCn8TA',
-            type: 'link',
-          },
+          // {
+          //   title: intl('navigation_participate'),
+          //   url: '#',
+          //   type: 'header',
+          // },
+          // {
+          //   title: intl('navigation_press'),
+          //   url: 'https://forms.gle/G4FxcQsC2Byy9NEHA',
+          //   type: 'link',
+          // },
+          // {
+          //   title: intl('navigation_volunteer'),
+          //   url: 'https://forms.gle/GnH3SyxSNnQCCn8TA',
+          //   type: 'link',
+          // },
           {
             title: intl('navigation_contribute'),
             url: '#',
@@ -143,55 +148,72 @@ const useNavigationData = () => {
           },
         ],
       },
+      // {
+      //   title: intl('navigation_event'),
+      //   url: '#',
+      //   type: 'links',
+      //   logo: LogoBogota,
+      //   links: [
+      //     {
+      //       title: 'Bogotá',
+      //       url: '#',
+      //       type: 'header',
+      //     },
+      //     {
+      //       title: intl('navigation_city_guide'),
+      //       url: '/bogota',
+      //       type: 'page',
+      //     },
+      //     {
+      //       title: intl('devcon_week_title'),
+      //       url: '/devcon-week',
+      //       type: 'page',
+      //     },
+      //     {
+      //       title: 'Devcon',
+      //       url: '#',
+      //       type: 'header',
+      //     },
+      //     {
+      //       title: intl('cd_title'),
+      //       url: '/continuous-devcon',
+      //       type: 'page',
+      //     },
+      //     {
+      //       title: 'Devcon Satellites',
+      //       url: '/satellites',
+      //       type: 'page',
+      //     },
+      //   ],
+      // },
       {
-        title: intl('navigation_event'),
-        url: '#',
-        type: 'links',
-        logo: LogoBogota,
-        links: [
-          {
-            title: 'Bogotá',
-            url: '#',
-            type: 'header',
-          },
-          {
-            title: intl('navigation_city_guide'),
-            url: '/bogota',
-            type: 'page',
-          },
-          {
-            title: intl('devcon_week_title'),
-            url: '/devcon-week',
-            type: 'page',
-          },
-          {
-            title: 'Devcon',
-            url: '#',
-            type: 'header',
-          },
-          {
-            title: intl('cd_title'),
-            url: '/continuous-devcon',
-            type: 'page',
-          },
-          {
-            title: 'Devcon Satellites',
-            url: '/satellites',
-            type: 'page',
-          },
-        ],
+        title: intl('navigation_forum'),
+        url: 'https://forum.devcon.org/',
+        type: 'link',
       },
       {
-        title: intl('navigation_live'),
-        url: 'https://live.devcon.org',
+        title: intl('navigation_blog'),
+        url: '/blogs',
         type: 'page',
-        highlight: 'livestream',
       },
+      // Comment these back in when closer to the event ;)
+      // {
+      //   title: intl('navigation_live'),
+      //   url: 'https://live.devcon.org',
+      //   type: 'page',
+      //   highlight: 'livestream',
+      // },
+      // {
+      //   title: intl('navigation_devcon_app'),
+      //   url: 'https://app.devcon.org',
+      //   type: 'page',
+      //   highlight: 'app',
+      // },
       {
-        title: intl('navigation_devcon_app'),
-        url: 'https://app.devcon.org',
+        title: intl('navigation_archive'),
+        url: 'https://archive.devcon.org',
         type: 'page',
-        highlight: 'app',
+        highlight: 'archive',
       },
     ],
     footer: {
@@ -223,30 +245,46 @@ const useNavigationData = () => {
           type: 'page',
         },
         {
-          title: intl('navigation_tickets'),
-          url: '/tickets',
+          title: intl('navigation_forum'),
+          url: 'https://forum.devcon.org/',
+          type: 'link',
+        },
+        {
+          title: intl('navigation_blog'),
+          url: '/blogs',
           type: 'page',
         },
         {
-          title: intl('navigation_program'),
-          url: '/program',
-          type: 'page',
+          title: intl('navigation_archive'),
+          url: 'https://archive.devcon.org/archive/',
+          type: 'link',
         },
-        {
-          title: 'DIPs',
-          url: '/dips',
-          type: 'page',
-        },
-        {
-          title: intl('navigation_city_guide'),
-          url: '/bogota',
-          type: 'page',
-        },
-        {
-          title: 'FAQ',
-          url: '/faq',
-          type: 'page',
-        },
+
+        // {
+        //   title: intl('navigation_tickets'),
+        //   url: '/tickets',
+        //   type: 'page',
+        // },
+        // {
+        //   title: intl('navigation_program'),
+        //   url: '/program',
+        //   type: 'page',
+        // },
+        // {
+        //   title: 'DIPs',
+        //   url: '/dips',
+        //   type: 'page',
+        // },
+        // {
+        //   title: intl('navigation_city_guide'),
+        //   url: '/bogota',
+        //   type: 'page',
+        // },
+        // {
+        //   title: 'FAQ',
+        //   url: '/faq',
+        //   type: 'page',
+        // },
       ],
     },
   }

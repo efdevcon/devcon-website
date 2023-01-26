@@ -15,8 +15,10 @@ import LogoBogota from 'assets/images/pages/bogota.svg'
 import LogoVideo from 'assets/images/pages/archive-1.svg'
 import LogoGetInvolved from 'assets/images/pages/get-involved.svg'
 import LogoPassport from 'assets/images/pages/devcon-passport.svg'
+import DevconStats from 'assets/images/hero/devcon-stats.png';
 import Image from 'next/image'
 import { Router, useRouter } from 'next/router'
+import getNewsItems from 'services/news'
 
 const useDraggableLink = () => {
   const dragging = React.useRef(false)
@@ -44,54 +46,66 @@ const usePages = () => {
 
   return [
     {
-      id: 'passport',
-      background: BackgroundPassport,
+      id: 'recap',
+      background: DevconStats,
       titlePrefix: TitleDevcon,
-      title: intl('hero_passport_title'), // 'Passport',
+      title: intl('hero_recap_title'),
       logo: LogoPassport,
       imageAlt: 'LogoBogota',
       button: {
-        text: intl('hero_passport_cta'), //'Launch Devcon App',
+        text: intl('hero_recap_relive'),
         url: 'https://app.devcon.org',
       },
     },
-    {
-      id: 'bogota',
-      background: BackgroundBogota,
-      backgroundAlt: 'Deva',
-      titlePrefix: TitleBogota,
-      title: intl('hero_city_guide_title'),
-      logo: LogoBogota,
-      imageAlt: 'LogoBogota',
-      button: {
-        text: intl('hero_city_guide_cta'),
-        url: '/bogota',
-      },
-    },
-    {
-      id: 'devcon-week',
-      background: BackgroundDevconWeek,
-      titlePrefix: TitleDevcon,
-      title: intl('hero_devcon_week_title'),
-      logo: LogoGetInvolved,
-      imageAlt: 'LogoBogota',
-      button: {
-        text: intl('hero_devcon_week_cta'),
-        url: '/devcon-week',
-      },
-    },
-    {
-      id: 'livestream',
-      background: BackgroundLive,
-      titlePrefix: TitleDevcon,
-      title: intl('hero_live_title'),
-      logo: LogoVideo,
-      imageAlt: 'LogoBogota',
-      button: {
-        text: intl('hero_live_cta'),
-        url: 'https://live.devcon.org',
-      },
-    },
+    // {
+    //   id: 'passport',
+    //   background: BackgroundPassport,
+    //   titlePrefix: TitleDevcon,
+    //   title: intl('hero_passport_title'), // 'Passport',
+    //   logo: LogoPassport,
+    //   imageAlt: 'LogoBogota',
+    //   button: {
+    //     text: intl('hero_passport_cta'), //'Launch Devcon App',
+    //     url: 'https://app.devcon.org',
+    //   },
+    // },
+    // {
+    //   id: 'bogota',
+    //   background: BackgroundBogota,
+    //   backgroundAlt: 'Deva',
+    //   titlePrefix: TitleBogota,
+    //   title: intl('hero_city_guide_title'),
+    //   logo: LogoBogota,
+    //   imageAlt: 'LogoBogota',
+    //   button: {
+    //     text: intl('hero_city_guide_cta'),
+    //     url: '/bogota',
+    //   },
+    // },
+    // {
+    //   id: 'devcon-week',
+    //   background: BackgroundDevconWeek,
+    //   titlePrefix: TitleDevcon,
+    //   title: intl('hero_devcon_week_title'),
+    //   logo: LogoGetInvolved,
+    //   imageAlt: 'LogoBogota',
+    //   button: {
+    //     text: intl('hero_devcon_week_cta'),
+    //     url: '/devcon-week',
+    //   },
+    // },
+    // {
+    //   id: 'livestream',
+    //   background: BackgroundLive,
+    //   titlePrefix: TitleDevcon,
+    //   title: intl('hero_live_title'),
+    //   logo: LogoVideo,
+    //   imageAlt: 'LogoBogota',
+    //   button: {
+    //     text: intl('hero_live_cta'),
+    //     url: 'https://live.devcon.org',
+    //   },
+    // },
   ]
 }
 
@@ -132,6 +146,13 @@ export const Hero = () => {
 
         <div className={css['page-background']}>
           <Image
+            className={css['active']}
+            src={pages[0].background}
+            layout="raw"
+            priority
+            alt="Devcon stats"
+          />
+          {/* <Image
             className={page.id === 'passport' ? css['active'] : ''}
             src={pages[0].background}
             layout="raw"
@@ -158,7 +179,7 @@ export const Hero = () => {
             layout="raw"
             priority
             alt={pages[3].backgroundAlt}
-          />
+          /> */}
         </div>
 
         <div className={css['left-rotated']}>
@@ -170,7 +191,7 @@ export const Hero = () => {
 
         <div className={`${css['page-container']} section`}>
           <div className={css['page']}>
-            <div
+            {/* <div
               className={css['date']}
               // onClick={() => {
               //   setCurrentPage(currentPage === pages.length - 1 ? 0 : currentPage + 1)
@@ -178,7 +199,7 @@ export const Hero = () => {
             >
               <p>Oct 2022</p>
               <p>11 → 14</p>
-            </div>
+            </div> */}
 
             <div className={css['content']}>
               <page.logo className={css['logo']} />
@@ -191,78 +212,80 @@ export const Hero = () => {
               </Button>
             </div>
 
-            <div className={css['cta']}>
-              <CallToAction
-                items={
-                  <>
-                    <div
-                      {...draggableLinkAttributes}
-                      onClick={(e: any) => {
-                        draggableLinkAttributes.onClick(e)
+            {pages.length > 1 &&
+              <div className={css['cta']}>
+                <CallToAction
+                  items={
+                    <>
+                      <div
+                        {...draggableLinkAttributes}
+                        onClick={(e: any) => {
+                          draggableLinkAttributes.onClick(e)
 
-                        if (e.defaultPrevented) return
+                          if (e.defaultPrevented) return
 
-                        setCurrentPage(0)
-                      }}
-                      id="passport"
-                      className={`${page.id === 'passport' && css['active']} ${css['cta-item']}`}
-                    >
-                      <p className="bold">{intl('hero_passport')} —</p>
-                      <p className="font-sm">{intl('hero_passport_subtext')}</p>
-                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
-                    </div>
-                    <div
-                      {...draggableLinkAttributes}
-                      onClick={(e: any) => {
-                        draggableLinkAttributes.onClick(e)
+                          setCurrentPage(0)
+                        }}
+                        id="passport"
+                        className={`${page.id === 'passport' && css['active']} ${css['cta-item']}`}
+                      >
+                        <p className="bold">{intl('hero_passport')} —</p>
+                        <p className="font-sm">{intl('hero_passport_subtext')}</p>
+                        <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
+                      </div>
+                      <div
+                        {...draggableLinkAttributes}
+                        onClick={(e: any) => {
+                          draggableLinkAttributes.onClick(e)
 
-                        if (e.defaultPrevented) return
+                          if (e.defaultPrevented) return
 
-                        setCurrentPage(1)
-                      }}
-                      id="bogota"
-                      className={`${page.id === 'bogota' && css['active']} ${css['cta-item']}`}
-                    >
-                      <p className="bold">{intl('hero_city_guide')} —</p>
-                      <p className="font-sm">{intl('hero_city_guide_subtext')}</p>
-                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
-                    </div>
-                    <div
-                      {...draggableLinkAttributes}
-                      onClick={(e: any) => {
-                        draggableLinkAttributes.onClick(e)
+                          setCurrentPage(1)
+                        }}
+                        id="bogota"
+                        className={`${page.id === 'bogota' && css['active']} ${css['cta-item']}`}
+                      >
+                        <p className="bold">{intl('hero_city_guide')} —</p>
+                        <p className="font-sm">{intl('hero_city_guide_subtext')}</p>
+                        <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
+                      </div>
+                      <div
+                        {...draggableLinkAttributes}
+                        onClick={(e: any) => {
+                          draggableLinkAttributes.onClick(e)
 
-                        if (e.defaultPrevented) return
+                          if (e.defaultPrevented) return
 
-                        setCurrentPage(2)
-                      }}
-                      id="devcon-week"
-                      className={`${page.id === 'devcon-week' && css['active']} ${css['cta-item']}`}
-                    >
-                      <p className="bold">{intl('hero_devcon_week')} —</p>
-                      <p className="font-sm">{intl('hero_devcon_week_subtext')}</p>
-                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
-                    </div>
-                    <div
-                      {...draggableLinkAttributes}
-                      onClick={(e: any) => {
-                        draggableLinkAttributes.onClick(e)
+                          setCurrentPage(2)
+                        }}
+                        id="devcon-week"
+                        className={`${page.id === 'devcon-week' && css['active']} ${css['cta-item']}`}
+                      >
+                        <p className="bold">{intl('hero_devcon_week')} —</p>
+                        <p className="font-sm">{intl('hero_devcon_week_subtext')}</p>
+                        <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
+                      </div>
+                      <div
+                        {...draggableLinkAttributes}
+                        onClick={(e: any) => {
+                          draggableLinkAttributes.onClick(e)
 
-                        if (e.defaultPrevented) return
+                          if (e.defaultPrevented) return
 
-                        setCurrentPage(3)
-                      }}
-                      id="livestream"
-                      className={`${page.id === 'livestream' && css['active']} ${css['cta-item']}`}
-                    >
-                      <p className="bold">{intl('hero_live')} —</p>
-                      <p className="font-sm">{intl('hero_live_subtext')}</p>
-                      <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
-                    </div>
-                  </>
-                }
-              />
-            </div>
+                          setCurrentPage(3)
+                        }}
+                        id="livestream"
+                        className={`${page.id === 'livestream' && css['active']} ${css['cta-item']}`}
+                      >
+                        <p className="bold">{intl('hero_live')} —</p>
+                        <p className="font-sm">{intl('hero_live_subtext')}</p>
+                        <div className={css['timer']} onAnimationEnd={rotateNextPage}></div>
+                      </div>
+                    </>
+                  }
+                />
+              </div>
+            }
           </div>
         </div>
 
@@ -302,4 +325,5 @@ export const Hero = () => {
       </div>
     </>
   )
+
 }

@@ -21,6 +21,7 @@ import Shanghai from 'assets/images/editions/Shanghai.png'
 import Cancun from 'assets/images/editions/Cancun.png'
 import Prague from 'assets/images/editions/Prague.png'
 import Osaka from 'assets/images/editions/Osaka.png'
+import Bogota from 'assets/images/editions/Bogota.png'
 import { useTranslations } from 'next-intl'
 
 function getEditionImage(edition: number) {
@@ -30,6 +31,7 @@ function getEditionImage(edition: number) {
   if (edition === 3) return Cancun
   if (edition === 4) return Prague
   if (edition === 5) return Osaka
+  if (edition === 6) return Bogota
 
   return ''
 }

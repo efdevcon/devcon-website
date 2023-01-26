@@ -34,19 +34,19 @@ export default pageHOC(function Index(props: any) {
         ticketsOnSale={props.sections['tickets-on-sale-now']}
       /> */}
 
-      <News data={props.news} />
+      {/* <News data={props.news} /> */}
 
-      <div className="clear-bottom border-bottom"></div>
+      {/* <div className="clear-bottom border-bottom"></div> */}
 
       <TrackList tracks={props.tracks} />
+
+      <BlogReel blogs={props.blogs} />
 
       <div className={`${css['background-container']} section`}>
         <div className={`${css['circle-background']} expand`}>
           <Image src={CircleBackground} alt="Circles" />
         </div>
       </div>
-
-      <BlogReel blogs={props.blogs} />
 
       <div className="clear-bottom"></div>
 
