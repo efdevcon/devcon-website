@@ -4,11 +4,11 @@ sourceId: "7G8KPV"
 title: "Fuel: Scaling Ethereum with the Fastest Modular Execution Layer"
 description: "Fuel is the fastest modular execution layer. It brings UTXO-based parallel transaction execution, a more flexible transaction format, a more efficient virtual machine, and a superior vertically-integrated developer stack to Ethereum.
 From the creator of optimistic rollups, this exclusive talk will discuss how users and developers will be able to leverage Fuel for global scale, without having to sacrifice decentralization or the security of Ethereum."
-youtubeUrl: ""
+youtubeUrl: "https://www.youtube.com/watch?v=VigPCRZSNK4"
 ipfsHash: ""
 ethernaIndex: ""
 ethernaPermalink: ""
-duration: 0
+duration: 1452
 expertise: "Intermediate"
 type: "Talk"
 track: "Layer 2s"
