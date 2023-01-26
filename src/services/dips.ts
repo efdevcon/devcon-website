@@ -147,7 +147,7 @@ async function getGithubFile(owner: string, repo: string, path: string): Promise
   }
 
   const octokit = new Octokit({
-    auth: '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', // process.env.GITHUB_TOKEN,
+    auth: process.env.GITHUB_TOKEN,
   })
 
   const result: any = await octokit.repos.getContent({ owner, repo, path })
