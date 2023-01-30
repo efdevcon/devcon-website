@@ -10,7 +10,8 @@
     flex-direction: row;
   }
 
-  .left, .right {
+  .left,
+  .right {
     flex-shrink: 0;
     flex-basis: 50%;
   }
@@ -24,13 +25,13 @@
     flex-direction: column;
 
     @media (min-width: $breakpoints-lg) {
-     padding-left: 158px;
+      padding-left: 158px;
     }
 
     .links {
       margin-top: 1em;
 
-      > * {
+      >* {
         margin-right: 8px;
 
         &:last-child {
@@ -44,29 +45,31 @@
 
 .about {
   justify-content: space-between;
+
   .left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     .links {
       display: flex;
       margin-top: 32px;
       flex-wrap: wrap;
       position: relative;
       top: -12px;
-  
-      > * {
+
+      >* {
         flex-shrink: 0;
         display: flex;
         align-items: center;
         margin-right: 24px;
         margin-top: 12px;
-  
+
         svg {
           font-size: 0.9em;
           margin-left: 8px;
         }
-  
+
         &:last-child {
           margin-right: 0px;
         }

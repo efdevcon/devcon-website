@@ -101,7 +101,7 @@ export default pageHOC(function PastEvents(props: any) {
                 </div>
                 <div className={css['right']}>
                   <h2 className="spaced">{edition.title}</h2>
-                  <div>{edition.description}</div>
+                  <div className="markdown" dangerouslySetInnerHTML={{ __html: edition.description }}></div>
                   <div className={css['links']}>
                     {edition.links.map((link: any) => {
                       return (
@@ -130,7 +130,8 @@ export default pageHOC(function PastEvents(props: any) {
 export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const page = await GetPage('/past-events', context.locale)
-  const editions = GetDevconEditions(context.locale)
+  const editions = await GetDevconEditions(context.locale)
+  const sortedEditions = editions
     .sort((a, b) => b.number - a.number)
     .filter(i => i.startDate && i.startDate < new Date().getTime())
 
@@ -138,7 +139,7 @@ export async function getStaticProps(context: any) {
     props: {
       ...globalData,
       page,
-      editions,
+      editions: sortedEditions,
     },
   }
 }

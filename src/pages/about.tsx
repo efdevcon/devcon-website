@@ -85,13 +85,13 @@ export default pageHOC(function AboutPage(props: any) {
                 },
                 {
                   Icon: IconCovid,
-                  title: 'Devcon 5',
-                  right: <span className={css['theme-colored']}>2019</span>,
+                  title: 'Devcon 6',
+                  right: <span className={css['theme-colored']}>2022</span>,
                 },
                 {
                   Icon: IconManAtDesk,
                   title: intl('about_past_editions'),
-                  right: <span className={css['theme-colored']}>6</span>,
+                  right: <span className={css['theme-colored']}>7</span>,
                 },
                 {
                   Icon: IconGlobe,

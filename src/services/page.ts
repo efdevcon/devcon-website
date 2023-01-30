@@ -170,12 +170,12 @@ export function GetTags(lang: string = 'en'): Array<Tag> {
     .filter(i => !!i) as Array<Tag>
 }
 
-export function GetDevconEditions(lang: string = 'en'): Array<DevconEdition> {
+export async function GetDevconEditions(lang: string = 'en'): Promise<Array<DevconEdition>> {
   if (lang !== 'es') lang = 'en'
 
   const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'devcon', lang)
 
-  return fs
+  const editions = fs
     .readdirSync(dir)
     .map(i => {
       const content = fs.readFileSync(join(dir, i), 'utf8')
@@ -201,6 +201,13 @@ export function GetDevconEditions(lang: string = 'en'): Array<DevconEdition> {
       return edition
     })
     .filter(i => !!i) as Array<DevconEdition>
+
+    return Promise.all(editions.map(async (edition) => {
+      return {
+        ...edition,
+        description: await markdownUtils.toHtml(edition.description),
+      }
+    }));
 }
 
 export function GetTracks(lang: string = 'en'): Array<Track> {
