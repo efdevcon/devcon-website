@@ -483,6 +483,7 @@ $logo-offset: 50px;
 
   &.recap {
     background: linear-gradient(45deg, #1b1b1b, #282828, #212121);
+    // background: linear-gradient(45deg, #f4734c, #f39e74, #d37840);
   }
 
   &.passport {
@@ -524,6 +525,12 @@ $logo-offset: 50px;
   position: absolute;
   top: 0px;
   height: 100%;
+  z-index: 2;
+  pointer-events: none;
+
+  a {
+    pointer-events: all;
+  }
 
   .page {
     display: flex;

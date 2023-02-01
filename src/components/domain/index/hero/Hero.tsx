@@ -19,6 +19,7 @@ import DevconStats from 'assets/images/hero/devcon-stats.png';
 import Image from 'next/image'
 import { Router, useRouter } from 'next/router'
 import getNewsItems from 'services/news'
+import StatsAnimation from './stats-anim';
 
 const useDraggableLink = () => {
   const dragging = React.useRef(false)
@@ -54,7 +55,7 @@ const usePages = () => {
       imageAlt: 'LogoBogota',
       button: {
         text: intl('hero_recap_relive'),
-        url: 'https://app.devcon.org',
+        url: 'https://archive.devcon.org',
       },
     },
     // {
@@ -145,13 +146,13 @@ export const Hero = () => {
         </div>
 
         <div className={css['page-background']}>
-          <Image
+          {/* <Image
             className={css['active']}
             src={pages[0].background}
             layout="raw"
             priority
             alt="Devcon stats"
-          />
+          /> */}
           {/* <Image
             className={page.id === 'passport' ? css['active'] : ''}
             src={pages[0].background}
@@ -288,6 +289,8 @@ export const Hero = () => {
             }
           </div>
         </div>
+
+        <StatsAnimation />
 
         {/* <div className={css['logo-container']}>
           <Logo alt={intl('global_title')} className={css['logo']} />

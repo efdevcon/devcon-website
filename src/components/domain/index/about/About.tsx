@@ -43,7 +43,7 @@ const About = (props: Props) => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/6X0yIUq7fpc"
+              src="https://www.youtube.com/embed/R1mezQU6GL0"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
