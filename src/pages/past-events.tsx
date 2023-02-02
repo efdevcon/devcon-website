@@ -64,10 +64,10 @@ export default pageHOC(function PastEvents(props: any) {
             </div>
 
             <div className={css['links']}>
-              <Link to="/program" className="text-uppercase hover-underline font-lg bold">
+              {/* <Link to="/program" className="text-uppercase hover-underline font-lg bold">
                 {intl('program_programming')}
                 <ArrowRight />
-              </Link>
+              </Link> */}
               <Link to="https://archive.devcon.org/archive/" className="text-uppercase hover-underline font-lg bold">
                 {intl('navigation_archive')}
                 <ArrowRight />

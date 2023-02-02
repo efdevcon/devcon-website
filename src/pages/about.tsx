@@ -203,7 +203,7 @@ export default pageHOC(function AboutPage(props: any) {
           </div>
         </div>
 
-        <h2 className="spaced clear-top" id="support">
+        {/* <h2 className="spaced clear-top" id="support">
           {props.sections['public-goods'].title}
         </h2>
         <div className="two-columns clear-bottom border-bottom">
@@ -222,9 +222,9 @@ export default pageHOC(function AboutPage(props: any) {
               dangerouslySetInnerHTML={{ __html: props.sections['public-goods'].data.right }}
             ></div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="section-markdown clear-top clear-bottom" id="involve">
+        {/* <div className="section-markdown clear-top clear-bottom" id="involve">
           <h2 className="spaced">{props.sections['getting-involved'].title}</h2>
 
           <div className="markdown" dangerouslySetInnerHTML={{ __html: props.sections['getting-involved'].body }}></div>
@@ -245,11 +245,8 @@ export default pageHOC(function AboutPage(props: any) {
               className="markdown"
               dangerouslySetInnerHTML={{ __html: props.sections['getting-involved'].data.right }}
             ></div>
-            {/* <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfCZyBMdyTSrJa9GNIbiQMeNQ-3jQJrdr9JQemKD0VXKduOhA/viewform">
-              <Button className={`lg green ${css['button']}`}>{intl('about_volunteer')}</Button>
-            </Link> */}
           </div>
-        </div>
+        </div> */}
 
         <h2 className="spaced clear-top">{props.sections['share-ideas'].title}</h2>
 
@@ -262,13 +259,13 @@ export default pageHOC(function AboutPage(props: any) {
           </div>
         </div>
 
-        <div id="faq">
+        {/* <div id="faq">
           <FAQ
             data={[{ id: 'something', title: 'Frequently Asked Questions', questions: props.faq }]}
             customCategoryTitle="FAQ"
             noSearch
           />
-        </div>
+        </div> */}
 
         <Tags items={pageContext?.current?.tags} viewOnly />
       </div>

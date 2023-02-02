@@ -170,8 +170,8 @@ $logo-offset: 50px;
     top: -75px;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    animation: enter 3.5s 0s ease-out forwards;
+    // opacity: 0;
+    // animation: enter 3.5s 0s ease-out forwards;
 
     @media (max-width: 1000px) {
       width: 200%;
@@ -179,7 +179,7 @@ $logo-offset: 50px;
     }
 
     .rays {
-      animation: rotate 240s linear infinite;
+      // animation: rotate 240s linear infinite;
       width: 100%;
     }
   }
