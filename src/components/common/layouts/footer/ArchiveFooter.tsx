@@ -32,7 +32,7 @@ export const ArchiveFooter = () => {
           type: 'link',
         },
         {
-          title: 'Road to Devcon',
+          title: 'Devcon',
           url: 'https://www.devcon.org/',
           type: 'link',
         },
