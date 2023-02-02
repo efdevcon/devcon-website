@@ -48,15 +48,21 @@ const StatsAnimation = () => {
         }
       });
 
+    // @ts-ignore 
     mouseConstraint.mouse.element.removeEventListener("mousewheel", mouseConstraint.mouse.mousewheel);
+    // @ts-ignore 
+
     mouseConstraint.mouse.element.removeEventListener("DOMMouseScroll", mouseConstraint.mouse.mousewheel);
 
     // Need this in order to scroll on mobile, but it means we can't interact with the content - we'll reserve touch interactions for when a cursor is available
     const isTouchDevice = window.matchMedia('(hover: none)').matches;
 
     if (isTouchDevice) {
+      // @ts-ignore 
       mouseConstraint.mouse.element.removeEventListener('touchmove', mouseConstraint.mouse.mousemove);
+      // @ts-ignore 
       mouseConstraint.mouse.element.removeEventListener('touchstart', mouseConstraint.mouse.mousedown);
+      // @ts-ignore 
       mouseConstraint.mouse.element.removeEventListener('touchend', mouseConstraint.mouse.mouseup);
     }
 
