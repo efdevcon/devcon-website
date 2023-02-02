@@ -48,7 +48,7 @@ const usePages = () => {
   return [
     {
       id: 'recap',
-      background: DevconStats,
+      background: BackgroundPassport,
       titlePrefix: TitleDevcon,
       title: intl('hero_recap_title'),
       logo: LogoPassport,
@@ -141,18 +141,18 @@ export const Hero = () => {
   return (
     <>
       <div ref={heroEl} data-jest="hero" className={`${css['hero']} ${css[page.id]}`}>
-        <div className={css['rays-container']}>
+        {/* <div className={css['rays-container']}>
           <Rays className={css['rays']} />
-        </div>
+        </div> */}
 
         <div className={css['page-background']}>
-          {/* <Image
+          <Image
             className={css['active']}
             src={pages[0].background}
             layout="raw"
             priority
             alt="Devcon stats"
-          /> */}
+          />
           {/* <Image
             className={page.id === 'passport' ? css['active'] : ''}
             src={pages[0].background}

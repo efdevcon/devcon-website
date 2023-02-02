@@ -482,8 +482,23 @@ $logo-offset: 50px;
   }
 
   &.recap {
+
     background: linear-gradient(45deg, #1b1b1b, #282828, #212121);
     // background: linear-gradient(45deg, #f4734c, #f39e74, #d37840);
+    // background: linear-gradient(45deg, #5865f1, #74abf3, #4bb5b3);
+    img {
+      opacity: 0.15 !important;
+      width: 40%;
+      left: 50%;
+      height: auto;
+      object-position: right;
+      object-fit: cover;
+
+      @media (max-width: $breakpoints-md) {
+        width: 80%;
+        left: 30%;
+      }
+    }
   }
 
   &.passport {

@@ -32,7 +32,8 @@ const StatsAnimation = () => {
       options: {
         width,
         height,
-        showVelocity: true,
+        // showVelocity: true,
+        showAngleIndicator: false,
         wireframes: false
       }
     });
@@ -66,56 +67,8 @@ const StatsAnimation = () => {
       mouseConstraint.mouse.element.removeEventListener('touchend', mouseConstraint.mouse.mouseup);
     }
 
-    // create two boxes and a ground
-    // var panda = Bodies.rectangle(Math.max(80, Math.random() * width), Math.max(80, Math.random() * height), 80, 80, {
-    //   render: {
-    //     sprite: {
-    //       texture: '/assets/textures/panda.png',
-    //       xScale: 1,
-    //       yScale: 1
-    //     }
-    //   }
-    // });
-
-    // var rocket = Bodies.rectangle(Math.max(80, Math.random() * width), Math.max(80, Math.random() * height), 80, 80, {
-    //   render: {
-    //     sprite: {
-    //       texture: '/assets/textures/rocket.png',
-    //       xScale: 1,
-    //       yScale: 1
-    //     }
-    //   }
-    // });
-
-    // var mountain = Bodies.rectangle(Math.max(80, Math.random() * width), Math.max(80, Math.random() * height), 80, 80, {
-    //   render: {
-    //     sprite: {
-    //       texture: '/assets/textures/mountain.png',
-    //       xScale: 1,
-    //       yScale: 1
-    //     }
-    //   }
-    // });
-
-    // var covid = Bodies.rectangle(Math.max(80, Math.random() * width), Math.max(80, Math.random() * height), 80, 80, {
-    //   render: {
-    //     sprite: {
-    //       texture: '/assets/textures/covid.png',
-    //       xScale: 1,
-    //       yScale: 1
-    //     }
-    //   }
-    // });
-
-    // var unicorn = Bodies.rectangle(Math.max(80, Math.random() * width), Math.max(80, Math.random() * height), 80, 80, {
-    //   render: {
-    //     sprite: {
-    //       texture: '/assets/textures/unicorn.png',
-    //       xScale: 1,
-    //       yScale: 1
-    //     }
-    //   }
-    // });
+    engine.positionIterations = 100;
+    engine.velocityIterations = 100;
 
     const createHtmlObject = (id: string) => {
       const elem = document.getElementById(id) as any;
@@ -123,22 +76,26 @@ const StatsAnimation = () => {
       const body = Bodies.rectangle(
         Math.max(elemSize.width, Math.random() * width),
         Math.max(elemSize.height, Math.random() * height),
+        // Math.min(height / 5, Math.max(elemSize.height, Math.random() * height)),
         elemSize.width,
         elemSize.height,
         {
-          chamfer: { radius: 5 },
-          render: { fillStyle: 'transparent' },
+          // chamfer: { radius: 5 },
+          render: { fillStyle: 'transparent', },
+          // density: 0.005,
+          frictionAir: 0.05,
+          // // restitution: 0.3,
+          // friction: 0.01,
+          // frictionStatic: Infinity
         }
       );
 
-      const render = (angle?: number) => {
+      const render = () => {
         const { x, y } = body.position;
         elem.style.top = `${y - elemSize.height / 2}px`;
         elem.style.left = `${x - elemSize.width / 2}px`;
-        elem.style.transform = `rotate(${angle ? angle : body.angle}rad)`;
+        elem.style.transform = `rotate(${body.angle}rad)`// ; translateY(${y - elemSize.height / 2}px) translateX(${x - elemSize.width / 2}px)`;
       }
-
-      render(170)
 
       return {
         body,
@@ -175,85 +132,39 @@ const StatsAnimation = () => {
       Bodies.rectangle(width, height / 2, 20, height, wallOptions),
     ]
 
-    var stack = Composites.stack(0, 50, 100, 5, 1, 5, function (x: any, y: any) {
-      const radius = 10 + Common.random() * 20
-      return Bodies.circle(x, y, radius, {
-        // width: radius,
-        // height: radius,
-        render: {
-          sprite: {
-            texture: '/assets/textures/unicorn.png',
-            xScale: 1,
-            yScale: 1
-          }
-        }
-      });
-    });
-
-    // var stack = Composites.stack(10, 10, 10, 100, 100, 100, function (x: any, y: any) {
-    //   var sides = Math.round(Common.random(1, 8));
-
-    //   // round the edges of some bodies
-    //   var chamfer = {};
-    //   // if (sides > 2 && Common.random() > 0.7) {
-    //   //   chamfer = {
-    //   //     radius: 10
-    //   //   };
-    //   // }
-
-    //   return Bodies.polygon(x, y, sides, Common.random(25, 50), {
-    //     chamfer, render: {
-    //       sprite: {
-    //         texture: '/assets/textures/unicorn.png',
-    //         xScale: 1,
-    //         yScale: 1
-    //       }
-    //     }
-    //   });
-
-    //   switch (Math.round(Common.random(0, 1))) {
-    //     case 0:
-    //       if (Common.random() < 0.2) {
-    //         return Bodies.rectangle(x, y, Common.random(25, 50), Common.random(25, 50), {
-    //           chamfer, render: {
-    //             // sprite: {
-    //             //   texture: '/assets/textures/panda.png',
-    //             //   xScale: 1,
-    //             //   yScale: 1
-    //             // }
-    //           }
-    //         });
-    //       } else {
-    //         return Bodies.rectangle(x, y, Common.random(80, 120), Common.random(25, 30), {
-    //           chamfer, render: {
-    //             // sprite: {
-    //             //   texture: '/assets/textures/covid.png',
-    //             //   xScale: 1,
-    //             //   yScale: 1
-    //             // }
-    //           }
-    //         });
-    //       }
-    //     case 1:
-    //       return Bodies.polygon(x, y, sides, Common.random(25, 50), {
-    //         chamfer, render: {
-    //           sprite: {
-    //             texture: '/assets/textures/unicorn.png',
-    //             xScale: 1,
-    //             yScale: 1
-    //           }
-    //         }
-    //       });
-    //   }
-    // });
-
     const bodies = [
       ...htmlObjects.map(htmlObject => htmlObject.body), /*covid, mountain, unicorn, rocket, panda*/, ...walls, mouseConstraint
     ] as Array<any>
 
-    const useFillerObjects = window.matchMedia("(min-width: 700px)").matches;
+    let stack;
 
-    if (useFillerObjects) bodies.push(stack);
+    const useFillerObjects = window.matchMedia("(min-width: 800px)").matches;
+
+
+    if (useFillerObjects) {
+      const icons = ['unicorn.png', 'panda.png', 'covid.png', 'mountain.png', 'rocket.png'];
+
+      stack = Composites.stack(50, 50, 50, 1, 5, 5, function (x: any, y: any) {
+        const radius = 31;
+        const icon = icons[Math.floor(Math.random() * icons.length)];
+        return Bodies.circle(x, Math.random() * height, radius, {
+          render: {
+            sprite: {
+              texture: `/assets/textures/${icon}`,
+              xScale: 0.7,
+              yScale: 0.7
+            }
+          },
+          // density: 0.00005,
+          frictionAir: 0.05,
+          // restitution: 0.3,
+          // friction: 0.01,
+          // frictionStatic: Infinity
+        });
+      });
+
+      bodies.push(stack);
+    }
 
     // add all of the bodies to the world
     Composite.add(engine.world, bodies);
