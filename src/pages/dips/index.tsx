@@ -68,6 +68,8 @@ export async function getStaticProps(context: any) {
   const dips = await GetDIPs()
   const contributors = await GetContributors()
 
+  // console.log(dips, 'hello')
+
   return {
     props: {
       ...globalData,

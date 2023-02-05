@@ -76,17 +76,11 @@ const StatsAnimation = () => {
       const body = Bodies.rectangle(
         Math.max(elemSize.width, Math.random() * width),
         Math.max(elemSize.height, Math.random() * height),
-        // Math.min(height / 5, Math.max(elemSize.height, Math.random() * height)),
         elemSize.width,
         elemSize.height,
         {
-          // chamfer: { radius: 5 },
           render: { fillStyle: 'transparent', },
-          // density: 0.005,
           frictionAir: 0.05,
-          // // restitution: 0.3,
-          // friction: 0.01,
-          // frictionStatic: Infinity
         }
       );
 
@@ -94,7 +88,7 @@ const StatsAnimation = () => {
         const { x, y } = body.position;
         elem.style.top = `${y - elemSize.height / 2}px`;
         elem.style.left = `${x - elemSize.width / 2}px`;
-        elem.style.transform = `rotate(${body.angle}rad)`// ; translateY(${y - elemSize.height / 2}px) translateX(${x - elemSize.width / 2}px)`;
+        elem.style.transform = `rotate(${body.angle}rad)`
       }
 
       return {
@@ -142,25 +136,42 @@ const StatsAnimation = () => {
 
 
     if (useFillerObjects) {
-      const icons = ['unicorn.png', 'panda.png', 'covid.png', 'mountain.png', 'rocket.png'];
+      const icons = ['unicorn.png', 'panda.png', 'mountain.png', 'rocket.png'];
+      const colors = ['#F5D222', '#88C43F', '#E55066', '#0FADCF', '#00B3A4', '#F69022', '#E4F6FA'];
 
-      stack = Composites.stack(50, 50, 50, 1, 5, 5, function (x: any, y: any) {
-        const radius = 31;
-        const icon = icons[Math.floor(Math.random() * icons.length)];
-        return Bodies.circle(x, Math.random() * height, radius, {
-          render: {
-            sprite: {
-              texture: `/assets/textures/${icon}`,
-              xScale: 0.7,
-              yScale: 0.7
-            }
-          },
-          // density: 0.00005,
-          frictionAir: 0.05,
-          // restitution: 0.3,
-          // friction: 0.01,
-          // frictionStatic: Infinity
-        });
+      stack = Composites.stack(50, 50, 100, 1, 4, 5, function (x: any, y: any) {
+        switch (Math.round(Common.random(0, 8))) {
+          case 0: {
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            return Bodies.polygon(x, Math.random() * height, 4, Common.random(40, 50), { render: { fillStyle: color } });
+          }
+          case 1: {
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            return Bodies.circle(x, Math.random() * height, Common.random(40, 50), { render: { fillStyle: color } });
+          }
+          case 2: {
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            return Bodies.polygon(x, Math.random() * height, 3, Common.random(40, 50), { render: { fillStyle: color } });
+          }
+
+          default:
+            const radius = 29;
+            const icon = icons[Math.floor(Math.random() * icons.length)];
+
+            return Bodies.circle(x, Math.random() * height, radius, {
+              render: {
+                sprite: {
+                  texture: `/assets/textures/${icon}`,
+                  xScale: 0.65,
+                  yScale: 0.65
+                }
+              },
+              frictionAir: 0.05,
+            });
+        }
       });
 
       bodies.push(stack);

@@ -122,20 +122,20 @@ export const Proposals = (props: ProposalsProps) => {
       sort: SortVariation.basic,
       render: (item: DIP) => {
         let labelType = 'neutral'
-  
+
         switch (item.status.toLowerCase()) {
           case 'withdrawn':
           case 'not implemented':
             labelType = 'error'
-  
+
             break
           case 'active':
           case 'accepted':
             labelType = 'success'
-  
+
             break
         }
-  
+
         return (
           <Label type={labelType}>
             <div className={css['label-content']}>
@@ -168,16 +168,16 @@ export const Proposals = (props: ProposalsProps) => {
           .map(item => item.toString().trim().toLowerCase())
           .sort()
           .join('')
-  
+
         return a.localeCompare(b)
       },
       render: (item: DIP) => {
         return item.tags
           ? item.tags.map(tag => (
-              <Label key={tag} type="neutral" className={css['tag']}>
-                <p className="font-xs bold text-uppercase">{tag}</p>
-              </Label>
-            ))
+            <Label key={tag} type="neutral" className={css['tag']}>
+              <p className="font-xs bold text-uppercase">{tag}</p>
+            </Label>
+          ))
           : null
       },
     },
@@ -189,14 +189,13 @@ export const Proposals = (props: ProposalsProps) => {
         return <Links dip={item} />
       },
     },
-    // RTD: remove expand colum/link
     {
       intl: 'dips_expand',
       key: 'link',
       className: css['expand-column'],
       render: (item: DIP) => {
         return (
-          <Link to={`/${context?.current?.lang || 'en'}/dips/dip-${item.number}`}>
+          <Link to={item.github}> {/*"{`/${context?.current?.lang || 'en'}/dips/dip-${item.number}`}>*/}
             <ArrowRight />
           </Link>
         )

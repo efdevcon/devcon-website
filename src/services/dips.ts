@@ -75,56 +75,66 @@ export async function GetDIPs(): Promise<Array<DIP>> {
       .sort((a, b) => a - b)
 
     const dips = Array.from(files.data).map(async i => {
-        const file: any = await getGithubFile(owner, repo, i.path)
-        if (file.data.type !== 'file') return
+      const file: any = await getGithubFile(owner, repo, i.path)
+      if (file.data.type !== 'file') return
 
-        const buffer = Buffer.from(file.data.content, 'base64')
-        let formattedMarkdown = buffer.toString('utf-8')
-        formattedMarkdown = formattedMarkdown.replace('---', `---\nGithub URL: ${file.data._links.html}`);
+      const buffer = Buffer.from(file.data.content, 'base64')
+      let formattedMarkdown = buffer.toString('utf-8')
+      formattedMarkdown = formattedMarkdown.replace('---', `---\nGithub URL: ${file.data._links.html}`)
 
-        // Finds the first section of the markdown body and extracts the text from it
-        // Look for first occurence of ## (markdown header), keep going until a newline is found, collect all text until the next header, then sanitize and trim
-        const matchSummary = formattedMarkdown.match(/##[^\n]*([^##]*)/);
-        if (matchSummary && matchSummary[1]) formattedMarkdown = formattedMarkdown.replace('---', `---\nSummary: '${matchSummary[1].replace(/'/g, '"').trim()}'`)
+      // Finds the first section of the markdown body and extracts the text from it
+      // Look for first occurence of ## (markdown header), keep going until a newline is found, collect all text until the next header, then sanitize and trim
+      const matchSummary = formattedMarkdown.match(/##[^\n]*([^##]*)/)
+      if (matchSummary && matchSummary[1])
+        formattedMarkdown = formattedMarkdown.replace(
+          '---',
+          `---\nSummary: '${matchSummary[1].replace(/'/g, '"').trim()}'`
+        )
 
-        const matchTitle = formattedMarkdown.match(/(Title\:[^\n]*)/);
-        if (matchTitle && matchTitle[1]) {
-          let titleValue = matchTitle[1].split(':').pop()?.trim();
+      const matchTitle = formattedMarkdown.match(/(Title\:[^\n]*)/)
+      if (matchTitle && matchTitle[1]) {
+        let titleValue = matchTitle[1].split(':').pop()?.trim()
 
-          if (titleValue) {
-            // Normalize just in case title already ends and starts with '
-            if (titleValue.startsWith("'") && titleValue.endsWith("'")) {
-              titleValue = titleValue.slice(1, titleValue.length - 1);
-            }
-
-            // Wrap title in ' to prevent erroring out if quotation marks is used in title (gray-matter cries in this case)
-            formattedMarkdown = formattedMarkdown.replace(`${matchTitle[1]}\n`, `Title: '${titleValue}'\n`)
+        if (titleValue) {
+          // Normalize just in case title already ends and starts with '
+          if (titleValue.startsWith("'") && titleValue.endsWith("'")) {
+            titleValue = titleValue.slice(1, titleValue.length - 1)
           }
+
+          // Wrap title in ' to prevent erroring out if quotation marks is used in title (gray-matter cries in this case)
+          formattedMarkdown = formattedMarkdown.replace(`${matchTitle[1]}\n`, `Title: '${titleValue}'\n`)
         }
+      }
 
-        const currentIndex = dipNumbers.indexOf(Number(i.name.replace('.md', '').replace('DIP-', '')))
-        const prevDip = currentIndex > 0 ? `/dips/dip-${dipNumbers[currentIndex - 1]}` : `/dips/`
-        const nextDip = currentIndex < dipNumbers.length ? `/dips/dip-${dipNumbers[currentIndex + 1]}` : `/dips/`
+      const currentIndex = dipNumbers.indexOf(Number(i.name.replace('.md', '').replace('DIP-', '')))
+      const prevDip = currentIndex > 0 ? `/dips/dip-${dipNumbers[currentIndex - 1]}` : `/dips/`
+      const nextDip = currentIndex < dipNumbers.length ? `/dips/dip-${dipNumbers[currentIndex + 1]}` : `/dips/`
 
-        const doc = matter(formattedMarkdown)
+      const doc = matter(formattedMarkdown)
 
-        return {
-            number: doc.data.DIP,
-            title: doc.data.Title,
-            summary: doc.data.Summary ? await markdownUtils.toHtml(doc.data.Summary) : '',
-            status: doc.data.Status,
-            github: doc.data['Github URL'],
-            themes: doc.data.Themes ? doc.data.Themes.split(',') : [],
-            tags: doc.data.Tags ? doc.data.Tags.split(',') : [],
-            authors: doc.data.Authors ? doc.data.Authors.split(',') : [],
-            resources: doc.data['Resources Required'] ?? '',
-            discussion: doc.data.Discussion,
-            created: doc.data.Created ? new Date(doc.data.Created).getTime() : 0,
-            body: await markdownUtils.toHtml(doc.content),
-            slug: i.name.replace('.md', '').toLowerCase(),
-            next_dip: nextDip,
-            prev_dip: prevDip
-        } as DIP
+      if (!doc.data.Title) {
+        console.warn(currentIndex, 'dip failed markdown parse')
+
+        return undefined
+      }
+
+      return {
+        number: doc.data.DIP,
+        title: doc.data.Title,
+        summary: doc.data.Summary ? await markdownUtils.toHtml(doc.data.Summary) : '',
+        status: doc.data.Status,
+        github: doc.data['Github URL'],
+        themes: doc.data.Themes ? doc.data.Themes.split(',') : [],
+        tags: doc.data.Tags ? doc.data.Tags.split(',') : [],
+        authors: doc.data.Authors ? doc.data.Authors.split(',') : [],
+        resources: doc.data['Resources Required'] ?? '',
+        discussion: doc.data.Discussion,
+        created: doc.data.Created ? new Date(doc.data.Created).getTime() : 0,
+        body: await markdownUtils.toHtml(doc.content),
+        slug: i.name.replace('.md', '').toLowerCase(),
+        next_dip: nextDip,
+        prev_dip: prevDip,
+      } as DIP
     })
 
     const all = await Promise.all(dips)

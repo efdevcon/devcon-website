@@ -250,7 +250,7 @@ export default pageHOC(function AboutPage(props: any) {
 
         <h2 className="spaced clear-top">{props.sections['share-ideas'].title}</h2>
 
-        <div className="two-columns clear-bottom margin-bottom border-bottom">
+        <div className="two-columns clear-bottom">
           <div className="left">
             <div className="markdown" dangerouslySetInnerHTML={{ __html: props.sections['share-ideas'].body }}></div>
             <Link to="/dips">

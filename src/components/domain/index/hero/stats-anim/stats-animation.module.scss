@@ -10,7 +10,7 @@
   }
 
   .element {
-    font-size: 32px;
+    font-size: 2vw;
     padding: 1em 0.75em;
     position: absolute;
     pointer-events: none;
@@ -28,7 +28,7 @@
     }
 
     @media (max-width: 1200px) {
-      font-size: 16px;
+      font-size: 20px;
     }
 
     .number {
