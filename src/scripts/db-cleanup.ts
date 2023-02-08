@@ -12,4 +12,6 @@ async function Run() {
 
     const result = await tokenRepo.deleteMany({ issued: { $lt: defaultDeletionDate } })
     console.log('ITEMS Deleted?', result)
+
+    process.exit(0)
 }
