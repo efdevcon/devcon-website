@@ -1,7 +1,7 @@
 ---
 edition: 4
 title: "The State of Plasma"
-description: "David Knott and Kelvin Fitcher give an update on the state of Plasma."
+description: "David Knott and Kelvin Fichter give an update on the state of Plasma."
 youtubeUrl: "https://youtu.be/zbgsGI7Embs"
 ipfsHash: "QmNtrjgbo1y871X8QZgGdUTHuJ3gtZ3NFZf648r3DoHnnJ"
 ethernaIndex: "https://etherna.io/embed/63463de4c02259b06a2ffb4c"
@@ -12,5 +12,5 @@ type: "Talk"
 track: "Developer Infrastructure"
 keywords: ['scaling','mvp','zk','zero knowledge']
 tags: ['Developer Infrastructure']
-speakers: ['David Knott','Kelvin Fitcher']
+speakers: ['David Knott','Kelvin Fichter']
 ---

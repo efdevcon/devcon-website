@@ -12,5 +12,5 @@ type: "Talk"
 track: "Devcon"
 tags: ["Devcon"]
 keywords: ["Ethereum Foundation", "Devcon"]
-speakers: [""]
+speakers: []
 ---
