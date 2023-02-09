@@ -130,7 +130,7 @@ async function ExportArchive(id: string) {
 
     // fix duplicate titles at other events 
     let filename = session.id
-    if (filename === 'the-raiden-network' || filename === 'evolving-the-evm') { 
+    if (filename === 'the-raiden-network' || filename === 'evolving-the-evm' || filename === 'state-of-the-ens') { 
       const newId = `${filename}-${id}`
       filename = newId
       session.id = newId
