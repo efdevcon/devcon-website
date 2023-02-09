@@ -55,7 +55,7 @@ const usePages = () => {
       imageAlt: 'LogoBogota',
       button: {
         text: intl('hero_recap_relive'),
-        url: 'https://archive.devcon.org',
+        url: '#recap' // https://archive.devcon.org',
       },
     },
     // {

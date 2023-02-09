@@ -38,7 +38,7 @@ const About = (props: Props) => {
             <Button className="red lg bold">Past Events →</Button>
           </Link>
         </div>
-        <div className={css['right']}>
+        <div className={css['right']} id="recap">
           <div className="aspect">
             <iframe
               width="100%"
