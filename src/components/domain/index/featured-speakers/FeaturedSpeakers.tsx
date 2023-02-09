@@ -72,18 +72,18 @@ const FeaturedSpeakers = () => {
         <div className={css['background-title']}>{intl('featured_speakers')}</div>
         <SwipeToScroll noBounds scrollIndicatorDirections={{ left: true, right: true }}>
           <div className={css['speakers']}>
-            <Speaker appLink="https://app.devcon.org/schedule/HFPLPD" name="Brewster Kahle" image={BrewsterKahle} />
-            <Speaker appLink="https://app.devcon.org/speakers/J7DTZN" name="Danny Ryan" image={DannyRyan} />
-            <Speaker appLink="https://app.devcon.org/speakers/ADH9HF" name="Aya Miyaguchi" image={AyaMiyaguchi} />
-            <Speaker appLink="https://app.devcon.org/speakers/FLKFV8" name="Vitalik Buterin" image={VitalikButerin} />
-            <Speaker appLink="https://app.devcon.org/speakers/ZUMDMJ" name="Pia Mancini" image={PiaMancini} />
-            <Speaker appLink="https://app.devcon.org/speakers/PRM7AM" name="Bruno Macaes" image={BrunoMacaes} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/publishers-denial-of-digital-ownership-vs-decentralization/?tab=YouTube" name="Brewster Kahle" image={BrewsterKahle} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-intro/?tab=YouTube" name="Danny Ryan" image={DannyRyan} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-aya/?tab=YouTube" name="Aya Miyaguchi" image={AyaMiyaguchi} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-vitalik/?tab=YouTube" name="Vitalik Buterin" image={VitalikButerin} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/the-future-is-collective/?tab=YouTube" name="Pia Mancini" image={PiaMancini} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/why-only-virtual-money-is-real-money/?tab=YouTube" name="Bruno Macaes" image={BrunoMacaes} />
             <Speaker name="IXShells" image={IXShells} />
-            <Speaker appLink="https://app.devcon.org/speakers/JS9FQP" name="Kurt Opsahl" image={KurtOpsahl} />
-            <Speaker appLink="https://app.devcon.org/speakers/Z93KWP" name="Venkatesh Rao" image={VekateshRao} />
-            <Speaker appLink="https://app.devcon.org/speakers/7BSSFC" name="Tim Beiko" image={TimBeiko} />
-            <Speaker appLink="https://app.devcon.org/speakers/3NSWV9" name="Eric Wall" image={EricWall} />
-            <Speaker appLink="https://app.devcon.org/speakers/A9WCWN" name="Max Semenchuk" image={MaxSemenchuk} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/closing-ceremonies-kurt-opsahl/?tab=YouTube" name="Kurt Opsahl" image={KurtOpsahl} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/there-are-many-alternatives-unlocking-civilizational-hypercomplexity-with-ethereum/?tab=YouTube" name="Venkatesh Rao" image={VekateshRao} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-tim/?tab=YouTube" name="Tim Beiko" image={TimBeiko} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/social-slashing/?tab=YouTube" name="Eric Wall" image={EricWall} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/web3-in-the-ukraine-government-integration-and-impact/?tab=YouTube" name="Max Semenchuk" image={MaxSemenchuk} />
           </div>
         </SwipeToScroll>
       </div>

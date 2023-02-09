@@ -114,6 +114,19 @@ export function getTrackImage(id?: string, className?: string) {
   return null
 }
 
+const getArchiveSlug = (id?: string) => {
+  if (id === 'layer-1') return 'Layer%201%20Protocol'
+  if (id === 'layer-2s') return 'Layer%202s';
+  if (id === 'developer-infrastructure') return 'Developer%20Infrastructure';
+  if (id === 'governance-coordination') return 'Governance%20%26%20Coordination';
+  if (id === 'ux-design') return 'UX%20%26%20Design';
+  if (id === 'staking-validator-experience') return 'Staking%20%26%20Validator%20Experience';
+  if (id === 'security') return 'Security';
+  if (id === 'zkps') return 'ZKPs%3A%20Privacy%2C%20Identity%2C%20Infrastructure%2C%20%26%20More';
+  if (id === 'opportunity-global-impact') return 'Opportunity%20%26%20Global%20Impact';
+  if (id === 'cryptoeconomics') return 'Cryptoeconomics';
+}
+
 const Tracks = (props: Props) => {
   const sliderProps = useSlider(settings)
 
@@ -132,7 +145,7 @@ const Tracks = (props: Props) => {
             className += ` ${css[track.id]}`
 
             return (
-              <FlipCard key={track.slug} className={className}>
+              <FlipCard key={track.slug} className={className} to={`https://archive.devcon.org/archive/watch?order=desc&sort=edition&tags=${getArchiveSlug(track.id)}`}>
                 <div className={css['image']}>{getTrackImage(track.id)}</div>
                 <div className={css['details']}>
                   <p className={css['title']}>{track.title}</p>
