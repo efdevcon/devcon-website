@@ -4,11 +4,11 @@
   "eventId": "devcon-6",
   "title": "Cryptographic Optimizations in Aztec",
   "description": ".",
-  "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+  "track": "Privacy",
   "type": "Talk",
   "expertise": "Beginner",
   "tags": [
-    "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "Privacy",
     "zk"
   ],
   "speakers": [

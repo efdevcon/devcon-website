@@ -10,8 +10,8 @@ ethernaPermalink: ""
 duration: 2290
 expertise: "Beginner"
 type: "Panel"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zk"]
 speakers: ["Barry Whitehat"]
 ---

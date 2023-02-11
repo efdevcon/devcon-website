@@ -4,11 +4,11 @@
   "eventId": "devcon-6",
   "title": "Auditing Strategy for zkEVM",
   "description": "A panel discussing approaches to auditing the zkEVM.",
-  "track": "ZKPs: Privacy, Identity, Infrastructure, & More",
+  "track": "Privacy",
   "type": "Panel",
   "expertise": "Beginner",
   "tags": [
-    "ZKPs: Privacy, Identity, Infrastructure, & More",
+    "Privacy",
     "zk"
   ],
   "speakers": [

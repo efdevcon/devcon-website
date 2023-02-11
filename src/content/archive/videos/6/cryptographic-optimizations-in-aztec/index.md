@@ -10,8 +10,8 @@ ethernaPermalink: ""
 duration: 1017
 expertise: "Beginner"
 type: "Talk"
-track: "ZKPs: Privacy, Identity, Infrastructure, & More"
-tags: ["ZKPs: Privacy, Identity, Infrastructure, & More"]
+track: "Privacy"
+tags: ["Privacy"]
 keywords: ["zk"]
 speakers: ["Adrian Hamelink"]
 ---
