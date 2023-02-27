@@ -24,12 +24,6 @@ export default pageHOC(function Index(props: any) {
       <Header withStrip withHero />
       <Hero />
 
-      {/* <div className={`${css['background-container']} section`}>
-        <div className={`${css['triangle-background']} expand`}>
-          <Image src={TriangleBackground} alt="Triangles" />
-        </div>
-      </div> */}
-
       <About content={props.sections['devcon-about']} />
 
       <div className={`${css['background-container']} section`}>
@@ -56,12 +50,6 @@ export default pageHOC(function Index(props: any) {
       <TrackList tracks={props.tracks} />
 
       <BlogReel blogs={props.blogs} />
-
-      {/* <div className={`${css['background-container']} section`}>
-        <div className={`${css['circle-background']} expand`}>
-          <Image src={CircleBackground} alt="Circles" />
-        </div>
-      </div> */}
 
       <div className="clear-bottom"></div>
 

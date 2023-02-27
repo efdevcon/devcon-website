@@ -24,6 +24,7 @@ import StatsAnimation from './stats-anim';
 import Devcon7Logo from 'assets/images/devcon-7.svg'
 import SEA from 'assets/images/sea-2024.png';
 import SEAPattern from 'assets/images/sea-pattern-2024.png';
+import { Tags } from 'components/common/tags'
 
 const useDraggableLink = () => {
   const dragging = React.useRef(false)
@@ -51,7 +52,7 @@ const usePages = () => {
 
   return [
     {
-      id: '2024',
+      id: 'update-2024',
       background: BackgroundPassport,
       titlePrefix: TitleDevcon,
       title: '2024 Update',
@@ -59,7 +60,7 @@ const usePages = () => {
       imageAlt: 'Devcon logo',
       button: {
         text: 'Learn More',
-        url: '#recap' // https://archive.devcon.org',
+        url: '#update-2024' // https://archive.devcon.org',
       },
     },
     {
@@ -165,7 +166,7 @@ export const Hero = () => {
           :
           <div className={css['announcement-background']}>
             <Image
-              className={page.id === '2024' ? css['active'] : ''}
+              className={page.id === 'update-2024' ? css['active'] : ''}
               src={SEAPattern}
               layout="raw"
               alt="worldmap"
@@ -173,15 +174,12 @@ export const Hero = () => {
             />
 
             <Image
-              className={page.id === '2024' ? css['active'] : ''}
+              className={page.id === 'update-2024' ? css['active'] : ''}
               src={SEA}
               layout="raw"
               alt="worldmap"
               priority
             />
-
-
-
 
             <div>
               <Devcon7Logo />
@@ -252,13 +250,20 @@ export const Hero = () => {
                 <page.titlePrefix className={css['title-prefix']} />
                 <p className={css['title']}>{page.title} —</p>
               </div>
+
               <Button className="red bold lg hover" to={page.button.url}>
                 {page.button.text} →
               </Button>
 
-              <Button className="black bold sm margin-top-less" onClick={() => setCurrentPage(currentPage === 1 ? 0 : 1)}>
-                {page.id === '2024' ? 'Devcon Bogota Recap' : 'Devcon 2024 Announcement'} →
-              </Button>
+              <div className={css['page-toggle']}>
+                <div className={`label margin-top-less ${page.id === 'update-2024' ? css['active'] : ''}`} onClick={() => setCurrentPage(0)}>
+                  Devcon 7 Update
+                </div>
+
+                <div className={`label margin-top-less ${page.id === 'recap' ? css['active'] : ''}`} onClick={() => setCurrentPage(1)}>
+                  Devcon 6 Recap
+                </div>
+              </div>
             </div>
 
             {/* {pages.length > 1 &&

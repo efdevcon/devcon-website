@@ -15,7 +15,7 @@ interface Props {
 const About = (props: Props) => {
   return (
     <div className={`section ${css['container']}`}>
-      <div className={`${css['body']} clear-top`}>
+      <div className={`${css['body']} clear-top`} id={props.recap ? 'recap' : 'update-2024'}>
         <div className={css['left']}>
           {props.recap
             ?
@@ -24,7 +24,7 @@ const About = (props: Props) => {
             <TitleDevcon />
           }
 
-          <div className={`section-markdown`} dangerouslySetInnerHTML={{ __html: props.content.body }} />
+          <div className={`section-markdown markdown`} dangerouslySetInnerHTML={{ __html: props.content.body }} />
 
           {/* <p>
             <span className={css['grey']}>
@@ -45,11 +45,11 @@ const About = (props: Props) => {
             </Link>
             :
             <Link to="https://blog.ethereum.org/2023/02/28/devcon-7-update/">
-              <Button className="red bold">Devcon 7 Updates →</Button>
+              <Button className="red bold">Blog Post →</Button>
             </Link>
           }
         </div>
-        <div className={css['right']} id={props.recap ? 'recap' : ''}>
+        <div className={css['right']}>
           {props.recap ?
             <div className="aspect">
               <iframe

@@ -123,6 +123,8 @@ $logo-offset: 50px;
     height: 90vh;
   }
 
+
+
   .shading {
     position: absolute;
     top: 0px;
@@ -461,6 +463,25 @@ $logo-offset: 50px;
 }
 
 .hero {
+  &.update-2024 {
+      @media (max-width: $breakpoints-md) {
+        .page {
+          justify-content: flex-end;
+        }
+
+        .content {
+          justify-content: flex-end;
+          align-items: center !important;
+      
+          > * {
+            &:not(.page-toggle, a) {
+              display: none;
+            }
+          }
+        }
+      }
+  }
+
   &.bogota {
     img {
       @media (max-width: $breakpoints-md) {
@@ -579,7 +600,6 @@ $logo-offset: 50px;
       @media (max-width: $breakpoints-md) {
         flex-grow: 1;
         margin-top: 32px;
-        // order: -1;
       }
 
       .logo {
@@ -740,7 +760,7 @@ $logo-offset: 50px;
     align-items: center;
 
     @media (max-width: $breakpoints-lg) {
-      align-items: flex-end;
+      // align-items: flex-end;
 
       svg {
         width: 80%;
@@ -751,20 +771,45 @@ $logo-offset: 50px;
       animation: fadeInUp 1s linear;
       transform: scale(1.7);
     }
+  }
+}
 
-    // span {
-    //   display: block;
-    //   animation: fadeInUp;
-    //   animation-duration: 1.5s;
-    //   animation-fill-mode: both;
+.page-toggle {
+  display: flex;
 
-    //   &:nth-of-type(2) {
-    //     animation-delay: 1s;
-    //   }
+  > * {
+    pointer-events: all;
+    cursor: pointer;
 
-    //   &:nth-of-type(3) {
-    //     animation-delay: 1.5s;
-    //   }
+
+    &:not(.active) {
+      @include colors-black-ghost;
+      opacity: 0.8;
+    }
+
+    &.active, &:hover {
+      opacity: 1;
+      @include colors-black;
+      @include fonts-bold;
+    }
+
+    // &:not(.active) {
+    //   @include colors-black-ghost;
+    //   color: white;
+    //   border-color: white;
+    //   background: none;
     // }
+
+    // &.active, &:hover {
+    //   @include fonts-bold;
+    //   color: $colors-track-red !important;
+    //   background: white;
+    //   border-color: $colors-track-red !important;
+    // }
+
+
+    &:first-child {
+      margin-right: 4px;
+    }
   }
 }
