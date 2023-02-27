@@ -44,9 +44,10 @@ const About = (props: Props) => {
               <Button className="red bold">Past Events →</Button>
             </Link>
             :
-            <Link to="https://blog.ethereum.org/2023/02/28/devcon-7-update/">
-              <Button className="red bold">Blog Post →</Button>
-            </Link>
+            null
+            // <Link to="https://blog.ethereum.org/2023/02/28/devcon-7-update/">
+            //   <Button className="red bold">Blog Post →</Button>
+            // </Link>
           }
         </div>
         <div className={css['right']}>
