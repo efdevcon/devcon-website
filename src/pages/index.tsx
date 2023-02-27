@@ -15,6 +15,7 @@ import FeaturedSpeakers from 'components/domain/index/featured-speakers'
 import CallsToAction from 'components/domain/index/ctas'
 import Image from 'next/image'
 import CircleBackground from 'assets/images/background-circles.png'
+import TriangleBackground from 'assets/images/background-triangles.png'
 import { GetContentSections, GetTracks } from 'services/page'
 
 export default pageHOC(function Index(props: any) {
@@ -23,7 +24,21 @@ export default pageHOC(function Index(props: any) {
       <Header withStrip withHero />
       <Hero />
 
-      <About content={props.sections['devcon-bogota']} />
+      {/* <div className={`${css['background-container']} section`}>
+        <div className={`${css['triangle-background']} expand`}>
+          <Image src={TriangleBackground} alt="Triangles" />
+        </div>
+      </div> */}
+
+      <About content={props.sections['devcon-about']} />
+
+      <div className={`${css['background-container']} section`}>
+        <div className={`${css['circle-background']} expand`}>
+          <Image src={CircleBackground} alt="Circles" />
+        </div>
+      </div>
+
+      <About recap content={props.sections['devcon-recap']} />
 
       <FeaturedSpeakers />
 
@@ -42,11 +57,11 @@ export default pageHOC(function Index(props: any) {
 
       <BlogReel blogs={props.blogs} />
 
-      <div className={`${css['background-container']} section`}>
+      {/* <div className={`${css['background-container']} section`}>
         <div className={`${css['circle-background']} expand`}>
           <Image src={CircleBackground} alt="Circles" />
         </div>
-      </div>
+      </div> */}
 
       <div className="clear-bottom"></div>
 
@@ -59,7 +74,8 @@ export async function getStaticProps(context: any) {
   const globalData = await getGlobalData(context)
   const sections = await GetContentSections(
     [
-      'devcon-bogota',
+      'devcon-about',
+      'devcon-recap',
       'cta-speaker-applications',
       'cta-ticket-presale',
       'cta-scholar-applications',

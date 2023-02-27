@@ -1,16 +1,15 @@
 import React from 'react'
 import css from './about.module.scss'
-import DevconLogo from 'assets/images/devcon-logo-bogota-text.svg'
 import { Button } from 'components/common/button'
 import Image from 'next/image'
-import TriangleWithImages from 'assets/images/about-triangles.png'
-import DevconManual from 'assets/images/devcon-manual.png'
+import Devcon2024Announcement from 'assets/images/2024-blog-post-shadow.png'
+import TitleDevcon from 'assets/images/devcon-title.svg'
 import { Link } from 'components/common/link'
 import { ContentSection } from 'types/ContentSection'
-import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 interface Props {
   content: ContentSection
+  recap?: boolean
 }
 
 const About = (props: Props) => {
@@ -18,7 +17,12 @@ const About = (props: Props) => {
     <div className={`section ${css['container']}`}>
       <div className={`${css['body']} clear-top`}>
         <div className={css['left']}>
-          <DevconLogo />
+          {props.recap
+            ?
+            <h2 className="title spaced">Devcon Bogota Recap</h2>
+            :
+            <TitleDevcon />
+          }
 
           <div className={`section-markdown`} dangerouslySetInnerHTML={{ __html: props.content.body }} />
 
@@ -34,37 +38,39 @@ const About = (props: Props) => {
             <span className="font-sm">Devcon Week — October 7-16 in Bogotá, Colombia.</span>
           </p> */}
 
-          <Link to="/past-events">
-            <Button className="red lg bold">Past Events →</Button>
-          </Link>
+          {props.recap
+            ?
+            <Link to="/past-events">
+              <Button className="red bold">Past Events →</Button>
+            </Link>
+            :
+            <Link to="https://blog.ethereum.org/2023/02/28/devcon-7-update/">
+              <Button className="red bold">Devcon 7 Updates →</Button>
+            </Link>
+          }
         </div>
-        <div className={css['right']} id="recap">
-          <div className="aspect">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/lgTMm7J0t7c"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-
-          {/* <Link to="https://blog.ethereum.org/2022/10/04/devcon-manual" className={css['image-container']}>
-            <Image src={DevconManual} alt="Devcon images" priority />
-          </Link> */}
-        </div>
-        {/* <div className={css['right']}>
-          <SwipeToScroll scrollIndicatorDirections={{ left: true }} alwaysShowscrollIndicators>
-            <div className={css['image-container']}>
-              <Image src={TriangleWithImages} layout="raw" alt="Devcon images" priority />
+        <div className={css['right']} id={props.recap ? 'recap' : ''}>
+          {props.recap ?
+            <div className="aspect">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/lgTMm7J0t7c"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
-          </SwipeToScroll>
-        </div> */}
+            :
+            <Link to="https://blog.ethereum.org/2023/02/28/devcon-7-update/" className={css['image-container']}>
+              <Image src={Devcon2024Announcement} alt="Devcon images" priority />
+            </Link>
+          }
+        </div>
       </div>
       <div className="clear-bottom margin-bottom border-bottom"></div>
-    </div>
+    </div >
   )
 }
 

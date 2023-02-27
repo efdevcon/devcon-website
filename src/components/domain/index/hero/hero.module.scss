@@ -25,13 +25,13 @@
 
 @keyframes enter {
   0% {
-    opacity: 0.3;
-    transform: scale(0.1);
+    opacity: 0.2;
+    // transform: scale(0.1);
   }
 
   100% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0.45;
+    // transform: scale(1);
   }
 }
 
@@ -104,10 +104,16 @@ $logo-offset: 50px;
   position: relative;
   height: calc(100vh - env(safe-area-inset-bottom));
   width: 100%;
-  background: linear-gradient(45deg, #f17c58, #f374a4, #24aadb);
-  background-size: 600% 100%;
-  animation: gradient 16s linear infinite;
-  animation-direction: alternate;
+  // background: linear-gradient(45deg, #f17c58, #f374a4, #24aadb);
+  // background: linear-gradient(45deg, #0744c6, #fb0f69, #24aadb);
+
+  // background: linear-gradient(45deg, #0744c6, #160b14, #0094a1);
+  // background: linear-gradient(45deg, #91008f, #6c61a2, #76b1ff);
+  background: linear-gradient(45deg, #91008f, #5c7093, #000280d6);
+
+  // background-size: 600% 100%;
+  // animation: gradient 16s linear infinite;
+  // animation-direction: alternate;
   // transition: background-color 0.5s linear;
 
   // Using 100vh on mobile devices often doesn't account for the navigation bar at the bottom
@@ -543,7 +549,7 @@ $logo-offset: 50px;
   z-index: 2;
   pointer-events: none;
 
-  a {
+  a, button {
     pointer-events: all;
   }
 
@@ -601,8 +607,9 @@ $logo-offset: 50px;
       }
 
       .title {
-        font-size: 60px;
-        margin-bottom: 48px;
+        line-height: 1em;
+        font-size: 48px;
+        margin-bottom: 24px;
         transform: translateX(-5px);
       }
     }
@@ -688,5 +695,76 @@ $logo-offset: 50px;
         animation-play-state: paused;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+.announcement-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+
+  img {
+    pointer-events: none;
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+
+    &:nth-child(1) {
+      animation: rotate 240s linear infinite, enter 2.5s ease-out forwards;
+      width: 200%;
+      height: 200%;
+    }
+  }
+
+  div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: center;
+
+    @media (max-width: $breakpoints-lg) {
+      align-items: flex-end;
+
+      svg {
+        width: 80%;
+      }
+    }
+
+    svg {
+      animation: fadeInUp 1s linear;
+      transform: scale(1.7);
+    }
+
+    // span {
+    //   display: block;
+    //   animation: fadeInUp;
+    //   animation-duration: 1.5s;
+    //   animation-fill-mode: both;
+
+    //   &:nth-of-type(2) {
+    //     animation-delay: 1s;
+    //   }
+
+    //   &:nth-of-type(3) {
+    //     animation-delay: 1.5s;
+    //   }
+    // }
   }
 }

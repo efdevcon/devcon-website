@@ -20,6 +20,10 @@ import Image from 'next/image'
 import { Router, useRouter } from 'next/router'
 import getNewsItems from 'services/news'
 import StatsAnimation from './stats-anim';
+// import Background2024 from 'assets/images/hero-bg-2024.png';
+import Devcon7Logo from 'assets/images/devcon-7.svg'
+import SEA from 'assets/images/sea-2024.png';
+import SEAPattern from 'assets/images/sea-pattern-2024.png';
 
 const useDraggableLink = () => {
   const dragging = React.useRef(false)
@@ -46,6 +50,18 @@ const usePages = () => {
   const intl = useTranslations()
 
   return [
+    {
+      id: '2024',
+      background: BackgroundPassport,
+      titlePrefix: TitleDevcon,
+      title: '2024 Update',
+      logo: LogoPassport,
+      imageAlt: 'Devcon logo',
+      button: {
+        text: 'Learn More',
+        url: '#recap' // https://archive.devcon.org',
+      },
+    },
     {
       id: 'recap',
       background: BackgroundPassport,
@@ -141,9 +157,37 @@ export const Hero = () => {
   return (
     <>
       <div ref={heroEl} data-jest="hero" className={`${css['hero']} ${css[page.id]}`}>
-        <div className={css['rays-container']}>
-          <Rays className={css['rays']} />
-        </div>
+
+        {page.id === 'recap' ?
+          <div className={css['rays-container']}>
+            <Rays className={css['rays']} />
+          </div>
+          :
+          <div className={css['announcement-background']}>
+            <Image
+              className={page.id === '2024' ? css['active'] : ''}
+              src={SEAPattern}
+              layout="raw"
+              alt="worldmap"
+              priority
+            />
+
+            <Image
+              className={page.id === '2024' ? css['active'] : ''}
+              src={SEA}
+              layout="raw"
+              alt="worldmap"
+              priority
+            />
+
+
+
+
+            <div>
+              <Devcon7Logo />
+            </div>
+          </div>
+        }
 
         <div className={css['page-background']}>
           {/* <Image
@@ -187,7 +231,7 @@ export const Hero = () => {
           <p className={'text-uppercase'}>{intl('global_subtitle')}</p>
         </div>
         <div className={css['right-rotated']}>
-          <p className={'text-uppercase'}>{intl('journey')}</p>
+          <p className={'text-uppercase'}>Road TO SOUTH EAST ASIA 2024</p>
         </div>
 
         <div className={`${css['page-container']} section`}>
@@ -211,9 +255,13 @@ export const Hero = () => {
               <Button className="red bold lg hover" to={page.button.url}>
                 {page.button.text} →
               </Button>
+
+              <Button className="black bold sm margin-top-less" onClick={() => setCurrentPage(currentPage === 1 ? 0 : 1)}>
+                {page.id === '2024' ? 'Devcon Bogota Recap' : 'Devcon 2024 Announcement'} →
+              </Button>
             </div>
 
-            {pages.length > 1 &&
+            {/* {pages.length > 1 &&
               <div className={css['cta']}>
                 <CallToAction
                   items={
@@ -286,11 +334,11 @@ export const Hero = () => {
                   }
                 />
               </div>
-            }
+            } */}
           </div>
         </div>
 
-        <StatsAnimation />
+        {page.id === 'recap' && <StatsAnimation />}
 
         {/* <div className={css['logo-container']}>
           <Logo alt={intl('global_title')} className={css['logo']} />

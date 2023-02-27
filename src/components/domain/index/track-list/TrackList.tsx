@@ -138,7 +138,7 @@ const Tracks = (props: Props) => {
       {/* <h2 className="border-top clear-top">Tracks</h2> */}
 
       <div className={css['tracks']}>
-        <Slider sliderProps={sliderProps} title="Tracks">
+        <Slider sliderProps={sliderProps} title="Track Playlists">
           {props.tracks.map((track: Track, i: number) => {
             let className = css['card']
 
