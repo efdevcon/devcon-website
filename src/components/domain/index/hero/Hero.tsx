@@ -261,7 +261,7 @@ export const Hero = () => {
                 </div>
 
                 <div className={`label margin-top-less ${page.id === 'recap' ? css['active'] : ''}`} onClick={() => setCurrentPage(1)}>
-                  Devcon 6 Recap
+                  Devcon VI Recap
                 </div>
               </div>
             </div>
