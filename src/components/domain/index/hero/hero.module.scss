@@ -464,22 +464,29 @@ $logo-offset: 50px;
 
 .hero {
   &.update-2024 {
-      @media (max-width: $breakpoints-md) {
-        .page {
-          justify-content: flex-end;
-        }
-
-        .content {
-          justify-content: flex-end;
-          align-items: center !important;
-      
-          > * {
-            &:not(.page-toggle, a) {
-              display: none;
-            }
-          }
-        }
+    @media (max-width: $breakpoints-lg) {
+      .announcement-background {
+        position: relative;
+        height: 60%;
+        bottom: 0px;
       }
+    }
+      // @media (max-width: $breakpoints-md) {
+      //   .page {
+      //     justify-content: flex-end;
+      //   }
+
+      //   .content {
+      //     justify-content: flex-end;
+      //     align-items: center !important;
+      
+      //     > * {
+      //       &:not(.page-toggle, a) {
+      //         display: none;
+      //       }
+      //     }
+      //   }
+      // }
   }
 
   &.bogota {
