@@ -28,7 +28,6 @@ export const useArchiveSearch = (qs: string, params?: SearchParams): FetchedResu
   if (params?.sort) uri += `&sort=${params.sort}`
   if (params?.order) uri += `&order=${params.order}`
 
-  console.log('Paged Search', uri)
   const { error, isValidating } = useSWR(uri, fetcher, {
     onSuccess: data => {
       setData(data)
@@ -38,10 +37,6 @@ export const useArchiveSearch = (qs: string, params?: SearchParams): FetchedResu
     },
     revalidateOnFocus: false
   })
-
-  // total: number
-  // currentPage: number
-  // items: Array<T>
 
   return {
     isLoading: !error && isValidating,
@@ -67,49 +62,10 @@ export const useArchiveSearch = (qs: string, params?: SearchParams): FetchedResu
           track: item.track,
           keywords: item.tags.split(','),
           tags: item.tags.split(','),
-          speakers: [],
+          speakers: item.speakers.map((speaker: any) => speaker.name),
           profiles: []
         } as unknown as ArchiveVideo
       })      
     }
   }
-
-  // if (result.data) {
-  //   console.log('PAGED RESULT DATA', result.data)
-  //   const data = { 
-  //     ...result,
-  //     data: {
-  //       ...result.data,
-  //       items: result.data.items.map((item: any) => {
-  //         return {
-  //           id: item.id,
-  //           sourceId: item.sourceId,
-  //           slug: item.id,
-  //           edition: Number(item.eventId.replace('devcon-', '')),
-  //           title: item.title,
-  //           relatedVideos: [] as ArchiveVideo[],
-  //           description: item.description,
-  //           slidesUrl: item.resources_slides,
-  //           youtubeUrl: `https://youtu.be/${item.sources_youtubeId}`,
-  //           ipfsHash: item.sources_ipfsHash,
-  //           ethernaPermalink: `https://etherna.io/embed/${item.sources_swarmHash}`,
-  //           duration: item.duration,
-  //           expertise: item.expertise,
-  //           type: item.type,
-  //           track: item.track,
-  //           keywords: item.tags.split(','),
-  //           tags: item.tags.split(','),
-  //           speakers: [],
-  //           profiles: []
-  //         } as unknown as ArchiveVideo
-  //       })
-  //     }
-  //   }
-  //   console.log('RE-MAPPED DATA', data)
-  //   return data
-  // }
-
-  // return result
 }
-
-// edition: filterState.editionFilterState?.activeFilter,
