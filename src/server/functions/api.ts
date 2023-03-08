@@ -1,6 +1,5 @@
 import express, { json, Request, Response, urlencoded } from 'express'
 import serverless from 'serverless-http'
-import * as archiveRoutes from '../routes/archive'
 
 // Basic Express configuration
 const server = express()
@@ -29,7 +28,6 @@ router.get('/', (req: Request, res: Response) => {
 
 // userAccountRoutes.register(router)
 // twitterRoutes.register(router)
-archiveRoutes.register(router)
 
 // Express-sessions
 // if (!SERVER_CONFIG.SESSION_SECRET) throw new Error('Required SESSION_SECRET not found.')
