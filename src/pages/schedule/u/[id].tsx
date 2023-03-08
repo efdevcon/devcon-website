@@ -27,8 +27,8 @@ export default pageHOC((props: any) => {
     <AppLayout>
       <SEO 
         title={`${props.userSchedule.username}'s schedule`} 
-        description='Sign up for the Devcon Passport App to customize, plan and share your own Devcon Bogotá Experience.'
-        imageUrl={`${API_URL}api/image/user?id=${props.userId}`} />
+        description='Sign up for the Devcon Passport App to customize, plan and share your own Devcon Bogotá Experience.'/>
+        {/* imageUrl={`${API_URL}api/image/user?id=${props.userId}`} /> */}
       <Schedule {...props} sessions={props.userSchedule.sessions} />
     </AppLayout>
   )

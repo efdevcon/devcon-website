@@ -24,7 +24,7 @@ export default pageHOC((props: any) => {
           <SEO
             title={session.title}
             description={session.description}
-            imageUrl={`${API_URL}api/image/og?id=${session.id}`}
+            imageUrl={`${API_URL}sessions/${session.id}/image`}
           />
           <Session session={session} {...props} relatedSessions={related} sessionID={sessionID} />
         </>

@@ -53,7 +53,7 @@ export default pageHOC((props: any) => {
         <SEO
           title={props.session.title}
           description={props.session.description}
-          imageUrl={`${API_URL}api/image/og?id=${props.session.id}`}
+          imageUrl={`${API_URL}sessions/${props.session.id}/image`}
         />
         <Session {...props} />
       </>
