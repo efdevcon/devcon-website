@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { fetch } from 'cross-fetch'
+import fetch from 'node-fetch'
 import queryString from 'query-string'
 import { ArchiveVideo } from 'src/types/ArchiveVideo'
 
