@@ -1,49 +1,44 @@
 import { Request, Response } from 'express'
-import { SearchIndexClientInterface, SearchParams } from 'src/server/services/search-client'
+import { fetch } from 'cross-fetch'
+import queryString from 'query-string'
+import { ArchiveVideo } from 'src/types/ArchiveVideo'
 
 export class ArchiveController {
-  private _client: SearchIndexClientInterface
-
-  constructor(client: SearchIndexClientInterface) {
-    this._client = client
-  }
-
   public async Search(req: Request, res: Response) {
     try {
-      const query = new Array<string>()
-      const input = req.query
+      const qs = queryString.stringify(req.query)
+      const uri = `https://api.devcon.org/sessions?${qs}`
 
-      let params: SearchParams = {}
-      if (req.query['sort']) params.sort = req.query['sort'] as string
-      if (req.query['order']) params.order = req.query['order'] as 'asc' | 'desc'
-      if (req.query['from']) params.from = Number(req.query['from'])
-      if (req.query['size']) params.size = Number(req.query['size'])
+      const response = await fetch(uri)
+      const data = await response.json()
 
-      const skipParams = ['q', 'sort', 'order', 'from', 'size']
-      Object.keys(input).forEach(i => {
-        if (skipParams.includes(i)) return
-
-        if (Array.isArray(input[i])) {
-          const asArray = input[i] as string[]
-          const arrayFilter = asArray.map(value => `${i}:${value.split(' ')[0]}`)
-
-          query.push(`(${arrayFilter.join(' OR ')})`)
-        }
-
-        if (typeof input[i] === 'string') {
-          const value = (input[i] as string).split(' ')[0]
-          query.push(`(${i}:${value})`)
-        }
-      })
-
-      if (req.query['q']) {
-        const searchQuery = req.query['q'] as string
-        query.push(`(title:*${searchQuery}* OR speakers:*${searchQuery}* OR description:*${searchQuery}*)`)
-      }
-      const queryString = query.length ? query.join(' AND ') : '*'
-      const results = await this._client.searchIndex('archive', queryString, params)
-
-      res.status(200).send({ code: 200, data: results })
+      res.status(200).send({ code: 200, data: {
+        ...data.data,
+        items: data.data.items.map((item: any) => {
+          const edition = Number(item.eventId.replace('devcon-', ''))
+          return {
+            id: item.id,
+            sourceId: item.sourceId,
+            slug: `${edition}/${item.id}`,
+            edition: Number(item.eventId.replace('devcon-', '')),
+            title: item.title,
+            relatedVideos: [] as ArchiveVideo[],
+            description: item.description,
+            slidesUrl: item.resources_slides,
+            youtubeUrl: `https://youtu.be/${item.sources_youtubeId}`,
+            ipfsHash: item.sources_ipfsHash,
+            ethernaPermalink: `https://etherna.io/embed/${item.sources_swarmHash}`,
+            duration: item.duration,
+            expertise: item.expertise,
+            type: item.type,
+            track: item.track,
+            keywords: item.tags.split(','),
+            tags: item.tags.split(','),
+            speakers: [],
+            profiles: []
+          }
+        })
+      }})
     } catch (e) {
       console.error(e)
       res.status(500).send({ code: 500, message: 'Unable to fetch Archive search results' })

@@ -48,7 +48,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
     [
       {
         title: 'Event',
-        key: 'edition',
+        key: 'eventId',
         sort: SortVariation.basic,
       },
       {
@@ -68,7 +68,7 @@ export const Watch = resetOnPageNavigationHOC((props: WatchProps) => {
 
   const qs = useQueryStringer(
     {
-      edition: filterState.editionFilterState?.activeFilter,
+      event: filterState.editionFilterState?.activeFilter,
       tags: filterState.tagsFilterState?.activeFilter,
       expertise: filterState.expertiseFilterState?.activeFilter,
       type: filterState.typeFilterState?.activeFilter,

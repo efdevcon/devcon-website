@@ -1,7 +1,5 @@
 import React from 'react'
 import IconFilter from 'src/assets/icons/filter.svg'
-import IconClose from 'src/assets/icons/cross.svg'
-import IconArrowRight from 'src/assets/icons/arrow_right.svg'
 import { Filter, useFilter } from 'src/components/common/filter'
 import css from './video-filter.module.scss'
 import { useLocation } from '@reach/router'
@@ -9,7 +7,6 @@ import queryString from 'query-string'
 import { usePageContext } from 'src/context/page-context'
 import IconSearch from 'src/assets/icons/search.svg'
 import { InputForm } from 'src/components/common/input-form'
-import { Button } from 'src/components/common/button'
 import {
   CollapsedSection,
   CollapsedSectionContent,
@@ -50,7 +47,7 @@ export const useVideoFilter = () => {
     filters: editionFilters.map(i => {
       return {
         text: i.toString(),
-        value: i.toString(),
+        value: `devcon-${i}`,
       }
     }),
     filterFunction: () => [],
@@ -62,27 +59,27 @@ export const useVideoFilter = () => {
     filters: [
       {
         text: 'Talk',
-        value: 'talk',
+        value: 'Talk',
       },
       {
         text: 'Panel',
-        value: 'panel',
+        value: 'Panel',
       },
       {
         text: 'Workshop',
-        value: 'workshop',
+        value: 'Workshop',
       },
       {
         text: 'Lightning Talk',
-        value: 'lightning talk',
+        value: 'Lightning Talk',
       },
       {
         text: 'Breakout',
-        value: 'breakout',
+        value: 'Breakout',
       },
       {
         text: 'Other',
-        value: 'other',
+        value: 'Other',
       },
     ],
     filterFunction: () => [],
@@ -94,15 +91,15 @@ export const useVideoFilter = () => {
     filters: [
       {
         text: 'Beginner',
-        value: 'beginner',
+        value: 'Beginner',
       },
       {
         text: 'Intermediate',
-        value: 'intermediate',
+        value: 'Intermediate',
       },
       {
         text: 'Expert',
-        value: 'expert',
+        value: 'Expert',
       },
     ],
     filterFunction: () => [],
@@ -131,7 +128,7 @@ export const useVideoFilter = () => {
   React.useEffect(() => {
     const initialFilters = queryStringToFilterState(location.search)
 
-    if (initialFilters.edition) editionFilterState?.setActiveFilter(initialFilters.edition, true)
+    if (initialFilters.event) editionFilterState?.setActiveFilter(initialFilters.event, true)
     if (initialFilters.q) searchFilterState?.setActiveFilter(initialFilters.q, true)
     if (initialFilters.tags) tagsFilterState?.setActiveFilter(initialFilters.tags, true)
     if (initialFilters.expertise) expertiseFilterState?.setActiveFilter(initialFilters.expertise, true)
