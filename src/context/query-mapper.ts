@@ -28,7 +28,7 @@ export function ToArchiveNavigation(videoTags?: any[]): Array<Link> {
     event =>
       ({
         title: `Devcon ${event}`,
-        url: `/archive/watch?edition=${event}`,
+        url: `/archive/watch?event=devcon-${event}`,
         type: 'page',
       } as Link)
   )

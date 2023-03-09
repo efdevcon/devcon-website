@@ -147,7 +147,7 @@ export const Editions = (props: Props) => {
                 {/* Only show watch now button after the event has started */}
                 {moment().unix() > moment(selectedEdition.startDate).unix() && (
                   <Button
-                    to={`/archive/watch?edition=${selectedEdition.number}`}
+                    to={`/archive/watch?event=devcon-${selectedEdition.number}`}
                     className={`${css['button']} red ghost sm`}
                   >
                     Watch <OnDemandVideoIcon />

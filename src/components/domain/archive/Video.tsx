@@ -160,7 +160,7 @@ export const Video = (props: VideoProps) => {
         type="video.movie"
         author={{
           name: `Devcon ${video.edition}`,
-          url: `/archive/watch?edition=${video.edition}`,
+          url: `/archive/watch?event=devcon-${video.edition}`,
         }}
       />
       <Metadata type="video" data={props.video} />
