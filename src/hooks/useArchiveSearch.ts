@@ -44,11 +44,12 @@ export const useArchiveSearch = (qs: string, params?: SearchParams): FetchedResu
     data: {
       ...data,
       items: data.items.map((item: any) => {
+        const edition = Number(item.eventId.replace('devcon-', ''))
         return {
           id: item.id,
           sourceId: item.sourceId,
-          slug: item.id,
-          edition: Number(item.eventId.replace('devcon-', '')),
+          slug: `${edition}/${item.id}`,
+          edition: edition,
           title: item.title,
           relatedVideos: [] as ArchiveVideo[],
           description: item.description,
