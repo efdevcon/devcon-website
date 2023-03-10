@@ -48,7 +48,7 @@ export const useArchiveSearch = (qs: string, params?: SearchParams): FetchedResu
         return {
           id: item.id,
           sourceId: item.sourceId,
-          slug: `${edition}/${item.id}`,
+          slug: `/archive/watch/${edition}/${item.id}`,
           edition: edition,
           title: item.title,
           relatedVideos: [] as ArchiveVideo[],
