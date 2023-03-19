@@ -203,7 +203,7 @@ export const Video = (props: VideoProps) => {
                   </Tab>
                 )}
 
-                {props.video.ethernaPermalink && (
+                {/* {props.video.ethernaPermalink && (
                   <Tab title="Swarm">
                     <div className="aspect">
                       <iframe
@@ -215,7 +215,7 @@ export const Video = (props: VideoProps) => {
                       />
                     </div>
                   </Tab>
-                )}
+                )} */}
               </Tabs>
             </div>
 
