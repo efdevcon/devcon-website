@@ -110,7 +110,8 @@ export async function GetCategories(lang: string = 'en'): Promise<Array<Category
 }
 
 export async function GetFAQ(lang: string = 'en'): Promise<Array<FAQ>> {
-  if (lang !== 'es') lang = 'en'
+  // if (lang !== 'es') lang = 'en'
+  lang = 'en'
 
   const dir = join(process.cwd(), BASE_CONTENT_FOLDER, 'faq', lang)
 
@@ -202,12 +203,14 @@ export async function GetDevconEditions(lang: string = 'en'): Promise<Array<Devc
     })
     .filter(i => !!i) as Array<DevconEdition>
 
-    return Promise.all(editions.map(async (edition) => {
+  return Promise.all(
+    editions.map(async edition => {
       return {
         ...edition,
         description: await markdownUtils.toHtml(edition.description),
       }
-    }));
+    })
+  )
 }
 
 export function GetTracks(lang: string = 'en'): Array<Track> {
