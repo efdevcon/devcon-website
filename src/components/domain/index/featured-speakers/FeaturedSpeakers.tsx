@@ -73,7 +73,7 @@ const FeaturedSpeakers = () => {
         <SwipeToScroll noBounds scrollIndicatorDirections={{ left: true, right: true }}>
           <div className={css['speakers']}>
             <Speaker appLink="https://archive.devcon.org/archive/watch/6/publishers-denial-of-digital-ownership-vs-decentralization/?tab=YouTube" name="Brewster Kahle" image={BrewsterKahle} />
-            <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-intro/?tab=YouTube" name="Danny Ryan" image={DannyRyan} />
+            <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-danny/?tab=YouTube" name="Danny Ryan" image={DannyRyan} />
             <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-aya/?tab=YouTube" name="Aya Miyaguchi" image={AyaMiyaguchi} />
             <Speaker appLink="https://archive.devcon.org/archive/watch/6/opening-ceremonies-vitalik/?tab=YouTube" name="Vitalik Buterin" image={VitalikButerin} />
             <Speaker appLink="https://archive.devcon.org/archive/watch/6/the-future-is-collective/?tab=YouTube" name="Pia Mancini" image={PiaMancini} />
