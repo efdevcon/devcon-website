@@ -22,6 +22,8 @@ const supportedLanguages = [defaultLanguage, secondaryLanguage]
 
 const matomoSiteId = '24' // '8'
 const matomoUrl = 'https://matomo.ethereum.org'
+const secondaryMatomoSiteId = '8'
+const secondaryMatomoTracker = 'https://ethereumfoundation.matomo.cloud/matomo.php'
 
 const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
@@ -134,6 +136,12 @@ module.exports = {
         siteId: matomoSiteId,
         matomoUrl: matomoUrl,
         siteUrl,
+        additionalTrackers: [
+          {
+            siteId: secondaryMatomoSiteId,
+            trackerUrl: secondaryMatomoTracker
+          }
+        ],
       },
     },
     {
