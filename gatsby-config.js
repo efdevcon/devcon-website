@@ -12,7 +12,7 @@ if (NODE_ENV === 'production' && NETLIFY_ENV === 'branch-deploy' && siteUrl === 
   console.log('Override siteUrl in Gatsby config for archive branch-deploy..')
   siteUrl = 'https://archive.devcon.org'
 }
-console.log('Gatsby config', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 
+console.log('Gatsby config', 'NODE_ENV', NODE_ENV, 'NETLIFY_ENV', NETLIFY_ENV, 'NETLIFY_SITE_URL', NETLIFY_SITE_URL,
   'NETLIFY_SITE_URL', NETLIFY_SITE_URL, 'isNetlifyProduction', isNetlifyProduction, 'siteUrl', siteUrl)
 
 const title = 'Devcon'
@@ -20,10 +20,8 @@ const defaultLanguage = 'en'
 const secondaryLanguage = 'es'
 const supportedLanguages = [defaultLanguage, secondaryLanguage]
 
-const matomoSiteId = '24' // '8'
-const matomoUrl = 'https://matomo.ethereum.org'
-const secondaryMatomoSiteId = '8'
-const secondaryMatomoTracker = 'https://ethereumfoundation.matomo.cloud/matomo.php'
+const matomoSiteId = '24'
+const matomoUrl = 'https://ethereumfoundation.matomo.cloud/'
 
 const offlinePages = ['/en', '/es', '/en/contact', '/es/contact']
 
@@ -136,12 +134,6 @@ module.exports = {
         siteId: matomoSiteId,
         matomoUrl: matomoUrl,
         siteUrl,
-        additionalTrackers: [
-          {
-            siteId: secondaryMatomoSiteId,
-            trackerUrl: secondaryMatomoTracker
-          }
-        ],
       },
     },
     {
