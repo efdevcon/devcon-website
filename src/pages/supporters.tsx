@@ -202,7 +202,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
     <Page theme={themes['teal']}>
       <PageHero
         path={[{ text: <span className="bold">Get Involved</span> }, { text: props.page.header }]}
-        title={pageContext.current.title}
+        title={pageContext?.current?.title}
         navigation={[
           {
             title: intl('supporters_overview'),
