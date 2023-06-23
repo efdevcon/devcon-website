@@ -202,6 +202,7 @@ export default pageHOC(function SatelliteEvents(props: any) {
     <Page theme={themes['teal']}>
       <PageHero
         path={[{ text: <span className="bold">Get Involved</span> }, { text: props.page.header }]}
+        title={pageContext.current.title}
         navigation={[
           {
             title: intl('supporters_overview'),
@@ -312,10 +313,10 @@ export default pageHOC(function SatelliteEvents(props: any) {
           </HorizontalLooper>
         </div>
 
-        <div className="clear-bottom border-bottom" />
+        <div className="clear-bottom margin-bottom border-bottom" />
       </div>
 
-      <div className="section padding-top margin-bottom">
+      {/* <div className="section padding-top margin-bottom">
         <h2 id="supporters" className="spaced">
           {props.sections['supporters-program'].title}
         </h2>
@@ -334,10 +335,12 @@ export default pageHOC(function SatelliteEvents(props: any) {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={`section clear-bottom ${css['thanks']}`}>
-        <h2 className="clear-bottom">{intl('supporters_announcing')}</h2>
+        <h2 id="supporters" className="clear-bottom">
+          {intl('supporters_announcing')}
+        </h2>
         <div className={`${css['grid-images']} clear-bottom`}>
           <Link to="https://twitter.com/AaveAave" className={`${css['grid-image-wrapper']} ${css['smaller']}`}>
             <Image src={aavegrants} alt="Supporter graphic" />

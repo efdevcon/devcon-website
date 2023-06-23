@@ -1,9 +1,10 @@
 ---
-title: Supporters
+title: Supporters and Impact Booths
 header: Supporters
 tags:
   - devcon
 ---
+
 Devcon VI in Bogotá featured a Public Goods Supporters Program that replaced a traditional sponsorship effort.
 
 Our team owes a big thank you to those teams and DAOs that joined our first-ever Supporter Program without most benefits expected by sponsors.
