@@ -63,6 +63,7 @@ export async function getStaticProps(context: any) {
   const sections = await GetContentSections(
     [
       'devcon-about',
+      'road-to-devcon-grants',
       'devcon-recap',
       'cta-speaker-applications',
       'cta-ticket-presale',

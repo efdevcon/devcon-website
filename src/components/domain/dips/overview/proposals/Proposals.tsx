@@ -27,7 +27,9 @@ export const Links = ({ dip }: { dip: DIP }) => {
           <GithubIcon />
         </Link>
       )}
-      <CopyToClipboard url={dip.github} /*commented out until DIP page is deployed: url={`https://devcon.org${dip.slug}`}*/ />
+      <CopyToClipboard
+        url={dip.github} /*commented out until DIP page is deployed: url={`https://devcon.org${dip.slug}`}*/
+      />
     </div>
   )
 }
@@ -174,10 +176,10 @@ export const Proposals = (props: ProposalsProps) => {
       render: (item: DIP) => {
         return item.tags
           ? item.tags.map(tag => (
-            <Label key={tag} type="neutral" className={css['tag']}>
-              <p className="font-xs bold text-uppercase">{tag}</p>
-            </Label>
-          ))
+              <Label key={tag} type="neutral" className={css['tag']}>
+                <p className="font-xs bold text-uppercase">{tag}</p>
+              </Label>
+            ))
           : null
       },
     },
@@ -195,7 +197,9 @@ export const Proposals = (props: ProposalsProps) => {
       className: css['expand-column'],
       render: (item: DIP) => {
         return (
-          <Link to={item.github}> {/*"{`/${context?.current?.lang || 'en'}/dips/dip-${item.number}`}>*/}
+          <Link to={item.github}>
+            {' '}
+            {/*"{`/${context?.current?.lang || 'en'}/dips/dip-${item.number}`}>*/}
             <ArrowRight />
           </Link>
         )
@@ -206,7 +210,7 @@ export const Proposals = (props: ProposalsProps) => {
   return (
     <section id="proposals" className={css['container']}>
       <div className={css['top-container']}>
-        <p className="h3">{intl('dips_proposals')}</p>
+        <p className="h2">{intl('dips_proposals')}</p>
 
         {/* <Filter {...filterState} /> */}
       </div>

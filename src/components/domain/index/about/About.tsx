@@ -17,14 +17,13 @@ const About = (props: Props) => {
     <div className={`section ${css['container']}`}>
       <div className={`${css['body']} clear-top`} id={props.recap ? 'recap' : 'update-2024'}>
         <div className={css['left']}>
-          {props.recap
-            ?
+          {props.recap ? (
             <h2 className="title spaced">Devcon Bogota Recap</h2>
-            :
-            <TitleDevcon />
-          }
+          ) : (
+            <TitleDevcon style={{ marginBottom: '24px' }} />
+          )}
 
-          <div className={`section-markdown markdown`} dangerouslySetInnerHTML={{ __html: props.content.body }} />
+          <div className={`markdown`} dangerouslySetInnerHTML={{ __html: props.content.body }} />
 
           {/* <p>
             <span className={css['grey']}>
@@ -38,20 +37,19 @@ const About = (props: Props) => {
             <span className="font-sm">Devcon Week — October 7-16 in Bogotá, Colombia.</span>
           </p> */}
 
-          {props.recap
-            ?
-            <Link to="/past-events">
-              <Button className="red bold">Past Events →</Button>
-            </Link>
-            :
-            null
+          {
+            props.recap ? (
+              <Link to="/past-events">
+                <Button className="red bold">Past Events →</Button>
+              </Link>
+            ) : null
             // <Link to="https://blog.ethereum.org/2023/02/28/devcon-7-update/">
             //   <Button className="red bold">Blog Post →</Button>
             // </Link>
           }
         </div>
         <div className={css['right']}>
-          {props.recap ?
+          {props.recap ? (
             <div className="aspect">
               <iframe
                 width="100%"
@@ -63,15 +61,15 @@ const About = (props: Props) => {
                 allowFullScreen
               ></iframe>
             </div>
-            :
+          ) : (
             <Link to="https://blog.ethereum.org/2023/02/28/devcon-7-update/" className={css['image-container']}>
               <Image src={Devcon2024Announcement} alt="Devcon images" priority />
             </Link>
-          }
+          )}
         </div>
       </div>
       <div className="clear-bottom margin-bottom border-bottom"></div>
-    </div >
+    </div>
   )
 }
 
