@@ -52,14 +52,14 @@
       position: relative;
       display: flex;
       justify-content: center;
-      max-height: 350px;
+      max-height: 400px;
       margin-top: 32px;
 
       @media (min-width: $breakpoints-lg) {
         margin-top: 0px;
         padding-left: 60px;
         flex-basis: 45%;
-        max-height: 475px; 
+        max-height: 560px; 
       }
 
       .image-container {

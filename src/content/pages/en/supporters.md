@@ -1,8 +1,12 @@
 ---
-title: Supporters
+title: Supporters and Impact Booths
 header: Supporters
 tags:
   - devcon
 ---
 
-This year’s Devcon is special in many ways. We’ve used the last three years to create a whole new experience based on all that we’ve seen at past Devcons, and lessons learned while event-planning during the pandemic. Devcon VI involved the community via [Community Hubs](https://forum.devcon.org/c/community-hubs/15) and [Devcon Improvement Proposals](https://forum.devcon.org/c/dip-discussion/6) (DIPs), features a **Public Goods Supporters** Program that relaces a traditional sponsorship effort, and will introduce **Impact Booths** in Bogotá.
+Devcon VI in Bogotá featured a Public Goods Supporters Program that replaced a traditional sponsorship effort.
+
+Our team owes a big thank you to those teams and DAOs that joined our first-ever Supporter Program without most benefits expected by sponsors.
+
+The participating teams deserve special thanks for their contributions to Ethereum-related public goods funding, including the [ETHColombia Quadratic Funding Round @ Devcon](https://ethcolombia.clr.fund/), [Gitcoin](https://gitcoin.co/), [CLR.Fund’s open grants](https://clr.fund/), and the [Protocol Guild](https://protocol-guild.readthedocs.io/en/latest/index.html) (which supports core Ethereum research and development).

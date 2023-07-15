@@ -1,8 +1,12 @@
 ---
 title: Impact Booths
-pages: ['supporters']
+pages:
+  - supporters
 left: >-
-  En los últimos años, los puestos solo han estado disponibles para equipos con grandes presupuestos que pueden pagar los paquetes de patrocinio. Este año, reservamos stands para equipos con alto impacto en el ecosistema Ethereum, independientemente de sus presupuestos.
+  En los últimos años, los puestos solo han estado disponibles para equipos con
+  grandes presupuestos que pueden pagar los paquetes de patrocinio. Este año,
+  reservamos stands para equipos con alto impacto en el ecosistema Ethereum,
+  independientemente de sus presupuestos.
 
 
   En Devcon VI, Impact Booths contará con equipos de clientes, aquellos que mejoran la infraestructura de Ethereum, esfuerzos de bienes públicos, proyectos acumulativos y otros proyectos seleccionados de alto impacto.

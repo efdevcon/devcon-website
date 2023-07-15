@@ -42,6 +42,10 @@
     // padding-top: 1em;
   }
 
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
   h3 {
     @include fonts-highlighted;
     margin-bottom: 0.5em;

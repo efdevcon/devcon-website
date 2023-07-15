@@ -1,11 +1,15 @@
 ---
 title: Impact Booths
-pages: ['supporters']
+pages:
+  - supporters
 left: >-
-  In past years, booths have only been available to teams with large budgets that are able to pay for sponsorship packages. This year, we reserved booths for teams with high impact on the Ethereum ecosystem, regardless of their budgets.
+  In past years, booths have only been available to teams with large budgets
+  that are able to pay for sponsorship packages. At Devcon VI, we reserved
+  booths for teams with high impact on the Ethereum ecosystem, regardless of
+  their budgets. 
 
 
-  At Devcon VI, Impact Booths will feature client teams, those improving Ethereum’s infrastructure, public goods efforts, roll-up projects, and other selected high-impact projects.
+  Impact Booths featured client teams, those improving Ethereum’s infrastructure, public goods efforts, roll-up projects, and other selected high-impact projects.
 right: >-
   **Devcon VI Impact teams are:**
 
