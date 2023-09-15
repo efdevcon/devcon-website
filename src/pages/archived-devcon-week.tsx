@@ -13,15 +13,26 @@ import { Snapshot } from 'components/common/snapshot'
 import { Link } from 'components/common/link'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import { FAQ } from 'components/domain/faq'
-import css from './devcon-week.module.scss'
-import { isAfterDate } from './tickets'
+import css from './archived-devcon-week.module.scss'
 import { toHtml } from 'utils/markdown'
+import moment from 'moment'
+import Head from 'next/head'
+
+const isAfterDate = (dateString: string) => {
+  const date = moment.utc(dateString)
+  const currentDate = moment.utc()
+
+  return date.isBefore(currentDate)
+}
 
 export default pageHOC(function DevconWeek(props: any) {
   const intl = useTranslations()
 
   return (
     <Page theme={themes['bogota']}>
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
       <PageHero
         path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: props.page.header }]}
         navigation={[
@@ -77,9 +88,9 @@ export default pageHOC(function DevconWeek(props: any) {
           </div>
 
           <div className={`right ${css['space-between']} ${css['snapshot-container']}`}>
-            {/* <h2 className="spaced">{intl('devcon_week_pre_devcon_events')}</h2> */}
+            <h2 className="spaced">{intl('devcon_week_pre_devcon_events')}</h2>
 
-            {/* <Snapshot
+            <Snapshot
               items={[
                 {
                   Icon: () => <></>,
@@ -158,8 +169,8 @@ export default pageHOC(function DevconWeek(props: any) {
                   ),
                   right: 'OCT 10',
                 },
-              ].filter(item => item.title !== 'event passed')}
-            /> */}
+              ]}
+            />
 
             {/* <div className={`spaced ${css['devcon-separator']}`}>
               <h2>Devcon - Oct 11-14</h2>
