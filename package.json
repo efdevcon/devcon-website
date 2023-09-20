@@ -73,6 +73,7 @@
     "web3modal": "^1.9.5"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.40.1",
     "@octokit/types": "^6.34.0",
     "@svgr/webpack": "^6.2.1",
     "@types/fuzzy-search": "^2.1.2",
