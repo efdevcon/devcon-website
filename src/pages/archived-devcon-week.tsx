@@ -30,6 +30,7 @@ export default pageHOC(function DevconWeek(props: any) {
 
   return (
     <Page theme={themes['bogota']}>
+      <p>sanity check</p>
       {/* <Head>
         <meta name="robots" content="noindex" />
       </Head> */}
