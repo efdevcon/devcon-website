@@ -15,15 +15,15 @@ import LogoBogota from 'assets/images/pages/bogota.svg'
 import LogoVideo from 'assets/images/pages/archive-1.svg'
 import LogoGetInvolved from 'assets/images/pages/get-involved.svg'
 import LogoPassport from 'assets/images/pages/devcon-passport.svg'
-import DevconStats from 'assets/images/hero/devcon-stats.png';
-import Image from 'next/image'
+import DevconStats from 'assets/images/hero/devcon-stats.png'
+import Image from 'next/legacy/image'
 import { Router, useRouter } from 'next/router'
 import getNewsItems from 'services/news'
-import StatsAnimation from './stats-anim';
+import StatsAnimation from './stats-anim'
 // import Background2024 from 'assets/images/hero-bg-2024.png';
 import Devcon7Logo from 'assets/images/devcon-7.svg'
-import SEA from 'assets/images/sea-2024.png';
-import SEAPattern from 'assets/images/sea-pattern-2024.png';
+import SEA from 'assets/images/sea-2024.png'
+import SEAPattern from 'assets/images/sea-pattern-2024.png'
 import { Tags } from 'components/common/tags'
 
 const useDraggableLink = () => {
@@ -60,7 +60,7 @@ const usePages = () => {
       imageAlt: 'Devcon logo',
       button: {
         text: 'Learn More',
-        url: '#update-2024' // https://archive.devcon.org',
+        url: '#update-2024', // https://archive.devcon.org',
       },
     },
     {
@@ -72,7 +72,7 @@ const usePages = () => {
       imageAlt: 'LogoBogota',
       button: {
         text: intl('hero_recap_relive'),
-        url: '#recap' // https://archive.devcon.org',
+        url: '#recap', // https://archive.devcon.org',
       },
     },
     // {
@@ -158,68 +158,60 @@ export const Hero = () => {
   return (
     <>
       <div ref={heroEl} data-jest="hero" className={`${css['hero']} ${css[page.id]}`}>
-
-        {page.id === 'recap' ?
+        {page.id === 'recap' ? (
           <div className={css['rays-container']}>
             <Rays className={css['rays']} />
           </div>
-          :
+        ) : (
           <div className={css['announcement-background']}>
             <Image
               className={page.id === 'update-2024' ? css['active'] : ''}
               src={SEAPattern}
-              layout="raw"
               alt="worldmap"
               priority
             />
 
-            <Image
-              className={page.id === 'update-2024' ? css['active'] : ''}
-              src={SEA}
-              layout="raw"
-              alt="worldmap"
-              priority
-            />
+            <Image className={page.id === 'update-2024' ? css['active'] : ''} src={SEA} alt="worldmap" priority />
 
             <div>
               <Devcon7Logo />
             </div>
           </div>
-        }
+        )}
 
         <div className={css['page-background']}>
           {/* <Image
             className={css['active']}
             src={pages[0].background}
-            layout="raw"
+            ""
             priority
             alt="Devcon stats"
           /> */}
           {/* <Image
             className={page.id === 'passport' ? css['active'] : ''}
             src={pages[0].background}
-            layout="raw"
+            ""
             priority
             alt={pages[0].backgroundAlt}
           />
           <Image
             className={page.id === 'bogota' ? css['active'] : ''}
             src={pages[1].background}
-            layout="raw"
+            ""
             priority
             alt={pages[1].backgroundAlt}
           />
           <Image
             className={page.id === 'devcon-week' ? css['active'] : ''}
             src={pages[2].background}
-            layout="raw"
+            ""
             priority
             alt={pages[2].backgroundAlt}
           />
           <Image
             className={page.id === 'livestream' ? css['active'] : ''}
             src={pages[3].background}
-            layout="raw"
+            ""
             priority
             alt={pages[3].backgroundAlt}
           /> */}
@@ -256,11 +248,17 @@ export const Hero = () => {
               </Button>
 
               <div className={css['page-toggle']}>
-                <div className={`label margin-top-less ${page.id === 'update-2024' ? css['active'] : ''}`} onClick={() => setCurrentPage(0)}>
+                <div
+                  className={`label margin-top-less ${page.id === 'update-2024' ? css['active'] : ''}`}
+                  onClick={() => setCurrentPage(0)}
+                >
                   Devcon 7 Update
                 </div>
 
-                <div className={`label margin-top-less ${page.id === 'recap' ? css['active'] : ''}`} onClick={() => setCurrentPage(1)}>
+                <div
+                  className={`label margin-top-less ${page.id === 'recap' ? css['active'] : ''}`}
+                  onClick={() => setCurrentPage(1)}
+                >
                   Devcon VI Recap
                 </div>
               </div>
@@ -381,5 +379,4 @@ export const Hero = () => {
       </div>
     </>
   )
-
 }

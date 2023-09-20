@@ -2,7 +2,7 @@ import React from 'react'
 import Image404 from 'assets/images/404.png'
 import themes from './themes.module.scss'
 import { PageHero } from 'components/common/page-hero'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import css from './404.module.scss'
 import { GetPage } from 'services/page'
 import { pageHOC } from 'context/pageHOC'

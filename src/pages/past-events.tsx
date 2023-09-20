@@ -10,7 +10,7 @@ import { usePageContext } from 'context/page-context'
 import ArrowRight from 'assets/icons/arrow_right.svg'
 import css from './past-events.module.scss'
 import { Link } from 'components/common/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import EventLocations from 'assets/images/event-locations.png'
 import { DevconEdition } from 'types/DevconEdition'
 import { Button } from 'components/common/button'

@@ -114,7 +114,7 @@ export async function GetSessions(fromCache = true): Promise<Array<SessionType>>
         tagsAnswer.split(',').map(i => i.replace(/['"]+/g, '').trim()) :
         tagsAnswer.split(' ').map(i => i.replace(/['"]+/g, '').trim()) :
         []
-    }
+    };
   })
 
   return sessions

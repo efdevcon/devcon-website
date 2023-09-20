@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React from 'react'
 import css from './thumbnail-block.module.scss'
 import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'

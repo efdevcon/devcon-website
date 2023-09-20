@@ -6,7 +6,7 @@ import { Contributor } from 'types/DIP'
 import { Tooltip } from 'components/common/tooltip'
 import { useTranslations } from 'next-intl'
 import { chunkArray } from 'utils/chunk-array'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { usePageContext } from 'context/page-context'
 
 type ContributeProps = {

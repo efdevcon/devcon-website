@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './about.module.scss'
 import { Button } from 'components/common/button'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Devcon2024Announcement from 'assets/images/2024-blog-post-shadow.png'
 import TitleDevcon from 'assets/images/devcon-title.svg'
 import { Link } from 'components/common/link'

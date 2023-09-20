@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './no-results.module.scss'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import noResults from 'assets/images/no-results.png'
 
 interface Props {

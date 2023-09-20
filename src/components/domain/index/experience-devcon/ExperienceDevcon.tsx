@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import css from './experience-devcon.module.scss'
 import ExperienceDevcon from './experience-devcon.png'
 

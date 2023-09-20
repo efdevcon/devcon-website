@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import css from './pwa.module.scss'
 import { Modal } from 'components/common/modal'
 import IconPlus from 'assets/icons/plus.svg'

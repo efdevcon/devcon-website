@@ -13,7 +13,7 @@ import TrackList from 'components/domain/index/track-list'
 import About from 'components/domain/index/about'
 import FeaturedSpeakers from 'components/domain/index/featured-speakers'
 import CallsToAction from 'components/domain/index/ctas'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import CircleBackground from 'assets/images/background-circles.png'
 import TriangleBackground from 'assets/images/background-triangles.png'
 import { GetContentSections, GetTracks } from 'services/page'

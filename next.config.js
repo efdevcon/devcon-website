@@ -22,14 +22,6 @@ const nextConfig = {
       'www.gravatar.com',
     ],
   },
-  experimental: {
-    images: {
-      layoutRaw: true,
-    },
-  },
-  sentry: {
-    hideSourceMaps: true,
-  },
   i18n: {
     locales: ['default', 'en', 'es'],
     defaultLocale: 'default',
@@ -110,7 +102,7 @@ const nextConfig = {
           ...config.module.rules,
         ],
       },
-    }
+    };
   },
   async rewrites() {
     return [

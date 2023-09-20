@@ -5,7 +5,7 @@ import { ArchiveVideo } from 'types/ArchiveVideo'
 import { Playlist } from 'types/Playlist'
 import { getVideoId } from 'utils/video'
 import moment from 'moment'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 interface Props {
   video: ArchiveVideo
@@ -76,5 +76,5 @@ export const VideoCard = (props: Props) => {
         </div>
       </div>
     </BasicCard>
-  )
+  );
 }

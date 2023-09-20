@@ -5,7 +5,7 @@ import css from './navigation.module.scss'
 import { Link as LinkType } from 'types/Link'
 import ArrowCollapse from 'assets/icons/arrow_collapse.svg'
 import ArrowDropdown from 'assets/icons/arrow_drop_down.svg'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import useNavigationData from '../../useNavigationData'
 import IconCalendar from 'assets/icons/calendar.svg'
 import IconWatch from 'assets/icons/on_demand_video.svg'

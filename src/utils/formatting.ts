@@ -11,7 +11,7 @@ export function GetExcerpt(text: string, length: number = 250) {
 }
 
 export function GetDomainName(url: string): string {
-  return url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[\/?#]/)[0]
+  return url.replace('http://', '').replace('https://', '').replace('www.', '').split(/[\/?#]/)[0];
 }
 
 export function TruncateMiddle(text: string, length: number = 5) {

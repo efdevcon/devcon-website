@@ -32,7 +32,7 @@ import css from './continuous-devcon.module.scss'
 import HackerBasement from 'assets/images/hacker-basement.png'
 import LinkIcon from 'assets/icons/link-indicator.svg'
 import HackerBasementTag from 'assets/images/hacker-basement-tag.png'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 
 export default pageHOC(function ContinuousDevcon(props: any) {
@@ -92,7 +92,11 @@ export default pageHOC(function ContinuousDevcon(props: any) {
                   Icon: IconPeople,
                   title: 'Devcon after Dark',
                   right: (
-                    <Link indicateExternal className="theme-color" to="https://forum.devcon.org/t/introducing-devcon-after-dark/1375">
+                    <Link
+                      indicateExternal
+                      className="theme-color"
+                      to="https://forum.devcon.org/t/introducing-devcon-after-dark/1375"
+                    >
                       {intl('cd_devcon_forum')}
                     </Link>
                   ),
@@ -259,7 +263,7 @@ export default pageHOC(function ContinuousDevcon(props: any) {
 
         <section className={`${css['hacker-basement']} expand`}>
           <div className={css['background']}>
-            <Image src={HackerBasement} alt="Hacker basement" layout="raw" />
+            <Image src={HackerBasement} alt="Hacker basement" />
           </div>
           <div className="section" id="hacker-basement">
             <h2 className="clear-top clear-bottom">{props.sections['hacker-basement'].title}</h2>
@@ -286,18 +290,13 @@ export default pageHOC(function ContinuousDevcon(props: any) {
               </div>
 
               <div className={`right ${css['tag']}`}>
-                <Image
-                  className={css['image-take-up-space']}
-                  layout="raw"
-                  src={HackerBasementTag}
-                  alt="Hacker basement tag"
-                />
+                <Image className={css['image-take-up-space']} src={HackerBasementTag} alt="Hacker basement tag" />
 
-                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
-                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
-                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
-                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
-                <Image className={css['glitch-image']} layout="raw" src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} src={HackerBasementTag} alt="Hacker basement tag" />
+                <Image className={css['glitch-image']} src={HackerBasementTag} alt="Hacker basement tag" />
               </div>
             </div>
 
