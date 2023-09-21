@@ -1,5 +1,5 @@
 // const withPWA = require('next-pwa')
-const webpack = require('webpack')
+// const webpack = require('webpack')
 // const { withSentryConfig } = require('@sentry/nextjs')
 
 /** @type {import('next').NextConfig} */
@@ -28,7 +28,7 @@ const nextConfig = {
     localeDetection: false,
   },
   trailingSlash: true,
-  webpack: (config, { buildId }) => {
+  webpack: (config, { buildId, webpack }) => {
     return {
       ...config,
       plugins: [
@@ -102,7 +102,7 @@ const nextConfig = {
           ...config.module.rules,
         ],
       },
-    };
+    }
   },
   async rewrites() {
     return [
