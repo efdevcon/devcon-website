@@ -16,7 +16,7 @@ import { FAQ } from 'components/domain/faq'
 import css from './archived-devcon-week.module.scss'
 import { toHtml } from 'utils/markdown'
 import moment from 'moment'
-// import Head from 'next/head'
+import Head from 'next/head'
 
 const isAfterDate = (dateString: string) => {
   const date = moment.utc(dateString)
@@ -30,10 +30,9 @@ export default pageHOC(function DevconWeek(props: any) {
 
   return (
     <Page theme={themes['bogota']}>
-      <p>sanity check2</p>
-      {/* <Head>
+      <Head>
         <meta name="robots" content="noindex" />
-      </Head> */}
+      </Head>
       <PageHero
         path={[{ text: <span className="bold">{intl('program_title')}</span> }, { text: props.page.header }]}
         navigation={[

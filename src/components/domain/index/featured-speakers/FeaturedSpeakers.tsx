@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './featured-speakers.module.scss'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import { Button } from 'components/common/button'
 import { Link } from 'components/common/link'
 // import Layer1 from 'assets/images/tracks/big-icons/Layer 1 Protocol.svg'

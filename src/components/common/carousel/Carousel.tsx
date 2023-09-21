@@ -1,6 +1,6 @@
 import React from 'react'
 import css from './carousel.module.scss'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 
 type CarouselProps = {
   title?: string

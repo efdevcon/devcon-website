@@ -15,8 +15,8 @@ import LogoBogota from 'assets/images/pages/bogota.svg'
 import LogoVideo from 'assets/images/pages/archive-1.svg'
 import LogoGetInvolved from 'assets/images/pages/get-involved.svg'
 import LogoPassport from 'assets/images/pages/devcon-passport.svg'
-import DevconStats from 'assets/images/hero/devcon-stats.png'
-import Image from 'next/legacy/image'
+// import DevconStats from 'assets/images/hero/devcon-stats.png'
+import Image from 'next/image'
 import { Router, useRouter } from 'next/router'
 import getNewsItems from 'services/news'
 import StatsAnimation from './stats-anim'
@@ -172,7 +172,6 @@ export const Hero = () => {
             />
 
             <Image className={page.id === 'update-2024' ? css['active'] : ''} src={SEA} alt="worldmap" priority />
-
             <div>
               <Devcon7Logo />
             </div>
