@@ -44,7 +44,7 @@
     "moment-timezone": "^0.5.34",
     "mongodb-client-encryption": "^1.2.7",
     "mongoose": "^6.1.9",
-    "next": "^13.5.2",
+    "next": "13.4.9",
     "next-intl": "^2.3.5",
     "next-pwa": "^5.5.4",
     "node-fetch": "^3.2.3",
