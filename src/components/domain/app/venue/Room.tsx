@@ -14,7 +14,7 @@ import moment from 'moment'
 import { AppNav } from 'components/domain/app/navigation'
 import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import filterCss from 'components/domain/app/app-filter.module.scss'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Floor from 'assets/images/venue-map/venue-map-floor-1.jpeg'
 import { usePanzoom, PanzoomControls } from './Venue'
 import venueCss from './venue.module.scss'
@@ -53,7 +53,7 @@ export const Room = (props: Props) => {
 
       <div className={venueCss['panzoom']}>
         <div className={venueCss['image']} id="image-container">
-          <Image src={Floor} alt="venue map" layout="raw" id="venue-image" priority />
+          <Image src={Floor} alt="venue map" id="venue-image" priority />
         </div>
         <PanzoomControls pz={pz} />
       </div>

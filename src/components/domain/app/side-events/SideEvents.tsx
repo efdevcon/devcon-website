@@ -5,7 +5,7 @@ import { CollapsedSection, CollapsedSectionContent, CollapsedSectionHeader } fro
 import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import { SideEventCard, SideEvent } from './SideEventCard'
 import LogoImage from 'assets/images/test-asset.svg'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import ChevronUp from 'assets/icons/chevron-up.svg'
 import imageBogota from 'assets/images/bogota-city.png'
 import { AppNav } from 'components/domain/app/navigation'

@@ -11,7 +11,7 @@ import { Room } from 'types/Room'
 import { AppNav } from 'components/domain/app/navigation'
 import { Search, Tags, Basic, FilterFoldout } from 'components/common/filter/Filter'
 import filterCss from 'components/domain/app/app-filter.module.scss'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Floor from 'assets/images/venue-map/venue-map.png'
 import Panzoom, { PanZoom, PanZoomController } from 'panzoom'
 import IconPlus from 'assets/icons/plus.svg'
@@ -121,7 +121,7 @@ export const Venue = (props: Props) => {
 
       <div className={css['panzoom']}>
         <div className={css['image']} id="image-container">
-          <Image src={Floor} alt="venue map" layout="raw" id="venue-image" priority />
+          <Image src={Floor} alt="venue map" id="venue-image" priority />
         </div>
         <PanzoomControls pz={pz} />
       </div>

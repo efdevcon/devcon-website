@@ -27,10 +27,10 @@ export function Carousel(props: CarouselProps) {
       {/* TO-DO: Use next/image - couldn't get it working; goal is to set a fixed height and having width be decided by the intrinsic size of the image */}
       <div className={imagesClassName}>
         {props.images.map((image, index) => {
-          return <Image key={index + 'first'} layout="raw" src={image.src} alt={image.alt} />
+          return <Image key={index + 'first'} src={image.src} alt={image.alt} />
         })}
         {props.images.map((image, index) => {
-          return <Image key={index + 'second'} layout="raw" src={image.src} alt={image.alt} />
+          return <Image key={index + 'second'} src={image.src} alt={image.alt} />
         })}
       </div>
     </div>

@@ -1,5 +1,5 @@
 // const withPWA = require('next-pwa')
-const webpack = require('webpack')
+// const webpack = require('webpack')
 // const { withSentryConfig } = require('@sentry/nextjs')
 
 /** @type {import('next').NextConfig} */
@@ -22,21 +22,13 @@ const nextConfig = {
       'www.gravatar.com',
     ],
   },
-  experimental: {
-    images: {
-      layoutRaw: true,
-    },
-  },
-  sentry: {
-    hideSourceMaps: true,
-  },
   i18n: {
     locales: ['default', 'en', 'es'],
     defaultLocale: 'default',
     localeDetection: false,
   },
   trailingSlash: true,
-  webpack: (config, { buildId }) => {
+  webpack: (config, { buildId, webpack }) => {
     return {
       ...config,
       plugins: [
@@ -111,6 +103,19 @@ const nextConfig = {
         ],
       },
     }
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+        ],
+      },
+    ]
   },
   async rewrites() {
     return [

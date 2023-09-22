@@ -15,7 +15,7 @@ import { Snapshot } from 'components/common/snapshot'
 import PencilIcon from 'assets/icons/pencil.svg'
 import CalendarIcon from 'assets/icons/calendar.svg'
 import SelectionIcon from 'assets/icons/selection.svg'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import SwipeToScroll from 'components/common/swipe-to-scroll'
 import Process from 'assets/images/speaker-process.png'
 
@@ -23,7 +23,7 @@ const ProcessOverview = () => {
   return (
     <SwipeToScroll scrollIndicatorDirections={{ left: true, right: true }}>
       <div className={css['process-container']}>
-        <Image src={Process} layout="raw" alt="Speaker application process" />
+        <Image src={Process} alt="Speaker application process" />
       </div>
     </SwipeToScroll>
   )

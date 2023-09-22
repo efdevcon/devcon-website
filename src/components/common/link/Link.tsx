@@ -79,7 +79,7 @@ const Link = React.forwardRef(
     }
 
     return (
-      <NextLink href={to} locale={locale}>
+      <NextLink href={to} locale={locale} legacyBehavior>
         <a {...linkAttributes}>{children}</a>
       </NextLink>
     )

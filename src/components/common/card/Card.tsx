@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'components/common/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { GetExcerpt } from 'utils/formatting'
 import css from './card.module.scss'
 import IconArrowRight from 'assets/icons/arrow_right.svg'

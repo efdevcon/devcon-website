@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import React from 'react'
 import css from './thumbnail-block.module.scss'
 import { getTrackImage, getTrackID } from 'components/domain/index/track-list/TrackList'
@@ -55,8 +55,8 @@ export const ThumbnailBlock = (props: ThumbnailBlock) => {
           <Image
             unoptimized={props.unoptimized} // Have to do this for images hosted on domains we don't know beforehand
             src={props.thumbnail}
-            width="56px"
-            height="56px"
+            width={56}
+            height={56}
             alt={props.track || props.thumbnailAlt || 'thumbnail'}
           />
           {thumbnailSubtext}

@@ -9,7 +9,7 @@ import { usePageContext } from 'context/page-context'
 import moment from 'moment'
 import { Button } from 'components/common/button'
 import { useAppContext } from 'context/app-context'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import EthBackground from 'assets/images/eth-diamond-rainbow.png'
 // import notifications from 'pages/app/notifications'
 

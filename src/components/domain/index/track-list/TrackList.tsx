@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './track-list.module.scss'
 import Accordion from 'components/common/accordion'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Layer1 from 'assets/images/tracks/big-icons/Layer 1 Protocol.svg'
 import Cryptoeconomics from 'assets/images/tracks/big-icons/Cryptoeconomics.svg'
 import DeveloperInfra from 'assets/images/tracks/big-icons/Developer Infrastructure.svg'

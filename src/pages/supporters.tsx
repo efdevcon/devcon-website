@@ -17,7 +17,7 @@ import IconPeople from 'assets/icons/people.svg'
 import { Link } from 'components/common/link'
 import { AutoScroller } from 'components/domain/dips/overview/contribute/Contribute'
 import HorizontalLooper from 'components/common/horizontal-looper'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 // impact
 import wat from 'assets/images/supporters-page/impact/wat.png'
 import l2beat from 'assets/images/supporters-page/impact/l2-beat.png'

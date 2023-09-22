@@ -14,7 +14,7 @@ import { Alert } from 'components/common/alert'
 import { getSiweMessage } from 'utils/web3'
 import AccountFooter from './AccountFooter'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { AppNav } from 'components/domain/app/navigation'
 import { InfoIcon } from 'components/common/info-icon'
 
@@ -138,7 +138,7 @@ export default function LoginPage() {
                   <p className={css['connect']}>Connect —</p>
                   <p className={css['description']}>Your personalized passport to the Devcon experience.</p>
 
-                  <Image className={css['logo']} layout="raw" src={pwaIcon} alt="App logo" />
+                  <Image className={css['logo']} src={pwaIcon} alt="App logo" />
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ export default function LoginPage() {
                 </p>
               </div>
 
-              <div className={css['alert']}>{error && <Alert type="info" title='Info' message={error} />}</div>
+              <div className={css['alert']}>{error && <Alert type="info" title="Info" message={error} />}</div>
 
               {emailSent && (
                 <div className={css['email']}>

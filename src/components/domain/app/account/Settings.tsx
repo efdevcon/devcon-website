@@ -10,7 +10,7 @@ import { useAvatar } from 'hooks/useAvatar'
 import { isEmail } from 'utils/validators'
 import { TruncateMiddle } from 'utils/formatting'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { AppNav } from 'components/domain/app/navigation'
 import Toggle from 'react-toggle'
 

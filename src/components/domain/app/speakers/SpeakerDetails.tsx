@@ -3,7 +3,7 @@ import IconGithub from 'assets/icons/github.svg'
 import IconGlobe from 'assets/icons/globe.svg'
 import IconTwitter from 'assets/icons/twitter.svg'
 import css from './speaker-details.module.scss'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import makeBlockie from 'ethereum-blockies-base64'
 import { SessionCard } from '../session'
 import { Session } from 'types/Session'

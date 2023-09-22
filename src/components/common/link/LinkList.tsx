@@ -4,7 +4,7 @@ import IconCalendar from 'assets/icons/schedule-plus.svg'
 import IconLink from 'assets/icons/link-chain.svg'
 import IconExternalLink from 'assets/icons/external-link.svg'
 import googleDriveImage from './google-drive.png'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 export const LinkList = (props: any) => {
   return (
@@ -37,8 +37,8 @@ export const LinkList = (props: any) => {
               </div>
             )
           })(),
-        })
+        });
       })}
     </div>
-  )
+  );
 }

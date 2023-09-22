@@ -5,7 +5,7 @@ import IconClose from 'assets/icons/cross.svg'
 import IconChevronLeft from 'assets/icons/chevron_left.svg'
 import IconChevronRight from 'assets/icons/chevron_right.svg'
 import { Button } from 'components/common/button'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 type ModalProps = {
   open: boolean
