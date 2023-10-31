@@ -3,7 +3,6 @@ title: About Devcon
 pages:
   - index
 ---
-
 ## Devcon 7 will be coming to Southeast Asia in 2024!
 
 🌏 Devcon 7 in Southeast Asia offers the opportunity to give a large, new, active, and diverse community a platform on the world Ethereum stage!
@@ -26,4 +25,4 @@ Workshops,
 Education initiatives,
 and other community activities.**
 
-**Deadline: 31.10.2023**
+**Deadline: 30.11.2023**
