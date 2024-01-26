@@ -19,10 +19,16 @@ export async function GetTicketQuota(id: string = ''): Promise<TicketQuota | und
         if (!data) return
 
         return {
-            id: productId,
-            available_number: data.available_number,
-            available: data.available
+            id: '5',
+            available_number: 0,
+            available: false,
         } as TicketQuota
+
+        // return {
+        //     id: productId,
+        //     available_number: data.available_number,
+        //     available: data.available
+        // } as TicketQuota
     }
     catch (e) {
         console.log('Unable to fetch ticket availability..')

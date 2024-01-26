@@ -19,21 +19,21 @@ export function useTicketQuota(quota: TicketQuota | undefined, interval: number 
 
   async function trySetQuota() {
     // 'Sold out' for testing purposes
-    // setAvailability({
-    //   id: '5',
-    //   available_number: 0,
-    //   available: false,
-    // })
-    // return
+    setAvailability({
+      id: '5',
+      available_number: 0,
+      available: false,
+    })
+    return
 
-    try {
-      const response = await fetch('/api/tickets/availability')
-      const body = await response.json()
-      setAvailability(body.data)
-      return
-    } catch (e) {
-      console.log('Unable to fetch availability')
-    }
+    // try {
+    //   const response = await fetch('/api/tickets/availability')
+    //   const body = await response.json()
+    //   setAvailability(body.data)
+    //   return
+    // } catch (e) {
+    //   console.log('Unable to fetch availability')
+    // }
   }
 
   return availability
